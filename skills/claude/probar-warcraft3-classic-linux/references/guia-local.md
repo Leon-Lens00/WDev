@@ -16,7 +16,9 @@ Consultar `docs/herramientas-wc3.txt` y `wc3-environment.json` en ese entorno.
 
 ### Comprobación de rutas del 20-10-2026
 
-La entrada del Taller existe y resuelve a `FrozenThone/scripts/wc3-taller.py`. `wc3 verificar` encontró ausentes únicamente los destinos de fuente/GUI de Forge y su enlace del Taller: la configuración aún señala `/home/snz/Documentos/WarDatsPy/wc3-forge`, mientras la copia actual está en `/home/snz/Documentos/MCP W3/wc3-forge`.
+La entrada del Taller existe y resuelve a `FrozenThone/scripts/wc3-taller.py`. `wc3 verificar` encontró ausentes únicamente los destinos de fuente/GUI de Forge y su enlace del Taller: la configuración señalaba `/home/snz/Documentos/WarDatsPy/wc3-forge`, mientras la copia actual está en `/home/snz/Documentos/MCP W3/wc3-forge`.
+
+Corrección del 23-10-2026: configuración y enlace del Taller apuntan ya a `MCP W3/wc3-forge`; `wc3 verificar` devolvió `ok: true` (26 herramientas, 30 enlaces). Sólo se comprobaron rutas; Forge GUI, `mcp` y `probe` siguen sin ejecutarse tras el cambio.
 
 Los destinos comprobados de `play`, NewGen, YDWE, GE-Proton, DXVK, JassHelper, pJASS y APIs Classic siguen presentes. Conservar sus perfiles y parámetros; esta revisión fue de rutas y lanzadores, sin repetir partidas. Resolver Forge por separado antes de usar `wc3 forge`, `mcp` o `probe`; no reparar enlaces ni modificar configuración global automáticamente. El comando `python3 /home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py play COPIA.w3x` es la entrada directa del mismo flujo de juego.
 

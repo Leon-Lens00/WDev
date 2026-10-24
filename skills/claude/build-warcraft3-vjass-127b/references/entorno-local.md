@@ -10,7 +10,7 @@ Rutas comprobadas el 20-10-2026 en CachyOS x86_64/Hyprland. Son referencias de e
 - Taller: `/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3`, enlace a `scripts/wc3-taller.py` del entorno.
 - Forge encontrado actualmente: `/home/snz/Documentos/MCP W3/wc3-forge`.
 
-**Desajuste observado:** `wc3-environment.json`, algunas guías y el enlace de Forge del Taller aún apuntan a `/home/snz/Documentos/WarDatsPy/wc3-forge`, ruta que ya no existe. `wc3 verificar` falla por esos destinos, mientras los destinos de compilación, juego, NewGen y YDWE existen. Evaluar cada fallo: esto no demuestra que `vjass` o `play` estén rotos. Comprobar y resolver Forge por separado antes de usar `forge`, `mcp`, `probe` o scripts que dependan de su fuente/GUI. No cambiar configuración ajena como efecto de leer esta skill.
+**Rutas de Forge corregidas (23-10-2026):** `wc3-environment.json` (`forge`, `forge_gui`) y el enlace de Forge del Taller apuntan a `/home/snz/Documentos/MCP W3/wc3-forge`; la ruta antigua `/home/snz/Documentos/WarDatsPy/wc3-forge` ya no existe. `wc3 verificar` devolvió `ok: true` (26 herramientas, 30 enlaces). Es una comprobación de rutas: Forge GUI, su MCP y `probe` no se ejecutaron. Si `verificar` vuelve a fallar, evaluar cada destino: un fallo de Forge no demuestra que `vjass` o `play` estén rotos. No cambiar configuración ajena como efecto de leer esta skill. Incidencia: `/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-231452-forge-ruta-obsoleta-entorno.md`.
 
 ## Toolchain y comandos locales
 

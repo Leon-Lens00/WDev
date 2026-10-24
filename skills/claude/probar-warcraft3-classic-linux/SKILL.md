@@ -8,7 +8,7 @@ description: "Probar mapas de Warcraft III Classic 1.27b en esta PC Linux: lanza
 ## Preparación
 
 1. Leer las instrucciones del workspace. En esta PC el entorno está en `/home/snz/Documentos/ChatGPT/FrozenThone`; consultar allí `docs/herramientas-wc3.txt` y `wc3-environment.json` antes de usar Forge/complementos. Las rutas y versiones pueden cambiar: comprobarlas.
-   Comprobar los destinos concretos de `wc3 verificar`: un fallo del acceso de Forge no invalida por sí solo NewGen, YDWE, compilación o `play`. Ver el desajuste local de rutas en la guía; conservar los parámetros de otros perfiles válidos.
+   Comprobar los destinos concretos de `wc3 verificar`: un fallo del acceso de Forge no invalida por sí solo NewGen, YDWE, compilación o `play`. El desajuste de rutas de Forge se corrigió el 23-10-2026 (ver la guía); conservar los parámetros de otros perfiles válidos.
 2. Leer [la guía local](references/guia-local.md). Contiene recetas de lanzamiento, teclas, cierre y evidencia comprobada. No reconstruir el procedimiento a partir de PIDs, coordenadas o logs de otro ensayo.
 3. Para modificar mapas/JASS, leer `skills/claude/build-warcraft3-vjass-127b/SKILL.md`. Para interacción visual, leer `skills/claude/control-escritorio-linux/SKILL.md` y comprobar capacidades/permisos actuales. Preferir CLI/API de aplicación donde resuelvan el trabajo.
 4. Inventariar procesos, prefijos y ventanas antes de lanzar. Usar una copia, un escritor por mapa, y registrar hash, versión, objetivo y criterio de éxito. Conservar editores y partidas preexistentes.
