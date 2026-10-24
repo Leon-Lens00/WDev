@@ -1,0 +1,73 @@
+{
+  "schema": 1,
+  "status": "Validated",
+  "target": "Warcraft III 1.27b",
+  "map": "projects/inventorysys-lab/maps/InventorySys-Manual-20261019-01.w3x",
+  "sha256": "26d7faf7953feb98a991222c77bf92c1fed58ffef534e2a874ba8ddd3a8f28fe",
+  "source": "projects/inventorysys-lab/reports/manual/runs/inv-manual-20261019-01/inv-manual-20261019-01.w3x",
+  "assembled_sha256": "3836c03662507dcc372a9d08a8efc0603cdb0fb78e3e3eddd1edfc0f8c55f418",
+  "build_id": "inv-manual-20261019-01",
+  "session": "prueba01",
+  "expected_filename_pattern": "IL141M-inv-manual-20261019-01--prueba01--*.pld",
+  "external_directory": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs",
+  "not_before": 1792440879.7859807,
+  "runtime_writing_verified": false,
+  "semantic_certification": false,
+  "T4": "awaiting_user",
+  "game_launched": false,
+  "original_fixes": false,
+  "specs": {
+    "S1": "preparation met; user completion pending",
+    "S2": "capture design validated; actual runtime files unknown",
+    "S3": "no original fixes",
+    "S4": "existing workshop/profile only; no launch in delivery",
+    "S5": "initial verifier fixture-location deviation disclosed and parent accepted",
+    "S6": "minimal TMPDIR test-helper adjustment authorized"
+  },
+  "prior_automatic_results": {
+    "PASS": 16,
+    "FAIL": 2,
+    "OBS": 6,
+    "SKIP": 4
+  },
+  "verification_scratch": "/tmp/wdev-inventorysys-lab/manual-delivery-y26kx657",
+  "proof_files": [
+    "audit.exit",
+    "audit.stderr",
+    "audit.stdout",
+    "command-summary.json",
+    "edges.exit",
+    "edges.stderr",
+    "edges.stdout",
+    "isolated-suite.exit",
+    "isolated-suite.stderr",
+    "isolated-suite.stdout"
+  ],
+  "delivery_tests": [
+    {
+      "command": "HOME=/tmp/wdev-inventorysys-lab/manual-delivery-y26kx657/home TMPDIR=/tmp/wdev-inventorysys-lab/manual-delivery-y26kx657/tmp XDG_CACHE_HOME=/tmp/wdev-inventorysys-lab/manual-delivery-y26kx657/cache PYTHONDONTWRITEBYTECODE=1 /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python -B -m unittest discover -s projects/inventorysys-lab/tests -p test_manual_protocol_edges.py -v",
+      "exit": 0,
+      "tests": 1,
+      "stdout": "",
+      "stderr_summary": "Ran 1 test in 0.240s; OK; individual test ok"
+    },
+    {
+      "command": "HOME=/tmp/wdev-inventorysys-lab/manual-delivery-y26kx657/home TMPDIR=/tmp/wdev-inventorysys-lab/manual-delivery-y26kx657/tmp XDG_CACHE_HOME=/tmp/wdev-inventorysys-lab/manual-delivery-y26kx657/cache PYTHONDONTWRITEBYTECODE=1 /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python -B -m unittest discover -s projects/inventorysys-lab/tests -v",
+      "exit": 0,
+      "tests": 67,
+      "stdout": "",
+      "stderr_summary": "Ran 67 tests in 2.158s; OK; all individual tests ok"
+    }
+  ],
+  "independent_evidence": {
+    "verifier": "mvfoq9rj-c-0qk1",
+    "audit_exit": 0,
+    "initial_suite_tests": 66,
+    "initial_suite_exit": 0,
+    "isolated_suite_tests": 67,
+    "isolated_suite_exit": 0,
+    "edges_tests": 1,
+    "edges_exit": 0,
+    "process_deviation": "Initial verifier fixtures were inside the user-authorized temporary root but outside the narrower parent-required child; automatic cleanup removed its own fixtures. Later isolated copy passed 67 tests. Parent accepted disclosure; no candidate blocker."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "status": "Scanned/PREPARED04",
+  "lint_exit": 0,
+  "errors": 0,
+  "ownership_warnings": 20,
+  "unknown_direct_calls": [],
+  "changes": {
+    "MapMain.j": {
+      "added": 1,
+      "removed": 1,
+      "sha256": "a3f4fb67ac2fc5c10e90494c0a90a674f9e7a0bec7251ecf9e237bb667a774b0"
+    },
+    "NativeProbe.j": {
+      "added": 59,
+      "removed": 14,
+      "sha256": "c8760733afd74abb547498337c93f21304a92f69805e5c177707201014d806be"
+    },
+    "NativeReference.j": {
+      "added": 0,
+      "removed": 0,
+      "sha256": "585add637a5d62c2d6ab523ad70fe1c028544078975f083db8a2f889dbdb2d09"
+    },
+    "PathingCandidate.j": {
+      "added": 0,
+      "removed": 0,
+      "sha256": "057a0d8efd50566c668688f5f6d037f17e16e939b6fd38c3b2be5880808e7d4a"
+    },
+    "ProbeLog.j": {
+      "added": 2,
+      "removed": 2,
+      "sha256": "e4aaf225a5922a4ad61083d41196386c17f63e8202e49365f113f4b9ad908b60"
+    }
+  },
+  "protected01_02_03_artifacts_unchanged": 268,
+  "old_pinned_inputs_unchanged": 67,
+  "all5_run03_sources_frozen_verified": true,
+  "base_core_dependencies_unchanged": true,
+  "collision_predicate_byte_identical_to03": true,
+  "actual_anchor_upper_bounds_exclusive": true,
+  "static_selection_attributed_to_parent": true,
+  "native04_compiled": false,
+  "native04_executed": false,
+  "runtime_budget": {
+    "timer_period_seconds": 0.125,
+    "maximum_callbacks": 440,
+    "game_time_deadline_seconds": 55,
+    "reference_move_deadline_seconds": 1.875,
+    "native_restoration_guard_seconds": 2,
+    "channel_deadline_seconds": 2,
+    "observer_wall_budget_seconds": 120,
+    "load_and_engine_io_headroom_seconds": 65,
+    "wall_clock_guaranteed": false,
+    "on_budget_exhaustion": "explicit FAIL then cleanup/COMPLETE; unreached geometry is not accepted",
+    "native_rest_stable_intervals": 3,
+    "native_rest_stable_window_seconds": 0.375
+  },
+  "limitations": "Static readback/envelope arithmetic only, not native GREEN; actual03 remains failed; parent executes ONE04, no retries."
+}

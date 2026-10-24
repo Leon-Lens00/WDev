@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "original_sha256": "6a168b922c994d230d80c7c59ad601cb260fa3066f22b579c8784bcf3d0b4e46",
+  "functions": [
+    {
+      "name": "NewTimerEx",
+      "sha256": "e5abb0d9dddd7432e515ed608bff6d0df7d2942a45606c10d64fd3fecf450ae6",
+      "hooks": [
+        {"anchor": "     return s__TimerUtils___tT[TimerUtils___tN]\r\n", "count": 1, "side": "before", "insert": "     call ILM_Log(\"timer\", \"ACQUIRE\", ITL_Capture(s__TimerUtils___tT[TimerUtils___tN], value))\r\n"}
+      ]
+    },
+    {
+      "name": "ReleaseTimer",
+      "sha256": "c7580476715be359d0a77f68640c72076e55d67883ae0f73dbdf6367b49eb035",
+      "hooks": [
+        {"anchor": "            call DestroyTimer(t)\r\n", "count": 1, "side": "after", "insert": "            call ILM_Log(\"timer\", \"DESTROY\", ITL_Retire(t, true))\r\n"},
+        {"anchor": "            set TimerUtils___tN=TimerUtils___tN + 1\r\n", "count": 1, "side": "after", "insert": "            call ILM_Log(\"timer\", \"RELEASE\", ITL_Retire(t, false))\r\n"}
+      ]
+    },
+    {
+      "name": "s__UIButton_enableButtonCallback",
+      "sha256": "4a2e0d38cd1e644f0f9c9fc818880a7a1005a2b77c291f02b37783610b23a141",
+      "hooks": [
+        {"anchor": "            set s__UIButton_disabled[btn]=false\r\n", "count": 1, "side": "before", "insert": "            call ILM_Log(\"timer\", \"EXPIRED\", ITL_Expired(GetExpiredTimer()))\r\n"}
+      ]
+    },
+    {
+      "name": "s__UIButton_clickL",
+      "sha256": "e24938e77fff14b9e6a39cb586bbd224b375bf6e6fc6fd4740e33f8b1f7296c9",
+      "hooks": [
+        {"anchor": "            set UserInterface___ClickedButton=this\r\n", "count": 1, "side": "after", "insert": "            call ILM_Log(\"button\", \"CLICK\", ITL_Click(this))\r\n"}
+      ]
+    }
+  ]
+}

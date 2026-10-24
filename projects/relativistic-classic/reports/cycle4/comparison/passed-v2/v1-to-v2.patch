@@ -1,0 +1,30 @@
+--- /tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/comparison.py
++++ /tmp/wdev-relativistic-fixed03-verify/corrected-a44wAHM5/comparison.py
+@@ -99,9 +99,16 @@
+             assert report[key] == value
+         assert (R / f'lab-{run}.stdout.json').read_bytes() == (R / f'lab-{run}.json').read_bytes()
+         assert (R / f'lab-{run}.stderr.txt').read_bytes() == b''
+-        fresh = report['freshness']
+-        assert math.isfinite(fresh['mtime']) and math.isfinite(fresh['not_before'])
+-        assert fresh['mtime'] >= fresh['not_before']
++        if 'freshness' not in report:
++            assert run == 'fixed-20261019-02', 'current report missing mandatory freshness'
++            (OWN / 'legacy-freshness.json').write_text(json.dumps({
++                'run_id': run, 'freshness': 'historicalfreshnessnotrecorded',
++                'limitation': 'unavailable; not reconstructed or accepted as PASS'
++            }, sort_keys=True) + '\n')
++        else:
++            fresh = report['freshness']
++            assert math.isfinite(fresh['mtime']) and math.isfinite(fresh['not_before'])
++            assert fresh['mtime'] >= fresh['not_before']
+         return cases, checks, counts, report
+ 
+     old, new, alone, negative = [load(run) for run in RUNS]
+@@ -220,6 +227,7 @@
+         'identities': identities, 'copied_files': len(files),
+         'source_and_candidate_preserved': True,
+         'native_freshness': 'saved_native_mtime_matches_launch_and_reader_metadata',
++        'historical_fixed02_freshness': 'historicalfreshnessnotrecorded',
+         'scope': 'saved_single_client_evidence_and_identity_only'}
+ finally:
+     for relative in sorted(files):

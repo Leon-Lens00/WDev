@@ -1,0 +1,135 @@
+{
+  "UnitWeapons_path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Units/UnitWeapons.slk",
+  "UnitWeapons_sha256": "03c9cbc02d703cf5f8b5b1ed4da789ffcf733aff44f8e2f70b7937e4de613b33",
+  "stock_oshm_castpt": "0.6",
+  "stock_oshm_castbsw": "1.4",
+  "controller_base05_mods": [
+    {
+      "field": "unam",
+      "type": 3,
+      "level": 0,
+      "pointer": 0,
+      "value": "Rapid Fire Controller",
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "uaen",
+      "type": 0,
+      "level": 0,
+      "pointer": 0,
+      "value": 0,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "uabi",
+      "type": 3,
+      "level": 0,
+      "pointer": 0,
+      "value": "A00G",
+      "end": "\u0000\u0000\u0000\u0000"
+    }
+  ],
+  "A00G_base05_mods": [
+    {
+      "field": "anam",
+      "type": 3,
+      "level": 0,
+      "pointer": 0,
+      "value": "Rapid Fire Point Probe",
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "alev",
+      "type": 0,
+      "level": 0,
+      "pointer": 0,
+      "value": 1,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "aher",
+      "type": 0,
+      "level": 0,
+      "pointer": 0,
+      "value": 0,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "acdn",
+      "type": 2,
+      "level": 1,
+      "pointer": 0,
+      "value": 0.0,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "amcs",
+      "type": 0,
+      "level": 1,
+      "pointer": 0,
+      "value": 0,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "aran",
+      "type": 2,
+      "level": 1,
+      "pointer": 0,
+      "value": 99999.0,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "Ncl1",
+      "type": 2,
+      "level": 1,
+      "pointer": 1,
+      "value": 0.0,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "Ncl2",
+      "type": 0,
+      "level": 1,
+      "pointer": 2,
+      "value": 2,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "Ncl3",
+      "type": 0,
+      "level": 1,
+      "pointer": 3,
+      "value": 0,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "Ncl4",
+      "type": 2,
+      "level": 1,
+      "pointer": 4,
+      "value": 0.9800000190734863,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "Ncl5",
+      "type": 0,
+      "level": 1,
+      "pointer": 5,
+      "value": 1,
+      "end": "\u0000\u0000\u0000\u0000"
+    },
+    {
+      "field": "Ncl6",
+      "type": 3,
+      "level": 1,
+      "pointer": 6,
+      "value": "channel",
+      "end": "\u0000\u0000\u0000\u0000"
+    }
+  ],
+  "merged_o001_castpt": "0.6",
+  "merged_o001_castbsw": "1.4",
+  "A00G_acas1_inherited": 0,
+  "ability_casttime_change_required_from_static_data": false,
+  "reason": "base05 has no unit timing or acas override; ANcl Cast1=0; Ncl1 follow-through override0; native effect latency remains unknown until R03"
+}

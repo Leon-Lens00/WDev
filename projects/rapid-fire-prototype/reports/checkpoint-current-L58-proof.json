@@ -1,0 +1,28 @@
+{
+  "currentFeaturePath": "odd/tasks/rapid-fire-prototype-current.md",
+  "payloadPath": "projects/rapid-fire-prototype/reports/checkpoint-current-L58-payload.txt",
+  "sourceBytes": 10602,
+  "payloadBytes": 10602,
+  "sourceSHA256": "d06b3aa51fa53adc37dd43920cfb338fa6aa3b71ae4e7b3aa4050e6aa0d4792f",
+  "payloadSHA256": "d06b3aa51fa53adc37dd43920cfb338fa6aa3b71ae4e7b3aa4050e6aa0d4792f",
+  "exactCopyVerified": true,
+  "archiveSHA256": "9452f9bd6d44c2842658411ae6bbf84d099a1bb9ffd1d250fcdac10709da3c98",
+  "archiveUnchanged": true,
+  "specsUnchanged": true,
+  "existingLogUnchanged": true,
+  "L58characters": 405,
+  "passivelyDerivedCounts": {
+    "PASS": 11,
+    "OBS": 28,
+    "FAIL": 1,
+    "SKIP": 0
+  },
+  "ABORTrecords": 1,
+  "recordCount": 40,
+  "statusCountsMatch": true,
+  "mirrorStatus": "EXACT_MIRROR_SAVED",
+  "savedId": 57,
+  "providerResult": {"id": 57, "status": "saved"},
+  "project": "wdev",
+  "topic_key": "odd/rapid-fire-prototype/tasks"
+}

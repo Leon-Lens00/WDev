@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+    "wc3ctl",
+    "file",
+    "set",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/manual/runs/inv-manual-20261019-01/input.w3x",
+    "war3map.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/manual/runs/inv-manual-20261019-01/assembled.j",
+    "--out",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/manual/runs/inv-manual-20261019-01/injected.w3x",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 474182 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/manual/runs/inv-manual-20261019-01/injected.w3x\"\n}\n",
+  "stderr": ""
+}

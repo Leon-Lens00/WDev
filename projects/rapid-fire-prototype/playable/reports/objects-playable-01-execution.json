@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+    "--base",
+    "projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+    "--recipe",
+    "projects/rapid-fire-prototype/playable/base/objects-playable.json",
+    "--out",
+    "projects/rapid-fire-prototype/playable/base/playable-01.w3x",
+    "--evidence",
+    "projects/rapid-fire-prototype/playable/reports/objects-playable-01"
+  ],
+  "started": 1792535907.83888,
+  "finished": 1792535908.4242847,
+  "exit": 0
+}

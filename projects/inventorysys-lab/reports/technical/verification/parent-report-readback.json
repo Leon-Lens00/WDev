@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "kind": "existing-record structural readback only",
+  "observed_at": 1792453525.430765,
+  "engine_aggregate": {
+    "cases": 60,
+    "pass": 142,
+    "fail": 161,
+    "obs": 68,
+    "skip": 0
+  },
+  "seven_closure_records_match": true,
+  "gui_remains_unproved": true,
+  "functional_rerun": false,
+  "new_process_or_gui_check": false,
+  "native_approval": false
+}

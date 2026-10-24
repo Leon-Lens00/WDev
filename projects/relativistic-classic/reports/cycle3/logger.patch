@@ -1,0 +1,43 @@
+--- Support.j.before
++++ Support.j.after
+@@ -1,5 +1,6 @@
+-library LabSupport requires LabConfig, Missiles
++library LabSupport initializer InitSnapshot requires LabConfig, Missiles
+     globals
++        private trigger snapshotTrigger = null
+         private string array lines
+         private integer lineCount = 0
+         private integer checks = 0
+@@ -38,11 +39,9 @@
+         integer RM_LIMIT = 8
+     endglobals
+ 
+-    function RM_Log takes string text returns nothing
++    private function FlushSnapshot takes nothing returns boolean
+         local integer i = 0
+-        set lines[lineCount] = "RM28|" + RM_RUN_ID + "|" + text
+-        set lineCount = lineCount + 1
+-        // Rewrite the complete bounded snapshot: a crash never erases previous cases.
++        // Same immediate cumulative snapshot, evaluated outside the caller context.
+         call PreloadGenClear()
+         call PreloadGenStart()
+         loop
+@@ -51,6 +50,18 @@
+             set i = i + 1
+         endloop
+         call PreloadGenEnd(RM_LOG_FILE)
++        return true
++    endfunction
++
++    private function InitSnapshot takes nothing returns nothing
++        set snapshotTrigger = CreateTrigger()
++        call TriggerAddCondition(snapshotTrigger, Condition(function FlushSnapshot))
++    endfunction
++
++    function RM_Log takes string text returns nothing
++        set lines[lineCount] = "RM28|" + RM_RUN_ID + "|" + text
++        set lineCount = lineCount + 1
++        call TriggerEvaluate(snapshotTrigger)
+     endfunction
+ 
+     function RM_Begin takes nothing returns nothing

@@ -1,0 +1,41 @@
+{
+  "through_log": 66,
+  "document": "odd/tasks/rapid-fire-prototype-current.md",
+  "payload": "projects/rapid-fire-prototype/reports/checkpoint-current-L66-payload.txt",
+  "bytes": 18207,
+  "sha256": "e8518f1d317c770f12d7b16dfb21f0b09103f31f34ec7fa921e4587b146995f8",
+  "literal_payload_byte_equal": true,
+  "archive": "odd/tasks/rapid-fire-prototype.md",
+  "archive_bytes": 89082,
+  "archive_sha256": "9452f9bd6d44c2842658411ae6bbf84d099a1bb9ffd1d250fcdac10709da3c98",
+  "archive_preserved": true,
+  "specs_and_prior_log_preserved_at_edit": true,
+  "validation": "Finite archival SHA/mtime and local whole-payload equality only; no new test/build/reader/gameplay",
+  "provider_receipt": {
+    "id": 57,
+    "status": "saved"
+  },
+  "provider_readback_performed": false,
+  "mirror_status": "EXACT_L66_LITERAL_SAVE_RECEIPT_OBSERVED_AFTER_ONE_TRANSCRIPTION_CORRECTION",
+  "archive_evidence_count": 10,
+  "result_verdict": "FAIL_SCOPED_FIXTURE_F1_S24_UNMET_PARTIAL_S3_UNRUN",
+  "l66_characters": 694,
+  "first_save_receipt": {
+    "id": 57,
+    "status": "saved"
+  },
+  "first_literal_save_byte_equal": false,
+  "first_literal_save_sha256": "9fc5c086d8910197dac467857a889d59bbace099573d6cac0384577c1fbfaa63",
+  "first_literal_save_bytes": 18207,
+  "first_literal_save_error": "S16 literal transcription: se manda el acion instead of se manda la acion; local Specs untouched. One corrected full literal save required.",
+  "save_calls_sent": 2,
+  "corrected_full_literal_save_calls": 1,
+  "corrected_literal_transcription": "S16 restored to se manda la acion de disparar; full literal content sent to mem_save",
+  "local_document_payload_byte_equality_rechecked": true,
+  "provider_sent_payload_mechanical_capture": false,
+  "provider_content_readback": false,
+  "specs_prior_logs_byte_preserved": true,
+  "preserved_original_files": 100,
+  "preserved_scratch_files": 10,
+  "archive_manifest_sha256": "e661b2dd999a9016002160344ac82a747e460f31131b3c67160df85d7069d3a9"
+}

@@ -1,0 +1,260 @@
+{
+  "attempt": "02",
+  "status": "PREPARED_TREE_RED",
+  "scope": "partial S3, Tree harness preparation only",
+  "command_argv": [
+    "python3",
+    "-B",
+    "-"
+  ],
+  "timeout_seconds": 30,
+  "compiler_native_run": false,
+  "baseline_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j": "7184bd4cd7ceef0fd3c04b0e776e90a64a82ed23e8e65dce1f6f0e924dcfdcc7",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimNativeTest.j": "262d8584be5a5b76840949816955a9f708b03a5f56f74046c562a1fa392d5070",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimLogRed01.j": "2be7fc087074ee38cea5ecc0ece9d60b32945bd1345d24c4f059d0206a1b4ac6",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimMapMainRed01.j": "31b6ed2efcfde956db5389c5a2579e5b9badfa8736811a41eeba8eab5b06c639",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/README.md": "44acf1f29d6ef66c78a1255810177fa9f2f6678d066a96bb0148b4bfc4d571ca"
+  },
+  "source_artifacts": [
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "lines": 598,
+      "sha256": "f7cc54108d5da7fe059b0262e84d097b2a6690d98a6ad1173a7b7573af9d6afa"
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j",
+      "lines": 67,
+      "sha256": "f82c6fc0436c90f35750ac2fa10eb91903a656b6c93a0a4645a52bbc94d3c420"
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed01.j",
+      "lines": 35,
+      "sha256": "36ef5aed46cf580254913e495cf813dca2a9d586554949686c30f016532b2e8e"
+    }
+  ],
+  "lint_findings": [
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 154,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 165,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 185,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 431,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 432,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 433,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 434,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 442,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 445,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 447,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 449,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 450,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 451,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 459,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 592,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 593,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j",
+      "line": 34,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j",
+      "line": 35,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    }
+  ],
+  "lint_errors": 0,
+  "lint_warnings": 18,
+  "unknown_API_calls": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": [],
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j": [],
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed01.j": []
+  },
+  "native_type_local_name_collisions": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": [],
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j": [],
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed01.j": []
+  },
+  "classic_API_sha256": {
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c"
+  },
+  "plan_sha256": "93ac6924883aeed1a6c60d815ce931332e4c2221c9c24b0947048bac455879c3",
+  "input_pins": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j": "f82c6fc0436c90f35750ac2fa10eb91903a656b6c93a0a4645a52bbc94d3c420",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": "f7cc54108d5da7fe059b0262e84d097b2a6690d98a6ad1173a7b7573af9d6afa",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed01.j": "36ef5aed46cf580254913e495cf813dca2a9d586554949686c30f016532b2e8e"
+  },
+  "build_argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py",
+    "build",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+    "--wc3",
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "--timer-utils",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "--world-bounds",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "--dummy-recycler",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "--core",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "--bootstrap",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed01.j",
+    "--output-dir",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build",
+    "--run-id",
+    "rf-burst-tree-red-20261020-01",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+    "--entry",
+    "RF_StartTreeTest"
+  ],
+  "build_shell": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py build --base /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x --wc3 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 --timer-utils /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j --world-bounds /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j --dummy-recycler /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j --core /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j --bootstrap /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed01.j --output-dir /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build --run-id rf-burst-tree-red-20261020-01 --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j --entry RF_StartTreeTest",
+  "reader_argv_template": [
+    "python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-tree-red-20261020-01.txt",
+    "--run-id",
+    "rf-burst-tree-red-20261020-01",
+    "--not-before",
+    "PARENT_RECORDED_LAUNCH_UNIX_SECONDS",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-reader.json"
+  ],
+  "historical_source_preserved": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j": true,
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimNativeTest.j": true,
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimLogRed01.j": true,
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimMapMainRed01.j": true,
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": true
+  },
+  "README_after_sha256": "dcde523f92959f4493d7ddca844bbdaea4bf331fac64b5227ec3f6d0e10c90ef",
+  "README_historical_content_preserved": "Prefix writer retained original text; separate historical-suffix hash comparison NOT RUN (the inline suffix expression was not an independent preservation check)",
+  "strongest_current_status": "Scanned",
+  "pending_checks": [
+    "JassHelper compile",
+    "pJASS",
+    "archive round-trip",
+    "qualified native absent/present run",
+    "public native log reader",
+    "full T3 integration",
+    "future independent verification"
+  ],
+  "exit_code": 0
+}

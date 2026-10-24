@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "wc3ctl",
+    "object",
+    "new",
+    "projects/relativistic-classic/baseline/original.w3x",
+    "unit",
+    "oshm",
+    "--out",
+    "projects/rapid-fire-prototype/base/01-actor.w3x",
+    "--json"
+  ],
+  "exit": 1
+}

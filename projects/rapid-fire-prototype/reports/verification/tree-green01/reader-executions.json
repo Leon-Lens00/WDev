@@ -1,0 +1,34 @@
+[
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/read_logs.py",
+      "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/RF-rf-burst-tree-red-20261020-05.txt",
+      "--run-id",
+      "rf-burst-tree-red-20261020-05",
+      "--not-before",
+      "1792531146.6349857",
+      "--report",
+      "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/red-report.json"
+    ],
+    "exit_code": 1,
+    "timeout_seconds": 20
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/read_logs.py",
+      "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/RF-rf-burst-tree-green-20261020-01.txt",
+      "--run-id",
+      "rf-burst-tree-green-20261020-01",
+      "--not-before",
+      "1792532680.9873888",
+      "--report",
+      "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/green-report.json"
+    ],
+    "exit_code": 0,
+    "timeout_seconds": 20
+  }
+]

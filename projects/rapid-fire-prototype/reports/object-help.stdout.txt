@@ -1,0 +1,29 @@
+Description:
+  Object data queries.
+
+Usage:
+  wc3ctl object [command] [options]
+
+Options:
+  --json                 Emit machine-readable JSON.
+  --game-dir <game-dir>  Warcraft III install directory (overrides auto-detection).
+  -?, -h, --help         Show help and usage information
+
+Commands:
+  form <map> <rawcode>                        Show an object the way an editor should: fields grouped and ordered like the World Editor, fields that do not apply to this object hidden, legal ranges shown, and which object-data layer each field is written to.
+  get <map> <rawcode>                         Get an object's merged fields (base game data ⊕ map deltas).
+  list <map>                                  List the map's custom/modified objects of one kind.
+  set <map> <rawcode> <field> <value>         Set an object field (any kind) and save the edited map.
+  new <map> <kind> <base>                     Create a custom object derived from a base rawcode and save the edited map. Prints the fresh rawcode.
+  search <map> <query>                        Search every custom/modified object's field values (base and map) for text. Read-only.
+  noop-fields <map>                           List fields whose map value equals the base game value, so the edit changes nothing. Read-only. Needs --game-dir for the base, or it reports map-only.
+  deprecated <map>                            List object fields the target build's schema does not define but the map still sets. Read-only.
+  rawcode-suggest <map> <kind>                Propose free four-character rawcodes that collide with neither the map nor the base game data for the kind. Read-only.
+  clone <map> <kind> <rawcode> <new-rawcode>  Deep-clone a map object (its field deltas, and level data for an ability) under a new rawcode and save the edited map. Refuses a rawcode already taken.
+  migrate <map>                               Rewrite the map's object data to the target build's field set, dropping fields the target does not define and reporting each drop. Saves an edited copy.
+  bulk-set <map>                              Set one field on every object of a kind matching every --where clause, and save the edited copy. Reports how many changed.
+  export <map>                                Export the objects of a kind (base game data overlaid by the map) to CSV, one row per object, one column per field code. Read-only.
+  import <map>                                Import a CSV of one kind back into the map, adding or updating its objects. Refuses an unknown column. Saves an edited copy.
+  rename <map> <old> <new>                    Rename an object rawcode and optionally rewrite every field and script literal that references it. Saves an edited copy.
+  options <field>                             The legal values for an object field, taken from what the base game data uses for it. Ask before 'object set' on an enumerated field.
+

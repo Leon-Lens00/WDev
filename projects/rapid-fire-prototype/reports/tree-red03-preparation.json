@@ -1,0 +1,264 @@
+{
+  "unchanged_functions": [
+    "Scan",
+    "OnShot",
+    "OnDamage",
+    "OnSpell",
+    "Assess",
+    "At",
+    "Bodies",
+    "LiveOwned",
+    "InWorld",
+    "TreeWitness",
+    "FlightsClear",
+    "Corridor",
+    "VisitTree",
+    "RF_StartTreeTest",
+    "Abort",
+    "Deadline"
+  ],
+  "preservation": [
+    {
+      "path": "projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "frozen_intact": true,
+      "original_intact": false,
+      "intentional_harness_change": true
+    },
+    {
+      "path": "projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/src/prototype/PairCore.j",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/build-plan-tree-red02.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-build.exit.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-build.stderr.txt",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-build.stdout.txt",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-native-launch.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-native-launch.stderr.txt",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-native-launch.stdout.txt",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-native-reader.exit.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-native-reader.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-native-reader.stderr.txt",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-native-reader.stdout.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-observer.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-preparation.md",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-profile-preflight.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-results.md",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-static-stderr.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-static-stdout.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/tree-red02-static.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-02.txt",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-02/build.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-02/command-1.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-02/command-2.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-02/commands.json",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-02/compiled.j",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-02/entry.j",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-02/injected.w3x",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    },
+    {
+      "path": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-02/rf-burst-tree-red-20261020-02.w3x",
+      "frozen_intact": true,
+      "original_intact": true,
+      "intentional_harness_change": false
+    }
+  ],
+  "source_hashes": {
+    "projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": "e59a527bd7104004a6efbde20a76546e2e64b9fc1b384035013337c11b477b6a",
+    "projects/rapid-fire-prototype/src/prototype/TreeLogRed03.j": "1200bbcd862bd7e9f1a2d8b6b73002b445562d99b97d035002e20fbf74058dfc",
+    "projects/rapid-fire-prototype/src/prototype/TreeMapMainRed03.j": "dfa26b0b75cdb23fe622cc1434d084ab0c69c31806f9358f4b6b04d9b246b101",
+    "projects/rapid-fire-prototype/src/prototype/PairCore.j": "770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3",
+    "projects/rapid-fire-prototype/build-plan-tree-red03.json": "1e54209b6a957c9bda3490cc7aaf71c787ab8270b6deea138159841aa0212e67"
+  },
+  "harness_diff": "--- frozen-tree-red02/TreeNativeTest.j\n+++ TreeNativeTest.j\n@@ -1,5 +1,6 @@\n library RFBurstTreeTest requires RFBurstLog, RFBurstPair\n-    // Two fresh scenes, adapted from BurstNativeTest (not the Aim suite).\n+    // Two cases on the same bodies/pair/hooks; only the live tree is added.\n+    // Adapted from BurstNativeTest (not the Aim suite).\n     // Collection entries are borrowed ONLY during a fresh bounded scan.\n     globals\n         private constant real PERIOD = .03125\n@@ -60,6 +61,8 @@\n         private real corridorY = 0.\n         private real array absentX\n         private real array absentY\n+        private unit array stableBody\n+        private integer array stableId\n     endglobals\n \n     private function Pose takes unit u returns string\n@@ -75,7 +78,8 @@\n     endfunction\n \n     private function RemoveScene takes nothing returns nothing\n-        // Called only AFTER the finite observation, or explicit fixture abort.\n+        // Final cleanup only, AFTER observation or explicit fixture abort.\n+        // Never used between the absent and present cases.\n         call RB_Dispose()\n         if damageHook != null then\n             call DestroyTrigger(damageHook)\n@@ -111,6 +115,10 @@\n         set target = null\n         set control = null\n         set tree = null\n+        set stableBody[0] = null\n+        set stableBody[1] = null\n+        set stableBody[2] = null\n+        set stableBody[3] = null\n         call RB_LogComplete()\n     endfunction\n \n@@ -227,11 +235,23 @@\n         return corridorOK and ownedTrees == scene\n     endfunction\n \n+    private function IdentityText takes nothing returns string\n+        return \"actor=\"+I2S(GetHandleId(actor))+\"/\"+I2S(stableId[0])+\" controller=\"+I2S(GetHandleId(caster))+\"/\"+I2S(stableId[1])+\" enemy=\"+I2S(GetHandleId(target))+\"/\"+I2S(stableId[2])+\" control=\"+I2S(GetHandleId(control))+\"/\"+I2S(stableId[3])+\" actual/baseline\"\n+    endfunction\n+\n+    private function SameBodies takes nothing returns boolean\n+        return actor == stableBody[0] and caster == stableBody[1] and target == stableBody[2] and control == stableBody[3] and GetHandleId(actor) == stableId[0] and GetHandleId(caster) == stableId[1] and GetHandleId(target) == stableId[2] and GetHandleId(control) == stableId[3]\n+    endfunction\n+\n     private function SceneReady takes nothing returns boolean\n         // Same predicate order/short circuit; OBS identifies the first failure.\n         if not Bodies() then\n             return GateFailure(\"body-contract\",\"actor \"+Pose(actor)+\" caster \"+Pose(caster)+\" target \"+Pose(target)+\" control \"+Pose(control))\n         endif\n+        if not SameBodies() then\n+            return GateFailure(\"body-identity\",IdentityText())\n+        endif\n+        call RB_LogRecord(\"OBS\",\"same-body-identity\",IdentityText())\n         if not At(actor,AX,AY) then\n             return GateFailure(\"actor-placement\",\"expected=\"+R2S(AX)+\",\"+R2S(AY)+\" tolerance1 actual \"+Pose(actor))\n         endif\n@@ -275,8 +295,13 @@\n             set absentY[1] = GetUnitY(target)\n             set absentX[2] = GetUnitX(control)\n             set absentY[2] = GetUnitY(control)\n+            set absentX[3] = GetUnitX(caster)\n+            set absentY[3] = GetUnitY(caster)\n         elseif RAbsBJ(GetUnitX(actor)-absentX[0]) > .01 or RAbsBJ(GetUnitY(actor)-absentY[0]) > .01 or RAbsBJ(GetUnitX(target)-absentX[1]) > .01 or RAbsBJ(GetUnitY(target)-absentY[1]) > .01 or RAbsBJ(GetUnitX(control)-absentX[2]) > .01 or RAbsBJ(GetUnitY(control)-absentY[2]) > .01 then\n             return GateFailure(\"same-actual-scenes\",\"tolerance.01; actor \"+Pose(actor)+\" enemy \"+Pose(target)+\" control \"+Pose(control))\n+        endif\n+        if scene == 1 and (RAbsBJ(GetUnitX(caster)-absentX[3]) > .01 or RAbsBJ(GetUnitY(caster)-absentY[3]) > .01) then\n+            return GateFailure(\"same-actual-controller\",\"tolerance.01; controller \"+Pose(caster))\n         endif\n         // Terrain path flags are NOT missile obstruction. Owned tree pathing is\n         // expected, not an unintended blocker. Native contacts qualify the ray.\n@@ -466,7 +491,8 @@\n         return qualified and effects and lifetime and cadence and projectilesOK and shots == 4 and liveCount == 0 and bodiesOK and Bodies() and controlHits == 0\n     endfunction\n \n-    private function CreateScene takes nothing returns nothing\n+    private function ResetCase takes nothing returns nothing\n+        // Invoked for R07 ONLY after old flight closure is proven.\n         set fault = \"\"\n         set qualified = false\n         set shots = 0\n@@ -479,6 +505,15 @@\n         set projectilesOK = true\n         set bodiesOK = true\n         set treeOK = true\n+        set calibrationHP = 0.\n+        set calibrationDamage = 0.\n+        set calibrationSource = false\n+        set calibrated = false\n+        set phase = 0\n+    endfunction\n+\n+    private function CreateScene takes nothing returns nothing\n+        call ResetCase()\n         set actor = CreateUnit(Player(0),'o000',AX,AY,0.)\n         set caster = CreateUnit(Player(0),'o001',-5500.,-5500.,0.)\n         set target = CreateUnit(Player(1),'o000',AX+512.,AY,0.)\n@@ -486,10 +521,15 @@\n         call PauseUnit(target,true)\n         call PauseUnit(control,true)\n         set tree = null\n-        if scene == 1 then\n-            set tree = CreateDestructable('LTlt',AX+128.,AY,0.,1.,0)\n-            set treeStart = GetDestructableLife(tree)\n-        endif\n+        set stableBody[0] = actor\n+        set stableBody[1] = caster\n+        set stableBody[2] = target\n+        set stableBody[3] = control\n+        set stableId[0] = GetHandleId(actor)\n+        set stableId[1] = GetHandleId(caster)\n+        set stableId[2] = GetHandleId(target)\n+        set stableId[3] = GetHandleId(control)\n+        call RB_LogRecord(\"OBS\",\"baseline-body-identity\",IdentityText())\n         set damageHook = CreateTrigger()\n         call TriggerRegisterUnitEvent(damageHook,target,EVENT_UNIT_DAMAGED)\n         call TriggerRegisterUnitEvent(damageHook,control,EVENT_UNIT_DAMAGED)\n@@ -506,36 +546,28 @@\n         set phase = 0\n     endfunction\n \n-    private function RemovedAbsent takes nothing returns boolean\n-        local group g = CreateGroup()\n-        local unit u\n-        local integer n = 0\n-        local integer site = 0\n-        local boolean ok = GetUnitTypeId(actor) == 0 and GetUnitTypeId(caster) == 0 and GetUnitTypeId(target) == 0 and GetUnitTypeId(control) == 0\n+    private function PreviousFlightsClosed takes nothing returns boolean\n+        local integer serial = 1\n+        // Keep old counters/tokens/brackets intact until this fresh scan passes.\n+        call Scan(0)\n+        if fault != \"\" then\n+            return GateFailure(\"old-flight-scan\",fault)\n+        endif\n+        if not absentPassed or shots != 4 or castEvents != 1 then\n+            return GateFailure(\"old-flight-baseline\",\"absentPassed=\"+BoolText(absentPassed)+\" shots=\"+I2S(shots)+\" effects=\"+I2S(castEvents))\n+        endif\n+        if not FlightsClear() then\n+            return false\n+        endif\n         loop\n-            exitwhen site > 1\n-            if site == 0 then\n-                call GroupEnumUnitsInRange(g,AX+256.,AY+256.,1024.,null)\n-            else\n-                call GroupEnumUnitsInRange(g,-5500.,-5500.,128.,null)\n-            endif\n-            loop\n-                set u = FirstOfGroup(g)\n-                exitwhen u == null\n-                call GroupRemoveUnit(g,u)\n-                set n = n+1\n-                if u == actor or u == caster or u == target or u == control or n > 256 then\n-                    set ok = false\n-                endif\n-                exitwhen n > 256\n-            endloop\n-            set site = site+1\n+            exitwhen serial > 4\n+            if not closed[serial] or firstAbsent[serial] < birth[serial] then\n+                return GateFailure(\"old-flight-closure\",\"serial=\"+I2S(serial)+\" closed=\"+BoolText(closed[serial])+\" birth=\"+R2S(birth[serial])+\" firstAbsent=\"+R2S(firstAbsent[serial]))\n+            endif\n+            set serial = serial+1\n         endloop\n-        call DestroyGroup(g)\n-        set g = null\n-        set u = null\n-        call Scan(0)\n-        return ok and fault == \"\" and liveCount == 0\n+        call RB_LogRecord(\"OBS\",\"old-four-flights-closed\",\"fresh source count0; four observed absence brackets retained; no dispose/removal/reset before clearance\")\n+        return true\n     endfunction\n \n     private function Tick takes nothing returns nothing\n@@ -546,14 +578,22 @@\n             return\n         endif\n         if phase == 6 then\n-            // Next-tick native type AND group absence, no wait/retry/fallback.\n-            if not RemovedAbsent() then\n-                call Abort(\"old bodies/flights not absent on next tick\")\n+            // One next-tick check, no wait/retry/fallback or body recreation.\n+            if not PreviousFlightsClosed() then\n+                call Abort(\"old flights not proven closed before live tree\")\n+                return\n+            endif\n+            if not SameBodies() or not Bodies() then\n+                call RB_LogRecord(\"OBS\",\"transition-body-identity\",IdentityText())\n+                call Abort(\"stable live-owned bodies unavailable before live tree\")\n                 return\n             endif\n             set scene = 1\n             call RB_LogCase(\"R07-live-tree-termination\")\n-            call CreateScene()\n+            call RB_LogRecord(\"OBS\",\"retained-body-identity\",IdentityText())\n+            call ResetCase()\n+            set tree = CreateDestructable('LTlt',AX+128.,AY,0.,1.,0)\n+            set treeStart = GetDestructableLife(tree)\n             return\n         endif\n         call Scan(0)\n@@ -623,7 +663,7 @@\n                         call Abort(\"absent positive failed; present contrast not admitted\")\n                         return\n                     endif\n-                    call RemoveScene()\n+                    // Keep bodies, pair and observer registrations intact.\n                     set phase = 6\n                 else\n                     // Missing early extinction/HP prevention on admitted fixture\n",
+  "status": "Scanned",
+  "command": "python3 -B - (bounded inline source/API/integrity checks)",
+  "timeout_seconds": 30,
+  "exit_code": 0,
+  "stdout": "PASS strict admission primitives, calibration/event handlers, public borrowing/reuse/closure sampling, lifetime/cadence/HP oracle and bounds unchanged\nPASS all prior readiness predicates/diagnostics retained; identity and controller continuity added\nPASS single stable-body/pair/hook lifetime; fresh fail-closed four-flight clearance precedes reset/tree; no position coercion\nPASS original case-counter resets reused, calibration state explicitly cleared; no old serial reset before closure\nPASS no newly introduced external/native API calls; local names avoid JASS reserved types (not compiler validation)\nPASS 31 frozen SHA256/mtime/size artifacts intact; 30 originals unchanged; sole intentional original change TreeNativeTest.j\nPASS ten build input pins/Core770; label-only logger/bootstrap and builder argv changes; same two cases/oracle\n",
+  "stderr": "",
+  "native_red": "PENDING, not observed; Tree02 ABORT is not RED",
+  "compiler": "NOT RUN",
+  "native": "NOT RUN",
+  "specs": "T2 partial S3; no S1-S23 completion",
+  "scratch_paths": [],
+  "executions": [
+    {
+      "command": "python3 -B -",
+      "purpose": "exclusive Tree02 freeze before source edit",
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "FROZEN 31 Tree02 artifacts; SHA256/mtime/size verified; exclusive creation\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 -B -",
+      "purpose": "Tree03 label variants and plan preparation",
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "PREPARED Tree03 logger/bootstrap/plan; fresh pins recorded; no build or native execution\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 -B -",
+      "purpose": "single bounded source/API/integrity check",
+      "timeout_seconds": 30,
+      "exit_code": 0,
+      "stdout": "PASS strict admission primitives, calibration/event handlers, public borrowing/reuse/closure sampling, lifetime/cadence/HP oracle and bounds unchanged\nPASS all prior readiness predicates/diagnostics retained; identity and controller continuity added\nPASS single stable-body/pair/hook lifetime; fresh fail-closed four-flight clearance precedes reset/tree; no position coercion\nPASS original case-counter resets reused, calibration state explicitly cleared; no old serial reset before closure\nPASS no newly introduced external/native API calls; local names avoid JASS reserved types (not compiler validation)\nPASS 31 frozen SHA256/mtime/size artifacts intact; 30 originals unchanged; sole intentional original change TreeNativeTest.j\nPASS ten build input pins/Core770; label-only logger/bootstrap and builder argv changes; same two cases/oracle\n",
+      "stderr": ""
+    }
+  ],
+  "prior_outcome": {
+    "run": "rf-burst-tree-red-20261020-02",
+    "complete": [
+      2,
+      40,
+      1,
+      0
+    ],
+    "R06": "qualified 4 shots/4 hits/HP differential40",
+    "R07": "ABORT enemy expected(-2624,2624), actual(-2608,2608), before calibration/order/cast; cause unknown"
+  }
+}

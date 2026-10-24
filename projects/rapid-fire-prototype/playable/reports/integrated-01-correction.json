@@ -1,0 +1,108 @@
+{
+  "status": "Scanned",
+  "qualification": "NOT_NATIVE_VERIFIED",
+  "specs": [
+    "S1",
+    "S13",
+    "S15",
+    "S16",
+    "S28"
+  ],
+  "native_evidence": {
+    "log": "projects/rapid-fire-prototype/playable/reports/RF-rfp-integrated-20261020-01.txt",
+    "complete": "1/3/1/0",
+    "observed": "I01 OBS admission actual actor -3136,2624; PASS native-controller-move; FAIL composite ABORT before any spell. Only one of nine cases reached.",
+    "parent_reported_build": "candidate01 JassHelper/pJASS/archive exit0; not rerun by worker",
+    "not_proven": "Which Bodies predicate failed; controller displacement or ownership failure cannot be inferred from the composite message."
+  },
+  "hypothesis": "A self-Stop nested inside issued Move/Smart can be overwritten by outer native order dispatch. This is a source-level cancellation flaw; actual candidate01 failing predicate remains unknown.",
+  "changes": [
+    "Save and command controller native speed0 while paired; restore old local speed snapshot before disposal order callbacks",
+    "Defer only revision-matched actual current Move/Smart stops to existing timer; newer Channel/Stop invalidates pending work",
+    "Hold actor native speed0 during bursts for direct-actor outer-order protection; validated script XY still350, native350 restored on exhaustion/cancellation",
+    "Controller movement during burst no longer redundantly stops actor; direct actor walk cancellation/facing takeover occurs once outside dispatch",
+    "Preserve all nine cases and strict anchor tolerance; add exact first-failed predicate and both full native body snapshots",
+    "Measure logical XY unchanged and actor pre-cast/native-resume displacement; verify speed restoration at observer Dispose/reinitialize",
+    "Fresh run02 logger/plan; historical01 inputs/plans/maps/log untouched"
+  ],
+  "remaining_uncertainties": [
+    "Native SetUnitMoveSpeed0 translation inhibition/getter/selection/casting semantics require next engine run; setters and static checks are not proof",
+    "Order revision/deferred Stop and actor animation/facing need native verification",
+    "No compiler, game, process, GUI or application closure executed by worker"
+  ],
+  "tool_errors": [
+    "Initial Log.j edit rejected for nonunique oldText; no write occurred; retried with unique declaration and filename context."
+  ],
+  "validation": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-c",
+        "import hashlib,json,pathlib,re\nr=pathlib.Path(\"projects/rapid-fire-prototype/playable\")\nnames=[\"Config\",\"PairCore\",\"Controls\",\"Demo\",\"IntegratedTest\",\"Log\",\"MapMain\",\"TestMapMain\"]\ns={n:(r/\"src\"/(n+\".j\")).read_text() for n in names}\nchecks={}\nchecks[\"all-eight-sources-utf8-no-bom\"]=all(not t.startswith(\"\\ufeff\") for t in s.values())\nchecks[\"balanced-function-blocks\"]=all(len(re.findall(r\"(?m)^\\s*(?:private )?function \",t))==len(re.findall(r\"(?m)^\\s*endfunction\\b\",t)) for t in s.values())\nchecks[\"balanced-method-blocks\"]=all(len(re.findall(r\"(?m)^\\s*(?:private )?(?:static )?method \",t))==len(re.findall(r\"(?m)^\\s*endmethod\\b\",t)) for t in s.values())\nchecks[\"no-modern-userdata-exit-or-nested-imports\"]=not any(re.search(r\"\\b(?:Blz\\w*|FourCC|SetUnitUserData|ExitProcess|EndGame)\\s*\\(|^\\s*//!\\s*import\",t,re.M) for t in s.values())\nchecks[\"shown-unpaused-controller\"]=not any(re.search(r\"call\\s+(?:ShowUnit|PauseUnit)\\((?:actor|visible|logical|controller)\",t) for t in s.values())\nc=s[\"PairCore\"]\nchecks[\"actual-terrain-and-world-dispatch\"]=all(x in c for x in [\"method onTerrain takes nothing returns boolean\",\"method onBoundaries takes nothing returns boolean\"]) and \"method onCliff\" not in c\nstep=c[c.index(\"private function OnMove \"):c.index(\"private function ResumeNative \")]\nchecks[\"no-per-step-facing-animation-or-orders\"]=not any(x in step[step.index(\"if not goal then\"):] for x in [\"SetUnitFacing\",\"SetUnitAnimation\",\"IssuePointOrder\",\"IssueImmediateOrder\"])\nchecks[\"single-order-dispatch-condition\"]=c.count(\"TriggerAddCondition(orderHook,\")==1 and \"function OnOrder\" in c\nchecks[\"legacy-abi-preserved\"]=all(\"function \"+n+\" takes\" in c for n in [\"RB_GetShotMissile\",\"RB_GetShotSource\",\"RB_GetShotX\",\"RB_GetShotY\",\"RB_InitializePair\",\"RB_Dispose\"])\nmain=lambda t:t[t.index(\"function main takes\"):]\nchecks[\"identical-world-main\"]=main(s[\"MapMain\"])==main(s[\"TestMapMain\"])\nchecks[\"integrated-run-id\"]= \"rfp-integrated-20261020-02\" in s[\"Log\"] and \"RF-rfp-integrated-20261020-02.txt\" in s[\"Log\"]\nfor name,entry in [(\"test01\",\"RF_StartIntegratedTest\"),(\"playable01\",\"RF_StartDemo\")]:\n p=json.loads((r/(\"build-plan-\"+name+\".json\")).read_text());a=p[\"argv\"]\n checks[\"plan-\"+name+\"-entry\"]=a[a.index(\"--entry\")+1]==entry\n checks[\"plan-\"+name+\"-pending-base-pin\"]=p[\"base_sha256\"] is None\n if name==\"playable01\": checks[\"playable-excludes-battery\"]=not any(\"IntegratedTest.j\" in v or \"Log.j\" in v for v in a)\nseed=pathlib.Path(\"projects/rapid-fire-prototype/src/prototype/PairCore.j\")\nchecks[\"preserved-tested-Core6442\"]=hashlib.sha256(seed.read_bytes()).hexdigest()==\"6442b4b2afbaa48c3090789ed63e934938039e1c459c3944bcf89568fc1ce923\"\nprint(json.dumps({\"checks\":checks,\"source_lines\":{n:len(t.splitlines()) for n,t in s.items()},\"external_call_inventory\":sorted(set(re.findall(r\"\\bcall\\s+([A-Za-z_]\\w*)\\s*\\(\",\"\\n\".join(s.values())))-set(re.findall(r\"\\bfunction\\s+([A-Za-z_]\\w*)\\s+takes\",\"\\n\".join(s.values()))))},sort_keys=True))\nraise SystemExit(not all(checks.values()))"
+      ],
+      "stdout": "{\"checks\": {\"actual-terrain-and-world-dispatch\": true, \"all-eight-sources-utf8-no-bom\": true, \"balanced-function-blocks\": true, \"balanced-method-blocks\": true, \"identical-world-main\": true, \"integrated-run-id\": true, \"legacy-abi-preserved\": true, \"no-modern-userdata-exit-or-nested-imports\": true, \"no-per-step-facing-animation-or-orders\": true, \"plan-playable01-entry\": true, \"plan-playable01-pending-base-pin\": true, \"plan-test01-entry\": true, \"plan-test01-pending-base-pin\": true, \"playable-excludes-battery\": true, \"preserved-tested-Core6442\": true, \"shown-unpaused-controller\": true, \"single-order-dispatch-condition\": true}, \"external_call_inventory\": [\"ClearSelection\", \"CreateDestructable\", \"DefineStartLocation\", \"DestroyGroup\", \"DestroyTimer\", \"DestroyTrigger\", \"DisplayTimedTextToPlayer\", \"EnumDestructablesInRect\", \"ForcePlayerStartLocation\", \"GroupEnumUnitsInRange\", \"GroupEnumUnitsInRect\", \"GroupRemoveUnit\", \"InitBlizzard\", \"IssueImmediateOrder\", \"IssuePointOrder\", \"MoveLocation\", \"NewSoundEnvironment\", \"PanCameraTo\", \"PanCameraToTimed\", \"PauseTimer\", \"PauseUnit\", \"Preload\", \"PreloadGenClear\", \"PreloadGenEnd\", \"PreloadGenStart\", \"RCStartHarness\", \"RemoveDestructable\", \"RemoveLocation\", \"RemoveRect\", \"RemoveUnit\", \"SelectUnit\", \"SetAmbientDaySound\", \"SetAmbientNightSound\", \"SetCameraBounds\", \"SetCameraField\", \"SetDayNightModels\", \"SetGamePlacement\", \"SetMapDescription\", \"SetMapName\", \"SetPlayerColor\", \"SetPlayerController\", \"SetPlayerRacePreference\", \"SetPlayerRaceSelectable\", \"SetPlayerSlotAvailable\", \"SetPlayerStartLocation\", \"SetPlayerTeam\", \"SetPlayers\", \"SetRect\", \"SetTeams\", \"SetUnitAnimation\", \"SetUnitFacing\", \"SetUnitMoveSpeed\", \"SetUnitOwner\", \"SetUnitTimeScale\", \"SetUnitX\", \"SetUnitY\", \"TimerStart\", \"TriggerAddCondition\", \"TriggerEvaluate\", \"TriggerRegisterPlayerChatEvent\", \"TriggerRegisterPlayerUnitEvent\", \"TriggerRegisterUnitEvent\", \"UnitDamageTarget\"], \"source_lines\": {\"Config\": 14, \"Controls\": 39, \"Demo\": 92, \"IntegratedTest\": 730, \"Log\": 59, \"MapMain\": 35, \"PairCore\": 702, \"TestMapMain\": 35}}\n",
+      "stderr": "",
+      "exit_code": 0,
+      "scope": "existing recorded static check with only expected log run ID advanced to02"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-c",
+        "import json,pathlib,re\nr=pathlib.Path(\"projects/rapid-fire-prototype/playable\")\nc=(r/\"src/PairCore.j\").read_text();t=(r/\"src/IntegratedTest.j\").read_text();old=(r/\"build-inputs/rfp-integrated-20261020-01/src/IntegratedTest.j\").read_text();p=json.loads((r/\"build-plan-test02.json\").read_text());checks={}\nchecks[\"all-nine-case-ids-retained\"]=re.findall(r\"RB_LogCase\\(\\\"([^\\\"]+)\\\"\",t)==re.findall(r\"RB_LogCase\\(\\\"([^\\\"]+)\\\"\",old) and len(re.findall(r\"RB_LogCase\\(\\\"\",t))==9\nchecks[\"strict-anchor-and-life-thresholds\"]= \"return Distance(GetUnitX(u),GetUnitY(u),x,y) <= 1.\" in t and \"elseif not At(logical,-5500.,-5500.) then\" in t and t.count(\"GetWidgetLife(actor) <= .405\")==1 and t.count(\"GetWidgetLife(logical) <= .405\")==1\nchecks[\"eleven-exact-body-predicates\"]=len(re.findall(r'return \"[^\"]+\"',t[t.index(\"private function BodyFault \"):t.index(\"private function Bodies \")]))==11\npose=t[t.index(\"private function Pose \"):t.index(\"private function BodyDiagnostics \")]\nchecks[\"diagnostic-native-fields\"]=all(x in pose for x in [\"GetUnitTypeId\",\"GetWidgetLife\",\"GetOwningPlayer\",\"IsUnitPaused\",\"IsUnitHidden\",\"GetUnitX\",\"GetUnitY\",\"anchor=\",\"delta=\",\"GetUnitCurrentOrder\",\"GetUnitMoveSpeed\"])\nchecks[\"logical-speed-snapshot-and-hold\"]= \"set controllerOriginalSpeed = GetUnitMoveSpeed(logical)\" in c and \"call SetUnitMoveSpeed(logical,0.)\" in c\nrestore=c.index(\"call SetUnitMoveSpeed(oldController,oldControllerSpeed)\")\nchecks[\"restore-old-snapshot-before-external-orders\"]= \"local real oldControllerSpeed = controllerOriginalSpeed\" in c and restore<c.index('call IssueImmediateOrder(oldActor,\"stop\")') and \"set controllerOriginalSpeed = 0.\" in c[:restore]\ndrain=c[c.index(\"private function DrainWalkOrders \"):c.index(\"private function OnMove \")]\nchecks[\"deferred-stop-actual-order-revision-and-epoch-guards\"]=all(x in drain for x in [\"controllerStopRevision == controllerRevision\",\"actorStopRevision == actorRevision\",\"WalkOrder(GetUnitCurrentOrder(controller))\",\"WalkOrder(GetUnitCurrentOrder(actor))\",\"epoch != ticket\",\"set relaying = true\"])\npoint=c[c.index(\"private function OnPoint \"):c.index(\"private function OnImmediate \")]\ntarget=c[c.index(\"private function OnTarget \"):c.index(\"private function OnOrder \")]\nchecks[\"no-self-stop-inside-point-smart-callbacks\"]=\"IssueImmediateOrder\" not in point+target\nchecks[\"later-channel-invalidates-deferred-walk\"]= \"set controllerStopPending = false\" in c[c.index(\"private function OnCast \"):c.index(\"private function OnPoint \")] and \"set controllerRevision = controllerRevision+1\" in c\nchecks[\"actor-outer-order-held-until-deferred-stop\"]= \"call SetUnitMoveSpeed(actor,0.)\" in c and \"call SetUnitMoveSpeed(visible,RF_MOVE_SPEED)\" in c and \"set actorStopRevision = actorRevision\" in point\nchecks[\"actual-logical-xy-and-actor-native-handoff-oracles\"]=all(x in t for x in [\"logicalStationary and At(logical,-5500.,-5500.)\",\"sawNativeBefore and sawScript\",\"sawResume and resumedDisplacement\",\"dispose-restores-logical-native-speed\"])\nchecks[\"fresh-plan-and-logger\"]=p[\"run_id\"]==\"rfp-integrated-20261020-02\" and p[\"expected_cases\"]==9 and 'RF-rfp-integrated-20261020-02.txt' in (r/\"src/Log.j\").read_text()\nprint(json.dumps({\"checks\":checks},sort_keys=True));raise SystemExit(not all(checks.values()))"
+      ],
+      "stdout": "{\"checks\": {\"actor-outer-order-held-until-deferred-stop\": true, \"actual-logical-xy-and-actor-native-handoff-oracles\": true, \"all-nine-case-ids-retained\": true, \"deferred-stop-actual-order-revision-and-epoch-guards\": true, \"diagnostic-native-fields\": true, \"eleven-exact-body-predicates\": true, \"fresh-plan-and-logger\": true, \"later-channel-invalidates-deferred-walk\": true, \"logical-speed-snapshot-and-hold\": true, \"no-self-stop-inside-point-smart-callbacks\": true, \"restore-old-snapshot-before-external-orders\": true, \"strict-anchor-and-life-thresholds\": true}}\n",
+      "stderr": "",
+      "exit_code": 0,
+      "scope": "correction structural contracts only; no native behavior proof"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-c",
+        "import hashlib,json,pathlib; r=json.loads(pathlib.Path(\"projects/rapid-fire-prototype/playable/reports/integrated-01-correction.json\").read_text()); bad=[s for s,h in dict(r[\"protected_sha256\"],**r[\"corrected_sources_sha256\"]).items() if hashlib.sha256(pathlib.Path(s).read_bytes()).hexdigest()!=h]; print(json.dumps({\"hash_mismatches\":bad,\"protected_files\":len(r[\"protected_sha256\"])})); raise SystemExit(bool(bad))"
+      ],
+      "stdout": "{\"hash_mismatches\": [], \"protected_files\": 17}\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "stdout": "?? .pi/\n?? odd/\n?? projects/\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ],
+  "protected_sha256": {
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/base/playable-01.w3x": "e1ff1b36d6194549ec86bf19837707673be96abd1e166fdff75505e6fe65ecf6",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/Config.j": "9fd792acf84595a22c79c0e3aa1786c9fc0c53d14b239c587d7c30101b7e5d88",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/Controls.j": "8fe94f1075ca70714c8727231da716c406b1ead9b93080cb0b28e53051945ffc",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/Demo.j": "6ec278f5f1a97735e3d6ff4621c74870c809b74bae59b2f9c366996b2e62d46f",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/IntegratedTest.j": "4029edd8227ee0b16c41d2545986515af40c82faeb65c841a51db3c32b3c71df",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/Log.j": "a5afe8eef325821c5978143fec98703e866957fec841e9f560a5df7af2538e61",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/PairCore.j": "87cf4a0493892320cac092e5a6b6310375ace8f8962edfacd15fbf677cb8964d",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/TestMapMain.j": "8860e3a0fd4652e505b0a34e7a1792be4e351761de0dfe3aee33495d74d88f5e",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/vendor/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/vendor/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/vendor/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/src/vendor/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-01/tools/build.py": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "projects/rapid-fire-prototype/playable/build-plan-test01.json": "b8abf578a6e8d0170c71376ca6c3dd4a6dc8f30429fe8037b343dad0b8f157cb",
+    "projects/rapid-fire-prototype/playable/reports/RF-rfp-integrated-20261020-01.txt": "27ef56eb89d6a7b2411c3497933e9236588e6627718af887c3affbb2650662ba",
+    "projects/rapid-fire-prototype/playable/reports/integration-preparation.json": "a816b9de7c8b050ec928a03fbb4b12f649772c17bb822ad80c914c5e25719d82",
+    "projects/rapid-fire-prototype/playable/build-plan-playable01.json": "476919f7f5d6fb6266e970b05f0936b57f11502dab03a9ff9730a605a5d275ce"
+  },
+  "corrected_sources_sha256": {
+    "projects/rapid-fire-prototype/playable/src/PairCore.j": "afe80e2827fe2ff373acff4ec687f52971751d1beb208e64cc7e3d0c2564ae37",
+    "projects/rapid-fire-prototype/playable/src/IntegratedTest.j": "0c65df7ca78f33e8cc78a76b25912f8080cb34356202842a59ee29b73e0a741f",
+    "projects/rapid-fire-prototype/playable/src/Log.j": "71b79eb9a9451352e453e0cef226c0cfbab32466f70a234bdad8118a0da3230b"
+  },
+  "base_sha256": "e1ff1b36d6194549ec86bf19837707673be96abd1e166fdff75505e6fe65ecf6"
+}

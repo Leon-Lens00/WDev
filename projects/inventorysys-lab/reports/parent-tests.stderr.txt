@@ -1,0 +1,38 @@
+test_assembly_preserves_original_bytes_and_hooks_after_demo (test_build.CliTests.test_assembly_preserves_original_bytes_and_hooks_after_demo) ... ok
+test_build_public_roundtrip_and_exact_tool_evidence (test_build.CliTests.test_build_public_roundtrip_and_exact_tool_evidence) ... ok
+test_identity_remapping_and_unsupported_housekeeping_changes_rejected (test_build.CliTests.test_identity_remapping_and_unsupported_housekeeping_changes_rejected) ... ok
+test_invalid_entry_and_output_input_overlap_rejected (test_build.CliTests.test_invalid_entry_and_output_input_overlap_rejected) ... ok
+test_managed_script_mismatch_fails_closed (test_build.CliTests.test_managed_script_mismatch_fails_closed) ... ok
+test_opaque_raw_payload_change_fails_closed (test_build.CliTests.test_opaque_raw_payload_change_fails_closed) ... ok
+test_real_failed_fixture_housekeeping_rewrite_is_accepted (test_build.CliTests.test_real_failed_fixture_housekeeping_rewrite_is_accepted) ... ok
+test_real_unknown_asset_corruption_is_rejected (test_build.CliTests.test_real_unknown_asset_corruption_is_rejected) ... ok
+test_recover_preserves_blocks_and_rejects_overwrite (test_build.CliTests.test_recover_preserves_blocks_and_rejects_overwrite) ... ok
+test_recovered_original_startup_is_preserved_byte_for_byte (test_build.CliTests.test_recovered_original_startup_is_preserved_byte_for_byte) ... ok
+test_recovery_hash_mismatch_writes_nothing (test_build.CliTests.test_recovery_hash_mismatch_writes_nothing) ... ok
+test_reject_adapter_imports_and_missing_entry (test_build.CliTests.test_reject_adapter_imports_and_missing_entry) ... ok
+test_reject_bad_run_ids (test_build.CliTests.test_reject_bad_run_ids) ... ok
+test_reject_input_alias_and_symlink_destination (test_build.CliTests.test_reject_input_alias_and_symlink_destination) ... ok
+test_reject_missing_duplicate_or_changed_anchors (test_build.CliTests.test_reject_missing_duplicate_or_changed_anchors) ... ok
+test_roundtrip_mismatch_fails_closed (test_build.CliTests.test_roundtrip_mismatch_fails_closed) ... ok
+test_tool_failure_retains_diagnostics_without_publishing_map (test_build.CliTests.test_tool_failure_retains_diagnostics_without_publishing_map) ... ok
+test_bad_rows_counts_order_and_malicious_payloads (test_logs.ReaderTests.test_bad_rows_counts_order_and_malicious_payloads) ... ok
+test_clean_fail_skip_and_observation (test_logs.ReaderTests.test_clean_fail_skip_and_observation) ... ok
+test_duplicate_case_unknown_wrapper_and_record_limit (test_logs.ReaderTests.test_duplicate_case_unknown_wrapper_and_record_limit) ... ok
+test_empty_oversize_and_non_utf8 (test_logs.ReaderTests.test_empty_oversize_and_non_utf8) ... ok
+test_exclusive_report_matches_stdout_and_never_overwrites (test_logs.ReaderTests.test_exclusive_report_matches_stdout_and_never_overwrites) ... ok
+test_missing_input_symlinks_and_report_alias_preserved (test_logs.ReaderTests.test_missing_input_symlinks_and_report_alias_preserved) ... ok
+test_missing_or_symlink_input_and_invalid_report_preserve_existing_file (test_logs.ReaderTests.test_missing_or_symlink_input_and_invalid_report_preserve_existing_file) ... ok
+test_preload_envelope_and_failure_report (test_logs.ReaderTests.test_preload_envelope_and_failure_report) ... ok
+test_reject_wrong_id_stale_and_invalid_threshold (test_logs.ReaderTests.test_reject_wrong_id_stale_and_invalid_threshold) ... ok
+test_all_adapter_symbols_are_prefixed_and_calls_declared_before_use (test_scenarios.AdapterContracts.test_all_adapter_symbols_are_prefixed_and_calls_declared_before_use) ... ok
+test_all_lowered_calls_are_actual_public_functions_not_storage (test_scenarios.AdapterContracts.test_all_lowered_calls_are_actual_public_functions_not_storage) ... ok
+test_bounded_matrix_and_explicit_non_certification (test_scenarios.AdapterContracts.test_bounded_matrix_and_explicit_non_certification) ... ok
+test_fixture_is_original_fixed_strength_three_in_slot_nine (test_scenarios.AdapterContracts.test_fixture_is_original_fixed_strength_three_in_slot_nine) ... ok
+test_native_readiness_pickup_and_preservation_guards (test_scenarios.AdapterContracts.test_native_readiness_pickup_and_preservation_guards) ... ok
+test_public_assembler_preserves_original_startup_and_adapter_only_substitution (test_scenarios.AdapterContracts.test_public_assembler_preserves_original_startup_and_adapter_only_substitution) ... ok
+test_scheduling_persistence_and_honest_watchdog (test_scenarios.AdapterContracts.test_scheduling_persistence_and_honest_watchdog) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.386s
+
+OK

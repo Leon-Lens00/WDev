@@ -1,0 +1,36 @@
+--- frozen02/functions.j
++++ frozen03/functions.j
+@@ -102,7 +102,7 @@
+     local group after = CreateGroup()
+     local unit u
+     local integer n = 0
+-    call GroupEnumUnitsOfPlayer(before, Player(13), null)
++    call GroupEnumUnitsOfPlayer(before, CAMERA_DUMMY_PLAYER, null)
+     call ITL_Log("CHECK", "before=constructor slot=" + I2S(slot))
+     if ITL_Mode == 1 then
+         set ITL_Ids[slot] = s__UIButton_create(-0.6 + slot*0.15, 0.5, 0.1, 0.1, 0., 0)
+@@ -112,13 +112,13 @@
+         set ITL_Ids[slot] = s__UIText_create(-0.6 + slot*0.15, 0.5, 0.)
+     endif
+     call ITL_Log("CHECK", "after=constructor slot=" + I2S(slot))
+-    call GroupEnumUnitsOfPlayer(after, Player(13), null)
++    call GroupEnumUnitsOfPlayer(after, CAMERA_DUMMY_PLAYER, null)
+     set ITL_Units[slot] = null
+     loop
+         set u = FirstOfGroup(after)
+         exitwhen u == null
+         call GroupRemoveUnit(after, u)
+-        if not IsUnitInGroup(u, before) and GetUnitTypeId(u) == 'uidm' and GetOwningPlayer(u) == Player(13) then
++        if not IsUnitInGroup(u, before) and GetUnitTypeId(u) == 'uidm' and GetOwningPlayer(u) == CAMERA_DUMMY_PLAYER then
+             set n = n + 1
+             // Retain only typed handles proven newly created by this synchronous call.
+             if n == 1 then
+@@ -392,7 +392,7 @@
+ endfunction
+ 
+ function ITL_TimerVerdict takes nothing returns nothing
+-    local boolean ready = ITL_Clicks > 0 and ITL_Acquired > 0 and ITL_Beat > ITL_StartBeat
++    local boolean ready = ITL_Clicks > 0 and ITL_Acquired > 0 and ITL_Beat > ITL_StartBeat and ITL_ExpiredCount > 0
+     call ITL_Check(ready, "timer-readiness clicks=" + I2S(ITL_Clicks) + " acquired=" + I2S(ITL_Acquired) + " heartbeat=" + I2S(ITL_Beat-ITL_StartBeat))
+     call ITL_Record("OBS", "baseline-deficit before=harness-cleanup acquired=" + I2S(ITL_Acquired) + " expired=" + I2S(ITL_ExpiredCount) + " released=" + I2S(ITL_Released) + " destroyed=" + I2S(ITL_Destroyed))
+     if ready then

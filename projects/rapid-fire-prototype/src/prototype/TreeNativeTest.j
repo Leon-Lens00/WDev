@@ -1,0 +1,860 @@
+library RFBurstTreeTest requires RFBurstLog, RFBurstPair
+    // Two cases on the same bodies/pair/hooks; only the live tree is added.
+    // Adapted from BurstNativeTest (not the Aim suite).
+    // Collection entries are borrowed ONLY during a fresh bounded scan.
+    globals
+        private constant real PERIOD = .03125
+        // Recycler delay2s + .5s finite scheduling margin, NOT a fixed wait.
+        private constant real CLEARANCE_LIMIT = 2.5
+        private real transitionStart = 0.
+        private boolean transitionChecked = false
+        private unit array priorDummy
+        private integer array priorDummyId
+        private boolean array priorInCorridor
+        private boolean array pendingLogged
+        private boolean array clearanceLogged
+        private constant real AX = -3136.
+        private constant real AY = 2624.
+        private unit actor = null
+        private unit caster = null
+        private unit target = null
+        private unit control = null
+        private destructable tree = null
+        private timer clock = null
+        private timer runner = null
+        private trigger damageHook = null
+        private trigger spellHook = null
+        private trigger shotHook = null
+        private integer phase = 0
+        private integer scene = 0
+        private boolean done = false
+        private boolean qualified = false
+        private boolean absentPassed = false
+        private string fault = ""
+        private integer calibrationHits = 0
+        private real calibrationHP = 0.
+        private real calibrationDamage = 0.
+        private boolean calibrationSource = false
+        private boolean calibrated = false
+        private integer hits = 0
+        private integer controlHits = 0
+        private boolean hitValuesOK = true
+        private boolean hitSourcesOK = true
+        private integer shots = 0
+        private boolean projectilesOK = true
+        private integer castEvents = 0
+        private real castTime = 0.
+        private real orderTime = 0.
+        private real aimX = 0.
+        private real aimY = 0.
+        private real targetStart = 0.
+        private real controlStart = 0.
+        private real treeStart = 0.
+        private boolean bodiesOK = true
+        private boolean treeOK = true
+        private integer liveCount = 0
+        private integer array token
+        private boolean array closed
+        private boolean array seen
+        private real array birth
+        private real array lastTime
+        private real array lastX
+        private real array lastY
+        private real array firstAbsent
+        private integer corridorUnits = 0
+        private integer corridorTrees = 0
+        private integer ownedTrees = 0
+        private integer rejectedUnits = 0
+        private integer rejectedTrees = 0
+        private boolean corridorOK = true
+        private real corridorY = 0.
+        private real array absentX
+        private real array absentY
+        private unit array stableBody
+        private integer array stableId
+    endglobals
+
+    private function Pose takes unit u returns string
+        return "type="+I2S(GetUnitTypeId(u))+" xy="+R2S(GetUnitX(u))+","+R2S(GetUnitY(u))+" hp="+R2S(GetWidgetLife(u))+" owner="+I2S(GetPlayerId(GetOwningPlayer(u)))+" order="+I2S(GetUnitCurrentOrder(u))
+    endfunction
+
+    private function LiveOwned takes unit u, integer raw, player p returns boolean
+        return GetUnitTypeId(u) == raw and GetWidgetLife(u) > .405 and GetOwningPlayer(u) == p
+    endfunction
+
+    private function Bodies takes nothing returns boolean
+        return LiveOwned(actor,'o000',Player(0)) and LiveOwned(caster,'o001',Player(0)) and LiveOwned(target,'o000',Player(1)) and LiveOwned(control,'o000',Player(1))
+    endfunction
+
+    private function RemoveScene takes nothing returns nothing
+        // Final cleanup only, AFTER observation or explicit fixture abort.
+        // Never used between the absent and present cases.
+        call RB_Dispose()
+        if damageHook != null then
+            call DestroyTrigger(damageHook)
+            call DestroyTrigger(spellHook)
+            call DestroyTrigger(shotHook)
+        endif
+        set damageHook = null
+        set spellHook = null
+        set shotHook = null
+        call RemoveUnit(actor)
+        call RemoveUnit(caster)
+        call RemoveUnit(target)
+        call RemoveUnit(control)
+        if tree != null then
+            call RemoveDestructable(tree)
+        endif
+    endfunction
+
+    private function Finish takes nothing returns nothing
+        local integer serial = 1
+        if done then
+            return
+        endif
+        set done = true
+        call PauseTimer(runner)
+        call PauseTimer(clock)
+        call RemoveScene()
+        call DestroyTimer(runner)
+        call DestroyTimer(clock)
+        set runner = null
+        set clock = null
+        set actor = null
+        set caster = null
+        set target = null
+        set control = null
+        set tree = null
+        set stableBody[0] = null
+        set stableBody[1] = null
+        set stableBody[2] = null
+        set stableBody[3] = null
+        loop
+            exitwhen serial > 4
+            // Borrowed recycler-owned handles: never remove or mutate them.
+            set priorDummy[serial] = null
+            set serial = serial+1
+        endloop
+        call RB_LogComplete()
+    endfunction
+
+    private function Abort takes string why returns nothing
+        call RB_LogRecord("FAIL","ABORT-fixture",why+"; behavior unqualified, no tree RED inferred")
+        call Finish()
+    endfunction
+
+    private function Deadline takes nothing returns nothing
+        call Abort("global15 game-second deadline; unreached assertions remain pending")
+    endfunction
+
+    private function At takes unit u, real x, real y returns boolean
+        return GetUnitTypeId(u) != 0 and RAbsBJ(GetUnitX(u)-x) <= 1. and RAbsBJ(GetUnitY(u)-y) <= 1.
+    endfunction
+
+    private function InWorld takes real x, real y, real pad returns boolean
+        return x-pad > WorldBounds.minX and x+pad < WorldBounds.maxX and y-pad > WorldBounds.minY and y+pad < WorldBounds.maxY
+    endfunction
+
+    private function TreeWitness takes nothing returns boolean
+        if scene == 0 then
+            return tree == null
+        endif
+        return GetDestructableTypeId(tree) == 'LTlt' and GetDestructableLife(tree) > .405 and RAbsBJ(GetDestructableX(tree)-(AX+128.)) <= 1. and RAbsBJ(GetDestructableY(tree)-AY) <= 1.
+    endfunction
+
+    private function BoolText takes boolean value returns string
+        if value then
+            return "true"
+        endif
+        return "false"
+    endfunction
+
+    private function GateFailure takes string gate, string detail returns boolean
+        call RB_LogRecord("OBS","readiness-rejected-"+gate,detail+"; later gates unreached/unqualified")
+        return false
+    endfunction
+
+    private function FlightsClear takes nothing returns boolean
+        if liveCount != 0 then
+            return GateFailure("source-flight-clearance","fresh source flights="+I2S(liveCount))
+        endif
+        return true
+    endfunction
+
+    private function VisitTree takes nothing returns nothing
+        local destructable d = GetEnumDestructable()
+        set corridorTrees = corridorTrees+1
+        if corridorTrees > 64 then
+            set corridorOK = false
+            if corridorTrees == 65 then
+                call RB_LogRecord("OBS","corridor-destructable-overflow","enumerated>64; fixture rejected, no life filter")
+            endif
+        elseif scene == 1 and d == tree and TreeWitness() then
+            set ownedTrees = ownedTrees+1
+        else
+            // No life filter: the immutable core enumerates dead widgets too.
+            set corridorOK = false
+            set rejectedTrees = rejectedTrees+1
+            if rejectedTrees <= 4 then
+                call RB_LogRecord("OBS","corridor-unexpected-destructable","index="+I2S(corridorTrees)+" handle="+I2S(GetHandleId(d))+" type="+I2S(GetDestructableTypeId(d))+" xy="+R2S(GetDestructableX(d))+","+R2S(GetDestructableY(d))+" life="+R2S(GetDestructableLife(d))+" ownedHandle="+BoolText(d == tree))
+            endif
+        endif
+        set d = null
+    endfunction
+
+    private function Corridor takes nothing returns boolean
+        local group g = CreateGroup()
+        local rect r
+        local unit u
+        local real x = GetUnitX(actor)
+        local real y = GetUnitY(actor)
+        set corridorUnits = 0
+        set corridorTrees = 0
+        set ownedTrees = 0
+        set rejectedUnits = 0
+        set rejectedTrees = 0
+        set corridorOK = true
+        // Entire 1500 ray plus core candidate pad128 and logical collision32.
+        // Broad conservative native enumeration; no footprint/LOS inference.
+        set r = Rect(x-160.,y-160.,x+1660.,y+160.)
+        call GroupEnumUnitsInRect(g,r,null)
+        call RemoveRect(r)
+        loop
+            set u = FirstOfGroup(g)
+            exitwhen u == null
+            call GroupRemoveUnit(g,u)
+            set corridorUnits = corridorUnits+1
+            if corridorUnits > 256 then
+                set corridorOK = false
+                call RB_LogRecord("OBS","corridor-unit-overflow","enumerated>256; fixture rejected")
+                exitwhen true
+            endif
+            if GetUnitX(u) >= x-160. and GetUnitX(u) <= x+1660. and RAbsBJ(GetUnitY(u)-y) <= 160. then
+                if u != actor and u != target then
+                    set corridorOK = false
+                    set rejectedUnits = rejectedUnits+1
+                    if rejectedUnits <= 4 then
+                        call RB_LogRecord("OBS","corridor-unexpected-unit","index="+I2S(corridorUnits)+" handle="+I2S(GetHandleId(u))+" "+Pose(u))
+                    endif
+                endif
+            endif
+        endloop
+        call DestroyGroup(g)
+        set corridorY = y
+        set r = Rect(x-160.,corridorY-160.,x+1660.,corridorY+160.)
+        call EnumDestructablesInRect(r,null,function VisitTree)
+        call RemoveRect(r)
+        call RB_LogRecord("OBS","native-corridor","unitsScanned="+I2S(corridorUnits)+" destructables="+I2S(corridorTrees)+" owned="+I2S(ownedTrees)+" unexpectedUnits="+I2S(rejectedUnits)+" unexpectedDestructables="+I2S(rejectedTrees)+" corridorOK="+BoolText(corridorOK)+" expectedOwned="+I2S(scene)+" no life filter; full1500+160 broadphase")
+        set g = null
+        set r = null
+        set u = null
+        return corridorOK and ownedTrees == scene
+    endfunction
+
+    private function IdentityText takes nothing returns string
+        return "actor="+I2S(GetHandleId(actor))+"/"+I2S(stableId[0])+" controller="+I2S(GetHandleId(caster))+"/"+I2S(stableId[1])+" enemy="+I2S(GetHandleId(target))+"/"+I2S(stableId[2])+" control="+I2S(GetHandleId(control))+"/"+I2S(stableId[3])+" actual/baseline"
+    endfunction
+
+    private function SameBodies takes nothing returns boolean
+        return actor == stableBody[0] and caster == stableBody[1] and target == stableBody[2] and control == stableBody[3] and GetHandleId(actor) == stableId[0] and GetHandleId(caster) == stableId[1] and GetHandleId(target) == stableId[2] and GetHandleId(control) == stableId[3]
+    endfunction
+
+    private function SceneReady takes nothing returns boolean
+        // Same predicate order/short circuit; OBS identifies the first failure.
+        if not Bodies() then
+            return GateFailure("body-contract","actor "+Pose(actor)+" caster "+Pose(caster)+" target "+Pose(target)+" control "+Pose(control))
+        endif
+        if not SameBodies() then
+            return GateFailure("body-identity",IdentityText())
+        endif
+        call RB_LogRecord("OBS","same-body-identity",IdentityText())
+        if not At(actor,AX,AY) then
+            return GateFailure("actor-placement","expected="+R2S(AX)+","+R2S(AY)+" tolerance1 actual "+Pose(actor))
+        endif
+        if not At(caster,-5500.,-5500.) then
+            return GateFailure("controller-placement","expected=-5500,-5500 tolerance1 actual "+Pose(caster))
+        endif
+        if not At(target,AX+512.,AY) then
+            return GateFailure("enemy-placement","expected="+R2S(AX+512.)+","+R2S(AY)+" tolerance1 actual "+Pose(target))
+        endif
+        if not At(control,AX+256.,AY+512.) then
+            return GateFailure("control-placement","expected="+R2S(AX+256.)+","+R2S(AY+512.)+" tolerance1 actual "+Pose(control))
+        endif
+        if GetWidgetLife(actor) <= 100. or GetWidgetLife(target) <= 100. or GetWidgetLife(control) <= 100. then
+            return GateFailure("life","actor="+R2S(GetWidgetLife(actor))+" target="+R2S(GetWidgetLife(target))+" control="+R2S(GetWidgetLife(control))+" required>100")
+        endif
+        if GetUnitAbilityLevel(caster,'A00G') != 1 or GetUnitAbilityLevel(caster,'Ablo') != 0 or GetUnitAbilityLevel(actor,'A00G') != 0 or GetUnitAbilityLevel(actor,'Ablo') != 0 then
+            return GateFailure("pair-abilities","caster A00G/Ablo="+I2S(GetUnitAbilityLevel(caster,'A00G'))+"/"+I2S(GetUnitAbilityLevel(caster,'Ablo'))+" actor="+I2S(GetUnitAbilityLevel(actor,'A00G'))+"/"+I2S(GetUnitAbilityLevel(actor,'Ablo')))
+        endif
+        if GetUnitAbilityLevel(target,'A00G') != 0 or GetUnitAbilityLevel(target,'Ablo') != 0 or GetUnitAbilityLevel(control,'A00G') != 0 or GetUnitAbilityLevel(control,'Ablo') != 0 then
+            return GateFailure("target-abilities","target A00G/Ablo="+I2S(GetUnitAbilityLevel(target,'A00G'))+"/"+I2S(GetUnitAbilityLevel(target,'Ablo'))+" control="+I2S(GetUnitAbilityLevel(control,'A00G'))+"/"+I2S(GetUnitAbilityLevel(control,'Ablo')))
+        endif
+        if IsUnitPaused(actor) or IsUnitPaused(caster) or not IsUnitPaused(target) or not IsUnitPaused(control) then
+            return GateFailure("pause","actor="+BoolText(IsUnitPaused(actor))+" caster="+BoolText(IsUnitPaused(caster))+" target="+BoolText(IsUnitPaused(target))+" control="+BoolText(IsUnitPaused(control)))
+        endif
+        if not IsUnitEnemy(target,Player(0)) or not IsUnitEnemy(control,Player(0)) or not IsUnitEnemy(actor,Player(1)) or GetPlayerAlliance(Player(0),Player(1),ALLIANCE_PASSIVE) or GetPlayerAlliance(Player(1),Player(0),ALLIANCE_PASSIVE) then
+            return GateFailure("alliance","enemy target/control/actor="+BoolText(IsUnitEnemy(target,Player(0)))+"/"+BoolText(IsUnitEnemy(control,Player(0)))+"/"+BoolText(IsUnitEnemy(actor,Player(1)))+" passive01/10="+BoolText(GetPlayerAlliance(Player(0),Player(1),ALLIANCE_PASSIVE))+"/"+BoolText(GetPlayerAlliance(Player(1),Player(0),ALLIANCE_PASSIVE)))
+        endif
+        if GetUnitCurrentOrder(actor) != 0 or RAbsBJ(GetUnitFacing(actor)) > .01 then
+            return GateFailure("actor-order-facing","order="+I2S(GetUnitCurrentOrder(actor))+" facing="+R2S(GetUnitFacing(actor))+" expected0/.01")
+        endif
+        if not TreeWitness() then
+            return GateFailure("tree-state","scene="+I2S(scene)+" type="+I2S(GetDestructableTypeId(tree))+" xy="+R2S(GetDestructableX(tree))+","+R2S(GetDestructableY(tree))+" life="+R2S(GetDestructableLife(tree)))
+        endif
+        if not InWorld(AX,AY,160.) or not InWorld(AX+1500.,AY,160.) or not InWorld(GetUnitX(control),GetUnitY(control),32.) or not InWorld(-5500.,-5500.,32.) then
+            return GateFailure("world","bounds="+I2S(WorldBounds.minX)+","+I2S(WorldBounds.minY)+".."+I2S(WorldBounds.maxX)+","+I2S(WorldBounds.maxY)+" ray1500 pad160 control/controller pad32; control "+Pose(control))
+        endif
+        if scene == 0 then
+            set absentX[0] = GetUnitX(actor)
+            set absentY[0] = GetUnitY(actor)
+            set absentX[1] = GetUnitX(target)
+            set absentY[1] = GetUnitY(target)
+            set absentX[2] = GetUnitX(control)
+            set absentY[2] = GetUnitY(control)
+            set absentX[3] = GetUnitX(caster)
+            set absentY[3] = GetUnitY(caster)
+        elseif RAbsBJ(GetUnitX(actor)-absentX[0]) > .01 or RAbsBJ(GetUnitY(actor)-absentY[0]) > .01 or RAbsBJ(GetUnitX(target)-absentX[1]) > .01 or RAbsBJ(GetUnitY(target)-absentY[1]) > .01 or RAbsBJ(GetUnitX(control)-absentX[2]) > .01 or RAbsBJ(GetUnitY(control)-absentY[2]) > .01 then
+            return GateFailure("same-actual-scenes","tolerance.01; actor "+Pose(actor)+" enemy "+Pose(target)+" control "+Pose(control))
+        endif
+        if scene == 1 and (RAbsBJ(GetUnitX(caster)-absentX[3]) > .01 or RAbsBJ(GetUnitY(caster)-absentY[3]) > .01) then
+            return GateFailure("same-actual-controller","tolerance.01; controller "+Pose(caster))
+        endif
+        // Terrain path flags are NOT missile obstruction. Owned tree pathing is
+        // expected, not an unintended blocker. Native contacts qualify the ray.
+        return Corridor()
+    endfunction
+
+    private function Scan takes integer incoming returns nothing
+        local integer i = 0
+        local integer j
+        local integer match
+        local Missiles m
+        local real now = TimerGetElapsed(clock)
+        set liveCount = 0
+        if Missiles.count >= 32 then
+            set fault = "public collection overflow32"
+            return
+        endif
+        set j = 1
+        loop
+            exitwhen j > shots or j > 4
+            set seen[j] = false
+            set j = j+1
+        endloop
+        loop
+            exitwhen i > Missiles.count
+            // Only this freshly acquired entry is dereferenced, never token[].
+            set m = Missiles.collection[i]
+            if m.allocated and m.source == actor then
+                set liveCount = liveCount+1
+                set match = 0
+                set j = 1
+                loop
+                    exitwhen j > shots or j > 4
+                    if not closed[j] and token[j] == m then
+                        set match = j
+                    endif
+                    set j = j+1
+                endloop
+                if m != incoming then
+                    if match == 0 then
+                        set fault = "unmapped source flight or ambiguous allocator reuse"
+                    else
+                        set seen[match] = true
+                        set lastTime[match] = now
+                        set lastX[match] = m.x
+                        set lastY[match] = m.y
+                    endif
+                endif
+            endif
+            set i = i+1
+        endloop
+        if liveCount > 4 then
+            set fault = "more than four live application flights"
+        endif
+        set j = 1
+        loop
+            exitwhen j > shots or j > 4
+            if not closed[j] and not seen[j] then
+                set closed[j] = true
+                set firstAbsent[j] = now
+                call RB_LogRecord("OBS","flight-absence-bracket","serial="+I2S(j)+" birth="+R2S(birth[j])+" lastLive="+R2S(lastTime[j])+" xy="+R2S(lastX[j])+","+R2S(lastY[j])+" firstAbsent="+R2S(now))
+            endif
+            set j = j+1
+        endloop
+    endfunction
+
+    private function OnShot takes nothing returns boolean
+        local Missiles m = RB_GetShotMissile()
+        local integer j = 1
+        local boolean valid = false
+        local string birthFailure = "none"
+        // Birth pulse serial, not a private generation getter. If an ID is reused
+        // before we observed its absence, reject rather than read the old ID.
+        loop
+            exitwhen j > shots or j > 4
+            if not closed[j] and token[j] == m then
+                set fault = "ID reused before observed absence; lifetime unqualified"
+                return false
+            endif
+            set j = j+1
+        endloop
+        call Scan(m)
+        set shots = shots+1
+        if shots > 4 then
+            set fault = "more than four birth pulses"
+            return false
+        endif
+        if m != 0 then
+            set valid = m.allocated and m.launched and m.dummy != null
+            set valid = valid and GetUnitTypeId(m.dummy) != 0 and m.dummy != actor and m.dummy != caster and m.dummy != target and m.dummy != control
+            set valid = valid and m.source == actor and RB_GetShotSource() == actor
+            set valid = valid and RAbsBJ(m.x-GetUnitX(actor)) <= 1. and RAbsBJ(m.y-GetUnitY(actor)) <= 1.
+            set valid = valid and RAbsBJ(RB_GetShotX()-m.x) <= .01 and RAbsBJ(RB_GetShotY()-m.y) <= .01
+        endif
+        set projectilesOK = projectilesOK and valid and phase == 5
+        if not valid then
+            set fault = "birth pulse has no qualified live public projectile"
+            return false
+        endif
+        if scene == 0 then
+            // Capture identity ONLY at the qualified callback-scoped birth.
+            // Recycler native owner is neutral before processing; logical missile
+            // owner is already assigned. OnOrient/refreshVision syncs it later.
+            if GetUnitTypeId(m.dummy) != 'e000' then
+                set birthFailure = "type"
+            elseif GetOwningPlayer(m.dummy) != Player(PLAYER_NEUTRAL_PASSIVE) then
+                set birthFailure = "owner"
+            elseif GetWidgetLife(m.dummy) <= .405 then
+                set birthFailure = "life"
+            elseif not IsUnitPaused(m.dummy) then
+                set birthFailure = "pause"
+            endif
+            call RB_LogRecord("OBS","birth-dummy-contract","firstFailed="+birthFailure+" owner="+I2S(GetPlayerId(GetOwningPlayer(m.dummy)))+" type="+I2S(GetUnitTypeId(m.dummy))+" life="+R2S(GetWidgetLife(m.dummy))+" pause="+BoolText(IsUnitPaused(m.dummy))+" handle="+I2S(GetHandleId(m.dummy))+" time="+R2S(TimerGetElapsed(clock)))
+            if birthFailure != "none" then
+                set fault = "incompatible dummy at qualified birth firstFailed="+birthFailure
+                return false
+            endif
+            set j = 1
+            loop
+                exitwhen j >= shots
+                if priorDummy[j] == m.dummy then
+                    set fault = "dummy identity reused within absent baseline"
+                    return false
+                endif
+                set j = j+1
+            endloop
+            set priorDummy[shots] = m.dummy
+            set priorDummyId[shots] = GetHandleId(m.dummy)
+        endif
+        set token[shots] = m
+        set closed[shots] = false
+        set birth[shots] = TimerGetElapsed(clock)
+        set lastTime[shots] = birth[shots]
+        set lastX[shots] = m.x
+        set lastY[shots] = m.y
+        call RB_LogRecord("OBS","SHOT-public-birth","serial="+I2S(shots)+" time="+R2S(birth[shots])+" liveID="+I2S(m)+" xy="+R2S(m.x)+","+R2S(m.y)+" dummy="+I2S(GetHandleId(m.dummy))+" visibleSource="+I2S(GetHandleId(m.source)))
+        return false
+    endfunction
+
+    private function OnDamage takes nothing returns boolean
+        local real amount = GetEventDamage()
+        if GetTriggerUnit() == control then
+            set controlHits = controlHits+1
+        elseif GetTriggerUnit() == target then
+            if phase == 1 then
+                set calibrationHits = calibrationHits+1
+                set calibrationDamage = amount
+                set calibrationSource = GetEventDamageSource() == actor
+            elseif phase == 5 then
+                set hits = hits+1
+                set hitValuesOK = hitValuesOK and RAbsBJ(amount-10.) <= .01
+                set hitSourcesOK = hitSourcesOK and GetEventDamageSource() == actor
+                call RB_LogRecord("OBS","native-damage","time="+R2S(TimerGetElapsed(clock))+" value="+R2S(amount)+" source="+I2S(GetHandleId(GetEventDamageSource()))+" visible="+I2S(GetHandleId(actor)))
+            else
+                set fault = "target damage outside calibration/observation"
+            endif
+        endif
+        return false
+    endfunction
+
+    private function OnSpell takes nothing returns boolean
+        set castEvents = castEvents+1
+        call RB_LogRecord("OBS","native-spell-effect","time="+R2S(TimerGetElapsed(clock))+" ability="+I2S(GetSpellAbilityId())+" source="+I2S(GetHandleId(GetTriggerUnit()))+" point="+R2S(GetSpellTargetX())+","+R2S(GetSpellTargetY()))
+        if phase != 4 or GetTriggerUnit() != caster or GetSpellAbilityId() != 'A00G' or RAbsBJ(GetSpellTargetX()-aimX) > .01 or RAbsBJ(GetSpellTargetY()-aimY) > .01 then
+            set fault = "unexpected spell source/ability/point/count"
+            return false
+        endif
+        set castTime = TimerGetElapsed(clock)
+        set targetStart = GetWidgetLife(target)
+        set controlStart = GetWidgetLife(control)
+        set phase = 5
+        return false
+    endfunction
+
+    private function Assess takes nothing returns boolean
+        local real diff = (GetWidgetLife(control)-controlStart)-(GetWidgetLife(target)-targetStart)
+        local integer i = 1
+        local boolean cadence = shots == 4
+        local boolean lifetime = shots == 4
+        local boolean effects
+        loop
+            exitwhen i > shots or i > 4
+            if i > 1 then
+                set cadence = cadence and RAbsBJ((birth[i]-birth[i-1])-.25) <= PERIOD
+            endif
+            if scene == 0 then
+                // Empirical baseline must travel to the farther enemy, then end.
+                set lifetime = lifetime and closed[i] and lastX[i] >= aimX-110. and lastX[i] <= aimX+2. and RAbsBJ(lastY[i]-aimY) <= 2.
+                set lifetime = lifetime and firstAbsent[i]-birth[i] >= .30 and firstAbsent[i]-birth[i] <= .55
+            else
+                // Tree origin128, box32, core step30/.025: first candidate
+                // contact near .100-.150; +.03125 sampling, finite .18125 cap.
+                // Last scalar64..176 excludes enemy contact near x464/.4s.
+                set lifetime = lifetime and closed[i] and firstAbsent[i]-birth[i] >= .0625 and firstAbsent[i]-birth[i] <= .18125
+                set lifetime = lifetime and lastX[i]-AX >= 64. and lastX[i]-AX <= 176. and RAbsBJ(lastY[i]-AY) <= 2.
+            endif
+            set i = i+1
+        endloop
+        call RB_LogRecord("OBS","paired-HP","target="+R2S(targetStart)+"->"+R2S(GetWidgetLife(target))+" control="+R2S(controlStart)+"->"+R2S(GetWidgetLife(control))+" differential="+R2S(diff))
+        call RB_LogCheck(shots == 4 and projectilesOK,"four-real-public-launches","actual="+I2S(shots)+" live allocated/launched/separate dummy/source/current origin at birth")
+        call RB_LogCheck(cadence,"three-adjacent-quarter-second-intervals","four public birth times; tolerance=.03125")
+        call RB_LogCheck(liveCount == 0,"no-source-flights-at-horizon","fresh collection scan at actual effect+3s; no disposal before observation")
+        call RB_LogCheck(bodiesOK and Bodies(),"bodies-live-owned-throughout","actor/controller/target/control alive and expected owners at every observer tick")
+        call RB_LogCheck(controlHits == 0,"control-undamaged","native control events="+I2S(controlHits))
+        if scene == 0 then
+            set effects = hits == 4 and hitValuesOK and hitSourcesOK and RAbsBJ(diff-40.) <= .10
+            call RB_LogCheck(hits == 4,"four-native-hits","actual="+I2S(hits))
+            call RB_LogCheck(hits == 4 and hitValuesOK and hitSourcesOK,"physical10-visible-source","each actual event10 + visible source; calibration excluded")
+            call RB_LogCheck(RAbsBJ(diff-40.) <= .10,"paired-HP-differential40","actual="+R2S(diff)+" tolerance=.10")
+            call RB_LogCheck(lifetime,"far-enemy-travel-then-extinction","each last-live x>=enemy-110; absence age .30..55; not dummy recycling")
+        else
+            set effects = hits == 0 and RAbsBJ(diff) <= .10 and treeOK
+            call RB_LogCheck(hits == 0,"tree-prevents-native-enemy-damage","actual events="+I2S(hits)+" expected0; downstream impacts are behavioral FAIL, not fixture ABORT")
+            call RB_LogCheck(RAbsBJ(diff) <= .10,"paired-HP-differential0","actual="+R2S(diff)+" tolerance=.10")
+            call RB_LogCheck(treeOK and TreeWitness(),"tree-live-HP-unchanged","start="+R2S(treeStart)+" end="+R2S(GetDestructableLife(tree))+" no tree removal/death/damage allowed")
+            call RB_LogCheck(lifetime,"four-early-near-tree-extinctions","each first absence age<=.18125; last-live x offset64..176/y+-2; enemy512/.4s cannot satisfy")
+        endif
+        return qualified and effects and lifetime and cadence and projectilesOK and shots == 4 and liveCount == 0 and bodiesOK and Bodies() and controlHits == 0
+    endfunction
+
+    private function ResetCase takes nothing returns nothing
+        // Invoked for R07 ONLY after old flight AND native corridor clearance.
+        set fault = ""
+        set qualified = false
+        set shots = 0
+        set hits = 0
+        set controlHits = 0
+        set castEvents = 0
+        set calibrationHits = 0
+        set hitValuesOK = true
+        set hitSourcesOK = true
+        set projectilesOK = true
+        set bodiesOK = true
+        set treeOK = true
+        set calibrationHP = 0.
+        set calibrationDamage = 0.
+        set calibrationSource = false
+        set calibrated = false
+        set phase = 0
+    endfunction
+
+    private function CreateScene takes nothing returns nothing
+        call ResetCase()
+        set actor = CreateUnit(Player(0),'o000',AX,AY,0.)
+        set caster = CreateUnit(Player(0),'o001',-5500.,-5500.,0.)
+        set target = CreateUnit(Player(1),'o000',AX+512.,AY,0.)
+        set control = CreateUnit(Player(1),'o000',AX+256.,AY+512.,0.)
+        call PauseUnit(target,true)
+        call PauseUnit(control,true)
+        set tree = null
+        set stableBody[0] = actor
+        set stableBody[1] = caster
+        set stableBody[2] = target
+        set stableBody[3] = control
+        set stableId[0] = GetHandleId(actor)
+        set stableId[1] = GetHandleId(caster)
+        set stableId[2] = GetHandleId(target)
+        set stableId[3] = GetHandleId(control)
+        call RB_LogRecord("OBS","baseline-body-identity",IdentityText())
+        set damageHook = CreateTrigger()
+        call TriggerRegisterUnitEvent(damageHook,target,EVENT_UNIT_DAMAGED)
+        call TriggerRegisterUnitEvent(damageHook,control,EVENT_UNIT_DAMAGED)
+        call TriggerAddCondition(damageHook,Condition(function OnDamage))
+        // Observer before application's event hook: baseline precedes sync shot.
+        set spellHook = CreateTrigger()
+        call TriggerRegisterUnitEvent(spellHook,caster,EVENT_UNIT_SPELL_EFFECT)
+        call TriggerAddCondition(spellHook,Condition(function OnSpell))
+        set shotHook = CreateTrigger()
+        call TriggerAddCondition(shotHook,Condition(function OnShot))
+        if not RB_InitializePair(actor,caster,shotHook) then
+            set fault = "InitializePair rejected fresh pair"
+        endif
+        set phase = 0
+    endfunction
+
+    private function PreviousFlightsClosed takes nothing returns boolean
+        local integer serial = 1
+        // Keep old counters/tokens/brackets intact until this fresh scan passes.
+        call Scan(0)
+        if fault != "" then
+            return GateFailure("old-flight-scan",fault)
+        endif
+        if not absentPassed or shots != 4 or castEvents != 1 then
+            return GateFailure("old-flight-baseline","absentPassed="+BoolText(absentPassed)+" shots="+I2S(shots)+" effects="+I2S(castEvents))
+        endif
+        if not FlightsClear() then
+            return false
+        endif
+        loop
+            exitwhen serial > 4
+            if not closed[serial] or firstAbsent[serial] < birth[serial] then
+                return GateFailure("old-flight-closure","serial="+I2S(serial)+" closed="+BoolText(closed[serial])+" birth="+R2S(birth[serial])+" firstAbsent="+R2S(firstAbsent[serial]))
+            endif
+            set serial = serial+1
+        endloop
+        if not transitionChecked then
+            call RB_LogRecord("OBS","old-four-flights-closed","time="+R2S(TimerGetElapsed(clock))+" fresh source count0; four observed absence brackets retained; no dispose/removal/reset before clearance")
+            set transitionChecked = true
+        endif
+        return true
+    endfunction
+
+    private function TransitionClear takes nothing returns boolean
+        local group g = CreateGroup()
+        local rect r
+        local unit u
+        local integer serial = 1
+        local integer match
+        local integer n = 0
+        local boolean ready = true
+        local real x = GetUnitX(actor)
+        local real y = GetUnitY(actor)
+        local real now = TimerGetElapsed(clock)
+        loop
+            exitwhen serial > 4
+            set priorInCorridor[serial] = false
+            set serial = serial+1
+        endloop
+        // Same conservative corridor geometry as strict Corridor; no rawcode skip.
+        set r = Rect(x-160.,y-160.,x+1660.,y+160.)
+        call GroupEnumUnitsInRect(g,r,null)
+        call RemoveRect(r)
+        loop
+            set u = FirstOfGroup(g)
+            exitwhen u == null
+            call GroupRemoveUnit(g,u)
+            set n = n+1
+            if n > 256 then
+                set fault = "transition corridor enumeration overflow256"
+                exitwhen true
+            endif
+            if GetUnitX(u) >= x-160. and GetUnitX(u) <= x+1660. and RAbsBJ(GetUnitY(u)-y) <= 160. and u != actor and u != target then
+                set match = 0
+                set serial = 1
+                loop
+                    exitwhen serial > 4
+                    if u == priorDummy[serial] and GetHandleId(u) == priorDummyId[serial] then
+                        set match = serial
+                    endif
+                    set serial = serial+1
+                endloop
+                if match == 0 then
+                    set fault = "unknown transition corridor unit time="+R2S(now)+" handle="+I2S(GetHandleId(u))+" "+Pose(u)
+                    exitwhen true
+                endif
+                set priorInCorridor[match] = true
+            endif
+        endloop
+        call DestroyGroup(g)
+        set g = null
+        set u = null
+        set r = null
+        if fault != "" then
+            return false
+        endif
+        // Reuse strict destructable visitor, still scene0/tree absent; no life filter.
+        set corridorTrees = 0
+        set ownedTrees = 0
+        set rejectedTrees = 0
+        set corridorOK = true
+        set r = Rect(x-160.,y-160.,x+1660.,y+160.)
+        call EnumDestructablesInRect(r,null,function VisitTree)
+        call RemoveRect(r)
+        set r = null
+        if not corridorOK then
+            set fault = "unexpected transition destructable"
+            return false
+        endif
+        set serial = 1
+        loop
+            exitwhen serial > 4
+            set u = priorDummy[serial]
+            if u == null or GetHandleId(u) != priorDummyId[serial] then
+                set fault = "missing prior dummy identity serial="+I2S(serial)
+            elseif GetUnitTypeId(u) == 0 then
+                if priorInCorridor[serial] then
+                    set fault = "removed prior dummy enumerated in corridor"
+                endif
+            elseif not LiveOwned(u,'e000',Player(PLAYER_NEUTRAL_PASSIVE)) or not IsUnitPaused(u) then
+                set fault = "incompatible prior dummy serial="+I2S(serial)+" "+Pose(u)
+            elseif priorInCorridor[serial] then
+                if clearanceLogged[serial] then
+                    set fault = "cleared prior dummy returned to corridor"
+                endif
+                set ready = false
+                if not pendingLogged[serial] then
+                    set pendingLogged[serial] = true
+                    call RB_LogRecord("OBS","known-prior-dummy-pending","time="+R2S(now)+" serial="+I2S(serial)+" handle="+I2S(priorDummyId[serial])+" "+Pose(u))
+                endif
+            elseif not At(u,WorldBounds.maxX,WorldBounds.maxY) then
+                set fault = "prior dummy outside corridor but not at recycler corner serial="+I2S(serial)+" "+Pose(u)
+            endif
+            if fault != "" then
+                set u = null
+                return false
+            endif
+            if not priorInCorridor[serial] and not clearanceLogged[serial] then
+                set clearanceLogged[serial] = true
+                call RB_LogRecord("OBS","known-prior-dummy-clear","time="+R2S(now)+" serial="+I2S(serial)+" handle="+I2S(priorDummyId[serial])+" type="+I2S(GetUnitTypeId(u))+" removed or live-neutral-paused at recycler corner; fresh corridor absence")
+            endif
+            set serial = serial+1
+        endloop
+        set u = null
+        return ready
+    endfunction
+
+    private function Tick takes nothing returns nothing
+        local real life
+        local boolean accepted
+        if fault != "" then
+            call Abort(fault)
+            return
+        endif
+        if phase == 6 then
+            // Poll observable state, retaining all old proof until admission.
+            if TimerGetElapsed(clock)-transitionStart >= CLEARANCE_LIMIT then
+                call Abort("intercase observable clearance deadline2.5s time="+R2S(TimerGetElapsed(clock))+" start="+R2S(transitionStart))
+                return
+            endif
+            if not PreviousFlightsClosed() then
+                call Abort("old flights not proven closed before live tree")
+                return
+            endif
+            if not SameBodies() or not Bodies() then
+                call RB_LogRecord("OBS","transition-body-identity",IdentityText())
+                call Abort("stable live-owned bodies unavailable before live tree")
+                return
+            endif
+            set accepted = TransitionClear()
+            if fault != "" then
+                call Abort(fault)
+                return
+            endif
+            if not accepted then
+                return
+            endif
+            call RB_LogRecord("OBS","transition-clearance-observed","time="+R2S(TimerGetElapsed(clock))+" start="+R2S(transitionStart)+" fresh source0/corridor clear; all four native identities checked; before reset/tree")
+            set scene = 1
+            call RB_LogCase("R07-live-tree-termination")
+            call RB_LogRecord("OBS","retained-body-identity",IdentityText())
+            call ResetCase()
+            set tree = CreateDestructable('LTlt',AX+128.,AY,0.,1.,0)
+            set treeStart = GetDestructableLife(tree)
+            return
+        endif
+        call Scan(0)
+        if fault != "" then
+            call Abort(fault)
+            return
+        endif
+        if phase == 0 then
+            call RB_LogRecord("OBS","strict-readiness-guard","time="+R2S(TimerGetElapsed(clock))+" scene="+I2S(scene)+" original strict guards; no dummy exemptions")
+            call RB_LogRecord("OBS","actor-ready",Pose(actor))
+            call RB_LogRecord("OBS","controller-ready",Pose(caster))
+            call RB_LogRecord("OBS","target-ready",Pose(target))
+            call RB_LogRecord("OBS","control-ready",Pose(control))
+            call RB_LogRecord("OBS","tree-ready","type="+I2S(GetDestructableTypeId(tree))+" xy="+R2S(GetDestructableX(tree))+","+R2S(GetDestructableY(tree))+" life="+R2S(GetDestructableLife(tree)))
+            if not FlightsClear() or not SceneReady() then
+                call Abort("fresh actual geometry512/ownership/alliance/life/abilities/pause/world/tree/corridor unavailable; no terrain/pathing inference")
+                return
+            endif
+            set phase = 1
+            set calibrationHP = GetWidgetLife(target)
+            set calibrated = UnitDamageTarget(actor,target,10.,true,true,ATTACK_TYPE_MELEE,DAMAGE_TYPE_NORMAL,null)
+        elseif phase == 1 then
+            call RB_LogRecord("OBS","native-calibration","events="+I2S(calibrationHits)+" damage="+R2S(calibrationDamage)+" HP="+R2S(calibrationHP)+"->"+R2S(GetWidgetLife(target)))
+            if not calibrated or calibrationHits != 1 or not calibrationSource or RAbsBJ(calibrationDamage-10.) > .01 or GetWidgetLife(target) >= calibrationHP or controlHits != 0 then
+                call Abort("physical10 visible-source native calibration unavailable")
+                return
+            endif
+            set life = RMinBJ(GetUnitState(target,UNIT_STATE_MAX_LIFE),GetUnitState(control,UNIT_STATE_MAX_LIFE))-10.
+            call SetWidgetLife(target,life)
+            call SetWidgetLife(control,life)
+            if life <= 60. or RAbsBJ(GetWidgetLife(target)-life) > .001 or RAbsBJ(GetWidgetLife(control)-life) > .001 then
+                call Abort("same-type equal native HP reset failed")
+                return
+            endif
+            set phase = 3
+        elseif phase == 3 then
+            if not SceneReady() or not FlightsClear() then
+                call Abort("fixture changed before actual order")
+                return
+            endif
+            set qualified = true
+            set aimX = GetUnitX(target)
+            set aimY = GetUnitY(target)
+            set orderTime = TimerGetElapsed(clock)
+            set phase = 4
+            // All expected-event state committed BEFORE possibly synchronous cast.
+            set accepted = IssuePointOrder(caster,"channel",aimX,aimY)
+            call RB_LogCheck(accepted,"native-point-order-accepted","EAST actual target="+R2S(aimX)+","+R2S(aimY))
+            if not accepted then
+                call Abort("native Channel order rejected")
+            endif
+        elseif phase == 4 then
+            if TimerGetElapsed(clock)-orderTime >= 2. then
+                call Abort("native effect deadline2s")
+            endif
+        elseif phase == 5 then
+            set bodiesOK = bodiesOK and Bodies()
+            if scene == 1 then
+                set treeOK = treeOK and TreeWitness() and RAbsBJ(GetDestructableLife(tree)-treeStart) <= .01
+            endif
+            if castEvents != 1 then
+                call Abort("actual effect count not1")
+            elseif TimerGetElapsed(clock)-castTime >= 3. then
+                call RB_LogCheck(qualified,"native-fixture-qualified","actual order/effect/calibration/corridor; observation3s from effect, not producer intent")
+                if scene == 0 then
+                    call RB_LogRecord("OBS","R06-assessment-time","time="+R2S(TimerGetElapsed(clock))+" effect="+R2S(castTime))
+                    set absentPassed = Assess()
+                    if not absentPassed then
+                        call Abort("absent positive failed; present contrast not admitted")
+                        return
+                    endif
+                    // Keep bodies, pair and observer registrations intact.
+                    set transitionStart = TimerGetElapsed(clock)
+                    call RB_LogRecord("OBS","transition-start","time="+R2S(transitionStart)+" deadline="+R2S(transitionStart+CLEARANCE_LIMIT)+" recycler2s plus margin.5s; readiness polled each .03125s, never blind sleep")
+                    set phase = 6
+                else
+                    // Missing early extinction/HP prevention on admitted fixture
+                    // stays FAIL above, never reclassified as fixture-unready.
+                    set accepted = Assess()
+                    call Finish()
+                endif
+            endif
+        endif
+    endfunction
+
+    function RF_StartTreeTest takes nothing returns nothing
+        call RB_LogBegin()
+        call RB_LogCase("R06-tree-absent-positive")
+        call SetPlayerAlliance(Player(0),Player(1),ALLIANCE_PASSIVE,false)
+        call SetPlayerAlliance(Player(1),Player(0),ALLIANCE_PASSIVE,false)
+        set clock = CreateTimer()
+        set runner = CreateTimer()
+        call TimerStart(clock,15.,false,function Deadline)
+        call CreateScene()
+        call TimerStart(runner,PERIOD,true,function Tick)
+    endfunction
+endlibrary

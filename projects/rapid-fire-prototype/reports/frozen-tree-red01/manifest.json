@@ -1,0 +1,242 @@
+{
+  "status": "FROZEN_BEFORE_SOURCE_EDIT",
+  "files": [
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/src/prototype/TreeNativeTest.j",
+      "sha256": "f7cc54108d5da7fe059b0262e84d097b2a6690d98a6ad1173a7b7573af9d6afa",
+      "mtime_ns": 1792474461618765327,
+      "size": 28186
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/src/prototype/TreeLogRed01.j",
+      "sha256": "f82c6fc0436c90f35750ac2fa10eb91903a656b6c93a0a4645a52bbc94d3c420",
+      "mtime_ns": 1792474411014597982,
+      "size": 2269
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed01.j",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/src/prototype/TreeMapMainRed01.j",
+      "sha256": "36ef5aed46cf580254913e495cf813dca2a9d586554949686c30f016532b2e8e",
+      "mtime_ns": 1792474419669626653,
+      "size": 1882
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build-plan-tree-red01.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/build-plan-tree-red01.json",
+      "sha256": "93ac6924883aeed1a6c60d815ce931332e4c2221c9c24b0947048bac455879c3",
+      "mtime_ns": 1792474559716449432,
+      "size": 9288
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/README.md",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/README.md",
+      "sha256": "dcde523f92959f4493d7ddca844bbdaea4bf331fac64b5227ec3f6d0e10c90ef",
+      "mtime_ns": 1792474559718195332,
+      "size": 39333
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/build.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/build/rf-burst-tree-red-20261020-01/build.json",
+      "sha256": "3884eba7d030979eed51d5116c4467122957393b3e49bdac665208b58429778d",
+      "mtime_ns": 1792474752692686403,
+      "size": 4000
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/command-1.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/build/rf-burst-tree-red-20261020-01/command-1.json",
+      "sha256": "70ac150c0dd1398d26e53ab58ab21086a10d1ce9bbd6e5426ef34d94c8c8f33f",
+      "mtime_ns": 1792474752077672406,
+      "size": 670
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/command-2.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/build/rf-burst-tree-red-20261020-01/command-2.json",
+      "sha256": "2f4ed11e0f009960ea0c706c9fb6988294811a7296df375679feeaef13da3962",
+      "mtime_ns": 1792474752682842414,
+      "size": 777
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/commands.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/build/rf-burst-tree-red-20261020-01/commands.json",
+      "sha256": "e8686b96dd39a94dc09dce55db3add1c7686f6b69e04ef8354ddcebc2e441a7c",
+      "mtime_ns": 1792474752683287609,
+      "size": 1508
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/compiled.j",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/build/rf-burst-tree-red-20261020-01/compiled.j",
+      "sha256": "a0d49d1a07fc7a1975869f9f79fc4a139a2083524df1776362800b72e072dfda",
+      "mtime_ns": 1792474752063468360,
+      "size": 180205
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/entry.j",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/build/rf-burst-tree-red-20261020-01/entry.j",
+      "sha256": "dbbd4759ffb1913218b50a087b5ab9d89fd04dbf768f1b7c785fca5c07078ea8",
+      "mtime_ns": 1792474749664696674,
+      "size": 944
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/injected.w3x",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/build/rf-burst-tree-red-20261020-01/injected.w3x",
+      "sha256": "21c55cec7f7894ebae3859e6bde433893b099a66ddc9f0022c616eee25608305",
+      "mtime_ns": 1792474752575685710,
+      "size": 288289
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/rf-burst-tree-red-20261020-01.w3x",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/build/rf-burst-tree-red-20261020-01/rf-burst-tree-red-20261020-01.w3x",
+      "sha256": "21c55cec7f7894ebae3859e6bde433893b099a66ddc9f0022c616eee25608305",
+      "mtime_ns": 1792474752693346762,
+      "size": 288289
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-01.txt",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/RF-rf-burst-tree-red-20261020-01.txt",
+      "sha256": "805085eafd469e50bcb33c40f89229ce4c7a004395b834939a4e414745050d30",
+      "mtime_ns": 1792474884538432084,
+      "size": 1422
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-attempt02-static.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-attempt02-static.json",
+      "sha256": "5137fd83a018e69da232fc574d2b18ad124ced54c8ca90049d7f8874541714bd",
+      "mtime_ns": 1792474574787553618,
+      "size": 14591
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-attempt02-stderr.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-attempt02-stderr.json",
+      "sha256": "c8a7efc8ea6d3d2cc253a4e093c5c6a71a76a61cb32afbd5b6a1c394993b6ca6",
+      "mtime_ns": 1792474559908935542,
+      "size": 87
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-attempt02-stdout.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-attempt02-stdout.json",
+      "sha256": "a57fe71aa8131306dd331b09d2efd421ebc9724970c89bd3a737c1b4db8faea1",
+      "mtime_ns": 1792474559908823687,
+      "size": 226
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-build.exit.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-build.exit.json",
+      "sha256": "589ec3c438312057574e1d9a8a9e40125df73d0ca2552bf1683c7012371fec2f",
+      "mtime_ns": 1792474752714906081,
+      "size": 1600
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-build.stderr.txt",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-build.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_ns": 1792474749446667150,
+      "size": 0
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-build.stdout.txt",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-build.stdout.txt",
+      "sha256": "216930934fd567a718f47f1199d3e114b5793b64e1a44abc7fcbb53f4d854a6b",
+      "mtime_ns": 1792474752693346762,
+      "size": 3820
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-launch.exit.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-native-launch.exit.json",
+      "sha256": "5de9c79a61c2d399a036d112cb9eb649c31342cfa0cb68935f3b4665d3c4469a",
+      "mtime_ns": 1792476087737646030,
+      "size": 317
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-launch.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-native-launch.json",
+      "sha256": "a68f17a0f8e852f7cd23e08b6ff53596e18562af989b9ac25b029b1fa19c8d12",
+      "mtime_ns": 1792474870097006783,
+      "size": 581
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-launch.stderr.txt",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-native-launch.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_ns": 1792474870097006783,
+      "size": 0
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-launch.stdout.txt",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-native-launch.stdout.txt",
+      "sha256": "ca8d75ccdb9c94c0c45ce3179b549fde308bd2d7392102ad77048a5dae475b5c",
+      "mtime_ns": 1792474870634065110,
+      "size": 257
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-reader.exit.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-native-reader.exit.json",
+      "sha256": "756ca5b29014a00c0a6fb1b4166d31a74552b30cc24a1d3f10e49a511f8e6770",
+      "mtime_ns": 1792474884612495504,
+      "size": 627
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-reader.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-native-reader.json",
+      "sha256": "6e6515443f033d4cc17eac8bf77024a8c2427c69237a62987692b4d358c70765",
+      "mtime_ns": 1792474884602508450,
+      "size": 1382
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-reader.stderr.txt",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-native-reader.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_ns": 1792474884611432479,
+      "size": 0
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-reader.stdout.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-native-reader.stdout.json",
+      "sha256": "6e6515443f033d4cc17eac8bf77024a8c2427c69237a62987692b4d358c70765",
+      "mtime_ns": 1792474884610432473,
+      "size": 1382
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-observer.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-observer.json",
+      "sha256": "c46fe6588a2035d6c66bcadef24bbf0cd48183211a06314c77839d89a1f96dad",
+      "mtime_ns": 1792474884612566777,
+      "size": 159
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-preparation.md",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-preparation.md",
+      "sha256": "c46947c51b1e381e0e6340940426076e8b98228d5598e6d80b686f75decb7b50",
+      "mtime_ns": 1792474499362017068,
+      "size": 7950
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-profile-preflight.json",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-profile-preflight.json",
+      "sha256": "a19ca7897088b033f94264253ca826756487dcf9dac360dfc04bf7a076433d54",
+      "mtime_ns": 1792474830051541662,
+      "size": 506
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-results.md",
+      "frozen": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/frozen-tree-red01/reports/tree-red01-results.md",
+      "sha256": "2b08a35a11a775ba4fc89a96dd090088073d228df6ba18bda675dcaca6917aa1",
+      "mtime_ns": 1792475694487107983,
+      "size": 4332
+    }
+  ],
+  "input_pins_verified": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j": "f82c6fc0436c90f35750ac2fa10eb91903a656b6c93a0a4645a52bbc94d3c420",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": "f7cc54108d5da7fe059b0262e84d097b2a6690d98a6ad1173a7b7573af9d6afa",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed01.j": "36ef5aed46cf580254913e495cf813dca2a9d586554949686c30f016532b2e8e"
+  },
+  "copy": "exclusive xb reservation then shutil.copy2; source/frozen SHA and mtime equal"
+}

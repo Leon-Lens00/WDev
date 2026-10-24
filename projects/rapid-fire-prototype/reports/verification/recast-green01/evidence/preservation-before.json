@@ -1,0 +1,82 @@
+{
+  "projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x": {
+    "sha256": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+    "mtime_ns": 1792460695052756981
+  },
+  "projects/rapid-fire-prototype/build/rf-burst-recast-green-20261020-01/rf-burst-recast-green-20261020-01.w3x": {
+    "sha256": "2e6785b493465ae08390c4777cee0dda4acabcd3654e5187c2c622dd361ed35d",
+    "mtime_ns": 1792464221465798085
+  },
+  "projects/rapid-fire-prototype/build-plan-recast-green01.json": {
+    "sha256": "e15d0d7a5321cbf301fb224d0511e099b1dd0dddc2afdaa3f077fb3e68e0c6b0",
+    "mtime_ns": 1792463985051952765
+  },
+  "projects/rapid-fire-prototype/reports/RF-rf-burst-recast-green-20261020-01.txt": {
+    "sha256": "19fdf2d07a4fd9160a35d3d2d6a7bff23b2b34ee5673190db703f4e33b98dabd",
+    "mtime_ns": 1792465548559842062
+  },
+  "projects/rapid-fire-prototype/reports/RF-rf-burst-recast-red-20261020-02.txt": {
+    "sha256": "8db4c8e7f2108785f802c5bf94cb67536d66bf48682bd56b9d15a5e74e8d254e",
+    "mtime_ns": 1792462931206679551
+  },
+  "projects/rapid-fire-prototype/reports/frozen-recast-red02/preservation.json": {
+    "sha256": "072af8f6e469aeb6187c79f993ae3495c07955f9a414bd891c399b50e155eef6",
+    "mtime_ns": 1792463937369021305
+  },
+  "projects/rapid-fire-prototype/reports/frozen-recast-red02/sources/PairCore.j": {
+    "sha256": "7fe99448ba2fff01e6bd67675c8a71e30ad7b11b35268e65b4f74ec0a64e1078",
+    "mtime_ns": 1792458079336638052
+  },
+  "projects/rapid-fire-prototype/reports/frozen-recast-red02/sources/RecastNativeTest.j": {
+    "sha256": "aec5c4735d594975644eef5f03118d23e4acffadc4afd3ee46ff8c389a769af0",
+    "mtime_ns": 1792462567744286869
+  },
+  "projects/rapid-fire-prototype/reports/recast-green01-native-launch.json": {
+    "sha256": "055284c84c6289308191c8c42defc204ab66dfd38161e65f515a864bdf915a1c",
+    "mtime_ns": 1792465533311857664
+  },
+  "projects/rapid-fire-prototype/reports/recast-red02-native-launch.json": {
+    "sha256": "dad548e0da645b7437168eac21ab52f46dfe1fbfdaae58c675b007addcba9550",
+    "mtime_ns": 1792462868754203892
+  },
+  "projects/rapid-fire-prototype/src/prototype/PairCore.j": {
+    "sha256": "f82e92301dea1dd64a1993843e4f04c929a58bd032b9908f87fa96eb18426d52",
+    "mtime_ns": 1792463946541223767
+  },
+  "projects/rapid-fire-prototype/src/prototype/RecastLogGreen01.j": {
+    "sha256": "e447939ffec04d2e3e14876fe84b36f2dd07b7e8f239b1ce9bdc593daa0d28e0",
+    "mtime_ns": 1792463985051246206
+  },
+  "projects/rapid-fire-prototype/src/prototype/RecastMapMainGreen01.j": {
+    "sha256": "a3481542c6abe1b0ede5f3ec9dfc42c3b068dd53c99f81b266a14dd656e00ee0",
+    "mtime_ns": 1792463985051293746
+  },
+  "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j": {
+    "sha256": "aec5c4735d594975644eef5f03118d23e4acffadc4afd3ee46ff8c389a769af0",
+    "mtime_ns": 1792462567744286869
+  },
+  "projects/relativistic-classic/src/Missiles.j": {
+    "sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "mtime_ns": 1792383155424927357
+  },
+  "projects/relativistic-classic/src/libraries/DummyRecycler.j": {
+    "sha256": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "mtime_ns": 1792369976943388123
+  },
+  "projects/relativistic-classic/src/libraries/TimerUtils.j": {
+    "sha256": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "mtime_ns": 1792369976943325806
+  },
+  "projects/relativistic-classic/src/libraries/WorldBounds.j": {
+    "sha256": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "mtime_ns": 1792369976943354294
+  },
+  "projects/relativistic-classic/tools/build.py": {
+    "sha256": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "mtime_ns": 1792369969856927855
+  },
+  "projects/relativistic-classic/tools/read_logs.py": {
+    "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+    "mtime_ns": 1792370695996710430
+  }
+}

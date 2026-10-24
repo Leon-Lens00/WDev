@@ -1,0 +1,18 @@
+{
+  "checked_unix": 1792464249.124841,
+  "profile_prefix": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx",
+  "status": "OCCUPIED",
+  "matching_instances": [
+    {
+      "pid": 117007,
+      "executable": "c:/warcraftiii/war3.exe"
+    }
+  ],
+  "unreadable_war3_pids": [],
+  "native_log_already_exists": false,
+  "map_sha256": "2e6785b493465ae08390c4777cee0dda4acabcd3654e5187c2c622dd361ed35d",
+  "script_sha256": "f6a5a8177d6ae4bdd8666192b61701f16137487c1d9bb23bfa7d76620870d998",
+  "build_stderr_bytes": 0,
+  "launcher_guard_must_remain_enabled": true,
+  "read_only_single_snapshot": true
+}

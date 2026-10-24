@@ -1,0 +1,16 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "RM28|rf-burst-tree-red-20261020-01|BEGIN|RFBurstTree" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-01|CASE|R06-tree-absent-positive" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-01|CHECK|R06-tree-absent-positive|OBS|actor-ready|type=1865429040 xy=-3136.000,2624.000 hp=335.000 owner=0 order=0" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-01|CHECK|R06-tree-absent-positive|OBS|controller-ready|type=1865429041 xy=-5500.000,-5500.000 hp=335.000 owner=0 order=0" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-01|CHECK|R06-tree-absent-positive|OBS|target-ready|type=1865429040 xy=-2624.000,2624.000 hp=335.000 owner=1 order=851973" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-01|CHECK|R06-tree-absent-positive|OBS|control-ready|type=1865429040 xy=-2640.000,3184.000 hp=335.000 owner=1 order=851973" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-01|CHECK|R06-tree-absent-positive|OBS|tree-ready|type=0 xy=0.000,0.000 life=0.000" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-01|CHECK|R06-tree-absent-positive|FAIL|ABORT-fixture|fresh actual geometry512/ownership/alliance/life/abilities/pause/world/tree/corridor unavailable; no terrain/pathing inference; behavior unqualified, no tree RED inferred" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-01|COMPLETE|1|6|1|0" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

@@ -1,0 +1,23 @@
+{
+  "at": 1792454528.168572,
+  "pid": 87674,
+  "start_ticks": "2769603",
+  "proc_absent": true,
+  "profile_game_processes": [],
+  "scan_uncertain_pids": [],
+  "profile_game_free": true,
+  "target_window_absent": true,
+  "termination_mechanism": "unproven: Alt+F4 confirmation viewed; PID disappeared before affirmative guard, no click delivered",
+  "gui_outcome": "PARTIAL: Inventory [B] tooltip first became visible in stopped screenshot, after operator had stopped recording; no activation/open/close attempted",
+  "reader_exit": 0,
+  "rows": 3,
+  "chunks": 1,
+  "stop_reason": "USER_STOP",
+  "dropped": 0,
+  "native_events": [
+    "BEGIN",
+    "STATS",
+    "TERMINAL"
+  ],
+  "semantic_certification": false
+}

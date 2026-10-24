@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-aim-green-20261020-01.txt",
+    "--run-id",
+    "rf-burst-aim-green-20261020-01",
+    "--not-before",
+    "1792469667.4688725",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/aim-green01-native-reader.json"
+  ],
+  "exit_code": 0,
+  "source_mtime": 1792469688.6314762,
+  "launch_requested_unix": 1792469667.4688725
+}

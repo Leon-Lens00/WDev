@@ -1,0 +1,10 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "IL141M|inv-manual-20261019-01|techgui01|0|1|185187|recorder|BEGIN|schema=1" )
+	call Preload( "IL141M|inv-manual-20261019-01|techgui01|0|2|185187|sample|STATS|str=22 agi=13 int=17 gold=0" )
+	call Preload( "IL141M|inv-manual-20261019-01|techgui01|0|3|282750|recorder|TERMINAL|reason=USER_STOP rows=3 dropped=0" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+    "-B",
+    "projects/rapid-fire-prototype/tests/compare_object_clis.py",
+    "--baseline",
+    "projects/rapid-fire-prototype/reports/instant-controller-01/baseline/rapid-fire-prototype/tools/prepare_objects.py",
+    "--evidence",
+    "projects/rapid-fire-prototype/reports/instant-controller-differential01"
+  ],
+  "exit": 0
+}

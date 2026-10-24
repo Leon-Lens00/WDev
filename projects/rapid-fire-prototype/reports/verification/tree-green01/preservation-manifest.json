@@ -1,0 +1,166 @@
+{
+  "source_directory": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ",
+  "archive_count": 17,
+  "archive_bytes": 398848,
+  "no_overwrite": true,
+  "no_symlinks": true,
+  "files": [
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/findings.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/findings.json",
+      "sha256": "b02c558038ee92e761eef2545843d61042dca7d7abe02c13e20777db62c1f5bd",
+      "bytes": 989,
+      "mtime_ns": 1792533030304318554
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/source-evidence.txt",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/source-evidence.txt",
+      "sha256": "a5a8b2e9074189cf13cea60aeb2eea125ad8eaf309919b3d06176027940c6a88",
+      "bytes": 224914,
+      "mtime_ns": 1792533030297593285
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/PairCore.diff",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/PairCore.diff",
+      "sha256": "0fd819f71d7467cbc372e763bed491406d79e5481ba05eaec85ac81ec9ba5a73",
+      "bytes": 364,
+      "mtime_ns": 1792533030272853625
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/comparison.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/comparison.json",
+      "sha256": "48d234440737f14ba5c0d458cca081eed716fb71319f35ca529e577973e0dbb1",
+      "bytes": 1299,
+      "mtime_ns": 1792533030297748671
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/comparison-addendum.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/comparison-addendum.json",
+      "sha256": "e9ad679b075c7a4400ebf0b619522d1ad2c683d6a984e63342028331829f322e",
+      "bytes": 484,
+      "mtime_ns": 1792533049847476895
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/artifact-pins-preservation.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/artifact-pins-preservation.json",
+      "sha256": "bd6b2e5a643d819d3bfcb97b3e77db61467d2521ac50989176d2ed0e2abfec52",
+      "bytes": 67655,
+      "mtime_ns": 1792533030304277984
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/pins-preservation.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/pins-preservation.json",
+      "sha256": "d24cdf554f35443f7ebcd95e9ecb433d195e30c24ff0fdab71d87124fe58d287",
+      "bytes": 1595,
+      "mtime_ns": 1792532978390659062
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/reader-executions.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/reader-executions.json",
+      "sha256": "6609baa3ee1e3fff60c1f1e11b9e347d9a9068c5e61b53d57dc2c9842db8a5b6",
+      "bytes": 1012,
+      "mtime_ns": 1792532978390482987
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/green-reader.stderr",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/green-reader.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792532978390314776
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/green-reader.stdout",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/green-reader.stdout",
+      "sha256": "b0d653f793ecd5e1d176c69172c1667c0c5b0e717b4d82b5c41055f0bbf9a8bd",
+      "bytes": 15250,
+      "mtime_ns": 1792532978390314776
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/green-report.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/green-report.json",
+      "sha256": "b0d653f793ecd5e1d176c69172c1667c0c5b0e717b4d82b5c41055f0bbf9a8bd",
+      "bytes": 15250,
+      "mtime_ns": 1792532978385384933
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/red-reader.stderr",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/red-reader.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792532978354431857
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/red-reader.stdout",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/red-reader.stdout",
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "bytes": 15846,
+      "mtime_ns": 1792532978354431857
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/red-report.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/red-report.json",
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "bytes": 15846,
+      "mtime_ns": 1792532978349893256
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/RF-rf-burst-tree-green-20261020-01.txt",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/RF-rf-burst-tree-green-20261020-01.txt",
+      "sha256": "fa5f1740faabbf33ce51788bd7b7ca474f50217973f315920ab31b9bed73f291",
+      "bytes": 16392,
+      "mtime_ns": 1792532695086510271
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/RF-rf-burst-tree-red-20261020-05.txt",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/RF-rf-burst-tree-red-20261020-05.txt",
+      "sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4",
+      "bytes": 16860,
+      "mtime_ns": 1792531163094124795
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree-green01-independent-wYT0sZ/read_logs.py",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-green01/read_logs.py",
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "bytes": 5092,
+      "mtime_ns": 1792370695996710430
+    }
+  ],
+  "originals_before": {
+    "odd/tasks/rapid-fire-prototype.md": {
+      "sha256": "9452f9bd6d44c2842658411ae6bbf84d099a1bb9ffd1d250fcdac10709da3c98",
+      "bytes": 89082,
+      "mtime_ns": 1792475582719653998
+    },
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-green-20261020-01.txt": {
+      "sha256": "fa5f1740faabbf33ce51788bd7b7ca474f50217973f315920ab31b9bed73f291",
+      "bytes": 16392,
+      "mtime_ns": 1792532695086510271
+    },
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt": {
+      "sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4",
+      "bytes": 16860,
+      "mtime_ns": 1792531163094124795
+    },
+    "projects/rapid-fire-prototype/reports/checkpoint-current-L71-payload.txt": {
+      "sha256": "15eb41959956f70d9b7c9f31d8e0adb25d8e6def81027424bfed4bb25a7f8e92",
+      "bytes": 22164,
+      "mtime_ns": 1792532793431159906
+    },
+    "projects/rapid-fire-prototype/reports/checkpoint-current-L71-proof.json": {
+      "sha256": "153f815fa7831023a008e5962370920eba5d5a57590fae1b3fe2ec3b83c13aa7",
+      "bytes": 1441,
+      "mtime_ns": 1792532879427239352
+    }
+  },
+  "originals_byte_mtime_unchanged": true,
+  "scratch_byte_mtime_unchanged": true,
+  "archive_copy_byte_mtime_equal": true,
+  "excluded": "No HOME/TMP/cache directories copied; only the17 explicitly named regular files; scratch untouched.",
+  "frozen_RED_artifacts_checked": 55,
+  "frozen_RED_SHA_size_mtime_preserved": true,
+  "README_before": {
+    "bytes": 40830,
+    "sha256": "8a28bc37d218f160f35a162247629dcdb46de848226fb0bb28e1db944c3a47ae"
+  },
+  "README_prior_bytes_preserved_as_prefix": true
+}

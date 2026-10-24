@@ -1,0 +1,126 @@
+{
+  "status": "Scanned",
+  "spec_scope": [
+    "S3",
+    "S4",
+    "S8",
+    "S9",
+    "S10"
+  ],
+  "S5_S7": "existing tool/profile provenance preserved; compiler/native commands parent-owned",
+  "native_outcomes": "pending; not GREEN or final candidate acceptance",
+  "core_sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+  "logger_sha256": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+  "source_before_sha256": {
+    "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+    "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "lab/Config.j": "7db72ddb89f85338a4ed2af34d944190d3112318d1db01a59ed5646b1985f29c",
+    "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+    "lab/Environment.j": "021a504533130ffb3e3922f1ca2bca8f37e4209bc51e64906bceca5646e7e41f",
+    "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+    "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+    "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+    "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+    "lab/Support.j": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+    "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+  },
+  "source_after_sha256": {
+    "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+    "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "lab/Config.j": "7db72ddb89f85338a4ed2af34d944190d3112318d1db01a59ed5646b1985f29c",
+    "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+    "lab/Environment.j": "0b1c72c23fdc2cf90ad7ebdb993b1df5804b62ef3e036e21ceab6ea2b6dbfaf2",
+    "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+    "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+    "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+    "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+    "lab/Support.j": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+    "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+  },
+  "maintained_source_changes": [
+    "lab/Environment.j"
+  ],
+  "patchstat_environment": {
+    "additions": 259,
+    "deletions": 27
+  },
+  "historical_red": {
+    "path": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/reports/RM28-diag3-e29-transfer-20261019-01.txt",
+    "sha256": "2c2bd7cbe38dd5c1d425d8a9432222ce6d9b48266a99bbdd30eb03fc31e30271",
+    "actual": "COMPLETE1/60/3/1 reader1; raw and missile old owners retain vision at .25s; both settle by .5s in that run only"
+  },
+  "test_first_exception": "New bounded guard and predicate seam did not exist before; no prior negative native run. Parent executes one actual injected timeout then exactly one full47.",
+  "tooling_tests": {
+    "command": "python3 -B -m unittest discover -s projects/relativistic-classic/tests -v",
+    "runs": 1,
+    "timeout_seconds": 30,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_bootstrap_keeps_exact_config_and_excludes_original_demo (test_build.BuildTests.test_bootstrap_keeps_exact_config_and_excludes_original_demo) ... ok\ntest_build_without_harness_preserves_empty_bootstrap_contract (test_build.BuildTests.test_build_without_harness_preserves_empty_bootstrap_contract) ... ok\ntest_collision_before_any_write (test_build.BuildTests.test_collision_before_any_write) ... ok\ntest_compiler_failure_records_exit_without_publication (test_build.BuildTests.test_compiler_failure_records_exit_without_publication) ... ok\ntest_destination_ancestor_of_input_rejected (test_build.BuildTests.test_destination_ancestor_of_input_rejected) ... ok\ntest_existing_run_is_immutable (test_build.BuildTests.test_existing_run_is_immutable) ... ok\ntest_failed_roundtrip_never_publishes_map (test_build.BuildTests.test_failed_roundtrip_never_publishes_map) ... ok\ntest_hardlink_input_alias_rejected (test_build.BuildTests.test_hardlink_input_alias_rejected) ... ok\ntest_harness_requires_entry (test_build.BuildTests.test_harness_requires_entry) ... ok\ntest_help (test_build.BuildTests.test_help) ... ok\ntest_invalid_entry_rejected (test_build.BuildTests.test_invalid_entry_rejected) ... ok\ntest_invalid_run_id_rejected (test_build.BuildTests.test_invalid_run_id_rejected) ... ok\ntest_nested_import_rejected_without_writes (test_build.BuildTests.test_nested_import_rejected_without_writes) ... ok\ntest_opaque_member_build_preservation (test_build.BuildTests.test_opaque_member_build_preservation) ... ok\ntest_recovery_bad_hash_no_writes (test_build.BuildTests.test_recovery_bad_hash_no_writes) ... ok\ntest_recovery_boundary_validation_no_writes (test_build.BuildTests.test_recovery_boundary_validation_no_writes) ... ok\ntest_recovery_exact_sources_and_repeated_rejection (test_build.BuildTests.test_recovery_exact_sources_and_repeated_rejection) ... ok\ntest_recovery_opaque_member_records_raw_evidence (test_build.BuildTests.test_recovery_opaque_member_records_raw_evidence) ... ok\ntest_success_entry_roundtrip_and_input_preservation (test_build.BuildTests.test_success_entry_roundtrip_and_input_preservation) ... ok\ntest_symlink_output_rejected (test_build.BuildTests.test_symlink_output_rejected) ... ok\ntest_documented_case_ids_match_runner_and_danger_is_last (test_lab.CatalogStructure.test_documented_case_ids_match_runner_and_danger_is_last) ... ok\ntest_bad_status (test_lab.Logs.test_bad_status) ... ok\ntest_counters_rejected (test_lab.Logs.test_counters_rejected) ... ok\ntest_duplicate_case (test_lab.Logs.test_duplicate_case) ... ok\ntest_duplicate_complete (test_lab.Logs.test_duplicate_complete) ... ok\ntest_fail_is_nonzero_with_machine_evidence (test_lab.Logs.test_fail_is_nonzero_with_machine_evidence) ... ok\ntest_freshness_equal_boundary_and_metadata (test_lab.Logs.test_freshness_equal_boundary_and_metadata) ... ok\ntest_incomplete (test_lab.Logs.test_incomplete) ... ok\ntest_invalid_run_id (test_lab.Logs.test_invalid_run_id) ... ok\ntest_mismatch (test_lab.Logs.test_mismatch) ... ok\ntest_missing_begin (test_lab.Logs.test_missing_begin) ... ok\ntest_nonfinite_freshness (test_lab.Logs.test_nonfinite_freshness) ... ok\ntest_normal_pass_and_exclusive_report (test_lab.Logs.test_normal_pass_and_exclusive_report) ... ok\ntest_observation_is_not_assertion (test_lab.Logs.test_observation_is_not_assertion) ... ok\ntest_report_never_overwritten (test_lab.Logs.test_report_never_overwritten) ... ok\ntest_skip_is_not_pass (test_lab.Logs.test_skip_is_not_pass) ... ok\ntest_stale (test_lab.Logs.test_stale) ... ok\ntest_symlink_report_parent_is_rejected (test_lab.Logs.test_symlink_report_parent_is_rejected) ... ok\ntest_unbegun_case (test_lab.Logs.test_unbegun_case) ... ok\n\n----------------------------------------------------------------------\nRan 39 tests in 0.764s\n\nOK\n",
+    "files": {
+      "stdout": "tooling-tests.stdout.txt",
+      "stderr": "tooling-tests.stderr.txt",
+      "exit": "tooling-tests.exit.txt"
+    },
+    "sha256": {
+      "stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "41784b854f169fd254f64286cfb0a7fb04f72fbf05a6bccd4a968f746e875104",
+      "exit": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "scope": "39 existing Python tooling tests ONLY; not game proof"
+  },
+  "snapshots": [
+    {
+      "run_id": "diag4-e29-timeout-20261019-01",
+      "selection": "E29",
+      "manifest": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/manifest.json",
+      "manifest_sha256": "fc8793e0c188295d3ea291dbcc8405f2784924d8a2cd2d96d53ce4cf7b1682ef",
+      "input_sha256": {
+        "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+        "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+        "lab/Config.j": "bc41ea85d2a74d6d24a141c42d61706e14df842cccb2532a96e28a76bd88e6e1",
+        "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+        "lab/Environment.j": "d7fcc7fefbddd724a6bf23f252ede1c46030e020b9f6542023375cab5f9e85b3",
+        "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+        "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+        "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+        "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+        "lab/Support.j": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+        "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+        "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+        "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+      },
+      "compiler_command": "PYTHONDONTWRITEBYTECODE=1 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py build --wc3 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 --base /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/baseline/original.w3x --timer-utils /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/libraries/TimerUtils.j --world-bounds /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/libraries/WorldBounds.j --dummy-recycler /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/libraries/DummyRecycler.j --core /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/Missiles.j --bootstrap /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/MapMain.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Config.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Support.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Lifecycle.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Motion.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Contact.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Environment.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Load.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Runner.j --entry LabRun --output-dir /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build --run-id diag4-e29-timeout-20261019-01"
+    },
+    {
+      "run_id": "fixed-20261019-03",
+      "selection": "all",
+      "manifest": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/manifest.json",
+      "manifest_sha256": "fbb0b46237d2f72c8a7427be5412f05d3328f3b9036423128640db27371bb3fb",
+      "input_sha256": {
+        "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+        "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+        "lab/Config.j": "5cd3b75504a30fcf093d6f1d413ae763e960cadba40869f7e4e8adc2ab1e8001",
+        "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+        "lab/Environment.j": "0b1c72c23fdc2cf90ad7ebdb993b1df5804b62ef3e036e21ceab6ea2b6dbfaf2",
+        "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+        "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+        "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+        "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+        "lab/Support.j": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+        "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+        "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+        "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+      },
+      "compiler_command": "PYTHONDONTWRITEBYTECODE=1 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py build --wc3 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 --base /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/baseline/original.w3x --timer-utils /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/libraries/TimerUtils.j --world-bounds /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/libraries/WorldBounds.j --dummy-recycler /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/libraries/DummyRecycler.j --core /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/Missiles.j --bootstrap /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/MapMain.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Config.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Support.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Lifecycle.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Motion.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Contact.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Environment.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Load.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Runner.j --entry LabRun --output-dir /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build --run-id fixed-20261019-03"
+    }
+  ],
+  "preservation_report": "preservation.json",
+  "risk": "item3 acceptance/test-oracle contract; independent fixture verifier after native checks",
+  "scratch_created": [],
+  "native_authority": "not invoked; no approval inferred"
+}

@@ -1,0 +1,25 @@
+# Tree02 fixture correction — PREPARED source, native pending
+
+Authority: complete `odd/tasks/rapid-fire-prototype-current.md`, T2/S3/L55. Human selected “Corregir la fixture y medir una vez” / correct_fixture_one_tree02. Prepare only; parent owns compilation, exact-profile preflight and ONE protected native measurement. No automatic retry, callback change or S3 completion.
+
+Before changing live source, freeze the fixed Tree01 source/plan/build/native/README evidence with exclusive copy2, SHA256 and mtime verification. Missing proof or any failed command stops this bounded attempt without a source retry. The old checkpoint archive and mirror payload remain untouched.
+
+Tree01 COMPLETE1/6/1/0: 0PASS/5OBS/1FAIL, fixture ABORT before calibration/order/absent positive. Requested control(-2624,3136) actually spawned(-2640,3184). This is fixture invalidity, NOT collision RED; other gates were not isolated. Launcher44 exit0 does not prove profile release.
+
+Correction scope: control requested/expected actor+256X,+512Y =(-2880,3136), in both fresh scenes. Historical Aim placement is only a proposal for Tree02; native admission must independently pass. All tolerances, expected-point matching, unit contracts, target512/tree128, native calibration/HP/cadence, corridor bounds, borrowing/reuse, sampling, horizon and early-extinction assertions stay unchanged. Diagnostics identify only the first reached failed gate; later gates remain explicitly unqualified/unreached. New logger/bootstrap are label-only variants with run rf-burst-tree-red-20261020-02, group RFBurstTree and entry RF_StartTreeTest.
+
+## Diagnostics and unchanged admission
+
+Body contract, each requested placement, life>100, pair/target ability levels, pause flags, enemy/alliance, actor order/facing, tree state, world bounds and actual-scene equality retain their original predicate sequence and short-circuit behavior. Each first failure emits OBS naming its gate and actual values; later gates are explicitly unreached/unqualified. `FlightsClear` is a diagnostic wrapper around the same liveCount==0 check at the original two short-circuit positions. Native corridor bounds remain the entire1500 ray plus160 margin; unit overflow256 and destructable overflow64 still reject. First four unexpected unit/destructable identities include handles/type/XY/life and unit owner (destructables have no player-owner API); counts/owned-tree witness and overflow are logged without ignoring dead destructables or blockers. Cleanup/enumeration ownership is unchanged.
+
+R06 must still establish real four-flight cadence, native physical10/visible-source hits, paired HP40, off-ray control0 and travel to the enemy512 before disappearance. Only then is fresh R07 admitted: tree origin128, early first absence age .0625..18125 and last-live X offset64..176/Y±2, zero downstream events/paired HP0, unchanged live tree, no remaining source flights, all bodies live/owned. Missing early extinction on qualified present geometry remains behavioral FAIL, never fixture-unready simply because Core770 flies through.
+
+Fresh collection borrowing, maximum four application flights, public collection limit32, serial mapping/reuse-before-observed-absence ABORT, scalar brackets and no retained-ID dereference are byte-identical. Native calibration, phase precommit before possible synchronous cast, .25±.03125 cadence, effect deadline2s, horizon3s from effect and global15 game seconds remain unchanged. Parent observer180 wall seconds is a budget, not a guarantee.
+
+## Evidence and next parent step
+
+`reports/frozen-tree-red01/manifest.json` records32 exclusive-copy2 artifacts with source/frozen SHA256, size and mtime_ns, plus ten verified old plan inputs. This includes original harness/log/bootstrap/plan/README, all eight fixed build artifacts, raw/native reader/observer/preflight/finished-launcher streams/exit and prior preparation evidence. No original map, library, Core770, old logger/bootstrap/plan, raw failure, compact spec, historical archive or mirror payload is edited.
+
+`build-plan-tree-red02.json` records exact unchanged builder argv with only new log/bootstrap/run/output/reader and harness pins. Ten pins preserve base Instant dea9/core adc5/PairCore770/dependencies. `tree-red02-static.json` contains actual unified diff, new source/plan hashes, API/type-local-name scan, unchanged-function and readiness-predicate-order checks, frozen-artifact source SHA/mtime preservation and actual README historical-suffix byte/hash comparison. Check output/error streams use new JSON paths. No static check is native RED/GREEN. Parent alone decides compilation, fresh exact-profile preflight BEFORE observer, protected ONE Tree02 measurement and reader; no measurement is launched here.
+
+No compiler/JassHelper/pJASS/build/game/reader/process/native/GUI action is authorized to this writer. Strongest status and observed checks will be recorded in `tree-red02-static.json`. Native placement/contrast and full S3/T2/T4 remain pending. RED/GREEN exception: fixture-source preparation has no authorized native runner; source checks do not establish gameplay RED/GREEN.

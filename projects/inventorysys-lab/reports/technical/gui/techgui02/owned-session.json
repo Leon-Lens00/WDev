@@ -1,0 +1,323 @@
+{
+  "at": 1792454281.5834544,
+  "pid": 87674,
+  "start_ticks": "2769603",
+  "command": [
+    "C:\\WarcraftIII\\war3.exe",
+    "-loadfile",
+    "Maps\\CodexTest\\26d7faf7953feb98.w3x",
+    "-window"
+  ],
+  "WINEPREFIX": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/",
+  "map_sha256": "26d7faf7953feb98a991222c77bf92c1fed58ffef534e2a874ba8ddd3a8f28fe",
+  "staged_sha256": "26d7faf7953feb98a991222c77bf92c1fed58ffef534e2a874ba8ddd3a8f28fe",
+  "window": {
+    "address": "0x555ccf9abb30",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      0,
+      0
+    ],
+    "size": [
+      1920,
+      1080
+    ],
+    "workspace": {
+      "id": 4,
+      "name": "4"
+    },
+    "floating": true,
+    "monitor": 0,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 87674,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 2,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 0,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "180002a7"
+  },
+  "monitors": [
+    {
+      "id": 0,
+      "name": "eDP-1",
+      "description": "Sharp Corporation LQ173M1JW12",
+      "make": "Sharp Corporation",
+      "model": "LQ173M1JW12",
+      "serial": "",
+      "width": 1920,
+      "height": 1080,
+      "physicalWidth": 380,
+      "physicalHeight": 210,
+      "refreshRate": 360.00601,
+      "x": 0,
+      "y": 0,
+      "activeWorkspace": {
+        "id": 4,
+        "name": "4"
+      },
+      "specialWorkspace": {
+        "id": 0,
+        "name": ""
+      },
+      "reserved": [
+        0,
+        45,
+        0,
+        0
+      ],
+      "scale": 1,
+      "transform": 0,
+      "focused": true,
+      "dpmsStatus": true,
+      "vrr": false,
+      "solitary": "555ccf9abb30",
+      "solitaryBlockedBy": null,
+      "activelyTearing": false,
+      "tearingBlockedBy": [
+        "NOT_TORN"
+      ],
+      "directScanoutTo": "0",
+      "directScanoutBlockedBy": [
+        "USER"
+      ],
+      "disabled": false,
+      "currentFormat": "XRGB8888",
+      "mirrorOf": "none",
+      "availableModes": [
+        "1920x1080@360.01Hz",
+        "1920x1080@60.00Hz"
+      ],
+      "colorManagementPreset": "srgb",
+      "sdrBrightness": 1,
+      "sdrSaturation": 1,
+      "sdrMinLuminance": 0.2,
+      "sdrMaxLuminance": 80,
+      "hardwareCursorsInUse": false
+    },
+    {
+      "id": 1,
+      "name": "DP-1",
+      "description": "LG Electronics LG TV 0x01010101",
+      "make": "LG Electronics",
+      "model": "LG TV",
+      "serial": "0x01010101",
+      "width": 1920,
+      "height": 1080,
+      "physicalWidth": 700,
+      "physicalHeight": 390,
+      "refreshRate": 60.0,
+      "x": 3840,
+      "y": 0,
+      "activeWorkspace": {
+        "id": 11,
+        "name": "11"
+      },
+      "specialWorkspace": {
+        "id": 0,
+        "name": ""
+      },
+      "reserved": [
+        0,
+        45,
+        0,
+        0
+      ],
+      "scale": 1,
+      "transform": 0,
+      "focused": false,
+      "dpmsStatus": true,
+      "vrr": false,
+      "solitary": "0",
+      "solitaryBlockedBy": [
+        "WINDOWED",
+        "CANDIDATE"
+      ],
+      "activelyTearing": false,
+      "tearingBlockedBy": [
+        "NOT_TORN",
+        "CANDIDATE"
+      ],
+      "directScanoutTo": "0",
+      "directScanoutBlockedBy": [
+        "USER",
+        "CANDIDATE"
+      ],
+      "disabled": false,
+      "currentFormat": "XRGB8888",
+      "mirrorOf": "none",
+      "availableModes": [
+        "1024x768@61.34Hz",
+        "1920x1080@60.00Hz",
+        "1920x1080@59.94Hz",
+        "1920x1080@50.00Hz",
+        "1920x1080@30.00Hz",
+        "1920x1080@29.97Hz",
+        "1920x1080@25.00Hz",
+        "1920x1080@24.00Hz",
+        "1920x1080@23.98Hz",
+        "1360x768@59.80Hz",
+        "1920x540@60.05Hz",
+        "1280x720@59.65Hz",
+        "1280x720@60.00Hz",
+        "1280x720@59.94Hz",
+        "1280x720@50.00Hz",
+        "1024x768@60.00Hz",
+        "800x600@60.32Hz",
+        "720x576@50.00Hz",
+        "720x576@50.00Hz",
+        "720x480@60.00Hz",
+        "720x480@60.00Hz",
+        "720x480@59.94Hz",
+        "1440x240@60.05Hz",
+        "720x480@59.94Hz",
+        "720x480@59.94Hz",
+        "640x480@60.00Hz",
+        "640x480@59.94Hz",
+        "640x480@59.94Hz",
+        "720x400@70.08Hz"
+      ],
+      "colorManagementPreset": "srgb",
+      "sdrBrightness": 1,
+      "sdrSaturation": 1,
+      "sdrMinLuminance": 0.2,
+      "sdrMaxLuminance": 80,
+      "hardwareCursorsInUse": false
+    },
+    {
+      "id": 2,
+      "name": "HDMI-A-1",
+      "description": "Samsung Electric Company SA300/SA350 H9NB304808",
+      "make": "Samsung Electric Company",
+      "model": "SA300/SA350",
+      "serial": "H9NB304808",
+      "width": 1920,
+      "height": 1080,
+      "physicalWidth": 410,
+      "physicalHeight": 230,
+      "refreshRate": 59.939,
+      "x": 1920,
+      "y": 0,
+      "activeWorkspace": {
+        "id": 10,
+        "name": "10"
+      },
+      "specialWorkspace": {
+        "id": 0,
+        "name": ""
+      },
+      "reserved": [
+        0,
+        45,
+        0,
+        0
+      ],
+      "scale": 1,
+      "transform": 0,
+      "focused": false,
+      "dpmsStatus": true,
+      "vrr": false,
+      "solitary": "0",
+      "solitaryBlockedBy": [
+        "WINDOWED",
+        "CANDIDATE"
+      ],
+      "activelyTearing": false,
+      "tearingBlockedBy": [
+        "NOT_TORN",
+        "CANDIDATE"
+      ],
+      "directScanoutTo": "0",
+      "directScanoutBlockedBy": [
+        "USER",
+        "CANDIDATE"
+      ],
+      "disabled": false,
+      "currentFormat": "XRGB8888",
+      "mirrorOf": "none",
+      "availableModes": [
+        "1366x768@59.79Hz",
+        "1920x1080@59.94Hz",
+        "1280x720@59.94Hz",
+        "1024x768@75.03Hz",
+        "1024x768@70.07Hz",
+        "1024x768@60.00Hz",
+        "800x600@75.00Hz",
+        "800x600@72.19Hz",
+        "800x600@60.32Hz",
+        "800x600@56.25Hz",
+        "720x480@59.94Hz",
+        "720x480@59.94Hz",
+        "640x480@75.00Hz",
+        "640x480@72.81Hz",
+        "640x480@59.94Hz"
+      ],
+      "colorManagementPreset": "srgb",
+      "sdrBrightness": 1,
+      "sdrSaturation": 1,
+      "sdrMinLuminance": 0.2,
+      "sdrMaxLuminance": 80,
+      "hardwareCursorsInUse": false
+    }
+  ],
+  "active_window": {
+    "address": "0x555ccf9abb30",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      0,
+      0
+    ],
+    "size": [
+      1920,
+      1080
+    ],
+    "workspace": {
+      "id": 4,
+      "name": "4"
+    },
+    "floating": true,
+    "monitor": 0,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 87674,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 2,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 0,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "180002a7"
+  }
+}

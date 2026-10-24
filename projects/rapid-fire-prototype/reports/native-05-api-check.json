@@ -1,0 +1,13 @@
+{
+  "unknown_calls_including_expressions": [],
+  "sources": [
+    "projects/rapid-fire-prototype/src/MapMain.j",
+    "projects/rapid-fire-prototype/src/NativeProbe.j",
+    "projects/rapid-fire-prototype/src/NativeReference.j",
+    "projects/rapid-fire-prototype/src/PathingCandidate.j",
+    "projects/rapid-fire-prototype/src/ProbeLog.j",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j"
+  ],
+  "scope": "Declaration/call scan only; not compiler or native proof"
+}

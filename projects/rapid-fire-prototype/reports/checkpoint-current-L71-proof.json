@@ -1,0 +1,29 @@
+{
+  "through_log": 71,
+  "document": "odd/tasks/rapid-fire-prototype-current.md",
+  "payload": "projects/rapid-fire-prototype/reports/checkpoint-current-L71-payload.txt",
+  "bytes": 22164,
+  "sha256": "15eb41959956f70d9b7c9f31d8e0adb25d8e6def81027424bfed4bb25a7f8e92",
+  "literal_payload_byte_equal": true,
+  "archive": "odd/tasks/rapid-fire-prototype.md",
+  "archive_bytes": 89082,
+  "archive_sha256": "9452f9bd6d44c2842658411ae6bbf84d099a1bb9ffd1d250fcdac10709da3c98",
+  "archive_mtime_ns": 1792475582719653998,
+  "archive_preserved": true,
+  "archive_mtime_preserved": true,
+  "specs_S1_S26_and_prior_logs_preserved_at_edit": true,
+  "l71_characters": 591,
+  "validation": "Finite local whole-payload/equality/hash/archive checks only; passive bookkeeping, no behavioral test/runtime/source action",
+  "provider_receipt": {
+    "id": 57,
+    "status": "saved"
+  },
+  "save_calls_sent": 1,
+  "provider_readback_performed": false,
+  "provider_sent_payload_mechanical_capture": false,
+  "mirror_status": "L71_WHOLE_LITERAL_SAVE_RECEIPT_OBSERVED",
+  "tdd_exception": "Passive bookkeeping only; no behavior changed or meaningful RED/GREEN",
+  "initial_prewrite_check_failure": "L71 draft 612 characters rejected before any write; shortened to <=600",
+  "limitation": "Whole literal sent once; receipt id57 saved observed. No provider readback or mechanical capture of sent payload.",
+  "local_document_payload_byte_equality_rechecked": true
+}

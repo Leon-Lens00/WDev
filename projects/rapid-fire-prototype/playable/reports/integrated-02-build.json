@@ -1,0 +1,99 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/tools/build.py",
+    "build",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/base/playable-01.w3x",
+    "--wc3",
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "--timer-utils",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/vendor/TimerUtils.j",
+    "--world-bounds",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/vendor/WorldBounds.j",
+    "--dummy-recycler",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/vendor/DummyRecycler.j",
+    "--core",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/vendor/Missiles.j",
+    "--bootstrap",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/TestMapMain.j",
+    "--output-dir",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build",
+    "--run-id",
+    "rfp-integrated-20261020-02",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/Config.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/PairCore.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/Controls.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/Demo.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/Log.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02/src/IntegratedTest.j",
+    "--entry",
+    "RF_StartIntegratedTest"
+  ],
+  "started": 1792536569.829274,
+  "finished": 1792536572.5819173,
+  "exit": 0,
+  "inputs": {
+    "tools/build.py": {
+      "sha256": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+      "bytes": 15845
+    },
+    "base/playable-01.w3x": {
+      "sha256": "e1ff1b36d6194549ec86bf19837707673be96abd1e166fdff75505e6fe65ecf6",
+      "bytes": 332787
+    },
+    "src/vendor/TimerUtils.j": {
+      "sha256": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+      "bytes": 11147
+    },
+    "src/vendor/WorldBounds.j": {
+      "sha256": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+      "bytes": 1866
+    },
+    "src/vendor/DummyRecycler.j": {
+      "sha256": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+      "bytes": 20321
+    },
+    "src/vendor/Missiles.j": {
+      "sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+      "bytes": 40740
+    },
+    "src/TestMapMain.j": {
+      "sha256": "8860e3a0fd4652e505b0a34e7a1792be4e351761de0dfe3aee33495d74d88f5e",
+      "bytes": 1902
+    },
+    "src/Config.j": {
+      "sha256": "9fd792acf84595a22c79c0e3aa1786c9fc0c53d14b239c587d7c30101b7e5d88",
+      "bytes": 509
+    },
+    "src/PairCore.j": {
+      "sha256": "afe80e2827fe2ff373acff4ec687f52971751d1beb208e64cc7e3d0c2564ae37",
+      "bytes": 26093
+    },
+    "src/Controls.j": {
+      "sha256": "8fe94f1075ca70714c8727231da716c406b1ead9b93080cb0b28e53051945ffc",
+      "bytes": 1576
+    },
+    "src/Demo.j": {
+      "sha256": "6ec278f5f1a97735e3d6ff4621c74870c809b74bae59b2f9c366996b2e62d46f",
+      "bytes": 3704
+    },
+    "src/Log.j": {
+      "sha256": "71b79eb9a9451352e453e0cef226c0cfbab32466f70a234bdad8118a0da3230b",
+      "bytes": 2212
+    },
+    "src/IntegratedTest.j": {
+      "sha256": "0c65df7ca78f33e8cc78a76b25912f8080cb34356202842a59ee29b73e0a741f",
+      "bytes": 33511
+    }
+  },
+  "snapshot": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build-inputs/rfp-integrated-20261020-02"
+}

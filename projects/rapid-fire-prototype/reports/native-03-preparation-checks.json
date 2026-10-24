@@ -1,0 +1,41 @@
+{
+  "status": "Scanned/PREPARED03",
+  "lint_exit": 0,
+  "errors": 0,
+  "ownership_warnings": 20,
+  "unknown_direct_calls": [],
+  "changes": {
+    "MapMain.j": {
+      "added": 1,
+      "removed": 1,
+      "sha256": "b5998a4e2aaaee9bc8cc578f7720ad5a746911b388534038e5e18d1853a81968"
+    },
+    "NativeProbe.j": {
+      "added": 48,
+      "removed": 16,
+      "sha256": "a544e74a8cd3e13c65098f6eeec8f506a238c22ba5c2a6b6b5a853f633fecdc4"
+    },
+    "NativeReference.j": {
+      "added": 72,
+      "removed": 8,
+      "sha256": "585add637a5d62c2d6ab523ad70fe1c028544078975f083db8a2f889dbdb2d09"
+    },
+    "PathingCandidate.j": {
+      "added": 0,
+      "removed": 0,
+      "sha256": "057a0d8efd50566c668688f5f6d037f17e16e939b6fd38c3b2be5880808e7d4a"
+    },
+    "ProbeLog.j": {
+      "added": 2,
+      "removed": 2,
+      "sha256": "c0b069483cb13fa123e2c1ce35d492913dd40bcc36816eab80655a4e20873847"
+    }
+  },
+  "protected01_02_artifacts_unchanged": 228,
+  "pinned_old_inputs_unchanged": 67,
+  "all5_run02_sources_frozen_verified": true,
+  "collision_predicate_byte_identical_to02": true,
+  "native03_compiled": false,
+  "native03_executed": false,
+  "limitations": "Static preparation only; actual02 failure is RED, parent native03 GREEN/FAIL pending; no wall-clock or universal collision guarantee"
+}

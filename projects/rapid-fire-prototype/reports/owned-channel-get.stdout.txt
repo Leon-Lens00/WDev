@@ -1,0 +1,95 @@
+{
+  "Rawcode": "A00G",
+  "Found": true,
+  "BaseRawcode": "ANcl",
+  "Name": "Rapid Fire Point Probe",
+  "Fields": [
+    {
+      "Code": "acdn:1",
+      "Name": "acdn:1",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "aher",
+      "Name": "aher",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "alev",
+      "Name": "alev",
+      "Value": "1",
+      "Source": "map",
+      "Display": "1"
+    },
+    {
+      "Code": "amcs:1",
+      "Name": "amcs:1",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "anam",
+      "Name": "anam",
+      "Value": "Rapid Fire Point Probe",
+      "Source": "map",
+      "Display": "Rapid Fire Point Probe"
+    },
+    {
+      "Code": "aran:1",
+      "Name": "aran:1",
+      "Value": "99999",
+      "Source": "map",
+      "Display": "99999"
+    },
+    {
+      "Code": "Ncl1:1",
+      "Name": "Ncl1:1",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl2:1",
+      "Name": "Ncl2:1",
+      "Value": "2",
+      "Source": "map",
+      "Display": "2"
+    },
+    {
+      "Code": "Ncl3:1",
+      "Name": "Ncl3:1",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl4:1",
+      "Name": "Ncl4:1",
+      "Value": "0.98",
+      "Source": "map",
+      "Display": "0.98"
+    },
+    {
+      "Code": "Ncl5:1",
+      "Name": "Ncl5:1",
+      "Value": "1",
+      "Source": "map",
+      "Display": "1"
+    },
+    {
+      "Code": "Ncl6:1",
+      "Name": "Ncl6:1",
+      "Value": "channel",
+      "Source": "map",
+      "Display": "channel"
+    }
+  ],
+  "Diagnostics": [
+    "Warcraft III install not found (pass --game-dir \u003Cpath\u003E)"
+  ]
+}

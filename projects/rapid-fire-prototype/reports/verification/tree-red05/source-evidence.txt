@@ -1,0 +1,63 @@
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:391: local string birthFailure = "none"
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:425: set birthFailure = "type"
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:427: set birthFailure = "owner"
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:429: set birthFailure = "life"
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:431: set birthFailure = "pause"
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:433: call RB_LogRecord("OBS","birth-dummy-contract","firstFailed="+birthFailure+" owner="+I2S(GetPlayerId(GetOwningPlayer(m.dummy)))+" type="+I2S(GetUnitTypeId(m.dummy))+" life="+R2S(GetWidgetLife(m.dummy))+" pause="+BoolText(IsUnitPaused(m.dummy))+" handle="+I2S(GetHandleId(m.dummy))+" time="+R2S(TimerGetElapsed(clock)))
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:434: if birthFailure != "none" then
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:435: set fault = "incompatible dummy at qualified birth firstFailed="+birthFailure
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/compiled.j:2955: elseif GetOwningPlayer(s__Missiles_dummy[m]) != Player(PLAYER_NEUTRAL_PASSIVE) then
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/compiled.j:2962: call RB_LogRecord("OBS" , "birth-dummy-contract" , "firstFailed=" + birthFailure + " owner=" + I2S(GetPlayerId(GetOwningPlayer(s__Missiles_dummy[m]))) + " type=" + I2S(GetUnitTypeId(s__Missiles_dummy[m])) + " life=" + R2S(GetWidgetLife(s__Missiles_dummy[m])) + " pause=" + RFBurstTreeTest__BoolText(IsUnitPaused(s__Missiles_dummy[m])) + " handle=" + I2S(GetHandleId(s__Missiles_dummy[m])) + " time=" + R2S(TimerGetElapsed(RFBurstTreeTest__clock)))
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:6: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|strict-readiness-guard|time=0.031 scene=0 original strict guards; no dummy exemptions" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:18: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|native-spell-effect|time=0.180 ability=1093677127 source=1050745 point=-2624.000,2624.000" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:19: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|birth-dummy-contract|firstFailed=none owner=15 type=1697656880 life=120.000 pause=true handle=1050709 time=0.180" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:21: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|birth-dummy-contract|firstFailed=none owner=15 type=1697656880 life=120.000 pause=true handle=1050710 time=0.430" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:25: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|birth-dummy-contract|firstFailed=none owner=15 type=1697656880 life=120.000 pause=true handle=1050711 time=0.680" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:29: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|birth-dummy-contract|firstFailed=none owner=15 type=1697656880 life=120.000 pause=true handle=1050712 time=0.930" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:37: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|paired-HP|target=325.030->285.781 control=325.030->325.781 differential=40.000" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:49: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|known-prior-dummy-clear|time=3.219 serial=1 handle=1050709 type=1697656880 removed or live-neutral-paused at recycler corner; fresh corridor absence" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:50: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|known-prior-dummy-clear|time=3.219 serial=2 handle=1050710 type=1697656880 removed or live-neutral-paused at recycler corner; fresh corridor absence" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:51: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|known-prior-dummy-clear|time=3.219 serial=3 handle=1050711 type=1697656880 removed or live-neutral-paused at recycler corner; fresh corridor absence" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:52: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|known-prior-dummy-pending|time=3.219 serial=4 handle=1050712 type=1697656880 xy=-2656.000,2624.000 hp=120.000 owner=15 order=851973" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:53: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R06-tree-absent-positive|OBS|known-prior-dummy-clear|time=3.375 serial=4 handle=1050712 type=1697656880 removed or live-neutral-paused at recycler corner; fresh corridor absence" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:57: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R07-live-tree-termination|OBS|strict-readiness-guard|time=3.406 scene=1 original strict guards; no dummy exemptions" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:68: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R07-live-tree-termination|OBS|native-spell-effect|time=3.469 ability=1093677127 source=1050745 point=-2624.000,2624.000" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:83: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R07-live-tree-termination|OBS|paired-HP|target=325.007->285.757 control=325.007->325.757 differential=40.000" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:89: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R07-live-tree-termination|FAIL|tree-prevents-native-enemy-damage|actual events=4 expected0; downstream impacts are behavioral FAIL, not fixture ABORT" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:90: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R07-live-tree-termination|FAIL|paired-HP-differential0|actual=40.000 tolerance=.10" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:92: call Preload( "RM28|rf-burst-tree-red-20261020-05|CHECK|R07-live-tree-termination|FAIL|four-early-near-tree-extinctions|each first absence age<=.18125; last-live x offset64..176/y+-2; enemy512/.4s cannot satisfy" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt:93: call Preload( "RM28|rf-burst-tree-red-20261020-05|COMPLETE|2|87|3|0" )
+
+--- projects/rapid-fire-prototype/reports/frozen-tree-red04/workspace/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j
++++ projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j
+@@ -388,6 +388,7 @@
+         local Missiles m = RB_GetShotMissile()
+         local integer j = 1
+         local boolean valid = false
++        local string birthFailure = "none"
+         // Birth pulse serial, not a private generation getter. If an ID is reused
+         // before we observed its absence, reject rather than read the old ID.
+         loop
+@@ -418,8 +419,20 @@
+         endif
+         if scene == 0 then
+             // Capture identity ONLY at the qualified callback-scoped birth.
+-            if GetUnitTypeId(m.dummy) != 'e000' or GetOwningPlayer(m.dummy) != Player(0) or GetWidgetLife(m.dummy) <= .405 or not IsUnitPaused(m.dummy) then
+-                set fault = "incompatible dummy at qualified birth"
++            // Recycler native owner is neutral before processing; logical missile
++            // owner is already assigned. OnOrient/refreshVision syncs it later.
++            if GetUnitTypeId(m.dummy) != 'e000' then
++                set birthFailure = "type"
++            elseif GetOwningPlayer(m.dummy) != Player(PLAYER_NEUTRAL_PASSIVE) then
++                set birthFailure = "owner"
++            elseif GetWidgetLife(m.dummy) <= .405 then
++                set birthFailure = "life"
++            elseif not IsUnitPaused(m.dummy) then
++                set birthFailure = "pause"
++            endif
++            call RB_LogRecord("OBS","birth-dummy-contract","firstFailed="+birthFailure+" owner="+I2S(GetPlayerId(GetOwningPlayer(m.dummy)))+" type="+I2S(GetUnitTypeId(m.dummy))+" life="+R2S(GetWidgetLife(m.dummy))+" pause="+BoolText(IsUnitPaused(m.dummy))+" handle="+I2S(GetHandleId(m.dummy))+" time="+R2S(TimerGetElapsed(clock)))
++            if birthFailure != "none" then
++                set fault = "incompatible dummy at qualified birth firstFailed="+birthFailure
+                 return false
+             endif
+             set j = 1

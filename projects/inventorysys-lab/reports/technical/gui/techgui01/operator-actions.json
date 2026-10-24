@@ -1,0 +1,12 @@
+{
+  "at": 1792452795.7086596,
+  "recording_acceptance": "viewed techgui01 Recording acknowledgement",
+  "actions": [
+    "mouse hero330,415",
+    "mouse command1840,860: tooltip Atacar; no inventory open proof",
+    "mouse Bag1320,838: native dummy selected; no panel open proof"
+  ],
+  "stop_command_sent": true,
+  "proof_boundary": "No verified INV_OPEN or INV_CLOSE; partial GUI coverage",
+  "historical_closure_file": "desktop-closure.json was intermediate focus blocker; focus later restored externally"
+}

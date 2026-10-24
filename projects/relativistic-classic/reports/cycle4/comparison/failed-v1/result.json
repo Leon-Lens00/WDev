@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/comparison.py\", line 107, in <module>\n    old, new, alone, negative = [load(run) for run in RUNS]\n                                 ~~~~^^^^^\n  File \"/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/comparison.py\", line 102, in load\n    fresh = report['freshness']\n            ~~~~~~^^^^^^^^^^^^^\nKeyError: 'freshness'\n",
+  "scratch": "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz"
+}

@@ -1,0 +1,46 @@
+{
+  "verdict": "FAIL scoped fixture; no production acceptance",
+  "blockers": [
+    {
+      "id": "F1",
+      "spec": "S24",
+      "location": "src/prototype/TreeNativeTest.j:421",
+      "finding": "New synchronous birth guard requires native owner Player(0), but constructor retrieves neutral paused dummy, spawn sets plain missile owner field, and launch only schedules processing. Native ownership sync occurs later in refreshVision from OnOrient, not before listener. Candidate fixture assumes an unsupported lifecycle state.",
+      "native_limit": "Composite guard records no individual native field values. Actual failing predicate was not captured.",
+      "baseline": "Frozen Tree03 OnShot lacks added birth guard; native Tree03 R06 four shots and four hits passed. Same pinned Core/libraries."
+    }
+  ],
+  "transition": "Bounded fail-closed state machine preserves old closure proof, checks identities and full corridor, admits before reset/tree only on clearance. Not reached natively; no additional critical static issue identified in scope.",
+  "specs": {
+    "S3": "unmet/unverified: collision R07 NOT RUN, no qualified Tree RED",
+    "S24": "unmet: correction prepared/compiled, native clearance UNPROVEN, F1 blocks R06"
+  },
+  "out_of_scope": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "next": "Human decision required: fixture-only align birth-owner predicate with pre-processing neutral lifecycle; retain strict post-termination neutral/recycler clearance and capture individual diagnostics. No Core/library change or new measurement without grant.",
+  "memory": "Engram mem_save and mem_session_summary tools unavailable; no bypass attempted.",
+  "commands": "One public reader invocation only, recorded in reader-execution.json, exit1/empty stderr. All other commands read-only inspection, hash/mtime verification or writes confined to this scratch. No build/game/test-suite rerun.",
+  "test_first": "No qualified collision RED or native GREEN; captured fixture ABORT is not behavioral RED."
+}

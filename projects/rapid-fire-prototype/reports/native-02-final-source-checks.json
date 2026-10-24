@@ -1,0 +1,42 @@
+{
+  "status": "Scanned/PREPARED02",
+  "source_changes": {
+    "MapMain.j": {
+      "added": 1,
+      "removed": 1,
+      "lines": 38,
+      "sha256": "4888bb417c89bb29fac78150a8ecfde6a682bf43c4d7e62108a8b015cfb13f3f"
+    },
+    "NativeProbe.j": {
+      "added": 633,
+      "removed": 297,
+      "lines": 711,
+      "sha256": "f288b6a842e8b36f930be190bf3badc8a9f6bb8f204d5a0f47b36c30d27847a0"
+    },
+    "NativeReference.j": {
+      "added": 95,
+      "removed": 0,
+      "lines": 95,
+      "sha256": "e3102a7174d75e27616d2a244068036b7a869b3b98195f598685edb22ed494c7"
+    },
+    "PathingCandidate.j": {
+      "added": 52,
+      "removed": 5,
+      "lines": 191,
+      "sha256": "057a0d8efd50566c668688f5f6d037f17e16e939b6fd38c3b2be5880808e7d4a"
+    },
+    "ProbeLog.j": {
+      "added": 3,
+      "removed": 3,
+      "lines": 79,
+      "sha256": "a496fcf45e4f0130422ec7ac6689a1be55197fd79721954a528f334efaa659af"
+    }
+  },
+  "unknown_direct_calls": [],
+  "final_source_lint_exit": 0,
+  "errors": 0,
+  "ownership_warnings": 20,
+  "reason_for_nativeprobe_refinement": "Preserve fresh rejected short-step coverage without terrain/pathing rewrites: independently prequalified goal, actual radius31 blocker52 away, native current-clear/goal-overlap guards, queried8-step reject, native removal/positive checks",
+  "native01_red_preserved": true,
+  "native02_green": "PENDING parent actual compile/native; no synthetic physics tests"
+}

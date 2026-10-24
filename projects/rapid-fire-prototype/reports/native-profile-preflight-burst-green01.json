@@ -1,0 +1,31 @@
+{
+  "executor": "parent",
+  "evidence_basis": "Parent-reported fresh one-shot read-only exact-profile preflight; worker records attributed metadata only, no process query",
+  "exit_code": 0,
+  "stdout_exact": "{\"profile\":\"proton-newgen-modern-test\",\"active_game_processes\":[],\"profile_clear_at_check\":true,\"read_only\":true}",
+  "stdout_newline_status": "Not supplied; no trailing newline inferred",
+  "stdout": {
+    "profile": "proton-newgen-modern-test",
+    "active_game_processes": [],
+    "profile_clear_at_check": true,
+    "read_only": true
+  },
+  "snapshot_only": true,
+  "future_availability_guaranteed": false,
+  "launcher_must_recheck_occupancy": true,
+  "run_id": "rf-burst-green-20261019-01",
+  "native_GREEN_executed": false,
+  "parent_runtime": "Observer/launch only AFTER worker return",
+  "worker_process_query": false,
+  "worker_runtime_action_queued": false,
+  "build": {
+    "executor": "parent",
+    "job": 26,
+    "exit_code": 0,
+    "jasshelper_pjass_archive_passed": true,
+    "compiler_stderr_empty": true,
+    "map_sha256": "535b98b13b63988c1ec5ee8b94ccfd6956c87cd44ff29030116f22c534d6bb50",
+    "compiled_war3map_j_sha256": "607f2dcc8c0155ddd8e6f1f1c7a8756ef61ce9f479e0e1e3bb20f17a6ce1b0f7",
+    "evidence_basis": "Parent actual build26; not rebuilt or rehashed by worker"
+  }
+}

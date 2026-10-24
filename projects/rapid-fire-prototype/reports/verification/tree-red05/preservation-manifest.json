@@ -1,0 +1,379 @@
+{
+  "source_directory": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh",
+  "archive_count": 10,
+  "archive_bytes": 76103,
+  "no_overwrite": true,
+  "no_symlinks": true,
+  "files": [
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/RF-rf-burst-tree-red-20261020-05.txt",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/RF-rf-burst-tree-red-20261020-05.txt",
+      "sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4",
+      "bytes": 16860,
+      "mtime_ns": 1792531163094124795
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/findings.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/findings.json",
+      "sha256": "22227e3fefd5976940e3ed37911a026a460e4dc971d08bdd0af7113b88354ce3",
+      "bytes": 1014,
+      "mtime_ns": 1792531468752325562
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/git-status-after.txt",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/git-status-after.txt",
+      "sha256": "8241aee66ba4122ad15b80a07b83d31d9b42cffc9c5ae89ca84451f54f04b207",
+      "bytes": 29,
+      "mtime_ns": 1792531468754227340
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/pins-preservation.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/pins-preservation.json",
+      "sha256": "134e7b06872fa3efd125085517dbcf3c342687f21573a30968df2481746322ce",
+      "bytes": 10615,
+      "mtime_ns": 1792531468755348425
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/read_logs.py",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/read_logs.py",
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "bytes": 5092,
+      "mtime_ns": 1792370695996710430
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/reader-execution.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/reader-execution.json",
+      "sha256": "931245dc766979e0c09b5990321ba8f4563c76f3c7edac18fe97238310d246ee",
+      "bytes": 1787,
+      "mtime_ns": 1792531439136930587
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/reader.stderr",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/reader.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792531439136590372
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/reader.stdout",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/reader.stdout",
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "bytes": 15846,
+      "mtime_ns": 1792531439136590372
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/scratchreader.json",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/scratchreader.json",
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "bytes": 15846,
+      "mtime_ns": 1792531439128705945
+    },
+    {
+      "source": "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/source-evidence.txt",
+      "destination": "projects/rapid-fire-prototype/reports/verification/tree-red05/source-evidence.txt",
+      "sha256": "a72d75fcb0bc3063cc7e81793afda44aecbbefcea61eee953adee0131992fad3",
+      "bytes": 9014,
+      "mtime_ns": 1792531468752237836
+    }
+  ],
+  "originals_before": {
+    "odd/tasks/rapid-fire-prototype.md": {
+      "sha256": "9452f9bd6d44c2842658411ae6bbf84d099a1bb9ffd1d250fcdac10709da3c98",
+      "bytes": 89082,
+      "mtime_ns": 1792475582719653998
+    },
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt": {
+      "sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4",
+      "bytes": 16860,
+      "mtime_ns": 1792531163094124795
+    },
+    "projects/rapid-fire-prototype/reports/checkpoint-current-L68-payload.txt": {
+      "sha256": "c4bb999db5162999d87aeb6c9e2a003814e7aceea3e9730468d95667f1aa56bd",
+      "bytes": 19922,
+      "mtime_ns": 1792531285025185767
+    },
+    "projects/rapid-fire-prototype/reports/checkpoint-current-L68-proof.json": {
+      "sha256": "ebc6ce01d594c644521ac574f9305128443e7dafd25d308abe1572c8caf904b1",
+      "bytes": 1281,
+      "mtime_ns": 1792531365480476811
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-build.exit.json": {
+      "sha256": "e57690c96d3b1c4e6c6648cc2a362a7e1f11aa51bf6f89930d12508391edfd3e",
+      "bytes": 56,
+      "mtime_ns": 1792528858428582676
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-build.json": {
+      "sha256": "1dc623d41c8202f58a66af576f15a0865f4bbc642ca45628f2b8de16a75d40e6",
+      "bytes": 3404,
+      "mtime_ns": 1792528854142925762
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-build.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792528854142925762
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-build.stdout.txt": {
+      "sha256": "25a872f77eb62a0eeb0fb2d305a471fd837d372949ede7cb70cb5477d6df50f4",
+      "bytes": 3820,
+      "mtime_ns": 1792528858401451010
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-execution-blocker.md": {
+      "sha256": "a82109ef9de48635abfebbaa7abc7f71a972dee77acc1d2e198d51256a3b77d2",
+      "bytes": 2894,
+      "mtime_ns": 1792528647098685467
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-native-launch.exit.json": {
+      "sha256": "47a23b20e7a90ffe7b543acc2327eb27ae0d370b9dcb2d5a22ecc0821f13e0f8",
+      "bytes": 50,
+      "mtime_ns": 1792528939761614942
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-native-launch.json": {
+      "sha256": "bb3894be1ed0817d8b26695bfbb904c57ca8ad7fdf2cffc1c0b1384b758e91b2",
+      "bytes": 544,
+      "mtime_ns": 1792528906667828736
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-native-launch.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792528906667828736
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-native-launch.stdout.txt": {
+      "sha256": "6959139ba646d95f2f68cc7e243b3f0160653df263309104bdfd4b5a7e9a9d9c",
+      "bytes": 257,
+      "mtime_ns": 1792528907180277373
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-native-reader.exit.json": {
+      "sha256": "afa48ab87a57b70fa21d02e89196ddf1dae395ac15e5430cb21bb84f6a9b079a",
+      "bytes": 619,
+      "mtime_ns": 1792528915992690662
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-native-reader.json": {
+      "sha256": "e4a2ea2d429f1d31a062ef6f83d7b3abd6496cd4ee67bf836e6774c8938d83e6",
+      "bytes": 3047,
+      "mtime_ns": 1792528915985672609
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-native-reader.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792528915992456327
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-native-reader.stdout.json": {
+      "sha256": "e4a2ea2d429f1d31a062ef6f83d7b3abd6496cd4ee67bf836e6774c8938d83e6",
+      "bytes": 3047,
+      "mtime_ns": 1792528915992456327
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-observer-ready.json": {
+      "sha256": "05f3acea5c215dc59e0134be975b509bfb849624994b0cf43b98d23f037b8eaf",
+      "bytes": 80,
+      "mtime_ns": 1792528895405976199
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-observer.json": {
+      "sha256": "abc996fa25ff148337b3aadf29ab025f404eac21833214c7b930cdba22487bf3",
+      "bytes": 156,
+      "mtime_ns": 1792528915992762688
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-parent-spot.exit.json": {
+      "sha256": "dc91e2e2fe408c4f515ad3ce92c0b3b00d62d9cff159f2d92b35be0a5d60a5e4",
+      "bytes": 493,
+      "mtime_ns": 1792529218213364879
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-parent-spot.json": {
+      "sha256": "c1f11bb1749c3f3773a77c4fe966c71e990f9cd7fee9957c672dd22fee971ac4",
+      "bytes": 3047,
+      "mtime_ns": 1792529218205014153
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-parent-spot.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792529218213232000
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-parent-spot.stdout.json": {
+      "sha256": "c1f11bb1749c3f3773a77c4fe966c71e990f9cd7fee9957c672dd22fee971ac4",
+      "bytes": 3047,
+      "mtime_ns": 1792529218213232000
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-preparation.json": {
+      "sha256": "376e66e2fd2164469a4e564985ba62fc374b566b0ed1f6160756b22fff15f898",
+      "bytes": 19193,
+      "mtime_ns": 1792528439711525390
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-preparation.md": {
+      "sha256": "250d252881941ac146a6a0234804cd6722697e8799115fa927f6b45c8b48d433",
+      "bytes": 7070,
+      "mtime_ns": 1792528475758312210
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-profile-preflight.json": {
+      "sha256": "c3af8d8ec17d6223e428ecf4bb22fa7acccfc9fb7a86a3be55ae8bf230133d69",
+      "bytes": 506,
+      "mtime_ns": 1792528879623005304
+    },
+    "projects/rapid-fire-prototype/reports/tree-red04-results.md": {
+      "sha256": "4e8a0e5e07be8d1926219396159dc7339e53eae62d8534b0391cf420e6fc291b",
+      "bytes": 5639,
+      "mtime_ns": 1792529332663768938
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-build.exit.json": {
+      "sha256": "a9bdc4ae108afb949e7bc95f1ba7b8d604ec4be047db70a4d3f8b1cb27672471",
+      "bytes": 56,
+      "mtime_ns": 1792531104806560182
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-build.json": {
+      "sha256": "bece17cc88ec2f9faac3836640e97bc6fbeb408a1dbf2840f2e8d4a25f496d9f",
+      "bytes": 3231,
+      "mtime_ns": 1792531100941540731
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-build.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792531100941540731
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-build.stdout.txt": {
+      "sha256": "a40bab30551d58a5d8ecc0419e6f6062de48c4eaf8c33068d4ea9f3ea9883b6f",
+      "bytes": 3820,
+      "mtime_ns": 1792531104785145343
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-native-launch.exit.json": {
+      "sha256": "cfd7d4286fec025d401a0b3cd1f127f27e1ed75dcf11cce9b40e4c811fe789db",
+      "bytes": 49,
+      "mtime_ns": 1792531218145907556
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-native-launch.json": {
+      "sha256": "c9824dfa57bd625e44399ff31a2b94c688254c49d19c2947b53fef41573dbb2d",
+      "bytes": 545,
+      "mtime_ns": 1792531146635112258
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-native-launch.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792531146635112258
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-native-launch.stdout.txt": {
+      "sha256": "db454aa802ff4abb5f3c1e389e2e48a35447a9a52da84d8d2aab2f3bc83a5e1f",
+      "bytes": 257,
+      "mtime_ns": 1792531147243582041
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-native-reader.exit.json": {
+      "sha256": "3f39658f12226312474ea533dd2845e270946caba5d6b6710a131854328c66d0",
+      "bytes": 621,
+      "mtime_ns": 1792531163152176714
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-native-reader.json": {
+      "sha256": "9eeadcf6c558ae13cd111d0f5d3e36dc14bd0c0333248f732c327d5f34505f7a",
+      "bytes": 15845,
+      "mtime_ns": 1792531163144968234
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-native-reader.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792531163151988853
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-native-reader.stdout.json": {
+      "sha256": "9eeadcf6c558ae13cd111d0f5d3e36dc14bd0c0333248f732c327d5f34505f7a",
+      "bytes": 15845,
+      "mtime_ns": 1792531163151988853
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-observer-ready.json": {
+      "sha256": "545c285eb2064d6e7b6d2db4dc251d76072b8caff1b098718719918ed098864d",
+      "bytes": 79,
+      "mtime_ns": 1792531136887016860
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-observer.json": {
+      "sha256": "7e9869c25508571db4877c769cd2b001a9a61cfd631634edabd503661ce46bab",
+      "bytes": 158,
+      "mtime_ns": 1792531163152228556
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-parent-spot.exit.json": {
+      "sha256": "3d28b5cc5b51a766722d72f90e95fbc083e5a49be15eb8b98f0def7d9ce90515",
+      "bytes": 495,
+      "mtime_ns": 1792531496052459042
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-parent-spot.json": {
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "bytes": 15846,
+      "mtime_ns": 1792531496045470799
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-parent-spot.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792531496052321804
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-parent-spot.stdout.json": {
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "bytes": 15846,
+      "mtime_ns": 1792531496052321804
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-preparation.json": {
+      "sha256": "4ce6eca8b8e4fd0a72f61fb9ae12ffc36564aa28658faa529c7153dd263329dc",
+      "bytes": 7407,
+      "mtime_ns": 1792531073317200927
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-preparation.md": {
+      "sha256": "3d0ceb30db1410e9f53674a6a67ab7f6021b470fb1a2d511e87414b497342b5d",
+      "bytes": 3478,
+      "mtime_ns": 1792531048069697948
+    },
+    "projects/rapid-fire-prototype/reports/tree-red05-profile-preflight.json": {
+      "sha256": "b2994834e365a70e34d846e80181b47261ee8a619dbd818426ca626d3d388825",
+      "bytes": 506,
+      "mtime_ns": 1792531122159107637
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/RF-rf-burst-tree-red-20261020-04.txt": {
+      "sha256": "ba3a6ed9cd6c996f6fe3bc16a8d3f6547ebd7b6b991f54d715058fe3c4de193c",
+      "bytes": 3185,
+      "mtime_ns": 1792528915942475120
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/findings.json": {
+      "sha256": "554d0617e5ea948d062fe99fd0edef2c1f420df9c301a76587b7f6f74719b154",
+      "bytes": 2148,
+      "mtime_ns": 1792529170262006680
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/git-status-after.txt": {
+      "sha256": "8241aee66ba4122ad15b80a07b83d31d9b42cffc9c5ae89ca84451f54f04b207",
+      "bytes": 29,
+      "mtime_ns": 1792529170273513741
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/pins-preservation.json": {
+      "sha256": "0c9d8a5483cd7897e81f49453ac1d2575b0b296e52c8297e1f66ef956eec57b9",
+      "bytes": 17261,
+      "mtime_ns": 1792529170261933980
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/preservation-manifest.json": {
+      "sha256": "e661b2dd999a9016002160344ac82a747e460f31131b3c67160df85d7069d3a9",
+      "bytes": 27980,
+      "mtime_ns": 1792529303906896634
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/read_logs.py": {
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "bytes": 5092,
+      "mtime_ns": 1792370695996710430
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/reader-execution.json": {
+      "sha256": "b6efe046ef8af25c10c9fff5f30e555fde6c8946d91f1e5cea4622827ae359f0",
+      "bytes": 1809,
+      "mtime_ns": 1792529126877334585
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/reader.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_ns": 1792529126877117814
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/reader.stdout": {
+      "sha256": "c1f11bb1749c3f3773a77c4fe966c71e990f9cd7fee9957c672dd22fee971ac4",
+      "bytes": 3047,
+      "mtime_ns": 1792529126877117814
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/scratchreader.json": {
+      "sha256": "c1f11bb1749c3f3773a77c4fe966c71e990f9cd7fee9957c672dd22fee971ac4",
+      "bytes": 3047,
+      "mtime_ns": 1792529126869615172
+    },
+    "projects/rapid-fire-prototype/reports/verification/tree-red04/source-evidence.txt": {
+      "sha256": "744e63c926828f038d489e7ab51882179138d872e031d4d788a2bf5001174b0f",
+      "bytes": 6837,
+      "mtime_ns": 1792529170261783528
+    }
+  },
+  "originals_byte_mtime_unchanged": true,
+  "scratch_byte_mtime_unchanged": true,
+  "archive_copy_byte_mtime_equal": true
+}

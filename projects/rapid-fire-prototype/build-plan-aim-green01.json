@@ -1,0 +1,207 @@
+{
+  "status": "PREPARED_AIM_GREEN_NEEDS_NATIVE",
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py",
+    "build",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+    "--wc3",
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "--timer-utils",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "--world-bounds",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "--dummy-recycler",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "--core",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "--bootstrap",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimMapMainGreen01.j",
+    "--output-dir",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build",
+    "--run-id",
+    "rf-burst-aim-green-20261020-01",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimLogGreen01.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimNativeTest.j",
+    "--entry",
+    "RF_StartAimTest"
+  ],
+  "shell": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py build --base /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x --wc3 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 --timer-utils /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j --world-bounds /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j --dummy-recycler /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j --core /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j --bootstrap /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimMapMainGreen01.j --output-dir /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build --run-id rf-burst-aim-green-20261020-01 --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimLogGreen01.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimNativeTest.j --entry RF_StartAimTest",
+  "inputs_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimLogGreen01.j": "e455388f8bb2af71edba61d3e466321517f991e4d93dff2f0049d2ba7ffcd5b0",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimNativeTest.j": "262d8584be5a5b76840949816955a9f708b03a5f56f74046c562a1fa392d5070",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimMapMainGreen01.j": "622bf4e2b546eedcd242c29e56ee25db720996cd427f5cb311095414674a5aa6"
+  },
+  "import_order": [
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimLogGreen01.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimNativeTest.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/AimMapMainGreen01.j"
+  ],
+  "public_entry": "RF_StartAimTest",
+  "native_run_id": "rf-burst-aim-green-20261020-01",
+  "native_run_already_executed": false,
+  "group": "RFBurstAim",
+  "output_map": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-aim-green-20261020-01/rf-burst-aim-green-20261020-01.w3x",
+  "log": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-aim-green-20261020-01.txt",
+  "relative_log": "Logs\\RF-rf-burst-aim-green-20261020-01.txt",
+  "reader_argv_template": [
+    "python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-aim-green-20261020-01.txt",
+    "--run-id",
+    "rf-burst-aim-green-20261020-01",
+    "--not-before",
+    "PARENT_RECORDED_LAUNCH_UNIX_SECONDS",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/aim-green01-native-reader.json"
+  ],
+  "partial_specs": [
+    "S6"
+  ],
+  "regression_specs_partial": [
+    "S1",
+    "S2",
+    "S4",
+    "S5",
+    "S10",
+    "S11"
+  ],
+  "cases": [
+    "B01-four-shot-native-effects",
+    "B02-default-cadence",
+    "R03-active-recast-reset-and-cadence",
+    "R04-new-aim-future-shots",
+    "R05-existing-flight-heading"
+  ],
+  "geometry": {
+    "actor": [
+      -3136.0,
+      2624.0
+    ],
+    "east": [
+      -2880.0,
+      2624.0
+    ],
+    "north": [
+      -3136.0,
+      2880.0
+    ],
+    "eastControl": [
+      -2880.0,
+      3136.0
+    ],
+    "northControl": [
+      -3648.0,
+      2880.0
+    ],
+    "flat_raw": [
+      9715,
+      1,
+      0
+    ]
+  },
+  "static_geometry_evidence": [
+    "reports/aim-red01-static-geometry.json",
+    "reports/aim-red01-geometry-selection.json"
+  ],
+  "qualification": {
+    "rays": "actual target deltas length254..258, cosine<=.7071068 (>=45deg), placement\u00b11; flat native\u00b11z/same cliff/walk restriction absent and enumerated alive unit/destructable-free corridors",
+    "first": "real live launched missile/dummy/source/origin saved during callback",
+    "recast_due_from_first_shot_seconds": 0.0625,
+    "input": "NORTH actual GetUnitXY on a future tick; flags/expected-event/time committed before native order",
+    "second_actual_effect": "exact caster/A00G/NORTH point at public shot1, no impact, same first flight live/source/dummy, before firstShot+.25",
+    "post_dispatch": "next periodic tick before impacts/shot2; sample same borrowed live ID/public x/y; no private generation or angle API",
+    "on_unready": "explicit FAIL ABORT-fixture/COMPLETE, no native R04 behavior RED inferred"
+  },
+  "assertions": {
+    "R04": [
+      "5 real public missiles/5 native10 hits/source visible actor",
+      "EAST1/NORTH4 actual native hits; paired HP differentials10/40\u00b1.10",
+      "both off-ray controls undamaged/all4 target-control bodies alive",
+      "4 adjacent.25\u00b1.03125 emission intervals/no immediate extra"
+    ],
+    "R05": [
+      "post-dispatch first-flight sample advanced along actual old EAST ray, cross-track<=1",
+      "first native EAST10/source actor hit at observed shot1 before second boundary",
+      "no NORTH native hit before second emission"
+    ]
+  },
+  "runtime_budget": {
+    "global_game_seconds": 25,
+    "harness_period_seconds": 0.03125,
+    "first_effect_deadline_seconds_each": 2,
+    "prior_cases": "original per-case timing/calibration/assertions unchanged",
+    "aim_observation_seconds_after_second_actual_effect": 3,
+    "aim_second_effect_deadline": "strictly before firstShot+.25 and before any impact",
+    "observer_wall_seconds": 180,
+    "wall_clock_guaranteed": false,
+    "no_retry_until_pass": true
+  },
+  "preservation": "projects/rapid-fire-prototype/reports/frozen-aim-red01/preservation.json",
+  "design_notes": "projects/rapid-fire-prototype/reports/aim-green01-preparation.md",
+  "limits": [
+    "Scanned source candidate only; actual compiler/native GREEN pending parent",
+    "SAME AimNativeTest262d8584be5a5b76840949816955a9f708b03a5f56f74046c562a1fa392d5070, geometry/readiness/assertions unchanged",
+    "Only future heading updated in active branch; reset4/timer phase/epoch/no-immediate-emission/flight snapshots preserved",
+    "S14 while moving, mover/facing/animation/UI/range/obstacle/full T2/T4 proof deferred",
+    "Parent owns fresh exact-profile preflight before observer/protected game; launcher38 EXIT0 is not closure proof",
+    "Risk4 requires parent assessment/independent verification after own native checks"
+  ],
+  "observed_RED": {
+    "run_id": "rf-burst-aim-red-20261020-01",
+    "cases": 5,
+    "checks": 123,
+    "PASS": 51,
+    "OBS": 68,
+    "FAIL": 4,
+    "SKIP": 0,
+    "ABORT": 0,
+    "qualification": "actual NORTH effect at shot1/first-flight live; postdispatch old-ray sample and first native EAST impact before shot2 passed",
+    "partitions": {
+      "EAST_hits": 5,
+      "NORTH_hits": 0,
+      "paired_HP_differentials": [
+        50,
+        0
+      ]
+    },
+    "regressions": "B01/B02/R03/R05 PASS; parent-recorded native behavior RED"
+  },
+  "expected_conditional_GREEN": {
+    "observed": false,
+    "conditions": "successful parent compilation and same native qualification",
+    "cases": 5,
+    "failures": 0,
+    "skips": 0,
+    "required_EAST_NORTH_hits": [
+      1,
+      4
+    ],
+    "required_paired_HP_differentials": [
+      10,
+      40
+    ],
+    "R05": "same first flight retains old heading/sample and first native EAST hit",
+    "no_predicted_actual_counts_or_times": true
+  }
+}

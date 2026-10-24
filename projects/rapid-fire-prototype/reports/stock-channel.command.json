@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "wc3ctl",
+    "object",
+    "get",
+    "projects/relativistic-classic/baseline/original.w3x",
+    "ANcl",
+    "--kind",
+    "ability",
+    "--game-dir",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b",
+    "--json"
+  ],
+  "exit": 0
+}

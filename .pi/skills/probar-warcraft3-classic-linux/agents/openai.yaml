@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pruebas Warcraft III Classic"
+  short_description: "Probar mapas y manejar juego y editores en Linux"
+  default_prompt: "Usa $probar-warcraft3-classic-linux para probar este mapa de Warcraft III 1.27b, recoger evidencia y cerrar solo la partida de prueba."

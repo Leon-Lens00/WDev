@@ -1,0 +1,12 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "RM28|rfp-integrated-20261020-03|BEGIN|RFIntegrated" )
+	call Preload( "RM28|rfp-integrated-20261020-03|CASE|I01-recast-phase-moving-takeover" )
+	call Preload( "RM28|rfp-integrated-20261020-03|CHECK|I01-recast-phase-moving-takeover|OBS|logical-native-speed-after-init|handle=1050763 type=1865429041 life=335.000 owner=0 paused=false hidden=false xy=-5500.000,-5500.000 anchor=-5500.000,-5500.000 delta=0.000,0.000 distan" )
+	call Preload( "RM28|rfp-integrated-20261020-03|CHECK|I01-recast-phase-moving-takeover|OBS|admission|scene=1 actual=-3136.000,2624.000 sourceHP=335.000 prior flights closed and recycler wait3s before fixture" )
+	call Preload( "RM28|rfp-integrated-20261020-03|CHECK|I01-recast-phase-moving-takeover|PASS|native-controller-move|cast takeover follows after .25s of actual movement" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

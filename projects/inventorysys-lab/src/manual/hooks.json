@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "original_sha256": "6a168b922c994d230d80c7c59ad601cb260fa3066f22b579c8784bcf3d0b4e46",
+  "functions": [
+    {
+      "name": "AcquireItem___Actions",
+      "sha256": "97d90b40e04153ce64ec01db7c09a6000bb729e53c2bef110601e85445303672",
+      "hooks": [
+        {"anchor": "        local integer data\r\n", "count": 1, "side": "after", "insert": "        call ILM_Log(\"pickup\", \"ENTRY\", \"unit=\" + I2S(GetHandleId(u)) + \" type=\" + I2S(GetItemTypeId(itm)) + \" cid=\" + I2S(GetItemUserData(itm)))\r\n"},
+        {"anchor": "        set s__InvItem_tempCustomId[itemData]=data\r\n", "count": 1, "side": "after", "insert": "        call ILM_Log(\"pickup\", \"PRE_ADD\", \"inv=\" + I2S(inv) + \" item=\" + I2S(itemData) + \" type=\" + I2S(GetItemTypeId(itm)) + \" cid=\" + I2S(data))\r\n"},
+        {"anchor": "            call RemoveItem(itm)\r\n", "count": 1, "side": "before", "insert": "            call ILM_Log(\"pickup\", \"ADD_TRUE\", \"type=\" + I2S(GetItemTypeId(itm)) + \" cid=\" + I2S(data))\r\n"},
+        {"anchor": "            call UnitRemoveItem(u, itm)\r\n", "count": 1, "side": "before", "insert": "            call ILM_Log(\"pickup\", \"ADD_FALSE\", \"type=\" + I2S(GetItemTypeId(itm)) + \" cid=\" + I2S(data))\r\n"}
+      ]
+    },
+    {
+      "name": "InventoryCore___LClickItemSlot",
+      "sha256": "b0ab2e3df9cd12bc2f78fe89154b09b157bd897bacc1e9aca1fd83f3cf9a977b",
+      "hooks": [
+        {"anchor": "        local integer lastButton= InvPlayerLastButton[s__Inventory_pid[inv]]\r\n", "count": 1, "side": "after", "insert": "        call ILM_Log(\"inventory\", \"LEFT_ENTRY\", \"pid=\" + I2S(pid) + \" inv=\" + I2S(inv) + \" slot=\" + I2S(slot) + \" button=\" + I2S(but))\r\n"},
+        {"anchor": "            set s__Inventory_currentPage[inv]=s__Inventory_currentPage[inv] + 1\r\n", "count": 1, "side": "before", "insert": "            call ILM_Log(\"page\", \"REQUEST\", \"inv=\" + I2S(inv) + \" direction=1 before=\" + I2S(s__Inventory_currentPage[inv]))\r\n"},
+        {"anchor": "            set s__Inventory_currentPage[inv]=s__Inventory_currentPage[inv] - 1\r\n", "count": 1, "side": "before", "insert": "            call ILM_Log(\"page\", \"REQUEST\", \"inv=\" + I2S(inv) + \" direction=-1 before=\" + I2S(s__Inventory_currentPage[inv]))\r\n"},
+        {"anchor": "            call s__Inventory_show(inv , true , s__Inventory_camera[inv])\r\n", "count": 2, "side": "after", "insert": "            call ILM_Log(\"page\", \"SHOWN\", \"inv=\" + I2S(inv) + \" normalized=\" + I2S(s__Inventory_currentPage[inv]))\r\n"}
+      ]
+    },
+    {
+      "name": "InventoryCore___RClickItemSlot",
+      "sha256": "3c96d1f9ce68a060438c7d46137eee8613638b966b7cb3374021412418f33ee0",
+      "hooks": [
+        {"anchor": "        local integer itemId\r\n", "count": 1, "side": "after", "insert": "        call ILM_Log(\"inventory\", \"RIGHT_ENTRY\", \"pid=\" + I2S(pid) + \" inv=\" + I2S(inv) + \" slot=\" + I2S(slot))\r\n"}
+      ]
+    },
+    {
+      "name": "s__Equipment_equip",
+      "sha256": "f7168d9a5cce55db368b0afa14dd1e000623599d029c0af9d61707e1174d8c2a",
+      "hooks": [
+        {"anchor": "            local integer slot= s__InvItem_slot[itm] - 1\r\n", "count": 1, "side": "after", "insert": "            call ILM_Log(\"equip\", \"ENTRY\", \"gear=\" + I2S(this) + \" item=\" + I2S(itm) + \" type=\" + I2S(s__InvItem_id[itm]) + \" cid=\" + I2S(s__InvItem_tempCustomId[itm]) + \" slot=\" + I2S(equipSlot))\r\n"},
+        {"anchor": "                return false\r\n", "count": 9, "side": "before", "insert": "                call ILM_Log(\"equip\", \"RETURN\", \"gear=\" + I2S(this) + \" item=\" + I2S(itm) + \" slot=\" + I2S(equipSlot) + \" value=0\")\r\n"},
+        {"anchor": "            return true\r\n", "count": 1, "side": "before", "insert": "            call ILM_Log(\"equip\", \"RETURN\", \"gear=\" + I2S(this) + \" item=\" + I2S(itm) + \" slot=\" + I2S(equipSlot) + \" value=1\")\r\n"}
+      ]
+    },
+    {
+      "name": "s__Equipment_unequip",
+      "sha256": "612bf37a3d023547c30fb91c628a3ce7ed468426c2601fea0ca3c5006872d3dc",
+      "hooks": [
+        {"anchor": "            local integer cid= s__InvItem_tempCustomId[itm]\r\n", "count": 1, "side": "after", "insert": "            call ILM_Log(\"unequip\", \"ENTRY\", \"gear=\" + I2S(this) + \" item=\" + I2S(itm) + \" type=\" + I2S(s__InvItem_id[itm]) + \" cid=\" + I2S(cid) + \" slot=\" + I2S(slot))\r\n"},
+        {"anchor": "                return false\r\n", "count": 1, "side": "before", "insert": "                call ILM_Log(\"unequip\", \"RETURN\", \"gear=\" + I2S(this) + \" item=\" + I2S(itm) + \" slot=\" + I2S(slot) + \" value=0\")\r\n"},
+        {"anchor": "            return true\r\n", "count": 1, "side": "before", "insert": "            call ILM_Log(\"unequip\", \"RETURN\", \"gear=\" + I2S(this) + \" item=\" + I2S(itm) + \" slot=\" + I2S(slot) + \" value=1\")\r\n"}
+      ]
+    },
+    {
+      "name": "YesNoDialog___OnClick",
+      "sha256": "bcc4a3c3efbec0c67cb24bd142c4fbdc3157db99e4cb1526d776d670bec862f2",
+      "hooks": [
+        {"anchor": "        local button btn= GetClickedButton()\r\n", "count": 1, "side": "after", "insert": "        call ILM_Log(\"dialog\", \"CLICK\", \"pid=\" + I2S(GetPlayerId(GetTriggerPlayer())) + \" dialog=\" + I2S(GetHandleId(GetClickedDialog())) + \" button=\" + I2S(GetHandleId(btn)) + \" yes=\" + ILM_Bool(btn == YesNoDialog___YesBtn[GetPlayerId(GetTriggerPlayer())]))\r\n"}
+      ]
+    },
+    {
+      "name": "SellItem___Actions",
+      "sha256": "bfbff6762b57cc9b261e9c648d53e0cc8f6855e451c54543fbdfc94245bc61ce",
+      "hooks": [
+        {"anchor": "        local integer slot= InvEventSlot\r\n", "count": 1, "side": "after", "insert": "        call ILM_Log(\"sell\", \"REQUEST\", \"inv=\" + I2S(inv) + \" item=\" + I2S(itm) + \" type=\" + I2S(s__InvItem_id[itm]) + \" cost=\" + I2S(s__InvItem_cost[itm]) + \" slot=\" + I2S(slot))\r\n"}
+      ]
+    },
+    {
+      "name": "SellItem___OnAgree",
+      "sha256": "fbc0c51d205e808d83b07c714ebbdfef25a776604cc8a6fa0900c50eb63d3e62",
+      "hooks": [
+        {"anchor": "        local integer inv= SellItem___SellInv[s__User_id[user]]\r\n", "count": 1, "side": "after", "insert": "        call ILM_Log(\"sell\", \"AGREE_ENTRY\", \"inv=\" + I2S(inv) + \" item=\" + I2S(itm) + \" type=\" + I2S(s__InvItem_id[itm]) + \" cost=\" + I2S(s__InvItem_cost[itm]) + \" slot=\" + I2S(slot))\r\n"}
+      ]
+    },
+    {
+      "name": "DropItem___Actions",
+      "sha256": "f5c7171e1799efcc7acd079250a0410c5eb7019859af8947d9833a1b2fb28542",
+      "hooks": [
+        {"anchor": "        local integer slot= InvEventSlot\r\n", "count": 1, "side": "after", "insert": "        call ILM_Log(\"drop\", \"REQUEST\", \"inv=\" + I2S(inv) + \" item=\" + I2S(itm) + \" type=\" + I2S(s__InvItem_id[itm]) + \" slot=\" + I2S(slot))\r\n"}
+      ]
+    },
+    {
+      "name": "DropItem___OnAgree",
+      "sha256": "0499304769e2a3f6d60a9d4e2780f7b5890baba5617ac127ad76b8a97d2de74f",
+      "hooks": [
+        {"anchor": "        local integer inv= DropItem___DropInv[s__User_id[user]]\r\n", "count": 1, "side": "after", "insert": "        call ILM_Log(\"drop\", \"AGREE_ENTRY\", \"inv=\" + I2S(inv) + \" item=\" + I2S(itm) + \" type=\" + I2S(s__InvItem_id[itm]) + \" slot=\" + I2S(slot))\r\n"}
+      ]
+    },
+    {
+      "name": "SocketItem___Actions",
+      "sha256": "12c066ecb2fbf053eeaa48264c257d8d282fe6e18e9d409f4ddb602a438daeb0",
+      "hooks": [
+        {"anchor": "        set SocketItem___SockItem[s__User_id[s__Inventory_user[inv]]]=itm\r\n", "count": 1, "side": "before", "insert": "        call ILM_Log(\"socket\", \"REQUEST\", \"inv=\" + I2S(inv) + \" gem=\" + I2S(itm) + \" gem_type=\" + I2S(s__InvItem_id[itm]) + \" target=\" + I2S(socketItm) + \" from=\" + I2S(SocketLast) + \" slot=\" + I2S(SocketSlot))\r\n        call ILM_Log(\"socket\", \"DETAIL\", \"target_type=\" + I2S(s__InvItem_id[socketItm]) + \" max_sockets=\" + I2S(s__InvItem_maxSockets[socketItm]) + \" gem_cost=\" + I2S(s__InvItem_cost[itm]) + \" is_gem=\" + ILM_Bool(s__InvItem_isSocket[itm]))\r\n"}
+      ]
+    },
+    {
+      "name": "SocketItem___OnAgree",
+      "sha256": "6ac98f7b4e772638d2ccfab83ebad579dff1355a458cab0b0af9fdd4bc4b4c7a",
+      "hooks": [
+        {"anchor": "        set s__InvItem_tempCustomId[socketItm]=( LoadInteger(s__Inventory_Hashtable, ( inv ), ( s__Inventory_MAX_ITEMS * s__Inventory_KEY_ITEM_ID ) + ( slot )) ) // INLINED!!\r\n", "count": 1, "side": "before", "insert": "        call ILM_Log(\"socket\", \"AGREE_ENTRY\", \"inv=\" + I2S(inv) + \" gem=\" + I2S(itm) + \" gem_type=\" + I2S(s__InvItem_id[itm]) + \" target=\" + I2S(socketItm) + \" slot=\" + I2S(slot))\r\n"},
+        {"anchor": "        if ( s__InvItem_addSocket(socketItm , itm) ) then\r\n", "count": 1, "side": "after", "insert": "            call ILM_Log(\"socket\", \"ADD_TRUE\", \"inv=\" + I2S(inv) + \" gem=\" + I2S(itm) + \" target=\" + I2S(socketItm) + \" slot=\" + I2S(slot))\r\n"}
+      ]
+    }
+  ]
+}

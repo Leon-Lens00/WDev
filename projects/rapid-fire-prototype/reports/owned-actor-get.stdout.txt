@@ -1,0 +1,32 @@
+{
+  "Rawcode": "o000",
+  "Found": true,
+  "BaseRawcode": "oshm",
+  "Name": "Rapid Fire Actor",
+  "Fields": [
+    {
+      "Code": "uabi",
+      "Name": "uabi",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "uaen",
+      "Name": "uaen",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "unam",
+      "Name": "unam",
+      "Value": "Rapid Fire Actor",
+      "Source": "map",
+      "Display": "Rapid Fire Actor"
+    }
+  ],
+  "Diagnostics": [
+    "Warcraft III install not found (pass --game-dir \u003Cpath\u003E)"
+  ]
+}

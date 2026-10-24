@@ -1,0 +1,493 @@
+2498:     function NewTimerEx takes integer value returns timer
+2499:         if ( TimerUtils___tN == 0 ) then
+2500:             if ( not TimerUtils___didinit ) then
+2501:                 //This extra if shouldn't represent a major performance drawback
+2502:                 //because QUANTITY rule is not supposed to be broken every day. 
+2503:                 call TriggerEvaluate(st___prototype3[( 1 )]) // INLINED!!
+2504:                 set TimerUtils___tN=TimerUtils___tN - 1
+2505:             else
+2506:                 //If this happens then the QUANTITY rule has already been broken, try to fix the
+2507:                 // issue, else fail.
+2508:                 set s__TimerUtils___tT[0]=CreateTimer()
+2509: 
+2510: 
+2511: 
+2512: 
+2513: 
+2514: 
+2515: 
+2516: 
+2517: 
+2518: 
+2519: 
+2520: 
+2521: 
+2522: 
+2523: 
+2524:             endif
+2525:         else
+2526:             set TimerUtils___tN=TimerUtils___tN - 1
+2527:         endif
+2528:         call SaveInteger(TimerUtils___ht, 0, GetHandleId(( s__TimerUtils___tT[TimerUtils___tN] )), ( value )) // INLINED!!
+2529:      return s__TimerUtils___tT[TimerUtils___tN]
+2530:     endfunction
+2538:     function ReleaseTimer takes timer t returns nothing
+2539:         if ( t == null ) then
+2540:             return
+2541:         endif
+2542:         if ( TimerUtils___tN == TimerUtils___ARRAY_SIZE ) then
+2543:             //stack is full, the map already has much more troubles than the chance of bug
+2544:             call DestroyTimer(t)
+2545:         else
+2546:             call PauseTimer(t)
+2547:             if ( ( LoadInteger(TimerUtils___ht, 0, GetHandleId(( t ))) ) == TimerUtils___HELD ) then // INLINED!!
+2548:                 return
+2549:             endif
+2550:             call SaveInteger(TimerUtils___ht, 0, GetHandleId(( t )), ( TimerUtils___HELD )) // INLINED!!
+2551:             set s__TimerUtils___tT[TimerUtils___tN]=t
+2552:             set TimerUtils___tN=TimerUtils___tN + 1
+2553:         endif
+2554:     endfunction
+6372:     function InventoryCore_GracePeriod takes nothing returns nothing
+6373:         local timer t= GetExpiredTimer()
+6374:         local integer but= ( ( LoadInteger(TimerUtils___ht, 0, GetHandleId(( t ))) ) )
+6375:         
+6376:         set InvButtonDisabled[but]=false
+6377:         
+6378:         call ReleaseTimer(t)
+6379:     endfunction
+5279:         function s__UIButton_clickL takes integer this returns nothing
+5280:             set UserInterface___ClickedButton=this
+5281: 
+5282:             if ( s__UIButton_triggerL[this] != null and TriggerEvaluate(s__UIButton_triggerL[this]) ) then
+5283:                 call TriggerExecute(s__UIButton_triggerL[this])
+5284:             endif
+5285: 
+5286:             if ( s__UIButton_onLeftClick[this] != null ) then
+5287:                  call UserInterface_Eval(s__UIButton_onLeftClick[this])
+5288:             endif
+5289:         endfunction
+5394:         function s__UIButton_clickPeriodicSelect takes player p,boolean isLeft returns boolean
+5395:             local integer i= s__UIButton_CountShow
+5396:             local timer t
+5397:             
+5398:             loop
+5399:                 exitwhen i < 0
+5400: 
+5401:                 if ( IsUnitSelected(s__UIButton_picture[s__UIButton_AllShow[i]], p) ) then
+5402:                     
+5403:                     if ( not s__UIButton_disabled[s__UIButton_AllShow[i]] ) then
+5404: 
+5405:                         if isLeft then
+5406:                             call s__UIButton_clickL(s__UIButton_AllShow[i])
+5407:                         else
+5408:                             call s__UIButton_clickR(s__UIButton_AllShow[i])
+5409:                         endif
+5410: 
+5411:                         
+5412:                         if ( s__UIButton_useDelay ) then // static if doesn't work..
+5413:                             set s__UIButton_disabled[s__UIButton_AllShow[i]]=true
+5414: 
+5415: 
+5416:                                 call TimerStart(NewTimerEx(s__UIButton_AllShow[i]), s__Interface_LEFT_CLICK_DELAY, false, function s__UIButton_enableButtonCallback)
+5417: 
+5418: 
+5419: 
+5420: 
+5421: 
+5422: 
+5423: 
+5424:                         endif
+5425:                         
+5426:                         return true
+5427:                     endif
+5428: 
+5429:                     call SelectUnit(s__UIButton_picture[s__UIButton_AllShow[i]], false)
+5430: 
+5431:                     if ( s__UIButton_selectUnit[s__UIButton_AllShow[i]] != null and s__User_Local == p ) then
+5432:                         call SelectUnit(s__UIButton_selectUnit[s__UIButton_AllShow[i]], true)
+5433:                     endif
+5434: 
+5435:                 endif
+5436:                 
+5437:                 set i=i - 1
+5438:             endloop
+5439:             
+5440:             return false
+5441:         endfunction
+5381:         function s__UIButton_enableButtonCallback takes nothing returns nothing
+5382:             local timer t= GetExpiredTimer()
+5383: 
+5384: 
+5385:                 local integer btn= ( ( LoadInteger(TimerUtils___ht, 0, GetHandleId(( t ))) ) )
+5386: 
+5387: 
+5388: 
+5389: 
+5390:             set s__UIButton_disabled[btn]=false
+5391:             set t=null
+5392:         endfunction
+3513:         function s__Camera_create takes nothing returns integer
+3514:             local integer this= s__Camera__allocate()
+3515:             
+3516:             set s__Camera_customValue[this]=0
+3517:             set s__Camera_change[this]=true
+3518:             set s__Camera_eye[this]=s__VECTOR3_New_1(0.0 , - 922.668 , Camera___DeltaZ + 1367.912)
+3519:             set s__Camera_at[this]=s__VECTOR3_New_1(0 , 0 , Camera___DeltaZ)
+3520:             set s__Camera_distance[this]=0
+3521:             set s__Camera_yaw[this]=0
+3522:             set s__Camera_pitch[this]=0
+3523:             set s__Camera_roll[this]=0
+3524:             set s__Camera_axisX[this]=s__VECTOR3__allocate()
+3525:             set s__Camera_axisY[this]=s__VECTOR3__allocate()
+3526:             set s__Camera_axisZ[this]=s__VECTOR3__allocate()
+3527:             set s__Camera_view[this]=s__MATRIX4__allocate()
+3528:             set s__Camera_projection[this]=Camera___Matrix4Perspective2(s__MATRIX4__allocate() , 0.5 , 10000 , - SCREEN_WIDTH / 2 , SCREEN_WIDTH / 2 , - SCREEN_HEIGHT / 2 , SCREEN_HEIGHT / 2)
+3529:             call s__Camera_updateDistanceYawPitch(this)
+3530:             call s__Camera_updateAxisMatrix(this)
+3531:             
+3532:             return this
+3533:         endfunction
+3467:         function s__Camera_setPosition takes integer this,real x,real y,real z returns nothing
+3468:             local real dx= x - s__VECTOR3_x[s__Camera_at[this]]
+3469:             local real dy= y - s__VECTOR3_y[s__Camera_at[this]]
+3470:             local real dz= z - s__VECTOR3_z[s__Camera_at[this]]
+3471:             set s__VECTOR3_x[s__Camera_eye[this]]=s__VECTOR3_x[s__Camera_eye[this]] + dx
+3472:             set s__VECTOR3_y[s__Camera_eye[this]]=s__VECTOR3_y[s__Camera_eye[this]] + dy
+3473:             set s__VECTOR3_z[s__Camera_eye[this]]=s__VECTOR3_z[s__Camera_eye[this]] + dz
+3474:             set s__VECTOR3_x[s__Camera_at[this]]=x
+3475:             set s__VECTOR3_y[s__Camera_at[this]]=y
+3476:             set s__VECTOR3_z[s__Camera_at[this]]=z
+3477:             set s__Camera_change[this]=true
+3478:         endfunction
+3535:         function s__Camera_destroy takes integer this returns nothing
+3536:             call s__VECTOR3_deallocate(s__Camera_eye[this])
+3537:             call s__VECTOR3_deallocate(s__Camera_at[this])
+3538:             call s__VECTOR3_deallocate(s__Camera_axisX[this])
+3539:             call s__VECTOR3_deallocate(s__Camera_axisY[this])
+3540:             call s__VECTOR3_deallocate(s__Camera_axisZ[this])
+3541:             call s__MATRIX4_deallocate(s__Camera_view[this])
+3542:             call s__MATRIX4_deallocate(s__Camera_projection[this])
+3543:             call s__Camera_destroy(this)
+3544:         endfunction
+1196: function s__UIButton__allocate takes nothing returns integer
+1197:  local integer this=si__UIButton_F
+1198:     if ( this != 0 ) then
+1199:         set si__UIButton_F=si__UIButton_V[this]
+1200:     else
+1201:         set si__UIButton_I=si__UIButton_I + 1
+1202:         set this=si__UIButton_I
+1203:     endif
+1204:     if ( this > 8190 ) then
+1205:         return 0
+1206:     endif
+1207: 
+1208:     set si__UIButton_V[this]=- 1
+1209:  return this
+1210: endfunction
+1213: function s__UIButton_deallocate takes integer this returns nothing
+1214:     if this == null then
+1215:         return
+1216:     elseif ( si__UIButton_V[this] != - 1 ) then
+1217:         return
+1218:     endif
+1219:     set si__UIButton_V[this]=si__UIButton_F
+1220:     set si__UIButton_F=this
+1221: endfunction
+5174:         function s__UIButton_create takes real minx,real maxy,real W,real H,real z,integer texture returns integer
+5175:             local integer this= s__UIButton__allocate()
+5176: 
+5177:             set s__UIButton_texture[this]=texture
+5178:             set s__UIButton_customValue[this]=0
+5179:             set s__UIButton_camera[this]=0
+5180:             set s__UIButton_width[this]=W
+5181:             set s__UIButton_height[this]=H
+5182:             set s__UIButton_minx[this]=minx
+5183:             set s__UIButton_maxx[this]=minx + W
+5184:             set s__UIButton_maxy[this]=maxy
+5185:             set s__UIButton_miny[this]=maxy - H
+5186:             set s__UIButton_z[this]=100.2 + z
+5187:             set s__UIButton_centerx[this]=minx + W / 2.0
+5188:             set s__UIButton_centery[this]=maxy - H / 2.0
+5189:             set s__UIButton_displayed[this]=false
+5190:             set s__UIButton_scale[this]=UserInterface_FindModelSize(W , H , s__UIButton_z[this])
+5191:             set s__UIButton_triggerL[this]=null
+5192:             set s__UIButton_triggerR[this]=null
+5193:             set s__UIButton_onLeftClick[this]=null
+5194:             set s__UIButton_onRightClick[this]=null
+5195:             set s__UIButton_selectUnit[this]=null
+5196:             set s__UIButton_picture[this]=CreateUnit(s__Interface_PLAYER, s__Interface_DUMMY_TYPE, 0, 0, 0)
+5197:             
+5198:             // apply texture
+5199:             call UserInterface_ApplySkin(s__UIButton_picture[this] , texture)
+5200:             
+5201:             set s__UIButton_animIndex[this]=UserInterface_FindModelAnimIndex(W , H , s__UIButton_z[this])
+5202:             call SetUnitAnimationByIndex(s__UIButton_picture[this], s__UIButton_animIndex[this])
+5203:             call UnitAddAbility(s__UIButton_picture[this], s__Interface_DESTROYER_FORM_ID)
+5204:             call UnitRemoveAbility(s__UIButton_picture[this], s__Interface_DESTROYER_FORM_ID)
+5205:             call UnitAddAbility(s__UIButton_picture[this], s__Interface_SKIN_CHANGE_ABILITY)
+5206:             call UnitAddAbility(s__UIButton_picture[this], s__Interface_GHOST_ABILITY)
+5207:             
+5208:             set s__UIButton_unitId[this]=GetUnitUserData(s__UIButton_picture[this])
+5209:             set s__UIButton_Unit2Button[s__UIButton_unitId[this]]=this
+5210:             
+5211:             call SetUnitScale(s__UIButton_picture[this], 0, 0, 0)
+5212:             
+5213:             return this
+5214:         endfunction
+5216:         function s__UIButton_destroy takes integer this returns nothing
+5217:             call RemoveUnit(s__UIButton_picture[this])
+5218:             
+5219:             if s__UIButton_displayed[this] then
+5220:                 set s__UIButton_AllShow[s__UIButton_index[this]]=s__UIButton_AllShow[s__UIButton_CountShow]
+5221:                 set s__UIButton_index[s__UIButton_AllShow[s__UIButton_index[this]]]=s__UIButton_index[this]
+5222:                 set s__UIButton_CountShow=s__UIButton_CountShow - 1
+5223:             endif
+5224:         endfunction
+5238:         function s__UIButton_show takes integer this,boolean flag,integer Cam returns nothing
+5239:             if Cam != - 1 then
+5240:                 set s__UIButton_camera[this]=Cam
+5241:             endif
+5242:             
+5243:             if flag != s__UIButton_displayed[this] then
+5244:                 if flag then
+5245:                     set s__UIButton_AllShow[s__UIButton_CountShow]=this
+5246:                     set s__UIButton_index[this]=s__UIButton_CountShow
+5247:                     set s__UIButton_CountShow=s__UIButton_CountShow + 1
+5248:                     call s__UIButton_update(this)
+5249:                     call SetUnitAnimationByIndex(s__UIButton_picture[this], s__UIButton_animIndex[this])
+5250:                     
+5251:                     call SetUnitScale(s__UIButton_picture[this], s__UIButton_scale[this], 0, 0)
+5252:                 else
+5253:                     set s__UIButton_CountShow=s__UIButton_CountShow - 1
+5254:                     set s__UIButton_AllShow[s__UIButton_index[this]]=s__UIButton_AllShow[s__UIButton_CountShow]
+5255:                     set s__UIButton_index[s__UIButton_AllShow[s__UIButton_index[this]]]=s__UIButton_index[this]
+5256:                     
+5257:                     call SetUnitX(s__UIButton_picture[this], 0)
+5258:                     call SetUnitY(s__UIButton_picture[this], 0)
+5259:                     
+5260:                     call SetUnitScale(s__UIButton_picture[this], 0, 0, 0)
+5261:                 endif
+5262:             endif
+5263:             
+5264:             set s__UIButton_displayed[this]=flag
+5265:         endfunction
+5226:         function s__UIButton_update takes integer this returns nothing
+5227:             local integer Pos
+5228:             
+5229:             if ( s__UIButton_displayed[this] ) then
+5230:                 set Pos=s__Camera_win2World(s__UIButton_camera[this] , s__UIButton_centerx[this] , s__UIButton_centery[this] , s__UIButton_z[this])
+5231:                 call SetUnitX(s__UIButton_picture[this], s__VECTOR3_x[Pos])
+5232:                 call SetUnitY(s__UIButton_picture[this], s__VECTOR3_y[Pos])
+5233:                 call SetUnitFlyHeight(s__UIButton_picture[this], s__VECTOR3_z[Pos] - UserInterface_GetTerrainZ(s__VECTOR3_x[Pos] , s__VECTOR3_y[Pos]), 0)
+5234:                 call s__VECTOR3_deallocate(Pos)
+5235:             endif
+5236:         endfunction
+5328:         function s__UIButton_updateAll takes nothing returns nothing
+5329:             local integer i= s__UIButton_CountShow
+5330:             loop
+5331:                 exitwhen i < 0
+5332:                 call s__UIButton_update(s__UIButton_AllShow[i])
+5333:                 set i=i - 1
+5334:             endloop
+5335:         endfunction
+1168: function s__UIPicture__allocate takes nothing returns integer
+1169:  local integer this=si__UIPicture_F
+1170:     if ( this != 0 ) then
+1171:         set si__UIPicture_F=si__UIPicture_V[this]
+1172:     else
+1173:         set si__UIPicture_I=si__UIPicture_I + 1
+1174:         set this=si__UIPicture_I
+1175:     endif
+1176:     if ( this > 8190 ) then
+1177:         return 0
+1178:     endif
+1179: 
+1180:     set si__UIPicture_V[this]=- 1
+1181:  return this
+1182: endfunction
+1185: function s__UIPicture_deallocate takes integer this returns nothing
+1186:     if this == null then
+1187:         return
+1188:     elseif ( si__UIPicture_V[this] != - 1 ) then
+1189:         return
+1190:     endif
+1191:     set si__UIPicture_V[this]=si__UIPicture_F
+1192:     set si__UIPicture_F=this
+1193: endfunction
+5448:         function s__UIPicture_create takes real minx,real maxy,real w,real h,real z,integer texture returns integer
+5449:             local integer this= s__UIPicture__allocate()
+5450: 
+5451:             set s__UIPicture_texture[this]=texture
+5452:             set s__UIPicture_customValue[this]=0
+5453:             set s__UIPicture_camera[this]=0
+5454:             set s__UIPicture_width[this]=w
+5455:             set s__UIPicture_height[this]=h
+5456:             set s__UIPicture_centerx[this]=minx + w / 2.0
+5457:             set s__UIPicture_centery[this]=maxy - h / 2.0
+5458:             set s__UIPicture_z[this]=100.2 + z
+5459:             set s__UIPicture_displayed[this]=false
+5460:             set s__UIPicture_picture[this]=CreateUnit(s__Interface_PLAYER, s__Interface_DUMMY_TYPE, 0, 0, 0)
+5461:             set s__UIPicture_animIndex[this]=UserInterface_FindModelAnimIndex(w , h , s__UIPicture_z[this])
+5462:             set s__UIPicture_scale[this]=UserInterface_FindModelSize(w , h , s__UIPicture_z[this])
+5463:             
+5464:             call UserInterface_ApplySkin(s__UIPicture_picture[this] , texture)
+5465:             
+5466:             call SetUnitAnimationByIndex(s__UIPicture_picture[this], s__UIPicture_animIndex[this])
+5467:             
+5468:             call UnitAddAbility(s__UIPicture_picture[this], s__Interface_DESTROYER_FORM_ID)
+5469:             call UnitRemoveAbility(s__UIPicture_picture[this], s__Interface_DESTROYER_FORM_ID)
+5470:             call UnitAddAbility(s__UIPicture_picture[this], s__Interface_LOCUST_ID)
+5471:             call UnitRemoveAbility(s__UIPicture_picture[this], s__Interface_LOCUST_ID)
+5472:             
+5473:             // hide unit
+5474:             call SetUnitScale(s__UIPicture_picture[this], 0, 0, 0)
+5475:             
+5476:             return this
+5477:         endfunction
+5506:         function s__UIPicture_destroy takes integer this returns nothing
+5507:             call RemoveUnit(s__UIPicture_picture[this])
+5508:             
+5509:             if s__UIPicture_displayed[this] then
+5510:                 set s__UIPicture_AllShow[s__UIPicture_index[this]]=s__UIPicture_AllShow[s__UIPicture_CountShow]
+5511:                 set s__UIPicture_index[s__UIPicture_AllShow[s__UIPicture_index[this]]]=s__UIPicture_index[this]
+5512:                 set s__UIPicture_CountShow=s__UIPicture_CountShow - 1
+5513:             endif
+5514:         endfunction
+5528:         function s__UIPicture_show takes integer this,boolean show,integer Cam returns nothing
+5529:             if Cam != - 1 then
+5530:                 set s__UIPicture_camera[this]=Cam
+5531:             endif
+5532: 
+5533:             if show != s__UIPicture_displayed[this] then
+5534:                 if show then
+5535:                     set s__UIPicture_AllShow[s__UIPicture_CountShow]=this
+5536:                     set s__UIPicture_index[this]=s__UIPicture_CountShow
+5537:                     set s__UIPicture_CountShow=s__UIPicture_CountShow + 1
+5538:                     call s__UIPicture_update(this)
+5539:                     call SetUnitAnimationByIndex(s__UIPicture_picture[this], s__UIPicture_animIndex[this])
+5540:                     call SetUnitScale(s__UIPicture_picture[this], s__UIPicture_scale[this], 0, 0)
+5541:                 else
+5542:                     set s__UIPicture_CountShow=s__UIPicture_CountShow - 1
+5543:                     set s__UIPicture_AllShow[s__UIPicture_index[this]]=s__UIPicture_AllShow[s__UIPicture_CountShow]
+5544:                     set s__UIPicture_index[s__UIPicture_AllShow[s__UIPicture_index[this]]]=s__UIPicture_index[this]
+5545:                     call SetUnitX(s__UIPicture_picture[this], 0)
+5546:                     call SetUnitY(s__UIPicture_picture[this], 0)
+5547:                     call SetUnitScale(s__UIPicture_picture[this], 0, 0, 0)
+5548:                 endif
+5549:             endif
+5550:             
+5551:             set s__UIPicture_displayed[this]=show
+5552:         endfunction
+5516:         function s__UIPicture_update takes integer this returns nothing
+5517:             local integer Pos
+5518: 
+5519:             if ( s__UIPicture_displayed[this] ) then
+5520:                 set Pos=s__Camera_win2World(s__UIPicture_camera[this] , s__UIPicture_centerx[this] , s__UIPicture_centery[this] , s__UIPicture_z[this])
+5521:                 call SetUnitX(s__UIPicture_picture[this], s__VECTOR3_x[Pos])
+5522:                 call SetUnitY(s__UIPicture_picture[this], s__VECTOR3_y[Pos])
+5523:                 call SetUnitFlyHeight(s__UIPicture_picture[this], s__VECTOR3_z[Pos] - UserInterface_GetTerrainZ(s__VECTOR3_x[Pos] , s__VECTOR3_y[Pos]), 0)
+5524:                 call s__VECTOR3_deallocate(Pos)
+5525:             endif
+5526:         endfunction
+5582:         function s__UIPicture_updateAll takes nothing returns nothing
+5583:             local integer i= s__UIPicture_CountShow
+5584: 
+5585:             loop
+5586:                 exitwhen i < 0
+5587:                 call s__UIPicture_update(s__UIPicture_AllShow[i])
+5588:                 set i=i - 1
+5589:             endloop
+5590:         endfunction
+1140: function s__UIText__allocate takes nothing returns integer
+1141:  local integer this=si__UIText_F
+1142:     if ( this != 0 ) then
+1143:         set si__UIText_F=si__UIText_V[this]
+1144:     else
+1145:         set si__UIText_I=si__UIText_I + 1
+1146:         set this=si__UIText_I
+1147:     endif
+1148:     if ( this > 8190 ) then
+1149:         return 0
+1150:     endif
+1151: 
+1152:     set si__UIText_V[this]=- 1
+1153:  return this
+1154: endfunction
+1157: function s__UIText_deallocate takes integer this returns nothing
+1158:     if this == null then
+1159:         return
+1160:     elseif ( si__UIText_V[this] != - 1 ) then
+1161:         return
+1162:     endif
+1163:     set si__UIText_V[this]=si__UIText_F
+1164:     set si__UIText_F=this
+1165: endfunction
+5595:         function s__UIText_create takes real minx,real maxy,real z returns integer
+5596:             local integer this= s__UIText__allocate()
+5597:             
+5598:             set s__UIText_customValue[this]=0
+5599:             set s__UIText_camera[this]=0
+5600:             set s__UIText_minx[this]=minx
+5601:             set s__UIText_maxy[this]=maxy
+5602:             set s__UIText_z[this]=100 + z
+5603:             set s__UIText_displayed[this]=false
+5604:             set s__UIText_text[this]=CreateTextTag()
+5605:             set s__UIText_dummy[this]=CreateUnit(s__Interface_PLAYER, s__Interface_DUMMY_TYPE, 0, 0, 0)
+5606: 
+5607:             call SetUnitScale(s__UIText_dummy[this], 0, 0, 0)
+5608: 
+5609:             call UnitAddAbility(s__UIText_dummy[this], s__Interface_LOCUST_ID)
+5610:             call UnitRemoveAbility(s__UIText_dummy[this], s__Interface_LOCUST_ID)
+5611:             
+5612:             call SetTextTagVisibility(s__UIText_text[this], false)
+5613:             call SetTextTagPosUnit(s__UIText_text[this], s__UIText_dummy[this], 0)
+5614:             
+5615:             return this
+5616:         endfunction
+5644:         function s__UIText_destroy takes integer this returns nothing
+5645:             call DestroyTextTag(s__UIText_text[this])
+5646:             
+5647:             if s__UIText_displayed[this] then
+5648:                 set s__UIText_AllShow[s__UIText_index[this]]=s__UIText_AllShow[s__UIText_CountShow]
+5649:                 set s__UIText_index[s__UIText_AllShow[s__UIText_index[this]]]=s__UIText_index[this]
+5650:                 set s__UIText_CountShow=s__UIText_CountShow - 1
+5651:             endif
+5652:         endfunction
+5671:         function s__UIText_show takes integer this,boolean show,integer Cam returns nothing
+5672:             if Cam != - 1 then
+5673:                 set s__UIText_camera[this]=Cam
+5674:             endif
+5675:             
+5676:             call SetTextTagVisibility(s__UIText_text[this], show)
+5677:             
+5678:             if show != s__UIText_displayed[this] then
+5679:                 if show then
+5680:                     set s__UIText_AllShow[s__UIText_CountShow]=this
+5681:                     set s__UIText_index[this]=s__UIText_CountShow
+5682:                     set s__UIText_CountShow=s__UIText_CountShow + 1
+5683:                     call s__UIText_update(this)
+5684:                 else
+5685:                     set s__UIText_CountShow=s__UIText_CountShow - 1
+5686:                     set s__UIText_AllShow[s__UIText_index[this]]=s__UIText_AllShow[s__UIText_CountShow]
+5687:                     set s__UIText_index[s__UIText_AllShow[s__UIText_index[this]]]=s__UIText_index[this]
+5688:                 endif
+5689:             endif
+5690:             
+5691:             set s__UIText_displayed[this]=show
+5692:         endfunction
+5654:         function s__UIText_update takes integer this returns nothing
+5655:             local integer Pos= s__Camera_win2World(s__UIText_camera[this] , s__UIText_minx[this] , s__UIText_maxy[this] , s__UIText_z[this])
+5656:             call SetUnitX(s__UIText_dummy[this], s__VECTOR3_x[Pos])
+5657:             call SetUnitY(s__UIText_dummy[this], s__VECTOR3_y[Pos])
+5658:             call SetTextTagPosUnit(s__UIText_text[this], s__UIText_dummy[this], ( s__VECTOR3_z[Pos] - UserInterface_GetTerrainZ(s__VECTOR3_x[Pos] , s__VECTOR3_y[Pos]) ) - 14.8)
+5659:             call s__VECTOR3_deallocate(Pos)
+5660:         endfunction
+5694:         function s__UIText_updateAll takes nothing returns nothing
+5695:             local integer i= s__UIText_CountShow
+5696:             loop
+5697:                 exitwhen i < 0
+5698:                 call s__UIText_update(s__UIText_AllShow[i])
+5699:                 set i=i - 1
+5700:             endloop
+5701:         endfunction

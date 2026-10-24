@@ -1,0 +1,32 @@
+{
+  "Type": "channelFlags",
+  "IsList": false,
+  "Options": [
+    {
+      "Value": "0",
+      "DisplayName": "Visible",
+      "Label": "Visible"
+    },
+    {
+      "Value": "1",
+      "DisplayName": "Imagen objetivo",
+      "Label": "Imagen objetivo"
+    },
+    {
+      "Value": "2",
+      "DisplayName": "Conjuro f\u00EDsico",
+      "Label": "Conjuro f\u00EDsico"
+    },
+    {
+      "Value": "3",
+      "DisplayName": "Conjuro universal",
+      "Label": "Conjuro universal"
+    },
+    {
+      "Value": "4",
+      "DisplayName": "Conjuro \u00FAnico",
+      "Label": "Conjuro \u00FAnico"
+    }
+  ],
+  "Diagnostic": null
+}

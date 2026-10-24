@@ -1,0 +1,261 @@
+{
+  "status": "verified_singleclient_map",
+  "strongest_status": "Tested in map",
+  "ready_for_production": false,
+  "independent_comparison_completed": true,
+  "native_review_approved": false,
+  "target": "Warcraft III Classic 1.27b",
+  "candidate": {
+    "path": "projects/relativistic-classic/build/fixed-20261019-03/fixed-20261019-03.w3x",
+    "sha256": "4490afbf0824a89186faf22e3a948452b27fe0ae1a111f3d960a108228fb2694"
+  },
+  "working_core": {
+    "path": "projects/relativistic-classic/src/Missiles.j",
+    "sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6"
+  },
+  "working_logger": {
+    "path": "projects/relativistic-classic/src/lab/Support.j",
+    "sha256": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+    "scope": "Cycle3 independently verified bounded logger; included in current fixed03 full47 map",
+    "full47_acceptance": "670PASS/137OBS/0FAIL/1multiplayerSKIP; independent assigned-scope comparison complete"
+  },
+  "working_environment": {
+    "path": "projects/relativistic-classic/src/lab/Environment.j",
+    "sha256": "0b1c72c23fdc2cf90ad7ebdb993b1df5804b62ef3e036e21ceab6ea2b6dbfaf2",
+    "scope": "E29 bounded native-reference fixture; normal uninjected candidate"
+  },
+  "identity_basis": "Independently recomputed by corrected executed comparison mvexzndm-j-5179 (exit0, empty stderr); final reporting only copies saved proof, without rerunning source/hash/native comparisons.",
+  "original_map_sha256": "c87d5afb56fe36c4e633061d26551951f4d7db68b6ae0953b002e54eab6a4f9c",
+  "original_matches_snapshot": true,
+  "original_preservation_basis": "Historical external-original fingerprint/preservation evidence retained. Independent recomputation covers the explicitly copied comparison inputs; this is not a claim of a fresh read/hash of the external original map.",
+  "run_id": "fixed-20261019-03",
+  "complete": true,
+  "cases": 47,
+  "check_records": 808,
+  "passing_assertions": 670,
+  "record_status_counts": {
+    "PASS": 670,
+    "OBS": 137,
+    "FAIL": 0,
+    "SKIP": 1
+  },
+  "failures": [],
+  "skips": 1,
+  "skip_scope": "E29 multiplayer only",
+  "e29": {
+    "PASS": 34,
+    "OBS": 13,
+    "FAIL": 0,
+    "SKIP": 1
+  },
+  "last_case": "L99",
+  "assertion_log": "projects/relativistic-classic/reports/RM28-fixed-20261019-03.txt",
+  "parsed_report": "projects/relativistic-classic/reports/lab-fixed-20261019-03.json",
+  "log_reader_exit": 0,
+  "public_report_status": "inconclusive",
+  "independent_recheck": "Inherited mvevyvvm-a-ov94 source scan plus corrected executed mvexzndm-j-5179 comparison closes assigned single-client S3/S4/S8/S10/S11 purpose/S12 gate; not native/universal approval",
+  "comparison_stdout": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/stdout.txt",
+  "comparison_stderr": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/stderr.txt",
+  "comparison_exit": 0,
+  "comparison_availability": "Executed corrected comparison exit0; exact saved streams and invocation copied, no rerun",
+  "workspace_isolation_viable": false,
+  "outside_path_authorized": true,
+  "cycle4": {
+    "results": "projects/relativistic-classic/reports/cycle4/results.json",
+    "report": "projects/relativistic-classic/reports/cycle4/RESULTS.md",
+    "independent_verification": "projects/relativistic-classic/reports/cycle4/independent-verification.json",
+    "negative_proof": "projects/relativistic-classic/reports/cycle4/timeout-result.json",
+    "negative_actual_reader_exit": 1,
+    "negative_expected_validation_exit": 0,
+    "negative_counts": {
+      "PASS": 28,
+      "OBS": 17,
+      "FAIL": 1,
+      "SKIP": 1
+    },
+    "normal_game_exit": 0,
+    "normal_game_elapsed": "5m50s",
+    "negative_game_exit": 0,
+    "negative_game_elapsed": "10m19s",
+    "observer_exit": 0,
+    "observer_elapsed": "2m43s",
+    "all_games_and_observers_complete": true,
+    "termination_methods": "not established",
+    "builds_exit": 0,
+    "tooling_tests": "39 exit0 in0.764s, retained not rerun"
+  },
+  "historical_full_candidate": {
+    "run_id": "fixed-20261019-02",
+    "candidate": {
+      "path": "projects/relativistic-classic/build/fixed-20261019-02/fixed-20261019-02.w3x",
+      "sha256": "b8b1b9a1e4a072f014a75122a1c96851175c07c7198532f1d900227ee1165859"
+    },
+    "cases": 47,
+    "check_records": 785,
+    "record_status_counts": {
+      "PASS": 657,
+      "OBS": 124,
+      "FAIL": 3,
+      "SKIP": 1
+    },
+    "failures": [
+      {
+        "case": "E29",
+        "name": "vision-neutral-transfer-clears",
+        "detail": "previous effective owner loses reveal"
+      },
+      {
+        "case": "E29",
+        "name": "vision-source-removal-clears",
+        "detail": "removed source no longer supplies owner"
+      },
+      {
+        "case": "M45",
+        "name": "coordinate-fixture-live",
+        "detail": "zero-speed missile processed without finishing"
+      }
+    ],
+    "log_reader_exit": 1,
+    "assertion_log": "projects/relativistic-classic/reports/RM28-fixed-20261019-02.txt",
+    "parsed_report": "projects/relativistic-classic/reports/lab-fixed-20261019-02.json",
+    "current_candidate": false,
+    "working_logger_included": false
+  },
+  "cycle3": {
+    "status": "historical_bounded_controls_completed",
+    "results": "projects/relativistic-classic/reports/cycle3/results.json",
+    "independent_verification": "projects/relativistic-classic/reports/cycle3/independent-verification.json",
+    "logger": {
+      "map": "projects/relativistic-classic/build/diag3-logger-stress-20261019-01/diag3-logger-stress-20261019-01.w3x",
+      "sha256": "49ab6761f916c381940bf7833fbd8b9fdef2f4e42a589966fe3cd5ffddcc6763",
+      "cases": 1,
+      "checks": 771,
+      "PASS": 70,
+      "OBS": 701,
+      "FAIL": 0,
+      "SKIP": 0,
+      "reader_exit": 0
+    },
+    "e29": {
+      "map": "projects/relativistic-classic/build/diag3-e29-transfer-20261019-01/diag3-e29-transfer-20261019-01.w3x",
+      "sha256": "dc7f288c19055eb9ebfe2af9adfd947be67efd9a5b23676edb750b43b4734d70",
+      "cases": 1,
+      "checks": 60,
+      "PASS": 25,
+      "OBS": 31,
+      "FAIL": 3,
+      "SKIP": 1,
+      "reader_exit": 1,
+      "failure_names": [
+        "vision-owner-transfer",
+        "vision-source-transfer",
+        "diag3-raw-owner-transfer"
+      ],
+      "game_exit": 0,
+      "game_elapsed": "11m37s",
+      "game_exit_provenance": "Late parent tool event L34; termination method not established"
+    },
+    "interpretation": "Native .25s transfer FAIL justifies oracle adaptation, not universal .5s cadence or cause of all historical withdrawal failures. Separate withdrawal PASS.",
+    "further_rounds_queued": false
+  },
+  "cycle2": {
+    "status": "historical_cycle2_completed_with_missing_proof",
+    "diagnosis": "projects/relativistic-classic/reports/cycle2/diagnosis.json",
+    "further_rounds_queued": false,
+    "candidate_and_core_unchanged_at_cycle2": true
+  },
+  "pending": [
+    "out-of-scope multiplayer proof",
+    "out-of-scope exhaustion/arbitrary integrations",
+    "out-of-scope editor save/reopen"
+  ],
+  "next_decision": null,
+  "task_checkpoint": {
+    "T1": "done",
+    "T2": "done",
+    "T3": "done",
+    "T4": "done",
+    "T5": "done",
+    "T6": "done",
+    "T7": "done",
+    "T8": "done"
+  },
+  "editor_save_certified": false,
+  "coverage_limits": [
+    "OBS tails visibly truncated; missing values not proved; named assertions retained",
+    "670 PASS not808 assertions",
+    "single-client circular revelation not unit occlusion",
+    "no multiplayer/exhaustion/universal production certification",
+    "no screenshots accessed/referenced/embedded",
+    "no native approval or receipt"
+  ],
+  "scratch": {
+    "reporting_unit_created": [],
+    "retained_proof_roots": [
+      "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/",
+      "/tmp/wdev-relativistic-fixed03-verify/corrected-a44wAHM5/"
+    ],
+    "historical_retained_untouched": "/tmp/rc-item3-XNICaO",
+    "cleanup_performed": false,
+    "future_access_authorized": false
+  },
+  "risk": "item3 oracle/evidence contract verified for assigned single-client scope; this unit documentation/evidence only",
+  "comparison_stderr_empty": true,
+  "authorization_scope": "Historical live S12/L45 permission for this completed session/purpose only; not future standing consent",
+  "comparison": {
+    "status": "passed",
+    "verifier": "mvexzndm-j-5179",
+    "required_scope": "non-E29 cross-run multiplicity, M45 preservation and provenance",
+    "exit_code": 0,
+    "stderr_empty": true,
+    "stdout_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/stdout.txt",
+    "stderr_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/stderr.txt",
+    "result_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/result.json",
+    "invocation_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/invocation.json",
+    "script_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/comparison.py",
+    "timeout_seconds": 25,
+    "executed_in_reporting_unit": false,
+    "first_attempt": {
+      "verifier": "mvexqx1v-i-bl4g",
+      "exit_code": 1,
+      "stdout_empty": true,
+      "error": "KeyError: 'freshness' at comparison.py:102",
+      "proof_directory": "projects/relativistic-classic/reports/cycle4/comparison/failed-v1/"
+    },
+    "correction": "ONE auxiliary metadata-reader correction: allow missing optional freshness ONLY for historical fixed02; all three current freshness checks remain mandatory. No source/input/assertion change.",
+    "historical_fixed02_freshness": "historicalfreshnessnotrecorded; unavailable, not reconstructed or accepted as PASS",
+    "preservation": "77 explicit copied inputs, current13 sources, both frozen manifests, Config specializations, sole negative predicate, compiled/maps/logs/public streams checked; originals before/after hashes and Git state unchanged",
+    "case_ids": 47,
+    "L99_last": true,
+    "M45_exact_original_checks": 70,
+    "original_E29_records_preserved": 26,
+    "non_E29_multiplicities": "preserved_except_two_allowed_M45_changes: recovered launch flag and coordinate-fixture-live FAIL to PASS",
+    "dynamic_detail_differences": 36,
+    "dynamic_difference_cases": [
+      "C21",
+      "C25",
+      "C36",
+      "C37",
+      "C38",
+      "C39",
+      "C40",
+      "C41",
+      "C42"
+    ],
+    "dynamic_details": "Runtime handles and C37/C38 expected/actual0-vs1 remaining-object swaps, both PASS. No whole-log/detail identity claim.",
+    "dynamic_differences_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/dynamic-differences.json",
+    "historical_capability_checks": [
+      "mvevyvvm-a-ov94 source scan: comparison not launched because of no-scratch conflict",
+      "mvex3wej-f-koxp continuation: not launched because workspace isolation forbidden; S11 insufficient for outside location"
+    ],
+    "authorization": "Live S12/L45 scoped system-temp grant resolved prior isolation blocks; session/purpose-limited, not standing future permission"
+  },
+  "action_required": false,
+  "in_scope_pending_checks": [],
+  "reporting_readback": {
+    "exit_code": 0,
+    "artifact": "projects/relativistic-classic/reports/cycle4/comparison/reporting-readback.json",
+    "scope": "reporting metadata/syntax/exact20 proof copies only"
+  },
+  "all_planned_tasks_done_for_scoped_work": true
+}

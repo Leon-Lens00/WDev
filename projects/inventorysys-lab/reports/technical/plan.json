@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "task": "odd/tasks/inventorysys-technical.md T1 S1; permissions S2 S3",
+  "status": "Scanned",
+  "runtime_evidence": "Pending parent-owned native build, four owned game runs, GUI companion, closure and independent verification",
+  "credits": "Original InventorySys map and all recovered author/source credits preserved unchanged. Local evaluation only; redistribution permission not inferred.",
+  "modes": {
+    "itl-button-": {"cases": 21, "hidden_pairs": 16, "last_case": "membership", "timer_cases": [19, 20]},
+    "itl-picture-": {"cases": 19, "hidden_pairs": 16, "last_case": "membership"},
+    "itl-text-": {"cases": 19, "hidden_pairs": 16, "last_case": "membership"},
+    "itl-camera-": {"cases": 1, "destroy_calls": 1, "last_case": "standalone recursive destructor"}
+  },
+  "bounds": {"rows_max": 512, "payload_ascii_max": 160, "case_watchdog_seconds": 4, "target_seconds_per_map_max": 60, "owned_timer_slots_max": 8, "routine_cameras_retained_per_class_map": 1},
+  "log": {"reader": "tools/read_logs.py", "schema": "IL141|run|sequence|kind|case|payload", "filename": "Logs\\IL141-<run>.pld", "statuses": ["PASS", "FAIL", "OBS", "SKIP"], "terminal": "COMPLETE from living runner only"},
+  "expected_baseline_failures": [
+    "UIButton and UIPicture and UIText public destroy omit generated deallocation: immediate hidden same-class ID is not reused",
+    "UIText.destroy leaves native owned dummy alive; log failure before explicit native cleanup",
+    "Visible A B C destroy A then show D can exclude C from updateAll; direct update on same dedicated camera is independent oracle",
+    "Actual UIButton enableButtonCallback omits timer release; positive real-click readiness required for any timer deficit verdict",
+    "Camera.destroy recursively calls itself; watchdog failure if runner lives, incomplete log if whole VM freezes"
+  ],
+  "limits": ["Static Python tests are not native compile or game physics proof", "ID nonreuse is not RSS or process leak measurement", "Harness-inclusive short timing OBS is not FPS or long-match proof", "Multiplayer untested; no LAN framework", "Shared membership is not restored; close each disposable owned game", "Retained cameras and last-case live texttags reclaimed only on map shutdown"],
+  "frozen_inputs": {
+    "baseline/original.w3x": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada",
+    "baseline/members/war3map.j": "6a168b922c994d230d80c7c59ad601cb260fa3066f22b579c8784bcf3d0b4e46",
+    "baseline/wct/trigger-025.j": "a167dc43e6ba4522ca9444849646021e038fa642dab3540359c83b743afa8b27",
+    "baseline/wct/trigger-029.j": "296c37079ab1f7d106899fb7439e427d98bbdffc76dd94387d3dc5a0589caf69",
+    "baseline/wct/trigger-032.j": "6783c7a74100e9cf18fc007e5aea26b0649aaa73c01f41c1a9c4bb3bbe88216e",
+    "src/globals.j": "9d74866d476cc3c23b39327b5a4736bcf38e0bcedec63177597c82c70188878c",
+    "src/functions.j": "5ba2a8146e4bb79020d0aa5fab2d01f7fbf56bed9a864d85a5afe4223af51444",
+    "src/manual/globals.j": "244433d0d2d85578e21dd991e2769b7a8511ddad9f26c8fef865c833b331296b",
+    "src/manual/early.j": "e046d248087e6a96619fed4a045bf44b1227fdcd4191d5d1cc0dbfbe4cb47bd9",
+    "src/manual/functions.j": "27510c5ea65a909ffc40d89b13e4005167c16d25e00fc49c54d1257783bdbb0f",
+    "src/manual/hooks.json": "76b01fb7d8bc0b078fa79c69e9ab500538302cce7c68231275e094adcfa7a519",
+    "tools/build.py": "398c50592bc5805d12a689bd9509b1970c2087aa0971fc0c69496c082a807ce9",
+    "tools/read_logs.py": "68e95f34c563f4647ea60e978138662b25a1db3d3cacfca16c532c85b9ce03e3",
+    "tools/read_manual_logs.py": "8da23d948e5da0f1352ab3b4d8b2ca605e9d96a33d4d7c29371fe5b74c1be72a"
+  }
+}

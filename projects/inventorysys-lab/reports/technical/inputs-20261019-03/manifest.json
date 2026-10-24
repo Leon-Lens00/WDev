@@ -1,0 +1,18 @@
+{
+  "globals.j": {
+    "source": "projects/inventorysys-lab/src/technical/globals.j",
+    "sha256": "d09215e62f6428c776d68779c352b4535c7a86e5446f12f23d0f61e6586ce5c0"
+  },
+  "early.j": {
+    "source": "projects/inventorysys-lab/src/technical/early.j",
+    "sha256": "fb173ae49031eaf198806683af2416b1cfc5829aacb1705ba41129365210da8c"
+  },
+  "functions.j": {
+    "source": "projects/inventorysys-lab/src/technical/functions.j",
+    "sha256": "9771db69b1c375ed639f56054793895b1eb251c37f66d6773552c64711ce2aa7"
+  },
+  "hooks.json": {
+    "source": "projects/inventorysys-lab/src/technical/hooks.json",
+    "sha256": "7af4f072fd1882ed56ae4a326073e0b2e2f998b863a8deb70a2f89a3c9426823"
+  }
+}

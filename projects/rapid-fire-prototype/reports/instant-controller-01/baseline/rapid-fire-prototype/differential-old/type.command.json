@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-01/baseline/rapid-fire-prototype/tools/prepare_objects.py",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-01/baseline/rapid-fire-prototype/differential-old/owned-input.w3x",
+    "--recipe",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-01/baseline/rapid-fire-prototype/differential-old/type.recipe.json",
+    "--out",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-01/baseline/rapid-fire-prototype/differential-old/type.w3x",
+    "--evidence",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-01/baseline/rapid-fire-prototype/differential-old/type-details"
+  ],
+  "exit": 1
+}

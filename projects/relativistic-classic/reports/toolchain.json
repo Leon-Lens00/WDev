@@ -1,0 +1,193 @@
+{
+  "files": {
+    "workshop_launcher": {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+      "size": 7529,
+      "sha256": "065a8ec7bc250b98c7221240130c87e16af84d979dbc255d2d58841ed5aa86d6"
+    },
+    "config": {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Documentacion/Configuracion.json",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/wc3-environment.json",
+      "size": 4604,
+      "sha256": "54c5f88e8354bc9be97aee91200efe3a32c7b814454e3900b6cef9006838334c"
+    },
+    "python": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "resolved": "/home/snz/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "size": 30894944,
+      "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7"
+    },
+    "mpyq": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/lib/python3.12/site-packages/mpyq.py",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/lib/python3.12/site-packages/mpyq.py",
+      "size": 14237,
+      "sha256": "526d3e3ae1f5254d8bc32e0248b0763ec5998f350846876c38794373983bed78"
+    },
+    "dotnet": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/dotnet/dotnet",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/dotnet/dotnet",
+      "size": 68424,
+      "sha256": "7dda7a639bc35fba05c40d308b0296450aa4e628d109245a6312c385da9b0931"
+    },
+    "legacy_wine": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/lutris-GE-Proton8-26-x86_64/bin/wine",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/lutris-GE-Proton8-26-x86_64/bin/wine",
+      "size": 13788,
+      "sha256": "d66993551779e46fd982953f3b6b1572a81a2c7341421314cc7dd9ded345dcbc"
+    },
+    "wc3_wrapper": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "size": 8537,
+      "sha256": "506b01e55512fd2e3da17e9586de00623d76c052d808952dbac543008ba9b2d9"
+    },
+    "runtime_wrapper": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/editores.py",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/editores.py",
+      "size": 10206,
+      "sha256": "1dee5acd3f84328b1fa8a9234b9b6adaed9d05e53ba3d8dc93b61446651c4842"
+    },
+    "jasshelper": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/clijasshelper.exe",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/clijasshelper.exe",
+      "size": 814080,
+      "sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985"
+    },
+    "jasshelper_config": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/jasshelper.conf",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/jasshelper.conf",
+      "size": 1214,
+      "sha256": "712da1828251c3f34b31dcb23acff60b7caf92d2db1e3371fbc74844074c1dd5"
+    },
+    "jasshelper_pjass": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/pjass.exe",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/pjass.exe",
+      "size": 47630,
+      "sha256": "ffad8252c95f7e0dc89262e4fd0154bcafb27f081071945597cec02f126e4f05"
+    },
+    "sfmpq": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/sfmpq.dll",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/sfmpq.dll",
+      "size": 72192,
+      "sha256": "268acf8f65150928696dc35c186c0e0fc68108f7d8087b1a881d373e0407e8ef",
+      "fixed_file_version_candidates": [
+        "1.0.7.4"
+      ]
+    },
+    "bin_sfmpq": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/bin/sfmpq.dll",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/bin/sfmpq.dll",
+      "size": 72192,
+      "sha256": "268acf8f65150928696dc35c186c0e0fc68108f7d8087b1a881d373e0407e8ef",
+      "fixed_file_version_candidates": [
+        "1.0.7.4"
+      ]
+    },
+    "manual": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/jasshelpermanual.html",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/jasshelpermanual.html",
+      "size": 479635,
+      "sha256": "41b92dcab46da263544413e40060accb8613ee9dade1c0f9bcf0f6bb7c049dae"
+    },
+    "changelog": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/changelog.txt",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/changelog.txt",
+      "size": 2613,
+      "sha256": "364b84ab758cdf7f8cc649547731f1440040033eae884aef14037743156bf7b3"
+    },
+    "pjass": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/pjass",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/pjass",
+      "size": 82320,
+      "sha256": "917c50be6bd80f819e6a0fa3a2f7e8286967e5795106dd7ca98abe8c0f58f851"
+    },
+    "pjass_readme": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/readme.md",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/readme.md",
+      "size": 4083,
+      "sha256": "0d3632a7621a2fb02cc0bec66afb06aaeb6844429d069816649486654a35160a"
+    },
+    "wc3ctl": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3ctl-classic-bin/wc3ctl.dll",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3ctl-classic-bin/wc3ctl.dll",
+      "size": 708608,
+      "sha256": "a4ac00b5212e146a1074d72a0fa21a9d95ab12a2f0cc171f43aec6609203886f",
+      "fixed_file_version_candidates": [
+        "0.3.0.0"
+      ]
+    },
+    "common": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "size": 166690,
+      "sha256": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924"
+    },
+    "blizzard": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "size": 451847,
+      "sha256": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c"
+    },
+    "native_provenance": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/provenance.json",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/provenance.json",
+      "size": 15283,
+      "sha256": "66484e2b5764a9bcffb141a8bcb46c5cec8dd2d092cc747a4e1b6f6be10d113b"
+    },
+    "installed_war3": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.exe",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.exe",
+      "size": 515048,
+      "sha256": "0ea3434d2bdfd9609eda5fce2a68febac2137af72846de52e0008b142297ffbd",
+      "fixed_file_version_candidates": [
+        "1.27.1.7085"
+      ]
+    },
+    "installed_game_dll": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/game.dll",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/game.dll",
+      "size": 14837224,
+      "sha256": "d51e5680243fc90e19c9d6074f7fac433c466d3cf5f46e2364291725574d8236",
+      "fixed_file_version_candidates": [
+        "1.27.1.7085"
+      ]
+    },
+    "profile_war3": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/war3.exe",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/war3.exe",
+      "size": 515048,
+      "sha256": "0ea3434d2bdfd9609eda5fce2a68febac2137af72846de52e0008b142297ffbd",
+      "fixed_file_version_candidates": [
+        "1.27.1.7085"
+      ]
+    },
+    "profile_game_dll": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/game.dll",
+      "resolved": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/game.dll",
+      "size": 14837224,
+      "sha256": "d51e5680243fc90e19c9d6074f7fac433c466d3cf5f46e2364291725574d8236",
+      "fixed_file_version_candidates": [
+        "1.27.1.7085"
+      ]
+    }
+  },
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "mpyq_version": "0.2.5",
+  "native_expected_matches": {
+    "common": true,
+    "blizzard": true
+  },
+  "manual_title": "JassHelper 2012-02-07",
+  "changelog_first_date": "2014-03-10",
+  "reviewed_invocation": "wc3 vjass SOURCE NEW_OUTPUT; wrapper stages full config/bin and runs clijasshelper --scriptonly, then native pjass common Blizzard output",
+  "imports": "Installed manual supports absolute imports. Builder uses explicit Z:\\ paths; nested imports rejected, no lookupfolder dependence.",
+  "pjass_options": "Wrapper default only; no automatic +oldpatch (it enables returnbug).",
+  "compatibility_verified": false,
+  "limitations": [
+    "Hashes and embedded metadata are observed identity, not official provenance or authentication.",
+    "Installed manual/changelog identify a dated distribution, not proof of exact compiler source/fork.",
+    "Native provenance file attributes Scripts to War3Patch.mpq; archive extraction not independently repeated here.",
+    "Runtime override environment may change Wine/Proton selection; no compiler or game executed."
+  ]
+}

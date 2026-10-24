@@ -1,0 +1,11 @@
+--- timeout-Environment.j.before
++++ timeout-Environment.j.after
+@@ -75,7 +75,7 @@
+ 
+     // ONLY native reference visibility enters these predicates, never missile probes.
+     private function ReferenceTransferReady takes nothing returns boolean
+-        return not IsVisibleToPlayer(-800., 3000., Player(1)) and IsVisibleToPlayer(-800., 3000., Player(2)) and not IsVisibleToPlayer(2400., 3000., Player(2)) and IsVisibleToPlayer(2400., 3000., Player(1))
++        return false
+     endfunction
+ 
+     private function ReferenceReady takes nothing returns boolean

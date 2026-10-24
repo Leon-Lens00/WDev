@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/tmp/wdev-inventorysys-lab/recheck-69i986/project/tests",
+    "-p",
+    "test_actual_run.py",
+    "-v"
+  ],
+  "exit": 0,
+  "timeout_seconds": 30
+}

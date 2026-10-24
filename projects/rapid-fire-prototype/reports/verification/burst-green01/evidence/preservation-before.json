@@ -1,0 +1,94 @@
+{
+  "projects/rapid-fire-prototype/base/05-owned-objects.w3x": {
+    "sha256": "ff34f3fcea03281163c81bdcb11a6f7285f12c289c7160f640d4fa242adfb3b3",
+    "mtime_ns": 1792439629200525997
+  },
+  "projects/rapid-fire-prototype/build/rf-burst-green-20261019-01/rf-burst-green-20261019-01.w3x": {
+    "sha256": "535b98b13b63988c1ec5ee8b94ccfd6956c87cd44ff29030116f22c534d6bb50",
+    "mtime_ns": 1792458285368428597
+  },
+  "projects/rapid-fire-prototype/build-plan-burst-green01.json": {
+    "sha256": "2b3fa636b3adcb8c26f9e187456ed5e009b872ebac7a2c461f4b3af844abcaf4",
+    "mtime_ns": 1792458103256652441
+  },
+  "projects/rapid-fire-prototype/reports/RF-rf-burst-green-20261019-01.txt": {
+    "sha256": "ce00fcec27df1e669ad646888de5ebb1bde67f8983921d4f51ce88ff86de947f",
+    "mtime_ns": 1792458761018034110
+  },
+  "projects/rapid-fire-prototype/reports/RF-rf-burst-red-20261019-01.txt": {
+    "sha256": "e46e52f822f5271a5965dd3e167bba539e3ef10cd840a2699a67028931775288",
+    "mtime_ns": 1792457518111789967
+  },
+  "projects/rapid-fire-prototype/reports/burst-green01-native-launch.json": {
+    "sha256": "43fc002eb0ccf0c5e41fbe13a6357f350122f9f31262132bd00a22374a0114ad",
+    "mtime_ns": 1792458750080077800
+  },
+  "projects/rapid-fire-prototype/reports/burst-red01-native-launch.json": {
+    "sha256": "982c8d2a811b04e163a535eb878cfd7bf2adf14764ed226496b74e5bfada93e3",
+    "mtime_ns": 1792457505455005023
+  },
+  "projects/rapid-fire-prototype/reports/frozen-burst-red01/BurstLog.j": {
+    "sha256": "d0014411491bacae74a938fc745960e8e7fd8edd4c5ac812579862e00fe87ca8",
+    "mtime_ns": 1792458032801071064
+  },
+  "projects/rapid-fire-prototype/reports/frozen-burst-red01/BurstMapMain.j": {
+    "sha256": "0a1f61b86dd0f3fdf0d523e0d9c444b405aac3aed9dd59afb38992df9eee2c2f",
+    "mtime_ns": 1792458032801156397
+  },
+  "projects/rapid-fire-prototype/reports/frozen-burst-red01/BurstNativeTest.j": {
+    "sha256": "7184bd4cd7ceef0fd3c04b0e776e90a64a82ed23e8e65dce1f6f0e924dcfdcc7",
+    "mtime_ns": 1792458032801130904
+  },
+  "projects/rapid-fire-prototype/reports/frozen-burst-red01/PairStub.j": {
+    "sha256": "83972975fa39d5b47336e8f415e3afce25d14266e9102f5d22086bde0fd6b13a",
+    "mtime_ns": 1792458032801107197
+  },
+  "projects/rapid-fire-prototype/reports/frozen-burst-red01/build-plan-burst-red01.json": {
+    "sha256": "2abadfe14816a6701ca0b1dc30c54564223b56139b5a94825494f98dbaf76f5f",
+    "mtime_ns": 1792458032801175628
+  },
+  "projects/rapid-fire-prototype/reports/frozen-burst-red01/preservation.json": {
+    "sha256": "fb389a3111e1917ad3962e54ae97bb6419bf10a6bab9721a25c494868c952510",
+    "mtime_ns": 1792458032801237151
+  },
+  "projects/rapid-fire-prototype/src/prototype/BurstLogGreen01.j": {
+    "sha256": "5dab1ada4319772a61bdc3d9cb7e7a81d313adabef52ffe9ff9cd9756f75620a",
+    "mtime_ns": 1792458103255956042
+  },
+  "projects/rapid-fire-prototype/src/prototype/BurstMapMainGreen01.j": {
+    "sha256": "a102db6bbe936bdc7805edfb9e8f3b545e38ef7ecf078f42823edbfb2e4b8f0b",
+    "mtime_ns": 1792458103256003281
+  },
+  "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j": {
+    "sha256": "7184bd4cd7ceef0fd3c04b0e776e90a64a82ed23e8e65dce1f6f0e924dcfdcc7",
+    "mtime_ns": 1792456838842448636
+  },
+  "projects/rapid-fire-prototype/src/prototype/PairCore.j": {
+    "sha256": "7fe99448ba2fff01e6bd67675c8a71e30ad7b11b35268e65b4f74ec0a64e1078",
+    "mtime_ns": 1792458079336638052
+  },
+  "projects/relativistic-classic/src/Missiles.j": {
+    "sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "mtime_ns": 1792383155424927357
+  },
+  "projects/relativistic-classic/src/libraries/DummyRecycler.j": {
+    "sha256": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "mtime_ns": 1792369976943388123
+  },
+  "projects/relativistic-classic/src/libraries/TimerUtils.j": {
+    "sha256": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "mtime_ns": 1792369976943325806
+  },
+  "projects/relativistic-classic/src/libraries/WorldBounds.j": {
+    "sha256": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "mtime_ns": 1792369976943354294
+  },
+  "projects/relativistic-classic/tools/build.py": {
+    "sha256": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "mtime_ns": 1792369969856927855
+  },
+  "projects/relativistic-classic/tools/read_logs.py": {
+    "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+    "mtime_ns": 1792370695996710430
+  }
+}

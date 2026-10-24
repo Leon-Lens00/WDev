@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+    "-B",
+    "/tmp/wdev-inventorysys-lab/verify-Jpktho/project/tools/read_logs.py",
+    "/tmp/wdev-inventorysys-lab/verify-Jpktho/project/reports/runs/inv-baseline-20261019-02/IL141-inv-baseline-20261019-02.pld",
+    "--run-id",
+    "inv-baseline-20261019-02",
+    "--not-before",
+    "1792430180.0629613",
+    "--report",
+    "/tmp/wdev-inventorysys-lab/verify-Jpktho/actual-report.json"
+  ],
+  "exit": 1
+}

@@ -1,0 +1,219 @@
+{
+  "schema": 1,
+  "task": "T10",
+  "session": "techgui03",
+  "status": "bounded_request_execution_complete_with_limitations",
+  "execution_complete": true,
+  "spec_disposition": {
+    "S1": "actual bounded in-game/computer-use evaluation executed; owned games closed; failures and limits retained",
+    "S7": "one known-B open/close probe executed and owned game closed"
+  },
+  "visual": {
+    "inventory_open": true,
+    "inventory_closed": true,
+    "inventory_open_close_verified": true,
+    "parent_viewed": true,
+    "reporter_viewed_retained_images": true,
+    "open_screenshot": "screens/techgui03-open-settled.png",
+    "closed_screenshot": "screens/techgui03-closed.png",
+    "open_panel_slots": 30,
+    "open_panel_page": "1/5",
+    "open_banner": "Recording techgui03 rows=2",
+    "recording_active_during_open_close": true,
+    "selected_hero": "Calis Wraithson, level 1 Lich",
+    "stats_match_hud": {
+      "str": 15,
+      "agi": 14,
+      "int": 20
+    }
+  },
+  "actual_inputs": {
+    "tool": "ydotool",
+    "key": "KEY_B",
+    "code": 48,
+    "down_up_pairs": 2,
+    "command": "ydotool key 48:1 48:0",
+    "open": {
+      "time": 1792455220.499839,
+      "command": "ydotool key 48:1 48:0",
+      "exit": 0,
+      "pid": 90578,
+      "chat_closed_visually": true,
+      "recording_acknowledged": true
+    },
+    "close": {
+      "time": 1792455237.7151105,
+      "command": "ydotool key 48:1 48:0",
+      "exit": 0,
+      "pid": 90578,
+      "opened_visually": "30-slot panel page 1/5 at lower right",
+      "hero_selected": true
+    },
+    "focus_verified": true,
+    "chat_closed_verified": true,
+    "worker": "mvfxito7-u-49hx"
+  },
+  "native_inventory_events_verified": false,
+  "semantic_certification": false,
+  "protocol": {
+    "public_reader_exit": 0,
+    "exit_evidence": "gui/techgui03/closure.json",
+    "report": "gui/techgui03/operator-reader-techgui03.json",
+    "status": "observation_complete",
+    "chunks": 1,
+    "rows": 3,
+    "events": [
+      "BEGIN",
+      "STATS",
+      "TERMINAL"
+    ],
+    "stop_reason": "USER_STOP",
+    "dropped": 0,
+    "runtime_writing_verified": false
+  },
+  "recorder_correlation": {
+    "status": "unproved",
+    "missing_events": [
+      "INV_OPEN",
+      "INV_CLOSE"
+    ],
+    "root_cause": "unknown",
+    "wrong_hero_explanation_supported": false,
+    "blocks_current_bounded_visual_evaluation": false,
+    "specific_native_labels_required_by_user": false
+  },
+  "identity": {
+    "pid": 90578,
+    "start_ticks": "2862638",
+    "not_before": 1792455090.6222274,
+    "map_sha256": "26d7faf7953feb98a991222c77bf92c1fed58ffef534e2a874ba8ddd3a8f28fe",
+    "recording_label": "techgui03",
+    "repair_label_used": false
+  },
+  "closure": {
+    "confirmed": true,
+    "owned_pid_absent": true,
+    "profile_game_processes": [],
+    "observed_at": 1792455333.7249367,
+    "launcher": {
+      "job": 25,
+      "exit": 0,
+      "duration_reported": "3m53s",
+      "launches": 1
+    },
+    "watcher": {
+      "job": 26,
+      "exit": 0,
+      "duration_reported": "3m39s",
+      "fresh_stop_captured": true
+    },
+    "intermediate_live_at": 1792455289.8402395,
+    "final_supersedes_intermediate_live_warning": true,
+    "termination_mechanism": "unproved",
+    "evidence": "gui/techgui03/closure.json",
+    "all_owned_task_games_closed": 9,
+    "nine_successful_gui_tests": false,
+    "new_process_check_for_report": false
+  },
+  "preservation": {
+    "source_core_config_changed": false,
+    "earlier_artifacts_preserved": true,
+    "historical_reports_changed": false,
+    "historical_reports": [
+      "FINAL.md",
+      "summary.json",
+      "GUI02-ADDENDUM.md"
+    ],
+    "historical_engine_aggregate_unchanged": {
+      "cases": 60,
+      "pass": 142,
+      "fail": 161,
+      "obs": 68,
+      "skip": 0
+    },
+    "fail_count_is_distinct_bugs": false
+  },
+  "limits": [
+    "Not library-wide correctness or all-tests-green certification",
+    "Native inventory-event correlation unproved",
+    "No multiplayer/RSS/FPS/long-duration certification"
+  ],
+  "followup": {
+    "current_task_blocked": false,
+    "further_game_needed_or_authorized": false,
+    "recorder_fix_needed_or_authorized_for_current_evaluation": false,
+    "optional_future_work": "Recorder-coverage investigation only if separately requested",
+    "automatic_new_launch": false
+  },
+  "pre_recording_input_note": "Initial leading-dash ydotool type invocation rejected, corrected with -- before record start; parent Log L32, no implementation change.",
+  "evidence_hashes": [
+    {
+      "path": "gui/techgui03/b-open-input.json",
+      "sha256": "99d94ba2dc9c8342f9a9c7b6a240e55499ec85b85538631e4aed3a42c1e91e8f"
+    },
+    {
+      "path": "gui/techgui03/b-close-input.json",
+      "sha256": "e73112e107e4545ba10143fb58cf7ab1498bffcaae01dbc9361556023b5144d1"
+    },
+    {
+      "path": "gui/techgui03/closure.json",
+      "sha256": "e8c197f43ccd32710e8f9a182f86728accb0036765c4716f645ee0c3b5ff6892"
+    },
+    {
+      "path": "gui/techgui03/desktop-closure-final.json",
+      "sha256": "c2d0db0f805f6c86b858837897941d31fefdcc529c07f4f4c48dbb5bd14445b6"
+    },
+    {
+      "path": "gui/techgui03/launch-request.json",
+      "sha256": "dbc43904f571bf010e01898c81fefd00b63cd9a9068d3f3781c11301a9b016c3"
+    },
+    {
+      "path": "gui/techgui03/native-log-provenance.json",
+      "sha256": "668ece5e66614e2001c4a20ecc4ca46d4d067d20723fd13ae149e4dd0540eab2"
+    },
+    {
+      "path": "gui/techgui03/operator-reader-techgui03.json",
+      "sha256": "4f4dfd75f14bb1c4ca9e505f9e9b991e0bbf09ea6b6733abd48b220478118c15"
+    },
+    {
+      "path": "gui/techgui03/process-identity.json",
+      "sha256": "e03ab69bb056176e52fb38dc1c35b6691816f4c8dc53acd9b8f460d6c63cee01"
+    },
+    {
+      "path": "gui/techgui03/process-watcher-closure.json",
+      "sha256": "4970d32c72950c05fd28a3b2325bb84fe46d681163c2c6c5814c09a5d67796e5"
+    },
+    {
+      "path": "gui/techgui03/owned-session.json",
+      "sha256": "b09009995f2c577625d848f3876773bc393c44384f14e4dcf76431c807249efc"
+    },
+    {
+      "path": "gui/techgui03/operator-evidence/techgui03/source-manifest.json",
+      "sha256": "3b0bd25db47d22fdb25bc35298ee5d4d69dd1483985b19a801f131ad768515ee"
+    },
+    {
+      "path": "gui/techgui03/native-logs/IL141M-inv-manual-20261019-01--techgui03--0.pld",
+      "sha256": "55348f185952b1d1e9038696fc086c04abdb8ba90abb8b784c69378ad2a4eb52"
+    },
+    {
+      "path": "gui/techgui03/operator-evidence/techgui03/IL141M-inv-manual-20261019-01--techgui03--0.pld",
+      "sha256": "55348f185952b1d1e9038696fc086c04abdb8ba90abb8b784c69378ad2a4eb52"
+    },
+    {
+      "path": "screens/techgui03-open-settled.png",
+      "sha256": "5ce861e5370f7416299453da63542e00a238be2ebdc172b313c4ed43240bbe22"
+    },
+    {
+      "path": "screens/techgui03-closed.png",
+      "sha256": "9d5791f5d07f2df291df1b6207ea6533ab183d559243abd85812b2609d4febef"
+    }
+  ],
+  "report_checks": {
+    "scope": "structural-only JSON/text/hash/link processing",
+    "passed": true,
+    "functional_reruns": false,
+    "public_readers_invoked": false,
+    "new_process_or_GUI_probe": false,
+    "addendum_lines": 42
+  }
+}

@@ -1,0 +1,624 @@
+﻿STRING 10
+{
+Player 1
+}
+
+STRING 11
+{
+Player 2
+}
+
+STRING 12
+{
+Player 3
+}
+
+STRING 13
+{
+Player 4
+}
+
+STRING 14
+{
+Force 1
+}
+
+STRING 15
+{
+Force 2
+}
+
+STRING 16
+{
+Force 3
+}
+
+STRING 17
+{
+Force 4
+}
+
+STRING 18
+{
+Force 5
+}
+
+STRING 19
+{
+Force 6
+}
+
+STRING 20
+{
+Relativistic Missiles 2.8 Classic Test
+}
+
+STRING 21
+{
+1v1 or 2v2
+}
+
+STRING 22
+{
+Mapa clásico 1.27b. Escribí -rmtest para lanzar un misil de prueba.
+}
+
+STRING 23
+{
+Vexorian, Anitarf, Blizzard(map)
+}
+
+STRING 24
+// Unidades: e000 (xe unit), Name (Nombre (unam))
+{
+xe unit
+}
+
+STRING 25
+// Unidades: e000 (xe unit), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+(Caster System?)
+}
+
+STRING 26
+// Unidades: e000 (xe unit), Ubertip (Ayuda - Ampliada (utub))
+{
+http://wc3campaigns.net/vexorian
+}
+
+STRING 27
+// Unidades: N000 (Dude), Name (Nombre (unam))
+{
+Dude
+}
+
+STRING 28
+// Unidades: N000 (Dude), Awakentip (Ayuda - Despertar (uawt))
+{
+Revive Anc|cffffcc00e|rstral Guardian
+}
+
+STRING 29
+// Unidades: N000 (Dude), Revivetip (Ayuda - Revivir (utpr))
+{
+Revive Anc|cffffcc00e|rstral Guardian
+}
+
+STRING 30
+// Unidades: N000 (Dude), Tip (Ayuda - Básica (utip))
+{
+Summon Anc|cffffcc00e|rstral Guardian
+}
+
+STRING 31
+// Unidades: N000 (Dude), Ubertip (Ayuda - Ampliada (utub))
+{
+Cunning Hero, adept at charging towards enemies. Can learn Recurrent Dream, Stormy dreams, Sleepwalker and Burning Nightmare |n|n|cffffcc00Attacks land units.|r
+}
+
+STRING 32
+// Unidades: N000 (Dude), Hotkey (Acceso rápido (uhot))
+{
+E
+}
+
+STRING 33
+// Objetos: I000 (Testing Assistant), Name (Nombre (unam))
+{
+Testing Assistant
+}
+
+STRING 34
+// Objetos: I000 (Testing Assistant), Ubertip (Ayuda - Ampliada (utub))
+{
+Allows to reset cooldown, change level, spawn allied units and become invisible.
+}
+
+STRING 35
+// Objetos: I001 (Fire claws of attack +6), Name (Nombre (unam))
+{
+Fire claws of attack +6
+}
+
+STRING 36
+// Objetos: I001 (Fire claws of attack +6), Ubertip (Ayuda - Ampliada (utub))
+{
++6 to attack, And it adds fiery bonus to stormy dreams.
+}
+
+STRING 37
+// Objetos: I002 (The Magical Sheep Staff), Name (Nombre (unam))
+{
+The Magical Sheep Staff
+}
+
+STRING 38
+// Objetos: I002 (The Magical Sheep Staff), Ubertip (Ayuda - Ampliada (utub))
+{
+|cffff8c00Artifact|r|nThis magical sheep talisman can will convert all the hero's foes in an area into sheeps.|n|cffffcc00History|r|n|cffffdeadVexorian needed something to show how the  a massive negative buff can work with his system.|r
+}
+
+STRING 39
+// Objetos: I002 (The Magical Sheep Staff), Description (Descripción (ides))
+{
+Mass Polymorph!
+}
+
+STRING 40
+// Objetos: I003 (Rune of Illusion), Name (Nombre (unam))
+{
+Rune of Illusion
+}
+
+STRING 41
+// Objetos: I003 (Rune of Illusion), Description (Descripción (ides))
+{
+Creates a copy of the hero, can't cast spells and does 50% of the hero's damage
+}
+
+STRING 42
+// Objetos: I004 (Doubled gem of fire), Name (Nombre (unam))
+{
+Doubled gem of fire
+}
+
+STRING 43
+// Objetos: I004 (Doubled gem of fire), Ubertip (Ayuda - Ampliada (utub))
+{
+|cffff8c00Special|r|nThis gem used to be a gem of green fire, we tweaked it to become a gem of double green fire! Shoot two fireballs that will explode when they hit!.|n|cffffcc00History|r|n|cffffdeadVexorian needed a simple sample for xecollider.|r
+}
+
+STRING 44
+// Objetos: I004 (Doubled gem of fire), Description (Descripción (ides))
+{
+Very simple xecollider sample.
+}
+
+STRING 45
+// Habilidades: A001 (), Tip (Ayuda - Normal (atp1))
+{
+Level Up Hero
+}
+
+STRING 46
+// Habilidades: A001 (), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Changes the level of the hero
+}
+
+STRING 47
+// Habilidades: A001 (), EditorSuffix (Sufijo editor (ansf))
+{
+(demo map)
+}
+
+STRING 48
+// Habilidades: A002 (), Tip (Ayuda - Normal (atp1))
+{
+Spawn Archers
+}
+
+STRING 49
+// Habilidades: A002 (), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Spawns a maximum of 6 snapdragons (So you can test spells that affect allied units)|n|n( Will recall the snapdragons if you already have them)
+}
+
+STRING 50
+// Habilidades: A002 (), EditorSuffix (Sufijo editor (ansf))
+{
+(demo map)
+}
+
+STRING 51
+// Habilidades: A003 (), EditorSuffix (Sufijo editor (ansf))
+{
+(Demo Map)
+}
+
+STRING 52
+// Habilidades: A003 (), Tip (Ayuda - Normal (atp1))
+{
+Invisibility
+}
+
+STRING 53
+// Habilidades: A003 (), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Makes the hero invisible until the hero attacks/ casts a spell.
+}
+
+STRING 54
+// Habilidades: A004 (), EditorSuffix (Sufijo editor (ansf))
+{
+(demo map)
+}
+
+STRING 55
+// Habilidades: A000 (), Tip (Ayuda - Normal (atp1))
+{
+Restore Hero
+}
+
+STRING 56
+// Habilidades: A000 (), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Will restore the current hero's Mana, Hit Points and cooldown, making it easier for you to test the abilities again.
+
+|cffffff00Hint:|r Try casting this restoration 2 consecutive times without a delay and mana cost / cooldown will be disabled.
+}
+
+STRING 57
+// Habilidades: A000 (), EditorSuffix (Sufijo editor (ansf))
+{
+(demo map)
+}
+
+STRING 58
+// Habilidades: A008 (Dedo de la muerte), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Instantly kills anything you target, even the hero.
+}
+
+STRING 59
+// Habilidades: A00B (Stormy Dreams), Name (Nombre (anam))
+{
+Stormy Dreams
+}
+
+STRING 60
+// Habilidades: A00B (Stormy Dreams), Tip (Ayuda - Normal (atp1))
+{
+Stormy Dreams [|cffffcc00N|r] - [|cffffcc00Level 1|r]
+}
+
+STRING 61
+// Habilidades: A00B (Stormy Dreams), Tip (Ayuda - Normal (atp1))
+{
+Stormy Dreams [|cffffcc00N|r] - [|cffffcc00Level 2|r]
+}
+
+STRING 62
+// Habilidades: A00B (Stormy Dreams), Tip (Ayuda - Normal (atp1))
+{
+Stormy Dreams [|cffffcc00N|r] - [|cffffcc00Level 3|r]
+}
+
+STRING 63
+// Habilidades: A00B (Stormy Dreams), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Conjures three arcane missiles towards the target direction in circular motion. Each missile deals 15 damage.
+}
+
+STRING 64
+// Habilidades: A00B (Stormy Dreams), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Conjures three arcane missiles towards the target direction in circular motion. Each missile deals 26 damage.
+}
+
+STRING 65
+// Habilidades: A00B (Stormy Dreams), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Conjures three arcane missiles towards the target direction in circular motion. Each missile deals 37 damage.
+}
+
+STRING 66
+// Habilidades: A00B (Stormy Dreams), Researchubertip (Ayuda - Aprender - Ampliada (arut))
+{
+Conjures six arcane missiles towards the target direction in circular motion.|n|n|cffffcc00Level 1|r - 15 damage per missile. |n|cffffcc00Level 2|r - 26 damage per missile. |n|cffffcc00Level 3|r - 37 damage per missile.|n|cffffcc00Fiery bonus|r - Bonus damage per second, may affect spell immune units.
+}
+
+STRING 67
+// Habilidades: A00B (Stormy Dreams), Researchtip (Ayuda - Aprender (aret))
+{
+Learn Stormy Dreams [|cffffcc00N|r] - [|cffffcc00Level %d|r]
+}
+
+STRING 68
+// Habilidades: A00D (Stormy Dreams damage over time), Name (Nombre (anam))
+{
+Stormy Dreams damage over time
+}
+
+STRING 69
+// Habilidades: A005 (Polimorfismo), EditorSuffix (Sufijo editor (ansf))
+{
+(caster)
+}
+
+STRING 70
+// Habilidades: A006 (Sheep Staff), Name (Nombre (anam))
+{
+Sheep Staff
+}
+
+STRING 71
+// Habilidades: A006 (Sheep Staff), EditorSuffix (Sufijo editor (ansf))
+{
+(Triggerer)
+}
+
+STRING 72
+// Habilidades: A007 (Fire Nova Strike), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00F|rire nova strike - [|cffffcc00Level 1|r]
+}
+
+STRING 73
+// Habilidades: A007 (Fire Nova Strike), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00F|rire nova strike - [|cffffcc00Level 2|r]
+}
+
+STRING 74
+// Habilidades: A007 (Fire Nova Strike), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00F|rire nova strike - [|cffffcc00Level 3|r]
+}
+
+STRING 75
+// Habilidades: A007 (Fire Nova Strike), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+An initial nova of fire that then follows the target.
+}
+
+STRING 76
+// Habilidades: A007 (Fire Nova Strike), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+An initial nova of fire that then follows the target.
+}
+
+STRING 77
+// Habilidades: A007 (Fire Nova Strike), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+An initial nova of fire that then follows the target.
+}
+
+STRING 78
+// Habilidades: A007 (Fire Nova Strike), Researchubertip (Ayuda - Aprender - Ampliada (arut))
+{
+An initial nova of fire that then follows the target.
+}
+
+STRING 79
+// Habilidades: A007 (Fire Nova Strike), Researchtip (Ayuda - Aprender (aret))
+{
+Learn |cffffcc00F|rire nova strike - [|cffffcc00Level %d|r]
+}
+
+STRING 80
+// Habilidades: A007 (Fire Nova Strike), Name (Nombre (anam))
+{
+Fire Nova Strike
+}
+
+STRING 81
+// Habilidades: A009 (Illusions), Name (Nombre (anam))
+{
+Illusions
+}
+
+STRING 82
+// Habilidades: A009 (Illusions), EditorSuffix (Sufijo editor (ansf))
+{
+(dummy)
+}
+
+STRING 83
+// Habilidades: A00A (Green Fire II), Name (Nombre (anam))
+{
+Green Fire II
+}
+
+STRING 84
+// Habilidades: A00A (Green Fire II), EditorSuffix (Sufijo editor (ansf))
+{
+(Triggerer)
+}
+
+STRING 85
+// Habilidades: A00C (Chains of fire), Name (Nombre (anam))
+{
+Chains of fire
+}
+
+STRING 86
+// Habilidades: A00C (Chains of fire), Researchtip (Ayuda - Aprender (aret))
+{
+Learn [|cffffcc00B|r] Chains of fire - [|cffffcc00Level %d|r]
+}
+
+STRING 87
+// Habilidades: A00C (Chains of fire), Researchubertip (Ayuda - Aprender - Ampliada (arut))
+{
+Chains of fire! Hurls firebals at multiple targets.
+}
+
+STRING 88
+// Habilidades: A00C (Chains of fire), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Chains of fire! Hurls firebals at multiple targets.
+}
+
+STRING 89
+// Habilidades: A00C (Chains of fire), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Chains of fire! Hurls firebals at multiple targets.
+}
+
+STRING 90
+// Habilidades: A00C (Chains of fire), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Chains of fire! Hurls firebals at multiple targets.
+}
+
+STRING 91
+// Habilidades: A00C (Chains of fire), Tip (Ayuda - Normal (atp1))
+{
+[|cffffcc00B|r] Chains of fire - [|cffffcc00Level 1|r]
+}
+
+STRING 92
+// Habilidades: A00C (Chains of fire), Tip (Ayuda - Normal (atp1))
+{
+[|cffffcc00B|r] Chains of fire - [|cffffcc00Level 2|r]
+}
+
+STRING 93
+// Habilidades: A00C (Chains of fire), Tip (Ayuda - Normal (atp1))
+{
+[|cffffcc00B|r] Chains of fire - [|cffffcc00Level 3|r]
+}
+
+STRING 94
+// Conjuros benéficos/efectos: BHwe (), Bufftip (Ayuda (ftip))
+{
+Water Elementali
+}
+
+STRING 95
+// Conjuros benéficos/efectos: B001 (), Bufftip (Ayuda (ftip))
+{
+Fiery Spirit
+}
+
+STRING 96
+// Conjuros benéficos/efectos: B001 (), Buffubertip (Ayuda - Ampliada (fube))
+{
+This ancestral guardian is on fire, baby!
+}
+
+STRING 97
+// Conjuros benéficos/efectos: B000 (Fiery spirit immolation buff), EditorName (Nombre (sólo editor) (fnam))
+{
+Fiery spirit immolation buff
+}
+
+STRING 98
+// Conjuros benéficos/efectos: B002 (Stormy nightmare damage), EditorName (Nombre (sólo editor) (fnam))
+{
+Stormy nightmare damage
+}
+
+STRING 99
+// Conjuros benéficos/efectos: B002 (Stormy nightmare damage), Bufftip (Ayuda (ftip))
+{
+Stormy nightmare damage over time
+}
+
+STRING 100
+// Conjuros benéficos/efectos: B002 (Stormy nightmare damage), Buffubertip (Ayuda - Ampliada (fube))
+{
+This unit has been hit by a fiery bolt; it will take damage over time.
+}
+
+STRING 101
+// Conjuros benéficos/efectos: B003 (), Bufftip (Ayuda (ftip))
+{
+Sleepwalker
+}
+
+STRING 102
+// Conjuros benéficos/efectos: B003 (), Buffubertip (Ayuda - Ampliada (fube))
+{
+This unit is being protected by the Ancestral Guardian's SleepWalker enchant. A shadow looks after it.
+}
+
+STRING 103
+// Conjuros benéficos/efectos: B004 (), Bufftip (Ayuda (ftip))
+{
+Semi-stun
+}
+
+STRING 104
+// Conjuros benéficos/efectos: B004 (), Buffubertip (Ayuda - Ampliada (fube))
+{
+This unit has been hit by Recurring Dream; its movement speed and attack rate are reduced and is unable to cast spells.
+}
+
+STRING 105
+// Habilidades: A00E (Fireblast), Name (Nombre (anam))
+{
+Fireblast
+}
+
+STRING 106
+// Habilidades: A00E (Fireblast), Researchtip (Ayuda - Aprender (aret))
+{
+Learn |cffffcc00F|rireblast - [|cffffcc00Level %d|r]
+}
+
+STRING 107
+// Habilidades: A00E (Fireblast), Researchhotkey (Aprender (arhk))
+{
+F
+}
+
+STRING 108
+// Habilidades: A00E (Fireblast), Hotkey (Acceso rápido - Normal (ahky))
+{
+F
+}
+
+STRING 109
+// Habilidades: A00E (Fireblast), Researchubertip (Ayuda - Aprender - Ampliada (arut))
+{
+The hero launches a fiery missile that fires smaller missiles at the enemy unit closest to it. When the main missile lands, it fires one last wave of missiles at all nearby enemies.|n|n|cffffcc00Level 1|r - 25 damage per missile. |n|cffffcc00Level 2|r - 50 damage per missile. |n|cffffcc00Level 3|r - 75 damage per missile.
+}
+
+STRING 110
+// Habilidades: A00E (Fireblast), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+The hero launches a fiery missile that fires smaller missiles at the enemy unit closest to it. When the main missile lands, it fires one last wave of missiles at all nearby enemies. The missiles deal 25 damage.
+}
+
+STRING 111
+// Habilidades: A00E (Fireblast), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+The hero launches a fiery missile that fires smaller missiles at the enemy unit closest to it. When the main missile lands, it fires one last wave of missiles at all nearby enemies. The missiles deal 50 damage.
+}
+
+STRING 112
+// Habilidades: A00E (Fireblast), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+The hero launches a fiery missile that fires smaller missiles at the enemy unit closest to it. When the main missile lands, it fires one last wave of missiles at all nearby enemies. The missiles deal 75 damage.
+}
+
+STRING 113
+// Habilidades: A00E (Fireblast), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00F|rireblast - [|cffffcc00Level 1|r]
+}
+
+STRING 114
+// Habilidades: A00E (Fireblast), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00F|rireblast - [|cffffcc00Level 2|r]
+}
+
+STRING 115
+// Habilidades: A00E (Fireblast), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00F|rireblast - [|cffffcc00Level 3|r]
+}
+

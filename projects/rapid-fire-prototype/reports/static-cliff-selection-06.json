@@ -1,0 +1,317 @@
+{
+  "executor": "parent",
+  "basis": "Parent-forwarded TWO actual stdout-only WC3 Python query results, both exit0/no writes/no game; worker did NOT rerun terrain queries",
+  "base_sha256": "ff34f3fcea03281163c81bdcb11a6f7285f12c289c7160f640d4fa242adfb3b3",
+  "wpm_sha256": "ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab",
+  "w3e_sha256": "f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f",
+  "wpm_dimensions": [
+    512,
+    512
+  ],
+  "w3e_dimensions": [
+    129,
+    129
+  ],
+  "origin": [
+    -8192,
+    -8192
+  ],
+  "wpm_cell_size": 32,
+  "w3e_tile_size": 128,
+  "raw_corner_low_nibble_counts": {
+    "0": 9263,
+    "1": 7378
+  },
+  "initial_sw_only_pairs": 22496,
+  "initial_query_limit": "SW-only raw layer may mislead at mixed corners; final requires BOTH SW and minimum-corner differences",
+  "final_static_candidate_pairs": 4788,
+  "selection_order": "nearest current fixture anchor, selected separated256 radius, CELL CENTRES",
+  "raw_levels_are_native_levels": false,
+  "mask64_means": "NO WATER/unfloatable, NOT water present",
+  "pairs": [
+    {
+      "rank": 1,
+      "sample": {
+        "cell": [
+          173,
+          432
+        ],
+        "world": [
+          -2640,
+          5648
+        ],
+        "mask": 202,
+        "corners": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "raw_sw": 1,
+        "raw_min": 1
+      },
+      "neighbor": {
+        "cell": [
+          169,
+          432
+        ],
+        "world": [
+          -2768,
+          5648
+        ],
+        "mask": 10,
+        "corners": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "raw_sw": 0,
+        "raw_min": 0
+      }
+    },
+    {
+      "rank": 2,
+      "sample": {
+        "cell": [
+          155,
+          391
+        ],
+        "world": [
+          -3216,
+          4336
+        ],
+        "mask": 202,
+        "corners": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "raw_sw": 0,
+        "raw_min": 0
+      },
+      "neighbor": {
+        "cell": [
+          155,
+          395
+        ],
+        "world": [
+          -3216,
+          4464
+        ],
+        "mask": 64,
+        "corners": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "raw_sw": 1,
+        "raw_min": 1
+      }
+    },
+    {
+      "rank": 3,
+      "sample": {
+        "cell": [
+          155,
+          383
+        ],
+        "world": [
+          -3216,
+          4080
+        ],
+        "mask": 202,
+        "corners": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "raw_sw": 0,
+        "raw_min": 0
+      },
+      "neighbor": {
+        "cell": [
+          159,
+          383
+        ],
+        "world": [
+          -3088,
+          4080
+        ],
+        "mask": 64,
+        "corners": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "raw_sw": 1,
+        "raw_min": 1
+      }
+    },
+    {
+      "rank": 4,
+      "sample": {
+        "cell": [
+          155,
+          375
+        ],
+        "world": [
+          -3216,
+          3824
+        ],
+        "mask": 202,
+        "corners": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "raw_sw": 0,
+        "raw_min": 0
+      },
+      "neighbor": {
+        "cell": [
+          159,
+          375
+        ],
+        "world": [
+          -3088,
+          3824
+        ],
+        "mask": 64,
+        "corners": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "raw_sw": 1,
+        "raw_min": 1
+      }
+    },
+    {
+      "rank": 5,
+      "sample": {
+        "cell": [
+          148,
+          395
+        ],
+        "world": [
+          -3440,
+          4464
+        ],
+        "mask": 202,
+        "corners": [
+          0,
+          1,
+          1,
+          1
+        ],
+        "raw_sw": 0,
+        "raw_min": 0
+      },
+      "neighbor": {
+        "cell": [
+          148,
+          399
+        ],
+        "world": [
+          -3440,
+          4592
+        ],
+        "mask": 64,
+        "corners": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "raw_sw": 1,
+        "raw_min": 1
+      }
+    },
+    {
+      "rank": 6,
+      "sample": {
+        "cell": [
+          147,
+          403
+        ],
+        "world": [
+          -3472,
+          4720
+        ],
+        "mask": 202,
+        "corners": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "raw_sw": 0,
+        "raw_min": 0
+      },
+      "neighbor": {
+        "cell": [
+          151,
+          403
+        ],
+        "world": [
+          -3344,
+          4720
+        ],
+        "mask": 64,
+        "corners": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "raw_sw": 1,
+        "raw_min": 1
+      }
+    }
+  ],
+  "native_guard": "sample fresh walkBlocked=true AND fresh native cliff levels differ AND BOTH radius16 footprints within actual WorldBounds; never require particular native level numbers/order",
+  "selection_runtime": "candidate-first, up to6 fixed pairs in one callback; log all tested pairs before any geometry; no fallback scan/wait",
+  "old_point_diagnosis": {
+    "requested": [
+      1792,
+      -6656
+    ],
+    "cell": [
+      312,
+      48
+    ],
+    "cell_center": [
+      1808,
+      -6640
+    ],
+    "corners": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "east128_same_sw_min": true,
+    "north128_cell": [
+      312,
+      52
+    ],
+    "north128_center": [
+      1808,
+      -6512
+    ],
+    "north128_corners": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "scope": "poor axis proposal only, NOT observed old native boundary0/1; six FINAL pairs used instead"
+  }
+}

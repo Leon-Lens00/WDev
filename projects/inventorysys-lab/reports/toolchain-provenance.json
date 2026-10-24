@@ -1,0 +1,50 @@
+{
+  "target": "Warcraft III 1.27b",
+  "files": {
+    "Scripts\\common.j": {
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3Patch.mpq",
+      "local": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "sha256": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924",
+      "byte_identical_to_patch": true
+    },
+    "Scripts\\Blizzard.j": {
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3Patch.mpq",
+      "local": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "sha256": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c",
+      "byte_identical_to_patch": true
+    },
+    "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.exe": {
+      "size": 515048,
+      "sha256": "0ea3434d2bdfd9609eda5fce2a68febac2137af72846de52e0008b142297ffbd"
+    },
+    "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/game.dll": {
+      "size": 14837224,
+      "sha256": "d51e5680243fc90e19c9d6074f7fac433c466d3cf5f46e2364291725574d8236"
+    },
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/pjass": {
+      "size": 82320,
+      "sha256": "917c50be6bd80f819e6a0fa3a2f7e8286967e5795106dd7ca98abe8c0f58f851"
+    },
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3ctl-classic-bin/wc3ctl.dll": {
+      "size": 708608,
+      "sha256": "a4ac00b5212e146a1074d72a0fa21a9d95ab12a2f0cc171f43aec6609203886f"
+    },
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py": {
+      "size": 8537,
+      "sha256": "506b01e55512fd2e3da17e9586de00623d76c052d808952dbac543008ba9b2d9"
+    },
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-play.py": {
+      "size": 3767,
+      "sha256": "bb98560748ccaee736ec04171b090051eb02b35f4d9b5eb72c91ed21780aef67"
+    },
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py": {
+      "size": 7529,
+      "sha256": "065a8ec7bc250b98c7221240130c87e16af84d979dbc255d2d58841ed5aa86d6"
+    }
+  },
+  "JassHelper_executed": false,
+  "reason": "Baseline and adapter are already plain JASS; full assembled script uses pJASS directly.",
+  "limits": [
+    "Fingerprints and patch-member equality do not replace actual gameplay or multiplayer tests."
+  ]
+}

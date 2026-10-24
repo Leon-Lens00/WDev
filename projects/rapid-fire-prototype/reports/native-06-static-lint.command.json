@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    ".pi/skills/build-warcraft3-vjass-127b/scripts/wc3lint.py",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src",
+    "--json"
+  ],
+  "exit": 0
+}

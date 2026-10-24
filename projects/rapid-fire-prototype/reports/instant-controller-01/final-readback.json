@@ -1,0 +1,42 @@
+{
+  "status": "PREPARED_INSTANT_CONTROLLER",
+  "strongest": "Scanned: metadata/object serialization only, not native cast timing",
+  "owned_base": "projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+  "owned_base_sha256": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+  "source_base_sha256": "ff34f3fcea03281163c81bdcb11a6f7285f12c289c7160f640d4fa242adfb3b3",
+  "recipe_sha256": "577bd55c5232258236cb2af3f235bb735455dde546eae6ef102a2cb0810e6a7a",
+  "readback": {
+    "hm3w_preserved": true,
+    "only_o001_fields_added": [
+      "ucpt",
+      "ucbs"
+    ],
+    "actor_and_other_records_byte_identical": true,
+    "ability_and_other_members_identical": true,
+    "opaque_gameplay_blocks_identical": true
+  },
+  "protected_count": 84,
+  "protected_mismatches": [],
+  "RED_GREEN_plan_inputs_unchanged": true,
+  "python_syntax": "four files AST parsed; no bytecode generated",
+  "war3net_get": "exit0, map overrides0; install-not-found diagnostic means no merged install readback",
+  "unit_field_encoding": {
+    "ucpt": {
+      "stored_type": 2,
+      "metadata_type": "unreal",
+      "level": 0,
+      "selector": 0,
+      "old": 0.6,
+      "new": 0
+    },
+    "ucbs": {
+      "stored_type": 2,
+      "metadata_type": "unreal",
+      "level": 0,
+      "selector": 0,
+      "old": 1.4,
+      "new": 0
+    }
+  },
+  "native_effect_latency_observed": false
+}

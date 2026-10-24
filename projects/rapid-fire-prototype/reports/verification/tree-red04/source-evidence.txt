@@ -1,0 +1,43 @@
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:8: private constant real CLEARANCE_LIMIT = 2.5
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:421: if GetUnitTypeId(m.dummy) != 'e000' or GetOwningPlayer(m.dummy) != Player(0) or GetWidgetLife(m.dummy) <= .405 or not IsUnitPaused(m.dummy) then
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:422: set fault = "incompatible dummy at qualified birth"
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:470: call RB_LogRecord("OBS","native-spell-effect","time="+R2S(TimerGetElapsed(clock))+" ability="+I2S(GetSpellAbilityId())+" source="+I2S(GetHandleId(GetTriggerUnit()))+" point="+R2S(GetSpellTargetX())+","+R2S(GetSpellTargetY()))
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:610: private function TransitionClear takes nothing returns boolean
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:723: if TimerGetElapsed(clock)-transitionStart >= CLEARANCE_LIMIT then
+projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j:824: call RB_LogRecord("OBS","transition-start","time="+R2S(transitionStart)+" deadline="+R2S(transitionStart+CLEARANCE_LIMIT)+" recycler2s plus margin.5s; readiness polled each .03125s, never blind sleep")
+projects/rapid-fire-prototype/src/prototype/PairCore.j:45: set owner = owning
+projects/rapid-fire-prototype/src/prototype/PairCore.j:119: private function Emit takes nothing returns nothing
+projects/rapid-fire-prototype/src/prototype/PairCore.j:175: call TriggerEvaluate(listener)
+projects/relativistic-classic/src/Missiles.j:374: call refreshVision()
+projects/relativistic-classic/src/Missiles.j:505: call SetUnitOwner(dummy, Player(PLAYER_NEUTRAL_PASSIVE), false)
+projects/relativistic-classic/src/Missiles.j:587: call refreshVision()
+projects/relativistic-classic/src/Missiles.j:864: private method refreshVision takes nothing returns nothing
+projects/relativistic-classic/src/Missiles.j:881: call SetUnitOwner(dummy, p, false)
+projects/relativistic-classic/src/Missiles.j:1053: method launch takes nothing returns nothing
+projects/relativistic-classic/src/libraries/DummyRecycler.j:69: //  function GetRecycledDummy takes real x, real y, real z, real facing returns unit
+projects/relativistic-classic/src/libraries/DummyRecycler.j:74: //  function GetRecycledDummyAnyAngle takes real x, real y, real z returns unit
+projects/relativistic-classic/src/libraries/DummyRecycler.j:117: private constant player OWNER = Player(PLAYER_NEUTRAL_PASSIVE)
+projects/relativistic-classic/src/libraries/DummyRecycler.j:306: function GetRecycledDummy takes real x, real y, real z, real facing returns unit
+projects/relativistic-classic/src/libraries/DummyRecycler.j:412: call SetUnitOwner(u, OWNER, false)
+projects/relativistic-classic/src/libraries/DummyRecycler.j:483: function GetRecycledDummyAnyAngle takes real x, real y, real z returns unit
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:163: constant real RFBurstTreeTest___CLEARANCE_LIMIT= 2.5
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:840: call RFBurstLog___Log("COMPLETE|" + I2S(RFBurstLog___cases) + "|" + I2S(RFBurstLog___checks) + "|" + I2S(RFBurstLog___failures) + "|0")
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:1217: function GetRecycledDummy takes real x,real y,real z,real facing returns unit
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:1328: call SetUnitOwner(u, DummyRecycler___OWNER, false)
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:1399: function GetRecycledDummyAnyAngle takes real x,real y,real z returns unit
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:1603: function s__Missiles_refreshVision takes integer this returns nothing
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:1620: call SetUnitOwner(s__Missiles_dummy[this], p, false)
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:1703: call s__Missiles_refreshVision(this)
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:1933: call SetUnitOwner(s__Missiles_dummy[this], Player(PLAYER_NEUTRAL_PASSIVE), false)
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:2245: call s__Missiles_refreshVision(this)
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:2508: call TriggerEvaluate(listener)
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:2951: set RFBurstTreeTest___fault="incompatible dummy at qualified birth"
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:2999: call RB_LogRecord("OBS" , "native-spell-effect" , "time=" + R2S(TimerGetElapsed(RFBurstTreeTest___clock)) + " ability=" + I2S(GetSpellAbilityId()) + " source=" + I2S(GetHandleId(GetTriggerUnit())) + " point=" + R2S(GetSpellTargetX()) + "," + R2S(GetSpellTargetY()))
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:3252: if TimerGetElapsed(RFBurstTreeTest___clock) - RFBurstTreeTest___transitionStart >= RFBurstTreeTest___CLEARANCE_LIMIT then
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:3353: call RB_LogRecord("OBS" , "transition-start" , "time=" + R2S(RFBurstTreeTest___transitionStart) + " deadline=" + R2S(RFBurstTreeTest___transitionStart + RFBurstTreeTest___CLEARANCE_LIMIT) + " recycler2s plus margin.5s; readiness polled each .03125s, never blind sleep")
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:3476: call SetUnitOwner(s__Missiles_dummy[this], Player(PLAYER_NEUTRAL_PASSIVE), false)
+projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-04/compiled.j:3727: call s__Missiles_refreshVision(this)
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-04.txt:18: call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|native-spell-effect|time=0.180 ability=1093677127 source=1050745 point=-2624.000,2624.000" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-04.txt:19: call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|FAIL|ABORT-fixture|incompatible dummy at qualified birth; behavior unqualified, no tree RED inferred" )
+projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-04.txt:20: call Preload( "RM28|rf-burst-tree-red-20261020-04|COMPLETE|1|15|1|0" )
+projects/rapid-fire-prototype/reports/frozen-tree-red03/src/prototype/TreeNativeTest.j:436: call RB_LogRecord("OBS","native-spell-effect","time="+R2S(TimerGetElapsed(clock))+" ability="+I2S(GetSpellAbilityId())+" source="+I2S(GetHandleId(GetTriggerUnit()))+" point="+R2S(GetSpellTargetX())+","+R2S(GetSpellTargetY()))

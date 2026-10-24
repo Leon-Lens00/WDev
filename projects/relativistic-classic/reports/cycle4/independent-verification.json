@@ -1,0 +1,159 @@
+{
+  "verifier": "mvexzndm-j-5179",
+  "status": "verified_singleclient_map",
+  "verification_complete": true,
+  "independent_comparison_completed": true,
+  "native_review_approved": false,
+  "introduced_fixture_defects_found": [],
+  "verdict": "Inherited source scan and actual corrected comparison PASS close assigned single-client evidence/oracle gate only; not native review or universal production approval.",
+  "spec_findings": {
+    "S3": "met within inspected logger/E29 scope",
+    "S4": "met within assigned single-client evidence gate: executed non-E29 multiplicities, exact70 M45,26 original E29 records and provenance checks",
+    "S8": "met within SAVED single-client circular scenarios ONLY; not multiplayer, occlusion or universal behavior",
+    "S10": "met within inspected authorized fixture scope",
+    "S5_S7": "Existing tool/profile and preservation provenance independently recomputed by corrected comparison; no new engine/build runs",
+    "S11": "Within-WDev proposal was insufficient historically; assigned comparison purpose completed using live S12 grant",
+    "S12": "Live L45 scoped permission honored; proof copied read-only for final reporting; no future standing permission"
+  },
+  "comparison": {
+    "status": "passed",
+    "verifier": "mvexzndm-j-5179",
+    "required_scope": "non-E29 cross-run multiplicity, M45 preservation and provenance",
+    "exit_code": 0,
+    "stderr_empty": true,
+    "stdout_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/stdout.txt",
+    "stderr_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/stderr.txt",
+    "result_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/result.json",
+    "invocation_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/invocation.json",
+    "script_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/comparison.py",
+    "timeout_seconds": 25,
+    "executed_in_reporting_unit": false,
+    "first_attempt": {
+      "verifier": "mvexqx1v-i-bl4g",
+      "exit_code": 1,
+      "stdout_empty": true,
+      "error": "KeyError: 'freshness' at comparison.py:102",
+      "proof_directory": "projects/relativistic-classic/reports/cycle4/comparison/failed-v1/"
+    },
+    "correction": "ONE auxiliary metadata-reader correction: allow missing optional freshness ONLY for historical fixed02; all three current freshness checks remain mandatory. No source/input/assertion change.",
+    "historical_fixed02_freshness": "historicalfreshnessnotrecorded; unavailable, not reconstructed or accepted as PASS",
+    "preservation": "77 explicit copied inputs, current13 sources, both frozen manifests, Config specializations, sole negative predicate, compiled/maps/logs/public streams checked; originals before/after hashes and Git state unchanged",
+    "case_ids": 47,
+    "L99_last": true,
+    "M45_exact_original_checks": 70,
+    "original_E29_records_preserved": 26,
+    "non_E29_multiplicities": "preserved_except_two_allowed_M45_changes: recovered launch flag and coordinate-fixture-live FAIL to PASS",
+    "dynamic_detail_differences": 36,
+    "dynamic_difference_cases": [
+      "C21",
+      "C25",
+      "C36",
+      "C37",
+      "C38",
+      "C39",
+      "C40",
+      "C41",
+      "C42"
+    ],
+    "dynamic_details": "Runtime handles and C37/C38 expected/actual0-vs1 remaining-object swaps, both PASS. No whole-log/detail identity claim.",
+    "dynamic_differences_artifact": "projects/relativistic-classic/reports/cycle4/comparison/passed-v2/dynamic-differences.json",
+    "historical_capability_checks": [
+      "mvevyvvm-a-ov94 source scan: comparison not launched because of no-scratch conflict",
+      "mvex3wej-f-koxp continuation: not launched because workspace isolation forbidden; S11 insufficient for outside location"
+    ],
+    "authorization": "Live S12/L45 scoped system-temp grant resolved prior isolation blocks; session/purpose-limited, not standing future permission"
+  },
+  "inspection_references": [
+    {
+      "path": "projects/relativistic-classic/src/lab/Environment.j",
+      "lines": "77-94",
+      "finding": "raw-only reference predicates; never gate on actual missile visibility"
+    },
+    {
+      "path": "projects/relativistic-classic/src/lab/Environment.j",
+      "lines": "175-190",
+      "finding": "reference eligibility"
+    },
+    {
+      "path": "projects/relativistic-classic/src/lab/Environment.j",
+      "lines": "319-351",
+      "finding": "motion1600 for exactly two .25s intervals, stop and public reconciliation before later raw mutations"
+    },
+    {
+      "path": "projects/relativistic-classic/src/lab/Environment.j",
+      "lines": "354-430",
+      "finding": "original actual visibility conditions retained and evaluated after raw references"
+    },
+    {
+      "path": "projects/relativistic-classic/src/lab/Environment.j",
+      "lines": "150-172;285-313",
+      "finding": "2s transition/abort guards and160-tick watchdog"
+    },
+    {
+      "path": "projects/relativistic-classic/src/lab/Environment.j",
+      "lines": "55-69;121-148",
+      "finding": "Stop/Destroy, restoration and removal checks"
+    },
+    {
+      "path": "projects/relativistic-classic/reports/RM28-fixed-20261019-03.txt",
+      "lines": "373-421;853-859",
+      "finding": "normal47 counts and restoration PASS in saved evidence"
+    },
+    {
+      "path": "projects/relativistic-classic/reports/RM28-diag4-e29-timeout-20261019-01.txt",
+      "lines": "8-51",
+      "finding": "negative exact timeout and cleanup in saved evidence"
+    }
+  ],
+  "preservation": "Executed corrected comparison checks all47 IDs/L99 last, non-E29 case/status/name multiplicities except intended M45 changes, all70 M45 original records with exact details/order,26 old E29 names/details;36 dynamic detail differences explicitly retained",
+  "provenance": {
+    "basis": "Independently recomputed by corrected executed comparison mvexzndm-j-5179 (exit0, empty stderr); final reporting only copies saved proof, without rerunning source/hash/native comparisons.",
+    "map_sha256": "4490afbf0824a89186faf22e3a948452b27fe0ae1a111f3d960a108228fb2694",
+    "environment_sha256": "0b1c72c23fdc2cf90ad7ebdb993b1df5804b62ef3e036e21ceab6ea2b6dbfaf2",
+    "core_sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "logger_sha256": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+    "source_mtime": 1792391818.1322196,
+    "launch_requested_unix": 1792391665.9561656,
+    "observation": "Recorded source/candidate identities independently recomputed, current freshness matches launch/reader; fixed02 optional freshness absent and explicitly unrecorded"
+  },
+  "limitations": [
+    "Diagnostic OBS tails truncated by native log; missing tail values not proved. Individual named assertions retained; no introduced fixture defect inferred from truncation.",
+    "No screenshot access/reference/embed; ambiguous GUI captures excluded.",
+    "No engine/build/tooling-suite/native-review rerun for comparison or reporting.",
+    "Native assessment unassessable for untracked candidate; no approval or delivery receipt.",
+    "Multiplayer, editor-save/reopen, exhaustion, arbitrary integrations and universal production remain uncertified."
+  ],
+  "scratch": {
+    "reporting_unit_created": [],
+    "retained_proof_roots": [
+      "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/",
+      "/tmp/wdev-relativistic-fixed03-verify/corrected-a44wAHM5/"
+    ],
+    "historical_retained_untouched": "/tmp/rc-item3-XNICaO",
+    "outside_path_authorized": true,
+    "authorization_scope": "S12 live, session/purpose-limited; not future standing permission",
+    "cleanup_performed": false
+  },
+  "risk": "item3 oracle/evidence contract verified for assigned single-client scope; this unit documentation/evidence only",
+  "source_inspector": "mvevyvvm-a-ov94",
+  "ready_for_production": false,
+  "outside_path_authorized": true,
+  "action_required": false,
+  "in_scope_pending_checks": [],
+  "reporting_readback": {
+    "exit_code": 0,
+    "artifact": "projects/relativistic-classic/reports/cycle4/comparison/reporting-readback.json",
+    "scope": "reporting metadata/syntax/exact20 proof copies only"
+  },
+  "task_checkpoint": {
+    "T1": "done",
+    "T2": "done",
+    "T3": "done",
+    "T4": "done",
+    "T5": "done",
+    "T6": "done",
+    "T7": "done",
+    "T8": "done"
+  },
+  "all_planned_tasks_done_for_scoped_work": true
+}

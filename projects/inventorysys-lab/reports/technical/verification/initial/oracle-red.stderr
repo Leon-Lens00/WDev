@@ -1,0 +1,28 @@
+FF
+======================================================================
+FAIL: test_fixture_uses_public_original_owner (test_technical_oracles.TechnicalOracleRegressions.test_fixture_uses_public_original_owner)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/wdev-inventorysys-lab/verify-cgXzme/projects/inventorysys-lab/tests/test_technical_oracles.py", line 22, in test_fixture_uses_public_original_owner
+    self.assertEqual(re.findall(r"GroupEnumUnitsOfPlayer\((?:before|after), ([^,]+), null\)", create),
+AssertionError: Lists differ: ['Player(13)', 'Player(13)'] != ['CAMERA_DUMMY_PLAYER', 'CAMERA_DUMMY_PLAYER']
+
+First differing element 0:
+'Player(13)'
+'CAMERA_DUMMY_PLAYER'
+
+- ['Player(13)', 'Player(13)']
++ ['CAMERA_DUMMY_PLAYER', 'CAMERA_DUMMY_PLAYER']
+
+======================================================================
+FAIL: test_timer_deficit_requires_actual_owned_expiry (test_technical_oracles.TechnicalOracleRegressions.test_timer_deficit_requires_actual_owned_expiry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/wdev-inventorysys-lab/verify-cgXzme/projects/inventorysys-lab/tests/test_technical_oracles.py", line 32, in test_timer_deficit_requires_actual_owned_expiry
+    self.assertIn(prerequisite, gate)
+AssertionError: 'ITL_ExpiredCount > 0' not found in 'ITL_Clicks > 0 and ITL_Acquired > 0 and ITL_Beat > ITL_StartBeat'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+FAILED (failures=2)

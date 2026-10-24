@@ -1,0 +1,22 @@
+--- frozen
++++ candidate
+@@ -1,6 +1,6 @@
+ library RFBurstPair requires Missiles
+-    // Minimal B01/B02 plus same-aim R03 candidate. Caller owns pair/observer.
+-    // Active casts reset pending shots only; latest-aim behavior is deferred.
++    // Minimal burst/reset/aim candidate. Caller owns pair/observer.
++    // Active casts update future heading; launched flights keep their own path.
+     globals
+         private constant real CADENCE = .25
+         private constant real RANGE = 1500.
+@@ -201,8 +201,9 @@
+             return false
+         endif
+         if remaining > 0 then
+-            // Reset count only: keep the running timer phase and fixed heading.
++            // Reset count and future heading only; keep the running timer phase.
+             set remaining = 4
++            set heading = Atan2(GetSpellTargetY()-GetUnitY(actor),GetSpellTargetX()-GetUnitX(actor))
+             return false
+         endif
+         if notifying then

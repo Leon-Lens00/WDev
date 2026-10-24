@@ -1,0 +1,18 @@
+{
+  "status": "PREPARED_AIM_RED",
+  "strongest": "Scanned",
+  "artifact_sha256": {
+    "projects/rapid-fire-prototype/src/prototype/AimNativeTest.j": "262d8584be5a5b76840949816955a9f708b03a5f56f74046c562a1fa392d5070",
+    "projects/rapid-fire-prototype/src/prototype/AimLogRed01.j": "2be7fc087074ee38cea5ecc0ece9d60b32945bd1345d24c4f059d0206a1b4ac6",
+    "projects/rapid-fire-prototype/src/prototype/AimMapMainRed01.j": "31b6ed2efcfde956db5389c5a2579e5b9badfa8736811a41eeba8eab5b06c639",
+    "projects/rapid-fire-prototype/build-plan-aim-red01.json": "352aa351b497407623ff670a467cab9a790f084404ebef52da312161c9c76328"
+  },
+  "protected885_unchanged": true,
+  "all10_plan_pins_match": true,
+  "no_native_type_local_collision": true,
+  "compiled_map_absent": true,
+  "native_geometry_qualified": false,
+  "native_inflight_cast_sample_window_qualified": false,
+  "native_R04_RED_observed": false,
+  "native_R05_PASS_observed": false
+}

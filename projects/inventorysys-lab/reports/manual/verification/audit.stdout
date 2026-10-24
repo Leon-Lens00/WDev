@@ -1,0 +1,59 @@
+automatic retained actual assembly equal: inv-baseline-20261019-01 774127dc6f0b45ed5edea51f37122c2fcafc275639baa94b23054300be7d1f3e
+automatic retained actual assembly equal: inv-baseline-20261019-02 8235fb554965db9d5b12e49a6609d763833065f304bb1501bec5bbf843afc2c4
+{
+  "original_sha256": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada",
+  "manual_sha256": "26d7faf7953feb98a991222c77bf92c1fed58ffef534e2a874ba8ddd3a8f28fe",
+  "assembled_sha256": "3836c03662507dcc372a9d08a8efc0603cdb0fb78e3e3eddd1edfc0f8c55f418",
+  "strip_spans": 36,
+  "restored_original": true,
+  "source_hashes_current": true,
+  "named_members_equal": 17,
+  "prefix_equal": true,
+  "archive_preservation": {
+    "preserved_identities": 52,
+    "housekeeping_changes": [
+      {
+        "name": "(attributes)",
+        "identity": [
+          3548657611,
+          132115180,
+          0,
+          0
+        ],
+        "before": null,
+        "after": {
+          "sha256": "d495e5849b705eae01c984f39a67c79cab66c8444df1a1475400d38aefa755a2",
+          "archived_size": 460,
+          "size": 668,
+          "flags": 2147680768,
+          "key_offset": 624314
+        }
+      },
+      {
+        "name": "(listfile)",
+        "identity": [
+          4251285776,
+          1318820007,
+          0,
+          0
+        ],
+        "before": {
+          "sha256": "a1789d991283ffb9002dee7733425b4e1db93bf28b524c62f8c49e13102da949",
+          "archived_size": 330,
+          "size": 920,
+          "flags": 2147680768,
+          "key_offset": 618862
+        },
+        "after": {
+          "sha256": "c7273fdb080eb21cc80435a27d85dfe1b3ceb8700558d552e10af698b185bb43",
+          "archived_size": 328,
+          "size": 867,
+          "flags": 2147680768,
+          "key_offset": 623986
+        }
+      }
+    ],
+    "unreferenced_payloads": 0,
+    "policy": "Identity-bound raw preservation; only neutral listfile rewrite and attributes addition allowed."
+  }
+}

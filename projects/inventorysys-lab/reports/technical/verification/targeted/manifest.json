@@ -1,0 +1,82 @@
+{
+  "scope": "Archive of pre-existing proof only; scripts copied as inert text, never executed. Source untouched.",
+  "files": [
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/targeted.command",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/targeted.command",
+      "bytes": 131,
+      "sha256": "3fb79d0bce62a4df367acc730f7999e056cc817ff89ff4e04a8d5e4dc36fa7c4",
+      "recorded_exit": null
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/targeted.exit",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/targeted.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "recorded_exit": 0
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/targeted.stdout",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/targeted.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorded_exit": null
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/targeted.stderr",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/targeted.stderr",
+      "bytes": 112,
+      "sha256": "504334941e35e2e567be725b9db1a42454796ff1d7cd85c60f2ef44f81abe8b9",
+      "recorded_exit": null
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/recheck.command",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/recheck.command",
+      "bytes": 132,
+      "sha256": "2e2405c84aa374867414c3ac6094198ea5508d6df8c90a3874f40601fbdc485e",
+      "recorded_exit": null
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/recheck.exit",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/recheck.exit",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "recorded_exit": 0
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/recheck.stdout",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/recheck.stdout",
+      "bytes": 1055,
+      "sha256": "e89964cd8c6a30fe75803bc5f26c3197af3435d8a96e758c0e8d71c709bb0a1f",
+      "recorded_exit": null
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/recheck.stderr",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/recheck.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "recorded_exit": null
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/recheck.py",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/recheck.py",
+      "bytes": 3393,
+      "sha256": "6a2931113a39f32ecde37208afbd534497c21f94f7838d73fddec40d1e288a90",
+      "recorded_exit": null
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/source.diff",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/source.diff",
+      "bytes": 1970,
+      "sha256": "81e1d836e3615244e8c733bb871c72f794ac53b542351329bbcfaa75b2173f87",
+      "recorded_exit": null
+    },
+    {
+      "source": "/tmp/wdev-inventorysys-lab/recheck-GwJGxd/proof.json",
+      "destination": "projects/inventorysys-lab/reports/technical/verification/targeted/proof.json",
+      "bytes": 8502,
+      "sha256": "7fef0e19c93965f21565ca95f8fabe3f4f43efc8d7b0a986e88a558fd37e544f",
+      "recorded_exit": null
+    }
+  ]
+}

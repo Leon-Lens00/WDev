@@ -1,0 +1,29 @@
+[
+  {
+    "argv": [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+      "pjass",
+      "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/runs/inv-baseline-20261019-02/assembled.j"
+    ],
+    "returncode": 0,
+    "stdout": "Parse successful:     2418 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j\nParse successful:    10230 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j\nParse successful:    10777 lines: /home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/runs/inv-baseline-20261019-02/assembled.j\nParse successful:    23425 lines: <total>\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+      "wc3ctl",
+      "file",
+      "set",
+      "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/runs/inv-baseline-20261019-02/input.w3x",
+      "war3map.j",
+      "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/runs/inv-baseline-20261019-02/assembled.j",
+      "--out",
+      "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/runs/inv-baseline-20261019-02/injected.w3x",
+      "--json"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 477308 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/runs/inv-baseline-20261019-02/injected.w3x\"\n}\n",
+    "stderr": ""
+  }
+]

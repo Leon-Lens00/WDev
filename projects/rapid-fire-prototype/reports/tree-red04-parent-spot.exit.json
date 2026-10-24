@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "projects/relativistic-classic/tools/read_logs.py",
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-04.txt",
+    "--run-id",
+    "rf-burst-tree-red-20261020-04",
+    "--not-before",
+    "1792528906.667707",
+    "--report",
+    "projects/rapid-fire-prototype/reports/tree-red04-parent-spot.json"
+  ],
+  "exit_code": 1,
+  "purpose": "Reproduce existing ABORT evidence once; no gameplay; exit1 remains failure, not acceptance"
+}

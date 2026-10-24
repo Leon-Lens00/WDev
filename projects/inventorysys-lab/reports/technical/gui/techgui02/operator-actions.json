@@ -1,0 +1,17 @@
+{
+  "at": 1792454397.9815693,
+  "start_command_sent_once": true,
+  "status_command_sent": true,
+  "recording_ack_visually_verified": false,
+  "hero_hud": "Moogul el Astuto, level1 blade master, HP280/280; not dummy",
+  "hover_candidate": {
+    "x": 1740,
+    "y": 935,
+    "compositor_cursor_verified": true,
+    "inventory_tooltip_identified": false
+  },
+  "relative_motion_probe": "one pixel x; no tooltip observed",
+  "inventory_activated": false,
+  "stop_command_sent": true,
+  "outcome": "PARTIAL: required tooltip unavailable; no guessed activation or hotkey"
+}

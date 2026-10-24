@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "-"
+  ],
+  "stdout": "PREPARED_TREE02_FIXTURE (Scanned); diff +67/-16; 0 lint/API/identifier errors; 18 ownership warnings.\n32 frozen artifacts preserved;30 originals unchanged; README suffix byte/hash equal; control placement and first-failure diagnostics only.\nHarness SHA256 de09c0eb5502bb7af0ec250ced5d2c8657d22d33c8a9f659aaa03211575dc647\nPlan SHA256 8ec905769dbd3d1a3cbfd30f9659c2f7fa56037c05652beef9e49f3695a94825\n",
+  "exit_code": 0
+}

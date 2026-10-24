@@ -1,0 +1,21 @@
+{
+  "through_log": 65,
+  "document": "odd/tasks/rapid-fire-prototype-current.md",
+  "payload": "projects/rapid-fire-prototype/reports/checkpoint-current-L65-payload.txt",
+  "bytes": 17708,
+  "sha256": "74cca3ba507cce693f51b0fce8cfd0a59c04e60489576b5875e79c49bcf2c66a",
+  "literal_payload_byte_equal": true,
+  "archive": "odd/tasks/rapid-fire-prototype.md",
+  "archive_bytes": 89082,
+  "archive_sha256": "9452f9bd6d44c2842658411ae6bbf84d099a1bb9ffd1d250fcdac10709da3c98",
+  "archive_preserved": true,
+  "specs_and_prior_log_preserved_at_edit": true,
+  "validation": "One finite local byte equality/hash/archive check; no runtime/build/reader check",
+  "provider_receipt": {
+    "id": 57,
+    "status": "saved"
+  },
+  "provider_readback_performed": false,
+  "mirror_status": "EXACT_L65_PAYLOAD_SAVE_RECEIPT_OBSERVED",
+  "outcome_classified": false
+}

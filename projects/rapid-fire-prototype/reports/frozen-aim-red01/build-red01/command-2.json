@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+    "wc3ctl",
+    "file",
+    "set",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+    "war3map.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-aim-red-20261020-01/compiled.j",
+    "--out",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-aim-red-20261020-01/injected.w3x",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 211519 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-aim-red-20261020-01/injected.w3x\"\n}\n",
+  "stderr": ""
+}

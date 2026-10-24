@@ -1,0 +1,181 @@
+{
+  "status": "Scanned",
+  "map_sha256": "ff34f3fcea03281163c81bdcb11a6f7285f12c289c7160f640d4fa242adfb3b3",
+  "owned_records": {
+    "o000": {
+      "old": "oshm",
+      "new": "o000",
+      "mods": [
+        {
+          "field": "unam",
+          "type": 3,
+          "level": 0,
+          "pointer": 0,
+          "value": "Rapid Fire Actor",
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "uaen",
+          "type": 0,
+          "level": 0,
+          "pointer": 0,
+          "value": 0,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "uabi",
+          "type": 3,
+          "level": 0,
+          "pointer": 0,
+          "value": "",
+          "end": "\u0000\u0000\u0000\u0000"
+        }
+      ]
+    },
+    "o001": {
+      "old": "oshm",
+      "new": "o001",
+      "mods": [
+        {
+          "field": "unam",
+          "type": 3,
+          "level": 0,
+          "pointer": 0,
+          "value": "Rapid Fire Controller",
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "uaen",
+          "type": 0,
+          "level": 0,
+          "pointer": 0,
+          "value": 0,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "uabi",
+          "type": 3,
+          "level": 0,
+          "pointer": 0,
+          "value": "A00G",
+          "end": "\u0000\u0000\u0000\u0000"
+        }
+      ]
+    },
+    "A00G": {
+      "old": "ANcl",
+      "new": "A00G",
+      "mods": [
+        {
+          "field": "anam",
+          "type": 3,
+          "level": 0,
+          "pointer": 0,
+          "value": "Rapid Fire Point Probe",
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "alev",
+          "type": 0,
+          "level": 0,
+          "pointer": 0,
+          "value": 1,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "aher",
+          "type": 0,
+          "level": 0,
+          "pointer": 0,
+          "value": 0,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "acdn",
+          "type": 2,
+          "level": 1,
+          "pointer": 0,
+          "value": 0.0,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "amcs",
+          "type": 0,
+          "level": 1,
+          "pointer": 0,
+          "value": 0,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "aran",
+          "type": 2,
+          "level": 1,
+          "pointer": 0,
+          "value": 99999.0,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "Ncl1",
+          "type": 2,
+          "level": 1,
+          "pointer": 1,
+          "value": 0.0,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "Ncl2",
+          "type": 0,
+          "level": 1,
+          "pointer": 2,
+          "value": 2,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "Ncl3",
+          "type": 0,
+          "level": 1,
+          "pointer": 3,
+          "value": 0,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "Ncl4",
+          "type": 2,
+          "level": 1,
+          "pointer": 4,
+          "value": 0.9800000190734863,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "Ncl5",
+          "type": 0,
+          "level": 1,
+          "pointer": 5,
+          "value": 1,
+          "end": "\u0000\u0000\u0000\u0000"
+        },
+        {
+          "field": "Ncl6",
+          "type": 3,
+          "level": 1,
+          "pointer": 6,
+          "value": "channel",
+          "end": "\u0000\u0000\u0000\u0000"
+        }
+      ]
+    }
+  },
+  "nonowned_object_records_preserved": 20,
+  "all_live_mpq_hash_entries": 22,
+  "raw_payload_changes": [
+    "(3548657611, 132115180, 0, 0)",
+    "(4251285776, 1318820007, 0, 0)",
+    "(4115557215, 375997887, 0, 0)",
+    "(3164994953, 3180933751, 0, 0)"
+  ],
+  "raw_changes_only_managed_and_generated_bookkeeping": true,
+  "managed_crcs_verified": true,
+  "hm3w_equal": true,
+  "independent_reader": "tests/readback.py from initial diagnostic; all raw MPQ hash entries independently traversed; registered War3Net object-get also exit0",
+  "native_execution": false
+}

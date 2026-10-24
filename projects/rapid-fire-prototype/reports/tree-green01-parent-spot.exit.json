@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "projects/relativistic-classic/tools/read_logs.py",
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-green-20261020-01.txt",
+    "--run-id",
+    "rf-burst-tree-green-20261020-01",
+    "--not-before",
+    "1792532680.9873888",
+    "--report",
+    "projects/rapid-fire-prototype/reports/tree-green01-parent-spot.json"
+  ],
+  "exit_code": 0,
+  "purpose": "Single parent reproduction of captured same-harness GREEN; no gameplay rerun"
+}

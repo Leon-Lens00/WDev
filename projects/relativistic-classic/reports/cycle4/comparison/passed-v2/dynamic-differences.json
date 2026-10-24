@@ -1,0 +1,290 @@
+[
+  {
+    "case": "C21",
+    "name": "native-before-original-pad128-member",
+    "old_line": 313,
+    "new_line": 313,
+    "old_detail": "item=1050843 x=0.000 y=0.000 life=75.000",
+    "new_detail": "item=1050846 x=0.000 y=0.000 life=75.000"
+  },
+  {
+    "case": "C25",
+    "name": "native-before-original-pad0-member",
+    "old_line": 346,
+    "new_line": 346,
+    "old_detail": "item=1050840 x=90.000 y=90.000 life=75.000",
+    "new_detail": "item=1050843 x=90.000 y=90.000 life=75.000"
+  },
+  {
+    "case": "C25",
+    "name": "native-before-original-pad128-member",
+    "old_line": 348,
+    "new_line": 348,
+    "old_detail": "item=1050847 x=160.000 y=0.000 life=75.000",
+    "new_detail": "item=1050850 x=160.000 y=0.000 life=75.000"
+  },
+  {
+    "case": "C25",
+    "name": "native-before-original-pad128-member",
+    "old_line": 349,
+    "new_line": 349,
+    "old_detail": "item=1050840 x=90.000 y=90.000 life=75.000",
+    "new_detail": "item=1050843 x=90.000 y=90.000 life=75.000"
+  },
+  {
+    "case": "C36",
+    "name": "native-before-original-pad128-member",
+    "old_line": 494,
+    "new_line": 516,
+    "old_detail": "tree=1051818 x=64.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051821 x=64.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C36",
+    "name": "native-before-original-pad128-member",
+    "old_line": 495,
+    "new_line": 517,
+    "old_detail": "tree=1051802 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051805 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C37",
+    "name": "fresh-public-contact-remaining-2",
+    "old_line": 517,
+    "new_line": 539,
+    "old_detail": "expected=1 actual=1",
+    "new_detail": "expected=0 actual=0"
+  },
+  {
+    "case": "C37",
+    "name": "fresh-public-contact-remaining-3",
+    "old_line": 518,
+    "new_line": 540,
+    "old_detail": "expected=0 actual=0",
+    "new_detail": "expected=1 actual=1"
+  },
+  {
+    "case": "C38",
+    "name": "fresh-public-contact-remaining-2",
+    "old_line": 533,
+    "new_line": 555,
+    "old_detail": "expected=1 actual=1",
+    "new_detail": "expected=0 actual=0"
+  },
+  {
+    "case": "C38",
+    "name": "fresh-public-contact-remaining-3",
+    "old_line": 534,
+    "new_line": 556,
+    "old_detail": "expected=0 actual=0",
+    "new_detail": "expected=1 actual=1"
+  },
+  {
+    "case": "C39",
+    "name": "native-before-original-pad0-member",
+    "old_line": 553,
+    "new_line": 575,
+    "old_detail": "item=1051796 x=0.000 y=0.000 life=75.000",
+    "new_detail": "item=1051799 x=0.000 y=0.000 life=75.000"
+  },
+  {
+    "case": "C39",
+    "name": "native-before-original-pad0-member",
+    "old_line": 554,
+    "new_line": 576,
+    "old_detail": "item=1051300 x=16.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051801 x=16.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C39",
+    "name": "native-before-original-pad128-member",
+    "old_line": 556,
+    "new_line": 578,
+    "old_detail": "item=1051796 x=0.000 y=0.000 life=75.000",
+    "new_detail": "item=1051799 x=0.000 y=0.000 life=75.000"
+  },
+  {
+    "case": "C39",
+    "name": "native-before-original-pad128-member",
+    "old_line": 557,
+    "new_line": 579,
+    "old_detail": "item=1051045 x=48.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051048 x=48.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C39",
+    "name": "native-before-original-pad128-member",
+    "old_line": 558,
+    "new_line": 580,
+    "old_detail": "item=1051300 x=16.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051801 x=16.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C39",
+    "name": "native-before-fresh-pad0-member",
+    "old_line": 564,
+    "new_line": 586,
+    "old_detail": "item=1051300 x=16.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051801 x=16.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C39",
+    "name": "native-before-fresh-pad128-member",
+    "old_line": 566,
+    "new_line": 588,
+    "old_detail": "item=1051045 x=48.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051048 x=48.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C39",
+    "name": "native-before-fresh-pad128-member",
+    "old_line": 567,
+    "new_line": 589,
+    "old_detail": "item=1051300 x=16.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051801 x=16.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C40",
+    "name": "native-before-original-pad0-member",
+    "old_line": 590,
+    "new_line": 612,
+    "old_detail": "item=1051806 x=0.000 y=0.000 life=75.000",
+    "new_detail": "item=1051809 x=0.000 y=0.000 life=75.000"
+  },
+  {
+    "case": "C40",
+    "name": "native-before-original-pad0-member",
+    "old_line": 591,
+    "new_line": 613,
+    "old_detail": "item=1051833 x=16.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051836 x=16.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C40",
+    "name": "native-before-original-pad128-member",
+    "old_line": 593,
+    "new_line": 615,
+    "old_detail": "item=1051806 x=0.000 y=0.000 life=75.000",
+    "new_detail": "item=1051809 x=0.000 y=0.000 life=75.000"
+  },
+  {
+    "case": "C40",
+    "name": "native-before-original-pad128-member",
+    "old_line": 594,
+    "new_line": 616,
+    "old_detail": "item=1051841 x=48.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051844 x=48.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C40",
+    "name": "native-before-original-pad128-member",
+    "old_line": 595,
+    "new_line": 617,
+    "old_detail": "item=1051833 x=16.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051836 x=16.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C40",
+    "name": "native-before-fresh-pad0-member",
+    "old_line": 601,
+    "new_line": 623,
+    "old_detail": "item=1051833 x=16.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051836 x=16.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C40",
+    "name": "native-before-fresh-pad128-member",
+    "old_line": 603,
+    "new_line": 625,
+    "old_detail": "item=1051841 x=48.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051844 x=48.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C40",
+    "name": "native-before-fresh-pad128-member",
+    "old_line": 604,
+    "new_line": 626,
+    "old_detail": "item=1051833 x=16.000 y=-16.000 life=75.000",
+    "new_detail": "item=1051836 x=16.000 y=-16.000 life=75.000"
+  },
+  {
+    "case": "C41",
+    "name": "native-before-original-pad128-member",
+    "old_line": 628,
+    "new_line": 650,
+    "old_detail": "tree=1051806 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051809 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C41",
+    "name": "native-before-original-pad128-member",
+    "old_line": 629,
+    "new_line": 651,
+    "old_detail": "tree=1051841 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051844 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C41",
+    "name": "native-before-original-pad128-member",
+    "old_line": 630,
+    "new_line": 652,
+    "old_detail": "tree=1051284 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051287 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C41",
+    "name": "native-before-fresh-pad128-member",
+    "old_line": 637,
+    "new_line": 659,
+    "old_detail": "tree=1051841 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051844 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C41",
+    "name": "native-before-fresh-pad128-member",
+    "old_line": 638,
+    "new_line": 660,
+    "old_detail": "tree=1051284 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051287 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C42",
+    "name": "native-before-original-pad128-member",
+    "old_line": 662,
+    "new_line": 684,
+    "old_detail": "tree=1051806 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051809 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C42",
+    "name": "native-before-original-pad128-member",
+    "old_line": 663,
+    "new_line": 685,
+    "old_detail": "tree=1051841 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051844 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C42",
+    "name": "native-before-original-pad128-member",
+    "old_line": 664,
+    "new_line": 686,
+    "old_detail": "tree=1050840 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1050843 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C42",
+    "name": "native-before-fresh-pad128-member",
+    "old_line": 671,
+    "new_line": 693,
+    "old_detail": "tree=1051841 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1051844 x=0.000 y=0.000 life=50.000"
+  },
+  {
+    "case": "C42",
+    "name": "native-before-fresh-pad128-member",
+    "old_line": 672,
+    "new_line": 694,
+    "old_detail": "tree=1050840 x=0.000 y=0.000 life=50.000",
+    "new_detail": "tree=1050843 x=0.000 y=0.000 life=50.000"
+  }
+]

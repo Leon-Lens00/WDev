@@ -1,0 +1,13 @@
+--- Core770
++++ Core6442
+@@ -65,6 +65,10 @@
+             return true
+         endmethod
+ 
++        method onDestructable takes destructable dest returns boolean
++            return GetDestructableLife(dest) > 0.
++        endmethod
++
+         method onPeriod takes nothing returns boolean
+             return not LiveOwned(savedActor,savedOwner)
+         endmethod

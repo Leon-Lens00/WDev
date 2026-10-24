@@ -1,0 +1,143 @@
+{
+  "status": "PREPARED_RECAST_RED_NOT_COMPILED",
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py",
+    "build",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+    "--wc3",
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "--timer-utils",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "--world-bounds",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "--dummy-recycler",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "--core",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "--bootstrap",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainRed01.j",
+    "--output-dir",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build",
+    "--run-id",
+    "rf-burst-recast-red-20261020-01",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogRed01.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+    "--entry",
+    "RF_StartRecastTest"
+  ],
+  "shell": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py build --base /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x --wc3 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 --timer-utils /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j --world-bounds /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j --dummy-recycler /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j --core /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j --bootstrap /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainRed01.j --output-dir /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build --run-id rf-burst-recast-red-20261020-01 --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogRed01.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j --entry RF_StartRecastTest",
+  "inputs_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogRed01.j": "e828a0db60a5cc46a99024b3bdfe5561ce764b600a172fcd1609e45a40e65a76",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "7fe99448ba2fff01e6bd67675c8a71e30ad7b11b35268e65b4f74ec0a64e1078",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j": "9dc12b73bb7248af4b935ac29b848035dbe5aa361790e8075c6e5ed9fa620f63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainRed01.j": "d4d34b794433ba3de146989c8b39f47170f647a0347db9a5f3aa4a8537e397a4"
+  },
+  "import_order": [
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogRed01.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainRed01.j"
+  ],
+  "public_entry": "RF_StartRecastTest",
+  "native_run_id": "rf-burst-recast-red-20261020-01",
+  "group": "RFBurstRecast",
+  "native_run_already_executed": false,
+  "output_map": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-recast-red-20261020-01/rf-burst-recast-red-20261020-01.w3x",
+  "log": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-recast-red-20261020-01.txt",
+  "relative_log": "Logs\\RF-rf-burst-recast-red-20261020-01.txt",
+  "reader_argv_template": [
+    "python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-recast-red-20261020-01.txt",
+    "--run-id",
+    "rf-burst-recast-red-20261020-01",
+    "--not-before",
+    "PARENT_RECORDED_LAUNCH_UNIX_SECONDS",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red01-native-reader.json"
+  ],
+  "cases": {
+    "B01-four-shot-native-effects": "same count/native damage-source/paired HP differential40 assertions and readiness on new controller base",
+    "B02-default-cadence": "same3 adjacent intervals .25\u00b1.03125, missing observations FAIL",
+    "R03-active-recast-reset-and-cadence": "fresh calibrated pair; recast issued on future tick at second public live shot+.125; qualify second actual native effect at observed shot2 before next .25 boundary; expect6 real shots/hits10/source actor, paired HP differential60, no extra immediate emission and5 adjacent .25 intervals"
+  },
+  "partial_specs": [
+    "S1",
+    "S2",
+    "S4"
+  ],
+  "regression_specs_partial": [
+    "S1",
+    "S4",
+    "S5",
+    "S10",
+    "S11"
+  ],
+  "runtime_budget": {
+    "global_game_seconds": 20,
+    "harness_period_seconds": 0.03125,
+    "first_effect_deadline_from_order_seconds_each": 2,
+    "regression_observation_from_first_effect_seconds": 3,
+    "R03_second_live_shot_deadline_from_first_effect_seconds": 0.75,
+    "recast_issue_due_after_second_shot_seconds": 0.125,
+    "second_effect_strict_deadline_after_second_shot_seconds": 0.25,
+    "R03_observation_from_second_effect_seconds": 3,
+    "observer_wall_seconds": 180,
+    "wall_clock_guaranteed": false,
+    "clearance": "no prior allocated source flight after regression window, remove pair, next harness tick type0/native group absence before fresh creation",
+    "no_wait_retry_until_pass": true
+  },
+  "qualification": {
+    "source": "exact caster",
+    "ability": "A00G",
+    "point": "same ACTUAL target XY",
+    "second_effect_observed_shot_count": 2,
+    "precommit": "expected cast/phase/pending flags/issue timestamp set before IssuePointOrder; synchronous native effect admitted",
+    "timestamps_logged": [
+      "first issue/effect/latency",
+      "second shot/due/issue/effect/latency",
+      "public shot/native damage times"
+    ],
+    "on_unqualified": "explicit FAIL ABORT-fixture and COMPLETE; no R03 behavior verdict"
+  },
+  "expected_conditional_RED": {
+    "observed": false,
+    "conditions": "B01/B02 pass and actual second native event qualified inside active window",
+    "unchanged_core_shots": 4,
+    "unchanged_core_hits": 4,
+    "unchanged_core_paired_HP_differential": 40,
+    "R03_expected_shots": 6,
+    "R03_expected_paired_HP_differential": 60,
+    "R03_behavior_failures": 8,
+    "failure_breakdown": "six count/projectile/hit/value/source/HP assertions plus2 missing adjacent intervals",
+    "reader_exit": 1
+  },
+  "preservation": "projects/rapid-fire-prototype/reports/recast-red01-preservation.json",
+  "design_notes": "projects/rapid-fire-prototype/reports/recast-red01-preparation.md",
+  "limits": [
+    "Scanned only; no compilation/game/zero-latency evidence",
+    "PairCore remains unchanged and TEMP ignores active casts",
+    "Same aim only; no S6/S7/S14 trajectory acceptance or animation/mover/UI/S2-complete claim",
+    "Native actor/target data and public calibration unchanged; no defense matrix/continuous collision/multiplayer proof",
+    "Parent exact-profile preflight before observer and protected launcher; wrapper exit0 is not closure proof"
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "commands": [
+    [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/project/tests",
+      "-v"
+    ],
+    [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/project/tests",
+      "-p",
+      "test_manual_protocol_edges.py",
+      "-v"
+    ],
+    [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "-B",
+      "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/audit.py"
+    ]
+  ],
+  "results": {
+    "suite": {
+      "exit": 0,
+      "stdout": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/suite.stdout",
+      "stderr": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/suite.stderr"
+    },
+    "edges": {
+      "exit": 0,
+      "stdout": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/edges.stdout",
+      "stderr": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/edges.stderr"
+    },
+    "audit": {
+      "exit": 0,
+      "stdout": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/audit.stdout",
+      "stderr": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/audit.stderr"
+    },
+    "example": {
+      "exit": 0,
+      "stdout": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/example.stdout",
+      "stderr": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/example.stderr"
+    },
+    "build-help": {
+      "exit": 0,
+      "stdout": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/build-help.stdout",
+      "stderr": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/build-help.stderr"
+    },
+    "reader-help": {
+      "exit": 0,
+      "stdout": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/reader-help.stdout",
+      "stderr": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/reader-help.stderr"
+    },
+    "isolated-suite": {
+      "exit": 0,
+      "stdout": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/isolated-suite.stdout",
+      "stderr": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/isolated-suite.stderr"
+    }
+  },
+  "isolation_exception": "First suite used original hardcoded temporary fixture root; corrected scratch fixture bases only before subsequent checks.",
+  "additional_commands": [
+    {
+      "cwd": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/project",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "tools/build.py",
+        "assemble",
+        "--base",
+        "baseline/original.w3x",
+        "--globals",
+        "src/manual/globals.j",
+        "--early-functions",
+        "src/manual/early.j",
+        "--functions",
+        "src/manual/functions.j",
+        "--hooks",
+        "src/manual/hooks.json",
+        "--entry",
+        "ILM_Init",
+        "--run-id",
+        "inv-manual-001",
+        "--output-dir",
+        "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/assembly-example"
+      ]
+    },
+    {
+      "cwd": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/project",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "tools/build.py",
+        "--help"
+      ]
+    },
+    {
+      "cwd": "/tmp/wdev-inventorysys-lab/manual-verify-ufgMad/project",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "tools/read_manual_logs.py",
+        "--help"
+      ]
+    }
+  ]
+}

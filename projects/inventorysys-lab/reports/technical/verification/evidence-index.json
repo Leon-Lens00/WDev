@@ -1,0 +1,340 @@
+{
+  "scope": "Hashes of existing evidence read/correlated for T7, not a functional rerun.",
+  "files": [
+    {
+      "path": "projects/inventorysys-lab/baseline/members/war3map.j",
+      "bytes": 457945,
+      "sha256": "6a168b922c994d230d80c7c59ad601cb260fa3066f22b579c8784bcf3d0b4e46"
+    },
+    {
+      "path": "projects/inventorysys-lab/baseline/original.w3x",
+      "bytes": 621592,
+      "sha256": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/closure.json",
+      "bytes": 898,
+      "sha256": "49021f1a4483a004377c2b6d89c77d4739e58c451d49d515ceee77e6fd17f507"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/desktop-closure-final.json",
+      "bytes": 678,
+      "sha256": "ac5ba97bb683c7cf8c437d786d06659d8750a1ad62f92b80bfe38ad29fb79689"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/desktop-closure.json",
+      "bytes": 1503,
+      "sha256": "7c6cf0aead80e40405c8e4dd3a19eef34ffc457e17a4fa5bbd04f53c839e6ada"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/observer-timeout.json",
+      "bytes": 92,
+      "sha256": "21f1a1fb28ec66ee8a8c981a197e8865d301a3b0ea4e26b4c0b03b965d0e19eb"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/operator-actions.json",
+      "bytes": 510,
+      "sha256": "211f64a5955b0d8883147a2069328116541ee202ca9d6ddcd7362fd2da5ca692"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/operator-evidence/IL141M-inv-manual-20261019-01--techgui01--0.pld",
+      "bytes": 425,
+      "sha256": "63d62dcfa27898f0ef1d4003eb51849a4b0637192f91e72e9c2b02bff8b1cc20"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/operator-reader-report.json",
+      "bytes": 1074,
+      "sha256": "a9aedf52959b58eabef171aa2c7a9861c105df968644772bf8af79b6f9f463e3"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/operator-reader.exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/operator-reader.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/operator-reader.stdout.txt",
+      "bytes": 1074,
+      "sha256": "a9aedf52959b58eabef171aa2c7a9861c105df968644772bf8af79b6f9f463e3"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/gui/techgui01/parent-reconciliation.json",
+      "bytes": 145,
+      "sha256": "ab93a3c65abc6bc9ab6ed3baa86245ae8a971b4fbcdb1984a2e366747f7bf5e9"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/oracles-green.exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/oracles-green.stderr.txt",
+      "bytes": 392,
+      "sha256": "356bff863bf6d5444c3fb3d950411569152a661d5ddec9076483a0500adc2157"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/oracles-red.exit.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/oracles-red.stderr.txt",
+      "bytes": 1890,
+      "sha256": "d26d7fce3dd4c6eef3c2590aefd6e0e6d03dfc270db20e0b3221a975a2b368b9"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/oracles-suite.exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/oracles-suite.stderr.txt",
+      "bytes": 11098,
+      "sha256": "20d1d6af6243730f16b7e8f1833bf238b93b4f8df38216f0a411725b564bdb23"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/parent-tests.exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/parent-tests.stderr.txt",
+      "bytes": 10643,
+      "sha256": "e749f60b4b4252917106a7c6069857c161dc1a96710b00e8c61c11b4841b3b16"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/plan.json",
+      "bytes": 3643,
+      "sha256": "7a99396deef576d79b9a7f6c8ead6b84a0b29755049b42cabd22fa3fc9b185a0"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-01/closure.json",
+      "bytes": 482,
+      "sha256": "84f4441f5cd5b06e4b00078f47c83876879336a216e9ee11457fb0fbb81e8bdd"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-02/closure.json",
+      "bytes": 615,
+      "sha256": "956c6a3ccfec8f8f302aa1d53f6c787bf0a32ffaac0b6da0a0647ce4ae7b34b7"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/IL141-itl-button-20261019-03.pld",
+      "bytes": 37345,
+      "sha256": "f5826e1cf0524121797605206ea24cc569eac6fa274618e51dc5ac1a40d5e619"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/build.json",
+      "bytes": 15393,
+      "sha256": "c038f8e1dc66f151bf22dd354c9c745cde7f6fbb3ae822ef1df4bcae5d2906d8"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/closure.json",
+      "bytes": 469,
+      "sha256": "efdcb4e4893e8d162184d5611043cd1328f275a7ba8d8f5ce23cda3f8bd506f7"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/commands.json",
+      "bytes": 1596,
+      "sha256": "fada9357a05115635f2b6b21cd48f2d223309109d334d04faf96700fa7fbe18b"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/game-result.json",
+      "bytes": 134,
+      "sha256": "eac80ba6e446b82852da814c7e0fe6213659c2b1d327a7ebe9c50adab1726b13"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/native-log-provenance.json",
+      "bytes": 874,
+      "sha256": "5d740e86f57459ad3f0fe80d5d39722835029a03b46bfa3d65b94e1d16c6d7bc"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/owned-session.json",
+      "bytes": 7484,
+      "sha256": "720d9eafc5a382aa7676e42e05a279414b6ea8ad3b65b050784fde671adc50da"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/reader.exit.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/reader.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/reader.stdout.txt",
+      "bytes": 134,
+      "sha256": "eac80ba6e446b82852da814c7e0fe6213659c2b1d327a7ebe9c50adab1726b13"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/IL141-itl-camera-20261019-03.pld",
+      "bytes": 1041,
+      "sha256": "1913989630f4a8939910f013576e23729d2a02a97c9710a927cceba6d617241a"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/build.json",
+      "bytes": 15393,
+      "sha256": "ac4e12a4384e3f4e5293fbd3ec8502370b534c6832db022c109d3f260ebb15f3"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/closure.json",
+      "bytes": 385,
+      "sha256": "d4cc0bd50874cc788edc503f8a9300b168c16f888fc217285226b002788920c3"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/commands.json",
+      "bytes": 1596,
+      "sha256": "2ca8f7a1c918c5efb92249a9824e262b49e7218647e9093d40c5147b98bd4cd7"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/game-result.json",
+      "bytes": 130,
+      "sha256": "574b09d13596f26374b6174097302ac29e9ed5fed084a74f9ee9ba6e44fc085c"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/native-log-provenance.json",
+      "bytes": 873,
+      "sha256": "4cc36fd893f32d685ea148ef3b2c4ef130bd522bd185e8619d86b559870554f0"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/owned-session.json",
+      "bytes": 7649,
+      "sha256": "1ac81573fbe89678c09acdbb36f765435401d4e7ba9a7a4f48107399e73b6fbe"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/reader.exit.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/reader.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/reader.stdout.txt",
+      "bytes": 130,
+      "sha256": "574b09d13596f26374b6174097302ac29e9ed5fed084a74f9ee9ba6e44fc085c"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/IL141-itl-picture-20261019-03.pld",
+      "bytes": 33407,
+      "sha256": "c603679953495d4921d91e55b31f20368a14eaa1ec38bf16e128a31c20f9d025"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/build.json",
+      "bytes": 15396,
+      "sha256": "2eeab5324a87cbe3963f8bd8b2f786cb8a4add351e862a0fd1b673b182dc3ee3"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/closure.json",
+      "bytes": 390,
+      "sha256": "c1618a1264e5a6bb81789c15e2cb3790e6599b9fb7ba3fa507b2293cda7b7ad1"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/commands.json",
+      "bytes": 1602,
+      "sha256": "bff1267ab9dfc4c3983aa063fc6d0ca7fee3197c401ce88f0bb4eff80e764e0d"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/game-result.json",
+      "bytes": 135,
+      "sha256": "8b8a00b2a932d96d264df1557e0d8021e9ff4d1ac6fc6e7e7a6fff8b8ed1fe3c"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/native-log-provenance.json",
+      "bytes": 877,
+      "sha256": "1190591119216e56c1abc6c8dfccc62f7d07d5ba7b9b142a8db9f43535e9c1f8"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/owned-session.json",
+      "bytes": 7484,
+      "sha256": "a6fc4057e7f4c467f0844df90d91057b13875a9461ed727c859f5d84b2ec598e"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/reader.exit.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/reader.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/reader.stdout.txt",
+      "bytes": 135,
+      "sha256": "8b8a00b2a932d96d264df1557e0d8021e9ff4d1ac6fc6e7e7a6fff8b8ed1fe3c"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/IL141-itl-text-20261019-03.pld",
+      "bytes": 32394,
+      "sha256": "c6b8ce875a560f1a864718ef2f73b866b9a8cd53cb82c3f317d2cf72a25d9c46"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/build.json",
+      "bytes": 15387,
+      "sha256": "4451ea0b39b3706c299cda57653713cac984104af714c34de4f283835da378af"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/closure.json",
+      "bytes": 383,
+      "sha256": "2b240ca9a529e3431aea9ffbfe03973c39dc35470d9bfc1fd4f378aaaed6738a"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/commands.json",
+      "bytes": 1584,
+      "sha256": "4fa3f8df07cb8c9a015170674ab8b86a69575b57004733e5b793e922c7783315"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/game-result.json",
+      "bytes": 132,
+      "sha256": "51c495cbce326860611d7691b9be5c098c0a14f5b5dade41382f1c480beedafb"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/native-log-provenance.json",
+      "bytes": 864,
+      "sha256": "fe69dcf4c3fe37be22838d15a4b70a33a49bf32e1b8145a1960997b1a454adab"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/owned-session.json",
+      "bytes": 7648,
+      "sha256": "bfad976440e0b1f15781a8bdce67c9bf8716265a174a8114368cf23e13dc434d"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/reader.exit.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/reader.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/reader.stdout.txt",
+      "bytes": 132,
+      "sha256": "51c495cbce326860611d7691b9be5c098c0a14f5b5dade41382f1c480beedafb"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/type-name-green.exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/type-name-red.exit.txt",
+      "bytes": 2,
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "projects/inventorysys-lab/reports/technical/type-name-suite.exit.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "-"
+  ],
+  "stdout": "PREPARED_TREE_RED (Scanned): three source files; ten pins; 0 lint/API/name errors. Native RED/GREEN NOT RUN.\nLint ownership warnings: 18\n",
+  "exit_code": 0
+}

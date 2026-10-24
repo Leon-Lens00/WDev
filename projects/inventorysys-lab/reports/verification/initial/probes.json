@@ -1,0 +1,114 @@
+[
+  {
+    "name": "wrong-id",
+    "argv": [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "-B",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/project/tools/read_logs.py",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/wrong-id.pld",
+      "--run-id",
+      "inv-other",
+      "--not-before",
+      "1792430180.0629613",
+      "--report",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/wrong-id.report.json"
+    ],
+    "exit": 2,
+    "before": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/wrong-id.pld": "2458b665741ea41ab06a6ee8a968140fb2867f2d3b2e17b1c98371086f65925b"
+    },
+    "after": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/wrong-id.pld": "2458b665741ea41ab06a6ee8a968140fb2867f2d3b2e17b1c98371086f65925b"
+    }
+  },
+  {
+    "name": "stale",
+    "argv": [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "-B",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/project/tools/read_logs.py",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/stale.pld",
+      "--run-id",
+      "inv-baseline-20261019-02",
+      "--not-before",
+      "1792430207.8591142",
+      "--report",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/stale.report.json"
+    ],
+    "exit": 2,
+    "before": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/stale.pld": "2458b665741ea41ab06a6ee8a968140fb2867f2d3b2e17b1c98371086f65925b"
+    },
+    "after": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/stale.pld": "2458b665741ea41ab06a6ee8a968140fb2867f2d3b2e17b1c98371086f65925b"
+    }
+  },
+  {
+    "name": "truncated",
+    "argv": [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "-B",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/project/tools/read_logs.py",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/truncated.pld",
+      "--run-id",
+      "inv-baseline-20261019-02",
+      "--not-before",
+      "1792430180.0629613",
+      "--report",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/truncated.report.json"
+    ],
+    "exit": 2,
+    "before": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/truncated.pld": "9fd5213da53d95eb0445743b8806001eda3875b672a1be03be06ae81b0599e3e"
+    },
+    "after": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/truncated.pld": "9fd5213da53d95eb0445743b8806001eda3875b672a1be03be06ae81b0599e3e"
+    }
+  },
+  {
+    "name": "mismatch",
+    "argv": [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "-B",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/project/tools/read_logs.py",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/mismatch.pld",
+      "--run-id",
+      "inv-baseline-20261019-02",
+      "--not-before",
+      "1792430180.0629613",
+      "--report",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/mismatch.report.json"
+    ],
+    "exit": 2,
+    "before": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/mismatch.pld": "d8b7f59e359f327bb7a5b6ebfbb2c28c0b283a8b5ccee05ede79d8df35838aa4"
+    },
+    "after": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/mismatch.pld": "d8b7f59e359f327bb7a5b6ebfbb2c28c0b283a8b5ccee05ede79d8df35838aa4"
+    }
+  },
+  {
+    "name": "existing-report",
+    "argv": [
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "-B",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/project/tools/read_logs.py",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/existing-report.pld",
+      "--run-id",
+      "inv-baseline-20261019-02",
+      "--not-before",
+      "1792430180.0629613",
+      "--report",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/existing-report.report.json"
+    ],
+    "exit": 2,
+    "before": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/existing-report.pld": "2458b665741ea41ab06a6ee8a968140fb2867f2d3b2e17b1c98371086f65925b",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/existing-report.report.json": "e451f7b461081f3903975a4fcba1ca1ec97b4a6915ec7cbdc13eebbf5d08baf5"
+    },
+    "after": {
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/existing-report.pld": "2458b665741ea41ab06a6ee8a968140fb2867f2d3b2e17b1c98371086f65925b",
+      "/tmp/wdev-inventorysys-lab/verify-Jpktho/probes/existing-report.report.json": "e451f7b461081f3903975a4fcba1ca1ec97b4a6915ec7cbdc13eebbf5d08baf5"
+    }
+  }
+]

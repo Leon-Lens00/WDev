@@ -1,0 +1,1234 @@
+{
+  "Rawcode": "htow",
+  "Found": true,
+  "BaseRawcode": "htow",
+  "Name": "Ayuntamiento",
+  "Fields": [
+    {
+      "Code": "upgr",
+      "Name": "Actualizaciones utilizadas",
+      "Value": "Rhac,Rgfo",
+      "Source": "base",
+      "Display": "Rhac,Rgfo"
+    },
+    {
+      "Code": "uacq",
+      "Name": "Adquisici\u00F3n de alcance",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "uagi",
+      "Name": "Agilidad de partida",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "uagp",
+      "Name": "Agilidad por nivel",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "uamn",
+      "Name": "Alcance m\u00EDnimo de ataque",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "usid",
+      "Name": "Alcance visual (d\u00EDa)",
+      "Value": "900",
+      "Source": "base",
+      "Display": "900"
+    },
+    {
+      "Code": "usin",
+      "Name": "Alcance visual (noche)",
+      "Value": "600",
+      "Source": "base",
+      "Display": "600"
+    },
+    {
+      "Code": "umvh",
+      "Name": "Altura",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "umvf",
+      "Name": "Altura m\u00EDnimo",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uocc",
+      "Name": "Altura oclusi\u00F3n",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ucbs",
+      "Name": "Animaci\u00F3n - Lanzar con efecto de retroceso",
+      "Value": "0.51",
+      "Source": "base",
+      "Display": "0.51"
+    },
+    {
+      "Code": "uble",
+      "Name": "Animaci\u00F3n - Mezclar tiempo (segundos)",
+      "Value": "0.15",
+      "Source": "base",
+      "Display": "0.15"
+    },
+    {
+      "Code": "ucpt",
+      "Name": "Animaci\u00F3n - Punto de lanzamiento",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "urun",
+      "Name": "Animaci\u00F3n - Velocidad carrera",
+      "Value": "200",
+      "Source": "base",
+      "Display": "200"
+    },
+    {
+      "Code": "uwal",
+      "Name": "Animaci\u00F3n - Velocidad paso",
+      "Value": "200",
+      "Source": "base",
+      "Display": "200"
+    },
+    {
+      "Code": "umdl",
+      "Name": "Archivo de modelo",
+      "Value": "buildings\\human\\TownHall\\TownHall",
+      "Source": "base",
+      "Display": "buildings\\human\\TownHall\\TownHall"
+    },
+    {
+      "Code": "uver",
+      "Name": "Archivo de modelos - Versiones adicionales",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ua1r",
+      "Name": "Ataque 1 - Alcance",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "udp1",
+      "Name": "Ataque 1 - Animaci\u00F3n punto de da\u00F1o",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ubs1",
+      "Name": "Ataque 1 - Animaci\u00F3n punto de retroceso",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "urb1",
+      "Name": "Ataque 1 - B\u00FAfer alcance movimiento",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "udu1",
+      "Name": "Ataque 1 - Cantidad actualizaci\u00F3n da\u00F1o",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ua1b",
+      "Name": "Ataque 1 - Da\u00F1o de base",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "usd1",
+      "Name": "Ataque 1 - Distancia de alcance del da\u00F1o",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uhd1",
+      "Name": "Ataque 1 - Factor de da\u00F1o - Medio",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "uqd1",
+      "Name": "Ataque 1 - Factor de da\u00F1o - Peque\u00F1o",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "udl1",
+      "Name": "Ataque 1 - Factor de p\u00E9rdida del da\u00F1o",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uwu1",
+      "Name": "Ataque 1 - Mostrar IU",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "ua1d",
+      "Name": "Ataque 1 - N\u00FAmero de da\u00F1os de dado",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "utc1",
+      "Name": "Ataque 1 - N\u00FAmero m\u00E1ximo de objetivos",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ua1p",
+      "Name": "Ataque 1 - Objetivos de \u00E1rea de efecto",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "ua1g",
+      "Name": "Ataque 1 - Objetivos permitidos",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "ua1s",
+      "Name": "Ataque 1 - Partes da\u00F1adas por dado",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "usr1",
+      "Name": "Ataque 1 - Radio de alcance del da\u00F1o",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ucs1",
+      "Name": "Ataque 1 - Sonido del arma",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "ua1c",
+      "Name": "Ataque 1 - Tiempo muerto",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ua1w",
+      "Name": "Ataque 1 - Tipo de arma",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "ua1t",
+      "Name": "Ataque 1 - Tipo de ataque",
+      "Value": "normal",
+      "Source": "base",
+      "Display": "normal"
+    },
+    {
+      "Code": "ua1f",
+      "Name": "Ataque 1 - \u00C1rea de efecto (da\u00F1o total)",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "ua1h",
+      "Name": "Ataque 1 - \u00C1rea de efecto (medio da\u00F1o)",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "ua1q",
+      "Name": "Ataque 1 - \u00C1rea de efecto (un cuarto de da\u00F1o)",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "ua2r",
+      "Name": "Ataque 2 - Alcance",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "udp2",
+      "Name": "Ataque 2 - Animaci\u00F3n punto de da\u00F1o",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ubs2",
+      "Name": "Ataque 2 - Animaci\u00F3n punto de efecto de retroceso",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "urb2",
+      "Name": "Ataque 2 - B\u00FAfer alcance movimiento",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "udu2",
+      "Name": "Ataque 2 - Cantidad actualizaci\u00F3n da\u00F1o",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ua2b",
+      "Name": "Ataque 2 - Da\u00F1o de base",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "usd2",
+      "Name": "Ataque 2 - Distancia de alcance del da\u00F1o",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uhd2",
+      "Name": "Ataque 2 - Factor de da\u00F1o - Medio",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "uqd2",
+      "Name": "Ataque 2 - Factor de da\u00F1o - Peque\u00F1o",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "udl2",
+      "Name": "Ataque 2 - Factor de p\u00E9rdida del da\u00F1o",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uwu2",
+      "Name": "Ataque 2 - Mostrar IU",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "ua2d",
+      "Name": "Ataque 2 - N\u00FAmero de da\u00F1os de dado",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "utc2",
+      "Name": "Ataque 2 - N\u00FAmero m\u00E1ximo de objetivos",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "ua2p",
+      "Name": "Ataque 2 - Objetivos de \u00E1rea de efecto",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "ua2g",
+      "Name": "Ataque 2 - Objetivos permitidos",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "ua2s",
+      "Name": "Ataque 2 - Partes da\u00F1adas por dado",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "usr2",
+      "Name": "Ataque 2 - Radio de alcance del da\u00F1o",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ucs2",
+      "Name": "Ataque 2 - Sonido del arma",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "ua2c",
+      "Name": "Ataque 2 - Tiempo muerto",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ua2w",
+      "Name": "Ataque 2 - Tipo de arma",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "ua2t",
+      "Name": "Ataque 2 - Tipo de ataque",
+      "Value": "normal",
+      "Source": "base",
+      "Display": "normal"
+    },
+    {
+      "Code": "ua2h",
+      "Name": "Ataque 2 - \u00C1rea de efecto (da\u00F1o medio)",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ua2f",
+      "Name": "Ataque 2 - \u00C1rea de efecto (da\u00F1o total)",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ua2q",
+      "Name": "Ataque 2 - \u00C1rea de efecto (un cuarto de da\u00F1o)",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "uaen",
+      "Name": "Ataques activados",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "upra",
+      "Name": "Atributo primario",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "udup",
+      "Name": "Bonificaci\u00F3n actualizaci\u00F3n de defensa",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "umpi",
+      "Name": "Cantidad inicial de man\u00E1",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "ucam",
+      "Name": "Clasificaci\u00F3n - Campa\u00F1a",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uspe",
+      "Name": "Clasificaci\u00F3n - Especial",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "utyp",
+      "Name": "Clasificaci\u00F3n unidades",
+      "Value": "TownHall,Mechanical",
+      "Source": "base",
+      "Display": "TownHall,Mechanical"
+    },
+    {
+      "Code": "uine",
+      "Name": "Colocable en el Editor",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "upar",
+      "Name": "Colocaci\u00F3n imposible por",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "upap",
+      "Name": "Colocaci\u00F3n requiere",
+      "Value": "unbuildable",
+      "Source": "base",
+      "Display": "unbuildable"
+    },
+    {
+      "Code": "utco",
+      "Name": "Color de equipo",
+      "Value": "-1",
+      "Source": "base",
+      "Display": "-1"
+    },
+    {
+      "Code": "uclr",
+      "Name": "Color de te\u00F1ido 1 (rojo)",
+      "Value": "255",
+      "Source": "base",
+      "Display": "255"
+    },
+    {
+      "Code": "uclg",
+      "Name": "Color de te\u00F1ido 2 (verde)",
+      "Value": "255",
+      "Source": "base",
+      "Display": "255"
+    },
+    {
+      "Code": "uclb",
+      "Name": "Color de te\u00F1ido 3 (azul)",
+      "Value": "255",
+      "Source": "base",
+      "Display": "255"
+    },
+    {
+      "Code": "ufma",
+      "Name": "Comida producida",
+      "Value": "12",
+      "Source": "base",
+      "Display": "12"
+    },
+    {
+      "Code": "usnd",
+      "Name": "Configuraci\u00F3n sonido unidad",
+      "Value": "TownHall",
+      "Source": "base",
+      "Display": "TownHall"
+    },
+    {
+      "Code": "util",
+      "Name": "Conjuntos gr\u00E1ficos",
+      "Value": "*",
+      "Source": "base",
+      "Display": "*"
+    },
+    {
+      "Code": "ufoo",
+      "Name": "Coste de comida",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ulum",
+      "Name": "Coste de madera",
+      "Value": "205",
+      "Source": "base",
+      "Display": "205"
+    },
+    {
+      "Code": "ulur",
+      "Name": "Coste de madera de reparaci\u00F3n",
+      "Value": "205",
+      "Source": "base",
+      "Display": "205"
+    },
+    {
+      "Code": "ugol",
+      "Name": "Coste de oro",
+      "Value": "385",
+      "Source": "base",
+      "Display": "385"
+    },
+    {
+      "Code": "ugor",
+      "Name": "Coste de oro de reparaci\u00F3n",
+      "Value": "385",
+      "Source": "base",
+      "Display": "385"
+    },
+    {
+      "Code": "uslz",
+      "Name": "C\u00EDrculo de selecci\u00F3n - Altura",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "usew",
+      "Name": "C\u00EDrculo de selecci\u00F3n en agua",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "udef",
+      "Name": "Defensa de base",
+      "Value": "5",
+      "Source": "base",
+      "Display": "5"
+    },
+    {
+      "Code": "usle",
+      "Name": "Duerme",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "unbm",
+      "Name": "Edificio neutral - Muestra icono minimapa",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "unbr",
+      "Name": "Edificio neutral - V\u00E1lido como edificio aleatorio",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "uept",
+      "Name": "Elevaci\u00F3n - Puntos de muestra",
+      "Value": "4",
+      "Source": "base",
+      "Display": "4"
+    },
+    {
+      "Code": "uerd",
+      "Name": "Elevaci\u00F3n - Radio de muestra",
+      "Value": "50",
+      "Source": "base",
+      "Display": "50"
+    },
+    {
+      "Code": "ubdg",
+      "Name": "Es un edificio",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "ussc",
+      "Name": "Escala selecci\u00F3n",
+      "Value": "6.3",
+      "Source": "base",
+      "Display": "6.3"
+    },
+    {
+      "Code": "uscb",
+      "Name": "Escalar proyectiles",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "uint",
+      "Name": "Estad\u00EDsticas - Inteligencia de partida",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ustr",
+      "Name": "Fuerza de partida",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "ustp",
+      "Name": "Fuerza por nivel",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "udaa",
+      "Name": "Habilidad activa predeterminada",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "uhhb",
+      "Name": "H\u00E9roe - Ocultar icono de interfaz de h\u00E9roe",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uhhm",
+      "Name": "H\u00E9roe - Ocultar vista de minimapa de h\u00E9roes",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uhhd",
+      "Name": "H\u00E9roe: ocultar mensaje de muerte del h\u00E9roe",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ushu",
+      "Name": "Imagen de sombra (Unidad)",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "uimz",
+      "Name": "Impacto de proyectil - Z",
+      "Value": "160",
+      "Source": "base",
+      "Display": "160"
+    },
+    {
+      "Code": "uisz",
+      "Name": "Impacto de proyectil - Z (Swimming)",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uinp",
+      "Name": "Inteligencia por nivel",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "uori",
+      "Name": "Interpolaci\u00F3n orientaci\u00F3n",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "usrg",
+      "Name": "Intervalo de reabastecimiento de las reservas",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "upaw",
+      "Name": "La colocaci\u00F3n requiere un radio de agua",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ulpz",
+      "Name": "Lanzamiento de proyectil - Z",
+      "Value": "60",
+      "Source": "base",
+      "Display": "60"
+    },
+    {
+      "Code": "ulpx",
+      "Name": "Lanzamiento proyectil - X",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ulpy",
+      "Name": "Lanzamiento proyectil - Y",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ulsz",
+      "Name": "Lanzamiento proyectil - Z (Swimming)",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "umpm",
+      "Name": "Man\u00E1 m\u00E1ximo",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "upat",
+      "Name": "Mapa de rutas",
+      "Value": "PathTextures\\16x16Simple.tga",
+      "Source": "base",
+      "Display": "PathTextures\\16x16Simple.tga"
+    },
+    {
+      "Code": "uhos",
+      "Name": "Mostrar como neutral hostil",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "umxp",
+      "Name": "M\u00E1xima inclinaci\u00F3n de \u00E1ngulo (grados)",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "umxr",
+      "Name": "M\u00E1xima rotaci\u00F3n de \u00E1ngulo (grados)",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "usma",
+      "Name": "M\u00E1ximo de reservas",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ufrd",
+      "Name": "Niebla de guerra - Radio de muestra",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ulev",
+      "Name": "Nivel",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "uabi",
+      "Name": "Normal",
+      "Value": "Abdl,Argl",
+      "Source": "base",
+      "Display": "Abdl,Argl"
+    },
+    {
+      "Code": "uhom",
+      "Name": "Ocultar visualizaci\u00F3n del minimapa",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "utcc",
+      "Name": "Permitir color de equipo personalizado",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "upri",
+      "Name": "Prioridad",
+      "Value": "6",
+      "Source": "base",
+      "Display": "6"
+    },
+    {
+      "Code": "ucbo",
+      "Name": "Puede construir encima",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "udro",
+      "Name": "Puede dejar caer objetos al morir",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "ufle",
+      "Name": "Puede huir",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "uhpm",
+      "Name": "Puntos de impacto m\u00E1ximos (Base)",
+      "Value": "1500",
+      "Source": "base",
+      "Display": "1500"
+    },
+    {
+      "Code": "uabr",
+      "Name": "Radio de colocaci\u00F3n IA",
+      "Value": "8",
+      "Source": "base",
+      "Display": "8"
+    },
+    {
+      "Code": "ufor",
+      "Name": "Rango de formaci\u00F3n",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "urac",
+      "Name": "Raza",
+      "Value": "human",
+      "Source": "base",
+      "Display": "human"
+    },
+    {
+      "Code": "ulba",
+      "Name": "Recompensa de madera ganada: Base",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ulbd",
+      "Name": "Recompensa de madera ganada: N\u00FAmero de dado",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ulbs",
+      "Name": "Recompensa de madera ganada: Partes por dado",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ubba",
+      "Name": "Recompensa ganada - Base",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ubdi",
+      "Name": "Recompensa ganada - N\u00FAmero dados",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ubsi",
+      "Name": "Recompensa ganada - Partes por dado",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "umpr",
+      "Name": "Regeneraci\u00F3n de man\u00E1",
+      "Value": " - ",
+      "Source": "base",
+      "Display": " - "
+    },
+    {
+      "Code": "usst",
+      "Name": "Retraso de inicio de reservas",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "uibo",
+      "Name": "Se puede construir encima",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "upru",
+      "Name": "Se utilizan nombres propios",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "utar",
+      "Name": "Seleccionado como",
+      "Value": "structure",
+      "Source": "base",
+      "Display": "structure"
+    },
+    {
+      "Code": "urpo",
+      "Name": "Separaci\u00F3n de grupo - Activada",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "urpg",
+      "Name": "Separaci\u00F3n de grupo - N\u00FAmero de grupo",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "urpp",
+      "Name": "Separaci\u00F3n de grupo - Par\u00E1metro",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "urpr",
+      "Name": "Separaci\u00F3n de grupo - Prioridad",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ucol",
+      "Name": "Tama\u00F1o de colisi\u00F3n",
+      "Value": "176",
+      "Source": "base",
+      "Display": "176"
+    },
+    {
+      "Code": "ucar",
+      "Name": "Tama\u00F1o transportado",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "ushb",
+      "Name": "Textura de sombra (Edificio)",
+      "Value": "ShadowTownhall",
+      "Source": "base",
+      "Display": "ShadowTownhall"
+    },
+    {
+      "Code": "uubs",
+      "Name": "Textura de suelo",
+      "Value": "HTOW",
+      "Source": "base",
+      "Display": "HTOW"
+    },
+    {
+      "Code": "ubld",
+      "Name": "Tiempo de construcci\u00F3n",
+      "Value": "180",
+      "Source": "base",
+      "Display": "180"
+    },
+    {
+      "Code": "urtm",
+      "Name": "Tiempo de reparaci\u00F3n",
+      "Value": "180",
+      "Source": "base",
+      "Display": "180"
+    },
+    {
+      "Code": "udtm",
+      "Name": "Tiempo muerte (segundos)",
+      "Value": "3.17",
+      "Source": "base",
+      "Display": "3.17"
+    },
+    {
+      "Code": "utss",
+      "Name": "Tiene datos espec\u00EDficos de conjunto gr\u00E1fico",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "ushr",
+      "Name": "Tiene sombra de agua",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "umvt",
+      "Name": "Tipo",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "uarm",
+      "Name": "Tipo de armadura",
+      "Value": "Wood",
+      "Source": "base",
+      "Display": "Wood"
+    },
+    {
+      "Code": "uabt",
+      "Name": "Tipo de colocaci\u00F3n IA",
+      "Value": "townhall",
+      "Source": "base",
+      "Display": "townhall"
+    },
+    {
+      "Code": "udty",
+      "Name": "Tipo de defensa",
+      "Value": "fort",
+      "Source": "base",
+      "Display": "fort"
+    },
+    {
+      "Code": "udea",
+      "Name": "Tipo de muerte",
+      "Value": "2",
+      "Source": "base",
+      "Display": "2"
+    },
+    {
+      "Code": "uhrt",
+      "Name": "Tipo de regeneraci\u00F3n de puntos de impacto",
+      "Value": "none",
+      "Source": "base",
+      "Display": "none"
+    },
+    {
+      "Code": "uuch",
+      "Name": "Utilizar ayudante para comandos clic",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ulos",
+      "Name": "Utilizar l\u00EDnea de visi\u00F3n ampliada",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "usca",
+      "Name": "Valor de escala",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "upoi",
+      "Name": "Valor de punto",
+      "Value": "100",
+      "Source": "base",
+      "Display": "100"
+    },
+    {
+      "Code": "umvs",
+      "Name": "Velocidad de base",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "umas",
+      "Name": "Velocidad m\u00E1xima",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "umis",
+      "Name": "Velocidad m\u00EDnima",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "uprw",
+      "Name": "Ventana de propulsi\u00F3n (grados)",
+      "Value": "60",
+      "Source": "base",
+      "Display": "60"
+    },
+    {
+      "Code": "umvr",
+      "Name": "\u00CDndice de cambio",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "uhpr",
+      "Name": "\u00CDndice de regeneraci\u00F3n de puntos de impacto",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    }
+  ],
+  "Diagnostics": []
+}

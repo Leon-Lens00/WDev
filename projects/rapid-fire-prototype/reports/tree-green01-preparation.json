@@ -1,0 +1,30 @@
+{
+  "status": "Scanned",
+  "command_argv": [
+    "/usr/bin/python3",
+    "-B",
+    "-c",
+    "\nfrom pathlib import Path\nimport json,hashlib,re\np=Path('projects/rapid-fire-prototype'); f=p/'reports/frozen-tree-red05'\nmanifest=json.loads((f/'manifest.json').read_text())\nfor row in manifest['artifacts']:\n for key in ['frozen','source']:\n  if key=='source' and row[key] in [str(p/'src/prototype/PairCore.j'),str(p/'README.md')]: continue\n  q=Path(row[key]); st=q.stat()\n  assert hashlib.sha256(q.read_bytes()).hexdigest()==row['sha256'] and st.st_size==row['size'] and st.st_mtime_ns==row['mtime_ns'],str(q)\nprint('PASS 55 frozen SHA256/size/mtime artifacts and every unchanged original; only Core/README excepted')\na=(f/'workspace'/p/'src/prototype/PairCore.j').read_text(); b=(p/'src/prototype/PairCore.j').read_text()\ncallback='        method onDestructable takes destructable dest returns boolean\\n            return GetDestructableLife(dest) > 0.\\n        endmethod\\n\\n'\n# Literal source above uses escaped newlines; construct the exact insertion.\ncallback=callback.replace('\\\\n','\\n')\nassert b.count(callback)==1\nassert b.replace(callback,'',1)==a\nassert hashlib.sha256(a.encode()).hexdigest()=='770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3'\nprint('PASS only four-line live-filter callback inserted; all prior Core functions/globals byte-identical; no spent/state/mutation/termination additions')\nred=json.loads((p/'build-plan-tree-red05.json').read_text()); green=json.loads((p/'build-plan-tree-green01.json').read_text())\nassert len(red['inputs_sha256'])==len(green['inputs_sha256'])==10\nfor k,h in green['inputs_sha256'].items(): assert hashlib.sha256(Path(k).read_bytes()).hexdigest()==h,k\nfor k,h in red['inputs_sha256'].items():\n if not k.endswith('/PairCore.j'): assert hashlib.sha256(Path(k).read_bytes()).hexdigest()==h,k\nassert hashlib.sha256((p/'src/prototype/TreeNativeTest.j').read_bytes()).hexdigest()=='86770d6b75ef7b4ead795f7fad876027372a49c498d1b01608ae95f80987f968'\nfor key in ['cases','oracle','runtime_budget','transition','borrow_lifetime','body_continuity','public_entry','group']: assert green[key]==red[key],key\nold='rf-burst-tree-red-20261020-05'; new='rf-burst-tree-green-20261020-01'\nfor stem in ['TreeLog','TreeMapMain']:\n assert (p/f'src/prototype/{stem}Green01.j').read_text()==(p/f'src/prototype/{stem}Red05.j').read_text().replace(old,new).replace('Tree RED','Tree GREEN')\nnormalize=lambda s:s.replace(old,new).replace('TreeLogRed05.j','TreeLogGreen01.j').replace('TreeMapMainRed05.j','TreeMapMainGreen01.j').replace('tree-red05','tree-green01')\nfor key in ['argv','import_order','reader_argv_template','parent_play_argv','output_map','log','relative_log']:\n assert green[key]==json.loads(normalize(json.dumps(red[key]))),key\nassert not Path(green['output_map']).exists()\nassert not (p/'reports/tree-green01-native-reader.json').exists()\nassert not green['native_run_already_executed']\nprint('PASS ten GREEN pins; all old non-Core pins byte-identical; same harness/oracles/budgets; logger/bootstrap/commands label-only; compiler/native pending')\nlib=Path('projects/relativistic-classic/src/Missiles.j').read_text()\nassert 'method onDestructable takes destructable dest returns boolean defaults false' in lib\nassert 'set stop = .onDestructable(d)' in lib and 'if allocated and stop then' in lib\nraw=(p/'reports/RF-rf-burst-tree-red-20261020-05.txt').read_text()\nassert 'COMPLETE|2|87|3|0' in raw and 'ABORT-fixture' not in raw\nfor name in red['expected_conditional_RED']['failure_names']: assert '|FAIL|'+name+'|' in raw\nassert 'tree-live-HP-unchanged' in (p/'src/prototype/TreeNativeTest.j').read_text()\nprint('PASS pinned Classic dispatch signature; captured qualified Tree05 RED 2/87/3/0 no ABORT and three exact behavioral failures retained; tree HP oracle unchanged')\n"
+  ],
+  "timeout_seconds": 30,
+  "exit_code": 0,
+  "stdout": "PASS 55 frozen SHA256/size/mtime artifacts and every unchanged original; only Core/README excepted\nPASS only four-line live-filter callback inserted; all prior Core functions/globals byte-identical; no spent/state/mutation/termination additions\nPASS ten GREEN pins; all old non-Core pins byte-identical; same harness/oracles/budgets; logger/bootstrap/commands label-only; compiler/native pending\nPASS pinned Classic dispatch signature; captured qualified Tree05 RED 2/87/3/0 no ABORT and three exact behavioral failures retained; tree HP oracle unchanged\n",
+  "stderr": "",
+  "specs": [
+    "T2 partial S3",
+    "S26"
+  ],
+  "compiler": "PENDING parent",
+  "native_GREEN": "PENDING ONE parent same-scenario run",
+  "RED": "qualified Tree05 2/87/3/0 preserved",
+  "core_diff": "--- frozen-tree-red05/PairCore.j\n+++ PairCore.j\n@@ -65,6 +65,10 @@\n             return true\n         endmethod\n \n+        method onDestructable takes destructable dest returns boolean\n+            return GetDestructableLife(dest) > 0.\n+        endmethod\n+\n         method onPeriod takes nothing returns boolean\n             return not LiveOwned(savedActor,savedOwner)\n         endmethod\n",
+  "source_hashes": {
+    "projects/rapid-fire-prototype/src/prototype/PairCore.j": "6442b4b2afbaa48c3090789ed63e934938039e1c459c3944bcf89568fc1ce923",
+    "projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": "86770d6b75ef7b4ead795f7fad876027372a49c498d1b01608ae95f80987f968",
+    "projects/rapid-fire-prototype/src/prototype/TreeLogGreen01.j": "aea0134c7ec4f0b1ee77171e7d1d93f72b259520eff72114790137347d8cac51",
+    "projects/rapid-fire-prototype/src/prototype/TreeMapMainGreen01.j": "f9b167c452b0e377af358c8f4e3f59a9d41f2dc7d33d844806d5c38902ea44fb",
+    "projects/rapid-fire-prototype/build-plan-tree-green01.json": "fd8132b2ebe1ac4b78a34fcbb9121fa42df76e8c20766c70b45f1b8dce59b042",
+    "projects/rapid-fire-prototype/reports/frozen-tree-red05/manifest.json": "e1924fcc19d392909cda58fdafa2be41bed76cac40a6c5f62732f2572156eb9d"
+  },
+  "scratch_paths": []
+}

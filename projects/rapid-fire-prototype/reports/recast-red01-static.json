@@ -1,0 +1,143 @@
+{
+  "lint_argv": [
+    "python3",
+    "-B",
+    ".pi/skills/build-warcraft3-vjass-127b/scripts/wc3lint.py",
+    "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+    "--json"
+  ],
+  "lint_exit": 0,
+  "lint_stdout_text": "{\n  \"files\": 1,\n  \"findings\": [\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 250,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 376,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 377,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 378,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 379,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 382,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 385,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 386,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 388,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 389,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 390,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 499,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 500,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    }\n  ]\n}\n",
+  "lint_stdout": {
+    "files": 1,
+    "findings": [
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 250,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 376,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 377,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 378,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 379,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 382,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 385,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 386,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 388,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 389,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 390,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 499,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+        "line": 500,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      }
+    ]
+  },
+  "lint_stderr": "",
+  "unknown_direct_calls_including_expressions": [],
+  "api_source_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j": "9dc12b73bb7248af4b935ac29b848035dbe5aa361790e8075c6e5ed9fa620f63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogRed01.j": "e828a0db60a5cc46a99024b3bdfe5561ce764b600a172fcd1609e45a40e65a76",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainRed01.j": "d4d34b794433ba3de146989c8b39f47170f647a0347db9a5f3aa4a8537e397a4",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "7fe99448ba2fff01e6bd67675c8a71e30ad7b11b35268e65b4f74ec0a64e1078",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6"
+  },
+  "regression_structural_preservation_only": {
+    "byte_identical_function_bodies": [
+      "Pose",
+      "OnDamage",
+      "At",
+      "BodyReady",
+      "SceneReady"
+    ],
+    "B01_B02_Assess_identical_except_case_transition": true,
+    "scope": "Structural preservation check, NOT gameplay/native acceptance"
+  },
+  "protected_count": 359,
+  "protected_mismatches": [],
+  "plan_input_hashes_match": true,
+  "declared_output_absent": true,
+  "source_lines": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j": 507,
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogRed01.j": 67,
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainRed01.j": 36
+  },
+  "harness_vs_original_diff": {
+    "added": 258,
+    "removed": 51
+  },
+  "scope": "Scanned only; callback/window/runtime/native semantics pending parent compilation and engine run"
+}

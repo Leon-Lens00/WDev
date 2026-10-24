@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/tools/prepare_objects.py",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-green01/owned-input.w3x",
+    "--recipe",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-green01/level.recipe.json",
+    "--out",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-green01/level.w3x",
+    "--evidence",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-green01/level-details"
+  ],
+  "exit": 1
+}

@@ -1,0 +1,7 @@
+{
+  "exit": 0,
+  "stdout": "Read exact MPQ hash-table member from highest-priority archive",
+  "stderr": "",
+  "sha256": "7297c5a4462c1aa419c0a23b02aa9daf4a54b5394b8e6510da1d7b6cf5004061",
+  "reason": "CLI ExtractCommand selects doc.GetFile from enumerated map entries; direct registered mpyq lookup avoids name enumeration, same archive/member, no lower-priority fallback"
+}

@@ -1,0 +1,26 @@
+{
+  "verifier": "mvethryx-3-qxpn",
+  "provenance": "parent-returned verifier evidence; not rerun by reporting worker",
+  "execution": {"description": "deterministic Python standard-library comparison", "executions": 1, "timeout_seconds": 30, "exit_code": 0, "stderr": "", "exact_heredoc_body": "unavailable to parent; not reconstructed"},
+  "normalized_stdout": {"assertions_identical_order_status_name_detail":70,"baseline":{"checks":70,"reader_exit":0,"stderr":""},"core_sha256":"adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6","historical_partial":{"checks":717,"observations":700,"passes":17,"reader_exit":2,"stderr":"error: missing COMPLETE\n"},"maintained_sources_unchanged":true,"new":{"cases":1,"checks":771,"failures":0,"observations":701,"reader_exit":0,"skips":0,"stderr":""},"old_logger_restored_sha256":"d733ef12e5e130548a2715209edadb417e465a11582c02b5ec6df5bebdc91708","padding_observations":700,"phase_observation":"phase=5 periods=10 allocated=true launched=true paused=false finished=false","raw_normalized_equal":true,"report_stdout_identical":true,"stress_changed_files":["lab/Config.j","lab/Support.j"]},
+  "comparison_rules": [
+    "All70 original case/status/name/detail/order tuples identical; no FAIL or SKIP excluded",
+    "Exactly700 numbered padding OBS plus one named phase OBS excluded from assertion comparison only",
+    "Raw normalization changes only run identity/provenance, removes701 named OBS, and maps COMPLETE771 to70",
+    "Saved reader stdout/report bytes identical, freshness valid, core/input hashes unchanged",
+    "Historical initial17 assertions unchanged"
+  ],
+  "inspection": [
+    "Append, counters, ordering and synchronous TriggerEvaluate retained",
+    "No waits, timer, deferred batch or per-record handle allocation introduced",
+    "Compiled initialization after InitBlizzard and before LabRun",
+    "Total snapshot complexity unchanged; native VM ceiling unmeasured"
+  ],
+  "verdicts_at_verifier_time": {"S3": "scoped PASS", "S4": "logger bounded PASS only", "S9": "scope PASS", "S8": "runtime PENDING"},
+  "e29_scope": "Verifier did not accept E29 or full feature. Parent later read actual E29 COMPLETE1/60/3/1 reader1; see results.json.",
+  "introduced_item3_logger_blocker": false,
+  "working_logger": {"path": "projects/relativistic-classic/src/lab/Support.j", "sha256": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d", "scope": "bounded logger only; not included in historical full47 map"},
+  "reruns": {"source_changes": false, "tests": false, "builds": false, "native": false},
+  "native_review_approved": false,
+  "scratch": {"path": "/tmp/rc-item3-XNICaO", "status": "reported retained by verifier; parent/reporting worker did not access or remove"}
+}

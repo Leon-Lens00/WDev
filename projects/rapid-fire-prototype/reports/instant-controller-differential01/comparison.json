@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "case": "previous-recipe",
+      "exit_stdout_stderr_identical": true,
+      "output_bytes_identical": true,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "unknown",
+      "exit_stdout_stderr_identical": true,
+      "output_bytes_identical": false,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "kind",
+      "exit_stdout_stderr_identical": true,
+      "output_bytes_identical": false,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "foreign-id",
+      "exit_stdout_stderr_identical": true,
+      "output_bytes_identical": false,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "level",
+      "exit_stdout_stderr_identical": true,
+      "output_bytes_identical": false,
+      "inputs_unchanged": true
+    },
+    {
+      "case": "type",
+      "exit_stdout_stderr_identical": true,
+      "output_bytes_identical": false,
+      "inputs_unchanged": true
+    }
+  ],
+  "intentional_new_fields_difference": "old rejects; new accepts correctly typed controller-only ucpt/ucbs",
+  "readback": {
+    "hm3w_preserved": true,
+    "only_o001_fields_added": [
+      "ucpt",
+      "ucbs"
+    ],
+    "actor_and_other_records_byte_identical": true,
+    "ability_and_other_members_identical": true,
+    "opaque_gameplay_blocks_identical": true
+  },
+  "stdout_stderr_path_normalization": "NONE; common messages are byte-identical",
+  "baseline": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-01/baseline/rapid-fire-prototype/tools/prepare_objects.py"
+}

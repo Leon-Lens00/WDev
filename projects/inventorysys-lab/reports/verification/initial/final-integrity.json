@@ -1,0 +1,80 @@
+{
+  "original_after_sha256": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada",
+  "copied_protected_files_unchanged": 101,
+  "workspace_vs_copies_unchanged": true,
+  "git_status_argv": [
+    "git",
+    "status",
+    "--short"
+  ],
+  "git_status_exit": 0,
+  "git_status_stdout": "?? .pi/\n?? odd/\n?? projects/\n",
+  "git_status_stderr": "",
+  "independent_structure": {
+    "original_sha": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada",
+    "map_sha": "574c634cfa95a075643ec40ea80056c4b6143b1ced23598c4f09d5a405448853",
+    "assembled_sha": "8235fb554965db9d5b12e49a6609d763833065f304bb1501bec5bbf843afc2c4",
+    "three_insertion_reversal": true,
+    "named_members": 18,
+    "wct_slots": 47,
+    "archive": {
+      "preserved_identities": 52,
+      "housekeeping_changes": [
+        {
+          "name": "(attributes)",
+          "identity": [
+            3548657611,
+            132115180,
+            0,
+            0
+          ],
+          "before": null,
+          "after": {
+            "sha256": "72cd6f5bcd696372900ef7c286bded8738f9df91aa5ec717adc2cfcc0c2c43b3",
+            "archived_size": 460,
+            "size": 668,
+            "flags": 2147680768,
+            "key_offset": 624681
+          }
+        },
+        {
+          "name": "(listfile)",
+          "identity": [
+            4251285776,
+            1318820007,
+            0,
+            0
+          ],
+          "before": {
+            "sha256": "a1789d991283ffb9002dee7733425b4e1db93bf28b524c62f8c49e13102da949",
+            "archived_size": 330,
+            "size": 920,
+            "flags": 2147680768,
+            "key_offset": 618862
+          },
+          "after": {
+            "sha256": "ed7ed572e81036ac4605f9c4a80147a834374181bbb2d713c6f05cd3fd697b79",
+            "archived_size": 328,
+            "size": 867,
+            "flags": 2147680768,
+            "key_offset": 624353
+          }
+        }
+      ],
+      "unreferenced_payloads": 0,
+      "policy": "Identity-bound raw preservation; only neutral listfile rewrite and attributes addition allowed."
+    },
+    "log_mtime": 1792430206.8591142,
+    "log_sha": "2458b665741ea41ab06a6ee8a968140fb2867f2d3b2e17b1c98371086f65925b",
+    "rows": 166,
+    "all_14_returned": true,
+    "recorded_tool_streams_consistent": true
+  },
+  "probe_exits": [
+    2,
+    2,
+    2,
+    2,
+    2
+  ]
+}

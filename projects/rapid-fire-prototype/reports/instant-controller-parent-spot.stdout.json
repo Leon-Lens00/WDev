@@ -1,0 +1,46 @@
+{
+  "Rawcode": "o001",
+  "Found": true,
+  "BaseRawcode": "oshm",
+  "Name": "Rapid Fire Controller",
+  "Fields": [
+    {
+      "Code": "uabi",
+      "Name": "uabi",
+      "Value": "A00G",
+      "Source": "map",
+      "Display": "A00G"
+    },
+    {
+      "Code": "uaen",
+      "Name": "uaen",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ucbs",
+      "Name": "ucbs",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ucpt",
+      "Name": "ucpt",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "unam",
+      "Name": "unam",
+      "Value": "Rapid Fire Controller",
+      "Source": "map",
+      "Display": "Rapid Fire Controller"
+    }
+  ],
+  "Diagnostics": [
+    "Warcraft III install not found (pass --game-dir \u003Cpath\u003E)"
+  ]
+}

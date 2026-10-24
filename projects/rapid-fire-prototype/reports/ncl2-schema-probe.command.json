@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "wc3ctl",
+    "object",
+    "set",
+    "projects/rapid-fire-prototype/base/03-channel.w3x",
+    "A00G",
+    "Ncl2:1",
+    "2",
+    "--kind",
+    "ability",
+    "--out",
+    "projects/rapid-fire-prototype/base/04-ncl2-schema-probe.w3x",
+    "--json"
+  ],
+  "exit": 0
+}

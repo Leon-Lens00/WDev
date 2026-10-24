@@ -1,0 +1,28 @@
+{
+  "executor": "parent",
+  "evidence_basis": "Parent-reported fresh one-shot read-only exact-profile preflight; worker records attributed metadata only, no process query",
+  "human_confirmation": "listo",
+  "exit_code": 0,
+  "stdout_exact": "{\"profile\":\"proton-newgen-modern-test\",\"active_game_processes\":[],\"profile_clear_at_check\":true,\"read_only\":true}",
+  "stdout_newline_status": "Not supplied; no trailing newline inferred",
+  "stdout": {
+    "profile": "proton-newgen-modern-test",
+    "active_game_processes": [],
+    "profile_clear_at_check": true,
+    "read_only": true
+  },
+  "snapshot_only": true,
+  "future_availability_guaranteed": false,
+  "launcher_must_recheck_occupancy": true,
+  "independently_observed_os_exit": false,
+  "occupied_snapshot_preserved": "projects/rapid-fire-prototype/reports/native-profile-preflight-06.json",
+  "compiled_map_sha256": "121dc291dc5ba32990f7aeb104159dbce8a7e4c29f6b303785536a632642c4de",
+  "native06_executed": false,
+  "s22_measurement_consumed": false,
+  "one_measurement_reserved": true,
+  "parent_runtime_resume": "Existing S22 ONE06 observer and native-launch-06.* after worker return; no additional grant needed",
+  "worker_process_query": false,
+  "worker_runtime_action_queued": false,
+  "automatic_retry": false,
+  "automatic07_authorized": false
+}

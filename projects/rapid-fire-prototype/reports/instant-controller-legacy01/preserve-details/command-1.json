@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "wc3ctl",
+    "file",
+    "set",
+    "projects/rapid-fire-prototype/reports/instant-controller-legacy01/preserve-details/stage-0.w3x",
+    "war3map.w3a",
+    "projects/rapid-fire-prototype/reports/instant-controller-legacy01/preserve-details/war3map.w3a",
+    "--out",
+    "projects/rapid-fire-prototype/reports/instant-controller-legacy01/preserve-details/stage-1.w3x",
+    "--json"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.w3a, 8298 bytes\",\n  \"SavedTo\": \"projects/rapid-fire-prototype/reports/instant-controller-legacy01/preserve-details/stage-1.w3x\"\n}\n",
+  "stderr": ""
+}

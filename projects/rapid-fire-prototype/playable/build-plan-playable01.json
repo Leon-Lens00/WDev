@@ -1,0 +1,26 @@
+{
+  "status": "PREPARED_NOT_COMPILED",
+  "base_sha256": null,
+  "base_pin_status": "pending parent creation of base/playable-01.w3x; hash before execution",
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3", "python", "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/build.py", "build",
+    "--base", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/playable-01.w3x",
+    "--wc3", "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "--timer-utils", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/src/vendor/TimerUtils.j",
+    "--world-bounds", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/src/vendor/WorldBounds.j",
+    "--dummy-recycler", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/src/vendor/DummyRecycler.j",
+    "--core", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/src/vendor/Missiles.j",
+    "--bootstrap", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/src/MapMain.j",
+    "--output-dir", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build",
+    "--run-id", "rfp-playable-20261020-01",
+    "--harness", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/src/Config.j",
+    "--harness", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/src/PairCore.j",
+    "--harness", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/src/Controls.j",
+    "--harness", "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/src/Demo.j",
+    "--entry", "RF_StartDemo"
+  ],
+  "entry": "RF_StartDemo",
+  "automated_battery_imported": false,
+  "limits": ["Preparation only; compile and in-game usability pending parent", "Separate playable output never autoruns the battery"]
+}

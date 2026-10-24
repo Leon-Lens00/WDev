@@ -1,0 +1,132 @@
+--- frozen05/NativeProbe.j
++++ src/NativeProbe.j
+@@ -764,6 +764,93 @@
+         endif
+     endfunction
+ 
++    // Parent-owned WPM/W3E cell-centre proposals, NOT native level truth.
++    // Candidate-first, at most six in one callback; no scan, wait or terrain edit.
++    private function Cliff takes nothing returns nothing
++        local integer result
++        local integer i = 1
++        local real x
++        local real y
++        local real nx
++        local real ny
++        local integer rawSample
++        local integer rawNeighbor
++        local integer level
++        local integer neighborLevel
++        local boolean blocked
++        local boolean neighborBlocked
++        local boolean inside
++        local rect bounds
++        if phase == 0 then
++            set result = Positive(ox,oy,false)
++            if result == -1 then
++                call AbortFixture("static/cliff positive control failed")
++            elseif result == 1 then
++                set phase = 1
++            endif
++            return
++        endif
++        call RF_Record("OBS","cliff-static-provenance","parent-owned-base=ff34f3fcea03281163c81bdcb11a6f7285f12c289c7160f640d4fa242adfb3b3 WPM=ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab W3E=f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f; rawSW/min proxies NOT native levels")
++        set bounds = GetWorldBounds()
++        loop
++            exitwhen i > 6
++            if i == 1 then
++                set x = -2640.
++                set y = 5648.
++                set nx = -2768.
++                set ny = 5648.
++                set rawSample = 1
++                set rawNeighbor = 0
++            elseif i == 2 then
++                set x = -3216.
++                set y = 4336.
++                set nx = -3216.
++                set ny = 4464.
++                set rawSample = 0
++                set rawNeighbor = 1
++            elseif i == 3 or i == 4 then
++                set x = -3216.
++                set y = 4080.-(i-3)*256.
++                set nx = -3088.
++                set ny = y
++                set rawSample = 0
++                set rawNeighbor = 1
++            elseif i == 5 then
++                set x = -3440.
++                set y = 4464.
++                set nx = -3440.
++                set ny = 4592.
++                set rawSample = 0
++                set rawNeighbor = 1
++            else
++                set x = -3472.
++                set y = 4720.
++                set nx = -3344.
++                set ny = 4720.
++                set rawSample = 0
++                set rawNeighbor = 1
++            endif
++            set blocked = IsTerrainPathable(x,y,PATHING_TYPE_WALKABILITY)
++            set neighborBlocked = IsTerrainPathable(nx,ny,PATHING_TYPE_WALKABILITY)
++            set level = GetTerrainCliffLevel(x,y)
++            set neighborLevel = GetTerrainCliffLevel(nx,ny)
++            // Remote NEGATIVE fixture: actual world bounds, not open-region claims.
++            set inside = x-16.>=GetRectMinX(bounds) and x+16.<GetRectMaxX(bounds) and y-16.>=GetRectMinY(bounds) and y+16.<GetRectMaxY(bounds) and nx-16.>=GetRectMinX(bounds) and nx+16.<GetRectMaxX(bounds) and ny-16.>=GetRectMinY(bounds) and ny+16.<GetRectMaxY(bounds)
++            call RF_Record("OBS","actual-cliff-pair-reference","pair="+I2S(i)+" sample="+R2S(x)+","+R2S(y)+" walkBlocked="+RF_Bool(blocked)+" nativeCliff="+I2S(level)+" neighbor="+R2S(nx)+","+R2S(ny)+" neighborWalkBlocked="+RF_Bool(neighborBlocked)+" neighborNativeCliff="+I2S(neighborLevel)+" rawSWandMin="+I2S(rawSample)+"->"+I2S(rawNeighbor)+" bothFootprintsInsideWorld="+RF_Bool(inside)+" source=cliff-static-provenance; no raw/native equality assumed")
++            if inside and blocked and level!=neighborLevel then
++                call RemoveRect(bounds)
++                set bounds = null
++                call Query("native-flag-qualified-real-cliff-negative",x,y,0)
++                call Next()
++                return
++            endif
++            set i = i+1
++        endloop
++        call RemoveRect(bounds)
++        set bounds = null
++        call AbortFixture("no fresh native restricted unequal-level cliff pair within six parent-selected candidates")
++    endfunction
++
+     private function Tick takes nothing returns nothing
+         local integer result
+         local real x
+@@ -790,7 +877,9 @@
+         endif
+         if which == 1 then
+             call Open()
+-        elseif which == 2 or which == 11 then
++        elseif which == 11 then
++            call Cliff()
++        elseif which == 2 then
+             if phase == 0 then
+                 set result = Positive(ox,oy,false)
+                 if result == -1 then
+@@ -802,23 +891,12 @@
+                 // Fresh PUBLIC restriction/levels before ANY guard, no spawn oracle.
+                 set staticBlocked = IsTerrainPathable(1792.,-6656.,PATHING_TYPE_WALKABILITY)
+                 call RF_Record("OBS","actual-static-cliff-reference","x=1792 y=-6656 walkBlocked="+RF_Bool(staticBlocked)+" cliff="+I2S(GetTerrainCliffLevel(1792.,-6656.))+" neighborCliff="+I2S(GetTerrainCliffLevel(1920.,-6656.)))
+-                if which==11 and GetTerrainCliffLevel(1792.,-6656.)==GetTerrainCliffLevel(1920.,-6656.) then
+-                    call AbortFixture("fresh adjacent cliff-level difference unavailable")
+-                    return
+-                endif
+                 if staticBlocked then
+                     call Query("native-flag-qualified-static-negative",1792.,-6656.,0)
+-                elseif which == 11 then
+-                    call AbortFixture("fresh remote static restriction unavailable; no cliff collision proof")
+-                    return
+                 else
+                     call RF_Record("FAIL","static-subfixture-aborted","fresh flag not restricted; no static negative accepted; local blocked-step control independent")
+                 endif
+-                if which == 2 then
+-                    set phase = 2
+-                else
+-                    call Next()
+-                endif
++                set phase = 2
+             elseif phase == 2 then
+                 // O01 recorded spawn placement at both actor-step points before
+                 // actor creation. A radius31 blocker52 units away must NOT

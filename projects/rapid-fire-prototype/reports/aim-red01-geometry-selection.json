@@ -1,0 +1,196 @@
+{
+  "basis": "finite whole-owned W3E grid scan after local flat-L selection returned zero; unchanged strict flat-L and WPM guards",
+  "candidate_count": 110,
+  "selected": {
+    "actor": [
+      -3136.0,
+      2624.0
+    ],
+    "east": [
+      -2880.0,
+      2624.0
+    ],
+    "north": [
+      -3136.0,
+      2880.0
+    ],
+    "eastControl": [
+      -2880.0,
+      3136.0
+    ],
+    "northControl": [
+      -3648.0,
+      2880.0
+    ],
+    "flat_raw": [
+      9715,
+      1,
+      0
+    ]
+  },
+  "candidates_nearest6": [
+    {
+      "actor": [
+        -3136.0,
+        2624.0
+      ],
+      "east": [
+        -2880.0,
+        2624.0
+      ],
+      "north": [
+        -3136.0,
+        2880.0
+      ],
+      "eastControl": [
+        -2880.0,
+        3136.0
+      ],
+      "northControl": [
+        -3648.0,
+        2880.0
+      ],
+      "flat_raw": [
+        9715,
+        1,
+        0
+      ]
+    },
+    {
+      "actor": [
+        -3008.0,
+        2496.0
+      ],
+      "east": [
+        -2752.0,
+        2496.0
+      ],
+      "north": [
+        -3008.0,
+        2752.0
+      ],
+      "eastControl": [
+        -2752.0,
+        3008.0
+      ],
+      "northControl": [
+        -3520.0,
+        2752.0
+      ],
+      "flat_raw": [
+        9715,
+        1,
+        0
+      ]
+    },
+    {
+      "actor": [
+        -3264.0,
+        2624.0
+      ],
+      "east": [
+        -3008.0,
+        2624.0
+      ],
+      "north": [
+        -3264.0,
+        2880.0
+      ],
+      "eastControl": [
+        -3008.0,
+        3136.0
+      ],
+      "northControl": [
+        -3776.0,
+        2880.0
+      ],
+      "flat_raw": [
+        9715,
+        1,
+        0
+      ]
+    },
+    {
+      "actor": [
+        -3648.0,
+        2880.0
+      ],
+      "east": [
+        -3392.0,
+        2880.0
+      ],
+      "north": [
+        -3648.0,
+        3136.0
+      ],
+      "eastControl": [
+        -3392.0,
+        3392.0
+      ],
+      "northControl": [
+        -4160.0,
+        3136.0
+      ],
+      "flat_raw": [
+        9715,
+        1,
+        0
+      ]
+    },
+    {
+      "actor": [
+        -3520.0,
+        2752.0
+      ],
+      "east": [
+        -3264.0,
+        2752.0
+      ],
+      "north": [
+        -3520.0,
+        3008.0
+      ],
+      "eastControl": [
+        -3264.0,
+        3264.0
+      ],
+      "northControl": [
+        -4032.0,
+        3008.0
+      ],
+      "flat_raw": [
+        9715,
+        1,
+        0
+      ]
+    },
+    {
+      "actor": [
+        -3136.0,
+        2496.0
+      ],
+      "east": [
+        -2880.0,
+        2496.0
+      ],
+      "north": [
+        -3136.0,
+        2752.0
+      ],
+      "eastControl": [
+        -2880.0,
+        3008.0
+      ],
+      "northControl": [
+        -3648.0,
+        2752.0
+      ],
+      "flat_raw": [
+        9715,
+        1,
+        0
+      ]
+    }
+  ],
+  "native_ready": false
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/comparison.py",
+    "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz"
+  ],
+  "cwd": "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/workspace",
+  "environment": {
+    "HOME": "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/home",
+    "TMPDIR": "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/tmp",
+    "XDG_CACHE_HOME": "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/cache",
+    "NODE_COMPILE_CACHE": "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/node-cache",
+    "NO_UPDATE_NOTIFIER": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PATH": "/usr/bin:/bin",
+    "LANG": "C.UTF-8",
+    "GIT_OPTIONAL_LOCKS": "0"
+  },
+  "timeout_seconds": 25
+}

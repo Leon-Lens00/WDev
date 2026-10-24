@@ -1,0 +1,125 @@
+{
+  "source_map": "/home/snz/Documentos/WarDatsPy/Relativistic Missiles vJASSLUAGUI/Relativistic-Missiles-2.8-Classic-Test-1.27b.w3x",
+  "source_sha256": "c87d5afb56fe36c4e633061d26551951f4d7db68b6ae0953b002e54eab6a4f9c",
+  "prefix_sha256": "eb77ea5d8c512a61a2ecc8e444e5f04d7dc1d2fd81bf9bb17b94560c472deac6",
+  "prefix_size": 512,
+  "global_sha256": "b6b2b05054e8e2f77eded462598350aaff2cde0e031b9d3075c7a1cb802d7cdc",
+  "global_lines": 1820,
+  "global_j_first_line": 1599,
+  "libraries": {
+    "TimerUtils": {
+      "sha256": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+      "wct_lines": [
+        1,
+        275
+      ]
+    },
+    "WorldBounds": {
+      "sha256": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+      "wct_lines": [
+        276,
+        332
+      ]
+    },
+    "DummyRecycler": {
+      "sha256": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+      "wct_lines": [
+        333,
+        822
+      ]
+    },
+    "Missiles": {
+      "sha256": "ff75e5cc9c4805638622ccc553db9dd1e8c19af27333f8e65257d4f706bae05d",
+      "wct_lines": [
+        823,
+        1778
+      ]
+    }
+  },
+  "members": {
+    "war3map.j": {
+      "size": 314496,
+      "sha256": "7f977423e095122dcd66b3135c1d7346c81fd92c9b217581db514669502127c5"
+    },
+    "war3map.wct": {
+      "size": 304203,
+      "sha256": "10b24ee58c19e891dd700a860fbba659b5e352841fbf5e2880fd908538da9afd"
+    },
+    "war3map.wtg": {
+      "size": 1325,
+      "sha256": "ecbf8cf8237c40e90ce510c005b91f2412666e725c64c409afb6a1a092eaee79"
+    },
+    "war3map.w3i": {
+      "size": 487,
+      "sha256": "64a33be6abb2dbb6ff1dcbb152178a0bf543f94cddebfa0144c8123a290379bc"
+    },
+    "war3map.w3e": {
+      "size": 116616,
+      "sha256": "f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f"
+    },
+    "war3map.w3u": {
+      "size": 933,
+      "sha256": "6076a336cfdc828d331d16daf2f61586505ab1c8301ae9e6f1e46750fe0e809d"
+    },
+    "war3map.w3a": {
+      "size": 7975,
+      "sha256": "67bb649553479c9db3dffae33b09fc9f1b4208ec47e731ad7b113f0f0d15f24b"
+    },
+    "war3map.w3t": {
+      "size": 1058,
+      "sha256": "d5428a8e1d6ae5305717873a2d1a9efa6bbfad9d9a1ad466f5b177276e7a64cf"
+    },
+    "war3map.w3h": {
+      "size": 966,
+      "sha256": "d9709f092b8a24af6fec1318533a79b472f49e734769ec5c3013fdb66479ddf9"
+    },
+    "war3map.wts": {
+      "size": 14305,
+      "sha256": "eb3c3f917f92ab8b6aba760cb0bca8e1a2bb888c2b7718786d3fb54c0f9bda12"
+    },
+    "war3map.imp": {
+      "size": 19,
+      "sha256": "74c4586a73a59bc12ada5faa740a9a43a8d7fa08bd1252b3058fac5cb1dbba03"
+    },
+    "war3map.doo": {
+      "size": 112774,
+      "sha256": "86c8c96d888830886d57d05d2a0e6a7720c7dead4839d5b2d7edf5db5323db80"
+    },
+    "war3mapUnits.doo": {
+      "size": 15052,
+      "sha256": "f3cea164ac36a6a1dc119f75a0f4f2c0f28097d1bf6d5bf99c0708cb112edd96"
+    },
+    "war3map.wpm": {
+      "size": 262160,
+      "sha256": "ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab"
+    },
+    "war3map.mmp": {
+      "size": 280,
+      "sha256": "49845960d0b75e3e1943373b328cba5ee06f08849706da7bd2c2ffc0a28e50d0"
+    },
+    "war3map.shd": {
+      "size": 262144,
+      "sha256": "dcb986a3daf37740e9607d4e09ef25ba81fe67b945779fe739500512f259a65b"
+    },
+    "war3mapImported\\dummy.mdx": {
+      "size": 35040,
+      "sha256": "113a257ba2e3908d075778b7ef8b72cdf8eadf614d45f1608d005e2383481ab1"
+    }
+  },
+  "opaque_members": {
+    "war3mapMap.blp": {
+      "error": "Unsupported compression type.",
+      "size": 20662,
+      "flags": 2147484160,
+      "raw_sha256": "5836235bd47f0bef48a5f5e1f74bbacb9244177c134f0bb4d1d5a8123c65da90"
+    }
+  },
+  "archive_block_count": 22,
+  "inventory_complete": false,
+  "limitations": [
+    "Explicit named-member inventory only; encrypted listfile is not decoded.",
+    "No compilation, game execution or editor-save certification."
+  ],
+  "permission": "User-authorized local recovery/modification; redistribution rights not inferred.",
+  "credits": "Original source comments preserved: Chopinski; BPower, Dirac, Vexorian; Flux. WorldBounds attribution follows original link to nestharus."
+}

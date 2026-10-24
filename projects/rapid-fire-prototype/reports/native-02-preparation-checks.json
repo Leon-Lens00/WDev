@@ -1,0 +1,43 @@
+{
+  "status": "Scanned/PREPARED02",
+  "native02_executed": false,
+  "native01_failures_preserved": 24,
+  "unknown_direct_calls": [],
+  "source_changes": {
+    "MapMain.j": {
+      "added": 1,
+      "removed": 1,
+      "lines": 38,
+      "sha256": "4888bb417c89bb29fac78150a8ecfde6a682bf43c4d7e62108a8b015cfb13f3f"
+    },
+    "NativeProbe.j": {
+      "added": 581,
+      "removed": 295,
+      "lines": 661,
+      "sha256": "235712b90a0b02300e088ad62705982315ac3b1c5b756d7fc30fde6ba119cc24"
+    },
+    "NativeReference.j": {
+      "added": 95,
+      "removed": 0,
+      "lines": 95,
+      "sha256": "e3102a7174d75e27616d2a244068036b7a869b3b98195f598685edb22ed494c7"
+    },
+    "PathingCandidate.j": {
+      "added": 52,
+      "removed": 5,
+      "lines": 191,
+      "sha256": "057a0d8efd50566c668688f5f6d037f17e16e939b6fd38c3b2be5880808e7d4a"
+    },
+    "ProbeLog.j": {
+      "added": 3,
+      "removed": 3,
+      "lines": 79,
+      "sha256": "a496fcf45e4f0130422ec7ac6689a1be55197fd79721954a528f334efaa659af"
+    }
+  },
+  "old_protected_artifacts_verified": 190,
+  "old_pinned_inputs_verified": 67,
+  "frozen_sources_verified": true,
+  "lint_exit": 0,
+  "limitations": "Static preparation only; no JassHelper/pJASS/native GREEN and no universal collision/production movement proof"
+}

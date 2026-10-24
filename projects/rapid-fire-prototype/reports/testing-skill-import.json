@@ -1,0 +1,155 @@
+{
+  "spec": "odd/tasks/rapid-fire-prototype-current.md T6/S23",
+  "source": "/home/snz/.codex/skills/probar-warcraft3-classic-linux",
+  "destination": "/home/snz/Documentos/ChatGPT/WDev/.pi/skills/probar-warcraft3-classic-linux",
+  "file_count": 3,
+  "files": [
+    {
+      "path": "SKILL.md",
+      "source_sha256_before": "a1dd0e9ef570736feaaa97b7b044930692753bc76ff3d0a6553727efffd3bb88",
+      "source_sha256_after": "a1dd0e9ef570736feaaa97b7b044930692753bc76ff3d0a6553727efffd3bb88",
+      "destination_sha256": "a1dd0e9ef570736feaaa97b7b044930692753bc76ff3d0a6553727efffd3bb88",
+      "mode": 420,
+      "mtime_ns": 1792457651173953176
+    },
+    {
+      "path": "agents/openai.yaml",
+      "source_sha256_before": "413c1f3ab988c96444b683a5c9fa3c6c50e7720508c1a6b1866cf48adfa54285",
+      "source_sha256_after": "413c1f3ab988c96444b683a5c9fa3c6c50e7720508c1a6b1866cf48adfa54285",
+      "destination_sha256": "413c1f3ab988c96444b683a5c9fa3c6c50e7720508c1a6b1866cf48adfa54285",
+      "mode": 420,
+      "mtime_ns": 1792457575306749480
+    },
+    {
+      "path": "references/guia-local.md",
+      "source_sha256_before": "af1f92fe70279846849697b21426c01ad2398a5ab78af34b641a390d0bf620b8",
+      "source_sha256_after": "af1f92fe70279846849697b21426c01ad2398a5ab78af34b641a390d0bf620b8",
+      "destination_sha256": "af1f92fe70279846849697b21426c01ad2398a5ab78af34b641a390d0bf620b8",
+      "mode": 420,
+      "mtime_ns": 1792457651174953177
+    }
+  ],
+  "manifest_sha256": "237debd5097d9b5e0ff2dc1ef5f003cb1f5449499a6f2116ae0ce6f021f278c0",
+  "manifest_hash_encoding": "SHA256 of UTF-8 JSON relative-path-to-SHA256 mapping, sorted keys, separators comma/colon",
+  "source_unchanged": true,
+  "destination_match": true,
+  "relative_markdown_links": [
+    {
+      "file": "SKILL.md",
+      "target": "references/guia-local.md",
+      "resolved": "references/guia-local.md",
+      "status": "resolved"
+    }
+  ],
+  "unvendored_absolute_dependencies": [
+    {
+      "file": "SKILL.md",
+      "link": "/home/snz/Documentos/ChatGPT/FrozenThone",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    },
+    {
+      "file": "SKILL.md",
+      "link": "/home/snz/.codex/skills/build-warcraft3-vjass-127b/SKILL.md",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    },
+    {
+      "file": "SKILL.md",
+      "link": "/home/snz/.codex/skills/control-escritorio-linux/SKILL.md",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    },
+    {
+      "file": "SKILL.md",
+      "link": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 play /ruta/absoluta/COPIA-COMPILADA.w3x",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    },
+    {
+      "file": "references/guia-local.md",
+      "link": "/home/snz/Documentos/ChatGPT/FrozenThone",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    },
+    {
+      "file": "references/guia-local.md",
+      "link": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    },
+    {
+      "file": "references/guia-local.md",
+      "link": "/proc/PID/stat",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    },
+    {
+      "file": "references/guia-local.md",
+      "link": "/proc/PID/environ",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    },
+    {
+      "file": "references/guia-local.md",
+      "link": "/proc/PID/maps",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    },
+    {
+      "file": "references/guia-local.md",
+      "link": "/home/snz/Documentos/ChatGPT/FrozenThone",
+      "status": "unvendored reference; not accessed or executed; no new access granted"
+    }
+  ],
+  "external_context_relative_references": {
+    "base": "/home/snz/Documentos/ChatGPT/FrozenThone",
+    "status": "historical docs/scripts/work/runtime references in guide are not skill-relative Markdown links; not vendored, accessed, or executed"
+  },
+  "frontmatter": {
+    "name": "probar-warcraft3-classic-linux",
+    "description": "Probar mapas de Warcraft III Classic 1.27b en esta PC Linux: lanzamiento rápido, NewGen/YDWE/Forge, interacción con el juego, capturas, registros frescos y cierre de la partida propia. Usar para pruebas dentro del juego o manejo del editor; complementar build-warcraft3-vjass-127b para código y control-escritorio-linux para entradas gráficas. No acredita Reforged, otras PC ni multijugador sin ensayo específico.",
+    "valid": true
+  },
+  "registry": {
+    "path": "/home/snz/Documentos/ChatGPT/WDev/.atl/skill-registry.md",
+    "scope": "project",
+    "skill_path": "/home/snz/Documentos/ChatGPT/WDev/.pi/skills/probar-warcraft3-classic-linux/SKILL.md",
+    "indexed_before": 5,
+    "indexed_after": 5,
+    "duplicates_resolved": 1,
+    "description_preserved": true,
+    "other_rows_preserved": true,
+    "sha256": "50581e7773c5883038aca85d6e812a38355c1c7fd7917d61eaf28593c6caa93d",
+    "cache": "incrementally refreshed from known registry metadata; no full global rescan",
+    "engram_persistence": {
+      "status": "saved",
+      "observation_id": 156,
+      "project": "wdev",
+      "title": "skill-registry",
+      "topic_key": "skill-registry",
+      "type": "config",
+      "capture_prompt": false,
+      "content": "exact resulting registry, including trailing newline"
+    },
+    "runtime_observation": "Subsequent registry read retained project row and all five entries but incremental-refresh annotation was absent; final hash records observed registry. No manual global rescan performed."
+  },
+  "skills_loaded": [
+    "/home/snz/.codex/skills/probar-warcraft3-classic-linux/SKILL.md",
+    "/home/snz/.gentle-shell/versions/4.3.0-1.2.0/node_modules/.pnpm/gentle-pi@4.3.0_@earendil-works+pi-ai@1.2.0_@aws-sdk+credential-provider-node@3.972.86__253f9f8b5b5472735a4494655c5ddc19/node_modules/gentle-pi/skills/skill-registry/SKILL.md"
+  ],
+  "additional_source_reads": [
+    "references/guia-local.md",
+    "agents/openai.yaml"
+  ],
+  "checks": {
+    "symlink_escape_preflight": "PASS; all source symlinks rejected and source/destination ancestors checked",
+    "destination_conflict": "PASS; absent before exclusive creation",
+    "proof_conflict": "PASS; absent before exclusive creation",
+    "regular_file_hierarchy": "PASS",
+    "source_hashes_before_after": "PASS",
+    "destination_hashes_names_count": "PASS",
+    "copy2_modes_mtimes": "PASS",
+    "frontmatter": "PASS",
+    "relative_markdown_links": "PASS",
+    "registry_count_scope_dedup_description_other_rows": "PASS",
+    "failed": [],
+    "skipped": [
+      "RED/GREEN behavior tests: passive documentation/config copy; structural checks instead",
+      "global skill rescan: outside authorized access",
+      "game/editor/desktop/process/build recipes: not authorized; not executed"
+    ]
+  },
+  "permissions": "Documentation/config copy only. No game/editor automation, global desktop input, process closing/killing, dependency access, builds, Git configuration, or prototype acceptance."
+}

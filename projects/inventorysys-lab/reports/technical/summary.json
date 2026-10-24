@@ -1,0 +1,358 @@
+{
+  "schema": 1,
+  "status": "Needs your decision",
+  "task": "T7",
+  "evidence_only": true,
+  "spec_disposition": {
+    "S1": "UNMET: clean GUI semantics unproved; T3 blocked",
+    "S2": "met within authorized observed scope",
+    "S3": "met within authorized observed scope",
+    "S4": "met within authorized observed scope"
+  },
+  "engine": {
+    "status": "executed_with_native_FAILs",
+    "aggregate": {
+      "cases": 60,
+      "pass": 142,
+      "fail": 161,
+      "obs": 68,
+      "skip": 0
+    },
+    "per_mode": {
+      "button": {
+        "cases": 21,
+        "fail": 56,
+        "inconclusive": true,
+        "obs": 25,
+        "pass": 55,
+        "run_id": "itl-button-20261019-03",
+        "skip": 0,
+        "reader_exit": 1,
+        "evidence": "runs/itl-button-20261019-03",
+        "complete_log_sequence": 381
+      },
+      "picture": {
+        "cases": 19,
+        "fail": 52,
+        "inconclusive": true,
+        "obs": 21,
+        "pass": 43,
+        "run_id": "itl-picture-20261019-03",
+        "skip": 0,
+        "reader_exit": 1,
+        "evidence": "runs/itl-picture-20261019-03",
+        "complete_log_sequence": 342
+      },
+      "text": {
+        "cases": 19,
+        "fail": 52,
+        "inconclusive": true,
+        "obs": 21,
+        "pass": 43,
+        "run_id": "itl-text-20261019-03",
+        "skip": 0,
+        "reader_exit": 1,
+        "evidence": "runs/itl-text-20261019-03",
+        "complete_log_sequence": 342
+      },
+      "camera": {
+        "cases": 1,
+        "fail": 1,
+        "inconclusive": true,
+        "obs": 1,
+        "pass": 1,
+        "run_id": "itl-camera-20261019-03",
+        "skip": 0,
+        "reader_exit": 1,
+        "evidence": "runs/itl-camera-20261019-03",
+        "complete_log_sequence": 9
+      }
+    },
+    "fail_count_is_distinct_bugs": false,
+    "interpretation": "Repeated assertions, not 161 distinct bugs; each strict reader exited 1/inconclusive.",
+    "findings": [
+      {
+        "id": "owned-button-timers",
+        "cases": [
+          19,
+          20
+        ],
+        "baseline_deficits": [
+          2,
+          1
+        ],
+        "before_harness_cleanup": true,
+        "source": "baseline/members/war3map.j:5381-5392",
+        "exclude": "InventoryCore_GracePeriod releases timer at line 6378"
+      },
+      {
+        "id": "native-unit-persistence",
+        "modes": [
+          "button",
+          "picture",
+          "text"
+        ],
+        "sample_sequence": 11,
+        "observed_native_type": 1969841261,
+        "source_support": "UIText destroy omits RemoveUnit; UIButton/UIPicture call RemoveUnit, so their immediate persistence mechanism is unknown."
+      },
+      {
+        "id": "unreclaimed-struct-slots",
+        "cases": "2-17 per UI mode",
+        "sample_sequence": 25,
+        "source_support": "All three public destructors omit generated deallocation; freelist-first allocator supports unreclaimed slots, not RSS inference."
+      },
+      {
+        "id": "bulk-membership",
+        "case_by_mode": {
+          "button": 21,
+          "picture": 19,
+          "text": 19
+        },
+        "changed": 2,
+        "missing": 1,
+        "positive_controls": "three live units and three direct movements",
+        "source_support": "destroy copies CountShow slot before decrement; show appends at CountShow; updateAll includes extra slot"
+      },
+      {
+        "id": "camera-nonreturn",
+        "case": 1,
+        "before_sequence": 5,
+        "watchdog_fail_sequence": 6,
+        "after_marker": false,
+        "heartbeat_telemetry": false,
+        "mechanism": "unproved; recursion statically present, no crash/stack/whole-VM-freeze conclusion"
+      }
+    ]
+  },
+  "gui": {
+    "status": "UNPROVED",
+    "semantic_certification": false,
+    "inventory_open_close_verified": false,
+    "missing_proof": [
+      "INV_OPEN",
+      "INV_CLOSE",
+      "selection evidence",
+      "visibly opened inventory panel"
+    ],
+    "observer": {
+      "job": 22,
+      "exit": 124,
+      "deadline_seconds": 300,
+      "retried": false
+    },
+    "public_manual_reader": {
+      "exit": 0,
+      "status": "observation_complete",
+      "chunks": 1,
+      "rows": 3,
+      "events": [
+        "BEGIN",
+        "STATS",
+        "TERMINAL"
+      ],
+      "stop_reason": "USER_STOP",
+      "dropped": 0,
+      "runtime_writing_verified": false,
+      "meaning": "Protocol/observation completeness only, not GUI semantic success"
+    },
+    "input_diagnosis": "Legacy focus dispatcher failed; wtype no visible text; ydotool recorder commands succeeded. Root cause unknown.",
+    "no_verdict": [
+      "lingering glow",
+      "equipment correctness",
+      "multiplayer"
+    ],
+    "evidence": "gui/techgui01/"
+  },
+  "closure": {
+    "status": "all seven owned games closed according to retained proof",
+    "sessions": [
+      {
+        "owned_pid": 69143,
+        "owned_start_ticks": "2308480",
+        "owned_pid_absent": true,
+        "profile_game_processes": [],
+        "launcher_job": 8,
+        "launcher_exit": 0,
+        "observed_at": 1792449677.9247808,
+        "evidence": "runs/itl-button-20261019-01/closure.json"
+      },
+      {
+        "owned_pid": 72555,
+        "owned_start_ticks": "2375292",
+        "owned_pid_absent": true,
+        "profile_game_processes": [],
+        "launcher_job": 11,
+        "launcher_exit": 0,
+        "observed_at": 1792450356.7555194,
+        "evidence": "runs/itl-button-20261019-02/closure.json"
+      },
+      {
+        "owned_pid": 76894,
+        "owned_start_ticks": "2500258",
+        "owned_pid_absent": true,
+        "profile_game_processes": [],
+        "launcher_job": 13,
+        "launcher_exit": 0,
+        "observed_at": 1792451763.8088913,
+        "evidence": "runs/itl-button-20261019-03/closure.json"
+      },
+      {
+        "owned_pid": 78285,
+        "owned_start_ticks": "2537683",
+        "owned_pid_absent": true,
+        "profile_game_processes": [],
+        "launcher_job": 15,
+        "launcher_exit": 0,
+        "observed_at": 1792451965.3880897,
+        "evidence": "runs/itl-picture-20261019-03/closure.json"
+      },
+      {
+        "owned_pid": 79284,
+        "owned_start_ticks": "2549383",
+        "owned_pid_absent": true,
+        "profile_game_processes": [],
+        "launcher_job": 17,
+        "launcher_exit": 0,
+        "observed_at": 1792452124.1291213,
+        "evidence": "runs/itl-text-20261019-03/closure.json"
+      },
+      {
+        "owned_pid": 80234,
+        "owned_start_ticks": "2565326",
+        "owned_pid_absent": true,
+        "profile_game_processes": [],
+        "launcher_job": 19,
+        "launcher_exit": 0,
+        "observed_at": 1792452421.3451223,
+        "evidence": "runs/itl-camera-20261019-03/closure.json"
+      },
+      {
+        "owned_pid": 81879,
+        "owned_start_ticks": "2600184",
+        "owned_pid_absent": true,
+        "profile_game_processes": [],
+        "launcher_job": 21,
+        "launcher_exit": 0,
+        "observed_at": 1792452998.501886,
+        "evidence": "gui/techgui01/closure.json"
+      }
+    ],
+    "gui_supersession": "closure.json and parent-reconciliation.json at 1792452998.501886 supersede desktop-closure-final.json still-live snapshot",
+    "termination_mechanism": "not established for later runs; closure is proved, causal exit mechanism is not"
+  },
+  "tooling": {
+    "historical_python_suites": [
+      {
+        "tests": 77,
+        "exit": 0,
+        "evidence": "parent-tests.*"
+      },
+      {
+        "tests": 78,
+        "exit": 0,
+        "evidence": "type-name-suite.*"
+      },
+      {
+        "tests": 80,
+        "exit": 0,
+        "evidence": "oracles-suite.*"
+      }
+    ],
+    "type_name_regression": {
+      "red_exit": 1,
+      "green_exit": 0,
+      "focused_tests": 11,
+      "caused_initial_engine_failure": "unproved"
+    },
+    "parent_oracle_regressions": {
+      "tests": 2,
+      "red_exit": 1,
+      "green_exit": 0,
+      "full_suite_tests": 80,
+      "full_suite_exit": 0
+    },
+    "independent_initial": {
+      "focused_tests": 11,
+      "focused_exit": 0,
+      "suite_tests": 78,
+      "suite_exit": 0,
+      "oracle_red_exit": 1,
+      "reader02_exit": 1,
+      "archives_exit": 0,
+      "maps_audited": 8,
+      "evidence": "verification/initial/manifest.json"
+    },
+    "independent_targeted": {
+      "tests": 13,
+      "targeted_exit": 0,
+      "recheck_exit": 0,
+      "evidence": "verification/targeted/manifest.json"
+    },
+    "native_assess": {
+      "status": "unassessable",
+      "reason": "untracked candidate",
+      "approval": false
+    },
+    "risk_item": 3,
+    "independent_source_review_and_recheck": "already completed; no new round"
+  },
+  "preservation": {
+    "original_unchanged": true,
+    "original_sha256": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada",
+    "original_script_sha256": "6a168b922c994d230d80c7c59ad601cb260fa3066f22b579c8784bcf3d0b4e46",
+    "maps03": {
+      "count": 4,
+      "pjass_exit_each": 0,
+      "wc3ctl_exit_each": 0,
+      "preservation_exit_each": 0,
+      "preserved_identities_each": 52
+    },
+    "prior_sources_maps_reports_logs": "preserved; no overwrite",
+    "editor_save_certified": false,
+    "credits": "original credits preserved; local evaluation only"
+  },
+  "source": {
+    "baseline": "baseline/members/war3map.j",
+    "02_to_03": "Only four expressions: three Player(13) owner expressions changed to CAMERA_DUMMY_PLAYER, and actual owned expiry readiness prerequisite added. Other technical source bytes unchanged per retained recheck.",
+    "core_fixes": false,
+    "private_storage_oracle": false
+  },
+  "excluded_attempts": [
+    {
+      "run": "itl-button-20261019-01",
+      "observer_exit": 124,
+      "result": "load timeout/no log or COMPLETE; no core verdict"
+    },
+    {
+      "run": "itl-button-20261019-02",
+      "reader_exit": 1,
+      "result": "wrong-owner fixture readiness failure; no core verdict"
+    }
+  ],
+  "known_limits": [
+    "S1 GUI unmet",
+    "Camera runtime mechanism unproved; no heartbeat telemetry",
+    "UIButton/UIPicture immediate native persistence mechanism/settling contract unproved",
+    "No two-client multiplayer proof; not attempted",
+    "No RSS/FPS/long-duration proof; not attempted",
+    "Automatic SKIP=0 does not cover unattempted dimensions",
+    "Native coordinate checks do not certify visible text, texture, equipment or GUI UX",
+    "No native review approval",
+    "No commits: Git identity unavailable; no publication"
+  ],
+  "next_step": {
+    "status": "Needs your decision",
+    "options": [
+      "Authorize NEW bounded focus/input diagnosis BEFORE any GUI retry",
+      "Accept report with GUI unproved"
+    ],
+    "automatic_new_run": false
+  },
+  "report_checks": {
+    "kind": "structural-only local text/JSON/hash processing",
+    "functional_reruns": false,
+    "archived_scripts_executed": false,
+    "evidence_index": "verification/evidence-index.json"
+  }
+}

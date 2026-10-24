@@ -1,0 +1,44 @@
+{
+  "schema": "IL141M/1",
+  "run_id": "inv-manual-20261019-01",
+  "session": "techgui03",
+  "status": "observation_complete",
+  "semantic_certification": false,
+  "runtime_writing_verified": false,
+  "limitations": [
+    "Observed data only; no gameplay PASS certification.",
+    "Public samples are deferred/coalesced, not causal proof.",
+    "Filesystem freshness cannot prove game/runtime provenance.",
+    "OVERFLOW counts the first refused row only; later coverage is unknown."
+  ],
+  "chunks": 1,
+  "rows": 3,
+  "terminal": {
+    "reason": "USER_STOP",
+    "rows": 3,
+    "dropped": 0
+  },
+  "observations": [
+    {
+      "sequence": 1,
+      "time_ms": 94812,
+      "source": "recorder",
+      "event": "BEGIN",
+      "data": "schema=1"
+    },
+    {
+      "sequence": 2,
+      "time_ms": 94812,
+      "source": "sample",
+      "event": "STATS",
+      "data": "str=15 agi=14 int=20 gold=0"
+    },
+    {
+      "sequence": 3,
+      "time_ms": 140750,
+      "source": "recorder",
+      "event": "TERMINAL",
+      "data": "reason=USER_STOP rows=3 dropped=0"
+    }
+  ]
+}

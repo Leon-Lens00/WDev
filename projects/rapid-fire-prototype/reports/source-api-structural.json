@@ -1,0 +1,10 @@
+{
+  "unknown_direct_calls": [],
+  "source_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/ProbeLog.j": "805c155b1d58bb28ce3e04aaf59cbc31bec3b090d9050eaec8d07b882f5f5555",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/PathingCandidate.j": "6f735503fcfd459ef49b06fe4f4641855a841c20cccd22ded195b87396dfd56c",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j": "199f5daf7bf1dd678944e4eea172e9bfa9d08e71af22c8df1eb44f33059b5b96",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/MapMain.j": "8e137da93605b220502ee4d21359331666926e70f200c3847cfc116a42210eda"
+  },
+  "limitations": "Declaration/static inspection only; no JassHelper/pJASS/native proof"
+}

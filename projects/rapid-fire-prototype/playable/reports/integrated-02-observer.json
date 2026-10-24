@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE_OBSERVED",
+  "started_unix": 1792536651.1839988,
+  "ended_unix": 1792536659.2554524,
+  "budget_seconds": 180,
+  "reader_argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rfp-integrated-20261020-02.txt",
+    "--run-id",
+    "rfp-integrated-20261020-02",
+    "--not-before",
+    "1792536651.1815379",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/reports/integrated-02-native-reader.json"
+  ],
+  "reader_exit_code": 1,
+  "source_mtime": 1792536659.2083652
+}

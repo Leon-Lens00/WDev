@@ -1,0 +1,86 @@
+{
+  "files": [
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogRed01.j",
+      "frozen": "sources/RecastLogRed01.j",
+      "sha256": "e828a0db60a5cc46a99024b3bdfe5561ce764b600a172fcd1609e45a40e65a76"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+      "frozen": "sources/RecastNativeTest.j",
+      "sha256": "9dc12b73bb7248af4b935ac29b848035dbe5aa361790e8075c6e5ed9fa620f63"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainRed01.j",
+      "frozen": "sources/RecastMapMainRed01.j",
+      "sha256": "d4d34b794433ba3de146989c8b39f47170f647a0347db9a5f3aa4a8537e397a4"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build-plan-recast-red01.json",
+      "frozen": "build-plan-recast-red01.json",
+      "sha256": "9afcb235fe718a29b39eeeba4cc1add8ba3eff78cb40fe0b84d8ad667e4736f6"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-recast-red-20261020-01/entry.j",
+      "frozen": "build01/entry.j",
+      "sha256": "deb383df8e8085019f2d6d86ff81abb4d65114f80eb76faf4bc613dd84f5efc8"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-recast-red-20261020-01/command-1.json",
+      "frozen": "build01/command-1.json",
+      "sha256": "7e1b29648abe3ca556249a75b1ce71d40872b8b194cee83fc4b9143b3e5faede"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-recast-red-20261020-01/commands.json",
+      "frozen": "build01/commands.json",
+      "sha256": "510dff1be11ab9752b6bc5046cbcf459c9c2d487075ef544b67a89aa49fe0367"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red01-preservation.json",
+      "frozen": "reports/recast-red01-preservation.json",
+      "sha256": "5f774c01def1f126a352df2fa9e6400b7a8a69020ec8dc03d72b40bcacd22c7a"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red01-static.json",
+      "frozen": "reports/recast-red01-static.json",
+      "sha256": "6387db6d95444b96c82ade7075b3d57496edd9569484cf86de2ffec09fbe2ad4"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red01-preparation.md",
+      "frozen": "reports/recast-red01-preparation.md",
+      "sha256": "44084bc7d8af48470fd0d92a70aba0c3b8f9190e0a65651c50b793649427a844"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red01-readback.json",
+      "frozen": "reports/recast-red01-readback.json",
+      "sha256": "570b9871817f42f4096a673cba937f37968436615c51e0bdaaf787da13309fdc"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red01-build.stdout.txt",
+      "frozen": "reports/recast-red01-build.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red01-build.stderr.txt",
+      "frozen": "reports/recast-red01-build.stderr.txt",
+      "sha256": "dd5ea6560a92d91c53d1e9ea751a9b3695e3e346aaab18703e736fa32f38e453"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red01-build.exit.json",
+      "frozen": "reports/recast-red01-build.exit.json",
+      "sha256": "dd4c785004f89c700c9779ee75bac8f3170679d6d47c826e5b4b4c1026823869"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red01-results.md",
+      "frozen": "reports/recast-red01-results.md",
+      "sha256": "ccb86e867e43a5bd0316dfab2dc12433d903e059475ecb657055865713771f2c"
+    },
+    {
+      "source": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261019-210744-895709/jasshelper.log",
+      "frozen": "compiler/jasshelper.log",
+      "sha256": "0b669c656cdd6e23afe53b8d739c441568e03fda9a2c0be5cb30c0bca26ed7df"
+    }
+  ],
+  "frozen_before_rename": true,
+  "scope": "Actual failed build01 sources/plan/proof/compiler log; no retry execution"
+}

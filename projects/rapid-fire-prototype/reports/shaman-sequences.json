@@ -1,0 +1,156 @@
+[
+  {
+    "name": "Stand - 1",
+    "start_ms": 333,
+    "end_ms": 1667,
+    "duration_ms": 1334,
+    "at_300_percent_ms": 444.6666666666667,
+    "move_speed": 0.0,
+    "flags": 0,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Stand - 2",
+    "start_ms": 1833,
+    "end_ms": 5167,
+    "duration_ms": 3334,
+    "at_300_percent_ms": 1111.3333333333333,
+    "move_speed": 0.0,
+    "flags": 0,
+    "rarity": 4.0,
+    "sync": 0
+  },
+  {
+    "name": "Stand - 3",
+    "start_ms": 5333,
+    "end_ms": 9333,
+    "duration_ms": 4000,
+    "at_300_percent_ms": 1333.3333333333333,
+    "move_speed": 0.0,
+    "flags": 0,
+    "rarity": 4.0,
+    "sync": 0
+  },
+  {
+    "name": "Stand - 4",
+    "start_ms": 9467,
+    "end_ms": 14800,
+    "duration_ms": 5333,
+    "at_300_percent_ms": 1777.6666666666667,
+    "move_speed": 0.0,
+    "flags": 0,
+    "rarity": 5.0,
+    "sync": 0
+  },
+  {
+    "name": "Attack -1",
+    "start_ms": 14967,
+    "end_ms": 16133,
+    "duration_ms": 1166,
+    "at_300_percent_ms": 388.6666666666667,
+    "move_speed": 0.0,
+    "flags": 1,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Attack -2",
+    "start_ms": 16300,
+    "end_ms": 17467,
+    "duration_ms": 1167,
+    "at_300_percent_ms": 389.0,
+    "move_speed": 0.0,
+    "flags": 1,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Death",
+    "start_ms": 17633,
+    "end_ms": 21000,
+    "duration_ms": 3367,
+    "at_300_percent_ms": 1122.3333333333333,
+    "move_speed": 0.0,
+    "flags": 1,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Walk",
+    "start_ms": 21167,
+    "end_ms": 22033,
+    "duration_ms": 866,
+    "at_300_percent_ms": 288.6666666666667,
+    "move_speed": 275.0,
+    "flags": 0,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Spell",
+    "start_ms": 22833,
+    "end_ms": 24833,
+    "duration_ms": 2000,
+    "at_300_percent_ms": 666.6666666666666,
+    "move_speed": 0.0,
+    "flags": 1,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Spell 2",
+    "start_ms": 25000,
+    "end_ms": 28167,
+    "duration_ms": 3167,
+    "at_300_percent_ms": 1055.6666666666667,
+    "move_speed": 0.0,
+    "flags": 1,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Stand Ready",
+    "start_ms": 31833,
+    "end_ms": 33167,
+    "duration_ms": 1334,
+    "at_300_percent_ms": 444.6666666666667,
+    "move_speed": 0.0,
+    "flags": 0,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Stand Victory",
+    "start_ms": 84100,
+    "end_ms": 85500,
+    "duration_ms": 1400,
+    "at_300_percent_ms": 466.6666666666667,
+    "move_speed": 0.0,
+    "flags": 0,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Decay Flesh",
+    "start_ms": 100000,
+    "end_ms": 160000,
+    "duration_ms": 60000,
+    "at_300_percent_ms": 20000.0,
+    "move_speed": 0.0,
+    "flags": 1,
+    "rarity": 0.0,
+    "sync": 0
+  },
+  {
+    "name": "Decay Bone",
+    "start_ms": 166667,
+    "end_ms": 226667,
+    "duration_ms": 60000,
+    "at_300_percent_ms": 20000.0,
+    "move_speed": 0.0,
+    "flags": 1,
+    "rarity": 0.0,
+    "sync": 0
+  }
+]

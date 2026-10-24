@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-pathing-20261019-01.txt",
+    "--run-id",
+    "rf-pathing-20261019-01",
+    "--not-before",
+    "1792440660.7272184",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/native-rf-pathing-20261019-01.json"
+  ],
+  "exit_code": 1,
+  "source_mtime": 1792440675.081454,
+  "launch_requested_unix": 1792440660.7272184
+}

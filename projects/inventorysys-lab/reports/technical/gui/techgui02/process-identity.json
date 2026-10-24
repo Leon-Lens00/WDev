@@ -1,0 +1,13 @@
+{
+  "pid": 87674,
+  "start_ticks": "2769603",
+  "command": [
+    "C:\\WarcraftIII\\war3.exe",
+    "-loadfile",
+    "Maps\\CodexTest\\26d7faf7953feb98.w3x",
+    "-window"
+  ],
+  "profile_verified": true,
+  "expected_loadfile_verified": true,
+  "observed_at": 1792454183.8104112
+}

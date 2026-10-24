@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/tests/test_objects.py", line 92, in <module>
+    main()
+  File "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/tests/test_objects.py", line 49, in main
+    assert ncl2['pointer'] == 2, 'Ncl2 diagnostic selector remains0; metadata requires2'
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: Ncl2 diagnostic selector remains0; metadata requires2

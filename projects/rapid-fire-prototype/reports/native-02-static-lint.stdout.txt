@@ -1,0 +1,138 @@
+{
+  "files": 5,
+  "findings": [
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 241,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 282,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 339,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 373,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 471,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 472,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 573,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 574,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 653,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 654,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 658,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeReference.j",
+      "line": 12,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeReference.j",
+      "line": 51,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/NativeReference.j",
+      "line": 62,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/PathingCandidate.j",
+      "line": 21,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/PathingCandidate.j",
+      "line": 47,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/PathingCandidate.j",
+      "line": 60,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/ProbeLog.j",
+      "line": 36,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/ProbeLog.j",
+      "line": 37,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "command": "python3 -B - (foreground reporting-only readback via stdin; no copied comparison script executed)",
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"check\": \"reporting_metadata_syntax_and_exact_minimal_copy_only\", \"comparison_rerun\": false, \"copied_script_syntax\": \"PASS; not executed\", \"exact_proof_copies\": 20, \"invocation_redaction\": \"none required; nine isolated environment names only\", \"json_reports\": 3, \"markdown_reports\": 7, \"result\": \"PASS\", \"source_hash_or_native_checks\": false}\n",
+  "scope": "JSON metadata, Markdown readback, copied-artifact byte equality and syntax only; no source/native/cross-run comparison rerun"
+}

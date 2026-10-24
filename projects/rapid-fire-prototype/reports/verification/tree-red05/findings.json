@@ -1,0 +1,23 @@
+{
+  "scope": "TARGETED F1 recheck only",
+  "F1": "PASS resolved: neutral native owner before processing, discriminating fields captured on four successful births",
+  "S25": "PASS scoped fixture correction and single authorized measurement completed/consumed",
+  "S3": "FAIL product: qualified collision RED, not fixture ABORT; no production acceptance",
+  "counts": {
+    "cases": 2,
+    "checks": 87,
+    "PASS": 19,
+    "OBS": 65,
+    "FAIL": 3,
+    "SKIP": 0,
+    "ABORT": 0
+  },
+  "changed_functions": [
+    "OnShot"
+  ],
+  "oracle": "unchanged",
+  "Tree04": "FAIL/F1 historical verdict preserved; actual Tree04 individual predicate values remain uncaptured",
+  "transition": "serial4 pending3.219 cleared3.375; strict R07 readiness3.406; effect3.469",
+  "limits": "No new native run/build/code/test changes. Other specs/global acceptance/adversarial lifecycle proof outside this recheck. Parent spot once required before close.",
+  "memory": "Engram tools unavailable; parent handles scoped memory update."
+}

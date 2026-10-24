@@ -1,0 +1,82 @@
+{
+  "projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x": {
+    "sha256": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+    "mtime_ns": 1792460695052756981
+  },
+  "projects/rapid-fire-prototype/build/rf-burst-aim-green-20261020-01/rf-burst-aim-green-20261020-01.w3x": {
+    "sha256": "413713f0f742b9021fb9e99dadcaf051790378c16bf20d7da0a245b62c483752",
+    "mtime_ns": 1792469622045892653
+  },
+  "projects/rapid-fire-prototype/build-plan-aim-green01.json": {
+    "sha256": "0d5478cbefc794ad9385254c6be9469b48b67bd8ea5653552da3a25a387ba749",
+    "mtime_ns": 1792469375925562018
+  },
+  "projects/rapid-fire-prototype/reports/RF-rf-burst-aim-green-20261020-01.txt": {
+    "sha256": "371c53df613aaee94275b0b949d6fb71b1d804ec89426fb0f07362875a0aa51a",
+    "mtime_ns": 1792469688631476260
+  },
+  "projects/rapid-fire-prototype/reports/RF-rf-burst-aim-red-20261020-01.txt": {
+    "sha256": "675e6cb3a9d7e45529d345589c96d4702598d26dab2e086f6fc6d2809a56a909",
+    "mtime_ns": 1792468376622083242
+  },
+  "projects/rapid-fire-prototype/reports/aim-green01-native-launch.json": {
+    "sha256": "492bdc955531e0b5e6ef938daf595efcac28ea289a97819c380558e02325f355",
+    "mtime_ns": 1792469667469070012
+  },
+  "projects/rapid-fire-prototype/reports/aim-red01-native-launch.json": {
+    "sha256": "830671547f46c47398de5bb32244e8bddbfe65558c68ecb30e69dc1ca808af08",
+    "mtime_ns": 1792468346772577738
+  },
+  "projects/rapid-fire-prototype/reports/frozen-aim-red01/preservation.json": {
+    "sha256": "e2a44fbf55f2cbffe66c976531bbd31ad0f664176b836c2405d82350ce86af58",
+    "mtime_ns": 1792469333463604625
+  },
+  "projects/rapid-fire-prototype/reports/frozen-aim-red01/sources/AimNativeTest.j": {
+    "sha256": "262d8584be5a5b76840949816955a9f708b03a5f56f74046c562a1fa392d5070",
+    "mtime_ns": 1792467631905870507
+  },
+  "projects/rapid-fire-prototype/reports/frozen-aim-red01/sources/PairCore.j": {
+    "sha256": "f82e92301dea1dd64a1993843e4f04c929a58bd032b9908f87fa96eb18426d52",
+    "mtime_ns": 1792463946541223767
+  },
+  "projects/rapid-fire-prototype/src/prototype/AimLogGreen01.j": {
+    "sha256": "e455388f8bb2af71edba61d3e466321517f991e4d93dff2f0049d2ba7ffcd5b0",
+    "mtime_ns": 1792469375924033789
+  },
+  "projects/rapid-fire-prototype/src/prototype/AimMapMainGreen01.j": {
+    "sha256": "622bf4e2b546eedcd242c29e56ee25db720996cd427f5cb311095414674a5aa6",
+    "mtime_ns": 1792469375924104139
+  },
+  "projects/rapid-fire-prototype/src/prototype/AimNativeTest.j": {
+    "sha256": "262d8584be5a5b76840949816955a9f708b03a5f56f74046c562a1fa392d5070",
+    "mtime_ns": 1792467631905870507
+  },
+  "projects/rapid-fire-prototype/src/prototype/PairCore.j": {
+    "sha256": "770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3",
+    "mtime_ns": 1792469338214999424
+  },
+  "projects/relativistic-classic/src/Missiles.j": {
+    "sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "mtime_ns": 1792383155424927357
+  },
+  "projects/relativistic-classic/src/libraries/DummyRecycler.j": {
+    "sha256": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "mtime_ns": 1792369976943388123
+  },
+  "projects/relativistic-classic/src/libraries/TimerUtils.j": {
+    "sha256": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "mtime_ns": 1792369976943325806
+  },
+  "projects/relativistic-classic/src/libraries/WorldBounds.j": {
+    "sha256": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "mtime_ns": 1792369976943354294
+  },
+  "projects/relativistic-classic/tools/build.py": {
+    "sha256": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "mtime_ns": 1792369969856927855
+  },
+  "projects/relativistic-classic/tools/read_logs.py": {
+    "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+    "mtime_ns": 1792370695996710430
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "stdout": "{\"L99_last\": true, \"M45_exact_original_checks\": 70, \"cases\": 47, \"comparison\": \"PASS\", \"copied_files\": 77, \"detail_equality_outside_M45\": \"not_required\", \"dynamic_detail_differences\": 36, \"dynamic_difference_cases\": [\"C21\", \"C25\", \"C36\", \"C37\", \"C38\", \"C39\", \"C40\", \"C41\", \"C42\"], \"historical_fixed02_freshness\": \"historicalfreshnessnotrecorded\", \"identities\": {\"diag4-e29-timeout-20261019-01\": {\"compiled_sha256\": \"47b93b56552e3b0a2cccceca9672029c41d27ec2b91899ba6589ba301293fc87\", \"log_sha256\": \"05501175a865d872e5d645d6942f7572f28d206b59ff223dde3e7e9d57506e07\", \"map_sha256\": \"caec96f8546846b9e6ca9aef64bf1732a79cf9bf4981998e8be7767d5d8f1182\"}, \"fixed-20261019-03\": {\"compiled_sha256\": \"c90f22216bb071ee2b5cb6da1d60fd8800853debc2defa5cf6e1d4a018a1552a\", \"log_sha256\": \"e9c1d9eb3f8146fa1b02ea2e0d9659f6497ed978b358001471f66d6fd14ab21b\", \"map_sha256\": \"4490afbf0824a89186faf22e3a948452b27fe0ae1a111f3d960a108228fb2694\"}}, \"native_freshness\": \"saved_native_mtime_matches_launch_and_reader_metadata\", \"negative\": {\"FAIL\": 1, \"OBS\": 17, \"PASS\": 28, \"SKIP\": 1}, \"negative_reader_exit\": 1, \"non_E29_multiplicities\": \"preserved_except_two_allowed_M45_changes\", \"normal\": {\"OBS\": 137, \"PASS\": 670, \"SKIP\": 1}, \"normal_status\": \"inconclusive\", \"original_E29_records_preserved\": 26, \"scope\": \"saved_single_client_evidence_and_identity_only\", \"source_and_candidate_preserved\": true}\n",
+  "stderr": "",
+  "scratch": "/tmp/wdev-relativistic-fixed03-verify/corrected-a44wAHM5",
+  "v1_exit_code_preserved": 1,
+  "v1_unchanged": true
+}

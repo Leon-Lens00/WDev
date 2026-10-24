@@ -1,0 +1,323 @@
+{
+  "base_sha256": "716f8f4d64386f096bdc4ad0837dfb5c22428a69c26d956c51c29b23d1485a2a",
+  "out_sha256": "452a2eb9fa68b554c5c80c08a91fa4a392f80038624bdfd93b945dfb5c16aab6",
+  "recipe": [
+    {
+      "kind": "unit",
+      "id": "o000",
+      "field": "unam",
+      "level": 0,
+      "value": "Rapid Fire Actor"
+    },
+    {
+      "kind": "unit",
+      "id": "o000",
+      "field": "uaen",
+      "level": 0,
+      "value": 0
+    },
+    {
+      "kind": "unit",
+      "id": "o000",
+      "field": "uabi",
+      "level": 0,
+      "value": ""
+    },
+    {
+      "kind": "unit",
+      "id": "o001",
+      "field": "unam",
+      "level": 0,
+      "value": "Rapid Fire Controller"
+    },
+    {
+      "kind": "unit",
+      "id": "o001",
+      "field": "uaen",
+      "level": 0,
+      "value": 0
+    },
+    {
+      "kind": "unit",
+      "id": "o001",
+      "field": "uabi",
+      "level": 0,
+      "value": "A00G"
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "anam",
+      "level": 0,
+      "value": "Rapid Fire Point Probe"
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "alev",
+      "level": 0,
+      "value": 1
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "aher",
+      "level": 0,
+      "value": 0
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "acdn",
+      "level": 1,
+      "value": 0.0
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "amcs",
+      "level": 1,
+      "value": 0
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "aran",
+      "level": 1,
+      "value": 99999.0
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "Ncl1",
+      "level": 1,
+      "value": 0.0
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "Ncl2",
+      "level": 1,
+      "value": 2
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "Ncl3",
+      "level": 1,
+      "value": 0
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "Ncl4",
+      "level": 1,
+      "value": 0.98
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "Ncl5",
+      "level": 1,
+      "value": 1
+    },
+    {
+      "kind": "ability",
+      "id": "A00G",
+      "field": "Ncl6",
+      "level": 1,
+      "value": "channel"
+    }
+  ],
+  "all_nonowned_members": {
+    "listfile_names": [
+      "war3map.doo",
+      "war3map.imp",
+      "war3map.j",
+      "war3map.mmp",
+      "war3map.shd",
+      "war3map.w3a",
+      "war3map.w3c",
+      "war3map.w3e",
+      "war3map.w3h",
+      "war3map.w3i",
+      "war3map.w3r",
+      "war3map.w3t",
+      "war3map.w3u",
+      "war3map.wct",
+      "war3map.wpm",
+      "war3map.wtg",
+      "war3map.wts",
+      "war3mapImported\\dummy.mdx",
+      "war3mapMap.blp",
+      "war3mapUnits.doo"
+    ],
+    "(3285416453, 1395877256, 0, 0)": {
+      "mode": "decoded",
+      "size": 35040,
+      "sha256": "113a257ba2e3908d075778b7ef8b72cdf8eadf614d45f1608d005e2383481ab1",
+      "flags": 2147484160,
+      "crc32": 1481512820
+    },
+    "(2521102403, 1961196111, 0, 0)": {
+      "mode": "decoded",
+      "size": 8,
+      "sha256": "f13ee6ed54ea2aae9fc49a9faeb5da6e8ddef0e12ed5d30d35a624ae813e0485",
+      "flags": 2147484160,
+      "crc32": 767742221
+    },
+    "(135778390, 3345943409, 0, 0)": {
+      "mode": "decoded",
+      "size": 262144,
+      "sha256": "dcb986a3daf37740e9607d4e09ef25ba81fe67b945779fe739500512f259a65b",
+      "flags": 2147484160,
+      "crc32": 1073707827
+    },
+    "(3988064067, 2759747881, 0, 0)": {
+      "mode": "decoded",
+      "size": 15052,
+      "sha256": "f3cea164ac36a6a1dc119f75a0f4f2c0f28097d1bf6d5bf99c0708cb112edd96",
+      "flags": 2147484160,
+      "crc32": 3496686770
+    },
+    "(2193456980, 4292301260, 0, 0)": {
+      "mode": "decoded",
+      "size": 19,
+      "sha256": "74c4586a73a59bc12ada5faa740a9a43a8d7fa08bd1252b3058fac5cb1dbba03",
+      "flags": 2147484160,
+      "crc32": 4274895861
+    },
+    "(870877111, 3509911882, 0, 0)": {
+      "mode": "decoded",
+      "size": 487,
+      "sha256": "64a33be6abb2dbb6ff1dcbb152178a0bf543f94cddebfa0144c8123a290379bc",
+      "flags": 2147484160,
+      "crc32": 1824592883
+    },
+    "(104387832, 885581176, 0, 0)": {
+      "mode": "decoded",
+      "size": 8,
+      "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc",
+      "flags": 2147484160,
+      "crc32": 1696784233
+    },
+    "(2990263826, 1773284189, 0, 0)": {
+      "mode": "decoded",
+      "size": 966,
+      "sha256": "d9709f092b8a24af6fec1318533a79b472f49e734769ec5c3013fdb66479ddf9",
+      "flags": 2147484160,
+      "crc32": 1459863732
+    },
+    "(1371849486, 308398971, 0, 0)": {
+      "mode": "decoded",
+      "size": 14305,
+      "sha256": "eb3c3f917f92ab8b6aba760cb0bca8e1a2bb888c2b7718786d3fb54c0f9bda12",
+      "flags": 2147484160,
+      "crc32": 4151888468
+    },
+    "(2298872061, 3203110451, 0, 0)": {
+      "mode": "decoded",
+      "size": 262160,
+      "sha256": "ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab",
+      "flags": 2147484160,
+      "crc32": 4221593355
+    },
+    "(2589463621, 3602464758, 0, 0)": {
+      "mode": "decoded",
+      "size": 304203,
+      "sha256": "10b24ee58c19e891dd700a860fbba659b5e352841fbf5e2880fd908538da9afd",
+      "flags": 2147484160,
+      "crc32": 4163660886
+    },
+    "(239458894, 1069231113, 0, 0)": {
+      "mode": "decoded",
+      "size": 1325,
+      "sha256": "ecbf8cf8237c40e90ce510c005b91f2412666e725c64c409afb6a1a092eaee79",
+      "flags": 2147484160,
+      "crc32": 3404335989
+    },
+    "(3409745463, 1926280356, 0, 0)": {
+      "mode": "decoded",
+      "size": 1058,
+      "sha256": "d5428a8e1d6ae5305717873a2d1a9efa6bbfad9d9a1ad466f5b177276e7a64cf",
+      "flags": 2147484160,
+      "crc32": 3973252019
+    },
+    "(3436052949, 4293360940, 0, 0)": {
+      "mode": "decoded",
+      "size": 280,
+      "sha256": "49845960d0b75e3e1943373b328cba5ee06f08849706da7bd2c2ffc0a28e50d0",
+      "flags": 2147484160,
+      "crc32": 2984687941
+    },
+    "(3382118375, 2511869006, 0, 0)": {
+      "mode": "decoded",
+      "size": 314496,
+      "sha256": "7f977423e095122dcd66b3135c1d7346c81fd92c9b217581db514669502127c5",
+      "flags": 2147484160,
+      "crc32": 2889114731
+    },
+    "(4151898854, 3452709199, 0, 0)": {
+      "mode": "decoded",
+      "size": 112774,
+      "sha256": "86c8c96d888830886d57d05d2a0e6a7720c7dead4839d5b2d7edf5db5323db80",
+      "flags": 2147484160,
+      "crc32": 3683459083
+    },
+    "(4173574504, 1880668902, 0, 0)": {
+      "mode": "decoded",
+      "size": 116616,
+      "sha256": "f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f",
+      "flags": 2147484160,
+      "crc32": 2949737875
+    },
+    "(1801034187, 3534225523, 0, 0)": {
+      "mode": "opaque",
+      "size": 20662,
+      "sha256": "5836235bd47f0bef48a5f5e1f74bbacb9244177c134f0bb4d1d5a8123c65da90",
+      "flags": 2147484160,
+      "crc32": 387171409
+    }
+  },
+  "hm3w_preserved": true,
+  "commands": [
+    {
+      "argv": [
+        "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+        "wc3ctl",
+        "file",
+        "set",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/04-ncl2-schema-probe.w3x",
+        "war3map.w3u",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-legacy02/valid-details/war3map.w3u",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-legacy02/valid-details/stage-0.w3x",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.w3u, 1082 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-legacy02/valid-details/stage-0.w3x\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+        "wc3ctl",
+        "file",
+        "set",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-legacy02/valid-details/stage-0.w3x",
+        "war3map.w3a",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-legacy02/valid-details/war3map.w3a",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-legacy02/valid-details/stage-1.w3x",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.w3a, 8298 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-legacy02/valid-details/stage-1.w3x\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "metadata_sha256": {
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Units/AbilityMetaData.slk": "42249bc577463896a9b1fece959c6bd5f815eb42c4899b8c899620b547a5b3f6",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Units/UnitMetaData.slk": "4794cd724d1769cacab9a80c925d4df17a6514477d92815d5549d8e56b9a66a5"
+  }
+}

@@ -1,0 +1,12 @@
+[
+  "python3",
+  "-B",
+  "/tmp/wdev-rapid-fire-verify/aim-independent-WQl6PsLG/projects/relativistic-classic/tools/read_logs.py",
+  "/tmp/wdev-rapid-fire-verify/aim-independent-WQl6PsLG/projects/rapid-fire-prototype/reports/RF-rf-burst-aim-red-20261020-01.txt",
+  "--run-id",
+  "rf-burst-aim-red-20261020-01",
+  "--not-before",
+  "1792468346.7724726",
+  "--report",
+  "/tmp/wdev-rapid-fire-verify/aim-independent-WQl6PsLG/reproduced-red.json"
+]

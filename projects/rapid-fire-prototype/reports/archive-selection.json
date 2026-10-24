@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "archive": "War3Patch.mpq",
+      "member": "units\\orc\\Shaman\\Shaman.mdx",
+      "present": false
+    },
+    {
+      "archive": "War3xlocal.mpq",
+      "member": "units\\orc\\Shaman\\Shaman.mdx",
+      "present": false
+    },
+    {
+      "archive": "War3x.mpq",
+      "member": "units\\orc\\Shaman\\Shaman.mdx",
+      "present": false
+    },
+    {
+      "archive": "war3.mpq",
+      "member": "units\\orc\\Shaman\\Shaman.mdx",
+      "present": true
+    },
+    {
+      "archive": "War3Patch.mpq",
+      "member": "UI\\UnitEditorData.txt",
+      "present": true
+    }
+  ],
+  "selected": {
+    "units\\orc\\Shaman\\Shaman.mdx": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+    "UI\\UnitEditorData.txt": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3Patch.mpq"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "checked_files": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "references/guia-local.md"
+  ],
+  "source_unchanged": true,
+  "destination_byte_hashes_match": true,
+  "indexed_skills": 5,
+  "project_entry_unique": true,
+  "registry_sha256": "50581e7773c5883038aca85d6e812a38355c1c7fd7917d61eaf28593c6caa93d",
+  "recipes_executed": false
+}

@@ -1,0 +1,30 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "RM28|rf-burst-red-20261019-01|BEGIN|RFBurst" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CASE|B01-four-shot-native-effects" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|OBS|actor-ready|type=1865429040 xy=-2223.500,4352.000 facing=0.000 order=0 hp=335.000" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|OBS|caster-ready|type=1865429041 xy=-5500.000,-5500.000 facing=0.000 order=0 hp=335.000 A00G=1" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|OBS|target-ready|type=1865429040 xy=-1967.500,4352.000 facing=0.000 order=851973 hp=335.000" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|OBS|control-ready|type=1865429040 xy=-1967.500,4864.000 facing=0.000 order=851973 hp=335.000" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|OBS|native-calibration|events=1 damage=10.000 HPbefore=335.000 HPafter=325.007" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|PASS|native-point-order-accepted|actual target point=-1967.500,4352.000" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|OBS|native-spell-effect|ability=1093677127 source=1050728 xy=-1967.500,4352.000" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|PASS|native-cast-effect-ready|one matching source/A00G/actual target point; observation horizon3s relative to native event" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|OBS|actor-end|type=1865429040 xy=-2223.500,4352.000 facing=0.000 order=0 hp=335.000" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|OBS|target-control-HP|target=325.180->325.930 control=325.180->325.930 differential=0.000" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|FAIL|four-shot-notifications|actual=0 expected=4" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|FAIL|four-real-public-projectiles|live launched Missiles, separate native dummy, visible source and actual actor origin required at each pulse" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|FAIL|four-native-hits|actual=0 expected=4" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|FAIL|native-ten-per-hit|each GetEventDamage must be10 tolerance=.01; no calibration events counted" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|FAIL|visible-damage-source|each GetEventDamageSource must equal visible actor, not logical caster" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|FAIL|native-HP-differential40|actual=0.000 tolerance=.10; same-type paired regen control" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|PASS|control-undamaged|actual=0" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B01-four-shot-native-effects|PASS|targets-survive|target=325.930 control=325.930" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CASE|B02-default-cadence" )
+	call Preload( "RM28|rf-burst-red-20261019-01|CHECK|B02-default-cadence|FAIL|missing-cadence-observations|need4 actual shot pulses/3 adjacent intervals; actual=0" )
+	call Preload( "RM28|rf-burst-red-20261019-01|COMPLETE|2|19|7|0" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

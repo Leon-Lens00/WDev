@@ -1,0 +1,36 @@
+{
+  "checks": [
+    "55 frozen SHA/size/mtime preserved; all original artifacts except intended Core/README identical",
+    "only four-line pure callback insertion; all prior Core bytes identical",
+    "both ten-input plans match actual bytes; oracles/budgets/harness/libraries unchanged; bootstrap/logger label-only",
+    "compiled callback registered and dispatch enabled; map/injected/script hashes match recorded preflight/build; recorded build+validation exit0; no native build rerun",
+    "independent scalar probes: exact counters/failures, 0 ABORT, both cases 4 births at .25, native hit/HP contrast, 4 finite brackets, live tree HP50 unchanged"
+  ],
+  "results": {
+    "red": {
+      "counts": {
+        "OBS": 65,
+        "PASS": 19,
+        "FAIL": 3
+      },
+      "checks": 87,
+      "freshness": {
+        "mtime": 1792531163.0941248,
+        "not_before": 1792531146.6349857
+      },
+      "raw_sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4"
+    },
+    "green": {
+      "counts": {
+        "OBS": 61,
+        "PASS": 22
+      },
+      "checks": 83,
+      "freshness": {
+        "mtime": 1792532695.0865102,
+        "not_before": 1792532680.9873888
+      },
+      "raw_sha256": "fa5f1740faabbf33ce51788bd7b7ca474f50217973f315920ab31b9bed73f291"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "causality": "Only generated war3map.j, encrypted neutral (listfile) rewrite, and new encrypted neutral (attributes) differ; all 52 other identity-bound raw payloads/flags/sizes are unchanged.",
+  "protected_files_before": {
+    "/home/snz/Documentos/WarDatsPy/Inventory  Equipment System v1.4.1/InventorySys v1.4.1.w3x": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada",
+    "projects/inventorysys-lab/baseline/original.w3x": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada",
+    "projects/inventorysys-lab/reports/runs/inv-baseline-20261019-01/assembled.j": "774127dc6f0b45ed5edea51f37122c2fcafc275639baa94b23054300be7d1f3e",
+    "projects/inventorysys-lab/reports/runs/inv-baseline-20261019-01/command-1.json": "adb1bcd1a4aa483d689ab161747915ccef89f410ada16c298934b50b881bf5bb",
+    "projects/inventorysys-lab/reports/runs/inv-baseline-20261019-01/command-2.json": "e8a8ea47d36bdc3bd885106deb37bd0b471ea5cf30c318092dd8fcb217f50c89",
+    "projects/inventorysys-lab/reports/runs/inv-baseline-20261019-01/commands.json": "9e9e4d0926b9df28b21214495e0ea022c0fb610e6598554d359b6bbfb1cf93c2",
+    "projects/inventorysys-lab/reports/runs/inv-baseline-20261019-01/injected.w3x": "1a5d0eab5fdfe6b84333435421b4089293edf4ef33e93eb2e930b71000ca658a",
+    "projects/inventorysys-lab/reports/runs/inv-baseline-20261019-01/input.w3x": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada"
+  },
+  "identity_counts": [
+    54,
+    55
+  ],
+  "hash_table_entries": [
+    64,
+    128
+  ],
+  "changed": [
+    {
+      "identity": [
+        3382118375,
+        2511869006,
+        0,
+        0
+      ],
+      "name": "war3map.j",
+      "before": {
+        "block_index": 5,
+        "offset": 104056,
+        "size": 457945,
+        "archived_size": 96909,
+        "flags": 2147484160,
+        "raw_sha256": "931c4fb33b444be04d33cc744ece1a793de575c8b7746ddbcd77cb0cdf68ee2f"
+      },
+      "after": {
+        "block_index": 0,
+        "offset": 32,
+        "size": 477308,
+        "archived_size": 102400,
+        "flags": 2147484160,
+        "raw_sha256": "c3447359a20025a969cbce6c86f0b71d763f095a7e8e864d56fc49829caaf907"
+      }
+    },
+    {
+      "identity": [
+        3548657611,
+        132115180,
+        0,
+        0
+      ],
+      "name": "(attributes)",
+      "before": null,
+      "after": {
+        "block_index": 54,
+        "offset": 624681,
+        "size": 668,
+        "archived_size": 461,
+        "flags": 2147680768,
+        "raw_sha256": "2fbe6777c894b147e6d67bd73ca26b1766f6c08ece93d5edbb43560b9b675f5e"
+      }
+    },
+    {
+      "identity": [
+        4251285776,
+        1318820007,
+        0,
+        0
+      ],
+      "name": "(listfile)",
+      "before": {
+        "block_index": 53,
+        "offset": 618862,
+        "size": 920,
+        "archived_size": 330,
+        "flags": 2147680768,
+        "raw_sha256": "a1789d991283ffb9002dee7733425b4e1db93bf28b524c62f8c49e13102da949"
+      },
+      "after": {
+        "block_index": 53,
+        "offset": 624353,
+        "size": 867,
+        "archived_size": 328,
+        "flags": 2147680768,
+        "raw_sha256": "ed7ed572e81036ac4605f9c4a80147a834374181bbb2d713c6f05cd3fd697b79"
+      }
+    }
+  ],
+  "removed_identities": [],
+  "preserved_nonhousekeeping_count": 52,
+  "preserved_identity_manifest_sha256": "3c30b83d3c2c2fa62f6cf38e61ba63678b6af0e4b807263b88b39e2ccca673de",
+  "preserved_nonhousekeeping_encrypted_count": 0,
+  "preserved_named_members": {
+    "war3map.doo": "546daa302190624e0deff4325754eb7f539f20907d1d1c14249fd51136ae314f",
+    "war3map.imp": "75c30274944970cb2b5328bcf03734359d5c1ee019a6abe44bee8ffe2e62dcbb",
+    "war3map.mmp": "479e8a1a45af84bf375fc2296497c1f083356f22ecf22d98cf35459e0bcd5fda",
+    "war3map.shd": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+    "war3map.w3a": "6f38e44943576394787d757ff6913fa180c4283c859d5b08310257d322e36830",
+    "war3map.w3b": "dbfd17dba7471d7de7d65369e46d90589bfabad1b70f7ce0e8d1fc1a7b23d82c",
+    "war3map.w3d": "b6b38788c54fafaadacaf7c42978673ea29bfddd78693a6deaa432351e88e80b",
+    "war3map.w3e": "4b6895871c97369bf37b0048ddda09fdaff7049219921513c0425fa5a95c5f5c",
+    "war3map.w3h": "a4e2e9bf707cbec7c98ee5e1c60aa725037a8fab8094654a0bf024c83b1d783c",
+    "war3map.w3i": "8901327a0c45d50891118e31ef9cc4efc45be24bd2db4dbc65c55232538b9a53",
+    "war3map.w3t": "b31f45ae2e74fd21e57fe6767e5e6c254385e3dc51093abff3cfd05fd7d817b0",
+    "war3map.w3u": "e6a00a8c0fed000a11b5dac13d677bc2520c90e8f74cd2ab5b9bc9d4c93a42f7",
+    "war3map.wct": "734414283c3ce72478589f1a7eaa335837bfae5b82b802a3f6a2de487c274080",
+    "war3map.wpm": "7d5d599e7af4798e0162b2975112b3d8a361fdfbbde6804e0d052737144de15b",
+    "war3map.wtg": "37a258f6154eaed9eb78101bcc7faa0d42fc75d63438c72ac653ee9adb40fbbf",
+    "war3map.wts": "a08c5ba1596407259edaff56a1fa62423142fd2b5132e00c01c07fcaf94d9e3c",
+    "war3mapUnits.doo": "7ecabc526401c1f5ac84ba2a5568400569a6f4c7fb08fed1f3eb9f2122acc977"
+  },
+  "injected_script_sha256": "774127dc6f0b45ed5edea51f37122c2fcafc275639baa94b23054300be7d1f3e",
+  "housekeeping_decoding": "mpyq.read_file for (listfile)/(attributes) raises NotImplementedError: Encryption is not supported yet. No decrypted equivalence is claimed.",
+  "classification": "Permitted script replacement plus specifically identified housekeeping changes; no nonhousekeeping rekeying, recompression or raw mutation observed.",
+  "scope": "Read-only inspection of existing failed injected bytes, not a rebuild, game test or full asset semantics certification.",
+  "corrected_guard_read_only": {
+    "preserved_identities": 52,
+    "housekeeping_changes": [
+      {
+        "name": "(attributes)",
+        "identity": [
+          3548657611,
+          132115180,
+          0,
+          0
+        ],
+        "before": null,
+        "after": {
+          "sha256": "2fbe6777c894b147e6d67bd73ca26b1766f6c08ece93d5edbb43560b9b675f5e",
+          "archived_size": 461,
+          "size": 668,
+          "flags": 2147680768,
+          "key_offset": 624681
+        }
+      },
+      {
+        "name": "(listfile)",
+        "identity": [
+          4251285776,
+          1318820007,
+          0,
+          0
+        ],
+        "before": {
+          "sha256": "a1789d991283ffb9002dee7733425b4e1db93bf28b524c62f8c49e13102da949",
+          "archived_size": 330,
+          "size": 920,
+          "flags": 2147680768,
+          "key_offset": 618862
+        },
+        "after": {
+          "sha256": "ed7ed572e81036ac4605f9c4a80147a834374181bbb2d713c6f05cd3fd697b79",
+          "archived_size": 328,
+          "size": 867,
+          "flags": 2147680768,
+          "key_offset": 624353
+        }
+      }
+    ],
+    "unreferenced_payloads": 0,
+    "policy": "Identity-bound raw preservation; only neutral listfile rewrite and attributes addition allowed."
+  },
+  "differential_check": {
+    "assemble": "exit code, exact stdout/stderr and output bytes unchanged",
+    "recover": "exit code, exact stdout/stderr and output bytes unchanged"
+  },
+  "scratch": {
+    "path": "/tmp/wdev-inventorysys-lab/archive-diff-vpogrc2s",
+    "cleaned": true
+  },
+  "protected_files_after_match": true,
+  "tests": {
+    "red": "32 tests: one intended fixture replay failure, opaque raw MPQ payload changed; exit 1",
+    "focused_green": "17 tests passed; exit 0",
+    "full_green": "33 tests passed; exit 0",
+    "negative_control": "Actual unnamed non-housekeeping raw asset byte mutation rejected through public build; inputs and failed artifacts unchanged."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "unknown_direct_calls": [],
+  "generated_builder_entry": "RCStartHarness",
+  "sources": [
+    "projects/rapid-fire-prototype/src/ProbeLog.j",
+    "projects/rapid-fire-prototype/src/PathingCandidate.j",
+    "projects/rapid-fire-prototype/src/NativeProbe.j",
+    "projects/rapid-fire-prototype/src/MapMain.j",
+    "projects/rapid-fire-prototype/src/NativeReference.j",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j"
+  ],
+  "scope": "Declaration/direct-call scan only; no syntax/compiler/native acceptance"
+}

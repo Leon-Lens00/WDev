@@ -1,0 +1,390 @@
+{
+  "artifacts": [
+    {
+      "source": "projects/rapid-fire-prototype/README.md",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/README.md",
+      "sha256": "1ec06595d967e5fbb230ba6ee91ea8ca263d827b99398ccbe2c85daf7af71521",
+      "size": 40218,
+      "mtime_ns": 1792477082397911222
+    },
+    {
+      "source": "projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+      "sha256": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+      "size": 332578,
+      "mtime_ns": 1792460695052756981
+    },
+    {
+      "source": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/build.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/build.json",
+      "sha256": "45816897d88a34d39cf7f8bb74b925c9878cf028f1ef40ea2982d3678a04f577",
+      "size": 4000,
+      "mtime_ns": 1792531104785077669
+    },
+    {
+      "source": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/command-1.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/command-1.json",
+      "sha256": "a64503499c8dc740ea513099049671d2cf8c8a55bec97a26e9f77d564e45b03d",
+      "size": 670,
+      "mtime_ns": 1792531104198329579
+    },
+    {
+      "source": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/command-2.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/command-2.json",
+      "sha256": "c2dab35f1ed1647ebb50171eebbc6e2354824ea7f2a47fe11a64e0dcc35b4688",
+      "size": 777,
+      "mtime_ns": 1792531104775416820
+    },
+    {
+      "source": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/commands.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/commands.json",
+      "sha256": "74b707d66c108eca1824158ac924f0dfca1d717c2631f9a5bb9a9bee394ca86c",
+      "size": 1508,
+      "mtime_ns": 1792531104775535186
+    },
+    {
+      "source": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/compiled.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/compiled.j",
+      "sha256": "773b61545378ec37041c31bfef40dfb5a101474776bbdc073272d254028882b4",
+      "size": 204003,
+      "mtime_ns": 1792531104183417269
+    },
+    {
+      "source": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/entry.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/entry.j",
+      "sha256": "2955ead5af2b42101feec35088fab069e82e017df0cbde45fc8cd843a3503878",
+      "size": 944,
+      "mtime_ns": 1792531101131011439
+    },
+    {
+      "source": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/injected.w3x",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/injected.w3x",
+      "sha256": "33bd1f918f7d62b9eeb7ebb9e1fe3fd6049cc0fb7011c35e00e53867fdeb190e",
+      "size": 293954,
+      "mtime_ns": 1792531104683902751
+    },
+    {
+      "source": "projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/rf-burst-tree-red-20261020-05.w3x",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-05/rf-burst-tree-red-20261020-05.w3x",
+      "sha256": "33bd1f918f7d62b9eeb7ebb9e1fe3fd6049cc0fb7011c35e00e53867fdeb190e",
+      "size": 293954,
+      "mtime_ns": 1792531104785145343
+    },
+    {
+      "source": "projects/rapid-fire-prototype/build-plan-tree-red05.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/build-plan-tree-red05.json",
+      "sha256": "4f44bdbb8899a5acdf3161d4df676111e67f178e3702e7789b9f35ed4e844e3e",
+      "size": 11046,
+      "mtime_ns": 1792531028900820873
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt",
+      "sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4",
+      "size": 16860,
+      "mtime_ns": 1792531163094124795
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-build.exit.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-build.exit.json",
+      "sha256": "a9bdc4ae108afb949e7bc95f1ba7b8d604ec4be047db70a4d3f8b1cb27672471",
+      "size": 56,
+      "mtime_ns": 1792531104806560182
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-build.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-build.json",
+      "sha256": "bece17cc88ec2f9faac3836640e97bc6fbeb408a1dbf2840f2e8d4a25f496d9f",
+      "size": 3231,
+      "mtime_ns": 1792531100941540731
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-build.stderr.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-build.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "mtime_ns": 1792531100941540731
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-build.stdout.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-build.stdout.txt",
+      "sha256": "a40bab30551d58a5d8ecc0419e6f6062de48c4eaf8c33068d4ea9f3ea9883b6f",
+      "size": 3820,
+      "mtime_ns": 1792531104785145343
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-native-launch.exit.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-native-launch.exit.json",
+      "sha256": "cfd7d4286fec025d401a0b3cd1f127f27e1ed75dcf11cce9b40e4c811fe789db",
+      "size": 49,
+      "mtime_ns": 1792531218145907556
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-native-launch.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-native-launch.json",
+      "sha256": "c9824dfa57bd625e44399ff31a2b94c688254c49d19c2947b53fef41573dbb2d",
+      "size": 545,
+      "mtime_ns": 1792531146635112258
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-native-launch.stderr.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-native-launch.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "mtime_ns": 1792531146635112258
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-native-launch.stdout.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-native-launch.stdout.txt",
+      "sha256": "db454aa802ff4abb5f3c1e389e2e48a35447a9a52da84d8d2aab2f3bc83a5e1f",
+      "size": 257,
+      "mtime_ns": 1792531147243582041
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-native-reader.exit.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-native-reader.exit.json",
+      "sha256": "3f39658f12226312474ea533dd2845e270946caba5d6b6710a131854328c66d0",
+      "size": 621,
+      "mtime_ns": 1792531163152176714
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-native-reader.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-native-reader.json",
+      "sha256": "9eeadcf6c558ae13cd111d0f5d3e36dc14bd0c0333248f732c327d5f34505f7a",
+      "size": 15845,
+      "mtime_ns": 1792531163144968234
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-native-reader.stderr.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-native-reader.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "mtime_ns": 1792531163151988853
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-native-reader.stdout.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-native-reader.stdout.json",
+      "sha256": "9eeadcf6c558ae13cd111d0f5d3e36dc14bd0c0333248f732c327d5f34505f7a",
+      "size": 15845,
+      "mtime_ns": 1792531163151988853
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-observer-ready.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-observer-ready.json",
+      "sha256": "545c285eb2064d6e7b6d2db4dc251d76072b8caff1b098718719918ed098864d",
+      "size": 79,
+      "mtime_ns": 1792531136887016860
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-observer.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-observer.json",
+      "sha256": "7e9869c25508571db4877c769cd2b001a9a61cfd631634edabd503661ce46bab",
+      "size": 158,
+      "mtime_ns": 1792531163152228556
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-parent-spot.exit.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-parent-spot.exit.json",
+      "sha256": "3d28b5cc5b51a766722d72f90e95fbc083e5a49be15eb8b98f0def7d9ce90515",
+      "size": 495,
+      "mtime_ns": 1792531496052459042
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-parent-spot.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-parent-spot.json",
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "size": 15846,
+      "mtime_ns": 1792531496045470799
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-parent-spot.stderr.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-parent-spot.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "mtime_ns": 1792531496052321804
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-parent-spot.stdout.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-parent-spot.stdout.json",
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "size": 15846,
+      "mtime_ns": 1792531496052321804
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-preparation.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-preparation.json",
+      "sha256": "4ce6eca8b8e4fd0a72f61fb9ae12ffc36564aa28658faa529c7153dd263329dc",
+      "size": 7407,
+      "mtime_ns": 1792531073317200927
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-preparation.md",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-preparation.md",
+      "sha256": "3d0ceb30db1410e9f53674a6a67ab7f6021b470fb1a2d511e87414b497342b5d",
+      "size": 3478,
+      "mtime_ns": 1792531048069697948
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-profile-preflight.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-profile-preflight.json",
+      "sha256": "b2994834e365a70e34d846e80181b47261ee8a619dbd818426ca626d3d388825",
+      "size": 506,
+      "mtime_ns": 1792531122159107637
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/tree-red05-results.md",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/tree-red05-results.md",
+      "sha256": "50373c1bede0785b0d6af62e631324813f5cb3a0c73332dff3d8bd6293e322c0",
+      "size": 3857,
+      "mtime_ns": 1792531606577255685
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/RF-rf-burst-tree-red-20261020-05.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/RF-rf-burst-tree-red-20261020-05.txt",
+      "sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4",
+      "size": 16860,
+      "mtime_ns": 1792531163094124795
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/findings.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/findings.json",
+      "sha256": "22227e3fefd5976940e3ed37911a026a460e4dc971d08bdd0af7113b88354ce3",
+      "size": 1014,
+      "mtime_ns": 1792531468752325562
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/git-status-after.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/git-status-after.txt",
+      "sha256": "8241aee66ba4122ad15b80a07b83d31d9b42cffc9c5ae89ca84451f54f04b207",
+      "size": 29,
+      "mtime_ns": 1792531468754227340
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/pins-preservation.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/pins-preservation.json",
+      "sha256": "134e7b06872fa3efd125085517dbcf3c342687f21573a30968df2481746322ce",
+      "size": 10615,
+      "mtime_ns": 1792531468755348425
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/preservation-manifest.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/preservation-manifest.json",
+      "sha256": "23adf29b7527f66502a4461e7ef46a0a8ae863e8c4d026511275701ceab7e7aa",
+      "size": 17344,
+      "mtime_ns": 1792531588487994494
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/read_logs.py",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/read_logs.py",
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "size": 5092,
+      "mtime_ns": 1792370695996710430
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/reader-execution.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/reader-execution.json",
+      "sha256": "931245dc766979e0c09b5990321ba8f4563c76f3c7edac18fe97238310d246ee",
+      "size": 1787,
+      "mtime_ns": 1792531439136930587
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/reader.stderr",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/reader.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "mtime_ns": 1792531439136590372
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/reader.stdout",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/reader.stdout",
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "size": 15846,
+      "mtime_ns": 1792531439136590372
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/scratchreader.json",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/scratchreader.json",
+      "sha256": "2068b8ab7a66f7a6a10bbcdcf580e739c1a66dac9435ac1b15f7ca89f9361028",
+      "size": 15846,
+      "mtime_ns": 1792531439128705945
+    },
+    {
+      "source": "projects/rapid-fire-prototype/reports/verification/tree-red05/source-evidence.txt",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/reports/verification/tree-red05/source-evidence.txt",
+      "sha256": "a72d75fcb0bc3063cc7e81793afda44aecbbefcea61eee953adee0131992fad3",
+      "size": 9014,
+      "mtime_ns": 1792531468752237836
+    },
+    {
+      "source": "projects/rapid-fire-prototype/src/prototype/PairCore.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+      "sha256": "770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3",
+      "size": 9875,
+      "mtime_ns": 1792469338214999424
+    },
+    {
+      "source": "projects/rapid-fire-prototype/src/prototype/TreeLogRed05.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/src/prototype/TreeLogRed05.j",
+      "sha256": "5680d51f7cca49804b53a013a2f84f5f7a24d5314f75f95550f1920127957b13",
+      "size": 2269,
+      "mtime_ns": 1792531028898546351
+    },
+    {
+      "source": "projects/rapid-fire-prototype/src/prototype/TreeMapMainRed05.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed05.j",
+      "sha256": "76b19c9a30d391d21f6f8304bc46e65ed92e164e02bf01def564864ee9473fa4",
+      "size": 1882,
+      "mtime_ns": 1792531028898728428
+    },
+    {
+      "source": "projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "sha256": "86770d6b75ef7b4ead795f7fad876027372a49c498d1b01608ae95f80987f968",
+      "size": 43533,
+      "mtime_ns": 1792531017697585694
+    },
+    {
+      "source": "projects/relativistic-classic/src/Missiles.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/relativistic-classic/src/Missiles.j",
+      "sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+      "size": 40740,
+      "mtime_ns": 1792383155424927357
+    },
+    {
+      "source": "projects/relativistic-classic/src/libraries/DummyRecycler.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+      "sha256": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+      "size": 20321,
+      "mtime_ns": 1792369976943388123
+    },
+    {
+      "source": "projects/relativistic-classic/src/libraries/TimerUtils.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/relativistic-classic/src/libraries/TimerUtils.j",
+      "sha256": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+      "size": 11147,
+      "mtime_ns": 1792369976943325806
+    },
+    {
+      "source": "projects/relativistic-classic/src/libraries/WorldBounds.j",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/relativistic-classic/src/libraries/WorldBounds.j",
+      "sha256": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+      "size": 1866,
+      "mtime_ns": 1792369976943354294
+    },
+    {
+      "source": "projects/relativistic-classic/tools/build.py",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/relativistic-classic/tools/build.py",
+      "sha256": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+      "size": 15845,
+      "mtime_ns": 1792369969856927855
+    },
+    {
+      "source": "projects/relativistic-classic/tools/read_logs.py",
+      "frozen": "projects/rapid-fire-prototype/reports/frozen-tree-red05/workspace/projects/relativistic-classic/tools/read_logs.py",
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "size": 5092,
+      "mtime_ns": 1792370695996710430
+    }
+  ],
+  "scope": "Tree05 qualified RED before S26 callback; no overwritten proof"
+}

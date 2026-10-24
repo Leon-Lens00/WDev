@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "play",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/build/rfp-integrated-20261020-01/rfp-integrated-20261020-01.w3x"
+  ],
+  "launch_requested_unix": 1792536091.545509,
+  "map_sha256": "29c3254ab5683e1cf8158088a163343190f3f9318df64253492c92bea1cc3789",
+  "run_id": "rfp-integrated-20261020-01",
+  "phase": "S28_INTEGRATED_ITERATIVE_VERIFICATION",
+  "profile_contract": "launcher occupancy guard retained; never infer application closure from launcher exit"
+}

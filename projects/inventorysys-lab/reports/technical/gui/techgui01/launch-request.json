@@ -1,0 +1,12 @@
+{
+  "run_id": "inv-manual-20261019-01",
+  "session": "techgui01",
+  "not_before": 1792452421.346148,
+  "map": "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/maps/InventorySys-Manual-20261019-01.w3x",
+  "map_sha256": "26d7faf7953feb98a991222c77bf92c1fed58ffef534e2a874ba8ddd3a8f28fe",
+  "expected_log_directory": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs",
+  "expected_filename_pattern": "IL141M-inv-manual-20261019-01--techgui01--*.pld",
+  "owned_process_closure_required": true,
+  "profile_game_processes_before": [],
+  "authorization": "S1/S2 clean GUI companion on unchanged validated manual map after all disposable probes closed; new techgui01 label only; preserve prueba01"
+}

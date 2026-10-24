@@ -1,0 +1,428 @@
+{
+  "status": "cycle2_completed_with_missing_proof",
+  "strongest_status": "Tested in map",
+  "scope": "Bounded diagnostic evidence, not acceptance or delivery approval",
+  "spec_coverage": [
+    "S3",
+    "S4",
+    "S6",
+    "S7"
+  ],
+  "spec_missing": [
+    "S8 acceptance",
+    "S4 exhaustive correctness"
+  ],
+  "candidate_unchanged": {
+    "path": "projects/relativistic-classic/build/fixed-20261019-02/fixed-20261019-02.w3x",
+    "sha256": "b8b1b9a1e4a072f014a75122a1c96851175c07c7198532f1d900227ee1165859"
+  },
+  "core_unchanged": {
+    "path": "projects/relativistic-classic/src/Missiles.j",
+    "sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6"
+  },
+  "historical_full_run": {
+    "run_id": "fixed-20261019-02",
+    "cases": 47,
+    "check_records": 785,
+    "record_status_counts": {
+      "PASS": 657,
+      "OBS": 124,
+      "FAIL": 3,
+      "SKIP": 1
+    },
+    "reader_exit": 1
+  },
+  "runs": [
+    {
+      "run_id": "diag2-m45-alone-20261019-01",
+      "strongest_status": "Tested in map",
+      "build_job": 20,
+      "build_report": "projects/relativistic-classic/build/diag2-m45-alone-20261019-01/build.json",
+      "build_report_sha256": "dcfd34e7040c9c6a0d7c59c72590fb7edf2a5c1d9f798f6fc6c013c4eac3a6a9",
+      "manifest": "projects/relativistic-classic/build/inputs-diag2-m45-alone-20261019-01/manifest.json",
+      "manifest_sha256": "a5f97cbbe4983daecefb1d3972f57696d15cdb5ba3430089d24f736b64b92c2d",
+      "input_sha256": {
+        "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+        "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+        "lab/Config.j": "89122a2966955409e4dd311ce8ea367ccf44818abb949d74a8c94dd0af08e102",
+        "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+        "lab/Environment.j": "021a504533130ffb3e3922f1ca2bca8f37e4209bc51e64906bceca5646e7e41f",
+        "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+        "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+        "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+        "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+        "lab/Support.j": "d733ef12e5e130548a2715209edadb417e465a11582c02b5ec6df5bebdc91708",
+        "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+        "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+        "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+      },
+      "source_sha256": {},
+      "changed_vs_src": [
+        "lab/Config.j"
+      ],
+      "map": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-alone-20261019-01/diag2-m45-alone-20261019-01.w3x",
+      "map_sha256": "155a3429a130e7d1515099678ad68ded92dfba74be2de6a69f550fcb882bfce6",
+      "generated_jass_sha256": "b5e06025fdf7881abeac1b14d0a722d9e807a52e3302dadf52541a5fc9b27e8d",
+      "core_sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+      "build_command_evidence": [
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "vjass",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-alone-20261019-01/entry.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-alone-20261019-01/compiled.j"
+          ],
+          "returncode": 0,
+          "stdout": "{\"compiled\": true, \"validated\": true, \"output\": \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-alone-20261019-01/compiled.j\", \"report\": \"/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261018-233755-390520\"}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "wc3ctl",
+            "file",
+            "set",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/baseline/original.w3x",
+            "war3map.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-alone-20261019-01/compiled.j",
+            "--out",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-alone-20261019-01/injected.w3x",
+            "--json"
+          ],
+          "returncode": 0,
+          "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 250614 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-alone-20261019-01/injected.w3x\"\n}\n",
+          "stderr": ""
+        }
+      ],
+      "jasshelper_exit": 0,
+      "pjass_exit": 0,
+      "archive_verification_exit": 0,
+      "build_evidence_scope": "Existing actual build reports and parent-observed jobs; not rerun here. Historical tool notices do not imply gameplay acceptance.",
+      "game_exit": 0,
+      "game_exit_provenance": "parent conversation map22/map25 exit0",
+      "observer_exit": null,
+      "log": "projects/relativistic-classic/reports/RM28-diag2-m45-alone-20261019-01.txt",
+      "log_sha256": "b49164819c79dd0e91b01392cddb4566dabf8dc0535356dc74923431ce9124e7",
+      "parsed_report": "projects/relativistic-classic/reports/lab-diag2-m45-alone-20261019-01.json",
+      "complete": true,
+      "cases": 1,
+      "check_records": 70,
+      "record_status_counts": {
+        "PASS": 70
+      },
+      "reader_exit": 0,
+      "failures": [],
+      "freshness": {
+        "mtime": 1792384939.6054938,
+        "not_before": 1792384924.2191553
+      }
+    },
+    {
+      "run_id": "diag2-e29-20261019-01",
+      "strongest_status": "Tested in map",
+      "build_job": 23,
+      "build_report": "projects/relativistic-classic/build/diag2-e29-20261019-01/build.json",
+      "build_report_sha256": "59a4ca42319e2f613b6a1a30f862e46d2a5964498643698689912dd8be1c57cd",
+      "manifest": "projects/relativistic-classic/build/inputs-diag2-e29-20261019-01/manifest.json",
+      "manifest_sha256": "b40d5fc59e2e7c092cca6b49c002d561108a7ad07fde91b407932fe5fb80659f",
+      "input_sha256": {
+        "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+        "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+        "lab/Config.j": "e5871652c91d3aebfe529b9ef02cf20a639de3f7a7637bb9e0b09d3e08352334",
+        "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+        "lab/Environment.j": "40780e504d3f3306fc8d255ddf3597fc8c556c47b2ec6ea792c43486599a011c",
+        "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+        "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+        "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+        "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+        "lab/Support.j": "d733ef12e5e130548a2715209edadb417e465a11582c02b5ec6df5bebdc91708",
+        "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+        "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+        "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+      },
+      "source_sha256": {
+        "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+        "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+        "lab/Config.j": "7db72ddb89f85338a4ed2af34d944190d3112318d1db01a59ed5646b1985f29c",
+        "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+        "lab/Environment.j": "021a504533130ffb3e3922f1ca2bca8f37e4209bc51e64906bceca5646e7e41f",
+        "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+        "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+        "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+        "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+        "lab/Support.j": "d733ef12e5e130548a2715209edadb417e465a11582c02b5ec6df5bebdc91708",
+        "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+        "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+        "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+      },
+      "changed_vs_src": [
+        "lab/Config.j",
+        "lab/Environment.j"
+      ],
+      "map": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-e29-20261019-01/diag2-e29-20261019-01.w3x",
+      "map_sha256": "2e16e224bb405695a292b3ba6fbcbf9505bf31ef6685072b1f9ae8d5a47430a5",
+      "generated_jass_sha256": "62cf1a60fb0596ae4dfbd9eac8c094f27342ad2217ff8bd37c3b11e02e1ff8e4",
+      "core_sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+      "build_command_evidence": [
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "vjass",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-e29-20261019-01/entry.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-e29-20261019-01/compiled.j"
+          ],
+          "returncode": 0,
+          "stdout": "{\"compiled\": true, \"validated\": true, \"output\": \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-e29-20261019-01/compiled.j\", \"report\": \"/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261018-234221-119836\"}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "wc3ctl",
+            "file",
+            "set",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/baseline/original.w3x",
+            "war3map.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-e29-20261019-01/compiled.j",
+            "--out",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-e29-20261019-01/injected.w3x",
+            "--json"
+          ],
+          "returncode": 0,
+          "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 256016 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-e29-20261019-01/injected.w3x\"\n}\n",
+          "stderr": ""
+        }
+      ],
+      "jasshelper_exit": 0,
+      "pjass_exit": 0,
+      "archive_verification_exit": 0,
+      "build_evidence_scope": "Existing actual build reports and parent-observed jobs; not rerun here. Historical tool notices do not imply gameplay acceptance.",
+      "game_exit": 0,
+      "game_exit_provenance": "parent conversation map22/map25 exit0",
+      "observer_exit": null,
+      "log": "projects/relativistic-classic/reports/RM28-diag2-e29-20261019-01.txt",
+      "log_sha256": "d18c3dd29d60008910339d20eedc5b4750e92e91393905ae1d1914142215b052",
+      "parsed_report": "projects/relativistic-classic/reports/lab-diag2-e29-20261019-01.json",
+      "complete": true,
+      "cases": 1,
+      "check_records": 47,
+      "record_status_counts": {
+        "OBS": 19,
+        "PASS": 25,
+        "FAIL": 2,
+        "SKIP": 1
+      },
+      "reader_exit": 1,
+      "failures": [
+        {
+          "case": "E29",
+          "detail": "no cross-player lingering reveal",
+          "name": "vision-owner-transfer",
+          "status": "FAIL"
+        },
+        {
+          "case": "E29",
+          "detail": "effective source owner changed",
+          "name": "vision-source-transfer",
+          "status": "FAIL"
+        }
+      ],
+      "freshness": {
+        "mtime": 1792385186.6365123,
+        "not_before": 1792385168.3970127
+      }
+    },
+    {
+      "run_id": "diag2-m45-stress-20261019-01",
+      "strongest_status": "Tested in map",
+      "build_job": 26,
+      "build_report": "projects/relativistic-classic/build/diag2-m45-stress-20261019-01/build.json",
+      "build_report_sha256": "2de6bbd6655844629032b75eecca3db36487ba05d1d757cd6e0796637acd972c",
+      "manifest": "projects/relativistic-classic/build/inputs-diag2-m45-stress-20261019-01/manifest.json",
+      "manifest_sha256": "6d9130700dfe3b5092343f07d715970544ff22604eaddff2865a7950838cc8cf",
+      "input_sha256": {
+        "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+        "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+        "lab/Config.j": "41a7e49cbe850816ea8c91f9ca2e07fe221d1acac4fc41046cbba9cc1b113fed",
+        "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+        "lab/Environment.j": "021a504533130ffb3e3922f1ca2bca8f37e4209bc51e64906bceca5646e7e41f",
+        "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+        "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+        "lab/Motion.j": "4ed3811ef45b000f69ecec9339e2e31bcef3b568eb97b9ed940f85b56abf6a51",
+        "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+        "lab/Support.j": "9640e12e5e44139c6879cabfb9e67ad4f1d5e792b40e497ef25c96456f17b19e",
+        "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+        "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+        "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+      },
+      "source_sha256": {
+        "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+        "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+        "lab/Config.j": "7db72ddb89f85338a4ed2af34d944190d3112318d1db01a59ed5646b1985f29c",
+        "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+        "lab/Environment.j": "021a504533130ffb3e3922f1ca2bca8f37e4209bc51e64906bceca5646e7e41f",
+        "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+        "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+        "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+        "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+        "lab/Support.j": "d733ef12e5e130548a2715209edadb417e465a11582c02b5ec6df5bebdc91708",
+        "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+        "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+        "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+      },
+      "changed_vs_src": [
+        "lab/Config.j",
+        "lab/Motion.j",
+        "lab/Support.j"
+      ],
+      "map": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-stress-20261019-01/diag2-m45-stress-20261019-01.w3x",
+      "map_sha256": "dc261c19636422e7ba54c876dd7488d351436c1b7b07c7eb8ccf1d98a364c369",
+      "generated_jass_sha256": "21022d003b0ec7e3e56ca93eda13f409e076f3743ee5995dc9baf176cc192d1f",
+      "core_sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+      "build_command_evidence": [
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "vjass",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-stress-20261019-01/entry.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-stress-20261019-01/compiled.j"
+          ],
+          "returncode": 0,
+          "stdout": "{\"compiled\": true, \"validated\": true, \"output\": \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-stress-20261019-01/compiled.j\", \"report\": \"/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261018-234614-670308\"}\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "wc3ctl",
+            "file",
+            "set",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/baseline/original.w3x",
+            "war3map.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-stress-20261019-01/compiled.j",
+            "--out",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-stress-20261019-01/injected.w3x",
+            "--json"
+          ],
+          "returncode": 0,
+          "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 252327 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag2-m45-stress-20261019-01/injected.w3x\"\n}\n",
+          "stderr": ""
+        }
+      ],
+      "jasshelper_exit": 0,
+      "pjass_exit": 0,
+      "archive_verification_exit": 0,
+      "build_evidence_scope": "Existing actual build reports and parent-observed jobs; not rerun here. Historical tool notices do not imply gameplay acceptance.",
+      "game_exit": null,
+      "game_exit_provenance": "unavailable after runtime interruption",
+      "observer_exit": null,
+      "log": "projects/relativistic-classic/reports/cycle2/RM28-diag2-m45-stress-20261019-01.partial.txt",
+      "log_sha256": "988af5dc815b791f283abeef804b52c136be1671e83d421afeaff184e77651f8",
+      "capture_bytes": 78791,
+      "complete": false,
+      "cases": null,
+      "check_records": null,
+      "record_status_counts": null,
+      "reader_exit": 2,
+      "reader_command": [
+        "python3",
+        "-B",
+        "projects/relativistic-classic/tools/read_logs.py",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RM28-diag2-m45-stress-20261019-01.txt",
+        "--run-id",
+        "diag2-m45-stress-20261019-01",
+        "--not-before",
+        "1792385281.2195556"
+      ],
+      "reader_stdout": {
+        "error": "missing COMPLETE",
+        "run_id": "diag2-m45-stress-20261019-01",
+        "status": "invalid"
+      },
+      "reader_stderr": "error: missing COMPLETE\n",
+      "not_before": 1792385281.2195556,
+      "partial_snapshot": {
+        "last_record": "RM28|diag2-m45-stress-20261019-01|CHECK|M45|PASS|diagonal-next-y-equation|expected=210.000 actual=210.000 tolerance=0.010",
+        "check_records_observed": 717,
+        "record_status_counts": {
+          "OBS": 700,
+          "PASS": 17
+        }
+      },
+      "phase_value_observed": null,
+      "expected_complete_counts_not_observed": {
+        "padding_obs": 700,
+        "isolated_original_checks": 70,
+        "progress_obs": 1,
+        "expected_checks_if_complete": 771,
+        "expected_lines_if_complete": 774,
+        "array_limit": 8192
+      }
+    }
+  ],
+  "controls": {
+    "m45_alone": "Only Config differs from maintained src; original 70 checks pass, including coordinate-fixture-live. Context sensitivity, not logger causation.",
+    "e29_original_stage8": {
+      "vision-neutral-transfer-clears": "PASS",
+      "vision-source-removal-clears": "PASS"
+    },
+    "e29_original_stage7": {
+      "vision-owner-transfer": "FAIL",
+      "vision-source-transfer": "FAIL"
+    },
+    "raw_control": {
+      "initially_hidden": true,
+      "in_bounds": true,
+      "reveals": "PASS",
+      "rawP2_samples": false,
+      "primaryOldP2_samples": false,
+      "fallbackOldP1_samples": false,
+      "sample_interval_seconds_after_stage7": [
+        0.25,
+        2.25
+      ],
+      "missiles_alive_through_seconds_after_stage7": 1.25
+    },
+    "stress": "700 buffered harness OBS rows, no prior missile scenarios, same core; snapshot stops before launch. No observed fresh-thread phase value."
+  },
+  "findings": [
+    {
+      "classification": "WARNING",
+      "finding": "S8 acceptance remains unmet; no fog-latency cause established."
+    },
+    {
+      "classification": "PERF",
+      "finding": "Cumulative logger cost is a hypothesis requiring correction/control authorization, not a measured VM-operation ceiling or physics defect."
+    }
+  ],
+  "source_and_lowering": "Unchanged core; prior compiled lowering inspection found no initializer ordering defect.",
+  "runner_order": "Delayed calls Next -> StartCase before TimerStart; interrupted cold startup prevents the fresh-thread phase probe from running.",
+  "evidence_boundaries": {
+    "scan": "Preparation manifests are Scanned only, not game proof.",
+    "python_tests": "39 already passed during E29 preparation; not rerun here and not physics proof.",
+    "compiler": "Three actual JassHelper/pJASS builds exited0; existing reports retained.",
+    "archive": "Three actual archive verifications exited0; separate from gameplay.",
+    "game": "Two complete isolated runs and one incomplete stress snapshot; subsets do not replace fixed02 full-run failures.",
+    "multiplayer": "Not tested; explicit SKIP remains.",
+    "editor_save": "Not certified.",
+    "native_assess": "unassessable (untracked)",
+    "native_review_approved": false,
+    "delivery_approved": false
+  },
+  "unavailable": [
+    "stress observer exit/timeout",
+    "stress game28 exit",
+    "stress normal termination method",
+    "old job27 temporary output (ENOENT)"
+  ],
+  "runtime_resume_evidence": "Parent observed no session jobs and no Warcraft windows; no active tests to await.",
+  "missing_proof": [
+    "E29 owner/source-transfer cause and native owner-transfer comparison",
+    "logger-cost causation and complete stress acceptance",
+    "S8 full-run acceptance",
+    "multiplayer, exhaustion, integrations, editor save/reopen"
+  ],
+  "next_decision": "Authorize logger-cost correction plus ONE native owner-transfer control, or retain the partial/failing candidate without acceptance. Neither option has been executed; no further rounds are queued.",
+  "further_rounds_queued": false,
+  "maintained_source_behavior_changed": false
+}

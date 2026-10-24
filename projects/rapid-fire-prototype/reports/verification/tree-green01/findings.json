@@ -1,0 +1,18 @@
+{
+  "verdict": "PASS scoped partial S3/live-tree and S26",
+  "blockers": [],
+  "advisories": [],
+  "limits": [
+    "captured-reader plus static independence, not second gameplay",
+    "no full S3/product/library production/MP acceptance",
+    "dead/removed native not tested",
+    "no source repairs or further game authority"
+  ],
+  "checks": [
+    "55 frozen SHA/size/mtime preserved; all original artifacts except intended Core/README identical",
+    "only four-line pure callback insertion; all prior Core bytes identical",
+    "both ten-input plans match actual bytes; oracles/budgets/harness/libraries unchanged; bootstrap/logger label-only",
+    "compiled callback registered and dispatch enabled; map/injected/script hashes match recorded preflight/build; recorded build+validation exit0; no native build rerun",
+    "independent scalar probes: exact counters/failures, 0 ABORT, both cases 4 births at .25, native hit/HP contrast, 4 finite brackets, live tree HP50 unchanged"
+  ]
+}

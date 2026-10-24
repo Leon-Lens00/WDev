@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-tree-red-20261020-04.txt",
+    "--run-id",
+    "rf-burst-tree-red-20261020-04",
+    "--not-before",
+    "1792528906.667707",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red04-native-reader.json"
+  ],
+  "exit_code": 1,
+  "source_mtime": 1792528915.940702,
+  "launch_requested_unix": 1792528906.667707
+}

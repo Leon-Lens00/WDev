@@ -1,0 +1,89 @@
+{
+  "status": "Scanned",
+  "native_green": "pending",
+  "core_sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+  "historical_red_sha256": "988af5dc815b791f283abeef804b52c136be1671e83d421afeaff184e77651f8",
+  "historical_original_support_sha256": "d733ef12e5e130548a2715209edadb417e465a11582c02b5ec6df5bebdc91708",
+  "historical_stress_support_sha256": "9640e12e5e44139c6879cabfb9e67ad4f1d5e792b40e497ef25c96456f17b19e",
+  "corrected_support_sha256": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+  "source_before_sha256": {
+    "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+    "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "lab/Config.j": "7db72ddb89f85338a4ed2af34d944190d3112318d1db01a59ed5646b1985f29c",
+    "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+    "lab/Environment.j": "021a504533130ffb3e3922f1ca2bca8f37e4209bc51e64906bceca5646e7e41f",
+    "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+    "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+    "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+    "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+    "lab/Support.j": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+    "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+  },
+  "source_after_sha256": {
+    "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+    "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "lab/Config.j": "7db72ddb89f85338a4ed2af34d944190d3112318d1db01a59ed5646b1985f29c",
+    "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+    "lab/Environment.j": "021a504533130ffb3e3922f1ca2bca8f37e4209bc51e64906bceca5646e7e41f",
+    "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+    "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+    "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+    "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+    "lab/Support.j": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+    "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+  },
+  "historical_stress_manifest_sha256": "6d9130700dfe3b5092343f07d715970544ff22604eaddff2865a7950838cc8cf",
+  "historical_e29_manifest_sha256": "b40d5fc59e2e7c092cca6b49c002d561108a7ad07fde91b407932fe5fb80659f",
+  "checks": [
+    "historical logger identical except retained prefill",
+    "stress differs only Config and corrected Support",
+    "all original maintained E29 assertion/record calls retained",
+    "no source core or maintained Environment mutation"
+  ],
+  "snapshots": [
+    {
+      "run_id": "diag3-logger-stress-20261019-01",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag3-logger-stress-20261019-01/manifest.json",
+      "sha256": "ffe61b77da3e2bbad47c7d389d33814820e51d177703833045700020b1b74485",
+      "input_sha256": {
+        "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+        "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+        "lab/Config.j": "f5558b51556b328acbb3477178b9fa076f6922823da8da220799f2aa4051a205",
+        "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+        "lab/Environment.j": "021a504533130ffb3e3922f1ca2bca8f37e4209bc51e64906bceca5646e7e41f",
+        "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+        "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+        "lab/Motion.j": "4ed3811ef45b000f69ecec9339e2e31bcef3b568eb97b9ed940f85b56abf6a51",
+        "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+        "lab/Support.j": "918c4a616585e6b4a6b8943567acbd8303d75c8b14fe39ce3412b82661797e7a",
+        "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+        "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+        "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+      }
+    },
+    {
+      "run_id": "diag3-e29-transfer-20261019-01",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag3-e29-transfer-20261019-01/manifest.json",
+      "sha256": "500257bae52d76a271dbc444289a6631c7d8109d6ac9318ff7a45ecc8c01edb4",
+      "input_sha256": {
+        "MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+        "Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+        "lab/Config.j": "0a993e2376d2d99c9195de102dd98cba00ed4c26265620f996869bd34a281669",
+        "lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+        "lab/Environment.j": "ea191a6080d42403a8d2e8e3e6dc68ddb2908144aafe7e1b06e69375281680d0",
+        "lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+        "lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+        "lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+        "lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+        "lab/Support.j": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+        "libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+        "libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+        "libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+      }
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+--- frozen-Environment.j.before
++++ frozen-Environment.j.after
+@@ -4,6 +4,7 @@
+         private boolean diagnosticBounds = false
+         private boolean diagnosticHidden = false
+         private boolean diagnosticReady = false
++        private real diagnosticTransferClock = 0.
+         private real diagnosticWithdrawalClock = 0.
+         private boolean sightReady = false
+         private boolean fallbackReady = false
+@@ -38,9 +39,18 @@
+         endif
+     endfunction
+ 
+-    private function DiagnosticSample takes nothing returns nothing
+-        call RM_Record("OBS", "diag2-withdrawal-sample", "stage=" + I2S(RM_STAGE) + " scheduledSince7=" + R2S((RM_STAGE-7)*.25) + " clock=" + R2S(TimerGetElapsed(RM_CLOCK)) + " clockSince7=" + R2S(TimerGetElapsed(RM_CLOCK)-diagnosticWithdrawalClock) + " rawReady=" + DiagnosticBoolean(diagnosticReady) + " rawP2=" + DiagnosticBoolean(IsVisibleToPlayer(100., 3000., Player(2))) + " primaryOldP2=" + DiagnosticBoolean(IsVisibleToPlayer(-800., 0., Player(2))) + " fallbackOldP1=" + DiagnosticBoolean(IsVisibleToPlayer(2400., 0., Player(1))))
+-        call RM_Record("OBS", "diag2-public-state", "stage=" + I2S(RM_STAGE) + " m1OwnerNull=" + DiagnosticBoolean(RM_M[1].owner == null) + " source1Type=" + I2S(GetUnitTypeId(RM_M[1].source)) + " source2Type=" + I2S(GetUnitTypeId(RM_M[2].source)) + " dummy1Owner=" + I2S(GetPlayerId(GetOwningPlayer(RM_DUMMY[1]))) + " dummy1XY=" + R2S(GetUnitX(RM_DUMMY[1])) + "," + R2S(GetUnitY(RM_DUMMY[1])) + " dummy2Owner=" + I2S(GetPlayerId(GetOwningPlayer(RM_DUMMY[2]))) + " dummy2XY=" + R2S(GetUnitX(RM_DUMMY[2])) + "," + R2S(GetUnitY(RM_DUMMY[2])))
++    private function DiagnosticSample takes string phase returns nothing
++        local real clock = TimerGetElapsed(RM_CLOCK)
++        local unit dummy1 = RM_DUMMY[1]
++        local unit dummy2 = RM_DUMMY[2]
++        if RM_STAGE <= 10 then
++            set dummy1 = RM_M[1].dummy
++            set dummy2 = RM_M[2].dummy
++        endif
++        call RM_Record("OBS", "diag3-visibility-sample", "phase=" + phase + " stage=" + I2S(RM_STAGE) + " clock=" + R2S(clock) + " sinceTransfer=" + R2S(clock-diagnosticTransferClock) + " sinceWithdrawal=" + R2S(clock-diagnosticWithdrawalClock) + " rawReady=" + DiagnosticBoolean(diagnosticReady) + " rawP1=" + DiagnosticBoolean(IsVisibleToPlayer(100., 3000., Player(1))) + " rawP2=" + DiagnosticBoolean(IsVisibleToPlayer(100., 3000., Player(2))) + " primaryP1=" + DiagnosticBoolean(IsVisibleToPlayer(-800., 0., Player(1))) + " primaryP2=" + DiagnosticBoolean(IsVisibleToPlayer(-800., 0., Player(2))) + " fallbackP1=" + DiagnosticBoolean(IsVisibleToPlayer(2400., 0., Player(1))) + " fallbackP2=" + DiagnosticBoolean(IsVisibleToPlayer(2400., 0., Player(2))))
++        call RM_Record("OBS", "diag3-public-state", "phase=" + phase + " stage=" + I2S(RM_STAGE) + " clock=" + R2S(clock) + " m1OwnerNull=" + DiagnosticBoolean(RM_M[1].owner == null) + " source1Type=" + I2S(GetUnitTypeId(RM_M[1].source)) + " source2Type=" + I2S(GetUnitTypeId(RM_M[2].source)) + " dummy1Owner=" + I2S(GetPlayerId(GetOwningPlayer(dummy1))) + " dummy1XY=" + R2S(GetUnitX(dummy1)) + "," + R2S(GetUnitY(dummy1)) + " dummy2Owner=" + I2S(GetPlayerId(GetOwningPlayer(dummy2))) + " dummy2XY=" + R2S(GetUnitX(dummy2)) + "," + R2S(GetUnitY(dummy2)))
++        set dummy1 = null
++        set dummy2 = null
+     endfunction
+ 
+     // Save every incoming shared-vision edge to the two probe players.
+@@ -129,14 +139,14 @@
+             call ProbeAlliances(false)
+             set RM_LIMIT = 12
+             if RM_CASE == 29 then
+-                set RM_LIMIT = 16
++                set RM_LIMIT = 19
+                 // Isolated control: no unit, source, missile or extra timer.
+-                set diagnosticBounds = DiagnosticInBounds(0., 3000.) and DiagnosticInBounds(100., 3000.)
+-                set diagnosticHidden = not IsVisibleToPlayer(100., 3000., Player(2))
++                set diagnosticBounds = DiagnosticInBounds(0., 3000.) and DiagnosticInBounds(100., 3000.) and DiagnosticInBounds(-200., 2800.) and DiagnosticInBounds(200., 3200.)
++                set diagnosticHidden = not IsVisibleToPlayer(100., 3000., Player(1)) and not IsVisibleToPlayer(100., 3000., Player(2))
+                 set diagnosticReady = diagnosticBounds and diagnosticHidden
+-                call RM_Record("OBS", "diag2-raw-initial-readiness", "bounds=" + DiagnosticBoolean(diagnosticBounds) + " hidden=" + DiagnosticBoolean(diagnosticHidden) + " center=0,3000 radius=200 probe=100,3000 owner=2 visible,true,false")
++                call RM_Record("OBS", "diag3-raw-initial-readiness", "bounds=" + DiagnosticBoolean(diagnosticBounds) + " hiddenBoth=" + DiagnosticBoolean(diagnosticHidden) + " rawP1=" + DiagnosticBoolean(IsVisibleToPlayer(100., 3000., Player(1))) + " rawP2=" + DiagnosticBoolean(IsVisibleToPlayer(100., 3000., Player(2))) + " center=0,3000 radius=200 probe=100,3000 owner=1 visible,true,false")
+                 if diagnosticReady then
+-                    set diagnosticFog = CreateFogModifierRadius(Player(2), FOG_OF_WAR_VISIBLE, 0., 3000., 200., true, false)
++                    set diagnosticFog = CreateFogModifierRadius(Player(1), FOG_OF_WAR_VISIBLE, 0., 3000., 200., true, false)
+                     call FogModifierStart(diagnosticFog)
+                 endif
+             endif
+@@ -170,8 +180,8 @@
+     function RM_EnvironmentStep takes nothing returns nothing
+         if RM_CASE == 29 and RM_STAGE == 1 then
+             if diagnosticReady then
+-                set diagnosticReady = IsVisibleToPlayer(100., 3000., Player(2))
+-                call RM_Check(diagnosticReady, "diag2-raw-reveals", "initially hidden in-bounds raw probe100,3000 owner2 radius200")
++                set diagnosticReady = IsVisibleToPlayer(100., 3000., Player(1)) and not IsVisibleToPlayer(100., 3000., Player(2))
++                call RM_Check(diagnosticReady, "diag2-raw-reveals", "initially hidden to both; in-bounds raw probe100,3000 reveals owner1 radius200 and isolates owner2")
+             else
+                 call RM_Record("SKIP", "diag2-raw-reveals", "raw control ineligible: bounds or initial hidden readiness invalid")
+             endif
+@@ -215,8 +225,17 @@
+                 call RM_Check(IsVisibleToPlayer(-800., 0., Player(1)), "vision-moved-reveal", "new probe inside moving circle")
+                 call RM_Check(not IsVisibleToPlayer(-2400., 0., Player(1)), "vision-moved-clears-old", "old circle no longer supplies current visibility")
+             endif
++            call DiagnosticSample("before-transfer")
++            set diagnosticTransferClock = TimerGetElapsed(RM_CLOCK)
+             set RM_M[1].owner = Player(2)
+             call SetUnitOwner(RM_U, Player(1), false)
++            call DiagnosticStop()
++            if diagnosticReady then
++                set diagnosticFog = CreateFogModifierRadius(Player(2), FOG_OF_WAR_VISIBLE, 0., 3000., 200., true, false)
++                call FogModifierStart(diagnosticFog)
++            endif
++            // Core owner reconciliation occurs on its visit, not necessarily here.
++            call DiagnosticSample("after-transfer")
+         elseif RM_CASE == 29 and RM_STAGE == 7 then
+             call RM_Check(GetOwningPlayer(RM_M[1].dummy) == Player(2), "vision-owner-field-refresh", "direct owner change reconciled on visit")
+             call RM_Check(GetOwningPlayer(RM_M[2].dummy) == Player(1), "vision-source-owner-refresh", "source owner change reconciled on visit")
+@@ -226,16 +245,26 @@
+             if fallbackReady then
+                 call RM_Check(not IsVisibleToPlayer(2400., 0., Player(2)) and IsVisibleToPlayer(2400., 0., Player(1)), "vision-source-transfer", "effective source owner changed")
+             endif
+-            // Cache public handles while alive; post-termination dummy samples
+-            // describe these same handles (including recycler movement), not private state.
+-            set RM_DUMMY[1] = RM_M[1].dummy
+-            set RM_DUMMY[2] = RM_M[2].dummy
+-            set diagnosticWithdrawalClock = TimerGetElapsed(RM_CLOCK)
+-            call DiagnosticStop()
+-            set RM_M[1].owner = null
+-            call RemoveUnit(RM_U)
+-            set RM_U = null
+-        elseif RM_CASE == 29 and RM_STAGE == 8 then
++            call DiagnosticSample("transfer-0.25s")
++            if diagnosticReady then
++                call RM_Check(not IsVisibleToPlayer(100., 3000., Player(1)) and IsVisibleToPlayer(100., 3000., Player(2)), "diag3-raw-owner-transfer", "old owner1 loses reveal and new owner2 gains reveal at scheduled0.25s; OBS separates old-retained from new-not-yet-visible")
++            else
++                call RM_Record("SKIP", "diag3-raw-owner-transfer", "raw readiness/reveal/isolation invalid; no native transfer success claimed")
++            endif
++        elseif RM_CASE == 29 and RM_STAGE >= 8 and RM_STAGE <= 10 then
++            call DiagnosticSample("transfer-held")
++            if RM_STAGE == 10 then
++                // Cache public handles while alive; post-termination dummy samples
++                // describe these same handles (including recycler movement), not private state.
++                set RM_DUMMY[1] = RM_M[1].dummy
++                set RM_DUMMY[2] = RM_M[2].dummy
++                set diagnosticWithdrawalClock = TimerGetElapsed(RM_CLOCK)
++                call DiagnosticStop()
++                set RM_M[1].owner = null
++                call RemoveUnit(RM_U)
++                set RM_U = null
++            endif
++        elseif RM_CASE == 29 and RM_STAGE == 11 then
+             call RM_Check(GetOwningPlayer(RM_M[1].dummy) == Player(PLAYER_NEUTRAL_PASSIVE), "vision-null-source-neutral", "no explicit owner or source")
+             call RM_Check(GetOwningPlayer(RM_M[2].dummy) == Player(PLAYER_NEUTRAL_PASSIVE), "vision-removed-source-neutral", "removed source is not a valid owner fallback")
+             if sightReady then
+@@ -245,12 +274,12 @@
+                 call RM_Check(not IsVisibleToPlayer(2400., 0., Player(1)), "vision-source-removal-clears", "removed source no longer supplies owner")
+             endif
+         endif
+-        if RM_CASE == 29 and RM_STAGE >= 8 and RM_STAGE <= 16 then
+-            call DiagnosticSample()
+-            if RM_STAGE == 12 then
+-                // Additional checkpoint only: original stage8 assertions stay intact.
++        if RM_CASE == 29 and RM_STAGE >= 11 and RM_STAGE <= 19 then
++            call DiagnosticSample("withdrawal")
++            if RM_STAGE == 15 then
++                // Additional checkpoint only: original ownerless assertions stay intact at stage11.
+                 if sightReady and fallbackReady then
+-                    call RM_Check(not IsVisibleToPlayer(-800., 0., Player(2)) and not IsVisibleToPlayer(2400., 0., Player(1)), "diag2-both-withdrawn-at-1.25s", "both previous effective owners lose reveal before termination; scheduled1.25s after stage7")
++                    call RM_Check(not IsVisibleToPlayer(-800., 0., Player(2)) and not IsVisibleToPlayer(2400., 0., Player(1)), "diag2-both-withdrawn-at-1.25s", "both previous effective owners lose reveal before termination; scheduled1.25s after stage10")
+                 else
+                     call RM_Record("SKIP", "diag2-both-withdrawn-at-1.25s", "missile probes not initially eligible; no withdrawal success claimed")
+                 endif

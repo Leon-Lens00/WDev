@@ -1,0 +1,12 @@
+{
+  "native02": "COMPLETE|1|13|1|0",
+  "observed_failure": "logical-anchor-distance-at-most-1; native distance1.500 after stage4 Move",
+  "change": "anchor logical XY after guarded deferred cancellation; unchanged actor movement/collision and body tolerance1",
+  "battery_change": "scene ABORT remains FAIL; drain old flights within3s and continue after closure/recycler interval; global90s and reopened-flight safety remain terminal",
+  "checks": "targeted structure/original Core hash PASS; no native verification yet",
+  "sources": {
+    "projects/rapid-fire-prototype/playable/src/PairCore.j": "a812a3917607a2e79a2b5f5249c8703e632810107bcbe2197b06c25cb9ab33cd",
+    "projects/rapid-fire-prototype/playable/src/IntegratedTest.j": "1f6d829facc27a9e2ccde9b0f7de70cb7a76ea7a7346a3236a7b56426c64dd87",
+    "projects/rapid-fire-prototype/playable/src/Log.j": "fdc56447c31468fd86c4c271bc8997d2dffe7d70910b380a0cd8e9362b3098a2"
+  }
+}

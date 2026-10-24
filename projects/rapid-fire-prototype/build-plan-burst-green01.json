@@ -1,0 +1,177 @@
+{
+  "status": "PREPARED_GREEN_B01_B02_NOT_COMPILED",
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py",
+    "build",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/05-owned-objects.w3x",
+    "--wc3",
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "--timer-utils",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "--world-bounds",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "--dummy-recycler",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "--core",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "--bootstrap",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstMapMainGreen01.j",
+    "--output-dir",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build",
+    "--run-id",
+    "rf-burst-green-20261019-01",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstLogGreen01.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+    "--entry",
+    "RF_StartBurstTest"
+  ],
+  "shell": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py build --base /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/05-owned-objects.w3x --wc3 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 --timer-utils /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j --world-bounds /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j --dummy-recycler /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j --core /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j --bootstrap /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstMapMainGreen01.j --output-dir /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build --run-id rf-burst-green-20261019-01 --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstLogGreen01.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j --entry RF_StartBurstTest",
+  "inputs_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/05-owned-objects.w3x": "ff34f3fcea03281163c81bdcb11a6f7285f12c289c7160f640d4fa242adfb3b3",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstLogGreen01.j": "5dab1ada4319772a61bdc3d9cb7e7a81d313adabef52ffe9ff9cd9756f75620a",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "7fe99448ba2fff01e6bd67675c8a71e30ad7b11b35268e65b4f74ec0a64e1078",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j": "7184bd4cd7ceef0fd3c04b0e776e90a64a82ed23e8e65dce1f6f0e924dcfdcc7",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstMapMainGreen01.j": "a102db6bbe936bdc7805edfb9e8f3b545e38ef7ecf078f42823edbfb2e4b8f0b"
+  },
+  "import_order": [
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstLogGreen01.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstMapMainGreen01.j"
+  ],
+  "public_entry": "RF_StartBurstTest",
+  "native_run_id": "rf-burst-green-20261019-01",
+  "native_run_already_executed": false,
+  "group": "RFBurst",
+  "output_map": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-green-20261019-01/rf-burst-green-20261019-01.w3x",
+  "log": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-green-20261019-01.txt",
+  "relative_log": "Logs\\RF-rf-burst-green-20261019-01.txt",
+  "reader_argv_template": [
+    "python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-green-20261019-01.txt",
+    "--run-id",
+    "rf-burst-green-20261019-01",
+    "--not-before",
+    "PARENT_RECORDED_LAUNCH_UNIX_SECONDS",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/native-rf-burst-green-20261019-01.json"
+  ],
+  "cases": {
+    "B01-four-shot-native-effects": {
+      "specs_partially_covered": [
+        "S1",
+        "S4",
+        "S5",
+        "S10",
+        "S11"
+      ],
+      "assertions": [
+        "4 public SHOT pulses",
+        "4 live launched public Missiles with separate dummy/source/current actor origin",
+        "4 native target damage events",
+        "10 per native hit tolerance .01",
+        "visible actor damage source",
+        "paired native HP differential40 tolerance .10",
+        "control undamaged",
+        "target/control alive"
+      ]
+    },
+    "B02-default-cadence": {
+      "specs_partially_covered": [
+        "S1"
+      ],
+      "assertions": [
+        "3 adjacent public emission intervals .25 tolerance .03125; missing observations FAIL"
+      ]
+    }
+  },
+  "runtime_budget": {
+    "harness_period_seconds": 0.03125,
+    "global_game_seconds": 12,
+    "native_cast_effect_deadline_from_order_seconds": 2,
+    "behavior_window_from_actual_native_cast_effect_seconds": 3,
+    "observer_wall_budget_seconds": 180,
+    "wall_clock_guaranteed": false,
+    "on_unready": "explicit FAIL ABORT and COMPLETE; no burst-rule failure inferred"
+  },
+  "fixture": {
+    "base_unchanged": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/05-owned-objects.w3x",
+    "actor_o000_P0": [
+      -2223.5,
+      4352.0
+    ],
+    "caster_o001_P0": [
+      -5500.0,
+      -5500.0
+    ],
+    "target_o000_P1": [
+      -1967.5,
+      4352.0
+    ],
+    "control_o000_P1": [
+      -1967.5,
+      4864.0
+    ],
+    "target_control_paused_only": true,
+    "same_safe_health": "min(native max lives)-10; both exact native readback; calibration excluded from burst",
+    "placement_tolerance": 1,
+    "static_ray_samples": 9,
+    "spawn_is_not_walkability_proof": true,
+    "native_calibration": "UnitDamageTarget(actor,target,10.,true,true,ATTACK_TYPE_MELEE,DAMAGE_TYPE_NORMAL,null); exactly1 native damage10/visible source + next-phase positive HP loss, else ABORT",
+    "hidden_Channel05": "Ncl3=0 scripted capability only; stock cast latency permitted before actual event"
+  },
+  "limits": [
+    "Native GREEN and compilation pending parent; not tested in map",
+    "Partial S1/S4/S5/S10/S11 only; unchanged public harness",
+    "Active recasts TEMPORARILY ignored; idle max-rate, animation, mover, obstacle controls and UI deferred",
+    "Snapshot source/owner and callback epochs statically inspected only; Risk4 independent verification later",
+    "Physical mapping exactly calibrated flags; no alternate defense/attack-proc/XP promise",
+    "Technical defaults planar collision radius32/terrain+80 launch height; range1500/speed1200 not separately native-proven here",
+    "Parent exact-profile preflight before observer/protected launch; launcher25 exit0 not closure proof",
+    "Inherited W3I/WCT/WTG not editor-save/multiplayer certified"
+  ],
+  "observed_red": {
+    "run_id": "rf-burst-red-20261019-01",
+    "complete": "2/19/7FAIL/0SKIP",
+    "passes": 4,
+    "observations": 8,
+    "reader_exit": 1,
+    "valid_native_fixture": true,
+    "attribution": "parent-observed; focused reports/burst-red01-results.md"
+  },
+  "expected_candidate_result": {
+    "conditional_on_native_readiness": true,
+    "shots": 4,
+    "hits": 4,
+    "damage_each": 10,
+    "paired_HP_differential": 40,
+    "intervals": [
+      0.25,
+      0.25,
+      0.25
+    ],
+    "failures": 0,
+    "observed": false
+  },
+  "design_notes": "projects/rapid-fire-prototype/reports/burst-green01-preparation.md",
+  "frozen_red": "projects/rapid-fire-prototype/reports/frozen-burst-red01/"
+}

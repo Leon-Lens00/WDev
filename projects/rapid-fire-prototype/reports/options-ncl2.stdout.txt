@@ -1,0 +1,27 @@
+{
+  "Type": "channelType",
+  "IsList": false,
+  "Options": [
+    {
+      "Value": "0",
+      "DisplayName": "Instant\u00E1neo (Sin objetivo)",
+      "Label": "Instant\u00E1neo (Sin objetivo)"
+    },
+    {
+      "Value": "1",
+      "DisplayName": "Objetivo unidad",
+      "Label": "Objetivo unidad"
+    },
+    {
+      "Value": "2",
+      "DisplayName": "Objetivo punto",
+      "Label": "Objetivo punto"
+    },
+    {
+      "Value": "3",
+      "DisplayName": "Objetivo unidad o punto",
+      "Label": "Objetivo unidad o punto"
+    }
+  ],
+  "Diagnostic": null
+}

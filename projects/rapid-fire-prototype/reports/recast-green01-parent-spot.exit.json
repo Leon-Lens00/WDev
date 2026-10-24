@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/RF-rf-burst-recast-green-20261020-01.txt",
+    "--run-id",
+    "rf-burst-recast-green-20261020-01",
+    "--not-before",
+    "1792465533.3121042",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-green01-parent-spot.json"
+  ],
+  "exit_code": 0
+}

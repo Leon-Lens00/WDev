@@ -1,0 +1,16 @@
+{
+  "status": "PARENT_FORWARDED_STATIC_SUMMARY_NOT_NATIVE_ADMISSION",
+  "provenance": "Parent supplied recorded read-only exploration summary; worker did not rerun terrain/archive queries. Parent reports two commands exit0, empty stderr, no writes. Exact argv/stdout unavailable here and not reconstructed.",
+  "base_sha256": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+  "w3e_sha256": "f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f",
+  "wpm_sha256": "ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab",
+  "terrain_dimensions": [129,129],
+  "pathing_dimensions": [512,512],
+  "origin": [-8192,-8192],
+  "NE_raw_corner": {"ground":9715,"layer":0,"native_Z":null},
+  "rejected_T1": [{"xy":[-2768,5648],"mask":10,"blocked":true},{"xy":[-2640,5648],"mask":202,"blocked":true}],
+  "global_search": {"walkclear_bit":2,"footprint":"3x3 cells +/-32","no_ramp_boundary":"tf & 0x90 == 0","low0_footprints":7460,"cardinal_higher_within512":95},
+  "selected_cliff": {"actor":[-3952,5136],"direction":"east","raw_layer":0,"raw_ground_corners":[10208,10002,10128,10201],"terrain_flags":[64,64,67,64],"mask":8,"walkclear":true,"uniform_higher_raw_layer":1,"higher_sample":[-3696,5136],"sample_distance":256},
+  "selected_flat": {"actor":[-3136,2624],"endpoint":[-1636,2624],"direction":"east","mask":8,"whole_ray":"30-unit steps and footprint +/-32; uniform corner raw layer1 over1500","actor_raw_ground_corners":[9715,9715,9715,9715],"actor_terrain_flags":[66,64,65,65],"endpoint_raw_ground_corners":[9715,9715,9727,9719]},
+  "limits": ["No raw W3E-to-native height formula inferred","No native actor placement, GetLocationZ, cliff levels, wall intersection or corridor admission observed","Dynamic native survey must independently qualify or ABORT; no lower-Z adaptation"]
+}

@@ -1,0 +1,364 @@
+--- Environment.j.before
++++ Environment.j.after
+@@ -12,6 +12,15 @@
+         private integer originalTile = 0
+         private integer alternateTile = 0
+         private boolean tileArmed = false
++        private constant real VISION_WAIT = 2.0
++        private fogmodifier array referenceFog
++        private boolean referenceEligible = false
++        private integer visionPhase = 0
++        private real phaseClock = 0.
++        private real referenceX = -2000.
++        private integer idleRemove1 = 0
++        private integer idleRemove2 = 0
++        private boolean visionRestored = false
+     endglobals
+     // Save every incoming shared-vision edge to the two probe players.
+     private function ProbeAlliances takes boolean restore returns nothing
+@@ -34,6 +43,149 @@
+             endloop
+             set i = i + 1
+         endloop
++    endfunction
++
++    private function VisionBoolean takes boolean value returns string
++        if value then
++            return "true"
++        endif
++        return "false"
++    endfunction
++
++    private function ReferenceStop takes integer i returns nothing
++        if referenceFog[i] != null then
++            call FogModifierStop(referenceFog[i])
++            call DestroyFogModifier(referenceFog[i])
++            set referenceFog[i] = null
++        endif
++    endfunction
++
++    private function ReferenceSet takes integer i, player p, real x, real radius returns nothing
++        call ReferenceStop(i)
++        if radius > 0. then
++            set referenceFog[i] = CreateFogModifierRadius(p, FOG_OF_WAR_VISIBLE, x, 3000., radius, true, false)
++            call FogModifierStart(referenceFog[i])
++        endif
++    endfunction
++
++    private function VisionPhase takes integer nextPhase returns nothing
++        set visionPhase = nextPhase
++        set phaseClock = TimerGetElapsed(RM_CLOCK)
++    endfunction
++
++    // ONLY native reference visibility enters these predicates, never missile probes.
++    private function ReferenceTransferReady takes nothing returns boolean
++        return not IsVisibleToPlayer(-800., 3000., Player(1)) and IsVisibleToPlayer(-800., 3000., Player(2)) and not IsVisibleToPlayer(2400., 3000., Player(2)) and IsVisibleToPlayer(2400., 3000., Player(1))
++    endfunction
++
++    private function ReferenceReady takes nothing returns boolean
++        if visionPhase == 1 then
++            return IsVisibleToPlayer(-1600., 3000., Player(1)) and not IsVisibleToPlayer(-1100., 3000., Player(1)) and not IsVisibleToPlayer(2400., 3000., Player(1)) and IsVisibleToPlayer(2400., 3000., Player(2)) and not IsVisibleToPlayer(2900., 3000., Player(2)) and not IsVisibleToPlayer(-1600., 3000., Player(2))
++        elseif visionPhase == 2 then
++            return not IsVisibleToPlayer(-1600., 3000., Player(1)) and not IsVisibleToPlayer(2400., 3000., Player(2))
++        elseif visionPhase == 3 then
++            return not IsVisibleToPlayer(-1600., 3000., Player(1)) and IsVisibleToPlayer(2400., 3000., Player(2))
++        elseif visionPhase == 6 then
++            return IsVisibleToPlayer(-800., 3000., Player(1)) and not IsVisibleToPlayer(-2400., 3000., Player(1)) and not IsVisibleToPlayer(-800., 3000., Player(2))
++        elseif visionPhase == 8 then
++            return ReferenceTransferReady()
++        endif
++        // Withdrawal and post-termination cleanup must both be clear.
++        return not IsVisibleToPlayer(-800., 3000., Player(1)) and not IsVisibleToPlayer(-800., 3000., Player(2)) and not IsVisibleToPlayer(2400., 3000., Player(1)) and not IsVisibleToPlayer(2400., 3000., Player(2)) and not IsVisibleToPlayer(-1600., 3000., Player(1))
++    endfunction
++
++    private function VisionObservation takes string source returns nothing
++        call RM_Record("OBS", "vision-reference-state", "phase=" + I2S(visionPhase) + " wait=" + source + " clock=" + R2S(TimerGetElapsed(RM_CLOCK)) + " elapsed=" + R2S(TimerGetElapsed(RM_CLOCK)-phaseClock) + " deadline=" + R2S(VISION_WAIT) + " rawInitialP1=" + VisionBoolean(IsVisibleToPlayer(-1600., 3000., Player(1))) + " actualInitialP1=" + VisionBoolean(IsVisibleToPlayer(-1600., 0., Player(1))) + " rawMovedP1=" + VisionBoolean(IsVisibleToPlayer(-800., 3000., Player(1))) + " rawMovedP2=" + VisionBoolean(IsVisibleToPlayer(-800., 3000., Player(2))) + " actualMovedP1=" + VisionBoolean(IsVisibleToPlayer(-800., 0., Player(1))) + " actualMovedP2=" + VisionBoolean(IsVisibleToPlayer(-800., 0., Player(2))) + " rawSourceP1=" + VisionBoolean(IsVisibleToPlayer(2400., 3000., Player(1))) + " rawSourceP2=" + VisionBoolean(IsVisibleToPlayer(2400., 3000., Player(2))) + " actualSourceP1=" + VisionBoolean(IsVisibleToPlayer(2400., 0., Player(1))) + " actualSourceP2=" + VisionBoolean(IsVisibleToPlayer(2400., 0., Player(2))))
++    endfunction
++
++    private function VisionRestorationCheck takes nothing returns nothing
++        local integer i = 0
++        local integer j
++        local boolean restored = true
++        loop
++            exitwhen i > PLAYER_NEUTRAL_PASSIVE
++            set j = 1
++            loop
++                exitwhen j > 2
++                if i != j then
++                    set restored = restored and GetPlayerAlliance(Player(i), Player(j), ALLIANCE_SHARED_VISION) == sharedVision[i*2+j]
++                endif
++                set j = j + 1
++            endloop
++            set i = i + 1
++        endloop
++        call RM_Check(restored, "vision-alliances-restored", "all saved incoming probe edges")
++        call RM_Check(IsFogEnabled() == previousFog and IsFogMaskEnabled() == previousMask, "vision-fog-flags-restored", "saved fog and mask enable flags")
++    endfunction
++
++    private function VisionCleanup takes nothing returns nothing
++        // Reuse the lab's public, idempotent missile/source disposal path.
++        call RM_Cleanup()
++        call ReferenceStop(1)
++        call ReferenceStop(2)
++        if not visionRestored then
++            call ProbeAlliances(true)
++            call FogEnable(previousFog)
++            call FogMaskEnable(previousMask)
++            set visionRestored = true
++            call RM_Record("SKIP", "multiplayer", "single client cannot establish synchronization; repeat with two 1.27b clients")
++        endif
++        call VisionRestorationCheck()
++        call RM_Equal(RM_REMOVE[1], 1, "vision-remove-once")
++        call RM_Equal(RM_REMOVE[2], 1, "vision-fallback-remove-once")
++        set idleRemove1 = RM_REMOVE[1]
++        set idleRemove2 = RM_REMOVE[2]
++        call VisionPhase(12)
++    endfunction
++
++    private function VisionVisibilityCleanup takes nothing returns nothing
++        if sightReady then
++            call RM_Check(not IsVisibleToPlayer(-1600., 0., Player(1)), "vision-cleanup", "current visibility removed; explored fog is not visibility")
++        endif
++        if fallbackReady then
++            call RM_Check(not IsVisibleToPlayer(2400., 0., Player(2)), "vision-fallback-cleanup", "source remains far from probe")
++        endif
++    endfunction
++
++    private function VisionTimeout takes string source returns nothing
++        call RM_Record("FAIL", "vision-reference-timeout", "phase=" + I2S(visionPhase) + " wait=" + source + " deadline=" + R2S(VISION_WAIT) + " elapsed=" + R2S(TimerGetElapsed(RM_CLOCK)-phaseClock))
++        call RM_Record("OBS", "vision-aborted-original-rules", "remaining original visibility rules not evaluated after fixture timeout; not acceptance")
++        if visionPhase == 13 then
++            // Cleanup timeout also fails loudly, but restoration can never wait again.
++            call VisionCleanup()
++        else
++            call RM_Cleanup()
++            call ReferenceStop(1)
++            call ReferenceStop(2)
++            call VisionPhase(13)
++        endif
++    endfunction
++
++    private function VisionGate takes string source, boolean ready returns boolean
++        call VisionObservation(source)
++        if ready then
++            return true
++        endif
++        if TimerGetElapsed(RM_CLOCK)-phaseClock >= VISION_WAIT then
++            call VisionTimeout(source)
++        endif
++        return false
++    endfunction
++
++    private function ReferenceStart takes nothing returns nothing
++        // Full original-radius extents and every translated probe must be in bounds.
++        // The +3000Y strip cannot overlap the actual circles at Y0.
++        set referenceEligible = WorldBounds.minX < -2900. and WorldBounds.maxX > 2900. and WorldBounds.minY < 2400. and WorldBounds.maxY > 3600.
++        set referenceEligible = referenceEligible and not IsVisibleToPlayer(-1600., 3000., Player(1)) and not IsVisibleToPlayer(-1100., 3000., Player(1)) and not IsVisibleToPlayer(-2400., 3000., Player(1)) and not IsVisibleToPlayer(-800., 3000., Player(1)) and not IsVisibleToPlayer(-800., 3000., Player(2)) and not IsVisibleToPlayer(2400., 3000., Player(1)) and not IsVisibleToPlayer(2400., 3000., Player(2)) and not IsVisibleToPlayer(2900., 3000., Player(2)) and not IsVisibleToPlayer(-1600., 3000., Player(2))
++        set referenceX = -2000.
++        set visionRestored = false
++        call VisionPhase(1)
++        call RM_Record("OBS", "vision-reference-readiness", "bounds-and-hidden=" + VisionBoolean(referenceEligible) + " primaryActualEligible=" + VisionBoolean(sightReady) + " fallbackActualEligible=" + VisionBoolean(fallbackReady) + " translation=0,3000 radius=600 visible,true,false")
++        if referenceEligible then
++            // Later than actual vision setters/launch, not an earlier raw deadline.
++            call ReferenceSet(1, Player(1), -2000., 600.)
++            call ReferenceSet(2, Player(2), 2000., 600.)
++        endif
+     endfunction
+ 
+     struct LabEnvironmentMissile extends Missiles
+@@ -97,7 +249,8 @@
+             call FogEnable(true)
+             call FogMaskEnable(true)
+             call ProbeAlliances(false)
+-            set RM_LIMIT = 12
++            // Hard case watchdog; normal completion lowers this at the final idle step.
++            set RM_LIMIT = 160
+             // Gate all probes before any modifier exists: initial map vision is
+             // not evidence that this missile revealed a point.
+             set sightReady = not IsVisibleToPlayer(-1600., 0., Player(1)) and not IsVisibleToPlayer(-1100., 0., Player(1)) and not IsVisibleToPlayer(-2400., 0., Player(1)) and not IsVisibleToPlayer(-800., 0., Player(1)) and not IsVisibleToPlayer(-800., 0., Player(2))
+@@ -123,10 +276,83 @@
+         endif
+         set RM_M[1] = m
+         call m.launch()
+-    endfunction
+-
+-    function RM_EnvironmentStep takes nothing returns nothing
+-        if RM_CASE == 29 and RM_STAGE == 1 then
++        if RM_CASE == 29 then
++            call ReferenceStart()
++        endif
++    endfunction
++
++    // E29 owns its phases; the runner still supplies the same .25s checkpoints.
++    private function VisionStep takes nothing returns nothing
++        if visionPhase == 12 then
++            call RM_Equal(RM_REMOVE[1], idleRemove1, "vision-idle-no-extra-remove")
++            call RM_Equal(RM_REMOVE[2], idleRemove2, "vision-fallback-idle-no-extra-remove")
++            call VisionRestorationCheck()
++            set RM_LIMIT = RM_STAGE
++            return
++        endif
++        if RM_STAGE >= RM_LIMIT then
++            call RM_Record("FAIL", "vision-case-watchdog", "maximum160 runner checkpoints reached; forced cleanup/restoration")
++            call VisionCleanup()
++            set RM_LIMIT = RM_STAGE + 1
++            return
++        endif
++        if visionPhase == 13 then
++            if VisionGate("abort-cleanup-reference", ReferenceReady()) then
++                call VisionVisibilityCleanup()
++                call VisionCleanup()
++            endif
++            return
++        endif
++        if not referenceEligible then
++            if not sightReady then
++                call RM_Record("SKIP", "vision-radius-owner", "probe initially visible; needs unrevealed unoccluded region")
++            endif
++            if not fallbackReady then
++                call RM_Record("SKIP", "vision-radius-source", "probe initially visible; needs unrevealed unoccluded region")
++            endif
++            call RM_Record("SKIP", "vision-reference-readiness", "translated reference bounds/initial hidden eligibility invalid; original visibility rules inconclusive, not PASS")
++            call VisionCleanup()
++            return
++        endif
++        if visionPhase == 4 then
++            // First original .25s movement interval; never wait for reference here.
++            call VisionPhase(5)
++            return
++        elseif visionPhase == 5 then
++            // Stop after EXACTLY two existing runner ticks at1600, before any wait.
++            set RM_M[1].speed = 0.
++            set referenceX = RM_M[1].x
++            call RM_Record("OBS", "vision-motion-stopped", "clock=" + R2S(TimerGetElapsed(RM_CLOCK)) + " publicX=" + R2S(referenceX) + " publicY=" + R2S(RM_M[1].y) + " dummyX=" + R2S(GetUnitX(RM_M[1].dummy)) + " dummyY=" + R2S(GetUnitY(RM_M[1].dummy)))
++            call ReferenceSet(1, Player(1), referenceX, 600.)
++            call VisionPhase(6)
++            return
++        elseif visionPhase == 7 then
++            if not VisionGate("public-owner-reconciliation", GetOwningPlayer(RM_M[1].dummy) == Player(2) and GetOwningPlayer(RM_M[2].dummy) == Player(1)) then
++                return
++            endif
++            call RM_Check(GetOwningPlayer(RM_M[1].dummy) == Player(2), "vision-owner-field-refresh", "direct owner change reconciled on visit")
++            call RM_Check(GetOwningPlayer(RM_M[2].dummy) == Player(1), "vision-source-owner-refresh", "source owner change reconciled on visit")
++            // Raw transfer is no earlier than observed public dummy reconciliation.
++            call ReferenceSet(1, Player(2), referenceX, 600.)
++            call ReferenceSet(2, Player(1), 2000., 600.)
++            call VisionPhase(8)
++            return
++        elseif visionPhase == 9 then
++            if not VisionGate("public-neutral-reconciliation", GetOwningPlayer(RM_M[1].dummy) == Player(PLAYER_NEUTRAL_PASSIVE) and GetOwningPlayer(RM_M[2].dummy) == Player(PLAYER_NEUTRAL_PASSIVE)) then
++                return
++            endif
++            call RM_Check(GetOwningPlayer(RM_M[1].dummy) == Player(PLAYER_NEUTRAL_PASSIVE), "vision-null-source-neutral", "no explicit owner or source")
++            call RM_Check(GetOwningPlayer(RM_M[2].dummy) == Player(PLAYER_NEUTRAL_PASSIVE), "vision-removed-source-neutral", "removed source is not a valid owner fallback")
++            call ReferenceStop(1)
++            call ReferenceStop(2)
++            call VisionPhase(10)
++            return
++        endif
++        if not VisionGate("native-reference", ReferenceReady()) then
++            return
++        endif
++        if visionPhase == 1 then
++            call RM_Check(ReferenceReady(), "vision-reference-reveal-isolation", "initially hidden raw probes reveal each owner and isolate other owner; original600/400/900 geometry")
+             if sightReady then
+                 call RM_Check(IsVisibleToPlayer(-1600., 0., Player(1)), "vision-radius-owner", "initially hidden point 400 units inside requested600")
+                 call RM_Check(not IsVisibleToPlayer(-1100., 0., Player(1)), "vision-outside-owner", "point900 outside requested600")
+@@ -142,7 +368,10 @@
+             endif
+             set RM_M[1].vision = 200.
+             set RM_M[2].vision = 0.
+-        elseif RM_CASE == 29 and RM_STAGE == 2 then
++            call ReferenceSet(1, Player(1), -2000., 200.)
++            call ReferenceStop(2)
++            call VisionPhase(2)
++        elseif visionPhase == 2 then
+             if sightReady then
+                 call RM_Check(not IsVisibleToPlayer(-1600., 0., Player(1)), "vision-shrink", "probe400 outside new200 radius")
+             endif
+@@ -151,7 +380,10 @@
+             endif
+             set RM_M[1].vision = -1.
+             set RM_M[2].vision = 600.
+-        elseif RM_CASE == 29 and RM_STAGE == 3 then
++            call ReferenceStop(1)
++            call ReferenceSet(2, Player(2), 2000., 600.)
++            call VisionPhase(3)
++        elseif visionPhase == 3 then
+             if sightReady then
+                 call RM_Check(not IsVisibleToPlayer(-1600., 0., Player(1)), "vision-negative", "negative radius also clears")
+             endif
+@@ -160,18 +392,16 @@
+             endif
+             set RM_M[1].vision = 600.
+             set RM_M[1].speed = 1600.
+-        elseif RM_CASE == 29 and RM_STAGE == 5 then
+-            set RM_M[1].speed = 0.
+-        elseif RM_CASE == 29 and RM_STAGE == 6 then
++            call VisionPhase(4)
++        elseif visionPhase == 6 then
+             if sightReady then
+                 call RM_Check(IsVisibleToPlayer(-800., 0., Player(1)), "vision-moved-reveal", "new probe inside moving circle")
+                 call RM_Check(not IsVisibleToPlayer(-2400., 0., Player(1)), "vision-moved-clears-old", "old circle no longer supplies current visibility")
+             endif
+             set RM_M[1].owner = Player(2)
+             call SetUnitOwner(RM_U, Player(1), false)
+-        elseif RM_CASE == 29 and RM_STAGE == 7 then
+-            call RM_Check(GetOwningPlayer(RM_M[1].dummy) == Player(2), "vision-owner-field-refresh", "direct owner change reconciled on visit")
+-            call RM_Check(GetOwningPlayer(RM_M[2].dummy) == Player(1), "vision-source-owner-refresh", "source owner change reconciled on visit")
++            call VisionPhase(7)
++        elseif visionPhase == 8 then
+             if sightReady then
+                 call RM_Check(not IsVisibleToPlayer(-800., 0., Player(1)) and IsVisibleToPlayer(-800., 0., Player(2)), "vision-owner-transfer", "no cross-player lingering reveal")
+             endif
+@@ -181,9 +411,8 @@
+             set RM_M[1].owner = null
+             call RemoveUnit(RM_U)
+             set RM_U = null
+-        elseif RM_CASE == 29 and RM_STAGE == 8 then
+-            call RM_Check(GetOwningPlayer(RM_M[1].dummy) == Player(PLAYER_NEUTRAL_PASSIVE), "vision-null-source-neutral", "no explicit owner or source")
+-            call RM_Check(GetOwningPlayer(RM_M[2].dummy) == Player(PLAYER_NEUTRAL_PASSIVE), "vision-removed-source-neutral", "removed source is not a valid owner fallback")
++            call VisionPhase(9)
++        elseif visionPhase == 10 then
+             if sightReady then
+                 call RM_Check(not IsVisibleToPlayer(-800., 0., Player(2)), "vision-neutral-transfer-clears", "previous effective owner loses reveal")
+             endif
+@@ -192,6 +421,20 @@
+             endif
+             call RM_M[1].terminate()
+             call RM_M[2].terminate()
++            // Later-or-equal to actual termination, including the abort path.
++            call ReferenceStop(1)
++            call ReferenceStop(2)
++            call VisionPhase(11)
++        elseif visionPhase == 11 then
++            call VisionVisibilityCleanup()
++            call VisionCleanup()
++        endif
++    endfunction
++
++    function RM_EnvironmentStep takes nothing returns nothing
++        if RM_CASE == 29 then
++            call VisionStep()
++            return
+         endif
+         if RM_STAGE == RM_LIMIT then
+             if RM_CASE == 27 then
+@@ -204,17 +447,6 @@
+                     call RM_Equal(RM_DESTS[2], 1, "surveyed-cliff-once")
+                     call RM_Equal(RM_REMOVE[2], 1, "surveyed-cliff-remove-once")
+                 endif
+-            else
+-                if sightReady then
+-                    call RM_Check(not IsVisibleToPlayer(-1600., 0., Player(1)), "vision-cleanup", "current visibility removed; explored fog is not visibility")
+-                endif
+-                if fallbackReady then
+-                    call RM_Check(not IsVisibleToPlayer(2400., 0., Player(2)), "vision-fallback-cleanup", "source remains far from probe")
+-                endif
+-                call RM_Record("SKIP", "multiplayer", "single client cannot establish synchronization; repeat with two 1.27b clients")
+-                call ProbeAlliances(true)
+-                call FogEnable(previousFog)
+-                call FogMaskEnable(previousMask)
+             endif
+         endif
+     endfunction

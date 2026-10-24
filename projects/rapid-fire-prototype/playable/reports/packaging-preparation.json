@@ -1,0 +1,415 @@
+{
+  "status": "Scanned",
+  "inputs": [
+    {
+      "source": "projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+      "copy": "projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+      "sha256": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+      "mtime_ns": 1792460695052756981,
+      "size": 332578,
+      "original_bytes_and_mtime_preserved": true,
+      "copy_sha256": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad"
+    },
+    {
+      "source": "projects/relativistic-classic/tools/build.py",
+      "copy": "projects/rapid-fire-prototype/playable/tools/build.py",
+      "sha256": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+      "mtime_ns": 1792369969856927855,
+      "size": 15845,
+      "original_bytes_and_mtime_preserved": true,
+      "copy_sha256": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08"
+    },
+    {
+      "source": "projects/rapid-fire-prototype/tools/prepare_objects.py",
+      "copy": "projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+      "sha256": "e8ec3e16ea25a316d8663f09a9f71d1a95499222dab21aa425f3a08be52eb771",
+      "mtime_ns": 1792460620028300571,
+      "size": 14040,
+      "original_bytes_and_mtime_preserved": true,
+      "copy_sha256": "24e818fc2e52ea24611f2c8bfe4417a4fe029d2f8b100b3095fcba5ccba7846d"
+    },
+    {
+      "source": "projects/relativistic-classic/src/Missiles.j",
+      "copy": "projects/rapid-fire-prototype/playable/src/vendor/Missiles.j",
+      "sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+      "mtime_ns": 1792383155424927357,
+      "size": 40740,
+      "original_bytes_and_mtime_preserved": true,
+      "copy_sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6"
+    },
+    {
+      "source": "projects/relativistic-classic/src/libraries/TimerUtils.j",
+      "copy": "projects/rapid-fire-prototype/playable/src/vendor/TimerUtils.j",
+      "sha256": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+      "mtime_ns": 1792369976943325806,
+      "size": 11147,
+      "original_bytes_and_mtime_preserved": true,
+      "copy_sha256": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63"
+    },
+    {
+      "source": "projects/relativistic-classic/src/libraries/WorldBounds.j",
+      "copy": "projects/rapid-fire-prototype/playable/src/vendor/WorldBounds.j",
+      "sha256": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+      "mtime_ns": 1792369976943354294,
+      "size": 1866,
+      "original_bytes_and_mtime_preserved": true,
+      "copy_sha256": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+    },
+    {
+      "source": "projects/relativistic-classic/src/libraries/DummyRecycler.j",
+      "copy": "projects/rapid-fire-prototype/playable/src/vendor/DummyRecycler.j",
+      "sha256": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+      "mtime_ns": 1792369976943388123,
+      "size": 20321,
+      "original_bytes_and_mtime_preserved": true,
+      "copy_sha256": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf"
+    }
+  ],
+  "helper_checks": [
+    {
+      "name": "visible",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/visible.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/visible.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/visible-evidence",
+        "--validate-only"
+      ],
+      "exit": 0,
+      "stdout": "validated owned object recipe\n",
+      "stderr": ""
+    },
+    {
+      "name": "hidden",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/hidden.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/hidden.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/hidden-evidence",
+        "--validate-only"
+      ],
+      "exit": 0,
+      "stdout": "validated owned object recipe\n",
+      "stderr": ""
+    },
+    {
+      "name": "timing",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/timing.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/timing.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/timing-evidence",
+        "--validate-only"
+      ],
+      "exit": 0,
+      "stdout": "validated owned object recipe\n",
+      "stderr": ""
+    },
+    {
+      "name": "invalid-enum",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-enum.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-enum.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-enum-evidence"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: unverified enum value\n"
+    },
+    {
+      "name": "invalid-kind",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-kind.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-kind.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-kind-evidence"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: invalid owned object kind or id\n"
+    },
+    {
+      "name": "duplicate",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/duplicate.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/duplicate.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/duplicate-evidence"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: duplicate recipe field\n"
+    },
+    {
+      "name": "unknown-field",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/unknown-field.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/unknown-field.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/unknown-field-evidence"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: unknown or disallowed field\n"
+    },
+    {
+      "name": "invalid-level",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-level.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-level.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-level-evidence"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: invalid metadata level\n"
+    },
+    {
+      "name": "invalid-flag-type",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-flag-type.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-flag-type.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-flag-type-evidence"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: value type does not match metadata\n"
+    },
+    {
+      "name": "invalid-hotkey",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-hotkey.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-hotkey.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-hotkey-evidence"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: hotkey must be one ASCII letter or digit\n"
+    },
+    {
+      "name": "invalid-button",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-button.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-button.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/invalid-button-evidence"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: value outside metadata bounds\n"
+    },
+    {
+      "name": "actor-timing",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/actor-timing.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/actor-timing.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/actor-timing-evidence"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: cast timing fields require controller o001\n"
+    },
+    {
+      "name": "existing-out",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/objects-playable.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/existing-out.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/existing-out-evidence",
+        "--validate-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: destination already exists: /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/existing-out.w3x\n"
+    },
+    {
+      "name": "existing-evidence",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/objects-playable.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/existing-evidence.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/existing-evidence-evidence",
+        "--validate-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: destination already exists: /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/existing-evidence-evidence\n"
+    },
+    {
+      "name": "symlink-out",
+      "argv": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+        "-B",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--base",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+        "--recipe",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/base/objects-playable.json",
+        "--out",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/symlink-out.w3x",
+        "--evidence",
+        "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/symlink-out-evidence",
+        "--validate-only"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "error: symlink destination: /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/playable/tests/tooling/verify-k_y4o79k/symlink-out.w3x\n"
+    }
+  ],
+  "binary_readback_pending": true,
+  "limitations": [
+    "No map preparation, compiler, game, editor or multiplayer run in this unit.",
+    "Inherited Channel icon retained; no custom icon asset verified.",
+    "Validate-only verifies recipes/guards, not stored object bytes or in-game UI."
+  ],
+  "verification": [
+    {
+      "command": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B projects/rapid-fire-prototype/playable/tools/prepare_objects.py --help",
+      "argv": [
+        "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+        "python",
+        "-B",
+        "projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+        "--help"
+      ],
+      "exit": 0,
+      "stdout": "usage: prepare_objects.py [-h] --base BASE --recipe RECIPE --out OUT\n                          --evidence EVIDENCE [--validate-only]\n\nPrepare only owned o000/o001/A00G records into a NEW map (no game/compiler).\n--base MAP --recipe JSON --out NEW_MAP --evidence NEW_DIR Recipe rows:\nkind,id,field,level,value. Types/selectors come from pinned Classic metadata,\nnever value-shape inference. Optional controller-only unit fields ucpt (cast\npoint) and ucbs (cast backswing) use metadata Unreal type and level0. A00G UI:\nanam (name), ahky (one ASCII hotkey), abpx/abpy (button position), atp1/aub1\n(level-1 tooltips). Channel Ncl3 accepts only 0 (hidden) or 1 (visible). The\ninherited icon is retained. --validate-only checks recipes and output guards\nwithout reading/mutating a map or creating evidence. Only declared fields\nchange. Evidence and outputs must stay inside playable; existing files are\nnever overwritten.\n\noptions:\n  -h, --help           show this help message and exit\n  --base BASE\n  --recipe RECIPE\n  --out OUT\n  --evidence EVIDENCE\n  --validate-only      Validate recipe and output guards only; create no files\n                       and launch no tools\n",
+      "stderr": ""
+    },
+    {
+      "command": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B projects/rapid-fire-prototype/playable/tests/tooling/verify_prepare.py",
+      "argv": [
+        "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+        "python",
+        "-B",
+        "projects/rapid-fire-prototype/playable/tests/tooling/verify_prepare.py"
+      ],
+      "exit": 0,
+      "stdout": "PASS: 15 public helper checks; original bytes/mtime preserved; no map outputs\n",
+      "stderr": ""
+    }
+  ],
+  "metadata_sha256": {
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Units/AbilityMetaData.slk": "42249bc577463896a9b1fece959c6bd5f815eb42c4899b8c899620b547a5b3f6",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Units/UnitMetaData.slk": "4794cd724d1769cacab9a80c925d4df17a6514477d92815d5549d8e56b9a66a5",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/UI/WorldEditStrings.txt": "0c6a8e24015373fc943338c3d5587c4be9413bd7560848a6490252a7f72750fb"
+  },
+  "base_preparation_argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "projects/rapid-fire-prototype/playable/tools/prepare_objects.py",
+    "--base",
+    "projects/rapid-fire-prototype/playable/base/owned-original.w3x",
+    "--recipe",
+    "projects/rapid-fire-prototype/playable/base/objects-playable.json",
+    "--out",
+    "projects/rapid-fire-prototype/playable/base/playable-01.w3x",
+    "--evidence",
+    "projects/rapid-fire-prototype/playable/reports/objects-playable-01"
+  ],
+  "base_preparation_executed": false,
+  "spec_scope": "T2/T5 supporting UI/tooling preparation for S1-S17/S28; gameplay acceptance remains parent-owned"
+}

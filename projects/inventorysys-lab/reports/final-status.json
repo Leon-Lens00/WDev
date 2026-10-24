@@ -1,0 +1,120 @@
+{
+  "strongest_current_status": "Tested in map",
+  "target": "Warcraft III 1.27b",
+  "scope": "One own single-client run; bounded 14-case public-API fixture only",
+  "delivery": "Evaluated test, not all-green baseline approval",
+  "run_id": "inv-baseline-20261019-02",
+  "map": "runs/inv-baseline-20261019-02/inv-baseline-20261019-02.w3x",
+  "map_sha256": "574c634cfa95a075643ec40ea80056c4b6143b1ced23598c4f09d5a405448853",
+  "assembled_sha256": "8235fb554965db9d5b12e49a6609d763833065f304bb1501bec5bbf843afc2c4",
+  "original_sha256": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada",
+  "original_unchanged": true,
+  "core_fixes": false,
+  "actual_run": {
+    "complete": true,
+    "records": 166,
+    "cases": 14,
+    "pass": 16,
+    "fail": 2,
+    "obs": 6,
+    "skip": 4,
+    "inconclusive": true,
+    "reader_exit": 1,
+    "log": "runs/inv-baseline-20261019-02/IL141-inv-baseline-20261019-02.pld",
+    "result": "runs/inv-baseline-20261019-02/game-result.json",
+    "reader_stdout": "runs/inv-baseline-20261019-02/reader.stdout.json",
+    "reader_stderr": "runs/inv-baseline-20261019-02/reader.stderr.txt",
+    "reader_exit_file": "runs/inv-baseline-20261019-02/reader.exit.txt",
+    "case9": "Combined oracle inconclusive: observer comparison after original RemoveItem; no individual values logged; neither bug nor definitively invalid oracle established",
+    "case14": "Retained instance custom-ID metadata after setItem(0); fixture-restoration limitation, not proven public-contract violation",
+    "restart_before_manual_evaluation": true,
+    "game_job_4_exit": 0,
+    "game_job_4_exit_state": "Observed authoritative background completion event: exit 0 after 2h 26m; termination mechanism not established",
+    "game_job_4_launch_report": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/play-20261019-121634-710036"
+  },
+  "prior_observed_build": {
+    "pjass_exit": 0,
+    "wc3ctl_exit": 0,
+    "corrected_build_exit": 0,
+    "jasshelper_needed": false,
+    "fresh_vjass_recompile_claimed": false,
+    "prefix_and_named_members_preserved": true,
+    "raw_identities_preserved": 52,
+    "housekeeping_exceptions": [
+      "(attributes)",
+      "(listfile)"
+    ],
+    "encrypted_housekeeping_semantic_equivalence_claimed": false,
+    "commands": "runs/inv-baseline-20261019-02/commands.json",
+    "report": "runs/inv-baseline-20261019-02/build.json",
+    "first_build": "inv-baseline-20261019-01 failed archive guard after both native tools exited 0; retained unchanged",
+    "guard_correction": "One actual RED, then 17 focused and 33 suite GREEN",
+    "parent_suite": "33 tests, exit 0; not rerun in this correction"
+  },
+  "prior_independent_verification": {
+    "verifier": "mvfiqxos-7-am74",
+    "proof_root": "/tmp/wdev-inventorysys-lab/verify-Jpktho/",
+    "focused_tests": 17,
+    "focused_exit": 0,
+    "suite_tests": 33,
+    "suite_exit": 0,
+    "reader_exit": 1,
+    "help_exit": 0,
+    "assemble_exit": 0,
+    "negative_probe_exits": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "negative_probe_stderr": "error: invalid evidence\n",
+    "negative_probe_stdout": "",
+    "probe_inputs_and_existing_report_unchanged": true,
+    "only_blocker": "Stale pending/Scanned documentation; addressed by this bounded correction",
+    "report": "independent-verification.md"
+  },
+  "correction_verification": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python -B -m unittest discover -s projects/inventorysys-lab/tests -p test_actual_run.py -v",
+    "timeout_seconds": 30,
+    "red": {
+      "exit": 1,
+      "stdout": "",
+      "stderr_summary": "Artifact/public-evidence test ok; stale-document test FAIL on README pending phrase; Ran 2 tests in 0.046s; FAILED (failures=1)"
+    },
+    "green": {
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_actual_source_archive_and_failed_evidence (test_actual_run.ActualRun.test_actual_source_archive_and_failed_evidence) ... ok\ntest_close_docs_do_not_describe_completed_run_as_pending (test_actual_run.ActualRun.test_close_docs_do_not_describe_completed_run_as_pending) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.039s\n\nOK\n"
+    },
+    "streams_source": "Foreground tool results; RED stderr summarized because unittest embeds the entire stale README",
+    "full_suite_or_native_tools_rerun": false,
+    "scratch_created": false
+  },
+  "spec_outcomes": {
+    "S1": "Actual scenarios, persistent log, strict reader and failures delivered",
+    "S2": "Original supplied baseline/demo preserved; evaluated without core fixes",
+    "S3": "Actual pJASS, packaging and own-game run delivered within bounded scope",
+    "S4": "Authorized isolated temp fixtures/copies; correction tests read retained project-relative artifacts"
+  },
+  "remaining_advisories": [
+    "Pages, sell/drop, sockets and destructive camera are SKIP",
+    "Multiplayer and long-duration leak/lifetime evaluation pending",
+    "Editor reopen/save certification pending",
+    "Case 9 individual oracle values unavailable",
+    "Restart copied map before manual evaluation"
+  ],
+  "independent_recheck": {
+    "verifier": "mvfj04yf-9-hqey",
+    "result": "PASS",
+    "targeted_tests": 2,
+    "exit": 0,
+    "stdout": "",
+    "proof": "verification/recheck/targeted-command.json",
+    "documentation_links_resolved": 34,
+    "scope": "Only original stale-documentation blocker; no additional runtime tests"
+  },
+  "retained_independent_proof": "verification/",
+  "native_review_approved": false,
+  "native_assessment": "unassessable: untracked repository scope; independent item3 verification completed, no native approval claimed"
+}

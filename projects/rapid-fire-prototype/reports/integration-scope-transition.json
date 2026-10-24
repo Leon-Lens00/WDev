@@ -1,0 +1,51 @@
+{
+  "operation": "tracking-only S28/L74 integrated-delivery rebaseline",
+  "archive": {
+    "path": "odd/tasks/archive/rapid-fire-prototype-through-L73.md",
+    "bytes": 23752,
+    "sha256": "e74f7201a7bf6bd113e56ffdc7a95cf2a1aefae423fccb8a0dfd39ea3d6cd6c2",
+    "byte_exact_prior_current": true
+  },
+  "original_history": {
+    "path": "odd/tasks/rapid-fire-prototype.md",
+    "bytes": 89082,
+    "sha256": "9452f9bd6d44c2842658411ae6bbf84d099a1bb9ffd1d250fcdac10709da3c98",
+    "unchanged": true
+  },
+  "current": {
+    "path": "odd/tasks/rapid-fire-prototype-current.md",
+    "bytes": 10033,
+    "sha256": "5336e69a79139993a5d94554a21f290f19316bd8948a6b67b5710a40616b6a4e",
+    "specs_S1_S17_verbatim": true,
+    "S28_L74_exact_request_twice": true,
+    "task_count": 6
+  },
+  "probe_status": {
+    "prior_fields_preserved_by_equality": true,
+    "appended_current_section": true
+  },
+  "memory": {
+    "project": "wdev",
+    "topic_key": "odd/rapid-fire-prototype/tasks57",
+    "requested_observation_id": 57,
+    "status": "saved",
+    "literal_equality_check": {
+      "passed": true,
+      "bytes": 10033,
+      "sha256": "5336e69a79139993a5d94554a21f290f19316bd8948a6b67b5710a40616b6a4e",
+      "payload_is_whole_current_document": true
+    },
+    "provider_receipt": {
+      "id": 169,
+      "status": "saved"
+    },
+    "save_calls_sent": 1,
+    "provider_readback_performed": false,
+    "content_equals_checked_whole_current_literal": true,
+    "observation_id_note": "Provider assigned id 169; mem_save cannot select or force requested observation id 57. No retry."
+  },
+  "scope": {
+    "tracking_only": true,
+    "source_runtime_build_game_proc_GUI_Git_operations": false
+  }
+}

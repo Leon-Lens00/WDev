@@ -1,0 +1,28 @@
+{
+  "through_log": 68,
+  "document": "odd/tasks/rapid-fire-prototype-current.md",
+  "payload": "projects/rapid-fire-prototype/reports/checkpoint-current-L68-payload.txt",
+  "bytes": 19922,
+  "sha256": "c4bb999db5162999d87aeb6c9e2a003814e7aceea3e9730468d95667f1aa56bd",
+  "literal_payload_byte_equal": true,
+  "archive": "odd/tasks/rapid-fire-prototype.md",
+  "archive_bytes": 89082,
+  "archive_sha256": "9452f9bd6d44c2842658411ae6bbf84d099a1bb9ffd1d250fcdac10709da3c98",
+  "archive_mtime_ns": 1792475582719653998,
+  "archive_preserved": true,
+  "specs_and_prior_log_preserved_at_edit": true,
+  "l68_characters": 555,
+  "validation": "Finite local equality/hash/archive check only; passive bookkeeping, behavioral RED/GREEN inapplicable; no source/build/runtime/reader actions",
+  "provider_receipt": {
+    "id": 57,
+    "status": "saved"
+  },
+  "provider_readback_performed": false,
+  "save_calls_sent": 1,
+  "provider_sent_payload_mechanical_capture": false,
+  "archive_mtime_preserved": true,
+  "mirror_status": "L68_WHOLE_LITERAL_SAVE_RECEIPT_OBSERVED",
+  "local_document_payload_byte_equality_rechecked": true,
+  "provider_content_readback": false,
+  "limitation": "Whole literal sent once; save receipt observed. No provider readback or mechanical capture of sent payload."
+}

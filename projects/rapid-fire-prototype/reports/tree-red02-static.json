@@ -1,0 +1,474 @@
+{
+  "status": "PREPARED_TREE02_FIXTURE",
+  "command_argv": [
+    "python3",
+    "-B",
+    "-"
+  ],
+  "timeout_seconds": 30,
+  "scope": "Tree02 fixture preparation, partial S3 only",
+  "native_executed": false,
+  "unchanged_functions": [
+    "Abort",
+    "Assess",
+    "At",
+    "Bodies",
+    "Deadline",
+    "Finish",
+    "InWorld",
+    "LiveOwned",
+    "OnDamage",
+    "OnShot",
+    "OnSpell",
+    "Pose",
+    "RF_StartTreeTest",
+    "RemoveScene",
+    "RemovedAbsent",
+    "Scan",
+    "TreeWitness"
+  ],
+  "changed_functions": [
+    "Corridor",
+    "CreateScene",
+    "SceneReady",
+    "Tick",
+    "VisitTree"
+  ],
+  "readiness_predicate_order_unchanged_except_control_point": true,
+  "corridor_resource_sequence_unchanged": true,
+  "harness_diff": "--- frozen-tree-red01/TreeNativeTest.j\n+++ TreeNativeTest.j\n@@ -54,6 +54,8 @@\n         private integer corridorUnits = 0\n         private integer corridorTrees = 0\n         private integer ownedTrees = 0\n+        private integer rejectedUnits = 0\n+        private integer rejectedTrees = 0\n         private boolean corridorOK = true\n         private real corridorY = 0.\n         private real array absentX\n@@ -136,16 +138,42 @@\n         return GetDestructableTypeId(tree) == 'LTlt' and GetDestructableLife(tree) > .405 and RAbsBJ(GetDestructableX(tree)-(AX+128.)) <= 1. and RAbsBJ(GetDestructableY(tree)-AY) <= 1.\n     endfunction\n \n+    private function BoolText takes boolean value returns string\n+        if value then\n+            return \"true\"\n+        endif\n+        return \"false\"\n+    endfunction\n+\n+    private function GateFailure takes string gate, string detail returns boolean\n+        call RB_LogRecord(\"OBS\",\"readiness-rejected-\"+gate,detail+\"; later gates unreached/unqualified\")\n+        return false\n+    endfunction\n+\n+    private function FlightsClear takes nothing returns boolean\n+        if liveCount != 0 then\n+            return GateFailure(\"source-flight-clearance\",\"fresh source flights=\"+I2S(liveCount))\n+        endif\n+        return true\n+    endfunction\n+\n     private function VisitTree takes nothing returns nothing\n         local destructable d = GetEnumDestructable()\n         set corridorTrees = corridorTrees+1\n         if corridorTrees > 64 then\n             set corridorOK = false\n+            if corridorTrees == 65 then\n+                call RB_LogRecord(\"OBS\",\"corridor-destructable-overflow\",\"enumerated>64; fixture rejected, no life filter\")\n+            endif\n         elseif scene == 1 and d == tree and TreeWitness() then\n             set ownedTrees = ownedTrees+1\n         else\n             // No life filter: the immutable core enumerates dead widgets too.\n             set corridorOK = false\n+            set rejectedTrees = rejectedTrees+1\n+            if rejectedTrees <= 4 then\n+                call RB_LogRecord(\"OBS\",\"corridor-unexpected-destructable\",\"index=\"+I2S(corridorTrees)+\" handle=\"+I2S(GetHandleId(d))+\" type=\"+I2S(GetDestructableTypeId(d))+\" xy=\"+R2S(GetDestructableX(d))+\",\"+R2S(GetDestructableY(d))+\" life=\"+R2S(GetDestructableLife(d))+\" ownedHandle=\"+BoolText(d == tree))\n+            endif\n         endif\n         set d = null\n     endfunction\n@@ -159,6 +187,8 @@\n         set corridorUnits = 0\n         set corridorTrees = 0\n         set ownedTrees = 0\n+        set rejectedUnits = 0\n+        set rejectedTrees = 0\n         set corridorOK = true\n         // Entire 1500 ray plus core candidate pad128 and logical collision32.\n         // Broad conservative native enumeration; no footprint/LOS inference.\n@@ -172,11 +202,16 @@\n             set corridorUnits = corridorUnits+1\n             if corridorUnits > 256 then\n                 set corridorOK = false\n+                call RB_LogRecord(\"OBS\",\"corridor-unit-overflow\",\"enumerated>256; fixture rejected\")\n                 exitwhen true\n             endif\n             if GetUnitX(u) >= x-160. and GetUnitX(u) <= x+1660. and RAbsBJ(GetUnitY(u)-y) <= 160. then\n                 if u != actor and u != target then\n                     set corridorOK = false\n+                    set rejectedUnits = rejectedUnits+1\n+                    if rejectedUnits <= 4 then\n+                        call RB_LogRecord(\"OBS\",\"corridor-unexpected-unit\",\"index=\"+I2S(corridorUnits)+\" handle=\"+I2S(GetHandleId(u))+\" \"+Pose(u))\n+                    endif\n                 endif\n             endif\n         endloop\n@@ -185,7 +220,7 @@\n         set r = Rect(x-160.,corridorY-160.,x+1660.,corridorY+160.)\n         call EnumDestructablesInRect(r,null,function VisitTree)\n         call RemoveRect(r)\n-        call RB_LogRecord(\"OBS\",\"native-corridor\",\"unitsScanned=\"+I2S(corridorUnits)+\" destructables=\"+I2S(corridorTrees)+\" owned=\"+I2S(ownedTrees)+\" no life filter; full1500+160 broadphase\")\n+        call RB_LogRecord(\"OBS\",\"native-corridor\",\"unitsScanned=\"+I2S(corridorUnits)+\" destructables=\"+I2S(corridorTrees)+\" owned=\"+I2S(ownedTrees)+\" unexpectedUnits=\"+I2S(rejectedUnits)+\" unexpectedDestructables=\"+I2S(rejectedTrees)+\" corridorOK=\"+BoolText(corridorOK)+\" expectedOwned=\"+I2S(scene)+\" no life filter; full1500+160 broadphase\")\n         set g = null\n         set r = null\n         set u = null\n@@ -193,29 +228,45 @@\n     endfunction\n \n     private function SceneReady takes nothing returns boolean\n-        if not Bodies() or not At(actor,AX,AY) or not At(caster,-5500.,-5500.) or not At(target,AX+512.,AY) or not At(control,AX+512.,AY+512.) then\n-            return false\n+        // Same predicate order/short circuit; OBS identifies the first failure.\n+        if not Bodies() then\n+            return GateFailure(\"body-contract\",\"actor \"+Pose(actor)+\" caster \"+Pose(caster)+\" target \"+Pose(target)+\" control \"+Pose(control))\n+        endif\n+        if not At(actor,AX,AY) then\n+            return GateFailure(\"actor-placement\",\"expected=\"+R2S(AX)+\",\"+R2S(AY)+\" tolerance1 actual \"+Pose(actor))\n+        endif\n+        if not At(caster,-5500.,-5500.) then\n+            return GateFailure(\"controller-placement\",\"expected=-5500,-5500 tolerance1 actual \"+Pose(caster))\n+        endif\n+        if not At(target,AX+512.,AY) then\n+            return GateFailure(\"enemy-placement\",\"expected=\"+R2S(AX+512.)+\",\"+R2S(AY)+\" tolerance1 actual \"+Pose(target))\n+        endif\n+        if not At(control,AX+256.,AY+512.) then\n+            return GateFailure(\"control-placement\",\"expected=\"+R2S(AX+256.)+\",\"+R2S(AY+512.)+\" tolerance1 actual \"+Pose(control))\n         endif\n         if GetWidgetLife(actor) <= 100. or GetWidgetLife(target) <= 100. or GetWidgetLife(control) <= 100. then\n-            return false\n+            return GateFailure(\"life\",\"actor=\"+R2S(GetWidgetLife(actor))+\" target=\"+R2S(GetWidgetLife(target))+\" control=\"+R2S(GetWidgetLife(control))+\" required>100\")\n         endif\n         if GetUnitAbilityLevel(caster,'A00G') != 1 or GetUnitAbilityLevel(caster,'Ablo') != 0 or GetUnitAbilityLevel(actor,'A00G') != 0 or GetUnitAbilityLevel(actor,'Ablo') != 0 then\n-            return false\n+            return GateFailure(\"pair-abilities\",\"caster A00G/Ablo=\"+I2S(GetUnitAbilityLevel(caster,'A00G'))+\"/\"+I2S(GetUnitAbilityLevel(caster,'Ablo'))+\" actor=\"+I2S(GetUnitAbilityLevel(actor,'A00G'))+\"/\"+I2S(GetUnitAbilityLevel(actor,'Ablo')))\n         endif\n         if GetUnitAbilityLevel(target,'A00G') != 0 or GetUnitAbilityLevel(target,'Ablo') != 0 or GetUnitAbilityLevel(control,'A00G') != 0 or GetUnitAbilityLevel(control,'Ablo') != 0 then\n-            return false\n+            return GateFailure(\"target-abilities\",\"target A00G/Ablo=\"+I2S(GetUnitAbilityLevel(target,'A00G'))+\"/\"+I2S(GetUnitAbilityLevel(target,'Ablo'))+\" control=\"+I2S(GetUnitAbilityLevel(control,'A00G'))+\"/\"+I2S(GetUnitAbilityLevel(control,'Ablo')))\n         endif\n         if IsUnitPaused(actor) or IsUnitPaused(caster) or not IsUnitPaused(target) or not IsUnitPaused(control) then\n-            return false\n+            return GateFailure(\"pause\",\"actor=\"+BoolText(IsUnitPaused(actor))+\" caster=\"+BoolText(IsUnitPaused(caster))+\" target=\"+BoolText(IsUnitPaused(target))+\" control=\"+BoolText(IsUnitPaused(control)))\n         endif\n         if not IsUnitEnemy(target,Player(0)) or not IsUnitEnemy(control,Player(0)) or not IsUnitEnemy(actor,Player(1)) or GetPlayerAlliance(Player(0),Player(1),ALLIANCE_PASSIVE) or GetPlayerAlliance(Player(1),Player(0),ALLIANCE_PASSIVE) then\n-            return false\n-        endif\n-        if GetUnitCurrentOrder(actor) != 0 or RAbsBJ(GetUnitFacing(actor)) > .01 or not TreeWitness() then\n-            return false\n+            return GateFailure(\"alliance\",\"enemy target/control/actor=\"+BoolText(IsUnitEnemy(target,Player(0)))+\"/\"+BoolText(IsUnitEnemy(control,Player(0)))+\"/\"+BoolText(IsUnitEnemy(actor,Player(1)))+\" passive01/10=\"+BoolText(GetPlayerAlliance(Player(0),Player(1),ALLIANCE_PASSIVE))+\"/\"+BoolText(GetPlayerAlliance(Player(1),Player(0),ALLIANCE_PASSIVE)))\n+        endif\n+        if GetUnitCurrentOrder(actor) != 0 or RAbsBJ(GetUnitFacing(actor)) > .01 then\n+            return GateFailure(\"actor-order-facing\",\"order=\"+I2S(GetUnitCurrentOrder(actor))+\" facing=\"+R2S(GetUnitFacing(actor))+\" expected0/.01\")\n+        endif\n+        if not TreeWitness() then\n+            return GateFailure(\"tree-state\",\"scene=\"+I2S(scene)+\" type=\"+I2S(GetDestructableTypeId(tree))+\" xy=\"+R2S(GetDestructableX(tree))+\",\"+R2S(GetDestructableY(tree))+\" life=\"+R2S(GetDestructableLife(tree)))\n         endif\n         if not InWorld(AX,AY,160.) or not InWorld(AX+1500.,AY,160.) or not InWorld(GetUnitX(control),GetUnitY(control),32.) or not InWorld(-5500.,-5500.,32.) then\n-            return false\n+            return GateFailure(\"world\",\"bounds=\"+I2S(WorldBounds.minX)+\",\"+I2S(WorldBounds.minY)+\"..\"+I2S(WorldBounds.maxX)+\",\"+I2S(WorldBounds.maxY)+\" ray1500 pad160 control/controller pad32; control \"+Pose(control))\n         endif\n         if scene == 0 then\n             set absentX[0] = GetUnitX(actor)\n@@ -225,7 +276,7 @@\n             set absentX[2] = GetUnitX(control)\n             set absentY[2] = GetUnitY(control)\n         elseif RAbsBJ(GetUnitX(actor)-absentX[0]) > .01 or RAbsBJ(GetUnitY(actor)-absentY[0]) > .01 or RAbsBJ(GetUnitX(target)-absentX[1]) > .01 or RAbsBJ(GetUnitY(target)-absentY[1]) > .01 or RAbsBJ(GetUnitX(control)-absentX[2]) > .01 or RAbsBJ(GetUnitY(control)-absentY[2]) > .01 then\n-            return false\n+            return GateFailure(\"same-actual-scenes\",\"tolerance.01; actor \"+Pose(actor)+\" enemy \"+Pose(target)+\" control \"+Pose(control))\n         endif\n         // Terrain path flags are NOT missile obstruction. Owned tree pathing is\n         // expected, not an unintended blocker. Native contacts qualify the ray.\n@@ -431,7 +482,7 @@\n         set actor = CreateUnit(Player(0),'o000',AX,AY,0.)\n         set caster = CreateUnit(Player(0),'o001',-5500.,-5500.,0.)\n         set target = CreateUnit(Player(1),'o000',AX+512.,AY,0.)\n-        set control = CreateUnit(Player(1),'o000',AX+512.,AY+512.,0.)\n+        set control = CreateUnit(Player(1),'o000',AX+256.,AY+512.,0.)\n         call PauseUnit(target,true)\n         call PauseUnit(control,true)\n         set tree = null\n@@ -516,7 +567,7 @@\n             call RB_LogRecord(\"OBS\",\"target-ready\",Pose(target))\n             call RB_LogRecord(\"OBS\",\"control-ready\",Pose(control))\n             call RB_LogRecord(\"OBS\",\"tree-ready\",\"type=\"+I2S(GetDestructableTypeId(tree))+\" xy=\"+R2S(GetDestructableX(tree))+\",\"+R2S(GetDestructableY(tree))+\" life=\"+R2S(GetDestructableLife(tree)))\n-            if liveCount != 0 or not SceneReady() then\n+            if not FlightsClear() or not SceneReady() then\n                 call Abort(\"fresh actual geometry512/ownership/alliance/life/abilities/pause/world/tree/corridor unavailable; no terrain/pathing inference\")\n                 return\n             endif\n@@ -538,7 +589,7 @@\n             endif\n             set phase = 3\n         elseif phase == 3 then\n-            if not SceneReady() or liveCount != 0 then\n+            if not SceneReady() or not FlightsClear() then\n                 call Abort(\"fixture changed before actual order\")\n                 return\n             endif\n",
+  "diff_added": 67,
+  "diff_removed": 16,
+  "README_history": {
+    "byte_equal_to_frozen": true,
+    "frozen_sha256": "dcde523f92959f4493d7ddca844bbdaea4bf331fac64b5227ec3f6d0e10c90ef",
+    "suffix_sha256": "dcde523f92959f4493d7ddca844bbdaea4bf331fac64b5227ec3f6d0e10c90ef",
+    "current_sha256": "1ec06595d967e5fbb230ba6ee91ea8ca263d827b99398ccbe2c85daf7af71521"
+  },
+  "preservation": [
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": false,
+      "intentional_change": true
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed01.j",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed01.j",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build-plan-tree-red01.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/README.md",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": false,
+      "intentional_change": true
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/build.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/command-1.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/command-2.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/commands.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/compiled.j",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/entry.j",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/injected.w3x",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-01/rf-burst-tree-red-20261020-01.w3x",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-01.txt",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-attempt02-static.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-attempt02-stderr.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-attempt02-stdout.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-build.exit.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-build.stderr.txt",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-build.stdout.txt",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-launch.exit.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-launch.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-launch.stderr.txt",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-launch.stdout.txt",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-reader.exit.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-reader.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-reader.stderr.txt",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-native-reader.stdout.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-observer.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-preparation.md",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-profile-preflight.json",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red01-results.md",
+      "frozen_SHA_mtime_unchanged": true,
+      "original_SHA_mtime_unchanged": true,
+      "intentional_change": false
+    }
+  ],
+  "frozen_artifact_count": 32,
+  "current_spec_unchanged_sha256": "9a9247e2828fcc47bd1323e7803973c22c968b895e36bb978ce7a8e392bdb2e4",
+  "artifacts": [
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "sha256": "de09c0eb5502bb7af0ec250ced5d2c8657d22d33c8a9f659aaa03211575dc647",
+      "lines": 649
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j",
+      "sha256": "69b3beec38b36df791232ddb1e00ef39fdccd57695572318cb77961e4efb2f46",
+      "lines": 67
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j",
+      "sha256": "dfd43cb7b55c274ebd4e88fc0d3ade5b72485b1873083af27463374fb464f2a1",
+      "lines": 35
+    }
+  ],
+  "lint_findings": [
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 182,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 195,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 220,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 482,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 483,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 484,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 485,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 493,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 496,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 498,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 500,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 501,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 502,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 510,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 643,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+      "line": 644,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j",
+      "line": 34,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j",
+      "line": 35,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    }
+  ],
+  "lint_errors": 0,
+  "lint_warnings": 18,
+  "unknown_API_calls": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": [],
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j": [],
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j": []
+  },
+  "native_type_identifier_collisions": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": [],
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j": [],
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j": []
+  },
+  "classic_API_sha256": {
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c"
+  },
+  "plan_sha256": "8ec905769dbd3d1a3cbfd30f9659c2f7fa56037c05652beef9e49f3695a94825",
+  "build_argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py",
+    "build",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+    "--wc3",
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "--timer-utils",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "--world-bounds",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "--dummy-recycler",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "--core",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "--bootstrap",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j",
+    "--output-dir",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build",
+    "--run-id",
+    "rf-burst-tree-red-20261020-02",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+    "--entry",
+    "RF_StartTreeTest"
+  ],
+  "build_shell": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py build --base /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x --wc3 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 --timer-utils /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j --world-bounds /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j --dummy-recycler /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j --core /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j --bootstrap /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j --output-dir /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build --run-id rf-burst-tree-red-20261020-02 --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j --entry RF_StartTreeTest",
+  "reader_argv_template": [
+    "python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-tree-red-20261020-02.txt",
+    "--run-id",
+    "rf-burst-tree-red-20261020-02",
+    "--not-before",
+    "PARENT_RECORDED_LAUNCH_UNIX_SECONDS",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red02-native-reader.json"
+  ],
+  "input_pins": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j": "69b3beec38b36df791232ddb1e00ef39fdccd57695572318cb77961e4efb2f46",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": "de09c0eb5502bb7af0ec250ced5d2c8657d22d33c8a9f659aaa03211575dc647",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j": "dfd43cb7b55c274ebd4e88fc0d3ade5b72485b1873083af27463374fb464f2a1"
+  },
+  "strongest_current_status": "Scanned",
+  "pending_checks": [
+    "JassHelper/pJASS/parent build",
+    "fresh exact-profile preflight before observer",
+    "ONE protected native Tree02 run and reader",
+    "native512/control/tree/corridor admission",
+    "qualified collision RED",
+    "full S3/T2/T3/T4"
+  ],
+  "exit_code": 0
+}

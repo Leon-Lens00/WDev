@@ -1,0 +1,147 @@
+{
+  "source_change": "exactly three owner substitutions and expiry readiness prerequisite",
+  "source_sha256": "9771db69b1c375ed639f56054793895b1eb251c37f66d6773552c64711ce2aa7",
+  "maps": [
+    {
+      "run": "itl-button-20261019-03",
+      "map_sha256": "93e347a72a26ae54200189614921643103e0ab644ce778bbca2a705092fe9281",
+      "script_sha256": "27ddc3379c226e21b03b9dd55b4825ccd268771e7fce4a9b6613c51282041b07",
+      "preserved_identities": 52,
+      "recorded_commands": [
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "pjass",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/assembled.j"
+          ],
+          "returncode": 0,
+          "stdout": "Parse successful:     2418 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j\nParse successful:    10230 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j\nParse successful:    11007 lines: /home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/assembled.j\nParse successful:    23655 lines: <total>\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "wc3ctl",
+            "file",
+            "set",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/input.w3x",
+            "war3map.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/assembled.j",
+            "--out",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/injected.w3x",
+            "--json"
+          ],
+          "returncode": 0,
+          "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 485366 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-button-20261019-03/injected.w3x\"\n}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "run": "itl-picture-20261019-03",
+      "map_sha256": "34c50b840559cdb3b7174aa18b6a2f4fc5c896ecbf593226f83695e973e812ca",
+      "script_sha256": "3e46a8ec458bd3bc986790c8c580ac300a4d06d0219bed64c1d0aabaa0f24fe3",
+      "preserved_identities": 52,
+      "recorded_commands": [
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "pjass",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/assembled.j"
+          ],
+          "returncode": 0,
+          "stdout": "Parse successful:     2418 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j\nParse successful:    10230 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j\nParse successful:    11007 lines: /home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/assembled.j\nParse successful:    23655 lines: <total>\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "wc3ctl",
+            "file",
+            "set",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/input.w3x",
+            "war3map.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/assembled.j",
+            "--out",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/injected.w3x",
+            "--json"
+          ],
+          "returncode": 0,
+          "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 485367 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-picture-20261019-03/injected.w3x\"\n}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "run": "itl-text-20261019-03",
+      "map_sha256": "2192ede69b2039760e72d10419d4d86dfb1ac7d4031029aa6e30667281548e27",
+      "script_sha256": "b89c5280fc2f4fbe906e0e2dc2f89e0806bd4fbd034f43ccee33aeb9ac09d6cc",
+      "preserved_identities": 52,
+      "recorded_commands": [
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "pjass",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/assembled.j"
+          ],
+          "returncode": 0,
+          "stdout": "Parse successful:     2418 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j\nParse successful:    10230 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j\nParse successful:    11007 lines: /home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/assembled.j\nParse successful:    23655 lines: <total>\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "wc3ctl",
+            "file",
+            "set",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/input.w3x",
+            "war3map.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/assembled.j",
+            "--out",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/injected.w3x",
+            "--json"
+          ],
+          "returncode": 0,
+          "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 485364 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-text-20261019-03/injected.w3x\"\n}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "run": "itl-camera-20261019-03",
+      "map_sha256": "2bf5f6d5512cd145a82c651c5b1c28e406f21bd41fa703d8ef669da0e619a4bd",
+      "script_sha256": "ed453bd72d06f1ee24be68a5f6c26950f39dd94d66edc69c603a2db444e48639",
+      "preserved_identities": 52,
+      "recorded_commands": [
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "pjass",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/assembled.j"
+          ],
+          "returncode": 0,
+          "stdout": "Parse successful:     2418 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j\nParse successful:    10230 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j\nParse successful:    11007 lines: /home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/assembled.j\nParse successful:    23655 lines: <total>\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+            "wc3ctl",
+            "file",
+            "set",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/input.w3x",
+            "war3map.j",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/assembled.j",
+            "--out",
+            "/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/injected.w3x",
+            "--json"
+          ],
+          "returncode": 0,
+          "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 485366 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/inventorysys-lab/reports/technical/runs/itl-camera-20261019-03/injected.w3x\"\n}\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "original_sha256": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada"
+}

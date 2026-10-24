@@ -1,0 +1,23 @@
+{
+  "executor": "parent",
+  "evidence_basis": "Parent-reported read-only exact-profile preflight; worker records attributed metadata only, no process query",
+  "exit_code": null,
+  "exit_code_basis": "Preflight exit code not supplied in this handoff; build23 EXIT0 is separate evidence",
+  "stdout_exact": "{\"profile\":\"proton-newgen-modern-test\",\"active_game_processes\":[],\"profile_clear_at_check\":true,\"read_only\":true}",
+  "stdout_newline_status": "Not supplied; no trailing newline inferred",
+  "stdout": {
+    "profile": "proton-newgen-modern-test",
+    "active_game_processes": [],
+    "profile_clear_at_check": true,
+    "read_only": true
+  },
+  "snapshot_only": true,
+  "future_availability_guaranteed": false,
+  "launcher_must_recheck_occupancy": true,
+  "run_id": "rf-burst-red-20261019-01",
+  "actual_native_RED_observed": false,
+  "native_executed": false,
+  "parent_runtime": "Observer/game only after worker return",
+  "worker_process_query": false,
+  "worker_runtime_action_queued": false
+}

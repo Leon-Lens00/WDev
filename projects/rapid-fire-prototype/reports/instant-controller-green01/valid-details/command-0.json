@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "wc3ctl",
+    "file",
+    "set",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-green01/owned-input.w3x",
+    "war3map.w3u",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-green01/valid-details/war3map.w3u",
+    "--out",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-green01/valid-details/stage-0.w3x",
+    "--json"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.w3u, 1114 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/instant-controller-green01/valid-details/stage-0.w3x\"\n}\n",
+  "stderr": ""
+}

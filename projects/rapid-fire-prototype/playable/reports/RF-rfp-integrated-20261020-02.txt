@@ -1,0 +1,23 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "RM28|rfp-integrated-20261020-02|BEGIN|RFIntegrated" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CASE|I01-recast-phase-moving-takeover" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|OBS|logical-native-speed-after-init|handle=1050763 type=1865429041 life=335.000 owner=0 paused=false hidden=false xy=-5500.000,-5500.000 anchor=-5500.000,-5500.000 delta=0.000,0.000 distan" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|OBS|admission|scene=1 actual=-3136.000,2624.000 sourceHP=335.000 prior flights closed and recycler wait3s before fixture" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|PASS|native-controller-move|cast takeover follows after .25s of actual movement" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|PASS|public-cast-order|native Channel point order; effect required by pulse deadline" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|PASS|shot-attack-scale-command|pulse=1 ledger only; visual gesture requires inspection" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|PASS|public-cast-order|native Channel point order; effect required by pulse deadline" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|PASS|shot-attack-scale-command|pulse=2 ledger only; visual gesture requires inspection" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|PASS|shot-attack-scale-command|pulse=3 ledger only; visual gesture requires inspection" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|PASS|shot-attack-scale-command|pulse=4 ledger only; visual gesture requires inspection" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|OBS|first-failed-body-predicate|predicate=logical-anchor-distance-at-most-1 scene=1 stage=4 elapsed=1.094" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|OBS|actual-actor-body|handle=1050762 type=1865429040 life=335.000 owner=0 paused=false hidden=false xy=-3158.234,2932.215 anchor=-3136.000,2624.000 delta=-22.234,308.215 distance=309.016 o" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|OBS|actual-logical-body|handle=1050763 type=1865429041 life=335.000 owner=0 paused=false hidden=false xy=-5499.033,-5498.854 anchor=-5500.000,-5500.000 delta=0.967,1.146 distance=1.500 ord" )
+	call Preload( "RM28|rfp-integrated-20261020-02|CHECK|I01-recast-phase-moving-takeover|FAIL|ABORT-fixture|body predicate failed: logical-anchor-distance-at-most-1; no behavioral PASS inferred" )
+	call Preload( "RM28|rfp-integrated-20261020-02|COMPLETE|1|13|1|0" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

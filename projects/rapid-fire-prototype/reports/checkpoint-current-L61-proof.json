@@ -1,0 +1,31 @@
+{
+  "currentFeaturePath": "odd/tasks/rapid-fire-prototype-current.md",
+  "payloadPath": "projects/rapid-fire-prototype/reports/checkpoint-current-L61-payload.txt",
+  "sourceBytes": 13452,
+  "payloadBytes": 13452,
+  "sourceSHA256": "cb1742da35122c315a023f313d0fe078fd01efda9e5d67dbf750f2dfd5adf8c7",
+  "payloadSHA256": "cb1742da35122c315a023f313d0fe078fd01efda9e5d67dbf750f2dfd5adf8c7",
+  "exactCopyVerified": true,
+  "archiveBytes": 89082,
+  "archiveSHA256": "9452f9bd6d44c2842658411ae6bbf84d099a1bb9ffd1d250fcdac10709da3c98",
+  "archiveUnchanged": true,
+  "S1_S23Unchanged": true,
+  "existingLogUnchanged": true,
+  "taskCount": 6,
+  "doneTaskCount": 2,
+  "T2": "pending(remaining-implementation)",
+  "T3": "in_progress(single-Tree03-measurement)",
+  "allTasksComplete": false,
+  "production": false,
+  "mirrorStatus": "EXACT_MIRROR_SAVED",
+  "project": "wdev",
+  "topic_key": "odd/rapid-fire-prototype/tasks",
+  "savedId": 57,
+  "providerResult": {
+    "id": 57,
+    "status": "saved"
+  },
+  "literalSentPayloadFileEqualityVerified": true,
+  "equalityBasis": "Exact sent literal reconstructed from preserved L60 payload plus literal T2/T3 replacements and L61; source/payload bytes equal; provider receipt only, no memory readback",
+  "providerReadbackPerformed": false
+}

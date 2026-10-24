@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "wc3ctl",
+    "extract",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3Patch.mpq",
+    "UI\\UnitEditorData.txt",
+    "--out",
+    "projects/rapid-fire-prototype/assets/UnitEditorData.txt",
+    "--json"
+  ],
+  "exit": 1
+}

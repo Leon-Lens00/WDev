@@ -1,0 +1,205 @@
+{
+  "lint_argv": [
+    "python3",
+    "-B",
+    ".pi/skills/build-warcraft3-vjass-127b/scripts/wc3lint.py",
+    "projects/rapid-fire-prototype/src/prototype",
+    "--json"
+  ],
+  "lint_exit": 0,
+  "lint_stdout": {
+    "files": 7,
+    "findings": [
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstLog.j",
+        "line": 34,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstLog.j",
+        "line": 35,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstLogGreen01.j",
+        "line": 34,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstLogGreen01.j",
+        "line": 35,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 274,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 275,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 276,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 277,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 280,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 283,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 286,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 288,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 289,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 290,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 291,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j",
+        "line": 292,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/PairCore.j",
+        "line": 255,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/PairCore.j",
+        "line": 256,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/PairCore.j",
+        "line": 257,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/PairCore.j",
+        "line": 259,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/PairStub.j",
+        "line": 64,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      },
+      {
+        "severity": "WARNING",
+        "rule": "HANDLE-FACTORY",
+        "path": "projects/rapid-fire-prototype/src/prototype/PairStub.j",
+        "line": 66,
+        "message": "Document owner, lifetime, and cleanup or intentional persistence."
+      }
+    ]
+  },
+  "lint_stderr": "",
+  "unknown_direct_calls_including_expressions": [],
+  "api_source_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "7fe99448ba2fff01e6bd67675c8a71e30ad7b11b35268e65b4f74ec0a64e1078",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstLogGreen01.j": "5dab1ada4319772a61bdc3d9cb7e7a81d313adabef52ffe9ff9cd9756f75620a",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstMapMainGreen01.j": "a102db6bbe936bdc7805edfb9e8f3b545e38ef7ecf078f42823edbfb2e4b8f0b",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j": "7184bd4cd7ceef0fd3c04b0e776e90a64a82ed23e8e65dce1f6f0e924dcfdcc7",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6"
+  },
+  "core_members_source_inspected": [
+    "subclass extends Missiles/create",
+    "model/speed/collision/collideZ/source/owner",
+    "allocated/launched/dummy/x/y",
+    "launch/terminate/onHit/onPeriod/onRemove"
+  ],
+  "protected_file_count": 35,
+  "protected_mismatches": [],
+  "RED_4sources_plan_byte_identical": true,
+  "harness_sha256": "7184bd4cd7ceef0fd3c04b0e776e90a64a82ed23e8e65dce1f6f0e924dcfdcc7",
+  "label_only_variant_readback": true,
+  "plan_hash_readback": true,
+  "diff_size": {
+    "core_vs_stub_added": 213,
+    "core_vs_stub_removed": 20,
+    "new_JASS_lines": 365,
+    "unchanged_harness_lines": 300
+  },
+  "source_line_counts": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": 262,
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstLogGreen01.j": 67,
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstMapMainGreen01.j": 36,
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/BurstNativeTest.j": 300
+  },
+  "scope": "Static lexical/source/hash evidence only. Not compiler/native GREEN or reentrancy/lifecycle proof."
+}

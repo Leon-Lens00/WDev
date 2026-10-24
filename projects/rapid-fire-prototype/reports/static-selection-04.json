@@ -1,0 +1,37 @@
+{
+  "basis": "Parent-observed read-only terrain-info and stdout-only Python queries; forwarded evidence, NOT fresh worker CLI execution",
+  "status": "STATIC_CANDIDATES_NOT_NATIVE_PROOF",
+  "unapproved_reference_used": false,
+  "base_sha256": "ff34f3fcea03281163c81bdcb11a6f7285f12c289c7160f640d4fa242adfb3b3",
+  "members_match_baseline_parent_report": true,
+  "wpm_sha256": "ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab",
+  "w3e_sha256": "f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f",
+  "schema": {"wpm_cells": [512,512], "w3e_vertices": [129,129], "origin_left_bottom": [-8192,-8192], "path_cell_size": 32, "terrain_tile_size": 128, "versions_wpm_w3e": [0,11]},
+  "flag_correction": "WPM0x40 is NO WATER/unfloatable, not water present. C# Water enum label/PathingCommand documentation are misleading. Initial query excluding bit64 and returning zero candidates is INVALID diagnostic, not map-unsuitability evidence.",
+  "diagnostic_initial_bit64_exclusion_candidates": 0,
+  "diagnostic_initial_conclusion_valid": false,
+  "walk_build_no_water_cells": 77728,
+  "constant_raw_height_cells": 1424,
+  "constant_raw_height_rectangle_at_least_52x38_found": false,
+  "coherent_layer_cells": 77728,
+  "selection_filter": "WPM bits2/8 clear and64 set; all4 terrain corners rawtf&0x90=0 (no ramp/boundary), same rawmisc&15 cliff layer. No equal-height/texture or clear water-render flag requirement.",
+  "world_upper_bounds_exclusive": true,
+  "actual_anchor_upper_bounds_exclusive": true,
+  "layout_envelope_relative_to_actual_R": {"x": [-784,528], "y": [-336,528]},
+  "candidates": [
+    {"rank":1,"cells_inclusive":[162,370,251,419],"world":[-3008,3648,-128,5248],"actual_anchor":[-2224,3984,-656,4720],"nominal_proposal":[-1440,4352],"raw_ground_range":[9715,11031],"cliff_layer":1,"raw_flag_nibbles":[0,64]},
+    {"rank":2,"cells_inclusive":[296,64,361,129],"world":[1280,-6144,3392,-4032],"actual_anchor":[2064,-5808,2864,-4560],"nominal_proposal":[2464,-5184],"raw_ground_range":[9904,10670],"cliff_layer":1,"raw_flag_nibbles":[0,64]},
+    {"rank":3,"cells_inclusive":[356,346,419,407],"world":[3200,2880,5248,4864],"actual_anchor":[3984,3216,4720,4336],"nominal_proposal":[4352,3776],"raw_ground_range":[10024,10950],"cliff_layer":1,"raw_flag_nibbles":[0,64]}
+  ],
+  "parent_observed03_points": "All03 accepted anchors, failed neighbors and alternate placements had WPMmask64: no-walk=false, no-build=false, NOwater=true; varying raw terrain heights. This does not explain native displacement.",
+  "limits": "STATIC only: heights vary; water-render nibble64 may coexist with dry WPM, not native water proof. WPM excludes dynamic units/destructibles. No cliff/tree/placement-cause inference or whole-map-unsuitable claim. Retain independent native body/neighborhood, actual placement and resource-clearance gates.",
+  "primary_sources_forwarded_by_parent": [
+    "https://raw.githubusercontent.com/wiki/stijnherfst/HiveWE/war3map.wpm-Pathing.md",
+    "https://raw.githubusercontent.com/Drake53/War3Net/master/src/War3Net.Build.Core/Environment/PathingType.cs",
+    "https://github.com/Drake53/War3Net/tree/master/src/War3Net.Build.Core/Serialization/Binary/Environment"
+  ],
+  "schema_provenance": "Parent re-established from authorized C# row-major SW PathingCommand and public War3Net Binary MapEnvironment/MapPathingMap/TerrainTile readers, not the discarded out-of-grant reference. No worker network/schema query.",
+  "worker_source_envelope_review": "NativeProbe Open: grid +/-320 plus16; actor atR-768 and8/16-step points, plus16; Building center permitted +/-128 then existing positive X/XY brackets up to384 plus16, hence max+528. Existing building rays are positive only; no negative rays added. Symmetric negative Y rays would require Ymin-528 and recomputed admissibility, not covered here. Gap max64 and controller cast offsets fit existing envelope.",
+  "not_open_region_claims": ["remote static/cliff negative at1792,-6656", "world-bound negatives/observations", "helper parking and item enumeration", "600-unit broadphase", "off-camera controller"],
+  "gate": "After live actual-rest capture and before SAME-point/body qualification, require R+entire local envelope inside selected upper-exclusive world rectangle. Never assume15.4-unit arrival. Nominal reference start-64 and radius16/target are separately checked. Failed region is OBS proposal rejection, final FAIL after at most3 proposals. Native gates remain mandatory."
+}

@@ -1,0 +1,55 @@
+{
+  "status": "PREPARED_RECAST_GREEN_NEEDS_NATIVE",
+  "lint_argv": [
+    "python3",
+    "-B",
+    ".pi/skills/build-warcraft3-vjass-127b/scripts/wc3lint.py",
+    "projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "--json"
+  ],
+  "lint_exit": 0,
+  "lint_stdout_text": "{\n  \"files\": 1,\n  \"findings\": [\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/PairCore.j\",\n      \"line\": 260,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/PairCore.j\",\n      \"line\": 261,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/PairCore.j\",\n      \"line\": 262,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/PairCore.j\",\n      \"line\": 264,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    }\n  ]\n}\n",
+  "lint_stderr": "",
+  "unknown_direct_calls_including_expressions": [],
+  "minimal_Core_delta_verified": true,
+  "active_branch_only_assignment": "remaining=4; return; no calls/epoch/heading/notifying/diagnostic writes",
+  "owned_filters_Emit_epoch_Dispose_snapshots_spent_guards_unchanged": true,
+  "same_harness_sha256": "aec5c4735d594975644eef5f03118d23e4acffadc4afd3ee46ff8c389a769af0",
+  "frozen_file_count": 27,
+  "frozen_SHA_and_original_mtime_ns_preserved": true,
+  "old_basic_Core_SHA256": "7fe99448ba2fff01e6bd67675c8a71e30ad7b11b35268e65b4f74ec0a64e1078",
+  "protected_file_count": 806,
+  "only_intended_protected_change": [
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j"
+  ],
+  "excluded_live_launcher_paths": [
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red02-native-launch.exit.json",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red02-native-launch.stderr.txt",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/recast-red02-native-launch.stdout.txt"
+  ],
+  "label_only_variants": true,
+  "all10_plan_pins_match": true,
+  "compiled_map_absent": true,
+  "native_GREEN_observed": false,
+  "compiler_GREEN_observed": false,
+  "artifact_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "f82e92301dea1dd64a1993843e4f04c929a58bd032b9908f87fa96eb18426d52",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogGreen01.j": "e447939ffec04d2e3e14876fe84b36f2dd07b7e8f239b1ce9bdc593daa0d28e0",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainGreen01.j": "a3481542c6abe1b0ede5f3ec9dfc42c3b068dd53c99f81b266a14dd656e00ee0",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build-plan-recast-green01.json": "e15d0d7a5321cbf301fb224d0511e099b1dd0dddc2afdaa3f077fb3e68e0c6b0"
+  },
+  "API_inputs_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "f82e92301dea1dd64a1993843e4f04c929a58bd032b9908f87fa96eb18426d52",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogGreen01.j": "e447939ffec04d2e3e14876fe84b36f2dd07b7e8f239b1ce9bdc593daa0d28e0",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainGreen01.j": "a3481542c6abe1b0ede5f3ec9dfc42c3b068dd53c99f81b266a14dd656e00ee0",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j": "aec5c4735d594975644eef5f03118d23e4acffadc4afd3ee46ff8c389a769af0",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c"
+  },
+  "diff_size": {
+    "Core_added": 9,
+    "Core_removed": 4
+  },
+  "unified_Core_diff": "--- frozen-red02/PairCore.j\n+++ PairCore.j\n@@ -1,6 +1,6 @@\n library RFBurstPair requires Missiles\n-    // Minimal B01/B02 GREEN candidate. One caller-owned pair and shot observer.\n-    // Active recasts are TEMPORARILY IGNORED, not the final S1 reset contract.\n+    // Minimal B01/B02 plus same-aim R03 candidate. Caller owns pair/observer.\n+    // Active casts reset pending shots only; latest-aim behavior is deferred.\n     globals\n         private constant real CADENCE = .25\n         private constant real RANGE = 1500.\n@@ -200,8 +200,13 @@\n             call CancelBurst()\n             return false\n         endif\n-        if remaining > 0 or notifying then\n-            // Deliberate incomplete behavior awaiting incremental recast RED.\n+        if remaining > 0 then\n+            // Reset count only: keep the running timer phase and fixed heading.\n+            set remaining = 4\n+            return false\n+        endif\n+        if notifying then\n+            // Preserve the idle/final-pulse reentrancy guard.\n             return false\n         endif\n         set epoch = epoch+1\n",
+  "scope": "Static source/preservation proof only, NOT native gameplay or adversarial callback proof"
+}

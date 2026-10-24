@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "wc3ctl",
+    "extract",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+    "units\\orc\\Shaman\\Shaman.mdx",
+    "--out",
+    "projects/rapid-fire-prototype/assets/Shaman.mdx",
+    "--json"
+  ],
+  "exit": 0
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PREPARED_RECAST_RED",
+  "strongest": "Scanned",
+  "artifact_sha256": {
+    "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j": "9dc12b73bb7248af4b935ac29b848035dbe5aa361790e8075c6e5ed9fa620f63",
+    "projects/rapid-fire-prototype/src/prototype/RecastLogRed01.j": "e828a0db60a5cc46a99024b3bdfe5561ce764b600a172fcd1609e45a40e65a76",
+    "projects/rapid-fire-prototype/src/prototype/RecastMapMainRed01.j": "d4d34b794433ba3de146989c8b39f47170f647a0347db9a5f3aa4a8537e397a4",
+    "projects/rapid-fire-prototype/build-plan-recast-red01.json": "9afcb235fe718a29b39eeeba4cc1add8ba3eff78cb40fe0b84d8ad667e4736f6"
+  },
+  "protected_count": 359,
+  "protected_mismatches": [],
+  "all10_plan_inputs_match": true,
+  "PairCore_unchanged_sha256": "7fe99448ba2fff01e6bd67675c8a71e30ad7b11b35268e65b4f74ec0a64e1078",
+  "output_map_absent": true,
+  "native_zero_latency_observed": false,
+  "native_active_window_observed": false,
+  "native_R03_RED_observed": false
+}

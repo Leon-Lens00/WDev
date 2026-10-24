@@ -1,0 +1,21 @@
+# Salidas de compilación regenerables
+**/build/
+**/__pycache__/
+*.pyc
+
+# Copias congeladas del árbol dentro de reportes
+projects/*/reports/*/workspace/
+
+# Capturas de pantalla y evidencia pesada (se pueden regenerar o guardar aparte)
+projects/*/reports/screens/
+projects/*/reports/technical/screens/
+projects/*/reports/technical/runs/
+
+# Mapas generados dentro de reportes (los mapas base sí se versionan)
+projects/*/reports/**/*.w3x
+
+# Cachés, perfiles y secretos
+.env
+*.log
+node_modules/
+.cache/

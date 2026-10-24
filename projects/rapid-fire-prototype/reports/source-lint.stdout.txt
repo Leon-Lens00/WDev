@@ -1,0 +1,110 @@
+{
+  "files": 4,
+  "findings": [
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 134,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 135,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 216,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 217,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 258,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 271,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 307,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 308,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 368,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/NativeProbe.j",
+      "line": 371,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/PathingCandidate.j",
+      "line": 18,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/PathingCandidate.j",
+      "line": 19,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/PathingCandidate.j",
+      "line": 38,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/ProbeLog.j",
+      "line": 36,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "projects/rapid-fire-prototype/src/ProbeLog.j",
+      "line": 37,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    }
+  ]
+}

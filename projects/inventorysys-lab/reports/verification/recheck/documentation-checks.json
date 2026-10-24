@@ -1,0 +1,187 @@
+{
+  "links": [
+    {
+      "document": "README.md",
+      "link": "reports/FINAL.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "reports/final-status.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "reports/independent-verification.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/evaluation.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "reports/toolchain-provenance.json",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "docs/archive-preservation.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "link": "reports/independent-verification.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evaluation.md",
+      "link": "../reports/FINAL.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evaluation.md",
+      "link": "../reports/independent-verification.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evaluation.md",
+      "link": "../reports/FINAL.md",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/inv-baseline-20261019-02.w3x",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/assembled.j",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/build.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/commands.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/command-1.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/command-2.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "toolchain-provenance.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/IL141-inv-baseline-20261019-02.pld",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/game-result.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/reader.stdout.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/reader.stderr.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/reader.exit.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-02/launch-request.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "screens/baseline02-complete.png",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "runs/inv-baseline-20261019-01/commands.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "archive-diagnosis.json",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "parent-tests.stdout.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "parent-tests.stderr.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "parent-tests.exit.txt",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "independent-verification.md",
+      "exists": true
+    },
+    {
+      "document": "reports/FINAL.md",
+      "link": "final-status.json",
+      "exists": true
+    },
+    {
+      "document": "reports/independent-verification.md",
+      "link": "FINAL.md",
+      "exists": true
+    },
+    {
+      "document": "reports/independent-verification.md",
+      "link": "../tests/test_actual_run.py",
+      "exists": true
+    },
+    {
+      "document": "reports/independent-verification.md",
+      "link": "final-status.json",
+      "exists": true
+    }
+  ],
+  "hashes_match_prior_proof": true,
+  "counters_match_prior_proof": true,
+  "game_exit_claimed": false,
+  "direct_regression_inputs_unchanged": [
+    "tools/build.py",
+    "tools/read_logs.py",
+    "baseline/original.w3x",
+    "src/globals.j",
+    "src/functions.j",
+    "reports/runs/inv-baseline-20261019-02/assembled.j",
+    "reports/runs/inv-baseline-20261019-02/inv-baseline-20261019-02.w3x",
+    "reports/runs/inv-baseline-20261019-02/IL141-inv-baseline-20261019-02.pld"
+  ]
+}

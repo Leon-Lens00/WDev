@@ -1,0 +1,128 @@
+[
+  {
+    "kind": "unit",
+    "id": "o000",
+    "field": "unam",
+    "level": 0,
+    "value": "Rapid Fire Actor"
+  },
+  {
+    "kind": "unit",
+    "id": "o000",
+    "field": "uaen",
+    "level": 0,
+    "value": 0
+  },
+  {
+    "kind": "unit",
+    "id": "o000",
+    "field": "uabi",
+    "level": 0,
+    "value": ""
+  },
+  {
+    "kind": "unit",
+    "id": "o001",
+    "field": "unam",
+    "level": 0,
+    "value": "Rapid Fire Controller"
+  },
+  {
+    "kind": "unit",
+    "id": "o001",
+    "field": "uaen",
+    "level": 0,
+    "value": 0
+  },
+  {
+    "kind": "unit",
+    "id": "o001",
+    "field": "uabi",
+    "level": 0,
+    "value": "A00G"
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "anam",
+    "level": 0,
+    "value": "Rapid Fire Point Probe"
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "alev",
+    "level": 0,
+    "value": 1
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "aher",
+    "level": 0,
+    "value": 0
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "acdn",
+    "level": 1,
+    "value": 0.0
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "amcs",
+    "level": 1,
+    "value": 0
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "aran",
+    "level": 1,
+    "value": 99999.0
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "Ncl1",
+    "level": 1,
+    "value": 0.0
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "Ncl2",
+    "level": 1,
+    "value": 2
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "Ncl3",
+    "level": 1,
+    "value": 0
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "Ncl4",
+    "level": 1,
+    "value": 0.98
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "Ncl5",
+    "level": 1,
+    "value": 1
+  },
+  {
+    "kind": "ability",
+    "id": "A00G",
+    "field": "Ncl6",
+    "level": 1,
+    "value": "channel"
+  }
+]

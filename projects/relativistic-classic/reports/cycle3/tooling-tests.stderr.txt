@@ -1,0 +1,44 @@
+test_bootstrap_keeps_exact_config_and_excludes_original_demo (test_build.BuildTests.test_bootstrap_keeps_exact_config_and_excludes_original_demo) ... ok
+test_build_without_harness_preserves_empty_bootstrap_contract (test_build.BuildTests.test_build_without_harness_preserves_empty_bootstrap_contract) ... ok
+test_collision_before_any_write (test_build.BuildTests.test_collision_before_any_write) ... ok
+test_compiler_failure_records_exit_without_publication (test_build.BuildTests.test_compiler_failure_records_exit_without_publication) ... ok
+test_destination_ancestor_of_input_rejected (test_build.BuildTests.test_destination_ancestor_of_input_rejected) ... ok
+test_existing_run_is_immutable (test_build.BuildTests.test_existing_run_is_immutable) ... ok
+test_failed_roundtrip_never_publishes_map (test_build.BuildTests.test_failed_roundtrip_never_publishes_map) ... ok
+test_hardlink_input_alias_rejected (test_build.BuildTests.test_hardlink_input_alias_rejected) ... ok
+test_harness_requires_entry (test_build.BuildTests.test_harness_requires_entry) ... ok
+test_help (test_build.BuildTests.test_help) ... ok
+test_invalid_entry_rejected (test_build.BuildTests.test_invalid_entry_rejected) ... ok
+test_invalid_run_id_rejected (test_build.BuildTests.test_invalid_run_id_rejected) ... ok
+test_nested_import_rejected_without_writes (test_build.BuildTests.test_nested_import_rejected_without_writes) ... ok
+test_opaque_member_build_preservation (test_build.BuildTests.test_opaque_member_build_preservation) ... ok
+test_recovery_bad_hash_no_writes (test_build.BuildTests.test_recovery_bad_hash_no_writes) ... ok
+test_recovery_boundary_validation_no_writes (test_build.BuildTests.test_recovery_boundary_validation_no_writes) ... ok
+test_recovery_exact_sources_and_repeated_rejection (test_build.BuildTests.test_recovery_exact_sources_and_repeated_rejection) ... ok
+test_recovery_opaque_member_records_raw_evidence (test_build.BuildTests.test_recovery_opaque_member_records_raw_evidence) ... ok
+test_success_entry_roundtrip_and_input_preservation (test_build.BuildTests.test_success_entry_roundtrip_and_input_preservation) ... ok
+test_symlink_output_rejected (test_build.BuildTests.test_symlink_output_rejected) ... ok
+test_documented_case_ids_match_runner_and_danger_is_last (test_lab.CatalogStructure.test_documented_case_ids_match_runner_and_danger_is_last) ... ok
+test_bad_status (test_lab.Logs.test_bad_status) ... ok
+test_counters_rejected (test_lab.Logs.test_counters_rejected) ... ok
+test_duplicate_case (test_lab.Logs.test_duplicate_case) ... ok
+test_duplicate_complete (test_lab.Logs.test_duplicate_complete) ... ok
+test_fail_is_nonzero_with_machine_evidence (test_lab.Logs.test_fail_is_nonzero_with_machine_evidence) ... ok
+test_freshness_equal_boundary_and_metadata (test_lab.Logs.test_freshness_equal_boundary_and_metadata) ... ok
+test_incomplete (test_lab.Logs.test_incomplete) ... ok
+test_invalid_run_id (test_lab.Logs.test_invalid_run_id) ... ok
+test_mismatch (test_lab.Logs.test_mismatch) ... ok
+test_missing_begin (test_lab.Logs.test_missing_begin) ... ok
+test_nonfinite_freshness (test_lab.Logs.test_nonfinite_freshness) ... ok
+test_normal_pass_and_exclusive_report (test_lab.Logs.test_normal_pass_and_exclusive_report) ... ok
+test_observation_is_not_assertion (test_lab.Logs.test_observation_is_not_assertion) ... ok
+test_report_never_overwritten (test_lab.Logs.test_report_never_overwritten) ... ok
+test_skip_is_not_pass (test_lab.Logs.test_skip_is_not_pass) ... ok
+test_stale (test_lab.Logs.test_stale) ... ok
+test_symlink_report_parent_is_rejected (test_lab.Logs.test_symlink_report_parent_is_rejected) ... ok
+test_unbegun_case (test_lab.Logs.test_unbegun_case) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.792s
+
+OK

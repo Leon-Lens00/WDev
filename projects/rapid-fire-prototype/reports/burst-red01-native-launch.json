@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "play",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-red-20261019-01/rf-burst-red-20261019-01.w3x"
+  ],
+  "launch_requested_unix": 1792457505.4549522,
+  "map_sha256": "89281148a4e02089d2b4dead55a1f96644850c294fce1fbb389f4df95f3c0c8d",
+  "run_id": "rf-burst-red-20261019-01",
+  "phase": "RED_EXPECTED_FAIL_ONLY_IF_READINESS_VALID",
+  "profile_contract": "registered wc3-play shared proton-newgen-modern-test; occupancy guarded by launcher"
+}

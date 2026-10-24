@@ -1,0 +1,555 @@
+{
+  "Rawcode": "ANcl",
+  "Found": true,
+  "BaseRawcode": "ANcl",
+  "Name": "Canal",
+  "Fields": [
+    {
+      "Code": "ahky",
+      "Name": "Acceso r\u00E1pido - Normal",
+      "Value": "C",
+      "Source": "base",
+      "Display": "C"
+    },
+    {
+      "Code": "aran",
+      "Name": "Alcance conjuro",
+      "Value": "500",
+      "Source": "base",
+      "Display": "500"
+    },
+    {
+      "Code": "aran:1",
+      "Name": "Alcance conjuro",
+      "Value": "500",
+      "Source": "base",
+      "Display": "500"
+    },
+    {
+      "Code": "aran:2",
+      "Name": "Alcance conjuro",
+      "Value": "500",
+      "Source": "base",
+      "Display": "500"
+    },
+    {
+      "Code": "aran:3",
+      "Name": "Alcance conjuro",
+      "Value": "500",
+      "Source": "base",
+      "Display": "500"
+    },
+    {
+      "Code": "atp1",
+      "Name": "Ayuda - Normal",
+      "Value": "|cffffcc00C|ranal",
+      "Source": "base",
+      "Display": "|cffffcc00C|ranal"
+    },
+    {
+      "Code": "aub1",
+      "Name": "Ayuda - Normal - Ampliada",
+      "Value": "Canaliza una poderosa energ\u00EDa custodia.",
+      "Source": "base",
+      "Display": "Canaliza una poderosa energ\u00EDa custodia."
+    },
+    {
+      "Code": "aord",
+      "Name": "Cadena de orden - Utilizar / Activar",
+      "Value": "channel",
+      "Source": "base",
+      "Display": "channel"
+    },
+    {
+      "Code": "achd",
+      "Name": "Comprobar dependencias",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "acat",
+      "Name": "Conjurador",
+      "Value": "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl",
+      "Source": "base",
+      "Display": "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl"
+    },
+    {
+      "Code": "amcs",
+      "Name": "Coste de man\u00E1",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "amcs:1",
+      "Name": "Coste de man\u00E1",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "amcs:2",
+      "Name": "Coste de man\u00E1",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "amcs:3",
+      "Name": "Coste de man\u00E1",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl5",
+      "Name": "Desactivar otras habilidades",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "Ncl5:1",
+      "Name": "Desactivar otras habilidades",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "Ncl5:2",
+      "Name": "Desactivar otras habilidades",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "Ncl5:3",
+      "Name": "Desactivar otras habilidades",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "ahdu",
+      "Name": "Duraci\u00F3n - H\u00E9roe",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ahdu:1",
+      "Name": "Duraci\u00F3n - H\u00E9roe",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ahdu:2",
+      "Name": "Duraci\u00F3n - H\u00E9roe",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "ahdu:3",
+      "Name": "Duraci\u00F3n - H\u00E9roe",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "adur",
+      "Name": "Duraci\u00F3n - Normal",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "adur:1",
+      "Name": "Duraci\u00F3n - Normal",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "adur:2",
+      "Name": "Duraci\u00F3n - Normal",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "adur:3",
+      "Name": "Duraci\u00F3n - Normal",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl4",
+      "Name": "Duraci\u00F3n gr\u00E1fico",
+      "Value": "0.98",
+      "Source": "base",
+      "Display": "0.98"
+    },
+    {
+      "Code": "Ncl4:1",
+      "Name": "Duraci\u00F3n gr\u00E1fico",
+      "Value": "0.98",
+      "Source": "base",
+      "Display": "0.98"
+    },
+    {
+      "Code": "Ncl4:2",
+      "Name": "Duraci\u00F3n gr\u00E1fico",
+      "Value": "0.98",
+      "Source": "base",
+      "Display": "0.98"
+    },
+    {
+      "Code": "Ncl4:3",
+      "Name": "Duraci\u00F3n gr\u00E1fico",
+      "Value": "0.98",
+      "Source": "base",
+      "Display": "0.98"
+    },
+    {
+      "Code": "aeat",
+      "Name": "Efecto",
+      "Value": "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl",
+      "Source": "base",
+      "Display": "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl"
+    },
+    {
+      "Code": "aite",
+      "Name": "Habilidad de objeto",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "aher",
+      "Name": "Habilidad del h\u00E9roe",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "aart",
+      "Name": "Icono - Normal",
+      "Value": "ReplaceableTextures\\CommandButtons\\BTNDeathPact.blp",
+      "Source": "base",
+      "Display": "ReplaceableTextures\\CommandButtons\\BTNDeathPact.blp"
+    },
+    {
+      "Code": "Ncl6",
+      "Name": "ID de orden base",
+      "Value": "channel",
+      "Source": "base",
+      "Display": "channel"
+    },
+    {
+      "Code": "Ncl6:1",
+      "Name": "ID de orden base",
+      "Value": "channel",
+      "Source": "base",
+      "Display": "channel"
+    },
+    {
+      "Code": "Ncl6:2",
+      "Name": "ID de orden base",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "Ncl6:3",
+      "Name": "ID de orden base",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "arlv",
+      "Name": "Nivel necesario",
+      "Value": "1",
+      "Source": "base",
+      "Display": "1"
+    },
+    {
+      "Code": "alev",
+      "Name": "Niveles",
+      "Value": "3",
+      "Source": "base",
+      "Display": "3"
+    },
+    {
+      "Code": "anam",
+      "Name": "Nombre",
+      "Value": "Canal",
+      "Source": "base",
+      "Display": "Canal"
+    },
+    {
+      "Code": "aani",
+      "Name": "Nombres de animaci\u00F3n",
+      "Value": "spell,channel",
+      "Source": "base",
+      "Display": "spell,channel"
+    },
+    {
+      "Code": "atat",
+      "Name": "Objetivo",
+      "Value": "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl",
+      "Source": "base",
+      "Display": "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl"
+    },
+    {
+      "Code": "atar",
+      "Name": "Objetivos permitidos",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "atar:1",
+      "Name": "Objetivos permitidos",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "atar:2",
+      "Name": "Objetivos permitidos",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "atar:3",
+      "Name": "Objetivos permitidos",
+      "Value": "_",
+      "Source": "base",
+      "Display": "_"
+    },
+    {
+      "Code": "Ncl3",
+      "Name": "Opciones",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl3:1",
+      "Name": "Opciones",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl3:2",
+      "Name": "Opciones",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl3:3",
+      "Name": "Opciones",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "abpx",
+      "Name": "Posici\u00F3n bot\u00F3n - Normal (X)",
+      "Value": "2",
+      "Source": "base",
+      "Display": "2"
+    },
+    {
+      "Code": "abpy",
+      "Name": "Posici\u00F3n bot\u00F3n - Normal (Y)",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "apri",
+      "Name": "Prioridad Robar conjuro",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "acap",
+      "Name": "Punto de reuni\u00F3n conjurador 1",
+      "Value": "origin",
+      "Source": "base",
+      "Display": "origin"
+    },
+    {
+      "Code": "ata0",
+      "Name": "Punto de reuni\u00F3n del objetivo 1",
+      "Value": "origin",
+      "Source": "base",
+      "Display": "origin"
+    },
+    {
+      "Code": "arac",
+      "Name": "Raza",
+      "Value": "creeps",
+      "Source": "base",
+      "Display": "creeps"
+    },
+    {
+      "Code": "alsk",
+      "Name": "Requisito saltar nivel",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl1",
+      "Name": "Seguir todo el tiempo",
+      "Value": "180",
+      "Source": "base",
+      "Display": "180"
+    },
+    {
+      "Code": "Ncl1:1",
+      "Name": "Seguir todo el tiempo",
+      "Value": "180",
+      "Source": "base",
+      "Display": "180"
+    },
+    {
+      "Code": "Ncl1:2",
+      "Name": "Seguir todo el tiempo",
+      "Value": "180",
+      "Source": "base",
+      "Display": "180"
+    },
+    {
+      "Code": "Ncl1:3",
+      "Name": "Seguir todo el tiempo",
+      "Value": "180",
+      "Source": "base",
+      "Display": "180"
+    },
+    {
+      "Code": "acas",
+      "Name": "Tiempo de conjuro",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "acas:1",
+      "Name": "Tiempo de conjuro",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "acas:2",
+      "Name": "Tiempo de conjuro",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "acas:3",
+      "Name": "Tiempo de conjuro",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "acdn",
+      "Name": "Tiempo muerto",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "acdn:1",
+      "Name": "Tiempo muerto",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "acdn:2",
+      "Name": "Tiempo muerto",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "acdn:3",
+      "Name": "Tiempo muerto",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl2",
+      "Name": "Tipo de objetivo",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl2:1",
+      "Name": "Tipo de objetivo",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl2:2",
+      "Name": "Tipo de objetivo",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "Ncl2:3",
+      "Name": "Tipo de objetivo",
+      "Value": "0",
+      "Source": "base",
+      "Display": "0"
+    },
+    {
+      "Code": "aare",
+      "Name": "\u00C1rea de efecto",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "aare:1",
+      "Name": "\u00C1rea de efecto",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "aare:2",
+      "Name": "\u00C1rea de efecto",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    },
+    {
+      "Code": "aare:3",
+      "Name": "\u00C1rea de efecto",
+      "Value": "-",
+      "Source": "base",
+      "Display": "-"
+    }
+  ],
+  "Diagnostics": []
+}

@@ -1,0 +1,7 @@
+{
+  "OBS_delta": "exactly four R07 native-damage records removed; no other OBS name/count changes",
+  "parent_raw_record_comparison": "identical records and raw SHA256",
+  "body_identities": "all logged actual/baseline pairs equal",
+  "freshness_note": "workspace GREEN copy mtime1792532695.0865102 vs runtime recorded1792532695.0809414; both after launch1792532680.9873888, bytes match parent reader source SHA",
+  "original_preservation": "all saved pins unchanged at final check"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Warcraft III vJASS 1.27b"
+  short_description: "Audit and recover classic maps; build when authorized"
+  default_prompt: "Use the Warcraft III vJASS 1.27b skill to inspect this map or system read-only first. Require implementation authorization before creating files, compiling or building. Report artifact-scoped evidence and remaining editor, game and multiplayer checks."

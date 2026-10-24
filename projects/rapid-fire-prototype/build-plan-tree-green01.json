@@ -1,0 +1,174 @@
+{
+  "status": "PREPARED_TREE_GREEN01_NOT_COMPILED_NOT_NATIVE_GREEN",
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py",
+    "build",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+    "--wc3",
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "--timer-utils",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "--world-bounds",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "--dummy-recycler",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "--core",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "--bootstrap",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainGreen01.j",
+    "--output-dir",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build",
+    "--run-id",
+    "rf-burst-tree-green-20261020-01",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogGreen01.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+    "--entry",
+    "RF_StartTreeTest"
+  ],
+  "shell": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py build --base /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x --wc3 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 --timer-utils /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j --world-bounds /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j --dummy-recycler /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j --core /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j --bootstrap /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainGreen01.j --output-dir /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build --run-id rf-burst-tree-green-20261020-01 --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogGreen01.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j --entry RF_StartTreeTest",
+  "inputs_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogGreen01.j": "aea0134c7ec4f0b1ee77171e7d1d93f72b259520eff72114790137347d8cac51",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "6442b4b2afbaa48c3090789ed63e934938039e1c459c3944bcf89568fc1ce923",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": "86770d6b75ef7b4ead795f7fad876027372a49c498d1b01608ae95f80987f968",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainGreen01.j": "f9b167c452b0e377af358c8f4e3f59a9d41f2dc7d33d844806d5c38902ea44fb"
+  },
+  "import_order": [
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogGreen01.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainGreen01.j"
+  ],
+  "public_entry": "RF_StartTreeTest",
+  "native_run_id": "rf-burst-tree-green-20261020-01",
+  "native_run_already_executed": false,
+  "group": "RFBurstTree",
+  "output_map": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-green-20261020-01/rf-burst-tree-green-20261020-01.w3x",
+  "log": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-tree-green-20261020-01.txt",
+  "relative_log": "Logs\\RF-rf-burst-tree-green-20261020-01.txt",
+  "reader_argv_template": [
+    "python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-tree-green-20261020-01.txt",
+    "--run-id",
+    "rf-burst-tree-green-20261020-01",
+    "--not-before",
+    "PARENT_RECORDED_LAUNCH_UNIX_SECONDS",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-green01-native-reader.json"
+  ],
+  "partial_specs": [
+    "S3",
+    "S26"
+  ],
+  "cases": [
+    "R06-tree-absent-positive",
+    "R07-live-tree-termination"
+  ],
+  "geometry": {
+    "actor": [
+      -3136,
+      2624
+    ],
+    "enemy": [
+      -2624,
+      2624
+    ],
+    "control": [
+      -2880,
+      3136
+    ],
+    "controller": [
+      -5500,
+      -5500
+    ],
+    "owned_tree_present_only": [
+      -3008,
+      2624
+    ],
+    "type": "LTlt",
+    "placement_tolerance": 1,
+    "same_actual_scene_tolerance": 0.01,
+    "native512_qualified": false,
+    "native_control_placement_qualified": false,
+    "note": "Same unchanged Tree05 harness; geometry must freshly qualify in GREEN01."
+  },
+  "oracle": {
+    "absent": "four public flights/four native10 visible-source hits/pairedHP40/control0/far-enemy travel then absence",
+    "present": "four public flights/cadence/early near-tree extinction/native enemy0/pairedHP0/treeHP unchanged/all bodies live-owned/no remaining source flights",
+    "early_first_absence_age": [
+      0.0625,
+      0.18125
+    ],
+    "early_last_live_x_offset": [
+      64,
+      176
+    ],
+    "early_last_live_y_tolerance": 2,
+    "baseline_first_absence_age": [
+      0.3,
+      0.55
+    ],
+    "baseline_last_live_min": "actualEnemyX-110"
+  },
+  "borrow_lifetime": "Fresh bounded collection scan; token numbers compared only, never dereferenced. New pulse reusing an unclosed token ABORTs. First absence must be observed before reuse. Scalar last-live/first-absence brackets; no private generation or dummy recycling oracle. Prior dummy unit references are borrowed, captured at qualified neutral-native pre-processing births with unique handle IDs; every transition use checks type then live/owner/pause before geometry. Removed type0 accepted only absent from fresh corridor; live clearance requires actual recycler corner. No dummy ownership/mutation.",
+  "runtime_budget": {
+    "global_game_seconds": 15,
+    "per_scene_observation_from_effect_seconds": 3,
+    "native_effect_deadline_seconds": 2,
+    "period_seconds": 0.03125,
+    "observer_wall_seconds": 180,
+    "wall_clock_guaranteed": false,
+    "no_retries": true,
+    "intercase_clearance_deadline_seconds": 2.5
+  },
+  "preparation_notes": "projects/rapid-fire-prototype/reports/tree-green01-preparation.md",
+  "preservation": "projects/rapid-fire-prototype/reports/frozen-tree-red05/manifest.json",
+  "limits": [
+    "Scanned only; compiler/pJASS/archive/native/reader pending parent",
+    "ONE parent GREEN01 same scenario/assertions; no retry",
+    "Partial S3 only; no footprint/swept/Z/range/cliff/bounds/moving/visual/MP claims"
+  ],
+  "authorization": "S26: ONLY live-destructible termination callback and ONE parent GREEN same scenario, unchanged assertions/libraries",
+  "fixture_correction": "None: exact Tree05 TreeNativeTest bytes retained, including S25 birth diagnostics.",
+  "body_continuity": "Borrowed stable unit references plus initial handle IDs checked in both readiness passes per case, logged baseline/retained/current; strict .01 actual equality includes controller.",
+  "transition": "After timestamped R06 assessment PASS, poll every .03125s for at most2.5s from timestamped transition start. Require original four-flight closure and same live-owned bodies on every tick. Fresh full corridor scan rejects unknown units/destructables; known e000 neutral live paused prior dummies may be pending only inside corridor; removed or recycler-corner plus fresh absence qualifies. Log first pending/clearance per identity and final admission. Deadline ABORT, never PASS. Reset counters/create tree only after all proof clears.",
+  "parent_play_argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "play",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-green-20261020-01/rf-burst-tree-green-20261020-01.w3x"
+  ],
+  "qualified_RED": {
+    "run_id": "rf-burst-tree-red-20261020-05",
+    "complete": "2/87/3/0",
+    "proof": "projects/rapid-fire-prototype/reports/frozen-tree-red05/manifest.json",
+    "failures": [
+      "tree-prevents-native-enemy-damage",
+      "paired-HP-differential0",
+      "four-early-near-tree-extinctions"
+    ]
+  },
+  "expected_conditional_GREEN": {
+    "observed": false,
+    "condition": "R06 positive passes and R07 fixture qualifies; unchanged assertions all pass",
+    "reader_exit_expected": 0
+  }
+}

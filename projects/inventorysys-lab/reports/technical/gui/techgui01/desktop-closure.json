@@ -1,0 +1,57 @@
+{
+  "observed_at": 1792452633.8764527,
+  "pid": 81879,
+  "start_ticks": "2600184",
+  "proc_absent": false,
+  "same_owned_process_present": true,
+  "profile_game_free": false,
+  "recorder_started": false,
+  "keyboard_mouse_game_inputs_delivered": false,
+  "normal_closure_attempted": false,
+  "blocker": "Focus guard rejected active Ghostty; hyprctl dispatch focuswindow address:0x555cd2159d20 exited7 (unsupported legacy dispatcher); no keyboard/cursor/click sent; owned game remains live",
+  "active_window": {
+    "address": "0x555cd2159d20",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      0,
+      0
+    ],
+    "size": [
+      1920,
+      1080
+    ],
+    "workspace": {
+      "id": 4,
+      "name": "4"
+    },
+    "floating": true,
+    "monitor": 0,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 81879,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 2,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 0,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "18000260"
+  },
+  "termination_mechanism": "none observed",
+  "reader_result": "unavailable: techgui01 recorder not started"
+}

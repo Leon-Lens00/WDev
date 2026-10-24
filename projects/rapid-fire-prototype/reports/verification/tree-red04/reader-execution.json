@@ -1,0 +1,53 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "/tmp/wdev-rapid-fire-verify/tree04-independent-wpdw513b/read_logs.py",
+    "/tmp/wdev-rapid-fire-verify/tree04-independent-wpdw513b/RF-rf-burst-tree-red-20261020-04.txt",
+    "--run-id",
+    "rf-burst-tree-red-20261020-04",
+    "--not-before",
+    "1792528906.667707",
+    "--report",
+    "/tmp/wdev-rapid-fire-verify/tree04-independent-wpdw513b/scratchreader.json"
+  ],
+  "exit_code": 1,
+  "timeout_seconds": 20,
+  "originals_before": {
+    "projects/relativistic-classic/tools/read_logs.py": {
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "size": 5092,
+      "mtime_ns": 1792370695996710430
+    },
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-04.txt": {
+      "sha256": "ba3a6ed9cd6c996f6fe3bc16a8d3f6547ebd7b6b991f54d715058fe3c4de193c",
+      "size": 3185,
+      "mtime_ns": 1792528915942475120
+    }
+  },
+  "originals_after": {
+    "projects/relativistic-classic/tools/read_logs.py": {
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "size": 5092,
+      "mtime_ns": 1792370695996710430
+    },
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-04.txt": {
+      "sha256": "ba3a6ed9cd6c996f6fe3bc16a8d3f6547ebd7b6b991f54d715058fe3c4de193c",
+      "size": 3185,
+      "mtime_ns": 1792528915942475120
+    }
+  },
+  "copies": {
+    "read_logs.py": {
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "size": 5092,
+      "mtime_ns": 1792370695996710430
+    },
+    "RF-rf-burst-tree-red-20261020-04.txt": {
+      "sha256": "ba3a6ed9cd6c996f6fe3bc16a8d3f6547ebd7b6b991f54d715058fe3c4de193c",
+      "size": 3185,
+      "mtime_ns": 1792528915942475120
+    }
+  },
+  "launch": 1792528906.667707
+}

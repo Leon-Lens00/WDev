@@ -1,0 +1,18 @@
+{
+  "scope": "T7 structural text/JSON/hash checks only; no functional validation rerun",
+  "checks": [
+    "initial: 17 explicit raw proof copies byte/hash-identical to untouched sources",
+    "targeted: 11 explicit raw proof copies byte/hash-identical to untouched sources",
+    "67 indexed retained files still hash-identical",
+    "4 retained native logs match provenance hashes and result/stdout summaries; readers retain exit 1",
+    "Aggregate 60/142/161/68/0 and seven retained PID/profile closure records consistent",
+    "GUI protocol-only success and distinct observer 124 preserved",
+    "All local Markdown links resolve",
+    "Original map/script hashes match retained preservation contract",
+    "No scratch/cache created in allowed report surfaces; Git status intentionally not run (parent prohibition)"
+  ],
+  "passed": true,
+  "functional_tests_rerun": false,
+  "public_readers_invoked": false,
+  "git_invoked": false
+}

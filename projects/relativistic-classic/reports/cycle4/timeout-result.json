@@ -1,0 +1,710 @@
+{
+  "actual_reader_exit_code": 1,
+  "actual_reader_metadata": {
+    "exit_code": 1,
+    "launch_requested_unix": 1792390991.5737288,
+    "source_mtime": 1792391005.5894613
+  },
+  "actual_reader_stderr": "",
+  "actual_reader_stdout": "{\"cases\": 1, \"checks\": 47, \"complete\": true, \"failures\": 1, \"freshness\": {\"mtime\": 1792391005.5894613, \"not_before\": 1792390991.5737288}, \"group\": \"E29\", \"observations\": 17, \"records\": [{\"case\": \"E29\", \"detail\": \"expected=600.000 actual=600.000 tolerance=0.010\", \"name\": \"vision-getter\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"public dummy owner\", \"name\": \"vision-explicit-owner\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"public source owner\", \"name\": \"vision-source-fallback\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"bounds-and-hidden=true primaryActualEligible=true fallbackActualEligible=true translation=0,3000 radius=600 visible,true,false\", \"name\": \"vision-reference-readiness\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=1 wait=native-reference clock=0.250 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"initially hidden raw probes reveal each owner and isolate other owner; original600/400/900 geometry\", \"name\": \"vision-reference-reveal-isolation\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"initially hidden point 400 units inside requested600\", \"name\": \"vision-radius-owner\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"point900 outside requested600\", \"name\": \"vision-outside-owner\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"other owner instance must not reveal\", \"name\": \"vision-owner-isolation\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"initially hidden point400 inside requested600\", \"name\": \"vision-radius-source\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"point900 outside requested600\", \"name\": \"vision-outside-source\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"phase=2 wait=native-reference clock=0.500 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false r\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"probe400 outside new200 radius\", \"name\": \"vision-shrink\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"nonpositive radius removes current reveal\", \"name\": \"vision-zero\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"phase=3 wait=native-reference clock=0.750 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false r\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"negative radius also clears\", \"name\": \"vision-negative\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"source fallback still reveals after zero\", \"name\": \"vision-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"clock=1.250 publicX=-1200.000 publicY=0.000 dummyX=-1200.000 dummyY=0.000\", \"name\": \"vision-motion-stopped\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=6 wait=native-reference clock=1.500 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=true rawMovedP2=false actualMovedP1=true actualMovedP2=false rawSo\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"new probe inside moving circle\", \"name\": \"vision-moved-reveal\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"old circle no longer supplies current visibility\", \"name\": \"vision-moved-clears-old\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"phase=7 wait=public-owner-reconciliation clock=1.750 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=true rawMovedP2=false actualMovedP1=true actualMovedP2=\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"direct owner change reconciled on visit\", \"name\": \"vision-owner-field-refresh\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"source owner change reconciled on visit\", \"name\": \"vision-source-owner-refresh\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=2.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=2.250 elapsed=0.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=2.500 elapsed=0.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=2.750 elapsed=1.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=3.000 elapsed=1.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=3.250 elapsed=1.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=3.500 elapsed=1.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=3.750 elapsed=2.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference deadline=2.000 elapsed=2.000\", \"name\": \"vision-reference-timeout\", \"status\": \"FAIL\"}, {\"case\": \"E29\", \"detail\": \"remaining original visibility rules not evaluated after fixture timeout; not acceptance\", \"name\": \"vision-aborted-original-rules\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=13 wait=abort-cleanup-reference clock=4.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"current visibility removed; explored fog is not visibility\", \"name\": \"vision-cleanup\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"source remains far from probe\", \"name\": \"vision-fallback-cleanup\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"single client cannot establish synchronization; repeat with two 1.27b clients\", \"name\": \"multiplayer\", \"status\": \"SKIP\"}, {\"case\": \"E29\", \"detail\": \"all saved incoming probe edges\", \"name\": \"vision-alliances-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"saved fog and mask enable flags\", \"name\": \"vision-fog-flags-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-remove-once\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-fallback-remove-once\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-idle-no-extra-remove\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-fallback-idle-no-extra-remove\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"all saved incoming probe edges\", \"name\": \"vision-alliances-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"saved fog and mask enable flags\", \"name\": \"vision-fog-flags-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=2 actual=2\", \"name\": \"idle-no-extra-remove\", \"status\": \"PASS\"}], \"run_id\": \"diag4-e29-timeout-20261019-01\", \"skips\": 1, \"source_sha256\": \"05501175a865d872e5d645d6942f7572f28d206b59ff223dde3e7e9d57506e07\", \"status\": \"failed\"}\n",
+  "builds": [
+    {
+      "build_metadata": {
+        "editor_save_certified": false,
+        "inputs": {
+          "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py": "065a8ec7bc250b98c7221240130c87e16af84d979dbc255d2d58841ed5aa86d6",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/baseline/original.w3x": "c87d5afb56fe36c4e633061d26551951f4d7db68b6ae0953b002e54eab6a4f9c",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Config.j": "bc41ea85d2a74d6d24a141c42d61706e14df842cccb2532a96e28a76bd88e6e1",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Environment.j": "d7fcc7fefbddd724a6bf23f252ede1c46030e020b9f6542023375cab5f9e85b3",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Support.j": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+        },
+        "managed": {
+          "war3map.j": "47b93b56552e3b0a2cccceca9672029c41d27ec2b91899ba6589ba301293fc87"
+        },
+        "opaque_members": {
+          "war3mapMap.blp": {
+            "error": "Unsupported compression type.",
+            "flags": 2147484160,
+            "raw_sha256": "5836235bd47f0bef48a5f5e1f74bbacb9244177c134f0bb4d1d5a8123c65da90",
+            "size": 20662
+          }
+        },
+        "output": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag4-e29-timeout-20261019-01/diag4-e29-timeout-20261019-01.w3x",
+        "prefix_sha256": "eb77ea5d8c512a61a2ecc8e444e5f04d7dc1d2fd81bf9bb17b94560c472deac6",
+        "preserved_members": {
+          "war3map.doo": "86c8c96d888830886d57d05d2a0e6a7720c7dead4839d5b2d7edf5db5323db80",
+          "war3map.imp": "74c4586a73a59bc12ada5faa740a9a43a8d7fa08bd1252b3058fac5cb1dbba03",
+          "war3map.mmp": "49845960d0b75e3e1943373b328cba5ee06f08849706da7bd2c2ffc0a28e50d0",
+          "war3map.shd": "dcb986a3daf37740e9607d4e09ef25ba81fe67b945779fe739500512f259a65b",
+          "war3map.w3a": "67bb649553479c9db3dffae33b09fc9f1b4208ec47e731ad7b113f0f0d15f24b",
+          "war3map.w3e": "f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f",
+          "war3map.w3h": "d9709f092b8a24af6fec1318533a79b472f49e734769ec5c3013fdb66479ddf9",
+          "war3map.w3i": "64a33be6abb2dbb6ff1dcbb152178a0bf543f94cddebfa0144c8123a290379bc",
+          "war3map.w3t": "d5428a8e1d6ae5305717873a2d1a9efa6bbfad9d9a1ad466f5b177276e7a64cf",
+          "war3map.w3u": "6076a336cfdc828d331d16daf2f61586505ab1c8301ae9e6f1e46750fe0e809d",
+          "war3map.wct": "10b24ee58c19e891dd700a860fbba659b5e352841fbf5e2880fd908538da9afd",
+          "war3map.wpm": "ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab",
+          "war3map.wtg": "ecbf8cf8237c40e90ce510c005b91f2412666e725c64c409afb6a1a092eaee79",
+          "war3map.wts": "eb3c3f917f92ab8b6aba760cb0bca8e1a2bb888c2b7718786d3fb54c0f9bda12",
+          "war3mapImported\\dummy.mdx": "113a257ba2e3908d075778b7ef8b72cdf8eadf614d45f1608d005e2383481ab1",
+          "war3mapUnits.doo": "f3cea164ac36a6a1dc119f75a0f4f2c0f28097d1bf6d5bf99c0708cb112edd96"
+        },
+        "scope": "Executable-test build only. No editor-save, gameplay or multiplayer certification.",
+        "sha256": "caec96f8546846b9e6ca9aef64bf1732a79cf9bf4981998e8be7767d5d8f1182",
+        "source_of_truth": "external explicit sources; retained original WCT/WTG are NOT executable source"
+      },
+      "compiler_pjass_archive_exit_code": 0,
+      "exit_provenance": "parent-provided observed build exits; not rerun",
+      "generated_jass_sha256": "47b93b56552e3b0a2cccceca9672029c41d27ec2b91899ba6589ba301293fc87",
+      "map": "projects/relativistic-classic/build/diag4-e29-timeout-20261019-01/diag4-e29-timeout-20261019-01.w3x",
+      "map_sha256": "caec96f8546846b9e6ca9aef64bf1732a79cf9bf4981998e8be7767d5d8f1182",
+      "run_id": "diag4-e29-timeout-20261019-01",
+      "stderr": ""
+    },
+    {
+      "build_metadata": {
+        "editor_save_certified": false,
+        "inputs": {
+          "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py": "065a8ec7bc250b98c7221240130c87e16af84d979dbc255d2d58841ed5aa86d6",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/baseline/original.w3x": "c87d5afb56fe36c4e633061d26551951f4d7db68b6ae0953b002e54eab6a4f9c",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/MapMain.j": "e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Config.j": "5cd3b75504a30fcf093d6f1d413ae763e960cadba40869f7e4e8adc2ab1e8001",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Contact.j": "79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Environment.j": "0b1c72c23fdc2cf90ad7ebdb993b1df5804b62ef3e036e21ceab6ea2b6dbfaf2",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Lifecycle.j": "20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Load.j": "c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Motion.j": "401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Runner.j": "b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Support.j": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+          "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04"
+        },
+        "managed": {
+          "war3map.j": "c90f22216bb071ee2b5cb6da1d60fd8800853debc2defa5cf6e1d4a018a1552a"
+        },
+        "opaque_members": {
+          "war3mapMap.blp": {
+            "error": "Unsupported compression type.",
+            "flags": 2147484160,
+            "raw_sha256": "5836235bd47f0bef48a5f5e1f74bbacb9244177c134f0bb4d1d5a8123c65da90",
+            "size": 20662
+          }
+        },
+        "output": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/fixed-20261019-03/fixed-20261019-03.w3x",
+        "prefix_sha256": "eb77ea5d8c512a61a2ecc8e444e5f04d7dc1d2fd81bf9bb17b94560c472deac6",
+        "preserved_members": {
+          "war3map.doo": "86c8c96d888830886d57d05d2a0e6a7720c7dead4839d5b2d7edf5db5323db80",
+          "war3map.imp": "74c4586a73a59bc12ada5faa740a9a43a8d7fa08bd1252b3058fac5cb1dbba03",
+          "war3map.mmp": "49845960d0b75e3e1943373b328cba5ee06f08849706da7bd2c2ffc0a28e50d0",
+          "war3map.shd": "dcb986a3daf37740e9607d4e09ef25ba81fe67b945779fe739500512f259a65b",
+          "war3map.w3a": "67bb649553479c9db3dffae33b09fc9f1b4208ec47e731ad7b113f0f0d15f24b",
+          "war3map.w3e": "f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f",
+          "war3map.w3h": "d9709f092b8a24af6fec1318533a79b472f49e734769ec5c3013fdb66479ddf9",
+          "war3map.w3i": "64a33be6abb2dbb6ff1dcbb152178a0bf543f94cddebfa0144c8123a290379bc",
+          "war3map.w3t": "d5428a8e1d6ae5305717873a2d1a9efa6bbfad9d9a1ad466f5b177276e7a64cf",
+          "war3map.w3u": "6076a336cfdc828d331d16daf2f61586505ab1c8301ae9e6f1e46750fe0e809d",
+          "war3map.wct": "10b24ee58c19e891dd700a860fbba659b5e352841fbf5e2880fd908538da9afd",
+          "war3map.wpm": "ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab",
+          "war3map.wtg": "ecbf8cf8237c40e90ce510c005b91f2412666e725c64c409afb6a1a092eaee79",
+          "war3map.wts": "eb3c3f917f92ab8b6aba760cb0bca8e1a2bb888c2b7718786d3fb54c0f9bda12",
+          "war3mapImported\\dummy.mdx": "113a257ba2e3908d075778b7ef8b72cdf8eadf614d45f1608d005e2383481ab1",
+          "war3mapUnits.doo": "f3cea164ac36a6a1dc119f75a0f4f2c0f28097d1bf6d5bf99c0708cb112edd96"
+        },
+        "scope": "Executable-test build only. No editor-save, gameplay or multiplayer certification.",
+        "sha256": "4490afbf0824a89186faf22e3a948452b27fe0ae1a111f3d960a108228fb2694",
+        "source_of_truth": "external explicit sources; retained original WCT/WTG are NOT executable source"
+      },
+      "compiler_pjass_archive_exit_code": 0,
+      "exit_provenance": "parent-provided observed build exits; not rerun",
+      "generated_jass_sha256": "c90f22216bb071ee2b5cb6da1d60fd8800853debc2defa5cf6e1d4a018a1552a",
+      "map": "projects/relativistic-classic/build/fixed-20261019-03/fixed-20261019-03.w3x",
+      "map_sha256": "4490afbf0824a89186faf22e3a948452b27fe0ae1a111f3d960a108228fb2694",
+      "run_id": "fixed-20261019-03",
+      "stderr": ""
+    }
+  ],
+  "classification": "NEGATIVE",
+  "cleanup_and_restoration": {
+    "idle-no-extra-remove": [
+      {
+        "case": "E29",
+        "detail": "expected=2 actual=2",
+        "name": "idle-no-extra-remove",
+        "status": "PASS"
+      }
+    ],
+    "vision-alliances-restored": [
+      {
+        "case": "E29",
+        "detail": "all saved incoming probe edges",
+        "name": "vision-alliances-restored",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "all saved incoming probe edges",
+        "name": "vision-alliances-restored",
+        "status": "PASS"
+      }
+    ],
+    "vision-cleanup": [
+      {
+        "case": "E29",
+        "detail": "current visibility removed; explored fog is not visibility",
+        "name": "vision-cleanup",
+        "status": "PASS"
+      }
+    ],
+    "vision-fallback-cleanup": [
+      {
+        "case": "E29",
+        "detail": "source remains far from probe",
+        "name": "vision-fallback-cleanup",
+        "status": "PASS"
+      }
+    ],
+    "vision-fallback-idle-no-extra-remove": [
+      {
+        "case": "E29",
+        "detail": "expected=1 actual=1",
+        "name": "vision-fallback-idle-no-extra-remove",
+        "status": "PASS"
+      }
+    ],
+    "vision-fallback-remove-once": [
+      {
+        "case": "E29",
+        "detail": "expected=1 actual=1",
+        "name": "vision-fallback-remove-once",
+        "status": "PASS"
+      }
+    ],
+    "vision-fog-flags-restored": [
+      {
+        "case": "E29",
+        "detail": "saved fog and mask enable flags",
+        "name": "vision-fog-flags-restored",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "saved fog and mask enable flags",
+        "name": "vision-fog-flags-restored",
+        "status": "PASS"
+      }
+    ],
+    "vision-idle-no-extra-remove": [
+      {
+        "case": "E29",
+        "detail": "expected=1 actual=1",
+        "name": "vision-idle-no-extra-remove",
+        "status": "PASS"
+      }
+    ],
+    "vision-remove-once": [
+      {
+        "case": "E29",
+        "detail": "expected=1 actual=1",
+        "name": "vision-remove-once",
+        "status": "PASS"
+      }
+    ]
+  },
+  "complete": [
+    1,
+    47,
+    1,
+    1
+  ],
+  "core_sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+  "counts": {
+    "FAIL": 1,
+    "OBS": 17,
+    "PASS": 28,
+    "SKIP": 1
+  },
+  "evidence": {
+    "projects/relativistic-classic/build/diag4-e29-timeout-20261019-01/diag4-e29-timeout-20261019-01.w3x": {
+      "bytes": 307180,
+      "sha256": "caec96f8546846b9e6ca9aef64bf1732a79cf9bf4981998e8be7767d5d8f1182"
+    },
+    "projects/relativistic-classic/build/fixed-20261019-03/fixed-20261019-03.w3x": {
+      "bytes": 307179,
+      "sha256": "4490afbf0824a89186faf22e3a948452b27fe0ae1a111f3d960a108228fb2694"
+    },
+    "projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/Missiles.j": {
+      "bytes": 40740,
+      "sha256": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6"
+    },
+    "projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Environment.j": {
+      "bytes": 28203,
+      "sha256": "d7fcc7fefbddd724a6bf23f252ede1c46030e020b9f6542023375cab5f9e85b3"
+    },
+    "projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Support.j": {
+      "bytes": 6371,
+      "sha256": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d"
+    },
+    "projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/manifest.json": {
+      "bytes": 11971,
+      "sha256": "fc8793e0c188295d3ea291dbcc8405f2784924d8a2cd2d96d53ce4cf7b1682ef"
+    },
+    "projects/relativistic-classic/reports/RM28-diag4-e29-timeout-20261019-01.txt": {
+      "bytes": 8699,
+      "sha256": "05501175a865d872e5d645d6942f7572f28d206b59ff223dde3e7e9d57506e07"
+    },
+    "projects/relativistic-classic/reports/cycle4/diag4-e29-timeout-20261019-01-build.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "projects/relativistic-classic/reports/cycle4/diag4-e29-timeout-20261019-01-build.stdout.json": {
+      "bytes": 5027,
+      "sha256": "f62585f059543b3befb04b286557cc6bb5f00953d071967bb72dacd739c0706e"
+    },
+    "projects/relativistic-classic/reports/cycle4/diag4-e29-timeout-20261019-01-launch.json": {
+      "bytes": 324,
+      "sha256": "d690698802b466aa5a704820bd61b339cf645c3d7c8470e41d55e582baa12b20"
+    },
+    "projects/relativistic-classic/reports/cycle4/diag4-e29-timeout-20261019-01-reader-exit.json": {
+      "bytes": 97,
+      "sha256": "53f34e83e65af085f0b15c8850e9ce1288d803e48ccafa9d5519972111bbfb88"
+    },
+    "projects/relativistic-classic/reports/cycle4/fixed-20261019-03-build.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "projects/relativistic-classic/reports/cycle4/fixed-20261019-03-build.stdout.json": {
+      "bytes": 4847,
+      "sha256": "436e6065232ed33e8bc35a68a8e1cf7f8e0eae498c70afd1c05901cfd4d16f59"
+    },
+    "projects/relativistic-classic/reports/cycle4/preparation.json": {
+      "bytes": 15762,
+      "sha256": "ee074ac718cda930409a442f65e13bebebc36f3bf390423187ce9cfe16df6e0b"
+    },
+    "projects/relativistic-classic/reports/cycle4/tooling-tests.exit.txt": {
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    "projects/relativistic-classic/reports/cycle4/tooling-tests.stderr.txt": {
+      "bytes": 3784,
+      "sha256": "41784b854f169fd254f64286cfb0a7fb04f72fbf05a6bccd4a968f746e875104"
+    },
+    "projects/relativistic-classic/reports/cycle4/tooling-tests.stdout.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "projects/relativistic-classic/reports/lab-diag4-e29-timeout-20261019-01.json": {
+      "bytes": 8232,
+      "sha256": "e6b1e3da986aa652f79ceef53fe45db2734905ab02c83b1bc8985600a4bd6b49"
+    },
+    "projects/relativistic-classic/reports/lab-diag4-e29-timeout-20261019-01.stderr.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "projects/relativistic-classic/reports/lab-diag4-e29-timeout-20261019-01.stdout.json": {
+      "bytes": 8232,
+      "sha256": "e6b1e3da986aa652f79ceef53fe45db2734905ab02c83b1bc8985600a4bd6b49"
+    }
+  },
+  "existing_python_tests": {
+    "count": 39,
+    "exit_code": 0,
+    "rerun": false
+  },
+  "failure": {
+    "case": "E29",
+    "detail": "phase=8 wait=native-reference deadline=2.000 elapsed=2.000",
+    "name": "vision-reference-timeout",
+    "status": "FAIL"
+  },
+  "hash_scope": "saved public artifacts, frozen injected source/core/logger, and map bytes; no maintained-source mutation",
+  "launch": {
+    "launch_requested_unix": 1792390991.5737288,
+    "map": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag4-e29-timeout-20261019-01/diag4-e29-timeout-20261019-01.w3x",
+    "map_sha256": "caec96f8546846b9e6ca9aef64bf1732a79cf9bf4981998e8be7767d5d8f1182",
+    "run_id": "diag4-e29-timeout-20261019-01"
+  },
+  "logger_sha256": "564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d",
+  "native_reveal_isolation": {
+    "case": "E29",
+    "detail": "initially hidden raw probes reveal each owner and isolate other owner; original600/400/900 geometry",
+    "name": "vision-reference-reveal-isolation",
+    "status": "PASS"
+  },
+  "negative_control_expectation": "PASS",
+  "normalized_public_result": {
+    "cases": 1,
+    "checks": 47,
+    "complete": true,
+    "failures": 1,
+    "freshness": {
+      "mtime": 1792391005.5894613,
+      "not_before": 1792390991.5737288
+    },
+    "group": "E29",
+    "observations": 17,
+    "records": [
+      {
+        "case": "E29",
+        "detail": "expected=600.000 actual=600.000 tolerance=0.010",
+        "name": "vision-getter",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "public dummy owner",
+        "name": "vision-explicit-owner",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "public source owner",
+        "name": "vision-source-fallback",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "bounds-and-hidden=true primaryActualEligible=true fallbackActualEligible=true translation=0,3000 radius=600 visible,true,false",
+        "name": "vision-reference-readiness",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=1 wait=native-reference clock=0.250 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false raw",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "initially hidden raw probes reveal each owner and isolate other owner; original600/400/900 geometry",
+        "name": "vision-reference-reveal-isolation",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "initially hidden point 400 units inside requested600",
+        "name": "vision-radius-owner",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "point900 outside requested600",
+        "name": "vision-outside-owner",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "other owner instance must not reveal",
+        "name": "vision-owner-isolation",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "initially hidden point400 inside requested600",
+        "name": "vision-radius-source",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "point900 outside requested600",
+        "name": "vision-outside-source",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=2 wait=native-reference clock=0.500 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false r",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "probe400 outside new200 radius",
+        "name": "vision-shrink",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "nonpositive radius removes current reveal",
+        "name": "vision-zero",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=3 wait=native-reference clock=0.750 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false r",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "negative radius also clears",
+        "name": "vision-negative",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "source fallback still reveals after zero",
+        "name": "vision-restored",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "clock=1.250 publicX=-1200.000 publicY=0.000 dummyX=-1200.000 dummyY=0.000",
+        "name": "vision-motion-stopped",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=6 wait=native-reference clock=1.500 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=true rawMovedP2=false actualMovedP1=true actualMovedP2=false rawSo",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "new probe inside moving circle",
+        "name": "vision-moved-reveal",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "old circle no longer supplies current visibility",
+        "name": "vision-moved-clears-old",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=7 wait=public-owner-reconciliation clock=1.750 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=true rawMovedP2=false actualMovedP1=true actualMovedP2=",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "direct owner change reconciled on visit",
+        "name": "vision-owner-field-refresh",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "source owner change reconciled on visit",
+        "name": "vision-source-owner-refresh",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=8 wait=native-reference clock=2.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=8 wait=native-reference clock=2.250 elapsed=0.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=8 wait=native-reference clock=2.500 elapsed=0.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=8 wait=native-reference clock=2.750 elapsed=1.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=8 wait=native-reference clock=3.000 elapsed=1.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=8 wait=native-reference clock=3.250 elapsed=1.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=8 wait=native-reference clock=3.500 elapsed=1.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=8 wait=native-reference clock=3.750 elapsed=2.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=8 wait=native-reference deadline=2.000 elapsed=2.000",
+        "name": "vision-reference-timeout",
+        "status": "FAIL"
+      },
+      {
+        "case": "E29",
+        "detail": "remaining original visibility rules not evaluated after fixture timeout; not acceptance",
+        "name": "vision-aborted-original-rules",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "phase=13 wait=abort-cleanup-reference clock=4.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2",
+        "name": "vision-reference-state",
+        "status": "OBS"
+      },
+      {
+        "case": "E29",
+        "detail": "current visibility removed; explored fog is not visibility",
+        "name": "vision-cleanup",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "source remains far from probe",
+        "name": "vision-fallback-cleanup",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "single client cannot establish synchronization; repeat with two 1.27b clients",
+        "name": "multiplayer",
+        "status": "SKIP"
+      },
+      {
+        "case": "E29",
+        "detail": "all saved incoming probe edges",
+        "name": "vision-alliances-restored",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "saved fog and mask enable flags",
+        "name": "vision-fog-flags-restored",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "expected=1 actual=1",
+        "name": "vision-remove-once",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "expected=1 actual=1",
+        "name": "vision-fallback-remove-once",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "expected=1 actual=1",
+        "name": "vision-idle-no-extra-remove",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "expected=1 actual=1",
+        "name": "vision-fallback-idle-no-extra-remove",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "all saved incoming probe edges",
+        "name": "vision-alliances-restored",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "saved fog and mask enable flags",
+        "name": "vision-fog-flags-restored",
+        "status": "PASS"
+      },
+      {
+        "case": "E29",
+        "detail": "expected=2 actual=2",
+        "name": "idle-no-extra-remove",
+        "status": "PASS"
+      }
+    ],
+    "run_id": "diag4-e29-timeout-20261019-01",
+    "skips": 1,
+    "source_sha256": "05501175a865d872e5d645d6942f7572f28d206b59ff223dde3e7e9d57506e07",
+    "status": "failed"
+  },
+  "phase8_states": [
+    "phase=8 wait=native-reference clock=2.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+    "phase=8 wait=native-reference clock=2.250 elapsed=0.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+    "phase=8 wait=native-reference clock=2.500 elapsed=0.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+    "phase=8 wait=native-reference clock=2.750 elapsed=1.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+    "phase=8 wait=native-reference clock=3.000 elapsed=1.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+    "phase=8 wait=native-reference clock=3.250 elapsed=1.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+    "phase=8 wait=native-reference clock=3.500 elapsed=1.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw",
+    "phase=8 wait=native-reference clock=3.750 elapsed=2.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw"
+  ],
+  "readiness": {
+    "case": "E29",
+    "detail": "bounds-and-hidden=true primaryActualEligible=true fallbackActualEligible=true translation=0,3000 radius=600 visible,true,false",
+    "name": "vision-reference-readiness",
+    "status": "OBS"
+  },
+  "unreached_original_rules": {
+    "case": "E29",
+    "detail": "remaining original visibility rules not evaluated after fixture timeout; not acceptance",
+    "name": "vision-aborted-original-rules",
+    "status": "OBS"
+  },
+  "verification": {
+    "argv": [
+      "/usr/bin/python3",
+      "-B",
+      "-c",
+      "import collections, hashlib, json, re\nfrom pathlib import Path\np = Path('projects/relativistic-classic')\nr = p / 'reports/cycle4'\nrun = 'diag4-e29-timeout-20261019-01'\nseen = {}\ndef read(path):\n    data = path.read_bytes()\n    seen[str(path)] = {'sha256': hashlib.sha256(data).hexdigest(), 'bytes': len(data)}\n    return data\ndef obj(path):\n    return json.loads(read(path))\nraw = read(p / ('reports/RM28-' + run + '.txt'))\nreport = obj(p / ('reports/lab-' + run + '.json'))\nstdout = read(p / ('reports/lab-' + run + '.stdout.json'))\nstderr = read(p / ('reports/lab-' + run + '.stderr.txt'))\nreader = obj(r / (run + '-reader-exit.json'))\nlaunch = obj(r / (run + '-launch.json'))\nmanifest_path = p / ('build/inputs-' + run + '/manifest.json')\nm = obj(manifest_path)\nprep = obj(r / 'preparation.json')\nassert hashlib.sha256(raw).hexdigest() == report['source_sha256']\nassert json.loads(stdout) == report and stderr == b''\nassert reader['exit_code'] == 1\nassert reader['source_mtime'] == report['freshness']['mtime'] >= reader['launch_requested_unix']\nassert reader['launch_requested_unix'] == launch['launch_requested_unix'] == report['freshness']['not_before']\nassert report['run_id'] == run and report['group'] == 'E29'\nassert report['complete'] is True and report['status'] == 'failed'\nassert [report[k] for k in ('cases','checks','failures','skips','observations')] == [1,47,1,1,17]\nrows = re.findall(rb'call Preload\\( \"(RM28\\|[^\"\\r\\n]+)\" \\)', raw)\nfields = [row.decode().split('|') for row in rows]\nassert fields[0] == ['RM28',run,'BEGIN','E29'] and fields[1] == ['RM28',run,'CASE','E29']\nassert fields[-1] == ['RM28',run,'COMPLETE','1','47','1','1']\nassert len(fields) == 50 and all(f[:2] == ['RM28',run] for f in fields)\nrecords = [{'case': f[3], 'status': f[4], 'name': f[5], 'detail': f[6]} for f in fields[2:-1] if f[2] == 'CHECK' and len(f) == 7]\nassert records == report['records'] and len(records) == 47\ncounts = dict(collections.Counter(x['status'] for x in records))\nassert counts == {'PASS':28,'OBS':17,'FAIL':1,'SKIP':1}\ndef named(name):\n    return [x for x in records if x['name'] == name]\nfailures = [x for x in records if x['status'] == 'FAIL']\nassert failures == [{'case':'E29','status':'FAIL','name':'vision-reference-timeout','detail':'phase=8 wait=native-reference deadline=2.000 elapsed=2.000'}]\nassert named('vision-reference-readiness') == [{'case':'E29','status':'OBS','name':'vision-reference-readiness','detail':'bounds-and-hidden=true primaryActualEligible=true fallbackActualEligible=true translation=0,3000 radius=600 visible,true,false'}]\nassert named('vision-reference-reveal-isolation')[0]['status'] == 'PASS'\nassert named('vision-aborted-original-rules') == [{'case':'E29','status':'OBS','name':'vision-aborted-original-rules','detail':'remaining original visibility rules not evaluated after fixture timeout; not acceptance'}]\nassert [x['name'] for x in records if x['status']=='SKIP'] == ['multiplayer']\nrequired = m['expected']['cleanup_pass_names']\ncleanup = {name: named(name) for name in required}\nfor name, entries in cleanup.items():\n    assert len(entries) == (2 if name in ('vision-alliances-restored','vision-fog-flags-restored') else 1)\n    assert all(x['status']=='PASS' for x in entries)\nfor name in ('vision-remove-once','vision-fallback-remove-once','vision-idle-no-extra-remove','vision-fallback-idle-no-extra-remove'):\n    assert named(name)[0]['detail'] == 'expected=1 actual=1'\nassert named('idle-no-extra-remove')[0]['detail'] == 'expected=2 actual=2'\nstates = named('vision-reference-state')\nphase8 = [x['detail'] for x in states if x['detail'].startswith('phase=8 ')]\nassert len(phase8) == 8\nfor i, detail in enumerate(phase8,1):\n    assert detail.startswith('phase=8 wait=native-reference clock=%.3f elapsed=%.3f deadline=2.000 ' % (1.75+i*.25,i*.25))\nassert any(x['detail'].startswith('phase=13 wait=abort-cleanup-reference clock=4.000 elapsed=0.250 deadline=2.000 ') for x in states)\nenv_path = manifest_path.parent / 'lab/Environment.j'\nenv = read(env_path)\nassert hashlib.sha256(env).hexdigest() == m['input_sha256']['lab/Environment.j']\nassert env.decode().count(m['transformation']['new_text']) == 1\nassert 'return false' in m['transformation']['new_text']\nassert hashlib.sha256(m['transformation']['new_text'].encode()).hexdigest() == m['transformation']['new_sha256']\nassert hashlib.sha256(m['transformation']['old_text'].encode()).hexdigest() == m['transformation']['old_sha256']\nassert m['guard']['seconds'] == 2.0 and m['guard']['transfer_phase'] == 8\nfor rel, key in [('Missiles.j','core_sha256'),('lab/Support.j','logger_sha256')]:\n    assert hashlib.sha256(read(manifest_path.parent / rel)).hexdigest() == m[key] == prep[key]\nassert seen[str(manifest_path)]['sha256'] == prep['snapshots'][0]['manifest_sha256']\nbuilds = []\nfor run_id in (run, 'fixed-20261019-03'):\n    b = obj(r / (run_id + '-build.stdout.json'))\n    err = read(r / (run_id + '-build.stderr.txt'))\n    assert err == b''\n    map_path = p / ('build/' + run_id + '/' + run_id + '.w3x')\n    assert hashlib.sha256(read(map_path)).hexdigest() == b['sha256']\n    builds.append({'run_id':run_id,'map':str(map_path),'map_sha256':b['sha256'],'generated_jass_sha256':b['managed']['war3map.j'],'compiler_pjass_archive_exit_code':0,'exit_provenance':'parent-provided observed build exits; not rerun','stderr':err.decode(),'build_metadata':b})\nassert launch['map_sha256'] == builds[0]['map_sha256']\nassert read(r / 'tooling-tests.exit.txt') == b'0\\n'\nassert read(r / 'tooling-tests.stdout.txt') == b''\ntests_stderr = read(r / 'tooling-tests.stderr.txt').decode()\nassert tests_stderr == prep['tooling_tests']['stderr'] and 'Ran 39 tests in ' in tests_stderr and tests_stderr.endswith('\\nOK\\n')\nprint(json.dumps({'classification':'NEGATIVE','negative_control_expectation':'PASS','actual_reader_exit_code':1,'actual_reader_stdout':stdout.decode(),'actual_reader_stderr':stderr.decode(),'actual_reader_metadata':reader,'launch':launch,'complete':[1,47,1,1],'counts':counts,'failure':failures[0],'readiness':named('vision-reference-readiness')[0],'native_reveal_isolation':named('vision-reference-reveal-isolation')[0],'phase8_states':phase8,'cleanup_and_restoration':cleanup,'unreached_original_rules':named('vision-aborted-original-rules')[0],'normalized_public_result':report,'core_sha256':m['core_sha256'],'logger_sha256':m['logger_sha256'],'hash_scope':'saved public artifacts, frozen injected source/core/logger, and map bytes; no maintained-source mutation','builds':builds,'existing_python_tests':{'exit_code':0,'count':39,'rerun':False},'evidence':seen},sort_keys=True))\n"
+    ],
+    "command": "/usr/bin/python3 -B -c 'import collections, hashlib, json, re\nfrom pathlib import Path\np = Path('\"'\"'projects/relativistic-classic'\"'\"')\nr = p / '\"'\"'reports/cycle4'\"'\"'\nrun = '\"'\"'diag4-e29-timeout-20261019-01'\"'\"'\nseen = {}\ndef read(path):\n    data = path.read_bytes()\n    seen[str(path)] = {'\"'\"'sha256'\"'\"': hashlib.sha256(data).hexdigest(), '\"'\"'bytes'\"'\"': len(data)}\n    return data\ndef obj(path):\n    return json.loads(read(path))\nraw = read(p / ('\"'\"'reports/RM28-'\"'\"' + run + '\"'\"'.txt'\"'\"'))\nreport = obj(p / ('\"'\"'reports/lab-'\"'\"' + run + '\"'\"'.json'\"'\"'))\nstdout = read(p / ('\"'\"'reports/lab-'\"'\"' + run + '\"'\"'.stdout.json'\"'\"'))\nstderr = read(p / ('\"'\"'reports/lab-'\"'\"' + run + '\"'\"'.stderr.txt'\"'\"'))\nreader = obj(r / (run + '\"'\"'-reader-exit.json'\"'\"'))\nlaunch = obj(r / (run + '\"'\"'-launch.json'\"'\"'))\nmanifest_path = p / ('\"'\"'build/inputs-'\"'\"' + run + '\"'\"'/manifest.json'\"'\"')\nm = obj(manifest_path)\nprep = obj(r / '\"'\"'preparation.json'\"'\"')\nassert hashlib.sha256(raw).hexdigest() == report['\"'\"'source_sha256'\"'\"']\nassert json.loads(stdout) == report and stderr == b'\"'\"''\"'\"'\nassert reader['\"'\"'exit_code'\"'\"'] == 1\nassert reader['\"'\"'source_mtime'\"'\"'] == report['\"'\"'freshness'\"'\"']['\"'\"'mtime'\"'\"'] >= reader['\"'\"'launch_requested_unix'\"'\"']\nassert reader['\"'\"'launch_requested_unix'\"'\"'] == launch['\"'\"'launch_requested_unix'\"'\"'] == report['\"'\"'freshness'\"'\"']['\"'\"'not_before'\"'\"']\nassert report['\"'\"'run_id'\"'\"'] == run and report['\"'\"'group'\"'\"'] == '\"'\"'E29'\"'\"'\nassert report['\"'\"'complete'\"'\"'] is True and report['\"'\"'status'\"'\"'] == '\"'\"'failed'\"'\"'\nassert [report[k] for k in ('\"'\"'cases'\"'\"','\"'\"'checks'\"'\"','\"'\"'failures'\"'\"','\"'\"'skips'\"'\"','\"'\"'observations'\"'\"')] == [1,47,1,1,17]\nrows = re.findall(rb'\"'\"'call Preload\\( \"(RM28\\|[^\"\\r\\n]+)\" \\)'\"'\"', raw)\nfields = [row.decode().split('\"'\"'|'\"'\"') for row in rows]\nassert fields[0] == ['\"'\"'RM28'\"'\"',run,'\"'\"'BEGIN'\"'\"','\"'\"'E29'\"'\"'] and fields[1] == ['\"'\"'RM28'\"'\"',run,'\"'\"'CASE'\"'\"','\"'\"'E29'\"'\"']\nassert fields[-1] == ['\"'\"'RM28'\"'\"',run,'\"'\"'COMPLETE'\"'\"','\"'\"'1'\"'\"','\"'\"'47'\"'\"','\"'\"'1'\"'\"','\"'\"'1'\"'\"']\nassert len(fields) == 50 and all(f[:2] == ['\"'\"'RM28'\"'\"',run] for f in fields)\nrecords = [{'\"'\"'case'\"'\"': f[3], '\"'\"'status'\"'\"': f[4], '\"'\"'name'\"'\"': f[5], '\"'\"'detail'\"'\"': f[6]} for f in fields[2:-1] if f[2] == '\"'\"'CHECK'\"'\"' and len(f) == 7]\nassert records == report['\"'\"'records'\"'\"'] and len(records) == 47\ncounts = dict(collections.Counter(x['\"'\"'status'\"'\"'] for x in records))\nassert counts == {'\"'\"'PASS'\"'\"':28,'\"'\"'OBS'\"'\"':17,'\"'\"'FAIL'\"'\"':1,'\"'\"'SKIP'\"'\"':1}\ndef named(name):\n    return [x for x in records if x['\"'\"'name'\"'\"'] == name]\nfailures = [x for x in records if x['\"'\"'status'\"'\"'] == '\"'\"'FAIL'\"'\"']\nassert failures == [{'\"'\"'case'\"'\"':'\"'\"'E29'\"'\"','\"'\"'status'\"'\"':'\"'\"'FAIL'\"'\"','\"'\"'name'\"'\"':'\"'\"'vision-reference-timeout'\"'\"','\"'\"'detail'\"'\"':'\"'\"'phase=8 wait=native-reference deadline=2.000 elapsed=2.000'\"'\"'}]\nassert named('\"'\"'vision-reference-readiness'\"'\"') == [{'\"'\"'case'\"'\"':'\"'\"'E29'\"'\"','\"'\"'status'\"'\"':'\"'\"'OBS'\"'\"','\"'\"'name'\"'\"':'\"'\"'vision-reference-readiness'\"'\"','\"'\"'detail'\"'\"':'\"'\"'bounds-and-hidden=true primaryActualEligible=true fallbackActualEligible=true translation=0,3000 radius=600 visible,true,false'\"'\"'}]\nassert named('\"'\"'vision-reference-reveal-isolation'\"'\"')[0]['\"'\"'status'\"'\"'] == '\"'\"'PASS'\"'\"'\nassert named('\"'\"'vision-aborted-original-rules'\"'\"') == [{'\"'\"'case'\"'\"':'\"'\"'E29'\"'\"','\"'\"'status'\"'\"':'\"'\"'OBS'\"'\"','\"'\"'name'\"'\"':'\"'\"'vision-aborted-original-rules'\"'\"','\"'\"'detail'\"'\"':'\"'\"'remaining original visibility rules not evaluated after fixture timeout; not acceptance'\"'\"'}]\nassert [x['\"'\"'name'\"'\"'] for x in records if x['\"'\"'status'\"'\"']=='\"'\"'SKIP'\"'\"'] == ['\"'\"'multiplayer'\"'\"']\nrequired = m['\"'\"'expected'\"'\"']['\"'\"'cleanup_pass_names'\"'\"']\ncleanup = {name: named(name) for name in required}\nfor name, entries in cleanup.items():\n    assert len(entries) == (2 if name in ('\"'\"'vision-alliances-restored'\"'\"','\"'\"'vision-fog-flags-restored'\"'\"') else 1)\n    assert all(x['\"'\"'status'\"'\"']=='\"'\"'PASS'\"'\"' for x in entries)\nfor name in ('\"'\"'vision-remove-once'\"'\"','\"'\"'vision-fallback-remove-once'\"'\"','\"'\"'vision-idle-no-extra-remove'\"'\"','\"'\"'vision-fallback-idle-no-extra-remove'\"'\"'):\n    assert named(name)[0]['\"'\"'detail'\"'\"'] == '\"'\"'expected=1 actual=1'\"'\"'\nassert named('\"'\"'idle-no-extra-remove'\"'\"')[0]['\"'\"'detail'\"'\"'] == '\"'\"'expected=2 actual=2'\"'\"'\nstates = named('\"'\"'vision-reference-state'\"'\"')\nphase8 = [x['\"'\"'detail'\"'\"'] for x in states if x['\"'\"'detail'\"'\"'].startswith('\"'\"'phase=8 '\"'\"')]\nassert len(phase8) == 8\nfor i, detail in enumerate(phase8,1):\n    assert detail.startswith('\"'\"'phase=8 wait=native-reference clock=%.3f elapsed=%.3f deadline=2.000 '\"'\"' % (1.75+i*.25,i*.25))\nassert any(x['\"'\"'detail'\"'\"'].startswith('\"'\"'phase=13 wait=abort-cleanup-reference clock=4.000 elapsed=0.250 deadline=2.000 '\"'\"') for x in states)\nenv_path = manifest_path.parent / '\"'\"'lab/Environment.j'\"'\"'\nenv = read(env_path)\nassert hashlib.sha256(env).hexdigest() == m['\"'\"'input_sha256'\"'\"']['\"'\"'lab/Environment.j'\"'\"']\nassert env.decode().count(m['\"'\"'transformation'\"'\"']['\"'\"'new_text'\"'\"']) == 1\nassert '\"'\"'return false'\"'\"' in m['\"'\"'transformation'\"'\"']['\"'\"'new_text'\"'\"']\nassert hashlib.sha256(m['\"'\"'transformation'\"'\"']['\"'\"'new_text'\"'\"'].encode()).hexdigest() == m['\"'\"'transformation'\"'\"']['\"'\"'new_sha256'\"'\"']\nassert hashlib.sha256(m['\"'\"'transformation'\"'\"']['\"'\"'old_text'\"'\"'].encode()).hexdigest() == m['\"'\"'transformation'\"'\"']['\"'\"'old_sha256'\"'\"']\nassert m['\"'\"'guard'\"'\"']['\"'\"'seconds'\"'\"'] == 2.0 and m['\"'\"'guard'\"'\"']['\"'\"'transfer_phase'\"'\"'] == 8\nfor rel, key in [('\"'\"'Missiles.j'\"'\"','\"'\"'core_sha256'\"'\"'),('\"'\"'lab/Support.j'\"'\"','\"'\"'logger_sha256'\"'\"')]:\n    assert hashlib.sha256(read(manifest_path.parent / rel)).hexdigest() == m[key] == prep[key]\nassert seen[str(manifest_path)]['\"'\"'sha256'\"'\"'] == prep['\"'\"'snapshots'\"'\"'][0]['\"'\"'manifest_sha256'\"'\"']\nbuilds = []\nfor run_id in (run, '\"'\"'fixed-20261019-03'\"'\"'):\n    b = obj(r / (run_id + '\"'\"'-build.stdout.json'\"'\"'))\n    err = read(r / (run_id + '\"'\"'-build.stderr.txt'\"'\"'))\n    assert err == b'\"'\"''\"'\"'\n    map_path = p / ('\"'\"'build/'\"'\"' + run_id + '\"'\"'/'\"'\"' + run_id + '\"'\"'.w3x'\"'\"')\n    assert hashlib.sha256(read(map_path)).hexdigest() == b['\"'\"'sha256'\"'\"']\n    builds.append({'\"'\"'run_id'\"'\"':run_id,'\"'\"'map'\"'\"':str(map_path),'\"'\"'map_sha256'\"'\"':b['\"'\"'sha256'\"'\"'],'\"'\"'generated_jass_sha256'\"'\"':b['\"'\"'managed'\"'\"']['\"'\"'war3map.j'\"'\"'],'\"'\"'compiler_pjass_archive_exit_code'\"'\"':0,'\"'\"'exit_provenance'\"'\"':'\"'\"'parent-provided observed build exits; not rerun'\"'\"','\"'\"'stderr'\"'\"':err.decode(),'\"'\"'build_metadata'\"'\"':b})\nassert launch['\"'\"'map_sha256'\"'\"'] == builds[0]['\"'\"'map_sha256'\"'\"']\nassert read(r / '\"'\"'tooling-tests.exit.txt'\"'\"') == b'\"'\"'0\\n'\"'\"'\nassert read(r / '\"'\"'tooling-tests.stdout.txt'\"'\"') == b'\"'\"''\"'\"'\ntests_stderr = read(r / '\"'\"'tooling-tests.stderr.txt'\"'\"').decode()\nassert tests_stderr == prep['\"'\"'tooling_tests'\"'\"']['\"'\"'stderr'\"'\"'] and '\"'\"'Ran 39 tests in '\"'\"' in tests_stderr and tests_stderr.endswith('\"'\"'\\nOK\\n'\"'\"')\nprint(json.dumps({'\"'\"'classification'\"'\"':'\"'\"'NEGATIVE'\"'\"','\"'\"'negative_control_expectation'\"'\"':'\"'\"'PASS'\"'\"','\"'\"'actual_reader_exit_code'\"'\"':1,'\"'\"'actual_reader_stdout'\"'\"':stdout.decode(),'\"'\"'actual_reader_stderr'\"'\"':stderr.decode(),'\"'\"'actual_reader_metadata'\"'\"':reader,'\"'\"'launch'\"'\"':launch,'\"'\"'complete'\"'\"':[1,47,1,1],'\"'\"'counts'\"'\"':counts,'\"'\"'failure'\"'\"':failures[0],'\"'\"'readiness'\"'\"':named('\"'\"'vision-reference-readiness'\"'\"')[0],'\"'\"'native_reveal_isolation'\"'\"':named('\"'\"'vision-reference-reveal-isolation'\"'\"')[0],'\"'\"'phase8_states'\"'\"':phase8,'\"'\"'cleanup_and_restoration'\"'\"':cleanup,'\"'\"'unreached_original_rules'\"'\"':named('\"'\"'vision-aborted-original-rules'\"'\"')[0],'\"'\"'normalized_public_result'\"'\"':report,'\"'\"'core_sha256'\"'\"':m['\"'\"'core_sha256'\"'\"'],'\"'\"'logger_sha256'\"'\"':m['\"'\"'logger_sha256'\"'\"'],'\"'\"'hash_scope'\"'\"':'\"'\"'saved public artifacts, frozen injected source/core/logger, and map bytes; no maintained-source mutation'\"'\"','\"'\"'builds'\"'\"':builds,'\"'\"'existing_python_tests'\"'\"':{'\"'\"'exit_code'\"'\"':0,'\"'\"'count'\"'\"':39,'\"'\"'rerun'\"'\"':False},'\"'\"'evidence'\"'\"':seen},sort_keys=True))\n'",
+    "timeout_seconds": 25,
+    "exit_code": 0,
+    "stdout": "{\"actual_reader_exit_code\": 1, \"actual_reader_metadata\": {\"exit_code\": 1, \"launch_requested_unix\": 1792390991.5737288, \"source_mtime\": 1792391005.5894613}, \"actual_reader_stderr\": \"\", \"actual_reader_stdout\": \"{\\\"cases\\\": 1, \\\"checks\\\": 47, \\\"complete\\\": true, \\\"failures\\\": 1, \\\"freshness\\\": {\\\"mtime\\\": 1792391005.5894613, \\\"not_before\\\": 1792390991.5737288}, \\\"group\\\": \\\"E29\\\", \\\"observations\\\": 17, \\\"records\\\": [{\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"expected=600.000 actual=600.000 tolerance=0.010\\\", \\\"name\\\": \\\"vision-getter\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"public dummy owner\\\", \\\"name\\\": \\\"vision-explicit-owner\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"public source owner\\\", \\\"name\\\": \\\"vision-source-fallback\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"bounds-and-hidden=true primaryActualEligible=true fallbackActualEligible=true translation=0,3000 radius=600 visible,true,false\\\", \\\"name\\\": \\\"vision-reference-readiness\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=1 wait=native-reference clock=0.250 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false raw\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"initially hidden raw probes reveal each owner and isolate other owner; original600/400/900 geometry\\\", \\\"name\\\": \\\"vision-reference-reveal-isolation\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"initially hidden point 400 units inside requested600\\\", \\\"name\\\": \\\"vision-radius-owner\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"point900 outside requested600\\\", \\\"name\\\": \\\"vision-outside-owner\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"other owner instance must not reveal\\\", \\\"name\\\": \\\"vision-owner-isolation\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"initially hidden point400 inside requested600\\\", \\\"name\\\": \\\"vision-radius-source\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"point900 outside requested600\\\", \\\"name\\\": \\\"vision-outside-source\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=2 wait=native-reference clock=0.500 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false r\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"probe400 outside new200 radius\\\", \\\"name\\\": \\\"vision-shrink\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"nonpositive radius removes current reveal\\\", \\\"name\\\": \\\"vision-zero\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=3 wait=native-reference clock=0.750 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false r\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"negative radius also clears\\\", \\\"name\\\": \\\"vision-negative\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"source fallback still reveals after zero\\\", \\\"name\\\": \\\"vision-restored\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"clock=1.250 publicX=-1200.000 publicY=0.000 dummyX=-1200.000 dummyY=0.000\\\", \\\"name\\\": \\\"vision-motion-stopped\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=6 wait=native-reference clock=1.500 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=true rawMovedP2=false actualMovedP1=true actualMovedP2=false rawSo\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"new probe inside moving circle\\\", \\\"name\\\": \\\"vision-moved-reveal\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"old circle no longer supplies current visibility\\\", \\\"name\\\": \\\"vision-moved-clears-old\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=7 wait=public-owner-reconciliation clock=1.750 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=true rawMovedP2=false actualMovedP1=true actualMovedP2=\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"direct owner change reconciled on visit\\\", \\\"name\\\": \\\"vision-owner-field-refresh\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"source owner change reconciled on visit\\\", \\\"name\\\": \\\"vision-source-owner-refresh\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=8 wait=native-reference clock=2.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=8 wait=native-reference clock=2.250 elapsed=0.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=8 wait=native-reference clock=2.500 elapsed=0.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=8 wait=native-reference clock=2.750 elapsed=1.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=8 wait=native-reference clock=3.000 elapsed=1.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=8 wait=native-reference clock=3.250 elapsed=1.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=8 wait=native-reference clock=3.500 elapsed=1.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=8 wait=native-reference clock=3.750 elapsed=2.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=8 wait=native-reference deadline=2.000 elapsed=2.000\\\", \\\"name\\\": \\\"vision-reference-timeout\\\", \\\"status\\\": \\\"FAIL\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"remaining original visibility rules not evaluated after fixture timeout; not acceptance\\\", \\\"name\\\": \\\"vision-aborted-original-rules\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"phase=13 wait=abort-cleanup-reference clock=4.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2\\\", \\\"name\\\": \\\"vision-reference-state\\\", \\\"status\\\": \\\"OBS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"current visibility removed; explored fog is not visibility\\\", \\\"name\\\": \\\"vision-cleanup\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"source remains far from probe\\\", \\\"name\\\": \\\"vision-fallback-cleanup\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"single client cannot establish synchronization; repeat with two 1.27b clients\\\", \\\"name\\\": \\\"multiplayer\\\", \\\"status\\\": \\\"SKIP\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"all saved incoming probe edges\\\", \\\"name\\\": \\\"vision-alliances-restored\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"saved fog and mask enable flags\\\", \\\"name\\\": \\\"vision-fog-flags-restored\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"expected=1 actual=1\\\", \\\"name\\\": \\\"vision-remove-once\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"expected=1 actual=1\\\", \\\"name\\\": \\\"vision-fallback-remove-once\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"expected=1 actual=1\\\", \\\"name\\\": \\\"vision-idle-no-extra-remove\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"expected=1 actual=1\\\", \\\"name\\\": \\\"vision-fallback-idle-no-extra-remove\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"all saved incoming probe edges\\\", \\\"name\\\": \\\"vision-alliances-restored\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"saved fog and mask enable flags\\\", \\\"name\\\": \\\"vision-fog-flags-restored\\\", \\\"status\\\": \\\"PASS\\\"}, {\\\"case\\\": \\\"E29\\\", \\\"detail\\\": \\\"expected=2 actual=2\\\", \\\"name\\\": \\\"idle-no-extra-remove\\\", \\\"status\\\": \\\"PASS\\\"}], \\\"run_id\\\": \\\"diag4-e29-timeout-20261019-01\\\", \\\"skips\\\": 1, \\\"source_sha256\\\": \\\"05501175a865d872e5d645d6942f7572f28d206b59ff223dde3e7e9d57506e07\\\", \\\"status\\\": \\\"failed\\\"}\\n\", \"builds\": [{\"build_metadata\": {\"editor_save_certified\": false, \"inputs\": {\"/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py\": \"065a8ec7bc250b98c7221240130c87e16af84d979dbc255d2d58841ed5aa86d6\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/baseline/original.w3x\": \"c87d5afb56fe36c4e633061d26551951f4d7db68b6ae0953b002e54eab6a4f9c\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/MapMain.j\": \"e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/Missiles.j\": \"adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Config.j\": \"bc41ea85d2a74d6d24a141c42d61706e14df842cccb2532a96e28a76bd88e6e1\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Contact.j\": \"79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Environment.j\": \"d7fcc7fefbddd724a6bf23f252ede1c46030e020b9f6542023375cab5f9e85b3\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Lifecycle.j\": \"20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Load.j\": \"c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Motion.j\": \"401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Runner.j\": \"b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Support.j\": \"564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/libraries/DummyRecycler.j\": \"5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/libraries/TimerUtils.j\": \"1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/libraries/WorldBounds.j\": \"eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04\"}, \"managed\": {\"war3map.j\": \"47b93b56552e3b0a2cccceca9672029c41d27ec2b91899ba6589ba301293fc87\"}, \"opaque_members\": {\"war3mapMap.blp\": {\"error\": \"Unsupported compression type.\", \"flags\": 2147484160, \"raw_sha256\": \"5836235bd47f0bef48a5f5e1f74bbacb9244177c134f0bb4d1d5a8123c65da90\", \"size\": 20662}}, \"output\": \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag4-e29-timeout-20261019-01/diag4-e29-timeout-20261019-01.w3x\", \"prefix_sha256\": \"eb77ea5d8c512a61a2ecc8e444e5f04d7dc1d2fd81bf9bb17b94560c472deac6\", \"preserved_members\": {\"war3map.doo\": \"86c8c96d888830886d57d05d2a0e6a7720c7dead4839d5b2d7edf5db5323db80\", \"war3map.imp\": \"74c4586a73a59bc12ada5faa740a9a43a8d7fa08bd1252b3058fac5cb1dbba03\", \"war3map.mmp\": \"49845960d0b75e3e1943373b328cba5ee06f08849706da7bd2c2ffc0a28e50d0\", \"war3map.shd\": \"dcb986a3daf37740e9607d4e09ef25ba81fe67b945779fe739500512f259a65b\", \"war3map.w3a\": \"67bb649553479c9db3dffae33b09fc9f1b4208ec47e731ad7b113f0f0d15f24b\", \"war3map.w3e\": \"f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f\", \"war3map.w3h\": \"d9709f092b8a24af6fec1318533a79b472f49e734769ec5c3013fdb66479ddf9\", \"war3map.w3i\": \"64a33be6abb2dbb6ff1dcbb152178a0bf543f94cddebfa0144c8123a290379bc\", \"war3map.w3t\": \"d5428a8e1d6ae5305717873a2d1a9efa6bbfad9d9a1ad466f5b177276e7a64cf\", \"war3map.w3u\": \"6076a336cfdc828d331d16daf2f61586505ab1c8301ae9e6f1e46750fe0e809d\", \"war3map.wct\": \"10b24ee58c19e891dd700a860fbba659b5e352841fbf5e2880fd908538da9afd\", \"war3map.wpm\": \"ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab\", \"war3map.wtg\": \"ecbf8cf8237c40e90ce510c005b91f2412666e725c64c409afb6a1a092eaee79\", \"war3map.wts\": \"eb3c3f917f92ab8b6aba760cb0bca8e1a2bb888c2b7718786d3fb54c0f9bda12\", \"war3mapImported\\\\dummy.mdx\": \"113a257ba2e3908d075778b7ef8b72cdf8eadf614d45f1608d005e2383481ab1\", \"war3mapUnits.doo\": \"f3cea164ac36a6a1dc119f75a0f4f2c0f28097d1bf6d5bf99c0708cb112edd96\"}, \"scope\": \"Executable-test build only. No editor-save, gameplay or multiplayer certification.\", \"sha256\": \"caec96f8546846b9e6ca9aef64bf1732a79cf9bf4981998e8be7767d5d8f1182\", \"source_of_truth\": \"external explicit sources; retained original WCT/WTG are NOT executable source\"}, \"compiler_pjass_archive_exit_code\": 0, \"exit_provenance\": \"parent-provided observed build exits; not rerun\", \"generated_jass_sha256\": \"47b93b56552e3b0a2cccceca9672029c41d27ec2b91899ba6589ba301293fc87\", \"map\": \"projects/relativistic-classic/build/diag4-e29-timeout-20261019-01/diag4-e29-timeout-20261019-01.w3x\", \"map_sha256\": \"caec96f8546846b9e6ca9aef64bf1732a79cf9bf4981998e8be7767d5d8f1182\", \"run_id\": \"diag4-e29-timeout-20261019-01\", \"stderr\": \"\"}, {\"build_metadata\": {\"editor_save_certified\": false, \"inputs\": {\"/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py\": \"065a8ec7bc250b98c7221240130c87e16af84d979dbc255d2d58841ed5aa86d6\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/baseline/original.w3x\": \"c87d5afb56fe36c4e633061d26551951f4d7db68b6ae0953b002e54eab6a4f9c\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/MapMain.j\": \"e7817fd17abbdb77e1dd5898b7ece966074e806744fb9c53f4ffe9dc3006cfe1\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/Missiles.j\": \"adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Config.j\": \"5cd3b75504a30fcf093d6f1d413ae763e960cadba40869f7e4e8adc2ab1e8001\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Contact.j\": \"79e1dbe372aef6a7a45d2e2dc3213071020a90c042e9d7e11a2828553573b89b\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Environment.j\": \"0b1c72c23fdc2cf90ad7ebdb993b1df5804b62ef3e036e21ceab6ea2b6dbfaf2\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Lifecycle.j\": \"20f968b2cfe1b9724b5a824d0f79c48e2af61b03c1a1aa7fe68e06f2c5fc85e7\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Load.j\": \"c5cf35a121bd219bd4d7fe46401c3106bbf5fe7d0765c26eea7799260eccafd7\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Motion.j\": \"401c6f64b63c4bb2eeda41e59230d1140277a9a869e0e77cb035a9cc0dfd845f\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Runner.j\": \"b7be57739e77946f93947770c55a320d7a8cf985084b470f88c930a83ac41729\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/lab/Support.j\": \"564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/libraries/DummyRecycler.j\": \"5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/libraries/TimerUtils.j\": \"1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63\", \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-fixed-20261019-03/libraries/WorldBounds.j\": \"eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04\"}, \"managed\": {\"war3map.j\": \"c90f22216bb071ee2b5cb6da1d60fd8800853debc2defa5cf6e1d4a018a1552a\"}, \"opaque_members\": {\"war3mapMap.blp\": {\"error\": \"Unsupported compression type.\", \"flags\": 2147484160, \"raw_sha256\": \"5836235bd47f0bef48a5f5e1f74bbacb9244177c134f0bb4d1d5a8123c65da90\", \"size\": 20662}}, \"output\": \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/fixed-20261019-03/fixed-20261019-03.w3x\", \"prefix_sha256\": \"eb77ea5d8c512a61a2ecc8e444e5f04d7dc1d2fd81bf9bb17b94560c472deac6\", \"preserved_members\": {\"war3map.doo\": \"86c8c96d888830886d57d05d2a0e6a7720c7dead4839d5b2d7edf5db5323db80\", \"war3map.imp\": \"74c4586a73a59bc12ada5faa740a9a43a8d7fa08bd1252b3058fac5cb1dbba03\", \"war3map.mmp\": \"49845960d0b75e3e1943373b328cba5ee06f08849706da7bd2c2ffc0a28e50d0\", \"war3map.shd\": \"dcb986a3daf37740e9607d4e09ef25ba81fe67b945779fe739500512f259a65b\", \"war3map.w3a\": \"67bb649553479c9db3dffae33b09fc9f1b4208ec47e731ad7b113f0f0d15f24b\", \"war3map.w3e\": \"f815e2d090116731f8f7d88e69980edc40c18bccf67f2b23a67d806f85698c2f\", \"war3map.w3h\": \"d9709f092b8a24af6fec1318533a79b472f49e734769ec5c3013fdb66479ddf9\", \"war3map.w3i\": \"64a33be6abb2dbb6ff1dcbb152178a0bf543f94cddebfa0144c8123a290379bc\", \"war3map.w3t\": \"d5428a8e1d6ae5305717873a2d1a9efa6bbfad9d9a1ad466f5b177276e7a64cf\", \"war3map.w3u\": \"6076a336cfdc828d331d16daf2f61586505ab1c8301ae9e6f1e46750fe0e809d\", \"war3map.wct\": \"10b24ee58c19e891dd700a860fbba659b5e352841fbf5e2880fd908538da9afd\", \"war3map.wpm\": \"ce71d9f00f8c242dc827c9834aee329272385009c9ad902638c6e4858d2c51ab\", \"war3map.wtg\": \"ecbf8cf8237c40e90ce510c005b91f2412666e725c64c409afb6a1a092eaee79\", \"war3map.wts\": \"eb3c3f917f92ab8b6aba760cb0bca8e1a2bb888c2b7718786d3fb54c0f9bda12\", \"war3mapImported\\\\dummy.mdx\": \"113a257ba2e3908d075778b7ef8b72cdf8eadf614d45f1608d005e2383481ab1\", \"war3mapUnits.doo\": \"f3cea164ac36a6a1dc119f75a0f4f2c0f28097d1bf6d5bf99c0708cb112edd96\"}, \"scope\": \"Executable-test build only. No editor-save, gameplay or multiplayer certification.\", \"sha256\": \"4490afbf0824a89186faf22e3a948452b27fe0ae1a111f3d960a108228fb2694\", \"source_of_truth\": \"external explicit sources; retained original WCT/WTG are NOT executable source\"}, \"compiler_pjass_archive_exit_code\": 0, \"exit_provenance\": \"parent-provided observed build exits; not rerun\", \"generated_jass_sha256\": \"c90f22216bb071ee2b5cb6da1d60fd8800853debc2defa5cf6e1d4a018a1552a\", \"map\": \"projects/relativistic-classic/build/fixed-20261019-03/fixed-20261019-03.w3x\", \"map_sha256\": \"4490afbf0824a89186faf22e3a948452b27fe0ae1a111f3d960a108228fb2694\", \"run_id\": \"fixed-20261019-03\", \"stderr\": \"\"}], \"classification\": \"NEGATIVE\", \"cleanup_and_restoration\": {\"idle-no-extra-remove\": [{\"case\": \"E29\", \"detail\": \"expected=2 actual=2\", \"name\": \"idle-no-extra-remove\", \"status\": \"PASS\"}], \"vision-alliances-restored\": [{\"case\": \"E29\", \"detail\": \"all saved incoming probe edges\", \"name\": \"vision-alliances-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"all saved incoming probe edges\", \"name\": \"vision-alliances-restored\", \"status\": \"PASS\"}], \"vision-cleanup\": [{\"case\": \"E29\", \"detail\": \"current visibility removed; explored fog is not visibility\", \"name\": \"vision-cleanup\", \"status\": \"PASS\"}], \"vision-fallback-cleanup\": [{\"case\": \"E29\", \"detail\": \"source remains far from probe\", \"name\": \"vision-fallback-cleanup\", \"status\": \"PASS\"}], \"vision-fallback-idle-no-extra-remove\": [{\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-fallback-idle-no-extra-remove\", \"status\": \"PASS\"}], \"vision-fallback-remove-once\": [{\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-fallback-remove-once\", \"status\": \"PASS\"}], \"vision-fog-flags-restored\": [{\"case\": \"E29\", \"detail\": \"saved fog and mask enable flags\", \"name\": \"vision-fog-flags-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"saved fog and mask enable flags\", \"name\": \"vision-fog-flags-restored\", \"status\": \"PASS\"}], \"vision-idle-no-extra-remove\": [{\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-idle-no-extra-remove\", \"status\": \"PASS\"}], \"vision-remove-once\": [{\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-remove-once\", \"status\": \"PASS\"}]}, \"complete\": [1, 47, 1, 1], \"core_sha256\": \"adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6\", \"counts\": {\"FAIL\": 1, \"OBS\": 17, \"PASS\": 28, \"SKIP\": 1}, \"evidence\": {\"projects/relativistic-classic/build/diag4-e29-timeout-20261019-01/diag4-e29-timeout-20261019-01.w3x\": {\"bytes\": 307180, \"sha256\": \"caec96f8546846b9e6ca9aef64bf1732a79cf9bf4981998e8be7767d5d8f1182\"}, \"projects/relativistic-classic/build/fixed-20261019-03/fixed-20261019-03.w3x\": {\"bytes\": 307179, \"sha256\": \"4490afbf0824a89186faf22e3a948452b27fe0ae1a111f3d960a108228fb2694\"}, \"projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/Missiles.j\": {\"bytes\": 40740, \"sha256\": \"adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6\"}, \"projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Environment.j\": {\"bytes\": 28203, \"sha256\": \"d7fcc7fefbddd724a6bf23f252ede1c46030e020b9f6542023375cab5f9e85b3\"}, \"projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/lab/Support.j\": {\"bytes\": 6371, \"sha256\": \"564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d\"}, \"projects/relativistic-classic/build/inputs-diag4-e29-timeout-20261019-01/manifest.json\": {\"bytes\": 11971, \"sha256\": \"fc8793e0c188295d3ea291dbcc8405f2784924d8a2cd2d96d53ce4cf7b1682ef\"}, \"projects/relativistic-classic/reports/RM28-diag4-e29-timeout-20261019-01.txt\": {\"bytes\": 8699, \"sha256\": \"05501175a865d872e5d645d6942f7572f28d206b59ff223dde3e7e9d57506e07\"}, \"projects/relativistic-classic/reports/cycle4/diag4-e29-timeout-20261019-01-build.stderr.txt\": {\"bytes\": 0, \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}, \"projects/relativistic-classic/reports/cycle4/diag4-e29-timeout-20261019-01-build.stdout.json\": {\"bytes\": 5027, \"sha256\": \"f62585f059543b3befb04b286557cc6bb5f00953d071967bb72dacd739c0706e\"}, \"projects/relativistic-classic/reports/cycle4/diag4-e29-timeout-20261019-01-launch.json\": {\"bytes\": 324, \"sha256\": \"d690698802b466aa5a704820bd61b339cf645c3d7c8470e41d55e582baa12b20\"}, \"projects/relativistic-classic/reports/cycle4/diag4-e29-timeout-20261019-01-reader-exit.json\": {\"bytes\": 97, \"sha256\": \"53f34e83e65af085f0b15c8850e9ce1288d803e48ccafa9d5519972111bbfb88\"}, \"projects/relativistic-classic/reports/cycle4/fixed-20261019-03-build.stderr.txt\": {\"bytes\": 0, \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}, \"projects/relativistic-classic/reports/cycle4/fixed-20261019-03-build.stdout.json\": {\"bytes\": 4847, \"sha256\": \"436e6065232ed33e8bc35a68a8e1cf7f8e0eae498c70afd1c05901cfd4d16f59\"}, \"projects/relativistic-classic/reports/cycle4/preparation.json\": {\"bytes\": 15762, \"sha256\": \"ee074ac718cda930409a442f65e13bebebc36f3bf390423187ce9cfe16df6e0b\"}, \"projects/relativistic-classic/reports/cycle4/tooling-tests.exit.txt\": {\"bytes\": 2, \"sha256\": \"9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa\"}, \"projects/relativistic-classic/reports/cycle4/tooling-tests.stderr.txt\": {\"bytes\": 3784, \"sha256\": \"41784b854f169fd254f64286cfb0a7fb04f72fbf05a6bccd4a968f746e875104\"}, \"projects/relativistic-classic/reports/cycle4/tooling-tests.stdout.txt\": {\"bytes\": 0, \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}, \"projects/relativistic-classic/reports/lab-diag4-e29-timeout-20261019-01.json\": {\"bytes\": 8232, \"sha256\": \"e6b1e3da986aa652f79ceef53fe45db2734905ab02c83b1bc8985600a4bd6b49\"}, \"projects/relativistic-classic/reports/lab-diag4-e29-timeout-20261019-01.stderr.txt\": {\"bytes\": 0, \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"}, \"projects/relativistic-classic/reports/lab-diag4-e29-timeout-20261019-01.stdout.json\": {\"bytes\": 8232, \"sha256\": \"e6b1e3da986aa652f79ceef53fe45db2734905ab02c83b1bc8985600a4bd6b49\"}}, \"existing_python_tests\": {\"count\": 39, \"exit_code\": 0, \"rerun\": false}, \"failure\": {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference deadline=2.000 elapsed=2.000\", \"name\": \"vision-reference-timeout\", \"status\": \"FAIL\"}, \"hash_scope\": \"saved public artifacts, frozen injected source/core/logger, and map bytes; no maintained-source mutation\", \"launch\": {\"launch_requested_unix\": 1792390991.5737288, \"map\": \"/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/diag4-e29-timeout-20261019-01/diag4-e29-timeout-20261019-01.w3x\", \"map_sha256\": \"caec96f8546846b9e6ca9aef64bf1732a79cf9bf4981998e8be7767d5d8f1182\", \"run_id\": \"diag4-e29-timeout-20261019-01\"}, \"logger_sha256\": \"564434895226e3a08ea88556cf797e432a8696ca4ee1e0de3d86eef5e7f3654d\", \"native_reveal_isolation\": {\"case\": \"E29\", \"detail\": \"initially hidden raw probes reveal each owner and isolate other owner; original600/400/900 geometry\", \"name\": \"vision-reference-reveal-isolation\", \"status\": \"PASS\"}, \"negative_control_expectation\": \"PASS\", \"normalized_public_result\": {\"cases\": 1, \"checks\": 47, \"complete\": true, \"failures\": 1, \"freshness\": {\"mtime\": 1792391005.5894613, \"not_before\": 1792390991.5737288}, \"group\": \"E29\", \"observations\": 17, \"records\": [{\"case\": \"E29\", \"detail\": \"expected=600.000 actual=600.000 tolerance=0.010\", \"name\": \"vision-getter\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"public dummy owner\", \"name\": \"vision-explicit-owner\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"public source owner\", \"name\": \"vision-source-fallback\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"bounds-and-hidden=true primaryActualEligible=true fallbackActualEligible=true translation=0,3000 radius=600 visible,true,false\", \"name\": \"vision-reference-readiness\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=1 wait=native-reference clock=0.250 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"initially hidden raw probes reveal each owner and isolate other owner; original600/400/900 geometry\", \"name\": \"vision-reference-reveal-isolation\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"initially hidden point 400 units inside requested600\", \"name\": \"vision-radius-owner\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"point900 outside requested600\", \"name\": \"vision-outside-owner\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"other owner instance must not reveal\", \"name\": \"vision-owner-isolation\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"initially hidden point400 inside requested600\", \"name\": \"vision-radius-source\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"point900 outside requested600\", \"name\": \"vision-outside-source\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"phase=2 wait=native-reference clock=0.500 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false r\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"probe400 outside new200 radius\", \"name\": \"vision-shrink\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"nonpositive radius removes current reveal\", \"name\": \"vision-zero\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"phase=3 wait=native-reference clock=0.750 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2=false r\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"negative radius also clears\", \"name\": \"vision-negative\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"source fallback still reveals after zero\", \"name\": \"vision-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"clock=1.250 publicX=-1200.000 publicY=0.000 dummyX=-1200.000 dummyY=0.000\", \"name\": \"vision-motion-stopped\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=6 wait=native-reference clock=1.500 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=true rawMovedP2=false actualMovedP1=true actualMovedP2=false rawSo\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"new probe inside moving circle\", \"name\": \"vision-moved-reveal\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"old circle no longer supplies current visibility\", \"name\": \"vision-moved-clears-old\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"phase=7 wait=public-owner-reconciliation clock=1.750 elapsed=0.250 deadline=2.000 rawInitialP1=true actualInitialP1=true rawMovedP1=true rawMovedP2=false actualMovedP1=true actualMovedP2=\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"direct owner change reconciled on visit\", \"name\": \"vision-owner-field-refresh\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"source owner change reconciled on visit\", \"name\": \"vision-source-owner-refresh\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=2.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=2.250 elapsed=0.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=2.500 elapsed=0.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=2.750 elapsed=1.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=3.000 elapsed=1.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=3.250 elapsed=1.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=3.500 elapsed=1.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference clock=3.750 elapsed=2.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=8 wait=native-reference deadline=2.000 elapsed=2.000\", \"name\": \"vision-reference-timeout\", \"status\": \"FAIL\"}, {\"case\": \"E29\", \"detail\": \"remaining original visibility rules not evaluated after fixture timeout; not acceptance\", \"name\": \"vision-aborted-original-rules\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"phase=13 wait=abort-cleanup-reference clock=4.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=false actualMovedP1=false actualMovedP2\", \"name\": \"vision-reference-state\", \"status\": \"OBS\"}, {\"case\": \"E29\", \"detail\": \"current visibility removed; explored fog is not visibility\", \"name\": \"vision-cleanup\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"source remains far from probe\", \"name\": \"vision-fallback-cleanup\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"single client cannot establish synchronization; repeat with two 1.27b clients\", \"name\": \"multiplayer\", \"status\": \"SKIP\"}, {\"case\": \"E29\", \"detail\": \"all saved incoming probe edges\", \"name\": \"vision-alliances-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"saved fog and mask enable flags\", \"name\": \"vision-fog-flags-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-remove-once\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-fallback-remove-once\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-idle-no-extra-remove\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=1 actual=1\", \"name\": \"vision-fallback-idle-no-extra-remove\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"all saved incoming probe edges\", \"name\": \"vision-alliances-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"saved fog and mask enable flags\", \"name\": \"vision-fog-flags-restored\", \"status\": \"PASS\"}, {\"case\": \"E29\", \"detail\": \"expected=2 actual=2\", \"name\": \"idle-no-extra-remove\", \"status\": \"PASS\"}], \"run_id\": \"diag4-e29-timeout-20261019-01\", \"skips\": 1, \"source_sha256\": \"05501175a865d872e5d645d6942f7572f28d206b59ff223dde3e7e9d57506e07\", \"status\": \"failed\"}, \"phase8_states\": [\"phase=8 wait=native-reference clock=2.000 elapsed=0.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"phase=8 wait=native-reference clock=2.250 elapsed=0.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"phase=8 wait=native-reference clock=2.500 elapsed=0.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"phase=8 wait=native-reference clock=2.750 elapsed=1.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"phase=8 wait=native-reference clock=3.000 elapsed=1.250 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"phase=8 wait=native-reference clock=3.250 elapsed=1.500 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"phase=8 wait=native-reference clock=3.500 elapsed=1.750 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\", \"phase=8 wait=native-reference clock=3.750 elapsed=2.000 deadline=2.000 rawInitialP1=false actualInitialP1=false rawMovedP1=false rawMovedP2=true actualMovedP1=false actualMovedP2=true raw\"], \"readiness\": {\"case\": \"E29\", \"detail\": \"bounds-and-hidden=true primaryActualEligible=true fallbackActualEligible=true translation=0,3000 radius=600 visible,true,false\", \"name\": \"vision-reference-readiness\", \"status\": \"OBS\"}, \"unreached_original_rules\": {\"case\": \"E29\", \"detail\": \"remaining original visibility rules not evaluated after fixture timeout; not acceptance\", \"name\": \"vision-aborted-original-rules\", \"status\": \"OBS\"}}\n",
+    "stderr": "",
+    "scope": "ONE finite stdlib read-only verification, not a public-reader/game/build/test rerun"
+  },
+  "actual_reader_command": {
+    "argv_recipe": [
+      "<observer sys.executable>",
+      "-B",
+      "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RM28-diag4-e29-timeout-20261019-01.txt",
+      "--run-id",
+      "diag4-e29-timeout-20261019-01",
+      "--not-before",
+      "1792390991.5737288",
+      "--report",
+      "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/reports/lab-diag4-e29-timeout-20261019-01.json"
+    ],
+    "provenance": "observe.py command construction and saved launch/exit metadata; interpreter executable not separately captured",
+    "exit_code": 1,
+    "stdout_path": "projects/relativistic-classic/reports/lab-diag4-e29-timeout-20261019-01.stdout.json",
+    "stderr_path": "projects/relativistic-classic/reports/lab-diag4-e29-timeout-20261019-01.stderr.txt"
+  },
+  "status": "Tested in map",
+  "scope": "S3/S4/S10 bounded timeout negative control ONLY; no full47 or S8 acceptance",
+  "pending": {
+    "full47": "fixed-20261019-03 ONE already-authorized run launched by parent; gamejob10/observerjob9; outcomes PENDING; no acceptance", 
+    "independent_fixture_verifier": "pending after full47",
+    "gamejob8": "authoritative EXIT0 observed after10m19s; owned negative profile released; termination method not established", 
+    "GUI": "parent stopped inputs; no keyboard/click/other apps",
+    "candidate": "blocked; not production acceptance",
+    "existing_scratch": "/tmp/rc-item3-XNICaO untouched; no new scratch"
+  }
+}

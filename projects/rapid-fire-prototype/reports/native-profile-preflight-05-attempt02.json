@@ -1,0 +1,29 @@
+{
+  "executor": "parent",
+  "evidence_basis": "Parent-reported read-only exact-profile preflight; worker recorded attributed metadata only and did not query processes",
+  "human_resume_confirmation": "adelante",
+  "exit_code": 0,
+  "stdout_exact": "{\"profile\":\"proton-newgen-modern-test\",\"active_game_processes\":[],\"profile_clear_at_check\":true,\"read_only\":true}",
+  "stdout_newline_status": "Not supplied; no trailing newline inferred",
+  "stdout": {
+    "profile": "proton-newgen-modern-test",
+    "active_game_processes": [],
+    "profile_clear_at_check": true,
+    "read_only": true
+  },
+  "snapshot_only": true,
+  "future_availability_guaranteed": false,
+  "launcher_must_recheck_occupancy": true,
+  "os_exit_or_clean_close_proven": false,
+  "worker_process_query": false,
+  "worker_runtime_action_queued": false,
+  "native05_executed": false,
+  "native05_physics_established": false,
+  "s21_measurement_consumed": false,
+  "original_refusal_proof_must_not_be_overwritten": true,
+  "future_launch_evidence_prefix": "projects/rapid-fire-prototype/reports/native-launch-05-attempt02",
+  "future_reader_evidence_prefix": "projects/rapid-fire-prototype/reports/native-reader-05-attempt02",
+  "run_id": "rf-pathing-20261019-05",
+  "reuse_run_id_only_if_log_absent": true,
+  "worker_log_absence_check": false
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/tests/test_instant_controller.py", line 128, in <module>
+    main()
+  File "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/tests/test_instant_controller.py", line 100, in main
+    assert result == SUCCESS, 'controller timing recipe must succeed: '+repr(result)
+           ^^^^^^^^^^^^^^^^^
+AssertionError: controller timing recipe must succeed: (1, b'', b'error: unknown or disallowed field\n')

@@ -1,0 +1,25 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|BEGIN|RFBurstTree" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CASE|R06-tree-absent-positive" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|baseline-body-identity|actor=1050744/1050744 controller=1050745/1050745 enemy=1050746/1050746 control=1050747/1050747 actual/baseline" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|strict-readiness-guard|time=0.031 scene=0 original strict guards; no dummy exemptions" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|actor-ready|type=1865429040 xy=-3136.000,2624.000 hp=335.000 owner=0 order=0" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|controller-ready|type=1865429041 xy=-5500.000,-5500.000 hp=335.000 owner=0 order=0" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|target-ready|type=1865429040 xy=-2624.000,2624.000 hp=335.000 owner=1 order=851973" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|control-ready|type=1865429040 xy=-2880.000,3136.000 hp=335.000 owner=1 order=851973" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|tree-ready|type=0 xy=0.000,0.000 life=0.000" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|same-body-identity|actor=1050744/1050744 controller=1050745/1050745 enemy=1050746/1050746 control=1050747/1050747 actual/baseline" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|native-corridor|unitsScanned=2 destructables=0 owned=0 unexpectedUnits=0 unexpectedDestructables=0 corridorOK=true expectedOwned=0 no life filter; full1500+160 broadphase" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|native-calibration|events=1 damage=10.000 HP=335.000->325.007" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|same-body-identity|actor=1050744/1050744 controller=1050745/1050745 enemy=1050746/1050746 control=1050747/1050747 actual/baseline" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|native-corridor|unitsScanned=2 destructables=0 owned=0 unexpectedUnits=0 unexpectedDestructables=0 corridorOK=true expectedOwned=0 no life filter; full1500+160 broadphase" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|PASS|native-point-order-accepted|EAST actual target=-2624.000,2624.000" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|OBS|native-spell-effect|time=0.180 ability=1093677127 source=1050745 point=-2624.000,2624.000" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|CHECK|R06-tree-absent-positive|FAIL|ABORT-fixture|incompatible dummy at qualified birth; behavior unqualified, no tree RED inferred" )
+	call Preload( "RM28|rf-burst-tree-red-20261020-04|COMPLETE|1|15|1|0" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "wc3ctl",
+    "file",
+    "set",
+    "projects/rapid-fire-prototype/base/03-channel.w3x",
+    "war3map.w3u",
+    "projects/rapid-fire-prototype/reports/objects-preparation/war3map.w3u",
+    "--out",
+    "projects/rapid-fire-prototype/reports/objects-preparation/stage-0.w3x",
+    "--json"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.w3u, 1082 bytes\",\n  \"SavedTo\": \"projects/rapid-fire-prototype/reports/objects-preparation/stage-0.w3x\"\n}\n",
+  "stderr": ""
+}

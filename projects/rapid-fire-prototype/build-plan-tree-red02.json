@@ -1,0 +1,163 @@
+{
+  "status": "PREPARED_TREE02_FIXTURE_NOT_COMPILED",
+  "argv": [
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "python",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py",
+    "build",
+    "--base",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x",
+    "--wc3",
+    "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+    "--timer-utils",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "--world-bounds",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "--dummy-recycler",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "--core",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "--bootstrap",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j",
+    "--output-dir",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build",
+    "--run-id",
+    "rf-burst-tree-red-20261020-02",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "--harness",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+    "--entry",
+    "RF_StartTreeTest"
+  ],
+  "shell": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 python -B /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py build --base /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x --wc3 /home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 --timer-utils /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j --world-bounds /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j --dummy-recycler /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j --core /home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j --bootstrap /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j --output-dir /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build --run-id rf-burst-tree-red-20261020-02 --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j --harness /home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j --entry RF_StartTreeTest",
+  "inputs_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/base/burst-instant-controller-01.w3x": "dea9c6cbac7e486d7c4fc11267fc1ed7b17c483d11f6f1025ecad6f45dc5c7ad",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j": "1222246f85fb6424fb43e8d4c9d502d209d88cf7a1e42f817c6708024afc6c63",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j": "eaf04f062a5774e2ba88a3db08f90144066e1bc8dc94ef3083a6d3e8d3e3ed04",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j": "5d7f15fe13005d2bafafa85f9293462d8e6d48b80b016a9490cb669ac6ec4aaf",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j": "adc5ffd93cca18840f0e00406af482a7f41caf74334bf2e4ca928c63933d7cf6",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/build.py": "7546502d62660c6317984bb4412b0b955a82b5af5396e7c984ca9b9c24c9bf08",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j": "69b3beec38b36df791232ddb1e00ef39fdccd57695572318cb77961e4efb2f46",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "770fd2f5bda5b84e8cdcec1b27074a6d8d572787aaa41ceb201fe137dfaffcc3",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j": "de09c0eb5502bb7af0ec250ced5d2c8657d22d33c8a9f659aaa03211575dc647",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j": "dfd43cb7b55c274ebd4e88fc0d3ade5b72485b1873083af27463374fb464f2a1"
+  },
+  "import_order": [
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/TimerUtils.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/WorldBounds.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/libraries/DummyRecycler.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/src/Missiles.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeLogRed02.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeNativeTest.j",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/TreeMapMainRed02.j"
+  ],
+  "public_entry": "RF_StartTreeTest",
+  "native_run_id": "rf-burst-tree-red-20261020-02",
+  "native_run_already_executed": false,
+  "group": "RFBurstTree",
+  "output_map": "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build/rf-burst-tree-red-20261020-02/rf-burst-tree-red-20261020-02.w3x",
+  "log": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-tree-red-20261020-02.txt",
+  "relative_log": "Logs\\RF-rf-burst-tree-red-20261020-02.txt",
+  "reader_argv_template": [
+    "python3",
+    "-B",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rf-burst-tree-red-20261020-02.txt",
+    "--run-id",
+    "rf-burst-tree-red-20261020-02",
+    "--not-before",
+    "PARENT_RECORDED_LAUNCH_UNIX_SECONDS",
+    "--report",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/reports/tree-red02-native-reader.json"
+  ],
+  "partial_specs": [
+    "S3"
+  ],
+  "cases": [
+    "R06-tree-absent-positive",
+    "R07-live-tree-termination"
+  ],
+  "geometry": {
+    "actor": [
+      -3136,
+      2624
+    ],
+    "enemy": [
+      -2624,
+      2624
+    ],
+    "control": [
+      -2880,
+      3136
+    ],
+    "controller": [
+      -5500,
+      -5500
+    ],
+    "owned_tree_present_only": [
+      -3008,
+      2624
+    ],
+    "type": "LTlt",
+    "placement_tolerance": 1,
+    "same_actual_scene_tolerance": 0.01,
+    "native512_qualified": false,
+    "native_control_placement_qualified": false
+  },
+  "oracle": {
+    "absent": "four public flights/four native10 visible-source hits/pairedHP40/control0/far-enemy travel then absence",
+    "present": "four public flights/cadence/early near-tree extinction/native enemy0/pairedHP0/treeHP unchanged/all bodies live-owned/no remaining source flights",
+    "early_first_absence_age": [
+      0.0625,
+      0.18125
+    ],
+    "early_last_live_x_offset": [
+      64,
+      176
+    ],
+    "early_last_live_y_tolerance": 2,
+    "baseline_first_absence_age": [
+      0.3,
+      0.55
+    ],
+    "baseline_last_live_min": "actualEnemyX-110"
+  },
+  "borrow_lifetime": "Fresh bounded collection scan; token numbers compared only, never dereferenced. New pulse reusing an unclosed token ABORTs. First absence must be observed before reuse. Scalar last-live/first-absence brackets; no private generation or dummy recycling oracle.",
+  "runtime_budget": {
+    "global_game_seconds": 15,
+    "per_scene_observation_from_effect_seconds": 3,
+    "native_effect_deadline_seconds": 2,
+    "period_seconds": 0.03125,
+    "observer_wall_seconds": 180,
+    "wall_clock_guaranteed": false,
+    "no_retries": true
+  },
+  "expected_conditional_RED": {
+    "observed": false,
+    "conditions": "absent positive PASS and fresh actual present tree/corridor/calibration/effect qualified, lifetime identity unambiguous",
+    "unchanged_Core": "four downstream native hits/differential40 and late far-enemy extinctions",
+    "failure_names": [
+      "tree-prevents-native-enemy-damage",
+      "paired-HP-differential0",
+      "four-early-near-tree-extinctions"
+    ],
+    "reader_exit_expected": 1
+  },
+  "preparation_notes": "projects/rapid-fire-prototype/reports/tree-red02-preparation.md",
+  "preservation": "projects/rapid-fire-prototype/reports/tree-red02-static.json",
+  "limits": [
+    "Scanned only; compiler/pJASS/archive/game/reader NOT RUN",
+    "Prior five-case Aim remains unchanged and historical; full integrated T3 pending",
+    "Native flat-L previously256 only; 512 fixture must independently qualify",
+    "No production callback change; actual qualified RED required first",
+    "Parent owns any build/native decision and fresh exact-profile preflight BEFORE observer/protected launcher",
+    "No terrain/pathing changes or placement coercion/search/fallback"
+  ],
+  "authorization": "correct_fixture_one_tree02; ONE parent-native measurement, no further automatic retries",
+  "fixture_correction": "Only control requested/expected actor+256X,+512Y and discriminating OBS diagnostics; all other admission/oracle/lifetime behavior unchanged."
+}

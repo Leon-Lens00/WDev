@@ -1,0 +1,107 @@
+{
+  "scope": "Independent byte preservation inspection, not a native differential execution",
+  "baseline_environment": "/home/snz/Documentos/ChatGPT/WDev/projects/relativistic-classic/build/inputs-diag3-logger-stress-20261019-01/lab/Environment.j",
+  "baseline_sha256": "021a504533130ffb3e3922f1ca2bca8f37e4209bc51e64906bceca5646e7e41f",
+  "parts": {
+    "probe_alliances": {
+      "before_sha256": "c66955cf4696efeb4ae2219ee318bd28e4ed2487e0a6d47e5a9d5412dbbeba4c",
+      "after_sha256": "c66955cf4696efeb4ae2219ee318bd28e4ed2487e0a6d47e5a9d5412dbbeba4c",
+      "identical": true
+    },
+    "callbacks": {
+      "before_sha256": "c168cc647e8a45ba426b4eac25131c475531c5fa0c12caad33e35cb6f7ca4307",
+      "after_sha256": "c168cc647e8a45ba426b4eac25131c475531c5fa0c12caad33e35cb6f7ca4307",
+      "identical": true
+    },
+    "E27_E28_start": {
+      "before_sha256": "0d44b8435e30484bfc522897d661c8313d7375c664f7299722fbfa1f91057c78",
+      "after_sha256": "0d44b8435e30484bfc522897d661c8313d7375c664f7299722fbfa1f91057c78",
+      "identical": true
+    },
+    "common_start_launch": {
+      "before_sha256": "049668e7a2170751d2caca4ad3217b71fd78f1541d3c1e3547b8ab301aa28e42",
+      "after_sha256": "049668e7a2170751d2caca4ad3217b71fd78f1541d3c1e3547b8ab301aa28e42",
+      "identical": true
+    },
+    "E27_E28_final": {
+      "before_sha256": "a6490d3a5bc293cf43755ca336959664e2d914d42b5ec71c7a765c9c6d6701e9",
+      "after_sha256": "a6490d3a5bc293cf43755ca336959664e2d914d42b5ec71c7a765c9c6d6701e9",
+      "identical": true
+    },
+    "E46_and_tile_helpers": {
+      "before_sha256": "cb6ef2d693340ecadfe89f8a7545c64f34008c7d87b71c4df5b8a2fb1ae45bfe",
+      "after_sha256": "cb6ef2d693340ecadfe89f8a7545c64f34008c7d87b71c4df5b8a2fb1ae45bfe",
+      "identical": true
+    }
+  },
+  "original_assertion_and_record_calls_retained": [
+    "call RM_Record(\"OBS\", \"surveyed-cliff-fixture\", \"native uphill -2048,1536 to -1920,1536; Z one below source wall equation\")",
+    "call RM_Record(\"SKIP\", \"cliff-transition\", \"W3E candidate -2048,1536 to -1920,1536 lacks native uphill; needs native-confirmed adjacent128 uphill edge and wall equation minus1 Z\")",
+    "call RM_Near(m.vision, 600., .01, \"vision-getter\")",
+    "call RM_Check(GetOwningPlayer(m.dummy) == Player(1), \"vision-explicit-owner\", \"public dummy owner\")",
+    "call RM_Check(GetOwningPlayer(b.dummy) == Player(2), \"vision-source-fallback\", \"public source owner\")",
+    "call RM_Check(IsVisibleToPlayer(-1600., 0., Player(1)), \"vision-radius-owner\", \"initially hidden point 400 units inside requested600\")",
+    "call RM_Check(not IsVisibleToPlayer(-1100., 0., Player(1)), \"vision-outside-owner\", \"point900 outside requested600\")",
+    "call RM_Check(not IsVisibleToPlayer(2400., 0., Player(1)), \"vision-owner-isolation\", \"other owner instance must not reveal\")",
+    "call RM_Record(\"SKIP\", \"vision-radius-owner\", \"probe initially visible; needs unrevealed unoccluded region\")",
+    "call RM_Check(IsVisibleToPlayer(2400., 0., Player(2)), \"vision-radius-source\", \"initially hidden point400 inside requested600\")",
+    "call RM_Check(not IsVisibleToPlayer(2900., 0., Player(2)), \"vision-outside-source\", \"point900 outside requested600\")",
+    "call RM_Record(\"SKIP\", \"vision-radius-source\", \"probe initially visible; needs unrevealed unoccluded region\")",
+    "call RM_Check(not IsVisibleToPlayer(-1600., 0., Player(1)), \"vision-shrink\", \"probe400 outside new200 radius\")",
+    "call RM_Check(not IsVisibleToPlayer(2400., 0., Player(2)), \"vision-zero\", \"nonpositive radius removes current reveal\")",
+    "call RM_Check(not IsVisibleToPlayer(-1600., 0., Player(1)), \"vision-negative\", \"negative radius also clears\")",
+    "call RM_Check(IsVisibleToPlayer(2400., 0., Player(2)), \"vision-restored\", \"source fallback still reveals after zero\")",
+    "call RM_Check(IsVisibleToPlayer(-800., 0., Player(1)), \"vision-moved-reveal\", \"new probe inside moving circle\")",
+    "call RM_Check(not IsVisibleToPlayer(-2400., 0., Player(1)), \"vision-moved-clears-old\", \"old circle no longer supplies current visibility\")",
+    "call RM_Check(GetOwningPlayer(RM_M[1].dummy) == Player(2), \"vision-owner-field-refresh\", \"direct owner change reconciled on visit\")",
+    "call RM_Check(GetOwningPlayer(RM_M[2].dummy) == Player(1), \"vision-source-owner-refresh\", \"source owner change reconciled on visit\")",
+    "call RM_Check(not IsVisibleToPlayer(-800., 0., Player(1)) and IsVisibleToPlayer(-800., 0., Player(2)), \"vision-owner-transfer\", \"no cross-player lingering reveal\")",
+    "call RM_Check(not IsVisibleToPlayer(2400., 0., Player(2)) and IsVisibleToPlayer(2400., 0., Player(1)), \"vision-source-transfer\", \"effective source owner changed\")",
+    "call RM_Check(GetOwningPlayer(RM_M[1].dummy) == Player(PLAYER_NEUTRAL_PASSIVE), \"vision-null-source-neutral\", \"no explicit owner or source\")",
+    "call RM_Check(GetOwningPlayer(RM_M[2].dummy) == Player(PLAYER_NEUTRAL_PASSIVE), \"vision-removed-source-neutral\", \"removed source is not a valid owner fallback\")",
+    "call RM_Check(not IsVisibleToPlayer(-800., 0., Player(2)), \"vision-neutral-transfer-clears\", \"previous effective owner loses reveal\")",
+    "call RM_Check(not IsVisibleToPlayer(2400., 0., Player(1)), \"vision-source-removal-clears\", \"removed source no longer supplies owner\")",
+    "call RM_Equal(RM_BOUNDS[1], 1, \"bounds-once\")",
+    "call RM_Equal(RM_REMOVE[1], 1, \"bounds-remove-once\")",
+    "call RM_Equal(RM_HITS[1], 1, \"below-terrain-event-once\")",
+    "call RM_Equal(RM_REMOVE[1], 1, \"terrain-remove-once\")",
+    "call RM_Equal(RM_DESTS[2], 1, \"surveyed-cliff-once\")",
+    "call RM_Equal(RM_REMOVE[2], 1, \"surveyed-cliff-remove-once\")",
+    "call RM_Check(not IsVisibleToPlayer(-1600., 0., Player(1)), \"vision-cleanup\", \"current visibility removed; explored fog is not visibility\")",
+    "call RM_Check(not IsVisibleToPlayer(2400., 0., Player(2)), \"vision-fallback-cleanup\", \"source remains far from probe\")",
+    "call RM_Record(\"SKIP\", \"multiplayer\", \"single client cannot establish synchronization; repeat with two 1.27b clients\")",
+    "call RM_Equal(GetTerrainType(TileX(i), TileY(i)), savedTile[i], \"restored-tile-type-\" + I2S(i))",
+    "call RM_Equal(GetTerrainVariance(TileX(i), TileY(i)), savedVariation[i], \"restored-tile-variation-\" + I2S(i))",
+    "call RM_Equal(RM_ITEMS[1], 1, \"tileset-initialization-not-transition\")",
+    "call RM_Equal(tileLast[1], originalTile, \"tileset-initial-callback-type\")",
+    "call RM_Equal(GetTerrainType(64., 64.), alternateTile, \"controlled-tileset-fixture\")",
+    "call RM_Equal(RM_ITEMS[1], 2, \"actual-tileset-transition-once\")",
+    "call RM_Equal(tileLast[1], alternateTile, \"transition-callback-type\")",
+    "call RM_Equal(RM_M[1].tileset, alternateTile, \"public-current-tileset\")",
+    "call RM_Equal(RM_ITEMS[1], 3, \"restoration-transition-once\")",
+    "call RM_Equal(tileLast[1], originalTile, \"restoration-callback-type\")",
+    "call RM_Equal(RM_M[1].tileset, originalTile, \"public-restored-tileset\")",
+    "call RM_Equal(RM_ITEMS[2], 1, \"terminal-tileset-initialization\")",
+    "call RM_Equal(RM_ITEMS[2], 2, \"tileset-true-actual-transition\")",
+    "call RM_Equal(RM_REMOVE[2], 1, \"tileset-true-removes-once\")",
+    "call RM_Equal(RM_ITEMS[1], 3, \"no-post-remove-tileset-callback\")",
+    "call RM_Equal(RM_REMOVE[1], 1, \"tileset-observer-remove-once\")",
+    "call RM_Equal(RM_REMOVE[2], 1, \"tileset-terminal-remove-still-once\")"
+  ],
+  "unrelated_sources_identical": [
+    "MapMain.j",
+    "Missiles.j",
+    "lab/Config.j",
+    "lab/Contact.j",
+    "lab/Lifecycle.j",
+    "lab/Load.j",
+    "lab/Motion.j",
+    "lab/Runner.j",
+    "lab/Support.j",
+    "libraries/DummyRecycler.j",
+    "libraries/TimerUtils.j",
+    "libraries/WorldBounds.j"
+  ],
+  "non_e29_patch": "non-e29.patch",
+  "non_e29_patch_empty": true
+}

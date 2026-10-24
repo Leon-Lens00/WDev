@@ -1,0 +1,17 @@
+usage: prepare_objects.py [-h] --base BASE --recipe RECIPE --out OUT
+                          --evidence EVIDENCE
+
+Prepare only owned o000/o001/A00G records into a NEW map (no game/compiler).
+--base MAP --recipe JSON --out NEW_MAP --evidence NEW_DIR Recipe rows:
+kind,id,field,level,value. Types/selectors come from pinned Classic metadata,
+never value-shape inference. Optional controller-only unit fields ucpt (cast
+point) and ucbs (cast backswing) use metadata Unreal type and level0. Only
+declared fields change. Evidence and outputs must stay inside this project;
+existing files are never overwritten.
+
+options:
+  -h, --help           show this help message and exit
+  --base BASE
+  --recipe RECIPE
+  --out OUT
+  --evidence EVIDENCE

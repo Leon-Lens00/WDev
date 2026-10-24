@@ -1,0 +1,67 @@
+{
+  "status": "SCANNED_CORRECTION_READY",
+  "lint_argv": [
+    "python3",
+    "-B",
+    ".pi/skills/build-warcraft3-vjass-127b/scripts/wc3lint.py",
+    "projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j",
+    "--json"
+  ],
+  "lint_exit": 0,
+  "lint_stdout_text": "{\n  \"files\": 1,\n  \"findings\": [\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 250,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 376,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 377,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 378,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 379,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 382,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 385,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 386,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 388,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 389,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 390,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 499,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    },\n    {\n      \"severity\": \"WARNING\",\n      \"rule\": \"HANDLE-FACTORY\",\n      \"path\": \"projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j\",\n      \"line\": 500,\n      \"message\": \"Document owner, lifetime, and cleanup or intentional persistence.\"\n    }\n  ]\n}\n",
+  "lint_stderr": "",
+  "unknown_direct_calls_including_expressions": [],
+  "token_diff": {
+    "only_function": "RemovedAbsent",
+    "identifier_changes": [
+      [
+        "region",
+        "fixtureIndex"
+      ],
+      [
+        "region",
+        "fixtureIndex"
+      ],
+      [
+        "region",
+        "fixtureIndex"
+      ],
+      [
+        "region",
+        "fixtureIndex"
+      ],
+      [
+        "region",
+        "fixtureIndex"
+      ]
+    ],
+    "all_other_bytes_identical": true
+  },
+  "native_type_check": "actual common.j declares region as type; fixtureIndex is not a declared native type",
+  "static_limit": "wc3lint/API lexical scan does not generally validate reserved type names or compile JASS. Actual corrected compilation remains pending parent.",
+  "frozen_files": 16,
+  "original_artifacts_changed_only": [
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j"
+  ],
+  "protected359_unchanged": true,
+  "label_only_02_variants": true,
+  "inputs_match_plan": true,
+  "compiled_map02_absent": true,
+  "compiler_GREEN_observed": false,
+  "native_R03_RED_observed": false,
+  "sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j": "aec5c4735d594975644eef5f03118d23e4acffadc4afd3ee46ff8c389a769af0",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogRed02.j": "ec26cefe6a20f1f7405f831b74981bbab10a5dcbf9415e131fe2aa2c6f34bb09",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainRed02.j": "9521b415923e348458746af6274cf2da3924f3412e5a1edc9fe5b43ae22bb649",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/build-plan-recast-red02.json": "78e4d6089474e792e2447451843067b492003ebcb18e2b8ebc4d0615e3bc42bc"
+  },
+  "api_input_sha256": {
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastNativeTest.j": "aec5c4735d594975644eef5f03118d23e4acffadc4afd3ee46ff8c389a769af0",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastLogRed02.j": "ec26cefe6a20f1f7405f831b74981bbab10a5dcbf9415e131fe2aa2c6f34bb09",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/RecastMapMainRed02.j": "9521b415923e348458746af6274cf2da3924f3412e5a1edc9fe5b43ae22bb649",
+    "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/src/prototype/PairCore.j": "7fe99448ba2fff01e6bd67675c8a71e30ad7b11b35268e65b4f74ec0a64e1078",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c"
+  },
+  "unified_diff": "--- frozen01/RecastNativeTest.j\n+++ RecastNativeTest.j\n@@ -249,12 +249,12 @@\n     private function RemovedAbsent takes nothing returns boolean\n         local group g = CreateGroup()\n         local unit u\n-        local integer region = 0\n+        local integer fixtureIndex = 0\n         local integer seen = 0\n         local boolean ok = GetUnitTypeId(actor) == 0 and GetUnitTypeId(caster) == 0 and GetUnitTypeId(target) == 0 and GetUnitTypeId(control) == 0\n         loop\n-            exitwhen region == 2 or not ok\n-            if region == 0 then\n+            exitwhen fixtureIndex == 2 or not ok\n+            if fixtureIndex == 0 then\n                 call GroupEnumUnitsInRange(g,-2223.5,4352.,1024.,null)\n             else\n                 call GroupEnumUnitsInRange(g,-5500.,-5500.,128.,null)\n@@ -266,7 +266,7 @@\n                 set ok = seen <= 128 and u != actor and u != caster and u != target and u != control\n                 call GroupRemoveUnit(g,u)\n             endloop\n-            set region = region+1\n+            set fixtureIndex = fixtureIndex+1\n         endloop\n         call DestroyGroup(g)\n         set g = null\n"
+}

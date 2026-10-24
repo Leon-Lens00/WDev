@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/tests/test_objects.py", line 92, in <module>
+    main()
+  File "/home/snz/Documentos/ChatGPT/WDev/projects/rapid-fire-prototype/tests/test_objects.py", line 44, in main
+    assert (proc.returncode, proc.stdout, proc.stderr) == (0, b'prepared owned object base\n', b'')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

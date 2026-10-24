@@ -1,0 +1,11 @@
+{
+  "observer_exit": 124,
+  "observer_budget_seconds": 180,
+  "launcher_exit": 241,
+  "complete": false,
+  "last_native_record": "PASS native-controller-move; before cast; no subsequent progress captured",
+  "partial_sha256": "9e7b7d9d8a54bf2545aa933867d1acc06c6bf77d3a71b7b8a0ce818c539de63c",
+  "native_mtime": 1792537253.960386,
+  "source": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RF-rfp-integrated-20261020-03.txt",
+  "meaning": "Failed/incomplete attempt; cause not established; no automatic replay of timed-out observer or unchanged candidate"
+}

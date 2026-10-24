@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "projects/relativistic-classic/tools/read_logs.py",
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt",
+    "--run-id",
+    "rf-burst-tree-red-20261020-05",
+    "--not-before",
+    "1792531146.6349857",
+    "--report",
+    "projects/rapid-fire-prototype/reports/tree-red05-parent-spot.json"
+  ],
+  "exit_code": 1,
+  "purpose": "Single parent reproduction of qualified native RED; exit1 preserved, not product acceptance"
+}

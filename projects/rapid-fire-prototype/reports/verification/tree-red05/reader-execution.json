@@ -1,0 +1,53 @@
+{
+  "argv": [
+    "python3",
+    "-B",
+    "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/read_logs.py",
+    "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/RF-rf-burst-tree-red-20261020-05.txt",
+    "--run-id",
+    "rf-burst-tree-red-20261020-05",
+    "--not-before",
+    "1792531146.6349857",
+    "--report",
+    "/tmp/wdev-rapid-fire-verify/tree05-f1-vfl0cerh/scratchreader.json"
+  ],
+  "exit_code": 1,
+  "timeout_seconds": 20,
+  "originals_before": {
+    "projects/relativistic-classic/tools/read_logs.py": {
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "size": 5092,
+      "mtime_ns": 1792370695996710430
+    },
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt": {
+      "sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4",
+      "size": 16860,
+      "mtime_ns": 1792531163094124795
+    }
+  },
+  "originals_after": {
+    "projects/relativistic-classic/tools/read_logs.py": {
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "size": 5092,
+      "mtime_ns": 1792370695996710430
+    },
+    "projects/rapid-fire-prototype/reports/RF-rf-burst-tree-red-20261020-05.txt": {
+      "sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4",
+      "size": 16860,
+      "mtime_ns": 1792531163094124795
+    }
+  },
+  "copies": {
+    "read_logs.py": {
+      "sha256": "fccc3bea89f6f4c359b4a876deb35683f80d368329b4717fe67af000cc55f177",
+      "size": 5092,
+      "mtime_ns": 1792370695996710430
+    },
+    "RF-rf-burst-tree-red-20261020-05.txt": {
+      "sha256": "77196c62fc345c64d5c2ce913eb0c20a30d5a9d58c4718840dcb00cdae4a2ed4",
+      "size": 16860,
+      "mtime_ns": 1792531163094124795
+    }
+  },
+  "launch": 1792531146.6349857
+}

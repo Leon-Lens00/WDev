@@ -1,0 +1,19 @@
+{
+  "at": 1792452883.4007547,
+  "supersedes": "desktop-closure.json intermediate pre-recording focus blocker",
+  "pid": 81879,
+  "start_ticks": "2600184",
+  "proc_absent": false,
+  "profile_game_processes": [
+    81879
+  ],
+  "scan_uncertain_pids": [],
+  "profile_game_free": false,
+  "termination_mechanism": "guarded Alt+F4 then observed affirmative Salir click delivered; exact causal mechanism not independently established",
+  "reader_exit": 0,
+  "rows": 3,
+  "chunks": 1,
+  "stop_reason": "USER_STOP",
+  "dropped": 0,
+  "gui_proof": "PARTIAL: actual mouse/keyboard inputs; no INV_OPEN/INV_CLOSE/selection events in native recording; screenshots do not show opened panel"
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "projects/relativistic-classic/tools/read_logs.py",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RM28-diag2-m45-stress-20261019-01.txt",
+    "--run-id",
+    "diag2-m45-stress-20261019-01",
+    "--not-before",
+    "1792385281.2195556"
+  ],
+  "exit_code": 2,
+  "original_log": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/RM28-diag2-m45-stress-20261019-01.txt",
+  "capture_sha256": "988af5dc815b791f283abeef804b52c136be1671e83d421afeaff184e77651f8",
+  "capture_bytes": 78791,
+  "not_before": 1792385281.2195556,
+  "observer_exit": null,
+  "game_exit": null
+}

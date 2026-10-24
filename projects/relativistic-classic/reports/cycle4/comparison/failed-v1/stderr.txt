@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/comparison.py", line 107, in <module>
+    old, new, alone, negative = [load(run) for run in RUNS]
+                                 ~~~~^^^^^
+  File "/tmp/wdev-relativistic-fixed03-verify/run-KwOotOPz/comparison.py", line 102, in load
+    fresh = report['freshness']
+            ~~~~~~^^^^^^^^^^^^^
+KeyError: 'freshness'

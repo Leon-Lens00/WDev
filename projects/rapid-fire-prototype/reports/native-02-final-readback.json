@@ -1,0 +1,29 @@
+{
+  "structural_readback": "PASS",
+  "protected_native01_artifacts_unchanged": 190,
+  "pinned_old_inputs_unchanged": 67,
+  "source_hashes_match_plan": true,
+  "native02_compiled": false,
+  "native02_executed": false,
+  "source_hashes": {
+    "MapMain.j": "4888bb417c89bb29fac78150a8ecfde6a682bf43c4d7e62108a8b015cfb13f3f",
+    "NativeProbe.j": "235712b90a0b02300e088ad62705982315ac3b1c5b756d7fc30fde6ba119cc24",
+    "NativeReference.j": "e3102a7174d75e27616d2a244068036b7a869b3b98195f598685edb22ed494c7",
+    "PathingCandidate.j": "057a0d8efd50566c668688f5f6d037f17e16e939b6fd38c3b2be5880808e7d4a",
+    "ProbeLog.j": "a496fcf45e4f0130422ec7ac6689a1be55197fd79721954a528f334efaa659af"
+  },
+  "runtime_budget": {
+    "timer_period_seconds": 0.125,
+    "maximum_callbacks": 440,
+    "game_time_deadline_seconds": 55,
+    "reference_move_deadline_seconds": 1.875,
+    "native_restoration_guard_seconds": 2,
+    "channel_deadline_seconds": 2,
+    "observer_wall_budget_seconds": 120,
+    "load_and_engine_io_headroom_seconds": 65,
+    "wall_clock_guaranteed": false,
+    "on_budget_exhaustion": "explicit FAIL then cleanup/COMPLETE; unreached geometry is not accepted"
+  },
+  "no_symlinks_or_cache": true,
+  "limitations": "No new functional/native verification; existing actual01 RED preserved"
+}

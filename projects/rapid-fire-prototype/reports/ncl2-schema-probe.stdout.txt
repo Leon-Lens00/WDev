@@ -1,0 +1,6 @@
+{
+  "Ok": true,
+  "Message": "set Ncl2:1=2 on A00G",
+  "Warning": "field Ncl2:1 was newly added with inferred type Int (guessed from the value); verify that matches the field\u0027s real type \u2014 an Int written where the game expects Real (or vice-versa) stores a wrong value.",
+  "SavedTo": "projects/rapid-fire-prototype/base/04-ncl2-schema-probe.w3x"
+}

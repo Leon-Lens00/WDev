@@ -1,0 +1,29 @@
+{
+  "version": 25,
+  "strings": [
+    "TRIGSTR_020",
+    "TRIGSTR_023",
+    "TRIGSTR_022",
+    "TRIGSTR_021"
+  ],
+  "camera": [
+    -6144.0,
+    -6528.0,
+    6144.0,
+    6272.0,
+    -6144.0,
+    6272.0,
+    6144.0,
+    -6528.0
+  ],
+  "complements": [
+    12,
+    12,
+    11,
+    13
+  ],
+  "width": 104,
+  "height": 104,
+  "flags": 56336,
+  "flags_hex": "0xdc10"
+}

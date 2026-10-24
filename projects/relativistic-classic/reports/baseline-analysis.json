@@ -1,0 +1,96 @@
+{
+  "run_id": "baseline-20261019-02",
+  "scope": "T3 S1/S3/S4 diagnostic analysis; no core changes; corrected harness not compiled or run",
+  "baseline_result": {"cases": 47, "checks": 479, "failures": 70, "skips": 1, "reader_exit": 1},
+  "immutable_evidence": {
+    "log": {"path": "reports/RM28-baseline-20261019-02.txt", "sha256": "2dfe0bd57fc9fb1297261f7be45f69898ee0d4e5012e343f35304aca3ae06a19"},
+    "records": {"path": "reports/lab-baseline-20261019-02.json", "sha256": "08dc13ef3362a0172dc8b194574ce2684bf6279e759a22a56150404ab17fb73d"},
+    "frozen_harness": "build/inputs-baseline-20261019-02/",
+    "core_sha256": "ff75e5cc9c4805638622ccc553db9dd1e8c19af27333f8e65257d4f706bae05d",
+    "record_reference": "Each case/name below resolves to the exact original FAIL object in immutable_evidence.records; originals are not rewritten or reclassified as PASS."
+  },
+  "classification_totals": {"real_core_defect": 28, "invalid_fixture_or_oracle": 1, "inconclusive": 41},
+  "rules": [
+    {
+      "id": "created-disposal", "classification": "real_core_defect", "count": 3,
+      "failures": {"L01": ["created-disposed", "created-remove-once", "created-slot-reclaimed"]},
+      "cause": "OnRemove requires allocated AND launched, so terminate before launch does nothing. Requested disposal invariant, not an existing implementation guarantee."
+    },
+    {
+      "id": "frozen-release", "classification": "real_core_defect", "count": 1,
+      "failures": {"L04": ["frozen-slot-reclaimed"]},
+      "cause": "Frozen instance is absent from active scheduler; terminate removes frozen membership but deallocate only occurs in active remove(i)."
+    },
+    {
+      "id": "terminal-movement", "classification": "real_core_defect", "count": 3,
+      "failures": {"L05": ["no-post-remove-public-x-write"], "L06": ["no-post-remove-public-x-write"], "C26": ["enumerator-no-post-remove-public-write"]},
+      "cause": "move continues into OnOrient after callback termination; nextX still10, public x is overwritten after removal."
+    },
+    {
+      "id": "initial-z", "classification": "real_core_defect", "count": 6,
+      "failures": {"M7": ["initial-origin-z", "initial-prev-z", "initial-next-z"], "M45": ["initial-current-z-independent", "initial-previous-z-independent", "initial-next-z-independent"]},
+      "cause": "create initializes current/previous/next Z from impact.z instead of origin.z."
+    },
+    {
+      "id": "setter-coherence", "classification": "real_core_defect", "count": 4,
+      "failures": {"M8": ["speed-does-not-move-current-z", "speed-then-arc-coherent-next", "arc-speed-does-not-move-current"], "M45": ["speed-preserves-current-z-independent"]},
+      "cause": "speed setter writes current z; arc setter only sets height, leaving nextZ stale. Coherent setter prediction is the requested audited contract improvement, not a claim baseline promised it."
+    },
+    {
+      "id": "stale-homing-distance", "classification": "real_core_defect", "count": 1,
+      "failures": {"M13": ["homing-current-distance-not-stale-origin"]},
+      "cause": "OnHit caches d before onPeriod teleports target; OnOrient relinks impact but OnFinish still compares against old d."
+    },
+    {
+      "id": "native-distance-oracle", "classification": "invalid_fixture_or_oracle", "count": 1,
+      "failures": {"M14": ["duration-distance-over-time"]},
+      "cause": "Ideal distance800 is not native SquareRoot distance. M45 independently logs SquareRoot(250000)=500.008 with exact square250000. Coordinate nudge only runs for zero squared/native distance, not this800 path.",
+      "delta": "Assert speed against (origin.distance-travel)/requestedSeconds captured BEFORE duration assignment; independently compare distance with native SquareRoot(800*800), assert endpoint X, log inputs. Existing .01 speed tolerance retained."
+    },
+    {
+      "id": "item-placement-unproven", "classification": "inconclusive", "count": 3,
+      "failures": {"C21": ["item-hit-no-z", "item-hit-memory", "item-flush-rehit"]},
+      "cause": "Type success does not prove item inside radius10 rectangle. No original actual position/life/visibility evidence. Source has no object-type/life/visibility filter in onItems; C25 same rawcode hits radius100.",
+      "delta": "Create C21 missile at native item XY with equal absolute endpoints; log item actual XY/ground/life/visibility/rawcode and assert geometric/Z eligibility. Keep hit/hitted/flush checks."
+    },
+    {
+      "id": "missile-generation", "classification": "real_core_defect", "count": 2,
+      "failures": {"C23": ["new-generation-must-hit-persistent-A", "missile-flush-all-rehit"]},
+      "cause": "Persistent observer remembers recycled struct integer without generation. Second failure is cumulative fallout, not another independent defect."
+    },
+    {
+      "id": "vision-radius", "classification": "real_core_defect", "count": 2,
+      "failures": {"E29": ["vision-radius-owner", "vision-radius-source"]},
+      "cause": "vision setter stores sight and owner only, never applies radius. Hidden probes fail for both ownership paths; occlusion still bounds individual native probes."
+    },
+    {
+      "id": "destructable-boundary-fixture", "classification": "inconclusive", "count": 2,
+      "failures": {"C36": ["vertical-boundary-probe-1", "vertical-boundary-probe-3"]},
+      "cause": "Original formula assumes actual tree XY=0,0 and terrain there; neither actual widget XY nor horizontal inclusion was logged. Source formula is terrain(actual tree XY) plus native occluder height, not a model-size guess.",
+      "delta": "Center radius10 probes at native tree XY, derive bottom from native terrain there, retain inclusive upper/lower and .125 exclusive probes; log XY/life/terrain/occluder and interval."
+    },
+    {
+      "id": "post-terminal-hit-memory", "classification": "real_core_defect", "count": 6,
+      "failures": {"C38": ["fresh-public-contact-remaining-2", "fresh-public-contact-remaining-3", "fresh-hits-both-remaining"], "C44": ["fresh-public-contact-remaining-2", "fresh-public-contact-remaining-3", "fresh-hits-both-remaining"]},
+      "cause": "Explicit terminate+false flushes table and resets collision to0, but enclosing loop continues saving colocated survivors despite allocated=false; same-ID next lifetime suppresses them. Unit/missile return-true controls C37/C43 pass. This fixture removes observer LAST in collection, so does not establish skipped replacement-candidate mutation bug."
+    },
+    {
+      "id": "native-rectangle-fixture-unproven", "classification": "inconclusive", "count": 36,
+      "failures": {
+        "C39": ["first-contact-only", "contact-remove-once", "first-contact-fixture", "retired-contact-id-reused", "fresh-public-contact-remaining-1", "fresh-public-contact-remaining-2", "fresh-public-contact-remaining-3", "fresh-hits-both-remaining", "retired-contact-remove-still-once"],
+        "C40": ["first-contact-only", "contact-remove-once", "first-contact-fixture", "retired-contact-id-reused", "fresh-public-contact-remaining-1", "fresh-public-contact-remaining-2", "fresh-public-contact-remaining-3", "fresh-hits-both-remaining", "retired-contact-remove-still-once"],
+        "C41": ["first-contact-only", "contact-remove-once", "first-contact-fixture", "retired-contact-id-reused", "fresh-public-contact-remaining-1", "fresh-public-contact-remaining-2", "fresh-public-contact-remaining-3", "fresh-hits-both-remaining", "retired-contact-remove-still-once"],
+        "C42": ["first-contact-only", "contact-remove-once", "first-contact-fixture", "retired-contact-id-reused", "fresh-public-contact-remaining-1", "fresh-public-contact-remaining-2", "fresh-public-contact-remaining-3", "fresh-hits-both-remaining", "retired-contact-remove-still-once"]
+      },
+      "cause": "No first contact occurred, so no retirement/reuse precondition exists. All later failures are dependent evidence, NOT proof of the intended enumeration-continuation bug. Requested positions are not actual native positions; radius100 item/tree controls pass.",
+      "delta": "Log all actual item/tree XY/terrain/life/type and item visibility. Lifetime-only radius=max(10,max_i(abs(x_i),abs(y_i))+1) around0 covers every actual target with one-unit margin; same radius reused unchanged for fresh lifetime. All original first/remaining-contact/retirement assertions remain."
+    }
+  ],
+  "unresolved_proof": [
+    "Fresh parent-owned compile and game run of maintained corrections with unique run ID; no corrected PASS claimed.",
+    "Actual native fixture logs must distinguish relocation/snapping from engine enumeration exclusion; if geometric/liveness prerequisites pass but contacts fail, independently enumerate those same handles via public natives before core patch.",
+    "C39-C42 must first establish a contact and retirement before assessing continuation pollution. A downstream reused-ID failure without those prerequisites is not allocator proof.",
+    "No active-collection replacement skip reproduced by C44; a distinct mutation fixture is future scoped work, not a fix authorized by this evidence.",
+    "L99 passed this actual run; source concern remains unproven dynamically. Multiplayer remains SKIP; acceleration stays per processed callback and geometry stays point/rectangle sampled."
+  ]
+}

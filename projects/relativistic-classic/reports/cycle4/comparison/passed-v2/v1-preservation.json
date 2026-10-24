@@ -1,0 +1,23 @@
+{
+  "before": {
+    "comparison.py": "5e3fbd662d413fdcf07e7de70c8899bce55b88f203f16dbe0e9cdd197a3f0616",
+    "invocation.json": "27f9fe2a87633a521a4b6019ed8fca74b63a7327eb28e90ea4d56234fecf60b0",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "fdbec7fd15f7f6f28d1624e5400c9405cdd1e7402fb57b5c1a5b00da57de3513",
+    "result.json": "10dceaccef4098755b5719c3f961ac5bf44b56fff2b8e55aa85f510fe1c86ce0",
+    "identities.json": "4c0e92f7fd9beed8df5a3b94306ec6980c37f7b17e068a5ac50ed1d51b1159c7",
+    "git-status-before.txt": "3b3d7902abae6210de4624c5542ac70660ae9e83094e1a32ad6210e5c114d976",
+    "git-status-after.txt": "3b3d7902abae6210de4624c5542ac70660ae9e83094e1a32ad6210e5c114d976"
+  },
+  "after": {
+    "comparison.py": "5e3fbd662d413fdcf07e7de70c8899bce55b88f203f16dbe0e9cdd197a3f0616",
+    "invocation.json": "27f9fe2a87633a521a4b6019ed8fca74b63a7327eb28e90ea4d56234fecf60b0",
+    "stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr.txt": "fdbec7fd15f7f6f28d1624e5400c9405cdd1e7402fb57b5c1a5b00da57de3513",
+    "result.json": "10dceaccef4098755b5719c3f961ac5bf44b56fff2b8e55aa85f510fe1c86ce0",
+    "identities.json": "4c0e92f7fd9beed8df5a3b94306ec6980c37f7b17e068a5ac50ed1d51b1159c7",
+    "git-status-before.txt": "3b3d7902abae6210de4624c5542ac70660ae9e83094e1a32ad6210e5c114d976",
+    "git-status-after.txt": "3b3d7902abae6210de4624c5542ac70660ae9e83094e1a32ad6210e5c114d976"
+  },
+  "unchanged": true
+}
