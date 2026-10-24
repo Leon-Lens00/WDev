@@ -1,0 +1,6 @@
+ruleDirs: [rules]
+customLanguages:
+  jass:
+    libraryPath: lib/tree-sitter-jass.so
+    extensions: [j, jass]
+    expandoChar: _

@@ -1,0 +1,84 @@
+{
+  "sources": [
+    {
+      "name": "jass-tree-sitter-rust",
+      "remote": "https://github.com/WarRaft/JASS-Tree-sitter-Rust.git",
+      "commit": "db65ac182663bd4e904c133a85e5d0d0917fde72"
+    },
+    {
+      "name": "jass-language-tools",
+      "remote": "https://github.com/naichabaobao/jass.git",
+      "commit": "e03b20a991d43aac84f88af96e23aaaa942b236d"
+    },
+    {
+      "name": "tree-sitter-jass",
+      "remote": "https://github.com/WarRaft/tree-sitter-jass.git",
+      "commit": "319c99cb516d84184685b88725805d2f19048caf"
+    }
+  ],
+  "packages": [
+    {
+      "tool": "ast-grep",
+      "version": "0.51.0",
+      "url": "https://github.com/ast-grep/ast-grep/releases/download/0.51.0/app-x86_64-unknown-linux-gnu.zip",
+      "sha256": "a7eead5552d3a8daad70f5d50d935da44bd0c138e946b5b0a96b1d38169fa639",
+      "github_digest": "sha256:a7eead5552d3a8daad70f5d50d935da44bd0c138e946b5b0a96b1d38169fa639",
+      "status": "isolated lab; no global activation"
+    },
+    {
+      "tool": "typescript (transpiler for research)",
+      "version": "7.0.2",
+      "url": "https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz",
+      "sha256": "da2513f4b95176d6dde8b51aab7afe8a927656c9d277369793f77f7e59371c08",
+      "npm_shasum_checked": true,
+      "status": "downloaded candidate; not used (native TypeScript 7 package has no lib/typescript.js)"
+    },
+    {
+      "tool": "ydwe-compiler (candidate)",
+      "from": "/home/snz/Documentos/MCP W3/wc3-agent-lab/sources/jass-language-tools/static/ydwe-compiler",
+      "sha256": "be39befce8680f68850de032e54149a7bcc6773c92259c8c96e4d1cbd1031d0c",
+      "status": "isolated lab; no global activation"
+    },
+    {
+      "tool": "typescript JS API used by probe",
+      "version": "5.9.3",
+      "url": "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz",
+      "sha256": "10e108c9cf7d5f2879053dff18515fb405abf2ccef63eaaf017d9c571687a1d3",
+      "npm_shasum_checked": true,
+      "status": "isolated lab; no global activation"
+    }
+  ],
+  "python_lock": "requirements.lock.txt",
+  "compiled_parser": {
+    "path": "lib/tree-sitter-jass.so",
+    "sha256": "fe1fbf9344792933e8c6d771b49e70b5ccf7b6a6a1df1fa069cf8a8bdeb082d5",
+    "built_from": "sources/tree-sitter-jass/src/parser.c + scanner.c",
+    "command": "cc -shared -fPIC -O2 -I src src/parser.c src/scanner.c -o lib/tree-sitter-jass.so"
+  },
+  "entrypoints": [
+    "bin/vjass-audit",
+    "bin/jass-pattern-review",
+    "runtime/python/bin/pre-commit"
+  ],
+  "compiler_authority": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py vjass",
+  "active_mcp_configuration_changed": false,
+  "selection": {
+    "date": "2026-10-20",
+    "report": "SELECCION.txt",
+    "retain_for_git_automation": [
+      "pre-commit"
+    ],
+    "defer_to_lab": [
+      "ast-grep",
+      "tree-sitter-jass",
+      "jass-pattern-review"
+    ],
+    "exclude_from_routine_validation": [
+      "vjass-audit",
+      "ydwe-compiler candidate",
+      "candidate Rust LSP"
+    ],
+    "activation": "isolated lab only; no user project hooks installed",
+    "adapter_fix": "scripts/lint-batch.py now scans .j/.jass/.vjass via existing wc3lint.scan_file"
+  }
+}

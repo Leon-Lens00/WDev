@@ -1,0 +1,781 @@
+[
+  {
+    "case": "modern-call",
+    "should_flag_modern_or_local_gameplay": true,
+    "wc3lint": {
+      "exit": 1,
+      "seconds": 0.04,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "ERROR",
+            "rule": "WC127-BLZ",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/modern-call.j",
+            "line": 2,
+            "message": "Blz API is not vanilla Warcraft III 1.27b."
+          }
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 1,
+      "seconds": 0.044,
+      "result": {
+        "status": "advisory",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/modern-call.j",
+            "parser_errors": false,
+            "possible_vjass_blocks": 0
+          }
+        ],
+        "findings": [
+          {
+            "text": "BlzSetUnitMaxHP(null, 100)",
+            "range": {
+              "byteOffset": {
+                "start": 49,
+                "end": 75
+              },
+              "start": {
+                "line": 1,
+                "column": 5
+              },
+              "end": {
+                "line": 1,
+                "column": 31
+              }
+            },
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/modern-call.j",
+            "lines": "call BlzSetUnitMaxHP(null, 100)",
+            "charCount": {
+              "leading": 5,
+              "trailing": 0
+            },
+            "language": "jass",
+            "metaVariables": {
+              "single": {},
+              "multi": {
+                "secondary": [
+                  {
+                    "text": "BlzSetUnitMaxHP",
+                    "range": {
+                      "byteOffset": {
+                        "start": 49,
+                        "end": 64
+                      },
+                      "start": {
+                        "line": 1,
+                        "column": 5
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 20
+                      }
+                    }
+                  }
+                ]
+              },
+              "transformed": {}
+            },
+            "ruleId": "classic-modern-api-call",
+            "severity": "error",
+            "note": null,
+            "message": "API moderna: comprobar contra common.j de 1.27b",
+            "labels": [
+              {
+                "text": "BlzSetUnitMaxHP(null, 100)",
+                "range": {
+                  "byteOffset": {
+                    "start": 49,
+                    "end": 75
+                  },
+                  "start": {
+                    "line": 1,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 31
+                  }
+                },
+                "style": "primary"
+              },
+              {
+                "text": "BlzSetUnitMaxHP",
+                "range": {
+                  "byteOffset": {
+                    "start": 49,
+                    "end": 64
+                  },
+                  "start": {
+                    "line": 1,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 20
+                  }
+                },
+                "style": "secondary"
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "Permissive JASS grammar, not a compiler",
+          "No proof of absence of bugs or desync",
+          "Run JassHelper/pJASS and applicable game tests"
+        ]
+      }
+    },
+    "wc3lint_flag": true,
+    "pattern_flag": true
+  },
+  {
+    "case": "string-only",
+    "should_flag_modern_or_local_gameplay": false,
+    "wc3lint": {
+      "exit": 1,
+      "seconds": 0.04,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "ERROR",
+            "rule": "WC127-BLZ",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/string-only.j",
+            "line": 2,
+            "message": "Blz API is not vanilla Warcraft III 1.27b."
+          }
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 0,
+      "seconds": 0.049,
+      "result": {
+        "status": "advisory",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/string-only.j",
+            "parser_errors": false,
+            "possible_vjass_blocks": 0
+          }
+        ],
+        "findings": [],
+        "limitations": [
+          "Permissive JASS grammar, not a compiler",
+          "No proof of absence of bugs or desync",
+          "Run JassHelper/pJASS and applicable game tests"
+        ]
+      }
+    },
+    "wc3lint_flag": true,
+    "pattern_flag": false
+  },
+  {
+    "case": "block-comment",
+    "should_flag_modern_or_local_gameplay": false,
+    "wc3lint": {
+      "exit": 1,
+      "seconds": 0.038,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "ERROR",
+            "rule": "WC127-BLZ",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/block-comment.j",
+            "line": 3,
+            "message": "Blz API is not vanilla Warcraft III 1.27b."
+          }
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 2,
+      "seconds": 0.037,
+      "result": {
+        "status": "unsupported_or_unparsed",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/block-comment.j",
+            "parser_errors": true,
+            "possible_vjass_blocks": 0
+          }
+        ],
+        "findings": [],
+        "action": "Compile vJASS with the exact JassHelper first; do not treat this as an empty review."
+      }
+    },
+    "wc3lint_flag": true,
+    "pattern_flag": false
+  },
+  {
+    "case": "local-unit",
+    "should_flag_modern_or_local_gameplay": true,
+    "wc3lint": {
+      "exit": 1,
+      "seconds": 0.039,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "WARNING",
+            "rule": "SYNC-LOCAL-PLAYER",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-unit.j",
+            "line": 2,
+            "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+          },
+          {
+            "severity": "ERROR",
+            "rule": "SYNC-LOCAL-GAMEPLAY",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-unit.j",
+            "line": 3,
+            "message": "Local-only gameplay mutation can desynchronize clients."
+          },
+          {
+            "severity": "ERROR",
+            "rule": "SYNC-LOCAL-HANDLE",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-unit.j",
+            "line": 3,
+            "message": "Do not allocate gameplay handles in a local-player branch."
+          }
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 0,
+      "seconds": 0.042,
+      "result": {
+        "status": "advisory",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-unit.j",
+            "parser_errors": false,
+            "possible_vjass_blocks": 0
+          }
+        ],
+        "findings": [
+          {
+            "text": "CreateUnit(Player(0), 'hfoo', 0., 0., 0.)",
+            "range": {
+              "byteOffset": {
+                "start": 87,
+                "end": 128
+              },
+              "start": {
+                "line": 2,
+                "column": 5
+              },
+              "end": {
+                "line": 2,
+                "column": 46
+              }
+            },
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-unit.j",
+            "lines": "call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)",
+            "charCount": {
+              "leading": 5,
+              "trailing": 0
+            },
+            "language": "jass",
+            "metaVariables": {
+              "single": {},
+              "multi": {
+                "secondary": [
+                  {
+                    "text": "GetLocalPlayer() == Player(0)",
+                    "range": {
+                      "byteOffset": {
+                        "start": 47,
+                        "end": 76
+                      },
+                      "start": {
+                        "line": 1,
+                        "column": 3
+                      },
+                      "end": {
+                        "line": 1,
+                        "column": 32
+                      }
+                    }
+                  },
+                  {
+                    "text": "if GetLocalPlayer() == Player(0) then\ncall CreateUnit(Player(0), 'hfoo', 0., 0., 0.)\nendif",
+                    "range": {
+                      "byteOffset": {
+                        "start": 44,
+                        "end": 134
+                      },
+                      "start": {
+                        "line": 1,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "text": "CreateUnit",
+                    "range": {
+                      "byteOffset": {
+                        "start": 87,
+                        "end": 97
+                      },
+                      "start": {
+                        "line": 2,
+                        "column": 5
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 15
+                      }
+                    }
+                  }
+                ]
+              },
+              "transformed": {}
+            },
+            "ruleId": "classic-local-gameplay-review",
+            "severity": "warning",
+            "note": null,
+            "message": "Revisar operaci\u00f3n de juego bajo GetLocalPlayer; requiere comprobar sincronizaci\u00f3n y flujo posterior",
+            "labels": [
+              {
+                "text": "CreateUnit(Player(0), 'hfoo', 0., 0., 0.)",
+                "range": {
+                  "byteOffset": {
+                    "start": 87,
+                    "end": 128
+                  },
+                  "start": {
+                    "line": 2,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 46
+                  }
+                },
+                "style": "primary"
+              },
+              {
+                "text": "GetLocalPlayer() == Player(0)",
+                "range": {
+                  "byteOffset": {
+                    "start": 47,
+                    "end": 76
+                  },
+                  "start": {
+                    "line": 1,
+                    "column": 3
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 32
+                  }
+                },
+                "style": "secondary"
+              },
+              {
+                "text": "if GetLocalPlayer() == Player(0) then\ncall CreateUnit(Player(0), 'hfoo', 0., 0., 0.)\nendif",
+                "range": {
+                  "byteOffset": {
+                    "start": 44,
+                    "end": 134
+                  },
+                  "start": {
+                    "line": 1,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 5
+                  }
+                },
+                "style": "secondary"
+              },
+              {
+                "text": "CreateUnit",
+                "range": {
+                  "byteOffset": {
+                    "start": 87,
+                    "end": 97
+                  },
+                  "start": {
+                    "line": 2,
+                    "column": 5
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 15
+                  }
+                },
+                "style": "secondary"
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "Permissive JASS grammar, not a compiler",
+          "No proof of absence of bugs or desync",
+          "Run JassHelper/pJASS and applicable game tests"
+        ]
+      }
+    },
+    "wc3lint_flag": true,
+    "pattern_flag": true
+  },
+  {
+    "case": "global-unit",
+    "should_flag_modern_or_local_gameplay": false,
+    "wc3lint": {
+      "exit": 0,
+      "seconds": 0.037,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "WARNING",
+            "rule": "HANDLE-FACTORY",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/global-unit.j",
+            "line": 2,
+            "message": "Document owner, lifetime, and cleanup or intentional persistence."
+          }
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 0,
+      "seconds": 0.045,
+      "result": {
+        "status": "advisory",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/global-unit.j",
+            "parser_errors": false,
+            "possible_vjass_blocks": 0
+          }
+        ],
+        "findings": [],
+        "limitations": [
+          "Permissive JASS grammar, not a compiler",
+          "No proof of absence of bugs or desync",
+          "Run JassHelper/pJASS and applicable game tests"
+        ]
+      }
+    },
+    "wc3lint_flag": false,
+    "pattern_flag": false
+  },
+  {
+    "case": "local-camera",
+    "should_flag_modern_or_local_gameplay": false,
+    "wc3lint": {
+      "exit": 0,
+      "seconds": 0.039,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "WARNING",
+            "rule": "SYNC-LOCAL-PLAYER",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-camera.j",
+            "line": 2,
+            "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+          }
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 0,
+      "seconds": 0.042,
+      "result": {
+        "status": "advisory",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-camera.j",
+            "parser_errors": false,
+            "possible_vjass_blocks": 0
+          }
+        ],
+        "findings": [],
+        "limitations": [
+          "Permissive JASS grammar, not a compiler",
+          "No proof of absence of bugs or desync",
+          "Run JassHelper/pJASS and applicable game tests"
+        ]
+      }
+    },
+    "wc3lint_flag": false,
+    "pattern_flag": false
+  },
+  {
+    "case": "local-random",
+    "should_flag_modern_or_local_gameplay": true,
+    "wc3lint": {
+      "exit": 1,
+      "seconds": 0.041,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "WARNING",
+            "rule": "SYNC-LOCAL-PLAYER",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-random.j",
+            "line": 3,
+            "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+          },
+          {
+            "severity": "ERROR",
+            "rule": "SYNC-LOCAL-RNG",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-random.j",
+            "line": 4,
+            "message": "Do not consume synchronized RNG in a local-player branch."
+          }
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 0,
+      "seconds": 0.046,
+      "result": {
+        "status": "advisory",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-random.j",
+            "parser_errors": false,
+            "possible_vjass_blocks": 0
+          }
+        ],
+        "findings": [
+          {
+            "text": "GetRandomInt(1, 10)",
+            "range": {
+              "byteOffset": {
+                "start": 106,
+                "end": 125
+              },
+              "start": {
+                "line": 3,
+                "column": 8
+              },
+              "end": {
+                "line": 3,
+                "column": 27
+              }
+            },
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-random.j",
+            "lines": "set n = GetRandomInt(1, 10)",
+            "charCount": {
+              "leading": 8,
+              "trailing": 0
+            },
+            "language": "jass",
+            "metaVariables": {
+              "single": {},
+              "multi": {
+                "secondary": [
+                  {
+                    "text": "GetLocalPlayer() == Player(0)",
+                    "range": {
+                      "byteOffset": {
+                        "start": 63,
+                        "end": 92
+                      },
+                      "start": {
+                        "line": 2,
+                        "column": 3
+                      },
+                      "end": {
+                        "line": 2,
+                        "column": 32
+                      }
+                    }
+                  },
+                  {
+                    "text": "if GetLocalPlayer() == Player(0) then\nset n = GetRandomInt(1, 10)\nendif",
+                    "range": {
+                      "byteOffset": {
+                        "start": 60,
+                        "end": 131
+                      },
+                      "start": {
+                        "line": 2,
+                        "column": 0
+                      },
+                      "end": {
+                        "line": 4,
+                        "column": 5
+                      }
+                    }
+                  },
+                  {
+                    "text": "GetRandomInt",
+                    "range": {
+                      "byteOffset": {
+                        "start": 106,
+                        "end": 118
+                      },
+                      "start": {
+                        "line": 3,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 3,
+                        "column": 20
+                      }
+                    }
+                  }
+                ]
+              },
+              "transformed": {}
+            },
+            "ruleId": "classic-local-gameplay-review",
+            "severity": "warning",
+            "note": null,
+            "message": "Revisar operaci\u00f3n de juego bajo GetLocalPlayer; requiere comprobar sincronizaci\u00f3n y flujo posterior",
+            "labels": [
+              {
+                "text": "GetRandomInt(1, 10)",
+                "range": {
+                  "byteOffset": {
+                    "start": 106,
+                    "end": 125
+                  },
+                  "start": {
+                    "line": 3,
+                    "column": 8
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 27
+                  }
+                },
+                "style": "primary"
+              },
+              {
+                "text": "GetLocalPlayer() == Player(0)",
+                "range": {
+                  "byteOffset": {
+                    "start": 63,
+                    "end": 92
+                  },
+                  "start": {
+                    "line": 2,
+                    "column": 3
+                  },
+                  "end": {
+                    "line": 2,
+                    "column": 32
+                  }
+                },
+                "style": "secondary"
+              },
+              {
+                "text": "if GetLocalPlayer() == Player(0) then\nset n = GetRandomInt(1, 10)\nendif",
+                "range": {
+                  "byteOffset": {
+                    "start": 60,
+                    "end": 131
+                  },
+                  "start": {
+                    "line": 2,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 4,
+                    "column": 5
+                  }
+                },
+                "style": "secondary"
+              },
+              {
+                "text": "GetRandomInt",
+                "range": {
+                  "byteOffset": {
+                    "start": 106,
+                    "end": 118
+                  },
+                  "start": {
+                    "line": 3,
+                    "column": 8
+                  },
+                  "end": {
+                    "line": 3,
+                    "column": 20
+                  }
+                },
+                "style": "secondary"
+              }
+            ]
+          }
+        ],
+        "limitations": [
+          "Permissive JASS grammar, not a compiler",
+          "No proof of absence of bugs or desync",
+          "Run JassHelper/pJASS and applicable game tests"
+        ]
+      }
+    },
+    "wc3lint_flag": true,
+    "pattern_flag": true
+  },
+  {
+    "case": "commented-local-unit",
+    "should_flag_modern_or_local_gameplay": false,
+    "wc3lint": {
+      "exit": 1,
+      "seconds": 0.04,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "WARNING",
+            "rule": "SYNC-LOCAL-PLAYER",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/commented-local-unit.j",
+            "line": 3,
+            "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+          },
+          {
+            "severity": "ERROR",
+            "rule": "SYNC-LOCAL-GAMEPLAY",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/commented-local-unit.j",
+            "line": 4,
+            "message": "Local-only gameplay mutation can desynchronize clients."
+          },
+          {
+            "severity": "ERROR",
+            "rule": "SYNC-LOCAL-HANDLE",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/commented-local-unit.j",
+            "line": 4,
+            "message": "Do not allocate gameplay handles in a local-player branch."
+          }
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 2,
+      "seconds": 0.045,
+      "result": {
+        "status": "unsupported_or_unparsed",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/commented-local-unit.j",
+            "parser_errors": true,
+            "possible_vjass_blocks": 0
+          }
+        ],
+        "findings": [],
+        "action": "Compile vJASS with the exact JassHelper first; do not treat this as an empty review."
+      }
+    },
+    "wc3lint_flag": true,
+    "pattern_flag": false
+  }
+]

@@ -1,0 +1,48 @@
+# Build output
+bin/
+obj/
+# The npm launcher keeps its entry point in a bin folder, which is source here.
+!npm/wc3-mcp/bin/
+!npm/wc3-mcp/bin/**
+artifacts/
+[Bb]uild/
+*.user
+.vs/
+
+# Publish output (dist*/ also covers the dist*.old copies left by republishing)
+dist*/
+
+# Maps, replays and archives are other people's work or large binaries, never source
+*.w3x
+*.w3m
+*.w3g
+*.zip
+uabi-disconnect/maps/
+uabi-disconnect/results/
+
+# Working screenshots at the repo root
+/*.jpg
+/*.png
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Claude Code and planning artifacts, keep the repo free of agent and dev ledgers
+.claude/
+.superpowers/
+docs/superpowers/
+CLAUDE.md
+tmp/
+
+# Test run artifacts
+TestResults/
+*.trx
+
+# Scratch and stale publish folders
+%TEMP%/
+*.old/

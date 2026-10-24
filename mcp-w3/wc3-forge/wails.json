@@ -1,0 +1,17 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "wc3-forge",
+  "outputfilename": "wc3-forge",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "StephenSHorton",
+    "email": "4stephenhorton@gmail.com"
+  },
+  "postBuildHooks": {
+    "windows/*": "powershell -NoProfile -ExecutionPolicy Bypass -File ../../scripts/postbuild-copy-dlls.ps1 ${bin}",
+    "darwin/*": "bash ../../scripts/postbuild-copy-dylib.sh ${bin}"
+  }
+}

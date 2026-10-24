@@ -1,0 +1,169 @@
+HERRAMIENTAS PARA REDUCIR FALLOS DEL AGENTE EN WARCRAFT III CLASSIC 1.27b
+Exploración e instalación aislada — 20-10-2026, CachyOS x86_64
+
+CONCLUSIÓN
+La prioridad es conectar análisis de código, APIs exactas, construcción reproducible y
+pruebas reales. Un editor de mapas no cubre por sí solo el trabajo de un IDE y un IDE
+no valida el motor. La recomendación se basa en fuentes primarias y pruebas locales;
+no es una clasificación por popularidad ni una medición general del rendimiento de IA.
+Estado más fuerte de esta exploración: Validated, sólo para las comprobaciones descritas.
+No se ejecutó Warcraft ni se modificó un mapa del usuario.
+
+1. PROBLEMAS DEL AGENTE Y COBERTURA QUE HACE FALTA
+
+A. Inventa natives, miembros o firmas, o mezcla forks.
+   Usar la API exacta common.j/Blizzard.j y las fuentes de dependencias. El compilador
+   JassHelper + pJASS sigue siendo la autoridad. Las consultas de símbolos/referencias
+   ayudan antes de editar; un nombre no resuelto puede ser una dependencia ausente.
+B. Pierde contexto en archivos grandes y edita por coincidencia textual.
+   Usar índices por símbolos/ámbitos, referencias y rangos con hash de la fuente.
+   El jassgraph instalado ya ofrece una base léxica; deja miembros, módulos, macros e
+   imports sin resolver. Los resultados candidatos no autorizan un renombrado global.
+C. Mezcla 1.27b con Reforged o toma defaults de herramientas nuevas.
+   Fijar APIs y formatos; validar natives contra 1.27b, W3I <=25, JASS y datos Classic.
+   No convertir fuentes a TypeScript/Lua para fingir que un analizador las entiende.
+D. Guarda un mapa válido pero pierde código editable, imports o datos ajenos.
+   Hash/diff de miembros MPQ, fuente original intacta, copia nueva, WTG/WCT correlacionados.
+   Los binarios necesitan estos controles aunque Git conserve las fuentes de texto.
+E. Dos procesos pisan la misma copia, o usan índices/builds viejos.
+   Un escritor por mapa, manifiestos y fingerprints; bloqueo compartido con flock en los
+   escritores que lo respeten. No protege frente a un editor externo que ignore el lock.
+F. Declara éxito por exit=0, un PASS parcial o un log de otra ejecución.
+   Resultado JSON con cobertura, skipped/notChecked, versión/hash y logs frescos.
+   Un checker ejecutado sin errores no implica que el código haya sido aprobado.
+G. Crea fugas, rompe MUI o introduce escrituras de juego bajo GetLocalPlayer.
+   Reglas estáticas son señales de revisión; combinar con seguimiento de recursos,
+   ensayos solapados, motor real y clientes cuando corresponda. No hay prueba estática
+   universal de ausencia de desync. No tratar toda creación de unidad como fuga.
+H. Sustituye semántica del motor por un simulador aproximado.
+   Los tests de Python sirven para ejecutar/comparar laboratorios, no para demostrar
+   que una simulación reproduce handles, hashtables, grupos o RNG de 1.27b. Usar
+   sondas de natives y resultados del juego como oráculo cuando se investiga el motor.
+
+2. INVENTARIO Y LO YA DISPONIBLE
+
+- JassHelper/Wine, pJASS Linux, APIs Classic y scripts de construcción de la skill.
+- wc3ctl activo 0.3.0 adaptado a MPQ Classic. El 0.4.10 descargado sigue siendo candidato.
+- Forge local y jassgraph. El grafo es léxico y no resuelve todos los métodos/macros.
+- NewGen/YDWE, perfiles de juego, grim/ydotool y guías de prueba existentes.
+- Git, Python, make y flock. No hace falta reinstalarlos para usarlos en el proceso.
+- War3Net ya es dependencia de wc3ctl. Añadir otro MCP basado en lo mismo no aporta
+  automáticamente análisis vJASS ni una validación independiente.
+- Falta reparar la ruta antigua de Forge en el entorno/Taller antes de activar allí
+  integraciones que dependan de ella. Este laboratorio no modificó esa configuración.
+
+3. INSTALADO Y PROBADO EN ESTE LABORATORIO
+
+ast-grep 0.51.0 + gramática JASS nativa compilada.
+- Herramienta moderna extensible mediante parsers Tree-sitter dinámicos.
+- Probado: detecta una llamada Blz real y omite su mención en comentario/cadena.
+- Otra regla señala CreateUnit dentro de un if con GetLocalPlayer.
+- La gramática analizada NO ofrece semántica vJASS y acepta algunas formas no válidas
+  para el compilador local. Usarla sobre JASS compilado para búsquedas/reglas; no como
+  gate de sintaxis. El wrapper rechaza fuente vJASS evidente o árbol con errores.
+- No se habilitaron sustituciones automáticas. Las reglas son ejemplos de revisión,
+  no un detector completo de fugas/desync ni un validador de cada API del juego.
+Fuentes: https://ast-grep.github.io/advanced/custom-language.html
+         https://github.com/WarRaft/tree-sitter-jass
+
+Analizador TypeScript de naichabaobao/jass, commit fijado en manifest.json.
+- Se extrajo su uso como biblioteca de consulta, sin instalar VS Code ni la extensión.
+- CLI vjass-audit analiza archivo + dependencias explícitas, usando las APIs locales.
+- En la muestra detectó un método inventado y avisó de funciones inexistentes/modernas.
+- Dejó pasar una asignación incompleta y x++; por eso devuelve status=advisory incluso
+  con lista vacía. Aún no es validador bloqueante ni sustituto del compilador.
+- Se usa TypeScript 5.9.3 con API JavaScript para cargar los módulos. La distribución
+  nueva 7.0.2 no aporta esa misma ruta lib/typescript.js; quedó registrada como candidato
+  descargado y no se usa para este adaptador.
+Fuente: https://github.com/naichabaobao/jass
+
+pre-commit 4.7.0, en runtime/python.
+- Orquesta comprobaciones sin depender del lenguaje del mapa.
+- Ejemplo de hook local para wc3lint y wrapper que procesa varios archivos.
+- Se ejecutó en un repositorio desechable y rechazó el fixture incompatible.
+- No se instaló ningún hook en repositorios del usuario. Un hook se ejecuta al hacer
+  commit o al invocarlo; por sí solo no intercepta todos los guardados del agente.
+Fuente: https://pre-commit.com/
+
+4. CANDIDATOS QUE NECESITAN ADAPTACIÓN O MÁS VALIDACIÓN
+
+Serena + LSP vJASS: buena ruta para consultas por símbolos, referencias y cambios
+localizados desde un agente. Serena permite servidores adicionales mediante adaptador;
+JASS/vJASS no figura en su lista de soporte directo consultada. No basta renombrar .j a
+otro lenguaje. Antes de activar edición: probar resolución de ámbito, macros/imports,
+rangos de fuente, referencias ambiguas y mapeo del código generado. No instalado aquí.
+Fuente: https://github.com/oraios/serena/blob/main/docs/01-about/020_programming-languages.md
+
+ydwe-compiler Linux incluido en JASS Language Tools: arranca como servidor LSP y
+respondió símbolos y referencias de un método vJASS. Declara varias capacidades más,
+pero no se probaron todas ni se acreditó renombrado seguro. Devuelve también símbolos
+generados y algunos rangos de cabecera; necesita evaluación de source maps.
+En modo check, con --common-j/--blizzard-j locales, aceptó BlzSetUnitMaxHP y x++, que
+JassHelper rechazó. El LSP tampoco avisó de la llamada Blz en la sesión de prueba.
+No reemplazar JassHelper ni usar su exit=0 como certificado 1.27b. Su uso como backend
+lector de un puente MCP es un prototipo viable, sujeto a filtrar APIs y contrastar rangos.
+No se conectó al MCP activo ni se habilitó como compilador predeterminado.
+Fuente: https://github.com/naichabaobao/jass
+
+WarRaft JASS Tree-sitter Rust: navegación JASS y visores de formatos; el código usa
+varias dependencias de ruta hermanas y su gramática de base es JASS. La instalación
+completa no se probó. Evitar confundir sus imports/build/AngelScript/UjAPI con el flujo
+JassHelper vanilla. Puede ayudar con JASS emitido; vJASS requeriría trabajo adicional.
+Fuente: https://github.com/WarRaft/JASS-Tree-sitter-Rust
+
+Semgrep generic: alternativa para reglas textuales en lenguajes sin parser. Requiere
+reglas y pruebas propias; el modo genérico no convierte automáticamente sus análisis de
+lenguajes soportados en análisis semántico vJASS. Para este piloto se eligió ast-grep
+por el parser JASS disponible. Semgrep no se instaló.
+Fuente: https://docs.semgrep.dev/writing-rules/generic-pattern-matching
+
+w3x2lni: útil para llevar datos del mapa a archivos de texto revisables/versionables.
+Revisar primero la copia disponible con YDWE y probar conversión de ida/vuelta en una
+copia 1.27b. No se acreditó aquí roundtrip ni editor-save. No recupera fuentes ausentes
+sólo por convertir el empaquetado. No se añadió otro instalador de este componente.
+Fuente: https://github.com/sumneko/w3x2lni
+
+5. CONTRASTE EMPÍRICO DE COMPILADORES
+
+Caso                      JassHelper local       Rust candidato (--check)
+vJASS válido              acepta                 acepta
+Native Blz de parche nuevo rechaza                acepta
+Función inventada         rechaza                rechaza
+Método inventado          rechaza                rechaza
+Asignación incompleta     rechaza                rechaza
+CreateUnit en rama local  acepta                 acepta (aviso genérico)
+x++                       rechaza                acepta
+
+Siete casos x dos toolchains. Son fixtures dirigidos, no tasas de precisión ni una
+certificación exhaustiva. Ocho archivos pasaron por parser/analizador TS y Tree-sitter.
+El wrapper de patrones pasó 3 controles: llamada real, cobertura vJASS rechazada y
+señal de juego local. El hook fue probado con dos archivos y fallo esperado.
+
+6. ORDEN RECOMENDADO DE INTEGRACIÓN
+
+1) Corregir y verificar rutas activas de Forge; conservar versiones/toolchains actuales.
+2) Hacer obligatorio el gate del proyecto: lint + JassHelper + pJASS + empaquetado nuevo
+   + diff/hash + resultados/skipped explícitos. Añadir lock cooperativo en escritores.
+3) Usar las CLIs de consulta preparadas y ampliar reglas con controles positivos y
+   negativos; analizar JASS compilado y mantener correspondencia con la fuente vJASS.
+4) Preparar puente LSP de lectura (símbolos/referencias); luego integrar Serena/MCP sólo
+   si aporta esas capacidades sin aceptar silenciosamente APIs o rangos incorrectos.
+5) Añadir transformaciones/rename y formatos de mapas sólo después de pruebas de ida y
+   vuelta. Probar motor/MUI y LAN según el alcance; no trasladar un PASS de otra revisión.
+
+USO LOCAL
+bin/vjass-audit /ruta/Fuente.j /ruta/Dependencia.j
+bin/jass-pattern-review /ruta/JASS-COMPILADO.j
+runtime/python/bin/pre-commit --version
+
+Rutas absolutas desde esta carpeta. vjass-audit es sólo consulta. jass-pattern-review
+muestra status, cobertura y findings: salida 1 para regla de error, 2 para entrada no
+soportada; avisos pueden conservar salida 0. No interpretar cero como aprobación global.
+Ejemplo de hooks: examples/pre-commit-config.yaml. No altera el mapa ni publica nada.
+
+EVIDENCIA Y REPRODUCIBILIDAD
+manifest.json fija repos/commits, versiones, URLs y hashes. requirements.lock.txt fija
+Python. reports/ contiene pruebas, resultados LSP y contraste de compiladores; scripts/
+contiene los sondeos. La prueba comparativa usa salidas nuevas: para repetirla conservar
+la evidencia y elegir otras rutas de compilado. Fuentes/licencias se mantienen en sources/.
+No se cambió PATH global, toolchain activa, configuración MCP ni proyecto del usuario.

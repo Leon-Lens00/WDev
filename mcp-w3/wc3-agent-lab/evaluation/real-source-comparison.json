@@ -1,0 +1,1517 @@
+[
+  {
+    "file": "/home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys/MoveCast.j",
+    "audit": {
+      "exit": 0,
+      "seconds": 0.681,
+      "result": {
+        "status": "advisory",
+        "file": "/home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys/MoveCast.j",
+        "standardLibraries": [
+          "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+          "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j"
+        ],
+        "parser": {
+          "errors": [
+            {
+              "start": {
+                "line": 255,
+                "position": 34
+              },
+              "end": {
+                "line": 255,
+                "position": 38
+              },
+              "message": "Expected member name after '.'"
+            },
+            {
+              "start": {
+                "line": 286,
+                "position": 53
+              },
+              "end": {
+                "line": 286,
+                "position": 60
+              },
+              "message": "Expected identifier after '.' for member access"
+            },
+            {
+              "start": {
+                "line": 287,
+                "position": 55
+              },
+              "end": {
+                "line": 287,
+                "position": 59
+              },
+              "message": "Expected identifier after '.' for member access"
+            },
+            {
+              "start": {
+                "line": 287,
+                "position": 55
+              },
+              "end": {
+                "line": 287,
+                "position": 59
+              },
+              "message": "Expected expression, ',' or ')'"
+            },
+            {
+              "start": {
+                "line": 287,
+                "position": 59
+              },
+              "end": {
+                "line": 287,
+                "position": 60
+              },
+              "message": "Expected ')'"
+            },
+            {
+              "start": {
+                "line": 613,
+                "position": 31
+              },
+              "end": {
+                "line": 613,
+                "position": 38
+              },
+              "message": "Expected identifier after '.' for member access"
+            },
+            {
+              "start": {
+                "line": 613,
+                "position": 31
+              },
+              "end": {
+                "line": 613,
+                "position": 38
+              },
+              "message": "Expected '=' after target expression"
+            },
+            {
+              "start": {
+                "line": 614,
+                "position": 33
+              },
+              "end": {
+                "line": 614,
+                "position": 37
+              },
+              "message": "Expected identifier after '.' for member access"
+            },
+            {
+              "start": {
+                "line": 614,
+                "position": 33
+              },
+              "end": {
+                "line": 614,
+                "position": 37
+              },
+              "message": "Expected '=' after target expression"
+            },
+            {
+              "start": {
+                "line": 628,
+                "position": 36
+              },
+              "end": {
+                "line": 628,
+                "position": 43
+              },
+              "message": "Expected identifier after '.' for member access"
+            },
+            {
+              "start": {
+                "line": 628,
+                "position": 36
+              },
+              "end": {
+                "line": 628,
+                "position": 43
+              },
+              "message": "Expected '=' after target expression"
+            },
+            {
+              "start": {
+                "line": 629,
+                "position": 34
+              },
+              "end": {
+                "line": 629,
+                "position": 38
+              },
+              "message": "Expected identifier after '.' for member access"
+            },
+            {
+              "start": {
+                "line": 629,
+                "position": 34
+              },
+              "end": {
+                "line": 629,
+                "position": 38
+              },
+              "message": "Expected '=' after target expression"
+            },
+            {
+              "start": {
+                "line": 782,
+                "position": 30
+              },
+              "end": {
+                "line": 782,
+                "position": 37
+              },
+              "message": "Expected identifier after '.' for member access"
+            },
+            {
+              "start": {
+                "line": 782,
+                "position": 30
+              },
+              "end": {
+                "line": 782,
+                "position": 37
+              },
+              "message": "Expected 'then'"
+            },
+            {
+              "start": {
+                "line": 796,
+                "position": 64
+              },
+              "end": {
+                "line": 796,
+                "position": 68
+              },
+              "message": "Expected identifier after '.' for member access"
+            },
+            {
+              "start": {
+                "line": 796,
+                "position": 64
+              },
+              "end": {
+                "line": 796,
+                "position": 68
+              },
+              "message": "Expected expression, ',' or ')'"
+            },
+            {
+              "start": {
+                "line": 796,
+                "position": 68
+              },
+              "end": {
+                "line": 796,
+                "position": 69
+              },
+              "message": "Expected ')'"
+            }
+          ],
+          "warnings": [],
+          "checkValidationErrors": []
+        },
+        "semantic": {
+          "errors": [
+            {
+              "start": {
+                "line": 32,
+                "position": 12
+              },
+              "end": {
+                "line": 32,
+                "position": 17
+              },
+              "message": "Invalid variable type 'Table'. The type is not declared or is not a valid vJASS type",
+              "fix": "Ensure the type is declared (struct, interface, or type alias) or use a valid basic type (integer, real, string, boolean, code, handle, etc.)"
+            },
+            {
+              "start": {
+                "line": 33,
+                "position": 12
+              },
+              "end": {
+                "line": 33,
+                "position": 17
+              },
+              "message": "Invalid variable type 'Table'. The type is not declared or is not a valid vJASS type",
+              "fix": "Ensure the type is declared (struct, interface, or type alias) or use a valid basic type (integer, real, string, boolean, code, handle, etc.)"
+            },
+            {
+              "start": {
+                "line": 34,
+                "position": 12
+              },
+              "end": {
+                "line": 34,
+                "position": 17
+              },
+              "message": "Invalid variable type 'Table'. The type is not declared or is not a valid vJASS type",
+              "fix": "Ensure the type is declared (struct, interface, or type alias) or use a valid basic type (integer, real, string, boolean, code, handle, etc.)"
+            },
+            {
+              "start": {
+                "line": 35,
+                "position": 12
+              },
+              "end": {
+                "line": 35,
+                "position": 17
+              },
+              "message": "Invalid variable type 'Table'. The type is not declared or is not a valid vJASS type",
+              "fix": "Ensure the type is declared (struct, interface, or type alias) or use a valid basic type (integer, real, string, boolean, code, handle, etc.)"
+            },
+            {
+              "start": {
+                "line": 111,
+                "position": 19
+              },
+              "end": {
+                "line": 111,
+                "position": 24
+              },
+              "message": "Invalid variable type 'Table'. The type is not declared or is not a valid vJASS type",
+              "fix": "Ensure the type is declared (struct, interface, or type alias) or use a valid basic type (integer, real, string, boolean, code, handle, etc.)"
+            },
+            {
+              "start": {
+                "line": 118,
+                "position": 23
+              },
+              "end": {
+                "line": 118,
+                "position": 27
+              },
+              "message": "Variable name 'this' conflicts with a vJASS keyword. Variable names cannot be keywords",
+              "fix": "Rename the variable to a non-keyword name, for example: 'thisVar' or 'myThis'"
+            },
+            {
+              "start": {
+                "line": 255,
+                "position": 34
+              },
+              "end": {
+                "line": 255,
+                "position": 38
+              },
+              "message": "Expected condition expression"
+            },
+            {
+              "start": {
+                "line": 286,
+                "position": 23
+              },
+              "end": {
+                "line": 286,
+                "position": 24
+              },
+              "message": "Expected value expression after '='"
+            },
+            {
+              "start": {
+                "line": 287,
+                "position": 25
+              },
+              "end": {
+                "line": 287,
+                "position": 28
+              },
+              "message": "Function 'R2I' expects 1 parameters, but 0 were provided",
+              "fix": "Check the function call parameter count"
+            },
+            {
+              "start": {
+                "line": 417,
+                "position": 14
+              },
+              "end": {
+                "line": 417,
+                "position": 24
+              },
+              "message": "Method 'deallocate' not found in struct instance 'MovementData'",
+              "fix": "Check if the method name is correct or if the method is declared"
+            },
+            {
+              "start": {
+                "line": 424,
+                "position": 23
+              },
+              "end": {
+                "line": 424,
+                "position": 27
+              },
+              "message": "Variable name 'this' conflicts with a vJASS keyword. Variable names cannot be keywords",
+              "fix": "Rename the variable to a non-keyword name, for example: 'thisVar' or 'myThis'"
+            },
+            {
+              "start": {
+                "line": 504,
+                "position": 23
+              },
+              "end": {
+                "line": 504,
+                "position": 27
+              },
+              "message": "Variable name 'this' conflicts with a vJASS keyword. Variable names cannot be keywords",
+              "fix": "Rename the variable to a non-keyword name, for example: 'thisVar' or 'myThis'"
+            },
+            {
+              "start": {
+                "line": 540,
+                "position": 23
+              },
+              "end": {
+                "line": 540,
+                "position": 27
+              },
+              "message": "Variable name 'this' conflicts with a vJASS keyword. Variable names cannot be keywords",
+              "fix": "Rename the variable to a non-keyword name, for example: 'thisVar' or 'myThis'"
+            },
+            {
+              "start": {
+                "line": 584,
+                "position": 15
+              },
+              "end": {
+                "line": 584,
+                "position": 16
+              },
+              "message": "Return type 'integer' does not match function return type 'MovementData'",
+              "fix": "Change the return value type to 'MovementData'"
+            },
+            {
+              "start": {
+                "line": 613,
+                "position": 31
+              },
+              "end": {
+                "line": 613,
+                "position": 38
+              },
+              "message": "Expected target expression after 'set'"
+            },
+            {
+              "start": {
+                "line": 613,
+                "position": 31
+              },
+              "end": {
+                "line": 613,
+                "position": 38
+              },
+              "message": "Expected value expression after '='"
+            },
+            {
+              "start": {
+                "line": 614,
+                "position": 33
+              },
+              "end": {
+                "line": 614,
+                "position": 37
+              },
+              "message": "Expected target expression after 'set'"
+            },
+            {
+              "start": {
+                "line": 614,
+                "position": 33
+              },
+              "end": {
+                "line": 614,
+                "position": 37
+              },
+              "message": "Expected value expression after '='"
+            },
+            {
+              "start": {
+                "line": 628,
+                "position": 36
+              },
+              "end": {
+                "line": 628,
+                "position": 43
+              },
+              "message": "Expected target expression after 'set'"
+            },
+            {
+              "start": {
+                "line": 628,
+                "position": 36
+              },
+              "end": {
+                "line": 628,
+                "position": 43
+              },
+              "message": "Expected value expression after '='"
+            },
+            {
+              "start": {
+                "line": 629,
+                "position": 34
+              },
+              "end": {
+                "line": 629,
+                "position": 38
+              },
+              "message": "Expected target expression after 'set'"
+            },
+            {
+              "start": {
+                "line": 629,
+                "position": 34
+              },
+              "end": {
+                "line": 629,
+                "position": 38
+              },
+              "message": "Expected value expression after '='"
+            },
+            {
+              "start": {
+                "line": 782,
+                "position": 30
+              },
+              "end": {
+                "line": 782,
+                "position": 37
+              },
+              "message": "Expected condition expression"
+            },
+            {
+              "start": {
+                "line": 796,
+                "position": 35
+              },
+              "end": {
+                "line": 796,
+                "position": 38
+              },
+              "message": "Function 'R2I' expects 1 parameters, but 0 were provided",
+              "fix": "Check the function call parameter count"
+            }
+          ],
+          "warnings": [
+            {
+              "start": {
+                "line": 15,
+                "position": 49
+              },
+              "end": {
+                "line": 15,
+                "position": 86
+              },
+              "message": "Implicit type conversion from 'integer' to 'real'. JASS will automatically convert, but consider using explicit type cast for clarity"
+            },
+            {
+              "start": {
+                "line": 17,
+                "position": 53
+              },
+              "end": {
+                "line": 17,
+                "position": 98
+              },
+              "message": "Implicit type conversion from 'integer' to 'real'. JASS will automatically convert, but consider using explicit type cast for clarity"
+            },
+            {
+              "start": {
+                "line": 64,
+                "position": 26
+              },
+              "end": {
+                "line": 64,
+                "position": 31
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetPlayerSlotState'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 69,
+                "position": 27
+              },
+              "end": {
+                "line": 69,
+                "position": 32
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetPlayerController'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 114,
+                "position": 12
+              },
+              "end": {
+                "line": 114,
+                "position": 17
+              },
+              "message": "Variable 'table' may not be declared. Ensure it is declared with 'local' keyword or as a global variable"
+            },
+            {
+              "start": {
+                "line": 114,
+                "position": 20
+              },
+              "end": {
+                "line": 114,
+                "position": 25
+              },
+              "message": "Cannot resolve object type for 'Table', unable to verify if method 'create' exists"
+            },
+            {
+              "start": {
+                "line": 120,
+                "position": 11
+              },
+              "end": {
+                "line": 120,
+                "position": 20
+              },
+              "message": "Type 'thistype' is incompatible with type 'integer' in comparison"
+            },
+            {
+              "start": {
+                "line": 152,
+                "position": 31
+              },
+              "end": {
+                "line": 152,
+                "position": 36
+              },
+              "message": "Cannot resolve object type for 'table' (variable may not be declared), unable to verify if method 'has' exists"
+            },
+            {
+              "start": {
+                "line": 164,
+                "position": 17
+              },
+              "end": {
+                "line": 164,
+                "position": 22
+              },
+              "message": "Cannot resolve object type for 'table' (variable may not be declared), unable to verify if method 'remove' exists"
+            },
+            {
+              "start": {
+                "line": 183,
+                "position": 49
+              },
+              "end": {
+                "line": 183,
+                "position": 71
+              },
+              "message": "Variable 'TEXTTAG_DEBUG_MOVECAST' may not be declared, ensure it is declared before use"
+            },
+            {
+              "start": {
+                "line": 183,
+                "position": 28
+              },
+              "end": {
+                "line": 183,
+                "position": 48
+              },
+              "message": "Function 'CreateTrackedTextTag' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 204,
+                "position": 17
+              },
+              "end": {
+                "line": 204,
+                "position": 38
+              },
+              "message": "Function 'ReleaseTrackedTextTag' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 211,
+                "position": 27
+              },
+              "end": {
+                "line": 211,
+                "position": 37
+              },
+              "message": "Function 'NewTimerEx' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 212,
+                "position": 17
+              },
+              "end": {
+                "line": 212,
+                "position": 33
+              },
+              "message": "Function 'SetTimerDebugTag' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 219,
+                "position": 30
+              },
+              "end": {
+                "line": 219,
+                "position": 40
+              },
+              "message": "Function 'NewTimerEx' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 220,
+                "position": 17
+              },
+              "end": {
+                "line": 220,
+                "position": 33
+              },
+              "message": "Function 'SetTimerDebugTag' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 227,
+                "position": 17
+              },
+              "end": {
+                "line": 227,
+                "position": 29
+              },
+              "message": "Function 'ReleaseTimer' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 230,
+                "position": 24
+              },
+              "end": {
+                "line": 230,
+                "position": 34
+              },
+              "message": "Function 'NewTimerEx' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 231,
+                "position": 13
+              },
+              "end": {
+                "line": 231,
+                "position": 29
+              },
+              "message": "Function 'SetTimerDebugTag' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 339,
+                "position": 17
+              },
+              "end": {
+                "line": 339,
+                "position": 29
+              },
+              "message": "Function 'ReleaseTimer' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 348,
+                "position": 17
+              },
+              "end": {
+                "line": 348,
+                "position": 29
+              },
+              "message": "Function 'ReleaseTimer' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 353,
+                "position": 17
+              },
+              "end": {
+                "line": 353,
+                "position": 29
+              },
+              "message": "Function 'ReleaseTimer' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 377,
+                "position": 75
+              },
+              "end": {
+                "line": 377,
+                "position": 84
+              },
+              "message": "Function 'UnitAlive' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 382,
+                "position": 28
+              },
+              "end": {
+                "line": 382,
+                "position": 29
+              },
+              "message": "Possible null value used for parameter 1 of function 'IsLeapBuffActive'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 387,
+                "position": 31
+              },
+              "end": {
+                "line": 387,
+                "position": 32
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetUnitX'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 387,
+                "position": 44
+              },
+              "end": {
+                "line": 387,
+                "position": 45
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetUnitY'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 388,
+                "position": 33
+              },
+              "end": {
+                "line": 388,
+                "position": 34
+              },
+              "message": "Possible null value used for parameter 1 of function 'IssuePointOrder'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 396,
+                "position": 67
+              },
+              "end": {
+                "line": 396,
+                "position": 76
+              },
+              "message": "Function 'UnitAlive' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 411,
+                "position": 13
+              },
+              "end": {
+                "line": 411,
+                "position": 21
+              },
+              "message": "Cannot resolve object type for 'thistype' (variable may not be declared), unable to verify if method 'forget' exists"
+            },
+            {
+              "start": {
+                "line": 424,
+                "position": 30
+              },
+              "end": {
+                "line": 424,
+                "position": 42
+              },
+              "message": "Function 'GetTimerData' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 435,
+                "position": 11
+              },
+              "end": {
+                "line": 435,
+                "position": 20
+              },
+              "message": "Type 'thistype' is incompatible with type 'integer' in comparison"
+            },
+            {
+              "start": {
+                "line": 445,
+                "position": 70
+              },
+              "end": {
+                "line": 445,
+                "position": 79
+              },
+              "message": "Function 'UnitAlive' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 465,
+                "position": 17
+              },
+              "end": {
+                "line": 465,
+                "position": 28
+              },
+              "message": "Implicit type conversion from 'integer' to 'real'. JASS will automatically convert, but consider using explicit type cast for clarity"
+            },
+            {
+              "start": {
+                "line": 466,
+                "position": 17
+              },
+              "end": {
+                "line": 466,
+                "position": 28
+              },
+              "message": "Implicit type conversion from 'integer' to 'real'. JASS will automatically convert, but consider using explicit type cast for clarity"
+            },
+            {
+              "start": {
+                "line": 467,
+                "position": 21
+              },
+              "end": {
+                "line": 467,
+                "position": 38
+              },
+              "message": "Implicit type conversion from 'integer' to 'real'. JASS will automatically convert, but consider using explicit type cast for clarity"
+            },
+            {
+              "start": {
+                "line": 476,
+                "position": 19
+              },
+              "end": {
+                "line": 476,
+                "position": 55
+              },
+              "message": "Implicit type conversion from 'integer' to 'real'. JASS will automatically convert, but consider using explicit type cast for clarity"
+            },
+            {
+              "start": {
+                "line": 486,
+                "position": 17
+              },
+              "end": {
+                "line": 486,
+                "position": 38
+              },
+              "message": "Implicit type conversion from 'integer' to 'real'. JASS will automatically convert, but consider using explicit type cast for clarity"
+            },
+            {
+              "start": {
+                "line": 487,
+                "position": 17
+              },
+              "end": {
+                "line": 487,
+                "position": 38
+              },
+              "message": "Implicit type conversion from 'integer' to 'real'. JASS will automatically convert, but consider using explicit type cast for clarity"
+            },
+            {
+              "start": {
+                "line": 489,
+                "position": 15
+              },
+              "end": {
+                "line": 489,
+                "position": 32
+              },
+              "message": "Function 'IsTerrainWalkable' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 504,
+                "position": 30
+              },
+              "end": {
+                "line": 504,
+                "position": 42
+              },
+              "message": "Function 'GetTimerData' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 506,
+                "position": 11
+              },
+              "end": {
+                "line": 506,
+                "position": 20
+              },
+              "message": "Type 'thistype' is incompatible with type 'integer' in comparison"
+            },
+            {
+              "start": {
+                "line": 516,
+                "position": 70
+              },
+              "end": {
+                "line": 516,
+                "position": 79
+              },
+              "message": "Function 'UnitAlive' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 528,
+                "position": 32
+              },
+              "end": {
+                "line": 528,
+                "position": 60
+              },
+              "message": "Implicit type conversion from 'integer' to 'real'. JASS will automatically convert, but consider using explicit type cast for clarity"
+            },
+            {
+              "start": {
+                "line": 540,
+                "position": 30
+              },
+              "end": {
+                "line": 540,
+                "position": 42
+              },
+              "message": "Function 'GetTimerData' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 542,
+                "position": 11
+              },
+              "end": {
+                "line": 542,
+                "position": 20
+              },
+              "message": "Type 'thistype' is incompatible with type 'integer' in comparison"
+            },
+            {
+              "start": {
+                "line": 554,
+                "position": 70
+              },
+              "end": {
+                "line": 554,
+                "position": 79
+              },
+              "message": "Function 'UnitAlive' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 555,
+                "position": 17
+              },
+              "end": {
+                "line": 555,
+                "position": 29
+              },
+              "message": "Function 'ReleaseTimer' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 562,
+                "position": 17
+              },
+              "end": {
+                "line": 562,
+                "position": 29
+              },
+              "message": "Function 'ReleaseTimer' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 568,
+                "position": 95
+              },
+              "end": {
+                "line": 568,
+                "position": 104
+              },
+              "message": "Function 'UnitAlive' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 575,
+                "position": 13
+              },
+              "end": {
+                "line": 575,
+                "position": 25
+              },
+              "message": "Function 'ReleaseTimer' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 604,
+                "position": 11
+              },
+              "end": {
+                "line": 604,
+                "position": 20
+              },
+              "message": "Type 'MovementData' is incompatible with type 'integer' in comparison"
+            },
+            {
+              "start": {
+                "line": 668,
+                "position": 28
+              },
+              "end": {
+                "line": 668,
+                "position": 29
+              },
+              "message": "Possible null value used for parameter 1 of function 'IsLeapBuffActive'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 669,
+                "position": 44
+              },
+              "end": {
+                "line": 669,
+                "position": 45
+              },
+              "message": "Possible null value used for parameter 1 of function 'DestroyMovementDataForUnit'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 676,
+                "position": 43
+              },
+              "end": {
+                "line": 676,
+                "position": 44
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetOrCreateMovementData'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 677,
+                "position": 11
+              },
+              "end": {
+                "line": 677,
+                "position": 20
+              },
+              "message": "Type 'MovementData' is incompatible with type 'integer' in comparison"
+            },
+            {
+              "start": {
+                "line": 692,
+                "position": 41
+              },
+              "end": {
+                "line": 692,
+                "position": 42
+              },
+              "message": "Possible null value used for parameter 1 of function 'IssueImmediateOrderById'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 716,
+                "position": 76
+              },
+              "end": {
+                "line": 716,
+                "position": 83
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetUnitTypeId'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 717,
+                "position": 28
+              },
+              "end": {
+                "line": 717,
+                "position": 29
+              },
+              "message": "Possible null value used for parameter 1 of function 'IsLeapBuffActive'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 718,
+                "position": 44
+              },
+              "end": {
+                "line": 718,
+                "position": 45
+              },
+              "message": "Possible null value used for parameter 1 of function 'DestroyMovementDataForUnit'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 724,
+                "position": 25
+              },
+              "end": {
+                "line": 724,
+                "position": 32
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetUnitX'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 725,
+                "position": 25
+              },
+              "end": {
+                "line": 725,
+                "position": 32
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetUnitY'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 726,
+                "position": 43
+              },
+              "end": {
+                "line": 726,
+                "position": 44
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetOrCreateMovementData'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 727,
+                "position": 11
+              },
+              "end": {
+                "line": 727,
+                "position": 20
+              },
+              "message": "Type 'MovementData' is incompatible with type 'integer' in comparison"
+            },
+            {
+              "start": {
+                "line": 743,
+                "position": 41
+              },
+              "end": {
+                "line": 743,
+                "position": 42
+              },
+              "message": "Possible null value used for parameter 1 of function 'IssueImmediateOrderById'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 769,
+                "position": 40
+              },
+              "end": {
+                "line": 769,
+                "position": 41
+              },
+              "message": "Possible null value used for parameter 1 of function 'DestroyMovementDataForUnit'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 775,
+                "position": 24
+              },
+              "end": {
+                "line": 775,
+                "position": 25
+              },
+              "message": "Possible null value used for parameter 1 of function 'IsLeapBuffActive'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 776,
+                "position": 40
+              },
+              "end": {
+                "line": 776,
+                "position": 41
+              },
+              "message": "Possible null value used for parameter 1 of function 'DestroyMovementDataForUnit'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 783,
+                "position": 43
+              },
+              "end": {
+                "line": 783,
+                "position": 44
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetOrCreateMovementData'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 784,
+                "position": 11
+              },
+              "end": {
+                "line": 784,
+                "position": 20
+              },
+              "message": "Type 'MovementData' is incompatible with type 'integer' in comparison"
+            },
+            {
+              "start": {
+                "line": 790,
+                "position": 48
+              },
+              "end": {
+                "line": 790,
+                "position": 55
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetUnitTypeId'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 791,
+                "position": 30
+              },
+              "end": {
+                "line": 791,
+                "position": 37
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetUnitX'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 792,
+                "position": 30
+              },
+              "end": {
+                "line": 792,
+                "position": 37
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetUnitY'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 798,
+                "position": 48
+              },
+              "end": {
+                "line": 798,
+                "position": 55
+              },
+              "message": "Possible null value used for parameter 1 of function 'GetUnitTypeId'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 802,
+                "position": 27
+              },
+              "end": {
+                "line": 802,
+                "position": 28
+              },
+              "message": "Possible null value used for parameter 1 of function 'SetUnitFacing'. Handle types may be null, consider checking for null before use"
+            },
+            {
+              "start": {
+                "line": 825,
+                "position": 33
+              },
+              "end": {
+                "line": 825,
+                "position": 38
+              },
+              "message": "Cannot resolve object type for 'Table', unable to verify if method 'create' exists"
+            },
+            {
+              "start": {
+                "line": 826,
+                "position": 35
+              },
+              "end": {
+                "line": 826,
+                "position": 40
+              },
+              "message": "Cannot resolve object type for 'Table', unable to verify if method 'create' exists"
+            },
+            {
+              "start": {
+                "line": 827,
+                "position": 38
+              },
+              "end": {
+                "line": 827,
+                "position": 43
+              },
+              "message": "Cannot resolve object type for 'Table', unable to verify if method 'create' exists"
+            },
+            {
+              "start": {
+                "line": 828,
+                "position": 36
+              },
+              "end": {
+                "line": 828,
+                "position": 41
+              },
+              "message": "Cannot resolve object type for 'Table', unable to verify if method 'create' exists"
+            },
+            {
+              "start": {
+                "line": 835,
+                "position": 9
+              },
+              "end": {
+                "line": 835,
+                "position": 32
+              },
+              "message": "Function 'RegisterPlayerUnitEvent' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 836,
+                "position": 9
+              },
+              "end": {
+                "line": 836,
+                "position": 32
+              },
+              "message": "Function 'RegisterPlayerUnitEvent' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 837,
+                "position": 9
+              },
+              "end": {
+                "line": 837,
+                "position": 32
+              },
+              "message": "Function 'RegisterPlayerUnitEvent' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 838,
+                "position": 9
+              },
+              "end": {
+                "line": 838,
+                "position": 32
+              },
+              "message": "Function 'RegisterPlayerUnitEvent' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            }
+          ],
+          "checkValidationErrors": []
+        },
+        "externalSymbols": 2180,
+        "limitations": [
+          "Not JassHelper/pJASS validation",
+          "Pass dependencies explicitly; no implicit workspace scan",
+          "The trial parser missed an incomplete assignment; an empty result is not approval",
+          "No proof of runtime behavior, MUI, leaks or multiplayer safety"
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 2,
+      "seconds": 0.046,
+      "result": {
+        "status": "unsupported_or_unparsed",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys/MoveCast.j",
+            "parser_errors": true,
+            "possible_vjass_blocks": 58
+          }
+        ],
+        "findings": [],
+        "action": "Compile vJASS with the exact JassHelper first; do not treat this as an empty review."
+      }
+    },
+    "wc3lint": {
+      "exit": 0,
+      "seconds": 0.042,
+      "result": {
+        "files": 1,
+        "findings": []
+      }
+    }
+  },
+  {
+    "file": "/home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys/Config/MovementSpellTargetConfig.j",
+    "audit": {
+      "exit": 0,
+      "seconds": 0.634,
+      "result": {
+        "status": "advisory",
+        "file": "/home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys/Config/MovementSpellTargetConfig.j",
+        "standardLibraries": [
+          "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+          "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j"
+        ],
+        "parser": {
+          "errors": [],
+          "warnings": [],
+          "checkValidationErrors": []
+        },
+        "semantic": {
+          "errors": [],
+          "warnings": [
+            {
+              "start": {
+                "line": 4,
+                "position": 13
+              },
+              "end": {
+                "line": 4,
+                "position": 40
+              },
+              "message": "Function 'RegisterMovementSpellTarget' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            },
+            {
+              "start": {
+                "line": 5,
+                "position": 13
+              },
+              "end": {
+                "line": 5,
+                "position": 40
+              },
+              "message": "Function 'RegisterMovementSpellTarget' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+            }
+          ],
+          "checkValidationErrors": []
+        },
+        "externalSymbols": 2181,
+        "limitations": [
+          "Not JassHelper/pJASS validation",
+          "Pass dependencies explicitly; no implicit workspace scan",
+          "The trial parser missed an incomplete assignment; an empty result is not approval",
+          "No proof of runtime behavior, MUI, leaks or multiplayer safety"
+        ]
+      }
+    },
+    "patterns": {
+      "exit": 2,
+      "seconds": 0.04,
+      "result": {
+        "status": "unsupported_or_unparsed",
+        "coverage": [
+          {
+            "file": "/home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys/Config/MovementSpellTargetConfig.j",
+            "parser_errors": false,
+            "possible_vjass_blocks": 2
+          }
+        ],
+        "findings": [],
+        "action": "Compile vJASS with the exact JassHelper first; do not treat this as an empty review."
+      }
+    },
+    "wc3lint": {
+      "exit": 0,
+      "seconds": 0.04,
+      "result": {
+        "files": 1,
+        "findings": []
+      }
+    }
+  }
+]

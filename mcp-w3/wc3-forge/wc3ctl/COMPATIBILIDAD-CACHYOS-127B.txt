@@ -1,0 +1,57 @@
+WC3CTL — DESCARGA Y COMPATIBILIDAD
+Fecha local: 20 de octubre de 2026 (America/Lima)
+Estado de verificación: Scanned (revisión de documentación, código y paquetes).
+
+DESCARGA
+Origen: https://github.com/GodMephisto/wc3ctl
+Versión: v0.4.10
+Commit: afd0b1c210ed1783b39bb2d3ed9904e3689c8034
+Publicación: https://github.com/GodMephisto/wc3ctl/releases/tag/v0.4.10
+Código fuente: /home/snz/Documentos/MCP W3/wc3-forge/wc3ctl
+Paquetes CLI/MCP, Studio y esquemas: /home/snz/Documentos/MCP W3/wc3-forge/wc3ctl/downloads/v0.4.10
+No se ejecutó install.ps1 ni se registró el MCP en aplicaciones.
+
+INTEGRIDAD
+wc3ctl-schemas-v0.4.10.zip: SHA-256 OK, ZIP íntegro (415 entradas), 01f405c750f0b17b1c27477e938c80457efd653df33840aad87a51a9517afe7d
+wc3ctl-studio-v0.4.10-win-x64.zip: SHA-256 OK, ZIP íntegro (356 entradas), 48e04c4c76ef807a55f5a0ec4c5052372419213a55fdc165e6e407d766ec6299
+wc3ctl-v0.4.10-win-x64.zip: SHA-256 OK, ZIP íntegro (338 entradas), eb2b73cd4caa8d4cb7ac4027c6837eb49bb902cefdcfef5f57d0d18e641111d9
+
+CACHYOS
+Esta PC se identifica como CachyOS Linux, x86_64.
+No hay soporte oficial documentado para CachyOS/Linux en esta versión.
+README.md:30 exige Windows 10/11 de 64 bits; el flujo release.yml publica sólo win-x64.
+Los proyectos usan .NET 8, pero eso no demuestra que todas sus funciones sean portables.
+La lectura de datos base depende de CascLib.NET y de CascLib.dll.
+No se ejecutaron CLI, MCP ni Studio: su funcionamiento con Wine o mediante una
+compilación Linux queda sin comprobar. No se ha instalado ni adaptado para Linux.
+
+WARCRAFT III 1.27b
+Soporte parcial, explícito para comprobación de compatibilidad mediante esquemas.
+Existe data/schemas/TFT-v1.27b con: objects, triggers, script, enums.
+El índice declara 2243 campos, 1045 funciones GUI y ningún input faltante.
+TargetCompatCommand analiza identificadores JASS y campos de objetos contra el perfil.
+Esto no equivale a compilación ni prueba dentro de Warcraft III 1.27b.
+La carga de datos base de una instalación sigue la ruta CASC/Reforged en
+src/Wc3.GameData/GameData.cs y CascGameDataSource.cs; no se encontró un proveedor
+MPQ clásico equivalente para cargar directamente los archivos de la instalación 1.27b.
+Leer un mapa MPQ y leer los MPQ base de una instalación son capacidades distintas.
+
+WC3-FORGE EXISTENTE (revisión adicional de la copia local)
+La copia local contiene un perfil WC3FORGE_TARGET=1.27b, detección de instalaciones
+Classic MPQ y controles conservadores de guardado en internal/forge/classic_target.go.
+internal/wc3launch/launch_linux.go permite compilar el puente de edición en Linux,
+pero declara que no administra Wine y deja vacía la ruta del ejecutable del juego.
+Los ejecutables encontrados en build/bin son de Windows (.exe).
+No se compiló ni se probó wc3-forge en CachyOS durante esta revisión.
+El validador de la skill verificó sin errores el wc3toolchain.json ya existente en
+/home/snz/Documentos/ChatGPT/FrozenThone: JassHelper, pJASS, common.j y Blizzard.j presentes.
+Esa comprobación corresponde a la toolchain existente, no acredita wc3ctl.
+
+CONCLUSIÓN
+Descarga completa e íntegra. wc3ctl incorpora un perfil de análisis para 1.27b,
+pero esta versión no permite afirmar soporte completo para CachyOS + una
+instalación Classic 1.27b. No se hicieron pruebas de ejecución ni dentro del juego.
+
+ACTUALIZACIÓN — COMPROBACIÓN DE VIABILIDAD
+Se confirmó una vía de adaptación mediante compilación Linux y un prototipo MPQ.
+Consultar verificacion-adaptacion-20261020/RESULTADO.txt para la evidencia nueva.

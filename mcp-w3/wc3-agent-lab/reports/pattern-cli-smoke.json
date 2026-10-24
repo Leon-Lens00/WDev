@@ -1,0 +1,93 @@
+[
+{
+  "text": "BlzSetUnitMaxHP(null, 100)",
+  "range": {
+    "byteOffset": {
+      "start": 145,
+      "end": 171
+    },
+    "start": {
+      "line": 3,
+      "column": 9
+    },
+    "end": {
+      "line": 3,
+      "column": 35
+    }
+  },
+  "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/pattern-comments.j",
+  "lines": "    call BlzSetUnitMaxHP(null, 100)",
+  "charCount": {
+    "leading": 9,
+    "trailing": 0
+  },
+  "language": "jass",
+  "metaVariables": {
+    "single": {},
+    "multi": {
+      "secondary": [
+        {
+          "text": "BlzSetUnitMaxHP",
+          "range": {
+            "byteOffset": {
+              "start": 145,
+              "end": 160
+            },
+            "start": {
+              "line": 3,
+              "column": 9
+            },
+            "end": {
+              "line": 3,
+              "column": 24
+            }
+          }
+        }
+      ]
+    },
+    "transformed": {}
+  },
+  "ruleId": "classic-modern-api-call",
+  "severity": "error",
+  "note": null,
+  "message": "API moderna: comprobar contra common.j de 1.27b",
+  "labels": [
+    {
+      "text": "BlzSetUnitMaxHP(null, 100)",
+      "range": {
+        "byteOffset": {
+          "start": 145,
+          "end": 171
+        },
+        "start": {
+          "line": 3,
+          "column": 9
+        },
+        "end": {
+          "line": 3,
+          "column": 35
+        }
+      },
+      "style": "primary"
+    },
+    {
+      "text": "BlzSetUnitMaxHP",
+      "range": {
+        "byteOffset": {
+          "start": 145,
+          "end": 160
+        },
+        "start": {
+          "line": 3,
+          "column": 9
+        },
+        "end": {
+          "line": 3,
+          "column": 24
+        }
+      },
+      "style": "secondary"
+    }
+  ]
+}
+]

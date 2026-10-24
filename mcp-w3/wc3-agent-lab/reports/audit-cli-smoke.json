@@ -1,0 +1,38 @@
+{
+  "status": "advisory",
+  "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-method.j",
+  "standardLibraries": [
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j"
+  ],
+  "parser": {
+    "errors": [],
+    "warnings": [],
+    "checkValidationErrors": []
+  },
+  "semantic": {
+    "errors": [
+      {
+        "start": {
+          "line": 6,
+          "position": 11
+        },
+        "end": {
+          "line": 6,
+          "position": 27
+        },
+        "message": "Method 'teleportToSafety' not found in struct instance 'Counter'",
+        "fix": "Check if the method name is correct or if the method is declared"
+      }
+    ],
+    "warnings": [],
+    "checkValidationErrors": []
+  },
+  "externalSymbols": 2174,
+  "limitations": [
+    "Not JassHelper/pJASS validation",
+    "Pass dependencies explicitly; no implicit workspace scan",
+    "The trial parser missed an incomplete assignment; an empty result is not approval",
+    "No proof of runtime behavior, MUI, leaks or multiplayer safety"
+  ]
+}

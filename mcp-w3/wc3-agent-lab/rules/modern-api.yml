@@ -1,0 +1,9 @@
+id: classic-modern-api-call
+language: jass
+severity: error
+message: "API moderna: comprobar contra common.j de 1.27b"
+rule:
+  kind: function_call
+  has:
+    field: name
+    regex: '^Blz[A-Za-z0-9_]+$'

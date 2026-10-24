@@ -1,0 +1,259 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "algorithm",
+    "source",
+    "source_sha256",
+    "terrain_sha256",
+    "doodads_sha256",
+    "palette",
+    "contexts",
+    "water_slk_offset",
+    "resource_hashes",
+    "terrain_properties",
+    "samples",
+    "features",
+    "training_counts",
+    "holdout_counts",
+    "iterations",
+    "random_candidates",
+    "frequency_weight",
+    "tv_limit",
+    "max_grassy_patch"
+  ],
+  "properties": {
+    "format": {
+      "const": "wc3-material-profile-v1"
+    },
+    "algorithm": {
+      "const": "context-patchmatch-v1"
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "terrain_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "doodads_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "palette": {
+      "const": [
+        "Zdrt",
+        "Zdtr",
+        "Zdrg",
+        "Zsan",
+        "Zbkl",
+        "Arck",
+        "Agrd",
+        "Alvd",
+        "Avin"
+      ]
+    },
+    "contexts": {
+      "const": [
+        "water",
+        "coast",
+        "rock-slope",
+        "rock-isolated",
+        "forest-interior",
+        "forest-edge",
+        "scene",
+        "clearing"
+      ]
+    },
+    "water_slk_offset": {
+      "type": "number"
+    },
+    "resource_hashes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      }
+    },
+    "terrain_properties": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    },
+    "samples": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_vertex",
+          "context",
+          "texture",
+          "variation",
+          "patch3",
+          "patch5",
+          "context5",
+          "split"
+        ],
+        "properties": {
+          "source_vertex": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 18720
+          },
+          "context": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 7
+          },
+          "texture": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 8
+          },
+          "variation": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 31
+          },
+          "patch3": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": -1,
+              "maximum": 8
+            },
+            "minItems": 9,
+            "maxItems": 9
+          },
+          "patch5": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": -1,
+              "maximum": 8
+            },
+            "minItems": 25,
+            "maxItems": 25
+          },
+          "context5": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": -1,
+              "maximum": 7
+            },
+            "minItems": 25,
+            "maxItems": 25
+          },
+          "split": {
+            "enum": [
+              "train",
+              "holdout"
+            ]
+          }
+        }
+      }
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "context",
+          "trees_256",
+          "rocks_192",
+          "slope_64",
+          "shore_distance"
+        ],
+        "properties": {
+          "context": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 7
+          },
+          "trees_256": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "rocks_192": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "slope_64": {
+            "type": "number",
+            "minimum": 0
+          },
+          "shore_distance": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      },
+      "minItems": 18721,
+      "maxItems": 18721
+    },
+    "training_counts": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "minItems": 9,
+        "maxItems": 9
+      },
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "holdout_counts": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "minItems": 9,
+        "maxItems": 9
+      },
+      "minItems": 8,
+      "maxItems": 8
+    },
+    "iterations": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "random_candidates": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "frequency_weight": {
+      "type": "number",
+      "minimum": 0
+    },
+    "tv_limit": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "max_grassy_patch": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Structural schema documenting the implemented v1 contract. Provenance, Classic geometry and hashes are checked by the Go loader/validator. Added at packaging; frozen material criteria unchanged."
+}

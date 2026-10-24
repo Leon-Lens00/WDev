@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wc3-forge:landscape-brief:v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "wc3-landscape-brief-v1"
+    },
+    "id": {
+      "enum": [
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "intent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "temple": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "circle": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "platform": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "lagoon": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "bridge": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "waterfall": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        }
+      },
+      "required": [
+        "temple",
+        "circle",
+        "platform",
+        "lagoon",
+        "bridge",
+        "waterfall"
+      ]
+    },
+    "seeds": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 2147483647
+      },
+      "minItems": 4,
+      "maxItems": 4,
+      "uniqueItems": true
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "parent": {
+            "type": "string",
+            "minLength": 1
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "isolated": {
+            "type": "boolean"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "parent",
+          "members",
+          "isolated",
+          "reason"
+        ]
+      },
+      "minItems": 1
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "same-landmass",
+              "near",
+              "access",
+              "crossing",
+              "feeds",
+              "shore-attached"
+            ]
+          },
+          "from": {
+            "type": "string",
+            "minLength": 1
+          },
+          "to": {
+            "type": "string",
+            "minLength": 1
+          },
+          "from_port": {
+            "type": "string",
+            "minLength": 1
+          },
+          "to_port": {
+            "type": "string",
+            "minLength": 1
+          },
+          "width": {
+            "type": "number",
+            "minimum": 64,
+            "maximum": 1024
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "from",
+          "to",
+          "from_port",
+          "to_port",
+          "width"
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "format",
+    "id",
+    "intent",
+    "counts",
+    "seeds",
+    "groups",
+    "relations"
+  ]
+}

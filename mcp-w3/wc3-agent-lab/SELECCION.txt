@@ -1,0 +1,47 @@
+SELECCIÓN DE HERRAMIENTAS — CachyOS / Warcraft III Classic 1.27b
+Fecha: 2026-10-20
+
+VEREDICTO
+De lo nuevo, conservar pre-commit 4.7.0 como automatización opcional para repositorios Git. No añadir un segundo compilador ni un segundo analizador obligatorio.
+Base existente: wc3lint para revisión conservadora de patrones, jassgraph para referencias léxicas, JassHelper + pJASS con los archivos API locales de Classic como validación de compilación. Las pruebas en juego siguen siendo necesarias para comportamiento; estas pruebas no certifican multijugador.
+
+PRE-COMMIT — SELECCIONADO, AÚN AISLADO
+Aporta ejecución automática al hacer commit, no reglas nuevas ni garantía de que la IA lo ejecute en cada edición. No reemplaza los checks del proceso de construcción.
+Detecté un defecto en nuestro adaptador: anunciaba .j/.jass/.vjass, pero wc3lint CLI sólo enumeraba .j; las otras dos extensiones terminaban con files=0 y exit=0.
+Corregí únicamente scripts/lint-batch.py del laboratorio: carga scan_file del mismo wc3lint y conserva las rutas originales; rechaza entradas ajenas a las tres extensiones.
+Prueba real de pre-commit en repositorio desechable: tres archivos de control aceptados y tres negativos con BlzSetUnitMaxHP bloqueados (uno de cada extensión). No se instalaron hooks en proyectos del usuario ni se cambió configuración global.
+Evidencia: evaluation/hook-extension-check.json (antes), hook-extension-check-after.json, hook-integration.json.
+Limitación heredada: wc3lint puede marcar cadenas y comentarios como código; no se corrigió ese analizador durante esta evaluación. Antes de convertirlo en bloqueo general conviene mejorar su manejo léxico y verificar esas regresiones.
+
+AST-GREP + TREE-SITTER-JASS / JASS-PATTERN-REVIEW — RESERVA DE LABORATORIO
+Ocho casos dirigidos: API moderna real, cadena que sólo menciona API moderna, comentario de bloque con API moderna, unidad creada localmente, unidad global, cámara local, RNG local, comentario de bloque con creación local.
+Ambos analizadores identificaron los tres casos de riesgo (API moderna, unidad local, RNG local). Ningún hallazgo nuevo de riesgo frente a wc3lint en esta muestra.
+ast-grep evitó la falsa alarma dentro de una cadena. Su adaptador rechazó explícitamente los dos casos con comentarios de bloque: esto es cobertura no disponible, no revisiones limpias.
+wc3lint produjo errores espurios en cadena y los dos comentarios de bloque.
+Los dos archivos reales de MoveSys fueron rechazados por el adaptador de patrones por contener vJASS. La gramática elegida soporta JASS puro: requiere primero compilar vJASS.
+Conclusión: utilidad puntual para consultas estructurales sobre JASS ya generado; no justifica integrarlo como segunda barrera obligatoria con estas dos reglas.
+Evidencia: evaluation/pattern-comparison.json, real-source-comparison.json.
+
+VJASS-AUDIT / PARSER TYPESCRIPT DE NAICHABAOBAO — DESCARTADO DEL FLUJO HABITUAL
+En MoveCast.j (842 líneas), con las cinco dependencias directas proporcionadas: 18 errores del parser, 24 errores semánticos y 82 avisos. No se afirma que todos sean falsos ni que el proyecto completo esté validado.
+Control concluyente aparte: evaluation/idiomatic-vjass.j usa local thistype this = thistype.allocate(). JassHelper y pJASS lo aceptaron. vjass-audit marcó this como nombre prohibido: falso positivo demostrado, independiente de dependencias externas.
+Además, los controles anteriores muestran que omite asignación incompleta y x++. Aporta ruido y cobertura insuficiente para adoptarlo como barrera de aprobación.
+Evidencia: evaluation/idiom-comparison.json; reports/vjass-parser-results.json.
+
+YDWE-COMPILER NATIVO / LSP RUST CANDIDATO — DESCARTADO COMO SUSTITUTO
+La comparación anterior contiene siete casos por dos compiladores. El candidato aceptó una llamada Blz y x++; el JassHelper local rechazó ambos. Incluso proporcionando common.j/Blizzard.j de Classic, no sirve como autoridad para 1.27b.
+LSP: sólo se sondearon símbolos y referencias; otras capacidades anunciadas no quedan acreditadas. No adoptar renombrado automático sin validar posiciones y expansión vJASS.
+No confundir este candidato del repositorio naichabaobao/jass con nuestro YDWE instalado.
+Evidencia: reports/compiler-comparison.json, comparison-summary.json, lsp-results.json.
+
+ESTADO Y ALCANCE
+Selección evaluada y registrada. Ninguna de estas herramientas nuevas se activó globalmente, ni se eliminaron las candidatas. El laboratorio y sus versiones quedan conservados para reproducibilidad. No se modificaron mapas, fuentes de MoveSys, skills, Forge ni launchers del entorno activo.
+Se compiló únicamente el control aislado idiomatic-vjass dentro del laboratorio; no se lanzó el juego.
+La falta de diagnósticos no constituye aprobación de sintaxis, ejecución o ausencia de desync.
+
+FUENTES PRIMARIAS
+pre-commit: https://pre-commit.com/
+ast-grep: https://ast-grep.github.io/advanced/custom-language.html
+Gramática JASS: https://github.com/WarRaft/tree-sitter-jass
+Parser y compilador candidato: https://github.com/naichabaobao/jass
+Versiones, commits y hashes descargados: manifest.json y requirements.lock.txt.

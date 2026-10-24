@@ -1,0 +1,352 @@
+==================
+Integer - decimal
+==================
+
+function Test takes nothing returns integer
+    return 42
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (number)))))
+
+==================
+Integer - hexadecimal
+==================
+
+function Test takes nothing returns integer
+    return 0xFF
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (number)))))
+
+==================
+Integer - hex with $ prefix
+==================
+
+function Test takes nothing returns integer
+    return $AABBCCDD
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (number)))))
+
+==================
+Integer - binary
+==================
+
+function Test takes nothing returns integer
+    return 0b1010
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (number)))))
+
+==================
+Integer - with separators
+==================
+
+function Test takes nothing returns integer
+    return 1_000_000
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (number)))))
+
+==================
+Float - decimal
+==================
+
+function Test takes nothing returns real
+    return 3.14
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (float)))))
+
+==================
+Float - scientific notation
+==================
+
+function Test takes nothing returns real
+    return 2.5e10
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (float)))))
+
+==================
+Float - leading dot
+==================
+
+function Test takes nothing returns real
+    return .3
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (float)))))
+
+==================
+Float - trailing dot
+==================
+
+function Test takes nothing returns real
+    return 4.
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (float)))))
+
+==================
+Float - with suffix
+==================
+
+function Test takes nothing returns real
+    return 1.0f
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (float)))))
+
+==================
+Identifier
+==================
+
+function Test takes nothing returns integer
+    return myVar
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (id)))))
+
+==================
+Boolean - true
+==================
+
+function Test takes nothing returns boolean
+    return true
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (id)))))
+
+==================
+Boolean - false
+==================
+
+function Test takes nothing returns boolean
+    return false
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (id)))))
+
+==================
+Null
+==================
+
+function Test takes nothing returns unit
+    return null
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (id)))))
+
+==================
+Rawcode (FourCC)
+==================
+
+function Test takes nothing returns integer
+    return 'cstr'
+endfunction
+
+---
+
+(program
+  (function_statement
+    name: (id)
+    return_type: (id)
+    (return_statement
+      (expr (rawcode)))))
+
+==================
+Rawcode in function call
+==================
+
+call SaveUnitHandle(Hash, TimerId, 'cstr', Caster)
+
+---
+
+(program
+  (call_statement
+    (function_call
+      name: (expr (id))
+      args: (function_arguments
+        (expr (id))
+        (expr (id))
+        (expr (rawcode))
+        (expr (id))))))
+
+
+
+==================
+String - simple
+==================
+
+"hello world"
+
+---
+
+(program
+  (expr (string)))
+
+==================
+String - escaped backslash
+==================
+
+"path\\to\\file"
+
+---
+
+(program
+  (expr (string (escape_sequence) (escape_sequence))))
+
+==================
+String - escaped quote
+==================
+
+"say \"hello\""
+
+---
+
+(program
+  (expr (string (escape_sequence) (escape_sequence))))
+
+==================
+String - mixed escapes
+==================
+
+"line1\\nline2\"end"
+
+---
+
+(program
+  (expr (string (escape_sequence) (escape_sequence))))
+
+==================
+String - only escapes
+==================
+
+"\\\""
+
+---
+
+(program
+  (expr (string (escape_sequence) (escape_sequence))))
+
+==================
+String - escaped newline
+==================
+
+"line1\nline2"
+
+---
+
+(program
+  (expr (string (escape_sequence))))
+
+==================
+String - escaped carriage return
+==================
+
+"line1\rline2"
+
+---
+
+(program
+  (expr (string (escape_sequence))))
+

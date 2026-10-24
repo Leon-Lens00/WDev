@@ -1,0 +1,247 @@
+[
+  {
+    "case": "good-vjass.j",
+    "tool": "candidate-native",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "command": [
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/bin/ydwe-compiler",
+      "--mode",
+      "native",
+      "--check",
+      "--target",
+      "jass",
+      "--no-compile-lua",
+      "--common-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "--blizzard-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/good-vjass.j"
+    ]
+  },
+  {
+    "case": "good-vjass.j",
+    "tool": "local-jasshelper",
+    "returncode": 0,
+    "stdout": "{\"compiled\": true, \"validated\": true, \"output\": \"/home/snz/Documentos/MCP W3/wc3-agent-lab/reports/good-vjass-compiled.j\", \"report\": \"/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261020-192426-419044\"}\n",
+    "stderr": "",
+    "command": [
+      "python3",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "vjass",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/good-vjass.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/reports/good-vjass-compiled.j"
+    ]
+  },
+  {
+    "case": "bad-modern.j",
+    "tool": "candidate-native",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "command": [
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/bin/ydwe-compiler",
+      "--mode",
+      "native",
+      "--check",
+      "--target",
+      "jass",
+      "--no-compile-lua",
+      "--common-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "--blizzard-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-modern.j"
+    ]
+  },
+  {
+    "case": "bad-modern.j",
+    "tool": "local-jasshelper",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "JassHelper no produjo salida v\u00e1lida. Registro: /home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261020-192428-558864\n",
+    "command": [
+      "python3",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "vjass",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-modern.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/reports/bad-modern-compiled.j"
+    ]
+  },
+  {
+    "case": "bad-invented.j",
+    "tool": "candidate-native",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "error[E0202](semantic) undefined function 'MakeUnitInvincibleForever' (called in function 'main')\n  --> /home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-invented.j:2:5\n        \n     2 |     call MakeUnitInvincibleForever(null)\n       |     ^\n\nCompilation finished: 1 error(s), 0 warning(s)\n",
+    "command": [
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/bin/ydwe-compiler",
+      "--mode",
+      "native",
+      "--check",
+      "--target",
+      "jass",
+      "--no-compile-lua",
+      "--common-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "--blizzard-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-invented.j"
+    ]
+  },
+  {
+    "case": "bad-invented.j",
+    "tool": "local-jasshelper",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "JassHelper no produjo salida v\u00e1lida. Registro: /home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261020-192430-141971\n",
+    "command": [
+      "python3",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "vjass",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-invented.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/reports/bad-invented-compiled.j"
+    ]
+  },
+  {
+    "case": "bad-method.j",
+    "tool": "candidate-native",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "error[E0202](semantic) undefined method 'teleportToSafety' on struct 'Counter' (called in function 'main')\n  --> /home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-method.j:8:5\n        \n     8 |     call c.destroy()\n       |     ^\n\nCompilation finished: 1 error(s), 0 warning(s)\n",
+    "command": [
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/bin/ydwe-compiler",
+      "--mode",
+      "native",
+      "--check",
+      "--target",
+      "jass",
+      "--no-compile-lua",
+      "--common-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "--blizzard-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-method.j"
+    ]
+  },
+  {
+    "case": "bad-method.j",
+    "tool": "local-jasshelper",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "JassHelper no produjo salida v\u00e1lida. Registro: /home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261020-192431-944112\n",
+    "command": [
+      "python3",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "vjass",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-method.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/reports/bad-method-compiled.j"
+    ]
+  },
+  {
+    "case": "bad-syntax.j",
+    "tool": "candidate-native",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "error[E001](tokenizer) expected expression, found Endfunction\n  --> /home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-syntax.j:2:22\n        \n     2 |     local integer x =\n       |                      \n\nCompilation finished: 1 error(s), 0 warning(s)\n",
+    "command": [
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/bin/ydwe-compiler",
+      "--mode",
+      "native",
+      "--check",
+      "--target",
+      "jass",
+      "--no-compile-lua",
+      "--common-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "--blizzard-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-syntax.j"
+    ]
+  },
+  {
+    "case": "bad-syntax.j",
+    "tool": "local-jasshelper",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "JassHelper no produjo salida v\u00e1lida. Registro: /home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261020-192433-610004\n",
+    "command": [
+      "python3",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "vjass",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-syntax.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/reports/bad-syntax-compiled.j"
+    ]
+  },
+  {
+    "case": "bad-local-state.j",
+    "tool": "candidate-native",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "warning[W001](handle-leak): possible handle leak: return value of `CreateUnit` is not assigned or destroyed\n",
+    "command": [
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/bin/ydwe-compiler",
+      "--mode",
+      "native",
+      "--check",
+      "--target",
+      "jass",
+      "--no-compile-lua",
+      "--common-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "--blizzard-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-local-state.j"
+    ]
+  },
+  {
+    "case": "bad-local-state.j",
+    "tool": "local-jasshelper",
+    "returncode": 0,
+    "stdout": "{\"compiled\": true, \"validated\": true, \"output\": \"/home/snz/Documentos/MCP W3/wc3-agent-lab/reports/bad-local-state-compiled.j\", \"report\": \"/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261020-192435-163129\"}\n",
+    "stderr": "",
+    "command": [
+      "python3",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "vjass",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-local-state.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/reports/bad-local-state-compiled.j"
+    ]
+  },
+  {
+    "case": "permissive-grammar.j",
+    "tool": "candidate-native",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "command": [
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/bin/ydwe-compiler",
+      "--mode",
+      "native",
+      "--check",
+      "--target",
+      "jass",
+      "--no-compile-lua",
+      "--common-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "--blizzard-j",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/permissive-grammar.j"
+    ]
+  },
+  {
+    "case": "permissive-grammar.j",
+    "tool": "local-jasshelper",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "JassHelper no produjo salida v\u00e1lida. Registro: /home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261020-192436-868306\n",
+    "command": [
+      "python3",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "vjass",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/permissive-grammar.j",
+      "/home/snz/Documentos/MCP W3/wc3-agent-lab/reports/permissive-grammar-compiled.j"
+    ]
+  }
+]

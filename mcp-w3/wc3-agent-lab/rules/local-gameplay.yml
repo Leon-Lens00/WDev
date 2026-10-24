@@ -1,0 +1,15 @@
+id: classic-local-gameplay-review
+language: jass
+severity: warning
+message: "Revisar operación de juego bajo GetLocalPlayer; requiere comprobar sincronización y flujo posterior"
+rule:
+  kind: function_call
+  has:
+    field: name
+    regex: '^(CreateUnit|CreateItem|CreateTimer|CreateGroup|DestroyGroup|DestroyTimer|KillUnit|RemoveUnit|GetRandomInt|GetRandomReal)$'
+  inside:
+    kind: if_statement
+    stopBy: end
+    has:
+      field: condition
+      regex: '\bGetLocalPlayer\s*\('

@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: wc3-classic-lint
+        name: Warcraft III Classic source checks
+        entry: python3 "/home/snz/Documentos/MCP W3/wc3-agent-lab/scripts/lint-batch.py"
+        language: system
+        files: '\.(j|jass|vjass)$'
+        require_serial: true

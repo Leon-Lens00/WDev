@@ -1,0 +1,83 @@
+VIABILIDAD DE WC3CTL 0.4.10 EN CACHYOS Y WARCRAFT III 1.27b
+Fecha local: 20 de octubre de 2026 (America/Lima).
+Resultado: SÍ, la adaptación es técnicamente viable. No se encontró un bloqueo de arquitectura.
+Estado más fuerte alcanzado: Validated.
+Alcance: compilación, ejecución de CLI/MCP, prototipo del proveedor MPQ y arranque de Studio.
+No se probó un mapa resultante dentro del motor Warcraft III ni se probó multijugador.
+Esta comprobación no equivale a una adaptación completa instalada para uso cotidiano.
+
+EVIDENCIA NUEVA
+1. SDK Linux .NET 8.0.426 en /tmp/wc3ctl-adaptation-20261020/dotnet.
+   Runtime de prueba 8.0.32. No se instaló un paquete del sistema.
+2. CLI original 0.4.10 compilada y publicada para Linux sin cambios de fuente.
+   `mcp version` responde wc3ctl mcp 0.4.10.
+3. Servidor MCP nativo: initialize correcto, 267 herramientas y llamada real de lectura
+   de mapa por stdio. Sin registro del servidor en aplicaciones.
+4. Copia del mapa Islas Eco de la instalación Classic: lectura sin diagnósticos;
+   roundtrip Faithful=true, sin diferencias de contenido. Se regeneran listfile y
+   attributes como metadatos MPQ, tal como informa la herramienta.
+5. Perfil TFT-v1.27b: 150 identificadores comprobados, sin hallazgos en ese mapa.
+   No había campos modificados de objetos en esa muestra (FieldsChecked=0).
+   BlzGetUnitMaxHP se identifica correctamente como ausente en 1.27b.
+6. 50 pruebas originales seleccionadas pasaron, 0 fallidas y 0 omitidas:
+   RoundtripTests, TargetCompatTests, GameInstallTests y GameSchemaTests.
+7. Se localizó una adaptación previa 0.3.0 en el entorno FrozenThone. Su lector de
+   archivos Classic se reutilizó en un prototipo aislado de la biblioteca GameData
+   de 0.4.10. Los fuentes descargados de 0.4.10 no recibieron ese parche.
+8. El prototipo pasó 15 comprobaciones con los MPQ reales de la instalación local:
+   lectura de common.j, Blizzard.j, tablas, TriggerData.txt y modelo Footman;
+   common.j coincide byte por byte con la toolchain local 1.27b; precedencia del
+   parche comprobada; carga de almacenes y lectura diferida de modelos correctas.
+   hfoo devuelve 179 campos y hay 799 códigos de habilidad. Sin diagnósticos de objetos.
+9. Studio original compiló y abrió una copia de Islas Eco en CachyOS/Hyprland,
+   mediante XWayland. La carga base original falla por CascLib.dll, como se esperaba.
+10. Sustituyendo únicamente la biblioteca GameData en la publicación TEMPORAL de
+    Studio por la del prototipo (versión de ensamblado 0.4.10), desapareció ese error
+    y se cargaron 837 unidades, 469 doodads, 273 ítems y 247 destructibles.
+    Captura: studio-with-mpq.png. Esto verifica catálogo y arranque; no acredita
+    renderizado 3D, todos los modelos, todas las pestañas o todas las operaciones.
+
+CAMBIOS NECESARIOS PARA UNA ADAPTACIÓN COMPLETA
+ERROR — El proveedor base original usa CASC/Reforged. Portar formalmente el lector
+MPQ probado, incluyendo GameDataContext y los comandos que aún abren CASC de forma
+explícita (p. ej. snapshot y extracción de esquemas). Respetar prioridad de
+War3Patch.mpq > War3xlocal.mpq > War3x.mpq > war3.mpq y nombres sin distinción de caja.
+
+ERROR — `new` genera war3map.w3i versión 28 incluso con
+WC3_TARGET_BUILD=TFT-v1.27b. Se comprobó extrayendo los bytes, no sólo leyendo código.
+1.27b necesita versión 25 o anterior. Hacer que los mapas nuevos y sus guardados
+respeten formatos Classic, JASS y límites 1.27b. El perfil de análisis existente no
+convierte automáticamente los formatos ni garantiza todas las salidas de edición.
+
+WARNING — Audio de Studio y MP3 usan APIs Windows (NAudio/Media Foundation,
+WaveOut/WASAPI). Sustituirlas por audio Linux o deshabilitar explícitamente las
+funciones no soportadas hasta implementarlas.
+
+WARNING — Test in WC3, test-load y trazas lanzan ejecutables Windows directamente;
+algunas funciones usan user32.dll/kernel32.dll. Integrar el lanzador Wine/Proton
+existente y adaptar las sondas. El juego 1.27b seguirá ejecutándose mediante Wine.
+
+WARNING — Setup de clientes, búsqueda de ejecutables, edición de PATH y asociaciones
+incluyen supuestos Windows. Preparar lanzadores Linux y configuración MCP con rutas
+Linux y objetivo explícito TFT-v1.27b. No usar install.ps1 como instalador CachyOS.
+
+WARNING — Pruebas pendientes: edición/guardado de objetos y triggers con formatos
+Classic, assets 1.27b, compilación JASS con la toolchain local y apertura de una copia
+resultante en Warcraft III 1.27b. No se ejecutó toda la suite ni una prueba de juego.
+
+ARCHIVOS Y REPRODUCCIÓN
+- build-cli.log / build-studio.log: compilaciones originales Linux.
+- tests-portability.log: las 50 pruebas seleccionadas.
+- classic-probe.log: 15 controles sobre datos locales reales.
+- mcp-probe.json: inicialización y llamada MCP real.
+- new-map-format.json: incompatibilidad del formato de mapa nuevo predeterminado.
+- prototipo-mpq-0.4.10.patch: adaptación mínima de cuatro archivos de GameData.
+- prototipo-lector-mpq/: fuentes del prototipo y programa de comprobación.
+  Ejecutar con .NET SDK 8:
+  dotnet run --project prototipo-lector-mpq/Probe.csproj -c Release -- GAME_DIR COMMON_J
+  GAME_DIR y COMMON_J son las rutas reales indicadas en classic-probe.log y en la
+  toolchain local. El lector se ha reutilizado del entorno local 0.3.0, no es una
+  capacidad oficialmente publicada de wc3ctl 0.4.10.
+- Las publicaciones ejecutadas permanecen en /tmp/wc3ctl-adaptation-20261020.
+  Son temporales; estos fuentes y registros se guardan en esta carpeta de evidencia.
+- No se alteró el original de Islas Eco: SHA-256 comprobado antes/después.

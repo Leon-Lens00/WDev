@@ -1,0 +1,8 @@
+{
+  "markovjunior": {"repository":"https://github.com/mxgmn/MarkovJunior","revision":"42aaf24bcf54ae164fba49c0a59348297904a676","patch":"markovjunior-sample-bounds.patch","patch_version":"sample-bounds-v1","license":"MIT"},
+  "dotnet_sdk":"10.0.401",
+  "go_tested":"1.26.1",
+  "imagesharp":"3.1.12",
+  "target":"Warcraft III Classic 1.27b; Game.dll 1.27.1.7085",
+  "note":"ImageSharp has its own Six Labors license; see the restored package license. The classic game data and user map are external local inputs."
+}

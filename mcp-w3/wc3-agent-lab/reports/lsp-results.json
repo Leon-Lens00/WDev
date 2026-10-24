@@ -1,0 +1,1067 @@
+{
+  "command": [
+    "/home/snz/Documentos/MCP W3/wc3-agent-lab/bin/ydwe-compiler",
+    "--lsp",
+    "--no-compile-lua",
+    "--common-j",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+    "--blizzard-j",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j"
+  ],
+  "initialize": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+      "capabilities": {
+        "callHierarchyProvider": true,
+        "codeActionProvider": true,
+        "codeLensProvider": {
+          "resolveProvider": false
+        },
+        "completionProvider": {
+          "resolveProvider": false,
+          "triggerCharacters": [
+            ".",
+            "("
+          ]
+        },
+        "definitionProvider": true,
+        "documentFormattingProvider": true,
+        "documentHighlightProvider": true,
+        "documentSymbolProvider": true,
+        "foldingRangeProvider": true,
+        "hoverProvider": true,
+        "implementationProvider": true,
+        "inlayHintProvider": {
+          "resolveProvider": false
+        },
+        "referencesProvider": true,
+        "renameProvider": {
+          "prepareProvider": true
+        },
+        "selectionRangeProvider": true,
+        "semanticTokensProvider": {
+          "full": true,
+          "legend": {
+            "tokenModifiers": [
+              "declaration",
+              "readonly",
+              "defaultLibrary"
+            ],
+            "tokenTypes": [
+              "namespace",
+              "type",
+              "function",
+              "method",
+              "variable",
+              "parameter",
+              "keyword",
+              "comment",
+              "string",
+              "number",
+              "macro"
+            ]
+          },
+          "range": false
+        },
+        "signatureHelpProvider": {
+          "retriggerCharacters": [
+            ","
+          ],
+          "triggerCharacters": [
+            "(",
+            ","
+          ]
+        },
+        "textDocumentSync": 1,
+        "typeHierarchyProvider": true,
+        "workspace": {
+          "workspaceFolders": {
+            "changeNotifications": true,
+            "supported": true
+          }
+        },
+        "workspaceSymbolProvider": true
+      },
+      "serverInfo": {
+        "name": "ydwe-compiler",
+        "version": "0.3.0"
+      }
+    }
+  },
+  "symbols": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": [
+      {
+        "children": [
+          {
+            "detail": "",
+            "kind": 23,
+            "name": "Counter",
+            "range": {
+              "end": {
+                "character": 14,
+                "line": 1
+              },
+              "start": {
+                "character": 7,
+                "line": 1
+              }
+            },
+            "selectionRange": {
+              "end": {
+                "character": 14,
+                "line": 1
+              },
+              "start": {
+                "character": 7,
+                "line": 1
+              }
+            }
+          }
+        ],
+        "detail": "",
+        "kind": 2,
+        "name": "Probe",
+        "range": {
+          "end": {
+            "character": 13,
+            "line": 0
+          },
+          "start": {
+            "character": 8,
+            "line": 0
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 13,
+            "line": 0
+          },
+          "start": {
+            "character": 8,
+            "line": 0
+          }
+        }
+      },
+      {
+        "detail": "integer",
+        "kind": 12,
+        "name": "s__Counter__allocate",
+        "range": {
+          "end": {
+            "character": 20,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 20,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        }
+      },
+      {
+        "detail": "integer",
+        "kind": 12,
+        "name": "s__Counter__new",
+        "range": {
+          "end": {
+            "character": 15,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 15,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        }
+      },
+      {
+        "detail": "nothing",
+        "kind": 12,
+        "name": "config",
+        "range": {
+          "end": {
+            "character": 15,
+            "line": 13
+          },
+          "start": {
+            "character": 9,
+            "line": 13
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 15,
+            "line": 13
+          },
+          "start": {
+            "character": 9,
+            "line": 13
+          }
+        }
+      },
+      {
+        "detail": "integer this -> nothing",
+        "kind": 12,
+        "name": "s__Counter__deallocate",
+        "range": {
+          "end": {
+            "character": 22,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 22,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        }
+      },
+      {
+        "detail": "nothing",
+        "kind": 12,
+        "name": "main",
+        "range": {
+          "end": {
+            "character": 13,
+            "line": 15
+          },
+          "start": {
+            "character": 9,
+            "line": 15
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 13,
+            "line": 15
+          },
+          "start": {
+            "character": 9,
+            "line": 15
+          }
+        }
+      },
+      {
+        "detail": "integer this -> nothing",
+        "kind": 12,
+        "name": "s__Counter__destroy",
+        "range": {
+          "end": {
+            "character": 19,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 19,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        }
+      },
+      {
+        "detail": "nothing",
+        "kind": 12,
+        "name": "Probe_Init",
+        "range": {
+          "end": {
+            "character": 10,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 10,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        }
+      },
+      {
+        "detail": "integer",
+        "kind": 12,
+        "name": "s__Counter__create",
+        "range": {
+          "end": {
+            "character": 18,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 18,
+            "line": 0
+          },
+          "start": {
+            "character": 0,
+            "line": 0
+          }
+        }
+      },
+      {
+        "detail": "nothing",
+        "kind": 6,
+        "name": "step",
+        "range": {
+          "end": {
+            "character": 15,
+            "line": 3
+          },
+          "start": {
+            "character": 11,
+            "line": 3
+          }
+        },
+        "selectionRange": {
+          "end": {
+            "character": 15,
+            "line": 3
+          },
+          "start": {
+            "character": 11,
+            "line": 3
+          }
+        }
+      }
+    ]
+  },
+  "references": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": [
+      {
+        "range": {
+          "end": {
+            "character": 15,
+            "line": 3
+          },
+          "start": {
+            "character": 11,
+            "line": 3
+          }
+        },
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/good-vjass.j"
+      },
+      {
+        "range": {
+          "end": {
+            "character": 15,
+            "line": 9
+          },
+          "start": {
+            "character": 11,
+            "line": 9
+          }
+        },
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/good-vjass.j"
+      },
+      {
+        "range": {
+          "end": {
+            "character": 15,
+            "line": 1
+          },
+          "start": {
+            "character": 11,
+            "line": 1
+          }
+        },
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-method.j"
+      }
+    ]
+  },
+  "messages": [
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "capabilities": {
+          "callHierarchyProvider": true,
+          "codeActionProvider": true,
+          "codeLensProvider": {
+            "resolveProvider": false
+          },
+          "completionProvider": {
+            "resolveProvider": false,
+            "triggerCharacters": [
+              ".",
+              "("
+            ]
+          },
+          "definitionProvider": true,
+          "documentFormattingProvider": true,
+          "documentHighlightProvider": true,
+          "documentSymbolProvider": true,
+          "foldingRangeProvider": true,
+          "hoverProvider": true,
+          "implementationProvider": true,
+          "inlayHintProvider": {
+            "resolveProvider": false
+          },
+          "referencesProvider": true,
+          "renameProvider": {
+            "prepareProvider": true
+          },
+          "selectionRangeProvider": true,
+          "semanticTokensProvider": {
+            "full": true,
+            "legend": {
+              "tokenModifiers": [
+                "declaration",
+                "readonly",
+                "defaultLibrary"
+              ],
+              "tokenTypes": [
+                "namespace",
+                "type",
+                "function",
+                "method",
+                "variable",
+                "parameter",
+                "keyword",
+                "comment",
+                "string",
+                "number",
+                "macro"
+              ]
+            },
+            "range": false
+          },
+          "signatureHelpProvider": {
+            "retriggerCharacters": [
+              ","
+            ],
+            "triggerCharacters": [
+              "(",
+              ","
+            ]
+          },
+          "textDocumentSync": 1,
+          "typeHierarchyProvider": true,
+          "workspace": {
+            "workspaceFolders": {
+              "changeNotifications": true,
+              "supported": true
+            }
+          },
+          "workspaceSymbolProvider": true
+        },
+        "serverInfo": {
+          "name": "ydwe-compiler",
+          "version": "0.3.0"
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/good-vjass.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/good-vjass.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-modern.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/good-vjass.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "code": "E0202",
+            "message": "[E0202] [line 2:col 5] undefined function 'MakeUnitInvincibleForever' (called in function 'main')",
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 3
+              },
+              "start": {
+                "character": 0,
+                "line": 0
+              }
+            },
+            "severity": 1,
+            "source": "ydwe-compiler"
+          }
+        ],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-invented.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-modern.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "code": "E0202",
+            "message": "[E0202] [line 2:col 5] undefined function 'MakeUnitInvincibleForever' (called in function 'main')",
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 3
+              },
+              "start": {
+                "character": 0,
+                "line": 0
+              }
+            },
+            "severity": 1,
+            "source": "ydwe-compiler"
+          }
+        ],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-invented.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-modern.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/good-vjass.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "code": "E0202",
+            "message": "[E0202] [line 8:col 5] undefined method 'teleportToSafety' on struct 'Counter' (called in function 'main')",
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 1
+              },
+              "start": {
+                "character": 10,
+                "line": 6
+              }
+            },
+            "severity": 1,
+            "source": "ydwe-compiler"
+          }
+        ],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-method.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "code": "E0202",
+            "message": "[E0202] [line 2:col 5] undefined function 'MakeUnitInvincibleForever' (called in function 'main')",
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 3
+              },
+              "start": {
+                "character": 0,
+                "line": 0
+              }
+            },
+            "severity": 1,
+            "source": "ydwe-compiler"
+          }
+        ],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-invented.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "message": "error[E001] expected expression, found Endfunction",
+            "range": {
+              "end": {
+                "character": 22,
+                "line": 1
+              },
+              "start": {
+                "character": 21,
+                "line": 1
+              }
+            },
+            "severity": 1,
+            "source": "ydwe-compiler"
+          }
+        ],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-syntax.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-modern.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/good-vjass.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "textDocument/publishDiagnostics",
+      "params": {
+        "diagnostics": [
+          {
+            "code": "E0202",
+            "message": "[E0202] [line 8:col 5] undefined method 'teleportToSafety' on struct 'Counter' (called in function 'main')",
+            "range": {
+              "end": {
+                "character": 0,
+                "line": 1
+              },
+              "start": {
+                "character": 10,
+                "line": 6
+              }
+            },
+            "severity": 1,
+            "source": "ydwe-compiler"
+          }
+        ],
+        "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-method.j",
+        "version": 1
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": [
+        {
+          "children": [
+            {
+              "detail": "",
+              "kind": 23,
+              "name": "Counter",
+              "range": {
+                "end": {
+                  "character": 14,
+                  "line": 1
+                },
+                "start": {
+                  "character": 7,
+                  "line": 1
+                }
+              },
+              "selectionRange": {
+                "end": {
+                  "character": 14,
+                  "line": 1
+                },
+                "start": {
+                  "character": 7,
+                  "line": 1
+                }
+              }
+            }
+          ],
+          "detail": "",
+          "kind": 2,
+          "name": "Probe",
+          "range": {
+            "end": {
+              "character": 13,
+              "line": 0
+            },
+            "start": {
+              "character": 8,
+              "line": 0
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 13,
+              "line": 0
+            },
+            "start": {
+              "character": 8,
+              "line": 0
+            }
+          }
+        },
+        {
+          "detail": "integer",
+          "kind": 12,
+          "name": "s__Counter__allocate",
+          "range": {
+            "end": {
+              "character": 20,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 20,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "detail": "integer",
+          "kind": 12,
+          "name": "s__Counter__new",
+          "range": {
+            "end": {
+              "character": 15,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 15,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "detail": "nothing",
+          "kind": 12,
+          "name": "config",
+          "range": {
+            "end": {
+              "character": 15,
+              "line": 13
+            },
+            "start": {
+              "character": 9,
+              "line": 13
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 15,
+              "line": 13
+            },
+            "start": {
+              "character": 9,
+              "line": 13
+            }
+          }
+        },
+        {
+          "detail": "integer this -> nothing",
+          "kind": 12,
+          "name": "s__Counter__deallocate",
+          "range": {
+            "end": {
+              "character": 22,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 22,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "detail": "nothing",
+          "kind": 12,
+          "name": "main",
+          "range": {
+            "end": {
+              "character": 13,
+              "line": 15
+            },
+            "start": {
+              "character": 9,
+              "line": 15
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 13,
+              "line": 15
+            },
+            "start": {
+              "character": 9,
+              "line": 15
+            }
+          }
+        },
+        {
+          "detail": "integer this -> nothing",
+          "kind": 12,
+          "name": "s__Counter__destroy",
+          "range": {
+            "end": {
+              "character": 19,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 19,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "detail": "nothing",
+          "kind": 12,
+          "name": "Probe_Init",
+          "range": {
+            "end": {
+              "character": 10,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 10,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "detail": "integer",
+          "kind": 12,
+          "name": "s__Counter__create",
+          "range": {
+            "end": {
+              "character": 18,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 18,
+              "line": 0
+            },
+            "start": {
+              "character": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "detail": "nothing",
+          "kind": 6,
+          "name": "step",
+          "range": {
+            "end": {
+              "character": 15,
+              "line": 3
+            },
+            "start": {
+              "character": 11,
+              "line": 3
+            }
+          },
+          "selectionRange": {
+            "end": {
+              "character": 15,
+              "line": 3
+            },
+            "start": {
+              "character": 11,
+              "line": 3
+            }
+          }
+        }
+      ]
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": [
+        {
+          "range": {
+            "end": {
+              "character": 15,
+              "line": 3
+            },
+            "start": {
+              "character": 11,
+              "line": 3
+            }
+          },
+          "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/good-vjass.j"
+        },
+        {
+          "range": {
+            "end": {
+              "character": 15,
+              "line": 9
+            },
+            "start": {
+              "character": 11,
+              "line": 9
+            }
+          },
+          "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/good-vjass.j"
+        },
+        {
+          "range": {
+            "end": {
+              "character": 15,
+              "line": 1
+            },
+            "start": {
+              "character": 11,
+              "line": 1
+            }
+          },
+          "uri": "file:///home/snz/Documentos/MCP%20W3/wc3-agent-lab/fixtures/bad-method.j"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "local_jasshelper": {
+    "exit": 0,
+    "result": {
+      "compiled": true,
+      "validated": true,
+      "output": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/idiomatic-vjass-compiled.j",
+      "report": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261020-194248-668634"
+    },
+    "stderr": ""
+  },
+  "candidate_audit": {
+    "exit": 0,
+    "result": {
+      "status": "advisory",
+      "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/idiomatic-vjass.j",
+      "standardLibraries": [
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j"
+      ],
+      "parser": {
+        "errors": [],
+        "warnings": [],
+        "checkValidationErrors": []
+      },
+      "semantic": {
+        "errors": [
+          {
+            "start": {
+              "line": 4,
+              "position": 23
+            },
+            "end": {
+              "line": 4,
+              "position": 27
+            },
+            "message": "Variable name 'this' conflicts with a vJASS keyword. Variable names cannot be keywords",
+            "fix": "Rename the variable to a non-keyword name, for example: 'thisVar' or 'myThis'"
+          }
+        ],
+        "warnings": [],
+        "checkValidationErrors": []
+      },
+      "externalSymbols": 2174,
+      "limitations": [
+        "Not JassHelper/pJASS validation",
+        "Pass dependencies explicitly; no implicit workspace scan",
+        "The trial parser missed an incomplete assignment; an empty result is not approval",
+        "No proof of runtime behavior, MUI, leaks or multiplayer safety"
+      ]
+    },
+    "stderr": ""
+  }
+}

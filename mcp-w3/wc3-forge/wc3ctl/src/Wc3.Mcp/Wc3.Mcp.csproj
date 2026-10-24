@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <!-- The server's identity (see ServerIdentity.cs). The public wc3-mcp repository is exported
+         from this source and overrides these, with AssemblyName and Version, in its
+         Directory.Build.props, so this file never has to differ between the two. -->
+    <McpProductId Condition="'$(McpProductId)' == ''">wc3ctl</McpProductId>
+    <McpServerName Condition="'$(McpServerName)' == ''">wc3ctl</McpServerName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyMetadata Include="McpProductId" Value="$(McpProductId)" />
+    <AssemblyMetadata Include="McpServerName" Value="$(McpServerName)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Official MCP C# SDK (stable). Its Microsoft.Extensions.* transitives stay
+         isolated to this exe — never add them to the version-pinned projects. -->
+    <PackageReference Include="ModelContextProtocol" Version="1.4.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Wc3.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wc3.Commands\Wc3.Commands.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The reference documents the server serves as MCP resources (see Wc3Context.cs),
+         copied beside the exe so a client can read a whole document. -->
+    <Content Include="context\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

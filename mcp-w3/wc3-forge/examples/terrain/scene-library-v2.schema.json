@@ -1,0 +1,373 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wc3-forge:scene-library:v2",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "wc3-composition-library-v2"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "source",
+          "blend",
+          "rotations",
+          "anchors",
+          "kind",
+          "groups",
+          "required",
+          "optional",
+          "habitat",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source": {
+            "$ref": "#/$defs/rect"
+          },
+          "blend": {
+            "type": "number",
+            "minimum": 256,
+            "maximum": 1024
+          },
+          "rotations": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                0,
+                90,
+                180,
+                270
+              ]
+            }
+          },
+          "anchors": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/$defs/point"
+            }
+          },
+          "adjustments": {
+            "type": "object",
+            "propertyNames": {
+              "pattern": "^[0-9]+$"
+            },
+            "additionalProperties": {
+              "$ref": "#/$defs/point"
+            }
+          },
+          "kind": {
+            "enum": [
+              "main",
+              "micro"
+            ]
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "required": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "uniqueItems": true
+          },
+          "optional": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "uniqueItems": true
+          },
+          "habitat": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "uniqueItems": true
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "members"
+        ]
+      },
+      "minItems": 1
+    },
+    "recipes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "habitat": {
+            "type": "string",
+            "minLength": 1
+          },
+          "height_policy": {
+            "type": "string",
+            "minLength": 1
+          },
+          "density": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "id",
+          "source_ids",
+          "habitat",
+          "height_policy",
+          "density"
+        ]
+      }
+    },
+    "forest_cohorts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "minimum_spacing": {
+            "type": "number"
+          },
+          "close_pair_spacing": {
+            "type": "number"
+          },
+          "thin_close_pairs": {
+            "type": "boolean"
+          },
+          "anchor_neighbor_max": {
+            "type": "number"
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "bounds": {
+            "$ref": "#/$defs/rect"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "minItems": 30,
+            "uniqueItems": true
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "minimum_spacing",
+          "close_pair_spacing",
+          "thin_close_pairs",
+          "anchor_neighbor_max",
+          "id",
+          "bounds",
+          "source_ids",
+          "evidence"
+        ]
+      },
+      "minItems": 1
+    },
+    "coverage": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[0-9]+$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "review": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_sha256": {
+      "type": "string",
+      "pattern": "^[a-fA-F0-9]{64}$"
+    }
+  },
+  "required": [
+    "format",
+    "source_sha256",
+    "components",
+    "groups",
+    "recipes",
+    "forest_cohorts",
+    "coverage",
+    "review",
+    "review_sha256"
+  ],
+  "$defs": {
+    "point": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "rect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "min",
+        "max"
+      ],
+      "properties": {
+        "min": {
+          "$ref": "#/$defs/point"
+        },
+        "max": {
+          "$ref": "#/$defs/point"
+        }
+      }
+    },
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 4,
+        "maxLength": 4
+      }
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source",
+        "blend",
+        "rotations",
+        "anchors"
+      ],
+      "properties": {
+        "id": {
+          "enum": [
+            "circle",
+            "temple",
+            "platform",
+            "lagoon",
+            "bridge",
+            "waterfall"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/rect"
+        },
+        "blend": {
+          "type": "number",
+          "minimum": 256,
+          "maximum": 1024
+        },
+        "rotations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "const": 0
+          }
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/point"
+          }
+        },
+        "adjustments": {
+          "type": "object",
+          "propertyNames": {
+            "pattern": "^[0-9]+$"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/point"
+          }
+        }
+      }
+    }
+  }
+}

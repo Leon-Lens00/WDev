@@ -1,0 +1,312 @@
+[
+  {
+    "case": "pattern-comments.j",
+    "exit": 1,
+    "result": {
+      "status": "advisory",
+      "coverage": [
+        {
+          "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/pattern-comments.j",
+          "parser_errors": false,
+          "possible_vjass_blocks": 0
+        }
+      ],
+      "findings": [
+        {
+          "text": "BlzSetUnitMaxHP(null, 100)",
+          "range": {
+            "byteOffset": {
+              "start": 145,
+              "end": 171
+            },
+            "start": {
+              "line": 3,
+              "column": 9
+            },
+            "end": {
+              "line": 3,
+              "column": 35
+            }
+          },
+          "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/pattern-comments.j",
+          "lines": "    call BlzSetUnitMaxHP(null, 100)",
+          "charCount": {
+            "leading": 9,
+            "trailing": 0
+          },
+          "language": "jass",
+          "metaVariables": {
+            "single": {},
+            "multi": {
+              "secondary": [
+                {
+                  "text": "BlzSetUnitMaxHP",
+                  "range": {
+                    "byteOffset": {
+                      "start": 145,
+                      "end": 160
+                    },
+                    "start": {
+                      "line": 3,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 24
+                    }
+                  }
+                }
+              ]
+            },
+            "transformed": {}
+          },
+          "ruleId": "classic-modern-api-call",
+          "severity": "error",
+          "note": null,
+          "message": "API moderna: comprobar contra common.j de 1.27b",
+          "labels": [
+            {
+              "text": "BlzSetUnitMaxHP(null, 100)",
+              "range": {
+                "byteOffset": {
+                  "start": 145,
+                  "end": 171
+                },
+                "start": {
+                  "line": 3,
+                  "column": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 35
+                }
+              },
+              "style": "primary"
+            },
+            {
+              "text": "BlzSetUnitMaxHP",
+              "range": {
+                "byteOffset": {
+                  "start": 145,
+                  "end": 160
+                },
+                "start": {
+                  "line": 3,
+                  "column": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 24
+                }
+              },
+              "style": "secondary"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Permissive JASS grammar, not a compiler",
+        "No proof of absence of bugs or desync",
+        "Run JassHelper/pJASS and applicable game tests"
+      ]
+    }
+  },
+  {
+    "case": "good-vjass.j",
+    "exit": 2,
+    "result": {
+      "status": "unsupported_or_unparsed",
+      "coverage": [
+        {
+          "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/good-vjass.j",
+          "parser_errors": true,
+          "possible_vjass_blocks": 6
+        }
+      ],
+      "findings": [],
+      "action": "Compile vJASS with the exact JassHelper first; do not treat this as an empty review."
+    }
+  },
+  {
+    "case": "bad-local-state.j",
+    "exit": 0,
+    "result": {
+      "status": "advisory",
+      "coverage": [
+        {
+          "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-local-state.j",
+          "parser_errors": false,
+          "possible_vjass_blocks": 0
+        }
+      ],
+      "findings": [
+        {
+          "text": "CreateUnit(Player(0), 'hfoo', 0., 0., 0.)",
+          "range": {
+            "byteOffset": {
+              "start": 99,
+              "end": 140
+            },
+            "start": {
+              "line": 2,
+              "column": 13
+            },
+            "end": {
+              "line": 2,
+              "column": 54
+            }
+          },
+          "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-local-state.j",
+          "lines": "        call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)",
+          "charCount": {
+            "leading": 13,
+            "trailing": 0
+          },
+          "language": "jass",
+          "metaVariables": {
+            "single": {},
+            "multi": {
+              "secondary": [
+                {
+                  "text": "GetLocalPlayer() == Player(0)",
+                  "range": {
+                    "byteOffset": {
+                      "start": 51,
+                      "end": 80
+                    },
+                    "start": {
+                      "line": 1,
+                      "column": 7
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 36
+                    }
+                  }
+                },
+                {
+                  "text": "if GetLocalPlayer() == Player(0) then\n        call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)\n    endif",
+                  "range": {
+                    "byteOffset": {
+                      "start": 48,
+                      "end": 150
+                    },
+                    "start": {
+                      "line": 1,
+                      "column": 4
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 9
+                    }
+                  }
+                },
+                {
+                  "text": "CreateUnit",
+                  "range": {
+                    "byteOffset": {
+                      "start": 99,
+                      "end": 109
+                    },
+                    "start": {
+                      "line": 2,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 23
+                    }
+                  }
+                }
+              ]
+            },
+            "transformed": {}
+          },
+          "ruleId": "classic-local-gameplay-review",
+          "severity": "warning",
+          "note": null,
+          "message": "Revisar operaci\u00f3n de juego bajo GetLocalPlayer; requiere comprobar sincronizaci\u00f3n y flujo posterior",
+          "labels": [
+            {
+              "text": "CreateUnit(Player(0), 'hfoo', 0., 0., 0.)",
+              "range": {
+                "byteOffset": {
+                  "start": 99,
+                  "end": 140
+                },
+                "start": {
+                  "line": 2,
+                  "column": 13
+                },
+                "end": {
+                  "line": 2,
+                  "column": 54
+                }
+              },
+              "style": "primary"
+            },
+            {
+              "text": "GetLocalPlayer() == Player(0)",
+              "range": {
+                "byteOffset": {
+                  "start": 51,
+                  "end": 80
+                },
+                "start": {
+                  "line": 1,
+                  "column": 7
+                },
+                "end": {
+                  "line": 1,
+                  "column": 36
+                }
+              },
+              "style": "secondary"
+            },
+            {
+              "text": "if GetLocalPlayer() == Player(0) then\n        call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)\n    endif",
+              "range": {
+                "byteOffset": {
+                  "start": 48,
+                  "end": 150
+                },
+                "start": {
+                  "line": 1,
+                  "column": 4
+                },
+                "end": {
+                  "line": 3,
+                  "column": 9
+                }
+              },
+              "style": "secondary"
+            },
+            {
+              "text": "CreateUnit",
+              "range": {
+                "byteOffset": {
+                  "start": 99,
+                  "end": 109
+                },
+                "start": {
+                  "line": 2,
+                  "column": 13
+                },
+                "end": {
+                  "line": 2,
+                  "column": 23
+                }
+              },
+              "style": "secondary"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Permissive JASS grammar, not a compiler",
+        "No proof of absence of bugs or desync",
+        "Run JassHelper/pJASS and applicable game tests"
+      ]
+    }
+  }
+]

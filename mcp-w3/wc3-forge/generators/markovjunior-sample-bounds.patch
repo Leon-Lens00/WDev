@@ -1,0 +1,14 @@
+diff --git a/source/OverlapModel.cs b/source/OverlapModel.cs
+--- a/source/OverlapModel.cs
++++ b/source/OverlapModel.cs
+@@ -70,8 +70,8 @@
+         Dictionary<long, int> weights = new();
+         List<long> ordering = new();
+ 
+-        int ymax = periodicInput ? grid.MY : grid.MY - N + 1;
+-        int xmax = periodicInput ? grid.MX : grid.MX - N + 1;
++        int ymax = periodicInput ? SMY : SMY - N + 1;
++        int xmax = periodicInput ? SMX : SMX - N + 1;
+         for (int y = 0; y < ymax; y++) for (int x = 0; x < xmax; x++)
+             {
+                 byte[] pattern = Helper.Pattern((dx, dy) => sample[(x + dx) % SMX + ((y + dy) % SMY) * SMX], N);

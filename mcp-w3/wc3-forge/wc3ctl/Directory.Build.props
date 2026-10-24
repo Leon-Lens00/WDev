@@ -1,0 +1,38 @@
+<Project>
+  <!-- One version for the CLI, Studio and the MCP server inside them. A release tag vX.Y.Z must
+       match it, which the release workflow checks against what the published exe reports. -->
+  <PropertyGroup>
+    <Version>0.4.10</Version>
+  </PropertyGroup>
+
+  <!-- Build stamp: bake the git short hash and the UTC build time into assembly metadata for every
+       project, so 'wc3ctl version' and the Studio title bar announce exactly what a build is. This
+       lived in the Studio project alone and is here now so the CLI and the MCP server report the
+       same metadata. git is best-effort (ContinueOnError) so a build still works without it on PATH. -->
+  <Target Name="StampBuildInfo" BeforeTargets="GetAssemblyAttributes">
+    <Exec Command="git -C &quot;$(MSBuildProjectDirectory)&quot; rev-parse --short HEAD" ConsoleToMSBuild="true" ContinueOnError="true" StandardErrorImportance="low" StandardOutputImportance="low">
+      <Output TaskParameter="ConsoleOutput" PropertyName="_GitHash" />
+    </Exec>
+    <PropertyGroup>
+      <!-- ContinueOnError keeps the build alive when git is absent, but a failing git still prints
+           its message to stdout, which ConsoleToMSBuild captures. Trim, then fall back to nogit
+           unless what is left really looks like a hash, so a source tree without a .git bakes
+           "nogit" rather than "fatal: not a git repository". -->
+      <_GitHash>$(_GitHash.Trim())</_GitHash>
+      <_GitHash Condition="!$([System.Text.RegularExpressions.Regex]::IsMatch('$(_GitHash)', '^[0-9a-f]{7,40}$'))">nogit</_GitHash>
+      <_BuildTimeUtc>$([System.DateTime]::UtcNow.ToString("yyyy-MM-dd HH:mm"))</_BuildTimeUtc>
+    </PropertyGroup>
+    <ItemGroup>
+      <AssemblyMetadata Include="GitHash" Value="$(_GitHash.Trim())" />
+      <AssemblyMetadata Include="BuildTimeUtc" Value="$(_BuildTimeUtc)" />
+    </ItemGroup>
+  </Target>
+  <!-- Transitive security pins, solution wide, so a package pulled in by a dependency is held at a
+       patched version. Each version is the advisory's patched release. -->
+  <ItemGroup>
+    <PackageReference Include="System.Formats.Asn1" Version="8.0.1" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
+    <PackageReference Include="Tmds.DBus.Protocol" Version="0.21.3" />
+  </ItemGroup>
+</Project>

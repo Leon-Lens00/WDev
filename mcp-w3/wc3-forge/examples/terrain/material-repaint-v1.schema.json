@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "map",
+    "map_sha256",
+    "doodads_sha256",
+    "layout",
+    "layout_sha256",
+    "materials"
+  ],
+  "properties": {
+    "format": {
+      "const": "wc3-material-repaint-v1"
+    },
+    "map": {
+      "type": "string",
+      "minLength": 1
+    },
+    "map_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "doodads_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "layout": {
+      "type": "string",
+      "minLength": 1
+    },
+    "layout_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "materials": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "profile",
+        "profile_sha256",
+        "seed"
+      ],
+      "properties": {
+        "profile": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "seed": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Structural schema documenting the implemented v1 contract. Provenance, Classic geometry and hashes are checked by the Go loader/validator. Added at packaging; frozen material criteria unchanged."
+}

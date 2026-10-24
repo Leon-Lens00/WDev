@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wc3-forge:scene-brief:v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "wc3-scene-brief-v1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "silhouette": {
+      "enum": [
+        "archipelago",
+        "dominant-island",
+        "scattered"
+      ]
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 8
+      }
+    },
+    "ranges": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "include_recovered": {
+      "type": "boolean"
+    },
+    "forest": {
+      "enum": [
+        "compact",
+        "legacy-control"
+      ]
+    },
+    "seeds": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 2147483647
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "camera_roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "from": {
+            "type": "string",
+            "minLength": 1
+          },
+          "to": {
+            "type": "string",
+            "minLength": 1
+          },
+          "from_port": {
+            "type": "string",
+            "minLength": 1
+          },
+          "to_port": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "from_port",
+          "to_port",
+          "role"
+        ]
+      }
+    }
+  },
+  "required": [
+    "format",
+    "id",
+    "intent",
+    "silhouette",
+    "counts",
+    "include_recovered",
+    "forest",
+    "seeds",
+    "camera_roles"
+  ]
+}

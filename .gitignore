@@ -19,3 +19,7 @@ projects/*/reports/**/*.w3x
 *.log
 node_modules/
 .cache/
+
+# mcp-w3: conservar fuentes que reglas genéricas o del upstream ocultarían
+!mcp-w3/wc3-forge/build/
+mcp-w3/wc3-forge/build/bin/

@@ -1,0 +1,37 @@
+[
+  {
+    "case": "good-vjass.j",
+    "candidate-native": 0,
+    "local-jasshelper": 0
+  },
+  {
+    "case": "bad-modern.j",
+    "candidate-native": 0,
+    "local-jasshelper": 1
+  },
+  {
+    "case": "bad-invented.j",
+    "candidate-native": 1,
+    "local-jasshelper": 1
+  },
+  {
+    "case": "bad-method.j",
+    "candidate-native": 1,
+    "local-jasshelper": 1
+  },
+  {
+    "case": "bad-syntax.j",
+    "candidate-native": 1,
+    "local-jasshelper": 1
+  },
+  {
+    "case": "bad-local-state.j",
+    "candidate-native": 0,
+    "local-jasshelper": 0
+  },
+  {
+    "case": "permissive-grammar.j",
+    "candidate-native": 0,
+    "local-jasshelper": 1
+  }
+]

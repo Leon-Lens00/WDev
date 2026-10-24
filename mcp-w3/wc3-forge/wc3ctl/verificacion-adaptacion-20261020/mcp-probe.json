@@ -1,0 +1,53 @@
+{
+  "initialize": {
+    "result": {
+      "protocolVersion": "2024-11-05",
+      "capabilities": {
+        "logging": {},
+        "prompts": {
+          "listChanged": true
+        },
+        "resources": {
+          "listChanged": true
+        },
+        "tools": {
+          "listChanged": true
+        }
+      },
+      "serverInfo": {
+        "name": "wc3ctl",
+        "version": "0.4.10"
+      },
+      "instructions": "target resolution unavailable (no schemas directory configured)"
+    },
+    "id": 1,
+    "jsonrpc": "2.0"
+  },
+  "tool_count": 267,
+  "sample_names": [
+    "camera_remove",
+    "trigger_var_remove",
+    "placed_doodads_list",
+    "model_import",
+    "object_clone",
+    "object_set",
+    "triggers_read",
+    "audit_map",
+    "gamedata_field_lookup",
+    "placed_doodad_set",
+    "trigger_to_script",
+    "player_set_name"
+  ],
+  "call": {
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"info\":{\"name\":\"Islas Eco\",\"author\":\"Blizzard Entertainment\",\"players\":2,\"width\":116,\"height\":84,\"diagnostics\":[]},\"files\":[{\"name\":\"war3map.w3e\",\"sizeBytes\":87660,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"war3map.w3i\",\"sizeBytes\":299,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"war3map.wtg\",\"sizeBytes\":447,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"war3map.wct\",\"sizeBytes\":165,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":null,\"sizeBytes\":0,\"known\":false,\"parsed\":false,\"nameFromHarvest\":false},{\"name\":\"war3map.j\",\"sizeBytes\":43780,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"war3map.shd\",\"sizeBytes\":196608,\"known\":false,\"parsed\":false,\"nameFromHarvest\":false},{\"name\":\"war3mapMap.blp\",\"sizeBytes\":14666,\"known\":false,\"parsed\":false,\"nameFromHarvest\":false},{\"name\":\"war3map.mmp\",\"sizeBytes\":184,\"known\":false,\"parsed\":false,\"nameFromHarvest\":false},{\"name\":\"war3map.wpm\",\"sizeBytes\":196624,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"war3map.doo\",\"sizeBytes\":124574,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"war3mapUnits.doo\",\"sizeBytes\":10995,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"war3map.w3r\",\"sizeBytes\":8,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"war3map.w3c\",\"sizeBytes\":8,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"war3map.wts\",\"sizeBytes\":440,\"known\":true,\"parsed\":true,\"nameFromHarvest\":false},{\"name\":\"(listfile)\",\"sizeBytes\":188,\"known\":false,\"parsed\":false,\"nameFromHarvest\":false},{\"name\":\"(attributes)\",\"sizeBytes\":212,\"known\":false,\"parsed\":false,\"nameFromHarvest\":false}],\"objectCounts\":[{\"kind\":\"Unit\",\"count\":0},{\"kind\":\"Item\",\"count\":0},{\"kind\":\"Ability\",\"count\":0},{\"kind\":\"Destructable\",\"count\":0},{\"kind\":\"Doodad\",\"count\":0},{\"kind\":\"Buff\",\"count\":0},{\"kind\":\"Upgrade\",\"count\":0}],\"diagnostics\":[]}"
+        }
+      ]
+    },
+    "id": 3,
+    "jsonrpc": "2.0"
+  }
+}

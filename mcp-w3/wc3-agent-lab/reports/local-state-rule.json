@@ -1,0 +1,163 @@
+[
+{
+  "text": "CreateUnit(Player(0), 'hfoo', 0., 0., 0.)",
+  "range": {
+    "byteOffset": {
+      "start": 99,
+      "end": 140
+    },
+    "start": {
+      "line": 2,
+      "column": 13
+    },
+    "end": {
+      "line": 2,
+      "column": 54
+    }
+  },
+  "file": "/home/snz/Documentos/MCP W3/wc3-agent-lab/fixtures/bad-local-state.j",
+  "lines": "        call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)",
+  "charCount": {
+    "leading": 13,
+    "trailing": 0
+  },
+  "language": "jass",
+  "metaVariables": {
+    "single": {},
+    "multi": {
+      "secondary": [
+        {
+          "text": "GetLocalPlayer() == Player(0)",
+          "range": {
+            "byteOffset": {
+              "start": 51,
+              "end": 80
+            },
+            "start": {
+              "line": 1,
+              "column": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 36
+            }
+          }
+        },
+        {
+          "text": "if GetLocalPlayer() == Player(0) then\n        call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)\n    endif",
+          "range": {
+            "byteOffset": {
+              "start": 48,
+              "end": 150
+            },
+            "start": {
+              "line": 1,
+              "column": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 9
+            }
+          }
+        },
+        {
+          "text": "CreateUnit",
+          "range": {
+            "byteOffset": {
+              "start": 99,
+              "end": 109
+            },
+            "start": {
+              "line": 2,
+              "column": 13
+            },
+            "end": {
+              "line": 2,
+              "column": 23
+            }
+          }
+        }
+      ]
+    },
+    "transformed": {}
+  },
+  "ruleId": "classic-local-gameplay-review",
+  "severity": "warning",
+  "note": null,
+  "message": "Revisar operación de juego bajo GetLocalPlayer; requiere comprobar sincronización y flujo posterior",
+  "labels": [
+    {
+      "text": "CreateUnit(Player(0), 'hfoo', 0., 0., 0.)",
+      "range": {
+        "byteOffset": {
+          "start": 99,
+          "end": 140
+        },
+        "start": {
+          "line": 2,
+          "column": 13
+        },
+        "end": {
+          "line": 2,
+          "column": 54
+        }
+      },
+      "style": "primary"
+    },
+    {
+      "text": "GetLocalPlayer() == Player(0)",
+      "range": {
+        "byteOffset": {
+          "start": 51,
+          "end": 80
+        },
+        "start": {
+          "line": 1,
+          "column": 7
+        },
+        "end": {
+          "line": 1,
+          "column": 36
+        }
+      },
+      "style": "secondary"
+    },
+    {
+      "text": "if GetLocalPlayer() == Player(0) then\n        call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)\n    endif",
+      "range": {
+        "byteOffset": {
+          "start": 48,
+          "end": 150
+        },
+        "start": {
+          "line": 1,
+          "column": 4
+        },
+        "end": {
+          "line": 3,
+          "column": 9
+        }
+      },
+      "style": "secondary"
+    },
+    {
+      "text": "CreateUnit",
+      "range": {
+        "byteOffset": {
+          "start": 99,
+          "end": 109
+        },
+        "start": {
+          "line": 2,
+          "column": 13
+        },
+        "end": {
+          "line": 2,
+          "column": 23
+        }
+      },
+      "style": "secondary"
+    }
+  ]
+}
+]

@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wc3-forge:landscape-library:v3",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "format": {
+      "const": "wc3-composition-library-v3"
+    },
+    "base_library": {
+      "type": "string",
+      "minLength": 1
+    },
+    "base_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "modules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 2147483647
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          },
+          "height_policy": {
+            "enum": [
+              "absolute-rigid",
+              "ground-offset",
+              "water-offset",
+              "parent-relative"
+            ]
+          },
+          "parent_source_id": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2147483647
+          },
+          "variant_shifts": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "multipleOf": 64
+                },
+                "minItems": 2,
+                "maxItems": 2
+              },
+              "minItems": 1
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "required": [
+          "family",
+          "name",
+          "members",
+          "height_policy",
+          "variant_shifts"
+        ]
+      },
+      "minItems": 3
+    }
+  },
+  "required": [
+    "format",
+    "base_library",
+    "base_sha256",
+    "source_sha256",
+    "modules"
+  ]
+}

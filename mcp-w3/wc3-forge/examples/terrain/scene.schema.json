@@ -1,0 +1,26 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "$id":"urn:wc3-forge:scene:v1",
+ "title":"Classic tropical terrain scene",
+ "type":"object","additionalProperties":false,
+ "required":["format","source","source_sha256","install","dotnet","host","seed","sample","edit","protected","path","path_width","collision_radius","trees","plants","rocks","waterfall","wfc_tries"],
+ "properties":{
+  "format":{"const":"wc3-scene-spec-v1"},
+  "mode":{"enum":["","whole-map-restyle"]},"shadows":{"enum":["","omit"]},
+  "source":{"type":"string","minLength":1},"source_sha256":{"type":"string","pattern":"^[a-fA-F0-9]{64}$"},
+  "install":{"type":"string","minLength":1},"dotnet":{"type":"string","minLength":1},"host":{"type":"string","minLength":1},
+  "seed":{"type":"integer","minimum":0,"maximum":2147483647},
+  "sample":{"$ref":"#/$defs/rect"},"edit":{"$ref":"#/$defs/rect"},
+  "protected":{"type":"array","items":{"$ref":"#/$defs/rect"}},
+  "path":{"type":"array","minItems":2,"items":{"$ref":"#/$defs/point"}},
+  "path_width":{"type":"number","minimum":128,"maximum":1024},"collision_radius":{"type":"number","minimum":1},
+  "trees":{"$ref":"#/$defs/assets"},"plants":{"$ref":"#/$defs/assets"},"rocks":{"type":"array","items":{"type":"string","minLength":4,"maxLength":4}},
+  "waterfall":{"type":"object","additionalProperties":false,"required":["source","offset","blend"],"properties":{"source":{"$ref":"#/$defs/rect"},"offset":{"type":"array","minItems":3,"maxItems":3,"items":{"type":"number"}},"blend":{"type":"number","minimum":128,"maximum":1024}}},
+  "wfc_tries":{"type":"integer","minimum":1,"maximum":64},"wfc_steps":{"type":"integer","minimum":0,"maximum":100000}
+ },
+ "$defs":{
+  "point":{"type":"array","minItems":2,"maxItems":2,"items":{"type":"number"}},
+  "rect":{"type":"object","additionalProperties":false,"required":["min","max"],"properties":{"min":{"$ref":"#/$defs/point"},"max":{"$ref":"#/$defs/point"}}},
+  "assets":{"type":"array","minItems":1,"items":{"type":"string","minLength":4,"maxLength":4}}
+ }
+}

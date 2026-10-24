@@ -1,0 +1,163 @@
+[
+  {
+    "file": "bad-invented.j",
+    "parserErrors": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "semantic": {
+      "errors": [],
+      "warnings": [
+        {
+          "start": {
+            "line": 1,
+            "position": 9
+          },
+          "end": {
+            "line": 1,
+            "position": 34
+          },
+          "message": "Function 'MakeUnitInvincibleForever' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+        }
+      ],
+      "checkValidationErrors": []
+    },
+    "externalSymbolCount": 2174
+  },
+  {
+    "file": "bad-local-state.j",
+    "parserErrors": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "semantic": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "externalSymbolCount": 2174
+  },
+  {
+    "file": "bad-method.j",
+    "parserErrors": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "semantic": {
+      "errors": [
+        {
+          "start": {
+            "line": 6,
+            "position": 11
+          },
+          "end": {
+            "line": 6,
+            "position": 27
+          },
+          "message": "Method 'teleportToSafety' not found in struct instance 'Counter'",
+          "fix": "Check if the method name is correct or if the method is declared"
+        }
+      ],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "externalSymbolCount": 2174
+  },
+  {
+    "file": "bad-modern.j",
+    "parserErrors": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "semantic": {
+      "errors": [],
+      "warnings": [
+        {
+          "start": {
+            "line": 1,
+            "position": 9
+          },
+          "end": {
+            "line": 1,
+            "position": 24
+          },
+          "message": "Function 'BlzSetUnitMaxHP' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+        }
+      ],
+      "checkValidationErrors": []
+    },
+    "externalSymbolCount": 2174
+  },
+  {
+    "file": "bad-syntax.j",
+    "parserErrors": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "semantic": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "externalSymbolCount": 2174
+  },
+  {
+    "file": "good-vjass.j",
+    "parserErrors": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "semantic": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "externalSymbolCount": 2174
+  },
+  {
+    "file": "pattern-comments.j",
+    "parserErrors": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "semantic": {
+      "errors": [],
+      "warnings": [
+        {
+          "start": {
+            "line": 3,
+            "position": 9
+          },
+          "end": {
+            "line": 3,
+            "position": 24
+          },
+          "message": "Function 'BlzSetUnitMaxHP' may not be declared. Ensure it is declared in the current file or other project files, or it may be a native function"
+        }
+      ],
+      "checkValidationErrors": []
+    },
+    "externalSymbolCount": 2174
+  },
+  {
+    "file": "permissive-grammar.j",
+    "parserErrors": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "semantic": {
+      "errors": [],
+      "warnings": [],
+      "checkValidationErrors": []
+    },
+    "externalSymbolCount": 2174
+  }
+]

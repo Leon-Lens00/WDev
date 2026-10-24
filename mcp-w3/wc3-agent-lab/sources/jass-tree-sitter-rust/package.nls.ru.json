@@ -1,0 +1,24 @@
+{
+  "command.importGraph.show": "Показать граф импортов",
+  "command.callGraph.show": "Показать граф вызовов",
+  "command.typeGraph.show": "Показать граф типов",
+  "command.exportTable.show": "Показать экспортируемые символы",
+  "command.diagnosticSummary.show": "Показать сводку диагностик",
+  "command.rescan.execute": "Перечитать все файлы",
+  "command.build.execute": "Сборка",
+  "command.ujapi.download": "Скачать UjAPI common.j",
+  "command.mpq.browse": "Обзор архива MPQ",
+  "command.mpq.openFile": "Открыть файл из архива MPQ",
+  "command.mpq.extractHere": "Извлечь сюда",
+  "command.mpq.extractTo": "Извлечь в…",
+  "command.jass.restartServer": "Перезапустить JASS LSP сервер",
+  "customEditor.mdx.displayName": "Просмотр MDX-моделей",
+  "customEditor.blp.displayName": "Просмотр BLP-изображений",
+  "customEditor.doo.displayName": "Просмотр DOO-размещений",
+  "customEditor.w3i.displayName": "Просмотр W3I-информации карты",
+  "customEditor.w3e.displayName": "Редактор карты",
+  "customEditor.slk.displayName": "Табличный редактор SLK",
+  "command.slk.openTable": "Открыть как таблицу",
+  "command.slk.openText": "Открыть как текст"
+}
+

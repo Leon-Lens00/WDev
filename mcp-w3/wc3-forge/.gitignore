@@ -1,0 +1,67 @@
+# Go build artifacts
+/bin/
+/dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+coverage.out
+coverage.html
+# Vendored CASC bindings need to ship with the repo (MIT/zlib licensed).
+!/scripts/casclib/*.dll
+!/scripts/casclib/*.h
+
+# Go workspace
+go.work
+go.work.sum
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# wc3-forge runtime state (per-pid MCP lockfiles, etc.)
+/.wc3-forge/
+
+# Local notes that shouldn't ship
+/scratch/
+/notes-local/
+
+# Wails build outputs
+/build/bin/
+
+# Runtime log (anywhere it gets written; the binary writes to CWD)
+wc3-forge.log
+
+# Diagnostic helper output: scripts/extract-mdx pulls MDX files out of the
+# user's local CASC install into ./tmp-mdx/ for hex inspection + parser
+# regression testing (scripts/test-mdx-parse-with-patch.cjs reads them).
+# Personal install data, never check in.
+/tmp-mdx/
+
+# Frontend build artifacts (frontend/dist content is rebuilt every time;
+# the directory itself must exist for go:embed to succeed — kept via gitkeep)
+/frontend/node_modules/
+/frontend/dist/*
+!/frontend/dist/.gitkeep
+# Wails-CLI install-cache marker — regenerated on every `wails build`
+/frontend/package.json.md5
+
+# MCP server build artifacts
+/mcp/node_modules/
+/mcp/dist/
+
+# Reproducible terrain generator dependencies and local outputs.
+/.tools/
+/third_party/
+/generators/markovjunior-host/bin/
+/generators/markovjunior-host/obj/

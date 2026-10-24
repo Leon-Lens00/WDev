@@ -1,0 +1,10 @@
+#!/bin/sh
+# Project-local entry point; analysis reads sources and writes results to stdout.
+set -eu
+forge_root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+graph_bin="$forge_root/.tools/jassgraph/wc3-jassgraph"
+if [ ! -x "$graph_bin" ]; then
+    printf '%s\n' 'Build cmd/jassgraph first; see docs/jassgraph.md.' >&2
+    exit 1
+fi
+exec "$graph_bin" "$@"

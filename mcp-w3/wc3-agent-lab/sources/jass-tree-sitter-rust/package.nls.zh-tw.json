@@ -1,0 +1,24 @@
+{
+  "command.importGraph.show": "顯示匯入圖",
+  "command.callGraph.show": "顯示呼叫圖",
+  "command.typeGraph.show": "顯示類型圖",
+  "command.exportTable.show": "顯示匯出符號",
+  "command.diagnosticSummary.show": "顯示診斷摘要",
+  "command.rescan.execute": "重新掃描所有檔案",
+  "command.build.execute": "建構",
+  "command.ujapi.download": "下載 UjAPI common.j",
+  "command.mpq.browse": "瀏覽 MPQ 封存",
+  "command.mpq.openFile": "從 MPQ 封存開啟檔案",
+  "command.mpq.extractHere": "提取到此處",
+  "command.mpq.extractTo": "提取到…",
+  "command.jass.restartServer": "重新啟動 JASS LSP 伺服器",
+  "customEditor.mdx.displayName": "MDX 模型檢視器",
+  "customEditor.blp.displayName": "BLP 圖片檢視器",
+  "customEditor.doo.displayName": "DOO 放置檢視器",
+  "customEditor.w3i.displayName": "W3I 地圖資訊檢視器",
+  "customEditor.w3e.displayName": "地圖編輯器",
+  "customEditor.slk.displayName": "SLK 表格編輯器",
+  "command.slk.openTable": "以表格開啟",
+  "command.slk.openText": "以文字開啟"
+}
+

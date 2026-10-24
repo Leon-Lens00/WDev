@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Wc3.MapDocument\Wc3.MapDocument.csproj" />
+    <ProjectReference Include="..\Wc3.GameData\Wc3.GameData.csproj" />
+    <ProjectReference Include="..\Wc3.Render\Wc3.Render.csproj" />
+    <ProjectReference Include="..\Wc3.Modeling\Wc3.Modeling.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Wc3.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.31.0" />
+    <PackageReference Include="Microsoft.ML.Tokenizers" Version="2.0.1" />
+    <PackageReference Include="Neo4j.Driver" Version="6.3.0" />
+    <PackageReference Include="War3Net.CodeAnalysis.Decompilers" Version="6.1.1" />
+    <!-- Pinned to match src/Wc3.Studio, do NOT bump. 2.2.x is the version the Studio audio player
+         already ships with, and the sound optimiser decodes through the same NAudio. -->
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+</Project>

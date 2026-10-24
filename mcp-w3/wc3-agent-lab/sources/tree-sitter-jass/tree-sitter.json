@@ -1,0 +1,33 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "jass",
+      "camelcase": "JASS",
+      "scope": "source.jass",
+      "file-types": [
+        "j", "jass"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "JASS grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "nazarpunk",
+        "email": "nazarpunk@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/WarRaft/tree-sitter-jass"
+    }
+  },
+  "bindings": {
+    "go": false,
+    "python": false,
+    "swift": false,
+    "node": true
+  }
+}

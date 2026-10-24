@@ -1,0 +1,20 @@
+{
+ "format":"wc3-scene-spec-v1",
+ "source":"../../../artifacts/warcraft-terrain/tropical-v1/input/tropical-original.w3x",
+ "source_sha256":"efcd9f0de7a947baabb881d989c0ddbf2d7561ba0e3f2ad9cb3cf3e92392ffc3",
+ "install":"C:/Users/Leon/Downloads/Warcraft III 1.27",
+ "dotnet":"../../.tools/dotnet/dotnet.exe",
+ "host":"../../generators/markovjunior-host/bin/Release/net10.0/Host.dll",
+ "seed":12700,
+ "sample":{"min":[-2816,-2944],"max":[2816,896]},
+ "edit":{"min":[-3328,1024],"max":[3584,4352]},
+ "protected":[{"min":[-3072,-3456],"max":[3584,896]}],
+ "path":[[384,1152],[768,1664],[1536,1920],[2304,2560],[1792,3328]],
+ "path_width":384,
+ "collision_radius":32,
+ "trees":["B000","B001","B002","B003","B004"],
+ "plants":["D004","D005","D006","ZPsh","ZPfw"],
+ "rocks":["ZRrk","ZRsp"],
+ "waterfall":{"source":{"min":[-3200,-2176],"max":[-768,-640]},"offset":[512,4352,0],"blend":384},
+ "wfc_tries":8
+}

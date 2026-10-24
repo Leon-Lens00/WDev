@@ -1,0 +1,37 @@
+[
+  {
+    "extension": "j",
+    "exit": 1,
+    "seconds": 0.082,
+    "result": {
+      "files": 1,
+      "findings": [
+        {
+          "severity": "ERROR",
+          "rule": "WC127-BLZ",
+          "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/extension-probe.j",
+          "line": 2,
+          "message": "Blz API is not vanilla Warcraft III 1.27b."
+        }
+      ]
+    }
+  },
+  {
+    "extension": "jass",
+    "exit": 0,
+    "seconds": 0.074,
+    "result": {
+      "files": 0,
+      "findings": []
+    }
+  },
+  {
+    "extension": "vjass",
+    "exit": 0,
+    "seconds": 0.077,
+    "result": {
+      "files": 0,
+      "findings": []
+    }
+  }
+]
