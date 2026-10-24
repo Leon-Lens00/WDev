@@ -1,0 +1,54 @@
+--- 
++++ 
+@@ -9,6 +9,10 @@
+     private integer DumpIndex = 0
+     private boolean MetricsMode = false
+     private integer MetricsPage = 0
++    // Preserve the original camera vector; avoid incremental float drift in follow.
++    private real EyeOffsetX
++    private real EyeOffsetY
++    private real EyeOffsetZ
+     private Camera Cam
+     private unit FollowUnit = null
+     private unit Frame = null
+@@ -30,10 +34,17 @@
+ private function FollowCamera takes nothing returns nothing
+     local real x
+     local real y
++    local real z
+     if FollowUnit != null and GetUnitTypeId(FollowUnit) != 0 then
+         set x = GetUnitX(FollowUnit)
+         set y = GetUnitY(FollowUnit)
+-        call Cam.setPosition(x,y,UserInterface_GetTerrainZ(x,y)+GetUnitFlyHeight(FollowUnit))
++        set z = UserInterface_GetTerrainZ(x,y)+GetUnitFlyHeight(FollowUnit)
++        call Cam.setPosition(x,y,z)
++        // Absolute reconstruction in this fixed-orientation adapter only.
++        // Camera's original setPosition, axes and projection remain unchanged.
++        set Cam.eye.x = x+EyeOffsetX
++        set Cam.eye.y = y+EyeOffsetY
++        set Cam.eye.z = z+EyeOffsetZ
+     endif
+     call Cam.applyCameraForPlayer(Player(0),true)
+ endfunction
+@@ -277,6 +288,11 @@
+         call FollowCamera()
+         call ShowMetrics()
+         call TimerStart(Clock,0.01,true,function Tick)
++    elseif s == "-caminardialogo" then
++        // Development check: native pathfinding, independent of desktop pointer.
++        call IssuePointOrder(FollowUnit,"move",GetUnitX(FollowUnit)+350,GetUnitY(FollowUnit)+650)
++    elseif s == "-parardialogo" then
++        call IssueImmediateOrder(FollowUnit,"stop")
+     elseif s == "-dialogodiag" then
+         call Dump()
+     elseif s == "-vista0" then
+@@ -308,6 +324,9 @@
+     local real x = GetLocationX(start)
+     local real y = GetLocationY(start)
+     set Cam = Camera.create()
++    set EyeOffsetX = Cam.eye.x-Cam.at.x
++    set EyeOffsetY = Cam.eye.y-Cam.at.y
++    set EyeOffsetZ = Cam.eye.z-Cam.at.z
+     call SetPlayerAllianceStateBJ(Player(bj_PLAYER_NEUTRAL_EXTRA),Player(0),bj_ALLIANCE_ALLIED_VISION)
+     call SetPlayerAllianceStateBJ(Player(0),Player(bj_PLAYER_NEUTRAL_EXTRA),bj_ALLIANCE_ALLIED_VISION)
+     // Same native example owner as TerrainInventory; no inventory/items instantiated.

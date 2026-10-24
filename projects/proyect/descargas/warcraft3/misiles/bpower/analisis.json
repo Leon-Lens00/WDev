@@ -1,0 +1,846 @@
+[
+  {
+    "resource_id": "275718",
+    "title": "Missile [GUI] version 1.6.1",
+    "map_info_version": 25,
+    "terrain_version": 11,
+    "wct_version": 1,
+    "wct_trailing_bytes": 0,
+    "wct_recovered_blocks": 4,
+    "blocks": [
+      {
+        "file": "fuentes/275718/global.j",
+        "sha256": "6df56ee369d366d0e281901c3d7c9946ba3f5909755dfa5697d0e810784b0a7f",
+        "lines": 2,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/275718/trigger-0001.j",
+        "sha256": "131f46a0fa274219930ad7be5a75f54a738b28b87649c30bdcb8d59da9170fda",
+        "lines": 1087,
+        "missile_version": [
+          "1.6.1"
+        ],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/275718/trigger-0005.j",
+        "sha256": "695486ef36c7985f08bde2aad7d83e2dd202911229951ffcc1299584e2bd0c22",
+        "lines": 105,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/275718/trigger-0021.j",
+        "sha256": "fbd6c1796e4aff499bea7791b27c93956ed326f1a11d092a5268ff972963f76c",
+        "lines": 32,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      }
+    ],
+    "embedded_jass_pjass_exit": 0,
+    "original_hash_unchanged": true,
+    "game_tested": false,
+    "vjass_recompiled": false,
+    "missile_versions": [
+      "1.6.1"
+    ],
+    "core_flavor": "JASS/GUI",
+    "pjass_log": "/home/snz/Documentos/ChatGPT/Proyect/work/bpower-misiles-20261020/275718-pjass.log",
+    "verification_date": "2026-10-20",
+    "embedded_script_sha256": "e168bf96ce0dd44df0d4dad7f52bcf993b31aabd68f27901dfe9dfb0c79ab4d0"
+  },
+  {
+    "resource_id": "258518",
+    "title": "Hydra v4.2",
+    "map_info_version": 25,
+    "terrain_version": 11,
+    "wct_version": 1,
+    "wct_trailing_bytes": 0,
+    "wct_recovered_blocks": 15,
+    "blocks": [
+      {
+        "file": "fuentes/258518/global.j",
+        "sha256": "6df56ee369d366d0e281901c3d7c9946ba3f5909755dfa5697d0e810784b0a7f",
+        "lines": 2,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/258518/trigger-0000.j",
+        "sha256": "d86b49c72ce1748d2153a19d71abf1595a8926cff88b2dfac30f3687f7d3e1f2",
+        "lines": 1411,
+        "missile_version": [
+          "1.4"
+        ],
+        "libraries": [
+          "Missile"
+        ],
+        "scopes": [],
+        "structs": [
+          "Missile",
+          "MissilePosition",
+          "RecycleBin"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0001.j",
+        "sha256": "375eb82c09994196281d46fa2dd3aee0a745a0906810a825a30e6cef6ae0c974",
+        "lines": 275,
+        "missile_version": [],
+        "libraries": [
+          "TimerUtils"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/258518/trigger-0002.j",
+        "sha256": "b58e6120101fbe1152ae56113bea724057ea8f3c967dccf51c9a162636c6940d",
+        "lines": 42,
+        "missile_version": [],
+        "libraries": [
+          "WorldBounds"
+        ],
+        "scopes": [],
+        "structs": [
+          "WorldBounds"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0003.j",
+        "sha256": "38b989a719f67c7bc86ab390bc6ce3c64b089dfa0a53f94142a756f17e042748",
+        "lines": 75,
+        "missile_version": [],
+        "libraries": [
+          "ErrorMessage"
+        ],
+        "scopes": [],
+        "structs": [
+          "Fields"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0005.j",
+        "sha256": "414777a67a73506b8e4d6dc3eaa4dff7c87ffbe9043c5ef592cbee903106be8a",
+        "lines": 886,
+        "missile_version": [],
+        "libraries": [
+          "Hydra"
+        ],
+        "scopes": [],
+        "structs": [
+          "HydraHead",
+          "Hydra"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0006.j",
+        "sha256": "fc0344cfd8cd8f2912f21feb8db24f53264e87efaa6e02b6f6723ab118e09707",
+        "lines": 203,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/258518/trigger-0007.j",
+        "sha256": "7463a2ea454e3ea8aabd16c393709e2921baf15a9bdc183e88cd78ef93469ad9",
+        "lines": 199,
+        "missile_version": [],
+        "libraries": [
+          "HydraTemplate"
+        ],
+        "scopes": [],
+        "structs": [
+          "AcidHydra"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0009.j",
+        "sha256": "00bc4ae54f87b091c7c4198790a541259f145e9fe51ceae49f158afdf509cef8",
+        "lines": 85,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [
+          "FireHydra"
+        ],
+        "structs": [
+          "FireHydra"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0010.j",
+        "sha256": "20f0826a55363f25562c539a2634ef8cd1e5324fd6a7d55d72089b79a35005ab",
+        "lines": 90,
+        "missile_version": [],
+        "libraries": [
+          "IceHydra"
+        ],
+        "scopes": [],
+        "structs": [
+          "IceHydra"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0011.j",
+        "sha256": "492452c40dc064c94ac62941e2f161ec7c8b2362709df32edabc329768e3bd65",
+        "lines": 91,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [
+          "FriendlyHydra"
+        ],
+        "structs": [
+          "FriendlyHydra"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0012.j",
+        "sha256": "220f7860d2d8396212485b94c6e7aef70b578e483775e0c001399ef1595dc00e",
+        "lines": 136,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [
+          "EasterEgg"
+        ],
+        "structs": [
+          "HammerTime"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0013.j",
+        "sha256": "c8fd3f6107aba486055d38d89ea4df893c84cfe16d4cf9a68b97c34855c02e91",
+        "lines": 108,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [
+          "HillGuard"
+        ],
+        "structs": [
+          "Guard"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0014.j",
+        "sha256": "4429ea8b48b32d00356ef6e5137056b454aaea82b59cebf884b40bfe1dd48c9e",
+        "lines": 88,
+        "missile_version": [],
+        "libraries": [
+          "DemoMap"
+        ],
+        "scopes": [],
+        "structs": [
+          "preload",
+          "xxx"
+        ]
+      },
+      {
+        "file": "fuentes/258518/trigger-0015.j",
+        "sha256": "6df56ee369d366d0e281901c3d7c9946ba3f5909755dfa5697d0e810784b0a7f",
+        "lines": 2,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      }
+    ],
+    "embedded_jass_pjass_exit": 1,
+    "original_hash_unchanged": true,
+    "game_tested": false,
+    "vjass_recompiled": false,
+    "missile_versions": [
+      "1.4"
+    ],
+    "core_flavor": "vJASS",
+    "pjass_log": "/home/snz/Documentos/ChatGPT/Proyect/work/bpower-misiles-20261020/258518-pjass.log",
+    "verification_date": "2026-10-20",
+    "embedded_script_sha256": "972e06de1c4f73cf195d33059bdabc6dbedf0d36a373d09786d917e2dad3abe7"
+  },
+  {
+    "resource_id": "245470",
+    "title": "Armageddon v.2.4.1",
+    "map_info_version": 25,
+    "terrain_version": 11,
+    "wct_version": 1,
+    "wct_trailing_bytes": 0,
+    "wct_recovered_blocks": 8,
+    "blocks": [
+      {
+        "file": "fuentes/245470/trigger-0001.j",
+        "sha256": "5a55429e21f1fcdbefc77a26942aeb45dc52fc583d6a80447c15a3f0ca949b29",
+        "lines": 1791,
+        "missile_version": [
+          "2.5.1"
+        ],
+        "libraries": [
+          "Missile"
+        ],
+        "scopes": [],
+        "structs": [
+          "Missile",
+          "Missile",
+          "MissilePosition",
+          "RecycleBin"
+        ]
+      },
+      {
+        "file": "fuentes/245470/trigger-0002.j",
+        "sha256": "375eb82c09994196281d46fa2dd3aee0a745a0906810a825a30e6cef6ae0c974",
+        "lines": 275,
+        "missile_version": [],
+        "libraries": [
+          "TimerUtils"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245470/trigger-0003.j",
+        "sha256": "d3350d800dc75c0ffae2ebc3a7373fcdf28246bbca989c2d35b6db72f332732d",
+        "lines": 66,
+        "missile_version": [],
+        "libraries": [
+          "SpellEffectEvent"
+        ],
+        "scopes": [],
+        "structs": [
+          "S"
+        ]
+      },
+      {
+        "file": "fuentes/245470/trigger-0004.j",
+        "sha256": "901003343a3b3c3af1687c06f8f45872b2862409ab3e6631028c7f715c46fde6",
+        "lines": 64,
+        "missile_version": [],
+        "libraries": [
+          "RegisterPlayerUnitEvent"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245470/trigger-0006.j",
+        "sha256": "e7f65f00756e5cd81dc59cc07eaffffd58ebeae758466f29b8f951629970efdd",
+        "lines": 56,
+        "missile_version": [],
+        "libraries": [
+          "WorldBounds"
+        ],
+        "scopes": [],
+        "structs": [
+          "WorldBounds"
+        ]
+      },
+      {
+        "file": "fuentes/245470/trigger-0007.j",
+        "sha256": "67cf00ea89f5f68b65ef0ed2763e7f823bad2a9e7498bed452ea542952cc2a7e",
+        "lines": 83,
+        "missile_version": [],
+        "libraries": [
+          "IsDestructableTree"
+        ],
+        "scopes": [],
+        "structs": [
+          "I"
+        ]
+      },
+      {
+        "file": "fuentes/245470/trigger-0009.j",
+        "sha256": "1f0333833e6b419fa00b8b9a63220f0fcedda58d8eea79146077234d89aa601a",
+        "lines": 323,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [
+          "Armageddon"
+        ],
+        "structs": [
+          "Meteor",
+          "Armageddon"
+        ]
+      },
+      {
+        "file": "fuentes/245470/trigger-0010.j",
+        "sha256": "f906b82d1b60ac2079901b85d87c5e0196bcff428f9125b148069a5fe6202ee2",
+        "lines": 81,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [
+          "map"
+        ],
+        "structs": [
+          "preload",
+          "xxx"
+        ]
+      }
+    ],
+    "embedded_jass_pjass_exit": 0,
+    "original_hash_unchanged": true,
+    "game_tested": false,
+    "vjass_recompiled": false,
+    "missile_versions": [
+      "2.5.1"
+    ],
+    "core_flavor": "vJASS",
+    "pjass_log": "/home/snz/Documentos/ChatGPT/Proyect/work/bpower-misiles-20261020/245470-pjass.log",
+    "verification_date": "2026-10-20",
+    "embedded_script_sha256": "ce1204e8c1a5c4da28591b8db0863892bf1d7d5b13531ff52230c468bf0b3fcd"
+  },
+  {
+    "resource_id": "245192",
+    "title": "Simple Spell Collection#1 v.2.0",
+    "map_info_version": 25,
+    "terrain_version": 11,
+    "wct_version": 1,
+    "wct_trailing_bytes": 0,
+    "wct_recovered_blocks": 24,
+    "blocks": [
+      {
+        "file": "fuentes/245192/trigger-0000.j",
+        "sha256": "2319b829b83848cdff56046f7543afa5163184ca36f41b1623556e14754b1376",
+        "lines": 380,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0002.j",
+        "sha256": "0c1d59fbd3919e0bf351ecf5be8277892838ea30c146433ca85006295d307e94",
+        "lines": 408,
+        "missile_version": [],
+        "libraries": [
+          "Table"
+        ],
+        "scopes": [],
+        "structs": [
+          "Table",
+          "TableArray",
+          "dex",
+          "handles",
+          "agents",
+          "Table",
+          "TableArray"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0003.j",
+        "sha256": "5d7c365303924b7feaaf7366e46a8810bfc17d2c87dbbb5de59d2e105d7c51c4",
+        "lines": 1787,
+        "missile_version": [
+          "2.0.2"
+        ],
+        "libraries": [
+          "Missile"
+        ],
+        "scopes": [],
+        "structs": [
+          "Missile",
+          "Missile",
+          "MissilePosition",
+          "RecycleBin"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0004.j",
+        "sha256": "375eb82c09994196281d46fa2dd3aee0a745a0906810a825a30e6cef6ae0c974",
+        "lines": 275,
+        "missile_version": [],
+        "libraries": [
+          "TimerUtils"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0005.j",
+        "sha256": "b58e6120101fbe1152ae56113bea724057ea8f3c967dccf51c9a162636c6940d",
+        "lines": 42,
+        "missile_version": [],
+        "libraries": [
+          "WorldBounds"
+        ],
+        "scopes": [],
+        "structs": [
+          "WorldBounds"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0006.j",
+        "sha256": "d92b550bfe391497b6d564f15da5ff364ef7a53a15753b5726cd1be8a9a982c0",
+        "lines": 101,
+        "missile_version": [],
+        "libraries": [
+          "DummyCaster"
+        ],
+        "scopes": [],
+        "structs": [
+          "DummyCaster"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0007.j",
+        "sha256": "d3350d800dc75c0ffae2ebc3a7373fcdf28246bbca989c2d35b6db72f332732d",
+        "lines": 66,
+        "missile_version": [],
+        "libraries": [
+          "SpellEffectEvent"
+        ],
+        "scopes": [],
+        "structs": [
+          "S"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0008.j",
+        "sha256": "901003343a3b3c3af1687c06f8f45872b2862409ab3e6631028c7f715c46fde6",
+        "lines": 64,
+        "missile_version": [],
+        "libraries": [
+          "RegisterPlayerUnitEvent"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0010.j",
+        "sha256": "d2e69086917db17f89472988c4c13ba5efcf4d53adec2dd503059fd21343cb9c",
+        "lines": 77,
+        "missile_version": [],
+        "libraries": [
+          "SpellIndex"
+        ],
+        "scopes": [],
+        "structs": [
+          "SpellIndex"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0013.j",
+        "sha256": "fa7e6b6653fdb6ece9f6d3b528b1686e9d42c2398490b8db275325f0472f3cca",
+        "lines": 104,
+        "missile_version": [],
+        "libraries": [
+          "TerrainPathability",
+          "IsTerrainWalkable"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0014.j",
+        "sha256": "2064da46e7aeefe2ab081f5362626940c347dc80f229b8bd7de7a1e696e3f980",
+        "lines": 76,
+        "missile_version": [],
+        "libraries": [
+          "CameraEQNoise"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0015.j",
+        "sha256": "8dd4eb898f7b44f61c38baff9df6bea4c049c479cd2cb9e1497de8c7f91dd3f6",
+        "lines": 83,
+        "missile_version": [],
+        "libraries": [
+          "IsDestructableTree"
+        ],
+        "scopes": [],
+        "structs": [
+          "I"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0017.j",
+        "sha256": "13bcdda93a02641784a63bbdbf8f85447636991740c02d4ef598ef23ca54a7ce",
+        "lines": 19,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0021.j",
+        "sha256": "328f27b6edb024e70de33063abf63cf9530aae0526cd2a2683a1f37c2e9563bb",
+        "lines": 99,
+        "missile_version": [],
+        "libraries": [
+          "Fireball"
+        ],
+        "scopes": [],
+        "structs": [
+          "Fireball"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0022.j",
+        "sha256": "4113ba5c3021c7a12602ff4110f5645cc195a9f7489278c45487e23454ab29bc",
+        "lines": 92,
+        "missile_version": [],
+        "libraries": [
+          "IceSiege"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0023.j",
+        "sha256": "8825b51db944b65e3ebb740e54d9ae95da115f141b94cb990befc863fe786dd1",
+        "lines": 105,
+        "missile_version": [],
+        "libraries": [
+          "Chaosflare"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0024.j",
+        "sha256": "75be5be0e648b20d96817bb3c4325135e23af80d616fe03df131d3a9ec95bac0",
+        "lines": 136,
+        "missile_version": [],
+        "libraries": [
+          "ChaoticBoulder"
+        ],
+        "scopes": [],
+        "structs": [
+          "ChaoticBoulder"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0026.j",
+        "sha256": "0d99b3d8eaee8cef7ab355f838c64919e29ed5159aa7c945d2a9724cf4b5b615",
+        "lines": 137,
+        "missile_version": [],
+        "libraries": [
+          "BoneSpirit"
+        ],
+        "scopes": [],
+        "structs": [
+          "BoneSpirit"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0027.j",
+        "sha256": "967042c162659d03a65b82bb6de967cd8702b34078394d6d56431c7af3be7663",
+        "lines": 76,
+        "missile_version": [],
+        "libraries": [
+          "ReapersScythe"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0029.j",
+        "sha256": "a61914f7bebe71c4cd26ec2f0968069d84920942c550dcf1430c9feca1b6b731",
+        "lines": 171,
+        "missile_version": [],
+        "libraries": [
+          "Leap"
+        ],
+        "scopes": [],
+        "structs": [
+          "Leap"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0030.j",
+        "sha256": "28ce91dc0654eba249999465a0cff1380815876ee9cd68488ce0cfdbf7f52d9d",
+        "lines": 119,
+        "missile_version": [],
+        "libraries": [
+          "Whirlwind"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/245192/trigger-0032.j",
+        "sha256": "374250ea0a3c9bdce61f74a5b8534f31a8f0b11a70fe5f3120b1841e128288d3",
+        "lines": 174,
+        "missile_version": [],
+        "libraries": [
+          "FistOfThunder"
+        ],
+        "scopes": [],
+        "structs": [
+          "FistOfThunder"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0034.j",
+        "sha256": "e6c61f8e1909b3af2563c7d38e50acdca285ef5f391ec84b8978b4e4ebcbdd3a",
+        "lines": 204,
+        "missile_version": [],
+        "libraries": [
+          "GuidedArrow"
+        ],
+        "scopes": [],
+        "structs": [
+          "GuidedArrow"
+        ]
+      },
+      {
+        "file": "fuentes/245192/trigger-0035.j",
+        "sha256": "ee64d4de1fa33ab9cf36dfffffdc80c2167683ee2205eb13a0738edd0e8c995f",
+        "lines": 96,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [
+          "map"
+        ],
+        "structs": [
+          "preload",
+          "xxx"
+        ]
+      }
+    ],
+    "embedded_jass_pjass_exit": 0,
+    "original_hash_unchanged": true,
+    "game_tested": false,
+    "vjass_recompiled": false,
+    "missile_versions": [
+      "2.0.2"
+    ],
+    "core_flavor": "vJASS",
+    "pjass_log": "/home/snz/Documentos/ChatGPT/Proyect/work/bpower-misiles-20261020/245192-pjass.log",
+    "verification_date": "2026-10-20",
+    "embedded_script_sha256": "4f77460ef386e5bfc95b5533a2b2a0ed47f29ff2210e03efca6939a2d9eb91b7"
+  },
+  {
+    "resource_id": "243397",
+    "title": "Frozen Orb v2.1",
+    "map_info_version": 25,
+    "terrain_version": 11,
+    "wct_version": 1,
+    "wct_trailing_bytes": 0,
+    "wct_recovered_blocks": 8,
+    "blocks": [
+      {
+        "file": "fuentes/243397/trigger-0000.j",
+        "sha256": "29758de856c34d6aedc66e8fdbd9a828057f8419cfb2198a3aceb6eaca243fa0",
+        "lines": 380,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/243397/trigger-0002.j",
+        "sha256": "51daf6ed52ee9de60f1fc523550e84c40200e3a17acc8335ec2ef4617f557680",
+        "lines": 42,
+        "missile_version": [],
+        "libraries": [
+          "WorldBounds"
+        ],
+        "scopes": [],
+        "structs": [
+          "WorldBounds"
+        ]
+      },
+      {
+        "file": "fuentes/243397/trigger-0004.j",
+        "sha256": "cbcf79bacd5723c3f655fc6c1402a12144b4a5a4a102209f1b6aa701284e4286",
+        "lines": 1791,
+        "missile_version": [
+          "2.5.1"
+        ],
+        "libraries": [
+          "Missile"
+        ],
+        "scopes": [],
+        "structs": [
+          "Missile",
+          "Missile",
+          "MissilePosition",
+          "RecycleBin"
+        ]
+      },
+      {
+        "file": "fuentes/243397/trigger-0005.j",
+        "sha256": "b27128e78a167c373a3784f68383a98ef445ec1dc6edfaf9ecef78065b3e013f",
+        "lines": 66,
+        "missile_version": [],
+        "libraries": [
+          "SpellEffectEvent"
+        ],
+        "scopes": [],
+        "structs": [
+          "S"
+        ]
+      },
+      {
+        "file": "fuentes/243397/trigger-0006.j",
+        "sha256": "4e8423e5c0841be7c9bd03ce2aea3a3c7d84f18d160ae74973665676727d956e",
+        "lines": 64,
+        "missile_version": [],
+        "libraries": [
+          "RegisterPlayerUnitEvent"
+        ],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/243397/trigger-0007.j",
+        "sha256": "121f354bc39170ef78634153f17df50efe5a577518e745441ad9731441eb6bb8",
+        "lines": 30,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [],
+        "structs": []
+      },
+      {
+        "file": "fuentes/243397/trigger-0008.j",
+        "sha256": "acd3e3fb4532555191a77b05b37503f5ff11e492aa595db31c0fc1c74a7f443b",
+        "lines": 203,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [
+          "FrozenOrb"
+        ],
+        "structs": [
+          "Buff",
+          "IceBolt",
+          "FrozenOrb"
+        ]
+      },
+      {
+        "file": "fuentes/243397/trigger-0009.j",
+        "sha256": "d4ab140e198162e4e85c1b52c244ee0e2f6c151e4ea080f34fcecc6f7126b143",
+        "lines": 60,
+        "missile_version": [],
+        "libraries": [],
+        "scopes": [
+          "Show"
+        ],
+        "structs": [
+          "X"
+        ]
+      }
+    ],
+    "embedded_jass_pjass_exit": 0,
+    "original_hash_unchanged": true,
+    "game_tested": false,
+    "vjass_recompiled": false,
+    "missile_versions": [
+      "2.5.1"
+    ],
+    "core_flavor": "vJASS",
+    "pjass_log": "/home/snz/Documentos/ChatGPT/Proyect/work/bpower-misiles-20261020/243397-pjass.log",
+    "verification_date": "2026-10-20",
+    "embedded_script_sha256": "b40e40955eac3a21c0eb7b4bfe991b498279426053cff815091598261670897a"
+  }
+]

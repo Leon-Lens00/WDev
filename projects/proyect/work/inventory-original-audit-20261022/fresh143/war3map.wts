@@ -1,0 +1,4919 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 5
+// Abilities: Skin (-Skin Changer), Name (Name)
+{
+-Skin Changer
+}
+
+STRING 11
+// Destructibles: D000 (InvItemIcon000), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 12
+// Destructibles: D000 (InvItemIcon000), Name (Name)
+{
+InvItemIcon000
+}
+
+STRING 13
+// Destructibles: D010 (InvItemIcon036), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 14
+// Destructibles: D010 (InvItemIcon036), Name (Name)
+{
+InvItemIcon036
+}
+
+STRING 15
+// Destructibles: D020 (InvItemIcon072), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 16
+// Destructibles: D020 (InvItemIcon072), Name (Name)
+{
+InvItemIcon072
+}
+
+STRING 17
+// Destructibles: D030 (InvItemIcon108), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 18
+// Destructibles: D030 (InvItemIcon108), Name (Name)
+{
+InvItemIcon108
+}
+
+STRING 19
+// Destructibles: D040 (InvItemIcon144), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 20
+// Destructibles: D040 (InvItemIcon144), Name (Name)
+{
+InvItemIcon144
+}
+
+STRING 21
+// Destructibles: D050 (InvItemIcon180), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 22
+// Destructibles: D050 (InvItemIcon180), Name (Name)
+{
+InvItemIcon180
+}
+
+STRING 23
+// Destructibles: D001 (InvItemIcon001), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 24
+// Destructibles: D001 (InvItemIcon001), Name (Name)
+{
+InvItemIcon001
+}
+
+STRING 25
+// Destructibles: D201 (ElemBag01), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 26
+// Destructibles: D201 (ElemBag01), Name (Name)
+{
+ElemBag01
+}
+
+STRING 27
+// Destructibles: D011 (InvItemIcon037), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 28
+// Destructibles: D011 (InvItemIcon037), Name (Name)
+{
+InvItemIcon037
+}
+
+STRING 29
+// Destructibles: C311 (fs_Effect037), Name (Name)
+{
+fs_Effect037
+}
+
+STRING 30
+// Destructibles: D021 (InvItemIcon073), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 31
+// Destructibles: D021 (InvItemIcon073), Name (Name)
+{
+InvItemIcon073
+}
+
+STRING 32
+// Destructibles: D031 (InvItemIcon109), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 33
+// Destructibles: D031 (InvItemIcon109), Name (Name)
+{
+InvItemIcon109
+}
+
+STRING 34
+// Destructibles: D041 (InvItemIcon145), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 35
+// Destructibles: D041 (InvItemIcon145), Name (Name)
+{
+InvItemIcon145
+}
+
+STRING 36
+// Destructibles: D051 (InvItemIcon181), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 37
+// Destructibles: D051 (InvItemIcon181), Name (Name)
+{
+InvItemIcon181
+}
+
+STRING 38
+// Destructibles: D002 (InvItemIcon002), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 39
+// Destructibles: D002 (InvItemIcon002), Name (Name)
+{
+InvItemIcon002
+}
+
+STRING 40
+// Destructibles: D202 (ElemBag02), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 41
+// Destructibles: D202 (ElemBag02), Name (Name)
+{
+ElemBag02
+}
+
+STRING 42
+// Destructibles: D012 (InvItemIcon038), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 43
+// Destructibles: D012 (InvItemIcon038), Name (Name)
+{
+InvItemIcon038
+}
+
+STRING 44
+// Destructibles: C312 (fs_Effect038), Name (Name)
+{
+fs_Effect038
+}
+
+STRING 45
+// Destructibles: D022 (InvItemIcon074), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 46
+// Destructibles: D022 (InvItemIcon074), Name (Name)
+{
+InvItemIcon074
+}
+
+STRING 47
+// Destructibles: D032 (InvItemIcon110), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 48
+// Destructibles: D032 (InvItemIcon110), Name (Name)
+{
+InvItemIcon110
+}
+
+STRING 49
+// Destructibles: D042 (InvItemIcon146), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 50
+// Destructibles: D042 (InvItemIcon146), Name (Name)
+{
+InvItemIcon146
+}
+
+STRING 51
+// Destructibles: D052 (InvItemIcon182), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 52
+// Destructibles: D052 (InvItemIcon182), Name (Name)
+{
+InvItemIcon182
+}
+
+STRING 53
+// Destructibles: D003 (InvItemIcon003), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 54
+// Destructibles: D003 (InvItemIcon003), Name (Name)
+{
+InvItemIcon003
+}
+
+STRING 55
+// Destructibles: D203 (ElemBag03), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 56
+// Destructibles: D203 (ElemBag03), Name (Name)
+{
+ElemBag03
+}
+
+STRING 57
+// Destructibles: D013 (InvItemIcon039), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 58
+// Destructibles: D013 (InvItemIcon039), Name (Name)
+{
+InvItemIcon039
+}
+
+STRING 59
+// Destructibles: C313 (fs_Effect039), Name (Name)
+{
+fs_Effect039
+}
+
+STRING 60
+// Destructibles: D023 (InvItemIcon075), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 61
+// Destructibles: D023 (InvItemIcon075), Name (Name)
+{
+InvItemIcon075
+}
+
+STRING 62
+// Destructibles: D033 (InvItemIcon111), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 63
+// Destructibles: D033 (InvItemIcon111), Name (Name)
+{
+InvItemIcon111
+}
+
+STRING 64
+// Destructibles: D043 (InvItemIcon147), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 65
+// Destructibles: D043 (InvItemIcon147), Name (Name)
+{
+InvItemIcon147
+}
+
+STRING 66
+// Destructibles: D053 (InvItemIcon183), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 67
+// Destructibles: D053 (InvItemIcon183), Name (Name)
+{
+InvItemIcon183
+}
+
+STRING 68
+// Destructibles: D004 (InvItemIcon004), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 69
+// Destructibles: D004 (InvItemIcon004), Name (Name)
+{
+InvItemIcon004
+}
+
+STRING 70
+// Destructibles: D204 (ElemBag04), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 71
+// Destructibles: D204 (ElemBag04), Name (Name)
+{
+ElemBag04
+}
+
+STRING 72
+// Destructibles: D014 (InvItemIcon040), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 73
+// Destructibles: D014 (InvItemIcon040), Name (Name)
+{
+InvItemIcon040
+}
+
+STRING 74
+// Destructibles: C314 (fs_Effect040), Name (Name)
+{
+fs_Effect040
+}
+
+STRING 75
+// Destructibles: D024 (InvItemIcon076), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 76
+// Destructibles: D024 (InvItemIcon076), Name (Name)
+{
+InvItemIcon076
+}
+
+STRING 77
+// Destructibles: D034 (InvItemIcon112), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 78
+// Destructibles: D034 (InvItemIcon112), Name (Name)
+{
+InvItemIcon112
+}
+
+STRING 79
+// Destructibles: D044 (InvItemIcon148), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 80
+// Destructibles: D044 (InvItemIcon148), Name (Name)
+{
+InvItemIcon148
+}
+
+STRING 81
+// Destructibles: D054 (InvItemIcon184), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 82
+// Destructibles: D054 (InvItemIcon184), Name (Name)
+{
+InvItemIcon184
+}
+
+STRING 83
+// Destructibles: D005 (InvItemIcon005), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 84
+// Destructibles: D005 (InvItemIcon005), Name (Name)
+{
+InvItemIcon005
+}
+
+STRING 85
+// Destructibles: D015 (InvItemIcon041), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 86
+// Destructibles: D015 (InvItemIcon041), Name (Name)
+{
+InvItemIcon041
+}
+
+STRING 87
+// Destructibles: C315 (fs_Effect041), Name (Name)
+{
+fs_Effect041
+}
+
+STRING 88
+// Destructibles: D025 (InvItemIcon077), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 89
+// Destructibles: D025 (InvItemIcon077), Name (Name)
+{
+InvItemIcon077
+}
+
+STRING 90
+// Destructibles: D035 (InvItemIcon113), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 91
+// Destructibles: D035 (InvItemIcon113), Name (Name)
+{
+InvItemIcon113
+}
+
+STRING 92
+// Destructibles: D045 (InvItemIcon149), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 93
+// Destructibles: D045 (InvItemIcon149), Name (Name)
+{
+InvItemIcon149
+}
+
+STRING 94
+// Destructibles: D055 (InvItemIcon185), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 95
+// Destructibles: D055 (InvItemIcon185), Name (Name)
+{
+InvItemIcon185
+}
+
+STRING 96
+// Destructibles: D006 (InvItemIcon006), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 97
+// Destructibles: D006 (InvItemIcon006), Name (Name)
+{
+InvItemIcon006
+}
+
+STRING 98
+// Destructibles: D016 (InvItemIcon042), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 99
+// Destructibles: D016 (InvItemIcon042), Name (Name)
+{
+InvItemIcon042
+}
+
+STRING 100
+// Destructibles: D026 (InvItemIcon078), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 101
+// Destructibles: D026 (InvItemIcon078), Name (Name)
+{
+InvItemIcon078
+}
+
+STRING 102
+// Destructibles: D036 (InvItemIcon114), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 103
+// Destructibles: D036 (InvItemIcon114), Name (Name)
+{
+InvItemIcon114
+}
+
+STRING 104
+// Destructibles: D046 (InvItemIcon150), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 105
+// Destructibles: D046 (InvItemIcon150), Name (Name)
+{
+InvItemIcon150
+}
+
+STRING 106
+// Destructibles: D056 (InvItemIcon186), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 107
+// Destructibles: D056 (InvItemIcon186), Name (Name)
+{
+InvItemIcon186
+}
+
+STRING 108
+// Destructibles: D007 (InvItemIcon007), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 109
+// Destructibles: D007 (InvItemIcon007), Name (Name)
+{
+InvItemIcon007
+}
+
+STRING 110
+// Destructibles: D017 (InvItemIcon043), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 111
+// Destructibles: D017 (InvItemIcon043), Name (Name)
+{
+InvItemIcon043
+}
+
+STRING 112
+// Destructibles: D027 (InvItemIcon079), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 113
+// Destructibles: D027 (InvItemIcon079), Name (Name)
+{
+InvItemIcon079
+}
+
+STRING 114
+// Destructibles: D037 (InvItemIcon115), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 115
+// Destructibles: D037 (InvItemIcon115), Name (Name)
+{
+InvItemIcon115
+}
+
+STRING 116
+// Destructibles: D047 (InvItemIcon151), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 117
+// Destructibles: D047 (InvItemIcon151), Name (Name)
+{
+InvItemIcon151
+}
+
+STRING 118
+// Destructibles: D057 (InvItemIcon187), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 119
+// Destructibles: D057 (InvItemIcon187), Name (Name)
+{
+InvItemIcon187
+}
+
+STRING 120
+// Destructibles: D008 (InvItemIcon008), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 121
+// Destructibles: D008 (InvItemIcon008), Name (Name)
+{
+InvItemIcon008
+}
+
+STRING 122
+// Destructibles: D018 (InvItemIcon044), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 123
+// Destructibles: D018 (InvItemIcon044), Name (Name)
+{
+InvItemIcon044
+}
+
+STRING 124
+// Destructibles: D028 (InvItemIcon080), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 125
+// Destructibles: D028 (InvItemIcon080), Name (Name)
+{
+InvItemIcon080
+}
+
+STRING 126
+// Destructibles: D038 (InvItemIcon116), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 127
+// Destructibles: D038 (InvItemIcon116), Name (Name)
+{
+InvItemIcon116
+}
+
+STRING 128
+// Destructibles: D048 (InvItemIcon152), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 129
+// Destructibles: D048 (InvItemIcon152), Name (Name)
+{
+InvItemIcon152
+}
+
+STRING 130
+// Destructibles: D058 (InvItemIcon188), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 131
+// Destructibles: D058 (InvItemIcon188), Name (Name)
+{
+InvItemIcon188
+}
+
+STRING 132
+// Destructibles: D009 (InvItemIcon009), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 133
+// Destructibles: D009 (InvItemIcon009), Name (Name)
+{
+InvItemIcon009
+}
+
+STRING 134
+// Destructibles: D019 (InvItemIcon045), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 135
+// Destructibles: D019 (InvItemIcon045), Name (Name)
+{
+InvItemIcon045
+}
+
+STRING 136
+// Destructibles: D029 (InvItemIcon081), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 137
+// Destructibles: D029 (InvItemIcon081), Name (Name)
+{
+InvItemIcon081
+}
+
+STRING 138
+// Destructibles: D039 (InvItemIcon117), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 139
+// Destructibles: D039 (InvItemIcon117), Name (Name)
+{
+InvItemIcon117
+}
+
+STRING 140
+// Destructibles: D049 (InvItemIcon153), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 141
+// Destructibles: D049 (InvItemIcon153), Name (Name)
+{
+InvItemIcon153
+}
+
+STRING 142
+// Destructibles: D059 (InvItemIcon189), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 143
+// Destructibles: D059 (InvItemIcon189), Name (Name)
+{
+InvItemIcon189
+}
+
+STRING 144
+// Destructibles: D00A (InvItemIcon010), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 145
+// Destructibles: D00A (InvItemIcon010), Name (Name)
+{
+InvItemIcon010
+}
+
+STRING 146
+// Destructibles: D01A (InvItemIcon046), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 147
+// Destructibles: D01A (InvItemIcon046), Name (Name)
+{
+InvItemIcon046
+}
+
+STRING 148
+// Destructibles: D02A (InvItemIcon082), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 149
+// Destructibles: D02A (InvItemIcon082), Name (Name)
+{
+InvItemIcon082
+}
+
+STRING 150
+// Destructibles: D03A (InvItemIcon118), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 151
+// Destructibles: D03A (InvItemIcon118), Name (Name)
+{
+InvItemIcon118
+}
+
+STRING 152
+// Destructibles: D04A (InvItemIcon154), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 153
+// Destructibles: D04A (InvItemIcon154), Name (Name)
+{
+InvItemIcon154
+}
+
+STRING 154
+// Destructibles: D05A (InvItemIcon190), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 155
+// Destructibles: D05A (InvItemIcon190), Name (Name)
+{
+InvItemIcon190
+}
+
+STRING 156
+// Destructibles: D00B (InvItemIcon011), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 157
+// Destructibles: D00B (InvItemIcon011), Name (Name)
+{
+InvItemIcon011
+}
+
+STRING 158
+// Destructibles: D01B (InvItemIcon047), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 159
+// Destructibles: D01B (InvItemIcon047), Name (Name)
+{
+InvItemIcon047
+}
+
+STRING 160
+// Destructibles: D02B (InvItemIcon083), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 161
+// Destructibles: D02B (InvItemIcon083), Name (Name)
+{
+InvItemIcon083
+}
+
+STRING 162
+// Destructibles: D03B (InvItemIcon119), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 163
+// Destructibles: D03B (InvItemIcon119), Name (Name)
+{
+InvItemIcon119
+}
+
+STRING 164
+// Destructibles: D04B (InvItemIcon155), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 165
+// Destructibles: D04B (InvItemIcon155), Name (Name)
+{
+InvItemIcon155
+}
+
+STRING 166
+// Destructibles: D05B (InvItemIcon191), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 167
+// Destructibles: D05B (InvItemIcon191), Name (Name)
+{
+InvItemIcon191
+}
+
+STRING 168
+// Destructibles: D00C (InvItemIcon012), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 169
+// Destructibles: D00C (InvItemIcon012), Name (Name)
+{
+InvItemIcon012
+}
+
+STRING 170
+// Destructibles: D01C (InvItemIcon048), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 171
+// Destructibles: D01C (InvItemIcon048), Name (Name)
+{
+InvItemIcon048
+}
+
+STRING 172
+// Destructibles: C31C (fs_Effect047), Name (Name)
+{
+fs_Effect047
+}
+
+STRING 173
+// Destructibles: D02C (InvItemIcon084), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 174
+// Destructibles: D02C (InvItemIcon084), Name (Name)
+{
+InvItemIcon084
+}
+
+STRING 175
+// Destructibles: D03C (InvItemIcon120), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 176
+// Destructibles: D03C (InvItemIcon120), Name (Name)
+{
+InvItemIcon120
+}
+
+STRING 177
+// Destructibles: D04C (InvItemIcon156), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 178
+// Destructibles: D04C (InvItemIcon156), Name (Name)
+{
+InvItemIcon156
+}
+
+STRING 179
+// Destructibles: D05C (InvItemIcon192), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 180
+// Destructibles: D05C (InvItemIcon192), Name (Name)
+{
+InvItemIcon192
+}
+
+STRING 181
+// Destructibles: D00D (InvItemIcon013), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 182
+// Destructibles: D00D (InvItemIcon013), Name (Name)
+{
+InvItemIcon013
+}
+
+STRING 183
+// Destructibles: D01D (InvItemIcon049), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 184
+// Destructibles: D01D (InvItemIcon049), Name (Name)
+{
+InvItemIcon049
+}
+
+STRING 185
+// Destructibles: D02D (InvItemIcon085), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 186
+// Destructibles: D02D (InvItemIcon085), Name (Name)
+{
+InvItemIcon085
+}
+
+STRING 187
+// Destructibles: D03D (InvItemIcon121), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 188
+// Destructibles: D03D (InvItemIcon121), Name (Name)
+{
+InvItemIcon121
+}
+
+STRING 189
+// Destructibles: D04D (InvItemIcon157), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 190
+// Destructibles: D04D (InvItemIcon157), Name (Name)
+{
+InvItemIcon157
+}
+
+STRING 191
+// Destructibles: D05D (InvItemIcon193), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 192
+// Destructibles: D05D (InvItemIcon193), Name (Name)
+{
+InvItemIcon193
+}
+
+STRING 193
+// Destructibles: D00E (InvItemIcon014), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 194
+// Destructibles: D00E (InvItemIcon014), Name (Name)
+{
+InvItemIcon014
+}
+
+STRING 195
+// Destructibles: D01E (InvItemIcon050), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 196
+// Destructibles: D01E (InvItemIcon050), Name (Name)
+{
+InvItemIcon050
+}
+
+STRING 197
+// Destructibles: D02E (InvItemIcon086), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 198
+// Destructibles: D02E (InvItemIcon086), Name (Name)
+{
+InvItemIcon086
+}
+
+STRING 199
+// Destructibles: D03E (InvItemIcon122), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 200
+// Destructibles: D03E (InvItemIcon122), Name (Name)
+{
+InvItemIcon122
+}
+
+STRING 201
+// Destructibles: D04E (InvItemIcon158), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 202
+// Destructibles: D04E (InvItemIcon158), Name (Name)
+{
+InvItemIcon158
+}
+
+STRING 203
+// Destructibles: D05E (InvItemIcon194), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 204
+// Destructibles: D05E (InvItemIcon194), Name (Name)
+{
+InvItemIcon194
+}
+
+STRING 205
+// Destructibles: D00F (InvItemIcon015), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 206
+// Destructibles: D00F (InvItemIcon015), Name (Name)
+{
+InvItemIcon015
+}
+
+STRING 207
+// Destructibles: D01F (InvItemIcon051), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 208
+// Destructibles: D01F (InvItemIcon051), Name (Name)
+{
+InvItemIcon051
+}
+
+STRING 209
+// Destructibles: D02F (InvItemIcon087), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 210
+// Destructibles: D02F (InvItemIcon087), Name (Name)
+{
+InvItemIcon087
+}
+
+STRING 211
+// Destructibles: D03F (InvItemIcon123), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 212
+// Destructibles: D03F (InvItemIcon123), Name (Name)
+{
+InvItemIcon123
+}
+
+STRING 213
+// Destructibles: D04F (InvItemIcon159), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 214
+// Destructibles: D04F (InvItemIcon159), Name (Name)
+{
+InvItemIcon159
+}
+
+STRING 215
+// Destructibles: D05F (InvItemIcon195), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 216
+// Destructibles: D05F (InvItemIcon195), Name (Name)
+{
+InvItemIcon195
+}
+
+STRING 217
+// Destructibles: D00G (InvItemIcon016), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 218
+// Destructibles: D00G (InvItemIcon016), Name (Name)
+{
+InvItemIcon016
+}
+
+STRING 219
+// Destructibles: D01G (InvItemIcon052), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 220
+// Destructibles: D01G (InvItemIcon052), Name (Name)
+{
+InvItemIcon052
+}
+
+STRING 221
+// Destructibles: D02G (InvItemIcon088), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 222
+// Destructibles: D02G (InvItemIcon088), Name (Name)
+{
+InvItemIcon088
+}
+
+STRING 223
+// Destructibles: D03G (InvItemIcon124), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 224
+// Destructibles: D03G (InvItemIcon124), Name (Name)
+{
+InvItemIcon124
+}
+
+STRING 225
+// Destructibles: D04G (InvItemIcon160), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 226
+// Destructibles: D04G (InvItemIcon160), Name (Name)
+{
+InvItemIcon160
+}
+
+STRING 227
+// Destructibles: D05G (InvItemIcon196), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 228
+// Destructibles: D05G (InvItemIcon196), Name (Name)
+{
+InvItemIcon196
+}
+
+STRING 229
+// Destructibles: D00H (InvItemIcon017), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 230
+// Destructibles: D00H (InvItemIcon017), Name (Name)
+{
+InvItemIcon017
+}
+
+STRING 231
+// Destructibles: D01H (InvItemIcon053), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 232
+// Destructibles: D01H (InvItemIcon053), Name (Name)
+{
+InvItemIcon053
+}
+
+STRING 233
+// Destructibles: D02H (InvItemIcon089), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 234
+// Destructibles: D02H (InvItemIcon089), Name (Name)
+{
+InvItemIcon089
+}
+
+STRING 235
+// Destructibles: D03H (InvItemIcon125), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 236
+// Destructibles: D03H (InvItemIcon125), Name (Name)
+{
+InvItemIcon125
+}
+
+STRING 237
+// Destructibles: D04H (InvItemIcon161), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 238
+// Destructibles: D04H (InvItemIcon161), Name (Name)
+{
+InvItemIcon161
+}
+
+STRING 239
+// Destructibles: D05H (InvItemIcon197), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 240
+// Destructibles: D05H (InvItemIcon197), Name (Name)
+{
+InvItemIcon197
+}
+
+STRING 241
+// Destructibles: D00I (InvItemIcon018), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 242
+// Destructibles: D00I (InvItemIcon018), Name (Name)
+{
+InvItemIcon018
+}
+
+STRING 243
+// Destructibles: D01I (InvItemIcon054), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 244
+// Destructibles: D01I (InvItemIcon054), Name (Name)
+{
+InvItemIcon054
+}
+
+STRING 245
+// Destructibles: D02I (InvItemIcon090), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 246
+// Destructibles: D02I (InvItemIcon090), Name (Name)
+{
+InvItemIcon090
+}
+
+STRING 247
+// Destructibles: D03I (InvItemIcon126), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 248
+// Destructibles: D03I (InvItemIcon126), Name (Name)
+{
+InvItemIcon126
+}
+
+STRING 249
+// Destructibles: D04I (InvItemIcon162), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 250
+// Destructibles: D04I (InvItemIcon162), Name (Name)
+{
+InvItemIcon162
+}
+
+STRING 251
+// Destructibles: D05I (InvItemIcon198), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 252
+// Destructibles: D05I (InvItemIcon198), Name (Name)
+{
+InvItemIcon198
+}
+
+STRING 253
+// Destructibles: D00J (InvItemIcon019), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 254
+// Destructibles: D00J (InvItemIcon019), Name (Name)
+{
+InvItemIcon019
+}
+
+STRING 255
+// Destructibles: D01J (InvItemIcon055), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 256
+// Destructibles: D01J (InvItemIcon055), Name (Name)
+{
+InvItemIcon055
+}
+
+STRING 257
+// Destructibles: D02J (InvItemIcon091), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 258
+// Destructibles: D02J (InvItemIcon091), Name (Name)
+{
+InvItemIcon091
+}
+
+STRING 259
+// Destructibles: D03J (InvItemIcon127), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 260
+// Destructibles: D03J (InvItemIcon127), Name (Name)
+{
+InvItemIcon127
+}
+
+STRING 261
+// Destructibles: D04J (InvItemIcon163), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 262
+// Destructibles: D04J (InvItemIcon163), Name (Name)
+{
+InvItemIcon163
+}
+
+STRING 263
+// Destructibles: D05J (InvItemIcon199), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 264
+// Destructibles: D05J (InvItemIcon199), Name (Name)
+{
+InvItemIcon199
+}
+
+STRING 265
+// Destructibles: D00K (InvItemIcon020), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 266
+// Destructibles: D00K (InvItemIcon020), Name (Name)
+{
+InvItemIcon020
+}
+
+STRING 267
+// Destructibles: D01K (InvItemIcon056), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 268
+// Destructibles: D01K (InvItemIcon056), Name (Name)
+{
+InvItemIcon056
+}
+
+STRING 269
+// Destructibles: D02K (InvItemIcon092), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 270
+// Destructibles: D02K (InvItemIcon092), Name (Name)
+{
+InvItemIcon092
+}
+
+STRING 271
+// Destructibles: D03K (InvItemIcon128), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 272
+// Destructibles: D03K (InvItemIcon128), Name (Name)
+{
+InvItemIcon128
+}
+
+STRING 273
+// Destructibles: D04K (InvItemIcon164), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 274
+// Destructibles: D04K (InvItemIcon164), Name (Name)
+{
+InvItemIcon164
+}
+
+STRING 275
+// Destructibles: D05K (InvItemIcon200), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 276
+// Destructibles: D05K (InvItemIcon200), Name (Name)
+{
+InvItemIcon200
+}
+
+STRING 277
+// Destructibles: D00L (InvItemIcon021), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 278
+// Destructibles: D00L (InvItemIcon021), Name (Name)
+{
+InvItemIcon021
+}
+
+STRING 279
+// Destructibles: D01L (InvItemIcon057), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 280
+// Destructibles: D01L (InvItemIcon057), Name (Name)
+{
+InvItemIcon057
+}
+
+STRING 281
+// Destructibles: D02L (InvItemIcon093), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 282
+// Destructibles: D02L (InvItemIcon093), Name (Name)
+{
+InvItemIcon093
+}
+
+STRING 283
+// Destructibles: D03L (InvItemIcon129), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 284
+// Destructibles: D03L (InvItemIcon129), Name (Name)
+{
+InvItemIcon129
+}
+
+STRING 285
+// Destructibles: D04L (InvItemIcon165), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 286
+// Destructibles: D04L (InvItemIcon165), Name (Name)
+{
+InvItemIcon165
+}
+
+STRING 287
+// Destructibles: D05L (InvItemIcon201), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 288
+// Destructibles: D05L (InvItemIcon201), Name (Name)
+{
+InvItemIcon201
+}
+
+STRING 289
+// Destructibles: D00M (InvItemIcon022), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 290
+// Destructibles: D00M (InvItemIcon022), Name (Name)
+{
+InvItemIcon022
+}
+
+STRING 291
+// Destructibles: D01M (InvItemIcon058), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 292
+// Destructibles: D01M (InvItemIcon058), Name (Name)
+{
+InvItemIcon058
+}
+
+STRING 293
+// Destructibles: D02M (InvItemIcon094), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 294
+// Destructibles: D02M (InvItemIcon094), Name (Name)
+{
+InvItemIcon094
+}
+
+STRING 295
+// Destructibles: D03M (InvItemIcon130), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 296
+// Destructibles: D03M (InvItemIcon130), Name (Name)
+{
+InvItemIcon130
+}
+
+STRING 297
+// Destructibles: D04M (InvItemIcon166), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 298
+// Destructibles: D04M (InvItemIcon166), Name (Name)
+{
+InvItemIcon166
+}
+
+STRING 299
+// Destructibles: D05M (InvItemIcon202), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 300
+// Destructibles: D05M (InvItemIcon202), Name (Name)
+{
+InvItemIcon202
+}
+
+STRING 301
+// Destructibles: D00N (InvItemIcon023), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 302
+// Destructibles: D00N (InvItemIcon023), Name (Name)
+{
+InvItemIcon023
+}
+
+STRING 303
+// Destructibles: D01N (InvItemIcon059), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 304
+// Destructibles: D01N (InvItemIcon059), Name (Name)
+{
+InvItemIcon059
+}
+
+STRING 305
+// Destructibles: D02N (InvItemIcon095), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 306
+// Destructibles: D02N (InvItemIcon095), Name (Name)
+{
+InvItemIcon095
+}
+
+STRING 307
+// Destructibles: D03N (InvItemIcon131), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 308
+// Destructibles: D03N (InvItemIcon131), Name (Name)
+{
+InvItemIcon131
+}
+
+STRING 309
+// Destructibles: D04N (InvItemIcon167), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 310
+// Destructibles: D04N (InvItemIcon167), Name (Name)
+{
+InvItemIcon167
+}
+
+STRING 311
+// Destructibles: D05N (InvItemIcon203), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 312
+// Destructibles: D05N (InvItemIcon203), Name (Name)
+{
+InvItemIcon203
+}
+
+STRING 313
+// Destructibles: D00O (InvItemIcon024), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 314
+// Destructibles: D00O (InvItemIcon024), Name (Name)
+{
+InvItemIcon024
+}
+
+STRING 315
+// Destructibles: D01O (InvItemIcon060), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 316
+// Destructibles: D01O (InvItemIcon060), Name (Name)
+{
+InvItemIcon060
+}
+
+STRING 317
+// Destructibles: D02O (InvItemIcon096), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 318
+// Destructibles: D02O (InvItemIcon096), Name (Name)
+{
+InvItemIcon096
+}
+
+STRING 319
+// Destructibles: D03O (InvItemIcon132), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 320
+// Destructibles: D03O (InvItemIcon132), Name (Name)
+{
+InvItemIcon132
+}
+
+STRING 321
+// Destructibles: D04O (InvItemIcon168), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 322
+// Destructibles: D04O (InvItemIcon168), Name (Name)
+{
+InvItemIcon168
+}
+
+STRING 323
+// Destructibles: D05O (InvItemIcon204), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 324
+// Destructibles: D05O (InvItemIcon204), Name (Name)
+{
+InvItemIcon204
+}
+
+STRING 325
+// Destructibles: D00P (InvItemIcon025), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 326
+// Destructibles: D00P (InvItemIcon025), Name (Name)
+{
+InvItemIcon025
+}
+
+STRING 327
+// Destructibles: D01P (InvItemIcon061), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 328
+// Destructibles: D01P (InvItemIcon061), Name (Name)
+{
+InvItemIcon061
+}
+
+STRING 329
+// Destructibles: D02P (InvItemIcon097), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 330
+// Destructibles: D02P (InvItemIcon097), Name (Name)
+{
+InvItemIcon097
+}
+
+STRING 331
+// Destructibles: D03P (InvItemIcon133), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 332
+// Destructibles: D03P (InvItemIcon133), Name (Name)
+{
+InvItemIcon133
+}
+
+STRING 333
+// Destructibles: D04P (InvItemIcon169), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 334
+// Destructibles: D04P (InvItemIcon169), Name (Name)
+{
+InvItemIcon169
+}
+
+STRING 335
+// Destructibles: D05P (InvItemIcon205), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 336
+// Destructibles: D05P (InvItemIcon205), Name (Name)
+{
+InvItemIcon205
+}
+
+STRING 337
+// Destructibles: D00Q (InvItemIcon026), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 338
+// Destructibles: D00Q (InvItemIcon026), Name (Name)
+{
+InvItemIcon026
+}
+
+STRING 339
+// Destructibles: D01Q (InvItemIcon063), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 340
+// Destructibles: D01Q (InvItemIcon063), Name (Name)
+{
+InvItemIcon063
+}
+
+STRING 341
+// Destructibles: D02Q (InvItemIcon098), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 342
+// Destructibles: D02Q (InvItemIcon098), Name (Name)
+{
+InvItemIcon098
+}
+
+STRING 343
+// Destructibles: D03Q (InvItemIcon134), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 344
+// Destructibles: D03Q (InvItemIcon134), Name (Name)
+{
+InvItemIcon134
+}
+
+STRING 345
+// Destructibles: D04Q (InvItemIcon170), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 346
+// Destructibles: D04Q (InvItemIcon170), Name (Name)
+{
+InvItemIcon170
+}
+
+STRING 347
+// Destructibles: D05Q (InvItemIcon206), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 348
+// Destructibles: D05Q (InvItemIcon206), Name (Name)
+{
+InvItemIcon206
+}
+
+STRING 349
+// Destructibles: D00R (InvItemIcon027), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 350
+// Destructibles: D00R (InvItemIcon027), Name (Name)
+{
+InvItemIcon027
+}
+
+STRING 351
+// Destructibles: D01R (InvItemIcon062), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 352
+// Destructibles: D01R (InvItemIcon062), Name (Name)
+{
+InvItemIcon062
+}
+
+STRING 353
+// Destructibles: D02R (InvItemIcon099), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 354
+// Destructibles: D02R (InvItemIcon099), Name (Name)
+{
+InvItemIcon099
+}
+
+STRING 355
+// Destructibles: D03R (InvItemIcon135), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 356
+// Destructibles: D03R (InvItemIcon135), Name (Name)
+{
+InvItemIcon135
+}
+
+STRING 357
+// Destructibles: D04R (InvItemIcon171), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 358
+// Destructibles: D04R (InvItemIcon171), Name (Name)
+{
+InvItemIcon171
+}
+
+STRING 359
+// Destructibles: D05R (InvItemIcon207), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 360
+// Destructibles: D05R (InvItemIcon207), Name (Name)
+{
+InvItemIcon207
+}
+
+STRING 361
+// Destructibles: D00S (InvItemIcon028), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 362
+// Destructibles: D00S (InvItemIcon028), Name (Name)
+{
+InvItemIcon028
+}
+
+STRING 363
+// Destructibles: D01S (InvItemIcon066), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 364
+// Destructibles: D01S (InvItemIcon066), Name (Name)
+{
+InvItemIcon066
+}
+
+STRING 365
+// Destructibles: D02S (InvItemIcon100), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 366
+// Destructibles: D02S (InvItemIcon100), Name (Name)
+{
+InvItemIcon100
+}
+
+STRING 367
+// Destructibles: D03S (InvItemIcon136), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 368
+// Destructibles: D03S (InvItemIcon136), Name (Name)
+{
+InvItemIcon136
+}
+
+STRING 369
+// Destructibles: D04S (InvItemIcon172), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 370
+// Destructibles: D04S (InvItemIcon172), Name (Name)
+{
+InvItemIcon172
+}
+
+STRING 371
+// Destructibles: D05S (InvItemIcon208), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 372
+// Destructibles: D05S (InvItemIcon208), Name (Name)
+{
+InvItemIcon208
+}
+
+STRING 373
+// Destructibles: D00T (InvItemIcon029), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 374
+// Destructibles: D00T (InvItemIcon029), Name (Name)
+{
+InvItemIcon029
+}
+
+STRING 375
+// Destructibles: D01T (InvItemIcon065), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 376
+// Destructibles: D01T (InvItemIcon065), Name (Name)
+{
+InvItemIcon065
+}
+
+STRING 377
+// Destructibles: D02T (InvItemIcon101), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 378
+// Destructibles: D02T (InvItemIcon101), Name (Name)
+{
+InvItemIcon101
+}
+
+STRING 379
+// Destructibles: D03T (InvItemIcon137), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 380
+// Destructibles: D03T (InvItemIcon137), Name (Name)
+{
+InvItemIcon137
+}
+
+STRING 381
+// Destructibles: D04T (InvItemIcon173), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 382
+// Destructibles: D04T (InvItemIcon173), Name (Name)
+{
+InvItemIcon173
+}
+
+STRING 383
+// Destructibles: D05T (InvItemIcon209), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 384
+// Destructibles: D05T (InvItemIcon209), Name (Name)
+{
+InvItemIcon209
+}
+
+STRING 385
+// Destructibles: D00U (InvItemIcon030), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 386
+// Destructibles: D00U (InvItemIcon030), Name (Name)
+{
+InvItemIcon030
+}
+
+STRING 387
+// Destructibles: D01U (InvItemIcon065), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 388
+// Destructibles: D01U (InvItemIcon065), Name (Name)
+{
+InvItemIcon065
+}
+
+STRING 389
+// Destructibles: D02U (InvItemIcon102), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 390
+// Destructibles: D02U (InvItemIcon102), Name (Name)
+{
+InvItemIcon102
+}
+
+STRING 391
+// Destructibles: D03U (InvItemIcon138), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 392
+// Destructibles: D03U (InvItemIcon138), Name (Name)
+{
+InvItemIcon138
+}
+
+STRING 393
+// Destructibles: D04U (InvItemIcon174 Orb of Frost), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 395
+// Destructibles: D00V (InvItemIcon031), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 396
+// Destructibles: D00V (InvItemIcon031), Name (Name)
+{
+InvItemIcon031
+}
+
+STRING 397
+// Destructibles: D01V (InvItemIcon067), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 398
+// Destructibles: D01V (InvItemIcon067), Name (Name)
+{
+InvItemIcon067
+}
+
+STRING 399
+// Destructibles: D02V (InvItemIcon103), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 400
+// Destructibles: D02V (InvItemIcon103), Name (Name)
+{
+InvItemIcon103
+}
+
+STRING 401
+// Destructibles: D03V (InvItemIcon139), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 402
+// Destructibles: D03V (InvItemIcon139), Name (Name)
+{
+InvItemIcon139
+}
+
+STRING 403
+// Destructibles: D04V (InvItemIcon175), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 404
+// Destructibles: D04V (InvItemIcon175), Name (Name)
+{
+InvItemIcon175
+}
+
+STRING 405
+// Destructibles: D00W (InvItemIcon032), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 406
+// Destructibles: D00W (InvItemIcon032), Name (Name)
+{
+InvItemIcon032
+}
+
+STRING 407
+// Destructibles: D01W (InvItemIcon068), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 408
+// Destructibles: D01W (InvItemIcon068), Name (Name)
+{
+InvItemIcon068
+}
+
+STRING 409
+// Destructibles: D02W (InvItemIcon104), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 410
+// Destructibles: D02W (InvItemIcon104), Name (Name)
+{
+InvItemIcon104
+}
+
+STRING 411
+// Destructibles: D03W (InvItemIcon140), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 412
+// Destructibles: D03W (InvItemIcon140), Name (Name)
+{
+InvItemIcon140
+}
+
+STRING 413
+// Destructibles: D04W (InvItemIcon176), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 414
+// Destructibles: D04W (InvItemIcon176), Name (Name)
+{
+InvItemIcon176
+}
+
+STRING 415
+// Destructibles: D00X (InvItemIcon033), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 416
+// Destructibles: D00X (InvItemIcon033), Name (Name)
+{
+InvItemIcon033
+}
+
+STRING 417
+// Destructibles: D01X (InvItemIcon069), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 418
+// Destructibles: D01X (InvItemIcon069), Name (Name)
+{
+InvItemIcon069
+}
+
+STRING 419
+// Destructibles: D02X (InvItemIcon105), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 420
+// Destructibles: D02X (InvItemIcon105), Name (Name)
+{
+InvItemIcon105
+}
+
+STRING 421
+// Destructibles: D03X (InvItemIcon141), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 422
+// Destructibles: D03X (InvItemIcon141), Name (Name)
+{
+InvItemIcon141
+}
+
+STRING 423
+// Destructibles: D04X (InvItemIcon177), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 424
+// Destructibles: D04X (InvItemIcon177), Name (Name)
+{
+InvItemIcon177
+}
+
+STRING 425
+// Destructibles: D00Y (InvItemIcon034), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 426
+// Destructibles: D00Y (InvItemIcon034), Name (Name)
+{
+InvItemIcon034
+}
+
+STRING 427
+// Destructibles: D01Y (InvItemIcon070), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 428
+// Destructibles: D01Y (InvItemIcon070), Name (Name)
+{
+InvItemIcon070
+}
+
+STRING 429
+// Destructibles: D02Y (InvItemIcon106), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 430
+// Destructibles: D02Y (InvItemIcon106), Name (Name)
+{
+InvItemIcon106
+}
+
+STRING 431
+// Destructibles: D03Y (InvItemIcon142), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 432
+// Destructibles: D03Y (InvItemIcon142), Name (Name)
+{
+InvItemIcon142
+}
+
+STRING 433
+// Destructibles: D04Y (InvItemIcon178), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 434
+// Destructibles: D04Y (InvItemIcon178), Name (Name)
+{
+InvItemIcon178
+}
+
+STRING 435
+// Destructibles: D00Z (InvItemIcon035), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 436
+// Destructibles: D00Z (InvItemIcon035), Name (Name)
+{
+InvItemIcon035
+}
+
+STRING 437
+// Destructibles: D01Z (InvItemIcon071), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 438
+// Destructibles: D01Z (InvItemIcon071), Name (Name)
+{
+InvItemIcon071
+}
+
+STRING 439
+// Destructibles: D02Z (InvItemIcon107 Mask of Death), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 441
+// Destructibles: D03Z (InvItemIcon143), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 442
+// Destructibles: D03Z (InvItemIcon143), Name (Name)
+{
+InvItemIcon143
+}
+
+STRING 443
+// Destructibles: D04Z (InvItemIcon179), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 444
+// Destructibles: D04Z (InvItemIcon179), Name (Name)
+{
+InvItemIcon179
+}
+
+STRING 445
+// Destructibles: dbnk (Blank), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 446
+// Destructibles: dbnk (Blank), Name (Name)
+{
+Blank
+}
+
+STRING 447
+// Items: IBAG (Bag), Name (Name)
+{
+Bag
+}
+
+STRING 448
+// Items: IBAG (Bag), Description (Description)
+{
+Bag for item.
+}
+
+STRING 449
+// Items: IBAG (Bag), Ubertip (Tooltip - Extended)
+{
+Bag for 6 item.
+}
+
+STRING 450
+// Items: IBAG (Bag), Tip (Tooltip - Basic)
+{
+Bag
+}
+
+STRING 455
+// Abilities: sbnk (Blank), Name (Name)
+{
+Blank
+}
+
+STRING 456
+{
+Inventory & Equipment System v1.4.3
+}
+
+STRING 457
+{
+Any
+}
+
+STRING 459
+{
+TriggerHappy
+}
+
+STRING 460
+{
+Player 2
+}
+
+STRING 461
+{
+Player 3
+}
+
+STRING 462
+{
+Player 4
+}
+
+STRING 463
+{
+Player 5
+}
+
+STRING 464
+{
+Player 6
+}
+
+STRING 465
+{
+Player 7
+}
+
+STRING 466
+{
+Player 8
+}
+
+STRING 467
+{
+Player 9
+}
+
+STRING 468
+{
+Player 10
+}
+
+STRING 469
+{
+Player 11
+}
+
+STRING 470
+{
+Player 12
+}
+
+STRING 471
+{
+Force 2
+}
+
+STRING 474
+// Destructibles: D05W (EquipSlot Ring Left), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 476
+// Destructibles: D05W (EquipSlot Ring Left), Name (Name)
+{
+EquipSlot Ring Left
+}
+
+STRING 477
+// Destructibles: B003 (EquipSlot Head), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 478
+// Destructibles: B003 (EquipSlot Head), Name (Name)
+{
+EquipSlot Head
+}
+
+STRING 479
+// Destructibles: B004 (EquipSlot Shoulder Left), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 480
+// Destructibles: B004 (EquipSlot Shoulder Left), Name (Name)
+{
+EquipSlot Shoulder Left
+}
+
+STRING 481
+// Destructibles: B005 (EquipSlot Weapon), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 482
+// Destructibles: B005 (EquipSlot Weapon), Name (Name)
+{
+EquipSlot Weapon
+}
+
+STRING 483
+// Destructibles: B006 (EquipSlot Chest), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 484
+// Destructibles: B006 (EquipSlot Chest), Name (Name)
+{
+EquipSlot Chest
+}
+
+STRING 485
+// Destructibles: B007 (EquipSlot Belt), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 486
+// Destructibles: B007 (EquipSlot Belt), Name (Name)
+{
+EquipSlot Belt
+}
+
+STRING 487
+// Destructibles: B008 (EquipSlot Pants), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 488
+// Destructibles: B008 (EquipSlot Pants), Name (Name)
+{
+EquipSlot Pants
+}
+
+STRING 489
+// Destructibles: B009 (EquipSlot Neck), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 490
+// Destructibles: B009 (EquipSlot Neck), Name (Name)
+{
+EquipSlot Neck
+}
+
+STRING 491
+// Destructibles: B00A (EquipSlot Shoulder Right), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 492
+// Destructibles: B00A (EquipSlot Shoulder Right), Name (Name)
+{
+EquipSlot Shoulder Right
+}
+
+STRING 493
+// Destructibles: B00B (EquipSlot Shield), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 494
+// Destructibles: B00B (EquipSlot Shield), Name (Name)
+{
+EquipSlot Shield
+}
+
+STRING 495
+// Destructibles: B00C (EquipSlot Gloves), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 496
+// Destructibles: B00C (EquipSlot Gloves), Name (Name)
+{
+EquipSlot Gloves
+}
+
+STRING 497
+// Destructibles: B00D (EquipSlot Bracers), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 498
+// Destructibles: B00D (EquipSlot Bracers), Name (Name)
+{
+EquipSlot Bracers
+}
+
+STRING 499
+// Destructibles: B00E (EquipSlot Boots), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 500
+// Destructibles: B00E (EquipSlot Boots), Name (Name)
+{
+EquipSlot Boots
+}
+
+STRING 501
+// Destructibles: B00F (EquipSlot Ring Ring), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 502
+// Destructibles: B00F (EquipSlot Ring Ring), Name (Name)
+{
+EquipSlot Ring Ring
+}
+
+STRING 503
+// Doodads: D00R ((UnitDex)), Name (Name)
+{
+(UnitDex)
+}
+
+STRING 504
+// Doodads: D00S (Detect Leave), Name (Name)
+{
+Detect Leave
+}
+
+STRING 505
+// Destructibles: B00G (InvItemIcon Crown of Kings), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 506
+// Destructibles: B00G (InvItemIcon Crown of Kings), Name (Name)
+{
+InvItemIcon Crown of Kings
+}
+
+STRING 507
+// Doodads: D002 (Character), Name (Name)
+{
+Character
+}
+
+STRING 508
+// Doodads: D003 (Character [|cffffcc00C|r]), Name (Name)
+{
+Character [|cffffcc00C|r]
+}
+
+STRING 509
+// Doodads: D004 (Bag Window Long), Name (Name)
+{
+Bag Window Long
+}
+
+STRING 512
+// Destructibles: B00H (InvItemIcon Tooltip Gold), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 513
+// Destructibles: B00H (InvItemIcon Tooltip Gold), Name (Name)
+{
+InvItemIcon Tooltip Gold
+}
+
+STRING 514
+// Destructibles: D02Z (InvItemIcon107 Mask of Death), Name (Name)
+{
+InvItemIcon107 Mask of Death
+}
+
+STRING 515
+// Destructibles: D04U (InvItemIcon174 Orb of Frost), Name (Name)
+{
+InvItemIcon174 Orb of Frost
+}
+
+STRING 516
+// Abilities: A002 (Inventory), Name (Name)
+{
+Inventory
+}
+
+STRING 519
+// Abilities: A002 (Inventory), Tip (Tooltip - Normal)
+{
+Inventory [|cffffcc00B|r]
+}
+
+STRING 520
+// Abilities: A002 (Inventory), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 521
+// Destructibles: B00I (InvItemIcon Boots), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 522
+// Destructibles: B00I (InvItemIcon Boots), Name (Name)
+{
+InvItemIcon Boots
+}
+
+STRING 523
+// Destructibles: B00J (InvItemIcon Belt), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 524
+// Destructibles: B00J (InvItemIcon Belt), Name (Name)
+{
+InvItemIcon Belt
+}
+
+STRING 525
+// Units: uidm ( ), Name (Name)
+{
+ 
+}
+
+STRING 527
+// Destructibles: B00K (InvItemIcon Gauntlets), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 528
+// Destructibles: B00K (InvItemIcon Gauntlets), Name (Name)
+{
+InvItemIcon Gauntlets
+}
+
+STRING 529
+// Destructibles: B00L (InvItemIcon Necklace Spell Immunity), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 530
+// Destructibles: B00L (InvItemIcon Necklace Spell Immunity), Name (Name)
+{
+InvItemIcon Necklace Spell Immunity
+}
+
+STRING 531
+// Destructibles: B00M (InvItemIcon Runed Bracers), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 532
+// Destructibles: B00M (InvItemIcon Runed Bracers), Name (Name)
+{
+InvItemIcon Runed Bracers
+}
+
+STRING 533
+// Abilities: (A)- (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(-1024)
+}
+
+STRING 534
+// Abilities: (A)- (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 535
+// Abilities: (B)- (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(-1024)
+}
+
+STRING 536
+// Abilities: (B)- (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 537
+// Abilities: (C)- (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(-2048)
+}
+
+STRING 538
+// Abilities: (C)- (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 539
+// Abilities: (D)- (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(-512%)
+}
+
+STRING 540
+// Abilities: (D)- (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 541
+// Abilities: (E)- (BonusMod - Life Regen), EditorSuffix (Editor Suffix)
+{
+(-256)
+}
+
+STRING 542
+// Abilities: (E)- (BonusMod - Life Regen), Name (Name)
+{
+BonusMod - Life Regen
+}
+
+STRING 543
+// Abilities: (F)- (BonusMod - Strength), EditorSuffix (Editor Suffix)
+{
+(-256)
+}
+
+STRING 544
+// Abilities: (F)- (BonusMod - Strength), Name (Name)
+{
+BonusMod - Strength
+}
+
+STRING 545
+// Abilities: (G)- (BonusMod - Agility), EditorSuffix (Editor Suffix)
+{
+(-256)
+}
+
+STRING 546
+// Abilities: (G)- (BonusMod - Agility), Name (Name)
+{
+BonusMod - Agility
+}
+
+STRING 547
+// Abilities: (H)- (BonusMod - Intelligence), EditorSuffix (Editor Suffix)
+{
+(-256)
+}
+
+STRING 548
+// Abilities: (H)- (BonusMod - Intelligence), Name (Name)
+{
+BonusMod - Intelligence
+}
+
+STRING 549
+// Abilities: (I)- (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(-512%)
+}
+
+STRING 550
+// Abilities: (I)- (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 551
+// Abilities: (A)a (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0001)
+}
+
+STRING 552
+// Abilities: (A)a (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 553
+// Abilities: (B)a (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0001)
+}
+
+STRING 554
+// Abilities: (B)a (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 555
+// Abilities: (C)a (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0001)
+}
+
+STRING 556
+// Abilities: (C)a (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 557
+// Abilities: (D)a (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(+001%)
+}
+
+STRING 558
+// Abilities: (D)a (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 559
+// Abilities: (E)a (BonusMod - Life Regen), EditorSuffix (Editor Suffix)
+{
+(+001)
+}
+
+STRING 560
+// Abilities: (E)a (BonusMod - Life Regen), Name (Name)
+{
+BonusMod - Life Regen
+}
+
+STRING 561
+// Abilities: (F)a (BonusMod - Strength), EditorSuffix (Editor Suffix)
+{
+(+001)
+}
+
+STRING 562
+// Abilities: (F)a (BonusMod - Strength), Name (Name)
+{
+BonusMod - Strength
+}
+
+STRING 563
+// Abilities: (G)a (BonusMod - Agility), EditorSuffix (Editor Suffix)
+{
+(+001)
+}
+
+STRING 564
+// Abilities: (G)a (BonusMod - Agility), Name (Name)
+{
+BonusMod - Agility
+}
+
+STRING 565
+// Abilities: (H)a (BonusMod - Intelligence), EditorSuffix (Editor Suffix)
+{
+(+001)
+}
+
+STRING 566
+// Abilities: (H)a (BonusMod - Intelligence), Name (Name)
+{
+BonusMod - Intelligence
+}
+
+STRING 567
+// Abilities: (I)a (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(+001%)
+}
+
+STRING 568
+// Abilities: (I)a (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 569
+// Abilities: (A)b (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0002)
+}
+
+STRING 570
+// Abilities: (A)b (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 571
+// Abilities: (B)b (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0002)
+}
+
+STRING 572
+// Abilities: (B)b (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 573
+// Abilities: (C)b (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0002)
+}
+
+STRING 574
+// Abilities: (C)b (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 575
+// Abilities: (D)b (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(+002%)
+}
+
+STRING 576
+// Abilities: (D)b (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 577
+// Abilities: (E)b (BonusMod - Life Regen), EditorSuffix (Editor Suffix)
+{
+(+002)
+}
+
+STRING 578
+// Abilities: (E)b (BonusMod - Life Regen), Name (Name)
+{
+BonusMod - Life Regen
+}
+
+STRING 579
+// Abilities: (F)b (BonusMod - Strength), EditorSuffix (Editor Suffix)
+{
+(+002)
+}
+
+STRING 580
+// Abilities: (F)b (BonusMod - Strength), Name (Name)
+{
+BonusMod - Strength
+}
+
+STRING 581
+// Abilities: (G)b (BonusMod - Agility), EditorSuffix (Editor Suffix)
+{
+(+002)
+}
+
+STRING 582
+// Abilities: (G)b (BonusMod - Agility), Name (Name)
+{
+BonusMod - Agility
+}
+
+STRING 583
+// Abilities: (H)b (BonusMod - Intelligence), EditorSuffix (Editor Suffix)
+{
+(+002)
+}
+
+STRING 584
+// Abilities: (H)b (BonusMod - Intelligence), Name (Name)
+{
+BonusMod - Intelligence
+}
+
+STRING 585
+// Abilities: (I)b (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(+002%)
+}
+
+STRING 586
+// Abilities: (I)b (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 587
+// Abilities: (A)c (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0004)
+}
+
+STRING 588
+// Abilities: (A)c (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 589
+// Abilities: (B)c (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0004)
+}
+
+STRING 590
+// Abilities: (B)c (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 591
+// Abilities: (C)c (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0004)
+}
+
+STRING 592
+// Abilities: (C)c (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 593
+// Abilities: (D)c (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(+004%)
+}
+
+STRING 594
+// Abilities: (D)c (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 595
+// Abilities: (E)c (BonusMod - Life Regen), EditorSuffix (Editor Suffix)
+{
+(+004)
+}
+
+STRING 596
+// Abilities: (E)c (BonusMod - Life Regen), Name (Name)
+{
+BonusMod - Life Regen
+}
+
+STRING 597
+// Abilities: (F)c (BonusMod - Strength), EditorSuffix (Editor Suffix)
+{
+(+004)
+}
+
+STRING 598
+// Abilities: (F)c (BonusMod - Strength), Name (Name)
+{
+BonusMod - Strength
+}
+
+STRING 599
+// Abilities: (G)c (BonusMod - Agility), EditorSuffix (Editor Suffix)
+{
+(+004)
+}
+
+STRING 600
+// Abilities: (G)c (BonusMod - Agility), Name (Name)
+{
+BonusMod - Agility
+}
+
+STRING 601
+// Abilities: (H)c (BonusMod - Intelligence), EditorSuffix (Editor Suffix)
+{
+(+004)
+}
+
+STRING 602
+// Abilities: (H)c (BonusMod - Intelligence), Name (Name)
+{
+BonusMod - Intelligence
+}
+
+STRING 603
+// Abilities: (I)c (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(+004%)
+}
+
+STRING 604
+// Abilities: (I)c (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 605
+// Abilities: (A)d (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0008)
+}
+
+STRING 606
+// Abilities: (A)d (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 607
+// Abilities: (B)d (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0008)
+}
+
+STRING 608
+// Abilities: (B)d (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 609
+// Abilities: (C)d (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0008)
+}
+
+STRING 610
+// Abilities: (C)d (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 611
+// Abilities: (D)d (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(+008%)
+}
+
+STRING 612
+// Abilities: (D)d (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 613
+// Abilities: (E)d (BonusMod - Life Regen), EditorSuffix (Editor Suffix)
+{
+(+008)
+}
+
+STRING 614
+// Abilities: (E)d (BonusMod - Life Regen), Name (Name)
+{
+BonusMod - Life Regen
+}
+
+STRING 615
+// Abilities: (F)d (BonusMod - Strength), EditorSuffix (Editor Suffix)
+{
+(+008)
+}
+
+STRING 616
+// Abilities: (F)d (BonusMod - Strength), Name (Name)
+{
+BonusMod - Strength
+}
+
+STRING 617
+// Abilities: (G)d (BonusMod - Agility), EditorSuffix (Editor Suffix)
+{
+(+008)
+}
+
+STRING 618
+// Abilities: (G)d (BonusMod - Agility), Name (Name)
+{
+BonusMod - Agility
+}
+
+STRING 619
+// Abilities: (H)d (BonusMod - Intelligence), EditorSuffix (Editor Suffix)
+{
+(+008)
+}
+
+STRING 620
+// Abilities: (H)d (BonusMod - Intelligence), Name (Name)
+{
+BonusMod - Intelligence
+}
+
+STRING 621
+// Abilities: (I)d (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(+008%)
+}
+
+STRING 622
+// Abilities: (I)d (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 623
+// Abilities: (A)e (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0016)
+}
+
+STRING 624
+// Abilities: (A)e (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 625
+// Abilities: (B)e (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0016)
+}
+
+STRING 626
+// Abilities: (B)e (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 627
+// Abilities: (C)e (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0016)
+}
+
+STRING 628
+// Abilities: (C)e (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 629
+// Abilities: (D)e (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(+016%)
+}
+
+STRING 630
+// Abilities: (D)e (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 631
+// Abilities: (E)e (BonusMod - Life Regen), EditorSuffix (Editor Suffix)
+{
+(+016)
+}
+
+STRING 632
+// Abilities: (E)e (BonusMod - Life Regen), Name (Name)
+{
+BonusMod - Life Regen
+}
+
+STRING 633
+// Abilities: (F)e (BonusMod - Strength), EditorSuffix (Editor Suffix)
+{
+(+016)
+}
+
+STRING 634
+// Abilities: (F)e (BonusMod - Strength), Name (Name)
+{
+BonusMod - Strength
+}
+
+STRING 635
+// Abilities: (G)e (BonusMod - Agility), EditorSuffix (Editor Suffix)
+{
+(+016)
+}
+
+STRING 636
+// Abilities: (G)e (BonusMod - Agility), Name (Name)
+{
+BonusMod - Agility
+}
+
+STRING 637
+// Abilities: (H)e (BonusMod - Intelligence), EditorSuffix (Editor Suffix)
+{
+(+016)
+}
+
+STRING 638
+// Abilities: (H)e (BonusMod - Intelligence), Name (Name)
+{
+BonusMod - Intelligence
+}
+
+STRING 639
+// Abilities: (I)e (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(+016%)
+}
+
+STRING 640
+// Abilities: (I)e (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 641
+// Abilities: (A)f (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0032)
+}
+
+STRING 642
+// Abilities: (A)f (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 643
+// Abilities: (B)f (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0032)
+}
+
+STRING 644
+// Abilities: (B)f (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 645
+// Abilities: (C)f (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0032)
+}
+
+STRING 646
+// Abilities: (C)f (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 647
+// Abilities: (D)f (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(+032%)
+}
+
+STRING 648
+// Abilities: (D)f (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 649
+// Abilities: (E)f (BonusMod - Life Regen), EditorSuffix (Editor Suffix)
+{
+(+032)
+}
+
+STRING 650
+// Abilities: (E)f (BonusMod - Life Regen), Name (Name)
+{
+BonusMod - Life Regen
+}
+
+STRING 651
+// Abilities: (F)f (BonusMod - Strength), EditorSuffix (Editor Suffix)
+{
+(+032)
+}
+
+STRING 652
+// Abilities: (F)f (BonusMod - Strength), Name (Name)
+{
+BonusMod - Strength
+}
+
+STRING 653
+// Abilities: (G)f (BonusMod - Agility), EditorSuffix (Editor Suffix)
+{
+(+032)
+}
+
+STRING 654
+// Abilities: (G)f (BonusMod - Agility), Name (Name)
+{
+BonusMod - Agility
+}
+
+STRING 655
+// Abilities: (H)f (BonusMod - Intelligence), EditorSuffix (Editor Suffix)
+{
+(+032)
+}
+
+STRING 656
+// Abilities: (H)f (BonusMod - Intelligence), Name (Name)
+{
+BonusMod - Intelligence
+}
+
+STRING 657
+// Abilities: (I)f (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(+032%)
+}
+
+STRING 658
+// Abilities: (I)f (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 659
+// Abilities: (A)g (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0064)
+}
+
+STRING 660
+// Abilities: (A)g (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 661
+// Abilities: (B)g (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0064)
+}
+
+STRING 662
+// Abilities: (B)g (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 663
+// Abilities: (C)g (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0064)
+}
+
+STRING 664
+// Abilities: (C)g (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 665
+// Abilities: (D)g (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(+064%)
+}
+
+STRING 666
+// Abilities: (D)g (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 667
+// Abilities: (E)g (BonusMod - Life Regen), EditorSuffix (Editor Suffix)
+{
+(+064)
+}
+
+STRING 668
+// Abilities: (E)g (BonusMod - Life Regen), Name (Name)
+{
+BonusMod - Life Regen
+}
+
+STRING 669
+// Abilities: (F)g (BonusMod - Strength), EditorSuffix (Editor Suffix)
+{
+(+064)
+}
+
+STRING 670
+// Abilities: (F)g (BonusMod - Strength), Name (Name)
+{
+BonusMod - Strength
+}
+
+STRING 671
+// Abilities: (G)g (BonusMod - Agility), EditorSuffix (Editor Suffix)
+{
+(+064)
+}
+
+STRING 672
+// Abilities: (G)g (BonusMod - Agility), Name (Name)
+{
+BonusMod - Agility
+}
+
+STRING 673
+// Abilities: (H)g (BonusMod - Intelligence), EditorSuffix (Editor Suffix)
+{
+(+064)
+}
+
+STRING 674
+// Abilities: (H)g (BonusMod - Intelligence), Name (Name)
+{
+BonusMod - Intelligence
+}
+
+STRING 675
+// Abilities: (I)g (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(+064%)
+}
+
+STRING 676
+// Abilities: (I)g (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 677
+// Abilities: (A)h (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0128)
+}
+
+STRING 678
+// Abilities: (A)h (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 679
+// Abilities: (B)h (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0128)
+}
+
+STRING 680
+// Abilities: (B)h (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 681
+// Abilities: (C)h (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0128)
+}
+
+STRING 682
+// Abilities: (C)h (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 683
+// Abilities: (D)h (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(+128%)
+}
+
+STRING 684
+// Abilities: (D)h (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 685
+// Abilities: (E)h (BonusMod - Life Regen), EditorSuffix (Editor Suffix)
+{
+(+128)
+}
+
+STRING 686
+// Abilities: (E)h (BonusMod - Life Regen), Name (Name)
+{
+BonusMod - Life Regen
+}
+
+STRING 687
+// Abilities: (F)h (BonusMod - Strength), EditorSuffix (Editor Suffix)
+{
+(+128)
+}
+
+STRING 688
+// Abilities: (F)h (BonusMod - Strength), Name (Name)
+{
+BonusMod - Strength
+}
+
+STRING 689
+// Abilities: (G)h (BonusMod - Agility), EditorSuffix (Editor Suffix)
+{
+(+128)
+}
+
+STRING 690
+// Abilities: (G)h (BonusMod - Agility), Name (Name)
+{
+BonusMod - Agility
+}
+
+STRING 691
+// Abilities: (H)h (BonusMod - Intelligence), EditorSuffix (Editor Suffix)
+{
+(+128)
+}
+
+STRING 692
+// Abilities: (H)h (BonusMod - Intelligence), Name (Name)
+{
+BonusMod - Intelligence
+}
+
+STRING 693
+// Abilities: (I)h (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(+128%)
+}
+
+STRING 694
+// Abilities: (I)h (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 695
+// Abilities: (A)i (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0256)
+}
+
+STRING 696
+// Abilities: (A)i (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 697
+// Abilities: (B)i (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0256)
+}
+
+STRING 698
+// Abilities: (B)i (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 699
+// Abilities: (C)i (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0256)
+}
+
+STRING 700
+// Abilities: (C)i (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 701
+// Abilities: (D)i (BonusMod - Mana Regen Percent), EditorSuffix (Editor Suffix)
+{
+(+256%)
+}
+
+STRING 702
+// Abilities: (D)i (BonusMod - Mana Regen Percent), Name (Name)
+{
+BonusMod - Mana Regen Percent
+}
+
+STRING 703
+// Abilities: (I)i (BonusMod - Attack Speed), EditorSuffix (Editor Suffix)
+{
+(+256%)
+}
+
+STRING 704
+// Abilities: (I)i (BonusMod - Attack Speed), Name (Name)
+{
+BonusMod - Attack Speed
+}
+
+STRING 705
+// Abilities: (A)j (BonusMod - Armor), EditorSuffix (Editor Suffix)
+{
+(+0512)
+}
+
+STRING 706
+// Abilities: (A)j (BonusMod - Armor), Name (Name)
+{
+BonusMod - Armor
+}
+
+STRING 707
+// Abilities: (B)j (BonusMod - Damage), EditorSuffix (Editor Suffix)
+{
+(+0512)
+}
+
+STRING 708
+// Abilities: (B)j (BonusMod - Damage), Name (Name)
+{
+BonusMod - Damage
+}
+
+STRING 709
+// Abilities: (C)j (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+0512)
+}
+
+STRING 710
+// Abilities: (C)j (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 711
+// Abilities: (C)k (BonusMod - Sight Range), EditorSuffix (Editor Suffix)
+{
+(+1024)
+}
+
+STRING 712
+// Abilities: (C)k (BonusMod - Sight Range), Name (Name)
+{
+BonusMod - Sight Range
+}
+
+STRING 713
+// Destructibles: B00O (InvItemIcon Ring Green), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 715
+// Destructibles: B00P (InvItemIcon Pauldron), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 716
+// Destructibles: B00O (InvItemIcon Ring Green), Name (Name)
+{
+InvItemIcon Ring Green
+}
+
+STRING 717
+// Items: I000 (Pauldron), Name (Name)
+{
+Pauldron
+}
+
+STRING 718
+// Items: I000 (Pauldron), Tip (Tooltip - Basic)
+{
+Purchase Pauldron
+}
+
+STRING 720
+// Destructibles: B00Q (InvItemIcon Armor), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 721
+// Destructibles: B00P (InvItemIcon Pauldron), Name (Name)
+{
+InvItemIcon Pauldron
+}
+
+STRING 722
+// Items: I001 (Armor), Name (Name)
+{
+Armor
+}
+
+STRING 723
+// Items: I001 (Armor), Tip (Tooltip - Basic)
+{
+Purchase Pauldron
+}
+
+STRING 725
+// Destructibles: B00R (InvItemIcon Pants), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 726
+// Destructibles: B00Q (InvItemIcon Armor), Name (Name)
+{
+InvItemIcon Armor
+}
+
+STRING 727
+// Abilities: ZxLa (UnitMaxState - Life), EditorSuffix (Editor Suffix)
+{
+(-1)
+}
+
+STRING 728
+// Abilities: ZxLa (UnitMaxState - Life), Name (Name)
+{
+UnitMaxState - Life
+}
+
+STRING 729
+// Abilities: ZxMa (UnitMaxState - Mana), EditorSuffix (Editor Suffix)
+{
+(-1)
+}
+
+STRING 730
+// Abilities: ZxMa (UnitMaxState - Mana), Name (Name)
+{
+UnitMaxState - Mana
+}
+
+STRING 731
+// Abilities: ZxLb (UnitMaxState - Life), EditorSuffix (Editor Suffix)
+{
+(-2)
+}
+
+STRING 732
+// Abilities: ZxLb (UnitMaxState - Life), Name (Name)
+{
+UnitMaxState - Life
+}
+
+STRING 733
+// Abilities: ZxMb (UnitMaxState - Mana), EditorSuffix (Editor Suffix)
+{
+(-2)
+}
+
+STRING 734
+// Abilities: ZxMb (UnitMaxState - Mana), Name (Name)
+{
+UnitMaxState - Mana
+}
+
+STRING 735
+// Abilities: ZxLc (UnitMaxState - Life), EditorSuffix (Editor Suffix)
+{
+(-3)
+}
+
+STRING 736
+// Abilities: ZxLc (UnitMaxState - Life), Name (Name)
+{
+UnitMaxState - Life
+}
+
+STRING 737
+// Abilities: ZxMc (UnitMaxState - Mana), EditorSuffix (Editor Suffix)
+{
+(-3)
+}
+
+STRING 738
+// Abilities: ZxMc (UnitMaxState - Mana), Name (Name)
+{
+UnitMaxState - Mana
+}
+
+STRING 739
+// Abilities: ZxLd (UnitMaxState - Life), EditorSuffix (Editor Suffix)
+{
+(+1)
+}
+
+STRING 740
+// Abilities: ZxLd (UnitMaxState - Life), Name (Name)
+{
+UnitMaxState - Life
+}
+
+STRING 741
+// Abilities: ZxMd (UnitMaxState - Mana), EditorSuffix (Editor Suffix)
+{
+(+1)
+}
+
+STRING 742
+// Abilities: ZxMd (UnitMaxState - Mana), Name (Name)
+{
+UnitMaxState - Mana
+}
+
+STRING 743
+// Abilities: ZxLe (UnitMaxState - Life), EditorSuffix (Editor Suffix)
+{
+(+2)
+}
+
+STRING 744
+// Abilities: ZxLe (UnitMaxState - Life), Name (Name)
+{
+UnitMaxState - Life
+}
+
+STRING 745
+// Abilities: ZxMe (UnitMaxState - Mana), EditorSuffix (Editor Suffix)
+{
+(+2)
+}
+
+STRING 746
+// Abilities: ZxMe (UnitMaxState - Mana), Name (Name)
+{
+UnitMaxState - Mana
+}
+
+STRING 747
+// Abilities: ZxLf (UnitMaxState - Life), EditorSuffix (Editor Suffix)
+{
+(+3)
+}
+
+STRING 748
+// Abilities: ZxLf (UnitMaxState - Life), Name (Name)
+{
+UnitMaxState - Life
+}
+
+STRING 749
+// Abilities: ZxMf (UnitMaxState - Mana), EditorSuffix (Editor Suffix)
+{
+(+3)
+}
+
+STRING 750
+// Abilities: ZxMf (UnitMaxState - Mana), Name (Name)
+{
+UnitMaxState - Mana
+}
+
+STRING 751
+// Items: I002 (Pants), Name (Name)
+{
+Pants
+}
+
+STRING 752
+// Items: I002 (Pants), Tip (Tooltip - Basic)
+{
+Purchase Pants
+}
+
+STRING 754
+// Destructibles: B00S (Nothing), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 755
+// Destructibles: B00R (InvItemIcon Pants), Name (Name)
+{
+InvItemIcon Pants
+}
+
+STRING 756
+// Destructibles: B00U (Inv Page Up), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 757
+// Destructibles: B00S (Nothing), Name (Name)
+{
+Nothing
+}
+
+STRING 760
+// Units: e001 (dummy), Name (Name)
+{
+dummy
+}
+
+STRING 761
+// Destructibles: B00T (Inv Page Down), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 762
+// Destructibles: B00U (Inv Page Up), Name (Name)
+{
+Inv Page Up
+}
+
+STRING 763
+// Destructibles: B00V (InvItemIcon Battlescarred Shoulderplate), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 764
+// Destructibles: B00T (Inv Page Down), Name (Name)
+{
+Inv Page Down
+}
+
+STRING 766
+// Items: I003 (|cff70db70Battlescarred Shoulderplate|r), Tip (Tooltip - Basic)
+{
+Purchase Battlescarred Shoulderplate
+}
+
+STRING 768
+// Items: I004 (|cff70db70Silverhand Cuirass|r), Tip (Tooltip - Basic)
+{
+Purchase Silverhand Cuirass
+}
+
+STRING 770
+// Items: I005 (|cff70db70Golden Legguards|r), Tip (Tooltip - Basic)
+{
+Purchase Golden Legguards
+}
+
+STRING 772
+// Items: I006 (|cff70db70Lich Mantle|r), Tip (Tooltip - Basic)
+{
+Purchase Lich Mantle
+}
+
+STRING 774
+// Items: I007 (|cff70db70Robe of the Last Guardian|r), Tip (Tooltip - Basic)
+{
+Purchase Robe of the Last Guardian
+}
+
+STRING 777
+// Destructibles: B00W (InvItemIcon Silverhand Cuirass), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 778
+// Destructibles: B00V (InvItemIcon Battlescarred Shoulderplate), Name (Name)
+{
+InvItemIcon Battlescarred Shoulderplate
+}
+
+STRING 779
+// Destructibles: B00X (InvItemIcon Golden Legguards), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 780
+// Destructibles: B00W (InvItemIcon Silverhand Cuirass), Name (Name)
+{
+InvItemIcon Silverhand Cuirass
+}
+
+STRING 781
+// Destructibles: B00Y (InvItemIcon Lich Mantle), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 782
+// Destructibles: B00X (InvItemIcon Golden Legguards), Name (Name)
+{
+InvItemIcon Golden Legguards
+}
+
+STRING 783
+// Destructibles: B00Z (InvItemIcon Robe of the Last Guardian), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 784
+// Destructibles: B00Y (InvItemIcon Lich Mantle), Name (Name)
+{
+InvItemIcon Lich Mantle
+}
+
+STRING 785
+// Destructibles: B010 (InvItemIcon Kel'Thuzard's Jammies), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 786
+// Destructibles: B00Z (InvItemIcon Robe of the Last Guardian), Name (Name)
+{
+InvItemIcon Robe of the Last Guardian
+}
+
+STRING 787
+// Destructibles: B000 (InvItemIcon Searing Blade), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 788
+// Destructibles: B010 (InvItemIcon Kel'Thuzard's Jammies), Name (Name)
+{
+InvItemIcon Kel'Thuzard's Jammies
+}
+
+STRING 790
+// Items: I008 (|cff70db70Kel'Thuzard's Robe|r), Tip (Tooltip - Basic)
+{
+Purchase Kel'Thuzard's Robe
+}
+
+STRING 791
+// Destructibles: B001 (InvItemIcon Shield of Honor), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 792
+// Destructibles: B000 (InvItemIcon Searing Blade), Name (Name)
+{
+InvItemIcon Searing Blade
+}
+
+STRING 793
+// Destructibles: B002 (InvItemIcon Dagger of Escape), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 794
+// Destructibles: B001 (InvItemIcon Shield of Honor), Name (Name)
+{
+InvItemIcon Shield of Honor
+}
+
+STRING 795
+// Destructibles: B011 (Inv Sell Item), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 796
+// Destructibles: B002 (InvItemIcon Dagger of Escape), Name (Name)
+{
+InvItemIcon Dagger of Escape
+}
+
+STRING 797
+// Destructibles: B012 (InvItemIcon Gem), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 798
+// Destructibles: B011 (Inv Sell Item), Name (Name)
+{
+Inv Sell Item
+}
+
+STRING 799
+// Abilities: AIcd (Command Aura), Name (Name)
+{
+Command Aura
+}
+
+STRING 800
+// Abilities: AIbk (Blink), EditorSuffix (Editor Suffix)
+{
+Blink
+}
+
+STRING 801
+// Abilities: AIbk (Blink), Name (Name)
+{
+Blink
+}
+
+STRING 802
+{
+Bag
+}
+
+STRING 803
+// Destructibles: B013 (InvItemIcon Mana Gem), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 804
+// Doodads: LOwp (EquipSlot Pants), Name (Name)
+{
+EquipSlot Pants
+}
+
+STRING 805
+// Destructibles: B014 (Tooltip Border), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 806
+// Doodads: DObk (EquipSlot Neck), Name (Name)
+{
+EquipSlot Neck
+}
+
+STRING 807
+// Destructibles: B00N (Inv Drop Item), EditorSuffix (Editor Suffix)
+{
+(texture)
+}
+
+STRING 808
+// Doodads: LOt1 (EquipSlot Shoulder Right), Name (Name)
+{
+EquipSlot Shoulder Right
+}
+
+STRING 809
+// Doodads: DOkb ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 810
+// Doodads: D005 (EquipSlot Shield), Name (Name)
+{
+EquipSlot Shield
+}
+
+STRING 811
+// Doodads: YOst ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 812
+// Doodads: D007 (EquipSlot Gloves), Name (Name)
+{
+EquipSlot Gloves
+}
+
+STRING 813
+// Doodads: DOtb ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 814
+// Doodads: D00I (EquipSlot Bracers), Name (Name)
+{
+EquipSlot Bracers
+}
+
+STRING 815
+// Doodads: LOam ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 816
+// Doodads: D00O (EquipSlot Boots), Name (Name)
+{
+EquipSlot Boots
+}
+
+STRING 817
+// Doodads: D006 ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 818
+// Doodads: D00Q (EquipSlot Ring Ring), Name (Name)
+{
+EquipSlot Ring Ring
+}
+
+STRING 819
+// Doodads: D00H ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 820
+// Doodads: D001 (InvItemIcon Crown of Kings), Name (Name)
+{
+InvItemIcon Crown of Kings
+}
+
+STRING 822
+// Doodads: D00N ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 823
+// Doodads: D00B (InvItemIcon Tooltip Gold), Name (Name)
+{
+InvItemIcon Tooltip Gold
+}
+
+STRING 824
+// Doodads: D00C (InvItemIcon107 Mask of Death), Name (Name)
+{
+InvItemIcon107 Mask of Death
+}
+
+STRING 825
+// Doodads: D00D (InvItemIcon Gauntlets), Name (Name)
+{
+InvItemIcon Gauntlets
+}
+
+STRING 826
+// Abilities: A001 (Character), Tip (Tooltip - Normal)
+{
+Character [|cffffcc00C|r]
+}
+
+STRING 827
+// Abilities: A001 (Character), Name (Name)
+{
+Character
+}
+
+STRING 828
+// Abilities: uDex (Detect Leave), EditorSuffix (Editor Suffix)
+{
+(UnitDex)
+}
+
+STRING 829
+// Abilities: uDex (Detect Leave), Name (Name)
+{
+Detect Leave
+}
+
+STRING 830
+{
+07/10/2018
+}
+
+STRING 834
+// Doodads: D00P ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 836
+// Items: I009 (|cff3366ffLife Gem|r), Tip (Tooltip - Basic)
+{
+Purchase Life Gem
+}
+
+STRING 838
+// Items: I00A (|cff3366ffMana Gem|r), Tip (Tooltip - Basic)
+{
+Purchase Mana Gem
+}
+
+STRING 839
+// Destructibles: B012 (InvItemIcon Gem), Name (Name)
+{
+InvItemIcon Gem
+}
+
+STRING 840
+// Destructibles: B013 (InvItemIcon Mana Gem), Name (Name)
+{
+InvItemIcon Mana Gem
+}
+
+STRING 841
+// Doodads: D000 ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 842
+// Units: ttip (TooltipWindow), Name (Name)
+{
+TooltipWindow
+}
+
+STRING 843
+// Units: ewin (EquipmentWindow), EditorSuffix (Name - Editor Suffix)
+{
+(UI Dummy)
+}
+
+STRING 844
+// Units: ewin (EquipmentWindow), Name (Name)
+{
+EquipmentWindow
+}
+
+STRING 845
+// Units: bwn2 (RaceWindow), EditorSuffix (Name - Editor Suffix)
+{
+(UI Dummy)
+}
+
+STRING 846
+// Units: bwn2 (RaceWindow), Name (Name)
+{
+RaceWindow
+}
+
+STRING 847
+// Units: ttip (TooltipWindow), EditorSuffix (Name - Editor Suffix)
+{
+(UI Dummy)
+}
+
+STRING 848
+// Units: uidm ( ), EditorSuffix (Name - Editor Suffix)
+{
+Button (UI Dummy)
+}
+
+STRING 849
+// Destructibles: B014 (Tooltip Border), Name (Name)
+{
+Tooltip Border
+}
+
+STRING 850
+// Units: e000 (dummy), Name (Name)
+{
+dummy
+}
+
+STRING 851
+// Units: e000 (dummy), EditorSuffix (Name - Editor Suffix)
+{
+(hero window)
+}
+
+STRING 852
+// Units: e002 ( ), Name (Name)
+{
+ 
+}
+
+STRING 853
+// Units: e002 ( ), EditorSuffix (Name - Editor Suffix)
+{
+Selector 1 (UI Dummy)
+}
+
+STRING 854
+// Units: e003 (dummy), Name (Name)
+{
+dummy
+}
+
+STRING 855
+// Units: e003 (dummy), EditorSuffix (Name - Editor Suffix)
+{
+(selector)
+}
+
+STRING 856
+// Destructibles: B00N (Inv Drop Item), Name (Name)
+{
+Inv Drop Item
+}
+
+STRING 857
+// Doodads: D00A ((texture)), Name (Name)
+{
+(texture)
+}
+
+STRING 860
+// Items: I007 (|cff70db70Robe of the Last Guardian|r), Name (Name)
+{
+|cff70db70Robe of the Last Guardian|r
+}
+
+STRING 861
+// Items: I003 (|cff70db70Battlescarred Shoulderplate|r), Name (Name)
+{
+|cff70db70Battlescarred Shoulderplate|r
+}
+
+STRING 862
+// Items: I005 (|cff70db70Golden Legguards|r), Name (Name)
+{
+|cff70db70Golden Legguards|r
+}
+
+STRING 863
+// Items: I006 (|cff70db70Lich Mantle|r), Name (Name)
+{
+|cff70db70Lich Mantle|r
+}
+
+STRING 864
+// Items: I008 (|cff70db70Kel'Thuzard's Robe|r), Name (Name)
+{
+|cff70db70Kel'Thuzard's Robe|r
+}
+
+STRING 865
+// Items: I009 (|cff3366ffLife Gem|r), Name (Name)
+{
+|cff3366ffLife Gem|r
+}
+
+STRING 866
+// Items: I00A (|cff3366ffMana Gem|r), Name (Name)
+{
+|cff3366ffMana Gem|r
+}
+
+STRING 867
+// Items: I004 (|cff70db70Silverhand Cuirass|r), Name (Name)
+{
+|cff70db70Silverhand Cuirass|r
+}
+

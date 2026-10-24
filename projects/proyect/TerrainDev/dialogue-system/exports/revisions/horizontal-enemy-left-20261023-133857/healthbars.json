@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "variant": "horizontal",
+  "target": "Warcraft III Classic 1.27b",
+  "maxTextureDimension": 512,
+  "player": {
+    "textureSize": [
+      256,
+      64
+    ],
+    "contentRect": [
+      0,
+      0,
+      224,
+      64
+    ],
+    "lifeRect": [
+      18,
+      27,
+      133,
+      10
+    ],
+    "portraitRect": null,
+    "readoutRect": [
+      166,
+      24,
+      47,
+      16
+    ],
+    "frame": "FrameHeroHorizontal",
+    "contentUMax": 0.875,
+    "iconSource": "native HUD hero icon; no custom portrait texture"
+  },
+  "enemy": {
+    "textureSize": [
+      512,
+      128
+    ],
+    "contentRect": [
+      0,
+      0,
+      448,
+      96
+    ],
+    "lifeRect": [
+      102,
+      27,
+      325,
+      10
+    ],
+    "portraitRect": [
+      17,
+      10,
+      64,
+      64
+    ],
+    "readoutRect": [
+      17,
+      77,
+      64,
+      14
+    ],
+    "frame": "FrameEnemyHorizontal",
+    "contentUMax": 0.875,
+    "iconSource": "custom portrait BLP"
+  },
+  "enemyLifeLengthRatio": 2.443609022556391,
+  "nativeHeroIconRect": [
+    13,
+    46,
+    85,
+    82
+  ],
+  "portraits": {
+    "paladin": {
+      "name": "Paladín",
+      "texture": "PortraitPaladin"
+    },
+    "tauren": {
+      "name": "Tauren",
+      "texture": "PortraitTauren"
+    }
+  },
+  "fill": {
+    "normal": "LifeNormalHorizontal",
+    "critical": "LifeCriticalHorizontal",
+    "criticalAtPercent": 20,
+    "anchor": "left",
+    "growth": "left-to-right",
+    "uvPolicy": "crop the right side; preserve left origin"
+  },
+  "layersBackToFront": [
+    "native HUD / enemy portrait",
+    "frame",
+    "fill inside lifeRect",
+    "dynamic text"
+  ],
+  "previewCoordinates": "1920x1080 reference screenshot only; native anchoring in engine pending",
+  "totalBlpBytes": 334804
+}

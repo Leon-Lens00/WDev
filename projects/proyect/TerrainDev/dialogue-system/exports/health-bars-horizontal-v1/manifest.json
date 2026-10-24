@@ -1,0 +1,194 @@
+{
+  "target": "Classic 1.27b / BLP1 palette / alpha8 / complete mipmaps",
+  "variant": "horizontal",
+  "textures": [
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/game/UI/HealthBarsHorizontal/FrameHeroHorizontal.blp",
+      "sha256": "c4dcbbe6cb694327d94c0beb004b16b7ba964dbed9eb307a793b4ec97e51f717",
+      "dimensions": [
+        256,
+        128
+      ],
+      "mips": 9,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "FrameHeroHorizontal",
+      "bytes": 88562
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/game/UI/HealthBarsHorizontal/FrameEnemyHorizontal.blp",
+      "sha256": "e5c3b387431ebb23b3c3121b40b2318334c33c0f44a78394afbaa0caad1920c2",
+      "dimensions": [
+        512,
+        128
+      ],
+      "mips": 10,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "FrameEnemyHorizontal",
+      "bytes": 175946
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/game/UI/HealthBarsHorizontal/LifeNormalHorizontal.blp",
+      "sha256": "629025e5d1088f1127d4ab503c855c16b527a85289c928f2a85792f21050e4a6",
+      "dimensions": [
+        256,
+        16
+      ],
+      "mips": 9,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "LifeNormalHorizontal",
+      "bytes": 12122
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/game/UI/HealthBarsHorizontal/LifeCriticalHorizontal.blp",
+      "sha256": "44797899b295f29d24a7824463c04d4ceddabd6cde9eaced9c3a51dc22ea4498",
+      "dimensions": [
+        256,
+        16
+      ],
+      "mips": 9,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "LifeCriticalHorizontal",
+      "bytes": 12122
+    }
+  ],
+  "totalBlpBytes": 288752,
+  "verticalMaterialHashes": {
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/PortraitPaladin.blp": "ed6800be7c1e1c1c2cf44d027a232f125fc3eb69058bd2e6f563e6869c9143a4",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/PortraitTauren.blp": "9c9521fa9c7bf7245d584ac327edba1b8e8ef3f0cafe8c279fe56db921977631",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/FrameBlue.blp": "6b7f4208bd5edb7fa2e775f2cf047d5a9bc0ebfbd8176c42adc8fab65824c246",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/FrameRed.blp": "754bb486d54c67ad78d120c01b0e6ad7cf042cdf84b5f517f55b4dab2782d44e",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/LifeNormal.blp": "cad0458a22f9d5a46d87f6db9ba8d6e92dc25d356612cca252d17ce18a68e7cf",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/LifeCritical.blp": "c28c7b8c742fcbd148ae5708582db1e17367b22dc98ee2a75c8d5fa45af10dd0"
+  },
+  "nativeIcons": {
+    "paladin": {
+      "name": "Paladín",
+      "rawcode": "Hpal",
+      "texture": "NativePaladin",
+      "nativePath": "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp",
+      "width": 64,
+      "height": 64,
+      "png": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/NativePaladin.png",
+      "icon": {
+        "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/ReplaceableTextures_CommandButtons_BTNHeroPaladin.blp",
+        "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+        "internal": "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp",
+        "sha256": "dae9fd254f6ebef8947a189c156df8cf5d97ea789f9cf281886462f5ac83209d"
+      },
+      "objectData": {
+        "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/Units_HumanUnitFunc.txt",
+        "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+        "internal": "Units\\HumanUnitFunc.txt",
+        "sha256": "1631656b24484f02276d8aa09e61aa4d35ecbaeb128a2df667d2295beed0831d"
+      }
+    },
+    "tauren": {
+      "name": "Tauren",
+      "rawcode": "otau",
+      "texture": "NativeTauren",
+      "nativePath": "ReplaceableTextures\\CommandButtons\\BTNTauren.blp",
+      "width": 64,
+      "height": 64,
+      "png": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/NativeTauren.png",
+      "icon": {
+        "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/ReplaceableTextures_CommandButtons_BTNTauren.blp",
+        "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+        "internal": "ReplaceableTextures\\CommandButtons\\BTNTauren.blp",
+        "sha256": "78bb20d8e79ebf2af91f13cf87fff187e81353bafe872a2dc200fe4d276d6340"
+      },
+      "objectData": {
+        "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/Units_OrcUnitFunc.txt",
+        "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+        "internal": "Units\\OrcUnitFunc.txt",
+        "sha256": "e4d17018c2a294fdd15a75888d02d1f0f0ecf663360126138bd74974c984474c"
+      }
+    }
+  },
+  "activeMapSha256": "94ca3ebfd1249033f1ea1f868792d2aac59df659edcf6e96519433427caa3e81",
+  "mapIntegrated": true,
+  "nativeTested": true,
+  "preview": "http://127.0.0.1:4317/healthbars.html",
+  "previousMapSha256": "fb87a18cb24457d2751ed2e2d812bd7325d64f3c32b74e4316a2c96610bacb7c",
+  "sharedControl": "basic",
+  "auxiliaryOwner": 10,
+  "controller": 0,
+  "test": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/TerrainDev-Dialogue.w3x",
+    "sha256": "94ca3ebfd1249033f1ea1f868792d2aac59df659edcf6e96519433427caa3e81",
+    "target": "Warcraft III Classic1.27b/RenderEdge",
+    "mode": "SP",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "ownerIndex": 10,
+    "controllerIndex": 0,
+    "sharedControl": true,
+    "advancedControl": false,
+    "unitColor": "GetPlayerColor(Player(0))",
+    "nativeHeroHudIconHidden": true,
+    "heroIconInOwnBlueFrame": true,
+    "enemyIconAtRight": true,
+    "cases": [
+      "native selection/order card for shared Hpal",
+      "right-click smart order; world position changes",
+      "Luz sagrada via localized L + native left click; mana255→190 and heal effect",
+      "normal, critical and zero actual life",
+      "Tauren/Paladin target icon switching",
+      "patrol + dialogue opening/reveal/closing",
+      "bars hide/show; background captured without native hero icon"
+    ],
+    "textureMipsValidated": 37,
+    "modelStatesValidated": 303,
+    "evidence": "/home/snz/Documentos/ChatGPT/Proyect/work/healthbars-shared-native-20261023",
+    "video": "/home/snz/Documentos/ChatGPT/Proyect/work/healthbars-shared-native-20261023/barras-control-compartido.mp4",
+    "videoSeconds": 46.633333,
+    "videoSha256": "529b83e9d9d69902e86e4be79a179ea517c4da6b463de27659ea5676f94d8d37",
+    "closed": {
+      "pid": 1067943,
+      "closed": true,
+      "method": "Win+Q / inspected confirmation / S"
+    },
+    "nativeTested": true,
+    "multiplayerTested": false,
+    "cameraLibraryChanged": false,
+    "limitations": [
+      "SP1920x1080 only; multiplayer and other aspect ratios pending",
+      "Dedicated owner10 is outside map user slots0/1; sharing applies to all units of this owner",
+      "Advanced shared control adds native allied-hero icon; keep it false",
+      "Native icon registry currently Hpal/otau; extend before targeting other types",
+      "Life polling0.05s, visual projection0.01s; 1-percent model states",
+      "No ability/inventory/ownership gameplay system migration beyond this prototype"
+    ]
+  },
+  "models": [
+    {
+      "model": "UI/HealthBarsHorizontal/HealthHero.mdx",
+      "sha256": "c3eb34f443e0edf1aaebcc4e15c2e0b4df6e79a44368193b3f63fdbae92d1470",
+      "states": 101,
+      "sequenceEndpoints": 202,
+      "vertices": 16,
+      "bytes": 37572
+    },
+    {
+      "model": "UI/HealthBarsHorizontal/HealthEnemyTauren.mdx",
+      "sha256": "614ef2df1e42249f1f5e0ef58ea42b6f8f379d68408c877a3472198dc6ebcabb",
+      "states": 101,
+      "sequenceEndpoints": 202,
+      "vertices": 16,
+      "bytes": 37572
+    },
+    {
+      "model": "UI/HealthBarsHorizontal/HealthEnemyPaladin.mdx",
+      "sha256": "49bacd7dd7e02df12c72514929f89353ae0c91411f04c5cc7ffaa03c13a50835",
+      "states": 101,
+      "sequenceEndpoints": 202,
+      "vertices": 16,
+      "bytes": 37572
+    }
+  ]
+}

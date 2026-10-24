@@ -1,0 +1,39 @@
+{
+  "title": "BananaMissile",
+  "url": "https://www.hiveworkshop.com/threads/bananamissile.259787/",
+  "author": "Vinz",
+  "tags": [
+    "#Missile",
+    "#Human"
+  ],
+  "listedResources": 2,
+  "date": "2026-10-22T19:16:04.078543-05:00",
+  "category": "06-Especiales-y-paquetes",
+  "folder": "06-Especiales-y-paquetes/bananamissile.259787",
+  "zip": "original.zip",
+  "zipBytes": 6394,
+  "zipSha256": "826b3f47f7f61753c9b223d3bea18c472874f5841f3cb2adbaf4f113c3c8b816",
+  "crc": "PASS",
+  "files": [
+    {
+      "path": "originales/BananaMissile/readme.html",
+      "archivePath": "BananaMissile/readme.html",
+      "bytes": 1094,
+      "sha256": "250bfe0f0ab9d7860913ff2181ca6c364e2e6dd7301095eb037df07dbcd4acb0"
+    },
+    {
+      "path": "originales/BananaMissile/BananaMissile.mdx",
+      "archivePath": "BananaMissile/BananaMissile.mdx",
+      "bytes": 4724,
+      "sha256": "8755a26874f5e8957d703e2b89a558af0d5a12b3743a40fb3a2f8495bb5b95d6"
+    },
+    {
+      "path": "originales/BananaMissile/BananaBomb.mdx",
+      "archivePath": "BananaMissile/BananaBomb.mdx",
+      "bytes": 6980,
+      "sha256": "263cd9d5bd88ed275a8491fcce826c26cef8d12f8681e0f1a6bc2d7159ca9ae3"
+    }
+  ],
+  "models": 2,
+  "textures": 0
+}

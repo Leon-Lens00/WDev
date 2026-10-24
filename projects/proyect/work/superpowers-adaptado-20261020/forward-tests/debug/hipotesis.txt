@@ -1,0 +1,7 @@
+Fecha: 2026-10-20 America/Lima
+Objetivo: JASS ya generado para Warcraft III Classic 1.27b; no se dispone de WCT/vJASS editable.
+Reproducción: pJASS procesa common.j, Blizzard.j y entrada.j; devuelve 1, dos errores, líneas 2215 y 2221.
+Hipótesis: el validador rechaza las lecturas de ndist/bdist en comparaciones porque los locales sólo reciben valor dentro del cuerpo posterior de cada if. La condición con new/best nulos expresa selección inicial, pero no satisface la comprobación de inicialización de este pJASS.
+Predicción: inicializar los dos reales en su declaración elimina exactamente los dos diagnósticos con el mismo runner y APIs. Si persisten, la hipótesis o la cobertura del cambio son insuficientes.
+Impacto revisado: ambas variables son locales de s__Hydra_evaluateTarget y aparecen únicamente en declaración, comparación y asignación del candidato escogido. new/best comienzan en null; el primer candidato entra por ese estado y guarda su distancia; candidatos posteriores se comparan con la distancia guardada. Inicializar a 0. no reemplaza el criterio del primer candidato ni modifica rango, filtros, prioridad de objetivos libres o fallback al objetivo anterior. Consumidores: s__Hydra_attemptShoot y su wrapper generado sa__Hydra_attemptShoot; firma y retorno no cambian.
+Límite previo: esta lectura razona sobre la conservación del algoritmo; no demuestra comportamiento dentro del motor.

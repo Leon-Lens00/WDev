@@ -1,0 +1,13 @@
+V12 final — 23 de octubre de2026
+MDX SHA256:a8c3dc9992b743fb17a52765a6e943370879926a55326a2f94d00182b9f1b390
+Estado: probado visualmente en mapa, Warcraft III Classic1.27b.
+
+Relectura independiente war3-model4.0.1; MDL/MDX contrastados;15texturasBLP decodificadas con mipmaps.455poses: raíz fija, frente de vuelo X<=0,18geosets azules/UV idénticos a V11.37archivos de V11, incluidoZIP, conservados porSHA256.
+Visor: lateral, frontal, oblicua; Birth/Stand/Death a pasos20ms. Cola rosa curva y abierta; rayos cruzados de núcleo/halo AddAlpha. Finales de Death sin malla ni partículas visibles. Previews ralentizadas4veces.
+
+Motor: mapa b02748ae6faff9004af818a49600bb0f9ffc90dbc660b754513ec05b2bcd4cc4; JassHelper/pJASS y35miembros reextraídos iguales. YDWE -war3 -loadfile, un jugador, EnableHost0 sólo en copia privada. PID1014357,inicio16609425,DP-1 pantalla3.
+8casos relevantes,25capturas cada uno: escalas0.5/1/2.4, Birth/Death normal y animación0.25x, movimiento de prueba a escala1. En.5 se aprecia el destello pero se reduce el zigzag; en1/2.4 se distingue el halo y la forma curva. El impacto conserva destello y partículas independientes.
+Cierre propio confirmado, salida0, ventana y proceso ausentes.
+
+Límites: capturas nativas aproximadamente220ms no miden por sí solas120/240ms; tiempos revisados en curvas y pasos del visor. SetUnitTimeScale no demuestra ralentización idéntica de todos los relojes de partículas. Sin mediciónFPS, multijugador ni física de proyectiles. No se modificó TerrainDev.
+CodeGraph consultado antes y después en ModelEditor, sin avisos pendientes; no sustituye las pruebas. Fuentes src/*v12*, evidencia evidence/x3-v12. Candidatos descartados bajo candidate-a/candidate-b, excluidos de la entrega final.

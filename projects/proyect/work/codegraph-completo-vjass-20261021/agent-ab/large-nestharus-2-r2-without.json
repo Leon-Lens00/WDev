@@ -1,0 +1,38 @@
+{
+  "repo": "large-nestharus",
+  "flow": 2,
+  "names": [
+    "TimerTools.Timer.destroy",
+    "TimerTools.TimerPool.recycleTimer"
+  ],
+  "repetition": 2,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 34.93887834400084,
+  "usage": {
+    "input_tokens": 118464,
+    "cached_input_tokens": 100480,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1031,
+    "reasoning_output_tokens": 183
+  },
+  "commands": 5,
+  "command_text": [
+    "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '*Timer*' -g 'AGENTS.md'\"",
+    "/usr/bin/bash -lc \"pwd\nrg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'recycleTimer|library TimerTools|scope TimerTools' .\"",
+    "/usr/bin/bash -lc \"rg -n 'struct Timer|method destroy|method recycle|method release|module|implement|onDestroy|TimerPool|TimerGroup|timerId' Systems/TimerTools/script.j\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '1,335p;540,840p;840,1120p'\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '334,540p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '*Timer*' -g 'AGENTS.md'\"",
+    "/usr/bin/bash -lc \"pwd\nrg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'recycleTimer|library TimerTools|scope TimerTools' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16223-4a7d-77d0-ab31-0e001463ed8f"
+  ]
+}

@@ -1,0 +1,1136 @@
+
+
+Equipment
+
+Code
+
+
+
+Library Equipment extends the Warcraft III inventory surface
+
+by using a dummy unit and ability buttons as user interface.
+
+Equipped items can have own ability- and/or abstract bonus lists
+
+as well as special effect models and animatags.
+
+​
+
+
+
+
+
+
+
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+		
+	 Import Instructions
+
+
+
+
+
+Copy library Equipment and ErrorMessage into your map.
+
+Copy the equipment dummy unit from the demo map into your map.
+
+Read over the global user settings inside library Equipment.
+​
+
+
+
+
+
+
+
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+		
+	  Library Equipment
+
+
+
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library Equipment /* v2.5.2
+*************************************************************************************
+*
+*   Library Equipment extends the Warcraft III inventory surface
+*   by using a dummy unit and ability buttons as user interface.
+*   Equipped items can have own ability- and/or abstract bonus lists
+*   as well as special effect models and animatags.
+*
+**************************************************************************************
+*
+*   */ uses /*
+*
+*       */ ErrorMessage                        /* github.com/nestharus/JASS/tree/master/jass/Systems/ErrorMessage
+*
+*       */ optional Bonus                   /* github.com/nestharus/JASS/tree/master/jass/Systems/Bonus
+*       */ optional ItemSet                 /* hiveworkshop.com/forums/spells-569/itempower-v1-1-0-0-a-243917/
+*       */ optional BonusMod                /* wc3c.net/showthread.php?t=107940
+*   
+************************************************************************************
+*
+*   1. Import Instruction:
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*       • Copy library Equipment, ErrorMessage into your map.
+*       • Copy the Equipment dummy unit into your map.
+*       • For startes it's recommended to import the demo abilties aswell.
+*        • Read over the user settings. ( Below the API )
+*       • Within the EquipmentManual you'll find all information, about setting up Equipment.
+*       
+*   2. Equipment with: ItemPower, Bonus and ItemSet ( any combination of these three )
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*       Everything is installed fully automatic, you don't have do anything. 
+*       Just copy and paste the desired libraries into your map.
+*
+*   3. API
+*   ¯¯¯¯¯¯
+*
+*       Creator/Destructor:
+*       ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*           function CreateEquipment  takes unit whichUnit returns Equipment
+*           function DestroyEquipment takes unit whichUnit returns nothing            
+*        
+*      Pre-game Functions:
+*      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*           function RegisterEquipmentClass  takes integer class,  integer emptyIcon returns nothing
+*           function RegisterEquipmentItemId takes integer itemId, integer icon, integer class, boolean twohanded, string animation returns EquipmentItem
+*         
+*           function ItemIdAddAbility takes integer itemId, integer abilityId, integer level returns nothing
+*           function ItemIdAddBonus   takes integer itemId, integer bonus, integer amount returns nothing
+*                • Each item id ( example: 'I00A') can have individual affixes.
+*                  Affixes are added/removed when items are equipped/unequipped.
+*                  Those affixes can be Warcraft III abilities or abstract bonuses from library BonusMod.        
+*
+*           function ItemIdAddSpecialEffect takes integer itemId, string file, string attachPointName returns nothing
+*
+*           function EnableItemIdForUnitId takes integer itemId, integer unitId, boolean flag returns nothing
+*               • You can disable item ids for certain unit ids.
+*                 Example: call EnableItemIdForUnitId('I00A', 'hfoo', false).
+*
+*      Equipment events:
+*      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*           function RegisterItemEquipEvent    takes code func returns nothing
+*           function RegisterItemUnequipEvent  takes code func returns nothing
+*        
+*           constant function GetTriggerItemId takes nothing returns integer
+*           constant function GetEquippingUnit takes nothing returns unit
+*
+*      Ingame Functions:
+*      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*           function UnitHasEquipment      takes unit whichUnit returns boolean
+*           function UnitItemIdInSlot      takes unit whichUnit, integer class returns integer
+*           function IsEquipmentClassEmpty takes unit whichUnit, integer class returns boolean
+*           function UnequipItemClass      takes unit whichUnit, integer class returns nothing
+*           function EquipItem             takes unit whichUnit, item whichItem returns boolean
+*           function EquipItemIdById       takes unit whichUnit, integer itemId returns boolean
+*           function UnitHasItemIdEquipped takes unit whichUnit, integer itemId returns boolean
+*
+*      Special:
+*      ¯¯¯¯¯¯¯¯
+*           function EquipmentEnableAnimationTags takes unit whichUnit, boolean flag returns nothing
+*               • Some units shouldn't change animation tags, because it messes with their model.
+*                 A good is example is the demon hunter with an active metamorphosis,
+*                 because metamorphosis also uses animationtags.
+*
+**************************************************************************************/
+
+// User settings:
+// ==============
+
+    globals
+
+        //======================================================
+        // Item Class Configuration
+        //
+        // Do not forget to initialize your classes.
+        // For that use function RegisterEquipmentClass(class, icon)
+        // For example: call RegisterEquipmentClass(ITEM_CLASS_MAINHAND, 'A00D')
+
+        // Set the total amount of item classes in your map.
+        //
+        private constant integer ITEM_CLASSES = 9
+
+        // Mainhand and offhand are default classes which do not require any changes.
+        //
+        constant integer ITEM_CLASS_MAINHAND  = 0
+        constant integer ITEM_CLASS_OFFHAND   = 1
+     
+        // Add as many further classes as desired. These below are just examples.
+        // For that start of with two and increase 1 per class.
+        //
+        constant integer ITEM_CLASS_AMULET    = 2
+        constant integer ITEM_CLASS_ARMOR     = 3
+        constant integer ITEM_CLASS_BOOTS     = 4
+        constant integer ITEM_CLASS_GLOVES    = 5
+        constant integer ITEM_CLASS_RING      = 6
+        constant integer ITEM_CLASS_HELMET    = 7
+        constant integer ITEM_CLASS_SPECIAL   = 8
+     
+        //======================================================
+        // Object Data Configuration
+        //
+     
+        // Set the data value of the inventory dummy unit.
+        //
+        private constant integer INVENTORY_DUMMY_ID   = 'h007'
+     
+        // Set the data value of the ability to close the inventory.
+        //
+        private constant integer EXIT_ABILITY         = 'A00G'
+     
+        // Set the data value of the ability to open the inventory
+        //
+        private constant integer OPEN_ABILITY         = 'A003'
+     
+        // Set the data value of the ability, which gives the dummy the same inventory as the hero has.
+        private constant integer INVENTORY_ABILITY    = 'AInv'
+     
+        // Set the data value of the ability shown in the offhand slot, when a twohanded weapon is equipped.
+        //
+        private constant integer TWOHAND_ABILITY      = 'A00Z'
+        private constant boolean SHOW_TWOHAND_ABILITY = true
+  
+        //======================================================
+        // Misc Configuration
+
+        // This text is shown, when a unit wants to equip an item, which it isn't allowed to.
+        // For example: " can't equip " becomes ingame: Rifleman can't equip Giant Sword!
+        //
+        private constant string UNABLE_TO_EQUIP_STRING = " can't equip "
+    endglobals
+ 
+//==============================================================================
+// Functions, constants and variables used by Equipment. Make changes carefully.
+//==============================================================================
+ 
+    globals
+        //======================================================
+        // Constants
+        //
+     
+        // Constants concerning the interface error msg.
+        private constant string    ERROR_MSG_PREFIX   = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n|cffffcc00"
+        private constant real      ERROR_MSG_POS_X    = 0.52
+        private constant real      ERROR_MSG_POS_Y    = 0.96
+        private constant real      ERROR_MSG_DURATION = 5.00
+
+        // Misc constants.
+        private constant integer   ORDER_ID_STOP      = 0xD0004
+     
+        // Data storage constants.
+        private constant hashtable TABLE                  = InitHashtable()
+     
+        // Event related constans.
+        private constant trigger   EQUIP              = CreateTrigger()
+        private constant trigger   UNEQUIP            = CreateTrigger()
+     
+        //======================================================
+        // Variables
+        //
+     
+        // Event related variables.
+        private unit    eventUnit = null
+        private integer eventItem = 0
+     
+        // Misc variables.
+        private sound   error     = null 
+    endglobals
+
+//***************************************************************************
+//*
+//*  Unit Indexer Utility
+//*
+//***************************************************************************
+ 
+    // Allows you do decide whether or not the dummy unit should be indexed.
+    private function ToogleUnitIndexer takes boolean enable returns boolean
+        local boolean prev = true
+ 
+        static if LIBRARY_UnitIndexer then
+            set prev = UnitIndexer.enabled
+            set UnitIndexer.enabled = enable
+        endif
+ 
+        return prev
+    endfunction
+
+//***************************************************************************
+//*
+//*  Equipment Event
+//*
+//***************************************************************************
+
+    constant function GetEquippingUnit takes nothing returns unit
+        return eventUnit
+    endfunction
+ 
+    constant function GetTriggerItemId takes nothing returns integer
+        return eventItem
+    endfunction
+ 
+    function RegisterItemEquipEvent takes code func returns nothing
+        call TriggerAddCondition(EQUIP, Condition(func))
+    endfunction
+ 
+    function RegisterItemUnequipEvent takes code func returns nothing
+        call TriggerAddCondition(UNEQUIP, Condition(func))
+    endfunction
+ 
+    private function Fire takes trigger eventTrigger, unit source, integer itemId returns nothing
+        local integer prevItem = eventItem
+        local unit    prevUnit = eventUnit
+     
+        set eventItem = itemId
+        set eventUnit = source
+        call TriggerEvaluate(eventTrigger)
+        set eventItem = prevItem
+        set eventUnit = prevUnit
+        set prevUnit  = null
+    endfunction
+ 
+//***************************************************************************
+//*
+//*  Custom Interface Error
+//*
+//***************************************************************************
+ 
+    private function InterfaceError takes unit source, item eventItem returns nothing
+        local string msg = ERROR_MSG_PREFIX + GetUnitName(source) + UNABLE_TO_EQUIP_STRING + GetItemName(eventItem) + "|r"
+     
+        call DisplayTimedTextToPlayer(GetOwningPlayer(source), ERROR_MSG_POS_X, ERROR_MSG_POS_Y, ERROR_MSG_DURATION, msg)
+        if GetLocalPlayer() == GetOwningPlayer(source) then
+            call StartSound(error)
+        endif
+    endfunction
+ 
+    function UnitHasEquipment takes unit whichUnit returns boolean
+        return HaveSavedInteger(TABLE, GetHandleId(whichUnit), 0)
+    endfunction
+
+//***************************************************************************
+//*
+//*  Initialization Utility
+//*
+//***************************************************************************
+
+    private module Init
+        private static method onInit takes nothing returns nothing
+            call thistype.init()
+        endmethod
+    endmodule
+
+//***************************************************************************
+//*
+//*  Equipment Source Code
+//*
+//***************************************************************************
+
+    //===========================================================================
+    // Item id based bonuses:
+    // Data structure is a stack without destructors.
+    // The maximum allocation limit is 8190 instances.
+    // An ItemBonus can be of type ability or an abstract bonus from BonusMod.
+ 
+    private struct ItemBonus extends array
+        private static thistype collectionCount = 0
+        private static thistype nodeCount       = 0
+     
+        //===========================================================================
+        // Struct members
+     
+        readonly thistype first
+        readonly thistype next
+     
+        readonly integer  bonus
+        readonly integer  quantity
+        readonly boolean  isAbility
+    
+        method add takes integer bonus, integer quantity, boolean flag returns nothing
+            local thistype node = thistype(0).next
+         
+            if node == 0 then
+        
+                debug call ThrowError(nodeCount == 8191, "Equipment", "ItemBonus(this).add", "thistype", this, "Overflow!")
+        
+                set node         = nodeCount + 1
+                set nodeCount    = node
+            else
+                set thistype(0).next = next
+            endif
+            set node.next      = first
+            set first          = node
+            set node.bonus     = bonus
+            set node.quantity  = quantity
+            set node.isAbility = flag
+        endmethod
+    
+        static method create takes nothing returns thistype
+            local thistype this = thistype(0).first
+         
+            if this == 0 then
+        
+                debug call ThrowError(collectionCount == 8191, "Equipment", "ItemBonus.create", "thistype", this, "Overflow!")
+        
+                set this = collectionCount + 1
+                set collectionCount = this
+            else
+                set thistype(0).first = first
+            endif
+            set first = 0
+            return this
+        endmethod
+    
+    endstruct
+
+    //===========================================================================
+    // EquipmentItem struct to extends item data fields
+
+    private struct EquipmentItem extends array
+        private static integer alloc = ITEM_CLASSES + 1
+    
+        //===========================================================================
+        // Struct members
+     
+        readonly integer   icon
+        readonly integer   class
+        readonly integer   itemId
+        readonly string    tag
+        readonly string    file
+        readonly string    position
+        readonly boolean   twohanded
+        readonly ItemBonus bonuses
+    
+        static method operator [] takes integer itemId returns EquipmentItem
+            return LoadInteger(TABLE, itemId, 0)
+        endmethod
+    
+        method destroyFx takes unit source returns nothing
+            local integer id = GetHandleId(source)
+         
+            if HaveSavedHandle(TABLE, id, itemId) then
+                call DestroyEffect(LoadEffectHandle(TABLE, id, itemId))
+                call RemoveSavedHandle(TABLE, id, itemId)
+            endif
+        endmethod
+    
+        method addFx takes unit source returns nothing
+            local integer id = GetHandleId(source)
+         
+            if file != null and not HaveSavedHandle(TABLE, id, itemId) then
+                call SaveEffectHandle(TABLE, id, itemId, AddSpecialEffectTarget(file, source, position))
+            endif
+        endmethod
+    
+        static method createClass takes integer class, integer icon returns thistype
+            debug call ThrowError(class < 0,                           "EquipmentItem", "createClass", "class", class, "The class argument must be greater than zero!")
+            debug call ThrowError(class > ITEM_CLASSES,                 "EquipmentItem", "createClass", "class", class, "Class out of bound! Increase the amount of ITEM_CLASSES in the Equipment setup!")
+            debug call ThrowError(HaveSavedInteger(TABLE, class, 0), "EquipmentItem", "createClass", "class", class, "Attempt to override class!")         
+        
+            call SaveInteger(TABLE, class, 0, 0)
+            set thistype(class).class = class
+            set thistype(class).icon  = icon
+            return class
+        endmethod
+    
+        method addBonus takes integer bonus, integer quantity, boolean isAbility returns nothing
+            if 0 == bonuses then
+                set bonuses = ItemBonus.create()
+            endif
+            call bonuses.add(bonus, quantity, isAbility)
+        endmethod
+    
+        method removeBonuses takes unit source returns nothing
+            local ItemBonus node
+         
+            if bonuses == 0 then
+                return
+            endif
+            set node = bonuses.first
+            loop
+                exitwhen node == 0
+                if node.isAbility then
+                    call UnitRemoveAbility(source, node.bonus)
+                else
+                    static if LIBRARY_Bonus then
+                        call AddUnitBonus(source, node.bonus, -node.quantity)
+                    elseif LIBRARY_BonusMod then
+                        call AddUnitBonus(source, node.bonus, -node.quantity)
+                    endif
+                endif
+                set node = node.next
+            endloop
+        endmethod
+    
+        method addBonuses takes unit source returns nothing
+            local ItemBonus node
+         
+            if bonuses == 0 then
+                return
+            endif
+            set node = bonuses.first
+            loop
+                exitwhen node == 0
+                if node.isAbility then
+                    if UnitAddAbility(source, node.bonus) then
+                        call UnitMakeAbilityPermanent(source, true, node.bonus)
+                        call SetUnitAbilityLevel(source, node.bonus, node.quantity)
+                    endif
+                else
+                    static if LIBRARY_Bonus then
+                        call AddUnitBonus(source, node.bonus, node.quantity)
+                    elseif LIBRARY_BonusMod then
+                        call AddUnitBonus(source, node.bonus, node.quantity)
+                    endif
+                endif
+                set node = node.next
+            endloop
+        endmethod
+    
+        method addSpecialEffect takes string str, string attachPointName returns nothing
+            debug call ThrowWarning(StringLength(file) > 0, "Equipment", "addSpecialEffect", "file", this, "Attempt to override" + file + " for [" + GetObjectName(itemId) + "] to " + str + "!")
+
+            set file     = str
+            set position = attachPointName
+        endmethod
+     
+        static method create takes integer itemTypeId, integer abilityIcon, integer itemClass, boolean isTwohanded, string animation returns thistype
+            local thistype this = thistype.alloc + 1
+            set thistype.alloc  = integer(this)
+        
+            debug call ThrowError(itemTypeId == 0,                        "Equipment", "EquipmentItem.create", "itemTypeId", 0,          "Invalid item id ( 0 )")
+            debug call ThrowError(HaveSavedInteger(TABLE, itemTypeId, 0), "Equipment", "EquipmentItem.create", "itemTypeId", itemTypeId, "Attempt to double register [" + GetObjectName(itemTypeId) + "]")
+            debug call ThrowError(not HaveSavedInteger(TABLE, class, 0),  "Equipment", "EquipmentItem.create", "class",      class,      "Unknown class for object [" + GetObjectName(itemTypeId) + "]")
+        
+            call SaveInteger(TABLE, itemTypeId, 0, integer(this))
+            set itemId    = itemTypeId
+            set class     = itemClass
+            set icon      = abilityIcon
+            set bonuses   = 0
+            set twohanded = isTwohanded and itemClass == ITEM_CLASS_MAINHAND
+
+            if itemClass == ITEM_CLASS_MAINHAND or itemClass == ITEM_CLASS_OFFHAND then
+                set tag = animation
+            else
+                set tag = null
+            endif
+        
+            return this
+        endmethod
+     
+    endstruct
+
+    //===========================================================================
+    // Equipment struct
+
+    struct Equipment
+
+        private static EquipmentItem twohandIcon = 0
+
+        //===========================================================================
+        // Struct members
+
+        readonly unit    source
+        readonly string  animtag
+     
+        readonly EquipmentItem array itemSlot [ITEM_CLASSES]
+    
+        private  unit    dummy
+        private  trigger trig
+
+        //===========================================================================
+        // Typecast unit to Equipment instance
+
+        static method operator [] takes unit whichUnit returns thistype
+            return LoadInteger(TABLE, GetHandleId(whichUnit), 0)
+        endmethod
+
+        method operator exists takes nothing returns boolean
+            return trig != null
+        endmethod
+
+        method hasItemId takes integer itemId returns boolean
+            local EquipmentItem node = EquipmentItem[itemId]
+            return itemSlot[node.class] == node
+        endmethod
+
+        //===========================================================================
+        // Syncing source and dummy inventories
+     
+        private method sync takes nothing returns nothing
+            local integer index = UnitInventorySize(source)
+            loop
+                exitwhen 0 >= index
+                set index = index - 1
+                call RemoveItem(UnitItemInSlot(dummy, index))
+                if UnitAddItemToSlotById(dummy, GetItemTypeId(UnitItemInSlot(source, index)), index) then
+                    call SetItemDroppable(UnitItemInSlot(dummy, index), false)
+                endif
+            endloop
+        endmethod
+
+        private method refreshAnimation takes nothing returns nothing
+            local string s
+        
+            if itemSlot[ITEM_CLASS_OFFHAND] != 0 and itemSlot[ITEM_CLASS_OFFHAND] != twohandIcon then
+                set s = itemSlot[ITEM_CLASS_OFFHAND].tag
+            else
+                set s = itemSlot[ITEM_CLASS_MAINHAND].tag
+            endif
+            call AddUnitAnimationProperties(source, animtag, false)
+            call AddUnitAnimationProperties(source, s, true)
+            set animtag = s
+        endmethod
+
+        private method equipEmptyClass takes integer class returns nothing
+            call UnitAddAbility(dummy, EquipmentItem(class).icon)
+            call UnitMakeAbilityPermanent(dummy, true, EquipmentItem(class).icon)
+            set itemSlot[class] = 0
+        endmethod
+    
+        private method equipTwohandIcon takes nothing returns nothing
+            call UnitAddAbility(dummy, twohandIcon.icon)
+            call UnitMakeAbilityPermanent(dummy, true, twohandIcon.icon)
+            set itemSlot[ITEM_CLASS_OFFHAND] = twohandIcon
+        endmethod
+
+        //===========================================================================
+        // Equip and unequip
+
+        method unequip takes integer class returns boolean
+            local EquipmentItem eventItem = itemSlot[class]
+        
+            debug call ThrowWarning(not exists, "Equipment", "unequip", "thistype", this, "Running unequip for a null instance!")
+     
+            if exists then
+                if eventItem != 0 then
+            
+                    if eventItem.twohanded then
+                        call UnitRemoveAbility(dummy, TWOHAND_ABILITY)
+                        call equipEmptyClass(ITEM_CLASS_OFFHAND)
+                    endif
+        
+                    call eventItem.removeBonuses(source)             
+                    call eventItem.destroyFx(source)
+                    call UnitRemoveAbility(dummy, eventItem.icon)
+                    call UnitAddItemById(source, eventItem.itemId)
+                    static if LIBRARY_ItemPower then
+                        call ItemPower_UnitRemoveItemId(source, eventItem.itemId)
+                    endif
+                    static if LIBRARY_ItemSet then
+                        call ItemSet.onItemUnequip(source, eventItem.itemId)
+                    endif
+            
+                    call Fire(UNEQUIP, source, eventItem.itemId)
+                    set itemSlot[class] = 0
+                    if LoadBoolean(TABLE, GetHandleId(source), 0) then
+                        call refreshAnimation()
+                    endif
+                    return true
+                else
+                    return UnitRemoveAbility(dummy, EquipmentItem(class).icon)
+                endif
+            endif
+     
+            return false
+        endmethod
+
+        method equip takes integer itemId returns boolean
+            local EquipmentItem toEquip
+            local EquipmentItem mainEquip
+        
+            debug call ThrowWarning(not exists, "Equipment", "equip", "thistype", this, "Running equip for a null instance!")
+     
+            // Evaluate if the desired item id is a valid equipment item.
+            if not HaveSavedInteger(TABLE, itemId, 0) or not exists then
+                return false
+            endif
+            set toEquip   = EquipmentItem[itemId]
+            set mainEquip = itemSlot[ITEM_CLASS_MAINHAND]
+        
+            if mainEquip != 0 then
+                if toEquip.twohanded or mainEquip.twohanded and (toEquip.class == ITEM_CLASS_OFFHAND or toEquip.class == ITEM_CLASS_MAINHAND) then
+                    call unequip(ITEM_CLASS_OFFHAND)
+                    call unequip(ITEM_CLASS_MAINHAND)
+                    if not toEquip.twohanded and toEquip.class == ITEM_CLASS_MAINHAND then
+                        call equipEmptyClass(ITEM_CLASS_OFFHAND)
+                    elseif toEquip.class == ITEM_CLASS_OFFHAND then
+                        call equipEmptyClass(ITEM_CLASS_MAINHAND)
+                    endif
+                endif
+            endif
+            call unequip(toEquip.class)
+        
+            if toEquip.twohanded then
+                call unequip(ITEM_CLASS_OFFHAND)
+                static if SHOW_TWOHAND_ABILITY then
+                    call equipTwohandIcon()
+                else
+                    set itemSlot[ITEM_CLASS_OFFHAND] = twohandIcon
+                endif
+            endif
+        
+            call toEquip.addFx(source)
+            call toEquip.addBonuses(source)
+            call UnitAddAbility(dummy, toEquip.icon)
+            call UnitMakeAbilityPermanent(dummy, true, toEquip.icon)
+            static if LIBRARY_ItemPower then
+                call ItemPower_UnitAddItemId(source, toEquip.itemId)
+            endif
+            static if LIBRARY_ItemSet then
+                call ItemSet.onItemEquip(source, toEquip.itemId)
+            endif
+        
+            set itemSlot[toEquip.class] = toEquip
+        
+            // Check if the unit is allowed to use custom animation tags.
+            if LoadBoolean(TABLE, GetHandleId(source), 0) then
+                call refreshAnimation()
+            endif
+        
+            // Fire the event trigger.
+            call Fire(EQUIP, source, itemId)
+            return true
+        endmethod
+     
+        //===========================================================================
+        // Native trigger event response
+     
+                              // EVENT_UNIT_SPELL_CAST
+        private static method unitSpellCast takes unit eventUnit, integer abilityId returns nothing
+            local thistype this = LoadInteger(TABLE, GetHandleId(eventUnit), 0) 
+            local integer  class
+        
+            if abilityId == EXIT_ABILITY then
+                if GetLocalPlayer() == GetOwningPlayer(eventUnit) then
+                    call ClearSelection()
+                    call SelectUnit(source, true)
+                endif
+            
+            elseif abilityId == OPEN_ABILITY then
+                call SetUnitX(dummy, GetUnitX(eventUnit))
+                call SetUnitY(dummy, GetUnitY(eventUnit))
+                if GetLocalPlayer() == GetOwningPlayer(eventUnit) then
+                    call ClearSelection()
+                    call SelectUnit(dummy, true)
+                endif
+                call sync()
+        
+            // Check if the event ability has been casted by the dummy.
+            elseif GetUnitTypeId(eventUnit) == INVENTORY_DUMMY_ID then
+                set class = 0
+                loop
+                    exitwhen itemSlot[class].icon == abilityId or class >= ITEM_CLASSES
+                    set class = class + 1
+                endloop
+            
+                if class < ITEM_CLASSES then
+                    call unequip(class)
+                    call equipEmptyClass(class)
+                    call sync()
+                endif
+            endif
+        endmethod
+                              // EVENT_UNIT_USE_ITEM
+        private static method unitUseItem takes unit eventUnit, item eventItem returns nothing
+            local integer  itemId = GetItemTypeId(eventItem)
+            local integer  slot
+            local thistype this
+        
+            // Evaluate if the item is registered to Equipment.
+            if HaveSavedInteger(TABLE, itemId, 0) then
+                set this = LoadInteger(TABLE, GetHandleId(eventUnit), 0)
+            
+                // Check if the item id is banned for the source unit type id.
+                if LoadBoolean(TABLE, itemId, GetUnitTypeId(source)) then
+                    call InterfaceError(source, eventItem)
+            
+                elseif eventUnit == source then
+                    if not hasItemId(itemId) and equip(itemId) then
+                        call RemoveItem(eventItem)
+                        call sync()
+                    endif
+                    
+                elseif eventUnit == dummy then
+                    set eventUnit = source
+                    set slot      = UnitInventorySize(eventUnit)
+                    loop
+                        exitwhen slot <= 0
+                        set slot = slot - 1
+                        if itemId == GetItemTypeId(UnitItemInSlot(eventUnit, slot)) then
+                      
+                            call UnitUseItem(eventUnit, UnitItemInSlot(eventUnit, slot))
+                            call RemoveItem(eventItem)
+                            exitwhen true
+                            
+                        endif
+                    endloop
+                    set eventUnit = null
+                endif
+            endif
+        endmethod
+    
+        //===========================================================================
+        // Bug fix for EVENT_UNIT_ISSUED_TARGET_ORDER:
+        // The dummy must not pick up items.
+        // Otherwise those items would be purged from the map.
+     
+        private static method rescueItem takes unit eventUnit returns nothing     
+            call PauseUnit(eventUnit, true)
+            call IssueImmediateOrderById(eventUnit, ORDER_ID_STOP)
+            call PauseUnit(eventUnit, false)
+        endmethod
+     
+        private static method onEvent takes nothing returns boolean
+            if GetTriggerEventId() == EVENT_UNIT_USE_ITEM then
+                call unitUseItem(GetTriggerUnit(), GetManipulatedItem())
+            elseif GetTriggerEventId() == EVENT_UNIT_SPELL_CAST then
+                call unitSpellCast(GetTriggerUnit(), GetSpellAbilityId())
+            elseif GetOrderTargetItem() != null then
+                call rescueItem(GetTriggerUnit())
+            endif
+
+            return false
+        endmethod
+     
+        //===========================================================================
+        // Creator & Destructor
+     
+        method destroy takes nothing returns nothing
+            local integer index = 0
+
+            debug call ThrowError(not exists, "Equipment", "destroy", "not exists", this, "Attempt to destroy null instance!")
+
+            loop
+                exitwhen index >= ITEM_CLASSES
+                if itemSlot[index] != 0 then
+                    call unequip(itemSlot[index].class)
+                endif
+                set index = index + 1
+            endloop
+
+            call AddUnitAnimationProperties(source, animtag, false)
+            call UnitRemoveAbility(source, OPEN_ABILITY)
+            call RemoveSavedInteger(TABLE, GetHandleId(source), 0)
+            call RemoveSavedInteger(TABLE, GetHandleId(dummy),  0)
+            call RemoveSavedBoolean(TABLE, GetHandleId(source), 0)
+            call RemoveUnit(dummy)
+            call TriggerClearConditions(trig)
+            call DestroyTrigger(trig)
+         
+            set trig   = null
+            set source = null
+            set dummy  = null
+            call deallocate()
+        endmethod
+     
+     
+        static method create takes unit whichUnit returns Equipment
+            local thistype this  = allocate()
+            local integer  index = 0
+            local boolean  reset = ToogleUnitIndexer(false)
+        
+            debug call ThrowError(UnitHasEquipment(whichUnit),   "Equipment", "create", "exists",    0, "An equipment already exists for " + GetUnitName(whichUnit))
+            debug call ThrowError(GetUnitTypeId(whichUnit) == 0, "Equipment", "create", "whichUnit", 0, "Invalid unit argument ( null )!")
+        
+            set trig   = CreateTrigger()
+            set dummy  = CreateUnit(GetOwningPlayer(whichUnit), INVENTORY_DUMMY_ID, GetUnitX(whichUnit), GetUnitY(whichUnit), 0.00)
+            set source = whichUnit
+            call ToogleUnitIndexer(reset)
+        
+            call UnitAddAbility(dummy, INVENTORY_ABILITY)
+            call UnitAddAbility(dummy, EXIT_ABILITY)
+            call UnitMakeAbilityPermanent(dummy, true, INVENTORY_ABILITY)
+            call UnitMakeAbilityPermanent(dummy, true, EXIT_ABILITY)
+            call TriggerRegisterUnitEvent(trig, whichUnit, EVENT_UNIT_USE_ITEM)
+            call TriggerRegisterUnitEvent(trig, whichUnit, EVENT_UNIT_SPELL_CAST)
+            call TriggerRegisterUnitEvent(trig, dummy, EVENT_UNIT_USE_ITEM)
+            call TriggerRegisterUnitEvent(trig, dummy, EVENT_UNIT_SPELL_CAST)
+            call TriggerRegisterUnitEvent(trig, dummy, EVENT_UNIT_ISSUED_TARGET_ORDER)
+            call TriggerAddCondition(trig, Condition(function thistype.onEvent))
+        
+            call UnitAddAbility(source, OPEN_ABILITY)
+            call UnitMakeAbilityPermanent(source, true, OPEN_ABILITY)
+        
+            // Create references:
+            call SaveInteger(TABLE, GetHandleId(whichUnit), 0, integer(this))
+            call SaveInteger(TABLE, GetHandleId(dummy),     0, integer(this))
+            call SaveBoolean(TABLE, GetHandleId(whichUnit), 0, true)
+        
+            loop
+                exitwhen index >= ITEM_CLASSES
+                call equipEmptyClass(index)
+                set index = index + 1
+            endloop
+        
+            return this
+        endmethod
+    
+        //===========================================================================
+        // Initialization
+     
+        private static method init takes nothing returns nothing
+            set twohandIcon = EquipmentItem.createClass(ITEM_CLASSES, TWOHAND_ABILITY)
+            set error       = CreateSoundFromLabel("InterfaceError", false, false, false, 10, 10)
+        endmethod 
+    
+        implement Init
+    
+    endstruct
+
+    //===========================================================================
+    // Procedural Equipment API
+
+    function RegisterEquipmentClass takes integer class, integer emptyIcon returns nothing
+        call EquipmentItem.createClass(class, emptyIcon)
+    endfunction
+
+    function RegisterEquipmentItemId takes integer itemId, integer icon, integer class, boolean twohanded, string animation returns nothing
+        call EquipmentItem.create(itemId, icon, class, twohanded, animation)
+    endfunction
+
+    function CreateEquipment takes unit whichUnit returns Equipment
+        return Equipment.create(whichUnit)
+    endfunction
+
+    function GetUnitEquipment takes unit source returns Equipment
+        return Equipment[source]
+    endfunction
+
+    function DestroyEquipment takes unit source returns nothing
+        if UnitHasEquipment(source) then
+            call Equipment[source].destroy()
+        endif
+    endfunction
+
+    function UnitHasItemIdEquipped takes unit source, integer itemId returns boolean
+        return Equipment[source].hasItemId(itemId)
+    endfunction
+
+    function UnitItemIdInSlot takes unit source, integer class returns integer
+        return Equipment[source].itemSlot[class].itemId
+    endfunction
+
+    function ItemIdAddAbility takes integer itemId, integer abilityId, integer level returns nothing
+        call EquipmentItem[itemId].addBonus(abilityId, level, true)
+    endfunction
+
+    function ItemIdAddBonus takes integer itemId, integer bonus, integer amount returns nothing
+        call EquipmentItem[itemId].addBonus(bonus, amount, false)
+    endfunction
+
+    function ItemIdAddSpecialEffect takes integer itemId, string file, string attachPointName returns nothing
+        call EquipmentItem[itemId].addSpecialEffect(file, attachPointName)
+    endfunction
+
+    function EnableItemIdForUnitId takes integer itemId, integer unitId, boolean flag returns nothing
+        call SaveBoolean(TABLE, itemId, unitId, not flag)
+    endfunction
+
+    function IsEquipmentClassEmpty takes unit source, integer class returns boolean
+        return Equipment[source].itemSlot[class] == 0
+    endfunction
+
+    function UnitEquipItem takes unit source, item whichItem returns boolean
+        if Equipment[source].equip(GetItemTypeId(whichItem)) then
+            call RemoveItem(whichItem)
+            return true
+        endif
+        return false
+    endfunction
+
+    function UnitEquipItemById takes unit source, integer itemId returns boolean
+        return Equipment[source].equip(itemId)
+    endfunction
+
+    function UnitUnequipItemClass takes unit source, integer class returns boolean
+        return Equipment[source].unequip(class)
+    endfunction
+
+    function EquipmentEnableAnimationTags takes unit source, boolean flag returns nothing
+        call SaveBoolean(TABLE, GetHandleId(source), 0, flag)
+    endfunction
+
+endlibrary
+	
+
+
+
+
+
+
+
+
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+		
+	  Requirements
+
+
+
+
+
+In order to compile Equipment you'll need The Jass NewGen Pack.
+
+Nestharus's ErrorMessage for best debug results.
+
+
+Equipment can draw back on the following optional requirements:
+
+____
+
+Earth-Fury's BonusMod to register abstract bonuses to item ids.
+
+Nestharus's Bonus to register abstract bonuses to item ids.
+
+BPower's ItemSet to create item collections.
+
+
+​
+
+
+
+
+
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+		
+	  API
+
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+*       Creator/Destructor:
+*       ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*           function CreateEquipment  takes unit whichUnit returns Equipment
+*           function DestroyEquipment takes unit whichUnit returns nothing            
+*        
+*      Pre-game Functions:
+*      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*           function RegisterEquipmentClass  takes integer class,  integer emptyIcon returns nothing
+*           function RegisterEquipmentItemId takes integer itemId, integer icon, integer class, boolean twohanded, string animation returns EquipmentItem
+*         
+*           function ItemIdAddAbility takes integer itemId, integer abilityId, integer level returns nothing
+*           function ItemIdAddBonus   takes integer itemId, integer bonus, integer amount returns nothing
+*                • Each item id ( example: 'I00A') can have individual affixes.
+*                  Affixes are added/removed when items are equipped/unequipped.
+*                  Those affixes can be Warcraft III abilities or abstract bonuses from library BonusMod.        
+*
+*           function ItemIdAddSpecialEffect takes integer itemId, string file, string attachPointName returns nothing
+*
+*           function EnableItemIdForUnitId takes integer itemId, integer unitId, boolean flag returns nothing
+*               • You can disable item ids for certain unit ids.
+*                 Example: call EnableItemIdForUnitId('I00A', 'hfoo', false).
+*
+*      Equipment events:
+*      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*           function RegisterItemEquipEvent    takes code func returns nothing
+*           function RegisterItemUnequipEvent  takes code func returns nothing
+*        
+*           constant function GetTriggerItemId takes nothing returns integer
+*           constant function GetEquippingUnit takes nothing returns unit
+*
+*      Ingame Functions:
+*      ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*           function UnitHasEquipment      takes unit whichUnit returns boolean
+*           function UnitItemIdInSlot      takes unit whichUnit, integer class returns integer
+*           function IsEquipmentClassEmpty takes unit whichUnit, integer class returns boolean
+*           function UnequipItemClass      takes unit whichUnit, integer class returns nothing
+*           function EquipItem             takes unit whichUnit, item whichItem returns boolean
+*           function EquipItemIdById       takes unit whichUnit, integer itemId returns boolean
+*           function UnitHasItemIdEquipped takes unit whichUnit, integer itemId returns boolean
+*
+*      Special:
+*      ¯¯¯¯¯¯¯¯
+*           function EquipmentEnableAnimationTags takes unit whichUnit, boolean flag returns nothing
+*               • Some units should not change animation tags, because it messes with their model.
+*                 A good is example is the demon hunter with an active metamorphosis,
+*                 because metamorphosis also uses animationtags.
+	
+
+
+
+
+
+
+
+
+
+	~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+		
+	  Demo Code
+
+
+
+
+
+See first comment.
+
+​
+
+Keywords:
+
+equipment, item, system, Equipment System, modification, hero, unit, bonus, stat, equip, Set, ItemSet, SetItems, Inventory, inventory

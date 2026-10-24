@@ -1,0 +1,10 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "currentPage=1 selected=0" )
+	call Preload( "PASS page down through real selection event" )
+	call Preload( "checks=78 failures=0" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

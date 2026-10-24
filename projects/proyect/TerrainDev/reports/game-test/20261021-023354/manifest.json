@@ -1,0 +1,40 @@
+{
+  "directory": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/game-test/20261021-023354",
+  "run": "20261021-023354",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/work/TerrainDev-probe-20261021-023354.w3x",
+  "map_sha256": "d3a9187a3fe9f7e820822e4f8ca385bac15524d3a3e1c519a62b3f2735428e30",
+  "production_map_sha256": "a426dde6329d92b8716b77e5806e0626686a3ce6c369eadfff3f12469d22911b",
+  "source_sha256": "7d6056404c5c33a8126333efff1f34b47132c6087cf878d7fe670e12644cbd21",
+  "logs": {
+    "start": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-start.txt",
+    "result": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-result.txt"
+  },
+  "expected": {
+    "created": 90,
+    "removed": 90,
+    "finished": 70,
+    "collided": 10,
+    "cancelled": 10,
+    "liveUnpooled": 0,
+    "casters": 1,
+    "timerChecks": 1,
+    "failures": 0
+  },
+  "minimum": {
+    "pooled": 1,
+    "reused": 1,
+    "callbacks": 1,
+    "dummies": 1
+  },
+  "diagnostics_logs": {
+    "idle": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-diagnostics-idle.txt",
+    "normal": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-diagnostics-normal.txt",
+    "deferred": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-diagnostics-deferred.txt",
+    "deferred-done": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-diagnostics-deferred-done.txt",
+    "overdue": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-diagnostics-overdue.txt",
+    "recovered": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-diagnostics-recovered.txt",
+    "hidden": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-diagnostics-hidden.txt",
+    "visible": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-diagnostics-visible.txt",
+    "invalid": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-023354-diagnostics-invalid.txt"
+  }
+}

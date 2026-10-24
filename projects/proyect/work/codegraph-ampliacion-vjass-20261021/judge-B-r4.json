@@ -1,0 +1,25 @@
+{
+  "judge": "B",
+  "tree_sha256": "1d42d7d6a0acabff16dfb35d4197335a562cc27b226ff98e2017efc87f01167c",
+  "results": [
+    {
+      "id": "JD-A-R3-001",
+      "status": "verified",
+      "location": "src/resolution/jass.ts:122",
+      "evidence": "El predicado comprueba ahora los tokens producidos por lexJass, que excluye comentarios y literales. Las declaraciones con comentarios entre tipo/array y array/nombre recuperan la forma esperada. La nueva regresión cubre ambos casos; la fixture compilada aportada confirma la llamada a s__S_tick(values[0])."
+    },
+    {
+      "id": "JD-B-002-R3",
+      "status": "verified",
+      "location": "src/resolution/jass.ts:122",
+      "evidence": "La normalización mediante el lexer elimina la causa de la pérdida de enlaces señalada en R3. Se mantienen el requisito de binding array, el positivo de array simple y el negativo scalar // array, sin introducir resolución de operadores [] arbitrarios."
+    }
+  ],
+  "regressions": [],
+  "limitations": [
+    "Reevaluación estática de una sola pasada, limitada a los IDs indicados y posibles regresiones del delta R3→R4; no ejecuté programas ni modifiqué archivos.",
+    "Las 1198 pruebas, el build y la compilación JassHelper/pJASS son evidencia del padre.",
+    "No detecté regresiones concretas en este delta; el resultado no acredita soporte completo de vJASS.",
+    "El despliegue MCP activo permanece pendiente; las evidencias anteriores no acreditan que los procesos hayan recibido este parche."
+  ]
+}

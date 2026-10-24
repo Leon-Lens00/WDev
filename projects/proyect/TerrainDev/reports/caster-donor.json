@@ -1,0 +1,95 @@
+{
+  "Rawcode": "n002",
+  "Found": true,
+  "BaseRawcode": "nfr2",
+  "Name": "DummyCaster",
+  "Fields": [
+    {
+      "Code": "uabi",
+      "Name": "uabi",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "uble",
+      "Name": "uble",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ucbs",
+      "Name": "ucbs",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ucol",
+      "Name": "ucol",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "uhom",
+      "Name": "uhom",
+      "Value": "1",
+      "Source": "map",
+      "Display": "1"
+    },
+    {
+      "Code": "unam",
+      "Name": "unam",
+      "Value": "TRIGSTR_047",
+      "Source": "map",
+      "Display": "DummyCaster"
+    },
+    {
+      "Code": "upat",
+      "Name": "upat",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "urac",
+      "Name": "urac",
+      "Value": "human",
+      "Source": "map",
+      "Display": "human"
+    },
+    {
+      "Code": "usca",
+      "Name": "usca",
+      "Value": "0.01",
+      "Source": "map",
+      "Display": "0.01"
+    },
+    {
+      "Code": "ushb",
+      "Name": "ushb",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "usnd",
+      "Name": "usnd",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "uubs",
+      "Name": "uubs",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    }
+  ],
+  "Diagnostics": [
+    "Warcraft III install not found (pass --game-dir \u003Cpath\u003E)"
+  ]
+}

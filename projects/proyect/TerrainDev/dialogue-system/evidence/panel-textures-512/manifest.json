@@ -1,0 +1,54 @@
+{
+  "target": "Classic 1.27b / BLP1",
+  "activeChanged": false,
+  "nativeTested": false,
+  "modelsChanged": false,
+  "textures": [
+    {
+      "name": "FrameOpenRed.blp",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/FrameOpenRed.blp",
+      "sourceSha256": "c8752062e8b93b2a6f2ea555e967d15fcfcfec06fe69b81ff15a636d37cdaf56",
+      "beforeBytes": 1399282,
+      "candidates": [
+        {
+          "size": "512x256",
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/panel-textures-512/512x256/UI/Dialogue/FrameOpenRed.blp",
+          "bytes": 350706,
+          "sha256": "1da98c0aace190d255788d0aaee793093ae255597ece8cc79048ef2e9ef81614",
+          "mipPayloadsIdentical": true
+        },
+        {
+          "size": "512x512",
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/panel-textures-512/512x512/UI/Dialogue/FrameOpenRed.blp",
+          "bytes": 700230,
+          "sha256": "c210247f11d1ac697f13c8372426340e69368569d479a50ee600d16671c41ada",
+          "mipPayloadsIdentical": false
+        }
+      ]
+    },
+    {
+      "name": "FrameOpenBlue.blp",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/FrameOpenBlue.blp",
+      "sourceSha256": "bf86915804b452937cd0bd531089624887161f3ec6a19ab0a746d9fd92c3b767",
+      "beforeBytes": 1399282,
+      "candidates": [
+        {
+          "size": "512x256",
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/panel-textures-512/512x256/UI/Dialogue/FrameOpenBlue.blp",
+          "bytes": 350706,
+          "sha256": "ab88938868d3be5a3388cd51e8d6802c8caa9c2f689568cd2e54a6b8d13cca17",
+          "mipPayloadsIdentical": true
+        },
+        {
+          "size": "512x512",
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/panel-textures-512/512x512/UI/Dialogue/FrameOpenBlue.blp",
+          "bytes": 700230,
+          "sha256": "728f81c151958abfa8ff38edb4066e7cf45fb910a2391ac53210370cf6a9b3da",
+          "mipPayloadsIdentical": false
+        }
+      ]
+    }
+  ],
+  "activeMapSha256": "2cb340dbf906b8da9a061a2e4f08f0905e012c018c3e88a63284b2b5e07725be",
+  "activeModelSha256": "7bcfc6e76208b7390ca2d147092eecb984853abf657362e26c523073f56d6300"
+}

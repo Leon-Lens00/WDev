@@ -1,0 +1,194 @@
+[
+  {
+    "path": "examples/terrain/landscape-brief-v1.schema.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "examples/terrain/landscape-library-v3.schema.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "examples/terrain/material-profile-v1.schema.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "examples/terrain/material-repaint-v1.schema.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "examples/terrain/scene-brief-v1.schema.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "examples/terrain/scene-library-v2.schema.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "examples/terrain/scene-v2.schema.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "examples/terrain/scene-v3.schema.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "examples/terrain/scene-v4.schema.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "examples/terrain/tropical-recompose.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "frontend/src/App.svelte",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "frontend/src/scene-instances.ts",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "frontend/src/terrain.ts",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "frontend/src/viewport-automation.ts",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "generators/README.md",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "generators/contracts.md",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "generators/markovjunior-host/packages.lock.json",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "internal/formats/wtg/data/triggerdata.txt",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "internal/formats/wtg/data/triggerstrings.txt",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "mcp/scripts/terrain-landscape-contracts.mjs",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "mcp/src/tools.ts",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/postbuild-copy-dlls.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/screenshot-named.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/screenshot-window.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/terrain-biomes-atlas.py",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/terrain-biomes-test.py",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/terrain-landscape-prepare.py",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/terrain-landscape-release-checks.py",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/terrain-recompose-evidence.py",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/terrain-recompose.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/terrain-scene-forest-evidence.py",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "scripts/terrain-scene-library.py",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "test/e2e/run_release.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "test/e2e/lib/bridge.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "test/e2e/scenarios/01-save-safety.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "test/e2e/scenarios/02-terrain.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "test/e2e/scenarios/03-units-slocs.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "test/e2e/scenarios/04-regions-imports.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "test/e2e/scenarios/05-history-view-diag.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "test/e2e/scenarios/06-objects-casc.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "wc3ctl/install.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "wc3ctl/scripts/build-schemas.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "wc3ctl/scripts/merge-schemas.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "wc3ctl/scripts/pack-schemas.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "wc3ctl/scripts/publish-all.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "wc3ctl/scripts/smoke-mcp.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "wc3ctl/tools/wc3watch/wc3watch.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  },
+  {
+    "path": "wc3ctl/uabi-disconnect/run-local.ps1",
+    "equalsRemoteAfterCRLFtoLF": true
+  }
+]

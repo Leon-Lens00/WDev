@@ -1,0 +1,8 @@
+V9 — Tested in map, Warcraft III Classic1.27b.
+MDX800 releído con lector independiente; MDL equivalente; 311 poses y 14 dependencias. Máscara BLP1: cabecera 1/8/4/1, píxeles y 9 mipmaps contrastados con lector independiente.
+Cuatro barridos por Stand: periodo240ms, recorrido210ms. Nuevas capas ocultas en Birth/Death. Al retirarlas, se reconstruye exactamente V7: geometría, materiales, partículas, curvas y dimensiones base preservados. Archivos/ZIP V7 y V8 con hashes intactos.
+Visor real: lateral, oblicua, frontal; 48 fotogramas en pasos20ms. RITMO-1X.gif a velocidad normal; DETALLE-05X.gif a media velocidad.
+Mapa JassHelper/pJASS y 33 miembros reextraídos idénticos. Mapa cargado igual al fixture. YDWE SP EnableHost0, sin LAN, prefijo propio y pantalla3 DP-1.
+150 capturas: Stand2.4x, movimiento externo, escala0.5x, escala3x, Birth y Death. Foco/identidad comprobados en cada captura. Barrido visible, silueta continua y desaparición final correcta. Las capturas nativas (~200ms) no miden el periodo exacto240ms ni todas las fases de Birth160ms.
+Incidencia durante desarrollo: filamentos ampliaron bounds enZ; se recolocaron dentro de las extensiones originales y pasó la reconstrucción binaria. Resuelto: informes/errores/resueltos/2026-10-23-081530-x3-v9-extensiones-verificacion.md.
+CodeGraph consultado sobre fuentes actuales de ModelEditor; revisión gráfica y juego acreditados por separado. Cierre propio normal, retorno0, cero procesos y perfil a papelera. Sin FPS/estrés, multijugador ni integración de física.

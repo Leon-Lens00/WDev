@@ -1,0 +1,131 @@
+[
+  {
+    "address": "0x55bb0751ba00",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      6,
+      51
+    ],
+    "size": [
+      1908,
+      1023
+    ],
+    "workspace": {
+      "id": 2,
+      "name": "2"
+    },
+    "floating": false,
+    "monitor": 0,
+    "class": "brave-browser",
+    "title": "Jeff The Killer Theme Song (Piano Version) Sweet Dreams Are Made Of Screams - YouTube - Brave",
+    "initialClass": "brave-browser",
+    "initialTitle": "El d\u00eda que Bills no lleg\u00f3 a la Tierra... y lo cambi\u00f3 todo | HISTORIA COMPLETA - YouTube - Brave",
+    "pid": 12695,
+    "xwayland": false,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 0,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 1,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "18000028"
+  },
+  {
+    "address": "0x55bb07907fc0",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      6,
+      51
+    ],
+    "size": [
+      1908,
+      1023
+    ],
+    "workspace": {
+      "id": 3,
+      "name": "3"
+    },
+    "floating": false,
+    "monitor": 0,
+    "class": "org.kde.dolphin",
+    "title": "ui-studio \u2014 Dolphin",
+    "initialClass": "org.kde.dolphin",
+    "initialTitle": "Descargas \u2014 Dolphin",
+    "pid": 15539,
+    "xwayland": false,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 0,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 2,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "18000062"
+  },
+  {
+    "address": "0x55bb0733e500",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      6,
+      51
+    ],
+    "size": [
+      1908,
+      1023
+    ],
+    "workspace": {
+      "id": 1,
+      "name": "1"
+    },
+    "floating": false,
+    "monitor": 0,
+    "class": "Chatgpt",
+    "title": "ChatGPT",
+    "initialClass": "Chatgpt",
+    "initialTitle": "ChatGPT",
+    "pid": 2373,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 0,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 0,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "18000007"
+  }
+]

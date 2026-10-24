@@ -1,0 +1,5 @@
+V8: mantener completa la V7 y añadir una oleada luminosa que recorra su misma envoltura rosa de punta hacia cola. Classic 1.27b / MDX800, raíz fija en punta, sin física externa. Decisión inicial: periodo 480 ms, dos barridos por Stand (960 ms).
+Fases: copia preservada; máscara BLP1 y capa aditiva localizada; verificación estructural y regresión contra V7; revisión MDX en visor orbital; prueba YDWE SP pantalla3; empaquetado separado.
+Criterio: barrido claramente visible, azul y núcleo blanco conservados, ninguna pieza separada; base V7 idéntica entre oleadas. Estado: implementación.
+
+Final: MDX cc714b2acdc74df1380abd54f9b64cc951cf7f99a489f4abe35c126d896e685a. V7 byte-idéntica sin la capa añadida; 311 poses/14texturas; 24fases visor y150capturas nativas en6escenarios. Salida0. Paquete independiente V8; no cambios B/C ni física.

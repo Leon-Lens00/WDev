@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "server": {
+    "name": "codegraph",
+    "version": "1.6.2+jass-vjass.5"
+  },
+  "results": [
+    {
+      "label": "remove-invalid-receiver",
+      "edge_present": false,
+      "observed_before_any_followup_mcp_or_sync": true,
+      "elapsed_ms": 602
+    },
+    {
+      "label": "restore-integer-receiver",
+      "edge_present": true,
+      "observed_before_any_followup_mcp_or_sync": true,
+      "elapsed_ms": 803
+    }
+  ]
+}

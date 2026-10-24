@@ -1,0 +1,32 @@
+{
+  "repo": "medium-jassjass",
+  "flow": 3,
+  "names": [
+    "Jass.trace",
+    "Jass.print"
+  ],
+  "repetition": 1,
+  "arm": "with",
+  "exit": 0,
+  "seconds": 27.007320928998524,
+  "usage": {
+    "input_tokens": 80826,
+    "cached_input_tokens": 67584,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 735,
+    "reasoning_output_tokens": 130
+  },
+  "commands": 0,
+  "command_text": [],
+  "mcp": 2,
+  "mcp_tools": [
+    "codegraph_explore",
+    "codegraph_explore"
+  ],
+  "mcp_errors": [],
+  "forbidden_commands": [],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16219-6ab2-7dc2-b91e-2dab4bae9e1a"
+  ]
+}

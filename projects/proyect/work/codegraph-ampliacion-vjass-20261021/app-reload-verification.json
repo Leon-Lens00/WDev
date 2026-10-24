@@ -1,0 +1,70 @@
+{
+  "expected_identity": "1.6.2+jass-vjass.3",
+  "method": "App-managed MCP process started after the final compiled modules; independent MCP protocol and watcher verification are in mcp-live-verification.json.",
+  "old_pids": [
+    106858,
+    109994,
+    110092
+  ],
+  "current_chat_tool_call_after_reload": true,
+  "app_mcp_processes": [
+    {
+      "pid": 147600,
+      "parent": 145907,
+      "started_after_build": true
+    }
+  ],
+  "old_processes_exited": true,
+  "source_hashes_unchanged": true,
+  "indexes": [
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.3",
+        "indexed_with_extraction_version": "30"
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.3",
+        "indexed_with_extraction_version": "30"
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.3",
+        "indexed_with_extraction_version": "30"
+      }
+    }
+  ],
+  "passed": true,
+  "elapsed_seconds": 45.45,
+  "current_chat_queries": [
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "label": "missiles",
+      "successful": true,
+      "evidence": "current-chat-mcp-missiles.txt"
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "label": "inventory",
+      "successful": true,
+      "evidence": "current-chat-mcp-inventory.txt"
+    },
+    {
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "label": "ui",
+      "successful": true,
+      "evidence": "current-chat-mcp-ui.txt"
+    }
+  ]
+}

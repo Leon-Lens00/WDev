@@ -1,0 +1,26 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-players-coexist-v1.w3x",
+  "sha256": "eb1b65280e1adffbadbb7a07f6dd205ca7670fe9cc5ddbb38dbfd60bd8ec175c",
+  "base": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+  "base_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "sources": [
+    "Players/WavePlayerUtils.j",
+    "libraries/PlayerUtils.j"
+  ],
+  "boundary": "None: real player library and Classic APIs only",
+  "fixture": "tests/PlayerUtilsAudit.j",
+  "diagnostic_change": "None: exact sources",
+  "purpose": "Isolated players-coexist integration in real Classic engine; no full survival map coverage",
+  "jass_sha256": "8ca08f2276391d4b2edb231e1865aba9c8ac3c5705a35716c01f233c92fb5702",
+  "compiled": true,
+  "validated": true,
+  "reextracted": true,
+  "other_members_preserved": true,
+  "game_tested": true,
+  "native_log": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/players-coexist-v1-native.txt",
+  "checks": 39,
+  "failures": 0,
+  "removal_transitions": 144,
+  "expected_negative": false,
+  "process_closed": true
+}

@@ -1,0 +1,192 @@
+
+Analogous to Arcing Floating Text this system creates floating texts over coordinates.
+
+The difference between the two is, that "Arcing TextSplat" uses the textsplat object instead of the texttag handle.
+
+Unlike the texttag library Arcing TextSplat does not increase the text size,
+
+because the periodic operation is too heavy for textsplats and would make the system useless.
+
+
+
+Arcing TextSplat is slower in performance that Arcing Floating Text and should only be used if:
+
+
+
+Your map is about to hit the maximum texttag handle counter ( 100 ).
+
+You want to bind in images into the text ( |ipath|i ). 
+
+You wish to use a custom font for your map.
+
+You have a liking for the image handle.
+ 
+
+
+
+
+API
+
+function CreateArcingTextSplat takes string s, real x, real y returns nothing​
+
+Creates a arcing textsplat on coordinates x/y.
+
+
+function CreateArcingTextSplatForForce takes string s, real x, real y, force forForce returns nothing​
+
+For local traffic code. Is only displayed for force "forForce".
+
+
+
+
+
+
+Obligatory requirements
+
+
+TextSplat2
+
+
+
+
+
+
+
+	
+
+		Reveal Code
+	
+	
+
+		
+
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library ArcingTextSplat uses TextSplat2//* v1.2.1
+//**
+//*  Performance:
+//*  ============
+    //*  The creation of textsplat objects is a bit expensive, hence 
+    //* ArcingTextSplat is slower than the similar library Arcing Floating Text,
+    //* which uses the texttag handle. Use ArcingTextSplat only if:
+    //*     - Your map hits the maximum texttag count of 100.
+    //*     - You want to bind in images into the text ( |ipath|i ).
+    //*     - You have a liking for the image handle. 
+//**
+//* Import instruction:
+//* ===================
+    //*  Copy ArcingTextSplat, TextSplat2, Font and their requirements into your map.
+    //* Install a custom font of your choice. For more information look into library Font.
+//**
+//*  API: 
+//*  ====
+    //! novjass
+        function CreateArcingTextSplat takes string s, real x, real y returns nothing
+        function CreateArcingTextSplatForForce takes string s, real x, real y, force forForce returns nothing
+        //*  For local traffic code. Is only displayed for force "forForce".
+    //! endnovjass
+//**
+//*  User settings:
+//*  ==============
+    globals
+        private constant real TEXTSIZE        = 8       //*  Set the size of the text.
+        private constant real TIME_LIFE       = 1.0     //*  Set how long the text lasts.
+        private constant real TIME_FADE       = 0.5     //*  Set when the text starts to fade.
+        private constant real Z_OFFSET        = 50      //*  Set the height above the unit.
+        private constant real Z_OFFSET_BON    = 70      //*  Set how much extra height the text gains.
+        private constant real VELOCITY        = 2       //*  Set how fast the text move in x/y plane.
+        private constant real FIX_ANGLE       = bj_PI/2 //*  Set the movement angle of the text. Does not apply if ANGLE_RND is true.
+        private constant boolean ANGLE_RND    = true    //*  Set if the angle random or fixed.
+    endglobals
+//========================================================================
+//*  Arcing TextSplat system code. Make changes carefully.
+//======================================================================== 
+    globals
+        private constant timer TMR = CreateTimer()
+        //*  Indexing.
+        private integer max = 0
+        //*  Array.
+        private textsplat array splat
+    endglobals
+ 
+    private function OnPeriodic takes nothing returns nothing
+        local integer dex = 0
+        local textsplat t
+        loop
+            exitwhen (dex == max)
+            set t = splat[dex]
+            if (t.lifespan - t.age > 0.) then
+                call t.setPosition(t.x, t.y, Z_OFFSET + Z_OFFSET_BON*Sin(bj_PI*(t.lifespan - t.age))) 
+            else
+                set max = max - 1
+                set splat[dex] = splat[max]
+                set dex = dex - 1
+                if (0 == max) then
+                    call PauseTimer(TMR)
+                endif
+            endif
+            set dex = dex + 1
+        endloop    
+    endfunction
+    
+    function CreateArcingTextSplatForForce takes string s, font f, real x, real y, force forForce returns nothing
+        static if ANGLE_RND then
+            local real a = GetRandomReal(-bj_PI, bj_PI)
+        else 
+            local real a = FIX_ANGLE
+        endif
+        //*  textsplat API.
+        local textsplat t = textsplat.create(f)
+        set t.lifespan = TIME_LIFE
+        set t.fadepoint = TIME_FADE
+        set t.permanent = false
+        call t.setText(s, TEXTSIZE, TEXTSPLAT_TEXT_ALIGN_CENTER)
+        call t.setPosition(x, y, Z_OFFSET)
+        call t.setVelocity(Sin(a)*VELOCITY*32, Cos(a)*VELOCITY*32, 0.)
+        call t.setVisible(IsVisibleToPlayer(x, y, GetLocalPlayer()) and IsPlayerInForce(GetLocalPlayer(), forForce))
+        //*  Set members.
+        set splat[max] = t
+        //*  Start timer.
+        if (0 == max) then
+            call TimerStart(TMR, .031250000, true, function OnPeriodic)
+        endif
+        set max = max + 1
+    endfunction
+    
+    function CreateArcingTextSplat takes string s, font f, real x, real y returns nothing
+        call CreateArcingTextSplatForForce(s, f, x, y, bj_FORCE_ALL_PLAYERS)
+    endfunction
+
+endlibrary
+	
+
+		
+	
+
+
+Keywords:
+
+floating, textsplat, text

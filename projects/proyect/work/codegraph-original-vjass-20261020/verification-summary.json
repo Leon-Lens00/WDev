@@ -1,0 +1,70 @@
+{
+  "status": "Local original CodeGraph fork installed and MCP registered; language coverage partial/experimental.",
+  "source": "/home/snz/Documentos/MCP W3/codegraph-vjass",
+  "base": "v1.6.2",
+  "mcp_identity": "1.6.2+jass-vjass.1",
+  "cli": "/home/snz/.local/bin/codegraph",
+  "integration": {
+    "original_pipeline": true,
+    "sqlite_fts": true,
+    "incremental_sync": true,
+    "original_mcp_explore": true,
+    "legacy_jassgraph_bridge_enabled": false,
+    "unrelated_config_preserved": true
+  },
+  "validation": {
+    "jass_specific_tests_passed": 15,
+    "original_extraction_resolution_sync_tests_passed": 995,
+    "additional_run_tests_passed": 81,
+    "additional_run_tests_skipped": 8,
+    "additional_run_includes_13_earlier_jass_tests": true,
+    "python_graph_exactly_matches_upstream": true,
+    "jasshelper_and_pjass_fixture_passed": true,
+    "mcp_sdk_and_live_watch_passed": true,
+    "configured_global_command_and_projectPath_passed": true,
+    "skill_quick_validate_passed": true,
+    "git_diff_check_passed": true
+  },
+  "scale_probes": [
+    {
+      "files": 1,
+      "nodes": 12,
+      "edges": 16,
+      "index_ms": 170,
+      "flow_probes": 3,
+      "errors": [],
+      "stable_rebuild": true,
+      "sources_unchanged": true
+    },
+    {
+      "files": 2,
+      "nodes": 4050,
+      "edges": 6222,
+      "index_ms": 180,
+      "flow_probes": 3,
+      "errors": [],
+      "stable_rebuild": true,
+      "sources_unchanged": true
+    },
+    {
+      "files": 3,
+      "nodes": 7690,
+      "edges": 13939,
+      "index_ms": 272,
+      "flow_probes": 3,
+      "errors": [],
+      "stable_rebuild": true,
+      "sources_unchanged": true
+    }
+  ],
+  "limits": [
+    "No macro/import/module expansion or Zinc parsing.",
+    "No general dynamic dispatch, operator access dispatch, generated methods or arbitrary chained receivers.",
+    "Partial structural/static support; JassHelper/pJASS remain independent validators.",
+    "No Classic game or multiplayer test.",
+    "Upstream agent A/B gate over three real repositories not run; no token/time savings or full-language claim.",
+    "Current chat tool catalog has not been reloaded; use CLI now or reload MCP/new session."
+  ],
+  "package_version_unchanged": true,
+  "upstream_or_other_projects_published": false
+}

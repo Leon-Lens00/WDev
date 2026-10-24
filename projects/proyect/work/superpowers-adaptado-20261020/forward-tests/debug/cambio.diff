@@ -1,0 +1,13 @@
+--- entrada.j
++++ corregido.j
+@@ -2164,8 +2164,8 @@
+         
+         function s__Hydra_evaluateTarget takes integer this,integer node returns boolean
+             local real dist
+-            local real ndist
+-            local real bdist
++            local real ndist= 0.
++            local real bdist= 0.
+             local unit u
+             local unit new= null
+             local unit best= null

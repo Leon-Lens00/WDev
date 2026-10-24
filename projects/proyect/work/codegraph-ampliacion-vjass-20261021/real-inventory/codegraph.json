@@ -1,0 +1,11 @@
+{
+  "exclude": [
+    "build/",
+    "evidence/",
+    "runtime-isolated/",
+    "source-demo/",
+    "upstream/",
+    "studio-before/",
+    "__pycache__/"
+  ]
+}

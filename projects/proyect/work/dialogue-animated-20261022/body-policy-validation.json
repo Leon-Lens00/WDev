@@ -1,0 +1,56 @@
+{
+  "paladin": {
+    "bodyFrozen": true,
+    "frozenNodeIds": [
+      0,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25
+    ],
+    "animatedFacialNodes": 17,
+    "version": 800,
+    "animationBounds": {
+      "min": [
+        -12.500001269826924,
+        -11.000002570856827
+      ],
+      "max": [
+        12.500008080024976,
+        4.963639387574944
+      ]
+    }
+  },
+  "tauren": {
+    "bodyFrozen": true,
+    "frozenNodeIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "animatedFacialNodes": 13,
+    "version": 800,
+    "animationBounds": {
+      "min": [
+        -11.867094464628387,
+        -9.897515489098643
+      ],
+      "max": [
+        12.125000697799292,
+        8.030159920647922
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "status": "Tested in map",
+  "modelSha256": "63895d91e14521d4007748e60e46ee1d31bad64c6270644cf708e9241d975bdf",
+  "fixture": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v9-20261023-081750/X3BusterV9.w3x",
+    "sha256": "647d0aa2516115eaedbf7c91a2bf73ef37e25e01292fe4c71762db59e2a7f4ce",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 33,
+    "models": 2,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "loadedMap": {
+    "loadedMap": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v9-ydwe-runtime/pfx/drive_c/WarcraftIII/Maps/Test/WorldEditTestMap.w3x",
+    "sha256": "647d0aa2516115eaedbf7c91a2bf73ef37e25e01292fe4c71762db59e2a7f4ce",
+    "fixtureBytesIdentical": true
+  },
+  "scenarios": {
+    "stand-verified": {
+      "frames": 25,
+      "durationSeconds": 5.177291491010692,
+      "pid": 959554,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "move-verified": {
+      "frames": 25,
+      "durationSeconds": 5.051384149992373,
+      "pid": 959554,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "scale05-verified": {
+      "frames": 25,
+      "durationSeconds": 5.044206675986061,
+      "pid": 959554,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "scale3-verified": {
+      "frames": 25,
+      "durationSeconds": 5.1153537220088765,
+      "pid": 959554,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "birth-verified": {
+      "frames": 25,
+      "durationSeconds": 5.033176716999151,
+      "pid": 959554,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "impact-verified": {
+      "frames": 25,
+      "durationSeconds": 5.420349450985668,
+      "pid": 959554,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    }
+  },
+  "totalFrames": 150,
+  "visualResult": "Fast pink sweep and secondary filaments rendered in Classic1.27b. Blue body and tail stay continuous; effect scales and Death disappears.",
+  "closure": {
+    "returnCode": 0,
+    "ownedProcesses": [],
+    "windowGone": true,
+    "privateRuntimeTrashed": true,
+    "normalizedPrefixGuard": "PASS"
+  },
+  "limits": [
+    "Native captures approximately every200ms do not measure the exact240ms sweep period; this period is verified in exported curves and 20ms viewer steps.",
+    "Birth160ms is not fully resolved by native capture interval.",
+    "No FPS, stress, multiplayer or physics integration test.",
+    "240ms is artistic timing, not verified SNES timing."
+  ]
+}

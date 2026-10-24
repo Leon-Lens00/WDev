@@ -1,0 +1,16 @@
+Shots Vol. I / Misil-simple / 03-Purpura
+
+Modelo para importar: Shot_03_Purple.mdx
+Ruta sugerida del modelo en el mapa: ShotsTeam\Shot_03_Purple.mdx
+
+Importar también las tres BLP de ShotsTeam con las rutas siguientes:
+  ShotsTeam\ShotFlareNeutral.blp
+  ShotsTeam\ShotStarNeutral.blp
+  ShotsTeam\ShotGlowNeutral.blp
+
+Las carpetas ShotsTeam/Textures contienen los recursos del modelo. Conservar sus rutas internas.
+Las mismas texturas aparecen en otros colores: al importar varios modelos al mismo mapa basta una copia por ruta.
+El MDL es fuente editable; no es necesario importarlo al juego.
+El evento de sonido usa las tablas internas de Warcraft, sin un archivo de audio externo declarado en el MDX.
+Autor original: Vinz. Darle crédito. Derivados con anclaje frontal; MDX800 / Classic 1.27b.
+Fuente: https://www.hiveworkshop.com/threads/shots-vol-i.315258/

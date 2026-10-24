@@ -1,0 +1,2593 @@
+{
+  "files": [
+    {
+      "path": "Audio/Config/AudioPreload.j",
+      "sha256": "3e74fa0c350f7cf0b0b19e3fe41ed87fd8252229a61ffb14ea57ec66a2f18f92",
+      "lines": 96,
+      "libraries": [
+        "AudioPreloadConfig"
+      ],
+      "public_functions": [
+        "PreloadMapResources"
+      ]
+    },
+    {
+      "path": "Core/GameState.j",
+      "sha256": "a9389b1f86eebb6385f113c5f4afc298dd787cf45faa932cdafe1f082e48345c",
+      "lines": 25,
+      "libraries": [
+        "GameState"
+      ],
+      "public_functions": [
+        "GameStateInitDefaults"
+      ]
+    },
+    {
+      "path": "Environment/Config/VisionConfig.j",
+      "sha256": "5f81f6772c8db8fc9b8cf8b6329eb4c5a5bca1ec7913a5fbdd2b15eac91e1c51",
+      "lines": 67,
+      "libraries": [
+        "VisionConfi"
+      ],
+      "public_functions": [
+        "Trig_Event_Actions",
+        "InitTrig_Event"
+      ]
+    },
+    {
+      "path": "InitMap/MapBootstrap.j",
+      "sha256": "97c1c37612841eb0ffd3e7ef7d0b882d5dbabfc35a2e91eb27d3e0fefbde9204",
+      "lines": 25,
+      "libraries": [
+        "MapBootstrap"
+      ],
+      "public_functions": [
+        "Trig_gg_Actions",
+        "InitTrig_gg"
+      ]
+    },
+    {
+      "path": "InitMap/PreConfi.j",
+      "sha256": "35bb837ca55f185df2b43b5151c3a212cb67eac099c2e797e0830d2f7dae6df7",
+      "lines": 21,
+      "libraries": [
+        "PreConfi"
+      ],
+      "public_functions": [
+        "InitTrig_Vars"
+      ]
+    },
+    {
+      "path": "MoveSys/Config/MovementSpellTargetConfig.j",
+      "sha256": "7a8eea6f3a965de69ccfd6b9dc6433601e3aa09dfbb260fb686c7a137b68368c",
+      "lines": 9,
+      "libraries": [
+        "MovementSpellTargetConfig"
+      ],
+      "public_functions": [
+        "InitMovementSpellTargetConfig"
+      ]
+    },
+    {
+      "path": "MoveSys/MoveCast.j",
+      "sha256": "03814c4641637f59a3e8e757ed2e8216054382aad08e50dbfe9e087cef46ed1c",
+      "lines": 842,
+      "libraries": [
+        "MovementSystem"
+      ],
+      "public_functions": [
+        "RegisterMovementSpell",
+        "RegisterMovementSpellTarget",
+        "ConfigureMovementSpellCastSession",
+        "RegisterMovementSpellRecast",
+        "RegisterMovementSpellTargetRecast",
+        "CancelMovementSpellSessionForUnit"
+      ]
+    },
+    {
+      "path": "Multiboard/InitialWaveMultiboard.j",
+      "sha256": "6202600a9c17b58523f081aed8295d046aba70455e76d63a1b7275da7b8e73ac",
+      "lines": 89,
+      "libraries": [
+        "InitialWaveMultiboard"
+      ],
+      "public_functions": [
+        "ShowInitialWaveMultiboard",
+        "InitInitialWaveMultiboard"
+      ]
+    },
+    {
+      "path": "Multiboard/WaveMultiboard.j",
+      "sha256": "0803897a0e4812823183a2ff9eab3d69e746760658701bacc69f09e4ad5bcc12",
+      "lines": 283,
+      "libraries": [
+        "WaveMultiboard"
+      ],
+      "public_functions": [
+        "BMT1"
+      ]
+    },
+    {
+      "path": "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "sha256": "c2638bea859907efa8eac392c4f9e0fcb27a625b9eeb761595af1a928ad672e5",
+      "lines": 39,
+      "libraries": [
+        "LoadoutMoveCastConfi"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "MyMissiles/Config/WeaponProfileConfig.j",
+      "sha256": "1bcc7bd4d94e5ab53bd70fc50743a92d6434658b7464122da03ac946e5d3ded6",
+      "lines": 592,
+      "libraries": [
+        "WeaponProfileConfig"
+      ],
+      "public_functions": [
+        "WeaponProfileIsWeapon",
+        "WeaponProfileGetMode",
+        "WeaponProfileGetBehavior",
+        "WeaponProfileGetSelectorAbility",
+        "WeaponProfileGetFireAbility",
+        "WeaponProfileFromSelectorAbility",
+        "WeaponProfileFromFireAbility",
+        "WeaponProfileGetTexture",
+        "WeaponProfileGetName",
+        "WeaponProfileGetRole",
+        "WeaponProfileGetDamage",
+        "WeaponProfileGetCastDuration",
+        "WeaponProfileGetCastCount",
+        "WeaponProfileGetShotsPerSecond",
+        "WeaponProfileGetInterval",
+        "WeaponProfileGetRange",
+        "WeaponProfileGetProjectileCount",
+        "WeaponProfileGetArea",
+        "WeaponProfileGetCost",
+        "WeaponProfileGetDefaultAmmo",
+        "WeaponProfileGetPickupUnitType",
+        "WeaponProfileFromPickupUnitType",
+        "WeaponProfileGetMissileModel",
+        "WeaponProfileGetTierMissileModel",
+        "WeaponProfileGetMissileScale",
+        "WeaponProfileGetMissileSpeed",
+        "WeaponProfileGetAcceleration",
+        "WeaponProfileGetDescription",
+        "WeaponProfileGetDetailText"
+      ]
+    },
+    {
+      "path": "MyMissiles/Loadout Control.j",
+      "sha256": "53235fb9a63fd84ede7d3b0e6092f2e217cde4048b64df3c16dad49303e454e4",
+      "lines": 10,
+      "libraries": [
+        "LoadoutControl"
+      ],
+      "public_functions": [
+        "GetLoadoutControlMoveCastDuration"
+      ]
+    },
+    {
+      "path": "MyMissiles/Loadout IronLizard.j",
+      "sha256": "1cebba8a0e4d5f52e16298878f1c3cc4a107289d8fdb382d7631bfa2093eea83",
+      "lines": 240,
+      "libraries": [
+        "LoadoutIronLizard"
+      ],
+      "public_functions": [
+        "LoadoutIronLizardFire"
+      ]
+    },
+    {
+      "path": "MyMissiles/Loadout Leap.j",
+      "sha256": "198b3023a6593167f95833ba98edc07961dd39e70cb8ae8d9f38539d2c4b304e",
+      "lines": 728,
+      "libraries": [
+        "LoadoutLeap"
+      ],
+      "public_functions": [
+        "CancelLoadoutLeapForUnit"
+      ]
+    },
+    {
+      "path": "MyMissiles/Loadout LeapMissile.j",
+      "sha256": "e4a1da6ddcada5f7400b74263778233881ad5d5b9b8036744d8d58202ee95030",
+      "lines": 10,
+      "libraries": [
+        "LoadoutLeapMissile"
+      ],
+      "public_functions": [
+        "GetLoadoutLeapMissileMoveCastDuration"
+      ]
+    },
+    {
+      "path": "MyMissiles/Loadout MetalSlugSpecial.j",
+      "sha256": "725ad4894962fd6c0403ef4464884c5c2a3740df9a2b5dfe26ffa58090707fb6",
+      "lines": 374,
+      "libraries": [
+        "LoadoutMetalSlugSpecial"
+      ],
+      "public_functions": [
+        "LoadoutMetalSlugSpecialFireProfile"
+      ]
+    },
+    {
+      "path": "MyMissiles/Loadout Missile.j",
+      "sha256": "c606ef3bfda892798e259c7fb352e026517d7a99c4b20130be69d01a9f33e466",
+      "lines": 1179,
+      "libraries": [
+        "PlayerMissileLoadout",
+        "LoadoutOrbBalance",
+        "LoadoutMissile"
+      ],
+      "public_functions": [
+        "SetPlayerMissileLoadout",
+        "SetPlayerMissileAbilityChoice",
+        "SetPlayerMissileSpeedBonus",
+        "SetPlayerMissileDamageValue",
+        "SetPlayerMissileInstanceCount",
+        "AddPlayerMissileInstanceCount",
+        "SetPlayerMissileModelPath",
+        "SetPlayerMissileOverlayModelPath",
+        "SetPlayerMissileHealOnHit",
+        "SetPlayerMissileUseRapidFireMissile",
+        "SetPlayerMissileUseRapidFireControl",
+        "SetPlayerMissileUseRapidFire",
+        "SetPlayerMissileUseSmartRecast",
+        "SetPlayerLeapCasterFx",
+        "SetPlayerLeapDummyFx",
+        "SetPlayerLeapDummyScale",
+        "SetPlayerLeapDummyFlightOffset",
+        "SetPlayerLeapCompanionUnitId",
+        "SetPlayerLeapImpactFx",
+        "GetPlayerMissileAbilityChoice",
+        "GetPlayerMissileSpeedBonus",
+        "GetPlayerMissileDamageValue",
+        "GetPlayerMissileInstanceCount",
+        "GetPlayerMissileModelPath",
+        "GetPlayerMissileOverlayModelPath",
+        "GetPlayerMissileHealOnHit",
+        "GetPlayerMissileUseRapidFireMissile",
+        "GetPlayerMissileUseRapidFire",
+        "GetPlayerMissileUseRapidFireControl",
+        "GetPlayerMissileUseSmartRecast",
+        "GetPlayerLeapCasterFx1",
+        "GetPlayerLeapCasterFx2",
+        "GetPlayerLeapDummyFx1",
+        "GetPlayerLeapDummyFx2",
+        "GetPlayerLeapDummyScale",
+        "GetPlayerLeapDummyFlightOffset",
+        "GetPlayerLeapCompanionUnitId",
+        "GetPlayerLeapImpactFx",
+        "SetPlayerOrbLevel",
+        "SetPlayerPointsOfMana",
+        "GetPlayerOrbLevel",
+        "GetPlayerPointsOfMana",
+        "LoadoutClampInstance",
+        "LoadoutGetRayPierce",
+        "LoadoutGetFireDamage",
+        "LoadoutGetPoisonDuration",
+        "LoadoutGetPoisonTickDamage",
+        "LoadoutGetWindAoe",
+        "LoadoutGetWindDamage",
+        "LoadoutGetDarkBonus",
+        "LoadoutGetBloodMinMultiplier",
+        "LoadoutGetBloodMaxMultiplier",
+        "LoadoutGetBloodRandomMultiplier",
+        "LoadoutBloodMultiplierToPercent",
+        "GetLoadoutMissileMoveCastDuration",
+        "GetLoadoutMissileMoveCastDurationForAbility",
+        "LoadoutMissileFireProfile"
+      ]
+    },
+    {
+      "path": "MyMissiles/Loadout RocketLauncher.j",
+      "sha256": "200704e419a0417a0c8a5614c1aaafea101314934129304f8d154c1d03af7ffd",
+      "lines": 883,
+      "libraries": [
+        "LoadoutRocketLauncher"
+      ],
+      "public_functions": [
+        "GetLoadoutRocketLauncherMoveCastDuration",
+        "LoadoutRocketLauncherFire"
+      ]
+    },
+    {
+      "path": "MyMissiles/Loadout ThunderShot.j",
+      "sha256": "aec3982e4778a41b5b563b7f421d78145854677b87dbd8009cc28abee444ad76",
+      "lines": 372,
+      "libraries": [
+        "LoadoutThunderShot"
+      ],
+      "public_functions": [
+        "LoadoutThunderShotFire"
+      ]
+    },
+    {
+      "path": "MyMissiles/PrisonerDropSystem.j",
+      "sha256": "fdc46afd3dabf6c20c3cd464e5f4eea472b3df07bea526a4fe5c2ce746c561d5",
+      "lines": 349,
+      "libraries": [
+        "PrisonerDropSystem"
+      ],
+      "public_functions": [
+        "PrisonerDropTrySpawnForPid",
+        "PrisonerDropTrySpawn"
+      ]
+    },
+    {
+      "path": "MyMissiles/SwapMana.j",
+      "sha256": "ceee58c284548fa1b2be15b0e0185ef1e0007b4364747cac17ed6e519811a366",
+      "lines": 209,
+      "libraries": [
+        "LoadoutIntFullManaSwapNew"
+      ],
+      "public_functions": [
+        "TriggerLoadoutIntFullManaSwapForAbility",
+        "LoadoutIntFullMana"
+      ]
+    },
+    {
+      "path": "MyMissiles/UnitTypeMissile.j",
+      "sha256": "0c9ad2c9feef0270d2b7cdc72a3451b8bd0e623ebb7d4cf3508367fa66ee64f7",
+      "lines": 926,
+      "libraries": [
+        "UnitTypeMissile"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "MyMissiles/UnitTypeMissileConfig.j",
+      "sha256": "619e5fdf1384b930ff32fe8f94fc3edb29baed5019320e169be6618be54dc88f",
+      "lines": 664,
+      "libraries": [
+        "UnitTypeMissileConfig"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "MyMissiles/UnitTypeMissileLoadout.j",
+      "sha256": "d636c2213d3e523095c2eaede5f545ac424a5f04f388b6493353883486124bbc",
+      "lines": 621,
+      "libraries": [
+        "UnitTypeMissileLoadout"
+      ],
+      "public_functions": [
+        "SetUnitTypeMissileLoadout",
+        "SetUnitTypeUseRapidFire",
+        "SetUnitTypeCastAnimation",
+        "SetUnitTypeCasterWaitFx",
+        "SetUnitTypeDummyConfig",
+        "SetUnitTypeDummyImpactFx",
+        "SetUnitTypeDummyArea",
+        "SetUnitTypeMissileConfig",
+        "SetUnitTypeImpactOnPath",
+        "SetUnitTypeSpecialMissile",
+        "SetUnitTypeSpecialMultipliers",
+        "SetUnitTypeMissileSounds",
+        "SetUnitTypeMissileStartZ",
+        "SetUnitTypeManaCost",
+        "GetUnitTypeMissileSpeed",
+        "GetUnitTypeMissileDamage",
+        "GetUnitTypeMissileModel",
+        "GetUnitTypeMissileOverlayModel",
+        "GetUnitTypeUseRapidFire",
+        "GetUnitTypeRapidFireDuration",
+        "GetUnitTypeRapidFireInterval",
+        "GetUnitTypeCastAnimation",
+        "GetUnitTypeCastAnimationDelay",
+        "GetUnitTypeCastAnimationTimeScale",
+        "GetUnitTypeCasterWaitFx",
+        "GetUnitTypeDummyModel",
+        "GetUnitTypeDummyImpactFx",
+        "GetUnitTypeDummyScale",
+        "GetUnitTypeDummyArea",
+        "GetUnitTypeDummyDelay",
+        "GetUnitTypeMissileArc",
+        "GetUnitTypeMissileStartZ",
+        "GetUnitTypeMissileFlyHeight",
+        "GetUnitTypeMissileCollision",
+        "GetUnitTypeImpactOnPath",
+        "GetUnitTypeSpecialEnabled",
+        "GetUnitTypeSpecialAfterNormalShots",
+        "GetUnitTypeSpecialMissileModel",
+        "GetUnitTypeSpecialOverlayModel",
+        "GetUnitTypeSpecialDamageMult",
+        "GetUnitTypeSpecialAreaMult",
+        "GetUnitTypeSpecialSpeedMult",
+        "GetUnitTypeSpecialMissileScaleMult",
+        "GetUnitTypeSpecialDummyScaleMult",
+        "GetUnitTypeSoundCastStart",
+        "GetUnitTypeSoundWaitStart",
+        "GetUnitTypeSoundWaitEnd",
+        "GetUnitTypeSoundImpact",
+        "GetUnitTypeSoundLastMissile",
+        "GetUnitTypeSoundDummyClear",
+        "GetUnitTypeSoundInterrupted",
+        "GetUnitTypeSoundChannelComplete",
+        "GetUnitTypeMissileScale",
+        "GetUnitTypeManaCost",
+        "HasUnitTypeMissileConfig"
+      ]
+    },
+    {
+      "path": "MyMissiles/WeaponInventoryCore.j",
+      "sha256": "69093527d3fdac0af77fa23bf617e50aab279ed56f0f4e01f66a732d68ec2305",
+      "lines": 412,
+      "libraries": [
+        "WeaponInventoryCore"
+      ],
+      "public_functions": [
+        "WeaponInventoryGetHudVersion",
+        "WeaponInventoryGetSlotProfile",
+        "WeaponInventoryGetSlotAmmo",
+        "WeaponInventoryGetActiveSlot",
+        "WeaponInventoryGetActiveProfile",
+        "WeaponInventoryGetActiveAmmo",
+        "WeaponInventorySetSlotWeapon",
+        "WeaponInventoryResetSlotToHandgun",
+        "WeaponInventorySetActiveSlot",
+        "WeaponInventoryEnsurePlayer",
+        "WeaponInventoryGiveWeapon",
+        "WeaponInventoryConsumeShotForProfile",
+        "WeaponInventoryConsumeShot",
+        "WeaponInventoryCanStartFire",
+        "WeaponInventoryResetActiveSlotOnDeath"
+      ]
+    },
+    {
+      "path": "MyMissiles/WeaponInventorySystem.j",
+      "sha256": "998b11c9debc04573ba7c51480de543e1bf1cc6b1dd8c3426d6483b1cef73c3e",
+      "lines": 57,
+      "libraries": [
+        "WeaponInventorySystem"
+      ],
+      "public_functions": [
+        "WeaponInventoryFireActive"
+      ]
+    },
+    {
+      "path": "MyMissiles/WeaponSelectionSystem.j",
+      "sha256": "a7e4cc627708fd23abe53d64cb73cc751af2745f3d41ea8a883837c4e753422e",
+      "lines": 48,
+      "libraries": [
+        "WeaponSelectionSystem"
+      ],
+      "public_functions": [
+        "PlayerHasWeaponProfile",
+        "GetPlayerActiveWeaponProfile",
+        "SetPlayerActiveWeaponProfile",
+        "UnlockPlayerWeaponProfile",
+        "RefreshPlayerWeaponSelectors",
+        "EnsurePlayerDefaultWeaponProfile"
+      ]
+    },
+    {
+      "path": "Players/Config/AllianceConfig.j",
+      "sha256": "61cddea68475cdb6481e69ad3a6c7f35f563b83cfe35d4a838f464928474d539",
+      "lines": 25,
+      "libraries": [
+        "AllianceConfig"
+      ],
+      "public_functions": [
+        "InitHostileNeutralAlliances",
+        "InitPlayerBountyStates"
+      ]
+    },
+    {
+      "path": "Players/Config/InitialGoldConfig.j",
+      "sha256": "7e352df276b821b27bfb51197965cd6bcb7a61d6afa7ac1bc2d91fe2a18a0567",
+      "lines": 28,
+      "libraries": [
+        "InitialGoldConfig"
+      ],
+      "public_functions": [
+        "InitInitialPlayerGold"
+      ]
+    },
+    {
+      "path": "Players/PlayerHeroState.j",
+      "sha256": "c2dc8b7e379e23793cf4804d78e8838170a718d2ab18874a98ce6ea73f384f12",
+      "lines": 8,
+      "libraries": [
+        "PlayerHeroState"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "Selection/Config/SelectionElementConfig.j",
+      "sha256": "8918f6887cb3ff383e0046c7853f2fd921735426fbbcd69f2bdb2d153ec19d69",
+      "lines": 84,
+      "libraries": [
+        "SelectionElementConfig"
+      ],
+      "public_functions": [
+        "SelectionSetupElement"
+      ]
+    },
+    {
+      "path": "Selection/Config/SelectionHeroConfig.j",
+      "sha256": "97289e98e314e259c2c01d04dae2f07b9216dc313cef1b360f21bb6670e1a9e8",
+      "lines": 25,
+      "libraries": [
+        "SelectionHeroConfig"
+      ],
+      "public_functions": [
+        "SelectionGetHeroUnitId",
+        "SelectionGetHeroProjectileElementId"
+      ]
+    },
+    {
+      "path": "Selection/Config/SelectionHeroVisualConfig.j",
+      "sha256": "56b6187d209d393f7d4f95c2912bea18a15c26356a620b6db3383e51402ab797",
+      "lines": 34,
+      "libraries": [
+        "SelectionHeroVisualConfig"
+      ],
+      "public_functions": [
+        "SelectionSetupHeroVisual"
+      ]
+    },
+    {
+      "path": "Selection/SelectionClientBridge.j",
+      "sha256": "084941fbad11a2835250c85cf9c026176eac3ba452219f8ff16cb5436cfb6ea7",
+      "lines": 54,
+      "libraries": [
+        "SelectionClientBridge"
+      ],
+      "public_functions": [
+        "SelectionCreateClients",
+        "SelectionShowClients"
+      ]
+    },
+    {
+      "path": "Selection/SelectionHeroSpawn.j",
+      "sha256": "e3e2a16f6541422c79c57185972afe44f9c1c776a7c911936390f03cdaebf7bd",
+      "lines": 26,
+      "libraries": [
+        "SelectionHeroSpawn"
+      ],
+      "public_functions": [
+        "SelectionEnsureHeroCreated"
+      ]
+    },
+    {
+      "path": "Selection/SelectionStartFlow.j",
+      "sha256": "7c1c07dce4c9bb8e55c6e2c648c7ad6ed97b0a13ca50ceeb37816bf55aabad60",
+      "lines": 11,
+      "libraries": [
+        "SelectionStartFlow"
+      ],
+      "public_functions": [
+        "SelectionStartGameAfterAllSelected"
+      ]
+    },
+    {
+      "path": "Selection/SelectionSystem.j",
+      "sha256": "29c238b2ac3a813adb90611dd9a8b2f85f0f544926f612814a62c33ff078a938",
+      "lines": 170,
+      "libraries": [
+        "SelectionSystem"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "Systems/HeroLives/HeroLives.j",
+      "sha256": "177b69b78e24d9b9a5eb6f4511720473f044f5f0eed35d7734c9e2724993f0bd",
+      "lines": 358,
+      "libraries": [
+        "HeroLives"
+      ],
+      "public_functions": [
+        "HeroLivesGetCurrent",
+        "HeroLivesGetRemaining",
+        "HeroLivesSetCurrent",
+        "HeroLivesCancelPlayerState",
+        "HeroLivesInitHero",
+        "HeroLivesRefreshActivePlayers",
+        "HeroLivesRefreshAll",
+        "ReviveAndHealHeroes"
+      ]
+    },
+    {
+      "path": "Systems/Orders/OrderSmartChannel.j",
+      "sha256": "adf9b7e1460c74e77bcff6695fbd1156c976c6f9ca0c14ec5ea905854d5f7c2e",
+      "lines": 114,
+      "libraries": [
+        "OrderSmartChannel"
+      ],
+      "public_functions": [
+        "SILENCE_TESTUNIT_AMOV",
+        "EButts"
+      ]
+    },
+    {
+      "path": "Systems/Tender/Config/TenderSpawnConfig.j",
+      "sha256": "5df90679832101ad012e0bc92d5e37e2217c2338f613a1644e403119fbd41db8",
+      "lines": 7,
+      "libraries": [
+        "TenderSpawnConfig"
+      ],
+      "public_functions": [
+        "InitTenderSpawnConfig"
+      ]
+    },
+    {
+      "path": "Systems/Tender/TenderEscInteraction.j",
+      "sha256": "75a17886f47b9e2464799d74802960483684bda4d7bf874e097d526573724578",
+      "lines": 7,
+      "libraries": [
+        "TenderEscInteraction"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "Systems/Tender/TenderSystem.j",
+      "sha256": "30c2cd688eda8de7582a87d027bc48e29bbd35e58ec91a34bdbfad06392f80d0",
+      "lines": 61,
+      "libraries": [
+        "TenderSystem"
+      ],
+      "public_functions": [
+        "RefreshTenderUnitByType",
+        "RefreshTenderUnit",
+        "GetTenderUnit",
+        "IsUnitNearTender"
+      ]
+    },
+    {
+      "path": "Terrain/Config/TerrainReplaceConfig.j",
+      "sha256": "fe8832320dd7e29298894fbd03a0ee7761175f4de23716b770737000291150f1",
+      "lines": 115,
+      "libraries": [
+        "TerrainReplaceConfi"
+      ],
+      "public_functions": [
+        "ApplyDefaultTerrainReplaceRect",
+        "ApplyDefaultTerrainReplaceRectAsync",
+        "ApplyDefaultTerrainReplaceDebugRect",
+        "ApplyDefaultTerrainReplaceDebugRectAsync",
+        "ApplyDefaultTerrainReplaceBounds",
+        "ApplyDefaultTerrainReplaceBoundsAsync",
+        "ApplyDefaultTerrainReplaceDebugBounds",
+        "ApplyDefaultTerrainReplaceDebugBoundsAsync",
+        "ApplyDefaultTerrainReplaceFromCenter",
+        "ApplyDefaultTerrainReplaceFromCenterAsync",
+        "ApplyDefaultTerrainReplaceDebugFromCenter",
+        "ApplyDefaultTerrainReplaceDebugFromCenterAsync"
+      ]
+    },
+    {
+      "path": "UI System/MyIU/Config/MenuClientInitConfig.j",
+      "sha256": "a398d51f9d4aafdf8f784b0f7c47d319ea300f407d60eb9aafa64ca1976a3953",
+      "lines": 9,
+      "libraries": [
+        "MenuClientInitConfig"
+      ],
+      "public_functions": [
+        "InitMenuClientDefaults"
+      ]
+    },
+    {
+      "path": "UI System/MyIU/EnemyPreviewConfig.j",
+      "sha256": "1dfdf9ba0ae195d786872bb68db1cf85ebcc4b0c0c7dce8476e88af0239ec392",
+      "lines": 115,
+      "libraries": [
+        "EnemyPreviewConfig"
+      ],
+      "public_functions": [
+        "EnemyPreviewSetModelPath",
+        "EnemyPreviewGetModelPath",
+        "EnemyPreviewSetModelScale",
+        "EnemyPreviewGetModelScale",
+        "EnemyPreviewSetModel",
+        "EnemyPreviewSetText",
+        "EnemyPreviewGetText"
+      ]
+    },
+    {
+      "path": "UI System/MyIU/Inits.j",
+      "sha256": "7616c927c6ed53804c837669628bd08b363c77be20ed05d6f813b162b72dfb39",
+      "lines": 8,
+      "libraries": [
+        "Clk"
+      ],
+      "public_functions": [
+        "InitTrig_ShowMenuClient"
+      ]
+    },
+    {
+      "path": "UI System/MyIU/MenuClient.j",
+      "sha256": "95780cfd8756dc49e46f6c890cfb07ca66fd7b45b4b3e7fdb1a131ccdf5706e7",
+      "lines": 467,
+      "libraries": [
+        "MenuClient"
+      ],
+      "public_functions": [
+        "MenuClientRefreshEnemyPreviewForActivePlayers",
+        "MenuClientClearEnemyPreviewForActivePlayers"
+      ]
+    },
+    {
+      "path": "UI System/MyIU/Models.j",
+      "sha256": "3e7820fd802011a552eb58427012292137633a7db1a8f6b9fc2cc456f4991151",
+      "lines": 50,
+      "libraries": [
+        "EquipHeroModels"
+      ],
+      "public_functions": [
+        "EquipSetHeroModel",
+        "EquipGetHeroModel"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/AI/AIConfig.j",
+      "sha256": "263d864ed4dae9ac8eed32f65013d7cf08ee6d81c3d8d3fd3b9d35b47663a938",
+      "lines": 136,
+      "libraries": [
+        "AIConfig"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "WaveSysAnAI/AI/AIManagerUtils.j",
+      "sha256": "7e065c1c9ce8ba6ee8df8d653ef32f469d725ce1f01aa448496572f556f461e7",
+      "lines": 74,
+      "libraries": [
+        "AIManagerUtils"
+      ],
+      "public_functions": [
+        "AIBoolToInt",
+        "AIIntervalToMs",
+        "AIClampInt",
+        "AIClampReal",
+        "AIGetRandomRealRange",
+        "AIGetRandomMsRange"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/AI/AIProfiles.j",
+      "sha256": "1dc637a9392129974939892a593197eb0069e9b557622d777dafd434760becce",
+      "lines": 533,
+      "libraries": [
+        "AIProfiles"
+      ],
+      "public_functions": [
+        "AIRegisterProfile",
+        "AISetProfileBehavior",
+        "AISetProfileOrderInterval",
+        "AISetProfileTeleport",
+        "AIAddAbilityRule",
+        "AISetAbilityRuleChanneling",
+        "AIGetProfileRuleCount",
+        "AIAddAbilityRuleEx",
+        "AISetDefaultProfileForUnitType",
+        "AIGetDefaultProfileForUnitType",
+        "AIGetProfileThinkInterval",
+        "AIGetProfileRetargetInterval",
+        "AIGetProfileOrderInterval",
+        "AIGetProfileAcquireRange",
+        "AIGetProfileLeashRange",
+        "AIGetProfilePreferredRange",
+        "AIGetProfileChaseBias",
+        "AIGetProfileDefaultFlags",
+        "AIGetProfileTeleportEnabled",
+        "AIGetProfileTeleportPrioritizeFarthestTrackedHero",
+        "AIGetProfileTeleportCooldownMin",
+        "AIGetProfileTeleportCooldownMax",
+        "AIGetProfileTeleportEntryDelayMin",
+        "AIGetProfileTeleportEntryDelayMax",
+        "AIGetProfileTeleportOffsetMin",
+        "AIGetProfileTeleportOffsetMax",
+        "AIGetProfileTeleportPreFxPath",
+        "AIGetProfileRuleAbilityId",
+        "AIGetProfileRuleOrderString",
+        "AIGetProfileRuleTargetType",
+        "AIGetProfileRuleMinRange",
+        "AIGetProfileRuleMaxRange",
+        "AIGetProfileRuleSelfHpMaxPct",
+        "AIGetProfileRuleEnemyHpMaxPct",
+        "AIGetProfileRuleMinEnemiesInRadius",
+        "AIGetProfileRuleRadius",
+        "AIGetProfileRulePriority",
+        "AIGetProfileRuleLocalCooldown",
+        "AIGetProfileRuleIsChanneling",
+        "AIGetProfileRuleChannelLock"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/AI/IAManager.j",
+      "sha256": "482f4b727a310a388bb1580e853e736a105c3ffa12ef3d9e7cc2971e91318348",
+      "lines": 1903,
+      "libraries": [
+        "IAManager"
+      ],
+      "public_functions": [
+        "AIEnableWave",
+        "AISetDebug",
+        "AISetDebugWaveFilter",
+        "AISetDebugUnitTypeFilter",
+        "AISetDebugMaxLogsPerTick",
+        "AISetDynamicScheduler",
+        "AISetFixedTickMs",
+        "AISetFixedBudget",
+        "AIGetCurrentTickMs",
+        "AIGetCurrentBudget",
+        "AISetUseGroupFallbackNoHeroes",
+        "AISetTrackedHeroForPlayer",
+        "AISetTrackedHero",
+        "AIClearTrackedHeroes",
+        "AIDebugDumpTrackedHeroes"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j",
+      "sha256": "1dc2b065b3a09a6999989e9f72d81943568580bfd4cabcbdb39cc22c1b6e27bb",
+      "lines": 14,
+      "libraries": [
+        "WaveOwnerConfig"
+      ],
+      "public_functions": [
+        "InitDefaultWaveOwnerResearches"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeAudio.j",
+      "sha256": "6ce991ea68b9b17836bb017648af516257e0007239da507e086409909a33838f",
+      "lines": 35,
+      "libraries": [
+        "RestTimeAudio"
+      ],
+      "public_functions": [
+        "StopAmbientTownSound",
+        "StartAmbientTownSound",
+        "RestTimeStopSurvivalEndSound",
+        "RestTimeStartSurvivalEndSound"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j",
+      "sha256": "d44dae4331a7733d827f97b5de68ee7861ab64901f2da594bc3763c6bb7dffa5",
+      "lines": 62,
+      "libraries": [
+        "RestTimeCountdown"
+      ],
+      "public_functions": [
+        "RestTimeStopPhaseTimer",
+        "RestTimeLaunchCurrentWave",
+        "RestTimeBeginCountdown"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j",
+      "sha256": "e0c2af397d54c707e6e3f91f4d679f6d39babb14fa261dec98aac038212453c4",
+      "lines": 51,
+      "libraries": [
+        "RestTimeEndFlow"
+      ],
+      "public_functions": [
+        "RestTimeOnWaveFinished"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j",
+      "sha256": "0e549f811724814585d40bc32ecb357df3fade3202a98243f308978d0327c796",
+      "lines": 31,
+      "libraries": [
+        "RestTimeMenuBridge"
+      ],
+      "public_functions": [
+        "RestTimeMenuApplyStatusForActivePlayers",
+        "RestTimeMenuCloseTenderForActivePlayers",
+        "RestTimeMenuShowClientsForActivePlayers"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j",
+      "sha256": "f39982f8e3af4088f8f8d11daac6f64c1d67fd1438f158bb260195ee773cfedb",
+      "lines": 36,
+      "libraries": [
+        "RestTimeState"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j",
+      "sha256": "4a54244a503adfb8b9943ee0f231a47ade78b69003de21b0fec40c6466c06b4a",
+      "lines": 47,
+      "libraries": [
+        "RestTimeSurvivalEnd"
+      ],
+      "public_functions": [
+        "RestTimeCompleteSurvivalEndSequence",
+        "RestTimeStartSurvivalEndSequence"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j",
+      "sha256": "70a0492e9199a1ed0d136512d04403e24cc5366af13a7ab98b31f25d8ebd9b03",
+      "lines": 16,
+      "libraries": [
+        "RestTimeTenderAudio"
+      ],
+      "public_functions": [
+        "RestTimeTenderAudioStart",
+        "RestTimeTenderAudioStop"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j",
+      "sha256": "70591a2daac8d9e023e58eb4065c8d86ca3d59e978319a09ee319c3cda312929",
+      "lines": 31,
+      "libraries": [
+        "RestTimeUI"
+      ],
+      "public_functions": [
+        "RestTimeSetBoardTitle",
+        "RestTimeSetStatusForActivePlayers",
+        "RestTimeCloseTenderForActivePlayers",
+        "RestTimeShowClientsForActivePlayers"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/TheEnd.j",
+      "sha256": "f1f3a35f3030c97ecff1cad299d134f4312195d9b5628ec8e5833efc03f8cf33",
+      "lines": 19,
+      "libraries": [
+        "TheEnd"
+      ],
+      "public_functions": [
+        "CloseTenderForActivePlayers",
+        "StartInitialWaveCountdown",
+        "StartPurchaseCountdown",
+        "endF"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/StageExample.j",
+      "sha256": "597e8b02704870b7fe44bfd8ea1cd5d1bc28f7480eaff2bbab4418d64e4b3b7b",
+      "lines": 215,
+      "libraries": [
+        "stage1"
+      ],
+      "public_functions": [
+        "Trig_w1_Actions"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/SwlsWave.j",
+      "sha256": "b33711164fec7468b3048d0c42f0f5b3997d1bb072fea54de135252390e57119",
+      "lines": 2182,
+      "libraries": [
+        "WaveTest"
+      ],
+      "public_functions": [
+        "WaveDebugBoolToInt",
+        "WaveDebugUnitSummary",
+        "WaveDebugLog",
+        "WaveDeathDebugContextSummary",
+        "Wave_onTick",
+        "PendingSpawn_execute",
+        "GetWaveEventWave",
+        "GetWaveEventUnit",
+        "GetWaveEventKiller",
+        "GetWaveEventSlot",
+        "IsWaveEventBoss",
+        "IsWaveEventExternal",
+        "GetWaveSlotByUnit",
+        "IsWaveManagedUnit",
+        "RegisterWaveStartEvent",
+        "RegisterWavePauseEvent",
+        "RegisterWaveResumeEvent",
+        "RegisterWaveFinishEvent",
+        "RegisterWaveSpawnEvent",
+        "RegisterWaveDeathEvent",
+        "RegisterWaveExternalEvent",
+        "PauseWave",
+        "ResumeWave",
+        "BindWaveToUnitDeath",
+        "UnbindWaveFromUnitDeath",
+        "TerminateWaveInstanceGraceful",
+        "TerminateWaveInstanceForceKill",
+        "BindWaveInstanceToUnitDeath",
+        "UnbindWaveInstanceFromUnitDeath",
+        "InitFX",
+        "registerExternalUnit",
+        "GetWaveByUnit",
+        "WaveIsDefaultOwnerPlayerId",
+        "WaveGetDefaultOwnerCount",
+        "WaveGetSpawnFxIdForUnit",
+        "WaveCanSpawnUnitFromDefaultOwnerPid",
+        "WaveSpawnUnitFromDefaultOwnerPid",
+        "WaveSpawnUnitFromDefaultOwners"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/WavePointApi.j",
+      "sha256": "649cf71e72f29f1e33aa20a1e3bc48a1a4710f578a748dea48b2be4b8da34ae5",
+      "lines": 30,
+      "libraries": [
+        "WavePointApi"
+      ],
+      "public_functions": [
+        "WaveGetPointCount",
+        "WaveGetPointX",
+        "WaveGetPointY"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/WavePointGroups.j",
+      "sha256": "cab7841c405d5cd809cbe4033a92dce7df948eaa3461e9a127165313ec7ea5bb",
+      "lines": 340,
+      "libraries": [
+        "WavePointGroups"
+      ],
+      "public_functions": [
+        "WavePointGroupsSetDebug",
+        "WavePointGroupsClear",
+        "WavePointGroupRegister",
+        "WavePointGroupCount",
+        "WavePointGroupGetPointX",
+        "WavePointGroupGetPointY",
+        "WavePointGroupsBuild",
+        "WavePointGroupApplyToWave",
+        "WavePointGroupsDebugDump"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/WavePointGroupsConfig.j",
+      "sha256": "ef3e5ed7ade655db341fd8011be6bb12c4a30df90f665400acad227114e41dc0",
+      "lines": 25,
+      "libraries": [
+        "WavePointGroupsConfig"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/WaveStreaks.j",
+      "sha256": "6c566d35f2ceda443bd82c725bbd398bf0bc1804dbd121363f3f786038b342f3",
+      "lines": 745,
+      "libraries": [
+        "WaveStreaks"
+      ],
+      "public_functions": [
+        "GetWavePlayerCurrentStreak",
+        "GetWavePlayerCurrentMulti",
+        "GetWavePlayerTotalKills",
+        "GetWavePlayerTotalDeaths",
+        "SetWaveStreakMultiKillWindow",
+        "SetWaveStreakQueueGap",
+        "SetWaveStreakFirstBloodSound",
+        "SetWaveStreakKillStreakSound",
+        "SetWaveStreakMultiKillSound",
+        "SetWaveStreakBreakSound",
+        "SetWaveStreakMultiBreakLowSound",
+        "SetWaveStreakMultiBreakHighSound",
+        "SetWaveStreakFinisherSound",
+        "SetWaveStreakKillStreakThreshold",
+        "SetWaveStreakMultiKillThreshold",
+        "SetWaveStreakKillStreakStep",
+        "SetWaveStreakMultiKillStep"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j",
+      "sha256": "f33c7ab84703560e5b0f00d6727dae44921af282f33cbdc5d8e30b434892368a",
+      "lines": 728,
+      "libraries": [
+        "WaveAuraSkills"
+      ],
+      "public_functions": [
+        "WaveAuraSkillsTryExecute",
+        "WaveAuraSetDebug",
+        "WaveAuraSetDebugWaveFilter",
+        "WaveAuraSetDebugUnitTypeFilter",
+        "WaveAuraSetDebugMaxLogsPerTick",
+        "WaveAuraSetDebugMaxRejectLogsPerTick"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j",
+      "sha256": "0f2aa4732a8f4784696b08de941e4b3b81dcd5e6d5274f0d71c1c65399114e3d",
+      "lines": 382,
+      "libraries": [
+        "WaveBarrierSkills"
+      ],
+      "public_functions": [
+        "WaveBarrierSetProjectileInteraction",
+        "WaveBarrierClearProjectileTrace",
+        "WaveBarrierCheckPlayerProjectile",
+        "WaveBarrierSkillsTryExecute"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j",
+      "sha256": "6188b9fe1c1d36b4c3e7b9f158d0d62bf13ee9009ae2e34379d141d726aca657",
+      "lines": 379,
+      "libraries": [
+        "WaveMortarSkills"
+      ],
+      "public_functions": [
+        "WaveMortarSkillsTryExecute"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+      "sha256": "6e6ddf339e1f3fc98b90f0d16735bedc657000654b8d448546e2286adf730c88",
+      "lines": 635,
+      "libraries": [
+        "WavePriestSkills"
+      ],
+      "public_functions": [
+        "WavePriestSkillsTryExecute"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveProjectileBehaviors.j",
+      "sha256": "1d007c2f02a118a16e71a3945095ab3f35455633d800774b3a307d80f31c843f",
+      "lines": 117,
+      "libraries": [
+        "WaveProjectileBehaviors"
+      ],
+      "public_functions": [
+        "WaveProjectileBehaviorOnUnit",
+        "WaveProjectileBehaviorOnDestructable",
+        "WaveProjectileBehaviorOnTerrain",
+        "WaveProjectileBehaviorOnRemove",
+        "WaveProjectileBehaviorOnFinish"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j",
+      "sha256": "f1b2ed62ea8ee435269d2060cf4e1763f5dfce53d3a24c95da82fbf79d87a88c",
+      "lines": 201,
+      "libraries": [
+        "WaveProjectileConfig"
+      ],
+      "public_functions": [
+        "WaveProjectileRegister",
+        "WaveProjectileSetCollisionProfile",
+        "WaveProjectileSetImpactFx",
+        "WaveProjectileSetRemoveFx",
+        "WaveProjectileSetFinishAoe",
+        "WaveProjectileIsRegistered",
+        "WaveProjectileGetFamilyId",
+        "WaveProjectileGetModelPath",
+        "WaveProjectileGetMoveSpeed",
+        "WaveProjectileGetTravelDistance",
+        "WaveProjectileGetCollisionSize",
+        "WaveProjectileGetScale",
+        "WaveProjectileGetStartZ",
+        "WaveProjectileGetBaseDamage",
+        "WaveProjectileCollidesDestructable",
+        "WaveProjectileCollidesTerrain",
+        "WaveProjectileStopsOnUnit",
+        "WaveProjectileCanHitStructures",
+        "WaveProjectileGetImpactFxPath",
+        "WaveProjectileGetImpactFxAttach",
+        "WaveProjectileGetRemoveFxPath",
+        "WaveProjectileGetRemoveFxAttach",
+        "WaveProjectileGetFinishAoeRadius"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j",
+      "sha256": "a1f74fd51a11cecb2c19b0f442af2872a2581fe2f4e3b280d5eb9bfe55efcb8d",
+      "lines": 125,
+      "libraries": [
+        "WaveProjectileCore"
+      ],
+      "public_functions": [
+        "WaveProjectileLaunch",
+        "WaveProjectileLaunchFromSourceAngle",
+        "WaveProjectileLaunchFromSourceToPoint",
+        "WaveProjectileLaunchFromSourceToUnit",
+        "WaveProjectileLaunchToPointExact",
+        "WaveProjectileLaunchFromSourceToPointExact"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j",
+      "sha256": "41989f214e0b4de74ecaa4db1ff7f66e75c3b88c61bc9a1e89e8893590fd1d0e",
+      "lines": 560,
+      "libraries": [
+        "WaveRangedSkills"
+      ],
+      "public_functions": [
+        "WaveRangedSkillsSetTrackedHeroForPlayer",
+        "WaveRangedSkillsTryExecute"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveReinforcements.j",
+      "sha256": "afcf998796e2ce8c1e63371c6ed059a144ebf2b544f028926b8925675768d753",
+      "lines": 5,
+      "libraries": [
+        "WaveReinforcements"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j",
+      "sha256": "0f3d9f1089f7dd52a314b88f25942e9c0c1bcee33027581244dacf8fe56968b7",
+      "lines": 219,
+      "libraries": [
+        "WaveSiegeSkills"
+      ],
+      "public_functions": [
+        "WaveSiegeSkillsTryExecute"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j",
+      "sha256": "77a769bcc3b940add531e126f96990024401beed62a7759f6602d5eb4a4b8c5e",
+      "lines": 410,
+      "libraries": [
+        "WaveSiegeZoneSkills"
+      ],
+      "public_functions": [
+        "WaveSiegeZoneSkillsTryExecute"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j",
+      "sha256": "825141655319960fe775de5e1e7287c29d82fa80a3bb41ec05c5ef8f249e2485",
+      "lines": 224,
+      "libraries": [
+        "WaveSkillVisuals"
+      ],
+      "public_functions": [
+        "WaveSkillVisualScaleForRadius",
+        "WaveSkillVisualShieldScaleForRadius",
+        "WaveSkillVisualDestroy",
+        "WaveSkillVisualSetPosition",
+        "WaveSkillVisualSetRemaining",
+        "WaveSkillVisualCreateFollowerScaled",
+        "WaveSkillVisualCreateFollower",
+        "WaveSkillVisualCreateTimedMarkerScaled",
+        "WaveSkillVisualCreateTimedMarker"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j",
+      "sha256": "68ef08ffa06c13f245e32daa2f68445222ed9cf373c11a3a4cc4f91a2568ca36",
+      "lines": 511,
+      "libraries": [
+        "WaveTrapSkills"
+      ],
+      "public_functions": [
+        "WaveTrapSkillsTryExecute"
+      ]
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j",
+      "sha256": "550488f3a2cf17ac908ce619a6e5aeabdee6b93f5e93f85b57e9b822be2ea129",
+      "lines": 259,
+      "libraries": [
+        "WaveWaveformSkills"
+      ],
+      "public_functions": [
+        "WaveWaveformSkillsTryExecute"
+      ]
+    },
+    {
+      "path": "libraries/BoundSentinel.j",
+      "sha256": "5dd43675fa0109c984237a1fecdc26a145c253ff41cd5e3c628bf4ba795021ea",
+      "lines": 76,
+      "libraries": [
+        "BoundSentinel"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "libraries/Camera.j",
+      "sha256": "c1c1799e3451fd029653ca396425d9c5dd496e259a2b3a3a98cedee3ecf9f165",
+      "lines": 228,
+      "libraries": [
+        "Camera"
+      ],
+      "public_functions": [
+        "GetTerrainZ",
+        "GetCameraDeltaZ"
+      ]
+    },
+    {
+      "path": "libraries/CameraEQNoise.j",
+      "sha256": "6381c6e8c54a54f838fb62b7a10feceb6fde0d28726b087590a598e9fb452dcb",
+      "lines": 77,
+      "libraries": [
+        "CameraEQNoise"
+      ],
+      "public_functions": [
+        "StopCameraEQNoise",
+        "CameraSetEQNoise"
+      ]
+    },
+    {
+      "path": "libraries/Damage Text Util.j",
+      "sha256": "2fab15d1058480577bcca6978d4c5cf44fff1cf2fdfbcf939dba247fe47c86e9",
+      "lines": 39,
+      "libraries": [
+        "DamageTextUtil"
+      ],
+      "public_functions": [
+        "FormatLoadoutDamageText",
+        "ShowCustomLoadoutText"
+      ]
+    },
+    {
+      "path": "libraries/DummyCaster.j",
+      "sha256": "d92b550bfe391497b6d564f15da5ff364ef7a53a15753b5726cd1be8a9a982c0",
+      "lines": 101,
+      "libraries": [
+        "DummyCaster"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "libraries/File IO.j",
+      "sha256": "6e6e801da8845b74ccbcc4f7429c522ed222a2cb46bd14677eb1d48990faab46",
+      "lines": 350,
+      "libraries": [
+        "FileIO"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "libraries/HealthBarTextTags.j",
+      "sha256": "d5bd677804dd5677d15391eab6b699a9d323d16098bb0ccfcd6efbc98a72a780",
+      "lines": 410,
+      "libraries": [
+        "HealthBarTextTags"
+      ],
+      "public_functions": [
+        "GetHealthBarEnemySlotCap",
+        "GetHealthBarHeroSlotCap",
+        "GetHealthBarTextTagCap",
+        "GetHealthBarVisibleCount",
+        "GetHealthBarPeakVisibleCount",
+        "HealthBarsRefreshHeroForPlayer",
+        "HealthBarsNotifyEnemyDamagedByPid",
+        "HealthBarsNotifyEnemyDamaged"
+      ]
+    },
+    {
+      "path": "libraries/IsDestructableTree.j",
+      "sha256": "8dd4eb898f7b44f61c38baff9df6bea4c049c479cd2cb9e1497de8c7f91dd3f6",
+      "lines": 83,
+      "libraries": [
+        "IsDestructableTree"
+      ],
+      "public_functions": [
+        "IsDestructableTree",
+        "IsDestructableDead",
+        "IsDestructableAlive",
+        "IsTreeAlive",
+        "KillTree"
+      ]
+    },
+    {
+      "path": "libraries/IsUnitChanneling.j",
+      "sha256": "45cad8072606c9e222d723f76494f0025d8a74ba692725e7d3f1402b38f1b11a",
+      "lines": 103,
+      "libraries": [
+        "IsUnitChanneling"
+      ],
+      "public_functions": [
+        "IsUnitChannelingById",
+        "IsUnitChanneling"
+      ]
+    },
+    {
+      "path": "libraries/Missile.j",
+      "sha256": "83f8a3f2936d81a4896e9b3dd1a7191c3b51e00e222d1fc4e9f9844b10686d87",
+      "lines": 1789,
+      "libraries": [
+        "Missile"
+      ],
+      "public_functions": [
+        "GetUnitBodySize",
+        "GetDestructableHeight",
+        "GetItemHeight",
+        "GetLocZ",
+        "GetUnitBodySize",
+        "GetDestructableHeight",
+        "GetItemHeight",
+        "GetLocZ"
+      ]
+    },
+    {
+      "path": "libraries/PlayerUtils.j",
+      "sha256": "ccecc594e26b897e421936e2fa64bac26e07fcd56a80b07d42b053918499e933",
+      "lines": 306,
+      "libraries": [
+        "PlayerUtils"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "libraries/RegisterPlayerUnitEvent.j",
+      "sha256": "901003343a3b3c3af1687c06f8f45872b2862409ab3e6631028c7f715c46fde6",
+      "lines": 64,
+      "libraries": [
+        "RegisterPlayerUnitEvent"
+      ],
+      "public_functions": [
+        "RegisterPlayerUnitEvent",
+        "RegisterPlayerUnitEventForPlayer",
+        "GetPlayerUnitEventTrigger"
+      ]
+    },
+    {
+      "path": "libraries/SilenceEx.j",
+      "sha256": "7cb95778456739f74182b3fff95ce6112f161682ebe9251fa444c027521aa8d7",
+      "lines": 96,
+      "libraries": [
+        "AbilitySilence"
+      ],
+      "public_functions": [
+        "GetDummy",
+        "EnableAbility",
+        "DisableAbility",
+        "OnSilence",
+        "SetUnitAbilitySilenced",
+        "onInit"
+      ]
+    },
+    {
+      "path": "libraries/SimError.j",
+      "sha256": "ab04e75ef12b84eb00af4b74ae9da5de92b5dee6732e8d1a1a7678d97efb23a1",
+      "lines": 38,
+      "libraries": [
+        "SimError"
+      ],
+      "public_functions": [
+        "SimError"
+      ]
+    },
+    {
+      "path": "libraries/SpacebarDetect.j",
+      "sha256": "b93a72b5d62c088c116ae70b4a034ef5e7cc65ee042ee36f13dbd91499465966",
+      "lines": 116,
+      "libraries": [
+        "SpacebarDetect"
+      ],
+      "public_functions": [
+        "OnSpacebarPress",
+        "SpacebarRemoveEvent",
+        "TriggerRegisterSpacebarEvent",
+        "SetCameraQuickPositionEx"
+      ]
+    },
+    {
+      "path": "libraries/SpellEfffectEvent.j",
+      "sha256": "d3350d800dc75c0ffae2ebc3a7373fcdf28246bbca989c2d35b6db72f332732d",
+      "lines": 66,
+      "libraries": [
+        "SpellEffectEvent"
+      ],
+      "public_functions": [
+        "RegisterSpellEffectEvent"
+      ]
+    },
+    {
+      "path": "libraries/SpellFinishEvent.j",
+      "sha256": "34b8b7e4376c5a3aeb76a860b4950545f86be8cc21142564c5a8647666c7139b",
+      "lines": 54,
+      "libraries": [
+        "SpellFinishEvent"
+      ],
+      "public_functions": [
+        "RegisterSpellFinishEvent"
+      ]
+    },
+    {
+      "path": "libraries/SpellIndex.j",
+      "sha256": "d2e69086917db17f89472988c4c13ba5efcf4d53adec2dd503059fd21343cb9c",
+      "lines": 77,
+      "libraries": [
+        "SpellIndex"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "libraries/SwlsMath.j",
+      "sha256": "7a2e5e1f667bbd6f0bd7b15120841d8442a37a113ecfa793755f6f66afd25cee",
+      "lines": 20,
+      "libraries": [
+        "SwlsMath"
+      ],
+      "public_functions": [
+        "SwlsDistanceSq",
+        "SwlsDistance",
+        "DistanceBetweenCoords"
+      ]
+    },
+    {
+      "path": "libraries/SyncInteger.j",
+      "sha256": "a11c37051144366395eb39c136e964009248591c69e6751df30e64e53fd8b48c",
+      "lines": 468,
+      "libraries": [
+        "SyncInteger"
+      ],
+      "public_functions": [
+        "GetSyncedInteger",
+        "GetSyncedPlayer",
+        "GetSyncedPlayerId",
+        "IsPlayerSyncing",
+        "IsPlayerIdSyncing",
+        "IsSyncEnabled",
+        "SyncIntegerEnable",
+        "SyncIntegerDisable",
+        "SyncIntegerToggle",
+        "OnSyncInteger",
+        "RemoveSyncEvent",
+        "TriggerRegisterSyncEvent",
+        "OnSyncNotify",
+        "RemoveNotifyEvent",
+        "SyncNotify",
+        "FireEvents",
+        "SyncNotifyCreate",
+        "SyncInteger",
+        "SyncTerminate",
+        "SyncInitialize"
+      ]
+    },
+    {
+      "path": "libraries/Table.j",
+      "sha256": "0c1d59fbd3919e0bf351ecf5be8277892838ea30c146433ca85006295d307e94",
+      "lines": 408,
+      "libraries": [
+        "Table"
+      ],
+      "public_functions": []
+    },
+    {
+      "path": "libraries/TerrainPathability.j",
+      "sha256": "fa7e6b6653fdb6ece9f6d3b528b1686e9d42c2398490b8db275325f0472f3cca",
+      "lines": 104,
+      "libraries": [
+        "TerrainPathability",
+        "IsTerrainWalkable"
+      ],
+      "public_functions": [
+        "IsTerrainDeepWater",
+        "IsTerrainShallowWater",
+        "IsTerrainLand",
+        "IsTerrainPlatform",
+        "IsTerrainWalkable"
+      ]
+    },
+    {
+      "path": "libraries/TerrainReplace.j",
+      "sha256": "589df3dd5f665ffeb2a037b3af9da6519c6f2aaeac0a95c442df4564e66b6b44",
+      "lines": 758,
+      "libraries": [
+        "TerrainReplace"
+      ],
+      "public_functions": [
+        "TerrainReplaceGetTileSize",
+        "TerrainReplaceGetMaxRules",
+        "TerrainReplaceSetBatchTilesPerTick",
+        "TerrainReplaceGetBatchTilesPerTick",
+        "TerrainReplaceSetBatchTickSec",
+        "TerrainReplaceGetBatchTickSec",
+        "TerrainReplaceIsBatchRunning",
+        "TerrainReplaceStopBatch",
+        "TerrainReplaceClearRules",
+        "TerrainReplaceDisableRule",
+        "TerrainReplaceSetRuleEx",
+        "TerrainReplaceSetRule",
+        "TerrainReplaceSetRuleVariation",
+        "TerrainReplaceAddRuleEx",
+        "TerrainReplaceAddRule",
+        "TerrainReplaceGetRuleCount",
+        "TerrainReplaceSetDebug",
+        "TerrainReplaceClearDebugStats",
+        "TerrainReplaceGetDebugVisitedTiles",
+        "TerrainReplaceGetDebugChangedTiles",
+        "TerrainReplaceGetDebugRuleHits",
+        "TerrainReplaceDebugDump",
+        "TerrainReplaceCountTilesBounds",
+        "TerrainReplaceCountTilesFromCenter",
+        "TerrainReplaceApplyBounds",
+        "TerrainReplaceApplyFromCenter",
+        "TerrainReplaceDebugApplyBounds",
+        "TerrainReplaceDebugApplyFromCenter",
+        "TerrainReplaceDebugApplyRect",
+        "TerrainReplaceApplyFromCenterRect",
+        "TerrainReplaceDebugApplyFromCenterRect",
+        "TerrainReplaceApplyRect",
+        "TerrainReplaceStartBounds",
+        "TerrainReplaceStartFromCenter",
+        "TerrainReplaceStartRect"
+      ]
+    },
+    {
+      "path": "libraries/TextTagDebug.j",
+      "sha256": "ca54ef79ea9ea5259c4edd4e99319ce0bcf71fb308c5c64ad5d8ccbc993291df",
+      "lines": 95,
+      "libraries": [
+        "TextTagDebug"
+      ],
+      "public_functions": [
+        "CreateTrackedTextTag",
+        "ReleaseTrackedTextTag",
+        "DestroyTrackedTextTag",
+        "GetTextTagDebugCreated",
+        "GetTextTagDebugLive",
+        "GetTextTagDebugPeak",
+        "GetTextTagDebugCreatedTotal",
+        "GetTextTagDebugLiveTotal",
+        "GetTextTagDebugPeakTotal"
+      ]
+    },
+    {
+      "path": "libraries/TimerUtils.j",
+      "sha256": "51085b00ea287f27444b9a31613fa7ce2e1ad3d516ee8be1be6df0b78078083c",
+      "lines": 393,
+      "libraries": [
+        "TimerUtils"
+      ],
+      "public_functions": [
+        "SetTimerData",
+        "GetTimerData",
+        "GetTimerDebugTag",
+        "SetTimerDebugTag",
+        "GetTimerDebugLive",
+        "GetTimerDebugPeak",
+        "GetTimerDebugBorrows",
+        "NewTimerEx",
+        "NewTimer",
+        "ReleaseTimer",
+        "GetTimerUtilsCapacity",
+        "GetTimerUtilsAvailable",
+        "GetTimerUtilsInUse",
+        "GetTimerUtilsPeakInUse"
+      ]
+    },
+    {
+      "path": "libraries/UIMath.j",
+      "sha256": "09af17982f6e257ce463649f687fdfc84bf5fb86deed568c8b6c0ca88ee7cf65",
+      "lines": 398,
+      "libraries": [
+        "UIMath"
+      ],
+      "public_functions": [
+        "R2I_N",
+        "Vec3Add",
+        "Vec3Subtract",
+        "Vec3Scale",
+        "Vec3Division",
+        "Vec3Length",
+        "Vec3LengthSq",
+        "Vec3Normalize",
+        "Vec3Dot",
+        "Vec3Cross",
+        "Vec3Transform_1",
+        "Vec3Transform_2",
+        "Matrix3Multiply",
+        "Matrix3Scaling",
+        "Matrix3RotationX",
+        "Matrix3RotationY",
+        "Matrix3RotationZ",
+        "Matrix3RotationAxis",
+        "Matrix3RotationYawPitchRoll",
+        "Matrix4Multiply"
+      ]
+    },
+    {
+      "path": "libraries/UnitDex.j",
+      "sha256": "fce553569be95f4d2356158b45db0aba7fdada93e4558348a075c88e39f4475a",
+      "lines": 434,
+      "libraries": [
+        "UnitDex"
+      ],
+      "public_functions": [
+        "GetUnitId",
+        "GetUnitById",
+        "GetIndexedUnit",
+        "GetIndexedUnitId",
+        "IsUnitIndexed",
+        "UnitDexEnable",
+        "IsIndexingEnabled",
+        "RegisterUnitIndexEvent",
+        "RemoveUnitIndexEvent",
+        "TriggerRegisterUnitIndexEvent",
+        "OnUnitIndex",
+        "OnUnitDeindex",
+        "UnitDexRemove"
+      ]
+    },
+    {
+      "path": "libraries/UnitIndexer.j",
+      "sha256": "d105da230e2f34700f33d810d1d8bb1fe934fc552e60d688cc72d74aadce1ae4",
+      "lines": 54,
+      "libraries": [
+        "UnitIndexer"
+      ],
+      "public_functions": [
+        "IsUnitDeindexing"
+      ]
+    },
+    {
+      "path": "libraries/UserInterface.j",
+      "sha256": "4095627076eb7609a4620e5039262f7954e86d41d78301b26043dc7a0a100476",
+      "lines": 915,
+      "libraries": [
+        "UserInterface"
+      ],
+      "public_functions": [
+        "GetTriggerButton",
+        "GetClickingPlayer",
+        "Eval",
+        "GetTerrainZ",
+        "FindModelAnimIndex",
+        "FindModelSize",
+        "ApplySkin",
+        "CreateWindow"
+      ]
+    },
+    {
+      "path": "libraries/WaveDamageCredit.j",
+      "sha256": "cb54bc5a1820819eef7800b24fad01deb3fbec6c89a7ae05b2fa5d2ad9f4e0da",
+      "lines": 96,
+      "libraries": [
+        "WaveDamageCredit"
+      ],
+      "public_functions": [
+        "WaveRecordDamageCredit",
+        "WaveClearDamageCredit",
+        "WaveGetDamageCreditOwnerPid"
+      ]
+    },
+    {
+      "path": "libraries/WorldBounds.j",
+      "sha256": "b58e6120101fbe1152ae56113bea724057ea8f3c967dccf51c9a162636c6940d",
+      "lines": 42,
+      "libraries": [],
+      "public_functions": []
+    },
+    {
+      "path": "Players/WavePlayerUtils.j",
+      "sha256": "b9409c61c8bc0e1f01f325667fcdcbdbc3a00ce05ce0e775b6d8a5f572fb0daf",
+      "lines": 194,
+      "libraries": [
+        "WavePlayerUtils"
+      ]
+    }
+  ],
+  "imported_paths": {
+    "war3mapImported\\announcer_1stblood_01.wav": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\RDK_RompeRacha.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\RDK_RompeCombo1.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\RDK_RompeCombo2.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_spree_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_dominate_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_mega_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_unstop_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_wicked_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_monster_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_godlike_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_holy_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_double_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_triple_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_ultra_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\announcer_kill_rampage_01.mp3": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\Trader --- - Never Gonna Stay in The Abyss.wav": [
+      "Audio/Config/AudioPreload.j"
+    ],
+    "war3mapImported\\Trader 1 - Meanwhile, in The Abyss.wav": [
+      "Audio/Config/AudioPreload.j"
+    ],
+    "war3mapImported\\Trader 10 - Columba Noachi.wav": [
+      "Audio/Config/AudioPreload.j"
+    ],
+    "war3mapImported\\Trader 11 - Cold Wind.wav": [
+      "Audio/Config/AudioPreload.j"
+    ],
+    "war3mapImported\\Trader 12 - Crystal Breakin' Time.wav": [
+      "Audio/Config/AudioPreload.j"
+    ],
+    "war3mapImported\\Trader 9 - Weapon Check-up.wav": [
+      "Audio/Config/AudioPreload.j"
+    ],
+    "war3mapImported\\SurvivalEnd.wav": [
+      "Audio/Config/AudioPreload.j",
+      "WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j"
+    ],
+    "war3mapImported\\tenkiuv2.wav": [
+      "MyMissiles/PrisonerDropSystem.j"
+    ],
+    "war3mapImported\\Bondage Blue SD.mdx": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "MyMissiles/UnitTypeMissileLoadout.j",
+      "WaveSysAnAI/AI/IAManager.j"
+    ],
+    "war3mapImported\\Spell Marker Red.mdx": [
+      "MyMissiles/UnitTypeMissileConfig.j"
+    ],
+    "war3mapImported\\Shock Blast Orange.mdx": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j"
+    ],
+    "war3mapImported\\Spell Marker Green.mdx": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j"
+    ],
+    "war3mapImported\\Farm.mdx": [
+      "MyMissiles/UnitTypeMissileConfig.j"
+    ],
+    "war3mapImported\\Spell Marker Blue.mdx": [
+      "MyMissiles/UnitTypeMissileConfig.j"
+    ],
+    "war3mapImported\\OrbFireX.mdx": [
+      "MyMissiles/UnitTypeMissileLoadout.j"
+    ],
+    "war3mapImported\\MSX_Shotgun.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MSX_Heavy_Machinegun.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MS4_Two_Machinegun.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MSX_Rocket_Launcher.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MSX_Enemy_Chaser.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MSX_Laser_Gun.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MSX_Drop_Shot.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MSX_Flame_Shot.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MSX_Iron_Lizard.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MSX_Super_Grenade.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MS7_Thunder_Shot.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MS_Shotgun.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MS_Heavy_Machinegun.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MS5_Two_Machinegun.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MS_Rocket_Launcher.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MS2_Laser.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\MS_Flame_Shot.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\reloadweapon.wav": [
+      "MyMissiles/WeaponInventoryCore.j"
+    ],
+    "war3mapImported\\Error.mp3": [
+      "UI System/MyIU/Config/MenuClientInitConfig.j"
+    ],
+    "war3mapImported\\XPozoLife.mdx": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\PotraitRockGolemV1.mdl": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\Penguin.mdl": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\Hero_ShinigamiP.mdl": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\Yoshi TC By RTG.mdl": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\OrbBloodXR.mdx": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\OrbPoisonXR.mdx": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\OrbDarknessXR.mdx": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\OrbFireXR.mdx": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\OrbLightningXR.mdx": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\OrbLightXR.mdx": [
+      "UI System/MyIU/Models.j"
+    ],
+    "war3mapImported\\Wave 1.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\Wave 2.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\Wave 3.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\Wave 4.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\Wave 5.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\Wave 6.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\Wave 7.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\Wave 8.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\Wave 9.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\Wave 11.wav": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "war3mapImported\\te matee.wav": [
+      "WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    ],
+    "war3mapImported\\Ubershield Starfire x3.mdx": [
+      "WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j"
+    ],
+    "war3mapImported\\Ubershield Azure x3.mdx": [
+      "WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j"
+    ],
+    "war3mapImported\\NuclearExplosion.mdx": [
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j"
+    ]
+  },
+  "rawcodes": {
+    "A001": [
+      "MoveSys/Config/MovementSpellTargetConfig.j"
+    ],
+    "A000": [
+      "MoveSys/Config/MovementSpellTargetConfig.j"
+    ],
+    "AHdr": [
+      "MoveSys/Config/MovementSpellTargetConfig.j"
+    ],
+    "U0A2": [
+      "MoveSys/MoveCast.j",
+      "MyMissiles/Loadout Leap.j"
+    ],
+    "BB01": [
+      "MoveSys/MoveCast.j",
+      "MyMissiles/Loadout Leap.j"
+    ],
+    "U0A1": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j",
+      "MyMissiles/Loadout Missile.j"
+    ],
+    "U0A3": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0A4": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0A5": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j",
+      "MyMissiles/Loadout RocketLauncher.j"
+    ],
+    "U0A6": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j",
+      "MyMissiles/Loadout Missile.j"
+    ],
+    "U0A7": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j",
+      "MyMissiles/Loadout Missile.j"
+    ],
+    "U0A8": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0A9": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j",
+      "MyMissiles/Loadout Missile.j"
+    ],
+    "U0AA": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0AB": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0AC": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j",
+      "MyMissiles/Loadout Missile.j"
+    ],
+    "U0AD": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0AE": [
+      "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0AF": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0C1": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0C2": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "pRSN": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0B1": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0B2": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0B3": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0B4": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0B5": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0B6": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0B7": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0B8": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0B9": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0BA": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0BB": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0BC": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "U0BD": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "MA01": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "MA02": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "MA03": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "MA04": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "MA06": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "MA05": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "MA07": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP01": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP02": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP03": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP04": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP05": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP06": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP07": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP08": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP09": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP0A": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP0B": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP0C": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "wP0D": [
+      "MyMissiles/Config/WeaponProfileConfig.j"
+    ],
+    "AB01": [
+      "MyMissiles/Loadout Leap.j"
+    ],
+    "dumi": [
+      "MyMissiles/Loadout Leap.j",
+      "MyMissiles/Loadout Missile.j",
+      "MyMissiles/UnitTypeMissile.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j",
+      "libraries/Missile.j"
+    ],
+    "Aloc": [
+      "MyMissiles/Loadout Leap.j",
+      "MyMissiles/PrisonerDropSystem.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j",
+      "libraries/IsDestructableTree.j",
+      "libraries/Missile.j",
+      "libraries/SyncInteger.j",
+      "libraries/UserInterface.j"
+    ],
+    "Amrf": [
+      "MyMissiles/Loadout Leap.j",
+      "MyMissiles/PrisonerDropSystem.j",
+      "WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j",
+      "libraries/Missile.j"
+    ],
+    "BTLF": [
+      "MyMissiles/Loadout Leap.j"
+    ],
+    "AM02": [
+      "MyMissiles/Loadout Missile.j",
+      "MyMissiles/SwapMana.j",
+      "Selection/Config/SelectionElementConfig.j",
+      "UI System/MyIU/Models.j",
+      "libraries/IsUnitChanneling.j"
+    ],
+    "AM05": [
+      "MyMissiles/Loadout Missile.j",
+      "MyMissiles/SwapMana.j",
+      "Selection/Config/SelectionElementConfig.j",
+      "UI System/MyIU/Models.j",
+      "libraries/IsUnitChanneling.j"
+    ],
+    "AM04": [
+      "MyMissiles/Loadout Missile.j",
+      "MyMissiles/SwapMana.j",
+      "Selection/Config/SelectionElementConfig.j",
+      "UI System/MyIU/Models.j",
+      "libraries/IsUnitChanneling.j"
+    ],
+    "AM06": [
+      "MyMissiles/Loadout Missile.j",
+      "MyMissiles/SwapMana.j",
+      "Selection/Config/SelectionElementConfig.j",
+      "UI System/MyIU/Models.j",
+      "libraries/IsUnitChanneling.j"
+    ],
+    "AM03": [
+      "MyMissiles/Loadout Missile.j",
+      "MyMissiles/SwapMana.j",
+      "Selection/Config/SelectionElementConfig.j",
+      "UI System/MyIU/Models.j",
+      "libraries/IsUnitChanneling.j"
+    ],
+    "AM01": [
+      "MyMissiles/Loadout Missile.j",
+      "MyMissiles/SwapMana.j",
+      "Selection/Config/SelectionElementConfig.j",
+      "UI System/MyIU/Models.j",
+      "libraries/IsUnitChanneling.j"
+    ],
+    "Avul": [
+      "MyMissiles/PrisonerDropSystem.j",
+      "MyMissiles/UnitTypeMissile.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j",
+      "WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j"
+    ],
+    "AU01": [
+      "MyMissiles/UnitTypeMissile.j",
+      "WaveSysAnAI/AI/AIConfig.j"
+    ],
+    "hpea": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "libraries/IsDestructableTree.j"
+    ],
+    "hmtm": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j"
+    ],
+    "hfoo": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/SwlsWave/SwlsWave.j",
+      "WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j",
+      "libraries/SyncInteger.j"
+    ],
+    "hrif": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j"
+    ],
+    "hkni": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j"
+    ],
+    "hmpr": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j"
+    ],
+    "hsor": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j"
+    ],
+    "hmtt": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j"
+    ],
+    "hwt3": [
+      "MyMissiles/UnitTypeMissileConfig.j",
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j"
+    ],
+    "H01A": [
+      "Selection/Config/SelectionHeroConfig.j",
+      "UI System/MyIU/Models.j"
+    ],
+    "H001": [
+      "Selection/Config/SelectionHeroConfig.j",
+      "UI System/MyIU/Models.j"
+    ],
+    "H005": [
+      "Selection/Config/SelectionHeroConfig.j",
+      "UI System/MyIU/Models.j"
+    ],
+    "H006": [
+      "Selection/Config/SelectionHeroConfig.j",
+      "UI System/MyIU/Models.j"
+    ],
+    "H009": [
+      "Selection/Config/SelectionHeroConfig.j",
+      "UI System/MyIU/Models.j"
+    ],
+    "H007": [
+      "Selection/Config/SelectionHeroConfig.j",
+      "UI System/MyIU/Models.j"
+    ],
+    "HDHD": [
+      "Systems/Orders/OrderSmartChannel.j",
+      "libraries/IsUnitChanneling.j"
+    ],
+    "Amov": [
+      "Systems/Orders/OrderSmartChannel.j",
+      "libraries/SilenceEx.j"
+    ],
+    "Aatk": [
+      "Systems/Orders/OrderSmartChannel.j",
+      "libraries/SilenceEx.j"
+    ],
+    "Aro1": [
+      "Systems/Orders/OrderSmartChannel.j"
+    ],
+    "h004": [
+      "Systems/Tender/TenderSystem.j"
+    ],
+    "Zbkl": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Xdrt": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Alvd": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Lgrd": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Agrd": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Xrtl": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Xbtl": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Vgrs": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Adrd": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "cAc2": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Xblm": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Zdrt": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Avin": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Adrg": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "Yhdg": [
+      "Terrain/Config/TerrainReplaceConfig.j"
+    ],
+    "M00G": [
+      "UI System/MyIU/MenuClient.j"
+    ],
+    "M00H": [
+      "UI System/MyIU/MenuClient.j"
+    ],
+    "hhou": [
+      "UI System/MyIU/Models.j"
+    ],
+    "hmil": [
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j"
+    ],
+    "zA05": [
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j"
+    ],
+    "zA06": [
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j"
+    ],
+    "zA07": [
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j"
+    ],
+    "zA08": [
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j"
+    ],
+    "zA09": [
+      "WaveSysAnAI/AI/AIConfig.j",
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j"
+    ],
+    "zA01": [
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j"
+    ],
+    "zA02": [
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j"
+    ],
+    "zA03": [
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j"
+    ],
+    "zA04": [
+      "WaveSysAnAI/AI/IAManager.j",
+      "WaveSysAnAI/SwlsWave/StageExample.j",
+      "WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j",
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j"
+    ],
+    "Rhar": [
+      "WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j"
+    ],
+    "n00B": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "Ubos": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "Umbs": [
+      "WaveSysAnAI/SwlsWave/StageExample.j"
+    ],
+    "l00A": [
+      "WaveSysAnAI/SwlsWave/WavePointGroupsConfig.j"
+    ],
+    "rspl": [
+      "WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j"
+    ],
+    "BOwk": [
+      "WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j"
+    ],
+    "AInv": [
+      "WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j",
+      "libraries/SilenceEx.j"
+    ],
+    "A004": [
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j"
+    ],
+    "A005": [
+      "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j"
+    ],
+    "e001": [
+      "libraries/Camera.j"
+    ],
+    "n002": [
+      "libraries/DummyCaster.j"
+    ],
+    "Ahrl": [
+      "libraries/IsDestructableTree.j"
+    ],
+    "Amdf": [
+      "libraries/SilenceEx.j"
+    ],
+    "uloc": [
+      "libraries/SilenceEx.j"
+    ],
+    "BNso": [
+      "libraries/SilenceEx.j"
+    ],
+    "Bmfl": [
+      "libraries/SilenceEx.j"
+    ],
+    "Aeth": [
+      "libraries/SyncInteger.j",
+      "libraries/UserInterface.j"
+    ],
+    "wolg": [
+      "libraries/TerrainPathability.j"
+    ],
+    "Ldrt": [
+      "libraries/TerrainReplace.j"
+    ],
+    "Ldro": [
+      "libraries/TerrainReplace.j"
+    ],
+    "uDex": [
+      "libraries/UnitDex.j"
+    ],
+    "uidm": [
+      "libraries/UserInterface.j"
+    ],
+    "uiwn": [
+      "libraries/UserInterface.j"
+    ],
+    "D201": [
+      "libraries/UserInterface.j"
+    ],
+    "Aave": [
+      "libraries/UserInterface.j"
+    ],
+    "Skin": [
+      "libraries/UserInterface.j"
+    ]
+  },
+  "interpretation": "Lexical inventory only: imported_paths/rawcodes can include comments and disabled examples. Not a required-resource closure or executed-line coverage."
+}

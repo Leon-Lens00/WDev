@@ -1,0 +1,8 @@
+The chain is direct: **`Jass.trace(s)` → `Jass.print(s)` → `DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 120, s)`**.
+
+- `trace` unconditionally calls `print(s)`, then returns `0.0`. There is no intermediate function, callback registration, trigger, or conditional gate: [Jass.j:103–106](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:103).
+- `print` passes the unchanged string to `DisplayTimedTextToPlayer`, targeting `GetLocalPlayer()` at coordinates `(0, 0)` with duration `120`: [Jass.j:99–101](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:99).
+
+Both functions are declared `private`. No calls to `trace` were found in the searched repository source, so an active caller cannot be established.
+
+`codegraph_explore` was unavailable; this conclusion comes from read-only source inspection. Runtime behavior was not tested.

@@ -1,0 +1,4 @@
+V9: intervalo de oleada 480 -> 240 ms; cuatro barridos por Stand 960 ms. Mantener cuerpo/cola/anclaje y envoltura V7 aprobados. Pulir máscara rosa con borde recortado y filamentos verdes breves de las fases del sprite, subordinados al azul/rosa. Classic1.27b MDX800.
+Comprobar: datos y periodos; visor3D antes del juego; prueba YDWE SP en pantalla3; ZIP separado con V8 preservada. Estado: implementación.
+
+Final: MDX 63895d91e14521d4007748e60e46ee1d31bad64c6270644cf708e9241d975bdf. Periodo240ms, recorrido210ms, cresta rosa/white más fina y4filamentos breves. 3110tris,11PE2,1ribbon,14texturas. Pruebas:311poses,4ciclos en48fases3D,150capturas nativas/6escenarios; salida0. V7/V8 conservadas. ZIP separado V9.

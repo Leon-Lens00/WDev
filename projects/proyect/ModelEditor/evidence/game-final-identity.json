@@ -1,0 +1,52 @@
+[
+  {
+    "window": {
+      "address": "0x55bb07eda240",
+      "mapped": true,
+      "hidden": false,
+      "visible": true,
+      "acceptsInput": true,
+      "at": [
+        0,
+        0
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "workspace": {
+        "id": 3,
+        "name": "3"
+      },
+      "floating": true,
+      "monitor": 0,
+      "class": "steam_app_0",
+      "title": "Warcraft III",
+      "initialClass": "steam_app_0",
+      "initialTitle": "Warcraft III",
+      "pid": 607457,
+      "xwayland": true,
+      "pinned": false,
+      "pinFullscreened": false,
+      "fullscreen": 2,
+      "fullscreenClient": 0,
+      "fullscreenHandler": "default",
+      "allowedOverFullscreen": true,
+      "grouped": [],
+      "tags": [],
+      "swallowing": "0x0",
+      "focusHistoryID": 0,
+      "inhibitingIdle": false,
+      "xdgTag": "",
+      "xdgDescription": "",
+      "contentType": "none",
+      "tearingHint": false,
+      "stableId": "1800157b"
+    },
+    "stat": "607457 (war3.exe) S 607455 607414 607414 0 -1 4194304 145371 210 4 1 233 158 0 1 19 -1 76 0 9946067 2395029504 109335 18446744073709551615 2101346304 2101353425 4293223248 0 0 0 0 4096 1790 0 0 0 17 8 0 0 0 0 0 2101362676 2101362768 2104369152 4293224884 4293225190 4293225190 4293234561 0\n",
+    "cmdline": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\7c0de53497bed688.w3x -window                                                                                                                                                                                                                                     ",
+    "prefix": [
+      "WINEPREFIX=/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/"
+    ]
+  }
+]

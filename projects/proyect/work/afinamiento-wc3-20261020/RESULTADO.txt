@@ -1,0 +1,36 @@
+AFINAMIENTO DE WC3LINT Y JASSGRAPH — 20-10-2026
+
+Resultado: se actualizaron las dos herramientas locales en sus ubicaciones habituales.
+
+WC3LINT
+- Separa código, strings, rawcodes y comentarios de línea/bloque; conserva las líneas reportadas.
+- Las URLs dentro de strings no ocultan llamadas posteriores.
+- Las supresiones wc3lint: ignore sólo funcionan dentro de comentarios // reales y con motivo.
+- Conserva la dependencia de GetLocalPlayer en elseif/else; limpia el seguimiento de recursos al terminar cada método, además de las funciones.
+- Revisa .j, .jass y .vjass, incluso extensiones en mayúsculas.
+- No convierte texto ilegible en caracteres de reemplazo silenciosamente: UTF-8 inválido termina con error. Soporta BOM UTF-8 y CRLF.
+- Un comentario/literal sin cerrar devuelve LEX-INCOMPLETE. Una entrada sin fuentes compatibles devuelve error 2.
+- Continúa siendo un conjunto de heurísticas: no expande imports/macros, no hace inferencia completa de tipos, alias, recursos ni flujo entre funciones. Cero ERROR no significa aprobación del programa.
+
+JASSGRAPH
+- Conserva callbacks cualificados como function Tipo.metodo completos.
+- Consultar un método incluye referencias this.metodo, thistype.metodo y .metodo como candidatos textuales; puede incluir otros tipos con el mismo nombre final.
+- query_match explica la razón de inclusión sin alterar resolution ni inventar candidatos tipados.
+- coverage distingue lexical_only de partial. -strict emite el informe y devuelve 1 ante diagnósticos de cobertura; no invoca el compilador.
+- Informa cierres de ámbitos/métodos incompatibles; rechaza raíces sin fuentes; UTF-8 inválido queda diagnosticado y BOM no desplaza las coordenadas originales en bytes.
+- Se reconstruyó el binario .tools/jassgraph/wc3-jassgraph que ejecuta scripts/jassgraph.
+- No indexa variables/tipos ni inicializadores globales. No expande macros ni resuelve herencia/dispatch. Mantiene las ambigüedades y miembros sin resolver.
+
+VERIFICACIÓN
+36 pruebas Python correctas, incluidas 13 de wc3lint. 13 pruebas Go correctas entre el paquete y CLI. go vet y construcción correctos. Validación de la skill correcta.
+Los ocho casos dirigidos anteriores pasaron la comparación: de tres falsas alarmas ERROR a cero en esa muestra, conservando los tres positivos de riesgo.
+pre-commit: tres controles .j/.jass/.vjass aceptados y tres archivos con API moderna bloqueados, en un repositorio desechable sin instalar hooks.
+MoveSys: se conservaron los hashes de ambos archivos, 47 definiciones y 226 referencias; consulta por MovementSystem.MovementData.destroy de 3 a 9 referencias. Las seis incorporadas se etiquetan como textuales, no como tipos resueltos.
+No se modificaron fuentes ni mapas de MoveSys, ni se construyó su proyecto o se lanzó el juego. Las pruebas verifican las herramientas, no certifican comportamiento en juego o multijugador.
+
+ARCHIVOS
+changes.patch: cambios de código/documentación contra el estado previo.
+backup-manifest.json y before/: copia anterior del código/binario.
+validation.json: comandos, resultados y hashes de las versiones afinadas.
+integration-summary.json: comparación real y controles.
+El código principal está en la skill build-warcraft3-vjass-127b/scripts/wc3lint.py y Forge/internal/jassgraph/graph.go.

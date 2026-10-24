@@ -1,0 +1,30 @@
+[
+  {
+    "label": "missiles",
+    "calls": [
+      "GetSpellTargetX",
+      "GetSpellTargetY",
+      "GetTriggerUnit",
+      "RapidFire.RapidPair.cast",
+      "RapidFire.RapidPair.fromController"
+    ],
+    "api": [
+      {
+        "name": "GetSpellTargetX",
+        "file": "codegraph-api/common.j",
+        "api": true
+      }
+    ]
+  },
+  {
+    "label": "inventory",
+    "calls": [],
+    "api": [
+      {
+        "name": "GetSpellTargetX",
+        "file": "codegraph-api/common.j",
+        "api": true
+      }
+    ]
+  }
+]

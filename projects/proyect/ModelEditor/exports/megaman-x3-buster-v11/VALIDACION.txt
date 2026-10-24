@@ -1,0 +1,18 @@
+V11 final — 23 de octubre de 2026
+MDX SHA256: 570738e214e42c4610a56655278f9b52b2557cd3f9fe5c86ed516f261123e7d7
+Estado: probado visualmente en mapa, Warcraft III Classic 1.27b.
+
+Archivo y recursos
+Relectura independiente con war3-model 4.0.1; geometría MDL/MDX contrastada; 15 BLP decodificadas con mipmaps; referencias de recursos/materiales y jerarquía verificadas. 455 poses a pasos de 5 ms: raíz fija y frente de la geometría de vuelo en X<=0. Los 18 geosets azules y sus UV conservan V10. Las 34 entradas del paquete V10, incluido ZIP, permanecen intactas.
+
+Visor 3D
+Vistas lateral, frontal y oblicua. Secuencias Birth/Stand/Death revisadas; capturas a pasos de 20/40 ms. Birth corregido para que los emisores sigan la formación del cuerpo. Death deja de emitir vuelo, genera el estallido y se disipa. El impacto sí puede expandirse alrededor del origen. Los GIF de muestra están ralentizados.
+
+Prueba nativa final
+Mapa 16b298bea81a946ac60e8ef41c4407659471717242529bf8b4ba57128c4477e5, compilado con JassHelper/pJASS y 35 miembros reextraídos iguales. YDWE -war3 -loadfile, un jugador, EnableHost=0 en perfil privado, pantalla DP-1. PID1000454, inicio16352019.
+Ocho casos relevantes con 25 capturas cada uno: escalas 0.5, 1 y 2.4; Birth a velocidad normal y animación0.25x; Death normal y animación0.25x; vuelo en movimiento a escala1. Se verificó el efecto de las órdenes en pantalla. El rosa tiene más presencia; el verde se distingue mejor, aunque a0.5 pierde el detalle angular por su tamaño. Death muestra destello/estrellas y desaparición, sin contraer el cuerpo. Birth forma el cuerpo unido.
+Cierre propio con Win+Q, confirmación visual y S: salida0, proceso/ventana ausentes. Primera ejecución interrumpida por foco de otra partida excluida de estos casos; recuperación documentada.
+
+Límites
+Las capturas nativas separadas aproximadamente220ms no miden por sí solas los ciclos rápidos120/240ms; esos se contrastaron en curvas y visor. SetUnitTimeScale0.25 facilita inspeccionar la animación, sin acreditar que todos los relojes de partículas se ralenticen igual. No se midieron FPS ni se probaron multijugador o física de proyectiles. No se modificó TerrainDev.
+CodeGraph consultado sobre las fuentes V11 sin avisos pendientes de vigencia; el grafo no reemplaza compilación ni pruebas. Fuentes en ModelEditor/src/*v11*, evidencia en ModelEditor/evidence/x3-v11.

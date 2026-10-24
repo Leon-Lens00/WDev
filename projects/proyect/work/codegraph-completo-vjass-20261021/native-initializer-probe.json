@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "paths": [
+    "main -> VALUE -> StringLength",
+    "main -> S.FIELD -> StringLength"
+  ],
+  "compiler_evidence": "compiler-jury-constant-native-result.json",
+  "api": "Classic common.j"
+}

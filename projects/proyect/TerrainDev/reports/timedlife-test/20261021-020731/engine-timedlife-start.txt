@@ -1,0 +1,8 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "TIMEDLIFE 20261021-020731 START types=1685417321,1685417321,1685417321" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

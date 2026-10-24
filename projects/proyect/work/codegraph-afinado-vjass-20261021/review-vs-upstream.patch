@@ -1,0 +1,261 @@
+diff --git a/CHANGELOG.md b/CHANGELOG.md
+index 06ca319..b8e1ea7 100644
+--- a/CHANGELOG.md
++++ b/CHANGELOG.md
+@@ -12,6 +12,15 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+ 
+ ## [Unreleased]
+ 
++### New Features
++
++- Local JASS/vJASS support brings Classic Warcraft sources into the persistent graph, including declarations, callbacks and statically declared method receivers, with explicit limits for preprocessor expansion and dynamic calls.
++
++### Fixes
++
++- JASS/vJASS documentation regions and multiline strings no longer create false symbols or corrupt the scope of the code that follows them.
++- Calls from JASS/vJASS local initializers belong to the enclosing function, and unqualified struct methods resolve before same-named global functions.
++- MCP guidance now reflects automatic watching and catch-up for explicitly selected projects.
+ 
+ ## [1.6.2] - 2026-10-03
+ 
+diff --git a/README.md b/README.md
+index ae3750c..5d89549 100644
+--- a/README.md
++++ b/README.md
+@@ -806,6 +806,10 @@ is written):
+ 
+ ## Supported Languages
+ 
++This local checkout also adds **partial JASS/vJASS support** (`.j`, `.jass`,
++`.vjass`) inside the normal CodeGraph pipeline. See [JASS-VJASS.md](JASS-VJASS.md)
++for capabilities, scope, local operation and validation limits.
++
+ | Language | Extension | Status |
+ |----------|-----------|--------|
+ | TypeScript | `.ts`, `.tsx` | Full support |
+diff --git a/src/extraction/extraction-version.ts b/src/extraction/extraction-version.ts
+index 3691e95..b587d05 100644
+--- a/src/extraction/extraction-version.ts
++++ b/src/extraction/extraction-version.ts
+@@ -21,4 +21,4 @@
+  * turns the re-index hint into noise — keep it honest (see CLAUDE.md, "Honesty
+  * in the product is load-bearing").
+  */
+-export const EXTRACTION_VERSION = 27;
++export const EXTRACTION_VERSION = 29; // JASS inactive regions, literals and caller ownership changed.
+diff --git a/src/extraction/grammars.ts b/src/extraction/grammars.ts
+index 6a05b96..29be227 100644
+--- a/src/extraction/grammars.ts
++++ b/src/extraction/grammars.ts
+@@ -11,7 +11,7 @@ import * as fsp from 'fs/promises';
+ import { Parser, Language as WasmLanguage } from 'web-tree-sitter';
+ import { Language } from '../types';
+ 
+-export type GrammarLanguage = Exclude<Language, 'svelte' | 'vue' | 'astro' | 'liquid' | 'razor' | 'yaml' | 'twig' | 'xml' | 'properties' | 'unknown'>;
++export type GrammarLanguage = Exclude<Language, 'svelte' | 'vue' | 'astro' | 'liquid' | 'razor' | 'yaml' | 'twig' | 'xml' | 'properties' | 'unknown' | 'jass' | 'vjass'>;
+ 
+ /**
+  * WASM filename map — maps each language to its .wasm grammar file
+@@ -56,6 +56,9 @@ const WASM_GRAMMAR_FILES: Record<GrammarLanguage, string> = {
+  * File extension to Language mapping
+  */
+ export const EXTENSION_MAP: Record<string, Language> = {
++  '.j': 'jass',
++  '.jass': 'jass',
++  '.vjass': 'vjass',
+   '.ts': 'typescript',
+   '.tsx': 'tsx',
+   // ESM/CJS TypeScript module extensions — parsed as TS (no JSX). (#366)
+@@ -746,6 +749,7 @@ export function hasTreeSitterGrammar(language: string | undefined | null): boole
+  * Returns true if the grammar exists, even if not yet loaded.
+  */
+ export function isLanguageSupported(language: Language): boolean {
++  if (language === 'jass' || language === 'vjass') return true; // standalone structural extractor
+   if (language === 'svelte') return true; // custom extractor (script block delegation)
+   if (language === 'vue') return true; // custom extractor (script block delegation)
+   if (language === 'astro') return true; // custom extractor (frontmatter/script block delegation)
+@@ -763,6 +767,7 @@ export function isLanguageSupported(language: Language): boolean {
+  * Check if a grammar has been loaded and is ready for parsing.
+  */
+ export function isGrammarLoaded(language: Language): boolean {
++  if (language === 'jass' || language === 'vjass') return true; // no WASM grammar needed
+   if (language === 'svelte' || language === 'vue' || language === 'astro' || language === 'liquid' || language === 'razor') return true;
+   if (language === 'yaml' || language === 'twig') return true; // no WASM grammar needed
+   if (language === 'xml' || language === 'properties') return true; // no WASM grammar needed
+@@ -786,7 +791,7 @@ export function isFileLevelOnlyLanguage(language: Language): boolean {
+  * Get all supported languages (those with grammar definitions).
+  */
+ export function getSupportedLanguages(): Language[] {
+-  return [...(Object.keys(WASM_GRAMMAR_FILES) as GrammarLanguage[]), 'svelte', 'vue', 'astro', 'liquid'];
++  return [...(Object.keys(WASM_GRAMMAR_FILES) as GrammarLanguage[]), 'svelte', 'vue', 'astro', 'liquid', 'jass', 'vjass'];
+ }
+ 
+ /**
+@@ -875,6 +880,8 @@ export function getLanguageDisplayName(language: Language): string {
+     terraform: 'Terraform',
+     arkts: 'ArkTS',
+     unknown: 'Unknown',
++    jass: 'JASS (Classic Warcraft)',
++    vjass: 'vJASS (Classic Warcraft)',
+   };
+   return names[language] || language;
+ }
+diff --git a/src/extraction/tree-sitter.ts b/src/extraction/tree-sitter.ts
+index 5c27523..58529b8 100644
+--- a/src/extraction/tree-sitter.ts
++++ b/src/extraction/tree-sitter.ts
+@@ -28,6 +28,7 @@ import { RazorExtractor } from './razor-extractor';
+ import { SvelteExtractor } from './svelte-extractor';
+ import { AstroExtractor } from './astro-extractor';
+ import { DfmExtractor } from './dfm-extractor';
++import { JassExtractor } from './jass-extractor';
+ import { VueExtractor } from './vue-extractor';
+ import { MyBatisExtractor } from './mybatis-extractor';
+ import { CfmlExtractor } from './cfml-extractor';
+@@ -7552,7 +7553,9 @@ export function extractFromSource(
+   let result: ExtractionResult;
+ 
+   // Use custom extractor for Svelte
+-  if (detectedLanguage === 'svelte') {
++  if (detectedLanguage === 'jass' || detectedLanguage === 'vjass') {
++    result = new JassExtractor(filePath, source, detectedLanguage).extract();
++  } else if (detectedLanguage === 'svelte') {
+     const extractor = new SvelteExtractor(filePath, source);
+     result = extractor.extract();
+   } else if (detectedLanguage === 'vue') {
+diff --git a/src/mcp/server-instructions.ts b/src/mcp/server-instructions.ts
+index 80a6247..9e5cb3c 100644
+--- a/src/mcp/server-instructions.ts
++++ b/src/mcp/server-instructions.ts
+@@ -19,6 +19,11 @@
+  */
+ export const SERVER_INSTRUCTIONS = `# Codegraph — code intelligence over an indexed knowledge graph
+ 
++This local build adds JASS/vJASS (.j/.jass/.vjass) through a structural/static
++extractor. It does not expand textmacros, imports, module implementations or
++dynamic dispatch, and does not validate Classic 1.27b compatibility. Preserve
++extraction diagnostics; use JassHelper/pJASS for compilation and correctness.
++
+ Codegraph is a SQLite knowledge graph of every symbol, edge, and file in
+ the workspace — pre-computed structure you would otherwise re-derive by
+ reading files (cached intelligence: thousands of parse/trace decisions you
+@@ -61,11 +66,11 @@ calls; a grep/read exploration is dozens.
+ 
+ ## Anti-patterns
+ 
+-- **Trust codegraph's results — don't re-verify them with grep.** They come from a full AST parse; re-checking with grep is slower, less accurate, and wastes context.
++- **Treat returned source as already read.** Upstream languages use their registered parsers; local JASS/vJASS uses the structural subset described above. Do not repeat source reads without a specific gap to resolve. Respect extraction diagnostics and unresolved boundaries; a missing edge does not establish that code has no consumers.
+ - **Don't grep or Read first** to find or understand indexed code — ONE \`codegraph_explore\` returns the relevant symbols' source together in a single round-trip. Reach for raw \`Read\`/\`Grep\` only to confirm a specific detail codegraph didn't cover, or for what codegraph doesn't index (configs, docs).
+ - **Don't reconstruct a flow by hand** — name the endpoints in one \`codegraph_explore\` and it surfaces the path between them, dynamic-dispatch hops included.
+ - **After editing, check the staleness banner.** When a tool response starts with "⚠️ Some files referenced below were edited since the last index sync…", the listed files are pending re-index — Read those specific files for accurate content. Every file NOT in that banner is fresh, so still trust codegraph. A different, rarer banner — "⚠️ CodeGraph auto-sync is DISABLED…" or "⚠️ CodeGraph auto-sync is RECOVERING…" — means the whole index may be stale; until the full catch-up completes, Read files directly to confirm anything that may have changed. If a response refuses to answer from changed files or says freshness could not be verified within its budget, retry after sync or narrow the query; that refusal is not an error in the tool.
+-- **A file flagged "⚠ changed on disk after the last index sync" drifted from its index** (most common on projects queried via \`projectPath\`, which have no live watcher). Codegraph never serves a possibly-mis-sliced body from such a file — it either shows the file's full CURRENT source (trust it as a Read) or omits the source with this flag. When the source was omitted, Read that specific file; line numbers referencing it elsewhere in the response may be shifted until that project's next sync. All unflagged files remain trustworthy.
++- **A file flagged "⚠ changed on disk after the last index sync" drifted from its index.** Explicit \`projectPath\` projects catch up on access and acquire a watcher while cached, unless watching is disabled. Idle eviction or server shutdown releases it; the next access reopens and catches up. A pending/degraded sync can still leave changed files. Codegraph never serves a possibly-mis-sliced body from such a file — it either shows the file's full CURRENT source (trust it as a Read) or omits the source with this flag. When the source was omitted, Read that specific file; line numbers referencing it elsewhere in the response may be shifted until that project's next sync. All unflagged files remain trustworthy.
+ 
+ - **Source is re-served on every call by default**, including for fresh subagents and after context compaction. Cross-call dedup requires \`CODEGRAPH_EXPLORE_DEDUP=1\` and is only suitable for hosts that guarantee one durable context per connection. With that opt-in, **"Already sent earlier in this conversation"** points to exact, unchanged source returned by an earlier \`codegraph_explore\` in that context. Use that copy; don't re-fetch it and don't Read the file. The bytes it freed went into source you have not seen yet, elsewhere in the same response.
+ 
+@@ -91,6 +96,10 @@ calls; a grep/read exploration is dozens.
+  */
+ export const SERVER_INSTRUCTIONS_NO_ROOT_INDEX = `# Codegraph — available (per-project; pass projectPath)
+ 
++This local build supports a structural/static subset of JASS/vJASS, without
++macro/import/module expansion or dynamic dispatch. Preserve diagnostics and
++use JassHelper/pJASS for compilation; a graph is not Classic 1.27b validation.
++
+ Codegraph is a SQLite knowledge graph of a codebase's symbols, edges, and
+ files (30+ languages): one \`codegraph_explore\` call returns the verbatim, line-numbered source
+ of the relevant symbols PLUS the call paths between them and a blast-radius
+diff --git a/src/mcp/tools.ts b/src/mcp/tools.ts
+index c8fec8d..28194f7 100644
+--- a/src/mcp/tools.ts
++++ b/src/mcp/tools.ts
+@@ -2644,11 +2644,17 @@ export class ToolHandler {
+   }
+ 
+   private answerResult(cg: CodeGraph, text: string, paths: Iterable<string>): ToolResult {
++    const records = [...new Set(paths)].map(file => ({ path: file, record: cg.getFile(file) }));
++    const jass = records.filter(f => f.record?.language === 'jass' || f.record?.language === 'vjass');
++    if (jass.length) {
++      const diagnostics = jass.flatMap(f => (f.record?.errors ?? []).map(e => `${f.path}:${e.line ?? 1}: ${e.message}`));
++      const details = diagnostics.slice(0, 6).map(e => `> ${e.slice(0, 300)}`).join('\n');
++      text = '> JASS/vJASS local support: structural/static subset. No macro/import/module expansion or dynamic dispatch; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.\n' +
++        (details ? details + '\n' : '') +
++        (diagnostics.length > 6 ? `> ${diagnostics.length - 6} more extraction diagnostics in these files.\n` : '') + '\n' + text;
++    }
+     const result = this.textResult(text);
+-    result._cgAnswerFiles = [...new Set(paths)].map(file => ({
+-      path: file,
+-      contentHash: cg.getFile(file)?.contentHash ?? null,
+-    }));
++    result._cgAnswerFiles = records.map(f => ({ path: f.path, contentHash: f.record?.contentHash ?? null }));
+     return result;
+   }
+ 
+diff --git a/src/mcp/version.ts b/src/mcp/version.ts
+index cef1b78..879880a 100644
+--- a/src/mcp/version.ts
++++ b/src/mcp/version.ts
+@@ -25,7 +25,9 @@ function readPackageVersion(): string {
+     const raw = fs.readFileSync(pkgPath, 'utf8');
+     const parsed = JSON.parse(raw);
+     if (typeof parsed?.version === 'string' && parsed.version.length > 0) {
+-      return parsed.version;
++      // Local fork identity: never reuse a vanilla 1.6.2 daemon, whose extractor
++      // cannot read JASS/vJASS. The upstream package version is left unchanged.
++      return `${parsed.version}+jass-vjass.2`;
+     }
+   } catch {
+     // Fall through to sentinel.
+diff --git a/src/resolution/index.ts b/src/resolution/index.ts
+index 1eaf14b..a6e6bcb 100644
+--- a/src/resolution/index.ts
++++ b/src/resolution/index.ts
+@@ -24,6 +24,7 @@ import {
+ import { isPythonSelfCall, matchJsStoreBindingCall, isUnresolvedJsMemberCall, isVisibleAcrossFiles, matchReference, matchFunctionRef, matchDottedCallChain, matchScopedCallChain, matchMethodCall, sameLanguageFamily, crossesCodeBoundary, gateLanguageMatch, dumpNameMatcherProfile, clearNameMatcherMemos, isRustNameInScope, CASE_INSENSITIVE_LANGUAGES } from './name-matcher';
+ import { isVisibleCppMacro, clearCppMacroVisibility } from './cpp-macro-visibility';
+ import { isCppConstructorRef, matchCppConstructor } from './cpp-constructor';
++import { resolveJassReference } from './jass';
+ import { gateSwiftTypeTarget, clearSwiftTypeVisibility, swiftExtendedConformances } from './swift-type-visibility';
+ import { gateTypeParameter, clearTypeParameterMemos } from './type-parameters';
+ import { resolveViaImport, resolvePhpImportedStaticCall, resolvePhpQualifiedClassRef, resolveJvmImport, extractImportMappings, extractReExports, loadCppIncludeDirs, isPhpIncludePathRef, isCobolCopybookRef, isNixPathImportRef, isJsPathImportRef, isBoundToOutOfRepoImport, clearImportResolverMemos, resolveImportPath, isExternalImport } from './import-resolver';
+@@ -1065,6 +1066,7 @@ export class ReferenceResolver {
+   }
+ 
+   private resolveOneInner(ref: UnresolvedRef): ResolvedRef | null {
++    if (ref.language === 'jass' || ref.language === 'vjass') return resolveJassReference(ref, this.context);
+     // A local C++ object construction (`T obj(args)`, ref `ns::T::T/1`)
+     // resolves ONLY to a constructor of the lexically nearest `T` (#1839).
+     if (isCppConstructorRef(ref)) return matchCppConstructor(ref, this.context);
+@@ -1386,6 +1388,7 @@ export class ReferenceResolver {
+         kind,
+         line: ref.original.line,
+         column: ref.original.column,
++        ...(t.metadata?.jassStaticSubset ? { provenance: 'heuristic' as const } : {}),
+         metadata: {
+           ...(t.metadata ?? {}),
+           confidence: ref.confidence,
+diff --git a/src/resolution/name-matcher.ts b/src/resolution/name-matcher.ts
+index e0b4ad2..f89470b 100644
+--- a/src/resolution/name-matcher.ts
++++ b/src/resolution/name-matcher.ts
+@@ -145,6 +145,7 @@ function pickClosestFileNode(candidates: Node[], ref: UnresolvedRef): Node {
+  * `Foo`). Anything not listed forms its own singleton family.
+  */
+ const LANGUAGE_FAMILY: Record<string, string> = {
++  jass: 'jass', vjass: 'jass',
+   java: 'jvm', kotlin: 'jvm', scala: 'jvm',
+   swift: 'native', objc: 'native',
+   // ArkTS is a TS superset — every HarmonyOS project mixes `.ets` UI with
+diff --git a/src/types.ts b/src/types.ts
+index 44ffaf4..1ff5e14 100644
+--- a/src/types.ts
++++ b/src/types.ts
+@@ -119,6 +119,9 @@ export const LANGUAGES = [
+   'erlang',
+   'terraform',
+   'unknown',
++  // Local Classic Warcraft extension; append to preserve the kernel wire order.
++  'jass',
++  'vjass',
+ ] as const;
+ 
+ export type Language = (typeof LANGUAGES)[number];

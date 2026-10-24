@@ -1,0 +1,78 @@
+{
+  "status": "Tested in map",
+  "modelSha256": "cd479d2c0a35d84ece4d0d4680fe98740c7410a063d3bbcb08a767d18df93334",
+  "fixture": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v10-20261023-084018/X3BusterV10.w3x",
+    "sha256": "b986c73af1363e687e04913e26d198397591a271877980a3e22b8f8a4773c8db",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 34,
+    "models": 2,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "loadedMap": {
+    "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v10-ydwe-runtime/pfx/drive_c/WarcraftIII/Maps/Test/WorldEditTestMap.w3x",
+    "sha256": "b986c73af1363e687e04913e26d198397591a271877980a3e22b8f8a4773c8db",
+    "matchesFixture": true
+  },
+  "scenarios": {
+    "stand-verified": {
+      "frames": 25,
+      "durationSeconds": 3.755261918005999,
+      "pid": 978078,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "move-verified": {
+      "frames": 25,
+      "durationSeconds": 3.7541701619920786,
+      "pid": 978078,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "scale05-verified": {
+      "frames": 25,
+      "durationSeconds": 3.7429905369936023,
+      "pid": 978078,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "scale3-verified": {
+      "frames": 25,
+      "durationSeconds": 3.762409458984621,
+      "pid": 978078,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "birth-verified": {
+      "frames": 25,
+      "durationSeconds": 3.749056244996609,
+      "pid": 978078,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "impact-verified": {
+      "frames": 25,
+      "durationSeconds": 3.758095338998828,
+      "pid": 978078,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    }
+  },
+  "totalFrames": 150,
+  "visualResult": "Green angular streaks visibly render over the interior blue/white body, inside pink envelope. Individually staggered paths remove regular opposing diamond chain. Scale and external motion checked; Death disappears.",
+  "closure": {
+    "returnCode": 0,
+    "ownedProcesses": [],
+    "windowGone": true,
+    "privateRuntimeTrashed": true,
+    "normalizedPrefixGuard": "PASS"
+  },
+  "limits": [
+    "Native captures about150ms apart do not measure exact120ms green/240ms pink timing; curves and20ms viewer steps checked independently.",
+    "Birth160ms not fully resolved by capture.",
+    "No FPS, stress, multiplayer or physics integration test.",
+    "Small0.5scale compresses green detail; not equally legible at every scale.",
+    "Artistic timing; not verified native SNES timing."
+  ]
+}

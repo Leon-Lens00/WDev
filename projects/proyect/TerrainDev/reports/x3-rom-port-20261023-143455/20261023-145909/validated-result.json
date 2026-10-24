@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "production_sha256": "f087047bff8c051d26072c5c651513588d7272d38628d23cd697eaa7516e5e23",
+  "x3": {
+    "checks": 69.0,
+    "failures": 0.0,
+    "casts": 0.0,
+    "live": 0.0,
+    "created": 198.0,
+    "retired": 198.0,
+    "fusions": 7.0,
+    "flashes": 0.0
+  },
+  "colors": {
+    "checks": 40.0,
+    "failures": 0.0,
+    "live": 0.0,
+    "created": 221.0,
+    "retired": 221.0,
+    "scale": 2.743
+  },
+  "rapid_fire": {
+    "checks": 44.0,
+    "failures": 0.0,
+    "observed": 46.0,
+    "minimum": 0.25,
+    "emitted": 63.0,
+    "live": 0.0,
+    "pairs": 2.0
+  },
+  "checks_total": 153,
+  "negative_controls_rejected": 15,
+  "x3_fixture": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/20261023-145909/fixture.json",
+  "regression_fixture": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/20261023-145909/fixture.json"
+}

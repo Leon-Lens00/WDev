@@ -1,0 +1,199 @@
+{
+  "active_source_table_matches_ips": true,
+  "active_table_bytes": 48,
+  "source_nops_match_ips": true,
+  "source_helix_immediate_match": true,
+  "scope": "three focused source patches; does not prove complete source/IPS build equivalence",
+  "ranges": [
+    {
+      "start": "86BBA0",
+      "length": 48,
+      "differences": [
+        {
+          "cpu": "86BBA1",
+          "before": "18",
+          "after": "00"
+        },
+        {
+          "cpu": "86BBA3",
+          "before": "00",
+          "after": "F6"
+        },
+        {
+          "cpu": "86BBA8",
+          "before": "00",
+          "after": "60"
+        },
+        {
+          "cpu": "86BBA9",
+          "before": "7F",
+          "after": "30"
+        },
+        {
+          "cpu": "86BBAB",
+          "before": "08",
+          "after": "FF"
+        },
+        {
+          "cpu": "86BBAC",
+          "before": "80",
+          "after": "00"
+        },
+        {
+          "cpu": "86BBAD",
+          "before": "01",
+          "after": "05"
+        },
+        {
+          "cpu": "86BBB0",
+          "before": "00",
+          "after": "A0"
+        },
+        {
+          "cpu": "86BBB1",
+          "before": "7F",
+          "after": "30"
+        },
+        {
+          "cpu": "86BBB3",
+          "before": "08",
+          "after": "FF"
+        },
+        {
+          "cpu": "86BBB4",
+          "before": "80",
+          "after": "00"
+        },
+        {
+          "cpu": "86BBB5",
+          "before": "FE",
+          "after": "FB"
+        },
+        {
+          "cpu": "86BBB8",
+          "before": "00",
+          "after": "70"
+        },
+        {
+          "cpu": "86BBBB",
+          "before": "06",
+          "after": "03"
+        },
+        {
+          "cpu": "86BBBC",
+          "before": "C0",
+          "after": "00"
+        },
+        {
+          "cpu": "86BBBD",
+          "before": "00",
+          "after": "07"
+        },
+        {
+          "cpu": "86BBC0",
+          "before": "00",
+          "after": "90"
+        },
+        {
+          "cpu": "86BBC3",
+          "before": "06",
+          "after": "03"
+        },
+        {
+          "cpu": "86BBC4",
+          "before": "40",
+          "after": "00"
+        },
+        {
+          "cpu": "86BBC5",
+          "before": "FF",
+          "after": "F9"
+        }
+      ]
+    },
+    {
+      "start": "81C5AF",
+      "length": 4,
+      "differences": [
+        {
+          "cpu": "81C5AF",
+          "before": "22",
+          "after": "EA"
+        },
+        {
+          "cpu": "81C5B0",
+          "before": "A4",
+          "after": "EA"
+        },
+        {
+          "cpu": "81C5B1",
+          "before": "8C",
+          "after": "EA"
+        },
+        {
+          "cpu": "81C5B2",
+          "before": "01",
+          "after": "EA"
+        }
+      ]
+    },
+    {
+      "start": "81C335",
+      "length": 2,
+      "differences": [
+        {
+          "cpu": "81C336",
+          "before": "20",
+          "after": "30"
+        }
+      ]
+    },
+    {
+      "start": "81C610",
+      "length": 26,
+      "differences": []
+    },
+    {
+      "start": "82D7C2",
+      "length": 49,
+      "differences": []
+    },
+    {
+      "start": "82D78F",
+      "length": 51,
+      "differences": []
+    },
+    {
+      "start": "81C1C5",
+      "length": 50,
+      "differences": [
+        {
+          "cpu": "81C1D8",
+          "before": "02",
+          "after": "82"
+        },
+        {
+          "cpu": "81C1E9",
+          "before": "02",
+          "after": "82"
+        }
+      ]
+    },
+    {
+      "start": "819040",
+      "length": 35,
+      "differences": [
+        {
+          "cpu": "81905D",
+          "before": "04",
+          "after": "84"
+        },
+        {
+          "cpu": "819062",
+          "before": "02",
+          "after": "82"
+        }
+      ]
+    }
+  ]
+}

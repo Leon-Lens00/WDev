@@ -1,0 +1,183 @@
+> JASS/vJASS local support: structural/static subset. No macro/import/module expansion or dynamic dispatch; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+
+**Dynamic-dispatch links among your symbols**
+(synthesized — the indirect hops grep/Read would reconstruct; the `@file:line` is the wiring site)
+
+- CodeGraphProbe → Init   [calls]
+- Init → CreateTimer   [calls]
+- Init → TimerStart   [calls]
+- Init → Done   [references]
+- Done → run   [calls]
+- Counter → run   [contains]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: CodeGraphProbe.Init CodeGraphProbe.Counter.run**
+
+Found 40 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `Init` (probe.vjass:21) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+- `run` (probe.vjass:12) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+- `step` (probe.vjass:9) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`probe.vjass`** — CodeGraphProbe(namespace), run(method), Counter(struct), Init(function), step(method), +4 more
+
+```vjass
+1	library CodeGraphProbe initializer Init
+2	    globals
+3	        private integer hits = 0
+4	    endglobals
+5	    private function Ping takes nothing returns nothing
+6	        set hits = hits + 1
+7	    endfunction
+8	    private struct Counter
+9	        method step takes nothing returns nothing
+10	            call Ping()
+11	        endmethod
+12	        static method run takes nothing returns nothing
+13	            local thistype this = thistype.allocate()
+14	            call this.step()
+15	            call this.destroy()
+16	        endmethod
+17	    endstruct
+18	    private function Done takes nothing returns nothing
+19	        call Counter.run()
+20	    endfunction
+21	    private function Init takes nothing returns nothing
+22	        call TimerStart(CreateTimer(), 0.0, false, function Done)
+23	    endfunction
+24	endlibrary
+25	function main takes nothing returns nothing
+26	endfunction
+27	function config takes nothing returns nothing
+28	endfunction
+```
+
+**`common.j`** — agent(extends), timer(returns), hashtable(returns), ability(type_alias), agent(type_alias), +30 more
+
+```jass
+2	// Native types. All native functions take extended handle types when
+3	// possible to help prevent passing bad values to native functions
+4	//
+5	type agent			    extends     handle  // all reference counted objects
+6	type event              extends     agent  // a reference to an event registration
+7	type player             extends     agent  // a single player reference
+8	type widget             extends     agent  // an interactive game object with life
+9	type unit               extends     widget  // a single unit reference
+10	type destructable       extends     widget
+11	type item               extends     widget
+12	type ability            extends     agent
+13	type buff               extends     ability
+14	type force              extends     agent
+15	type group              extends     agent
+16	type trigger            extends     agent
+17	type triggercondition   extends     agent
+18	type triggeraction      extends     handle
+19	type timer              extends     agent
+20	type location           extends     agent
+21	type region             extends     agent
+22	type rect               extends     agent
+23	type boolexpr           extends     agent
+24	type sound              extends     agent
+25	type conditionfunc      extends     boolexpr
+26	type filterfunc         extends     boolexpr
+
+... (gap: unitpool (common.j:27), itempool (common.j:28), race (common.j:29), alliancetype (common.j:30), racepreference (common.j:31), gamestate (common.j:32), +31 more) ...
+
+66	type raritycontrol      extends     handle
+67	type blendmode          extends     handle
+68	type texmapflags        extends     handle
+69	type effect             extends     agent
+70	type effecttype         extends     handle
+71	type weathereffect      extends     handle
+72	type terraindeformation extends     handle
+73	type fogstate           extends     handle
+74	type fogmodifier        extends     agent
+75	type dialog             extends     agent
+76	type button             extends     agent
+77	type quest              extends     agent
+78	type questitem          extends     agent
+79	type defeatcondition    extends     agent
+80	type timerdialog        extends     agent
+81	type leaderboard        extends     agent
+82	type multiboard         extends     agent
+83	type multiboarditem     extends     agent
+84	type trackable          extends     agent
+85	type gamecache          extends     agent
+86	type version            extends     handle
+87	type itemtype           extends     handle
+88	type texttag            extends     handle
+
+... (gap: attacktype (common.j:89), damagetype (common.j:90), weapontype (common.j:91), soundtype (common.j:92), lightning (common.j:93)) ...
+
+94	type pathingtype        extends     handle
+95	type image              extends     handle
+96	type ubersplat          extends     handle
+97	type hashtable          extends     agent
+98	
+99	constant native ConvertRace                 takes integer i returns race
+100	constant native ConvertAllianceType         takes integer i returns alliancetype
+
+... (gap: ConvertRacePref (common.j:101), i (common.j:101), ConvertIGameState (common.j:102), ConvertFGameState (common.j:103), ConvertPlayerState (common.j:104), ConvertPlayerScore (common.j:105), +597 more) ...
+
+909	//============================================================================
+910	// Timer API
+911	//
+912	native CreateTimer          takes nothing returns timer
+913	native DestroyTimer         takes timer whichTimer returns nothing
+914	native TimerStart           takes timer whichTimer, real timeout, boolean periodic, code handlerFunc returns nothing
+915	native TimerGetElapsed      takes timer whichTimer returns real
+916	native TimerGetRemaining    takes timer whichTimer returns real
+917	native TimerGetTimeout      takes timer whichTimer returns real
+918	native PauseTimer           takes timer whichTimer returns nothing
+919	native ResumeTimer          takes timer whichTimer returns nothing
+920	native GetExpiredTimer      takes nothing returns timer
+921	
+922	//============================================================================
+923	// Group API
+
+... (gap: CreateGroup (common.j:925), DestroyGroup (common.j:926), whichGroup (common.j:926), GroupAddUnit (common.j:927), whichUnit (common.j:927), GroupRemoveUnit (common.j:928), +769 more) ...
+
+1795	//
+1796	native  ReloadGameCachesFromDisk takes nothing returns boolean
+1797	
+1798	native  InitGameCache    takes string campaignFile returns gamecache
+1799	native  SaveGameCache    takes gamecache whichCache returns boolean
+1800	
+1801	native  StoreInteger					takes gamecache cache, string missionKey, string key, integer value returns nothing
+
+... (gap: StoreReal (common.j:1802), key (common.j:1802), value (common.j:1802), missionKey (common.j:1802), cache (common.j:1802), StoreBoolean (common.j:1803), +24 more) ...
+
+1832	native  RestoreUnit						takes gamecache cache, string missionKey, string key, player forWhichPlayer, real x, real y, real facing returns unit
+1833	
+1834	
+1835	native  InitHashtable    takes nothing returns hashtable
+1836	
+1837	native  SaveInteger						takes hashtable table, integer parentKey, integer childKey, integer value returns nothing
+1838	native  SaveReal						takes hashtable table, integer parentKey, integer childKey, real value returns nothing
+
+... (gap: SaveBoolean (common.j:1839), table (common.j:1839), value (common.j:1839), childKey (common.j:1839), parentKey (common.j:1839), SaveStr (common.j:1840), +85 more) ...
+
+1889	native  LoadItemHandle				takes hashtable table, integer parentKey, integer childKey returns item
+1890	native  LoadUnitHandle				takes hashtable table, integer parentKey, integer childKey returns unit
+1891	native  LoadAbilityHandle			takes hashtable table, integer parentKey, integer childKey returns ability
+1892	native  LoadTimerHandle				takes hashtable table, integer parentKey, integer childKey returns timer
+1893	native  LoadTriggerHandle			takes hashtable table, integer parentKey, integer childKey returns trigger
+1894	native  LoadTriggerConditionHandle	takes hashtable table, integer parentKey, integer childKey returns triggercondition
+1895	native  LoadTriggerActionHandle		takes hashtable table, integer parentKey, integer childKey returns triggeraction
+
+... (gap: LoadTriggerEventHandle (common.j:1896), parentKey (common.j:1896), table (common.j:1896), childKey (common.j:1896), LoadForceHandle (common.j:1897), LoadGroupHandle (common.j:1898), +21 more) ...
+
+1920	native  LoadRegionHandle			takes hashtable table, integer parentKey, integer childKey returns region
+1921	native  LoadFogStateHandle			takes hashtable table, integer parentKey, integer childKey returns fogstate
+1922	native  LoadFogModifierHandle		takes hashtable table, integer parentKey, integer childKey returns fogmodifier
+1923	native  LoadHashtableHandle			takes hashtable table, integer parentKey, integer childKey returns hashtable
+1924	
+1925	native  HaveSavedInteger					takes hashtable table, integer parentKey, integer childKey returns boolean
+1926	native  HaveSavedReal						takes hashtable table, integer parentKey, integer childKey returns boolean
+```

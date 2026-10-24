@@ -1,0 +1,52 @@
+--- 
++++ 
+@@ -16,6 +16,10 @@
+         constant player CAMERA_DUMMY_PLAYER = Player(bj_PLAYER_NEUTRAL_EXTRA)
+         
+         private real DeltaZ = 0
++        // Optional map adapter: measured once after this controller has rendered.
++        // Projection always uses the logical eye; never sample it per frame.
++        private real array ControllerHeight
++        private boolean array HeightCalibrated
+         // endconfig
+         
+         public unit array DummyUnit
+@@ -101,6 +105,16 @@
+             call mat.destroy()
+         endmethod
+ 
++        // Call once, at least one rendered frame after applyCameraForPlayer.
++        // Native camera data stays local to p and is used only for its camera fields.
++        method calibrateHeightForPlayer takes player p returns nothing
++            local integer pid = GetPlayerId(p)
++            if GetLocalPlayer() == p then
++                set ControllerHeight[pid] = GetCameraTargetPositionZ()-GetCameraField(CAMERA_FIELD_ZOFFSET)
++                set HeightCalibrated[pid] = true
++            endif
++        endmethod
++
+         method applyCameraForPlayer takes player p, boolean ignoreChange returns boolean
+             if GetLocalPlayer() == p then
+                 call SetCameraField(CAMERA_FIELD_ROTATION, .yaw*bj_RADTODEG, 0)
+@@ -108,7 +122,11 @@
+                 call SetCameraField(CAMERA_FIELD_ROLL, .roll*bj_RADTODEG, 0)
+                 call SetCameraField(CAMERA_FIELD_TARGET_DISTANCE, .distance, 0)
+                 call SetCameraTargetController(DummyUnit[GetPlayerId(p)], .at.x, .at.y, false)
+-                call SetCameraField(CAMERA_FIELD_ZOFFSET, .at.z-DeltaZ, 0)
++                if HeightCalibrated[GetPlayerId(p)] then
++                    call SetCameraField(CAMERA_FIELD_ZOFFSET, .at.z-ControllerHeight[GetPlayerId(p)], 0)
++                else
++                    call SetCameraField(CAMERA_FIELD_ZOFFSET, .at.z-DeltaZ, 0)
++                endif
+             endif
+             if .change or ignoreChange then
+                 set .change = false
+@@ -193,7 +211,7 @@
+             call .axisZ.destroy()
+             call .view.destroy()
+             call .projection.destroy()
+-            call this.destroy()
++            call this.deallocate()
+         endmethod
+         
+     endstruct

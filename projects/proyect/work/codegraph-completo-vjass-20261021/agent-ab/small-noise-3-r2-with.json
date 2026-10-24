@@ -1,0 +1,35 @@
+{
+  "repo": "small-noise",
+  "flow": 3,
+  "names": [
+    "Noise.Noise.openSimplex2D",
+    "Noise.Noise.extrapolate2D"
+  ],
+  "repetition": 2,
+  "arm": "with",
+  "exit": 0,
+  "seconds": 29.722131569003977,
+  "usage": {
+    "input_tokens": 56316,
+    "cached_input_tokens": 45056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 943,
+    "reasoning_output_tokens": 306
+  },
+  "commands": 1,
+  "command_text": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\""
+  ],
+  "mcp": 1,
+  "mcp_tools": [
+    "codegraph_explore"
+  ],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a1621e-eb7d-75e1-a343-5d0320ed9136"
+  ]
+}

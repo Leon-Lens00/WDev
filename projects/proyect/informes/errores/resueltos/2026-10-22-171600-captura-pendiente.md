@@ -1,0 +1,3 @@
+# Lectura de captura antes de terminar su productor
+
+Fecha: 22/10/2026; Camera TerrainDev, agente principal. La lectura de calibrated-zone1-blue.png falló porque exec_command había devuelto sesión89847 todavía en ejecución; no era un fallo del juego. Se esperó la sesión con write_stdin: terminó0 y produjo la captura. view_image posterior correcto. Sin cambios en fuentes ni conclusiones por la lectura fallida. Estado: recuperación comprobada; esperar finalización antes de consumir archivos dependientes. Nombre de captura heredado de intención; la página era roja, la captura azul real es calibrated-blue.png.

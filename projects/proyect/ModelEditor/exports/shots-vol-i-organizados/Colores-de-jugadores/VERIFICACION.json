@@ -1,0 +1,12 @@
+{
+  "models": 36,
+  "poseComparisons": 11628,
+  "maxPoseError": 0.0000029802322387695312,
+  "maxCrossReaderPoseError": 2.086162567138672e-7,
+  "maxFlightFront": 0,
+  "birthContinuous": "PASS",
+  "impactAnchors": "PASS",
+  "colorFields": "PASS",
+  "preservation": "PASS",
+  "limits": "Numerical/file validation; visual game test separate."
+}

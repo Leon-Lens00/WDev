@@ -1,0 +1,8 @@
+The chain is **module inclusion → direct method call → four direct `floor` calls**.
+
+- `octavePerlin2D` originates in module `NoisePlugin.OctavePerlin`, whose library requires `Noise` ([OctavePerlin.j:10–11](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/OctavePerlin.j:10)). `Noise.Noise` incorporates it through `implement optional OctavePerlin` ([Noise.j:30](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:30)); this wiring depends on the module being available.
+- Starting with `i=0`, frequency and amplitude `1`, each iteration while `i < octaves` directly calls `perlin2D(x * frequency, y * frequency)`. Frequency doubles, amplitude multiplies by persistence, and `i` increments. `total` is **overwritten**, then divided by accumulated amplitude. For `octaves <= 0`, no call occurs ([OctavePerlin.j:29–43](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/OctavePerlin.j:29)).
+- `perlin2D` unconditionally calls `floor(x)` and `floor(y)` for masked lattice indices, then again for fractional coordinates ([Noise.j:74–84](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:74)).
+- `floor` uses `R2I(value)`, decrementing only when `value < 0` and `value - n != 0` ([Noise.j:32–37](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:32)).
+
+This establishes source wiring; compiled execution was not verified.

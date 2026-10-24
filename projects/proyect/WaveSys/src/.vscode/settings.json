@@ -1,0 +1,12 @@
+{
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "emeraldwalk.runonsave": {
+        "commands": [
+            {
+                "match": "^(?!.*[\\\\/](build|Pruebas|MissileExamples|logs)[\\\\/]).*\\.j$",
+                "isAsync": false,
+                "cmd": "powershell -NoProfile -ExecutionPolicy Bypass -File \"${workspaceFolder}/build/build-jass.ps1\""
+            }
+        ]
+    }
+}

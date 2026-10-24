@@ -1,0 +1,37 @@
+{
+  "repo": "small-noise",
+  "flow": 2,
+  "names": [
+    "Noise.Noise.perlin3D",
+    "Noise.Noise.grad3D",
+    "Noise.Noise.realTernaryOp"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 25.363710552002885,
+  "usage": {
+    "input_tokens": 67940,
+    "cached_input_tokens": 60032,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 771,
+    "reasoning_output_tokens": 119
+  },
+  "commands": 3,
+  "command_text": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\"",
+    "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.codegraph/**'\"' -g '\"'!**/.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' 'perlin3D|grad3D|realTernaryOp' .\"",
+    "/usr/bin/bash -lc \"nl -ba Noise.j | sed -n '1,155p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\"",
+    "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.codegraph/**'\"' -g '\"'!**/.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' 'perlin3D|grad3D|realTernaryOp' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16216-1377-7641-9339-dbbb1a9b2173"
+  ]
+}

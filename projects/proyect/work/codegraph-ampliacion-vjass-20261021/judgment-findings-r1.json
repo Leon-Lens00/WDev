@@ -1,0 +1,31 @@
+[
+  {
+    "ids": [
+      "JD-A-001",
+      "JD-B-002"
+    ],
+    "status": "confirmed",
+    "impact": "Incorrect target for unsupported S[index] operator",
+    "before": "Graph linked S.tick; compiler output calls Other.tick",
+    "fix": "Index receiver requires an existing binding explicitly declared array; struct operators remain unresolved"
+  },
+  {
+    "ids": [
+      "JD-A-002",
+      "JD-B-001"
+    ],
+    "status": "confirmed",
+    "impact": "Debug field treated as unconditional, dropping release fallback",
+    "before": "Extraction lost fallback; compiler release emits NO_DEBUG feature and S.fallback",
+    "fix": "Do not collect debug declarations as unconditional existence facts"
+  },
+  {
+    "ids": [
+      "JD-A-003"
+    ],
+    "status": "confirmed",
+    "impact": "Quadratic catalog reads in incremental JASS batch",
+    "before": "10 sync reads = 9 catalog + 1 hash reconciliation for 3 files",
+    "fix": "One catalog per batch; try/finally releases it. Regression observes 4 = 3 catalog + 1 reconcile"
+  }
+]

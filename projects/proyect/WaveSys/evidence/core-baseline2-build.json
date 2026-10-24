@@ -1,0 +1,24 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-core-baseline2.w3x",
+  "sha256": "41167dc5e4613aaf7038c697f97eb9b67993265d1c6078e36df1e4c4b3e91b0f",
+  "base": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+  "base_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "sources": [
+    "libraries/Table.j",
+    "libraries/TimerUtils.j",
+    "libraries/SwlsMath.j",
+    "WaveSysAnAI/SwlsWave/SwlsWave.j",
+    "WaveSysAnAI/SwlsWave/WavePointGroups.j"
+  ],
+  "boundary": "TheEnd.endF no-op; empty callbacks in every test",
+  "diagnostic_change": "None: exact core sources",
+  "purpose": "Core unit integration inside real Classic engine; no original map/assets/AI/endflow coverage",
+  "jass_sha256": "101399faad2012b531875406e0b169a6e4fb436699a3b22ffdf37177a97b7b3d",
+  "compiled": true,
+  "validated": true,
+  "reextracted": true,
+  "other_members_preserved": true,
+  "game_tested": true,
+  "result": "18 checks / 7 failures",
+  "multiplayer_tested": false
+}

@@ -1,0 +1,45 @@
+ M CHANGELOG.md
+ M README.md
+ M __tests__/dynamic-boundaries.test.ts
+ M __tests__/explore-synth-constant-endpoints.test.ts
+ M src/db/migrations.ts
+ M src/db/queries.ts
+ M src/db/schema.sql
+ M src/extraction/extraction-version.ts
+ M src/extraction/grammars.ts
+ M src/extraction/index.ts
+ M src/extraction/tree-sitter.ts
+ M src/mcp/server-instructions.ts
+ M src/mcp/tools.ts
+ M src/mcp/version.ts
+ M src/project-config.ts
+ M src/resolution/callback-synthesizer.ts
+ M src/resolution/index.ts
+ M src/resolution/name-matcher.ts
+ M src/sync/watcher.ts
+ M src/types.ts
+?? JASS-VJASS.md
+?? __tests__/fixtures/jass-conformance/
+?? __tests__/jass-conditions.test.ts
+?? __tests__/jass-expansion.test.ts
+?? __tests__/jass-expression.test.ts
+?? __tests__/jass-semantic-resolution.test.ts
+?? __tests__/jass-slk.test.ts
+?? __tests__/jass-value-bounds.test.ts
+?? __tests__/jass-vjass.test.ts
+?? __tests__/node-semantic-data.test.ts
+?? scripts/probe-jass.mjs
+?? src/extraction/jass-comments.ts
+?? src/extraction/jass-conditions.ts
+?? src/extraction/jass-constant.ts
+?? src/extraction/jass-expression.ts
+?? src/extraction/jass-extractor.ts
+?? src/extraction/jass-lexer.ts
+?? src/extraction/jass-preprocessor.ts
+?? src/extraction/jass-slk.ts
+?? src/jass-profile.ts
+?? src/resolution/jass-expression.ts
+?? src/resolution/jass-runtime-name.ts
+?? src/resolution/jass-synthesizer.ts
+?? src/resolution/jass-value-flow.ts
+?? src/resolution/jass.ts

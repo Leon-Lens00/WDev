@@ -1,0 +1,50 @@
+[
+  {
+    "seconds": 0.001,
+    "label": "Inicio: HUD normal"
+  },
+  {
+    "seconds": 2.167,
+    "label": "Abrir panel"
+  },
+  {
+    "seconds": 8.006,
+    "label": "Pausa a mitad de página: Stand"
+  },
+  {
+    "seconds": 22.031,
+    "label": "Reanudar escritura: Talk"
+  },
+  {
+    "seconds": 38.561,
+    "label": "Reposo automático tras completar la página"
+  },
+  {
+    "seconds": 58.565,
+    "label": "Interacción: siguiente página"
+  },
+  {
+    "seconds": 70.109,
+    "label": "Interacción: interlocutor azul"
+  },
+  {
+    "seconds": 76.263,
+    "label": "Movimiento con panel abierto"
+  },
+  {
+    "seconds": 90.891,
+    "label": "Detener unidad"
+  },
+  {
+    "seconds": 100.282,
+    "label": "Cerrar panel"
+  },
+  {
+    "seconds": 110.737,
+    "label": "Fin"
+  },
+  {
+    "seconds": 111.417,
+    "label": "Grabador cerrado"
+  }
+]

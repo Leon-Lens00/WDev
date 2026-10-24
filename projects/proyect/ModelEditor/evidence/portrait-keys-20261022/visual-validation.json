@@ -1,0 +1,42 @@
+{
+  "browser": "Brave / mdx-m3-viewer5.12.0",
+  "url": "http://127.0.0.1:8765/",
+  "windowEvidence": "preview-window.json",
+  "observed": [
+    "Paladin Portrait - 1 and Portrait Talk - 1, current vs0.02",
+    "Tauren Portrait Talk - 1 and - 2, current vs0.02",
+    "Tauren Portrait - 3 and Talk - 1, current vs0.1",
+    "Tauren Stand -1 selection preserved",
+    "Tauren Portrait - 2 paused at10667ms endpoint",
+    "Orbital drag changed view and grid axes; Frontal restored",
+    "Error/warn console query returned zero entries"
+  ],
+  "limits": [
+    "Representative clips visually checked, not every frame of every clip",
+    "No native game test of candidates",
+    "No measured runtime FPS or multiplayer"
+  ],
+  "video": {
+    "path": "PREVIEW.mp4",
+    "durationSeconds": 14,
+    "width": 1280,
+    "height": 720,
+    "captureRate": 30,
+    "source": "preview-raw.mp4",
+    "sourceSegmentsSeconds": [
+      [
+        4,
+        11
+      ],
+      [
+        57,
+        64
+      ]
+    ],
+    "fullDecode": "passed"
+  },
+  "archive": {
+    "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/retratos-finos-0.02.zip",
+    "sha256": "42e5b28088ad349be1ded8693d74fff63940f601eea75009789d740cf4443247"
+  }
+}

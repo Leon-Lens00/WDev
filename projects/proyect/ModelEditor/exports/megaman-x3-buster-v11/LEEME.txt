@@ -1,0 +1,15 @@
+X3 Buster A — V11 | Warcraft III Classic1.27b | MDX800
+
+Recubrimiento rosa: perfil longitudinal adaptado al óvalo azul, mayor radio en la zona media, franjas más anchas, filamentos y partículas reforzados. La capa aditiva conserva el núcleo blanco. Oleada cada240ms con recorrido210ms.
+Verde: cuatro rayos interiores angulares,3.44veces más anchos, desfasados0/30/60/90ms. Recorrido100ms, repetición120ms. Mezcla alfa conserva su color sobre el núcleo claro.
+Birth:300ms, destello breve y formación alargada desde la punta. Los emisores acompañan la formación.
+Death:1000ms, cuerpo se apaga en90ms sin encogerse; destello local que se expande y cuatro emisiones de estrellas/glóbulos/flashes/avance derivadas de ShotsVol.II. Las partículas se dispersan y desaparecen. Vuelo deja de emitir al comenzar Death.
+
+Importar A-Buster/X3_Buster_Cargado.mdx y15BLP de A-Buster/X3BusterV11. Rutas internas exactas X3BusterV11\Nombre.blp. MDL editable incluido. Punta/raíz=(0,0,0),frente+X,cola-X. El impacto puede expandirse alrededor del origen. No se incorpora física ni trayectoria mundial.
+IntervalosMDX: Birth0–300,Stand400–1360,Death1500–2500.3168triángulos,15PE2(11vuelo+4impacto),1ribbon,15texturas.
+V10 y releases anteriores conservadas; sóloBusterA. B/C no modificados.
+
+Previews: GIFs de capturas reales del visor, ralentizados; no usar como medición deFPS ni de ritmoSNES. Visor local http://127.0.0.1:34801/x3-v11/ mientras el servidor siga activo.
+Validación estructural y 3D completa. Birth, Stand, Death, movimiento de prueba y escalas 0.5/1/2.4 comprobados en Warcraft III 1.27b mediante YDWE, un jugador, pantalla 3. Consulte los límites de captura en VALIDACION.txt.
+
+Créditos: Vinz, ShotsVol.II (geometría,UV,capas y emisores adaptados), https://www.hiveworkshop.com/threads/shots-vol-ii.315512/ . Psionic Shots y Firebrand Shots estudiados para separar vuelo/estallido/disipación. Mega Man X3:Capcom; sprites Random Talking Bush/Spriters Resource; referencia animada Retropixel. Interpretación3D: los120/240ms son decisiones artísticas, no temporizaciónSNES comprobada.

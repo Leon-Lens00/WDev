@@ -1,0 +1,72 @@
+[
+  {
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-this-20261022/oracle-amccdazc",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "7d6a5756d11f80d6053317802bc893b269846ce1748c4bc4c2afb01faf362bf3",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null,
+    "case": "thistype"
+  },
+  {
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-this-20261022/oracle-2_7e2aaz",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "0c2f137b89af0fe97a7f88a2ec102764df125b99153421137396b0b723e27870",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null,
+    "case": "owner"
+  },
+  {
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-this-20261022/oracle-z8r9oh__",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "59320768a2da398386f7b2958b7b5fb03b2f3a05beb9d378a9b22086cbf296e7",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null,
+    "case": "integer"
+  },
+  {
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-this-20261022/oracle-3h98hul7",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "f17d2884b6ed8c11f5ec312375cd0f70e0342de927deaa77fa552fb3e9af189c",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\npjass.exe\nLine 45: [maa???]  Undeclared variable this\n1\n",
+    "case": "missing"
+  },
+  {
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-this-20261022/oracle-8cjra1go",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "84a7df6da33ba2e327e6e309e47448a7f2efd78410673fdfde66252c130ea8f6",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\npjass.exe\nLine 45: [maa???]  Cannot convert unit to integer in parameter this in call to s__Pair_cast\n1\n",
+    "case": "other"
+  }
+]

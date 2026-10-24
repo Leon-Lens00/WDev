@@ -1,0 +1,31 @@
+{
+  "previewEqualsBlpMip0": true,
+  "materials": 6,
+  "browser": "IAB / UI Studio 4317 / healthbars.html",
+  "consoleErrorsObserved": 0,
+  "screenshots": [
+    "preview-ui.png",
+    "preview-original-thin.png",
+    "preview-critical.png"
+  ],
+  "nativeTested": false,
+  "reviewedBeforeWidthAdjustment": [
+    "0 percent empty",
+    "20 percent critical",
+    "60 percent partial",
+    "100 percent full",
+    "portrait swap both roles",
+    "scale 70 and 150",
+    "grid and game reference backgrounds",
+    "reset defaults"
+  ],
+  "reviewed": [
+    "normal75/86% with16px fill and slim stem",
+    "critical20% with16px fill and slim stem",
+    "reset via accessibility control"
+  ],
+  "fillWidthPixels": 16,
+  "previousWidthPixels": 30,
+  "previousEvidence": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/revisions/fill-30-20261023-100244-337797",
+  "stemWidthPixels": 34
+}

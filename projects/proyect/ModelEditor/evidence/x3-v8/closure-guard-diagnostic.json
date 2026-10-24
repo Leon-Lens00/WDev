@@ -1,0 +1,57 @@
+{
+  "expected": {
+    "pid": 951847,
+    "start": "15786781",
+    "command": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\Test\\WorldEditTestMap.w3x -window -ydwe C:\\Tools\\YDWE                                                                                                                                                                                                                                     ",
+    "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v8-ydwe-runtime/pfx"
+  },
+  "exists": true,
+  "start": "15786781",
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v8-ydwe-runtime/pfx/",
+  "command": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\Test\\WorldEditTestMap.w3x -window -ydwe C:\\Tools\\YDWE                                                                                                                                                                                                                                     ",
+  "windows": [
+    {
+      "address": "0x558cbd4368b0",
+      "mapped": true,
+      "hidden": false,
+      "visible": true,
+      "acceptsInput": true,
+      "at": [
+        3840,
+        0
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "workspace": {
+        "id": 12,
+        "name": "12"
+      },
+      "floating": true,
+      "monitor": 1,
+      "class": "steam_app_0",
+      "title": "Warcraft III",
+      "initialClass": "steam_app_0",
+      "initialTitle": "Warcraft III",
+      "pid": 951847,
+      "xwayland": true,
+      "pinned": false,
+      "pinFullscreened": false,
+      "fullscreen": 2,
+      "fullscreenClient": 0,
+      "fullscreenHandler": "default",
+      "allowedOverFullscreen": true,
+      "grouped": [],
+      "tags": [],
+      "swallowing": "0x0",
+      "focusHistoryID": 0,
+      "inhibitingIdle": false,
+      "xdgTag": "",
+      "xdgDescription": "",
+      "contentType": "none",
+      "tearingHint": false,
+      "stableId": "180008de"
+    }
+  ]
+}

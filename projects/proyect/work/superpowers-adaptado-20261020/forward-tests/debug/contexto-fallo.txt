@@ -1,0 +1,79 @@
+2165:         function s__Hydra_evaluateTarget takes integer this,integer node returns boolean
+2166:             local real dist
+2167:             local real ndist
+2168:             local real bdist
+2169:             local unit u
+2170:             local unit new= null
+2171:             local unit best= null
+2172:             local unit old= s__Hydra__HydraHead_target[node]
+2173:             local real x
+2174:             local real y
+2175:             local real ox
+2176:             local real oy
+2177:             local integer temp
+2178:             
+2179:             // First check the previous target.
+2180:             // Evaluates stub method onTargetFilter
+2181:             if ( IsUnitInRange(old, s__Hydra__HydraHead_unit[node], s__Hydra_attackRange[this]) ) and ( sc__Hydra_onTargetFilter(this,old , s__Hydra_owner[this]) ) then
+2182:                 set old=null
+2183:                 return true
+2184:             else
+2185:                 set s__Hydra__HydraHead_target[node]=null // Clear the previous target.
+2186:                 call GroupClear(s__Hydra_grp)
+2187:                 
+2188:                 
+2189:                 // Units targeted by the other heads of this instance, have a lower priority.
+2190:                 set temp=s__Hydra__HydraHead__get_first(s__Hydra_list[this])
+2191:                 loop
+2192:                     exitwhen ( 0 == temp )
+2193:                     if ( s__Hydra__HydraHead_target[temp] != null ) then
+2194:                         call GroupAddUnit(s__Hydra_grp, s__Hydra__HydraHead_target[temp])
+2195:                     endif
+2196:                     set temp=s__Hydra__HydraHead__get_next(temp)
+2197:                 endloop
+2198:                 
+2199:                 set ox=s__Hydra__HydraHead_x[node]
+2200:                 set oy=s__Hydra__HydraHead_y[node]
+2201:                 call GroupEnumUnitsInRange(s__Hydra_enu, ox, oy, s__Hydra_attackRange[this] + Missile_MAXIMUM_COLLISION_SIZE, null)
+2202:         
+2203:                 // The old target probably has an high error quote,
+2204:                 // therefore it gets the lowest priority.
+2205:                 call GroupRemoveUnit(s__Hydra_enu, old)
+2206:                 loop
+2207:                     set u=FirstOfGroup(s__Hydra_enu)
+2208:                     exitwhen u == null
+2209:                     call GroupRemoveUnit(s__Hydra_enu, u)
+2210:                     
+2211:                     if IsUnitInRange(u, s__Hydra__HydraHead_unit[node], s__Hydra_attackRange[this]) and sc__Hydra_onTargetFilter(this,u , s__Hydra_owner[this]) then
+2212:                         set x=GetUnitX(u)
+2213:                         set y=GetUnitY(u)
+2214:                         set dist=( ( x - ox ) * ( x - ox ) + ( y - oy ) * ( y - oy ) ) //screw squareroot
+2215:                         if ( new == null ) or ( dist < ndist ) then
+2216:                             set ndist=dist
+2217:                             set new=u
+2218:                         endif
+2219:                         
+2220:                         if not ( IsUnitInGroup(u, s__Hydra_grp) ) then
+2221:                             if ( best == null ) or ( dist < bdist ) then
+2222:                                 set best=u
+2223:                                 set bdist=dist
+2224:                             endif
+2225:                         endif
+2226:                     endif
+2227:                 endloop
+2228:                 
+2229:                 if ( best != null ) then
+2230:                     set s__Hydra__HydraHead_target[node]=best
+2231:                     set best=null
+2232:                     
+2233:                 elseif ( new != null ) then
+2234:                     set s__Hydra__HydraHead_target[node]=new
+2235:                     
+2236:                 elseif ( sc__Hydra_onTargetFilter(this,old , s__Hydra_owner[this]) and IsUnitInRange(old, s__Hydra__HydraHead_unit[node], s__Hydra_attackRange[this]) ) then
+2237:                     set s__Hydra__HydraHead_target[node]=old
+2238:                 endif
+2239:                 set new=null
+2240:                 set old=null
+2241:             endif
+2242: 
+2243:             return ( s__Hydra__HydraHead_target[node] != null )

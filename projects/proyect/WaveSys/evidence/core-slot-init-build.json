@@ -1,0 +1,24 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-core-slot-init.w3x",
+  "sha256": "7293f500197eae46c0d3c4e4cc344dc98af8199904e9ec2e558d7bfae1f70c66",
+  "base": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+  "base_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "sources": [
+    "libraries/Table.j",
+    "libraries/TimerUtils.j",
+    "libraries/SwlsMath.j",
+    "WaveSysAnAI/SwlsWave/SwlsWave.j",
+    "WaveSysAnAI/SwlsWave/WavePointGroups.j"
+  ],
+  "boundary": "TheEnd.endF no-op; empty callbacks in every test",
+  "diagnostic_change": "OnUnitDeath local slot initialized to zero",
+  "purpose": "Core unit integration inside real Classic engine; no original map/assets/AI/endflow coverage",
+  "jass_sha256": "e3366c43d2480bea3eac44e1fd79bb5cade6a4c02f5b71ad9809c698258e1f9b",
+  "compiled": true,
+  "validated": true,
+  "reextracted": true,
+  "other_members_preserved": true,
+  "game_tested": true,
+  "result": "18 checks / 5 failures",
+  "multiplayer_tested": false
+}

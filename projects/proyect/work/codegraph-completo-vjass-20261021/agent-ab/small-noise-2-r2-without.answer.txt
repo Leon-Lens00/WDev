@@ -1,0 +1,7 @@
+`codegraph_explore` is unavailable; source inspection shows this direct call chain:
+
+- **`Noise.Noise.perlin3D → grad3D`:** `perlin3D` computes masked lattice coordinates and fractional offsets, then permutation indices `AA`, `AB`, `BA`, `BB`. It directly calls `grad3D` eight times inside arguments to four `lerp` calls: those four indices at `z`, and their `+1` variants at `z−1`, with corresponding `x−1`/`y−1` offsets. **`lerp` is not an intervening caller.** Results are interpolated along x, y, then z. [Noise.j:101–134](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:101)
+
+- **`grad3D → realTernaryOp`:** Set `h = hash & 15`. Select `u = x` when `h<8`, otherwise `y`. Select `v = y` when `h<4`; otherwise use a **nested `realTernaryOp`** selecting `x` when `h==12 or h==14`, otherwise `z`. Two further calls select the signs of `u` and `v` using bits 1 and 2, then sum them. [Noise.j:94–98](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:94)
+
+- **Helper behavior:** `realTernaryOp(cond,a,b)` returns `a` if true, otherwise `b`. [Noise.j:40–46](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:40)

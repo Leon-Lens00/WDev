@@ -1,0 +1,14 @@
+X3 Buster A — V8 | Warcraft III Classic 1.27b | MDX800
+
+V7 completa + oleada rosa más brillante sobre la misma envoltura aprobada.
+El brillo nace en la punta, recorre los costados hacia la cola y se desvanece. Ciclo 480 ms; recorrido UV 400 ms, con aparición/desvanecimiento suaves y descanso entre barridos. Dos oleadas por Stand de 960 ms. La capa extra se oculta en Birth y Death.
+El cuerpo azul, núcleo blanco, cola, punta, envoltura continua, 11 emisores y ribbon permanecen idénticos a V7. La verificación reconstruye exactamente el MDX V7 al retirar sólo la capa añadida.
+
+Importar A-Buster/X3_Buster_Cargado.mdx y las 14 texturas de A-Buster/X3BusterV8. Respetar las rutas internas X3BusterV8\Nombre.blp. Incluye MDL editable.
+Frente +X; raíz y punta geométrica (0,0,0). Birth 0–160 ms, Stand 200–1160 ms, Death 1300–1720 ms. Física y colisiones externas.
+
+OLEADA-3D.gif: 24 capturas del MDX real, pasos 40 ms, reproducción a 0.5x. FASES-3D.png muestra el recorrido. COMPARACION-3D.png: V7 izquierda / V8 derecha. V7 permanece conservada en su propia carpeta y ZIP.
+3054 triángulos, 11 PE2, 1 ribbon, 14 texturas. Coste adicional frente a V7: 576 triángulos, 1 geoset/material y 1 textura; sin nuevos emisores. No es una medición de rendimiento.
+
+Créditos: Vinz, Shots Vol. II https://www.hiveworkshop.com/threads/shots-vol-ii.315512/ . Geometría, UV, apilado luminoso y emisores adaptados; conservar atribución. Referencia Mega Man X3: Capcom; sprites Random Talking Bush / Spriters Resource y animación Retropixel. La oleada V8 es una interpretación 3D; el periodo no acredita el tiempo exacto del juego original.
+Sólo Buster A. B y C siguen en su entrega V4.

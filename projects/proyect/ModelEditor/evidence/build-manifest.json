@@ -1,0 +1,613 @@
+{
+  "target": "Warcraft III Classic 1.27b, MDX800",
+  "originalsVerified": 13,
+  "source": "https://www.hiveworkshop.com/threads/shots-vol-i.315258/",
+  "entries": [
+    {
+      "pack": "anchor",
+      "source": "Shot Blue.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.16658516228199005,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -5.998585179448128,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            5.665414854884148,
+            5.831999778747559
+          ],
+          "boundsRadius": 61.91273698560816
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Blue.mdx",
+      "sha256": "f5bb9b4c9551085710ca84391fff227c33caaa1afc5cbf98560e44755d5d53b6",
+      "bytes": 5932
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Blue Double.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.12942500412464142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          9
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -20.961425736546516,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            20.702575728297234,
+            5.831999778747559
+          ],
+          "boundsRadius": 65.08905703574722
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Blue Double.mdx",
+      "sha256": "7a469a6b4df603f245d5dc57ee101923dbb046121a74dc4386e8818ed7424ce8",
+      "bytes": 7343
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Green.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.16658516228199005,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -5.998585179448128,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            5.665414854884148,
+            5.831999778747559
+          ],
+          "boundsRadius": 61.91273698560816
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Green.mdx",
+      "sha256": "231a348a4d41c36a289b2ea7907ad10f20f1ac865086d82501aac2ee86bec922",
+      "bytes": 5904
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Green Double.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.12942500412464142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          9
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -20.961425736546516,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            20.702575728297234,
+            5.831999778747559
+          ],
+          "boundsRadius": 65.08905703574722
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Green Double.mdx",
+      "sha256": "00bbc88c311911a9bf7cce30f6ee112ac696ebbb5216cbb6ee2b22c694471743",
+      "bytes": 7315
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Orange.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.16658516228199005,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -5.998585179448128,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            5.665414854884148,
+            5.831999778747559
+          ],
+          "boundsRadius": 61.91273698560816
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Orange.mdx",
+      "sha256": "67c17a43895ced558cffb7ceb66426270ab2dece1f33ce65f691ba8754bb5d8e",
+      "bytes": 6172
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Orange Double.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.12942500412464142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          9
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -20.961425736546516,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            20.702575728297234,
+            5.831999778747559
+          ],
+          "boundsRadius": 65.08905703574722
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Orange Double.mdx",
+      "sha256": "cf182b276c017278d44abc79ed8cd877c1a989dbd1cdc1aa6cb9e74816c7a014",
+      "bytes": 7587
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Purple.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.16658516228199005,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -5.998585179448128,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            5.665414854884148,
+            5.831999778747559
+          ],
+          "boundsRadius": 61.91273698560816
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Purple.mdx",
+      "sha256": "09b31b138d32055f85da9e3fcd9e2b5f6837b89faada48e1c1583fc0576a6528",
+      "bytes": 6736
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Purple Double.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.12942500412464142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          9
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -20.961425736546516,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            20.702575728297234,
+            5.831999778747559
+          ],
+          "boundsRadius": 65.08905703574722
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Purple Double.mdx",
+      "sha256": "9391064978d83cdc22f10f9216463009016e7fe0dcd1053e7a20b978d8c7dfbc",
+      "bytes": 7347
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Red.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.16658516228199005,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -5.998585179448128,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            5.665414854884148,
+            5.831999778747559
+          ],
+          "boundsRadius": 61.91273698560816
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Red.mdx",
+      "sha256": "de43841137eae2751455403b2585df5be173859c34c52b9157b0e2072d50f9ca",
+      "bytes": 6524
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Red Double.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.12942500412464142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          9
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -20.961425736546516,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            20.702575728297234,
+            5.831999778747559
+          ],
+          "boundsRadius": 65.08905703574722
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Red Double.mdx",
+      "sha256": "bf6c51752ff00d1f8bb18968a18bcc4b10f58e7f48fad6fb0a51af206f210067",
+      "bytes": 7399
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Yellow.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.16658516228199005,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -5.998585179448128,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            5.665414854884148,
+            5.831999778747559
+          ],
+          "boundsRadius": 61.91273698560816
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Yellow.mdx",
+      "sha256": "a380e45052b36a1d4eb3d4836b9cd48b459059cc69b2f6c1ed5260db99a86a06",
+      "bytes": 6440
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot Yellow Double.mdx",
+      "transform": {
+        "delta": [
+          -48.423840403556824,
+          0.12942500412464142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          9
+        ],
+        "standBefore": {
+          "min": [
+            -61.34485924243927,
+            -20.961425736546516,
+            -5.831999778747559
+          ],
+          "max": [
+            48.423840403556824,
+            20.702575728297234,
+            5.831999778747559
+          ],
+          "boundsRadius": 65.08905703574722
+        }
+      },
+      "path": "exports/shots-vol-i-anclaje/Shot Yellow Double.mdx",
+      "sha256": "c0df95af0f502c34584007e6e86a3f4c7dc11e6bec12f724cb92b8b74e1905ca",
+      "bytes": 7851
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 0,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_00_Red.mdx",
+      "sha256": "0c53a4291196491724b256563337d19e1a5d3cb827ee4dcda920947944ea1f83",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 1,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_01_Blue.mdx",
+      "sha256": "dc72c421431b2acb110d7aa328ff4c6345788619ac4e132468e77bb222ff9d3b",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 2,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_02_Cyan.mdx",
+      "sha256": "a7d741b14c7b6d3da08a0244e1eb55442198224b9c978d1c73efc092e1f150cc",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 3,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_03_Purple.mdx",
+      "sha256": "5662484a0129f6ba5c6e3c7bbde1c7b7db480134a1f667e8423736d18b650137",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 4,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_04_Yellow.mdx",
+      "sha256": "f753f451a61d0a62f8cfd3416166ad1a6967b5d3cab7945ecb387c24533b1430",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 5,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_05_Orange.mdx",
+      "sha256": "88ad4ff1aba8d658af36242048ade7f14f02dfeac268369bec8878edc20efa04",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 6,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_06_Green.mdx",
+      "sha256": "6a0fd388d1d33bca8acb3b40771c0e88b0f6254a7012d7248c6fff9ca511aa81",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 7,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_07_Pink.mdx",
+      "sha256": "beeb0f763b5021b0a0dada62c53d1a7baaa62bf467d47049f0dab70790b297b3",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 8,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_08_LightGray.mdx",
+      "sha256": "d150e4f4714d28751df4864de22eaa322c522b42bed0417c198797d4acb6a46d",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 9,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_09_LightBlue.mdx",
+      "sha256": "7c1cad3561e069b7787c4f0666e847ec6ad31e2a346e9c731423ec09954edd4a",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 10,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_10_Aqua.mdx",
+      "sha256": "50009ee5b265935eb23f4e0a477a4252b9dab054a382484af13fbbabc38cc7f4",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue.mdx",
+      "color": 11,
+      "double": false,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_11_Brown.mdx",
+      "sha256": "1385ae892f0a1fcae79d456772a38b3355405d91c27c79e85f1d685f53b39e4a",
+      "bytes": 5932
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 0,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_00_Red_Double.mdx",
+      "sha256": "18f26a8999dbcb59841d8ba6f7b65d903a486ac25edaa75a693c6ae305d9848f",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 1,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_01_Blue_Double.mdx",
+      "sha256": "8fd13555284f30c091b4f49fd0d25924fceaae14558006629bb6da39a5ec186d",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 2,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_02_Cyan_Double.mdx",
+      "sha256": "f1cced5d016194892241e8d5967ef1ed2d2e2c5d28490f68d32045c2958dffc5",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 3,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_03_Purple_Double.mdx",
+      "sha256": "63e2de93a3f1911e74fa3be2dba7e01e453b5b1a2d1db9f71db6beadf933027d",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 4,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_04_Yellow_Double.mdx",
+      "sha256": "9815777ff04cbcb8631b52a863e48762e3f951e9c3df76afb7b589ba38fee3c9",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 5,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_05_Orange_Double.mdx",
+      "sha256": "01aef058865ab94c3b0993ee53071eb22d74b76b659e9a0e6d2ba76b3da194fb",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 6,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_06_Green_Double.mdx",
+      "sha256": "fe48f092880228ac8c31b6fc6ba91d27d4cc26764f4392c5fc2584195d93dfbb",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 7,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_07_Pink_Double.mdx",
+      "sha256": "2b8be387a56df18c9384cec325210aac74e06be3689407ba3e55c2fdea702492",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 8,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_08_LightGray_Double.mdx",
+      "sha256": "9bb4c4a6ad44e15cb1c23eed7534b264fd48af2e606ce4e1dfdee291f8aa468e",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 9,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_09_LightBlue_Double.mdx",
+      "sha256": "ee73ee3aa45ab8170acbc067580787b0cf423b85aef21f9a17a7226ddf486d4c",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 10,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_10_Aqua_Double.mdx",
+      "sha256": "3c3bb28583ca7c88082b886a01285837ea121191e35dcdf8d513e2d902c82a3d",
+      "bytes": 7343
+    },
+    {
+      "pack": "players",
+      "source": "Shot Blue Double.mdx",
+      "color": 11,
+      "double": true,
+      "path": "exports/shots-vol-i-jugadores/ShotsTeam/Shot_11_Brown_Double.mdx",
+      "sha256": "e72b59c5ad6cedf8e0f2da8846bd0b00ab591c9343c83d7454df07bbe783c54d",
+      "bytes": 7343
+    }
+  ]
+}

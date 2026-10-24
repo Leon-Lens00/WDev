@@ -1,0 +1,92 @@
+{
+  "status": "Tested in map",
+  "modelSHA256": "a8c3dc9992b743fb17a52765a6e943370879926a55326a2f94d00182b9f1b390",
+  "map": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v12-20261023-101319/X3BusterV12.w3x",
+    "sha256": "b02748ae6faff9004af818a49600bb0f9ffc90dbc660b754513ec05b2bcd4cc4",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 35,
+    "models": 2,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "launch": "YDWE single_test, EnableHost0 in private profile, single player",
+  "identity": {
+    "pid": 1014357,
+    "start": "16609425",
+    "command": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\Test\\WorldEditTestMap.w3x -window -ydwe C:\\Tools\\YDWE                                                                                                                                                                                                                                     ",
+    "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v12-ydwe-runtime/pfx"
+  },
+  "screen": "DP-1, screen3,1920x1080",
+  "cases": [
+    {
+      "case": "final-stand-scale1",
+      "captures": 25,
+      "duration": 5.5794999150093645,
+      "observed": "Reviewed native snapshots and sequence behavior"
+    },
+    {
+      "case": "final-scale05",
+      "captures": 25,
+      "duration": 5.292513413995039,
+      "observed": "Reviewed native snapshots and sequence behavior"
+    },
+    {
+      "case": "final-scale24",
+      "captures": 25,
+      "duration": 5.39417919999687,
+      "observed": "Reviewed native snapshots and sequence behavior"
+    },
+    {
+      "case": "final-birth-normal",
+      "captures": 25,
+      "duration": 5.61508702498395,
+      "observed": "Reviewed native snapshots and sequence behavior"
+    },
+    {
+      "case": "final-impact-normal",
+      "captures": 25,
+      "duration": 5.267621994018555,
+      "observed": "Reviewed native snapshots and sequence behavior"
+    },
+    {
+      "case": "final-birth-slow",
+      "captures": 25,
+      "duration": 5.318240908003645,
+      "observed": "Reviewed native snapshots and sequence behavior"
+    },
+    {
+      "case": "final-impact-slow",
+      "captures": 25,
+      "duration": 5.322786754986737,
+      "observed": "Reviewed native snapshots and sequence behavior"
+    },
+    {
+      "case": "final-moving-scale1",
+      "captures": 25,
+      "duration": 5.257072353997501,
+      "observed": "Reviewed native snapshots and sequence behavior"
+    }
+  ],
+  "observations": [
+    "Curved open pink wake replaces rear diamond",
+    "Additive green lightning visible at game angle; soft halo, finer center",
+    "At scale0.5 the flash reads but fine angular detail is reduced",
+    "Birth stays joined; Death flash and particles expand and dissipate",
+    "Blue core and tip anchoring preserved"
+  ],
+  "limits": [
+    "No FPS or multiplayer test",
+    "Native snapshots about220ms apart do not resolve120ms/240ms cycles; curves and 3D step captures cover timings",
+    "SetUnitTimeScale0.25 slows animation; not proof all particle clocks slow equally",
+    "Demo movement belongs to fixture only; no gameplay physics modified"
+  ],
+  "closed": {
+    "pid": 1014357,
+    "start": "16609425",
+    "processAbsent": true,
+    "windowAbsent": true,
+    "exitCode": 0,
+    "method": "Win+Q, inspected confirmation, S"
+  }
+}

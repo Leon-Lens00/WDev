@@ -1,0 +1,11 @@
+import {writeFile,mkdir} from 'node:fs/promises';
+import {preset,exportJass,integrationNotes} from './dist/core.js';
+await mkdir('test-results',{recursive:true});
+const p=preset();
+await writeFile('test-results/UIStudioLayout.j',exportJass(p));
+await writeFile('test-results/interfaz.wc3ui.json',JSON.stringify(p,null,2));
+await writeFile('test-results/Integracion.txt',integrationNotes(p));
+const source='../../analysis/inventorysys-1.4.1/source';
+const names=['25_UserInterface.j','27_UnitDex.j','28_PlayerUtils.j','29_Camera.j','30_UIMath.j','32_TimerUtils.j'];
+await writeFile('test-results/Main.j',names.map(n=>'//! import "'+source+'/'+n+'"').join('\n')+'\n//! import "UIStudioLayout.j"\nfunction main takes nothing returns nothing\nendfunction\nfunction config takes nothing returns nothing\nendfunction\n');
+console.log('Export generated for compiler verification.');

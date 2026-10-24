@@ -1,0 +1,107 @@
+{
+  "timestamp": "2026-10-21T20:11:31.507683+00:00",
+  "judgment": "JUDGMENT: APPROVED",
+  "approval_scope": "Frozen local CodeGraph JASS/vJASS adaptation and corroborated corrections; not full language/upstream performance acceptance or already-running MCP processes",
+  "code_tree_sha256": "d948b166d87d3c80d21f7edca1e41bdd19cf6828848364ee197b1dc6318bcf6d",
+  "evidence_tree_sha256": "30b37c59a0d965673e70c534160dacabe589846abce43e2187bdbc1361cff9d7",
+  "snapshots_verified": [
+    {
+      "verified": true,
+      "tree_sha256": "d948b166d87d3c80d21f7edca1e41bdd19cf6828848364ee197b1dc6318bcf6d",
+      "files": 28,
+      "source_matches": true,
+      "source_root": "/home/snz/Documentos/MCP W3/codegraph-vjass"
+    },
+    {
+      "verified": true,
+      "tree_sha256": "30b37c59a0d965673e70c534160dacabe589846abce43e2187bdbc1361cff9d7",
+      "files": 17,
+      "source_matches": true,
+      "source_root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021"
+    }
+  ],
+  "correction_rounds_used": 1,
+  "maximum_rounds": 2,
+  "distinct_causes": 5,
+  "finding_ids_closed": [
+    "JD-A-001",
+    "JD-A-002",
+    "JD-A-003",
+    "JD-B-001",
+    "JD-B-002",
+    "JD-B-003"
+  ],
+  "judges_finished": true,
+  "open_material_findings": [],
+  "checks": {
+    "suites": 9,
+    "tests_passed": 1054,
+    "tests_skipped": 0,
+    "full_build_passed": true,
+    "real_flow_probes": 3,
+    "python_control_equal_to_upstream": true,
+    "mcp_server_version": "1.6.2+jass-vjass.2",
+    "automatic_updates_passed": 9,
+    "source_map_hashes_unchanged": 71,
+    "source_map_files_changed": [],
+    "evaluate_compiler_probe_passed": true
+  },
+  "active_indexes": [
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "files": 16,
+      "nodes": 850,
+      "edges": 1141,
+      "index": {
+        "builtWithVersion": "1.6.2+jass-vjass.2",
+        "builtWithExtractionVersion": 29,
+        "currentExtractionVersion": 29,
+        "reindexRecommended": false,
+        "state": "complete",
+        "pendingRefs": 0
+      },
+      "sqlite_integrity": "ok",
+      "probe_files_remaining": 0
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "files": 56,
+      "nodes": 2576,
+      "edges": 3737,
+      "index": {
+        "builtWithVersion": "1.6.2+jass-vjass.2",
+        "builtWithExtractionVersion": 29,
+        "currentExtractionVersion": 29,
+        "reindexRecommended": false,
+        "state": "complete",
+        "pendingRefs": 0
+      },
+      "sqlite_integrity": "ok",
+      "probe_files_remaining": 0
+    },
+    {
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "files": 4,
+      "nodes": 126,
+      "edges": 734,
+      "index": {
+        "builtWithVersion": "1.6.2+jass-vjass.2",
+        "builtWithExtractionVersion": 29,
+        "currentExtractionVersion": 29,
+        "reindexRecommended": false,
+        "state": "complete",
+        "pendingRefs": 0
+      },
+      "sqlite_integrity": "ok",
+      "probe_files_remaining": 0
+    }
+  ],
+  "limits": [
+    "Partial JASS/vJASS; no general macro/import/module expansion or dynamic dispatch",
+    "No upstream real-repository small/medium/large agent A/B performance gate executed",
+    "No new game or multiplayer execution",
+    "Both judges performed static review; execution evidence is from parent",
+    "Existing MCP servers need reload to execute the new in-memory code; fresh MCP verified"
+  ],
+  "other_chats_messaged": false
+}

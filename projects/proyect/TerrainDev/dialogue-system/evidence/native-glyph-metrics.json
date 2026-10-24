@@ -1,0 +1,895 @@
+{
+  "nativeHeight": 0.027,
+  "client": [
+    1920,
+    1080
+  ],
+  "repeatCount": 8,
+  "gameIdentity": {
+    "pid": 589024,
+    "prefix": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/runtime-isolated/pfx",
+    "stat": "589024 (war3.exe) S 589023 588990 588990 0 -1 4194304 219471 212 26 0 630 315 0 0 19 -1 76 0 9791548 2413989888 130473 18446744073709551615 2101346304 2101353425 4294356768 0 0 0 0 4096 1790 0 0 0 17 2 0 0 0 0 0 2101362676 2101362768 2122801152 4294364066 4294364372 4294364372 4294373249 0\n",
+    "window": {
+      "address": "0x55bb0750f570",
+      "mapped": true,
+      "hidden": false,
+      "visible": true,
+      "acceptsInput": true,
+      "at": [
+        1920,
+        0
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "workspace": {
+        "id": 3,
+        "name": "3"
+      },
+      "floating": true,
+      "monitor": 2,
+      "class": "steam_app_0",
+      "title": "Warcraft III",
+      "initialClass": "steam_app_0",
+      "initialTitle": "Warcraft III",
+      "pid": 589024,
+      "xwayland": true,
+      "pinned": false,
+      "pinFullscreened": false,
+      "fullscreen": 2,
+      "fullscreenClient": 0,
+      "fullscreenHandler": "default",
+      "allowedOverFullscreen": true,
+      "grouped": [],
+      "tags": [],
+      "swallowing": "0x0",
+      "focusHistoryID": 0,
+      "inhibitingIdle": false,
+      "xdgTag": "",
+      "xdgDescription": "",
+      "contentType": "none",
+      "tearingHint": false,
+      "stableId": "18001409"
+    }
+  },
+  "measurements": [
+    {
+      "glyph": " ",
+      "wStartDistance": 86,
+      "groups": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        [
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113
+        ]
+      ],
+      "advance": 7.0
+    },
+    {
+      "glyph": "!",
+      "advance": 5,
+      "periodScore": 0.99369,
+      "inkWidth": 38,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "\"",
+      "advance": 9,
+      "periodScore": 1.0,
+      "inkWidth": 71,
+      "inkHeight": 7
+    },
+    {
+      "glyph": "#",
+      "advance": 19,
+      "periodScore": 0.99694,
+      "inkWidth": 152,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "$",
+      "advance": 15,
+      "periodScore": 1.0,
+      "inkWidth": 119,
+      "inkHeight": 25
+    },
+    {
+      "glyph": "%",
+      "advance": 20,
+      "periodScore": 0.97808,
+      "inkWidth": 159,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "&",
+      "advance": 24,
+      "periodScore": 0.96929,
+      "inkWidth": 191,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "'",
+      "advance": 4,
+      "periodScore": 0.99167,
+      "inkWidth": 31,
+      "inkHeight": 8
+    },
+    {
+      "glyph": "(",
+      "advance": 8,
+      "periodScore": 1.0,
+      "inkWidth": 62,
+      "inkHeight": 24
+    },
+    {
+      "glyph": ")",
+      "advance": 7,
+      "periodScore": 1.0,
+      "inkWidth": 55,
+      "inkHeight": 24
+    },
+    {
+      "glyph": "*",
+      "advance": 11,
+      "periodScore": 0.97348,
+      "inkWidth": 87,
+      "inkHeight": 9
+    },
+    {
+      "glyph": "+",
+      "advance": 15,
+      "periodScore": 1.0,
+      "inkWidth": 119,
+      "inkHeight": 14
+    },
+    {
+      "glyph": ",",
+      "advance": 5,
+      "periodScore": 1.0,
+      "inkWidth": 39,
+      "inkHeight": 6
+    },
+    {
+      "glyph": "-",
+      "advance": 10,
+      "periodScore": 0.74419,
+      "inkWidth": 79,
+      "inkHeight": 2
+    },
+    {
+      "glyph": ".",
+      "advance": 5,
+      "periodScore": 0.96386,
+      "inkWidth": 39,
+      "inkHeight": 4
+    },
+    {
+      "glyph": "/",
+      "advance": 13,
+      "periodScore": 0.98701,
+      "inkWidth": 103,
+      "inkHeight": 23
+    },
+    {
+      "glyph": "0",
+      "advance": 17,
+      "periodScore": 1.0,
+      "inkWidth": 136,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "1",
+      "advance": 5,
+      "periodScore": 0.99314,
+      "inkWidth": 41,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "2",
+      "advance": 17,
+      "periodScore": 0.96348,
+      "inkWidth": 135,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "3",
+      "advance": 15,
+      "periodScore": 0.99743,
+      "inkWidth": 119,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "4",
+      "advance": 18,
+      "periodScore": 1.0,
+      "inkWidth": 144,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "5",
+      "advance": 15,
+      "periodScore": 1.0,
+      "inkWidth": 120,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "6",
+      "advance": 16,
+      "periodScore": 0.94802,
+      "inkWidth": 128,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "7",
+      "advance": 15,
+      "periodScore": 0.99024,
+      "inkWidth": 119,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "8",
+      "advance": 17,
+      "periodScore": 0.97866,
+      "inkWidth": 136,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "9",
+      "advance": 17,
+      "periodScore": 0.9761,
+      "inkWidth": 136,
+      "inkHeight": 21
+    },
+    {
+      "glyph": ":",
+      "advance": 5,
+      "periodScore": 0.98204,
+      "inkWidth": 39,
+      "inkHeight": 14
+    },
+    {
+      "glyph": ";",
+      "advance": 5,
+      "periodScore": 1.0,
+      "inkWidth": 39,
+      "inkHeight": 16
+    },
+    {
+      "glyph": "<",
+      "advance": 14,
+      "periodScore": 1.0,
+      "inkWidth": 111,
+      "inkHeight": 14
+    },
+    {
+      "glyph": "=",
+      "advance": 15,
+      "periodScore": 0.94167,
+      "inkWidth": 119,
+      "inkHeight": 6
+    },
+    {
+      "glyph": ">",
+      "advance": 14,
+      "periodScore": 0.96145,
+      "inkWidth": 111,
+      "inkHeight": 14
+    },
+    {
+      "glyph": "?",
+      "advance": 13,
+      "periodScore": 0.98901,
+      "inkWidth": 103,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "@",
+      "advance": 21,
+      "periodScore": 1.0,
+      "inkWidth": 167,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "A",
+      "advance": 23,
+      "periodScore": 0.99741,
+      "inkWidth": 182,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "B",
+      "advance": 16,
+      "periodScore": 0.97623,
+      "inkWidth": 128,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "C",
+      "advance": 19,
+      "periodScore": 0.99249,
+      "inkWidth": 151,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "D",
+      "advance": 20,
+      "periodScore": 0.99433,
+      "inkWidth": 159,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "E",
+      "advance": 15,
+      "periodScore": 1.0,
+      "inkWidth": 119,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "F",
+      "advance": 13,
+      "periodScore": 1.0,
+      "inkWidth": 102,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "G",
+      "advance": 21,
+      "periodScore": 0.99774,
+      "inkWidth": 167,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "H",
+      "advance": 21,
+      "periodScore": 1.0,
+      "inkWidth": 166,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "I",
+      "advance": 7,
+      "periodScore": 1.0,
+      "inkWidth": 53,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "J",
+      "advance": 9,
+      "periodScore": 0.98574,
+      "inkWidth": 70,
+      "inkHeight": 26
+    },
+    {
+      "glyph": "K",
+      "advance": 19,
+      "periodScore": 0.99678,
+      "inkWidth": 151,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "L",
+      "advance": 15,
+      "periodScore": 1.0,
+      "inkWidth": 118,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "M",
+      "advance": 29,
+      "periodScore": 0.99618,
+      "inkWidth": 230,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "N",
+      "advance": 21,
+      "periodScore": 0.93451,
+      "inkWidth": 167,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "O",
+      "advance": 24,
+      "periodScore": 0.97225,
+      "inkWidth": 191,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "P",
+      "advance": 15,
+      "periodScore": 0.99591,
+      "inkWidth": 119,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "Q",
+      "advance": 25,
+      "periodScore": 0.98015,
+      "inkWidth": 201,
+      "inkHeight": 26
+    },
+    {
+      "glyph": "R",
+      "advance": 19,
+      "periodScore": 1.0,
+      "inkWidth": 150,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "S",
+      "advance": 15,
+      "periodScore": 0.99489,
+      "inkWidth": 120,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "T",
+      "advance": 16,
+      "periodScore": 1.0,
+      "inkWidth": 128,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "U",
+      "advance": 20,
+      "periodScore": 0.99109,
+      "inkWidth": 157,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "V",
+      "advance": 19,
+      "periodScore": 0.97475,
+      "inkWidth": 151,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "W",
+      "advance": 30,
+      "periodScore": 0.98014,
+      "inkWidth": 238,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "X",
+      "advance": 21,
+      "periodScore": 0.99511,
+      "inkWidth": 167,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "Y",
+      "advance": 19,
+      "periodScore": 0.99829,
+      "inkWidth": 150,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "Z",
+      "advance": 19,
+      "periodScore": 0.94389,
+      "inkWidth": 152,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "[",
+      "advance": 8,
+      "periodScore": 0.99652,
+      "inkWidth": 63,
+      "inkHeight": 24
+    },
+    {
+      "glyph": "\\",
+      "advance": 11,
+      "periodScore": 0.94242,
+      "inkWidth": 89,
+      "inkHeight": 24
+    },
+    {
+      "glyph": "]",
+      "advance": 7,
+      "periodScore": 0.99765,
+      "inkWidth": 55,
+      "inkHeight": 24
+    },
+    {
+      "glyph": "^",
+      "advance": 15,
+      "periodScore": 0.99412,
+      "inkWidth": 119,
+      "inkHeight": 9
+    },
+    {
+      "glyph": "_",
+      "advance": 11,
+      "periodScore": 0.7972,
+      "inkWidth": 120,
+      "inkHeight": 2
+    },
+    {
+      "glyph": "`",
+      "advance": 8,
+      "periodScore": 1.0,
+      "inkWidth": 60,
+      "inkHeight": 3
+    },
+    {
+      "glyph": "a",
+      "advance": 15,
+      "periodScore": 0.98203,
+      "inkWidth": 120,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "b",
+      "advance": 15,
+      "periodScore": 0.95669,
+      "inkWidth": 120,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "c",
+      "advance": 15,
+      "periodScore": 0.99057,
+      "inkWidth": 119,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "d",
+      "advance": 16,
+      "periodScore": 1.0,
+      "inkWidth": 128,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "e",
+      "advance": 15,
+      "periodScore": 0.99384,
+      "inkWidth": 120,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "f",
+      "advance": 10,
+      "periodScore": 0.97552,
+      "inkWidth": 80,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "g",
+      "advance": 18,
+      "periodScore": 0.98266,
+      "inkWidth": 144,
+      "inkHeight": 22
+    },
+    {
+      "glyph": "h",
+      "advance": 15,
+      "periodScore": 0.96226,
+      "inkWidth": 120,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "i",
+      "advance": 5,
+      "periodScore": 0.96071,
+      "inkWidth": 39,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "j",
+      "advance": 7,
+      "periodScore": 0.98542,
+      "inkWidth": 54,
+      "inkHeight": 26
+    },
+    {
+      "glyph": "k",
+      "advance": 15,
+      "periodScore": 1.0,
+      "inkWidth": 119,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "l",
+      "advance": 5,
+      "periodScore": 1.0,
+      "inkWidth": 39,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "m",
+      "advance": 25,
+      "periodScore": 0.98616,
+      "inkWidth": 199,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "n",
+      "advance": 15,
+      "periodScore": 0.92586,
+      "inkWidth": 120,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "o",
+      "advance": 16,
+      "periodScore": 0.98898,
+      "inkWidth": 128,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "p",
+      "advance": 16,
+      "periodScore": 1.0,
+      "inkWidth": 128,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "q",
+      "advance": 16,
+      "periodScore": 0.9986,
+      "inkWidth": 128,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "r",
+      "advance": 9,
+      "periodScore": 0.84865,
+      "inkWidth": 71,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "s",
+      "advance": 14,
+      "periodScore": 0.96514,
+      "inkWidth": 111,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "t",
+      "advance": 10,
+      "periodScore": 0.99501,
+      "inkWidth": 78,
+      "inkHeight": 18
+    },
+    {
+      "glyph": "u",
+      "advance": 15,
+      "periodScore": 0.96441,
+      "inkWidth": 120,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "v",
+      "advance": 17,
+      "periodScore": 0.98529,
+      "inkWidth": 135,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "w",
+      "advance": 24,
+      "periodScore": 0.9988,
+      "inkWidth": 192,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "x",
+      "advance": 16,
+      "periodScore": 1.0,
+      "inkWidth": 128,
+      "inkHeight": 14
+    },
+    {
+      "glyph": "y",
+      "advance": 16,
+      "periodScore": 0.97013,
+      "inkWidth": 128,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "z",
+      "advance": 15,
+      "periodScore": 0.93345,
+      "inkWidth": 120,
+      "inkHeight": 15
+    },
+    {
+      "glyph": "{",
+      "advance": 8,
+      "periodScore": 1.0,
+      "inkWidth": 63,
+      "inkHeight": 24
+    },
+    {
+      "glyph": "}",
+      "advance": 8,
+      "periodScore": 0.9977,
+      "inkWidth": 63,
+      "inkHeight": 24
+    },
+    {
+      "glyph": "~",
+      "advance": 15,
+      "periodScore": 1.0,
+      "inkWidth": 120,
+      "inkHeight": 4
+    },
+    {
+      "glyph": "á",
+      "advance": 15,
+      "periodScore": 0.93128,
+      "inkWidth": 120,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "é",
+      "advance": 15,
+      "periodScore": 0.9859,
+      "inkWidth": 120,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "í",
+      "advance": 8,
+      "periodScore": 0.93548,
+      "inkWidth": 63,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "ó",
+      "advance": 16,
+      "periodScore": 0.98805,
+      "inkWidth": 128,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "ú",
+      "advance": 15,
+      "periodScore": 0.99665,
+      "inkWidth": 120,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "ü",
+      "advance": 15,
+      "periodScore": 0.9875,
+      "inkWidth": 120,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "ñ",
+      "advance": 15,
+      "periodScore": 0.99684,
+      "inkWidth": 120,
+      "inkHeight": 20
+    },
+    {
+      "glyph": "Á",
+      "advance": 23,
+      "periodScore": 0.98268,
+      "inkWidth": 182,
+      "inkHeight": 27
+    },
+    {
+      "glyph": "É",
+      "advance": 15,
+      "periodScore": 0.97941,
+      "inkWidth": 120,
+      "inkHeight": 27
+    },
+    {
+      "glyph": "Í",
+      "advance": 9,
+      "periodScore": 0.98295,
+      "inkWidth": 70,
+      "inkHeight": 27
+    },
+    {
+      "glyph": "Ó",
+      "advance": 24,
+      "periodScore": 1.0,
+      "inkWidth": 191,
+      "inkHeight": 27
+    },
+    {
+      "glyph": "Ú",
+      "advance": 20,
+      "periodScore": 0.9933,
+      "inkWidth": 157,
+      "inkHeight": 27
+    },
+    {
+      "glyph": "Ü",
+      "advance": 20,
+      "periodScore": 0.95847,
+      "inkWidth": 159,
+      "inkHeight": 27
+    },
+    {
+      "glyph": "Ñ",
+      "advance": 21,
+      "periodScore": 0.95986,
+      "inkWidth": 167,
+      "inkHeight": 27
+    },
+    {
+      "glyph": "¿",
+      "advance": 12,
+      "periodScore": 0.94064,
+      "inkWidth": 95,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "¡",
+      "advance": 5,
+      "periodScore": 0.99133,
+      "inkWidth": 39,
+      "inkHeight": 21
+    },
+    {
+      "glyph": "…",
+      "advance": 19,
+      "periodScore": 0.98095,
+      "inkWidth": 152,
+      "inkHeight": 4
+    }
+  ]
+}

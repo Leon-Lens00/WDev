@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "config": "/home/snz/Documentos/ChatGPT/FrozenThone/wc3toolchain.json",
+  "target": "Warcraft III 1.27b",
+  "files": {
+    "jasshelper": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/clijasshelper.exe",
+      "exists": true,
+      "size": 814080,
+      "sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985"
+    },
+    "pjass": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/pjass",
+      "exists": true,
+      "size": 82320,
+      "sha256": "917c50be6bd80f819e6a0fa3a2f7e8286967e5795106dd7ca98abe8c0f58f851"
+    },
+    "common": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "exists": true,
+      "size": 166690,
+      "sha256": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924"
+    },
+    "blizzard": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "exists": true,
+      "size": 451847,
+      "sha256": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,8 @@
+The source chain is `OctavePerlin` module → injected `Noise.Noise.octavePerlin2D` → `Noise.Noise.perlin2D` → private `Noise.Noise.floor`.
+
+- **Wiring:** `NoisePlugin requires Noise` declares module `OctavePerlin` ([OctavePerlin.j:10–11](OctavePerlin.j:10)). Library `Noise` contains struct `Noise`, which uses `implement optional OctavePerlin` ([Noise.j:8–30](Noise.j:8)). This module implementation supplies `octavePerlin2D`; its unqualified `perlin2D(...)` call resolves to the implementing struct’s method.
+- **Call condition:** Starting with `i=0`, frequency and amplitude `1`, the loop exits when `i >= octaves`; otherwise it calls `perlin2D(x * frequency, y * frequency)` ([OctavePerlin.j:29–37](OctavePerlin.j:29)). Each iteration doubles frequency and multiplies amplitude by persistence. `total` is **overwritten**, then ultimately divided by accumulated `maxValue` ([OctavePerlin.j:37–43](OctavePerlin.j:37)).
+- **Floor calls:** `perlin2D` unconditionally calls `floor` four times: for masked integer coordinates and fractional coordinates ([Noise.j:74–84](Noise.j:74)).
+- **Floor branch:** It starts with `R2I(value)`, subtracting one only when `value < 0.` and `value - n != 0.` ([Noise.j:32–38](Noise.j:32)).
+
+For `octaves <= 0`, no downstream calls occur. Optional-module inclusion depends on the build; no build was executed.

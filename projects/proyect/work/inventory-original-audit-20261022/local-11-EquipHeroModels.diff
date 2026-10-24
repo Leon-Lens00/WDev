@@ -1,0 +1,20 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/011-EquipHeroModels.j
++++ TerrainDev/inventory-integration/src/Inventory_11_EquipHeroModels.j
+@@ -1,7 +1,7 @@
+ library EquipHeroModels initializer Init
+     
+     globals
+-        private Table HeroModels
++        private InventoryTable HeroModels
+         private string array Path
+         private integer Models = 0
+     endglobals
+@@ -23,7 +23,7 @@
+     endfunction
+     
+     private function Init takes nothing returns nothing
+-        set HeroModels=Table.create()
++        set HeroModels=InventoryTable.create()
+         
+         //
+         // configuration

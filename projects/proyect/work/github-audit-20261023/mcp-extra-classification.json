@@ -1,0 +1,18 @@
+{
+  "noIdenticalFileCount": 7577,
+  "ignored": 7566,
+  "notIgnored": [
+    "mcp-w3/wc3-forge/wc3ctl/downloads/v0.4.10/release.json",
+    "mcp-w3/wc3-forge/wc3ctl/downloads/v0.4.10/wc3ctl-schemas-v0.4.10.zip.sha256",
+    "mcp-w3/wc3-forge/wc3ctl/downloads/v0.4.10/wc3ctl-studio-v0.4.10-win-x64.zip.sha256",
+    "mcp-w3/wc3-forge/wc3ctl/downloads/v0.4.10/wc3ctl-v0.4.10-win-x64.zip.sha256",
+    "mcp-w3/wc3-agent-lab/downloads/ast-grep-0.51.0.zip",
+    "mcp-w3/wc3-agent-lab/downloads/typescript-7.0.2.tgz",
+    "mcp-w3/wc3-agent-lab/downloads/typescript-5.9.3.tgz",
+    "mcp-w3/wc3-agent-lab/bin/sg",
+    "mcp-w3/wc3-agent-lab/bin/ast-grep",
+    "mcp-w3/wc3-agent-lab/bin/vjass-audit",
+    "mcp-w3/wc3-agent-lab/bin/jass-pattern-review"
+  ],
+  "note": "Many are compiled binaries, caches and third-party downloads; no blanket upload recommended."
+}

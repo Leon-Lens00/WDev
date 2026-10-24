@@ -1,0 +1,22 @@
+--- fresh141/008-EquipmentCore.j
++++ fresh143/008-EquipmentCore.j
+@@ -354,7 +354,9 @@
+             endif
+             
+             call this.charModel.showPlayer(this.user.toPlayer(), flag, this.camera)
+-            //call this.selector[this.user.id].show(flag, cam)
++            if (not flag) then
++                call this.selector[this.user.id].show(flag, cam)
++            endif
+             
+             call SetUnitColor(.charModel.picture, this.user.color)
+ 
+@@ -432,7 +434,7 @@
+         else
+             set itm = inv.getItem(slot)
+             
+-            if (itm > 0 and not itm.isSocket) then
++            if (itm > 0 and not itm.isSocket and itm.slot > 0) then
+                 set but = gear.getButton(itm.slot - 1)
+                 
+                 call Equipment.selector[inv.pid].show(true, inv.camera)

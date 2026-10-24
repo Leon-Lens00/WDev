@@ -1,0 +1,20 @@
+{
+  "scope": "Skill documentation only; no launcher/profile/map changes or new game launch",
+  "files": [
+    {
+      "path": "/home/snz/.codex/skills/probar-warcraft3-classic-linux/SKILL.md",
+      "before": "e5d7160d5df78d4cb280ec6ba50de45eb9f3163a9073abbb8ecf65e90aff833f",
+      "after": "468b3a45a3926c19b3a04620af51c90cd077f03d756514930d3fa7550f55d78a"
+    },
+    {
+      "path": "/home/snz/.codex/skills/probar-warcraft3-classic-linux/references/lan-individual.md",
+      "before": "9f0e4cd0406045a8ab68d6ad87fd8eb23ab7063734da3ca352253fb4bf2e4f1c",
+      "after": "f770a0af4fbcd08f365361f4dd133cbc026405e4be39ec32baff7e6951a381c5"
+    }
+  ],
+  "verifiedCode": [
+    "ydwe_on_test.lua EnableHost=1, Option=0 -> one client, -auto",
+    "ydwe-moderno.py uses fixed shared DATA and guards existing session"
+  ],
+  "runtimeContinuity": "pending specific single-client LAN check"
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "vjass",
+    "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/core-slot-init-input.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/core-slot-init-compiled.j"
+  ],
+  "returncode": 0,
+  "stdout": "{\"compiled\": true, \"validated\": true, \"output\": \"/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/core-slot-init-compiled.j\", \"report\": \"/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261023-015012-760779\"}\n",
+  "stderr": ""
+}

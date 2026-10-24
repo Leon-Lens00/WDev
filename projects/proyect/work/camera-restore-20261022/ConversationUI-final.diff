@@ -1,0 +1,36 @@
+--- work/camera-restore-20261022/ConversationUI-before.j	2026-10-22 16:08:45.683947010 -0500
++++ TerrainDev/dialogue-system/src/ConversationUI.j	2026-10-22 17:03:13.532372344 -0500
+@@ -226,8 +226,12 @@
+     set DumpIndex = DumpIndex+1
+     call PreloadGenClear()
+     call PreloadGenStart()
++    call Preload("logicalEye="+R2S(Cam.eye.x)+","+R2S(Cam.eye.y)+","+R2S(Cam.eye.z))
++    call Preload("logicalAt="+R2S(Cam.at.x)+","+R2S(Cam.at.y)+","+R2S(Cam.at.z)+" deltaZ="+R2S(GetCameraDeltaZ()))
++    call Preload("terrainRef="+R2S(UserInterface_GetTerrainZ(CHECK_DELTAZ_X,CHECK_DELTAZ_Y))+" dummy="+R2S(UserInterface_GetTerrainZ(0,0))+" owner="+R2S(UserInterface_GetTerrainZ(GetUnitX(FollowUnit),GetUnitY(FollowUnit))))
+     call Preload("eye="+R2S(GetCameraEyePositionX())+","+R2S(GetCameraEyePositionY())+","+R2S(GetCameraEyePositionZ()))
+     call Preload("target="+R2S(GetCameraTargetPositionX())+","+R2S(GetCameraTargetPositionY())+","+R2S(GetCameraTargetPositionZ()))
++    call Preload("zoffset="+R2S(GetCameraField(CAMERA_FIELD_ZOFFSET)))
+     call Preload("angles="+R2S(GetCameraField(CAMERA_FIELD_ROTATION))+","+R2S(GetCameraField(CAMERA_FIELD_ANGLE_OF_ATTACK))+","+R2S(GetCameraField(CAMERA_FIELD_FIELD_OF_VIEW)))
+     call Preload("requested="+R2S(WantedX)+","+R2S(WantedY)+","+R2S(WantedZ)+" fly="+R2S(WantedFly))
+     call Preload("actual="+R2S(GetUnitX(Frame))+","+R2S(GetUnitY(Frame))+","+R2S(GetUnitFlyHeight(Frame)+UserInterface_GetTerrainZ(GetUnitX(Frame),GetUnitY(Frame)))+" fly="+R2S(GetUnitFlyHeight(Frame)))
+@@ -292,6 +296,12 @@
+     endif
+ endfunction
+ 
++private function CalibrateCamera takes nothing returns nothing
++    call Cam.calibrateHeightForPlayer(Player(0))
++    call FollowCamera()
++    call DestroyTimer(GetExpiredTimer())
++endfunction
++
+ private function Start takes nothing returns nothing
+     local integer i = 0
+     local location start = GetStartLocationLoc(GetPlayerStartLocation(Player(0)))
+@@ -331,6 +341,7 @@
+     call RemoveLocation(start)
+     set start = null
+     call TimerStart(Clock,0.01,true,function Tick)
++    call TimerStart(CreateTimer(),0.10,false,function CalibrateCamera)
+     call DisplayTimedTextToPlayer(Player(0),0,0,25,"Camara de unidad activa. Mueve al paladin con clic derecho. -dialogo abre; -reiniciardialogo reinicia; -cerrardialogo cierra. Esc/derecha avanza. HUD normal visible.")
+     call DestroyTimer(GetExpiredTimer())
+ endfunction

@@ -1,0 +1,44 @@
+[
+  {
+    "label": "missiles",
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+    "integrity": "ok",
+    "files": 16,
+    "nodes": 1277,
+    "edges": 1739,
+    "metadata": {
+      "index_state": "complete",
+      "indexed_with_version": "1.6.2+jass-vjass.3",
+      "indexed_with_extraction_version": "30"
+    },
+    "original_hashes_unchanged": true
+  },
+  {
+    "label": "inventory",
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+    "integrity": "ok",
+    "files": 56,
+    "nodes": 3333,
+    "edges": 4954,
+    "metadata": {
+      "index_state": "complete",
+      "indexed_with_version": "1.6.2+jass-vjass.3",
+      "indexed_with_extraction_version": "30"
+    },
+    "original_hashes_unchanged": true
+  },
+  {
+    "label": "ui",
+    "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+    "integrity": "ok",
+    "files": 4,
+    "nodes": 126,
+    "edges": 734,
+    "metadata": {
+      "index_state": "complete",
+      "indexed_with_version": "1.6.2+jass-vjass.3",
+      "indexed_with_extraction_version": "30"
+    },
+    "original_hashes_unchanged": true
+  }
+]

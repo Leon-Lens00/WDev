@@ -1,0 +1,106 @@
+{
+  "title": "Shots Vol. I",
+  "author": "Vinz",
+  "source": "https://www.hiveworkshop.com/threads/shots-vol-i.315258/",
+  "download_endpoint_without_ephemeral_token": "https://www.hiveworkshop.com/bundles/shots-vol-i.315258/legacy-download",
+  "downloaded_at": "2026-10-22T14:53:34.089449-05:00",
+  "archive": {
+    "path": "shots-vol-i-original.zip",
+    "bytes": 26830,
+    "sha256": "979c89c7a1a6b4462af930ad6f8147613f094a0cfaf79fc1f410d11eff34f2f9",
+    "crc_test": "PASS"
+  },
+  "model_count": 12,
+  "colors": [
+    "Blue",
+    "Green",
+    "Orange",
+    "Purple",
+    "Red",
+    "Yellow"
+  ],
+  "variants": [
+    "simple",
+    "Double"
+  ],
+  "files": [
+    {
+      "path": "originales/Shots Vol. I/readme.html",
+      "bytes": 5773,
+      "sha256": "8764c0e3b33dd93af1e511dceedabb2bf4fa12cff472d6d667d5c98bc7e1f007"
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Blue.mdx",
+      "bytes": 5900,
+      "sha256": "6d073549743b558396d9d9e3158d5b8130d1f7fda997e8da4136fdc42fba1a41",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Blue Double.mdx",
+      "bytes": 7311,
+      "sha256": "207792358ba184a7b8850db2cbaacafd9aa1b960c45b9905ee3eeca9e27ce47e",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Green.mdx",
+      "bytes": 5872,
+      "sha256": "058de54f2f6deaf0183e92f9f75ce4eeee9a7da1417c2b74bf9eafe86ea9788a",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Green Double.mdx",
+      "bytes": 7283,
+      "sha256": "7725166d413b36a26c7de1b4e6d168282237151025ff41427c6c6617966f6b5d",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Orange.mdx",
+      "bytes": 6140,
+      "sha256": "a093ab85380cde8804b746a4ff518b283936ecd0ca48aae74471d1bc77785818",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Orange Double.mdx",
+      "bytes": 7555,
+      "sha256": "78d9e5e05a08a692476048e90e2fe1637759e5692a1f494823840c221c8814e7",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Purple.mdx",
+      "bytes": 6704,
+      "sha256": "ae584daeb14319fb0c73ee05e6247c0b451a68ac2fbb88e713d808dd516beeb0",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Purple Double.mdx",
+      "bytes": 7315,
+      "sha256": "337175b73b35705a555b2085df0c9694da9aff2ddd0485169daaa48dcfe3d777",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Red.mdx",
+      "bytes": 6492,
+      "sha256": "832aa9a629288eb1d099372e508297b457255e8b69e98b67666b1d248e6e57be",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Red Double.mdx",
+      "bytes": 7367,
+      "sha256": "cf191e954957584f1f7121c44d7f6a1be91e86e7a4e32007b67223e88ec57510",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Yellow.mdx",
+      "bytes": 6408,
+      "sha256": "c49816a0453f4a691d810d05e0411f50937d1d161df2dadbb9153ec3c0baa064",
+      "model_version": 800
+    },
+    {
+      "path": "originales/Shots Vol. I/Shot Yellow Double.mdx",
+      "bytes": 7819,
+      "sha256": "a097691b8dd3386b4b5643f0ff197520715c57bec405c12265704110e2618343",
+      "model_version": 800
+    }
+  ],
+  "verification_scope": "ZIP íntegro, 12 modelos esperados y cabecera MDX800. Sin modificación, render ni ensayo en Warcraft."
+}

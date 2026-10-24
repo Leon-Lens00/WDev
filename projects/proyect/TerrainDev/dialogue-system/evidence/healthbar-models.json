@@ -1,0 +1,45 @@
+{
+  "version": 800,
+  "depth": 400,
+  "scale": 1.2,
+  "results": [
+    {
+      "name": "Hero",
+      "bytes": 37572,
+      "sequences": 101,
+      "triangles": 8,
+      "textures": [
+        "UI\\HealthBarsHorizontal\\FrameHeroHorizontal.blp",
+        "UI\\HealthBarsHorizontal\\LifeNormalHorizontal.blp",
+        "UI\\HealthBarsHorizontal\\LifeCriticalHorizontal.blp",
+        "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp"
+      ]
+    },
+    {
+      "name": "EnemyTauren",
+      "bytes": 37572,
+      "sequences": 101,
+      "triangles": 8,
+      "textures": [
+        "UI\\HealthBarsHorizontal\\FrameEnemyHorizontal.blp",
+        "UI\\HealthBarsHorizontal\\LifeNormalHorizontal.blp",
+        "UI\\HealthBarsHorizontal\\LifeCriticalHorizontal.blp",
+        "ReplaceableTextures\\CommandButtons\\BTNTauren.blp"
+      ]
+    },
+    {
+      "name": "EnemyPaladin",
+      "bytes": 37572,
+      "sequences": 101,
+      "triangles": 8,
+      "textures": [
+        "UI\\HealthBarsHorizontal\\FrameEnemyHorizontal.blp",
+        "UI\\HealthBarsHorizontal\\LifeNormalHorizontal.blp",
+        "UI\\HealthBarsHorizontal\\LifeCriticalHorizontal.blp",
+        "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp"
+      ]
+    }
+  ],
+  "independentReaders": true,
+  "nativeTested": false
+}

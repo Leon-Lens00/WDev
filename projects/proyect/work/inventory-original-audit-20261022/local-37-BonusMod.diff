@@ -1,0 +1,155 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/037-BonusMod.j
++++ TerrainDev/inventory-integration/src/Inventory_37_BonusMod.j
+@@ -281,71 +281,71 @@
+         set Init=true
+     // The following is a lua script for the ObjectMerger, used to generate abilities
+     //*
+-    //! externalblock extension=lua ObjectMerger $FILENAME$
+-    //! i if "$SHOULD_GENERATE_ABILITIES$" == "true" then
+-    //! i function FormatName(name)
+-    //! i     name = string.lower(name)
+-    //! i     name = string.gsub(name, "_", " ")
+-    //! i     s = name
+-    //! i     name = ""
+-    //! i     for w in string.gmatch(s, "%a%w*") do
+-    //! i         name = name .. string.upper(string.sub(w, 1, 1)) .. string.sub(w, 2, -1)
+-    //! i         name = name .. " "
+-    //! i     end
+-    //! i     name = string.sub(name, 1, string.len(name) - 1)
+-    //! i     return name
+-    //! i end
+-    //! i function SetupAbility(name, suffix, icon, hero)
+-    //! i     makechange(current, "anam", "BonusMod - " .. FormatName(name))
+-    //! i     makechange(current, "ansf", "(" .. suffix .. ")")
+-    //! i     makechange(current, "aart", "ReplaceableTextures\\CommandButtons\\" .. icon)
+-    //! i     makechange(current, "aite", 0)
+-    //! i     if hero then
+-    //! i         makechange(current, "Iagi", 1, 0)
+-    //! i         makechange(current, "Iint", 1, 0)
+-    //! i         makechange(current, "Istr", 1, 0)
+-    //! i     end
+-    //! i end
+-    //! i function CreateAbility(sourceAbility, prefix, field, abilityCount, name, icon)
+-    //! i     powOf2 = abilityCount - 1
+-    //! i     lengthOfMax = string.len(tostring(2^abilityCount))
+-    //! i     for i = 0, powOf2 do
+-    //! i         padding = ""
+-    //! i         for k = 0, lengthOfMax - string.len(tostring(2^i)) - 1 do
+-    //! i             padding = padding .. "0"
+-    //! i         end
+-    //! i         createobject(sourceAbility, prefix .. string.sub(chars, i + 1, i + 1))
+-    //! i         SetupAbility(name, "+" .. padding .. tostring(2 ^ i), icon, true)
+-    //! i         makechange(current, field, 1, tostring(2^i))
+-    //! i     end
+-    //! i     createobject(sourceAbility, prefix .. "-")
+-    //! i     SetupAbility(name, "-" .. tostring(2 ^ abilityCount), icon, true)
+-    //! i     makechange(current, field, 1, tostring(-(2^abilityCount)))
+-    //! i end
+-    //! i function CreatePercentageAbility(sourceAbility, prefix, field, abilityCount, name, icon)
+-    //! i     powOf2 = abilityCount - 1
+-    //! i     lengthOfMax = string.len(tostring(2^abilityCount))
+-    //! i     for i = 0, powOf2 do
+-    //! i         padding = ""
+-    //! i         for k = 0, lengthOfMax - string.len(tostring(2^i)) - 1 do
+-    //! i             padding = padding .. "0"
+-    //! i         end
+-    //! i         createobject(sourceAbility, prefix .. string.sub(chars, i + 1, i + 1))
+-    //! i         SetupAbility(name, "+" .. padding .. tostring(2 ^ i) .. "%", icon, false)
+-    //! i         makechange(current, field, 1, tostring((2 ^ i) / 100))
+-    //! i     end
+-    //! i     createobject(sourceAbility, prefix .. "-")
+-    //! i     SetupAbility(name, "-" .. tostring(2 ^ abilityCount) .. "%", icon, false)
+-    //! i     makechange(current, field, 1, tostring(-((2 ^ abilityCount) / 100)))
+-    //! i end
+-    //! i     setobjecttype("abilities")
+-    //! i     chars = "abcdefghijklmnopqrstuvwxyz"
+-    //! i 
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
+     // */
+ //! endtextmacro
+ 
+ //! textmacro BonusMod_DeclareBonus takes NAME, ABILITY_COUNT, SOURCE_ABILITY, RAWCODE_PREFIX, FIELD, HERO_ONLY, ICON
+-    //! i CreateAbility("$SOURCE_ABILITY$", "$RAWCODE_PREFIX$", "$FIELD$", $ABILITY_COUNT$, "$NAME$", "$ICON$")
++// Object generation omitted; bundled Classic objects imported.
+     globals
+         Bonus BONUS_$NAME$
+     endglobals
+@@ -353,7 +353,7 @@
+ //! endtextmacro
+ 
+ //! textmacro BonusMod_DeclarePercentBonus takes NAME, ABILITY_COUNT, SOURCE_ABILITY, RAWCODE_PREFIX, FIELD, HERO_ONLY, ICON
+-    //! i CreatePercentageAbility("$SOURCE_ABILITY$", "$RAWCODE_PREFIX$", "$FIELD$", $ABILITY_COUNT$, "$NAME$", "$ICON$")
++// Object generation omitted; bundled Classic objects imported.
+     globals
+         Bonus BONUS_$NAME$
+     endglobals
+@@ -362,8 +362,8 @@
+ 
+ //! textmacro BonusMod_EndBonuses
+     //*
+-    //! i end
+-    //! endexternalblock
++// Object generation omitted; bundled Classic objects imported.
++// Object generation omitted; bundled Classic objects imported.
+     // */
+     
+     endfunction

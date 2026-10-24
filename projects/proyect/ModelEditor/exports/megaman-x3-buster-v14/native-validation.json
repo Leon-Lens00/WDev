@@ -1,0 +1,84 @@
+{
+  "state": "Tested in map",
+  "target": "Warcraft III Classic 1.27b / YDWE single player / screen 3 DP-1",
+  "map": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v14-20261023-130311/X3BusterV14.w3x",
+    "sha256": "bff6d71ff9d0707b84327962bc1f1ef50d40323a8404778c738d9bfd4e73144f",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 37,
+    "models": 2,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "modelSHA256": "2c036d7cbac797544f553d655b068f2450c61935e6f78b00a47f49d87e571d45",
+  "scenarios": {
+    "final-stand-1": 25,
+    "final-stand-05": 25,
+    "final-stand-24": 25,
+    "final-birth-24": 25,
+    "final-death-24": 25,
+    "final-stand-recovery": 25,
+    "final-scale-return": 25,
+    "final-motion": 25
+  },
+  "videos": [
+    {
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/evidence/x3-v14/final-video-1.mp4",
+      "pid": 1044138,
+      "focusSamples": 47,
+      "returnCode": 0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "60/1",
+            "duration": "4.866667",
+            "nb_frames": "293"
+          }
+        ]
+      },
+      "note": "Capture rate is not a measured game FPS benchmark."
+    },
+    {
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/evidence/x3-v14/final-video-24.mp4",
+      "pid": 1044138,
+      "focusSamples": 47,
+      "returnCode": 0,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "60/1",
+            "duration": "4.950000",
+            "nb_frames": "298"
+          }
+        ]
+      },
+      "note": "Capture rate is not a measured game FPS benchmark."
+    }
+  ],
+  "observed": [
+    "200ms authored travelling wave visible at scales 0.5, 1 and 2.4",
+    "front grows, sweeps the body and fades toward tail; native camera shows curved depth",
+    "Birth followed by Stand",
+    "Death expands to impact and extinguishes; no remaining green loop",
+    "Stand recovery and external test movement preserve local wave"
+  ],
+  "closure": {
+    "pid": 1044138,
+    "processAbsent": true,
+    "windowAbsent": true,
+    "normalConfirmation": true
+  },
+  "limits": [
+    "The 60fps setting describes recording, not measured game performance",
+    "No projectile-system integration or multiplayer test",
+    "The five unchanged models retain their V13 tests; current native fixture tests Cross V13/V14 only"
+  ]
+}

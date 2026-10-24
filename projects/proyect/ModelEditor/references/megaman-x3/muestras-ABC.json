@@ -1,0 +1,41 @@
+[
+  {
+    "label": "A · Buster básico cargado",
+    "source": "originales/buster-estandar.gif",
+    "frame": 8,
+    "crop": [
+      0,
+      0,
+      150,
+      47
+    ],
+    "scale": 3,
+    "method": "nearest, no recolor or repaint"
+  },
+  {
+    "label": "B · Antes de la fusión",
+    "source": "originales/tenor-usuario.gif",
+    "frame": 56,
+    "crop": [
+      0,
+      0,
+      150,
+      133
+    ],
+    "scale": 3,
+    "method": "nearest, no recolor or repaint"
+  },
+  {
+    "label": "C · Súper carga fusionada",
+    "source": "originales/tenor-usuario.gif",
+    "frame": 75,
+    "crop": [
+      0,
+      0,
+      150,
+      133
+    ],
+    "scale": 3,
+    "method": "nearest, no recolor or repaint"
+  }
+]

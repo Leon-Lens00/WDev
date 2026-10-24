@@ -1,0 +1,32 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-removal-delayed.w3x",
+  "sha256": "50547d599698a55a098775a849b3c2904268882238383fcdcb6646eb3c7cfd2e",
+  "base": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+  "base_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "sources": [
+    "libraries/Table.j",
+    "libraries/TimerUtils.j",
+    "libraries/SwlsMath.j",
+    "WaveSysAnAI/SwlsWave/SwlsWave.j",
+    "WaveSysAnAI/SwlsWave/WavePointGroups.j"
+  ],
+  "boundary": "TheEnd.endF no-op; empty callbacks in every test",
+  "fixture": "tests/RemovalAudit.j",
+  "diagnostic_change": "None: exact core sources",
+  "purpose": "Core unit integration inside real Classic engine; no original map/assets/AI/endflow coverage",
+  "jass_sha256": "cc7e107832ca37aac9e0bb833ad67ffc8b6e3cac99a596ba17f0f283c34902e5",
+  "compiled": true,
+  "validated": true,
+  "reextracted": true,
+  "other_members_preserved": true,
+  "game_tested": true,
+  "result": {
+    "setup": 1,
+    "engineRemoved": 1,
+    "active": 1,
+    "tracked": 1,
+    "finished": 0,
+    "forceTerminated": 0
+  },
+  "multiplayer_tested": false
+}

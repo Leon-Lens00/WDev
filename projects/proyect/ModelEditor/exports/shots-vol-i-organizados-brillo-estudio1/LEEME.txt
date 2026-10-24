@@ -1,0 +1,10 @@
+Shots Vol. I — revisión de brillo y gradiente
+Colores-de-jugadores: doce variantes por tipo, con centro claro y textura glow recoloreada.
+Vol. I incluye Misil-simple y Misil-doble; Vol. II conserva únicamente Misil-simple.
+Cada carpeta de color incluye MDX, MDL, tres texturas, créditos y rutas de importación.
+Colores-originales: derivados de anclaje anteriores, con colores y bytes conservados.
+Las colecciones anteriores se conservan para trazabilidad. Usar esta revisión para los colores de jugadores.
+El sistema puede seleccionar el modelo con los helpers JASS incluidos; no hay cambio automático de color dentro del MDX.
+No modifica la física ni las colisiones del mapa.
+Vinz: autor de los modelos originales. Recursos base de Warcraft III Classic.
+Ver REVISION-BRILLO.md para cobertura de pruebas y límites.

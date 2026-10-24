@@ -1,0 +1,38 @@
+[
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+    "snippets": [
+      "libraries/Missile.j",
+      "libraries/MissileRecycler.j",
+      "libraries/RapidFire.j"
+    ],
+    "source_lines_compared": 245,
+    "mismatches": [],
+    "comparison_note": "Preserve trailing empty EOF line, as the renderer does."
+  },
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+    "snippets": [
+      "src/Inventory_01_Inventory.j",
+      "src/Inventory_25_UserInterface.j",
+      "src/Inventory_29_Camera.j",
+      "src/Inventory_30_Math.j",
+      "src/TerrainInventory.j"
+    ],
+    "source_lines_compared": 350,
+    "mismatches": [],
+    "comparison_note": "Preserve trailing empty EOF line, as the renderer does."
+  },
+  {
+    "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+    "snippets": [
+      "app.js",
+      "core.js",
+      "geometry.js",
+      "projection.js"
+    ],
+    "source_lines_compared": 118,
+    "mismatches": [],
+    "comparison_note": "Preserve trailing empty EOF line, as the renderer does."
+  }
+]

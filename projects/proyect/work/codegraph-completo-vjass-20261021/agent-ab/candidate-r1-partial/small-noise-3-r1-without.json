@@ -1,0 +1,34 @@
+{
+  "repo": "small-noise",
+  "flow": 3,
+  "names": [
+    "Noise.Noise.openSimplex2D",
+    "Noise.Noise.extrapolate2D"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 27.121645248000277,
+  "usage": {
+    "input_tokens": 82539,
+    "cached_input_tokens": 65664,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 764,
+    "reasoning_output_tokens": 127
+  },
+  "commands": 2,
+  "command_text": [
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'openSimplex2D|extrapolate2D' .\"",
+    "/usr/bin/bash -lc \"nl -ba Noise.j | sed -n '1,245p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'openSimplex2D|extrapolate2D' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a1620a-ab0d-7be1-8667-788c18f4ba7f"
+  ]
+}

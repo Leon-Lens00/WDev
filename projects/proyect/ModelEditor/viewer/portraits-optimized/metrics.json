@@ -1,0 +1,878 @@
+{
+  "created": "2026-10-23T03:38:41.821Z",
+  "target": "Classic 1.27b / MDX800",
+  "tolerances": [
+    0.005,
+    0.01,
+    0.02,
+    0.05,
+    0.1
+  ],
+  "selectedTolerance": 0.02,
+  "models": [
+    {
+      "id": "paladin",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/Portraits/paladin.mdx",
+      "sourceSha256": "de97d3dc6a84ff27d5c3ab345ceec201e277b8b018810fe00bff098b12540a09",
+      "originalBytes": 33391,
+      "originalSha256": "31fb76af561ed47c63b040d1924c10172e6c3142a2459023f2cb42b235d1db82",
+      "beforeBytes": 3434919,
+      "beforeKeys": 211878,
+      "candidates": [
+        {
+          "tolerance": 0.005,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.005/UI/Dialogue/Portraits/paladin.mdx",
+          "sha256": "636cfdde6a50255ed13e21f458dc503f115757fee067452412284434135fe41e",
+          "bytes": 1131351,
+          "keys": 67905,
+          "validation": {
+            "maxError": 0.004999972880789469,
+            "maxVertexError": 0.004999972880789469,
+            "checks": 424354,
+            "vertexChecks": 422571,
+            "sequences": [
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  80000,
+                  83333
+                ],
+                "maxError": 0.004989322817842502,
+                "maxVertexError": 0.004989322817842502,
+                "frames": 269,
+                "keysBefore": 31995,
+                "keysAfter": 2916
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  86667,
+                  96667
+                ],
+                "maxError": 0.004999972880789469,
+                "maxVertexError": 0.004999972880789469,
+                "frames": 801,
+                "keysBefore": 95037,
+                "keysAfter": 30125
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  103333,
+                  108533
+                ],
+                "maxError": 0.004999641618317211,
+                "maxVertexError": 0.004999641618317211,
+                "frames": 417,
+                "keysBefore": 49533,
+                "keysAfter": 16107
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  113333,
+                  116000
+                ],
+                "maxError": 0.0049998447483204644,
+                "maxVertexError": 0.0049998447483204644,
+                "frames": 215,
+                "keysBefore": 25596,
+                "keysAfter": 13130
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  120000,
+                  121000
+                ],
+                "maxError": 0.004998516400307436,
+                "maxVertexError": 0.004998516400307436,
+                "frames": 81,
+                "keysBefore": 9717,
+                "keysAfter": 5627
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        },
+        {
+          "tolerance": 0.01,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.01/UI/Dialogue/Portraits/paladin.mdx",
+          "sha256": "1c515036dfe9172f0e89782d251463f313697096f7b68b94b14d1a0db656cb3c",
+          "bytes": 830631,
+          "keys": 49110,
+          "validation": {
+            "maxError": 0.009997473702411244,
+            "maxVertexError": 0.009997473702411244,
+            "checks": 424354,
+            "vertexChecks": 422571,
+            "sequences": [
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  80000,
+                  83333
+                ],
+                "maxError": 0.009982141125345028,
+                "maxVertexError": 0.009982141125345028,
+                "frames": 269,
+                "keysBefore": 31995,
+                "keysAfter": 2007
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  86667,
+                  96667
+                ],
+                "maxError": 0.009997473702411244,
+                "maxVertexError": 0.009997473702411244,
+                "frames": 801,
+                "keysBefore": 95037,
+                "keysAfter": 21186
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  103333,
+                  108533
+                ],
+                "maxError": 0.009996618092996599,
+                "maxVertexError": 0.009996618092996599,
+                "frames": 417,
+                "keysBefore": 49533,
+                "keysAfter": 11513
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  113333,
+                  116000
+                ],
+                "maxError": 0.009992648475270474,
+                "maxVertexError": 0.009992648475270474,
+                "frames": 215,
+                "keysBefore": 25596,
+                "keysAfter": 10152
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  120000,
+                  121000
+                ],
+                "maxError": 0.009995117179778527,
+                "maxVertexError": 0.009995117179778527,
+                "frames": 81,
+                "keysBefore": 9717,
+                "keysAfter": 4252
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        },
+        {
+          "tolerance": 0.02,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.02/UI/Dialogue/Portraits/paladin.mdx",
+          "sha256": "7d66dde4e9facb6bf71ddbc2c276e3dc06d21170aac4eb63534c84d047e44441",
+          "bytes": 599239,
+          "keys": 34648,
+          "validation": {
+            "maxError": 0.019998161070998433,
+            "maxVertexError": 0.019998161070998433,
+            "checks": 424354,
+            "vertexChecks": 422571,
+            "sequences": [
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  80000,
+                  83333
+                ],
+                "maxError": 0.019959107058223045,
+                "maxVertexError": 0.019959107058223045,
+                "frames": 269,
+                "keysBefore": 31995,
+                "keysAfter": 1463
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  86667,
+                  96667
+                ],
+                "maxError": 0.019998161070998433,
+                "maxVertexError": 0.019998161070998433,
+                "frames": 801,
+                "keysBefore": 95037,
+                "keysAfter": 14538
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  103333,
+                  108533
+                ],
+                "maxError": 0.019987407949394444,
+                "maxVertexError": 0.019987407949394444,
+                "frames": 417,
+                "keysBefore": 49533,
+                "keysAfter": 8119
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  113333,
+                  116000
+                ],
+                "maxError": 0.019985868208868825,
+                "maxVertexError": 0.019985868208868825,
+                "frames": 215,
+                "keysBefore": 25596,
+                "keysAfter": 7456
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  120000,
+                  121000
+                ],
+                "maxError": 0.01995630177833906,
+                "maxVertexError": 0.01995630177833906,
+                "frames": 81,
+                "keysBefore": 9717,
+                "keysAfter": 3072
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        },
+        {
+          "tolerance": 0.05,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.05/UI/Dialogue/Portraits/paladin.mdx",
+          "sha256": "513c88afaab543c97b0575f3ccfcb1531a09a4f8580f8b862d75827341d2baa7",
+          "bytes": 401047,
+          "keys": 22261,
+          "validation": {
+            "maxError": 0.04998844973426,
+            "maxVertexError": 0.04998844973426,
+            "checks": 424354,
+            "vertexChecks": 422571,
+            "sequences": [
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  80000,
+                  83333
+                ],
+                "maxError": 0.04962583127037664,
+                "maxVertexError": 0.04962583127037664,
+                "frames": 269,
+                "keysBefore": 31995,
+                "keysAfter": 1070
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  86667,
+                  96667
+                ],
+                "maxError": 0.04998844973426,
+                "maxVertexError": 0.04998844973426,
+                "frames": 801,
+                "keysBefore": 95037,
+                "keysAfter": 8898
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  103333,
+                  108533
+                ],
+                "maxError": 0.049955285324867,
+                "maxVertexError": 0.049955285324867,
+                "frames": 417,
+                "keysBefore": 49533,
+                "keysAfter": 5070
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  113333,
+                  116000
+                ],
+                "maxError": 0.049978623790300096,
+                "maxVertexError": 0.049978623790300096,
+                "frames": 215,
+                "keysBefore": 25596,
+                "keysAfter": 5200
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  120000,
+                  121000
+                ],
+                "maxError": 0.04991928471021103,
+                "maxVertexError": 0.04991928471021103,
+                "frames": 81,
+                "keysBefore": 9717,
+                "keysAfter": 2023
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        },
+        {
+          "tolerance": 0.1,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.1/UI/Dialogue/Portraits/paladin.mdx",
+          "sha256": "ed31ea05ff7be2f1b0018b350574f6adced1eea28d62a336e9c94ad84bd81e58",
+          "bytes": 296615,
+          "keys": 15734,
+          "validation": {
+            "maxError": 0.09999526080979616,
+            "maxVertexError": 0.09999526080979616,
+            "checks": 424354,
+            "vertexChecks": 422571,
+            "sequences": [
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  80000,
+                  83333
+                ],
+                "maxError": 0.09994466223019656,
+                "maxVertexError": 0.09994466223019656,
+                "frames": 269,
+                "keysBefore": 31995,
+                "keysAfter": 814
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  86667,
+                  96667
+                ],
+                "maxError": 0.09999526080979616,
+                "maxVertexError": 0.09999526080979616,
+                "frames": 801,
+                "keysBefore": 95037,
+                "keysAfter": 6132
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  103333,
+                  108533
+                ],
+                "maxError": 0.09997650805207255,
+                "maxVertexError": 0.09997650805207255,
+                "frames": 417,
+                "keysBefore": 49533,
+                "keysAfter": 3385
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  113333,
+                  116000
+                ],
+                "maxError": 0.09998717498732049,
+                "maxVertexError": 0.09998717498732049,
+                "frames": 215,
+                "keysBefore": 25596,
+                "keysAfter": 3848
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  120000,
+                  121000
+                ],
+                "maxError": 0.09975924547200979,
+                "maxVertexError": 0.09975924547200979,
+                "frames": 81,
+                "keysBefore": 9717,
+                "keysAfter": 1555
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tauren",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/Portraits/tauren.mdx",
+      "sourceSha256": "146a62f0af2065514c48fa56a1d906a6fa9b967606a08950a78c1e3dd107bc26",
+      "originalBytes": 44174,
+      "originalSha256": "8762cde89deff3c3e4adf6f2754bfd0951ea4b13dad287bb4b8c7e353728cd6f",
+      "beforeBytes": 5919098,
+      "beforeKeys": 365064,
+      "candidates": [
+        {
+          "tolerance": 0.005,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.005/UI/Dialogue/Portraits/tauren.mdx",
+          "sha256": "c8d1fef1a194fde993acaaa73f97eee70cca5f884674553d200d72310e72c110",
+          "bytes": 2619530,
+          "keys": 158841,
+          "validation": {
+            "maxError": 0.004999838954521924,
+            "maxVertexError": 0.004999838954521924,
+            "checks": 729300,
+            "vertexChecks": 693264,
+            "sequences": [
+              {
+                "name": "Stand -1",
+                "interval": [
+                  3333,
+                  6000
+                ],
+                "maxError": 0,
+                "maxVertexError": 0,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 848
+              },
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  66667,
+                  69333
+                ],
+                "maxError": 0.004999838954521924,
+                "maxVertexError": 0.004999838954521924,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 14251
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  73333,
+                  84000
+                ],
+                "maxError": 0.00499977614007185,
+                "maxVertexError": 0.00499977614007185,
+                "frames": 855,
+                "keysBefore": 181472,
+                "keysAfter": 67866
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  90000,
+                  92000
+                ],
+                "maxError": 0.004996007057505761,
+                "maxVertexError": 0.004996007057505761,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 27303
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  100000,
+                  102000
+                ],
+                "maxError": 0.004999359255684593,
+                "maxVertexError": 0.004999359255684593,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 29139
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  110000,
+                  111333
+                ],
+                "maxError": 0.004995304329736139,
+                "maxVertexError": 0.004995304329736139,
+                "frames": 109,
+                "keysBefore": 23320,
+                "keysAfter": 19434
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        },
+        {
+          "tolerance": 0.01,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.01/UI/Dialogue/Portraits/tauren.mdx",
+          "sha256": "d3126f15f8b0bb087e5e897ef9cd7b802d5c1b22db37e12b81ce5a36ddcbbaa7",
+          "bytes": 2031738,
+          "keys": 122104,
+          "validation": {
+            "maxError": 0.009998709931705667,
+            "maxVertexError": 0.009998709931705667,
+            "checks": 729300,
+            "vertexChecks": 693264,
+            "sequences": [
+              {
+                "name": "Stand -1",
+                "interval": [
+                  3333,
+                  6000
+                ],
+                "maxError": 0,
+                "maxVertexError": 0,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 848
+              },
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  66667,
+                  69333
+                ],
+                "maxError": 0.009997661826720306,
+                "maxVertexError": 0.009997661826720306,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 10093
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  73333,
+                  84000
+                ],
+                "maxError": 0.009998310029772188,
+                "maxVertexError": 0.009998310029772188,
+                "frames": 855,
+                "keysBefore": 181472,
+                "keysAfter": 47511
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  90000,
+                  92000
+                ],
+                "maxError": 0.009998526523451292,
+                "maxVertexError": 0.009998526523451292,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 22388
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  100000,
+                  102000
+                ],
+                "maxError": 0.009998709931705667,
+                "maxVertexError": 0.009998709931705667,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 24595
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  110000,
+                  111333
+                ],
+                "maxError": 0.009992674969681554,
+                "maxVertexError": 0.009992674969681554,
+                "frames": 109,
+                "keysBefore": 23320,
+                "keysAfter": 16669
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        },
+        {
+          "tolerance": 0.02,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.02/UI/Dialogue/Portraits/tauren.mdx",
+          "sha256": "d6fc470c8f539479773f2ef216c0ac530057824965e02eddfa3cb6b15153e5eb",
+          "bytes": 1513674,
+          "keys": 89725,
+          "validation": {
+            "maxError": 0.019997072997800975,
+            "maxVertexError": 0.019997072997800975,
+            "checks": 729300,
+            "vertexChecks": 693264,
+            "sequences": [
+              {
+                "name": "Stand -1",
+                "interval": [
+                  3333,
+                  6000
+                ],
+                "maxError": 0,
+                "maxVertexError": 0,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 848
+              },
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  66667,
+                  69333
+                ],
+                "maxError": 0.01999218824211008,
+                "maxVertexError": 0.01999218824211008,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 6779
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  73333,
+                  84000
+                ],
+                "maxError": 0.019997072997800975,
+                "maxVertexError": 0.019997072997800975,
+                "frames": 855,
+                "keysBefore": 181472,
+                "keysAfter": 32593
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  90000,
+                  92000
+                ],
+                "maxError": 0.019994748342310718,
+                "maxVertexError": 0.019994748342310718,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 16959
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  100000,
+                  102000
+                ],
+                "maxError": 0.019995771517799018,
+                "maxVertexError": 0.019995771517799018,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 19138
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  110000,
+                  111333
+                ],
+                "maxError": 0.01997703484070627,
+                "maxVertexError": 0.01997703484070627,
+                "frames": 109,
+                "keysBefore": 23320,
+                "keysAfter": 13408
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        },
+        {
+          "tolerance": 0.05,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.05/UI/Dialogue/Portraits/tauren.mdx",
+          "sha256": "4f97ef9d62042863fa34d14c9bc3ccd6f1660f17c9f3616f87c2f4442b4d79c9",
+          "bytes": 1008938,
+          "keys": 58179,
+          "validation": {
+            "maxError": 0.04999935150548565,
+            "maxVertexError": 0.04999935150548565,
+            "checks": 729300,
+            "vertexChecks": 693264,
+            "sequences": [
+              {
+                "name": "Stand -1",
+                "interval": [
+                  3333,
+                  6000
+                ],
+                "maxError": 0,
+                "maxVertexError": 0,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 848
+              },
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  66667,
+                  69333
+                ],
+                "maxError": 0.04998435674217724,
+                "maxVertexError": 0.04998435674217724,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 4203
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  73333,
+                  84000
+                ],
+                "maxError": 0.04999935150548565,
+                "maxVertexError": 0.04999935150548565,
+                "frames": 855,
+                "keysBefore": 181472,
+                "keysAfter": 20025
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  90000,
+                  92000
+                ],
+                "maxError": 0.049990406474492495,
+                "maxVertexError": 0.049990406474492495,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 11020
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  100000,
+                  102000
+                ],
+                "maxError": 0.04999267066019818,
+                "maxVertexError": 0.04999267066019818,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 12536
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  110000,
+                  111333
+                ],
+                "maxError": 0.0499963642640321,
+                "maxVertexError": 0.0499963642640321,
+                "frames": 109,
+                "keysBefore": 23320,
+                "keysAfter": 9547
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        },
+        {
+          "tolerance": 0.1,
+          "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/dialogue-portraits-optimized/0.1/UI/Dialogue/Portraits/tauren.mdx",
+          "sha256": "124ca4ccd32fed0139162f4db66055df1cfbb5e3437110927d3a83993fb20220",
+          "bytes": 719482,
+          "keys": 40088,
+          "validation": {
+            "maxError": 0.09999890318927347,
+            "maxVertexError": 0.09999890318927347,
+            "checks": 729300,
+            "vertexChecks": 693264,
+            "sequences": [
+              {
+                "name": "Stand -1",
+                "interval": [
+                  3333,
+                  6000
+                ],
+                "maxError": 0,
+                "maxVertexError": 0,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 848
+              },
+              {
+                "name": "Portrait - 1",
+                "interval": [
+                  66667,
+                  69333
+                ],
+                "maxError": 0.09994348765968379,
+                "maxVertexError": 0.09994348765968379,
+                "frames": 215,
+                "keysBefore": 45792,
+                "keysAfter": 2669
+              },
+              {
+                "name": "Portrait - 2",
+                "interval": [
+                  73333,
+                  84000
+                ],
+                "maxError": 0.099924968211908,
+                "maxVertexError": 0.099924968211908,
+                "frames": 855,
+                "keysBefore": 181472,
+                "keysAfter": 13242
+              },
+              {
+                "name": "Portrait Talk - 2",
+                "interval": [
+                  90000,
+                  92000
+                ],
+                "maxError": 0.0999498082145053,
+                "maxVertexError": 0.0999498082145053,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 7706
+              },
+              {
+                "name": "Portrait Talk - 1",
+                "interval": [
+                  100000,
+                  102000
+                ],
+                "maxError": 0.09993367424601336,
+                "maxVertexError": 0.09993367424601336,
+                "frames": 161,
+                "keysBefore": 34344,
+                "keysAfter": 8701
+              },
+              {
+                "name": "Portrait - 3",
+                "interval": [
+                  110000,
+                  111333
+                ],
+                "maxError": 0.09999890318927347,
+                "maxVertexError": 0.09999890318927347,
+                "frames": 109,
+                "keysBefore": 23320,
+                "keysAfter": 6922
+              }
+            ],
+            "bound": "All linear breakpoints + midpoints; shared rigid billboard rotation preserves error norm. No native/game/FPS claim."
+          }
+        }
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "path": "UI/Dialogue/PortraitTeamColor.blp",
+      "bytes": 1350,
+      "sha256": "d438e60a88d907e5a68ecf7a8b7880ab40cd6e7aa61aabbf4cc19b3aabc10686"
+    },
+    {
+      "path": "UI/Dialogue/PortraitBackground.blp",
+      "bytes": 1350,
+      "sha256": "69a5ab42ae76a149713fb3476844f0efe40b9129180c216f138a6eebccecbaa1"
+    },
+    {
+      "path": "UI/Dialogue/Portraits/Heropaladin.blp",
+      "bytes": 74502,
+      "sha256": "f4522e240ca85e96ba65ed6102ceacf723e62fda963f3843dbaca50ec62a8f89"
+    },
+    {
+      "path": "UI/Dialogue/Portraits/Minotaur.blp",
+      "bytes": 87611,
+      "sha256": "589048023c7853b9ff9a0ed602c9e124218d50bf35bb2f095f5680d3199e9314"
+    }
+  ]
+}

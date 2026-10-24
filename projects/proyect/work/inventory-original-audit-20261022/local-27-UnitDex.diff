@@ -1,0 +1,24 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/027-UnitDex.j
++++ TerrainDev/inventory-integration/src/Inventory_27_UnitDex.j
+@@ -10,7 +10,7 @@
+ *   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+ *   Copy the script to your map, save it, then restart the editor and comment out the line below. 
+ */
+-    ///! external ObjectMerger w3a Adef uDex anam "Detect Leave" ansf "(UnitDex)" aart "" acat "" arac 0 
++    /// external ObjectMerger w3a Adef uDex anam "Detect Leave" ansf "(UnitDex)" aart "" acat "" arac 0 
+ /*  ________________________________________________________________________
+ *   2. Configuration
+ *   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯ 
+@@ -25,9 +25,9 @@
+         
+         // Uncomment the lines below to define a filter for units being indexed
+         
+-        /*static method onFilter takes unit u returns boolean
+-            return true
+-        endmethod*/
++        static method onFilter takes unit u returns boolean
++            return GetUnitTypeId(u) != 'dumi' and GetUnitTypeId(u) != 'dcst'
++        endmethod
+         
+     endmodule 
+ /*  _________________________________________________________________________

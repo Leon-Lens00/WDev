@@ -1,0 +1,19 @@
+--- 
++++ 
+@@ -7,6 +7,16 @@
+ export function cameraFrame(plane){
+  const width=plane.width*19.2,center=(plane.top+plane.height/2)*10.8;
+  return {anchorX:((plane.left+plane.width/2)*19.2-cameraPlane.originX)/cameraPlane.unitX,anchorY:(cameraPlane.originY-center)/cameraPlane.unitY,nativeScale:width/cameraPlane.unitX*cameraPlane.screenWidth*plane.depth/dialogueModel.width};
++}
++// Measured model rendering in the calibrated gameplay camera at 1920x1080.
++// UIText has a different client fit; this changes preview art only, never JASS.
++export const modelCameraPlane=Object.freeze({"id":"classic127b-gameplay-1920x1080-20261022","originX":961,"originY":432.3236690135403,"unitX":718.1893054298849,"unitY":387.7381926120089});
++export function modelPreviewRect(plane){
++ const f=cameraFrame(plane),m=modelCameraPlane;
++ const width=f.nativeScale*dialogueModel.width*m.unitX/(cameraPlane.screenWidth*plane.depth);
++ const height=f.nativeScale*dialogueModel.height*m.unitY/(cameraPlane.screenHeight*plane.depth);
++ const cx=m.originX+f.anchorX*m.unitX,cy=m.originY-f.anchorY*m.unitY;
++ return {left:cx-width/2,top:cy-height/2,width,height};
+ }
+ export const calibrationPreset=()=>({version:1,planeWidth:91.5,planeHeight:64.7,planeTop:12.8,depth:400,frustumWidth:.81,centerY:-.49,source:'verified-10 / 1920x1080; one camera position'});
+ export function validateCalibration(c){

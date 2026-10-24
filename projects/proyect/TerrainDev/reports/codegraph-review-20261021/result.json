@@ -1,0 +1,160 @@
+{
+  "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+  "metadata": {
+    "index_state": "complete",
+    "indexed_with_version": "1.6.2+jass-vjass.2",
+    "indexed_with_extraction_version": "29",
+    "index_files_discovered": "16",
+    "index_files_accounted": "16"
+  },
+  "counts": {
+    "files": 16,
+    "nodes": 850,
+    "edges": 1141
+  },
+  "integrity": "ok",
+  "stale_files": [],
+  "warnings": 286,
+  "extraction_errors": 0,
+  "delivery_hash_matches_tested_map": true,
+  "all_15_library_hashes_match_tested_delivery": true,
+  "watcher": {
+    "method": "MCP watcher already active; no sync or CodeGraph queries during observations",
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+    "fixture": "cg_review_99976.j",
+    "transitions": {
+      "create": {
+        "files": 1,
+        "symbols": [
+          "CGReview99976A"
+        ],
+        "passed": true,
+        "seconds": 0.414
+      },
+      "modify": {
+        "files": 1,
+        "symbols": [
+          "CGReview99976B"
+        ],
+        "passed": true,
+        "seconds": 0.401
+      },
+      "delete": {
+        "files": 0,
+        "symbols": [],
+        "passed": true,
+        "seconds": 0.602
+      }
+    },
+    "fixture_removed": true,
+    "passed": true
+  },
+  "confirmed_edges": [
+    {
+      "source": "RapidFire.RapidPair.cast",
+      "target": "RapidFire.RapidPair.emit",
+      "kind": "calls",
+      "line": 155,
+      "metadata": {
+        "jassStaticSubset": true,
+        "resolutionScope": "enclosing-struct-method",
+        "confidence": 0.95,
+        "resolvedBy": "qualified-name",
+        "refName": "emit"
+      }
+    },
+    {
+      "source": "RapidFire.RapidPair.emit",
+      "target": "RapidFire.RapidBolt.shoot",
+      "kind": "calls",
+      "line": 133,
+      "metadata": {
+        "jassStaticSubset": true,
+        "resolutionScope": "declared-receiver-type",
+        "confidence": 0.95,
+        "resolvedBy": "qualified-name",
+        "refName": "RapidBolt.shoot"
+      }
+    },
+    {
+      "source": "RapidFire.RapidPair.emit",
+      "target": "RapidFire.RapidPair.face",
+      "kind": "calls",
+      "line": 130,
+      "metadata": {
+        "jassStaticSubset": true,
+        "resolutionScope": "enclosing-struct-method",
+        "confidence": 0.95,
+        "resolvedBy": "qualified-name",
+        "refName": "face"
+      }
+    },
+    {
+      "source": "RapidFire.RapidBolt.onPeriod",
+      "target": "RapidFire.RapidBolt.resolve",
+      "kind": "calls",
+      "line": 27,
+      "metadata": {
+        "jassStaticSubset": true,
+        "resolutionScope": "enclosing-struct-method",
+        "confidence": 0.95,
+        "resolvedBy": "qualified-name",
+        "refName": "resolve"
+      }
+    },
+    {
+      "source": "RapidFire.RapidPair.tick",
+      "target": "GroundMotion.GroundMotion.step",
+      "kind": "calls",
+      "line": 235,
+      "metadata": {
+        "jassStaticSubset": true,
+        "resolutionScope": "declared-receiver-type",
+        "confidence": 0.95,
+        "resolvedBy": "qualified-name",
+        "refName": "motion.step"
+      }
+    },
+    {
+      "source": "RapidFire.RapidPair.cast",
+      "target": "GroundMotion.GroundMotion.enter",
+      "kind": "calls",
+      "line": 152,
+      "metadata": {
+        "jassStaticSubset": true,
+        "resolutionScope": "declared-receiver-type",
+        "confidence": 0.95,
+        "resolvedBy": "qualified-name",
+        "refName": "motion.enter"
+      }
+    },
+    {
+      "source": "RapidFire.RapidPair.initialize",
+      "target": "RapidFire.RapidPair.spell",
+      "kind": "references",
+      "line": 289,
+      "metadata": {
+        "jassStaticSubset": true,
+        "resolutionScope": "declared-receiver-type",
+        "confidence": 0.95,
+        "resolvedBy": "function-ref",
+        "refName": "thistype.spell",
+        "refKind": "function_ref",
+        "fnRef": true
+      }
+    }
+  ],
+  "finding": {
+    "severity": "minor presentation issue",
+    "source": "/home/snz/Documentos/MCP W3/codegraph-vjass/src/mcp/tools.ts",
+    "line": 3552,
+    "description": "Dynamic-dispatch links heading also displays ordinary static JASS calls/contains. Filter selects provenance heuristic; JASS static subset uses that provenance. Does not demonstrate runtime dispatch. No incorrect endpoint identified in sampled edges."
+  },
+  "changes": "Only this audit report and temporary watcher fixture (removed); no production source, map, instruction or CodeGraph implementation changes.",
+  "limits": [
+    "JASS structural/static subset only",
+    "No module/macro/import expansion or dynamic runtime dispatch",
+    "No new compiler/game tests needed or run for this read-only review; existing game evidence reused only after hash comparison",
+    "This review sampled current TerrainDev flows, not all edges or full language support"
+  ]
+}

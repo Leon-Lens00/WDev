@@ -1,0 +1,16 @@
+{
+  "command": [
+    "cp",
+    "-a",
+    "--reflink=always",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test",
+    "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile"
+  ],
+  "returncode": 0,
+  "stderr": "",
+  "source": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test",
+  "target": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile",
+  "shared_profile_modified": false,
+  "pfx/drive_c/WarcraftIII/war3.exe": "0ea3434d2bdfd9609eda5fce2a68febac2137af72846de52e0008b142297ffbd",
+  "pfx/drive_c/WarcraftIII/d3d9.dll": "265888c31ca78dffa290c39cb7e50bfb02762590e41927906e46fb32f01497fa"
+}

@@ -1,0 +1,125 @@
+{
+  "address": "86BB37",
+  "rows": [
+    {
+      "offset": 0,
+      "duration": 1,
+      "flags": 2,
+      "vx": 0.0,
+      "vy_up": -1.0
+    },
+    {
+      "offset": 6,
+      "duration": 1,
+      "flags": 2,
+      "vx": 0.0,
+      "vy_up": -2.0
+    },
+    {
+      "offset": 12,
+      "duration": 1,
+      "flags": 2,
+      "vx": 0.0,
+      "vy_up": -6.0
+    },
+    {
+      "offset": 18,
+      "duration": 1,
+      "flags": 2,
+      "vx": 0.0,
+      "vy_up": -3.0
+    },
+    {
+      "offset": 24,
+      "duration": 1,
+      "flags": 2,
+      "vx": 0.0,
+      "vy_up": -3.0
+    },
+    {
+      "offset": 30,
+      "duration": 1,
+      "flags": 2,
+      "vx": 0.0,
+      "vy_up": -6.0
+    },
+    {
+      "offset": 36,
+      "duration": 1,
+      "flags": 2,
+      "vx": 0.0,
+      "vy_up": -2.0
+    },
+    {
+      "offset": 42,
+      "duration": 1,
+      "flags": 2,
+      "vx": 0.0,
+      "vy_up": -1.0
+    },
+    {
+      "offset": 48,
+      "duration": 1,
+      "flags": 6,
+      "vx": 0.0,
+      "vy_up": 1.0
+    },
+    {
+      "offset": 54,
+      "duration": 1,
+      "flags": 6,
+      "vx": 0.0,
+      "vy_up": 2.0
+    },
+    {
+      "offset": 60,
+      "duration": 1,
+      "flags": 6,
+      "vx": 0.0,
+      "vy_up": 6.0
+    },
+    {
+      "offset": 66,
+      "duration": 1,
+      "flags": 6,
+      "vx": 0.0,
+      "vy_up": 3.0
+    },
+    {
+      "offset": 72,
+      "duration": 1,
+      "flags": 6,
+      "vx": 0.0,
+      "vy_up": 3.0
+    },
+    {
+      "offset": 78,
+      "duration": 1,
+      "flags": 6,
+      "vx": 0.0,
+      "vy_up": 6.0
+    },
+    {
+      "offset": 84,
+      "duration": 1,
+      "flags": 6,
+      "vx": 0.0,
+      "vy_up": 2.0
+    },
+    {
+      "offset": 90,
+      "duration": 1,
+      "flags": 6,
+      "vx": 0.0,
+      "vy_up": 1.0
+    }
+  ],
+  "terminal_byte": 0,
+  "read_by": "81C3BE",
+  "initial_offsets_bytes": [
+    0,
+    24,
+    48
+  ],
+  "scope": "table phase/position deltas; final sprite identities and collision trace not recovered"
+}

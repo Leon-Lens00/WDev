@@ -1,0 +1,223 @@
+{
+  "paladin": {
+    "name": "HeroPaladin",
+    "idle": 0,
+    "talk": 3,
+    "idleVariants": [
+      {
+        "index": 0,
+        "sourceIndex": 1,
+        "name": "Portrait - 1",
+        "durationMs": 3333,
+        "sourceName": "Portrait - 1"
+      },
+      {
+        "index": 1,
+        "sourceIndex": 2,
+        "name": "Portrait - 2",
+        "durationMs": 10000,
+        "sourceName": "Portrait - 2"
+      },
+      {
+        "index": 2,
+        "sourceIndex": 3,
+        "name": "Portrait - 3",
+        "durationMs": 5200,
+        "sourceName": "Portrait - 3"
+      }
+    ],
+    "staticIdleVariants": [],
+    "sourceIdle": 1,
+    "sourceTalk": 4,
+    "file": "UI\\Dialogue\\Portraits\\paladin.mdx",
+    "preview": "assets/dialogue/portraits/paladin.mdx",
+    "rawcode": "dpa0",
+    "bust": true,
+    "headOnly": false,
+    "retainedBodyParts": "original body, arms, hands and carried props; original motion",
+    "frozenBodyNodes": [],
+    "totemRepair": null,
+    "source": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/HeroPaladin_portrait.mdx",
+    "method": "source-camera-projected vertex animation",
+    "sourceCamera": {
+      "position": [
+        25.99812889099121,
+        224.09521484375,
+        71.62294006347656
+      ],
+      "target": [
+        3.222060203552246,
+        237.6083984375,
+        76.59339904785156
+      ],
+      "horizontalFieldOfView": 0.8278480172157288,
+      "near": 8,
+      "referenceSequence": 1,
+      "referenceFrame": 80000,
+      "frozen": false,
+      "animatedCamera": true
+    },
+    "depthBudget": {
+      "actorCenter": -2,
+      "backdrop": -3,
+      "localHalfDepth": 0.45,
+      "maxEditorScale": 1.4,
+      "scale": 0.013584013275421658
+    },
+    "sampleStepMs": 25,
+    "sequenceMotion": [
+      4.21524054260665,
+      12.574563242723457,
+      12.363959519488166,
+      3.91713463511984,
+      2.4470976053669604
+    ],
+    "sequenceNames": [
+      "Portrait - 1",
+      "Portrait - 2",
+      "Portrait - 3",
+      "Portrait Talk - 1",
+      "Portrait Talk - 2"
+    ],
+    "sourceSequences": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bodyPolicy": "projected all original Stand/Portrait/Talk body, arms, props, head and face motion",
+    "animatedVertexBones": 237,
+    "totalNodes": 238,
+    "geosets": 2,
+    "maxLocalPalette": 202,
+    "frustum": {
+      "width": 24.36,
+      "height": 18.954,
+      "xLimit": 13.5,
+      "yLimit": 10.7
+    },
+    "vertices": 237,
+    "triangles": 187
+  },
+  "tauren": {
+    "name": "Tauren",
+    "idle": 1,
+    "talk": 4,
+    "idleVariants": [
+      {
+        "index": 1,
+        "sourceIndex": 1,
+        "name": "Portrait - 1",
+        "durationMs": 2666,
+        "sourceName": "Portrait - 1"
+      },
+      {
+        "index": 2,
+        "sourceIndex": 2,
+        "name": "Portrait - 2",
+        "durationMs": 10667,
+        "sourceName": "Portrait - 2"
+      },
+      {
+        "index": 5,
+        "sourceIndex": 5,
+        "name": "Portrait - 3",
+        "durationMs": 1333,
+        "sourceName": "Portrait - 3"
+      }
+    ],
+    "staticIdleVariants": [
+      {
+        "index": 0,
+        "sourceIndex": 0,
+        "name": "Stand -1",
+        "durationMs": 2667
+      }
+    ],
+    "sourceIdle": 1,
+    "sourceTalk": 4,
+    "file": "UI\\Dialogue\\Portraits\\tauren.mdx",
+    "preview": "assets/dialogue/portraits/tauren.mdx",
+    "rawcode": "dta0",
+    "bust": true,
+    "headOnly": false,
+    "retainedBodyParts": "original body, arms, hands and carried props; original motion",
+    "frozenBodyNodes": [],
+    "totemRepair": {
+      "kind": "restore full-unit totem material",
+      "geometryAdded": false,
+      "triangles": 14,
+      "weldedVertices": 9,
+      "boundaryEdges": 0,
+      "sourceUnit": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-tauren-hud-20261022/Tauren-original-unit.mdx",
+      "materialLayers": 2,
+      "teamColorBase": true
+    },
+    "source": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/Tauren_portrait.mdx",
+    "method": "source-camera-projected vertex animation",
+    "sourceCamera": {
+      "position": [
+        81.04679870605469,
+        232.01800537109375,
+        75.2676010131836
+      ],
+      "target": [
+        49.30870056152344,
+        219.6580047607422,
+        83.64140319824219
+      ],
+      "horizontalFieldOfView": 1.1426700353622437,
+      "near": 8,
+      "referenceSequence": 1,
+      "referenceFrame": 66667,
+      "frozen": false,
+      "animatedCamera": true
+    },
+    "depthBudget": {
+      "actorCenter": -2,
+      "backdrop": -3,
+      "localHalfDepth": 0.45,
+      "maxEditorScale": 1.4,
+      "scale": 0.0033785872706871994
+    },
+    "sampleStepMs": 25,
+    "sequenceMotion": [
+      0,
+      4.524293876846869,
+      12.17086328054261,
+      9.158316967270997,
+      9.360235890276831,
+      9.240372493557674
+    ],
+    "sequenceNames": [
+      "Stand -1",
+      "Portrait - 1",
+      "Portrait - 2",
+      "Portrait Talk - 2",
+      "Portrait Talk - 1",
+      "Portrait - 3"
+    ],
+    "sourceSequences": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "bodyPolicy": "projected all original Stand/Portrait/Talk body, arms, props, head and face motion",
+    "animatedVertexBones": 424,
+    "totalNodes": 425,
+    "geosets": 4,
+    "maxLocalPalette": 240,
+    "frustum": {
+      "width": 24.36,
+      "height": 18.954,
+      "xLimit": 13.5,
+      "yLimit": 10.7
+    },
+    "vertices": 404,
+    "triangles": 325
+  }
+}

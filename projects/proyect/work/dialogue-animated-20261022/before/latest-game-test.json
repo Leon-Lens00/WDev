@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-22T17:35:32.653111-05:00",
+  "target": "Classic 1.27b SP 1920x1080",
+  "map_sha256": "ea4073c65837ff39b36376a6f4e4923d569a8fbd44fc2df363e9329d3b9dee45",
+  "build": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/build/20261022-172800-389335",
+  "pid": 649780,
+  "passed": [
+    "JassHelper release and pJASS; member preservation and script reextraction",
+    "native move command changes owner x/y while dialogue is open",
+    "four movement captures keep the same bottom border rows 736,737,738",
+    "two start zones, restart/repeated open and close",
+    "logical/native eye residual <=0.001 at log precision; target residual 0",
+    "36 UI Studio tests; measured native art profile does not alter exported projection",
+    "browser: wide/compact and selector, 50% overlay, final wide restored"
+  ],
+  "evidence_directory": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence",
+  "measurements": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-fine-20261022/measurements.json",
+  "frame_measurements": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-fine-20261022/frame-measurements.json",
+  "editor_screenshot": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-fine-20261022/editor-final.png",
+  "limitations": [
+    "Short SP test at reference resolution, not long-session endurance/LAN/other resolutions",
+    "Compact sampled in UI Studio only in this refinement; no new compact engine sample",
+    "Font rasterization and arbitrary glyph pairs remain approximate",
+    "fine-final-blue.png contains a red page; filename was capture intent, not evidence of blue in this run",
+    "fine-moving-0..4.png from first probe are invalid monitor captures and excluded"
+  ],
+  "exit": {
+    "pid": 649780,
+    "exited": true,
+    "confirmation": "S",
+    "sigterm_needed": false
+  },
+  "visual_approved": false
+}

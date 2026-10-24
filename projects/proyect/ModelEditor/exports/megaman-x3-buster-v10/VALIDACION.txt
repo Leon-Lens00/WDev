@@ -1,0 +1,9 @@
+V10 — Tested in map, Warcraft III Classic1.27b.
+MDX800 releído independientemente; MDL equivalente,311poses,15texturas resueltas. BLP1 Alpha8/picture4/subtype1 y mipmaps contrastados.
+Verde120ms,8ciclos por Stand, fases0/30/60/90ms; barrido100ms hacia -X. Geometría/curvas/textura rosaV9 exactas,240ms. Quitando capas añadidas se reconstruye V7 byte por byte. HashesV7/V8/V9 y susZIP intactos.
+Visor3D:12capturas en pasos20ms, lateral/frontal/oblicua. GIF1x y0.5x derivados de esas capturas. Plano/rayadura angular dentro de envoltura; partículas originales conservadas.
+JassHelper/pJASS y34miembrosMPQ reextraídos idénticos. Mapa realmente cargado coincide con fixture. YDWE individual EnableHost0, prefijo propio, pantalla3 DP-1.
+150capturas finales en seis escenarios: Stand2.4x, movimiento externo,0.5x,3x,Birth,Death. Verde visible con patrón irregular; núcleo yrosa continúan; desaparición correcta. Captura nativa~150ms no mide periodos120/240ms ni todas las fases deBirth160ms. A0.5x el verde pierde detalle por tamaño.
+CodeGraph consultado para fuentes ModelEditor, con revisión final actual. No sustituye exportación ni ejecución.
+Incidencias de herramientas: espera/foco del visor recuperados con pestaña nueva y capturas breves; auxiliar de cierre admitió proceso ya terminado sin enviar entrada. Informes en informes/errores/resueltos/2026-10-23-083211-x3-v10-espera-visor.md y2026-10-23-084902-x3-v10-cierre-ya-terminado.md. Import PIL auxiliar resuelto usando entorno dePillow existente; informe2026-10-22-123635-dialogo-inspeccion-png.md.
+Sin FPS/estrés, multijugador ni física. Cierre verificado: retorno0, ventana/procesos propios ausentes, perfil propio a papelera.

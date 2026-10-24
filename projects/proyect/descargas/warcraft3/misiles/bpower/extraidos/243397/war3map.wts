@@ -1,0 +1,134 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 6
+// Units: dumi (Particle), Name (Name (unam))
+{
+Particle
+}
+
+STRING 11
+// Abilities: A001 (Frozen Orb), Name (Name (anam))
+{
+Frozen Orb
+}
+
+STRING 21
+{
+Player 2
+}
+
+STRING 22
+{
+Force 2
+}
+
+STRING 25
+// Abilities: A001 (Frozen Orb), Researchtip (Tooltip - Learn (aret))
+{
+Learn |cffffcc00F|rrozen Orb - [|cffffcc00Level %d|r]
+}
+
+STRING 26
+// Abilities: A001 (Frozen Orb), Hotkey (Hotkey - Normal (ahky))
+{
+F
+}
+
+STRING 27
+// Abilities: A001 (Frozen Orb), Researchhotkey (Hotkey - Learn (arhk))
+{
+F
+}
+
+STRING 28
+// Abilities: A001 (Frozen Orb), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00F|rrozen Orb - [|cffffcc00Level 1|r]
+}
+
+STRING 29
+// Abilities: A001 (Frozen Orb), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00F|rrozen Orb - [|cffffcc00Level 2|r]
+}
+
+STRING 30
+// Abilities: A001 (Frozen Orb), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00F|rrozen Orb - [|cffffcc00Level 3|r]
+}
+
+STRING 34
+{
+Frozen Orb
+}
+
+STRING 36
+{
+Nondescript
+}
+
+STRING 37
+{
+Unknown
+}
+
+STRING 38
+// Abilities: A001 (Frozen Orb), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+A pulsating orb that shreds an area with Ice Bolts. |n|n|cffffcc00Level 1|r - Each Bolt deals 30 Damage. 10% Chance to burst dying enemies, leaving no corpse behind. |n|cffffcc00Level 2|r - Each Bolt deals 40 Damage. 15% Chance to burst dying enemies, leaving no corpse behind. |n|cffffcc00Level 3|r - Each Bolt deals 50 Damage. 20% Chance to burst dying enemies, leaving no corpse behind.
+}
+
+STRING 39
+// Abilities: A001 (Frozen Orb), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+A pulsating orb that shreds an area with Ice Bolts. Each Bolt deals 30 Damage. 10% Chance to burst dying enemies, leaving no corpse behind.
+}
+
+STRING 40
+// Abilities: A001 (Frozen Orb), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+A pulsating orb that shreds an area with Ice Bolts. Each Bolt deals 40 Damage. 15% Chance to burst dying enemies, leaving no corpse behind.
+}
+
+STRING 41
+// Abilities: A001 (Frozen Orb), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+A pulsating orb that shreds an area with Ice Bolts. Each Bolt deals 50 Damage. 20% Chance to burst dying enemies, leaving no corpse behind.
+}
+
+STRING 42
+// Units: n000 (DummyCaster), Name (Name (unam))
+{
+DummyCaster
+}
+
+STRING 43
+// Abilities: A002 (Frost Nova Dummy Caster), Name (Name (anam))
+{
+Frost Nova Dummy Caster
+}
+
+STRING 44
+{
+FrozenOrb
+}
+
+STRING 45
+{
+Have fun :)
+}
+
+STRING 46
+{
+Press ECS to create new footmens
+}
+

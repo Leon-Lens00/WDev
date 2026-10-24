@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "vjass",
+    "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/integration-v3-input.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/integration-v3-compiled.j"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "JassHelper no produjo salida v\u00e1lida. Registro: /home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261023-084112-079734\n"
+}

@@ -1,0 +1,46 @@
+Browser tab: 3, Title: "Vinz · estudio de 191 modelos", URL: "http://127.0.0.1:34801/vinz-study-v4/".
+0 AXWebArea Vinz · estudio de 191 modelos, URL: 127.0.0.1:34801/vinz-study-v4/
+	1 container
+		2 heading Vinz · estudio191, Value: 1
+			3 text Vinz · estudio191
+		4 button Anterior, ID: prev
+		5 text Página 
+		6 stepper (settable, integer) Página, Value: 30, ID: page
+		7 button Siguiente, ID: next
+		8 text Secuencia 
+		9 pop up button (collapsed, settable) Secuencia, Value: Death120ms, ID: sequence, Secondary Actions: Expand
+			10 menu
+				11 Stand
+				12 Birth120ms
+				13 (selected) Death120ms
+		14 text Cámara 
+		15 pop up button (collapsed, settable) Cámara, Value: Oblicua, ID: camera, Secondary Actions: Expand
+			16 menu
+				17 (selected) Oblicua
+				18 Lateral
+				19 Frontal
+		20 button Movimiento prueba | activar, ID: motion
+		25 text Página30/32 · 6 modelos · partículas98
+	22 container
+		23 image view
+		24 container cells
+			26 container
+				27 text 174 · TC15 Model Bundle · MBuilding Fire Small UD
+				28 text Recursos resueltos 0 tris · 4 PE2 · 0 estelas · Death · t3453ms
+			29 container
+				30 text 175 · TC15 Model Bundle · BurningSpear
+				31 text Recursos resueltos 644 tris · 14 PE2 · 3 estelas · Death · t8120ms
+			32 container
+				33 text 176 · TC15 Model Bundle · Burning Spear Target
+				34 text Recursos resueltos 0 tris · 9 PE2 · 0 estelas · Death · t3453ms
+			35 container
+				36 text 177 · TC15 Model Bundle · Chainsnare_AirTarget
+				37 text Recursos resueltos 68 tris · 0 PE2 · 3 estelas · Death · t5453ms
+			38 container
+				39 text 178 · TC15 Model Bundle · ChainsnareTarget
+				40 text Recursos resueltos 60 tris · 0 PE2 · 3 estelas · Death · t5453ms
+			41 container
+				42 text 179 · TC15 Model Bundle · ChainsnareMissile
+				43 text Recursos resueltos 32 tris · 0 PE2 · 0 estelas · Death · t16787ms
+
+The focused UI element is 7 button Siguiente, ID: next

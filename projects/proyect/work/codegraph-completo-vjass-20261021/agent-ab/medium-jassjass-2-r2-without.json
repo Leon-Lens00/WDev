@@ -1,0 +1,39 @@
+{
+  "repo": "medium-jassjass",
+  "flow": 2,
+  "names": [
+    "Jass.Lexer.parseIdent",
+    "Jass.isDelim"
+  ],
+  "repetition": 2,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 31.83316522699897,
+  "usage": {
+    "input_tokens": 180573,
+    "cached_input_tokens": 160000,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 931,
+    "reasoning_output_tokens": 108
+  },
+  "commands": 6,
+  "command_text": [
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' --glob '*.hs' --glob '*.lhs' --glob '*.js' --glob '*.ts' --glob '*.lua' 'parseIdent|isDelim' .\"",
+    "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"' -g '\"'!**/node_modules/**'\"' -g '\"'!**/vendor/**'\"'\"",
+    "/usr/bin/bash -lc \"rg -n 'parseIdent|isDelim|library|scope|struct|interface|module' Jass.j\"",
+    "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '635,830p'\"",
+    "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '990,1080p'\"",
+    "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '864,927p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' --glob '*.hs' --glob '*.lhs' --glob '*.js' --glob '*.ts' --glob '*.lua' 'parseIdent|isDelim' .\"",
+    "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"' -g '\"'!**/node_modules/**'\"' -g '\"'!**/vendor/**'\"'\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16220-87ad-70b2-8da4-a1d0f882bc1d"
+  ]
+}

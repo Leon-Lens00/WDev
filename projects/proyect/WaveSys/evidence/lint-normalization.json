@@ -1,0 +1,206 @@
+[
+  {
+    "source": "src/WaveSysAnAI/AI/AIConfig.j",
+    "source_sha256": "263d864ed4dae9ac8eed32f65013d7cf08ee6d81c3d8d3fd3b9d35b47663a938",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/AI/AIConfig.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/AI/AIManagerUtils.j",
+    "source_sha256": "7e065c1c9ce8ba6ee8df8d653ef32f469d725ce1f01aa448496572f556f461e7",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/AI/AIManagerUtils.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/AI/AIProfiles.j",
+    "source_sha256": "1dc637a9392129974939892a593197eb0069e9b557622d777dafd434760becce",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/AI/AIProfiles.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/AI/IAManager.j",
+    "source_sha256": "482f4b727a310a388bb1580e853e736a105c3ffa12ef3d9e7cc2971e91318348",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/AI/IAManager.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/StageExample.j",
+    "source_sha256": "042026a60044ff6800672ed712fd409aea257c8b5e470607e8d72f2044a7755f",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/StageExample.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/SwlsWave.j",
+    "source_sha256": "b33711164fec7468b3048d0c42f0f5b3997d1bb072fea54de135252390e57119",
+    "decode": "cp1252",
+    "normalized": "artifacts/lint-input/SwlsWave/SwlsWave.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/WavePointApi.j",
+    "source_sha256": "649cf71e72f29f1e33aa20a1e3bc48a1a4710f578a748dea48b2be4b8da34ae5",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/WavePointApi.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/WavePointGroups.j",
+    "source_sha256": "cab7841c405d5cd809cbe4033a92dce7df948eaa3461e9a127165313ec7ea5bb",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/WavePointGroups.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/WavePointGroupsConfig.j",
+    "source_sha256": "ef3e5ed7ade655db341fd8011be6bb12c4a30df90f665400acad227114e41dc0",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/WavePointGroupsConfig.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/WaveStreaks.j",
+    "source_sha256": "96bf8b6b6859ca726eba6abe6e7f31e4c6c9d205a0c32a730e70c777b8f0e266",
+    "decode": "cp1252",
+    "normalized": "artifacts/lint-input/SwlsWave/WaveStreaks.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j",
+    "source_sha256": "f33c7ab84703560e5b0f00d6727dae44921af282f33cbdc5d8e30b434892368a",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveAuraSkills.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j",
+    "source_sha256": "0f2aa4732a8f4784696b08de941e4b3b81dcd5e6d5274f0d71c1c65399114e3d",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveBarrierSkills.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j",
+    "source_sha256": "6188b9fe1c1d36b4c3e7b9f158d0d62bf13ee9009ae2e34379d141d726aca657",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveMortarSkills.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+    "source_sha256": "6e6ddf339e1f3fc98b90f0d16735bedc657000654b8d448546e2286adf730c88",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WavePriestSkills.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveProjectileBehaviors.j",
+    "source_sha256": "1d007c2f02a118a16e71a3945095ab3f35455633d800774b3a307d80f31c843f",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveProjectileBehaviors.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j",
+    "source_sha256": "f1b2ed62ea8ee435269d2060cf4e1763f5dfce53d3a24c95da82fbf79d87a88c",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveProjectileConfig.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j",
+    "source_sha256": "a1f74fd51a11cecb2c19b0f442af2872a2581fe2f4e3b280d5eb9bfe55efcb8d",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveProjectileCore.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j",
+    "source_sha256": "41989f214e0b4de74ecaa4db1ff7f66e75c3b88c61bc9a1e89e8893590fd1d0e",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveRangedSkills.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveReinforcements.j",
+    "source_sha256": "afcf998796e2ce8c1e63371c6ed059a144ebf2b544f028926b8925675768d753",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveReinforcements.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j",
+    "source_sha256": "0f3d9f1089f7dd52a314b88f25942e9c0c1bcee33027581244dacf8fe56968b7",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveSiegeSkills.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j",
+    "source_sha256": "77a769bcc3b940add531e126f96990024401beed62a7759f6602d5eb4a4b8c5e",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveSiegeZoneSkills.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j",
+    "source_sha256": "825141655319960fe775de5e1e7287c29d82fa80a3bb41ec05c5ef8f249e2485",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveSkillVisuals.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j",
+    "source_sha256": "68ef08ffa06c13f245e32daa2f68445222ed9cf373c11a3a4cc4f91a2568ca36",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveTrapSkills.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j",
+    "source_sha256": "550488f3a2cf17ac908ce619a6e5aeabdee6b93f5e93f85b57e9b822be2ea129",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/WaveProjectiles/WaveWaveformSkills.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j",
+    "source_sha256": "3cec19655a66212342ac574e34c49cc0f8dfa0003e10968053f01d65b5f435dd",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/Config/WaveOwnerConfig.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeAudio.j",
+    "source_sha256": "6ce991ea68b9b17836bb017648af516257e0007239da507e086409909a33838f",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/RestTime/RestTimeAudio.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j",
+    "source_sha256": "d44dae4331a7733d827f97b5de68ee7861ab64901f2da594bc3763c6bb7dffa5",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/RestTime/RestTimeCountdown.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j",
+    "source_sha256": "4a022a7ade77424b2263e27578643291738aff9b1f914ae046a6f6671789a557",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/RestTime/RestTimeEndFlow.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j",
+    "source_sha256": "3f9575aa6fb85195a1d6d8e183e4336a82f3e3d33689e3bef424d4052ad47185",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/RestTime/RestTimeMenuBridge.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j",
+    "source_sha256": "f39982f8e3af4088f8f8d11daac6f64c1d67fd1438f158bb260195ee773cfedb",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/RestTime/RestTimeState.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j",
+    "source_sha256": "06133c8704764ab767d6bed3b633cf09b17c25e7bf4bd9fa5d1a2575000e8073",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/RestTime/RestTimeSurvivalEnd.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j",
+    "source_sha256": "70a0492e9199a1ed0d136512d04403e24cc5366af13a7ab98b31f25d8ebd9b03",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/RestTime/RestTimeTenderAudio.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j",
+    "source_sha256": "d094dc8b220c95d1743ea172b84c2839fd8216e87f71fee985a2ac1ef2ef69f7",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/RestTime/RestTimeUI.j"
+  },
+  {
+    "source": "src/WaveSysAnAI/SwlsWave/RestTime/TheEnd.j",
+    "source_sha256": "f1f3a35f3030c97ecff1cad299d134f4312195d9b5628ec8e5833efc03f8cf33",
+    "decode": "utf-8-sig",
+    "normalized": "artifacts/lint-input/SwlsWave/RestTime/TheEnd.j"
+  }
+]

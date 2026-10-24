@@ -1,0 +1,470 @@
+[
+  {
+    "id": "D000",
+    "name": "SpellShieldAmulet",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNSpellShieldAmulet.blp",
+    "preview": "assets/D000.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D010",
+    "name": "Penguin",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNPenguin.blp",
+    "preview": "assets/D010.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D020",
+    "name": "HoodOfCunning",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNHoodOfCunning.blp",
+    "preview": "assets/D020.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D030",
+    "name": "MedalionOfCourage",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNMedalionOfCourage.blp",
+    "preview": "assets/D030.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D040",
+    "name": "LionHorn",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNLionHorn.blp",
+    "preview": "assets/D040.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D050",
+    "name": "ChestOfGold",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNChestOfGold.blp",
+    "preview": "assets/D050.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D001",
+    "name": "AmuletOftheWild",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNAmuletOftheWild.blp",
+    "preview": "assets/D001.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D201",
+    "name": "human-options-menu-border",
+    "path": "UI\\Widgets\\EscMenu\\Human\\human-options-menu-border.blp",
+    "preview": "assets/frames/ewin-D201.png",
+    "width": 512,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D011",
+    "name": "SacrificialSkull",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNSacrificialSkull.blp",
+    "preview": "assets/D011.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D021",
+    "name": "Boots",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNBoots.blp",
+    "preview": "assets/D021.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D031",
+    "name": "Manual",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNManual.blp",
+    "preview": "assets/D031.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D041",
+    "name": "HornOfCenarius",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNHornOfCenarius.blp",
+    "preview": "assets/D041.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D051",
+    "name": "Cheese",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNCheese.blp",
+    "preview": "assets/D051.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D002",
+    "name": "PendantOfMana",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNPendantOfMana.blp",
+    "preview": "assets/D002.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D202",
+    "name": "orc-options-menu-border",
+    "path": "UI\\Widgets\\EscMenu\\Orc\\orc-options-menu-border.blp",
+    "preview": "assets/frames/ewin-D202.png",
+    "width": 512,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D012",
+    "name": "EnchantedGemstone",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp",
+    "preview": "assets/D012.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D022",
+    "name": "DaggerOfEscape",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNDaggerOfEscape.blp",
+    "preview": "assets/D022.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D032",
+    "name": "Dust",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNDust.blp",
+    "preview": "assets/D032.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D042",
+    "name": "HornOfFog",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNHornOfFog.blp",
+    "preview": "assets/D042.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D052",
+    "name": "Talisman",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNTalisman.blp",
+    "preview": "assets/D052.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D003",
+    "name": "Amulet",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNAmulet.blp",
+    "preview": "assets/D003.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D203",
+    "name": "undead-options-menu-border",
+    "path": "UI\\Widgets\\EscMenu\\Undead\\undead-options-menu-border.blp",
+    "preview": "assets/frames/ewin-D203.png",
+    "width": 512,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D013",
+    "name": "ThoriumArmor",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNThoriumArmor.blp",
+    "preview": "assets/D013.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "C313",
+    "name": "UndeadUITile03",
+    "path": "UI\\Console\\Undead\\UndeadUITile03.blp",
+    "preview": "assets/C313.png",
+    "width": 512,
+    "height": 512,
+    "source": "game"
+  },
+  {
+    "id": "D023",
+    "name": "3M3",
+    "path": "ReplaceableTextures\\CommandButtons\\BTN3M3.blp",
+    "preview": "assets/D023.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D033",
+    "name": "Hammer",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNHammer.blp",
+    "preview": "assets/D033.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D043",
+    "name": "GauntletsOfOgrePower",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNGauntletsOfOgrePower.blp",
+    "preview": "assets/D043.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D204",
+    "name": "nightelf-options-menu-border",
+    "path": "UI\\Widgets\\EscMenu\\NightElf\\nightelf-options-menu-border.blp",
+    "preview": "assets/frames/ewin-D204.png",
+    "width": 512,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D009",
+    "name": "ClawsOfAttack",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNClawsOfAttack.blp",
+    "preview": "assets/D009.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "dbnk",
+    "name": "human-inventory-slotfiller",
+    "path": "UI\\Widgets\\Console\\Human\\human-inventory-slotfiller.blp",
+    "preview": "assets/dbnk.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "D05W",
+    "name": "RingLeft",
+    "path": "UI\\BTNRingLeft.blp",
+    "preview": "assets/D05W.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B003",
+    "name": "HelmLeft",
+    "path": "UI\\BTNHelmLeft.blp",
+    "preview": "assets/B003.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B004",
+    "name": "ShoulderLeft",
+    "path": "UI\\BTNShoulderLeft.blp",
+    "preview": "assets/B004.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B005",
+    "name": "WeaponLeft",
+    "path": "UI\\BTNWeaponLeft.blp",
+    "preview": "assets/B005.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B006",
+    "name": "ArmorLeft",
+    "path": "UI\\BTNArmorLeft.blp",
+    "preview": "assets/B006.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B007",
+    "name": "BeltLeft",
+    "path": "UI\\BTNBeltLeft.blp",
+    "preview": "assets/B007.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B008",
+    "name": "Pants",
+    "path": "UI\\BTNPants.blp",
+    "preview": "assets/B008.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B009",
+    "name": "Amulet",
+    "path": "UI\\BTNAmulet.blp",
+    "preview": "assets/B009.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B00A",
+    "name": "ShoulderRight",
+    "path": "UI\\BTNShoulderRight.blp",
+    "preview": "assets/B00A.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B00B",
+    "name": "Shield",
+    "path": "UI\\BTNShield.blp",
+    "preview": "assets/B00B.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B00C",
+    "name": "Gloves",
+    "path": "UI\\BTNGloves.blp",
+    "preview": "assets/B00C.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B00D",
+    "name": "Bracers",
+    "path": "UI\\BTNBracers.blp",
+    "preview": "assets/B00D.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B00E",
+    "name": "Boots",
+    "path": "UI\\BTNBoots.blp",
+    "preview": "assets/B00E.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B00F",
+    "name": "RingRight",
+    "path": "UI\\BTNRingRight.blp",
+    "preview": "assets/B00F.png",
+    "width": 128,
+    "height": 128,
+    "source": "map"
+  },
+  {
+    "id": "B00G",
+    "name": "HelmutPurple",
+    "path": "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp",
+    "preview": "assets/B00G.png",
+    "width": 64,
+    "height": 64,
+    "source": "game"
+  },
+  {
+    "id": "B00H",
+    "name": "ToolTipGoldIcon",
+    "path": "UI\\Widgets\\ToolTips\\Human\\ToolTipGoldIcon.blp",
+    "preview": "assets/B00H.png",
+    "width": 32,
+    "height": 32,
+    "source": "game"
+  },
+  {
+    "id": "B00S",
+    "name": "Nothing",
+    "path": "UI\\Nothing.blp",
+    "preview": "assets/B00S.png",
+    "width": 2,
+    "height": 2,
+    "source": "map"
+  },
+  {
+    "id": "B00U",
+    "name": "PageUpUp",
+    "path": "UI\\BTNPageUpUp.tga",
+    "preview": "assets/B00U.png",
+    "width": 32,
+    "height": 32,
+    "source": "map"
+  },
+  {
+    "id": "B00T",
+    "name": "PageDownUp",
+    "path": "UI\\BTNPageDownUp.tga",
+    "preview": "assets/B00T.png",
+    "width": 32,
+    "height": 32,
+    "source": "map"
+  },
+  {
+    "id": "B011",
+    "name": "Sell",
+    "path": "UI\\BTNSell.blp",
+    "preview": "assets/B011.png",
+    "width": 64,
+    "height": 64,
+    "source": "map"
+  },
+  {
+    "id": "B014",
+    "name": "tooltip-border",
+    "path": "UI\\tooltip-border.blp",
+    "preview": "assets/B014.png",
+    "width": 512,
+    "height": 64,
+    "source": "map"
+  },
+  {
+    "id": "B00N",
+    "name": "Drop",
+    "path": "UI\\BTNDrop.blp",
+    "preview": "assets/B00N.png",
+    "width": 64,
+    "height": 64,
+    "source": "map"
+  }
+]

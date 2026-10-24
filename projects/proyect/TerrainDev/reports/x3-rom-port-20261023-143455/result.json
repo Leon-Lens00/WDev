@@ -1,0 +1,40 @@
+{
+  "status": "Tested in map",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/TerrainDev.w3x",
+  "map_sha256": "f087047bff8c051d26072c5c651513588d7272d38628d23cd697eaa7516e5e23",
+  "profiles": [
+    "USA original",
+    "Zero Project IPS V4.1",
+    "GIF compatibility API"
+  ],
+  "build_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/20261023-144114-703534",
+  "engine_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/20261023-145909/validated-result.json",
+  "native_engine_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/20261023-145909/native-validated.json",
+  "checks_functional": 192,
+  "native_csv_values": 5259,
+  "failures": 0,
+  "negative_controls_rejected": 22,
+  "native_bodies": {
+    "created": 86,
+    "retired": 86,
+    "active": 0,
+    "casts": 0,
+    "flashes": 0
+  },
+  "preservation": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/preservation.json",
+  "codegraph": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/codegraph-final.json",
+  "closure": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/20261023-145909/closure.json",
+  "demo_video": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/demostracion-usa-zero.mp4",
+  "resolved_errors": [
+    "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-144917-x3-retroceso-blanco-nativo.md",
+    "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-144524-x3-oracle-colision-nombres.md"
+  ],
+  "limits": [
+    "single client Classic1.27b on CachyOS/Proton, no multiplayer certification",
+    "32Hz Missile render/physics; interpolation of native mathematical knots does not raise FPS",
+    "W/E/R discrete abilities; held-button charging not implemented",
+    "fixed cast origin/direction; map-specific collision and damage; ground XY only",
+    "no new editor save/reopen or new performance benchmark"
+  ],
+  "date": "2026-10-23T16:48:03.525168-05:00"
+}

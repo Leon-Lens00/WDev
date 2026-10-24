@@ -1,0 +1,42 @@
+--- config.toml.before
++++ config.toml.after
+@@ -51,26 +51,30 @@
+ [mcp_servers.node_repl]
+ args = []
+ command = "/usr/lib/chatgpt/resources/cua_node/bin/node_repl"
+-startup_timeout_sec = 120
++startup_timeout_sec = 120.0
+ 
+ [mcp_servers.node_repl.env]
++BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab,mcpapps"
++BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
++BROWSER_USE_CODEX_APP_VERSION = "26.1002.52244"
++BROWSER_USE_TINYSKY_ENABLED = "1"
++CODEX_CLI_PATH = "/usr/lib/chatgpt/resources/codex"
++CODEX_HOME = "/home/snz/.codex"
++NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
++NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+ NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+ NODE_REPL_NODE_MODULE_DIRS = "/usr/lib/chatgpt/resources/cua_node/lib/node_modules"
+ NODE_REPL_NODE_PATH = "/usr/lib/chatgpt/resources/cua_node/bin/node"
+ NODE_REPL_TRUSTED_CODE_PATHS = "/home/snz/.codex:/usr/lib/chatgpt/resources/cua_node/lib/node_modules"
+-CODEX_HOME = "/home/snz/.codex"
+-BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab,mcpapps"
+-BROWSER_USE_TINYSKY_ENABLED = "1"
+-NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
+-NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+-BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+-BROWSER_USE_CODEX_APP_VERSION = "26.1002.52244"
+ NODE_REPL_TRUSTED_SERVICES = '{"browser":"/home/snz/.codex/plugins/cache/openai-bundled/browser/26.1002.52244/scripts/browser-service.mjs"}'
+-CODEX_CLI_PATH = "/usr/lib/chatgpt/resources/codex"
+ 
+ [mcp_servers.wc3-forge-classic]
+ command = "/usr/bin/python3"
+ args = ["/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py", "mcp"]
++
++[mcp_servers.wc3-jass-explore]
++command = "/usr/bin/python3"
++args = ["/home/snz/.local/share/wc3-jass-explore/server.py", "--jassgraph", "/home/snz/Documentos/MCP W3/wc3-forge/scripts/jassgraph"]
+ 
+ [projects."/home/snz/Documentos/ChatGPT/FrozenThone"]
+ trust_level = "trusted"

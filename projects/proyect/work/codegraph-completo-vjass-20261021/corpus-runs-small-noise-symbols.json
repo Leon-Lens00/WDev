@@ -1,0 +1,1010 @@
+[
+  {
+    "name": "Noise.j",
+    "file": "Noise.j",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "Noise",
+    "file": "Noise.j",
+    "line": 8,
+    "kind": "namespace"
+  },
+  {
+    "name": "Noise.Init",
+    "file": "Noise.j",
+    "line": 10,
+    "kind": "module"
+  },
+  {
+    "name": "Noise.Noise",
+    "file": "Noise.j",
+    "line": 16,
+    "kind": "struct"
+  },
+  {
+    "name": "Noise.Noise.version",
+    "file": "Noise.j",
+    "line": 17,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.STRETCH_CONSTANT_2D",
+    "file": "Noise.j",
+    "line": 18,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.SQUISH_CONSTANT_2D",
+    "file": "Noise.j",
+    "line": 19,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.NORM_CONSTANT_2D",
+    "file": "Noise.j",
+    "line": 20,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.PMASK",
+    "file": "Noise.j",
+    "line": 21,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.SQUISH_CONSTANT_2D_X",
+    "file": "Noise.j",
+    "line": 22,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.SQUISH_CONSTANT_2D_Y",
+    "file": "Noise.j",
+    "line": 23,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.permutation",
+    "file": "Noise.j",
+    "line": 25,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.gradTable2DX",
+    "file": "Noise.j",
+    "line": 26,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.gradTable2DY",
+    "file": "Noise.j",
+    "line": 27,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.__cg_Noise_Init_onInit",
+    "file": "Noise.j",
+    "line": 29,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.x",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.octaves",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.persistence",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.persistence",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.persistence",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.octaves",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.z",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.x",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.octaves",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.y",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.y",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.x",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.amplitude",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.total",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.frequency",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.amplitude",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.total",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.amplitude",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.maxValue",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.frequency",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.maxValue",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.i",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.i",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.maxValue",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.i",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.frequency",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.total",
+    "file": "Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.floor",
+    "file": "Noise.j",
+    "line": 32,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.floor.value",
+    "file": "Noise.j",
+    "line": 32,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.floor.n",
+    "file": "Noise.j",
+    "line": 33,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.realTernaryOp",
+    "file": "Noise.j",
+    "line": 40,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.realTernaryOp.a",
+    "file": "Noise.j",
+    "line": 40,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.realTernaryOp.cond",
+    "file": "Noise.j",
+    "line": 40,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.realTernaryOp.b",
+    "file": "Noise.j",
+    "line": 40,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.fade",
+    "file": "Noise.j",
+    "line": 48,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.fade.t",
+    "file": "Noise.j",
+    "line": 48,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.lerp",
+    "file": "Noise.j",
+    "line": 52,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.lerp.b",
+    "file": "Noise.j",
+    "line": 52,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.lerp.t",
+    "file": "Noise.j",
+    "line": 52,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.lerp.a",
+    "file": "Noise.j",
+    "line": 52,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad1D",
+    "file": "Noise.j",
+    "line": 56,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.grad1D.hash",
+    "file": "Noise.j",
+    "line": 56,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad1D.x",
+    "file": "Noise.j",
+    "line": 56,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad1D.h",
+    "file": "Noise.j",
+    "line": 57,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin1D",
+    "file": "Noise.j",
+    "line": 61,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.perlin1D.x",
+    "file": "Noise.j",
+    "line": 61,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin1D.X",
+    "file": "Noise.j",
+    "line": 62,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad2D",
+    "file": "Noise.j",
+    "line": 67,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.grad2D.hash",
+    "file": "Noise.j",
+    "line": 67,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad2D.y",
+    "file": "Noise.j",
+    "line": 67,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad2D.x",
+    "file": "Noise.j",
+    "line": 67,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad2D.h",
+    "file": "Noise.j",
+    "line": 68,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad2D.u",
+    "file": "Noise.j",
+    "line": 69,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad2D.v",
+    "file": "Noise.j",
+    "line": 70,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D",
+    "file": "Noise.j",
+    "line": 74,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.y",
+    "file": "Noise.j",
+    "line": 74,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.x",
+    "file": "Noise.j",
+    "line": 74,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.X",
+    "file": "Noise.j",
+    "line": 75,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.Y",
+    "file": "Noise.j",
+    "line": 76,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.u",
+    "file": "Noise.j",
+    "line": 77,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.v",
+    "file": "Noise.j",
+    "line": 78,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.A",
+    "file": "Noise.j",
+    "line": 79,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.B",
+    "file": "Noise.j",
+    "line": 80,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.lerpA1",
+    "file": "Noise.j",
+    "line": 81,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.lerpA2",
+    "file": "Noise.j",
+    "line": 82,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad3D",
+    "file": "Noise.j",
+    "line": 94,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.grad3D.x",
+    "file": "Noise.j",
+    "line": 94,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad3D.y",
+    "file": "Noise.j",
+    "line": 94,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad3D.hash",
+    "file": "Noise.j",
+    "line": 94,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad3D.z",
+    "file": "Noise.j",
+    "line": 94,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad3D.h",
+    "file": "Noise.j",
+    "line": 95,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad3D.u",
+    "file": "Noise.j",
+    "line": 96,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad3D.v",
+    "file": "Noise.j",
+    "line": 97,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D",
+    "file": "Noise.j",
+    "line": 101,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.x",
+    "file": "Noise.j",
+    "line": 101,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.y",
+    "file": "Noise.j",
+    "line": 101,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.z",
+    "file": "Noise.j",
+    "line": 101,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.X",
+    "file": "Noise.j",
+    "line": 102,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.Y",
+    "file": "Noise.j",
+    "line": 103,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.Z",
+    "file": "Noise.j",
+    "line": 104,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.u",
+    "file": "Noise.j",
+    "line": 105,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.v",
+    "file": "Noise.j",
+    "line": 106,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.w",
+    "file": "Noise.j",
+    "line": 107,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.A",
+    "file": "Noise.j",
+    "line": 108,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.AA",
+    "file": "Noise.j",
+    "line": 109,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.AB",
+    "file": "Noise.j",
+    "line": 110,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.B",
+    "file": "Noise.j",
+    "line": 111,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.BA",
+    "file": "Noise.j",
+    "line": 112,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.BB",
+    "file": "Noise.j",
+    "line": 113,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.lerpA1",
+    "file": "Noise.j",
+    "line": 114,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.lerpA2",
+    "file": "Noise.j",
+    "line": 115,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.lerpB1",
+    "file": "Noise.j",
+    "line": 116,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.lerpB2",
+    "file": "Noise.j",
+    "line": 117,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D",
+    "file": "Noise.j",
+    "line": 137,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.ysb",
+    "file": "Noise.j",
+    "line": 137,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.dy",
+    "file": "Noise.j",
+    "line": 137,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.dx",
+    "file": "Noise.j",
+    "line": 137,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.xsb",
+    "file": "Noise.j",
+    "line": 137,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.index",
+    "file": "Noise.j",
+    "line": 138,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D",
+    "file": "Noise.j",
+    "line": 142,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.y",
+    "file": "Noise.j",
+    "line": 142,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.x",
+    "file": "Noise.j",
+    "line": 142,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.strechOffset",
+    "file": "Noise.j",
+    "line": 143,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xs",
+    "file": "Noise.j",
+    "line": 144,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.ys",
+    "file": "Noise.j",
+    "line": 145,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xsb",
+    "file": "Noise.j",
+    "line": 146,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.ysb",
+    "file": "Noise.j",
+    "line": 147,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.squishOffset",
+    "file": "Noise.j",
+    "line": 148,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xb",
+    "file": "Noise.j",
+    "line": 149,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.yb",
+    "file": "Noise.j",
+    "line": 150,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xins",
+    "file": "Noise.j",
+    "line": 151,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.yins",
+    "file": "Noise.j",
+    "line": 152,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.inSum",
+    "file": "Noise.j",
+    "line": 153,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dx0",
+    "file": "Noise.j",
+    "line": 154,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dy0",
+    "file": "Noise.j",
+    "line": 155,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dx_ext",
+    "file": "Noise.j",
+    "line": 156,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dy_ext",
+    "file": "Noise.j",
+    "line": 157,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xsv_ext",
+    "file": "Noise.j",
+    "line": 158,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.ysv_ext",
+    "file": "Noise.j",
+    "line": 159,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.value",
+    "file": "Noise.j",
+    "line": 160,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dx1",
+    "file": "Noise.j",
+    "line": 161,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dy1",
+    "file": "Noise.j",
+    "line": 162,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.attn1",
+    "file": "Noise.j",
+    "line": 163,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dx2",
+    "file": "Noise.j",
+    "line": 164,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dy2",
+    "file": "Noise.j",
+    "line": 165,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.attn2",
+    "file": "Noise.j",
+    "line": 166,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.zins",
+    "file": "Noise.j",
+    "line": 167,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.attn0",
+    "file": "Noise.j",
+    "line": 168,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.attn_ext",
+    "file": "Noise.j",
+    "line": 169,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.setGradientTable2D",
+    "file": "Noise.j",
+    "line": 236,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.openSimplexInit",
+    "file": "Noise.j",
+    "line": 256,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.permutationInit",
+    "file": "Noise.j",
+    "line": 262,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTable",
+    "file": "Noise.j",
+    "line": 267,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTable.i",
+    "file": "Noise.j",
+    "line": 268,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.getRandomIntEvent",
+    "file": "Noise.j",
+    "line": 277,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.p_getRandomIntLow",
+    "file": "Noise.j",
+    "line": 278,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.p_getRandomIntHigh",
+    "file": "Noise.j",
+    "line": 279,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.p_getRandomIntReturn",
+    "file": "Noise.j",
+    "line": 280,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.operator getRandomIntLow",
+    "file": "Noise.j",
+    "line": 282,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.operator getRandomIntHigh",
+    "file": "Noise.j",
+    "line": 286,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.operator getRandomIntReturn=",
+    "file": "Noise.j",
+    "line": 290,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.operator getRandomIntReturn=.value",
+    "file": "Noise.j",
+    "line": 290,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTableCustom",
+    "file": "Noise.j",
+    "line": 294,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTableCustom.GetRandomIntInterface",
+    "file": "Noise.j",
+    "line": 294,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTableCustom.i",
+    "file": "Noise.j",
+    "line": 295,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTableCustom.trig",
+    "file": "Noise.j",
+    "line": 296,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.initialize",
+    "file": "Noise.j",
+    "line": 312,
+    "kind": "method"
+  },
+  {
+    "name": "OctavePerlin.j",
+    "file": "OctavePerlin.j",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "NoisePlugin",
+    "file": "OctavePerlin.j",
+    "line": 10,
+    "kind": "namespace"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin",
+    "file": "OctavePerlin.j",
+    "line": 11,
+    "kind": "module"
+  }
+]

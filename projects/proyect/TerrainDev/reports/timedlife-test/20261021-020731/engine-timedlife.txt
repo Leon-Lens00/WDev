@@ -1,0 +1,9 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "TIMEDLIFE 20261021-020731 COMPLETE" )
+	call Preload( "pausedAlive=1 runningAlive=0 resumedAlive=0" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

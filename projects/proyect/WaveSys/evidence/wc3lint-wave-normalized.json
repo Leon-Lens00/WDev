@@ -1,0 +1,250 @@
+{
+  "files": 34,
+  "findings": [
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/AI/IAManager.j",
+      "line": 1882,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "EXECUTEFUNC",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/RestTime/RestTimeCountdown.j",
+      "line": 29,
+      "message": "String callbacks need exact generated names and minification review."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/RestTime/RestTimeCountdown.j",
+      "line": 47,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/RestTime/RestTimeSurvivalEnd.j",
+      "line": 41,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/StageExample.j",
+      "line": 205,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 378,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 1535,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "EXECUTEFUNC",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 1591,
+      "message": "String callbacks need exact generated names and minification review."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 1750,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 1757,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 1764,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 1771,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 1778,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 1785,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 1792,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2111,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2113,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2150,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2164,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2165,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2166,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2167,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2168,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2169,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/SwlsWave.j",
+      "line": 2170,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/WavePointGroups.j",
+      "line": 337,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/SwlsWave/WaveStreaks.j",
+      "line": 718,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/WaveProjectiles/WaveAuraSkills.j",
+      "line": 722,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/WaveProjectiles/WaveMortarSkills.j",
+      "line": 110,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/WaveProjectiles/WaveProjectileBehaviors.j",
+      "line": 16,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/WaveProjectiles/WaveSiegeSkills.j",
+      "line": 84,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/WaveProjectiles/WaveSiegeZoneSkills.j",
+      "line": 206,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/WaveProjectiles/WaveSkillVisuals.j",
+      "line": 70,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/WaveProjectiles/WaveWaveformSkills.j",
+      "line": 60,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/lint-input/WaveProjectiles/WaveWaveformSkills.j",
+      "line": 90,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    }
+  ]
+}

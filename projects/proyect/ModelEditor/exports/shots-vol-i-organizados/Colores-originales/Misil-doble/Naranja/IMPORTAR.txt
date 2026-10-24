@@ -1,0 +1,17 @@
+Shots Vol. I / Misil-doble / Naranja
+
+Modelo para importar: Shot Orange Double.mdx
+Ruta sugerida del modelo en el mapa: ShotsOriginales\Shot Orange Double.mdx
+
+Estas texturas son internas de Warcraft III 1.27b. Se incluyen copias locales para edición; el juego ya las aporta:
+  Textures\LavaLump.blp
+  Textures\star5tga.blp
+  Textures\Flare.blp
+  Textures\LavaLump2.blp
+
+Las carpetas ShotsTeam/Textures contienen los recursos del modelo. Conservar sus rutas internas.
+Las mismas texturas aparecen en otros colores: al importar varios modelos al mismo mapa basta una copia por ruta.
+El MDL es fuente editable; no es necesario importarlo al juego.
+El evento de sonido usa las tablas internas de Warcraft, sin un archivo de audio externo declarado en el MDX.
+Autor original: Vinz. Darle crédito. Derivados con anclaje frontal; MDX800 / Classic 1.27b.
+Fuente: https://www.hiveworkshop.com/threads/shots-vol-i.315258/

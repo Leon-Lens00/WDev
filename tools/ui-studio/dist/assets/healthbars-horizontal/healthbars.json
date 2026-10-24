@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "variant": "horizontal",
+  "target": "Warcraft III Classic 1.27b",
+  "maxTextureDimension": 512,
+  "player": {
+    "textureSize": [
+      256,
+      128
+    ],
+    "contentRect": [
+      0,
+      0,
+      256,
+      96
+    ],
+    "lifeRect": [
+      102,
+      27,
+      133,
+      10
+    ],
+    "portraitRect": [
+      17,
+      10,
+      64,
+      64
+    ],
+    "readoutRect": [
+      17,
+      77,
+      64,
+      14
+    ],
+    "frame": "FrameHeroHorizontal",
+    "contentUMax": 1.0,
+    "iconSource": "native unit Art resource"
+  },
+  "enemy": {
+    "textureSize": [
+      512,
+      128
+    ],
+    "contentRect": [
+      0,
+      0,
+      448,
+      96
+    ],
+    "lifeRect": [
+      21,
+      27,
+      325,
+      10
+    ],
+    "portraitRect": [
+      367,
+      10,
+      64,
+      64
+    ],
+    "readoutRect": [
+      367,
+      77,
+      64,
+      14
+    ],
+    "frame": "FrameEnemyHorizontal",
+    "contentUMax": 0.875,
+    "iconSource": "native unit Art resource"
+  },
+  "enemyLifeLengthRatio": 2.443609022556391,
+  "nativeHeroIconRect": null,
+  "heroUsesNativeHUDIcon": false,
+  "playerOrigin": [
+    24,
+    48.6
+  ],
+  "enemyOrigin": [
+    1358.4,
+    48.6
+  ],
+  "nativeOwnerIndex": 10,
+  "controllerIndex": 0,
+  "displayColorFromController": true,
+  "portraits": {
+    "paladin": {
+      "name": "Paladín",
+      "rawcode": "Hpal",
+      "texture": "NativePaladin",
+      "nativePath": "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp",
+      "width": 64,
+      "height": 64,
+      "png": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/NativePaladin.png",
+      "icon": {
+        "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/ReplaceableTextures_CommandButtons_BTNHeroPaladin.blp",
+        "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+        "internal": "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp",
+        "sha256": "dae9fd254f6ebef8947a189c156df8cf5d97ea789f9cf281886462f5ac83209d"
+      },
+      "objectData": {
+        "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/Units_HumanUnitFunc.txt",
+        "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+        "internal": "Units\\HumanUnitFunc.txt",
+        "sha256": "1631656b24484f02276d8aa09e61aa4d35ecbaeb128a2df667d2295beed0831d"
+      }
+    },
+    "tauren": {
+      "name": "Tauren",
+      "rawcode": "otau",
+      "texture": "NativeTauren",
+      "nativePath": "ReplaceableTextures\\CommandButtons\\BTNTauren.blp",
+      "width": 64,
+      "height": 64,
+      "png": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/NativeTauren.png",
+      "icon": {
+        "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/ReplaceableTextures_CommandButtons_BTNTauren.blp",
+        "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+        "internal": "ReplaceableTextures\\CommandButtons\\BTNTauren.blp",
+        "sha256": "78bb20d8e79ebf2af91f13cf87fff187e81353bafe872a2dc200fe4d276d6340"
+      },
+      "objectData": {
+        "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/Units_OrcUnitFunc.txt",
+        "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+        "internal": "Units\\OrcUnitFunc.txt",
+        "sha256": "e4d17018c2a294fdd15a75888d02d1f0f0ecf663360126138bd74974c984474c"
+      }
+    }
+  },
+  "fill": {
+    "normal": "LifeNormalHorizontal",
+    "critical": "LifeCriticalHorizontal",
+    "criticalAtPercent": 20,
+    "anchor": "left",
+    "growth": "left-to-right",
+    "uvPolicy": "crop the right side; preserve left origin"
+  },
+  "layersBackToFront": [
+    "native HUD / enemy portrait",
+    "frame",
+    "fill inside lifeRect",
+    "dynamic text"
+  ],
+  "previewCoordinates": "1920x1080 reference screenshot only; native anchoring in engine pending",
+  "totalBlpBytes": 288752
+}

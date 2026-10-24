@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "file",
+    "set",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261022-174156-085608/stage-14.w3x",
+    "ShotsTeam\\Shot_09_LightBlue.mdx",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261022-174156-085608/payload-15.bin",
+    "-o",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261022-174156-085608/stage-15.w3x",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"added ShotsTeam\\\\Shot_09_LightBlue.mdx, 5932 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261022-174156-085608/stage-15.w3x\"\n}\n",
+  "stderr": ""
+}

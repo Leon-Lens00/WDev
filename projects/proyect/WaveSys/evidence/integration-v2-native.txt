@@ -1,0 +1,23 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "WAVESYS INTEGRATION integration-v2 revived" )
+	call Preload( "checks=13 failures=0" )
+	call Preload( "BEGIN real libraries: lifecycle, credit, AI, gold, rest and board" )
+	call Preload( "PASS new gameplay roster and legacy UI initialize together" )
+	call Preload( "PASS real standard hero/enemy fixtures exist" )
+	call Preload( "PASS hero lives initialize to ten and invalid id is guarded" )
+	call Preload( "PASS negative lives clamp to zero" )
+	call Preload( "PASS initial gold configuration uses new active roster" )
+	call Preload( "PASS credit accepts player id zero without treating it as absent" )
+	call Preload( "PASS credit clear removes integer and real entries" )
+	call Preload( "PASS AI scheduler conversions and bounds" )
+	call Preload( "PASS real initial board initializes" )
+	call Preload( "PASS active-wave death consumes exactly one revive" )
+	call Preload( "PASS last available revive materializes after 1.5s even when counter now zero" )
+	call Preload( "PASS damage credit expires after 1.5 seconds" )
+	call Preload( "PASS fresh revival blocks damage during protection" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

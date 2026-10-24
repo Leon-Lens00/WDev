@@ -1,0 +1,11 @@
+X3 V14 — onda verde viajera del Cross Buster
+Solicitud: nace pequeña en punta, se abre según el cuerpo, vuelve a estrecharse hacia cola y se apaga antes del cierre; fuego y electricidad, brillo aditivo, intervalo aproximado0.20s. Interpretación: 200ms entre ondas, recorrido a determinar visualmente.
+Destino Classic1.27b MDX800. Cambiar sólo el verde envolvente de C/Cross, conservar cuerpo rosa, núcleo, demás modelos y V13. Sin física mundial.
+Base: Cross V13 SHA459d9c6255538ebc4ba157078715be0129991c8f2cbdb6885d6c46b54748e51e; visor y pruebas V13 existentes. CodeGraph consultado antes de cambios.
+Plan: reemplazar dos aros giratorios por bandas que avanzan localmente punta→cola con perfil de radio y alfa, capas halo/fuego/rayo; preservar Birth/Death con visibilidad independiente. Comprobar curva y anclajes con reloj global explícito si se usa. Previsualizar y capturar 3D, luego comparación nativa YDWE SP pantalla3. Empaquetar V14 con piezas aprobadas exactas y recursos por carpeta.
+Aceptación verificable: frentes sucesivos a200ms; radio crece y decrece; alfa termina mientras radio aún positivo; raíz0 y geometría frontal<=0; recursos resueltos; forma verde visible a cámara de juego; ningún cambio de los otros cinco modelos.
+Estado: inspección inicial completa. Implementación pendiente.
+
+Avance: onda implementada cada200ms; recorrido320ms, alfa0 desde300ms. Frente curvo enX y perfil de radio corregidos tras observar candidatoB demasiado plano en cámara nativa. Primeros61geosets y cinco modelos restantes preservados;106archivosV13 sin cambios. Validación estructural PASS,1334poses estándar y243combinaciones de reloj global. Visor MDX real lateral/oblicuo/frontal revisado antes del segundo lanzamiento YDWE SP. Prueba nativa final en curso.
+
+Estado final: implementación y verificación terminadas. Prueba final200capturas nativas, dosvídeos, escalas0.5/1/2.4, aparición/impacto/vuelo/movimiento. Partida propia cerrada retorno0. Incidencia de proyección resuelta; ver /home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-125731-x3-v14-onda-de-canto.md. ZIP independiente con MDX/MDL/recursos y previews. No se modificó física del mapa.

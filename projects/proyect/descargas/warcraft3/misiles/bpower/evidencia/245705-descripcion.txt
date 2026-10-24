@@ -1,0 +1,470 @@
+
+
+
+	
+	Blizzard
+
+
+Calls down waves of freezing ice shards that damage units in a target area.
+
+
+
+
+
+
+
+
+Obligatory Requirements
+
+
+CTL
+
+Table
+
+SpellEffectEvent
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+			Blizzard
+		
+	
+	
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+//===========================================================================
+// Blizzard ( Ability ) by BPower.
+//     - Version 1.2.1
+//===========================================================================
+//
+//    Calls down waves of freezing ice shards that damage units in a target area. 
+//
+//===========================================================================
+//
+//    Requirements:
+//
+//        CTL                 -    github.com/nestharus/JASS/tree/master/jass/Systems/ConstantTimerLoop32
+//        Table               -    hiveworkshop.com/forums/jass-resources-412/snippet-new-table-188084/
+//        SpellEffectEvent    -    hiveworkshop.com/forums/jass-resources-412/snippet-spelleffectevent-187193/ 
+//
+//===========================================================================
+//
+//    Credits:
+//
+//        To Nestharus for CTL
+//        To Bribe for Table and SpellEffectEvent
+//        To Vexorian for dummy.mdx
+//
+//===========================================================================
+
+native UnitAlive takes unit id returns boolean
+
+scope Blizzard initializer Init
+
+    // User settings:
+    // ==============
+    
+    globals        
+        // Object editor fields:
+        private constant integer    BLIZZARD_ABILITY      = 'A000'
+        private constant integer    DUMMY_UNIT_ID         = 'dumi'
+        
+        // Damage options:
+        private constant attacktype ATTACK_TYPE           = ATTACK_TYPE_NORMAL
+        private constant damagetype DAMAGE_TYPE           = DAMAGE_TYPE_MAGIC
+        
+        // Effect options:
+        private constant real       NEEDLE_FX_DURATION    = 0.8// Requires testing. Try and error.
+        private constant string     NEEDLE_FX             = "war3mapImported\\SnowyBlizzardTarget.mdx"
+        private constant string     GROUND_FX             = "war3mapImported\\FreezingField.mdx"
+        
+        // Balance options:
+        // Bring structure into the chaos, by dividing the area of effect into sectors.
+        // New needles will be created in random unique sectors to
+        // ensure a better distribution of spawned effects.
+        private constant integer    DISTRIBUTION_FACTOR   = 10
+        
+        // Accuracy options:
+        // Maximum collision size in your map.
+        private constant real       MAX_COLLISION_SIZE    = 64.
+        private constant real       NEEDLE_COLLISION_SIZE = 48.
+    endglobals
+    
+    // Filter valid targets.
+    private function TargetFilter takes unit target, player owner returns boolean
+        return UnitAlive(target) and not IsUnitType(target, UNIT_TYPE_MAGIC_IMMUNE) and not IsUnitType(target, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(target, owner)
+    endfunction
+    
+    // Returns the damage amount per needle. 
+    private function GetImpactDamage takes integer level returns real
+        return GetRandomReal(10., 15.) + 20.*level
+    endfunction
+    
+    // Returns the amount of needles created per seconds. 
+    private constant function GetNeedlesPerSecond takes integer level returns integer
+        return 1 + 2*level
+    endfunction
+    
+    // Returns the total spell duration in seconds.
+    private constant function GetSpellDuration takes integer level returns real
+        return 3. + 2.*level
+    endfunction
+     
+    // Returns the radius of the blizzard field.
+    private constant function GetFieldRadius takes integer level returns real
+        return 200. + 50.*level
+    endfunction
+    
+    // Returns the duration of the frost buff.
+    private constant function GetBuffDuration takes integer level returns real
+        return 4. + 0.*level
+    endfunction
+    
+    // Returns the proper scaling of the ground effect. Eventually requires try and error.
+    private constant function GetFieldEffectScale takes real fieldSize returns real
+        return fieldSize/400.
+    endfunction
+    
+    private function IsChanneling takes unit caster, integer level returns boolean
+        return true
+    endfunction
+    
+    // Global condition to keep the spell running.
+    private function CasterCondition takes unit caster returns boolean
+        return UnitAlive(caster)
+    endfunction
+    
+    // The following struct "Buff" creates the buff- and frostnova effect.
+    // Adjust the constants to your needs.     
+    private struct Buff 
+        // Buff type settings. 
+        private static constant integer BUFF_ORDER_ID  = 852226
+        private static constant integer BUFF_ABILITY   = 'A001'
+        private static constant integer BUFF           = 'Bfro'
+        //
+        private static constant integer CASTER_UNIT_ID = 'n000'
+        private static constant player  NEUTRAL_PLAYER = Player(bj_PLAYER_NEUTRAL_EXTRA)
+        private static constant timer   TIMER          = CreateTimer()
+        private static constant real    TIMER_TIMEOUT  = .03125
+        private static constant integer LOCUST_ABILITY = 'Aloc'
+    
+        private static thistype array prev
+        private static thistype array next
+    
+        private static unit  caster 
+        private static Table table
+    
+        private unit source
+        private real time
+        
+        static method unitHasBuff takes unit whichUnit returns boolean
+            return GetUnitAbilityLevel(whichUnit, BUFF) != 0
+        endmethod
+        
+        method destroy takes nothing returns nothing
+            call UnitRemoveAbility(source, BUFF)
+            call table.remove(GetHandleId(source))
+            call deallocate()
+        
+            set next[prev[this]] = next[this]
+            set prev[next[this]] = prev[this]
+            if next[0] == 0 then
+                call PauseTimer(TIMER)
+            endif
+            
+            set source = null
+        endmethod
+    
+        private static method onPeriodic takes nothing returns nothing
+            local thistype this = next[0]
+        
+            loop
+                exitwhen this == 0
+                if time > 0. and UnitAlive(source) and unitHasBuff(source) then
+                    set time = time - TIMER_TIMEOUT
+                else
+                     call destroy()
+                endif
+                set this = next[this]
+            endloop
+        endmethod
+        
+        static method apply takes player owner, unit target, real duration returns nothing
+            local integer  id = GetHandleId(target)
+            local thistype this 
+        
+            if table.has(id) then
+                set this = table[id]
+                if unitHasBuff(source) then
+                    set time = duration
+                    return
+                endif
+                call destroy()
+            endif
+        
+            call IssueTargetOrderById(caster, BUFF_ORDER_ID, target)
+            set this = allocate()
+            set table[id] = this
+            set source = target
+            set time = duration
+            
+            set next[this] = 0
+            set prev[this] = prev[0]
+            set next[prev[0]] = this
+            set prev[0] = this
+            if prev[this] == 0 then
+                call TimerStart(TIMER, TIMER_TIMEOUT, true, function thistype.onPeriodic)
+            endif
+        endmethod
+    
+        private static method onInit takes nothing returns nothing
+            set table = Table.create()
+            set caster = CreateUnit(NEUTRAL_PLAYER, CASTER_UNIT_ID, 0., 0., 0.)
+            call SetUnitPosition(caster, 2147483647, 2147483647)
+            call UnitAddAbility(caster, BUFF_ABILITY)
+            call UnitAddAbility(caster, LOCUST_ABILITY)
+            call ShowUnit(caster, false)
+        endmethod
+    endstruct
+    
+//================================================================
+// Blizzard source code. Make changes carefully.
+//================================================================
+    
+    private function Random takes nothing returns real
+        return GetRandomReal(0., 1.)
+    endfunction
+    
+    private function GetRandomRange takes real radius returns real
+        local real r = Random() + Random()
+        if r > 1. then 
+            return (2 - r)*radius
+        endif
+        return r*radius
+    endfunction
+
+    private struct Needle
+        real x
+        real y
+        real time
+        
+        static method create takes real centerX, real centerY, real maxRange, integer factor returns thistype
+            local thistype this = thistype.allocate()
+            local real spacing  = 2*bj_PI/DISTRIBUTION_FACTOR
+            local real min      = spacing*factor
+            local real max      = min + spacing
+            local real theta    = GetRandomReal(min, max)
+            local real radius   = GetRandomRange(maxRange)
+            
+            set x    = centerX + radius*Cos(theta)
+            set y    = centerY + radius*Sin(theta)
+            set time = NEEDLE_FX_DURATION
+            call DestroyEffect(AddSpecialEffect(NEEDLE_FX, x, y))
+            
+            return this
+        endmethod
+        
+    endstruct
+    
+    private struct Blizzard extends array
+        static constant group   ENUM_GROUP       = CreateGroup()
+        static constant real    TIMER_TIMEOUT    = .03125
+        static constant real    DUMMY_DEATH_TIME = .01
+        static constant integer TIMED_LIFE       = 'BTLF'
+        static constant integer TABLE_OFFSET     = 0x2710
+        
+        Table   table
+        integer size
+        integer sectors
+
+        unit    source
+        unit    dummy
+        effect  fx
+        player  user
+        
+        real    radius
+        real    time
+        real    timeout
+        real    centerX
+        real    centerY
+        real    duration
+        integer level
+        integer order 
+        boolean channel
+    
+        method getRandomSector takes nothing returns integer
+            local integer random
+            local integer sector
+            
+            if DISTRIBUTION_FACTOR == 1 then
+                return 0
+            
+            // Fills up the table with unique integers from 0 to DISTRIBUTION_FACTOR.
+            elseif sectors == 0 then
+                loop
+                    exitwhen sectors == DISTRIBUTION_FACTOR
+                    set table[TABLE_OFFSET + sectors] = sectors
+                    set sectors = sectors + 1
+                endloop
+            endif
+            
+            // Get an unique integer from the table.
+            set sectors = sectors - 1
+            set random  = GetRandomInt(0, sectors) 
+            set sector  = table[TABLE_OFFSET + random]
+            set table[TABLE_OFFSET + random] = table[TABLE_OFFSET + sectors]
+            
+            return sector
+        endmethod
+    
+        implement CTL
+            local unit u
+            local Needle needle
+            local integer index
+            local real damage
+            local real slow
+        implement CTLExpire
+        
+            if not CasterCondition(source) or duration <= 0. or (channel and GetUnitCurrentOrder(source) != order) then
+                if size == 0 then
+                    call destroy()
+                    call table.destroy()
+                    call DestroyEffect(fx)
+                    call UnitApplyTimedLife(dummy, TIMED_LIFE, DUMMY_DEATH_TIME)
+                    
+                    set fx = null
+                    set user = null
+                    set dummy = null
+                    set source = null
+                endif
+            else
+                set duration = duration - TIMER_TIMEOUT
+                set time = time + TIMER_TIMEOUT
+                loop
+                    exitwhen time < timeout
+                    set table[size] = Needle.create(centerX, centerY, radius, getRandomSector())
+                    set size = size + 1
+                    set time = time - timeout
+                endloop
+            endif
+
+            // Loop over all falling needles.
+            set index = 0
+            loop
+                exitwhen index == size
+                set needle = table[index]
+                
+                if needle.time > 0. then
+                    set needle.time = needle.time - TIMER_TIMEOUT
+                    set index = index + 1
+                else
+                    set damage = GetImpactDamage(level)
+                    set slow   = GetBuffDuration(level)
+                
+                    call GroupEnumUnitsInRange(ENUM_GROUP, needle.x, needle.y, NEEDLE_COLLISION_SIZE + MAX_COLLISION_SIZE, null)
+                    loop
+                        set u = FirstOfGroup(ENUM_GROUP)
+                        exitwhen u == null
+                        call GroupRemoveUnit(ENUM_GROUP, u)
+    
+                        if IsUnitInRangeXY(u, needle.x, needle.y, NEEDLE_COLLISION_SIZE*1.5) and TargetFilter(u, user) then
+                            if UnitDamageTarget(source, u, damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null) then
+                                call Buff.apply(user, u, slow)
+                            endif
+                        endif
+                    endloop
+                    
+                    call needle.destroy()
+                    set size = size - 1
+                    set table[index] = table[size]
+                endif
+            endloop
+        implement CTLEnd
+    
+        static method onEffect takes nothing returns nothing
+            local thistype this = thistype.create()
+            
+            set user     = GetTriggerPlayer()
+            set source   = GetTriggerUnit()
+            set centerX  = GetSpellTargetX()
+            set centerY  = GetSpellTargetY()
+            set level    = GetUnitAbilityLevel(source, BLIZZARD_ABILITY)
+            set radius   = GetFieldRadius(level)
+            set duration = GetSpellDuration(level)
+            set timeout  = 1./IMaxBJ(1, GetNeedlesPerSecond(level))
+            set channel  = IsChanneling(source, level)
+            set order    = GetUnitCurrentOrder(source)
+            set dummy    = CreateUnit(user, DUMMY_UNIT_ID, centerX, centerY, 2*bj_PI*Random())
+            set fx       = AddSpecialEffectTarget(GROUND_FX, dummy, "origin")
+            set table    = Table.create()
+            set time     = 0.
+            set sectors  = 0// Available sectors. Like cutting a piece of cake.
+            call SetUnitScale(dummy, GetFieldEffectScale(radius), 0., 0.)
+        endmethod
+
+    endstruct
+    
+    private function Init takes nothing returns nothing
+        debug local string text
+        debug if DISTRIBUTION_FACTOR <= 0 then
+            debug set text = "|cffffa500Error:|r |cff99b4d1In trigger Blizzard, scope Blizzard!|r\n"
+            debug set text = text + "|cffffa500Global user settings: |cff99b4d1constant integer DISTRIBUTION_FACTOR = " + I2S(DISTRIBUTION_FACTOR) + "!|r\n" 
+            debug set text = text + "|cffffa500Solution: |cff99b4d1DISTRIBUTION_FACTOR must be bigger than 0!|r"
+        
+            debug call DisplayTimedTextToPlayer(GetLocalPlayer(), 0.00, 0.00, 3600.00, text)
+        debug endif
+        //
+        call RegisterSpellEffectEvent(BLIZZARD_ABILITY, function Blizzard.onEffect)
+    endfunction
+    
+endscope
+	
+
+		
+	
+
+
+
+Credits:
+
+
+Nestharus, Bribe​
+
+Keywords:
+
+Blizzard, ice, snow, cold, slow

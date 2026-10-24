@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-20",
+  "skill_adaptations": [
+    "systematic-debugging",
+    "writing-plans"
+  ],
+  "upstream_commit": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+  "structural_validation": "Both entrypoints pass quick_validate; UI metadata and local references checked.",
+  "forward_testing": [
+    {
+      "case": "debug",
+      "method": "Independent agent used the new skill with isolated original JASS and real local pJASS.",
+      "observed": "Original returned 1 with two errors; two local initializations in a new output returned 0.",
+      "source_unchanged": true,
+      "limits": "Static JASS validation only; editable vJASS/WCT and original maps not updated; no game test.",
+      "evidence": "forward-tests/debug/resultado.json"
+    },
+    {
+      "case": "planning",
+      "method": "Different independent agent used the new skill with copied Missile/FrozenOrb sources; planning-only request.",
+      "observed": "Inspected exact API, identified native target/arc conflict, proposed local coordinate guidance, saved phases, dependencies, decisions and pending checks.",
+      "source_unchanged": true,
+      "limits": "Plan only; proposed movement not compiled or run. No comparative performance or statistical agent-effectiveness claim.",
+      "evidence": "forward-tests/planning/docs/planes/frozen-orb-seguimiento-curvo.md"
+    }
+  ],
+  "integration": {
+    "project_AGENTS_updated": "/home/snz/Documentos/ChatGPT/Proyect/AGENTS.md",
+    "backup": "AGENTS.before.md",
+    "diff": "AGENTS.diff",
+    "discovery": "Native Codex skills under ~/.codex/skills; normal implicit invocation. No marketplace plugin or global bootstrap installed.",
+    "extra_dependencies": []
+  },
+  "additional_documentation_correction": {
+    "file": "/home/snz/.codex/skills/crear-misiles-warcraft3-127b/references/ejemplos-locales.md",
+    "reason": "Observed Frozen Orb source has no death check before a conditional RemoveUnit; removed an inaccurate corpse-only characterization. No library/map modified."
+  },
+  "limits": [
+    "One forward scenario per skill; no A/B comparison or quantitative reduction in agent errors established.",
+    "No Warcraft gameplay or multiplayer execution in these development tests."
+  ]
+}

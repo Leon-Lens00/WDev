@@ -1,0 +1,31 @@
+{
+  "snapshot": "44f424faffdc3e3de7af057ed7b35fdd630831d0b18470aef14d67b7abedfde2",
+  "record": "Consolidaci\u00f3n de los dos informes recibidos; no transcripci\u00f3n literal",
+  "judges": {
+    "A": {
+      "verified": [
+        "JD-A-001",
+        "JD-B-002",
+        "JD-A-002",
+        "JD-B-001",
+        "JD-A-003"
+      ],
+      "regressions": []
+    },
+    "B": {
+      "verified": [
+        "JD-A-001",
+        "JD-B-002",
+        "JD-A-002",
+        "JD-B-001",
+        "JD-A-003"
+      ],
+      "regressions": []
+    }
+  },
+  "limits": [
+    "Ambos hicieron revisi\u00f3n est\u00e1tica y usaron logs del padre",
+    "Despliegue activo pendiente",
+    "Padre reabre A001/B002 por variante con comentario array tras ambos informes"
+  ]
+}

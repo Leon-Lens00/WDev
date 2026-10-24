@@ -1,0 +1,38 @@
+{
+  "repo": "small-noise",
+  "flow": 1,
+  "names": [
+    "Noise.Noise.octavePerlin2D",
+    "Noise.Noise.perlin2D",
+    "Noise.Noise.floor"
+  ],
+  "repetition": 2,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 28.556865074999223,
+  "usage": {
+    "input_tokens": 97772,
+    "cached_input_tokens": 83456,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 728,
+    "reasoning_output_tokens": 78
+  },
+  "commands": 4,
+  "command_text": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\"",
+    "/usr/bin/bash -lc 'nl -ba Noise.j'",
+    "/usr/bin/bash -lc \"rg --files -g '*.j' -g '*.jass' -g '*.vjass' -g 'AGENTS.md' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\"",
+    "/usr/bin/bash -lc 'nl -ba OctavePerlin.j'"
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\"",
+    "/usr/bin/bash -lc \"rg --files -g '*.j' -g '*.jass' -g '*.vjass' -g 'AGENTS.md' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a1621c-db51-7332-acd7-cd77f9aa4dad"
+  ]
+}

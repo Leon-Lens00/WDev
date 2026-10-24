@@ -1,0 +1,377 @@
+
+
+
+	
+	Scrolling Text
+
+
+May the force be with you.
+
+
+
+
+
+
+
+
+Obligatory Requirements
+
+
+
+
+
+
+List
+
+Table
+
+TimerUtils
+
+TextSplat2
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+			Scrolling Text
+		
+	
+	
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library ScrollingText /* v1.1
+*************************************************************************************
+*
+*   Create scrolling text displayed by textsplats.
+*   Inspired by the Star Wars intro.
+*
+*************************************************************************************
+*
+*   */ requires /*
+*  
+*       */ List        /*     github.com/nestharus/JASS/blob/master/jass/Data%20Structures/List/script.j
+*       */ Table       /*     hiveworkshop.com/forums/jass-resources-412/snippet-new-table-188084/
+*       */ TextSplat2  /*     hiveworkshop.com/threads/textsplat2.273717/post-2782914
+*       */ TimerUtils  /*     wc3c.net/showthread.php?t=101322
+*
+************************************************************************************
+*
+*   Credits to:
+*       - Nestharus for List.
+*       - Bribe for Table.
+*       - Vexorian for TimerUtils.
+*
+************************************************************************************/
+//=====================================
+// User settings.
+//=====================================
+
+    globals
+        private constant real START_FADE_AFTER_TIME_PRECENT = 0.80
+        
+        private constant real EXTRA_SPACE_BETWEEN_TWO_LINES = 0.10// Percent added to the text height of the previous text line.
+    endglobals
+
+//! novjass 
+//=====================================
+// API.
+//=====================================
+   
+    struct ScrollingText  
+        
+        // Must take an existing font.
+        static method create takes font fontType returns thistype
+        method destroy takes nothing returns nothing
+        
+        // "pos" is an relative offset of the window size you'll display the text.
+        //  --> originX + width*pos.
+        method addLine takes string text, real fontSize, real pos returns nothing
+    
+        method display takes real posX, real posY, real width, real height, real speed, force forForce returns nothing    
+    
+    // x, y, width, height is the rect you want to display the text in.
+    function DisplayScrollingTextForForce takes ScrollingText text, real x, real y, real width, real height, real speed, force forForce returns nothing
+    function DisplayScrollingText         takes ScrollingText text, real x, real y, real width, real height, real speed returns nothing
+    function StopScrollingText            takes player p returns nothing
+
+//! endnovjass
+    
+//=============================================
+// Scrolling text code. Make changes carefully.
+//=============================================
+
+    globals
+        private Table   array table 
+        private integer array current
+    endglobals
+                     // ForForce(spectators)
+    private function ClearReferenceEnum takes nothing returns nothing
+        set current[GetPlayerId(GetEnumPlayer())] = 0
+    endfunction
+    
+    private struct STPeriodic extends array
+        implement List// Replace "List" with your own data structure.
+        
+        textsplat text
+        force     spectators// Players watching.
+        timer     clock
+        
+        integer   index     // Lookup index inside the table.
+        integer   line
+        real      speed
+                                
+        // Window coordinates.
+        real      posX   
+        real      posY
+        real      sizeX
+        real      sizeY
+        
+        method finish takes nothing returns nothing
+            local thistype node = first
+            loop
+                exitwhen 0 == node// Free all splats.
+                call node.text.unlock()
+                set node = node.next
+            endloop
+            
+            call destroy()
+            call ForForce(spectators, function ClearReferenceEnum)
+            call ForceClear(spectators)
+            call DestroyForce(spectators)
+            call ReleaseTimer(clock)
+            
+            set clock = null
+            set spectators = null
+        endmethod
+        
+        // Removes splats which have been already faded.
+        // Also evaluates the "spectators" force size.
+        method update takes nothing returns boolean
+            local boolean  show = IsPlayerInForce(GetLocalPlayer(), spectators)
+            local thistype node = first
+            local thistype temp
+            local textsplat splat
+
+            loop
+                exitwhen 0 == node
+                set temp = node.next
+                set splat = node.text
+                
+                if splat.age >= splat.lifespan then
+                    call splat.unlock()
+                    call node.remove()
+                else
+                    call splat.setVisible(show)
+                endif
+                set node = temp
+            endloop
+
+            return CountPlayersInForceBJ(spectators) > 0
+        endmethod
+    
+        static method onPeriodic takes nothing returns nothing
+            local thistype  this = GetTimerData(GetExpiredTimer())
+            local real      time = speed
+            local Table     temp 
+            local textsplat t
+            
+            // Update all splats and check if 
+            // the spectator force is empty.
+            if not update() then
+                call finish()
+                return
+            endif
+            
+            set temp = table[index]
+            // Check if all lines have been displayed.
+            if line >= integer(temp[-1]) then
+                if first == 0 then
+                    call finish()
+                    return
+                endif
+                call TimerStart(clock, 1., false, function thistype.onPeriodic)
+                
+            else
+                if temp.string.has(line) then
+                    set t = CreateTextSplat(temp[-2])
+                    call t.lock()
+                
+                    call SetTextSplatPermanent(t, false)
+                    call SetTextSplatLifespan(t, sizeY/time/32.)
+                    call SetTextSplatFadepoint(t, t.lifespan*START_FADE_AFTER_TIME_PRECENT)
+                    call SetTextSplatText(t, temp.string[line], temp.real[line])
+                    call SetTextSplatPos(t, posX + sizeX*temp.real[-line], posY, 0)
+                    call SetTextSplatVelocity(t, 0, time*32.)
+                    call SetTextSplatVisibility(t, IsPlayerInForce(GetLocalPlayer(), spectators))
+                    set thistype(enqueue()).text = t
+                
+                    set time = (t.height + t.height*EXTRA_SPACE_BETWEEN_TWO_LINES)/time/32.
+                else
+                    set time = TEXT_SIZE_TO_IMAGE_SIZE*temp.real[line]/time/32.
+                endif
+                
+                set line = line + 1
+                call TimerStart(clock, time, false, function thistype.onPeriodic)
+            endif
+        endmethod
+        
+        static method stop takes player p returns nothing
+            local integer id = GetPlayerId(p)
+            local thistype this = current[id]
+            
+            if IsPlayerInForce(p, spectators) then
+                set current[id] = 0
+                call ForceRemovePlayer(spectators, p)
+                if not update() then
+                    call finish()
+                endif
+            endif
+        endmethod
+        
+        static thistype tempIndex
+        static method forPlayersEnum takes nothing returns nothing
+            local player picked = GetEnumPlayer()
+            local integer id    = GetPlayerId(picked)
+            
+            if current[id] != 0 then
+                call thistype.stop(picked)
+            endif
+        
+            set current[id] = tempIndex
+            call ForceAddPlayer(tempIndex.spectators, picked)
+            
+            set picked = null
+        endmethod
+        
+        static method start takes integer dex, real x, real y, real sx, real sy, real time, force forForce returns nothing
+            local thistype this = thistype.create()
+            
+            set clock = NewTimerEx(this)
+            set spectators = CreateForce()
+            set tempIndex = this
+            call ForForce(forForce, function thistype.forPlayersEnum)
+            
+            set index = dex
+            set line  = 1
+            set posX  = x
+            set posY  = y
+            set sizeX = sx
+            set sizeY = sy
+            set speed = time
+            
+            call TimerStart(clock, 0., false, function thistype.onPeriodic)
+        endmethod
+        
+    endstruct
+
+
+    struct ScrollingText  
+    
+        method display takes real posX, real posY, real width, real height, real speed, force forForce returns nothing    
+            call STPeriodic.start(this, posX, posY, width, height, speed, forForce)
+        endmethod
+        
+        method addLine takes string text, real fontSize, real pos returns nothing
+            local Table temp = table[this]
+            local integer line = IMaxBJ(temp[-1], 1)
+
+            set temp.real[line] = fontSize
+            set temp.real[-line] = pos
+            if text != null and text != "" then
+                set temp.string[line] = text
+            else
+                call temp.string.remove(line)
+            endif
+            
+            set temp[-1] = line + 1
+        endmethod
+
+        method destroy takes nothing returns nothing
+            call deallocate()
+            call table[this].destroy()
+        endmethod
+        
+        static method create takes integer fontType returns thistype
+            local thistype this = thistype.allocate()
+            set table[this] = Table.create()
+            set table[this][-1] = 0// max lines.
+            set table[this][-2] = fontType// font type.
+            return this
+        endmethod
+        
+    endstruct
+
+//=============================================
+// API.
+//=============================================
+    
+    function DisplayScrollingTextForForce takes ScrollingText text, real x, real y, real width, real height, real speed, force forForce returns nothing
+        call STPeriodic.start(text, x, y, width, height, speed, forForce)
+    endfunction
+    
+    function DisplayScrollingText takes ScrollingText text, real x, real y, real width, real height, real speed returns nothing
+        call STPeriodic.start(text, x, y, width, height, speed, bj_FORCE_ALL_PLAYERS)
+    endfunction
+    
+    function StopScrollingText takes player p returns nothing
+        call STPeriodic.stop(p)
+    endfunction
+    
+    function StopScrollinTextForForce takes force forForce returns nothing
+        local integer i = 0
+        loop
+            exitwhen i == bj_MAX_PLAYERS
+            if IsPlayerInForce(Player(i), forForce) then
+                call StopScrollingText(Player(i))
+            endif
+            set i = i + 1
+        endloop
+    endfunction
+    
+endlibrary
+	
+
+		
+	
+
+
+
+Keywords:
+
+Scrolling Text

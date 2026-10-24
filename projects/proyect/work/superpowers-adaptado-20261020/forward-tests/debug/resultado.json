@@ -1,0 +1,27 @@
+{
+  "fecha_ensayo": "2026-10-20",
+  "zona_horaria": "America/Lima",
+  "estado_mas_fuerte": "Validated",
+  "entrada_sha256": "972e06de1c4f73cf195d33059bdabc6dbedf0d36a373d09786d917e2dad3abe7",
+  "salida_sha256": "9982caed5f52cb91c4d92299b9e6f1ad8cfdbe3aa242e7b680fd4bc5c4552bf3",
+  "lineas_entrada": 4645,
+  "lineas_salida": 4645,
+  "cambios": [
+    "2167: local real ndist= 0.",
+    "2168: local real bdist= 0."
+  ],
+  "pjass_antes": 1,
+  "pjass_despues": 0,
+  "identidades_preservadas": {
+    "/tmp/superpowers-skills-forward-q2ye5sc7/debug/entrada.j": true,
+    "/home/snz/Documentos/ChatGPT/FrozenThone/wc3toolchain.json": true,
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py": true,
+    "/home/snz/Documentos/ChatGPT/FrozenThone/wc3-environment.json": true
+  },
+  "juego_ejecutado": false,
+  "mapas_modificados": false,
+  "limites": [
+    "Sólo JASS suministrado, no actualización de WCT/vJASS editable.",
+    "pJASS valida el script con las APIs indicadas; no demuestra ejecución en 1.27b ni sincronización multijugador."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "jasshelper_command": [
+    "C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\clijasshelper.exe",
+    "--scriptonly",
+    "C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\common.j",
+    "C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\blizzard.j",
+    "C:\\Users\\Leon\\Documents\\ChatGPT\\ZXDev\\ui-studio\\test-results\\Main.j",
+    "C:\\Users\\Leon\\Documents\\ChatGPT\\ZXDev\\ui-studio\\test-results\\compiled.j"
+  ],
+  "pjass_command": [
+    "C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\pjass.exe",
+    "C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\common.j",
+    "C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\blizzard.j",
+    "C:\\Users\\Leon\\Documents\\ChatGPT\\ZXDev\\ui-studio\\test-results\\compiled.j"
+  ],
+  "compiled": true,
+  "validated": true,
+  "jasshelper": {
+    "returncode": 0,
+    "stdout": "Checking tool existance...\ncopying ...\nOpening: C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\common.j\nLoading: C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\common.j\nParsing...\nOpening: C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\blizzard.j\nLoading: C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\blizzard.j\nParsing...\nLoading...\nLoading...\nParsing...\nTextmacros - initializing...\nTextmacros - parsing...\nTextmacros - writing...\nZinc...\nLibraries - parsing...\nGenerating...\nLibraries - writing...\ncopying ...\nStructs: Loading...\nStructs: Modules\nConditional Blocks: Processing...\nStructs: Parsing\nStructs: Evaluating\nStructs - Writing\n\ncopying ...\nCalling pjass.exe\ncopying ...\nShadowHelper: Loading script...\nShadowHelper: Processing...\ncopying ...\nInline: Loading script...\nInline: Processing...\nCalling Jass syntax checker again ...\nSaving C:\\Users\\Leon\\Documents\\ChatGPT\\ZXDev\\ui-studio\\test-results\\compiled.j ...\nSuccess!\n",
+    "stderr": ""
+  },
+  "pjass": {
+    "returncode": 0,
+    "stdout": "Parse successful:     2418 lines: C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\common.j\nParse successful:    10230 lines: C:\\Users\\Leon\\Downloads\\Jass New Gen Pack Rebuild\\jasshelper\\blizzard.j\nParse successful:     3922 lines: C:\\Users\\Leon\\Documents\\ChatGPT\\ZXDev\\ui-studio\\test-results\\compiled.j\nParse successful:    16570 lines: <total>\n",
+    "stderr": ""
+  }
+}

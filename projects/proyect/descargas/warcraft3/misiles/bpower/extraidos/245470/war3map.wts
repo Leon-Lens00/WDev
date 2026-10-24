@@ -1,0 +1,160 @@
+﻿STRING 1
+{
+Spieler 1
+}
+
+STRING 2
+{
+Streitmacht 1
+}
+
+STRING 5
+// Buffs/Effects: B000 (), Bufftip (Tooltip (ftip))
+{
+Chaosflare
+}
+
+STRING 11
+// Buffs/Effects: B000 (), Buffubertip (Tooltip - Extended (fube))
+{
+This unit burns. It takes damage over time
+}
+
+STRING 18
+{
+Armageddon
+}
+
+STRING 19
+{
+1
+}
+
+STRING 20
+{
+Armageddon
+}
+
+STRING 21
+{
+BPower
+}
+
+STRING 22
+{
+Armageddon v2.2
+}
+
+STRING 24
+{
+Uses Missile now, hence enabled the full Missile API for Armageddon.
+}
+
+STRING 32
+// Abilities: A001 (Armageddon), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00Q|r  Meat Hook
+}
+
+STRING 33
+// Abilities: A001 (Armageddon), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00Q|r  Meat Hook
+}
+
+STRING 36
+// Abilities: A001 (Armageddon), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+|cffffcc00Damages enemies only|n|nDeals 100+100*Level Damage|n|n600+200*Level Range|r
+}
+
+STRING 37
+// Abilities: A001 (Armageddon), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+|cffffcc00Damages enemies only|n|nDeals 100+100*Level Damage|n|n600+200*Level Range|r
+}
+
+STRING 74
+// Abilities: A001 (Armageddon), Researchhotkey (Hotkey - Learn (arhk))
+{
+E
+}
+
+STRING 75
+// Abilities: A001 (Armageddon), Hotkey (Hotkey - Normal (ahky))
+{
+E
+}
+
+STRING 88
+// Buffs/Effects: B001 (), Bufftip (Tooltip (ftip))
+{
+Reaper's Scythe
+}
+
+STRING 118
+// Units: dumi (Particle), Name (Name (unam))
+{
+Particle
+}
+
+STRING 136
+// Buffs/Effects: B002 (), Bufftip (Tooltip (ftip))
+{
+Bone Spirit
+}
+
+STRING 146
+// Abilities: A001 (Armageddon), Name (Name (anam))
+{
+Armageddon
+}
+
+STRING 147
+// Abilities: A001 (Armageddon), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Armageddon|r - [|cffffcc00Level 2|r]
+}
+
+STRING 148
+// Abilities: A001 (Armageddon), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Armageddon|r - [|cffffcc00Level 3|r]
+}
+
+STRING 150
+// Abilities: A001 (Armageddon), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+This terrible force of nature's vengeance rains down flaming stones around the caster,|npummeling any opponents foolish enough to be caught in its fury.|n|nEach meteor deals 95 damage.|n|n|cff6d6d6dHotkey: E|r
+}
+
+STRING 151
+// Abilities: A001 (Armageddon), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+This terrible force of nature's vengeance rains down flaming stones around the caster,|npummeling any opponents foolish enough to be caught in its fury.|n|nEach meteor deals 115 damage.|n|n|cff6d6d6dHotkey: E|r
+}
+
+STRING 152
+// Abilities: A001 (Armageddon), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Armageddon|r - [|cffffcc00Level 1|r]
+}
+
+STRING 153
+// Abilities: A001 (Armageddon), Researchtip (Tooltip - Learn (aret))
+{
+Learn Armag|cffffcc00e|rddon - [|cffffcc00Level %d|r]
+}
+
+STRING 155
+// Abilities: A001 (Armageddon), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+This terrible force of nature's vengeance rains down flaming stones around the caster,|npummeling any opponents foolish enough to be caught in its fury.|n|nEach meteor deals 75 damage.|n|n|cff6d6d6dHotkey: E|n|r
+}
+
+STRING 156
+// Abilities: A001 (Armageddon), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+This terrible force of nature's vengeance rains down flaming stones around the caster,|npummeling any opponents foolish enough to be caught in its fury.|n|n|cffffcc00Level 1|r - Deals 75 Damage per meteor to all units in an aoe of 450. |n|cffffcc00Level 2|r - Deals 95 Damage per meteor to all units in an aoe of 500.|n|cffffcc00Level 3|r - Deals 115 Damage per meteor to all units in an aoe of 550.
+}
+

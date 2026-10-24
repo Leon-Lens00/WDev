@@ -1,0 +1,25 @@
+{
+  "target": "Classic1.27b MDX800",
+  "revision": "V6 A white core / attached pink flow",
+  "entries": [
+    {
+      "name": "X3_Buster_Cargado",
+      "category": "A-Buster",
+      "path": "exports/megaman-x3-buster-v6/A-Buster/X3_Buster_Cargado.mdx",
+      "sha256": "e9842e265deee0f1e772885d4da9e6e0820a9144d74a0cd3bcd7f78049f2f25d",
+      "triangles": 2776,
+      "pe2": 11,
+      "ribbons": 1
+    }
+  ],
+  "source": {
+    "author": "Vinz",
+    "pack": "Shots Vol. II",
+    "original": "../descargas/warcraft3/misiles/vinz/shots-vol-ii/originales/Shots Vol. II/Shot II Blue.mdx",
+    "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac",
+    "anchored": "exports/shots-vol-ii-anclaje/Shot II Blue.mdx",
+    "anchoredSha256": "6e181b25bb6047896f95993e0033fd2602c05914e3da001ee192faac5e9c181e",
+    "reuse": "posed geometry/UV and full additive stack; adapted F1/F2/Atras Uno/Atras Dos Sq Tails; new attached bow/UV flow"
+  },
+  "worldTrajectory": false
+}

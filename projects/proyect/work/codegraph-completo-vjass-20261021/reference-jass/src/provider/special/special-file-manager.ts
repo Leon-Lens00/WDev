@@ -1,0 +1,301 @@
+import * as vscode from 'vscode';
+import * as fs from 'fs';
+import * as path from 'path';
+import { SpecialLiteral, SpecialParser } from './special-parser';
+import { StringsParser } from './strings-parser';
+import { PresetsParser } from './presets-parser';
+import { NumbersParser } from './numbers-parser';
+
+/**
+ * 特殊文件管理器
+ * 管理 strings.jass、presets.jass、numbers.jass 文件的字面量
+ */
+export class SpecialFileManager {
+    private static instance: SpecialFileManager | undefined;
+    private literals: SpecialLiteral[] = [];
+    private filePathToLiterals: Map<string, SpecialLiteral[]> = new Map();
+    private stringsParser: StringsParser | undefined;
+    private presetsParser: PresetsParser | undefined;
+    private numbersParser: NumbersParser | undefined;
+    private isInitialized = false;
+    private initPromise: Promise<void> | null = null;
+
+    private constructor() {
+        // 延迟初始化解析器，避免循环依赖问题
+    }
+
+    /**
+     * 获取字符串解析器（延迟初始化）
+     */
+    private getStringsParser(): StringsParser {
+        if (!this.stringsParser) {
+            this.stringsParser = new StringsParser();
+        }
+        return this.stringsParser;
+    }
+
+    /**
+     * 获取标记解析器（延迟初始化）
+     */
+    private getPresetsParser(): PresetsParser {
+        if (!this.presetsParser) {
+            this.presetsParser = new PresetsParser();
+        }
+        return this.presetsParser;
+    }
+
+    /**
+     * 获取数字解析器（延迟初始化）
+     */
+    private getNumbersParser(): NumbersParser {
+        if (!this.numbersParser) {
+            this.numbersParser = new NumbersParser();
+        }
+        return this.numbersParser;
+    }
+
+    public static getInstance(): SpecialFileManager {
+        if (!SpecialFileManager.instance) {
+            SpecialFileManager.instance = new SpecialFileManager();
+            // 获取实例后立即触发初始化（不等待，后台执行）
+            SpecialFileManager.instance.ensureInitialized().catch(err => {
+                console.error('[SpecialFileManager] Auto init failed:', err);
+            });
+        }
+        return SpecialFileManager.instance;
+    }
+
+    /**
+     * 确保已初始化（懒加载）
+     */
+    private async ensureInitialized(): Promise<void> {
+        if (this.isInitialized) {
+            return;
+        }
+        if (this.initPromise) {
+            await this.initPromise;
+            return;
+        }
+        this.initPromise = this.initialize();
+        await this.initPromise;
+    }
+
+    /**
+     * 等待初始化完成（公开方法，供外部调用）
+     */
+    public async waitForInitialization(): Promise<void> {
+        await this.ensureInitialized();
+    }
+
+    /**
+     * 初始化，扫描工作区中的特殊文件
+     */
+    public async initialize(workspaceRoot?: string, force: boolean = false): Promise<void> {
+        if (this.isInitialized && !force) {
+            return;
+        }
+        if (force) {
+            this.isInitialized = false;
+            this.initPromise = null;
+        }
+        
+        if (!workspaceRoot) {
+            const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+            workspaceRoot = workspaceFolder?.uri.fsPath;
+        }
+
+        this.literals = [];
+        this.filePathToLiterals.clear();
+
+        const specialFiles = await this.findSpecialFiles(workspaceRoot || '');
+        
+        if (specialFiles.length === 0) {
+            console.warn(`[SpecialFileManager] No special files found. Make sure strings.jass, presets.jass, or numbers.jass exist.`);
+        }
+        
+        for (const filePath of specialFiles) {
+            try {
+                const content = fs.readFileSync(filePath, 'utf-8');
+                const fileName = path.basename(filePath);
+                let parser: SpecialParser = this.getStringsParser();
+
+                if (fileName === 'presets.jass') {
+                    parser = this.getPresetsParser();
+                } else if (fileName === 'numbers.jass') {
+                    parser = this.getNumbersParser();
+                }
+
+                const fileLiterals = parser.parse(filePath, content);
+                this.literals.push(...fileLiterals);
+                this.filePathToLiterals.set(filePath, fileLiterals);
+            } catch (error) {
+                console.error(`[SpecialFileManager] Failed to parse special file ${filePath}:`, error);
+            }
+        }
+
+        this.isInitialized = true;
+        this.initPromise = null;
+    }
+
+    /**
+     * 查找工作区中的特殊文件
+     */
+    private async findSpecialFiles(workspaceRoot: string): Promise<string[]> {
+        const specialFiles: string[] = [];
+        const fileNames = ['strings.jass', 'presets.jass', 'numbers.jass'];
+
+        // 递归查找文件
+        const findFiles = (dir: string): void => {
+            try {
+                const entries = fs.readdirSync(dir, { withFileTypes: true });
+                
+                for (const entry of entries) {
+                    const fullPath = path.join(dir, entry.name);
+                    
+                    if (entry.isDirectory()) {
+                        // 跳过 node_modules、.git 等目录，但包括 static 目录
+                        if (!entry.name.startsWith('.') && entry.name !== 'node_modules') {
+                            findFiles(fullPath);
+                        }
+                    } else if (entry.isFile()) {
+                        if (fileNames.includes(entry.name)) {
+                            specialFiles.push(fullPath);
+                        }
+                    }
+                }
+            } catch (error) {
+                // 忽略权限错误等，但记录警告
+                console.warn(`[SpecialFileManager] Failed to read directory ${dir}:`, error);
+            }
+        };
+
+        // 如果有工作区根目录，先从工作区查找
+        if (workspaceRoot) {
+            findFiles(workspaceRoot);
+        }
+
+        // 也检查扩展的 static 目录（从编译后的 out 目录计算）
+        try {
+            const pathCandidates = [
+                path.resolve(__dirname, "../../../static"),       // out/provider/special → 项目根/static
+                path.resolve(__dirname, "../../../../static"),    // 备选：更深一层
+                path.resolve(__dirname, "../../static"),          // 备选：out/provider/special → out/static
+            ];
+            for (const candidate of pathCandidates) {
+                if (fs.existsSync(candidate) && fs.statSync(candidate).isDirectory()) {
+                    findFiles(candidate);
+                    break;
+                }
+            }
+        } catch (error) {
+            console.warn(`[SpecialFileManager] Failed to check extension static directory:`, error);
+        }
+
+        return specialFiles;
+    }
+
+    /**
+     * 获取所有字面量（去重）
+     */
+    public getAllLiterals(): SpecialLiteral[] {
+        if (!this.isInitialized) {
+            this.ensureInitialized().catch(err => console.error('[SpecialFileManager] Lazy init failed:', err));
+        }
+        return this.dedupeLiterals([...this.literals]);
+    }
+
+    /**
+     * 根据内容查找字面量（去重）
+     */
+    public findLiteralsByContent(content: string): SpecialLiteral[] {
+        if (!this.isInitialized) {
+            this.ensureInitialized().catch(err => console.error('[SpecialFileManager] Lazy init failed:', err));
+        }
+        const results = this.literals.filter(literal => literal.content === content);
+        return this.dedupeLiterals(results);
+    }
+
+    /**
+     * 去重：按 content + filePath 去重
+     */
+    private dedupeLiterals(literals: SpecialLiteral[]): SpecialLiteral[] {
+        const seen = new Set<string>();
+        const result: SpecialLiteral[] = [];
+        for (const l of literals) {
+            const key = l.content + '|' + l.filePath;
+            if (!seen.has(key)) {
+                seen.add(key);
+                result.push(l);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * 根据类型查找字面量
+     */
+    public findLiteralsByType(type: 'string' | 'mark' | 'number'): SpecialLiteral[] {
+        if (!this.isInitialized) {
+            this.ensureInitialized().catch(err => console.error('[SpecialFileManager] Lazy init failed:', err));
+        }
+        return this.literals.filter(literal => literal.type === type);
+    }
+
+    /**
+     * 根据文件路径获取字面量
+     */
+    public getLiteralsByFile(filePath: string): SpecialLiteral[] {
+        if (!this.isInitialized) {
+            this.ensureInitialized().catch(err => console.error('[SpecialFileManager] Lazy init failed:', err));
+        }
+        return this.filePathToLiterals.get(filePath) || [];
+    }
+
+    /**
+     * 更新文件
+     */
+    public updateFile(filePath: string, content: string): void {
+        const fileName = path.basename(filePath);
+        let parser: SpecialParser = this.getStringsParser();
+
+        if (fileName === 'presets.jass') {
+            parser = this.getPresetsParser();
+        } else if (fileName === 'numbers.jass') {
+            parser = this.getNumbersParser();
+        } else if (fileName !== 'strings.jass') {
+            return; // 不是特殊文件
+        }
+
+        // 移除旧的字面量
+        const oldLiterals = this.filePathToLiterals.get(filePath) || [];
+        this.literals = this.literals.filter(l => !oldLiterals.includes(l));
+        this.filePathToLiterals.delete(filePath);
+
+        // 解析新内容
+        try {
+            const newLiterals = parser.parse(filePath, content);
+            this.literals.push(...newLiterals);
+            this.filePathToLiterals.set(filePath, newLiterals);
+        } catch (error) {
+            console.error(`Failed to update special file ${filePath}:`, error);
+        }
+    }
+
+    /**
+     * 删除文件
+     */
+    public deleteFile(filePath: string): void {
+        const oldLiterals = this.filePathToLiterals.get(filePath) || [];
+        this.literals = this.literals.filter(l => !oldLiterals.includes(l));
+        this.filePathToLiterals.delete(filePath);
+    }
+
+    /**
+     * 清理
+     */
+    public dispose(): void {
+        this.literals = [];
+        this.filePathToLiterals.clear();
+    }
+}
+

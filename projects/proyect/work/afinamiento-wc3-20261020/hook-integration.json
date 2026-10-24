@@ -1,0 +1,36 @@
+[
+  {
+    "files": [
+      "good.j",
+      "good.jass",
+      "good.vjass"
+    ],
+    "exit": 0,
+    "result": "Warcraft III Classic source checks.......................................Passed\n",
+    "stderr": ""
+  },
+  {
+    "files": [
+      "bad.j"
+    ],
+    "exit": 1,
+    "result": "Warcraft III Classic source checks.......................................Failed\n- hook id: wc3-classic-lint\n- exit code: 1\n\n{\n  \"files\": 1,\n  \"findings\": [\n    {\n      \"severity\": \"ERROR\",\n      \"rule\": \"WC127-BLZ\",\n      \"path\": \"/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/hook-project/bad.j\",\n      \"line\": 2,\n      \"message\": \"Blz API is not vanilla Warcraft III 1.27b.\"\n    }\n  ]\n}\n\n",
+    "stderr": ""
+  },
+  {
+    "files": [
+      "bad.jass"
+    ],
+    "exit": 1,
+    "result": "Warcraft III Classic source checks.......................................Failed\n- hook id: wc3-classic-lint\n- exit code: 1\n\n{\n  \"files\": 1,\n  \"findings\": [\n    {\n      \"severity\": \"ERROR\",\n      \"rule\": \"WC127-BLZ\",\n      \"path\": \"/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/hook-project/bad.jass\",\n      \"line\": 2,\n      \"message\": \"Blz API is not vanilla Warcraft III 1.27b.\"\n    }\n  ]\n}\n\n",
+    "stderr": ""
+  },
+  {
+    "files": [
+      "bad.vjass"
+    ],
+    "exit": 1,
+    "result": "Warcraft III Classic source checks.......................................Failed\n- hook id: wc3-classic-lint\n- exit code: 1\n\n{\n  \"files\": 1,\n  \"findings\": [\n    {\n      \"severity\": \"ERROR\",\n      \"rule\": \"WC127-BLZ\",\n      \"path\": \"/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/hook-project/bad.vjass\",\n      \"line\": 2,\n      \"message\": \"Blz API is not vanilla Warcraft III 1.27b.\"\n    }\n  ]\n}\n\n",
+    "stderr": ""
+  }
+]

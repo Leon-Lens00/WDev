@@ -1,0 +1,12 @@
+V11 Buster A — presencia en juego, envoltura alargada y ciclo de misil
+Base: V10 MDX cd479d2c0a35d84ece4d0d4680fe98740c7410a063d3bbcb08a767d18df93334. Destino Classic1.27b/MDX800. Sólo modeloA; no física.
+Requisitos: rosa/verde legibles a cámara de juego; recubrimiento adaptado al óvalo largo; Birth y Death guiados por ShotsII y biblioteca Vinz. Raíz y punta en origen durante vuelo; impacto expande alrededor de punta.
+Evidencia: V10 raíz escala hasta.03 al morir. ShotsII Death1000ms: cuerpo desaparece rápidamente, Stars+40..240ms,Lumps/Flashes+50..300ms y Avante+0..160ms. Psionic/Firebrand separan emisores de muerte y vuelo.
+Fases:1 estudiar y conservar hashes;2 crearV11 con envoltura de perfil longitudinal, refuerzo visible, descargas anchas y vida separada;3 relectura independiente/BLP/poses/canales y tiempos;4visor3D vuelo/Birth/Death con referencia;5YDWE SP pantalla3 comparandoV10/V11 a escalas0.5/1/2.4;6empaquetar con evidencia y previos intactos.
+Decisiones iniciales: rosa más saturado y grueso, forma afilada que se ensancha gradualmente a lo largo del cuerpo; verde ancho con halo y núcleo claro, angular/desfasado; Birth300ms,Stand960ms,Death1000ms. Cuerpo se apaga~90ms en Death sin contraerse; destello/frente radial y partículas cortas. Ajustar tras ver.
+Criterio: a tamaño de juego distinguir rosa, verde y cuerpo azul; origen fijo; Death se lee como impacto y termina limpio. Prueba sintáctica no acredita aspecto. No FPS/multijugador ni timing nativo SNES.
+Estado: inspección de referencias completada; implementación pendiente.
+
+Avance: MDX220ed34d...3053;455poses y15BLP verificadas.3D Birth/Stand/Death completado; la capa Blend inicial tapaba el blanco, descartada y conservada como candidato. Flujo final aditivo y perfil más ancho. Mapa compilado/reextraído35miembros, arranqueYDWE en curso.
+
+Cierre: completado. MDX final570738e214e42c4610a56655278f9b52b2557cd3f9fe5c86ed516f261123e7d7. Birth con emisores unidos, vuelo/Death equivalentes al candidato previo en198poses. Prueba nativa final recuperada tras liberarse pantalla3: ocho casos/200capturas, escalas0.5/1/2.4, Birth/Death y movimiento. PID1000454 cerrado conexit0. Fuentes/evidencias conservadas; V10 intacta.

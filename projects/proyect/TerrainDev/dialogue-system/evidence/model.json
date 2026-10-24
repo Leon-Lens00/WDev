@@ -1,0 +1,53 @@
+{
+  "version": 800,
+  "vertices": 92,
+  "triangles": 46,
+  "innerBezel": {
+    "horizontal": 1.2,
+    "vertical": 0.85
+  },
+  "outerFrameUnchanged": true,
+  "sequences": [
+    [
+      "Stand",
+      1,
+      1000
+    ],
+    [
+      "Stand Alternate",
+      2001,
+      3000
+    ],
+    [
+      "Birth",
+      4001,
+      4651
+    ],
+    [
+      "Death",
+      7001,
+      7601
+    ],
+    [
+      "Birth Alternate",
+      10001,
+      10651
+    ],
+    [
+      "Death Alternate",
+      13001,
+      13601
+    ]
+  ],
+  "transition": {
+    "lineOpen": 150,
+    "unfold": 200,
+    "acquire": 300,
+    "loss": 300,
+    "fold": 150,
+    "lineClose": 150
+  },
+  "independentRoundtrip": true,
+  "textBaked": false,
+  "portraitsBaked": false
+}

@@ -1,0 +1,77 @@
+{
+  "target": "Classic 1.27b MDX800",
+  "revision": "v2 layered plasma study after Vinz comparison",
+  "worldTrajectory": false,
+  "entries": [
+    {
+      "name": "X3_Buster_Cargado",
+      "category": "A-Buster",
+      "path": "exports/megaman-x3-buster-v2/A-Buster/X3_Buster_Cargado.mdx",
+      "sha256": "702bf94a5e46d2dd59d25ea289306399962666581286fca9f61b864947f30a1c",
+      "geosets": 28,
+      "triangles": 1560,
+      "pe2": 4,
+      "ribbons": 2
+    },
+    {
+      "name": "X3_Orbe_Verde",
+      "category": "B-Orbes-individuales/Verde",
+      "path": "exports/megaman-x3-buster-v2/B-Orbes-individuales/Verde/X3_Orbe_Verde.mdx",
+      "sha256": "1259fa3e05f4784e159b830cf8453b950f087f883c4c221156d0117daad68a22",
+      "geosets": 5,
+      "triangles": 518,
+      "pe2": 3,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Orbe_Naranja",
+      "category": "B-Orbes-individuales/Naranja",
+      "path": "exports/megaman-x3-buster-v2/B-Orbes-individuales/Naranja/X3_Orbe_Naranja.mdx",
+      "sha256": "1908a9d66c7647ec7a0d642f159f9a73598379f178a6617d4bbae960dda4b24e",
+      "geosets": 5,
+      "triangles": 518,
+      "pe2": 3,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Orbe_Cian",
+      "category": "B-Orbes-individuales/Cian",
+      "path": "exports/megaman-x3-buster-v2/B-Orbes-individuales/Cian/X3_Orbe_Cian.mdx",
+      "sha256": "4fd239b682532f7e187d1a87ee599ee80fdc86e19bbfa2352691bcb191276a9e",
+      "geosets": 5,
+      "triangles": 518,
+      "pe2": 3,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Grupo_Orbital",
+      "category": "B-Grupo-visual",
+      "path": "exports/megaman-x3-buster-v2/B-Grupo-visual/X3_Grupo_Orbital.mdx",
+      "sha256": "20e0a5e6c43f0dc36f578db586c9068db03f2e284585b25eac7790710caa29ed",
+      "geosets": 15,
+      "triangles": 1554,
+      "pe2": 9,
+      "ribbons": 3
+    },
+    {
+      "name": "X3_Cross_Buster",
+      "category": "C-Buster-fusionado",
+      "path": "exports/megaman-x3-buster-v2/C-Buster-fusionado/X3_Cross_Buster.mdx",
+      "sha256": "bc174a40f533734599fa4e667e702bab94dadb14118570180b8024c7834310cd",
+      "geosets": 32,
+      "triangles": 3096,
+      "pe2": 5,
+      "ribbons": 2
+    },
+    {
+      "name": "X3_Flash_Union",
+      "category": "C-Flash-union",
+      "path": "exports/megaman-x3-buster-v2/C-Flash-union/X3_Flash_Union.mdx",
+      "sha256": "f121a2a04a6b315a32c696cc4bb73d414aa49669b73d11c89a74914fe8501c0a",
+      "geosets": 2,
+      "triangles": 640,
+      "pe2": 2,
+      "ribbons": 0
+    }
+  ]
+}

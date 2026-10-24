@@ -1,0 +1,1098 @@
+<h1>Missile [GUI] version 1.6.1</h1>
+<p>Submitted by BPower</p>
+<p>Uploaded: 15 Feb, 2016</p>
+<p>Last edited: 31 May, 2016</p>
+<p>Source:</p>
+<p><a href="https://www.hiveworkshop.com/threads/missile-gui-version-1-6-1.275718/">https://www.hiveworkshop.com/threads/missile-gui-version-1-6-1.275718/</a></p>
+<p>Tags: System, GUI / Triggers, JASS</p>
+<p>Filesize: 70.78 KB</p>
+<h2>Just another Warcraft III map</h2>
+<p>Filesize: 70.78 KB</p>
+<p>Filename: Missile GUI.w3x</p>
+<p>Number of players: 1</p>
+<p>Recommended game:</p>
+<p>Warcraft 3: Pre-Reforged (1.19 - 1.21b)</p>
+<h2>Description</h2>
+<p><a id="top"></a>
+<div class="vindit-align-center">
+	<b><span style="font-size: 22px"><span style="color: LightBlue">Missile [GUI]</span></span></b><br />
+<br />
+<span style="font-size: 12px"><i>A system made to handle, optimize and ease projectile creation in your map.</i></span><br />
+<br />
+</div><br />
+<span style="font-size: 12px"><div class="bbTable">
+<table style='width: 100%'><tr><td><b>Table of Content</b></td></tr><tr><td><br />
+<ul>
+<li data-xf-list-type="ul"><a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="rules">Three golden rules</a></li>
+<li data-xf-list-type="ul"><a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="create">Create &amp; destroy missiles</a></li>
+<li data-xf-list-type="ul"><a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="trigger">Trigger interface - Customizing missile events</a></li>
+<li data-xf-list-type="ul"><a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="vars">Variables</a></li>
+<li data-xf-list-type="ul"><a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="action">Example Trigger Action function</a></li>
+<li data-xf-list-type="ul"><a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="down">Directly to download</a></li>
+</ul></td></tr></table>
+</div></span><br />
+<a id="rules"></a><br />
+<span style="font-size: 15px"><span style="color: Goldenrod"><b>The three golden rules for Missile</b></span></span><br />
+<a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="top">top</a><br />
+<ol>
+<li data-xf-list-type="ol"><span style="font-size: 12px"><span style="color: lightblue">Neither Missile__Origin nor Missile__Impact leak</span>. <br />
+Missile removes both location handles internally.</span><br />
+---</li>
+<li data-xf-list-type="ol"><span style="font-size: 12px">All <span style="color: lightblue">variables</span> storing missile properties such as Missile__Owner or Missile__Damage<br />
+<span style="color: lightblue">are only valid within a trigger action function</span> fired from the Missile trigger interface.<br />
+Otherwise they will be null, 0 or false. To put it simple invalid.</span> <br />
+---</li>
+<li data-xf-list-type="ol"><span style="font-size: 12px">Every Missile related variable is prefixed with Missile<br />
+You may <span style="color: lightblue">only use variables with two underscores __</span>, such as Missile__Source<br />
+<span style="color: lightblue">or variables with one underscore _</span>, such as Missile_Source[index].<br />
+All other variables are private and strictly reserved for the internal structure of Missile.</span></li>
+</ol><br />
+<a id="create"></a><br />
+<span style="font-size: 15px"><span style="color: Goldenrod"><b>Create &amp; destroy missiles</b></span></span><br />
+<a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="top">top</a><br />
+<br />
+<span style="font-size: 12px">Create a missiles via <span style="color: lightblue">Run Missile Configuration &lt;gen&gt; - Set missile properties - Run Missile &lt;gen&gt;</span> syntax.<br />
+For example like here in my Fireball trigger:<br />
+
+
+
+<ul class="bbcode-trigger" data-xf-init="trigger-tag">
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/base.gif" /><span>Fireball Cast</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/events.gif" /><span>Events</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/unit.gif" /><span>Unit - A unit Starts the effect of an ability</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>Conditions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>(Ability being cast) Equal to Fireball</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__TempLoc = (Target point of ability being cast)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>--------   --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Trigger - Run Missile Configurate &lt;gen&gt; (ignoring conditions)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Source = (Triggering unit)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Owner = (Triggering player)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Origin = (Position of Missile__Source)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Impact = (Missile__Origin offset by 550.00 towards (Angle from Missile__Origin to Missile__TempLoc) degrees)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__ImpactZ = 50.00</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__OriginZ = 50.00</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Speed = 500.00</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Model = Abilities\Weapons\FireBallMissile\FireBallMissile.mdl</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Trigger - Run Missile &lt;gen&gt; (ignoring conditions)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>--------   --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   call RemoveLocation(udg_Missile__TempLoc)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+</ul>A missile <span style="color: lightblue">can be manually destroyed during each trigger event via</span><br />
+
+
+
+<ul class="bbcode-trigger" data-xf-init="trigger-tag">
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__WantDestroy = True</span>
+				
+					</li>
+				
+		
+		
+	
+</ul><span style="color: lightblue">or automatically when reaching the impact point</span>.</span><br />
+<br />
+<a id="trigger"></a><br />
+<span style="font-size: 15px"><span style="color: Goldenrod"><b>Missile trigger interface</b></span></span><br />
+<a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="top">top</a><br />
+<br />
+<span style="font-size: 12px">Missile <span style="color: lightblue">optionally runs</span> the five below listed <span style="color: lightblue">trigger events</span>.<br />
+Each event will upon occurrence run the trigger set to the trigger variable.<br />
+In the example below Fireball Actions &lt;gen&gt; would run for all events.</span><br />
+
+
+
+<ul class="bbcode-trigger" data-xf-init="trigger-tag">
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__OnPeriodic = Fireball Actions &lt;gen&gt;</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__OnCollideUnit = Fireball Actions &lt;gen&gt;</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__OnCollideDestructable = Fireball Actions &lt;gen&gt;</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__OnFinish = Fireball Actions &lt;gen&gt;</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__OnRemove = Fireball Actions &lt;gen&gt;</span>
+				
+					</li>
+				
+		
+		
+	
+</ul><span style="font-size: 12px">You can <span style="color: lightblue">identify the dispatched trigger by evaluating Missile__EventId</span> in an integer comparison with<br />
+these constant Missile event variables <span style="color: lightblue">for example Missile__EventId equals EVENT_MISSILE_FINISH</span></span><br />
+<ul>
+<li data-xf-list-type="ul"><span style="font-size: 12px"><span style="color: lightblue">EVENT_MISSILE_PERIODIC</span> runs every timer interval.</span></li>
+<li data-xf-list-type="ul"><span style="font-size: 12px"><span style="color: lightblue">EVENT_MISSILE_COLLIDE_UNIT</span>  runs on unit collision.</span></li>
+<li data-xf-list-type="ul"><span style="font-size: 12px"><span style="color: lightblue">EVENT_MISSILE_COLLIDE_DEST</span>  runs on destructable collision.</span></li>
+<li data-xf-list-type="ul"><span style="font-size: 12px"><span style="color: lightblue">EVENT_MISSILE_FINISH</span>  runs if the impact point is reached. If on finish is defined you must destroy the missile manually.</span></li>
+<li data-xf-list-type="ul"><span style="font-size: 12px"><span style="color: lightblue">EVENT_MISSILE_REMOVE</span>  runs when a missile is irrevocably destroyed.</span></li>
+</ul><a id="vars"></a><br />
+<span style="font-size: 15px"><span style="color: Goldenrod"><b>Missile variables - Documentated in JASS format</b></span></span><br />
+<a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="top">top</a><br />
+<br />
+<pre style="margin: 1em 0">//=============================================================
+//  Missile API. 
+//=============================================================  
+// Syntax for missile creation in GUI:
+//    1. Run trigger Missile Configurate &lt;gen&gt; 
+//    2. Set properties via scalar variables.
+//    3. Run trigger Missile &lt;gen&gt;
+// JASS users may call the create and launch function directly.
+//
+// Missile operates with custom events.
+// This means that you have access to 
+// a missile&#039;s properties within action functions
+// of the Missile trigger interface. 
+//
+// &quot;udg_Missile__EventId&quot; indicates
+// which event trigger has been dispatched.
+//
+// &quot;udg_Missile__EventIndex&quot; is the array index
+// of the triggering missile.
+//
+// Avaliable events are:
+//
+//   1.) udg_EVENT_MISSILE_COLLIDE_UNIT
+//        • Runs when a missile collides with a unit.
+//
+//   2.) udg_EVENT_MISSILE_COLLIDE_DEST
+//        • Runs when a missile collides with a destructable.
+//
+//   3.) udg_EVENT_MISSILE_PERIODIC
+//        • Runs every missile timer interval.
+//
+//   4.) udg_EVENT_MISSILE_FINISH
+//        • Runs when a missile reaches its impact position.
+//
+//   5.) udg_EVENT_MISSILE_REMOVE
+//        • Runs when a missile is destroyed.
+//
+//   6.) udg_EVENT_MISSILE_NOTHING
+//        • Value of udg_Missile__EventId when accessed
+//          from outside a trigger action function.
+//
+// During every missile event you may use the 
+// following GUI generated variables.
+// Every scalar variable has an equivalent array variable,
+// which you can read and use at any time. 
+// For exmple: udg_Missile__Source vs. udg_Missile_Source[index]
+//
+// Trigger variables which fire Missile events:
+//
+//    trigger udg_Missile__OnCollideUnit            -    trigger array udg_Missile_OnUnit 
+//    trigger udg_Missile__OnCollideDestructable    -    trigger array udg_Missile_OnDest
+//    trigger udg_Missile__OnPeridoic               -    trigger array udg_Missile_OnPeriodic
+//    trigger udg_Missile__OnRemove                 -    trigger array udg_Missile_OnRemove
+//    trigger udg_Missile__OnFinish                 -    trigger array udg_Missile_OnFinish
+//
+// Variables which mimic a function call:
+//
+//    location udg_Missile__Origin    
+//    location udg_Missile__Impact      
+//    boolean  udg_Missile__WantDestroy    -    boolean array udg_Missile_WantDestroy
+//    boolean  udg_Missile__Recycle        -    boolean array udg_Missile_Recycle
+//    real     udg_Missile__Scale          -    real    array udg_Missile_Scale
+//    real     udg_Missile__FlyTime        -    real    array udg_Missile_FlyTime ( Converts time in seconds to a vector lenght )
+//    real     udg_Missile__Model          -    string  array udg_Missile_Model   ( Converts a string path to a special effect )
+//    real     udg_Missile__Arc            -    real    array udg_Missile_Arc     ( Converts an arc in degree to height value )
+//    real     udg_Missile__Curve          -    real    array udg_Missile_Curve   ( Converts a curve in degree to an open value )
+//
+// Variables for read-only:
+//
+//    integer udg_Missile__EventId     
+//    integer udg_Missile__EventIndex  
+//    unit    udg_Missile__Dummy           -    unit array udg_Missile_Dummy
+//    real    udg_Missile__Angle           -    real array udg_Missile_Angle    ( In radians )
+//    real    udg_Missile__Distance        -    real array udg_Missile_Distance ( Total distance traveled )
+//
+// Variables for read and set.
+//
+//    unit    udg_Missile__Source          -    unit    array udg_Missile_Source
+//    unit    udg_Missile__Target          -    unit    array udg_Missile_Target    ( Enables homing behaviour towards a target unit )
+//    player  udg_Missile__Owner           -    unit    array udg_Missile_Owner     ( Pseudo-owner for better onCollide evaluation ) 
+//    real    udg_Missile__ImpactZ         -    real    array udg_Missile_ImpactZ
+//    real    udg_Missile__OriginZ         -    real    array udg_Missile_OriginZ
+//    real    udg_Missile__Damage          -    real    array udg_Missile_Damage
+//    real    udg_Missile__Collision       -    real    array udg_Missile_Collision
+//    real    udg_Missile__Speed           -    real    array udg_Missile_Speed
+//    real    udg_Missile__Acceleration    -    real    array udg_Missile_Acceleration
+//    real    udg_Missile__Height          -    real    array udg_Missile_Height    ( Highest point of the parabola )
+//    real    udg_Missile__Open            -    real    array udg_Missile_Open      
+//    real    udg_Missile__Turn            -    real    array udg_Missile_Turn      ( Turn ratio per second )
+//    real    udg_Missile__Data            -    integer array udg_Missile_Data</pre><br />
+<a id="action"></a><br />
+<span style="font-size: 15px"><span style="color: Goldenrod"><b>Example trigger action function</b></span></span><br />
+<a href="javascript:;" onclick="window.location.hash = '#' + $(this).data('hash')" data-hash="top">top</a><br />
+<br />
+<span style="font-size: 12px">Let&#039;s see how the event triggers run code in an action function.<br />
+We stick to the fireball scenario. This spell is also included in the demo map.</span><br />
+
+
+
+<ul class="bbcode-trigger" data-xf-init="trigger-tag">
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/base.gif" /><span>Fireball Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/events.gif" /><span>Events</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>Conditions</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- As you can see Missile__EventId allows you  --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- to identify which event trigger dispatched. --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Therefore you can run all actions from one trigger function. --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Of course you can also seperate triggers into different triggers. --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>If (All Conditions are True) then do (Then Actions) else do (Else Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>If - Conditions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>Missile__EventId Equal to EVENT_MISSILE_REMOVE</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Then - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>If (All Conditions are True) then do (Then Actions) else do (Else Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>If - Conditions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>Missile__Data Equal to 1</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Then - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Create more fireballs --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Reference to Missile__Dummy will be removed --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- Once you call Run Missile Configurate &lt;gen&gt; --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__TempLoc = (Position of Missile__Dummy)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>For each (Integer A) from 1 to 6, do (Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Loop - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Trigger - Run Missile Configurate &lt;gen&gt; (ignoring conditions)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Origin = (Point((X of Missile__TempLoc), (Y of Missile__TempLoc)))</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Impact = (Missile__Origin offset by 450.00 towards (60.00 x (Real((Integer A)))) degrees)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__ImpactZ = 50.00</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Height = 350.00</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__OriginZ = 50.00</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Speed = 500.00</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Damage = 150.00</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Source = Missile_Source[Missile__EventIndex]</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Owner = Missile_Owner[Missile__EventIndex]</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Model = Abilities\Weapons\FireBallMissile\FireBallMissile.mdl</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__OnCollideUnit = Fireball Actions &lt;gen&gt;</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__OnRemove = Fireball Actions &lt;gen&gt;</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__Data = 2</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Trigger - Run Missile &lt;gen&gt; (ignoring conditions)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   call RemoveLocation(udg_Missile__TempLoc)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   set udg_Missile__TempLoc = null</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Else - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__TempLoc = (Position of Missile__Dummy)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Temp_Group = (Units within 128.00 of Missile__TempLoc matching ((((Matching unit) belongs to an enemy of Missile__Owner) Equal to True) and (((Matching unit) is alive) Equal to True)))</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/unitgroup.gif" /><span>Unit Group - Pick every unit in Temp_Group and do (Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Loop - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/unit.gif" /><span>Unit - Cause Missile__Source to damage (Picked unit), dealing Missile__Damage damage of attack type Spells and damage type Normal</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/ani.gif" /><span>Special Effect - Create a special effect at Missile__TempLoc using Abilities\Spells\Other\Doom\DoomDeath.mdl</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/ani.gif" /><span>Special Effect - Destroy (Last created special effect)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   call DestroyGroup(udg_Temp_Group)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   call RemoveLocation(udg_Missile__TempLoc)</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/page.gif" /><span>Custom script:   set udg_Missile__TempLoc = null</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Else - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottomminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinbottomplus.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>If (All Conditions are True) then do (Then Actions) else do (Else Actions)</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/cond.gif" /><span>If - Conditions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>Missile__EventId Equal to EVENT_MISSILE_COLLIDE_UNIT</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/if.gif" /><span>(Missile__UnitHit belongs to an enemy of Missile__Owner) Equal to True</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinminus.gif" class="expander" data-alternative="/styles/default/ratory/trigger_legacy/joinplus.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Then - Actions</span>
+				
+					<ul>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/comment.gif" /><span>-------- See how easy damaging got. --------</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/join.gif" /><img src="/styles/default/ratory/trigger_legacy/unit.gif" /><span>Unit - Cause Missile__Source to damage Missile__UnitHit, dealing Missile__Damage damage of attack type Normal and damage type Normal</span>
+				
+					</li>
+				
+		
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/line.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/set.gif" /><span>Set Missile__WantDestroy = True</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+			<li>
+				<img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/empty.gif" /><img src="/styles/default/ratory/trigger_legacy/joinbottom.gif" /><img src="/styles/default/ratory/trigger_legacy/actions.gif" /><span>Else - Actions</span>
+				
+					</li>
+				
+		
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+		
+		
+			</ul>
+			</li>
+		
+	
+</ul><a id="down"></a><br />
+<br />
+<b>Keywords:</b><br />
+Missile, Projectile, System</p>
+<p>Don't forget to credit the author.</p>

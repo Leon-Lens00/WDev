@@ -1,0 +1,10 @@
+The chain is **`Noise.Noise.openSimplex2D → Noise.Noise.extrapolate2D` directly**: no intermediate function or callback. Four conditional call sites provide the wiring:
+
+- `attn1 > 0`: `extrapolate2D(xsb + 1, ysb, dx1, dy1)` ([Noise.j:170–173](Noise.j:170)).
+- `attn2 > 0`: `extrapolate2D(xsb, ysb + 1, dx2, dy2)` ([Noise.j:174–177](Noise.j:174)).
+- `attn0 > 0`: `extrapolate2D(xsb, ysb, dx0, dy0)` ([Noise.j:223–227](Noise.j:223)).
+- `attn_ext > 0`: `extrapolate2D(xsv_ext, ysv_ext, dx_ext, dy_ext)` ([Noise.j:228–232](Noise.j:228)).
+
+The intermediate work selects coordinates and displacements. For `inSum <= 1`, `zins = 1-inSum`; testing `zins > xins or zins > yins`, then `xins > yins`, selects extra offsets `(1,-1)`, `(-1,1)`, or `(1,1)` ([Noise.j:178–197](Noise.j:178)). Otherwise, `zins = 2-inSum`; analogous `<` tests select `(2,0)`, `(0,2)`, or `(0,0)`, followed by incrementing both base coordinates and adjusting displacements ([Noise.j:198–222](Noise.j:198)).
+
+Each attenuation is `2-dx²-dy²`; contributions use its fourth power. `extrapolate2D` hashes coordinates through `permutation`, masks the index with `7`, and returns the gradient dot product ([Noise.j:137–140](Noise.j:137)).

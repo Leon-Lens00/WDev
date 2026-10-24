@@ -1,0 +1,11 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "PASS missile reached endpoint" )
+	call Preload( "PASS missile returned to recycler" )
+	call Preload( "PASS missile diagnostics clean" )
+	call Preload( "checks=77 failures=0 arrivals=1" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

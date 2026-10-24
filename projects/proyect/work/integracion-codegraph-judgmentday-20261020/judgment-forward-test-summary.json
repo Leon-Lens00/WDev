@@ -1,0 +1,28 @@
+{
+  "method": "Independent read-only skill forward test by judgment_day_forward_test; no user-code review",
+  "routing_cases": [
+    "Ordinary bug fix does not implicitly activate two judges.",
+    "Explicit concrete Judgment Day review needs no repeated review permission; review-only does not authorize fixes.",
+    "Tool integration does not choose arbitrary projects to review."
+  ],
+  "findings_fixed": [
+    {
+      "issue": "Nested reserved manifest filename accepted at creation then rejected in verification",
+      "resolution": "Reject marker in any relative path component before creating destination; regression test."
+    },
+    {
+      "issue": "Valid JSON manifest with wrong top-level type caused uncontrolled AttributeError",
+      "resolution": "Validate manifest object type; regression test."
+    },
+    {
+      "issue": "Required Python version unstated",
+      "resolution": "Document Python 3.10+ in helper and skill."
+    }
+  ],
+  "limits_addressed": [
+    "File hash covers names/bytes only; preserve identical diff, requirements and instructions separately.",
+    "verify-source checks original files still match reviewed snapshot; regression test.",
+    "Snapshot is not atomic and read-only file modes do not isolate against the same OS user."
+  ],
+  "scope_limit": "The independent check validates routing and helper behavior; it does not demonstrate correctness or independence of a future live two-judge review."
+}

@@ -1,0 +1,11 @@
+{
+  "args": [
+    "/home/snz/.local/bin/codegraph",
+    "init",
+    "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+    "--yes"
+  ],
+  "code": 0,
+  "stdout": "\u250c  Initializing CodeGraph\n\u2502\n\u25c6  Initialized in /home/snz/Documentos/WarDatsPy/ui-studio/dist\n\u2502\nScanning files...\nParsing code...\nResolving refs...\nLinking dynamic dispatch...\n\u2502\n\u25c6  Indexed 4 files\n\u2502\n\u25cf  126 nodes, 734 edges in 159ms\n\u2502\n\u2514  Done\n\n",
+  "stderr": ""
+}

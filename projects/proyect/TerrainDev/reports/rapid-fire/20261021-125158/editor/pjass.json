@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "pjass",
+    "reports/rapid-fire/20261021-125158/editor/saved-extracted/war3map.j"
+  ],
+  "returncode": 0,
+  "stdout": "Parse successful:     2418 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j\nParse successful:    10230 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j\nParse successful:     5567 lines: reports/rapid-fire/20261021-125158/editor/saved-extracted/war3map.j\nParse successful:    18215 lines: <total>\n",
+  "stderr": ""
+}

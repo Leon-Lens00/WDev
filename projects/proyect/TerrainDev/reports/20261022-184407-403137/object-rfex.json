@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "object",
+    "get",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261022-184407-403137/stage-32.w3x",
+    "rfex",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Rawcode\": \"rfex\",\n  \"Found\": true,\n  \"BaseRawcode\": \"hrif\",\n  \"Name\": \"Rapid Fire - Ejecutor\",\n  \"Fields\": [\n    {\n      \"Code\": \"uabi\",\n      \"Name\": \"uabi\",\n      \"Value\": \"\",\n      \"Source\": \"map\",\n      \"Display\": \"\"\n    },\n    {\n      \"Code\": \"uacq\",\n      \"Name\": \"uacq\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"uaen\",\n      \"Name\": \"uaen\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ucbs\",\n      \"Name\": \"ucbs\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ucol\",\n      \"Name\": \"ucol\",\n      \"Value\": \"24\",\n      \"Source\": \"map\",\n      \"Display\": \"24\"\n    },\n    {\n      \"Code\": \"ucpt\",\n      \"Name\": \"ucpt\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ufle\",\n      \"Name\": \"ufle\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ufoo\",\n      \"Name\": \"ufoo\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"uhpm\",\n      \"Name\": \"uhpm\",\n      \"Value\": \"800\",\n      \"Source\": \"map\",\n      \"Display\": \"800\"\n    },\n    {\n      \"Code\": \"umvs\",\n      \"Name\": \"umvs\",\n      \"Value\": \"350\",\n      \"Source\": \"map\",\n      \"Display\": \"350\"\n    },\n    {\n      \"Code\": \"unam\",\n      \"Name\": \"unam\",\n      \"Value\": \"Rapid Fire - Ejecutor\",\n      \"Source\": \"map\",\n      \"Display\": \"Rapid Fire - Ejecutor\"\n    },\n    {\n      \"Code\": \"usnd\",\n      \"Name\": \"usnd\",\n      \"Value\": \"Rifleman\",\n      \"Source\": \"map\",\n      \"Display\": \"Rifleman\"\n    }\n  ],\n  \"Diagnostics\": [\n    \"Warcraft III install not found (pass --game-dir \\u003Cpath\\u003E)\"\n  ]\n}\n",
+  "stderr": ""
+}

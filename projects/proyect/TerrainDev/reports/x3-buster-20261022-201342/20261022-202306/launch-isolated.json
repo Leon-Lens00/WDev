@@ -1,0 +1,17 @@
+{
+  "source": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/work/TerrainDev-x3-20261022-202306.w3x",
+  "sha256": "c2081b25e64b415c0b774d02b59793e8b8478f485fdbb19a4c2d4730dd416a05",
+  "staged": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/x3-runtime/pfx/drive_c/WarcraftIII/Maps/CodexTest/c2081b25e64b415c.w3x",
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/x3-runtime/pfx",
+  "command": [
+    "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/_v2-entry-point",
+    "--verb=run",
+    "--",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+    "runinprefix",
+    "C:\\WarcraftIII\\war3.exe",
+    "-loadfile",
+    "Maps\\CodexTest\\c2081b25e64b415c.w3x",
+    "-window"
+  ]
+}

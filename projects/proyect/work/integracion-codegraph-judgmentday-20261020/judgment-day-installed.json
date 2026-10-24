@@ -1,0 +1,24 @@
+{
+  "skill": "/home/snz/.codex/skills/judgment-day",
+  "files": {
+    "SKILL.md": "479afe0461e681e564713e7fb41b5848b37fb65228a2fe83baa0983fe86997ef",
+    "references/prompts-and-formats.md": "5eef64234438f346c84691d4f4af44234bbfdcf9a2b8d43314e2c4297ce948f7",
+    "references/provenance.json": "27e9b26d6f97a038be82801d428e8862d7bffbab204c7a0fadaa7a6b10618126",
+    "agents/openai.yaml": "725420dc55000800f0cb82a6e9aa8055c705ee070de55bd506cea20bb8583bf4",
+    "scripts/snapshot.py": "358cbf68482a782fbf75fa9144b7ebc3ee2587ade4719682a49d0bddc1630375",
+    "scripts/tests/test_snapshot.py": "f5d1f55fbfc4789467086d41652af5ce5d489b64de4f29fc417b7186b8f8e9b4"
+  },
+  "validation": {
+    "quick_validate": "Skill is valid!",
+    "snapshot_unit_tests": {
+      "passed": 9,
+      "failed": 0
+    },
+    "cli_verify_source": {
+      "passed": true,
+      "files": 3,
+      "tree_sha256": "419c5b3791a701c8042bac7c56ec766ec7a866304ff7362c82bf727f6d93bd5a"
+    }
+  },
+  "native_two_judge_runtime_trial": "not performed; no user-code review requested"
+}

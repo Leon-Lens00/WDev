@@ -1,0 +1,113 @@
+--- before/src/mcp/tools.ts
++++ after/src/mcp/tools.ts
+@@ -3341,6 +3341,12 @@
+   private synthEdgeNote(edge: Edge | null): { label: string; compact: string; registeredAt?: string } | null {
+     if (!edge || edge.provenance !== 'heuristic') return null;
+     const m = edge.metadata as Record<string, unknown> | undefined;
++    if (m?.jassStaticSubset === true) {
++      return {
++        label: `JASS/vJASS static subset — ${edge.kind}`,
++        compact: `static JASS: ${edge.kind}`,
++      };
++    }
+     const registeredAt = typeof m?.registeredAt === 'string' ? m.registeredAt : undefined;
+     const at = registeredAt ? ` @${registeredAt}` : '';
+     if (m?.synthesizedBy === 'callback') {
+@@ -3549,8 +3555,8 @@
+         if (synthLines.length === 0 && !boundaries) return identityOnly();
+         const out: string[] = [];
+         if (synthLines.length) out.push(
+-          '**Dynamic-dispatch links among your symbols**',
+-          '(synthesized — the indirect hops grep/Read would reconstruct; the `@file:line` is the wiring site)',
++          '**Additional graph links among your symbols**',
++          '(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)',
+           '', ...synthLines, '');
+         if (boundaries) out.push(boundaries);
+         out.push('> Full source for these symbols is below.\n');
+@@ -3647,8 +3653,8 @@
+       }
+       if (synthLines.length) {
+         out.push(
+-          '**Dynamic-dispatch links among your symbols**',
+-          '(synthesized — the indirect hops grep/Read would reconstruct; the `@file:line` is the wiring site)',
++          '**Additional graph links among your symbols**',
++          '(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)',
+           '',
+           ...synthLines,
+           ''
+--- before/src/mcp/server-instructions.ts
++++ after/src/mcp/server-instructions.ts
+@@ -23,6 +23,8 @@
+ extractor. It does not expand textmacros, imports, module implementations or
+ dynamic dispatch, and does not validate Classic 1.27b compatibility. Preserve
+ extraction diagnostics; use JassHelper/pJASS for compilation and correctness.
++Additional graph links may be static or inferred: read each link label.
++A static JASS link does not demonstrate runtime dispatch.
+ 
+ Codegraph is a SQLite knowledge graph of every symbol, edge, and file in
+ the workspace — pre-computed structure you would otherwise re-derive by
+--- before/__tests__/jass-vjass.test.ts
++++ after/__tests__/jass-vjass.test.ts
+@@ -161,6 +161,22 @@
+     expect(explored.content[0]?.text).toContain('call Ping()');
+   });
+ 
++  it('labels static JASS links without claiming dynamic dispatch, with and without a flow', async () => {
++    await init({ 'main.j': fn('Start', ' call Run()') + fn('Run', ' call Ping()\n call Other()') + fn('Ping') + fn('Other') });
++    const handler = new ToolHandler(cg!);
++    for (const query of ['Run Ping', 'Start Run Ping']) {
++      const result = await handler.execute('codegraph_explore', { query });
++      const text = result.content[0]?.text as string;
++      expect(result.isError).not.toBe(true);
++      expect(text).toContain('**Additional graph links among your symbols**');
++      expect(text).toContain('[static JASS: calls]');
++      expect(text).not.toContain('**Dynamic-dispatch links');
++      expect(text).not.toContain('[dynamic:');
++      if (query.startsWith('Start')) expect(text).toContain('**Flow (call path');
++      else expect(text).not.toContain('**Flow (call path');
++    }
++  });
++
+   it('uses scoped private functions, explicit public prefixes, exact case and no cross-language fallback', async () => {
+     await init({
+       'one.j': `library One\n${fn('Hidden', '', 'private ')}${fn('Exported', '', 'public ')}${fn('Inside', ' call Hidden()\n call Exported()')}endlibrary\n`,
+--- before/__tests__/dynamic-boundaries.test.ts
++++ after/__tests__/dynamic-boundaries.test.ts
+@@ -273,7 +273,7 @@
+     const res = await handler.execute('codegraph_explore', { query: 'completeCheckout settleInvoice' });
+     const text = res.content[0].text as string;
+ 
+-    expect(text).toContain('**Dynamic-dispatch links among your symbols');
++    expect(text).toContain('**Additional graph links among your symbols');
+     expect(text).toMatch(/completeCheckout → settleInvoice/);
+     expect(text).toContain('invoice.settled');
+     // Connected via the synthesized edge — no boundary to announce.
+--- before/__tests__/explore-synth-constant-endpoints.test.ts
++++ after/__tests__/explore-synth-constant-endpoints.test.ts
+@@ -9,7 +9,7 @@
+  * "### Relationships" section would have caught it, but that is disabled below 500 files.
+  * Net: on a small RTK app the synthesized edge existed in the graph yet was invisible to
+  * the agent. The fix feeds a `dynNamed` set (named non-callable endpoints that participate
+- * in a heuristic edge) to the tier-independent "**Dynamic-dispatch links**" scan. This test
++ * in a heuristic edge) to the tier-independent "**Additional graph links**" scan. This test
+  * pins it on a deliberately tiny (<150-file) fixture so the Relationships gate is OFF and
+  * the dynamic-dispatch-links path is the ONLY thing that can surface the hop.
+  */
+@@ -39,7 +39,7 @@
+     if (dir && fs.existsSync(dir)) fs.rmSync(dir, { recursive: true, force: true });
+   });
+ 
+-  it('surfaces an RTK thunk→thunk hop (both `constant`) in the Dynamic-dispatch links section', async () => {
++  it('surfaces an RTK thunk→thunk hop (both `constant`) in the Additional graph links section', async () => {
+     dir = fs.mkdtempSync(path.join(os.tmpdir(), 'explore-thunk-surface-'));
+     fs.writeFileSync(
+       path.join(dir, 'package.json'),
+@@ -77,7 +77,7 @@
+ 
+     // The synthesized hop now surfaces (was invisible: both endpoints `constant` AND the
+     // small-repo Relationships section is off).
+-    expect(text).toContain('**Dynamic-dispatch links among your symbols');
++    expect(text).toContain('**Additional graph links among your symbols');
+     expect(text).toMatch(/outerThunk\s+→\s+innerThunk/);
+     // It reads as a dynamic-dispatch bridge with its wiring site, not a bare `calls`.
+     expect(text).toMatch(/dynamic: redux thunk @/);

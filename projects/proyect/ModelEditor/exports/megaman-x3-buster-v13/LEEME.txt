@@ -1,0 +1,40 @@
+MEGA MAN X3 — COMPONENTES DEL SÚPER BUSTER · V13
+Warcraft III Classic 1.27b · MDX versión 800 · 23/10/2026
+
+PIEZAS
+A-Buster-aprobado-V12: copia exacta del Buster normal aprobado, con sus recursos V12.
+B-Orbes-individuales/Verde: núcleo blanco, halo verde, cuerpo compacto, cola y partículas.
+B-Orbes-individuales/Naranja: equivalente naranja/blanco.
+B-Orbes-individuales/Cian: variante auxiliar conservada del pack anterior; verde y naranja son la pareja de la referencia seleccionada.
+C-Buster-fusionado: Cross Buster rosa/blanco, cuerpo ancho, envoltura de flujo, electricidad secundaria y dos aros verdes con giro local.
+C-Flash-union: destello independiente y finito de la unión, con expansión y residuo verde/rosa.
+
+Cada carpeta contiene MDX, fuente MDL y todos los recursos que referencia.
+Los componentes están separados. El sistema de juego debe decidir su desplazamiento, giro orbital de los orbes, cantidad, fusión, colisiones y creación/retiro. Este pack no modifica la física del mapa ni exporta un grupo con trayectoria prefijada. Los grupos visuales anteriores permanecen disponibles en V4.
+
+IMPORTACIÓN
+Importar el MDX de cada pieza y sus BLP. Mantener las rutas internas X3BusterV13\Nombre.blp. Los recursos repetidos entre piezas son idénticos y basta con importarlos una vez.
+A conserva X3BusterV12\Nombre.blp. No cambiar su prefijo a V13: sus bytes originales están preservados.
+El nombre/ruta de importación del propio MDX es libre.
+Los colores de estos componentes son fijos; no toman automáticamente el color de equipo.
+
+ANCLAJE Y SECUENCIAS
+Los proyectiles avanzan hacia +X. La punta geométrica del cuerpo está en (0,0,0); el resto queda hacia -X. La raíz no se traslada en Birth, Stand ni Death. El impacto y las partículas pueden expandirse alrededor de la punta como efecto visual.
+Orbes: longitud de geometría 46 unidades. Cross: 82.446 unidades; A: 105.7. El tamaño final se puede ajustar desde el juego.
+Birth 0–300 ms. Stand 400–1360 ms (bucle de 960 ms). Death 1500–2500 ms. En Death el cuerpo se desvanece al principio y un impacto independiente se expande y emite partículas; no se encoge el proyectil hasta un punto.
+Flash de unión: las tres secuencias son finitas, de 500 ms. Reproducir una sola secuencia al crear el destello y retirar el efecto cuando termine. No forzar un bucle de Stand en este componente.
+Permitir que termine Death antes de retirar la instancia si se quiere ver el impacto completo.
+
+PROCEDENCIA
+Diseño de personajes/efectos y sprites de referencia: Mega Man X3, Capcom. La referencia animada fue aportada por el usuario mediante https://tenor.com/iA3z0BfiPC1.gif y contrastada con las muestras A/B/C locales confirmadas.
+Base técnica y parte de geometría/UV, materiales y emisores: Shots Vol. II, Vinz, Hive Workshop https://www.hiveworkshop.com/threads/shots-vol-ii.315512/ . Conservar el crédito a Vinz al usar estos derivados. El estudio local adicional de sus otros misiles está en references/vinz-estudio-v4/.
+Adaptación X3: cambios de forma, paleta, envolturas, flujo UV, ciclos, pivotes y aros en ModelEditor. No son modelos oficiales de Capcom ni publicaciones originales de Vinz.
+White_Glow2 conserva exactamente el alfa y el valor máximo RGB del Blue_Glow2 de referencia, eliminando su sesgo azul. Recursos procedurales restantes heredados del trabajo V12.
+
+PREVIEWS
+Previews/muestras-3d.png: cuatro piezas principales, ampliadas individualmente; no compara su tamaño relativo.
+GIF del visor: reproducción al 50% para revisar el flujo y la rotación; modelos reales MDX, no ilustraciones conceptuales.
+El visor orbital local conserva comparación V4/V13 y vistas lateral, frontal, superior y oblicua. A se incluye como referencia aprobada.
+
+VALIDACIÓN
+Los informes JSON adjuntos identifican las pruebas estructurales y nativas. La validación de modelos no acredita la integración posterior con un sistema de proyectiles, rendimiento con cargas masivas ni multijugador.

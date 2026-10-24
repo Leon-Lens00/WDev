@@ -1,0 +1,2753 @@
+{
+  "units": "decimal bytes, KB=1000, MB=1000000",
+  "note": "Actual referenced texture paths; stock textures excluded from map imports; shared custom textures deduplicated by import path and hash within each collection.",
+  "packs": [
+    {
+      "family": "X3",
+      "name": "megaman-x3-buster-v14",
+      "models": 6,
+      "zipBytes": 7590588,
+      "folderBytes": 12238595,
+      "mdxBytes": 752505,
+      "uniqueCustomTextures": 43,
+      "customTextureBytes": 1622101,
+      "importBytes": 2374606
+    },
+    {
+      "family": "Shots I",
+      "name": "shots-vol-i-organizados-brillo",
+      "models": 36,
+      "zipBytes": 600038,
+      "folderBytes": 1486692,
+      "mdxBytes": 241850,
+      "uniqueCustomTextures": 14,
+      "customTextureBytes": 53991,
+      "importBytes": 295841
+    },
+    {
+      "family": "Shots II",
+      "name": "shots-vol-ii-organizados-brillo",
+      "models": 18,
+      "zipBytes": 289358,
+      "folderBytes": 732977,
+      "mdxBytes": 138144,
+      "uniqueCustomTextures": 14,
+      "customTextureBytes": 53991,
+      "importBytes": 192135
+    }
+  ],
+  "models": [
+    {
+      "family": "X3",
+      "pack": "V14",
+      "type": "C-Buster-fusionado",
+      "color": "",
+      "name": "X3_Cross_Buster",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v14/C-Buster-fusionado/X3_Cross_Buster.mdx",
+      "sha256": "2c036d7cbac797544f553d655b068f2450c61935e6f78b00a47f49d87e571d45",
+      "version": 800,
+      "mdx": 311211,
+      "textureCount": 15,
+      "textureBytes": 614957,
+      "customTextureBytes": 614957,
+      "importBytes": 926168,
+      "triangles": 7296,
+      "emitters": 15,
+      "ribbons": 1,
+      "textures": [
+        {
+          "path": "X3BusterV14\\Glow.blp",
+          "bytes": 44870,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Core.blp",
+          "bytes": 44870,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Band.blp",
+          "bytes": 44870,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Filament.blp",
+          "bytes": 44870,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Ring.blp",
+          "bytes": 44870,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Ribbon.blp",
+          "bytes": 12102,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Spark.blp",
+          "bytes": 12102,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Motes.blp",
+          "bytes": 44870,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Shell.blp",
+          "bytes": 44870,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Flow.blp",
+          "bytes": 44870,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\White_Glow2.blp",
+          "bytes": 3910,
+          "sha256": "cd7ea717ba182812a93b14e8c56a3490e574e24f73db8594e5044cf0f3ab3884",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Pulse.blp",
+          "bytes": 175942,
+          "sha256": "0adcb10e5bfbe98122a1dac3256c2aa3aa5fbc1d82e0b66b9a3bd3e22e4348bf",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV14\\Arc.blp",
+          "bytes": 44870,
+          "sha256": "844ed1360f7782c8fbf7f99282c4f58778af5060fa9ed9b1c1a3774f375aab38",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "X3",
+      "pack": "V14",
+      "type": "B-Orbes-individuales/Verde",
+      "color": "",
+      "name": "X3_Orbe_Verde",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v14/B-Orbes-individuales/Verde/X3_Orbe_Verde.mdx",
+      "sha256": "38f6f0687b08b395986af9c447d8bae4f45bb71a6b6388ac5c3047dccaaf67de",
+      "version": 800,
+      "mdx": 65893,
+      "textureCount": 13,
+      "textureBytes": 394145,
+      "customTextureBytes": 394145,
+      "importBytes": 460038,
+      "triangles": 1338,
+      "emitters": 8,
+      "ribbons": 1,
+      "textures": [
+        {
+          "path": "X3BusterV13\\Glow.blp",
+          "bytes": 44870,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Core.blp",
+          "bytes": 44870,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Band.blp",
+          "bytes": 44870,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Filament.blp",
+          "bytes": 44870,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Ring.blp",
+          "bytes": 44870,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Ribbon.blp",
+          "bytes": 12102,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Spark.blp",
+          "bytes": 12102,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Motes.blp",
+          "bytes": 44870,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Shell.blp",
+          "bytes": 44870,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Flow.blp",
+          "bytes": 44870,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\White_Glow2.blp",
+          "bytes": 3910,
+          "sha256": "cd7ea717ba182812a93b14e8c56a3490e574e24f73db8594e5044cf0f3ab3884",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "X3",
+      "pack": "V14",
+      "type": "B-Orbes-individuales/Naranja",
+      "color": "",
+      "name": "X3_Orbe_Naranja",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v14/B-Orbes-individuales/Naranja/X3_Orbe_Naranja.mdx",
+      "sha256": "35912e3f95821f1727fe2d7104591d1e1751450d098b93fb4999bdd56e73eabf",
+      "version": 800,
+      "mdx": 65893,
+      "textureCount": 13,
+      "textureBytes": 394145,
+      "customTextureBytes": 394145,
+      "importBytes": 460038,
+      "triangles": 1338,
+      "emitters": 8,
+      "ribbons": 1,
+      "textures": [
+        {
+          "path": "X3BusterV13\\Glow.blp",
+          "bytes": 44870,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Core.blp",
+          "bytes": 44870,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Band.blp",
+          "bytes": 44870,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Filament.blp",
+          "bytes": 44870,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Ring.blp",
+          "bytes": 44870,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Ribbon.blp",
+          "bytes": 12102,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Spark.blp",
+          "bytes": 12102,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Motes.blp",
+          "bytes": 44870,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Shell.blp",
+          "bytes": 44870,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Flow.blp",
+          "bytes": 44870,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\White_Glow2.blp",
+          "bytes": 3910,
+          "sha256": "cd7ea717ba182812a93b14e8c56a3490e574e24f73db8594e5044cf0f3ab3884",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "X3",
+      "pack": "V14",
+      "type": "B-Orbes-individuales/Cian",
+      "color": "",
+      "name": "X3_Orbe_Cian",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v14/B-Orbes-individuales/Cian/X3_Orbe_Cian.mdx",
+      "sha256": "0b7ec413289ed0bb6d7bd2a90510bb5281c477757239b3ab2a5097c9b2b095d7",
+      "version": 800,
+      "mdx": 65893,
+      "textureCount": 13,
+      "textureBytes": 394145,
+      "customTextureBytes": 394145,
+      "importBytes": 460038,
+      "triangles": 1338,
+      "emitters": 8,
+      "ribbons": 1,
+      "textures": [
+        {
+          "path": "X3BusterV13\\Glow.blp",
+          "bytes": 44870,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Core.blp",
+          "bytes": 44870,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Band.blp",
+          "bytes": 44870,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Filament.blp",
+          "bytes": 44870,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Ring.blp",
+          "bytes": 44870,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Ribbon.blp",
+          "bytes": 12102,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Spark.blp",
+          "bytes": 12102,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Motes.blp",
+          "bytes": 44870,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Shell.blp",
+          "bytes": 44870,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Flow.blp",
+          "bytes": 44870,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\White_Glow2.blp",
+          "bytes": 3910,
+          "sha256": "cd7ea717ba182812a93b14e8c56a3490e574e24f73db8594e5044cf0f3ab3884",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "X3",
+      "pack": "V14",
+      "type": "C-Flash-union",
+      "color": "",
+      "name": "X3_Flash_Union",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v14/C-Flash-union/X3_Flash_Union.mdx",
+      "sha256": "bf3dd00d062f6a3d67c3a7b6b34b81aa6641c7b3415d25cdd9fbdde9705698d7",
+      "version": 800,
+      "mdx": 30340,
+      "textureCount": 10,
+      "textureBytes": 383164,
+      "customTextureBytes": 383164,
+      "importBytes": 413504,
+      "triangles": 780,
+      "emitters": 2,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "X3BusterV13\\Glow.blp",
+          "bytes": 44870,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Core.blp",
+          "bytes": 44870,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Band.blp",
+          "bytes": 44870,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Filament.blp",
+          "bytes": 44870,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Ring.blp",
+          "bytes": 44870,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Ribbon.blp",
+          "bytes": 12102,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Spark.blp",
+          "bytes": 12102,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Motes.blp",
+          "bytes": 44870,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Shell.blp",
+          "bytes": 44870,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV13\\Flow.blp",
+          "bytes": 44870,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "X3",
+      "pack": "V14",
+      "type": "A-Buster-aprobado-V12",
+      "color": "",
+      "name": "X3_Buster_Cargado",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v14/A-Buster-aprobado-V12/X3_Buster_Cargado.mdx",
+      "sha256": "a8c3dc9992b743fb17a52765a6e943370879926a55326a2f94d00182b9f1b390",
+      "version": 800,
+      "mdx": 213275,
+      "textureCount": 15,
+      "textureBytes": 612999,
+      "customTextureBytes": 612999,
+      "importBytes": 826274,
+      "triangles": 4608,
+      "emitters": 15,
+      "ribbons": 1,
+      "textures": [
+        {
+          "path": "X3BusterV12\\Glow.blp",
+          "bytes": 44870,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Core.blp",
+          "bytes": 44870,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Band.blp",
+          "bytes": 44870,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Filament.blp",
+          "bytes": 44870,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Ring.blp",
+          "bytes": 44870,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Ribbon.blp",
+          "bytes": 12102,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Spark.blp",
+          "bytes": 12102,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Motes.blp",
+          "bytes": 44870,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Shell.blp",
+          "bytes": 44870,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Flow.blp",
+          "bytes": 44870,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Blue_Glow2.blp",
+          "bytes": 1952,
+          "sha256": "f034effe383cb39eae294b2a06a6f7ca3e447cb98eb98907e995fda86d91ceb7",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Pulse.blp",
+          "bytes": 175942,
+          "sha256": "0adcb10e5bfbe98122a1dac3256c2aa3aa5fbc1d82e0b66b9a3bd3e22e4348bf",
+          "stock": false
+        },
+        {
+          "path": "X3BusterV12\\Arc.blp",
+          "bytes": 44870,
+          "sha256": "844ed1360f7782c8fbf7f99282c4f58778af5060fa9ed9b1c1a3774f375aab38",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Azul",
+      "name": "Shot Blue.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-simple/Azul/Shot Blue.mdx",
+      "sha256": "f5bb9b4c9551085710ca84391fff227c33caaa1afc5cbf98560e44755d5d53b6",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 9054,
+      "customTextureBytes": 0,
+      "importBytes": 5932,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Blue_Glow2.blp",
+          "bytes": 1958,
+          "sha256": "dcbf0770aa792883d3d7ad0b93052d5a9a1b264ac841dae43b7876f26cbfd793",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Azul",
+      "name": "Shot Blue Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-doble/Azul/Shot Blue Double.mdx",
+      "sha256": "7a469a6b4df603f245d5dc57ee101923dbb046121a74dc4386e8818ed7424ce8",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 9054,
+      "customTextureBytes": 0,
+      "importBytes": 7343,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Blue_Glow2.blp",
+          "bytes": 1958,
+          "sha256": "dcbf0770aa792883d3d7ad0b93052d5a9a1b264ac841dae43b7876f26cbfd793",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Verde",
+      "name": "Shot Green.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-simple/Verde/Shot Green.mdx",
+      "sha256": "231a348a4d41c36a289b2ea7907ad10f20f1ac865086d82501aac2ee86bec922",
+      "version": 800,
+      "mdx": 5904,
+      "textureCount": 3,
+      "textureBytes": 9112,
+      "customTextureBytes": 0,
+      "importBytes": 5904,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Green_Glow3.blp",
+          "bytes": 2016,
+          "sha256": "e7ce9f685ae3581efb31eb805db783cee20528f94bb061128a312b52bfaca4ce",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Verde",
+      "name": "Shot Green Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-doble/Verde/Shot Green Double.mdx",
+      "sha256": "00bbc88c311911a9bf7cce30f6ee112ac696ebbb5216cbb6ee2b22c694471743",
+      "version": 800,
+      "mdx": 7315,
+      "textureCount": 3,
+      "textureBytes": 9112,
+      "customTextureBytes": 0,
+      "importBytes": 7315,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Green_Glow3.blp",
+          "bytes": 2016,
+          "sha256": "e7ce9f685ae3581efb31eb805db783cee20528f94bb061128a312b52bfaca4ce",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Naranja",
+      "name": "Shot Orange.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-simple/Naranja/Shot Orange.mdx",
+      "sha256": "67c17a43895ced558cffb7ceb66426270ab2dece1f33ce65f691ba8754bb5d8e",
+      "version": 800,
+      "mdx": 6172,
+      "textureCount": 4,
+      "textureBytes": 11319,
+      "customTextureBytes": 0,
+      "importBytes": 6172,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\LavaLump2.blp",
+          "bytes": 2177,
+          "sha256": "172a49889b2470415c5e571d3ac21d7adca19756703aff6f02f71d481bf32e58",
+          "stock": true
+        },
+        {
+          "path": "Textures\\LavaLump.blp",
+          "bytes": 2046,
+          "sha256": "60fe3fe1938e3452384e0dc25b390825e58ec8b9957d4b713cd3592c4d074212",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Naranja",
+      "name": "Shot Orange Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-doble/Naranja/Shot Orange Double.mdx",
+      "sha256": "cf182b276c017278d44abc79ed8cd877c1a989dbd1cdc1aa6cb9e74816c7a014",
+      "version": 800,
+      "mdx": 7587,
+      "textureCount": 4,
+      "textureBytes": 11319,
+      "customTextureBytes": 0,
+      "importBytes": 7587,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\LavaLump.blp",
+          "bytes": 2046,
+          "sha256": "60fe3fe1938e3452384e0dc25b390825e58ec8b9957d4b713cd3592c4d074212",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\LavaLump2.blp",
+          "bytes": 2177,
+          "sha256": "172a49889b2470415c5e571d3ac21d7adca19756703aff6f02f71d481bf32e58",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Purpura",
+      "name": "Shot Purple.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-simple/Purpura/Shot Purple.mdx",
+      "sha256": "09b31b138d32055f85da9e3fcd9e2b5f6837b89faada48e1c1583fc0576a6528",
+      "version": 800,
+      "mdx": 6736,
+      "textureCount": 6,
+      "textureBytes": 18571,
+      "customTextureBytes": 0,
+      "importBytes": 6736,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Purple_Glow.blp",
+          "bytes": 2002,
+          "sha256": "85281ecf3c941fce27f6c5bd4638886aef4c2d7e32b9483b7fb5e6d8ae44f442",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Glow.blp",
+          "bytes": 2265,
+          "sha256": "a02958b0cd074fd01f1d83388a964aeaa84f633149dc07dbb5633f51b5f284ba",
+          "stock": true
+        },
+        {
+          "path": "Textures\\GenericGlow64.blp",
+          "bytes": 3484,
+          "sha256": "e2d02637d2505a9486877fb96a1b0a427d6d21726b4353e0483f1452da791fef",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Star_Dim.blp",
+          "bytes": 3724,
+          "sha256": "45d936c52a8e92240851fbfdb0f81444efdacf5656c0588115f93702575659ec",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Purpura",
+      "name": "Shot Purple Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-doble/Purpura/Shot Purple Double.mdx",
+      "sha256": "9391064978d83cdc22f10f9216463009016e7fe0dcd1053e7a20b978d8c7dfbc",
+      "version": 800,
+      "mdx": 7347,
+      "textureCount": 3,
+      "textureBytes": 9098,
+      "customTextureBytes": 0,
+      "importBytes": 7347,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Purple_Glow.blp",
+          "bytes": 2002,
+          "sha256": "85281ecf3c941fce27f6c5bd4638886aef4c2d7e32b9483b7fb5e6d8ae44f442",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Rojo",
+      "name": "Shot Red.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-simple/Rojo/Shot Red.mdx",
+      "sha256": "de43841137eae2751455403b2585df5be173859c34c52b9157b0e2072d50f9ca",
+      "version": 800,
+      "mdx": 6524,
+      "textureCount": 5,
+      "textureBytes": 15517,
+      "customTextureBytes": 0,
+      "importBytes": 6524,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Red_star2.blp",
+          "bytes": 4301,
+          "sha256": "02a845639f7dfb8ae53b3498d84ba15acb273d3165bf1701d03f2bdc10ee9710",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Red_Glow3.blp",
+          "bytes": 1943,
+          "sha256": "b05e048d80e56f51cd4741ce4c041b02bdc1fe8fd2eaf8f0aa8bd1d44683b64c",
+          "stock": true
+        },
+        {
+          "path": "Textures\\LavaLump2.blp",
+          "bytes": 2177,
+          "sha256": "172a49889b2470415c5e571d3ac21d7adca19756703aff6f02f71d481bf32e58",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Rojo",
+      "name": "Shot Red Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-doble/Rojo/Shot Red Double.mdx",
+      "sha256": "bf6c51752ff00d1f8bb18968a18bcc4b10f58e7f48fad6fb0a51af206f210067",
+      "version": 800,
+      "mdx": 7399,
+      "textureCount": 3,
+      "textureBytes": 11397,
+      "customTextureBytes": 0,
+      "importBytes": 7399,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Red_star2.blp",
+          "bytes": 4301,
+          "sha256": "02a845639f7dfb8ae53b3498d84ba15acb273d3165bf1701d03f2bdc10ee9710",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Amarillo",
+      "name": "Shot Yellow.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-simple/Amarillo/Shot Yellow.mdx",
+      "sha256": "a380e45052b36a1d4eb3d4836b9cd48b459059cc69b2f6c1ed5260db99a86a06",
+      "version": 800,
+      "mdx": 6440,
+      "textureCount": 5,
+      "textureBytes": 16569,
+      "customTextureBytes": 0,
+      "importBytes": 6440,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Glow.blp",
+          "bytes": 2265,
+          "sha256": "a02958b0cd074fd01f1d83388a964aeaa84f633149dc07dbb5633f51b5f284ba",
+          "stock": true
+        },
+        {
+          "path": "Textures\\GenericGlow64.blp",
+          "bytes": 3484,
+          "sha256": "e2d02637d2505a9486877fb96a1b0a427d6d21726b4353e0483f1452da791fef",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Star_Dim.blp",
+          "bytes": 3724,
+          "sha256": "45d936c52a8e92240851fbfdb0f81444efdacf5656c0588115f93702575659ec",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Amarillo",
+      "name": "Shot Yellow Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-originales/Misil-doble/Amarillo/Shot Yellow Double.mdx",
+      "sha256": "c0df95af0f502c34584007e6e86a3f4c7dc11e6bec12f724cb92b8b74e1905ca",
+      "version": 800,
+      "mdx": 7851,
+      "textureCount": 5,
+      "textureBytes": 16569,
+      "customTextureBytes": 0,
+      "importBytes": 7851,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Yellow_Glow.blp",
+          "bytes": 2265,
+          "sha256": "a02958b0cd074fd01f1d83388a964aeaa84f633149dc07dbb5633f51b5f284ba",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Star_Dim.blp",
+          "bytes": 3724,
+          "sha256": "45d936c52a8e92240851fbfdb0f81444efdacf5656c0588115f93702575659ec",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\GenericGlow64.blp",
+          "bytes": 3484,
+          "sha256": "e2d02637d2505a9486877fb96a1b0a427d6d21726b4353e0483f1452da791fef",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "00-Rojo",
+      "name": "Shot_00_Red.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/00-Rojo/Shot_00_Red.mdx",
+      "sha256": "ccff29280627bf550ee90242dcf9640a87702b500312efab45e5ba9cdbc54f7e",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_00.blp",
+          "bytes": 3910,
+          "sha256": "f65e1c4b7c4cc1897105041c7620cb84849262d3793ffc4553063faa0ace88f1",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "01-Azul",
+      "name": "Shot_01_Blue.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/01-Azul/Shot_01_Blue.mdx",
+      "sha256": "db27613b3dab1383f9e2d19101750641a898587391a50ee34252a7a821876e0c",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_01.blp",
+          "bytes": 3910,
+          "sha256": "50844a0d945141ad783b79ba15eb122a8580eee24a11c09e6bb4f7baff79365d",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "02-Cian",
+      "name": "Shot_02_Cyan.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/02-Cian/Shot_02_Cyan.mdx",
+      "sha256": "e904d8db5f855897946ee100bd75d14a63968bd5bb203cc822c4b0621204f021",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_02.blp",
+          "bytes": 3910,
+          "sha256": "7b031b5a9f338f989690c624741cac8511af0f9e8a6ca56484dc44fbb4052588",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "03-Purpura",
+      "name": "Shot_03_Purple.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/03-Purpura/Shot_03_Purple.mdx",
+      "sha256": "b8603a490b276c08fd6877a3f11247e28fb78a44ed3e0e455a1cbf3391398b3b",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_03.blp",
+          "bytes": 3910,
+          "sha256": "24933ccc94dec5b51521ee87bdc84789428dc7e6a3763f37867383feb63bb20e",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "04-Amarillo",
+      "name": "Shot_04_Yellow.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/04-Amarillo/Shot_04_Yellow.mdx",
+      "sha256": "78c1c1f5b50361e660320197ee252e77f9bb97c41259fd52b83206910cd150ca",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_04.blp",
+          "bytes": 3910,
+          "sha256": "b2bb1d254b362891e5223ccbc6116df8feeeb3ad22d5ce7d3e789a6a6f542a60",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "05-Naranja",
+      "name": "Shot_05_Orange.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/05-Naranja/Shot_05_Orange.mdx",
+      "sha256": "28afe16e01f483da909065bc0897e078f2ce55f0fb35c10f8b5408e7a858faec",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_05.blp",
+          "bytes": 3910,
+          "sha256": "973be24f5ae641b69d6103a6f7ce316893d48e4c26fea62138793eda1ab1c57e",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "06-Verde",
+      "name": "Shot_06_Green.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/06-Verde/Shot_06_Green.mdx",
+      "sha256": "81984a06e82daf9267e1318787daa4832c7b585110f4f7fc0f3aeff863056062",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_06.blp",
+          "bytes": 3910,
+          "sha256": "ebe5eaf4dbaeb99c384af6d9338edb6ac859866836353fb4708de601e2ea642c",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "07-Rosa",
+      "name": "Shot_07_Pink.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/07-Rosa/Shot_07_Pink.mdx",
+      "sha256": "0ce035ec72425e40e64a72c7b2eedb7b6c7fe72894d8870e33d0255cde724eab",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_07.blp",
+          "bytes": 3910,
+          "sha256": "01b1ebcca0be42d60ebf5679d7ff7dc144a587ccf509966b3eeaffb168c70499",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "08-Gris-claro",
+      "name": "Shot_08_LightGray.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/08-Gris-claro/Shot_08_LightGray.mdx",
+      "sha256": "e9c5f7bcf0545c529ec51649f3b09ebd75dd6c022b100314a476f1e570a353c6",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_08.blp",
+          "bytes": 3910,
+          "sha256": "2d4a8f9f3e184abc1bf7e4cf4de8d27e13f99091d5fc835f8aaa2c2580458023",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "09-Azul-claro",
+      "name": "Shot_09_LightBlue.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/09-Azul-claro/Shot_09_LightBlue.mdx",
+      "sha256": "0f9bfa7f8c9a2b7b7658a2c32a105fe4bfe63b33b7c5ef5d6d4610b18c448b48",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_09.blp",
+          "bytes": 3910,
+          "sha256": "ea14cde973ff5002e9653fb774d9d03543d067062e8d2716e78dd3e65a0470c5",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "10-Verde-oscuro",
+      "name": "Shot_10_Aqua.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/10-Verde-oscuro/Shot_10_Aqua.mdx",
+      "sha256": "2bf8e18205d135ce38131df591f2cf6173cbd45c1710dc0f5baebf3890cd3bfe",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_10.blp",
+          "bytes": 3910,
+          "sha256": "daf8f04d4a573d55ec2a9237de0bf7947d461d33a030757743f1ee430020776a",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "11-Marron",
+      "name": "Shot_11_Brown.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/11-Marron/Shot_11_Brown.mdx",
+      "sha256": "d7dfab45d032b5da5a0a23411e1b5d7f734074e824aff743b2f3197d579fce7b",
+      "version": 800,
+      "mdx": 5932,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 16913,
+      "triangles": 24,
+      "emitters": 4,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_11.blp",
+          "bytes": 3910,
+          "sha256": "bd31a0365224713688cb6afbd03477b2d19e22fe8f4264209538d567b8084ccc",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "00-Rojo",
+      "name": "Shot_00_Red_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/00-Rojo/Shot_00_Red_Double.mdx",
+      "sha256": "bcc7c28ed97d341109dcb0d32f42b6aafa480e451588669c8411f7a333baa1b3",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_00.blp",
+          "bytes": 3910,
+          "sha256": "f65e1c4b7c4cc1897105041c7620cb84849262d3793ffc4553063faa0ace88f1",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "01-Azul",
+      "name": "Shot_01_Blue_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/01-Azul/Shot_01_Blue_Double.mdx",
+      "sha256": "63947d6e8d26d57452ece6b221b032eb35609968ebe325ae0cc23084515222fc",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_01.blp",
+          "bytes": 3910,
+          "sha256": "50844a0d945141ad783b79ba15eb122a8580eee24a11c09e6bb4f7baff79365d",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "02-Cian",
+      "name": "Shot_02_Cyan_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/02-Cian/Shot_02_Cyan_Double.mdx",
+      "sha256": "2a0d35a079b85d2501e16f62f6b3738ae092d9fded2081a7b99d5b2010dd45c3",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_02.blp",
+          "bytes": 3910,
+          "sha256": "7b031b5a9f338f989690c624741cac8511af0f9e8a6ca56484dc44fbb4052588",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "03-Purpura",
+      "name": "Shot_03_Purple_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/03-Purpura/Shot_03_Purple_Double.mdx",
+      "sha256": "fbf9ce3a4cd6788d66f15d87a8668f15a548e7c345c4f332b6b5780b22f60f85",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_03.blp",
+          "bytes": 3910,
+          "sha256": "24933ccc94dec5b51521ee87bdc84789428dc7e6a3763f37867383feb63bb20e",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "04-Amarillo",
+      "name": "Shot_04_Yellow_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/04-Amarillo/Shot_04_Yellow_Double.mdx",
+      "sha256": "88d74c4adc0d40a45e7ca4a42a74328d8b9fa6e4d8521d63d46179a433699546",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_04.blp",
+          "bytes": 3910,
+          "sha256": "b2bb1d254b362891e5223ccbc6116df8feeeb3ad22d5ce7d3e789a6a6f542a60",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "05-Naranja",
+      "name": "Shot_05_Orange_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/05-Naranja/Shot_05_Orange_Double.mdx",
+      "sha256": "097b4c81aa71ffe5bf6b95b79fe41c88c253a95a56ce6d6fb020aa3dddece0d2",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_05.blp",
+          "bytes": 3910,
+          "sha256": "973be24f5ae641b69d6103a6f7ce316893d48e4c26fea62138793eda1ab1c57e",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "06-Verde",
+      "name": "Shot_06_Green_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/06-Verde/Shot_06_Green_Double.mdx",
+      "sha256": "6332891ac4fa09a66413082cc7b7b747e2b599663d392b2129aa42c8b4818aa1",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_06.blp",
+          "bytes": 3910,
+          "sha256": "ebe5eaf4dbaeb99c384af6d9338edb6ac859866836353fb4708de601e2ea642c",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "07-Rosa",
+      "name": "Shot_07_Pink_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/07-Rosa/Shot_07_Pink_Double.mdx",
+      "sha256": "4c9c878c2378e5e4fe2dc7f783aa865f98dac0dd35318d9780342d53981bea6a",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_07.blp",
+          "bytes": 3910,
+          "sha256": "01b1ebcca0be42d60ebf5679d7ff7dc144a587ccf509966b3eeaffb168c70499",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "08-Gris-claro",
+      "name": "Shot_08_LightGray_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/08-Gris-claro/Shot_08_LightGray_Double.mdx",
+      "sha256": "73e2e5180a3e5209df429e15eb9cdb5ffdc800e6ebbf85a3633d3a34f65fe677",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_08.blp",
+          "bytes": 3910,
+          "sha256": "2d4a8f9f3e184abc1bf7e4cf4de8d27e13f99091d5fc835f8aaa2c2580458023",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "09-Azul-claro",
+      "name": "Shot_09_LightBlue_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/09-Azul-claro/Shot_09_LightBlue_Double.mdx",
+      "sha256": "685011b81cd29de16b308b2e68ca70d2c463157d60370e21d6ed9ea59d87075a",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_09.blp",
+          "bytes": 3910,
+          "sha256": "ea14cde973ff5002e9653fb774d9d03543d067062e8d2716e78dd3e65a0470c5",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "10-Verde-oscuro",
+      "name": "Shot_10_Aqua_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/10-Verde-oscuro/Shot_10_Aqua_Double.mdx",
+      "sha256": "80560f88a6a19352a9e3a9e03294ba0aff87df53c719d15457c64facc3c527d8",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_10.blp",
+          "bytes": 3910,
+          "sha256": "daf8f04d4a573d55ec2a9237de0bf7947d461d33a030757743f1ee430020776a",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots I",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "11-Marron",
+      "name": "Shot_11_Brown_Double.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-doble/11-Marron/Shot_11_Brown_Double.mdx",
+      "sha256": "f545b9a9dd79723ed28c4317d5f23e2a6506f0d8a67dd2c6bde5736c7ebc7ffd",
+      "version": 800,
+      "mdx": 7343,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18324,
+      "triangles": 48,
+      "emitters": 5,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_11.blp",
+          "bytes": 3910,
+          "sha256": "bd31a0365224713688cb6afbd03477b2d19e22fe8f4264209538d567b8084ccc",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Azul",
+      "name": "Shot II Blue.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-originales/Misil-simple/Azul/Shot II Blue.mdx",
+      "sha256": "6e181b25bb6047896f95993e0033fd2602c05914e3da001ee192faac5e9c181e",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 9054,
+      "customTextureBytes": 0,
+      "importBytes": 7684,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Blue_Glow2.blp",
+          "bytes": 1958,
+          "sha256": "dcbf0770aa792883d3d7ad0b93052d5a9a1b264ac841dae43b7876f26cbfd793",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Verde",
+      "name": "Shot II Green.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-originales/Misil-simple/Verde/Shot II Green.mdx",
+      "sha256": "93e9361903230b487ae2e7b3fdb82260b768ea7a8d15d18c7154ba6f33710cbd",
+      "version": 800,
+      "mdx": 7656,
+      "textureCount": 3,
+      "textureBytes": 9112,
+      "customTextureBytes": 0,
+      "importBytes": 7656,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Green_Glow3.blp",
+          "bytes": 2016,
+          "sha256": "e7ce9f685ae3581efb31eb805db783cee20528f94bb061128a312b52bfaca4ce",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Naranja",
+      "name": "Shot II Orange.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-originales/Misil-simple/Naranja/Shot II Orange.mdx",
+      "sha256": "efc227cf729b5b4442a8b4a606f09f5715df1fc602bf4ae4551264322ec6a491",
+      "version": 800,
+      "mdx": 7628,
+      "textureCount": 3,
+      "textureBytes": 9273,
+      "customTextureBytes": 0,
+      "importBytes": 7628,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\LavaLump2.blp",
+          "bytes": 2177,
+          "sha256": "172a49889b2470415c5e571d3ac21d7adca19756703aff6f02f71d481bf32e58",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Purpura",
+      "name": "Shot II Purple.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-originales/Misil-simple/Purpura/Shot II Purple.mdx",
+      "sha256": "86ab7ddddf13582875a8adcb0f0a046edf6f48a120db462a5067f1f77824f361",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 9098,
+      "customTextureBytes": 0,
+      "importBytes": 7684,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Purple_Glow.blp",
+          "bytes": 2002,
+          "sha256": "85281ecf3c941fce27f6c5bd4638886aef4c2d7e32b9483b7fb5e6d8ae44f442",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Rojo",
+      "name": "Shot II Red.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-originales/Misil-simple/Rojo/Shot II Red.mdx",
+      "sha256": "a69455ac37e2ebecfaf1087737db6961a354e00dfa92ac858ebdf57d1af9f0d2",
+      "version": 800,
+      "mdx": 7656,
+      "textureCount": 3,
+      "textureBytes": 9072,
+      "customTextureBytes": 0,
+      "importBytes": 7656,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Red_Glow1.blp",
+          "bytes": 1976,
+          "sha256": "529746fb543fa6e9ac9250bb9b89a7dd11f5fbd66cee37016690c23175ea9294",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Amarillo",
+      "name": "Shot II Yellow.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-originales/Misil-simple/Amarillo/Shot II Yellow.mdx",
+      "sha256": "8558afb3d6c76d99db28eef41dec6a9bb1f1185895885472e89b3ed02c1c8c5c",
+      "version": 800,
+      "mdx": 7628,
+      "textureCount": 3,
+      "textureBytes": 9361,
+      "customTextureBytes": 0,
+      "importBytes": 7628,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "bytes": 4660,
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Glow.blp",
+          "bytes": 2265,
+          "sha256": "a02958b0cd074fd01f1d83388a964aeaa84f633149dc07dbb5633f51b5f284ba",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "00-Rojo",
+      "name": "ShotII_00_Red.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/00-Rojo/ShotII_00_Red.mdx",
+      "sha256": "a2c89abe856a13b2a3c0ffbfc16f5d672f7fb119a2c3b39048d23f75ff23a654",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_00.blp",
+          "bytes": 3910,
+          "sha256": "f65e1c4b7c4cc1897105041c7620cb84849262d3793ffc4553063faa0ace88f1",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "01-Azul",
+      "name": "ShotII_01_Blue.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/01-Azul/ShotII_01_Blue.mdx",
+      "sha256": "f60323035df6d2f30010c3953872364fe0319a99dd63cee5e8bd6aaf6033b28c",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_01.blp",
+          "bytes": 3910,
+          "sha256": "50844a0d945141ad783b79ba15eb122a8580eee24a11c09e6bb4f7baff79365d",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "02-Cian",
+      "name": "ShotII_02_Cyan.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/02-Cian/ShotII_02_Cyan.mdx",
+      "sha256": "a1f55e03964cc5f40eba33547da65d23e2020cd745fd3e26816eb27c81d9d359",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_02.blp",
+          "bytes": 3910,
+          "sha256": "7b031b5a9f338f989690c624741cac8511af0f9e8a6ca56484dc44fbb4052588",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "03-Purpura",
+      "name": "ShotII_03_Purple.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/03-Purpura/ShotII_03_Purple.mdx",
+      "sha256": "a02a393008cb6e519f97c13b15c8d9745dcc84714a4d046fbd8064b11457fce7",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_03.blp",
+          "bytes": 3910,
+          "sha256": "24933ccc94dec5b51521ee87bdc84789428dc7e6a3763f37867383feb63bb20e",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "04-Amarillo",
+      "name": "ShotII_04_Yellow.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/04-Amarillo/ShotII_04_Yellow.mdx",
+      "sha256": "5b16ff8dec2fdd057b044647497406b39708eec59243e65781434bd0c8df3c69",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_04.blp",
+          "bytes": 3910,
+          "sha256": "b2bb1d254b362891e5223ccbc6116df8feeeb3ad22d5ce7d3e789a6a6f542a60",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "05-Naranja",
+      "name": "ShotII_05_Orange.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/05-Naranja/ShotII_05_Orange.mdx",
+      "sha256": "f7b0f1d5ea66f2f4f8d1697cedd659780ad5ff425540f90cdd658d8119fa6dea",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_05.blp",
+          "bytes": 3910,
+          "sha256": "973be24f5ae641b69d6103a6f7ce316893d48e4c26fea62138793eda1ab1c57e",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "06-Verde",
+      "name": "ShotII_06_Green.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/06-Verde/ShotII_06_Green.mdx",
+      "sha256": "6383e7afbe964870384952b8eee5554df6fc2792dce0971481909642b9805a25",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_06.blp",
+          "bytes": 3910,
+          "sha256": "ebe5eaf4dbaeb99c384af6d9338edb6ac859866836353fb4708de601e2ea642c",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "07-Rosa",
+      "name": "ShotII_07_Pink.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/07-Rosa/ShotII_07_Pink.mdx",
+      "sha256": "071b58eba65272edd92e598f82663c48fbfc6fa6c2db63455d98e2ad27c6648a",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_07.blp",
+          "bytes": 3910,
+          "sha256": "01b1ebcca0be42d60ebf5679d7ff7dc144a587ccf509966b3eeaffb168c70499",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "08-Gris-claro",
+      "name": "ShotII_08_LightGray.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/08-Gris-claro/ShotII_08_LightGray.mdx",
+      "sha256": "10fd8baed3b67aa67785a1fb945f5e8caaefcd122e0916e4a561e99b82de69c6",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_08.blp",
+          "bytes": 3910,
+          "sha256": "2d4a8f9f3e184abc1bf7e4cf4de8d27e13f99091d5fc835f8aaa2c2580458023",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "09-Azul-claro",
+      "name": "ShotII_09_LightBlue.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/09-Azul-claro/ShotII_09_LightBlue.mdx",
+      "sha256": "7afbaffd197fef3bcccd55b2fc9b82eee02947b721e6c5d68f0e32e47598761f",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_09.blp",
+          "bytes": 3910,
+          "sha256": "ea14cde973ff5002e9653fb774d9d03543d067062e8d2716e78dd3e65a0470c5",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "10-Verde-oscuro",
+      "name": "ShotII_10_Aqua.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/10-Verde-oscuro/ShotII_10_Aqua.mdx",
+      "sha256": "5e4888b4e6b8f11d782cecbd38fc8ce87b461426dfca082d11a59cc844b58dc6",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_10.blp",
+          "bytes": 3910,
+          "sha256": "daf8f04d4a573d55ec2a9237de0bf7947d461d33a030757743f1ee430020776a",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "family": "Shots II",
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "11-Marron",
+      "name": "ShotII_11_Brown.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-ii-organizados-brillo/Colores-de-jugadores/Misil-simple/11-Marron/ShotII_11_Brown.mdx",
+      "sha256": "ded43ac2f204beea5a71bc7c0f232e4846abeb51ef15436195bb492911d03acf",
+      "version": 800,
+      "mdx": 7684,
+      "textureCount": 3,
+      "textureBytes": 10981,
+      "customTextureBytes": 10981,
+      "importBytes": 18665,
+      "triangles": 24,
+      "emitters": 8,
+      "ribbons": 0,
+      "textures": [
+        {
+          "path": "ShotsVolII\\Flare.blp",
+          "bytes": 2436,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\star5tga.blp",
+          "bytes": 4635,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsVolII\\Glow_11.blp",
+          "bytes": 3910,
+          "sha256": "bd31a0365224713688cb6afbd03477b2d19e22fe8f4264209538d567b8084ccc",
+          "stock": false
+        }
+      ]
+    }
+  ]
+}

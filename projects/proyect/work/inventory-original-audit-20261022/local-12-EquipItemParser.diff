@@ -1,0 +1,11 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/012-EquipItemParser.j
++++ TerrainDev/inventory-integration/src/Inventory_12_EquipItemParser.j
+@@ -175,7 +175,7 @@
+         local integer step = 0
+ 
+         set itm.id = itemId
+-        set InvItem.Table[itm.id] = itm
++        set InvItem.InventoryTable[itm.id] = itm
+ 
+         loop
+             exitwhen i >= len

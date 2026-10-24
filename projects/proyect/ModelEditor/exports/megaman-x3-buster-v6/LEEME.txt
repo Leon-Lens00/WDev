@@ -1,0 +1,21 @@
+X3 Buster A — V6 | Warcraft III Classic 1.27b | MDX800
+
+Port derivado de Shots Vol. II Blue de Vinz, inspirado visualmente en el buster cargado de Mega Man X3 (Capcom).
+
+Cambios frente a V5:
+- Apilado aditivo original restaurado para el núcleo blanco/cian dentro del azul.
+- Adaptados cuatro emisores originales F1/F2/Atras Uno/Atras Dos Sq Tails: brillo, motas y trazos.
+- Frente rosa unido a la punta; franjas curvas con flujo UV hacia atrás y emisores de estela. Las copas móviles V5 fueron retiradas.
+- 11 emisores, 1 ribbon, 2776 triángulos; recursos incluidos.
+
+Importar A-Buster/X3_Buster_Cargado.mdx y las 13 BLP de A-Buster/X3BusterV6.
+Conservar las rutas internas X3BusterV6\Nombre.blp. El MDL es la fuente editable equivalente.
+Punta geométrica y raíz en (0,0,0), frente +X, cuerpo/estela en -X.
+Secuencias Birth0–160ms, Stand200–1160ms, Death1300–1720ms.
+Los residuos luminosos tienen extensión y vida propias. La colisión y el desplazamiento pertenecen a tu sistema de proyectiles.
+
+V6 contiene sólo el Buster A corregido; V5 y B/C V4 permanecen separados e intactos.
+FLUJO-3D.gif: capturas reales del visor a pasos de40ms, reproducidas a0.5x; no vídeo del motor.
+COMPARACION-3D.png: V5 izquierda / V6 derecha. Consultar VALIDACION.txt para pruebas y límites.
+
+Créditos: Vinz, Shots Vol. II https://www.hiveworkshop.com/threads/shots-vol-ii.315512/ . Conservar atribución al reutilizar/distribuir el derivado. Mega Man X3 y sprites: Capcom; rip Random Talking Bush / Spriters Resource; animación de referencia Retropixel.

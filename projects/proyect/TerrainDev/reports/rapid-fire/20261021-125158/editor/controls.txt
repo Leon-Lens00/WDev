@@ -1,0 +1,42 @@
+MAIN 100CA Warcraft III id=65826 Warcraft III World Editor UMS 5.0 - [Z:\...\20261021-125158\editor\TerrainDev-editor.w3x] menu=65826 FOREGROUND 10020 #32769 id=0 
+3008E ScrollBar id=11 
+2008C ScrollBar id=12 
+2008A ToolbarWindow32 id=10 
+30094 Static id=-1 Point: (-10695.4, -8522.7, 82.3)
+Cliff Level: 3
+20090 Static id=-1 Brush: Terrain - Selection
+
+20088 Static id=-1 Selection: None
+3007E Static id=-1 Time: 12:00
+Melee Map: No
+100E0 Button id=18 Show Neutral Building Icons
+100E2 Button id=19 Show Creep Camp Icons
+100E4 Button id=20 View Game Minimap
+100E6 Static id=-1 1
+100E8 msctls_updown32 id=35 
+100EA Static id=-1 Lighting: Noon
+100EC Static id=-1 270
+100EE msctls_updown32 id=29 
+100F0 Static id=-1 Rotate:
+100F2 Static id=-1 
+100F4 Static id=-1 500
+100F6 msctls_updown32 id=31 
+100F8 Static id=-1 Distance:
+100FA Static id=-1 0
+100FC msctls_updown32 id=33 
+100FE Static id=-1 Animation:
+10100 Static id=-1 
+10102 Static id=-1 0
+10104 msctls_updown32 id=37 
+10106 Static id=-1 
+10108 Button id=10 Place Random Variation
+1010A Static id=-1 
+1010C Button id=80 Place Random Variation
+1010E Static id=-1 0
+10110 msctls_updown32 id=79 
+10112 Static id=-1 
+10114 SysTreeView32 id=13 
+1011A Static id=14 
+1011C Static id=15 
+1011E Static id=16 
+10120 Button id=17 

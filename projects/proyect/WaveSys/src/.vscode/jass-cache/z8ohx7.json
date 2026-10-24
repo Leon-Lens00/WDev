@@ -1,0 +1,1383 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+  "items": [
+    {
+      "label": "PreloadResTimer",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer PreloadResTimer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_PreloadResTimer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PreloadResCursor",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger PreloadResCursor\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_PreloadResCursor",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WarmupSound",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction WarmupSound takes string path returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_WarmupSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetPreloadSoundPath",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetPreloadSoundPath takes integer idx returns string\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetPreloadSoundPath",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PreloadMapResourcesTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PreloadMapResourcesTick takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_PreloadMapResourcesTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "PreloadMapResources",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction PreloadMapResources takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_PreloadMapResources",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ManaPassiveUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array ManaPassiveUnit\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_ManaPassiveUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SwlsMultiboard",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nmultiboard SwlsMultiboard\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SwlsMultiboard",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SwlsSound",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound SwlsSound\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SwlsSound",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SwlsWaveStartTrigger",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntrigger SwlsWaveStartTrigger\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SwlsWaveStartTrigger",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SwlsSoundWaveVolume",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger SwlsSoundWaveVolume\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SwlsSoundWaveVolume",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "TargetWave",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger TargetWave\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TargetWave",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "error",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound error\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_error",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "error_Neg",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nsound error_Neg\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_error_Neg",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "Message",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring Message\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_Message",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WaveTgg",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nstring WaveTgg\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_WaveTgg",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "isTender",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean array[11] isTender\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_isTender",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "isWavez",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nboolean isWavez\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_isWavez",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GameStateInitDefaults",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GameStateInitDefaults takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GameStateInitDefaults",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ApplyVisionConfig",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ApplyVisionConfig takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_ApplyVisionConfig",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Trig_Event_Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Trig_Event_Actions takes nothing returns nothing\n```\n\n\n---\n\nCompatibilidad con detonador clÃ¡sico (si alguien todavÃ­a llama esta funciÃ³n).\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_Trig_Event_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitTrig_Event",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitTrig_Event takes nothing returns nothing\n```\n\n\n---\n\nCompatibilidad con InitTrig_... sin depender de gg_trg_Event.\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_InitTrig_Event",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Init takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_Init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Trig_gg_Actions",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Trig_gg_Actions takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_Trig_gg_Actions",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitTrig_gg",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitTrig_gg takes nothing returns nothing\n```\n\n\n---\n\nCompatibilidad con trigger clasico, pero sin gg_trg_gg.\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_InitTrig_gg",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "InitTrig_Vars",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitTrig_Vars takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_InitTrig_Vars",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "EXTRA",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real EXTRA\n```\n\n\n---\n\nHigh enough so the unit is no longer visible, low enough so the\n\ngame doesn't crash...\n\nI think you need 0.0 or soemthing negative prior to patch 1.22\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_EXTRA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "maxx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal maxx\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_maxx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "maxy",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal maxy\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_maxy",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "minx",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal minx\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_minx",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "miny",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal miny\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_miny",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "dis",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction dis takes nothing returns nothing\n```\n\n\n---\n\n=======================================================================\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_dis",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "init",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction init takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_init",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CHECK_DELTAZ_X",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CHECK_DELTAZ_X\n```\n\n\n---\n\nconfiguration\n\nlocation on the map where the terrain is the default level\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_CHECK_DELTAZ_X",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CHECK_DELTAZ_Y",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real CHECK_DELTAZ_Y\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_CHECK_DELTAZ_Y",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SCREEN_WIDTH",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SCREEN_WIDTH\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SCREEN_WIDTH",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SCREEN_HEIGHT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SCREEN_HEIGHT\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SCREEN_HEIGHT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "SCREEN_ASPECT_RATIO",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real SCREEN_ASPECT_RATIO\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_SCREEN_ASPECT_RATIO",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAMERA_DUMMY_TYPE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer CAMERA_DUMMY_TYPE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_CAMERA_DUMMY_TYPE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "CAMERA_DUMMY_PLAYER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player CAMERA_DUMMY_PLAYER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_CAMERA_DUMMY_PLAYER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DeltaZ",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal DeltaZ\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_DeltaZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DummyUnit",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array DummyUnit\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_DummyUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DummyLoc",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nlocation DummyLoc\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_DummyLoc",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetTerrainZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetTerrainZ takes real x, real y returns real\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetTerrainZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetCameraDeltaZ",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetCameraDeltaZ takes nothing returns real\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetCameraDeltaZ",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix4Perspective1",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Perspective1 takes MATRIX4 Output, real fovy, real Aspect, real zn, real zf returns MATRIX4\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_Matrix4Perspective1",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix4Perspective2",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Perspective2 takes MATRIX4 Output, real n, real f, real r, real l, real t, real b returns MATRIX4\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_Matrix4Perspective2",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Matrix4Look",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction Matrix4Look takes MATRIX4 Output, VECTOR3 PosCamera, VECTOR3 AxisX, VECTOR3 AxisY, VECTOR3 AxisZ returns MATRIX4\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_Matrix4Look",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Camera",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Camera\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_Camera",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "CamInitModule",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule CamInitModule\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_CamInitModule",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "CamInit",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct CamInit\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_CamInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "clock",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer array clock\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_clock",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "StopCameraEQNoise",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction StopCameraEQNoise takes player whichPlayer returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_StopCameraEQNoise",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TimerExpire",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction TimerExpire takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_TimerExpire",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "CameraSetEQNoise",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction CameraSetEQNoise takes player whichPlayer, real magnitude, real duration returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_CameraSetEQNoise",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "FormatLoadoutDamageText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction FormatLoadoutDamageText takes real amount returns string\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_FormatLoadoutDamageText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ShowCustomLoadoutText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ShowCustomLoadoutText takes unit target, string msg, integer r, integer g, integer b returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_ShowCustomLoadoutText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "UNITS_DUMMY_CASTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer UNITS_DUMMY_CASTER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_UNITS_DUMMY_CASTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "PLAYER_OWNER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player PLAYER_OWNER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_PLAYER_OWNER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "u",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit u\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_u",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "N",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule N\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_N",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "DummyCaster",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct DummyCaster extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_DummyCaster",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "LocalFileTestInit",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule LocalFileTestInit\n```\n\n\n---\n\nTests if the player can read files\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_LocalFileTestInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "LocalFileTest",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct LocalFileTest extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_LocalFileTest",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "FlagG",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct FlagG extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_FlagG",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "FileInit",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule FileInit\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_FileInit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "File",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct File extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_File",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_PERIOD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_PERIOD\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_PERIOD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_PERIOD",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_PERIOD\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_PERIOD",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_TIMEOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_TIMEOUT\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_SEGMENTS",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HEALTH_BAR_SEGMENTS\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_SEGMENTS",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_CAP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HEALTH_BAR_HERO_CAP\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_CAP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_CAP",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HEALTH_BAR_ENEMY_CAP\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_CAP",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_TEXT_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_TEXT_SIZE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_TEXT_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_TEXT_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_TEXT_SIZE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_TEXT_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_Z\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_Z",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_Z\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_Z",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_HERO_X_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_HERO_X_OFFSET\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_HERO_X_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ENEMY_X_OFFSET",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real HEALTH_BAR_ENEMY_X_OFFSET\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_ENEMY_X_OFFSET",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HEALTH_BAR_ALPHA",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HEALTH_BAR_ALPHA\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HEALTH_BAR_ALPHA",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarHeroTicker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer HealthBarHeroTicker\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HealthBarHeroTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyTicker",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer HealthBarEnemyTicker\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HealthBarEnemyTicker",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarClock",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntimer HealthBarClock\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HealthBarClock",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroTag",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntexttag array HeroTag\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HeroTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroBoundHandleId",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array HeroBoundHandleId\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HeroBoundHandleId",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HeroLastPercent",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array HeroLastPercent\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HeroLastPercent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarTag",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ntexttag array EnemyBarTag\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_EnemyBarTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarTarget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit array EnemyBarTarget\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_EnemyBarTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarTargetHid",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array EnemyBarTargetHid\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_EnemyBarTargetHid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarExpireAt",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nreal array EnemyBarExpireAt\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_EnemyBarExpireAt",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemyBarLastPercent",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger array EnemyBarLastPercent\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_EnemyBarLastPercent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "EnemySlotByTarget",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nTable EnemySlotByTarget\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_EnemySlotByTarget",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarHeroVisibleCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger HealthBarHeroVisibleCount\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HealthBarHeroVisibleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyVisibleCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger HealthBarEnemyVisibleCount\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HealthBarEnemyVisibleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarVisibleCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger HealthBarVisibleCount\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HealthBarVisibleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarPeakVisibleCount",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\ninteger HealthBarPeakVisibleCount\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HealthBarPeakVisibleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HealthBarClockNoop",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarClockNoop takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarClockNoop",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarNow",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarNow takes nothing returns real\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarNow",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarRefreshVisibleTotals",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarRefreshVisibleTotals takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarRefreshVisibleTotals",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyKey",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyKey takes integer targetHid returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarEnemyKey",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetPercent",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetPercent takes unit whichUnit returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarGetPercent",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetFilledSegments",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetFilledSegments takes integer percent returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarGetFilledSegments",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetBarText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetBarText takes integer percent returns string\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarGetBarText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarGetHeroText",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarGetHeroText takes integer pid, integer percent returns string\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarGetHeroText",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarIsTrackedUnit",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarIsTrackedUnit takes unit whichUnit returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarIsTrackedUnit",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarIsEnemyDisplayTargetValid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarIsEnemyDisplayTargetValid takes unit whichUnit returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarIsEnemyDisplayTargetValid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarCreatePersistentTextTag",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarCreatePersistentTextTag takes nothing returns texttag\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarCreatePersistentTextTag",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarSetTagPosition",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarSetTagPosition takes texttag tag, unit u, real xOffset, real zOffset returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarSetTagPosition",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetHealthBarEnemySlotCap",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetHealthBarEnemySlotCap takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetHealthBarEnemySlotCap",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetHealthBarHeroSlotCap",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetHealthBarHeroSlotCap takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetHealthBarHeroSlotCap",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetHealthBarTextTagCap",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetHealthBarTextTagCap takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetHealthBarTextTagCap",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetHealthBarVisibleCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetHealthBarVisibleCount takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetHealthBarVisibleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetHealthBarPeakVisibleCount",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetHealthBarPeakVisibleCount takes nothing returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetHealthBarPeakVisibleCount",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarsRefreshHeroForPlayer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarsRefreshHeroForPlayer takes integer pid returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarsRefreshHeroForPlayer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarUpdateHeroEntry",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarUpdateHeroEntry takes integer pid returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarUpdateHeroEntry",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarHeroTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarHeroTick takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarHeroTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyClearSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyClearSlot takes integer slotIndex returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarEnemyClearSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyFindSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyFindSlot takes unit target returns integer\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarEnemyFindSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyRefreshSlot",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyRefreshSlot takes integer slotIndex returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarEnemyRefreshSlot",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarsNotifyEnemyDamagedByPid",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarsNotifyEnemyDamagedByPid takes integer ownerPid, unit target returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarsNotifyEnemyDamagedByPid",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarsNotifyEnemyDamaged",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarsNotifyEnemyDamaged takes unit source, unit target returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarsNotifyEnemyDamaged",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HealthBarEnemyTick",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction HealthBarEnemyTick takes nothing returns nothing\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_HealthBarEnemyTick",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "HARVESTER_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HARVESTER_UNIT_ID\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HARVESTER_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HARVEST_ABILITY",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HARVEST_ABILITY\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HARVEST_ABILITY",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "HARVEST_ORDER_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer HARVEST_ORDER_ID\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_HARVEST_ORDER_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEUTRAL_PLAYER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player NEUTRAL_PLAYER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_NEUTRAL_PLAYER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "harvester",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nunit harvester\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_harvester",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "IsDestructableTree",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDestructableTree takes destructable d returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_IsDestructableTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsDestructableDead",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDestructableDead takes destructable d returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_IsDestructableDead",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsDestructableAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsDestructableAlive takes destructable d returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_IsDestructableAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "IsTreeAlive",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsTreeAlive takes destructable tree returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_IsTreeAlive",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "KillTree",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction KillTree takes destructable tree returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_KillTree",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Inits",
+      "kind": 8,
+      "detail": "Module",
+      "documentation": "\n```jass\nmodule Inits\n```\n\n\n---\n\n*  Seriously?\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_module_Inits",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "ModuleDeclaration"
+    },
+    {
+      "label": "I",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct I extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_I",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "OnChannel",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct OnChannel extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_OnChannel",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    },
+    {
+      "label": "IsUnitChanneling",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction IsUnitChanneling takes unit u returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_IsUnitChanneling",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "TIMER_TIMEOUT",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real TIMER_TIMEOUT\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_TIMER_TIMEOUT",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "NEUTRAL_PASSIVE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant player NEUTRAL_PASSIVE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_NEUTRAL_PASSIVE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DUMMY_UNIT_ID",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer DUMMY_UNIT_ID\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_DUMMY_UNIT_ID",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "MAXIMUM_COLLISION_SIZE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real MAXIMUM_COLLISION_SIZE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_MAXIMUM_COLLISION_SIZE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COLLISION_TYPE_CIRCLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer COLLISION_TYPE_CIRCLE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_COLLISION_TYPE_CIRCLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COLLISION_TYPE_RECTANGLE",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant integer COLLISION_TYPE_RECTANGLE\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_COLLISION_TYPE_RECTANGLE",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "COLLISION_ACCURACY_FACTOR",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real COLLISION_ACCURACY_FACTOR\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_COLLISION_ACCURACY_FACTOR",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_COLLISION_Z_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_COLLISION_Z_FILTER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_USE_COLLISION_Z_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "WRITE_DELAYED_MISSILE_RECYCLING",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean WRITE_DELAYED_MISSILE_RECYCLING\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_WRITE_DELAYED_MISSILE_RECYCLING",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "DELAYED_MISSILE_DEATH_ANIMATION_TIME",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant real DELAYED_MISSILE_DEATH_ANIMATION_TIME\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_DELAYED_MISSILE_DEATH_ANIMATION_TIME",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_DESTRUCTABLE_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_DESTRUCTABLE_FILTER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_USE_DESTRUCTABLE_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "USE_ITEM_FILTER",
+      "kind": 5,
+      "detail": "Global Variable",
+      "documentation": "\n```jass\nconstant boolean USE_ITEM_FILTER\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "2_var_USE_ITEM_FILTER",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "VariableDeclaration"
+    },
+    {
+      "label": "GetUnitBodySize",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetUnitBodySize takes unit whichUnit returns real\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetUnitBodySize",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetDestructableHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetDestructableHeight takes destructable d returns real\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetDestructableHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "GetItemHeight",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetItemHeight takes item i returns real\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_GetItemHeight",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "ToogleUnitIndexer",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction ToogleUnitIndexer takes boolean enable returns boolean\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_func_ToogleUnitIndexer",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "FunctionDeclaration"
+    },
+    {
+      "label": "Missile",
+      "kind": 21,
+      "detail": "Struct",
+      "documentation": "\n```jass\nstruct Missile extends array\n```\n\n\n**_>:** `build/AllCode.generated.j`",
+      "sortText": "1_struct_Missile",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\build\\AllCode.generated.j",
+      "statementType": "StructDeclaration"
+    }
+  ],
+  "timestamp": 1777579694676
+}

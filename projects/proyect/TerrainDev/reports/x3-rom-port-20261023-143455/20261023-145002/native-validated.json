@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "production_sha256": "f087047bff8c051d26072c5c651513588d7272d38628d23cd697eaa7516e5e23",
+  "fixture_sha256": "1c81369278d18ad3126576a87efc0d8a378c00cfee0bea6bcaec0be5c329b762",
+  "values": {
+    "checks": 39.0,
+    "failures": 0.0,
+    "oracle": 5259.0,
+    "oracleFailures": 0.0,
+    "maxError": 0.0,
+    "casts": 0.0,
+    "live": 0.0,
+    "created": 86.0,
+    "retired": 86.0,
+    "flashes": 0.0
+  },
+  "negative_controls_rejected": 7,
+  "oracle_provenance": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/20261023-145002/oracle-provenance.json",
+  "limits": [
+    "single client Classic1.27b",
+    "2 Warcraft units per native pixel",
+    "native mathematical flight; map-specific collision and damage",
+    "no multiplayer certification"
+  ]
+}

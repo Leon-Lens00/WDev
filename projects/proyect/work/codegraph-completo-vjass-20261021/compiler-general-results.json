@@ -1,0 +1,72 @@
+[
+  {
+    "case": "loops",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-4p33l7qu",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "d306a088616652f12536776ba59959a5cfc304aeff8a76c012c820367dd9c725",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "open-module",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-d8yk44yt",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "be5d4ba8c2c6109fdffedd62040bf05d0dc8568db1fbc62a14cbbef03e39d8bd",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "struct-capacity",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-m2zij9w4",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "00bf329e02cbb77fbd9f53c896ead887b69da50e4a8c2980c4b75946ffc7679e",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 7: [] size is not a member of S\n1\n"
+  },
+  {
+    "case": "deallocate",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-wis7pbll",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "b42f005478330f182852eea4fc4f0084e2d12f8b85611c4bdd7738a27d3334cc",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 9: [] S.deallocate is private\n1\n"
+  },
+  {
+    "case": "compare-zero",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-fow7qzs1",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "c973dd04addde477773e55abb9b0e1c137b6de412e8fea343c73e30f26ae78ec",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 8: []  operator < requires 1 argument of type: S\n1\n"
+  }
+]

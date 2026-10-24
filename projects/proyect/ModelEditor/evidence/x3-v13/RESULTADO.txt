@@ -1,0 +1,8 @@
+X3 V13 completado — 23/10/2026
+Cinco componentes renovados: orbe verde/naranja/cian, Cross Buster y flash de unión. A/V12 copiado exacto. Todos separados por pieza con MDX/MDL/BLP.
+Revisión visual del MDX en visor 3D primero; lateral y frontal de Cross, oblicuas de orbes, secuencia finita de unión e impacto de orbe. 152 capturas de secuencias del visor; algunas últimas del flash ya son transparentes.
+Validación independiente: war3-model4.0.1, MDL y MDX, 1304 poses, anclajes, límites, texturas/mips y 133 archivos previos exactos. Todos los cuerpos de vuelo llegan a X=0 como máximo. El efecto expansivo del impacto no está limitado a la punta.
+Prueba real Classic1.27b/YDWE SP en pantalla3: 275 capturas, escalas0.5/1/2.4, Birth/Stand/Death, movimiento externo y reproducción lenta. Colores, centro blanco, estelas y aros visibles. A escala0.5 se reduce el detalle fino; los colores siguen distinguiéndose. Sin medición de FPS, multijugador ni integración de la física.
+Partida cerrada por diálogo propio; ausencia de PID/ventana confirmada. Código143 del lanzador documentado, sin afirmar salida normal0. Perfil propio sin procesos movido a papelera; fuentes y evidencias conservadas.
+CodeGraph consultado antes de los cambios y después, con fuentes nuevas build-x3-v13.cjs/verify-x3-v13.cjs vigentes sin avisos de recuperación. El índice no sustituye las pruebas de motor.
+ZIP verificado: 06c343461f6b96acf3dfb57d553d97006980278b709b4b7a189437c659329202

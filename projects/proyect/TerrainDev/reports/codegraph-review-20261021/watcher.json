@@ -1,0 +1,31 @@
+{
+  "method": "MCP watcher already active; no sync or CodeGraph queries during observations",
+  "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+  "fixture": "cg_review_99976.j",
+  "transitions": {
+    "create": {
+      "files": 1,
+      "symbols": [
+        "CGReview99976A"
+      ],
+      "passed": true,
+      "seconds": 0.414
+    },
+    "modify": {
+      "files": 1,
+      "symbols": [
+        "CGReview99976B"
+      ],
+      "passed": true,
+      "seconds": 0.401
+    },
+    "delete": {
+      "files": 0,
+      "symbols": [],
+      "passed": true,
+      "seconds": 0.602
+    }
+  },
+  "fixture_removed": true,
+  "passed": true
+}

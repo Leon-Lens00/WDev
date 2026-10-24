@@ -1,0 +1,11 @@
+{
+  "pid": 1041985,
+  "closed": true,
+  "method": "Win+Q dialog verified; S did not close while another game became active; SIGTERM only to revalidated own PID",
+  "identity_revalidated": [
+    "pid",
+    "start",
+    "prefix",
+    "map hash in command"
+  ]
+}

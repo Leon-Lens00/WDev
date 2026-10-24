@@ -1,0 +1,60 @@
+{
+  "judgment": "APPROVED",
+  "scope": "63 reviewed files: structural/static JASS/vJASS CodeGraph integration, documented bounds; not whole compiler semantics or performance equality across agents/providers",
+  "tree_sha256": "d3daa5f81f8254d5fe8f3ae59d506fd9dd638e847b73e559d4bf66cf3c660846",
+  "correction_rounds_used": 1,
+  "judges": {
+    "A": {
+      "agent": "/root/jurado_completo_a",
+      "results": {
+        "JD-A-001": "verified",
+        "JD-A-002": "verified",
+        "JD-A-003": "verified",
+        "JD-B-001": "verified",
+        "JD-B-002": "verified",
+        "JD-B-003": "verified"
+      },
+      "new_delta_regressions": []
+    },
+    "B": {
+      "agent": "/root/jurado_completo_b",
+      "results": {
+        "JD-A-001": "verified",
+        "JD-A-002": "verified",
+        "JD-A-003": "verified",
+        "JD-B-001": "verified",
+        "JD-B-002": "verified",
+        "JD-B-003": "verified"
+      },
+      "new_delta_regressions": []
+    }
+  },
+  "evidence": [
+    "review-r1-context.json",
+    "review-r2-context.json",
+    "review-r1.diff",
+    "review-r2.diff",
+    "judgment-r1-findings.json",
+    "full-regression-r2.log",
+    "release-build-r2.log",
+    "production-build.log",
+    "control-modern-results.json",
+    "corpus-mcp-results.json",
+    "agent-ab/audit.json",
+    "installed-watch-results.json",
+    "production-database-checks.json"
+  ],
+  "limitations": [
+    "Both reviewers performed static reading; parent ran tests.",
+    "A001 ordinary TypeScript collision example was not demonstrated: normal qname uses ::; defensive context-contract test covers dotted collisions.",
+    "36 skipped platform/feature-gated cases are not passed tests.",
+    "Adapted Codex A/B under common project retrieval policy, not original Claude harness.",
+    "Small corpus time neutral; not every small query meets upstream ideal of one explore call. Observed 1–3 calls with 0 source reads. No universal latency/adoption claim.",
+    "No Warcraft runtime/multiplayer test; no Zinc/C/cJASS or arbitrary external-tool execution."
+  ],
+  "post_review_operational_verification": {
+    "current_chat_mcp": "passed",
+    "evidence": "app-reload-v4-verification.json",
+    "note": "Operational verification by parent; does not expand the jurors static review scope."
+  }
+}

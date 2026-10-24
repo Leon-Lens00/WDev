@@ -1,0 +1,331 @@
+{
+  "target": "Warcraft III Classic 1.27b / MDX800",
+  "source": "https://www.hiveworkshop.com/threads/shots-vol-ii.315512/",
+  "originalsVerified": 7,
+  "entries": [
+    {
+      "pack": "anchor",
+      "source": "Shot II Blue.mdx",
+      "path": "exports/shots-vol-ii-anclaje/Shot II Blue.mdx",
+      "sha256": "6e181b25bb6047896f95993e0033fd2602c05914e3da001ee192faac5e9c181e",
+      "transform": {
+        "delta": [
+          -65.66704261302948,
+          0.18722529709339142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          11
+        ],
+        "standBefore": {
+          "min": [
+            -150.74446403980255,
+            -18.12122531235218,
+            -17.93400001525879
+          ],
+          "max": [
+            65.66704261302948,
+            17.746774718165398,
+            17.93400001525879
+          ],
+          "boundsRadius": 152.88525305606052
+        },
+        "flightTrailIds": [
+          9,
+          12
+        ],
+        "addedHelperIds": [
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot II Green.mdx",
+      "path": "exports/shots-vol-ii-anclaje/Shot II Green.mdx",
+      "sha256": "93e9361903230b487ae2e7b3fdb82260b768ea7a8d15d18c7154ba6f33710cbd",
+      "transform": {
+        "delta": [
+          -59.2210396528244,
+          0.1814250499010086,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          11
+        ],
+        "standBefore": {
+          "min": [
+            -135.5494567155838,
+            -16.322025254368782,
+            -16.140600204467773
+          ],
+          "max": [
+            59.2210396528244,
+            15.959175154566765,
+            16.140600204467773
+          ],
+          "boundsRadius": 137.47939008904078
+        },
+        "flightTrailIds": [
+          9,
+          12
+        ],
+        "addedHelperIds": [
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot II Orange.mdx",
+      "path": "exports/shots-vol-ii-anclaje/Shot II Orange.mdx",
+      "sha256": "efc227cf729b5b4442a8b4a606f09f5715df1fc602bf4ae4551264322ec6a491",
+      "transform": {
+        "delta": [
+          -65.66704261302948,
+          0.18722529709339142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          11
+        ],
+        "standBefore": {
+          "min": [
+            -150.74446403980255,
+            -18.12122531235218,
+            -17.93400001525879
+          ],
+          "max": [
+            65.66704261302948,
+            17.746774718165398,
+            17.93400001525879
+          ],
+          "boundsRadius": 152.88525305606052
+        },
+        "flightTrailIds": [
+          9,
+          12
+        ],
+        "addedHelperIds": [
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot II Purple.mdx",
+      "path": "exports/shots-vol-ii-anclaje/Shot II Purple.mdx",
+      "sha256": "86ab7ddddf13582875a8adcb0f0a046edf6f48a120db462a5067f1f77824f361",
+      "transform": {
+        "delta": [
+          -65.66704261302948,
+          0.18722529709339142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          11
+        ],
+        "standBefore": {
+          "min": [
+            -150.74446403980255,
+            -18.12122531235218,
+            -17.93400001525879
+          ],
+          "max": [
+            65.66704261302948,
+            17.746774718165398,
+            17.93400001525879
+          ],
+          "boundsRadius": 152.88525305606052
+        },
+        "flightTrailIds": [
+          9,
+          12
+        ],
+        "addedHelperIds": [
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot II Red.mdx",
+      "path": "exports/shots-vol-ii-anclaje/Shot II Red.mdx",
+      "sha256": "a69455ac37e2ebecfaf1087737db6961a354e00dfa92ac858ebdf57d1af9f0d2",
+      "transform": {
+        "delta": [
+          -65.66704261302948,
+          0.18722529709339142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          11
+        ],
+        "standBefore": {
+          "min": [
+            -150.74446403980255,
+            -18.12122531235218,
+            -17.93400001525879
+          ],
+          "max": [
+            65.66704261302948,
+            17.746774718165398,
+            17.93400001525879
+          ],
+          "boundsRadius": 152.88525305606052
+        },
+        "flightTrailIds": [
+          9,
+          12
+        ],
+        "addedHelperIds": [
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "pack": "anchor",
+      "source": "Shot II Yellow.mdx",
+      "path": "exports/shots-vol-ii-anclaje/Shot II Yellow.mdx",
+      "sha256": "8558afb3d6c76d99db28eef41dec6a9bb1f1185895885472e89b3ed02c1c8c5c",
+      "transform": {
+        "delta": [
+          -65.66704261302948,
+          0.18722529709339142,
+          0
+        ],
+        "bodyNodes": [
+          0,
+          1,
+          7,
+          11
+        ],
+        "standBefore": {
+          "min": [
+            -150.74446403980255,
+            -18.12122531235218,
+            -17.93400001525879
+          ],
+          "max": [
+            65.66704261302948,
+            17.746774718165398,
+            17.93400001525879
+          ],
+          "boundsRadius": 152.88525305606052
+        },
+        "flightTrailIds": [
+          9,
+          12
+        ],
+        "addedHelperIds": [
+          14,
+          15
+        ]
+      }
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 0,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_00_Red.mdx",
+      "sha256": "5e7339aac941cc996cdeac60b0f5f05a5d8dd645199f2a5d24930780c443bd13"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 1,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_01_Blue.mdx",
+      "sha256": "6c31c1324cd4efc9d51db319023c31767693baa6fc623003d5c4836d978dd106"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 2,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_02_Cyan.mdx",
+      "sha256": "017c7a3cc1b9bca24741b4290346fba73cdd32f55bda8bc97eab96932b278f5b"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 3,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_03_Purple.mdx",
+      "sha256": "f1f7a08ebacc04458ffc5157bacbb8b0f4c5fcdf87a70141a10d1854545f7b0f"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 4,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_04_Yellow.mdx",
+      "sha256": "20a6f5a92eb01cd1a555ebc992a04ee54c84ef195d319309a5005c0827e2b275"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 5,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_05_Orange.mdx",
+      "sha256": "ef66b65de64ad05172778e5882d683554deca4f486474df036c2671d738b27b7"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 6,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_06_Green.mdx",
+      "sha256": "9df0e8f71b6ff7ec9e9bdb898c4e0dd02561108438eb201c97f9821e2a296cc8"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 7,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_07_Pink.mdx",
+      "sha256": "e06cfabcebcb31264873f87898479693b8bb80eb93068149a104bbdfe1b08306"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 8,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_08_LightGray.mdx",
+      "sha256": "a9d713afdbc3f2ed23e0333472b8cfb82d53357037bae76084326b8e01283423"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 9,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_09_LightBlue.mdx",
+      "sha256": "8ed5ebd3a323f63a6218e6c4aff9a8750a59727901626e7c685e1c30276f7a00"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 10,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_10_Aqua.mdx",
+      "sha256": "4b2632023868923ea517996960e5cb747186bda5ae8fa8c25eb31b762e633b6b"
+    },
+    {
+      "pack": "players",
+      "source": "Shot II Blue.mdx",
+      "color": 11,
+      "path": "exports/shots-vol-ii-jugadores/ShotsVolII/ShotII_11_Brown.mdx",
+      "sha256": "d941f5299d5928a55d1006d73d05737374d189e2cc24df178ab24a50b605414c"
+    }
+  ]
+}

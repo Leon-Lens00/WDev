@@ -1,0 +1,20 @@
+{
+  "resolved_reports": 6,
+  "open_reports": 0,
+  "moved_report_links_checked": 8,
+  "broken_moved_report_links": [],
+  "installed_source_matches_tested_candidate": true,
+  "current_chat_mcp_queries": 3,
+  "delivery_map_hashes": [
+    {
+      "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/TerrainDev.w3x",
+      "manifest": "TerrainDev/reports/verification.json",
+      "sha256_unchanged": true
+    },
+    {
+      "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/TerrainDev-Inventory.w3x",
+      "manifest": "TerrainDev/inventory-integration/latest-build.json",
+      "sha256_unchanged": true
+    }
+  ]
+}

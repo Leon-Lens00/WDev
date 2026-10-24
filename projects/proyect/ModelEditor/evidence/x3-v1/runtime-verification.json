@@ -1,0 +1,35 @@
+{
+  "target": "Warcraft III Classic 1.27b",
+  "map": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-20261022-194702/X3Buster.w3x",
+    "sha256": "ad1112469d72af0005a6e4f45d6a25ef8d16e36ebb96da0fcb95023baf569346",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 14,
+    "models": 7,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "ownedPid": 721447,
+  "screen": "3 / rightmost DP-1",
+  "modelsSeen": 7,
+  "birth": "visible growth; flash appears and fades, birth-verified/000.png",
+  "stand": "six flight models visible, orbital motion and green rings sampled in stand-verified; flash one-shot",
+  "death": "contraction then disappearance observed in impact-verified/000..003.png",
+  "scales": [
+    0.5,
+    2.4,
+    3.0
+  ],
+  "glow": "no square texture backgrounds seen",
+  "worldPhysics": "none in MDX; gallery units stationary",
+  "exit": {
+    "returnCode": 0,
+    "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-runtime/pfx"
+  },
+  "remainingOwnedPrefixProcesses": [],
+  "limits": [
+    "No collision/trajectory/fusion system tested",
+    "No multiplayer or performance test",
+    "First visual interpretation; user appearance review remains"
+  ]
+}

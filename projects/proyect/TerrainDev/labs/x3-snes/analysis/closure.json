@@ -1,0 +1,121 @@
+{
+  "checked_at": "2026-10-23T14:24:00.752983-05:00",
+  "all_own_processes_closed": true,
+  "runs": [
+    {
+      "run": "boot-original",
+      "pid": 1065215,
+      "same_process_alive": false
+    },
+    {
+      "run": "boot-original-stop",
+      "pid": 1065498,
+      "same_process_alive": false
+    },
+    {
+      "run": "enter-original",
+      "pid": 1065579,
+      "same_process_alive": false
+    },
+    {
+      "run": "enter-original-controller",
+      "pid": 1066776,
+      "same_process_alive": false
+    },
+    {
+      "run": "final-mod",
+      "pid": 1071552,
+      "same_process_alive": false
+    },
+    {
+      "run": "final-mod-gap20",
+      "pid": 1071721,
+      "same_process_alive": false
+    },
+    {
+      "run": "final-mod-left",
+      "pid": 1071637,
+      "same_process_alive": false
+    },
+    {
+      "run": "final-original",
+      "pid": 1071495,
+      "same_process_alive": false
+    },
+    {
+      "run": "final-original-gap20",
+      "pid": 1071678,
+      "same_process_alive": false
+    },
+    {
+      "run": "final-original-left",
+      "pid": 1071594,
+      "same_process_alive": false
+    },
+    {
+      "run": "ready-mod",
+      "pid": 1068783,
+      "same_process_alive": false
+    },
+    {
+      "run": "ready-original",
+      "pid": 1067213,
+      "same_process_alive": false
+    },
+    {
+      "run": "ready-original-fixed",
+      "pid": 1068434,
+      "same_process_alive": false
+    },
+    {
+      "run": "scene-original",
+      "pid": 1066922,
+      "same_process_alive": false
+    },
+    {
+      "run": "trace-mod-fusion",
+      "pid": 1069174,
+      "same_process_alive": false
+    },
+    {
+      "run": "trace-mod-gap20",
+      "pid": 1069543,
+      "same_process_alive": false
+    },
+    {
+      "run": "trace-mod-left",
+      "pid": 1069460,
+      "same_process_alive": false
+    },
+    {
+      "run": "trace-original",
+      "pid": 1068617,
+      "same_process_alive": false
+    },
+    {
+      "run": "trace-original-fullcharge",
+      "pid": 1068975,
+      "same_process_alive": false
+    },
+    {
+      "run": "trace-original-fusion",
+      "pid": 1069091,
+      "same_process_alive": false
+    },
+    {
+      "run": "trace-original-gap20",
+      "pid": 1069500,
+      "same_process_alive": false
+    },
+    {
+      "run": "trace-original-input250",
+      "pid": 1068754,
+      "same_process_alive": false
+    },
+    {
+      "run": "trace-original-left",
+      "pid": 1069383,
+      "same_process_alive": false
+    }
+  ]
+}

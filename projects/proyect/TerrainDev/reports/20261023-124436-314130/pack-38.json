@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "file",
+    "set",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-124436-314130/stage-37.w3x",
+    "X3Buster\\Solid.blp",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-124436-314130/payload-38.bin",
+    "-o",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-124436-314130/stage-38.w3x",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"added X3Buster\\\\Solid.blp, 1350 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-124436-314130/stage-38.w3x\"\n}\n",
+  "stderr": ""
+}

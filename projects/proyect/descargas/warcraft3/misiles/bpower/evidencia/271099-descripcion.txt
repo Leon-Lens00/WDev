@@ -1,0 +1,607 @@
+
+
+
+	ImageTools
+
+
+
+For you image needs
+
+
+
+
+
+About Images in Warcraft III
+
+
+
+There is an excellent documentation about the image handle on wc3.net.
+
+
+
+Main issues when it come to images:
+
+
+
+    1. An invalid filepath crashes the game.    2. An invalid imagetype ( index ) crashes the game.    3. Using native DestroyImage on an invalid image handle crashes the game.
+
+However:
+
+
+
+    1. Using coordinates out of bounds is safe.    2. Images can be rendered locally for a force or player.
+
+
+
+library ImageTools
+
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+// Written by BPower.
+library ImageTools /*v2.0
+*************************************************************************************
+*
+*   For your image needs.
+*
+*   Strictly speaking it provides two wrapper function for CreateImage & DestroyImage,
+*   named function NewImage & function ReleaseImage.
+*
+*   You always want to use these wrapper functions! Why so? See required know-how.
+* 
+*************************************************************************************
+*
+*   Required know-how [ Image extends handles for Dummies ]:
+*   -----------------
+*    
+*       1. An invalid filepath crashes the game.
+*       2. An invalid image type crashes the game.
+*       3. DestroyImage native on an invalid image handle crashes the game.
+*
+*       ImageTools prevents you from these fatal errors
+*       plus prints out debug messages, so you can quickly fix your code.
+*
+*       Hint: A very nice image tutorial link - [url]http://www.wc3c.net/showthread.php?t=107737[/url]
+*
+*************************************************************************************
+*     
+*       To Deaod
+*       -----------------------
+*
+*           For the original ImageUtils library ( [url]http://www.wc3c.net/showthread.php?t=107707[/url] )
+*
+*       To Bribe
+*       -----------------------
+*
+*           For Table
+*
+*       To Vexorian
+*       -----------------------
+*
+*           For ARGB
+*
+*************************************************************************************
+*
+*   */ uses /*
+* 
+*       */ Table         /* [url]https://www.hiveworkshop.com/forums/jass-resources-412/snippet-new-table-188084/[/url]
+*
+************************************************************************************
+*
+*   1. Import instruction
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*       Copy the ImageTools script and library Table into your map.
+
+*   2. API
+*   ¯¯¯¯¯¯
+*       function NewImage takes string file, real sizeX, real sizeY, real posX, real posY, real posZ, integer imageType returns image
+*           - Wrapper to the CreateImage native.
+*           - Does not crash the game, if the created image handle is invalid.
+*
+*       function ReleaseImage takes image whichImage retuns nothing
+*           - Wrapper to the DestroyImage native
+*           - Does not crash the game if whichImage is invalid.
+*           - Does not crash the game if whichImage is the first ever created image in the map.
+*
+*       function CreateImageCenter takes string file, real sizeX, real sizeY, real centerX, real centerY, real posZ, integer imageType returns image
+*           - Wrapper to the NewImage. It creates the image centered at centerX, centerY equal to other handle objects ( i.e. units ).
+*
+*   3. Configuration
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*       You don't have to setup anything.
+*/
+
+    globals
+        /**
+        *   The following are valid image types
+        *   sorted from highest to lowest layer:
+        */
+        constant integer IMAGE_TYPE_SELECTION      = 1// above all other image types.
+        constant integer IMAGE_TYPE_OCCLUSION_MASK = 3// above image type 2 and 4
+        constant integer IMAGE_TYPE_INDICATOR      = 2// above image type 4
+        constant integer IMAGE_TYPE_UBERSPLAT      = 4// lowest layer. Tinting affected by time of day
+                                                      // and is drawn below fog of war.
+           
+        /**
+        *   Those two are image types options in GUI's "Image - Create" wrapper of CreateImageBJ.
+        *   Both are invalid image types and should not be used in any case.
+        *   While an image with IMAGE_TYPE_SHADOW instantly crashes the game,
+        *   an image using IMAGE_TYPE_TOPMOST will simply not be render-able.
+        *   The game season however will continue normally.
+        */
+       
+        constant integer IMAGE_TYPE_SHADOW         = 0// Will create an invalid image handle with an handle id of -1.
+        constant integer IMAGE_TYPE_TOPMOST        = 5// Will create an invalid image handle, which can't be rendered.
+               
+   
+        /**
+        *   If an image handle is invalid, it gets the handle id -1.
+        *   Once you are using this handle somewhere, Warcraft III crashes,
+        *   hence ALWAYS create an image handle via function NewImage.
+        */
+        private constant integer INVALID_IMAGE_ID   = -1
+       
+        /**
+        *   When using ARGB, this is the default color set on Image.create()
+        */
+    endglobals
+
+    static if DEBUG_MODE then
+        private function DebugMsg takes string s returns nothing
+            call DisplayTextToPlayer(GetLocalPlayer(), 0, 0, "|cffff0000IMAGE TOOLS ERROR:|r\n    " + "|cff99b4d1" + "[" + s + "]|r" )
+        endfunction
+    endif
+   
+    globals
+        private Table table = 0
+    endglobals
+   
+    function NewImage takes string file, real sizeX, real sizeY, real posX, real posY, real posZ, integer imageType returns image
+        local image i = CreateImage(file, sizeX, sizeY, 0, posX, posY, posZ, 0, 0, 0, imageType)
+        if (0 > GetHandleId(i)) then
+            debug if (imageType < IMAGE_TYPE_SELECTION) or (imageType > IMAGE_TYPE_UBERSPLAT) then
+                debug call DebugMsg("function NewImage: Invalid image type [" + I2S(imageType) + "] for:  " + file)
+            debug else
+                debug call DebugMsg("function NewImage: Can't find string path in data: " + file)
+            debug endif
+            return null
+        else
+            set table.boolean[GetHandleId(i)] = true
+            return i
+        endif
+    endfunction
+   
+    function ReleaseImage takes image i returns nothing
+        local integer id = GetHandleId(i)
+        if (id > 0) and (table.boolean.has(id)) then
+            call table.boolean.remove(id)
+            call DestroyImage(i)
+        debug elseif (id > 0) then
+            debug call DebugMsg("function ReleaseImage: Attempt to double destroy an image handle: [" + I2S(id) + "]!" )
+            debug call DebugMsg("function ReleaseImage: Or even worse, you created an image without using NewImage!" )
+        debug else
+            debug call DebugMsg("function ReleaseImage: Attempt to destroy an invalid image handle! ( null )")       
+        endif
+    endfunction
+   
+    function CreateImageCenter takes string file, real sizeX, real sizeY, real centerX, real centerY, real centerZ, integer imageType returns image
+        return NewImage(file, sizeX, sizeY, centerX - sizeX*.5, centerY - sizeY*.5, centerZ, imageType)
+    endfunction
+   
+    private module InitImageTools
+        private static method onInit takes nothing returns nothing
+            set table = Table.create()
+        endmethod
+    endmodule
+    private struct I extends array
+        implement InitImageTools
+    endstruct
+   
+    //! runtextmacro optional IMAGE_TOOLS_IMPORT_STRUCT_CODE()
+   
+endlibrary
+	
+
+
+Optional: ImageStruct
+
+
+
+ImageTools is a minimalist library without any fancy features. Which is a good thing.
+
+ImageStruct is an add-on to ImageTools, which enables struct syntax for image handles. struct Image extends array
+
+Basically it's a textmacro which runs optional below the ImageTools code, if you have library ImageStruct in you map.
+
+
+
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library ImageStruct/*v1.0
+*************************************************************************************
+*
+*   ImageStruct enables struct syntax with images.
+*   Useful when you have advanced systems which relies on images.
+* 
+************************************************************************************
+*
+*   */ uses /*
+* 
+*       */ ImageTools    /* [url]https://www.hiveworkshop.com/forums/jass-resources-412/snippet-new-table-188084/[/url]
+*       */ optional ARGB /* [url]http://www.wc3c.net/showthread.php?t=101858[/url]
+*
+************************************************************************************
+*
+*       struct Image extends array
+* 
+*           Creator/Destructor:
+*               static method create takes string path, real sX, real sY, real pX, real pY, real pZ, integer imageTypeIndex, boolean render returns thistype
+*                   - Allocates a new Image instance and calls NewImage.
+*                   - Automatically renders the image if "render" is true.
+*
+*               method destroy takes nothing returns nothing
+*
+*           Methods which automatically re-draw the image:
+*
+*               method setSizeX takes real size returns nothing
+*               method setSizeY takes real size returns nothing
+*               method setFile  takes string filepath returns nothing
+*               method setImageType takes integer index returns nothing
+*              
+*           Methods which automatically re-locate the image:
+*      
+*               method setPosX takes real x returns nothing
+*               method setPosY takes real y returns nothing
+*               method setPosZ takes real z returns nothing
+*               method setPosition takes real x, real y, real z returns nothing
+*               method wrap takes boolean flag returns nothing
+*                   - binds the image to the ground no matter what posZ is set.
+*
+*           Additional render options, automatically re-renders the image.
+*
+*               method renderForAll takes nothing returns nothing
+*                   - renders this image for all players.
+*
+*               method renderForForce takes force whichForce returns nothing
+*                   - renders this image for all players in force whichForce.
+*
+*               method renderLocalPlayer takes player whichPlayer returns nothing
+*                   - renders this image only for a local client ( whichPlayer ).
+*
+*           Colorize images with ARGB:
+*               method setColor takes ARGB paint returns nothing
+*
+*           Colorize images without ARGB:
+*               method setColor takes integer Red, integer Green, integer Blue, integer Alpha returns nothing
+*
+*           Extra:
+*
+*               method setPositionEx takes real x, real y, real z returns nothing
+*                   - Here x, y, z define the center of the image, similar to
+*                     the coordinates which you use in other handle type
+*                     i.e. CreateUnit(p, id, x, y , 0)
+*
+*           Readonly fields:
+*
+*               readonly image   img
+*               readonly string  file
+*               readonly real    sizeX
+*               readonly real    sizeY
+*               readonly real    posX
+*               readonly real    posY
+*               readonly real    posZ
+*               readonly boolean show
+*               readonly integer imageType
+*               readonly boolean wrapped
+*               readonly integer green
+*               readonly integer red
+*               readonly integer blue
+*               readonly integer alpha
+*
+*   3. Configuration
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*       If you are using library ARGB, you should define a default color.
+*  
+*/
+    globals
+        constant integer DEFAULT_IMAGE_COLOR = 0xFFFFFFFF
+    endglobals
+   
+//! textmacro IMAGE_TOOLS_IMPORT_STRUCT_CODE
+
+    private keyword IMAGE_TOOLS_M
+    struct Image extends array   
+        implement IMAGE_TOOLS_M
+   
+        readonly image   img
+        readonly string  file
+        readonly real    sizeX
+        readonly real    sizeY
+        readonly real    posX
+        readonly real    posY
+        readonly real    posZ
+        readonly boolean show
+        readonly integer imageType
+        readonly boolean wrapped
+        private  force   frc
+        private  player  user
+
+        private method paint takes nothing returns nothing
+            static if LIBRARY_ARGB then
+                call SetImageColor(img, red, green, blue, alpha)
+            else
+                if hasColor then
+                    call SetImageColor(img, red, green, blue, alpha)
+                endif
+            endif
+        endmethod
+       
+        static if LIBRARY_ARGB then
+            readonly ARGB tint
+       
+            method operator red takes nothing returns integer
+                return tint.red
+            endmethod
+            method operator green takes nothing returns integer
+                return tint.green
+            endmethod
+            method operator blue takes nothing returns integer
+                return tint.blue
+            endmethod
+            method operator alpha takes nothing returns integer
+                return tint.alpha
+            endmethod
+            method operator color takes nothing returns ARGB
+                return tint
+            endmethod
+            method setColor takes ARGB cool returns nothing
+                set tint = cool
+                call paint()
+            endmethod
+        else
+            readonly integer green
+            readonly integer red
+            readonly integer blue
+            readonly integer alpha
+            private boolean hasColor
+            method setColor takes integer Red, integer Green, integer Blue, integer Alpha returns nothing
+                set alpha    = A/*  */lpha
+                set red      = R/*  */ed
+                set green    = G/*  */reen
+                set blue     = B/*  */lue
+                set hasColor = true
+                call paint()
+            endmethod
+        endif
+       
+        private method draw takes nothing returns nothing
+            if (img != null) then
+                call ReleaseImage(img)
+                set img = null
+            endif
+            set img = NewImage(file, sizeX, sizeY, posX, posY, posZ, imageType)
+            call SetImageConstantHeight(img, not wrapped, posZ)
+            call paint()
+            if (user == null) and (frc == null) then
+                call SetImageRenderAlways(img, show)
+            elseif (user != null) then
+                call SetImageRenderAlways(img, (show) and (GetLocalPlayer() == user))
+            else
+                call SetImageRenderAlways(img, (show) and IsPlayerInForce(GetLocalPlayer(), frc))
+            endif
+        endmethod
+       
+        method wrap takes boolean flag returns nothing
+            set  wrapped = flag
+            call SetImageConstantHeight(img, not wrapped, posZ)
+        endmethod
+       
+        method renderForAll takes nothing returns nothing
+            set user = null
+            set frc  = null
+            call draw()
+        endmethod
+       
+        method renderLocalPlayer takes player whichPlayer returns nothing
+            set user = whichPlayer
+            call draw()
+        endmethod
+       
+        method renderForForce takes force whichForce returns nothing
+            set frc = whichForce
+            call draw()
+        endmethod
+
+        method setSizeX takes real value returns nothing
+            set sizeX = value
+            call draw()
+        endmethod
+       
+        method setSizeY takes real value returns nothing
+            set sizeY = value
+            call draw()
+        endmethod
+       
+        method setFile takes string filepath returns nothing
+            set file = filepath
+            call draw()
+        endmethod
+       
+        method setPosX takes real amount returns nothing
+            set posX = amount
+            call SetImagePosition(img, amount, posY, posZ)
+        endmethod
+       
+        method setPosY takes real amount returns nothing
+            set posY = amount
+            call SetImagePosition(img, posX, amount, posZ)
+        endmethod
+       
+        method setPosZ takes real value returns nothing
+            set posZ = value
+            call SetImageConstantHeight(img, true, value)
+        endmethod
+       
+        method setPositionEx takes real x, real y, real z returns nothing
+            set posX = x - sizeX*.5
+            set posY = y - sizeY*.5
+            set posZ = z
+            call SetImagePosition(img, posX, posY, posZ)
+            call SetImageConstantHeight(img, not wrapped, z)
+        endmethod
+       
+        method setPosition takes real x, real y, real z returns nothing
+            set posX = x
+            set posY = y
+            set posZ = z
+            call SetImagePosition(img, posX, posY, posZ)
+            call SetImageConstantHeight(img, not wrapped, z)
+        endmethod
+       
+        // Checks for errors in NewImage
+        method setImageType takes integer i returns nothing
+            set imageType = i
+            call SetImageType(img, i)
+            call draw()
+        endmethod
+       
+        static method create takes string path, real sX, real sY, real pX, real pY, real pZ, integer imageTypeIndex, boolean render returns thistype
+      local thistype this = thistype.allocate()
+            set file      = path
+            set show      = render
+            set sizeX     = sX
+            set sizeY     = sY
+            set posX      = pX
+            set posY      = pY
+            set posZ      = pZ
+            set wrapped   = false
+            set imageType = imageTypeIndex
+            static if not LIBRARY_ARGB then
+                set hasColor = false
+            else
+                set tint  = DEFAULT_IMAGE_COLOR
+            endif
+            call draw()
+            return this
+        endmethod
+
+        method destroy takes nothing returns nothing
+            if (img != null) then
+                call ReleaseImage(img)
+                set img = null
+            endif
+            set user = null
+            set frc  = null
+        endmethod
+       
+    endstruct   
+   
+    private module IMAGE_TOOLS_M
+        private static integer array recycler
+        static method allocate takes nothing returns thistype
+            local thistype this = recycler[0]
+            debug if (this == 8192) then
+                debug call DebugMsg("Overflow - Requires an allocation module above 8910!")
+                debug return 0
+            debug endif
+            if (0 == recycler[this]) then
+                set recycler[0] = this + 1
+            else
+                set recycler[0] = recycler[this]
+            endif
+            debug set recycler[this] = -1
+            return this
+        endmethod
+   
+        method deallocate takes nothing returns nothing
+            debug if (recycler[this] != -1) then
+                debug call DebugMsg("Attempted To Deallocate Null Instance. ( Double Free )")
+            debug endif
+            set recycler[this] = recycler[0]
+            set recycler[0] = this
+        endmethod
+       
+        private static method onInit takes nothing returns nothing
+            set recycler[0] = 1
+        endmethod
+    endmodule
+//! endtextmacro
+
+endlibrary
+	
+
+
+An image utility library exists already! Why a new one?
+
+
+
+Yes true, in early 2010 Deaod submitted his version of ImageUtils on wc3.net
+
+But I saw a few things, which I think can be done better.
+
+
+
+imagex is a terrible struct name.
+
+-
+
+Images allocated in struct imagex do not allow specific render options ( for a single player or a force ), they render always for all players.
+
+-
+
+His double free protection is terrible as image handle id's can exceed 8910 easily. Consider that each unit uses at least 1 image, his shadow.
+
+-
+
+There is no connection between his imagex struct and the MAX_IMAGES constant. Yet it is used to define the struct space index.
+
+-
+
+The debug msg doesn't give enough precise information about the error. Just that an error occured.
+
+-
+
+Requires ARGB. Not that ARGB is bad, but why is it mandatory?

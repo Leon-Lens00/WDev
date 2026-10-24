@@ -1,0 +1,11 @@
+--- fresh141/022-SocketItem.j
++++ fresh143/022-SocketItem.j
+@@ -54,7 +54,7 @@
+         
+         call inv.showTooltip(inv, false)
+         
+-        call ShowYesNoDialog("Socket " + GetObjectName(itm.id) + " into " + GetObjectName(socketItm.id) + "?", inv.user, Filter(function OnAgree))
++        call ShowYesNoDialog("Socket " + GetObjectName(itm.id) + "\n\ninto\n\n" + GetObjectName(socketItm.id), inv.user, Filter(function OnAgree))
+     endfunction
+ 
+     //===========================================================================

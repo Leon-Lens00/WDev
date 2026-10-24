@@ -23,3 +23,27 @@ node_modules/
 # mcp-w3: conservar fuentes que reglas genéricas o del upstream ocultarían
 !mcp-w3/wc3-forge/build/
 mcp-w3/wc3-forge/build/bin/
+
+# Proyect y UI Studio: dependencias y estados locales, no fuentes publicables.
+projects/proyect/**/.codegraph/
+tools/ui-studio/.codegraph/
+projects/proyect/**/pfx/
+projects/proyect/**/runtime/
+projects/proyect/**/runtime-*/
+projects/proyect/**/artifacts/
+projects/proyect/**/upstream/
+projects/proyect/**/roms/
+projects/proyect/**/.venv/
+tools/ui-studio/.venv/
+projects/proyect/work/**/tooling/
+projects/proyect/work/**/plot-env/
+projects/proyect/work/**/validator-env/
+projects/proyect/work/**/dist/
+
+# Evidencias multimedia masivas permanecen en la PC; conservar muestras finales.
+projects/proyect/**/evidence/**/*.mp4
+projects/proyect/work/**/*.mp4
+!projects/proyect/ModelEditor/evidence/portrait-keys-20261022/PREVIEW.mp4
+!projects/proyect/work/dialogue-tauren-hud-20261022/dialogo-patrulla.mp4
+!projects/proyect/work/healthbars-native-20261023/barras-horizontales-prueba.mp4
+!projects/proyect/work/healthbars-shared-native-20261023/barras-control-compartido.mp4

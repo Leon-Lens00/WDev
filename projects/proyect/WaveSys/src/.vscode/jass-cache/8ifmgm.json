@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Control.j",
+  "items": [
+    {
+      "label": "GetLoadoutControlMoveCastDuration",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction GetLoadoutControlMoveCastDuration takes nothing returns real\n```\n\n\n---\n\nLegacy shotgun/pellet loadout disabled by Metal Slug weapon rework.\n\nU0A3 is now handled by LoadoutMetalSlugSpecial as a piercing AoE Shotgun blast.\n\n**_>:** `MyMissiles/Loadout Control.j`",
+      "sortText": "1_func_GetLoadoutControlMoveCastDuration",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\MyMissiles\\Loadout Control.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694715
+}

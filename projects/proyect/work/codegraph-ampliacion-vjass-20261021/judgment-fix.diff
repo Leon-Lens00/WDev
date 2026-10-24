@@ -1,0 +1,135 @@
+--- r1/src/extraction/index.ts
++++ r2/src/extraction/index.ts
+@@ -1860,6 +1860,7 @@
+  */
+ export class ExtractionOrchestrator {
+   private jassCatalog: JassCatalog | undefined;
++  private jassCatalogBatch = false;
+ 
+   private loadJassCatalog(): JassCatalog {
+     if (this.jassCatalog) return this.jassCatalog;
+@@ -2790,7 +2791,7 @@
+    * Index a single file
+    */
+   async indexFile(relativePath: string): Promise<ExtractionResult> {
+-    this.jassCatalog = undefined;
++    if (!this.jassCatalogBatch) this.jassCatalog = undefined;
+     // Indexing read: follow in-root symlinks (the `../` guard still applies), #935.
+     const fullPath = validatePathWithinRoot(this.rootDir, relativePath, { allowSymlinkEscape: true });
+ 
+@@ -3510,23 +3511,32 @@
+       await loadGrammarsForLanguages(preloadLanguagesForFiles(filesToIndex, overrides));
+     }
+ 
+-    // Index changed files
+-    const total = filesToIndex.length;
+-    for (let i = 0; i < filesToIndex.length; i++) {
+-      const filePath = filesToIndex[i]!;
+-      onProgress?.({
+-        phase: 'parsing',
+-        current: i + 1,
+-        total,
+-        currentFile: filePath,
+-      });
+-
+-      const result = await this.indexFile(filePath);
+-      if (result.errors.some(e => e.severity === 'error')) failedFilePaths.push(filePath);
+-      nodesUpdated += result.nodes.length;
+-
+-      const pause = backpressure?.();
+-      if (pause) await pause;
++    // One immutable catalog per re-extraction batch: re-reading all sources
++    // for each consumer would turn conservative invalidation into quadratic IO.
++    this.jassCatalogBatch = true;
++    try {
++      // Index changed files
++      const total = filesToIndex.length;
++      for (let i = 0; i < filesToIndex.length; i++) {
++        const filePath = filesToIndex[i]!;
++        onProgress?.({
++          phase: 'parsing',
++          current: i + 1,
++          total,
++          currentFile: filePath,
++        });
++
++        const result = await this.indexFile(filePath);
++        if (result.errors.some(e => e.severity === 'error')) failedFilePaths.push(filePath);
++        nodesUpdated += result.nodes.length;
++
++        const pause = backpressure?.();
++        if (pause) await pause;
++      }
++
++    } finally {
++      this.jassCatalogBatch = false;
++      this.jassCatalog = undefined;
+     }
+ 
+     // Names whose definition set this sync changed: a `file\0name` pair present
+--- r1/src/extraction/jass-preprocessor.ts
++++ r2/src/extraction/jass-preprocessor.ts
+@@ -29,7 +29,7 @@
+     const owner = [...blocks].reverse().find(b => b.kind === 'struct');
+     if (owner) {
+       owners.set(i, owner.id);
+-      if (!conditions.length && !words.includes('private') && blocks.at(-1)?.kind === 'struct') {
++      if (!conditions.length && !words.includes('private') && !words.includes('debug') && blocks.at(-1)?.kind === 'struct') {
+         const fieldAt = words[head + 1] === 'array' ? head + 2 : head + 1;
+         const field = keyword && /^[A-Za-z_]\w*$/.test(keyword) && !['implement', 'delegate', 'hook', 'key', 'keyword', 'call', 'set', 'return', 'else', 'endif'].includes(keyword) && [undefined, '=', '['].includes(words[fieldAt + 1]);
+         const name = keyword === 'method' ? words[head + 1] : field ? words[fieldAt] : undefined;
+--- r1/src/resolution/jass.ts
++++ r2/src/resolution/jass.ts
+@@ -117,7 +117,7 @@
+         : node?.returnType ? lookup(node.returnType, TYPES, node) : undefined;
+     } else {
+       const binding = lookup(receiver, new Set(['variable', 'parameter', 'field', 'constant']));
+-      if (mode === 'index' && binding && !/\barray\b/.test(binding.signature ?? '')) return null;
++      if (mode === 'index' && (!binding || !/\barray\b/.test(binding.signature ?? ''))) return null;
+       type = receiver === 'thistype' ? owningType : binding ? declaredType(binding) : receiver === 'this' ? owningType : lookup(receiver, TYPES);
+     }
+     if (!type) return null;
+--- r1/__tests__/jass-expansion.test.ts
++++ r2/__tests__/jass-expansion.test.ts
+@@ -1,9 +1,10 @@
+-import { afterEach, describe, expect, it } from 'vitest';
++import { afterEach, describe, expect, it, vi } from 'vitest';
+ import * as fs from 'node:fs';
+ import * as os from 'node:os';
+ import * as path from 'node:path';
+ import { CodeGraph } from '../src';
+ import { extractFromSource } from '../src/extraction/tree-sitter';
++import * as fileLimits from '../src/file-limits';
+ 
+ describe('JASS project expansion', { timeout: 60000 }, () => {
+   let root: string;
+@@ -152,4 +153,29 @@
+     expect(calls('S.run')).toEqual(['S.describe']);
+     expect(cg!.getNodesByQualifiedName('Unknown.maybe')).toHaveLength(2);
+   });
++
++  it('does not resolve index operators as if their receiver were a declared array', async () => {
++    await init({ 'index.j': 'struct Other extends array\nmethod tick takes nothing returns nothing\nendmethod\nendstruct\nstruct S extends array\nstatic method operator [] takes integer index returns Other\nreturn Other(index)\nendmethod\nmethod tick takes nothing returns nothing\nendmethod\nendstruct\nfunction Run takes nothing returns nothing\ncall S[0].tick()\nendfunction\n' });
++    expect(calls('Run')).not.toContain('S.tick');
++    expect(calls('Run')).not.toContain('Other.tick'); // Operator [] remains explicitly unsupported.
++  });
++
++  it('keeps debug-dependent exists fallbacks as potential paths', () => {
++    const result = extractFromSource('debug.j', 'struct S extends array\ndebug integer feature\nstatic if not thistype.feature.exists then\nstatic method fallback takes nothing returns nothing\nendmethod\nendif\nendstruct\n');
++    expect(result.nodes.some(n => n.qualifiedName === 'S.fallback')).toBe(true);
++    expect(result.errors.some(e => /Conditional compilation/.test(e.message))).toBe(true);
++  });
++
++  it('shares one project catalog across all consumers of an incremental batch', async () => {
++    await init({ 'defs.j': 'module M\nstatic method run takes nothing returns nothing\nendmethod\nendmodule\n', 'one.j': 'struct One extends array\nimplement M\nendstruct\n', 'two.j': 'struct Two extends array\nimplement M\nendstruct\n' });
++    const reads = vi.spyOn(fileLimits, 'readBoundedSourceSync');
++    try {
++      fs.writeFileSync(path.join(root, 'defs.j'), fs.readFileSync(path.join(root, 'defs.j'), 'utf8').replace('run', 'advance'));
++      await cg!.sync({ paths: ['defs.j'] });
++      expect(cg!.getNodesByQualifiedName('One.advance')).toHaveLength(1);
++      expect(cg!.getNodesByQualifiedName('Two.advance')).toHaveLength(1);
++      const sourceReads = reads.mock.calls.filter(([file]) => /\.(j|jass|vjass)$/i.test(String(file)));
++      expect(sourceReads).toHaveLength(4); // Three catalog reads plus the changed-file hash reconciliation.
++    } finally { reads.mockRestore(); }
++  });
+ });

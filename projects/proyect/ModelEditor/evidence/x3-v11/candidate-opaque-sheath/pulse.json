@@ -1,0 +1,38 @@
+{
+  "geoset": 43,
+  "accentGeosets": [
+    44,
+    45,
+    46,
+    47
+  ],
+  "arcMaterials": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "arcAnimations": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "arcTexture": 14,
+  "arcPeriodMs": 120,
+  "arcTravelMs": 100,
+  "arcPhaseMs": [
+    0,
+    30,
+    60,
+    90
+  ],
+  "material": 11,
+  "texture": 13,
+  "textureAnimation": 2,
+  "periodMs": 240,
+  "travelMs": 210,
+  "geometry": "shared elongated profile; four green paths 3.44x wider",
+  "direction": "nose to rear (-X)",
+  "birthDeath": "remapped by x3-lifecycle-v11; flight fades at impact"
+}

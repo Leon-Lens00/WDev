@@ -1,0 +1,9404 @@
+[
+  {
+    "name": "Shot II Blue.mdx",
+    "version": 800,
+    "globals": [],
+    "sequences": [
+      {
+        "name": "Stand",
+        "interval": [
+          100,
+          500
+        ]
+      },
+      {
+        "name": "Birth",
+        "interval": [
+          2000,
+          2300
+        ]
+      },
+      {
+        "name": "Death",
+        "interval": [
+          4000,
+          5000
+        ]
+      }
+    ],
+    "geosets": [
+      {
+        "vertices": 28,
+        "triangles": 24,
+        "groups": [
+          1,
+          2
+        ],
+        "indices": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4060,
+              4100,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                -24.356199264526367,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                0.9558789730072021,
+                0.8264560103416443,
+                4.779399871826172
+              ],
+              [
+                -6.791150093078613,
+                -0.3970719873905182,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4080,
+              4100,
+              4120,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Bone_B1",
+        "objectId": 0,
+        "parentId": 3,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4080,
+              4100
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                130.45599365234375,
+                0.23048800230026245,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0.4466649889945984,
+                0.23048800230026245,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "B1 T",
+        "objectId": 1,
+        "parentId": 0,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              2000,
+              2300
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Default",
+        "objectId": 3,
+        "parentId": -1,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGRT",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              5000
+            ],
+            "values": [
+              [
+                -5.96045985901128e-8,
+                0.7071059942245483,
+                0,
+                0.7071070075035095
+              ],
+              [
+                -3.576280107608909e-7,
+                0.7071059942245483,
+                5.96045985901128e-8,
+                0.7071080207824707
+              ],
+              [
+                0,
+                -0.008726529777050018,
+                0,
+                0.9999619722366333
+              ],
+              [
+                0,
+                -0.00872655026614666,
+                0,
+                0.9999619722366333
+              ],
+              [
+                -1.1920899822825959e-7,
+                0.7071040272712708,
+                0,
+                0.7071089744567871
+              ],
+              [
+                -4.172329965967947e-7,
+                0.7132470011711121,
+                0,
+                0.7009119987487793
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante",
+        "objectId": 4,
+        "parentId": 3,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KLAI",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4200,
+              4500,
+              5000
+            ],
+            "values": [
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                7
+              ],
+              [
+                7
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lite",
+        "objectId": 2,
+        "parentId": -1,
+        "flags": 0,
+        "type": 0,
+        "attenuation": [
+          40,
+          200
+        ],
+        "color": [
+          0.274509996175766,
+          0.4392159879207611,
+          1
+        ],
+        "intensity": 0,
+        "ambientColor": [
+          1,
+          1,
+          1
+        ],
+        "ambientIntensity": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4040,
+              4240
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Stars",
+        "objectId": 5,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 210,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            0.23921599984169006,
+            0.313726007938385,
+            1
+          ],
+          [
+            0.0784313976764679,
+            0.2862749993801117,
+            1
+          ],
+          [
+            0.2588239908218384,
+            0.4039219915866852,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          30,
+          50,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lumps",
+        "objectId": 6,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 140,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.33000001311302185,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10999999940395355,
+        "segmentColors": [
+          [
+            0.20000000298023224,
+            0.33725500106811523,
+            1
+          ],
+          [
+            0.050980400294065475,
+            0.4745100140571594,
+            1
+          ],
+          [
+            0.050980400294065475,
+            0.3294120132923126,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          60,
+          30,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 2,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                24
+              ],
+              [
+                24
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F1",
+        "objectId": 7,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 0,
+        "variation": 0,
+        "latitude": 0,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0.3098039925098419,
+            0.4470590054988861,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          100,
+          255,
+          100
+        ],
+        "segmentScaling": [
+          66,
+          66,
+          25
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4160
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante Uno",
+        "objectId": 8,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 820,
+        "variation": 0.8999999761581421,
+        "latitude": 14,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 8,
+        "length": 8,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            0.003921569790691137,
+            0.10588199645280838,
+            0.9960780143737793
+          ],
+          [
+            0.1333329975605011,
+            0.282353013753891,
+            1
+          ],
+          [
+            0.003921569790691137,
+            0.02745099924504757,
+            0.9450979828834534
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          24,
+          22,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Uno",
+        "objectId": 9,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 20,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.20000000298023224,
+            0.35686299204826355,
+            1
+          ],
+          [
+            0.17647099494934082,
+            0.274509996175766,
+            1
+          ],
+          [
+            0.21176500618457794,
+            0.34902000427246094,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          18,
+          18
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Flashes",
+        "objectId": 10,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 120,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            0.1294119954109192,
+            0.21960799396038055,
+            1
+          ],
+          [
+            0.1294119954109192,
+            0.4313730001449585,
+            0.992156982421875
+          ],
+          [
+            0.1294119954109192,
+            0.23921599984169006,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          10,
+          16,
+          10
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F2",
+        "objectId": 11,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 30,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.20000000298023224,
+            0.35686299204826355,
+            1
+          ],
+          [
+            0.17647099494934082,
+            0.274509996175766,
+            1
+          ],
+          [
+            0.21176500618457794,
+            0.34902000427246094,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          8,
+          8
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Dos Sq Tails",
+        "objectId": 12,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 90,
+        "variation": 0.800000011920929,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.2509799897670746,
+            0.4000000059604645,
+            1
+          ],
+          [
+            0.282353013753891,
+            0.37647101283073425,
+            1
+          ],
+          [
+            0.20000000298023224,
+            0.34117600321769714,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          16,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [],
+        "name": "SNDXMPMH",
+        "objectId": 13,
+        "parentId": -1,
+        "flags": 1024,
+        "globalSequenceId": -1,
+        "tracks": [
+          4000,
+          4010,
+          4020
+        ]
+      }
+    ],
+    "pivots": [
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "textures": [
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Flare.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\star5tga.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Blue_Glow2.blp",
+        "wrapMode": 0
+      }
+    ],
+    "geosetAnimations": [
+      {
+        "animations": [
+          {
+            "name": "KGAO",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0,
+              100,
+              2000,
+              4000,
+              4800
+            ],
+            "values": [
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "alpha": 1,
+        "flags": 2,
+        "color": [
+          0.33333298563957214,
+          0.6000000238418579,
+          1
+        ],
+        "geosetId": 0
+      }
+    ],
+    "materials": [
+      {
+        "priorityPlane": 0,
+        "flags": 0,
+        "shader": "",
+        "layers": [
+          {
+            "animations": [],
+            "filterMode": 3,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 0,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 0,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 0,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "PE1": 0,
+      "PE2": 8,
+      "ribbons": 0,
+      "lights": 1,
+      "collisions": 0
+    },
+    "poses": [
+      {
+        "seq": "Stand",
+        "samples": [
+          {
+            "t": 100,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 500,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Birth",
+        "samples": [
+          {
+            "t": 2000,
+            "bounds": {
+              "min": [
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0,
+                0,
+                0
+              ],
+              "boundsRadius": 0
+            }
+          },
+          {
+            "t": 2150,
+            "bounds": {
+              "min": [
+                -65.45591759681702,
+                -9.06061265617609,
+                -8.967000007629395
+              ],
+              "max": [
+                26.44283628463745,
+                8.873387359082699,
+                8.967000007629395
+              ],
+              "boundsRadius": 66.68567266874786
+            }
+          },
+          {
+            "t": 2300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Death",
+        "samples": [
+          {
+            "t": 4000,
+            "bounds": {
+              "min": [
+                -150.7717925310135,
+                -17.165344297885895,
+                -13.154600143432617
+              ],
+              "max": [
+                65.41638159751892,
+                18.702655732631683,
+                22.71339988708496
+              ],
+              "boundsRadius": 153.61582369306538
+            }
+          },
+          {
+            "t": 4500,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          },
+          {
+            "t": 5000,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shot II Green.mdx",
+    "version": 800,
+    "globals": [],
+    "sequences": [
+      {
+        "name": "Stand",
+        "interval": [
+          100,
+          500
+        ]
+      },
+      {
+        "name": "Birth",
+        "interval": [
+          2000,
+          2300
+        ]
+      },
+      {
+        "name": "Death",
+        "interval": [
+          4000,
+          5000
+        ]
+      }
+    ],
+    "geosets": [
+      {
+        "vertices": 28,
+        "triangles": 24,
+        "groups": [
+          1,
+          2
+        ],
+        "indices": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4060,
+              4100,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                -24.356199264526367,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                0.9558789730072021,
+                0.8264560103416443,
+                4.779399871826172
+              ],
+              [
+                -6.791150093078613,
+                -0.3970719873905182,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4080,
+              4100,
+              4120,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Bone_B1",
+        "objectId": 0,
+        "parentId": 3,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4080,
+              4100
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                130.45599365234375,
+                0.23048800230026245,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0.4466649889945984,
+                0.23048800230026245,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "B1 T",
+        "objectId": 1,
+        "parentId": 0,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              2000,
+              2300
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Default",
+        "objectId": 3,
+        "parentId": -1,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGRT",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              5000
+            ],
+            "values": [
+              [
+                -5.96045985901128e-8,
+                0.7071059942245483,
+                0,
+                0.7071070075035095
+              ],
+              [
+                -3.576280107608909e-7,
+                0.7071059942245483,
+                5.96045985901128e-8,
+                0.7071080207824707
+              ],
+              [
+                0,
+                -0.008726529777050018,
+                0,
+                0.9999619722366333
+              ],
+              [
+                0,
+                -0.00872655026614666,
+                0,
+                0.9999619722366333
+              ],
+              [
+                -1.1920899822825959e-7,
+                0.7071040272712708,
+                0,
+                0.7071089744567871
+              ],
+              [
+                -4.172329965967947e-7,
+                0.7132470011711121,
+                0,
+                0.7009119987487793
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante",
+        "objectId": 4,
+        "parentId": 3,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KLAI",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4200,
+              4500,
+              5000
+            ],
+            "values": [
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                7
+              ],
+              [
+                7
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lite",
+        "objectId": 2,
+        "parentId": -1,
+        "flags": 0,
+        "type": 0,
+        "attenuation": [
+          40,
+          200
+        ],
+        "color": [
+          0.513725996017456,
+          1,
+          0.274509996175766
+        ],
+        "intensity": 0,
+        "ambientColor": [
+          1,
+          1,
+          1
+        ],
+        "ambientIntensity": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4040,
+              4240
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Stars",
+        "objectId": 5,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 210,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            0.5450980067253113,
+            1,
+            0.24313700199127197
+          ],
+          [
+            0.5372549891471863,
+            1,
+            0.07450979948043823
+          ],
+          [
+            0.6823530197143555,
+            1,
+            0.2588239908218384
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          30,
+          50,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lumps",
+        "objectId": 6,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 140,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.33000001311302185,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10999999940395355,
+        "segmentColors": [
+          [
+            0.3215689957141876,
+            1,
+            0.20000000298023224
+          ],
+          [
+            0.549019992351532,
+            1,
+            0.050980400294065475
+          ],
+          [
+            0.1411760002374649,
+            1,
+            0.050980400294065475
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          60,
+          30,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 2,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                24
+              ],
+              [
+                24
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F1",
+        "objectId": 7,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 0,
+        "variation": 0,
+        "latitude": 0,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            0.3019610047340393,
+            1,
+            0
+          ],
+          [
+            0.1490200012922287,
+            1,
+            0
+          ],
+          [
+            0.564706027507782,
+            1,
+            0.3098039925098419
+          ]
+        ],
+        "segmentAlphas": [
+          100,
+          255,
+          100
+        ],
+        "segmentScaling": [
+          50,
+          50,
+          25
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4160
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante Uno",
+        "objectId": 8,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 820,
+        "variation": 0.8999999761581421,
+        "latitude": 14,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 8,
+        "length": 8,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            0.1490200012922287,
+            1,
+            0
+          ],
+          [
+            0.3921569883823395,
+            1,
+            0.1333329975605011
+          ],
+          [
+            0.21176500618457794,
+            0.9411770105361938,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          24,
+          22,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Uno",
+        "objectId": 9,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 20,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.5019609928131104,
+            1,
+            0.20000000298023224
+          ],
+          [
+            0.5254899859428406,
+            1,
+            0.17647099494934082
+          ],
+          [
+            0.5843139886856079,
+            1,
+            0.20784300565719604
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          18,
+          18
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Flashes",
+        "objectId": 10,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 120,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            0.4156860113143921,
+            1,
+            0.1333329975605011
+          ],
+          [
+            0.6509799957275391,
+            1,
+            0.1254899948835373
+          ],
+          [
+            0.4156860113143921,
+            1,
+            0.1333329975605011
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          10,
+          16,
+          10
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F2",
+        "objectId": 11,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 30,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.35686299204826355,
+            1,
+            0.20000000298023224
+          ],
+          [
+            0.48235300183296204,
+            1,
+            0.17647099494934082
+          ],
+          [
+            0.5450980067253113,
+            1,
+            0.20784300565719604
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          8,
+          8
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Dos Sq Tails",
+        "objectId": 12,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 90,
+        "variation": 0.800000011920929,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.4745100140571594,
+            1,
+            0.2509799897670746
+          ],
+          [
+            0.6431369781494141,
+            1,
+            0.282353013753891
+          ],
+          [
+            0.20000000298023224,
+            1,
+            0.21960799396038055
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          16,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [],
+        "name": "SNDXMPMH",
+        "objectId": 13,
+        "parentId": -1,
+        "flags": 1024,
+        "globalSequenceId": -1,
+        "tracks": [
+          4000,
+          4010,
+          4020
+        ]
+      }
+    ],
+    "pivots": [
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "textures": [
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Flare.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\star5tga.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Green_Glow3.blp",
+        "wrapMode": 0
+      }
+    ],
+    "geosetAnimations": [
+      {
+        "animations": [
+          {
+            "name": "KGAO",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0,
+              100,
+              2000,
+              4000,
+              4800
+            ],
+            "values": [
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "alpha": 1,
+        "flags": 2,
+        "color": [
+          0.4352940022945404,
+          1,
+          0.33333298563957214
+        ],
+        "geosetId": 0
+      }
+    ],
+    "materials": [
+      {
+        "priorityPlane": 0,
+        "flags": 0,
+        "shader": "",
+        "layers": [
+          {
+            "animations": [],
+            "filterMode": 3,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 0,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 0,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "PE1": 0,
+      "PE2": 8,
+      "ribbons": 0,
+      "lights": 1,
+      "collisions": 0
+    },
+    "poses": [
+      {
+        "seq": "Stand",
+        "samples": [
+          {
+            "t": 100,
+            "bounds": {
+              "min": [
+                -135.5494567155838,
+                -16.322025254368782,
+                -16.140600204467773
+              ],
+              "max": [
+                59.2210396528244,
+                15.959175154566765,
+                16.140600204467773
+              ],
+              "boundsRadius": 137.47939008904078
+            }
+          },
+          {
+            "t": 300,
+            "bounds": {
+              "min": [
+                -135.5494567155838,
+                -16.322025254368782,
+                -16.140600204467773
+              ],
+              "max": [
+                59.2210396528244,
+                15.959175154566765,
+                16.140600204467773
+              ],
+              "boundsRadius": 137.47939008904078
+            }
+          },
+          {
+            "t": 500,
+            "bounds": {
+              "min": [
+                -135.5494567155838,
+                -16.322025254368782,
+                -16.140600204467773
+              ],
+              "max": [
+                59.2210396528244,
+                15.959175154566765,
+                16.140600204467773
+              ],
+              "boundsRadius": 137.47939008904078
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Birth",
+        "samples": [
+          {
+            "t": 2000,
+            "bounds": {
+              "min": [
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0,
+                0,
+                0
+              ],
+              "boundsRadius": 0
+            }
+          },
+          {
+            "t": 2150,
+            "bounds": {
+              "min": [
+                -57.85841393470764,
+                -8.161012627184391,
+                -8.070300102233887
+              ],
+              "max": [
+                23.219834804534912,
+                7.979587577283382,
+                8.070300102233887
+              ],
+              "boundsRadius": 58.98582824612325
+            }
+          },
+          {
+            "t": 2300,
+            "bounds": {
+              "min": [
+                -135.5494567155838,
+                -16.322025254368782,
+                -16.140600204467773
+              ],
+              "max": [
+                59.2210396528244,
+                15.959175154566765,
+                16.140600204467773
+              ],
+              "boundsRadius": 137.47939008904078
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Death",
+        "samples": [
+          {
+            "t": 4000,
+            "bounds": {
+              "min": [
+                -135.57678520679474,
+                -15.366144239902496,
+                -11.361200332641602
+              ],
+              "max": [
+                58.97037863731384,
+                16.91505616903305,
+                20.920000076293945
+              ],
+              "boundsRadius": 138.22022361218723
+            }
+          },
+          {
+            "t": 4500,
+            "bounds": {
+              "min": [
+                0,
+                -0.4042882057617021,
+                3.43435041598579
+              ],
+              "max": [
+                0,
+                2.2858107059190615,
+                6.124449327666554
+              ],
+              "boundsRadius": 6.53711022933295
+            }
+          },
+          {
+            "t": 5000,
+            "bounds": {
+              "min": [
+                0,
+                -0.4042882057617021,
+                3.43435041598579
+              ],
+              "max": [
+                0,
+                2.2858107059190615,
+                6.124449327666554
+              ],
+              "boundsRadius": 6.53711022933295
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shot II Orange.mdx",
+    "version": 800,
+    "globals": [],
+    "sequences": [
+      {
+        "name": "Stand",
+        "interval": [
+          100,
+          500
+        ]
+      },
+      {
+        "name": "Birth",
+        "interval": [
+          2000,
+          2300
+        ]
+      },
+      {
+        "name": "Death",
+        "interval": [
+          4000,
+          5000
+        ]
+      }
+    ],
+    "geosets": [
+      {
+        "vertices": 28,
+        "triangles": 24,
+        "groups": [
+          1,
+          2
+        ],
+        "indices": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4060,
+              4100,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                -24.356199264526367,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                0.9558789730072021,
+                0.8264560103416443,
+                4.779399871826172
+              ],
+              [
+                -6.791150093078613,
+                -0.3970719873905182,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4080,
+              4100,
+              4120,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Bone_B1",
+        "objectId": 0,
+        "parentId": 3,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4080,
+              4100
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                130.45599365234375,
+                0.23048800230026245,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0.4466649889945984,
+                0.23048800230026245,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "B1 T",
+        "objectId": 1,
+        "parentId": 0,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              2000,
+              2300
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Default",
+        "objectId": 3,
+        "parentId": -1,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGRT",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              5000
+            ],
+            "values": [
+              [
+                -5.96045985901128e-8,
+                0.7071059942245483,
+                0,
+                0.7071070075035095
+              ],
+              [
+                -3.576280107608909e-7,
+                0.7071059942245483,
+                5.96045985901128e-8,
+                0.7071080207824707
+              ],
+              [
+                0,
+                -0.008726529777050018,
+                0,
+                0.9999619722366333
+              ],
+              [
+                0,
+                -0.00872655026614666,
+                0,
+                0.9999619722366333
+              ],
+              [
+                -1.1920899822825959e-7,
+                0.7071040272712708,
+                0,
+                0.7071089744567871
+              ],
+              [
+                -4.172329965967947e-7,
+                0.7132470011711121,
+                0,
+                0.7009119987487793
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante",
+        "objectId": 4,
+        "parentId": 3,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KLAI",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4200,
+              4500,
+              5000
+            ],
+            "values": [
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                7
+              ],
+              [
+                7
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lite",
+        "objectId": 2,
+        "parentId": -1,
+        "flags": 0,
+        "type": 0,
+        "attenuation": [
+          40,
+          200
+        ],
+        "color": [
+          1,
+          0.4392159879207611,
+          0.274509996175766
+        ],
+        "intensity": 0,
+        "ambientColor": [
+          1,
+          1,
+          1
+        ],
+        "ambientIntensity": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4040,
+              4240
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Stars",
+        "objectId": 5,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 210,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            1,
+            0.2509799897670746,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          30,
+          50,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lumps",
+        "objectId": 6,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 140,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.33000001311302185,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10999999940395355,
+        "segmentColors": [
+          [
+            0.9960780143737793,
+            0.7294120192527771,
+            0.05490199849009514
+          ],
+          [
+            1,
+            0.450980007648468,
+            0.0823528990149498
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          60,
+          30,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 2,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                24
+              ],
+              [
+                24
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F1",
+        "objectId": 7,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 0,
+        "variation": 0,
+        "latitude": 0,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            1,
+            0.4235289990901947,
+            0
+          ],
+          [
+            1,
+            0.37647101283073425,
+            0
+          ],
+          [
+            1,
+            0.2784309983253479,
+            0.10196100175380707
+          ]
+        ],
+        "segmentAlphas": [
+          100,
+          255,
+          100
+        ],
+        "segmentScaling": [
+          66,
+          66,
+          25
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4160
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante Uno",
+        "objectId": 8,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 820,
+        "variation": 0.8999999761581421,
+        "latitude": 14,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 8,
+        "length": 8,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            1,
+            0.5019609928131104,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          24,
+          22,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Uno",
+        "objectId": 9,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 20,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            1,
+            0.2509799897670746,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          18,
+          18
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Flashes",
+        "objectId": 10,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 120,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            1,
+            0.2509799897670746,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          10,
+          16,
+          10
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F2",
+        "objectId": 11,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 30,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            1,
+            0.3803919851779938,
+            0.20000000298023224
+          ],
+          [
+            1,
+            0.5019609928131104,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          8,
+          8
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Dos Sq Tails",
+        "objectId": 12,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 90,
+        "variation": 0.800000011920929,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            1,
+            0.2509799897670746,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ],
+          [
+            1,
+            0.2509799897670746,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          16,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [],
+        "name": "SNDXMPMH",
+        "objectId": 13,
+        "parentId": -1,
+        "flags": 1024,
+        "globalSequenceId": -1,
+        "tracks": [
+          4000,
+          4010,
+          4020
+        ]
+      }
+    ],
+    "pivots": [
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "textures": [
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Flare.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\star5tga.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\LavaLump2.blp",
+        "wrapMode": 0
+      }
+    ],
+    "geosetAnimations": [
+      {
+        "animations": [
+          {
+            "name": "KGAO",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0,
+              100,
+              2000,
+              4000,
+              4800
+            ],
+            "values": [
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "alpha": 1,
+        "flags": 2,
+        "color": [
+          1,
+          0.549019992351532,
+          0.2509799897670746
+        ],
+        "geosetId": 0
+      }
+    ],
+    "materials": [
+      {
+        "priorityPlane": 0,
+        "flags": 0,
+        "shader": "",
+        "layers": [
+          {
+            "animations": [],
+            "filterMode": 3,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "PE1": 0,
+      "PE2": 8,
+      "ribbons": 0,
+      "lights": 1,
+      "collisions": 0
+    },
+    "poses": [
+      {
+        "seq": "Stand",
+        "samples": [
+          {
+            "t": 100,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 500,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Birth",
+        "samples": [
+          {
+            "t": 2000,
+            "bounds": {
+              "min": [
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0,
+                0,
+                0
+              ],
+              "boundsRadius": 0
+            }
+          },
+          {
+            "t": 2150,
+            "bounds": {
+              "min": [
+                -65.45591759681702,
+                -9.06061265617609,
+                -8.967000007629395
+              ],
+              "max": [
+                26.44283628463745,
+                8.873387359082699,
+                8.967000007629395
+              ],
+              "boundsRadius": 66.68567266874786
+            }
+          },
+          {
+            "t": 2300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Death",
+        "samples": [
+          {
+            "t": 4000,
+            "bounds": {
+              "min": [
+                -150.7717925310135,
+                -17.165344297885895,
+                -13.154600143432617
+              ],
+              "max": [
+                65.41638159751892,
+                18.702655732631683,
+                22.71339988708496
+              ],
+              "boundsRadius": 153.61582369306538
+            }
+          },
+          {
+            "t": 4500,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          },
+          {
+            "t": 5000,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shot II Purple.mdx",
+    "version": 800,
+    "globals": [],
+    "sequences": [
+      {
+        "name": "Stand",
+        "interval": [
+          100,
+          500
+        ]
+      },
+      {
+        "name": "Birth",
+        "interval": [
+          2000,
+          2300
+        ]
+      },
+      {
+        "name": "Death",
+        "interval": [
+          4000,
+          5000
+        ]
+      }
+    ],
+    "geosets": [
+      {
+        "vertices": 28,
+        "triangles": 24,
+        "groups": [
+          1,
+          2
+        ],
+        "indices": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4060,
+              4100,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                -24.356199264526367,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                0.9558789730072021,
+                0.8264560103416443,
+                4.779399871826172
+              ],
+              [
+                -6.791150093078613,
+                -0.3970719873905182,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4080,
+              4100,
+              4120,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Bone_B1",
+        "objectId": 0,
+        "parentId": 3,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4080,
+              4100
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                130.45599365234375,
+                0.23048800230026245,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0.4466649889945984,
+                0.23048800230026245,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "B1 T",
+        "objectId": 1,
+        "parentId": 0,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              2000,
+              2300
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Default",
+        "objectId": 3,
+        "parentId": -1,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGRT",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              5000
+            ],
+            "values": [
+              [
+                -5.96045985901128e-8,
+                0.7071059942245483,
+                0,
+                0.7071070075035095
+              ],
+              [
+                -3.576280107608909e-7,
+                0.7071059942245483,
+                5.96045985901128e-8,
+                0.7071080207824707
+              ],
+              [
+                0,
+                -0.008726529777050018,
+                0,
+                0.9999619722366333
+              ],
+              [
+                0,
+                -0.00872655026614666,
+                0,
+                0.9999619722366333
+              ],
+              [
+                -1.1920899822825959e-7,
+                0.7071040272712708,
+                0,
+                0.7071089744567871
+              ],
+              [
+                -4.172329965967947e-7,
+                0.7132470011711121,
+                0,
+                0.7009119987487793
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante",
+        "objectId": 4,
+        "parentId": 3,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KLAI",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4200,
+              4500,
+              5000
+            ],
+            "values": [
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                7
+              ],
+              [
+                7
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lite",
+        "objectId": 2,
+        "parentId": -1,
+        "flags": 0,
+        "type": 0,
+        "attenuation": [
+          40,
+          200
+        ],
+        "color": [
+          0.7294120192527771,
+          0.274509996175766,
+          1
+        ],
+        "intensity": 0,
+        "ambientColor": [
+          1,
+          1,
+          1
+        ],
+        "ambientIntensity": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4040,
+              4240
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Stars",
+        "objectId": 5,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 210,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            0.5843139886856079,
+            0.24313700199127197,
+            1
+          ],
+          [
+            0.4627450108528137,
+            0.06666669994592667,
+            1
+          ],
+          [
+            0.5921570062637329,
+            0.2588239908218384,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          30,
+          50,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lumps",
+        "objectId": 6,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 140,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.33000001311302185,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10999999940395355,
+        "segmentColors": [
+          [
+            0.7960789799690247,
+            0.6823530197143555,
+            1
+          ],
+          [
+            0.6196079850196838,
+            0.4156860113143921,
+            1
+          ],
+          [
+            0.7529410123825073,
+            0.549019992351532,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          60,
+          30,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 2,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                24
+              ],
+              [
+                24
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F1",
+        "objectId": 7,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 0,
+        "variation": 0,
+        "latitude": 0,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            0.5254899859428406,
+            0,
+            1
+          ],
+          [
+            0.37647101283073425,
+            0,
+            1
+          ],
+          [
+            0.5019609928131104,
+            0.313726007938385,
+            0.9960780143737793
+          ]
+        ],
+        "segmentAlphas": [
+          100,
+          255,
+          100
+        ],
+        "segmentScaling": [
+          66,
+          66,
+          25
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4160
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante Uno",
+        "objectId": 8,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 820,
+        "variation": 0.8999999761581421,
+        "latitude": 14,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 8,
+        "length": 8,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            0.450980007648468,
+            0,
+            1
+          ],
+          [
+            0.5019609928131104,
+            0.1333329975605011,
+            1
+          ],
+          [
+            0.4235289990901947,
+            0,
+            0.9411770105361938
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          24,
+          22,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Uno",
+        "objectId": 9,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 20,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.5019609928131104,
+            0.20000000298023224,
+            1
+          ],
+          [
+            0.443136990070343,
+            0.17647099494934082,
+            1
+          ],
+          [
+            0.47843098640441895,
+            0.20000000298023224,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          18,
+          18
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Flashes",
+        "objectId": 10,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 120,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            0.5254899859428406,
+            0.1333329975605011,
+            1
+          ],
+          [
+            0.6705880165100098,
+            0.1254899948835373,
+            1
+          ],
+          [
+            0.37254899740219116,
+            0.1333329975605011,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          10,
+          16,
+          10
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F2",
+        "objectId": 11,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 30,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.47843098640441895,
+            0.20000000298023224,
+            1
+          ],
+          [
+            0.4627450108528137,
+            0.17647099494934082,
+            1
+          ],
+          [
+            0.4588240087032318,
+            0.20000000298023224,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          8,
+          8
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Dos Sq Tails",
+        "objectId": 12,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 90,
+        "variation": 0.800000011920929,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.6078429818153381,
+            0.2509799897670746,
+            1
+          ],
+          [
+            0.5882350206375122,
+            0.282353013753891,
+            1
+          ],
+          [
+            0.556863009929657,
+            0.20000000298023224,
+            1
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          16,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [],
+        "name": "SNDXMPMH",
+        "objectId": 13,
+        "parentId": -1,
+        "flags": 1024,
+        "globalSequenceId": -1,
+        "tracks": [
+          4000,
+          4010,
+          4020
+        ]
+      }
+    ],
+    "pivots": [
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "textures": [
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Flare.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\star5tga.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Purple_Glow.blp",
+        "wrapMode": 0
+      }
+    ],
+    "geosetAnimations": [
+      {
+        "animations": [
+          {
+            "name": "KGAO",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0,
+              100,
+              2000,
+              4000,
+              4800
+            ],
+            "values": [
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "alpha": 1,
+        "flags": 0,
+        "color": [
+          1,
+          1,
+          1
+        ],
+        "geosetId": 0
+      }
+    ],
+    "materials": [
+      {
+        "priorityPlane": 0,
+        "flags": 0,
+        "shader": "",
+        "layers": [
+          {
+            "animations": [],
+            "filterMode": 3,
+            "flags": 49,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 0,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 0,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "PE1": 0,
+      "PE2": 8,
+      "ribbons": 0,
+      "lights": 1,
+      "collisions": 0
+    },
+    "poses": [
+      {
+        "seq": "Stand",
+        "samples": [
+          {
+            "t": 100,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 500,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Birth",
+        "samples": [
+          {
+            "t": 2000,
+            "bounds": {
+              "min": [
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0,
+                0,
+                0
+              ],
+              "boundsRadius": 0
+            }
+          },
+          {
+            "t": 2150,
+            "bounds": {
+              "min": [
+                -65.45591759681702,
+                -9.06061265617609,
+                -8.967000007629395
+              ],
+              "max": [
+                26.44283628463745,
+                8.873387359082699,
+                8.967000007629395
+              ],
+              "boundsRadius": 66.68567266874786
+            }
+          },
+          {
+            "t": 2300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Death",
+        "samples": [
+          {
+            "t": 4000,
+            "bounds": {
+              "min": [
+                -150.7717925310135,
+                -17.165344297885895,
+                -13.154600143432617
+              ],
+              "max": [
+                65.41638159751892,
+                18.702655732631683,
+                22.71339988708496
+              ],
+              "boundsRadius": 153.61582369306538
+            }
+          },
+          {
+            "t": 4500,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          },
+          {
+            "t": 5000,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shot II Red.mdx",
+    "version": 800,
+    "globals": [],
+    "sequences": [
+      {
+        "name": "Stand",
+        "interval": [
+          100,
+          500
+        ]
+      },
+      {
+        "name": "Birth",
+        "interval": [
+          2000,
+          2300
+        ]
+      },
+      {
+        "name": "Death",
+        "interval": [
+          4000,
+          5000
+        ]
+      }
+    ],
+    "geosets": [
+      {
+        "vertices": 28,
+        "triangles": 24,
+        "groups": [
+          1,
+          2
+        ],
+        "indices": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4060,
+              4100,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                -24.356199264526367,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                0.9558789730072021,
+                0.8264560103416443,
+                4.779399871826172
+              ],
+              [
+                -6.791150093078613,
+                -0.3970719873905182,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4080,
+              4100,
+              4120,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Bone_B1",
+        "objectId": 0,
+        "parentId": 3,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4080,
+              4100
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                130.45599365234375,
+                0.23048800230026245,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0.4466649889945984,
+                0.23048800230026245,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "B1 T",
+        "objectId": 1,
+        "parentId": 0,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              2000,
+              2300
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Default",
+        "objectId": 3,
+        "parentId": -1,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGRT",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              5000
+            ],
+            "values": [
+              [
+                -5.96045985901128e-8,
+                0.7071059942245483,
+                0,
+                0.7071070075035095
+              ],
+              [
+                -3.576280107608909e-7,
+                0.7071059942245483,
+                5.96045985901128e-8,
+                0.7071080207824707
+              ],
+              [
+                0,
+                -0.008726529777050018,
+                0,
+                0.9999619722366333
+              ],
+              [
+                0,
+                -0.00872655026614666,
+                0,
+                0.9999619722366333
+              ],
+              [
+                -1.1920899822825959e-7,
+                0.7071040272712708,
+                0,
+                0.7071089744567871
+              ],
+              [
+                -4.172329965967947e-7,
+                0.7132470011711121,
+                0,
+                0.7009119987487793
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante",
+        "objectId": 4,
+        "parentId": 3,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KLAI",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4200,
+              4500,
+              5000
+            ],
+            "values": [
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                7
+              ],
+              [
+                7
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lite",
+        "objectId": 2,
+        "parentId": -1,
+        "flags": 0,
+        "type": 0,
+        "attenuation": [
+          40,
+          200
+        ],
+        "color": [
+          1,
+          0.274509996175766,
+          0.274509996175766
+        ],
+        "intensity": 0,
+        "ambientColor": [
+          1,
+          1,
+          1
+        ],
+        "ambientIntensity": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4040,
+              4240
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Stars",
+        "objectId": 5,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 210,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            1,
+            0.24313700199127197,
+            0.24313700199127197
+          ],
+          [
+            1,
+            0.274509996175766,
+            0.2901960015296936
+          ],
+          [
+            1,
+            0.2588239908218384,
+            0.2588239908218384
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          30,
+          50,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lumps",
+        "objectId": 6,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 140,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.33000001311302185,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10999999940395355,
+        "segmentColors": [
+          [
+            1,
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          [
+            1,
+            0.282353013753891,
+            0.282353013753891
+          ],
+          [
+            1,
+            0.274509996175766,
+            0.274509996175766
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          60,
+          30,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 2,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                24
+              ],
+              [
+                24
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F1",
+        "objectId": 7,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 0,
+        "variation": 0,
+        "latitude": 0,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0.3098039925098419,
+            0.3098039925098419
+          ]
+        ],
+        "segmentAlphas": [
+          100,
+          255,
+          100
+        ],
+        "segmentScaling": [
+          66,
+          66,
+          25
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4160
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante Uno",
+        "objectId": 8,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 820,
+        "variation": 0.8999999761581421,
+        "latitude": 14,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 8,
+        "length": 8,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0.1333329975605011,
+            0.1333329975605011
+          ],
+          [
+            0.9411770105361938,
+            0,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          24,
+          22,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Uno",
+        "objectId": 9,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 20,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            1,
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          [
+            1,
+            0.17647099494934082,
+            0.17647099494934082
+          ],
+          [
+            1,
+            0.20000000298023224,
+            0.20000000298023224
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          18,
+          18
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Flashes",
+        "objectId": 10,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 120,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            1,
+            0.1333329975605011,
+            0.1333329975605011
+          ],
+          [
+            1,
+            0.1254899948835373,
+            0.1254899948835373
+          ],
+          [
+            1,
+            0.1333329975605011,
+            0.1333329975605011
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          10,
+          16,
+          10
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F2",
+        "objectId": 11,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 30,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            1,
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          [
+            1,
+            0.17647099494934082,
+            0.17647099494934082
+          ],
+          [
+            1,
+            0.20000000298023224,
+            0.20000000298023224
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          8,
+          8
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Dos Sq Tails",
+        "objectId": 12,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 90,
+        "variation": 0.800000011920929,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            1,
+            0.2509799897670746,
+            0.2509799897670746
+          ],
+          [
+            1,
+            0.282353013753891,
+            0.282353013753891
+          ],
+          [
+            1,
+            0.20000000298023224,
+            0.20000000298023224
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          16,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [],
+        "name": "SNDXMPMH",
+        "objectId": 13,
+        "parentId": -1,
+        "flags": 1024,
+        "globalSequenceId": -1,
+        "tracks": [
+          4000,
+          4010,
+          4020
+        ]
+      }
+    ],
+    "pivots": [
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "textures": [
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Flare.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\star5tga.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Red_Glow1.blp",
+        "wrapMode": 0
+      }
+    ],
+    "geosetAnimations": [
+      {
+        "animations": [
+          {
+            "name": "KGAO",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0,
+              100,
+              2000,
+              4000,
+              4800
+            ],
+            "values": [
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "alpha": 1,
+        "flags": 2,
+        "color": [
+          1,
+          0.4588240087032318,
+          0.5960779786109924
+        ],
+        "geosetId": 0
+      }
+    ],
+    "materials": [
+      {
+        "priorityPlane": 0,
+        "flags": 0,
+        "shader": "",
+        "layers": [
+          {
+            "animations": [],
+            "filterMode": 3,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 0,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "PE1": 0,
+      "PE2": 8,
+      "ribbons": 0,
+      "lights": 1,
+      "collisions": 0
+    },
+    "poses": [
+      {
+        "seq": "Stand",
+        "samples": [
+          {
+            "t": 100,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 500,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Birth",
+        "samples": [
+          {
+            "t": 2000,
+            "bounds": {
+              "min": [
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0,
+                0,
+                0
+              ],
+              "boundsRadius": 0
+            }
+          },
+          {
+            "t": 2150,
+            "bounds": {
+              "min": [
+                -65.45591759681702,
+                -9.06061265617609,
+                -8.967000007629395
+              ],
+              "max": [
+                26.44283628463745,
+                8.873387359082699,
+                8.967000007629395
+              ],
+              "boundsRadius": 66.68567266874786
+            }
+          },
+          {
+            "t": 2300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Death",
+        "samples": [
+          {
+            "t": 4000,
+            "bounds": {
+              "min": [
+                -150.7717925310135,
+                -17.165344297885895,
+                -13.154600143432617
+              ],
+              "max": [
+                65.41638159751892,
+                18.702655732631683,
+                22.71339988708496
+              ],
+              "boundsRadius": 153.61582369306538
+            }
+          },
+          {
+            "t": 4500,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          },
+          {
+            "t": 5000,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Shot II Yellow.mdx",
+    "version": 800,
+    "globals": [],
+    "sequences": [
+      {
+        "name": "Stand",
+        "interval": [
+          100,
+          500
+        ]
+      },
+      {
+        "name": "Birth",
+        "interval": [
+          2000,
+          2300
+        ]
+      },
+      {
+        "name": "Death",
+        "interval": [
+          4000,
+          5000
+        ]
+      }
+    ],
+    "geosets": [
+      {
+        "vertices": 28,
+        "triangles": 24,
+        "groups": [
+          1,
+          2
+        ],
+        "indices": [
+          0,
+          0,
+          1
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4060,
+              4100,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                -24.356199264526367,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                0
+              ],
+              [
+                0.9558789730072021,
+                0.8264560103416443,
+                4.779399871826172
+              ],
+              [
+                -6.791150093078613,
+                -0.3970719873905182,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                -0.12942500412464142,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ],
+              [
+                1.2065399885177612,
+                0.8264549970626831,
+                4.779399871826172
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4080,
+              4100,
+              4120,
+              4180,
+              5000
+            ],
+            "values": [
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.009999999776482582,
+                0.009999999776482582
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ],
+              [
+                0,
+                0.08333329856395721,
+                0.08333329856395721
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Bone_B1",
+        "objectId": 0,
+        "parentId": 3,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4080,
+              4100
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                130.45599365234375,
+                0.23048800230026245,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0.4466649889945984,
+                0.23048800230026245,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ],
+              [
+                131.35499572753906,
+                0.2304929941892624,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "B1 T",
+        "objectId": 1,
+        "parentId": 0,
+        "flags": 256,
+        "geosetId": 0,
+        "geosetAnimationId": -1
+      },
+      {
+        "animations": [
+          {
+            "name": "KGSC",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              2000,
+              2300
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                1
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Default",
+        "objectId": 3,
+        "parentId": -1,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGRT",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              5000
+            ],
+            "values": [
+              [
+                -5.96045985901128e-8,
+                0.7071059942245483,
+                0,
+                0.7071070075035095
+              ],
+              [
+                -3.576280107608909e-7,
+                0.7071059942245483,
+                5.96045985901128e-8,
+                0.7071080207824707
+              ],
+              [
+                0,
+                -0.008726529777050018,
+                0,
+                0.9999619722366333
+              ],
+              [
+                0,
+                -0.00872655026614666,
+                0,
+                0.9999619722366333
+              ],
+              [
+                -1.1920899822825959e-7,
+                0.7071040272712708,
+                0,
+                0.7071089744567871
+              ],
+              [
+                -4.172329965967947e-7,
+                0.7132470011711121,
+                0,
+                0.7009119987487793
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante",
+        "objectId": 4,
+        "parentId": 3,
+        "flags": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KLAI",
+            "interpolationType": 1,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              500,
+              2000,
+              2300,
+              4000,
+              4200,
+              4500,
+              5000
+            ],
+            "values": [
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                4
+              ],
+              [
+                7
+              ],
+              [
+                7
+              ],
+              [
+                0
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lite",
+        "objectId": 2,
+        "parentId": -1,
+        "flags": 0,
+        "type": 0,
+        "attenuation": [
+          40,
+          200
+        ],
+        "color": [
+          1,
+          0.8392159938812256,
+          0.274509996175766
+        ],
+        "intensity": 0,
+        "ambientColor": [
+          1,
+          1,
+          1
+        ],
+        "ambientIntensity": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4040,
+              4240
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Stars",
+        "objectId": 5,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 210,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            1,
+            0.6941180229187012,
+            0.24313700199127197
+          ],
+          [
+            1,
+            0.6745100021362305,
+            0.06666669994592667
+          ],
+          [
+            1,
+            0.8862749934196472,
+            0.2588239908218384
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          30,
+          50,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Lumps",
+        "objectId": 6,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 140,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.33000001311302185,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10999999940395355,
+        "segmentColors": [
+          [
+            1,
+            0.8784310221672058,
+            0.20000000298023224
+          ],
+          [
+            1,
+            0.7176470160484314,
+            0.050980400294065475
+          ],
+          [
+            1,
+            0.9294120073318481,
+            0.050980400294065475
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          60,
+          30,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 2,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KGTR",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0
+            ],
+            "values": [
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          },
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                24
+              ],
+              [
+                24
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F1",
+        "objectId": 7,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 0,
+        "variation": 0,
+        "latitude": 0,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            1,
+            0.7019609808921814,
+            0
+          ],
+          [
+            1,
+            0.800000011920929,
+            0
+          ],
+          [
+            1,
+            0.8627449870109558,
+            0.3098039925098419
+          ]
+        ],
+        "segmentAlphas": [
+          100,
+          255,
+          100
+        ],
+        "segmentScaling": [
+          66,
+          66,
+          25
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4000,
+              4160
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Avante Uno",
+        "objectId": 8,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 820,
+        "variation": 0.8999999761581421,
+        "latitude": 14,
+        "gravity": 0,
+        "lifeSpan": 0.20999999344348907,
+        "emissionRate": 0,
+        "width": 8,
+        "length": 8,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.07000000029802322,
+        "segmentColors": [
+          [
+            1,
+            0.7764710187911987,
+            0
+          ],
+          [
+            1,
+            0.784313976764679,
+            0.1333329975605011
+          ],
+          [
+            0.9411770105361938,
+            0.6392160058021545,
+            0
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          255
+        ],
+        "segmentScaling": [
+          24,
+          22,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 1,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Uno",
+        "objectId": 9,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 20,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            1,
+            0.8431370258331299,
+            0.20000000298023224
+          ],
+          [
+            1,
+            0.8117650151252747,
+            0.17647099494934082
+          ],
+          [
+            1,
+            0.67843097448349,
+            0.20000000298023224
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          18,
+          18
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              4050,
+              4300
+            ],
+            "values": [
+              [
+                120
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Flashes",
+        "objectId": 10,
+        "parentId": 3,
+        "flags": 36864,
+        "speed": 120,
+        "variation": 4,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.30000001192092896,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.10000000149011612,
+        "segmentColors": [
+          [
+            1,
+            0.784313976764679,
+            0.1333329975605011
+          ],
+          [
+            1,
+            0.8039219975471497,
+            0.1254899948835373
+          ],
+          [
+            1,
+            0.8235290050506592,
+            0.1333329975605011
+          ]
+        ],
+        "segmentAlphas": [
+          0,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          10,
+          16,
+          10
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "F2",
+        "objectId": 11,
+        "parentId": 0,
+        "flags": 561152,
+        "speed": 30,
+        "variation": 2,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 0,
+        "tailLength": 0.44999998807907104,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            0.9960780143737793,
+            0.8392159938812256,
+            0.20392200350761414
+          ],
+          [
+            1,
+            0.7960789799690247,
+            0.17647099494934082
+          ],
+          [
+            0.9960780143737793,
+            0.9764710068702698,
+            0.20392200350761414
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          8,
+          8
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [
+          {
+            "name": "KP2E",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              100,
+              2000
+            ],
+            "values": [
+              [
+                50
+              ],
+              [
+                50
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "name": "Atras Dos Sq Tails",
+        "objectId": 12,
+        "parentId": 4,
+        "flags": 36864,
+        "speed": 90,
+        "variation": 0.800000011920929,
+        "latitude": 180,
+        "gravity": 0,
+        "lifeSpan": 0.6000000238418579,
+        "emissionRate": 0,
+        "width": 0,
+        "length": 0,
+        "filterMode": 1,
+        "rows": 1,
+        "columns": 1,
+        "headOrTail": 1,
+        "tailLength": 1,
+        "timeMiddle": 0.20000000298023224,
+        "segmentColors": [
+          [
+            1,
+            0.8352940082550049,
+            0.2509799897670746
+          ],
+          [
+            1,
+            0.8392159938812256,
+            0.282353013753891
+          ],
+          [
+            1,
+            0.800000011920929,
+            0.20000000298023224
+          ]
+        ],
+        "segmentAlphas": [
+          255,
+          255,
+          0
+        ],
+        "segmentScaling": [
+          8,
+          16,
+          1
+        ],
+        "headIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "tailIntervals": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "textureId": 0,
+        "squirt": 0,
+        "priorityPlane": 0,
+        "replaceableId": 0
+      },
+      {
+        "animations": [],
+        "name": "SNDXMPMH",
+        "objectId": 13,
+        "parentId": -1,
+        "flags": 1024,
+        "globalSequenceId": -1,
+        "tracks": [
+          4000,
+          4010,
+          4020
+        ]
+      }
+    ],
+    "pivots": [
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        -1.2065399885177612,
+        0.12942500412464142,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        36,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        30
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "textures": [
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Flare.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\star5tga.blp",
+        "wrapMode": 0
+      },
+      {
+        "replaceableId": 0,
+        "path": "Textures\\Yellow_Glow.blp",
+        "wrapMode": 0
+      }
+    ],
+    "geosetAnimations": [
+      {
+        "animations": [
+          {
+            "name": "KGAO",
+            "interpolationType": 0,
+            "globalSequenceId": -1,
+            "frames": [
+              0,
+              100,
+              2000,
+              4000,
+              4800
+            ],
+            "values": [
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                1
+              ],
+              [
+                0
+              ]
+            ],
+            "inTans": [],
+            "outTans": []
+          }
+        ],
+        "alpha": 1,
+        "flags": 2,
+        "color": [
+          0.9960780143737793,
+          0.8509799838066101,
+          0.4627450108528137
+        ],
+        "geosetId": 0
+      }
+    ],
+    "materials": [
+      {
+        "priorityPlane": 0,
+        "flags": 0,
+        "shader": "",
+        "layers": [
+          {
+            "animations": [],
+            "filterMode": 3,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 17,
+            "textureId": 2,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          },
+          {
+            "animations": [],
+            "filterMode": 4,
+            "flags": 49,
+            "textureId": 0,
+            "textureAnimationId": -1,
+            "coordId": 0,
+            "alpha": 1,
+            "emissiveGain": 1,
+            "fresnelColor": [
+              1,
+              1,
+              1
+            ],
+            "fresnelOpacity": 0,
+            "fresnelTeamColor": 0
+          }
+        ]
+      }
+    ],
+    "counts": {
+      "PE1": 0,
+      "PE2": 8,
+      "ribbons": 0,
+      "lights": 1,
+      "collisions": 0
+    },
+    "poses": [
+      {
+        "seq": "Stand",
+        "samples": [
+          {
+            "t": 100,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          },
+          {
+            "t": 500,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Birth",
+        "samples": [
+          {
+            "t": 2000,
+            "bounds": {
+              "min": [
+                0,
+                0,
+                0
+              ],
+              "max": [
+                0,
+                0,
+                0
+              ],
+              "boundsRadius": 0
+            }
+          },
+          {
+            "t": 2150,
+            "bounds": {
+              "min": [
+                -65.45591759681702,
+                -9.06061265617609,
+                -8.967000007629395
+              ],
+              "max": [
+                26.44283628463745,
+                8.873387359082699,
+                8.967000007629395
+              ],
+              "boundsRadius": 66.68567266874786
+            }
+          },
+          {
+            "t": 2300,
+            "bounds": {
+              "min": [
+                -150.74446403980255,
+                -18.12122531235218,
+                -17.93400001525879
+              ],
+              "max": [
+                65.66704261302948,
+                17.746774718165398,
+                17.93400001525879
+              ],
+              "boundsRadius": 152.88525305606052
+            }
+          }
+        ]
+      },
+      {
+        "seq": "Death",
+        "samples": [
+          {
+            "t": 4000,
+            "bounds": {
+              "min": [
+                -150.7717925310135,
+                -17.165344297885895,
+                -13.154600143432617
+              ],
+              "max": [
+                65.41638159751892,
+                18.702655732631683,
+                22.71339988708496
+              ],
+              "boundsRadius": 153.61582369306538
+            }
+          },
+          {
+            "t": 4500,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          },
+          {
+            "t": 5000,
+            "bounds": {
+              "min": [
+                0,
+                -0.5542214813699218,
+                3.284900494108598
+              ],
+              "max": [
+                0,
+                2.434777274065226,
+                6.273899249543746
+              ],
+              "boundsRadius": 6.729780989581315
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

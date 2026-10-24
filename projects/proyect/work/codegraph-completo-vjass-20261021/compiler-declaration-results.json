@@ -1,0 +1,23 @@
+[
+  {
+    "id": 4,
+    "expected_valid": true,
+    "valid": true,
+    "launcher_exit": 0,
+    "passed": true
+  },
+  {
+    "id": 5,
+    "expected_valid": true,
+    "valid": true,
+    "launcher_exit": 0,
+    "passed": true
+  },
+  {
+    "id": 6,
+    "expected_valid": true,
+    "valid": false,
+    "launcher_exit": 1,
+    "passed": false
+  }
+]

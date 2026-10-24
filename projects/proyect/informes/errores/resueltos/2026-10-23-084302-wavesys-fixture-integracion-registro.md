@@ -1,0 +1,19 @@
+# Instrumentación del ensayo de integración
+
+Fecha: 2026-10-23-084302, Codex, WaveSys Classic1.27b. Estado: en investigación.
+
+integration-v2 cargó114 fuentes y registró13 controles correctos hasta la reaparición; después llegó visualmente a TargetWave2 pero el log no avanzó a COMPLETE. No se considera una prueba completa ni se atribuye todavía la detención al producto. Evidencia: evidence/integration-v2-native.txt, pantalla y script generado. Sesión propia967621 cerrada por identidad; no sesiones ajenas.
+
+Se reforzó el fixture para conservar cada resultado, armar observadores antes de llamadas y detectar retorno del handler RestTime. integration-v3 falló al compilar: llamada a Save desde Check antes de declarar la función privada, pJASS «Undeclared function Save», logs del reporte vjass-20261023-084112-079734 y evidence/integration-v3-compile.json. Es fallo del fixture nuevo, sin cambios en src. Se ordenó Save antes de Check; siguiente ejecución integration-v4.
+
+Pendiente: validar compilación y localizar el tramo del handler que no retorna, distinguiendo objeto/import ausente, inicialización del laboratorio, interrupción de hilo y defecto del producto. No convertir el log parcial en aprobación.
+
+Observación v4: terminó21 controles/3fallos.18correctos acreditan vidas, crédito, IA y terminación; tres fallos pertenecen al no-retorno de RestTime y sus consecuencias, no demuestran tres defectos independientes. Hipótesis: laboratorio entra directamente al descanso sin el sound SwlsSound que StageExample asigna antes; GameState lo declara sin valor y Defaults no lo inicializa. Control v5 cambia sólo el fixture añadiendo SwlsSound=null antes del escenario; sin cambios en src. Una consulta auxiliar intentó libraries/FileIO.j inexistente, sin usar ese path para conclusiones. Al cerrar v4, su PID ya había desaparecido; la lectura de /proc y captura dependiente se abortaron, sin teclas enviadas. Se verifica ausencia, origen del cierre aún no confirmado.
+
+Recuperación comprobada en integration-v5: único cambio SwlsSound=null,25controles/24PASS/1FAIL, handler retorna y callback siguiente corre. El FAIL independiente confirma E11. Fixture recuperado, sin corrección de producto. La guarda de identidad detectó también un slash final de WINEPREFIX; se normalizó con Path.resolve antes de las acciones, sin entrada sobre otra sesión. Una consulta ls supuso ruta dotnet incorrecta: se resolvió con wc3-environment.json. Cierre propio985295 comprobado. Estado final: resuelto como instrumentación.
+
+Reabierto09:04: SurvivalAudit v1/v2 no compila porque el fixture usa WaveDamageCreditRecord inexistente. Diagnóstico pJASS Undeclared function; API real consultada por CodeGraph: WaveRecordDamageCredit(source,target). Se corrige nombre y orden en tests, ningún src modificado. Un rg auxiliar consultó ubicación supuesta incorrecta y se descartó. Pendiente compilar/correr survival-resources-v3.
+
+Survivalv3 compila JassHelper/pJASS correctamente; verificación del builder se detiene al comparar (attributes). El recurso base incorpora metadatos MPQ generados; al cambiar war3map.j sus hashes/CRC cambian. Se excluyen únicamente (attributes) y (listfile), conservando comparación de todos los miembros de juego y cabecera. Nuevo ensayo v4 pendiente. Este fallo de comprobación no acredita corrupción de objetos ni fallo de WaveSys.
+
+Recuperación final: survival-resources-v4 compila, reextrae todos los miembros de juego y conserva cabecera;67/67 controles y518apariciones/muertes recorren10waves hasta victoria nativa visible. Corregidos nombre/orden de llamada del fixture y comparación de metadatos. Una lectura auxiliar pidió la clave read_only_aura_observers que sólo existe en builds posteriores; se descarta ese acceso sin afectar el resultado ya verificado. Estado: resuelto (instrumentación).

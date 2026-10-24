@@ -1,0 +1,20 @@
+{
+  "file": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/evidence/x3-v14/final-video-1.mp4",
+  "pid": 1044138,
+  "focusSamples": 47,
+  "returnCode": 0,
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "60/1",
+        "duration": "4.866667",
+        "nb_frames": "293"
+      }
+    ]
+  },
+  "note": "Capture rate is not a measured game FPS benchmark."
+}

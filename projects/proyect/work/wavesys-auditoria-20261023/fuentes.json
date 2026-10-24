@@ -1,0 +1,1136 @@
+[
+  {
+    "path": "Audio/Config/AudioPreload.j",
+    "size": 3758,
+    "sha256": "3e74fa0c350f7cf0b0b19e3fe41ed87fd8252229a61ffb14ea57ec66a2f18f92",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Core/GameState.j",
+    "size": 599,
+    "sha256": "a9389b1f86eebb6385f113c5f4afc298dd787cf45faa932cdafe1f082e48345c",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Environment/Config/VisionConfig.j",
+    "size": 3689,
+    "sha256": "5f81f6772c8db8fc9b8cf8b6329eb4c5a5bca1ec7913a5fbdd2b15eac91e1c51",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "InitMap/MapBootstrap.j",
+    "size": 932,
+    "sha256": "97c1c37612841eb0ffd3e7ef7d0b882d5dbabfc35a2e91eb27d3e0fefbde9204",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "InitMap/PreConfi.j",
+    "size": 844,
+    "sha256": "35bb837ca55f185df2b43b5151c3a212cb67eac099c2e797e0830d2f7dae6df7",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MoveSys/Config/MovementSpellTargetConfig.j",
+    "size": 338,
+    "sha256": "7a8eea6f3a965de69ccfd6b9dc6433601e3aa09dfbb260fb686c7a137b68368c",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MoveSys/MoveCast.j",
+    "size": 25819,
+    "sha256": "03814c4641637f59a3e8e757ed2e8216054382aad08e50dbfe9e087cef46ed1c",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Multiboard/InitialWaveMultiboard.j",
+    "size": 6924,
+    "sha256": "3287faa176f5dee3c3274d747552a546886d8d8bfe6d0073985958dc5d495d6a",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Multiboard/WaveMultiboard.j",
+    "size": 14186,
+    "sha256": "6bdbecea9cf9cc73a4ead17d17d2819664e648fd9f2be25c16d71c4deb4bc3f1",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Config/LoadoutMoveCastConfig.j",
+    "size": 2182,
+    "sha256": "c2638bea859907efa8eac392c4f9e0fcb27a625b9eeb761595af1a928ad672e5",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Config/WeaponProfileConfig.j",
+    "size": 25210,
+    "sha256": "1bcc7bd4d94e5ab53bd70fc50743a92d6434658b7464122da03ac946e5d3ded6",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Loadout Control.j",
+    "size": 376,
+    "sha256": "53235fb9a63fd84ede7d3b0e6092f2e217cde4048b64df3c16dad49303e454e4",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Loadout IronLizard.j",
+    "size": 9401,
+    "sha256": "1cebba8a0e4d5f52e16298878f1c3cc4a107289d8fdb382d7631bfa2093eea83",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Loadout Leap.j",
+    "size": 30862,
+    "sha256": "198b3023a6593167f95833ba98edc07961dd39e70cb8ae8d9f38539d2c4b304e",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Loadout LeapMissile.j",
+    "size": 380,
+    "sha256": "e4a1da6ddcada5f7400b74263778233881ad5d5b9b8036744d8d58202ee95030",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Loadout MetalSlugSpecial.j",
+    "size": 16341,
+    "sha256": "725ad4894962fd6c0403ef4464884c5c2a3740df9a2b5dfe26ffa58090707fb6",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Loadout Missile.j",
+    "size": 49689,
+    "sha256": "c606ef3bfda892798e259c7fb352e026517d7a99c4b20130be69d01a9f33e466",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Loadout RocketLauncher.j",
+    "size": 36232,
+    "sha256": "200704e419a0417a0c8a5614c1aaafea101314934129304f8d154c1d03af7ffd",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/Loadout ThunderShot.j",
+    "size": 14720,
+    "sha256": "aec3982e4778a41b5b563b7f421d78145854677b87dbd8009cc28abee444ad76",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/PrisonerDropSystem.j",
+    "size": 12461,
+    "sha256": "2a37b91cfb1ba57ec2fcdc9c7b451020ee608c1feb79dba978f77885f7a7428a",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/SwapMana.j",
+    "size": 6951,
+    "sha256": "ceee58c284548fa1b2be15b0e0185ef1e0007b4364747cac17ed6e519811a366",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/UnitTypeMissile.j",
+    "size": 37020,
+    "sha256": "0c9ad2c9feef0270d2b7cdc72a3451b8bd0e623ebb7d4cf3508367fa66ee64f7",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/UnitTypeMissileConfig.j",
+    "size": 42479,
+    "sha256": "619e5fdf1384b930ff32fe8f94fc3edb29baed5019320e169be6618be54dc88f",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/UnitTypeMissileLoadout.j",
+    "size": 27299,
+    "sha256": "d636c2213d3e523095c2eaede5f545ac424a5f04f388b6493353883486124bbc",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/WeaponInventoryCore.j",
+    "size": 17323,
+    "sha256": "69093527d3fdac0af77fa23bf617e50aab279ed56f0f4e01f66a732d68ec2305",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/WeaponInventorySystem.j",
+    "size": 2558,
+    "sha256": "998b11c9debc04573ba7c51480de543e1bf1cc6b1dd8c3426d6483b1cef73c3e",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "MyMissiles/WeaponSelectionSystem.j",
+    "size": 2093,
+    "sha256": "a7e4cc627708fd23abe53d64cb73cc751af2745f3d41ea8a883837c4e753422e",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Players/Config/AllianceConfig.j",
+    "size": 1803,
+    "sha256": "61cddea68475cdb6481e69ad3a6c7f35f563b83cfe35d4a838f464928474d539",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Players/Config/InitialGoldConfig.j",
+    "size": 856,
+    "sha256": "05dc9c34dcb09b94df79315f03d95726c27e099baa5fe22bd8dc3503ba9c4d61",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Players/PlayerHeroState.j",
+    "size": 145,
+    "sha256": "c2dc8b7e379e23793cf4804d78e8838170a718d2ab18874a98ce6ea73f384f12",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Pruebas/AllScripts/castpremier.j",
+    "size": 13929,
+    "sha256": "38396ce6c21b7645b8e082557ad5877294c0e94ff0711f45485decac70a08301",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Equipment/EquipHeroModels.j",
+    "size": 1374,
+    "sha256": "d0d382bb3f97b2fee850481cc506378ae5bd26982e247ba7b4bb5ddacf29dd72",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Equipment/EquipItemParser.j",
+    "size": 9276,
+    "sha256": "3983dd35cf115ec4a19de370f305a229f71be328fd136eb0c1d0bc3cc9b34fca",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Equipment/EquipmentCore.j",
+    "size": 25132,
+    "sha256": "ae5369929f38aefab36cac12904f6855c0759e96c7105e06383018451292f3a3",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Equipment/EquipmentItem.j",
+    "size": 17346,
+    "sha256": "b44ebe6d6cdb0c3052096e1a68ab5acb20fa6546429c46ee58ed305ae4d65691",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Equipment/EquipmentSockets.j",
+    "size": 1816,
+    "sha256": "8eb4cd6d298f61c96b895d4d654785f6331c1f499d1b82f63566b7ed0330b012",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Inventory/InventoryBonuses.j",
+    "size": 86,
+    "sha256": "a7a98754294e58fdce7de68a92b9894c2e8dd2a4b172c3de63d9676e5da31579",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Inventory/InventoryCore.j",
+    "size": 27484,
+    "sha256": "e7bef857edc536fc8fa458cb045fdc9cd61ce87dde6e153afa66763e319423b9",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Inventory/InventoryGlobals.j",
+    "size": 374,
+    "sha256": "5f390858634f9b19e95ae09fbbec30a998de6d6e10d26e9643e00721789a5f66",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Inventory/InventoryItem.j",
+    "size": 2866,
+    "sha256": "6b9642bf454da250b649c92b3aa78e318d4162de89db6f4601f9a0a93fcaf3d6",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Inventory/InventoryPlugins.j",
+    "size": 284,
+    "sha256": "417b9601e177016a6055bd6d9d817ffa6ca692da6f6343b34b28c863a1ce914c",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Inventory/InventoryTooltip.j",
+    "size": 11446,
+    "sha256": "3c776b2b6adea4cd1694ee0eb50ca6493dd42140fa8160e83bac0b7bae508732",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/AcquireItem.j",
+    "size": 1325,
+    "sha256": "37bc6674075c6238a5074b1a32632f351e26341a96f401e2d4561889ba33c57e",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/Drop Item.j",
+    "size": 1714,
+    "sha256": "4945047c6e117b3bbf5a3a9918a2daeadb8e196347e7848318f43fccec90420b",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/Equip Item.j",
+    "size": 2074,
+    "sha256": "c644d4619513fc123c28ce4e3c26358938abfa6f8c7fa17c987bf33cc8d26e0c",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/HideInv.j",
+    "size": 1411,
+    "sha256": "978c35cc0079d06266ab45958af6cc3f66848aa0acb3844418632cb3920f5a50",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/InvItemSetups.j",
+    "size": 7839,
+    "sha256": "ba639da53d72956328277e8662f285ab7827353e02abb994a226fc77872b38f7",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/Sell Item.j",
+    "size": 1789,
+    "sha256": "338610643d9d78bec00345b2f190b395055ae6b48abbb336f6db8245aa86e166",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/Show Equipment.j",
+    "size": 993,
+    "sha256": "8a673664a78e234d866335300e090fafb57f656698028bd5bcc49e13802b37a9",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/Show Inventory.j",
+    "size": 1190,
+    "sha256": "6d752aa77e8b2ef9766e2f142e1e8c361153728988bce90dfb54cb2d0349d5dd",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/Socket Item.j",
+    "size": 2517,
+    "sha256": "3a1d9e0e223cb78b3f4eb5d5d8f19a87ab219bd80654159e903ce1850889f116",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/Unequip Item.j",
+    "size": 509,
+    "sha256": "55da45824702705eac691a4018af743ca506ed16b1efa3916cb7991cfd3000dc",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/Setups/YesNoDialog.j",
+    "size": 1914,
+    "sha256": "8205a0df0c965b1661eda1c204be83158b504949a5b0ba908b21c04d2e513da6",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/ExampleAdvance/StartGameV2.j",
+    "size": 1987,
+    "sha256": "f3404463149e79ebb653e8e5be994704144976228e1c3b26547c90c9a4a5269f",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/Loadout Missile.j",
+    "size": 42238,
+    "sha256": "9a7a4e203075b0d2f56b2f065d23244e8c04ac1dbeb7548c8cb912a2e0286534",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Blademaster/Leap.j",
+    "size": 8372,
+    "sha256": "a61914f7bebe71c4cd26ec2f0968069d84920942c550dcf1430c9feca1b6b731",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Blademaster/Whirlwind.j",
+    "size": 5148,
+    "sha256": "28ce91dc0654eba249999465a0cff1380815876ee9cd68488ce0cfdbf7f52d9d",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/BloodMage/Chaosflare.j",
+    "size": 5644,
+    "sha256": "8825b51db944b65e3ebb740e54d9ae95da115f141b94cb990befc863fe786dd1",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/BloodMage/Choatic Boulder.j",
+    "size": 6485,
+    "sha256": "75be5be0e648b20d96817bb3c4325135e23af80d616fe03df131d3a9ec95bac0",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/BloodMage/Fireball.j",
+    "size": 4581,
+    "sha256": "328f27b6edb024e70de33063abf63cf9530aae0526cd2a2683a1f37c2e9563bb",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/BloodMage/Ice Siege.j",
+    "size": 4361,
+    "sha256": "4113ba5c3021c7a12602ff4110f5645cc195a9f7489278c45487e23454ab29bc",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Loadout Missile(test v2).j",
+    "size": 21570,
+    "sha256": "b5513f4ef4e88003def997a6cf7f70f938e09c9ab00dc182594085eaf01b2799",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Lunar Slash.j",
+    "size": 11296,
+    "sha256": "5ba8add78f9a26f7819cb5ccb802b576570b16b001db21ca29f40b407b979832",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Mountain King/Fist of Thunder.j",
+    "size": 8287,
+    "sha256": "374250ea0a3c9bdce61f74a5b8534f31a8f0b11a70fe5f3120b1841e128288d3",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Necromancer/Bone Spirit.j",
+    "size": 6805,
+    "sha256": "0d99b3d8eaee8cef7ab355f838c64919e29ed5159aa7c945d2a9724cf4b5b615",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Necromancer/Reapers Scythe.j",
+    "size": 4212,
+    "sha256": "967042c162659d03a65b82bb6de967cd8702b34078394d6d56431c7af3be7663",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Rogue/Gravity Shell.j",
+    "size": 29888,
+    "sha256": "6f7d9e3e3a591d6cf9bec47ae8c6dc06f6c933f95506cb64286048212d818e22",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Rogue/Guided Arrow.j",
+    "size": 9783,
+    "sha256": "e6c61f8e1909b3af2563c7d38e50acdca285ef5f391ec84b8978b4e4ebcbdd3a",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Rogue/Gun Barrage.j",
+    "size": 13711,
+    "sha256": "ae617f9f8f4324efd52989bb092660e8f77a2739af15f4ca104f03019a0e9ea2",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Rogue/Target Sling.j",
+    "size": 26061,
+    "sha256": "395e062e11cbf45621bda267eb831ce0fed0b25be69a01275734dea4ce8dd81b",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/MissileExamples/Tiny/Tiny Building Toss.j",
+    "size": 24153,
+    "sha256": "7cb4cf47a190d422f9a5b861927492e3c891572b0e683a22373dde1edce393a7",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/RestTime.github.j",
+    "size": 19164,
+    "sha256": "8940642b517b3c628c13956a18fa52f4ab5bc4bf0795cddb12812bd3baf3c87e",
+    "encoding": "cp1252",
+    "active": false
+  },
+  {
+    "path": "Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j",
+    "size": 113479,
+    "sha256": "e7547984ee395fee0fe4f295b066e6ad119d6628b272b425f92fc52d10fb3ae8",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/Reworks/movecast_dummy_follow_legacy.j",
+    "size": 27561,
+    "sha256": "3b0d67757b506d5f2e533809c3ede38baee3c31c07f78315f7002ef969b774ba",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/Reworks/movecast_rework_experimental.j",
+    "size": 52272,
+    "sha256": "bf33613929cfa6b3cb05ff48dbf06b4291b3eb56e9c3d30ead5aa9abc437d635",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/Reworks/movecast_viejo.j",
+    "size": 45571,
+    "sha256": "83f551683aff13eb41687a996e7a2f8d69859963d0a50edb3d71b85ff857e67d",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Pruebas/tenderoff.j",
+    "size": 8491,
+    "sha256": "474cdd2170da5d9a42fd879777730faf3a7605d513cf63fb7d8b8f1aa3b92d8d",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "Selection/Config/SelectionElementConfig.j",
+    "size": 3401,
+    "sha256": "8918f6887cb3ff383e0046c7853f2fd921735426fbbcd69f2bdb2d153ec19d69",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Selection/Config/SelectionHeroConfig.j",
+    "size": 767,
+    "sha256": "97289e98e314e259c2c01d04dae2f07b9216dc313cef1b360f21bb6670e1a9e8",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Selection/Config/SelectionHeroVisualConfig.j",
+    "size": 1291,
+    "sha256": "56b6187d209d393f7d4f95c2912bea18a15c26356a620b6db3383e51402ab797",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Selection/SelectionClientBridge.j",
+    "size": 1556,
+    "sha256": "27ea766d9ee525abea1b1c8ff8c06309150cf33bf9718be19d61b34c0c8cb974",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Selection/SelectionHeroSpawn.j",
+    "size": 1089,
+    "sha256": "a77f403ab4cdc7ac8134b6a8517b73b8e47b3b280d5d6663369d59fcdcf66e10",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Selection/SelectionStartFlow.j",
+    "size": 414,
+    "sha256": "7c1c07dce4c9bb8e55c6e2c648c7ad6ed97b0a13ca50ceeb37816bf55aabad60",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Selection/SelectionSystem.j",
+    "size": 5879,
+    "sha256": "920e577a907c65799597657c2045d8a71ca729fb28d8ee2645e89e7f8fb2eb25",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Systems/HeroLives/HeroLives.j",
+    "size": 11854,
+    "sha256": "0c2fd21b6effd2adf27c735c839fc04f59144acedbc2b261909d9a57785241ea",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Systems/Orders/OrderSmartChannel.j",
+    "size": 3960,
+    "sha256": "adf9b7e1460c74e77bcff6695fbd1156c976c6f9ca0c14ec5ea905854d5f7c2e",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Systems/Tender/Config/TenderSpawnConfig.j",
+    "size": 230,
+    "sha256": "5df90679832101ad012e0bc92d5e37e2217c2338f613a1644e403119fbd41db8",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Systems/Tender/TenderEscInteraction.j",
+    "size": 213,
+    "sha256": "75a17886f47b9e2464799d74802960483684bda4d7bf874e097d526573724578",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Systems/Tender/TenderSystem.j",
+    "size": 2198,
+    "sha256": "30c2cd688eda8de7582a87d027bc48e29bbd35e58ec91a34bdbfad06392f80d0",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "Terrain/Config/TerrainReplaceConfig.j",
+    "size": 4319,
+    "sha256": "fe8832320dd7e29298894fbd03a0ee7761175f4de23716b770737000291150f1",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "UI System/MyIU/Config/MenuClientInitConfig.j",
+    "size": 593,
+    "sha256": "a398d51f9d4aafdf8f784b0f7c47d319ea300f407d60eb9aafa64ca1976a3953",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "UI System/MyIU/EnemyPreviewConfig.j",
+    "size": 5200,
+    "sha256": "1dfdf9ba0ae195d786872bb68db1cf85ebcc4b0c0c7dce8476e88af0239ec392",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "UI System/MyIU/Inits.j",
+    "size": 262,
+    "sha256": "7616c927c6ed53804c837669628bd08b363c77be20ed05d6f813b162b72dfb39",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "UI System/MyIU/MenuClient.j",
+    "size": 22273,
+    "sha256": "95780cfd8756dc49e46f6c890cfb07ca66fd7b45b4b3e7fdb1a131ccdf5706e7",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "UI System/MyIU/Models.j",
+    "size": 2041,
+    "sha256": "3e7820fd802011a552eb58427012292137633a7db1a8f6b9fc2cc456f4991151",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/AI/AIConfig.j",
+    "size": 8996,
+    "sha256": "263d864ed4dae9ac8eed32f65013d7cf08ee6d81c3d8d3fd3b9d35b47663a938",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/AI/AIManagerUtils.j",
+    "size": 1922,
+    "sha256": "7e065c1c9ce8ba6ee8df8d653ef32f469d725ce1f01aa448496572f556f461e7",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/AI/AIProfiles.j",
+    "size": 21597,
+    "sha256": "1dc637a9392129974939892a593197eb0069e9b557622d777dafd434760becce",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/AI/IAManager.j",
+    "size": 74859,
+    "sha256": "482f4b727a310a388bb1580e853e736a105c3ffa12ef3d9e7cc2971e91318348",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j",
+    "size": 397,
+    "sha256": "3cec19655a66212342ac574e34c49cc0f8dfa0003e10968053f01d65b5f435dd",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeAudio.j",
+    "size": 1487,
+    "sha256": "6ce991ea68b9b17836bb017648af516257e0007239da507e086409909a33838f",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j",
+    "size": 3110,
+    "sha256": "d44dae4331a7733d827f97b5de68ee7861ab64901f2da594bc3763c6bb7dffa5",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j",
+    "size": 1936,
+    "sha256": "4a022a7ade77424b2263e27578643291738aff9b1f914ae046a6f6671789a557",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j",
+    "size": 1130,
+    "sha256": "3f9575aa6fb85195a1d6d8e183e4336a82f3e3d33689e3bef424d4052ad47185",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j",
+    "size": 1509,
+    "sha256": "f39982f8e3af4088f8f8d11daac6f64c1d67fd1438f158bb260195ee773cfedb",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j",
+    "size": 1948,
+    "sha256": "06133c8704764ab767d6bed3b633cf09b17c25e7bf4bd9fa5d1a2575000e8073",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j",
+    "size": 555,
+    "sha256": "70a0492e9199a1ed0d136512d04403e24cc5366af13a7ab98b31f25d8ebd9b03",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j",
+    "size": 1112,
+    "sha256": "d094dc8b220c95d1743ea172b84c2839fd8216e87f71fee985a2ac1ef2ef69f7",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/RestTime/TheEnd.j",
+    "size": 689,
+    "sha256": "f1f3a35f3030c97ecff1cad299d134f4312195d9b5628ec8e5833efc03f8cf33",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/StageExample.j",
+    "size": 11808,
+    "sha256": "042026a60044ff6800672ed712fd409aea257c8b5e470607e8d72f2044a7755f",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/SwlsWave.j",
+    "size": 85070,
+    "sha256": "b33711164fec7468b3048d0c42f0f5b3997d1bb072fea54de135252390e57119",
+    "encoding": "cp1252",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/WavePointApi.j",
+    "size": 783,
+    "sha256": "649cf71e72f29f1e33aa20a1e3bc48a1a4710f578a748dea48b2be4b8da34ae5",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/WavePointGroups.j",
+    "size": 12318,
+    "sha256": "cab7841c405d5cd809cbe4033a92dce7df948eaa3461e9a127165313ec7ea5bb",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/WavePointGroupsConfig.j",
+    "size": 1254,
+    "sha256": "ef3e5ed7ade655db341fd8011be6bb12c4a30df90f665400acad227114e41dc0",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/SwlsWave/WaveStreaks.j",
+    "size": 31778,
+    "sha256": "96bf8b6b6859ca726eba6abe6e7f31e4c6c9d205a0c32a730e70c777b8f0e266",
+    "encoding": "cp1252",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j",
+    "size": 34831,
+    "sha256": "f33c7ab84703560e5b0f00d6727dae44921af282f33cbdc5d8e30b434892368a",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j",
+    "size": 15772,
+    "sha256": "0f2aa4732a8f4784696b08de941e4b3b81dcd5e6d5274f0d71c1c65399114e3d",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j",
+    "size": 17113,
+    "sha256": "6188b9fe1c1d36b4c3e7b9f158d0d62bf13ee9009ae2e34379d141d726aca657",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+    "size": 28722,
+    "sha256": "6e6ddf339e1f3fc98b90f0d16735bedc657000654b8d448546e2286adf730c88",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveProjectileBehaviors.j",
+    "size": 5232,
+    "sha256": "1d007c2f02a118a16e71a3945095ab3f35455633d800774b3a307d80f31c843f",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j",
+    "size": 9365,
+    "sha256": "f1b2ed62ea8ee435269d2060cf4e1763f5dfce53d3a24c95da82fbf79d87a88c",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j",
+    "size": 6002,
+    "sha256": "a1f74fd51a11cecb2c19b0f442af2872a2581fe2f4e3b280d5eb9bfe55efcb8d",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j",
+    "size": 25304,
+    "sha256": "41989f214e0b4de74ecaa4db1ff7f66e75c3b88c61bc9a1e89e8893590fd1d0e",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveReinforcements.j",
+    "size": 133,
+    "sha256": "afcf998796e2ce8c1e63371c6ed059a144ebf2b544f028926b8925675768d753",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j",
+    "size": 9846,
+    "sha256": "0f3d9f1089f7dd52a314b88f25942e9c0c1bcee33027581244dacf8fe56968b7",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j",
+    "size": 18028,
+    "sha256": "77a769bcc3b940add531e126f96990024401beed62a7759f6602d5eb4a4b8c5e",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j",
+    "size": 9758,
+    "sha256": "825141655319960fe775de5e1e7287c29d82fa80a3bb41ec05c5ef8f249e2485",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j",
+    "size": 21217,
+    "sha256": "68ef08ffa06c13f245e32daa2f68445222ed9cf373c11a3a4cc4f91a2568ca36",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j",
+    "size": 11318,
+    "sha256": "550488f3a2cf17ac908ce619a6e5aeabdee6b93f5e93f85b57e9b822be2ea129",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "build/AllCode.generated.j",
+    "size": 1287576,
+    "sha256": "36c205a0fbedd5524a93a714861b45d76b91e2dae6450d34f532544b4063fb93",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "build/build-jass.ps1",
+    "size": 12968,
+    "sha256": "2ac74ce7973efff8575708d290c28f66143bee3b4b668b422353a77f32e2d3ce",
+    "encoding": "utf-8",
+    "active": false
+  },
+  {
+    "path": "libraries/BoundSentinel.j",
+    "size": 2227,
+    "sha256": "5dd43675fa0109c984237a1fecdc26a145c253ff41cd5e3c628bf4ba795021ea",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/Camera.j",
+    "size": 8940,
+    "sha256": "c1c1799e3451fd029653ca396425d9c5dd496e259a2b3a3a98cedee3ecf9f165",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/CameraEQNoise.j",
+    "size": 2924,
+    "sha256": "6381c6e8c54a54f838fb62b7a10feceb6fde0d28726b087590a598e9fb452dcb",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/Damage Text Util.j",
+    "size": 1329,
+    "sha256": "2fab15d1058480577bcca6978d4c5cf44fff1cf2fdfbcf939dba247fe47c86e9",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/DummyCaster.j",
+    "size": 4066,
+    "sha256": "d92b550bfe391497b6d564f15da5ff364ef7a53a15753b5726cd1be8a9a982c0",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/File IO.j",
+    "size": 15125,
+    "sha256": "6e6e801da8845b74ccbcc4f7429c522ed222a2cb46bd14677eb1d48990faab46",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/HealthBarTextTags.j",
+    "size": 14901,
+    "sha256": "fec7217bafd949bcd4580498f406798ed79d8037369fb5c23b54bbd28f24a48e",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/IsDestructableTree.j",
+    "size": 3207,
+    "sha256": "8dd4eb898f7b44f61c38baff9df6bea4c049c479cd2cb9e1497de8c7f91dd3f6",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/IsUnitChanneling.j",
+    "size": 4433,
+    "sha256": "45cad8072606c9e222d723f76494f0025d8a74ba692725e7d3f1402b38f1b11a",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/Missile.j",
+    "size": 80199,
+    "sha256": "83f8a3f2936d81a4896e9b3dd1a7191c3b51e00e222d1fc4e9f9844b10686d87",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/PlayerUtils.j",
+    "size": 10960,
+    "sha256": "ccecc594e26b897e421936e2fa64bac26e07fcd56a80b07d42b053918499e933",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/RegisterPlayerUnitEvent.j",
+    "size": 2501,
+    "sha256": "901003343a3b3c3af1687c06f8f45872b2862409ab3e6631028c7f715c46fde6",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/SilenceEx.j",
+    "size": 3441,
+    "sha256": "7cb95778456739f74182b3fff95ce6112f161682ebe9251fa444c027521aa8d7",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/SimError.j",
+    "size": 1721,
+    "sha256": "ab04e75ef12b84eb00af4b74ae9da5de92b5dee6732e8d1a1a7678d97efb23a1",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/SpacebarDetect.j",
+    "size": 4537,
+    "sha256": "b93a72b5d62c088c116ae70b4a034ef5e7cc65ee042ee36f13dbd91499465966",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/SpellEfffectEvent.j",
+    "size": 2124,
+    "sha256": "d3350d800dc75c0ffae2ebc3a7373fcdf28246bbca989c2d35b6db72f332732d",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/SpellFinishEvent.j",
+    "size": 1810,
+    "sha256": "34b8b7e4376c5a3aeb76a860b4950545f86be8cc21142564c5a8647666c7139b",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/SpellIndex.j",
+    "size": 2786,
+    "sha256": "d2e69086917db17f89472988c4c13ba5efcf4d53adec2dd503059fd21343cb9c",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/SwlsMath.j",
+    "size": 722,
+    "sha256": "7a2e5e1f667bbd6f0bd7b15120841d8442a37a113ecfa793755f6f66afd25cee",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/SyncInteger.j",
+    "size": 18504,
+    "sha256": "a11c37051144366395eb39c136e964009248591c69e6751df30e64e53fd8b48c",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/Table.j",
+    "size": 14370,
+    "sha256": "0c1d59fbd3919e0bf351ecf5be8277892838ea30c146433ca85006295d307e94",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/TerrainPathability.j",
+    "size": 4791,
+    "sha256": "fa7e6b6653fdb6ece9f6d3b528b1686e9d42c2398490b8db275325f0472f3cca",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/TerrainReplace.j",
+    "size": 33358,
+    "sha256": "589df3dd5f665ffeb2a037b3af9da6519c6f2aaeac0a95c442df4564e66b6b44",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/TextTagDebug.j",
+    "size": 3575,
+    "sha256": "ca54ef79ea9ea5259c4edd4e99319ce0bcf71fb308c5c64ad5d8ccbc993291df",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/TimerUtils.j",
+    "size": 16036,
+    "sha256": "51085b00ea287f27444b9a31613fa7ce2e1ad3d516ee8be1be6df0b78078083c",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/UIMath.j",
+    "size": 14550,
+    "sha256": "09af17982f6e257ce463649f687fdfc84bf5fb86deed568c8b6c0ca88ee7cf65",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/UnitDex.j",
+    "size": 18345,
+    "sha256": "fce553569be95f4d2356158b45db0aba7fdada93e4558348a075c88e39f4475a",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/UnitIndexer.j",
+    "size": 1675,
+    "sha256": "d105da230e2f34700f33d810d1d8bb1fe934fc552e60d688cc72d74aadce1ae4",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/UserInterface.j",
+    "size": 33877,
+    "sha256": "4095627076eb7609a4620e5039262f7954e86d41d78301b26043dc7a0a100476",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/WaveDamageCredit.j",
+    "size": 3769,
+    "sha256": "cb54bc5a1820819eef7800b24fad01deb3fbec6c89a7ae05b2fa5d2ad9f4e0da",
+    "encoding": "utf-8",
+    "active": true
+  },
+  {
+    "path": "libraries/WorldBounds.j",
+    "size": 1570,
+    "sha256": "b58e6120101fbe1152ae56113bea724057ea8f3c967dccf51c9a162636c6940d",
+    "encoding": "utf-8",
+    "active": true
+  }
+]

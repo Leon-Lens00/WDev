@@ -1,0 +1,662 @@
+--- before/build-warcraft3-vjass-127b/SKILL.md
++++ after/build-warcraft3-vjass-127b/SKILL.md
+@@ -1,62 +1,68 @@
+ ---
+ name: build-warcraft3-vjass-127b
+-description: "Trigger: Warcraft III 1.27b, JASS/vJASS, JNGP, JassHelper, pJASS, W3X, Object Editor, custom units, classic interfaces and inventories, multiplayer, missiles, rawcodes, map forensics. Build, audit, compile, and recover classic maps and code. Use the dedicated terrain skill for complete spatial generation. Exclude Reforged, Lua, and modern patches unless the target changes."
++description: "Crear, auditar, compilar y recuperar mapas W3X y código JASS/vJASS para Warcraft III Classic 1.27b. Incluye objetos, rawcodes, bibliotecas, inventarios, misiles y sincronización; usa el entorno local CachyOS/Wine cuando corresponda. Para ejecución visual, complementar con probar-warcraft3-classic-linux. No aplicar a Reforged/Lua salvo cambio explícito de objetivo."
+ ---
+ 
+-# Warcraft III vJASS 1.27b
++# Warcraft III Classic 1.27b: JASS/vJASS
+ 
+-Treat Warcraft III 1.27b, the installed JassHelper, and the map's exact libraries as a closed compatibility target. Verify; do not recall APIs from newer patches.
++Usar Warcraft III 1.27b, el JassHelper instalado y las bibliotecas exactas del mapa como objetivo cerrado de compatibilidad. Comprobar las APIs; no completar huecos con funciones de parches modernos.
+ 
+-## Evidence order
++## Entorno y herramientas
+ 
+-Resolve conflicts in this order: map source and `AGENTS.md`; installed `common.j`/`Blizzard.j`; installed JassHelper; exact bundled library source; pJASS; copied-map test on 1.27b; two-client test for synchronization; patch-matched reproducible community evidence.
++En esta PC, leer [references/entorno-local.md](references/entorno-local.md) antes de compilar, empaquetar o elegir Forge/wc3ctl. Contiene las rutas Linux comprobadas y las diferencias entre el entorno activo y las copias experimentales. Verificar su existencia; si el usuario aporta otro proyecto o toolchain, respetarlos y adaptar la ejecución.
+ 
+-Do not claim a function, member, callback, rawcode, or dependency exists without evidence from the relevant layer.
++- JassHelper es un `.exe` de Windows que aquí se ejecuta con el lanzador Wine existente; pJASS es nativo Linux. Las extensiones `.exe`, las rutas dentro de Wine y los nombres MPQ con barras inversas siguen siendo válidos en ese contexto.
++- Para compilar una fuente: usar `scripts/wc3.py vjass FUENTE.j SALIDA-NUEVA.j` del entorno local. Compila y valida, pero no inyecta ni publica un mapa.
++- Para el proyecto modular de esta skill: configurar `local_launcher` en `wc3project.json` y ejecutar `scripts/build_w3x_project.py MANIFEST`. Usa el lanzador de JassHelper y wc3ctl nativo para los MPQ. El modo `mpqeditor` directo sigue disponible para entornos donde esos ejecutables puedan ejecutarse directamente.
++- No imponer este proyecto modular a un mapa con su propio proceso de construcción: usar su entrada y manifiesto existentes, conservando los controles de compatibilidad y verificación.
+ 
+-## Workflow
++## Orden de evidencia
+ 
+-1. Validate and fingerprint `wc3toolchain.json` with `scripts/check_toolchain.py`.
+-2. Preserve the only `.w3x`; keep editable code modular under `src/` with one `Main.j` entrypoint.
+-3. Load only task-relevant references.
+-4. Separate correctness, synchronization, lifetime, performance, and style.
+-5. Build with `scripts/build_w3x_project.py`: lint, compile, validate, inject into a copied W3X, and verify MPQ round trips.
+-6. Report the strongest verification state reached and remaining tests.
++Resolver discrepancias con instrucciones vigentes del usuario/proyecto y evidencia local: fuente del mapa; `common.j`/`Blizzard.j` exactos; compilador instalado; fuente de cada biblioteca; pJASS; prueba de una copia en 1.27b; ensayo de clientes para afirmaciones de sincronización; documentación reproducible de la misma versión.
+ 
+-## Reference routing
++No afirmar que existe una función, miembro, callback, rawcode o dependencia sin evidencia de la capa correspondiente. Los perfiles `library-*.md` describen versiones y ensayos concretos: no certifican la revisión local actual ni obligan a sustituirla por una variante histórica.
+ 
+-- Patch/API/rawcodes: `references/compatibility-127b.md`
+-- Multiplayer/handles/groups/waits: `references/multiplayer-and-handles.md`
+-- Advanced vJASS: `references/vjass-advanced.md`
+-- Libraries/initialization: `references/libraries-and-initialization.md`
+-- AI failure patterns: `references/ai-failure-patterns.md`
+-- Missiles: `references/missile-systems.md`; load the matching `references/library-*.md` profile for an exact implementation
+-- Map recovery/toolchain: `references/map-analysis-toolchain.md`
+-- Classic camera-based interfaces, clickable dummy units, dynamic icons, inventory/equipment: `references/library-inventorysys-141.md` (observed techniques and defects; not multiplayer certification)
+-- Validation: `references/testing-matrices.md`
+-- Local Linux game/editor test execution and safe session closure: `/home/snz/.codex/skills/probar-warcraft3-classic-linux/SKILL.md`
+-- Provenance: `references/sources.md`
++## Flujo de trabajo
+ 
+-## Hard rules
++1. Resolver y validar `wc3toolchain.json` con `scripts/check_toolchain.py`; registrar hashes de compilador, pJASS y APIs.
++2. Conservar el original `.w3x`/`.w3m`. Trabajar con copias y un solo escritor por mapa; separar fuentes editables y artefactos generados.
++3. Leer sólo las referencias pertinentes. Distinguir errores funcionales, sincronización, recursos, rendimiento y estilo.
++4. Compilar vJASS antes de pJASS. Conservar comandos, salida, códigos de retorno y la causa inicial de los errores.
++5. Empaquetar en una salida nueva con el proceso del proyecto. Reextraer y comparar por hash el JASS, WCT e imports modificados; conservar cabecera HM3W y miembros ajenos. Una validación sin hallazgos no cubre comprobaciones omitidas.
++6. Si se requieren objetos/GUI, guardar y reabrir una copia con el editor correspondiente. Para probar en el juego o manejar editores, seguir [probar-warcraft3-classic-linux](/home/snz/.codex/skills/probar-warcraft3-classic-linux/SKILL.md).
++7. Informar el estado más fuerte realmente alcanzado y las pruebas pendientes.
+ 
+-- Reject `Blz*`, `FourCC`, Lua, Frame API, 24-player APIs, and external patch APIs for vanilla 1.27b unless the exact local natives prove availability or the user explicitly changes the target.
+-- Use rawcodes such as `'hfoo'`; never invent object IDs.
+-- Treat every `GetLocalPlayer` branch as tainted until all writes and later data flows are proven cosmetic and local-safe.
+-- Do not create, destroy, recycle, mutate gameplay handles, or consume synchronized RNG in a local-only branch.
+-- Keep one authorized owner of `SetUnitUserData` when using a UnitIndexer.
+-- Record the exact version, source, dependencies, lifecycle, and compiler requirements of every external library; do not mix forks.
+-- Preserve public behavior when auditing legacy libraries. Propose safe fixes separately from experimental refactors.
++## Referencias por tarea
+ 
+-## Output contract
++- Entorno CachyOS, Wine, Forge, wc3ctl y comandos: [entorno-local.md](references/entorno-local.md).
++- APIs, parche y rawcodes: [compatibility-127b.md](references/compatibility-127b.md).
++- Multijugador, handles, grupos y waits: [multiplayer-and-handles.md](references/multiplayer-and-handles.md).
++- vJASS avanzado: [vjass-advanced.md](references/vjass-advanced.md).
++- Bibliotecas e inicialización: [libraries-and-initialization.md](references/libraries-and-initialization.md).
++- Fallos frecuentes: [ai-failure-patterns.md](references/ai-failure-patterns.md).
++- Misiles: [missile-systems.md](references/missile-systems.md) y el perfil `library-*.md` de la versión exacta.
++- Recuperación WTG/WCT/JASS y empaquetado: [map-analysis-toolchain.md](references/map-analysis-toolchain.md).
++- Interfaces clásicas de cámara, dummies e inventario: [library-inventorysys-141.md](references/library-inventorysys-141.md); técnicas observadas, no certificación multijugador.
++- Matrices de validación: [testing-matrices.md](references/testing-matrices.md).
++- Procedencia y fuentes: [sources.md](references/sources.md).
+ 
+-Classify findings as `ERROR`, `WARNING`, `PERF`, or `STYLE`; do not present an optimization or preference as a correctness bug.
++## Restricciones de compatibilidad
+ 
+-Report exactly one strongest status: **Designed**, **Scanned**, **Compiled**, **Validated**, **Tested in map**, or **Tested in multiplayer**. Do not collapse these states into "works perfectly."
++- Rechazar `Blz*`, `FourCC`, Frame API, APIs de 24 jugadores y extensiones de parches/plataformas para vanilla 1.27b, salvo disponibilidad probada en el objetivo o cambio explícito del usuario.
++- El script del mapa es JASS. Lua de configuración de NewGen/YDWE o de herramientas externas no convierte el mapa en un objetivo Lua ni está prohibido por esta restricción.
++- Usar rawcodes como `'hfoo'` y comprobar cada objeto; no inventar IDs.
++- En `GetLocalPlayer`, demostrar que todas las escrituras y sus efectos posteriores son exclusivamente visuales. No asignar/destruir handles de juego, alterar estado sincronizado o consumir RNG sincronizado sólo en un cliente.
++- Mantener un propietario autorizado de `SetUnitUserData` al usar UnitIndexer.
++- Registrar versión, procedencia, dependencias, ciclo de vida y compilador de cada biblioteca. No mezclar forks ni trasladar PASS entre versiones.
++- Preservar el comportamiento público al auditar código heredado. Separar las correcciones demostradas de cambios experimentales.
+ 
+-## Bundled tools
++## Resultado y herramientas auxiliares
+ 
+-- `scripts/check_toolchain.py CONFIG [--json]`: verify the 1.27b target, required files, classic native surface, absolute paths, sizes, and SHA-256 fingerprints.
+-- `scripts/wc3lint.py PATH [--json]`: conservative static scan for legacy compatibility and known failure patterns.
+-- `scripts/compile_vjass.py --jasshelper EXE --pjass EXE --common FILE --blizzard FILE --input FILE --output FILE [--debug] [--no-optimize] [--dry-run] [--log FILE]`: JassHelper `--scriptonly` followed by pJASS.
+-- `scripts/build_w3x_project.py MANIFEST`: build modular `.j` sources, update the managed WCT import, inject compiled/archive files with MPQEditor, compact, re-extract, and hash-verify.
+-- `scripts/map_inventory.py EXTRACTED_DIR`: inventory extracted files, decode editable WCT trigger text, and detect vJASS constructs without modifying the map.
+-- `assets/project-template/`: modular source tree, map directories, toolchain/project manifests, and project rules.
++Clasificar hallazgos como `ERROR`, `WARNING`, `PERF` o `STYLE`. Informar un único estado más fuerte: **Designed**, **Scanned**, **Compiled**, **Validated**, **Tested in map** o **Tested in multiplayer**. Un ensayo con fallos sigue teniendo fallos; no equivale a aprobación del producto.
++
++- `scripts/check_toolchain.py CONFIG [--json]`: objetivo, archivos, superficie clásica y SHA-256.
++- `scripts/wc3lint.py PATH [--json]`: revisión estática conservadora; no sustituye compilador ni motor.
++- `scripts/compile_vjass.py --jasshelper EXE --pjass BIN --common FILE --blizzard FILE --input FILE --output NUEVO [--local-launcher /ruta/scripts/wc3.py] [--dry-run] [--log FILE]`: compilación y pJASS. En modo directo admite `--debug` y `--no-optimize`; el lanzador local no expone esos parámetros.
++- `scripts/build_w3x_project.py MANIFEST`: construcción modular con backend local wc3ctl o MPQEditor directo, WCT opcional y reextracción por hash. Requiere salida y compilado nuevos.
++- `scripts/map_inventory.py EXTRACTED_DIR`: inventario y recuperación de WCT sin modificar el mapa.
++- `assets/project-template/`: ejemplo local; revisar rutas, mapa base y política de WCT antes de usarlo.
+--- before/build-warcraft3-vjass-127b/agents/openai.yaml
++++ after/build-warcraft3-vjass-127b/agents/openai.yaml
+@@ -1,4 +1,4 @@
+ interface:
+   display_name: "Warcraft III vJASS 1.27b"
+-  short_description: "Compila, audita y recupera mapas clásicos"
+-  default_prompt: "Usá la skill de Warcraft III vJASS 1.27b para inspeccionar, recuperar, compilar o auditar este mapa o sistema clásico."
++  short_description: "Compila y audita mapas Classic en CachyOS/Wine"
++  default_prompt: "Usa $build-warcraft3-vjass-127b para compilar, recuperar o auditar este mapa Classic 1.27b con la toolchain local verificada."
+--- before/build-warcraft3-vjass-127b/assets/project-template/AGENTS.md
++++ after/build-warcraft3-vjass-127b/assets/project-template/AGENTS.md
+@@ -7,10 +7,11 @@
+ - Keep third-party code in `src/libraries/`, map systems in `src/systems/`, and abilities in `src/spells/`.
+ - Use `src/Main.j` as the only project entrypoint; compose sources with `//! import`.
+ - Save every `.j` source as UTF-8 without BOM; classic JassHelper reads a BOM as source text.
+-- Do not use `Blz*`, `FourCC`, Lua, Frame API, or unapproved external APIs.
++- Do not use `Blz*`, `FourCC`, a Lua map script, Frame API, or unapproved external APIs. Lua configuration used by editors/tools is outside this map-script restriction.
+ - Do not invent rawcodes or library members.
+ - Keep the only original map unchanged; build and test copies.
+-- Build through `build_w3x_project.py wc3project.json`; do not concatenate or paste generated JASS manually.
++- Build through `build_w3x_project.py wc3project.json`; do not concatenate generated JASS manually. On this CachyOS PC, keep `local_launcher` configured for FrozenThone scripts/wc3.py and use fresh build/output paths. JassHelper runs under its configured Wine runtime; pJASS and archive tooling run natively.
++- Template tool paths describe this PC; verify them or replace them with the project-authorized toolchain. Windows paths inside Wine and MPQ member names are not Linux filesystem paths.
+ - Keep the builder-managed WCT import when World Editor saves must remain reproducible.
+ - Record exact library versions and one owner for UnitIndexer, timer recycling, and damage events.
+ - Report verification as designed, scanned, compiled, validated, tested in map, or tested in multiplayer.
+--- before/build-warcraft3-vjass-127b/assets/project-template/wc3project.example.json
++++ after/build-warcraft3-vjass-127b/assets/project-template/wc3project.example.json
+@@ -5,11 +5,11 @@
+   "entrypoint": "src/Main.j",
+   "source_root": "src",
+   "toolchain": "wc3toolchain.json",
+-  "mpqeditor": "C:/path/to/MPQEditor.exe",
+   "output_map": "dist/MyMap-dev.w3x",
+   "build_dir": "build",
+   "report": "reports/build-report.json",
+   "sync_wct": true,
+   "wct_import": "../src/Main.j",
+-  "archive_files": []
++  "archive_files": [],
++  "local_launcher": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py"
+ }
+--- before/build-warcraft3-vjass-127b/assets/project-template/wc3toolchain.example.json
++++ after/build-warcraft3-vjass-127b/assets/project-template/wc3toolchain.example.json
+@@ -1,7 +1,7 @@
+ {
+   "target": "Warcraft III 1.27b",
+-  "jasshelper": "C:/path/to/clijasshelper.exe",
+-  "pjass": "C:/path/to/pjass.exe",
+-  "common": "C:/path/to/common.j",
+-  "blizzard": "C:/path/to/Blizzard.j"
++  "jasshelper": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/clijasshelper.exe",
++  "pjass": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/pjass",
++  "common": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
++  "blizzard": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j"
+ }
+--- before/build-warcraft3-vjass-127b/references/entorno-local.md
++++ after/build-warcraft3-vjass-127b/references/entorno-local.md
+@@ -0,0 +1,57 @@
++# Entorno local de Warcraft III Classic
++
++Rutas comprobadas el 20-10-2026 en CachyOS x86_64/Hyprland. Son referencias de esta PC: verificar los destinos y el proyecto elegido antes de usarlas; no migrar ni reconfigurar instalaciones automáticamente.
++
++## Fuentes de configuración
++
++- Entorno del juego y compilación: `/home/snz/Documentos/ChatGPT/FrozenThone`.
++- Leer allí `AGENTS.md`, `docs/herramientas-wc3.txt`, `wc3-environment.json` y `wc3toolchain.json` según la operación.
++- Entrada directa estable: `/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py`.
++- Taller: `/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3`, enlace a `scripts/wc3-taller.py` del entorno.
++- Forge encontrado actualmente: `/home/snz/Documentos/MCP W3/wc3-forge`.
++
++**Desajuste observado:** `wc3-environment.json`, algunas guías y el enlace de Forge del Taller aún apuntan a `/home/snz/Documentos/WarDatsPy/wc3-forge`, ruta que ya no existe. `wc3 verificar` falla por esos destinos, mientras los destinos de compilación, juego, NewGen y YDWE existen. Evaluar cada fallo: esto no demuestra que `vjass` o `play` estén rotos. Comprobar y resolver Forge por separado antes de usar `forge`, `mcp`, `probe` o scripts que dependan de su fuente/GUI. No cambiar configuración ajena como efecto de leer esta skill.
++
++## Toolchain y comandos locales
++
++El `wc3toolchain.json` del entorno apunta a:
++
++| Componente | Ruta relativa al entorno |
++|---|---|
++| JassHelper Windows | `editors/newgen/jasshelper/standart/clijasshelper.exe` |
++| pJASS Linux | `tools/wc3-addons/wc3_agent_tools/pjass/pjass` |
++| API Classic | `tools/wc3-addons/classic-assets/Scripts/common.j` |
++| Biblioteca BJ | `tools/wc3-addons/classic-assets/Scripts/Blizzard.j` |
++| Juego fuente | `games/WarcraftIII-1.27b` |
++
++```bash
++python3 /home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/check_toolchain.py /home/snz/Documentos/ChatGPT/FrozenThone/wc3toolchain.json --json
++python3 /home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py vjass /ruta/FUENTE.j /ruta/SALIDA-NUEVA.j
++python3 /home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py pjass /ruta/JASS-COMPILADO.j
++python3 /home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py wc3ctl info /ruta/COPIA.w3x --json
++```
++
++El lanzador `vjass` prepara una copia de JassHelper con sus DLL y configuración, usa `editores.environment('newgen')` y el runtime que ese módulo seleccione, traduce rutas a `Z:\...`, conserva logs y termina validando con pJASS nativo. No ejecutar el PE como un binario Linux ni copiarlo aislado sin sus dependencias. El Wine antiguo puede servir para compilación sin acreditar calidad gráfica; no confundirlo con el perfil moderno de pruebas.
++
++El comando no acepta salida existente. Los imports deben resolver a archivos reales; usar UTF-8 sin BOM para nuevas fuentes. En `build_w3x_project.py`, `local_launcher` debe señalar a este `scripts/wc3.py`, no al enlace `wc3` del Taller: se verifica su configuración contra los cuatro archivos de la toolchain. El builder traduce el import absoluto a Wine; los nombres de miembros MPQ siguen usando `\` independientemente del sistema anfitrión.
++
++## Empaquetado y fuente editable
++
++La plantilla local configura `local_launcher` y no necesita MPQEditor.exe. wc3ctl extrae bytes, guarda cada sustitución en un archivo temporal distinto y repaca al guardar. El builder reextrae JASS, WCT e imports y compara SHA-256; conserva el prefijo HM3W. Para una versión entregable, comprobar también miembros ajenos con el diff de archivos y después guardar/reabrir o jugar según el alcance solicitado.
++
++`sync_wct` sólo se activa si existe una WCT versión 1 compatible y se quiere conservar la importación externa. El bloque WCT no incorpora por sí solo todos los archivos `src/`: entregarlos y mantener la ruta relativa a la copia del mapa. Si el proyecto tiene otro formato de triggers o sólo debe entregar JASS compilado, seguir su construcción o desactivar explícitamente `sync_wct`; no inventar ni convertir WTG/WCT para forzar el ejemplo.
++
++En otro entorno puede usarse `mpqeditor` sin `local_launcher`, conservando los parámetros existentes. Ese modo lanza MPQEditor/JassHelper directamente: requiere Windows o un wrapper ejecutable revisado que traduzca sus rutas y configure Wine. Un nombre `.exe` no basta para ejecutarlo en Linux.
++
++## Versiones de wc3ctl y Forge
++
++- El lanzador del entorno sigue usando `tools/wc3-addons/wc3ctl-classic-bin/wc3ctl.dll`: adaptación local **0.3.0** con lector MPQ Classic. Revisar diagnósticos y comprobaciones omitidas.
++- La descarga **0.4.10** está en `/home/snz/Documentos/MCP W3/wc3-forge/wc3ctl`. Su viabilidad Linux/MPQ se verificó con un prototipo aislado; no reemplazó la instalación activa. Evidencia: `verificacion-adaptacion-20261020/RESULTADO.txt` dentro de esa copia.
++- El comando `new` de 0.4.10 genera W3I versión 28 incluso con objetivo 1.27b; no usar esa salida como base Classic sin conversión verificada. Para 1.27b, comprobar W3I <=25, terreno <=11, objetos Classic, JASS y assets compatibles. Un análisis de identificadores no valida todos los formatos.
++- Forge tiene modificaciones locales Classic. Abrir copias: su Save As puede guardar primero el archivo abierto. El auxiliar Linux/MCP y la ventana GUI son sesiones diferentes; seleccionar explícitamente la sesión y conservar un único escritor por archivo. No acreditar su visor como réplica exacta del juego.
++
++## Ejecución y bibliotecas
++
++Seguir `/home/snz/.codex/skills/probar-warcraft3-classic-linux/SKILL.md` para `play`, editores, capturas, resultados y cierre. El perfil gráfico de `play` es NewGen moderno (GE-Proton/DXVK/RenderEdge); YDWE conserva su perfil propio. No cambiar perfiles por una receta histórica de compilación.
++
++Los perfiles de bibliotecas de esta skill son evidencia por versión/hash. Para código local actual, consultar fuentes y contratos del proyecto, no adoptar automáticamente `030-Missiles.j`, una RC antigua, el candidato Two ni una biblioteca sólo porque tenga un PASS histórico. Los ensayos locales RC8/candidato y las limitaciones están en las guías del proyecto; no promover una revisión ni iniciar LAN aplazado como consecuencia de actualizar herramientas.
+--- before/build-warcraft3-vjass-127b/references/library-chopinski-relativistic-missiles-2.8.md
++++ after/build-warcraft3-vjass-127b/references/library-chopinski-relativistic-missiles-2.8.md
+@@ -17,7 +17,7 @@
+ 3. `032-Missiles.j`: modern unit backend. Uses `BlzGroupGetSize`, `BlzGetUnitCollisionSize`, `BlzSetUnitFacingEx`, and unit real fields.
+ 4. `028-MissileUtils.j`: optional missile-group layer. Requires the exact Missiles API plus Alloc.
+ 
+-For 1.27b, start from the fingerprinted `030-Missiles.j`; do not modernize or mix it with `031`/`032` by replacing individual natives.
++Among these recovered upstream variants, the fingerprinted `030-Missiles.j` is the Classic candidate; do not mix it with `031`/`032` by replacing individual natives. This profile describes that recovered version, not the later local RC8 or Two candidate. For an existing project, preserve and audit its exact source and contracts; see [entorno-local.md](entorno-local.md).
+ 
+ When DummyRecycler 1.25 sees Bribe/NewTable 3.1.0.1, its optional Table branch may fail because
+ the typed `unit` view has no `remove` method. Either keep Table absent so the verified hashtable
+--- before/build-warcraft3-vjass-127b/references/map-analysis-toolchain.md
++++ after/build-warcraft3-vjass-127b/references/map-analysis-toolchain.md
+@@ -18,10 +18,10 @@
+ 
+ Keep `src/Main.j` as the only source entrypoint and compose project files with JassHelper `//! import`. Imports may be nested and relative to their importing file. Do not concatenate or namespace compiled JASS with regexes.
+ 
+-Use `wc3project.json` to declare the immutable base map, entrypoint, toolchain, MPQEditor, output map, build/report paths, WCT synchronization, and optional archive files. Run:
++Use `wc3project.json` to declare the immutable base map, entrypoint, toolchain, archive backend, output map, build/report paths, WCT synchronization, and optional archive files. On this CachyOS installation, use `local_launcher` pointing to FrozenThone `scripts/wc3.py`; see [entorno-local.md](entorno-local.md). This delegates JassHelper to the configured Wine runtime and archive operations to native wc3ctl. The optional `mpqeditor` direct backend remains for other configured environments. Run:
+ 
+ ```text
+-python scripts/build_w3x_project.py path/to/wc3project.json
++python3 /home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/build_w3x_project.py path/to/wc3project.json
+ ```
+ 
+ The builder must:
+@@ -32,8 +32,10 @@
+ 4. lint sources, compile with JassHelper, and validate with pJASS;
+ 5. copy the base W3X before mutation;
+ 6. inject compiled `war3map.j`, the managed WCT import, and declared archive files;
+-7. compact the output archive;
++7. repack on each wc3ctl save, or compact with the direct MPQEditor backend;
+ 8. re-extract every injected member and require byte-identical SHA-256 values.
++
++Use fresh output and build paths. A local Linux compiler import is translated to a Wine Z: path; MPQ member names and editable WCT imports retain their archive/Windows path semantics. The local launcher checks that its configured tools match the manifest; do not silently substitute another compiler.
+ 
+ WCT synchronization preserves existing global script text and owns only the block between `wc3project` markers. Disable it only when the output is intentionally compiled-only. A later World Editor save can overwrite an injected `war3map.j`; keep WCT synchronization enabled for an editable JNGP workflow.
+ 
+--- before/build-warcraft3-vjass-127b/scripts/build_w3x_project.py
++++ after/build-warcraft3-vjass-127b/scripts/build_w3x_project.py
+@@ -60,13 +60,14 @@
+     entrypoint: Path
+     source_root: Path
+     toolchain: Path
+-    mpqeditor: Path
++    mpqeditor: Path | None
+     output_map: Path
+     build_dir: Path
+     report: Path
+     sync_wct: bool
+     wct_import: str
+     archive_files: tuple[ArchiveFile, ...]
++    local_launcher: Path | None = None
+ 
+ 
+ def resolve_from(root: Path, value: str) -> Path:
+@@ -115,7 +116,8 @@
+     entrypoint = resolve_from(root, require_string(config, "entrypoint"))
+     source_root = resolve_from(root, config.get("source_root", str(entrypoint.parent)))
+     toolchain = resolve_from(root, require_string(config, "toolchain"))
+-    mpqeditor = resolve_from(root, require_string(config, "mpqeditor"))
++    local_launcher = resolve_from(root, require_string(config, "local_launcher")) if "local_launcher" in config else None
++    mpqeditor = resolve_from(root, require_string(config, "mpqeditor")) if not local_launcher else None
+     output_map = resolve_from(root, require_string(config, "output_map"))
+     build_dir = resolve_from(root, config.get("build_dir", "build"))
+     report = resolve_from(root, config.get("report", str(build_dir / "build-report.json")))
+@@ -151,7 +153,7 @@
+         ("base_map", base_map),
+         ("entrypoint", entrypoint),
+         ("toolchain", toolchain),
+-        ("mpqeditor", mpqeditor),
++        ("local_launcher" if local_launcher else "mpqeditor", local_launcher or mpqeditor),
+     ):
+         if not path.is_file():
+             raise ValueError(f"{field} does not exist: {path}")
+@@ -177,11 +179,14 @@
+         sync_wct=sync_wct,
+         wct_import=wct_import,
+         archive_files=tuple(archive_files),
+-    )
+-
+-
+-def render_compiler_input(entrypoint: Path, base_script: str) -> str:
++        local_launcher=local_launcher,
++    )
++
++
++def render_compiler_input(entrypoint: Path, base_script: str, *, wine_paths: bool = False) -> str:
+     path = str(entrypoint.resolve())
++    if wine_paths and os.name != "nt":
++        path = "Z:" + path.replace("/", "\\")
+     if any(char in path for char in "\"\r\n"):
+         raise ValueError(f"entrypoint path cannot be embedded safely: {path}")
+     return f'//! import "{path}"\n\n{base_script}'
+@@ -341,8 +346,15 @@
+     disk_path = disk_path_for_mpq(destination, target)
+     if disk_path.exists():
+         disk_path.unlink()
++    command = (
++        [sys.executable, str(project.local_launcher), "wc3ctl", "extract", str(archive),
++         validate_mpq_target(target), "-o", str(disk_path)]
++        if project.local_launcher
++        else mpq_extract_command(project.mpqeditor, archive, target, destination)
++    )
++    disk_path.parent.mkdir(parents=True, exist_ok=True)
+     execute(
+-        mpq_extract_command(project.mpqeditor, archive, target, destination),
++        command,
+         stage=stage,
+         cwd=project.root,
+         runner=runner,
+@@ -354,6 +366,8 @@
+ 
+ 
+ def build_project(project: Project, runner: Runner = subprocess.run) -> dict[str, Any]:
++    if project.output_map.exists():
++        raise BuildError(f"output_map already exists; choose a new output: {project.output_map}")
+     project.build_dir.mkdir(parents=True, exist_ok=True)
+     project.output_map.parent.mkdir(parents=True, exist_ok=True)
+     project.report.parent.mkdir(parents=True, exist_ok=True)
+@@ -379,7 +393,7 @@
+     base_script = base_script_path.read_text(encoding="utf-8-sig")
+     compiler_input = project.build_dir / "compiler-input.j"
+     compiler_input.write_text(
+-        render_compiler_input(project.entrypoint, base_script),
++        render_compiler_input(project.entrypoint, base_script, wine_paths=bool(project.local_launcher)),
+         encoding="utf-8",
+         newline="\n",
+     )
+@@ -408,6 +422,8 @@
+ 
+     tool_files = toolchain_report["files"]
+     compiled_jass = project.build_dir / "war3map.compiled.j"
++    if compiled_jass.exists():
++        raise BuildError(f"compiled output already exists; choose a fresh build_dir: {compiled_jass}")
+     compile_log = project.build_dir / "compile-report.json"
+     execute(
+         [
+@@ -427,6 +443,7 @@
+             str(compiled_jass),
+             "--log",
+             str(compile_log),
++            *(["--local-launcher", str(project.local_launcher)] if project.local_launcher else []),
+         ],
+         stage="compile and validate",
+         cwd=project.root,
+@@ -436,8 +453,6 @@
+     if not compiled_jass.is_file():
+         raise BuildError(f"compiler did not produce {compiled_jass}")
+ 
+-    if project.output_map.exists():
+-        project.output_map.unlink()
+     if map_prefix:
+         working_archive = project.build_dir / "output-archive.mpq"
+         shutil.copy2(base_archive, working_archive)
+@@ -451,20 +466,34 @@
+     managed_files.extend((item.source, item.target) for item in project.archive_files)
+ 
+     for source, target in managed_files:
++        staged = project.build_dir / "member-update.mpq"
++        if project.local_launcher and staged.exists():
++            raise BuildError(f"archive staging file already exists: {staged}")
++        command = (
++            [sys.executable, str(project.local_launcher), "wc3ctl", "file", "set",
++             str(working_archive), target, str(source), "-o", str(staged)]
++            if project.local_launcher
++            else mpq_add_command(project.mpqeditor, working_archive, source, target)
++        )
+         execute(
+-            mpq_add_command(project.mpqeditor, working_archive, source, target),
++            command,
+             stage=f"inject {target}",
+             cwd=project.root,
+             runner=runner,
+             command_log=command_log,
+         )
+-    execute(
+-        mpq_compact_command(project.mpqeditor, working_archive),
+-        stage="compact output map",
+-        cwd=project.root,
+-        runner=runner,
+-        command_log=command_log,
+-    )
++        if project.local_launcher:
++            if not staged.is_file():
++                raise BuildError(f"wc3ctl did not save the updated archive: {staged}")
++            staged.replace(working_archive)
++    if not project.local_launcher:
++        execute(
++            mpq_compact_command(project.mpqeditor, working_archive),
++            stage="compact output map",
++            cwd=project.root,
++            runner=runner,
++            command_log=command_log,
++        )
+ 
+     if map_prefix:
+         assemble_headered_map(map_prefix, working_archive, project.output_map)
+@@ -511,6 +540,7 @@
+         "wct_import": project.wct_import if project.sync_wct else None,
+         "verification": verification,
+         "toolchain": toolchain_report,
++        "archive_backend": "local wc3ctl (repacked on save)" if project.local_launcher else "MPQEditor",
+         "commands": command_log,
+         "verification_state": "Validated",
+         "remaining_tests": ["Open copied map in World Editor", "Test in Warcraft III 1.27b", "Run two-client test for sync claims"],
+--- before/build-warcraft3-vjass-127b/scripts/compile_vjass.py
++++ after/build-warcraft3-vjass-127b/scripts/compile_vjass.py
+@@ -5,6 +5,7 @@
+ 
+ import argparse
+ import json
++import os
+ import subprocess
+ import sys
+ from pathlib import Path
+@@ -25,7 +26,24 @@
+         jasshelper.append("--nooptimize")
+     jasshelper.extend(["--scriptonly", str(args.common), str(args.blizzard), str(args.input), str(args.output)])
+     pjass = [str(args.pjass), str(args.common), str(args.blizzard), str(args.output)]
++    if getattr(args, "local_launcher", None):
++        jasshelper = [sys.executable, str(args.local_launcher), "vjass", str(args.input), str(args.output)]
+     return jasshelper, pjass
++
++
++def validate_local_toolchain(args: argparse.Namespace) -> None:
++    """The local launcher owns its tool paths; reject a mismatched manifest."""
++    root = args.local_launcher.parent.parent
++    config = json.loads((root / "wc3-environment.json").read_text(encoding="utf-8"))
++    expected = {
++        "jasshelper": root / config["jasshelper_dir"] / "clijasshelper.exe",
++        "pjass": root / "tools/wc3-addons/wc3_agent_tools/pjass/pjass",
++        "common": root / config["classic_common"],
++        "blizzard": root / config["classic_blizzard"],
++    }
++    for name, path in expected.items():
++        if getattr(args, name).resolve() != path.resolve():
++            raise ValueError(f"local launcher {name} differs from the requested toolchain: {path}")
+ 
+ 
+ def run(command: list[str], cwd: Path) -> subprocess.CompletedProcess[str]:
+@@ -44,11 +62,25 @@
+     parser.add_argument("--no-optimize", action="store_true")
+     parser.add_argument("--dry-run", action="store_true", help="Print commands without executing")
+     parser.add_argument("--log", type=Path, help="Optional JSON log path")
++    parser.add_argument("--local-launcher", type=existing_file,
++                        help="FrozenThone scripts/wc3.py: stage JassHelper under its configured Wine runtime")
+     args = parser.parse_args()
+ 
+     args.output = args.output.expanduser().resolve()
+     if args.output == args.input:
+         parser.error("output must not overwrite input")
++    if args.output.exists():
++        parser.error("output already exists; choose a new output path")
++    if args.local_launcher:
++        if args.debug or args.no_optimize:
++            parser.error("the local launcher does not expose --debug/--no-optimize; use a configured direct runner")
++        try:
++            validate_local_toolchain(args)
++        except (OSError, ValueError, KeyError) as exc:
++            parser.error(str(exc))
++    elif os.name != "nt" and not args.dry_run:
++        if args.jasshelper.read_bytes()[:2] == b"MZ":
++            parser.error("Windows JassHelper needs Wine; use --local-launcher /path/to/FrozenThone/scripts/wc3.py")
+     args.output.parent.mkdir(parents=True, exist_ok=True)
+     jh_command, pj_command = command_plan(args)
+ 
+@@ -62,8 +94,6 @@
+         print(json.dumps(report, indent=2))
+         return 0
+ 
+-    if args.output.exists():
+-        args.output.unlink()
+     jh = run(jh_command, args.input.parent)
+     report["jasshelper"] = {"returncode": jh.returncode, "stdout": jh.stdout, "stderr": jh.stderr}
+     report["compiled"] = jh.returncode == 0 and args.output.is_file()
+@@ -91,4 +121,3 @@
+ 
+ if __name__ == "__main__":
+     sys.exit(main())
+-
+--- before/build-warcraft3-vjass-127b/scripts/tests/test_build_w3x_project.py
++++ after/build-warcraft3-vjass-127b/scripts/tests/test_build_w3x_project.py
+@@ -103,13 +103,20 @@
+                 build_w3x_project.load_project(manifest)
+ 
+     def test_compiler_input_imports_entrypoint_before_base_script(self):
+-        entrypoint = Path(r"C:\Maps\My Project\src\Main.j")
++        entrypoint = Path("My Project/src/Main.j").resolve()
+         base_script = "globals\nendglobals\nfunction main takes nothing returns nothing\nendfunction\n"
+ 
+         rendered = build_w3x_project.render_compiler_input(entrypoint, base_script)
+ 
+-        self.assertTrue(rendered.startswith('//! import "C:\\Maps\\My Project\\src\\Main.j"\n'))
++        self.assertTrue(rendered.startswith(f'//! import "{entrypoint}"\n'))
+         self.assertTrue(rendered.endswith(base_script))
++
++    @unittest.skipIf(sys.platform == "win32", "Wine path translation is for Linux")
++    def test_linux_compiler_import_is_readable_inside_wine(self):
++        entrypoint = Path("My Project/src/Main.j").resolve()
++        rendered = build_w3x_project.render_compiler_input(entrypoint, "// base", wine_paths=True)
++        wine_path = "Z:" + str(entrypoint).replace("/", "\\")
++        self.assertEqual(rendered, f'//! import "{wine_path}"\n\n// base')
+ 
+     def test_source_tree_rejects_utf8_bom_with_actionable_error(self):
+         with tempfile.TemporaryDirectory() as temporary:
+@@ -163,6 +170,12 @@
+         self.assertEqual(staged_bytes, archive)
+ 
+     def test_build_project_runs_compile_injection_and_roundtrip_pipeline(self):
++        self.exercise_pipeline(local=False)
++
++    def test_local_backend_compiles_and_injects_binary_members_without_mpqeditor(self):
++        self.exercise_pipeline(local=True)
++
++    def exercise_pipeline(self, local):
+         with tempfile.TemporaryDirectory() as temporary:
+             root = Path(temporary)
+             (root / "src").mkdir()
+@@ -178,6 +191,7 @@
+             base_map = root / "base.w3x"
+             base_map.write_bytes(b"MPQ\x1aBASE-MAP")
+             (root / "MPQEditor.exe").write_bytes(b"mpqeditor")
++            (root / "wc3.py").write_text("# launcher fixture\n")
+             for name, content in {
+                 "clijasshelper.exe": b"jasshelper",
+                 "pjass.exe": b"pjass",
+@@ -226,10 +240,23 @@
+                 "war3map.wct": wct_fixture(""),
+             }
+             injected: dict[str, bytes] = {}
++            if local:
++                config = json.loads(manifest.read_text())
++                config.pop("mpqeditor")
++                config["local_launcher"] = "wc3.py"
++                manifest.write_text(json.dumps(config))
+ 
+             def fake_runner(command, **_kwargs):
+                 command = [str(item) for item in command]
+-                if len(command) > 1 and command[1] == "extract":
++                if len(command) > 3 and command[2:4] == ["wc3ctl", "extract"]:
++                    archive, target = Path(command[4]), command[5]
++                    output = Path(command[command.index("-o") + 1])
++                    output.parent.mkdir(parents=True, exist_ok=True)
++                    output.write_bytes(original_members[target] if archive == base_map else injected[target])
++                elif len(command) > 4 and command[2:5] == ["wc3ctl", "file", "set"]:
++                    injected[command[6]] = Path(command[7]).read_bytes()
++                    Path(command[command.index("-o") + 1]).write_bytes(b"updated archive")
++                elif len(command) > 1 and command[1] == "extract":
+                     archive = Path(command[2])
+                     target = command[3]
+                     destination = Path(command[4])
+--- before/build-warcraft3-vjass-127b/scripts/tests/test_compile_vjass.py
++++ after/build-warcraft3-vjass-127b/scripts/tests/test_compile_vjass.py
+@@ -0,0 +1,51 @@
++import argparse
++import importlib.util
++import json
++from pathlib import Path
++import subprocess
++import sys
++import tempfile
++import unittest
++
++SCRIPT = Path(__file__).parents[1] / "compile_vjass.py"
++SPEC = importlib.util.spec_from_file_location("compile_vjass", SCRIPT)
++module = importlib.util.module_from_spec(SPEC)
++SPEC.loader.exec_module(module)
++
++
++class CompileLocalTests(unittest.TestCase):
++    def test_launcher_mismatch_is_rejected_before_execution(self):
++        with tempfile.TemporaryDirectory() as directory:
++            root = Path(directory)
++            launcher = root / "scripts/wc3.py"
++            launcher.parent.mkdir()
++            launcher.touch()
++            (root / "wc3-environment.json").write_text(json.dumps({
++                "jasshelper_dir": "compiler", "classic_common": "api/common.j",
++                "classic_blizzard": "api/Blizzard.j",
++            }))
++            args = argparse.Namespace(local_launcher=launcher,
++                jasshelper=root / "different/compiler.exe", pjass=root / "pjass",
++                common=root / "common.j", blizzard=root / "Blizzard.j")
++            with self.assertRaisesRegex(ValueError, "jasshelper differs"):
++                module.validate_local_toolchain(args)
++
++    def test_existing_output_is_preserved(self):
++        with tempfile.TemporaryDirectory() as directory:
++            root = Path(directory)
++            source = root / "source.j"
++            source.write_bytes(b"source")
++            output = root / "output.j"
++            output.write_bytes(b"valuable existing output")
++            argv = [sys.executable, str(SCRIPT)]
++            for option in ["jasshelper", "pjass", "common", "blizzard", "input"]:
++                argv += ["--" + option, str(source)]
++            argv += ["--output", str(output)]
++            result = subprocess.run(argv, capture_output=True, text=True)
++            self.assertNotEqual(result.returncode, 0)
++            self.assertIn("output already exists", result.stderr)
++            self.assertEqual(output.read_bytes(), b"valuable existing output")
++
++
++if __name__ == "__main__":
++    unittest.main()
+--- before/probar-warcraft3-classic-linux/SKILL.md
++++ after/probar-warcraft3-classic-linux/SKILL.md
+@@ -8,6 +8,7 @@
+ ## Preparación
+ 
+ 1. Leer las instrucciones del workspace. En esta PC el entorno está en `/home/snz/Documentos/ChatGPT/FrozenThone`; consultar allí `docs/herramientas-wc3.txt` y `wc3-environment.json` antes de usar Forge/complementos. Las rutas y versiones pueden cambiar: comprobarlas.
++   Comprobar los destinos concretos de `wc3 verificar`: un fallo del acceso de Forge no invalida por sí solo NewGen, YDWE, compilación o `play`. Ver el desajuste local de rutas en la guía; conservar los parámetros de otros perfiles válidos.
+ 2. Leer [la guía local](references/guia-local.md). Contiene recetas de lanzamiento, teclas, cierre y evidencia comprobada. No reconstruir el procedimiento a partir de PIDs, coordenadas o logs de otro ensayo.
+ 3. Para modificar mapas/JASS, leer `/home/snz/.codex/skills/build-warcraft3-vjass-127b/SKILL.md`. Para interacción visual, leer `/home/snz/.codex/skills/control-escritorio-linux/SKILL.md` y comprobar capacidades/permisos actuales. Preferir CLI/API de aplicación donde resuelvan el trabajo.
+ 4. Inventariar procesos, prefijos y ventanas antes de lanzar. Usar una copia, un escritor por mapa, y registrar hash, versión, objetivo y criterio de éxito. Conservar editores y partidas preexistentes.
+--- before/probar-warcraft3-classic-linux/references/guia-local.md
++++ after/probar-warcraft3-classic-linux/references/guia-local.md
+@@ -13,6 +13,14 @@
+ Entorno: `/home/snz/Documentos/ChatGPT/FrozenThone`.
+ Entrada común: `/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3`.
+ Consultar `docs/herramientas-wc3.txt` y `wc3-environment.json` en ese entorno.
++
++### Comprobación de rutas del 20-10-2026
++
++La entrada del Taller existe y resuelve a `FrozenThone/scripts/wc3-taller.py`. `wc3 verificar` encontró ausentes únicamente los destinos de fuente/GUI de Forge y su enlace del Taller: la configuración aún señala `/home/snz/Documentos/WarDatsPy/wc3-forge`, mientras la copia actual está en `/home/snz/Documentos/MCP W3/wc3-forge`.
++
++Los destinos comprobados de `play`, NewGen, YDWE, GE-Proton, DXVK, JassHelper, pJASS y APIs Classic siguen presentes. Conservar sus perfiles y parámetros; esta revisión fue de rutas y lanzadores, sin repetir partidas. Resolver Forge por separado antes de usar `wc3 forge`, `mcp` o `probe`; no reparar enlaces ni modificar configuración global automáticamente. El comando `python3 /home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py play COPIA.w3x` es la entrada directa del mismo flujo de juego.
++
++El lanzador activo usa wc3ctl Classic local 0.3.0. La descarga y el prototipo 0.4.10 de la carpeta nueva todavía no sustituyen ese ejecutable. No confundir la prueba de Studio nativo con una prueba de mapas dentro del juego.
+ 
+ El perfil para `play` es `runtime/proton-newgen-modern-test/pfx`, con GE-Proton 11, DXVK 3.1.1 y RenderEdge. YDWE tiene otro perfil: `runtime/proton-ydwe-modern/pfx`. No intercambiar prefijos, lanzadores ni handles. El Wine 8 histórico mostró terreno negro; no usarlo como referencia gráfica. Confirmar las versiones activas si cambió la instalación.
+ 

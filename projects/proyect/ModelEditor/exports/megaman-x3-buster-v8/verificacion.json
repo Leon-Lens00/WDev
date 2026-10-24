@@ -1,0 +1,157 @@
+{
+  "models": [
+    {
+      "name": "X3_Buster_Cargado",
+      "canonicalNodeOrder": "PASS",
+      "ribbonReaderAndVisibility": "PASS",
+      "posesSampled": 311,
+      "geometryX": [
+        -105.69999694824219,
+        0
+      ],
+      "frontAtOrigin": "PASS",
+      "rootAtOrigin": "PASS",
+      "dependencies": "PASS",
+      "birthStandDeath": "structure and pose PASS",
+      "mdlGeometry": "PASS",
+      "binaryAndIndependentReaders": "PASS in build"
+    }
+  ],
+  "textures": [
+    {
+      "file": "Glow.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "65bf7a59a9948bac29899aa27599f3bc240af21b97f776b35dee4db4e29dccde",
+      "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Core.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "cb385102e6b40b62cb8606da46ae9b6599b0c9f5d6b51289ccba59e6707b93e6",
+      "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Band.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "6180dfc7d37d381855e26cb78be6349a4d4ba91ec2c86b0bfd4a23a28c28f390",
+      "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Filament.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "b747714d3e497681f332e89faa0c9d3ceda2fb88c90f3fdced8c55497f00330d",
+      "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Ring.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "6dc6547c8100a723d2a10b17ef33290987fb1d3463bdc1c678ff0e8ee8e29044",
+      "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Ribbon.blp",
+      "size": 64,
+      "mips": 7,
+      "rgbaSha256": "7255adf3ee29599868aaee2565da4e8f4277cae797273ee205cdedadc94bbbd3",
+      "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Spark.blp",
+      "size": 64,
+      "mips": 7,
+      "rgbaSha256": "8ed6f62f25d4972dafa04fc8d63944d7405cbade5384c6f15d47d80dd8a9a377",
+      "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Motes.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "575175abfceacbaba1fce18b4b797131aed65fdc92bc4be3f27936f6c261fa92",
+      "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Shell.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "cf7141db8164a8973f4c3a276c92e37808fab3ce97920edd8f93780db59775e4",
+      "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Flow.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "9dd2ff2e7fac13d456041d619866b67198508ac68b111dcbdc8dbecc4e7f9fcb",
+      "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa",
+      "origin": "original procedural V6",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Pulse.blp",
+      "size": 256,
+      "mips": 9,
+      "rgbaSha256": "32a284e883b1a7fc82335749604414e960f43280197f65e50a420d8790796d59",
+      "sha256": "5a18256d4e72c7355f5e7e7f5a542ba303915caac8ad9c81a927eb024ef3d329",
+      "origin": "original procedural V8 pulse",
+      "headerPixelsAndMipBytes": "PASS",
+      "independentM3Decode": "PASS"
+    }
+  ],
+  "pulseCheck": {
+    "samples": [
+      {
+        "time": 280,
+        "rearProgress": 0.08000000715255734
+      },
+      {
+        "time": 360,
+        "rearProgress": 0.36000000238418584
+      },
+      {
+        "time": 440,
+        "rearProgress": 0.6399999976158142
+      },
+      {
+        "time": 520,
+        "rearProgress": 0.9199999928474427
+      }
+    ],
+    "periodMs": 480,
+    "oldModelReconstruction": "byte-identical V7",
+    "v7FilesPreserved": 31,
+    "birthDeathPulseHidden": "PASS"
+  },
+  "limits": "No world physics or multiplayer tests; visual runtime checked separately."
+}

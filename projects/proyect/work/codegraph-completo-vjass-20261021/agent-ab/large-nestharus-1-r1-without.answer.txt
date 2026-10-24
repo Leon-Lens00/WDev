@@ -1,0 +1,8 @@
+`codegraph_explore` was unavailable; this chain is verified directly from `Systems/TimerTools/script.j`.
+
+- **Entry:** `Timer.create(timeout, onExpire, funcId)` directly returns `TimerList.add(TimerList.getTimeoutId(timeout), onExpire, funcId)`. The timeout ID is `R2I(timeout*320 + .5)` ([730–732](Systems/TimerTools/script.j#L730), [605–606](Systems/TimerTools/script.j#L605)).
+- **Intermediate wiring:** `TimerList.add` looks up `lists[timeoutId]`, reconstructs `timeout = timeoutId/320.`, and creates an `ExpirationCode` storing the selected `timerId`, callback, and `funcId` ([586–619](Systems/TimerTools/script.j#L586), [334–336](Systems/TimerTools/script.j#L334)).
+- **Queue conditions:** An existing timer must be present. If `isConst[timeoutId]`, enqueue when its remaining time is **< timeout/2**; otherwise, enqueue when remaining time is **≤ relativeOffset[timeoutId]**. Both branches call `ExpirationCode.create(...)` immediately before `CreationQueue.add(expirationCode)` ([621–651](Systems/TimerTools/script.j#L621)). `isConst` means `timeout <= relativeOffset*2` ([631–635](Systems/TimerTools/script.j#L631)).
+- **Queue behavior:** `CreationQueue.add` indexes by `expirationCode.timerId`, increments `toAdd`, and appends the node ([463–481](Systems/TimerTools/script.j#L463)). After callbacks execute, `Handler.expire` drains it through `CreationQueue.register` ([700–705](Systems/TimerTools/script.j#L700)).
+
+There is **no explicit `Handler.expiringTimer` check** along this creation path.

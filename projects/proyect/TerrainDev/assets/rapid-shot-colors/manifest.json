@@ -1,0 +1,287 @@
+{
+  "source_directory": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple",
+  "author": "Vinz",
+  "source_url": "https://www.hiveworkshop.com/threads/shots-vol-i.315258/",
+  "derivatives": "ModelEditor: revisi\u00f3n brillo, n\u00facleo claro y gradiente conservado; copias exactas sin modificar MDX/BLP.",
+  "models": [
+    {
+      "color": 0,
+      "label": "00-Rojo",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/00-Rojo/Shot_00_Red.mdx",
+      "sha256": "ccff29280627bf550ee90242dcf9640a87702b500312efab45e5ba9cdbc54f7e",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_00.blp"
+      ]
+    },
+    {
+      "color": 1,
+      "label": "01-Azul",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/01-Azul/Shot_01_Blue.mdx",
+      "sha256": "db27613b3dab1383f9e2d19101750641a898587391a50ee34252a7a821876e0c",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_01.blp"
+      ]
+    },
+    {
+      "color": 2,
+      "label": "02-Cian",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/02-Cian/Shot_02_Cyan.mdx",
+      "sha256": "e904d8db5f855897946ee100bd75d14a63968bd5bb203cc822c4b0621204f021",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_02.blp"
+      ]
+    },
+    {
+      "color": 3,
+      "label": "03-Purpura",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/03-Purpura/Shot_03_Purple.mdx",
+      "sha256": "b8603a490b276c08fd6877a3f11247e28fb78a44ed3e0e455a1cbf3391398b3b",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_03.blp"
+      ]
+    },
+    {
+      "color": 4,
+      "label": "04-Amarillo",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/04-Amarillo/Shot_04_Yellow.mdx",
+      "sha256": "78c1c1f5b50361e660320197ee252e77f9bb97c41259fd52b83206910cd150ca",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_04.blp"
+      ]
+    },
+    {
+      "color": 5,
+      "label": "05-Naranja",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/05-Naranja/Shot_05_Orange.mdx",
+      "sha256": "28afe16e01f483da909065bc0897e078f2ce55f0fb35c10f8b5408e7a858faec",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_05.blp"
+      ]
+    },
+    {
+      "color": 6,
+      "label": "06-Verde",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/06-Verde/Shot_06_Green.mdx",
+      "sha256": "81984a06e82daf9267e1318787daa4832c7b585110f4f7fc0f3aeff863056062",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_06.blp"
+      ]
+    },
+    {
+      "color": 7,
+      "label": "07-Rosa",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/07-Rosa/Shot_07_Pink.mdx",
+      "sha256": "0ce035ec72425e40e64a72c7b2eedb7b6c7fe72894d8870e33d0255cde724eab",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_07.blp"
+      ]
+    },
+    {
+      "color": 8,
+      "label": "08-Gris-claro",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/08-Gris-claro/Shot_08_LightGray.mdx",
+      "sha256": "e9c5f7bcf0545c529ec51649f3b09ebd75dd6c022b100314a476f1e570a353c6",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_08.blp"
+      ]
+    },
+    {
+      "color": 9,
+      "label": "09-Azul-claro",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/09-Azul-claro/Shot_09_LightBlue.mdx",
+      "sha256": "0f9bfa7f8c9a2b7b7658a2c32a105fe4bfe63b33b7c5ef5d6d4610b18c448b48",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_09.blp"
+      ]
+    },
+    {
+      "color": 10,
+      "label": "10-Verde-oscuro",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/10-Verde-oscuro/Shot_10_Aqua.mdx",
+      "sha256": "2bf8e18205d135ce38131df591f2cf6173cbd45c1710dc0f5baebf3890cd3bfe",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_10.blp"
+      ]
+    },
+    {
+      "color": 11,
+      "label": "11-Marron",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple/11-Marron/Shot_11_Brown.mdx",
+      "sha256": "d7dfab45d032b5da5a0a23411e1b5d7f734074e824aff743b2f3197d579fce7b",
+      "version": 800,
+      "textures": [
+        "ShotsTeam\\Flare.blp",
+        "ShotsTeam\\star5tga.blp",
+        "ShotsTeam\\Glow_11.blp"
+      ]
+    }
+  ],
+  "imports": [
+    {
+      "internal": "ShotsTeam\\Shot_00_Red.mdx",
+      "file": "rapid-shot-colors/Shot_00_Red.mdx",
+      "sha256": "ccff29280627bf550ee90242dcf9640a87702b500312efab45e5ba9cdbc54f7e"
+    },
+    {
+      "internal": "ShotsTeam\\Flare.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Flare.blp",
+      "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2"
+    },
+    {
+      "internal": "ShotsTeam\\star5tga.blp",
+      "file": "rapid-shot-colors/ShotsTeam/star5tga.blp",
+      "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_00.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_00.blp",
+      "sha256": "f65e1c4b7c4cc1897105041c7620cb84849262d3793ffc4553063faa0ace88f1"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_01_Blue.mdx",
+      "file": "rapid-shot-colors/Shot_01_Blue.mdx",
+      "sha256": "db27613b3dab1383f9e2d19101750641a898587391a50ee34252a7a821876e0c"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_01.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_01.blp",
+      "sha256": "50844a0d945141ad783b79ba15eb122a8580eee24a11c09e6bb4f7baff79365d"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_02_Cyan.mdx",
+      "file": "rapid-shot-colors/Shot_02_Cyan.mdx",
+      "sha256": "e904d8db5f855897946ee100bd75d14a63968bd5bb203cc822c4b0621204f021"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_02.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_02.blp",
+      "sha256": "7b031b5a9f338f989690c624741cac8511af0f9e8a6ca56484dc44fbb4052588"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_03_Purple.mdx",
+      "file": "rapid-shot-colors/Shot_03_Purple.mdx",
+      "sha256": "b8603a490b276c08fd6877a3f11247e28fb78a44ed3e0e455a1cbf3391398b3b"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_03.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_03.blp",
+      "sha256": "24933ccc94dec5b51521ee87bdc84789428dc7e6a3763f37867383feb63bb20e"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_04_Yellow.mdx",
+      "file": "rapid-shot-colors/Shot_04_Yellow.mdx",
+      "sha256": "78c1c1f5b50361e660320197ee252e77f9bb97c41259fd52b83206910cd150ca"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_04.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_04.blp",
+      "sha256": "b2bb1d254b362891e5223ccbc6116df8feeeb3ad22d5ce7d3e789a6a6f542a60"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_05_Orange.mdx",
+      "file": "rapid-shot-colors/Shot_05_Orange.mdx",
+      "sha256": "28afe16e01f483da909065bc0897e078f2ce55f0fb35c10f8b5408e7a858faec"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_05.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_05.blp",
+      "sha256": "973be24f5ae641b69d6103a6f7ce316893d48e4c26fea62138793eda1ab1c57e"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_06_Green.mdx",
+      "file": "rapid-shot-colors/Shot_06_Green.mdx",
+      "sha256": "81984a06e82daf9267e1318787daa4832c7b585110f4f7fc0f3aeff863056062"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_06.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_06.blp",
+      "sha256": "ebe5eaf4dbaeb99c384af6d9338edb6ac859866836353fb4708de601e2ea642c"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_07_Pink.mdx",
+      "file": "rapid-shot-colors/Shot_07_Pink.mdx",
+      "sha256": "0ce035ec72425e40e64a72c7b2eedb7b6c7fe72894d8870e33d0255cde724eab"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_07.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_07.blp",
+      "sha256": "01b1ebcca0be42d60ebf5679d7ff7dc144a587ccf509966b3eeaffb168c70499"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_08_LightGray.mdx",
+      "file": "rapid-shot-colors/Shot_08_LightGray.mdx",
+      "sha256": "e9c5f7bcf0545c529ec51649f3b09ebd75dd6c022b100314a476f1e570a353c6"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_08.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_08.blp",
+      "sha256": "2d4a8f9f3e184abc1bf7e4cf4de8d27e13f99091d5fc835f8aaa2c2580458023"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_09_LightBlue.mdx",
+      "file": "rapid-shot-colors/Shot_09_LightBlue.mdx",
+      "sha256": "0f9bfa7f8c9a2b7b7658a2c32a105fe4bfe63b33b7c5ef5d6d4610b18c448b48"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_09.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_09.blp",
+      "sha256": "ea14cde973ff5002e9653fb774d9d03543d067062e8d2716e78dd3e65a0470c5"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_10_Aqua.mdx",
+      "file": "rapid-shot-colors/Shot_10_Aqua.mdx",
+      "sha256": "2bf8e18205d135ce38131df591f2cf6173cbd45c1710dc0f5baebf3890cd3bfe"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_10.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_10.blp",
+      "sha256": "daf8f04d4a573d55ec2a9237de0bf7947d461d33a030757743f1ee430020776a"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_11_Brown.mdx",
+      "file": "rapid-shot-colors/Shot_11_Brown.mdx",
+      "sha256": "d7dfab45d032b5da5a0a23411e1b5d7f734074e824aff743b2f3197d579fce7b"
+    },
+    {
+      "internal": "ShotsTeam\\Glow_11.blp",
+      "file": "rapid-shot-colors/ShotsTeam/Glow_11.blp",
+      "sha256": "bd31a0365224713688cb6afbd03477b2d19e22fe8f4264209538d567b8084ccc"
+    }
+  ],
+  "revision": "shots-vol-i-organizados-brillo",
+  "previous_manifest": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/previous-assets/manifest.json",
+  "validation": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/asset-validation.json"
+}

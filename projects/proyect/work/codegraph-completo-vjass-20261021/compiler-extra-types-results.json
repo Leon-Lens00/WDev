@@ -1,0 +1,72 @@
+[
+  {
+    "case": "comment-header",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-i_fjazbc",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "4fe1f51eb73afb10e1d69a674743420eb6c560f465546c012bc723008fdd7067",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "function-interface-static-method",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-gd9bo3wn",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "5147956cfdb2271b5c2a7d75193f5c23fa3fc783248d7d40690568f53ec4033a",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 10: [] Unable to find function S in the map's script.\n1\n"
+  },
+  {
+    "case": "function-interface-name",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-spyie9p5",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "dadda1b2350c4da39e5625b048bb0a0af53fd4e3ba50119b335120a9ac9b229b",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 8: [] (1) is not of a type that allows . syntax\n1\n"
+  },
+  {
+    "case": "private-create",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-n4q9o3vx",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "305f15871d226d79c1d553701728c0a9b643c6cec4f1d40f7bec6e604a361536",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 10: [] S.create is private\n1\n"
+  },
+  {
+    "case": "private-create-child",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-jukwcz21",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "8c98735b3c90e6425d2653a47cac9f8168c6c9b51b97421f329381a287ecd1fb",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 9: [] Unable to extend Base\nLine 5: [] \\--- (Base was declared to have a private \"create\" method)\n1\n"
+  }
+]

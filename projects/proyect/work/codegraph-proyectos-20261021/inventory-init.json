@@ -1,0 +1,11 @@
+{
+  "args": [
+    "/home/snz/.local/bin/codegraph",
+    "init",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+    "--yes"
+  ],
+  "code": 0,
+  "stdout": "\u250c  Initializing CodeGraph\n\u2502\n\u25c6  Initialized in /home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration\n\u2502\nScanning files...\nParsing code...\nResolving refs...\nLinking dynamic dispatch...\n\u2502\n\u25c6  Indexed 56 files\n\u2502\n\u25cf  2,664 nodes, 3,747 edges in 201ms\n\u2502\n\u2514  Done\n\n",
+  "stderr": ""
+}

@@ -1,0 +1,46 @@
+Browser tab: 3, Title: "Vinz · estudio de 191 modelos", URL: "http://127.0.0.1:34801/vinz-study-v4/".
+0 AXWebArea Vinz · estudio de 191 modelos, URL: 127.0.0.1:34801/vinz-study-v4/
+	1 container
+		2 heading Vinz · estudio191, Value: 1
+			3 text Vinz · estudio191
+		4 button Anterior, ID: prev
+		5 text Página 
+		6 stepper (settable, integer) Página, Value: 16, ID: page
+		7 button Siguiente, ID: next
+		8 text Secuencia 
+		9 pop up button (collapsed, settable) Secuencia, Value: Stand, ID: sequence, Secondary Actions: Expand
+			10 menu
+				11 (selected) Stand
+				12 Birth120ms
+				13 Death120ms
+		14 text Cámara 
+		15 pop up button (collapsed, settable) Cámara, Value: Oblicua, ID: camera, Secondary Actions: Expand
+			16 menu
+				17 (selected) Oblicua
+				18 Lateral
+				19 Frontal
+		20 button Movimiento prueba | activar, ID: motion
+		25 text Página16/32 · 6 modelos · partículas298 · errores40
+	22 container
+		23 image view
+		24 container cells
+			26 container
+				27 text 090 · SilverBolts · SilverBolts
+				28 text Recursos resueltos 55 tris · 3 PE2 · 0 estelas · Stand · t377ms
+			29 container
+				30 text 091 · SpiritArrow · SpiritArrow
+				31 text Recursos resueltos 26 tris · 0 PE2 · 1 estelas · Stand · t1014ms
+			32 container
+				33 text 092 · BouncingBlade · BouncingBlade7
+				34 text Recursos resueltos 59 tris · 1 PE2 · 0 estelas · Stand · t1307ms
+			35 container
+				36 text 093 · BouncingBlade · BouncingBladeBuff
+				37 text Recursos resueltos 57 tris · 1 PE2 · 0 estelas · Stand · t1847ms
+			38 container
+				39 text 094 · BurningSpear · BurningSpear
+				40 text Recursos resueltos 15 tris · 1 PE2 · 0 estelas · Stand · t1980ms
+			41 container
+				42 text 095 · Halberd · Halberd
+				43 text Recursos resueltos 35 tris · 0 PE2 · 0 estelas · Stand · t147ms
+
+The focused UI element is 7 button Siguiente, ID: next

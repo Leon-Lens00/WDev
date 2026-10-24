@@ -1,0 +1,74 @@
+{
+  "state": "Tested in map",
+  "target": "Warcraft III Classic 1.27b",
+  "mode": "YDWE single player / EnableHost=0",
+  "screen": "3 / DP-1",
+  "fixture": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v13-20261023-122728/X3BusterV13.w3x",
+    "sha256": "319724abb5a01f32b26cc498e274f649e5b9009ba87e27aa97d580a5b825a52d",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 24,
+    "models": 5,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "loaded": {
+    "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v13-ydwe-runtime/pfx/drive_c/WarcraftIII/Maps/Test/WorldEditTestMap.w3x",
+    "sha256": "319724abb5a01f32b26cc498e274f649e5b9009ba87e27aa97d580a5b825a52d",
+    "matchesFixture": true
+  },
+  "identity": [
+    {
+      "pid": 1024193,
+      "start": "17415810",
+      "command": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\Test\\WorldEditTestMap.w3x -window -ydwe C:\\Tools\\YDWE                                                                                                                                                                                                                                     ",
+      "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v13-ydwe-runtime/pfx"
+    }
+  ],
+  "scenarios": [
+    "Stand scale 1",
+    "Stand scale 0.5",
+    "Stand scale 2.4",
+    "Birth scale 2.4",
+    "Death scale 2.4",
+    "external fixture movement scale 2.4",
+    "Birth and Death with unit animation speed 0.25"
+  ],
+  "observed": [
+    "green/orange/cyan cores and tails visible",
+    "white core remains bright",
+    "Cross pink sheath and green rings visible",
+    "flight vanishes and impact emits at origin",
+    "union flash expands and ends",
+    "moving fixture leaves particle/ribbon residue"
+  ],
+  "limitations": [
+    "Local visual SP test, not integration with gameplay physics",
+    "No FPS stress test or multiplayer test",
+    "Native captures approx 220 ms apart; rapid flow reviewed separately in stepped 3D",
+    "SetUnitTimeScale does not certify every particle clock is slowed"
+  ],
+  "closure": {
+    "launcherReturnCode": 143,
+    "launcherExitFileMissing": true,
+    "gamePid": 1024193,
+    "gameProcessAbsent": true,
+    "gameWindowAbsent": true,
+    "normalLauncherExitNotCertified": true,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-123423-x3-v13-registro-cierre.md"
+  },
+  "captures": {
+    "native-stand-1": 25,
+    "native-stand-05": 25,
+    "native-stand-24": 25,
+    "native-birth-24": 25,
+    "native-death-24": 25,
+    "native-reset-24": 25,
+    "native-motion-24": 25,
+    "native-stop": 25,
+    "native-slow": 25,
+    "native-death-slow": 25,
+    "native-birth-slow": 25
+  },
+  "totalFrames": 275
+}

@@ -1,0 +1,63 @@
+{
+  "server": {
+    "name": "codegraph",
+    "version": "1.6.2+jass-vjass.4"
+  },
+  "checks": [
+    {
+      "name": "JASS add",
+      "ms": 605.742929,
+      "passed": true,
+      "observation": "read-only SQLite polling; no MCP query/sync between write and observation"
+    },
+    {
+      "name": "unchanged module consumer refresh",
+      "ms": 604.4424239999998,
+      "passed": true,
+      "observation": "read-only SQLite polling; no MCP query/sync between write and observation"
+    },
+    {
+      "name": "JASS delete",
+      "ms": 502.8138520000002,
+      "passed": true,
+      "observation": "read-only SQLite polling; no MCP query/sync between write and observation"
+    },
+    {
+      "name": "SLK data-only invalidation",
+      "ms": 805.9071709999998,
+      "passed": true,
+      "observation": "read-only SQLite polling; no MCP query/sync between write and observation"
+    },
+    {
+      "name": "profile-only invalidation",
+      "ms": 704.3071300000001,
+      "passed": true,
+      "observation": "read-only SQLite polling; no MCP query/sync between write and observation"
+    },
+    {
+      "name": "JS add",
+      "ms": 603.3328599999995,
+      "passed": true,
+      "observation": "read-only SQLite polling; no MCP query/sync between write and observation"
+    },
+    {
+      "name": "JS edit",
+      "ms": 502.76484900000014,
+      "passed": true,
+      "observation": "read-only SQLite polling; no MCP query/sync between write and observation"
+    },
+    {
+      "name": "JS delete",
+      "ms": 503.48659299999963,
+      "passed": true,
+      "observation": "read-only SQLite polling; no MCP query/sync between write and observation"
+    }
+  ],
+  "all_passed": true,
+  "roots": [
+    "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/installed-watch-probe/module",
+    "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/installed-watch-probe/slk",
+    "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/installed-watch-probe/javascript"
+  ],
+  "production_sources_modified": false
+}

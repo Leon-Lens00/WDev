@@ -1,0 +1,32 @@
+{
+  "completed": true,
+  "date": "2026-10-23T14:26:08.544309-05:00",
+  "lab": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes",
+  "runtime": "MesenCE 2.2.1 Linux x64, official release hash verified",
+  "scope": "complete ROM emulation, one intro-stage scene, X buster equipment flags set once then controller-only firing",
+  "final_cases": 6,
+  "observed_game_frames": 3840,
+  "combined_motion_updates": 1220,
+  "compared_values": 4880,
+  "mismatches": 0,
+  "formation_frames": {
+    "original": 18,
+    "mod": 8
+  },
+  "all_own_processes_closed": true,
+  "tmp_empty": true,
+  "original_rom_and_zip_preserved": true,
+  "production_map_and_libraries_unchanged": true,
+  "warcraft_port_applied": false,
+  "video": "analysis/comparacion-original-zero-project.mp4",
+  "report": "README.md",
+  "resolved_error_report": "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-140432-x3-mesen-cierre-script.md",
+  "script_sha256": {
+    "scripts/run_lab.py": "313b363e1d92f4ea4973a249af73aec798318a2be4dd65c784475f201fa8b1a5",
+    "scripts/codegraph.json": "44ffae1b78cbc0b3ac0999b699f8948cb009593546c8391c935c7f184b227934",
+    "scripts/prepare_scene.lua": "b5169677e21690cd6ba00a00653a2aae0ca6219c83fb3ca4a14b8e3611bf763a",
+    "scripts/trace.lua": "0132900fc2cec3aa5b5da4227f327ad713c5853959be4fd653c16219343ca117",
+    "scripts/analyse_trace.py": "eb16814bd51ab1f4a15baf74f9f4c6feaaaa946f0d5519374c2aac3afaf595b9",
+    "scripts/render_video.py": "84791e827675e96a5dfc3cfc51b0fcb8a93c670401ffb11fcd8f36ca272ddbfe"
+  }
+}

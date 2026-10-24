@@ -1,0 +1,53 @@
+{
+  "pid": 778805,
+  "start": "11806261",
+  "cmd": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\a90baa1df9931671.w3x -window                                                                                                                                                                                                                                     ",
+  "prefix": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/",
+  "window": {
+    "address": "0x558cbd0feca0",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      3840,
+      0
+    ],
+    "size": [
+      1920,
+      1080
+    ],
+    "workspace": {
+      "id": 12,
+      "name": "12"
+    },
+    "floating": true,
+    "monitor": 1,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 778805,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 2,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 0,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "18000254"
+  },
+  "map_sha256": "a90baa1df993167186b713a61e3990590366dc1204f4efa8277d4e0feaf76c13",
+  "hwnd": "00020082",
+  "verified_workspace": 32,
+  "verified_monitor": "HDMI-A-1"
+}

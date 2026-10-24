@@ -1,0 +1,251 @@
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/UserInterface.j:195:        if (User.Local == p) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/UserInterface.j:518:                    if (.AllShow[i].selectUnit != null and User.Local == p) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/UserInterface.j:746:            if (User.Local == p) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/UserInterface.j:873:        local User user = User.first
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/UserInterface.j:876:            exitwhen user == User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/UserInterface.j:890:         local User user = User.first
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/UserInterface.j:893:            exitwhen user == User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/SyncInteger.j:3:library SyncInteger initializer Init uses optional UnitDex /*or any unit indexer*/, optional GroupUtils, optional xebasic, optional PlayerUtils
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/SyncInteger.j:177:            static if (LIBRARY_PlayerUtils) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/SyncInteger.j:178:                set p2 = User.Local
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/SyncInteger.j:458:            static if (LIBRARY_PlayerUtils) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/SyncInteger.j:459:                set LocalPlayer=User.Local
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:1:library PlayerUtils
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:16:*     struct User
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:18:*       static method fromIndex takes integer i returns User
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:19:*       static method fromLocal takes nothing returns User
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:20:*       static method fromPlaying takes integer id returns User
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:22:*       static method operator []    takes integer id returns User
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:64:    private keyword PlayerUtilsInit
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:66:    struct User extends array
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:191:                set p.prev.next = User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:192:                set p.next.prev = User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:205:        implement PlayerUtilsInit
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:209:    private module PlayerUtilsInit
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:231:            set thistype.first = User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:236:                set p         = User(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:250:                    if (.first == User.NULL) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:252:                        set User(i).next = User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:253:                        set User(i).prev = User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:255:                        set User(i).prev = PlayingPlayer[AmountPlaying-1].id
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:256:                        set PlayingPlayer[AmountPlaying-1].next = User(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:257:                        set User(i).next = User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/PlayerUtils.j:291:                local User p = User[whichPlayer]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/WaveStreaks.j:1:library WaveStreaks initializer Init requires Table, TimerUtils, PlayerUtils, WaveTest, SelectionSystem, WaveDamageCredit, PlayerHeroState, PrisonerDropSystem
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/WaveStreaks.j:99:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/WaveStreaks.j:104:            exitwhen i >= User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/WaveStreaks.j:105:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/WaveStreaks.j:324:        if not User.fromIndex(pid).isPlaying then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/WaveStreaks.j:356:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/WaveStreaks.j:360:        set u = User.fromIndex(pid)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/WaveStreaks.j:484:        if User.fromIndex(pid).isPlaying then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/SpacebarDetect.j:3:library SpacebarDetect initializer Init requires UnitDex, SyncInteger, PlayerUtils
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/SpacebarDetect.j:99:            call SyncNotify(User.Local, NotifyID)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j:1:library WaveOwnerConfig requires PlayerUtils
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j:5:        local integer researchedLevel = User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j:1:library RestTimeUI requires PlayerUtils, PreConfi, RestTimeState, RestTimeMenuBridge
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j:17:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j:19:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j:20:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/HealthBarTextTags.j:1:library HealthBarTextTags initializer Init requires Table, TimerUtils, PlayerUtils, PlayerHeroState
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/HealthBarTextTags.j:132:        return User.fromIndex(pid).nameColored + "\n" + HealthBarGetBarText(percent)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/HealthBarTextTags.j:168:        if User.AmountPlaying > HEALTH_BAR_HERO_CAP then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/HealthBarTextTags.j:171:        return User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/HealthBarTextTags.j:200:        if not User.fromIndex(pid).isPlaying or not HealthBarIsTrackedUnit(hero) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j:1:library RestTimeSurvivalEnd requires PlayerUtils, RestTimeState, RestTimeAudio, RestTimeUI
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j:5:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j:12:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j:13:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j:1:library RestTimeMenuBridge requires PlayerUtils, PlayerHeroState, MenuClient, RestTimeState
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j:5:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j:9:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j:10:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Players/Config/InitialGoldConfig.j:1:library InitialGoldConfig requires PlayerUtils
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Players/Config/InitialGoldConfig.j:10:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Players/Config/InitialGoldConfig.j:15:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Players/Config/InitialGoldConfig.j:16:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j:1:library RestTimeEndFlow requires HeroLives, TenderSystem, PreConfi, PlayerUtils, RestTimeState, RestTimeCountdown, RestTimeSurvivalEnd, RestTimeUI
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j:5:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j:8:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j:9:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionClientBridge.j:1:library SelectionClientBridge requires PlayerUtils, MenuClient, PlayerHeroState
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionClientBridge.j:5:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionClientBridge.j:10:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionClientBridge.j:11:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionClientBridge.j:28:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionClientBridge.j:33:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionClientBridge.j:34:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionClientBridge.j:44:                if User.Local == u.handle then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionHeroSpawn.j:1:library SelectionHeroSpawn requires PlayerUtils, OrderSmartChannel, HeroLives, PlayerHeroState, SelectionHeroConfig
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionHeroSpawn.j:8:    function SelectionEnsureHeroCreated takes User u, integer heroChoice returns nothing
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:1:library HeroLives initializer Init requires PlayerUtils, TimerUtils, PreConfi, PlayerHeroState, WeaponSelectionSystem, WeaponInventoryCore
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:21:        return pid >= 0 and pid < bj_MAX_PLAYER_SLOTS and User.fromIndex(pid).isPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:94:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:97:            exitwhen i >= User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:98:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:233:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:240:        set u = User.fromIndex(pid)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:308:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:312:            exitwhen i >= User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Systems/HeroLives/HeroLives.j:313:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:1:library SelectionSystem requires PlayerUtils, PlayerHeroState, InitialWaveMultiboard, SelectionElementConfig, SelectionHeroVisualConfig, SelectionHeroConfig, SelectionHeroSpawn, SelectionStartFlow
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:23:    private static method executeElement takes User u returns nothing
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:28:    private static method finishSelection takes User u returns nothing
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:41:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:49:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:50:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:62:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:64:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:65:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:83:        if selectionPhase != SELECTION_PHASE_NONE and totalFinished >= User.AmountPlaying then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:96:        local User u = User[p]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:118:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:122:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:123:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:142:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:156:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Selection/SelectionSystem.j:157:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:16:        return User[GetOwningPlayer(u)].nameColored
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:48:        if User.Local == p then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:54:        if User.Local == p then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:117:        User user
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:221:            set this.user = User[this.player]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:273:            local User user = User(User.LocalId)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:279:            if equipment == 0 or not equipment.displayed or User.Local != user.handle then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:370:                if User.Local == this.player then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:410:        if client != 0 and p == client.user.handle and User.Local == p then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:442:        if User.Local == p then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:451:        local User user = User.first
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/UI System/MyIU/MenuClient.j:453:            exitwhen user == User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/Camera.j:1:library Camera requires UIMath, PlayerUtils
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/Camera.j:204:            local User user
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/Camera.j:207:                exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/libraries/Camera.j:209:                set user = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/StageExample.j:2:library stage1 initializer InitStage1 requires PlayerUtils, WaveTest, HeroLives, AIProfiles, AIConfig, IAManager, TenderSystem, PreConfi, WavePointGroupsConfig, PlayerHeroState, WaveMultiboard
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/StageExample.j:9:    local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/StageExample.j:106:        exitwhen i == User.AmountPlaying //static jeje por eso sin variable
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/StageExample.j:107:        set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/StageExample.j:193:        exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/StageExample.j:194:        set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/WaveSysAnAI/SwlsWave/StageExample.j:195:        if User.Local == u.handle and PlayerHero[u.id] != null and GetUnitTypeId(PlayerHero[u.id]) != 0 then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Multiboard/WaveMultiboard.j:1:library WaveMultiboard requires WaveTest, PlayerUtils, TimerUtils, TextTagDebug, HealthBarTextTags, HeroLives, WaveStreaks
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Multiboard/WaveMultiboard.j:80:        return User.fromIndex(pid).isPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/tenderoff.j:1:library TenderAudio requires PlayerUtils, TenderSystem
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/tenderoff.j:107:    private function StartPlayerTenderSound takes User u returns nothing
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/tenderoff.j:128:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/tenderoff.j:136:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/tenderoff.j:137:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Multiboard/InitialWaveMultiboard.j:1:library InitialWaveMultiboard requires PlayerUtils, TimerUtils, TextTagDebug, HealthBarTextTags, GameState
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Multiboard/InitialWaveMultiboard.j:33:        call SetInitialBoardCell(0, 2, "|cFF66FF99Activos|r|cFFFFFFFF: |r|cFFFFFFCC" + I2S(User.AmountPlaying) + "|r", 0.12)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Lunar Slash.j:15://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Loadout Missile(test v2).j:18://* User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/MyMissiles/Loadout Missile.j:470://* User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/BloodMage/Ice Siege.j:16://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:24:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:28:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:29:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:44:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:48:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:49:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:96:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:102:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:103:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:205:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:222:        exitwhen i == User.AmountPlaying //static jeje por eso sin variable
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/RestTime.github.j:223:        set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Blademaster/Whirlwind.j:11://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/MyMissiles/PrisonerDropSystem.j:1:library PrisonerDropSystem initializer Init requires TimerUtils, PlayerUtils, PlayerHeroState, WeaponInventoryCore, WaveDamageCredit
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/MyMissiles/PrisonerDropSystem.j:212:    local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/MyMissiles/PrisonerDropSystem.j:215:        exitwhen playerIndex >= User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/MyMissiles/PrisonerDropSystem.j:216:        set u = User.fromPlaying(playerIndex)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/MyMissiles/PrisonerDropSystem.j:230:    if PickupOwnerPid[i] >= 0 and PickupOwnerPid[i] < bj_MAX_PLAYER_SLOTS and not User.fromIndex(PickupOwnerPid[i]).isPlaying then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/BloodMage/Choatic Boulder.j:11://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/MyMissiles/Loadout Leap.j:3://* User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/BloodMage/Fireball.j:11://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/StartGameV2.j:11:        local User user
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/StartGameV2.j:22:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/StartGameV2.j:24:            set user = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/StartGameV2.j:33:            if (User.Local == user.handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Rogue/Target Sling.j:20://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/YesNoDialog.j:11:        local User user = User.first
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/YesNoDialog.j:15:            exitwhen user == User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/YesNoDialog.j:32:    function ShowYesNoDialog takes string title, User user, filterfunc callback returns nothing
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/YesNoDialog.j:40:            local User user = User.first
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/YesNoDialog.j:44:                exitwhen user == User.NULL
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Necromancer/Reapers Scythe.j:11://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/Socket Item.j:15:        local User user = User[GetTriggerPlayer()]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Blademaster/Leap.j:11://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryTooltip.j:89:            local boolean showLocally = (User.Local == User(this.pid).handle)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Loadout Missile.j:564://* User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/BloodMage/Chaosflare.j:11://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/Sell Item.j:10:        local User user = User[GetTriggerPlayer()]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/Sell Item.j:25:        local Inventory inv = Inventory.PlayerCurrent[User[p].id]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/Equip Item.j:10:        local unit u = Equipment.PlayerCurrentUnit[User[p].id]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/Drop Item.j:10:        local User user = User[GetTriggerPlayer()]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Setups/Drop Item.j:26:        local Inventory inv = Inventory.PlayerCurrent[User[p].id]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Rogue/Guided Arrow.j:11://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Mountain King/Fist of Thunder.j:11://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Necromancer/Bone Spirit.j:12://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Rogue/Gun Barrage.j:16://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:1:library InventoryCore initializer Init requires UserInterface, InventoryItem, PlayerUtils, TimerUtils
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:72:        readonly User user
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:101:            if (User.Local != User(pid).handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:287:            set this.user = User(this.pid)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:290:            set raceId = GetHandleId(GetPlayerRace(User(this.pid).handle))-1
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:292:            set showLocally = (User.Local == User(this.pid).handle)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:329:                call err(User(this.pid).handle, "There are no free slots on this inventory page.")
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:355:            local User user = User(User.LocalId)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:408:                if (User.LocalId == this.pid) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:485:        if (User.Local == p) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:502:           if (p != User(inv.pid).handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:507:            set InvEventPlayer = User(inv.pid).handle
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:525:           if (p != User(inv.pid).handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:530:            set InvEventPlayer = User(inv.pid).handle
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:541:           if (p != User(inv.pid).handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:550:           if (p != User(inv.pid).handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:564:        if (p != User(inv.pid).handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Inventory/InventoryCore.j:676:        if (p != User(inv.pid).handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/MissileExamples/Rogue/Gravity Shell.j:17://*  User settings:
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Equipment/EquipmentCore.j:10:        return User[GetOwningPlayer(u)].nameColored
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Equipment/EquipmentCore.j:63:        User user
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Equipment/EquipmentCore.j:90:            set this.user = User[this.player]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Equipment/EquipmentCore.j:288:            local User user = User(User.LocalId)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Equipment/EquipmentCore.j:294:            if (equipment == 0 or not equipment.displayed or Inventory.PlayerCurrent[equipment.user.id] > 0 or User.Local != user.handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Equipment/EquipmentCore.j:351:                if (User.Local == this.player) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Equipment/EquipmentCore.j:493:        if (GetClickingPlayer() != User(inv.pid).handle or gear.item[slot] <= 0) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/ExampleAdvance/Equipment/EquipmentCore.j:533:        if (User.Local == p) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:24:        return User[GetOwningPlayer(u)].nameColored
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:30:        if (User.Local != User(pid).handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:65:        if User.Local == p then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:71:        if User.Local == p then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:262:        User user
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:499:            set this.user = User[this.player]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:852:            local User user = User(User.LocalId)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:858:            if (equipment == 0 or not equipment.displayed /*or Inventory.PlayerCurrent[equipment.user.id] > 0*/ or User.Local != user.handle) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:871:            User.Local != user.handle
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1201:                if (User.Local == this.player) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1222:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1226:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1227:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1242:        local User u
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1246:            exitwhen i == User.AmountPlaying
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1247:            set u = User.fromPlaying(i)
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1356:        if (GetClickingPlayer() != User(inv.pid).handle or gear.item[slot] <= 0) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1471:        local User u = User[GetClickingPlayer()]
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1486:        if (User.Local == p) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1549:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1556:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1578:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1585:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1603:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1610:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1628:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1636:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1643:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1662:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1670:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1677:                if User.fromLocal() == u then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1806:        if (User.Local == p) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1832:        if (User.Local == p) then
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1872:        local User user = User.first
+/home/snz/Documentos/ChatGPT/Proyect/WaveSys/src/Pruebas/Reworks/MenuClient_full_legacy_before_cleanup.j:1874:            exitwhen user == User.NULL

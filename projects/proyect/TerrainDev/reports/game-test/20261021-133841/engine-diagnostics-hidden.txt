@@ -1,0 +1,13 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "DIAGNOSTICS 20261021-133841 hidden" )
+	call Preload( "active=0 peak=60 created=91 retired=91" )
+	call Preload( "tracked=96 pooled=96 borrowed=0 deferred=0 pending=0 overdue=0" )
+	call Preload( "preloaded=96 new=66 reused=25 disposed=67 lost=0" )
+	call Preload( "invalid=0 errors=0 inconsistent=0 omitted=0 adopted=1 alarms=1 probeFailures=0" )
+	call Preload( "board=|cffffcc44Misiles: revisar historial|r" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

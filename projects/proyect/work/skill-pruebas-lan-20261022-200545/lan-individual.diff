@@ -1,0 +1,10 @@
+--- references/lan-individual.md antes
++++ references/lan-individual.md después
+@@ -1,6 +1,6 @@
+ # LAN individual para pruebas independientes sin pausa por foco
+ 
+-Preferencia indicada por el usuario el 22-10-2026: cada agente prueba su propio mapa con un anfitrión LAN auxiliar y **una sola ventana de Warcraft**. El host no es una segunda instancia del juego ni un oponente de IA. Los trabajos separados no deben compartir partida ni resultados.
++Modo de lanzamiento indicado por el usuario el 22-10-2026 para pruebas fuera de foco y ensayos de agentes en instancias separadas: usar LAN individual por defecto. Cada agente prueba su propio mapa con un anfitrión LAN auxiliar y **una sola ventana de Warcraft**. El host no es una segunda instancia del juego ni un oponente de IA. Los trabajos separados no deben compartir partida ni resultados.
+ 
+ ## Estado y configuración comprobada por lectura
+ 

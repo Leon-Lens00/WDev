@@ -1,0 +1,11 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "POSITION 20261021-125158 COMPLETE" )
+	call Preload( "mode=0 beforeOrder=851986 afterOrder=851986 travelled=262.451" )
+	call Preload( "mode=1 beforeOrder=851986 afterOrder=0 travelled=0.000" )
+	call Preload( "mode=2 beforeOrder=851986 afterOrder=0 travelled=0.000" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

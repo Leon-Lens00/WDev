@@ -1,0 +1,34 @@
+--- a/src/resolution/jass.ts
++++ b/src/resolution/jass.ts
+@@ -1,6 +1,7 @@
+ import type { Node } from '../types';
+ import type { ResolutionContext, ResolvedRef, UnresolvedRef } from './types';
+ import * as path from 'node:path';
++import { lexJass } from '../extraction/jass-lexer';
+ 
+ const isJass = (node: Node) => node.language === 'jass' || node.language === 'vjass';
+ const parentName = (name: string) => name.includes('.') ? name.slice(0, name.lastIndexOf('.')) : '';
+@@ -118,7 +119,7 @@
+     } else {
+       const binding = lookup(receiver, new Set(['variable', 'parameter', 'field', 'constant']));
+       // Require the declaration shape, not an incidental word in a comment or initializer.
+-      if (mode === 'index' && (!binding || !/^(?:(?:local|private|public|constant|static|readonly|debug)\s+)*[A-Za-z_]\w*\s+array\s+[A-Za-z_]\w*\b/.test(binding.signature ?? ''))) return null;
++      if (mode === 'index' && (!binding || !/^(?:(?:local|private|public|constant|static|readonly|debug)\s+)*[A-Za-z_]\w*\s+array\s+[A-Za-z_]\w*\b/.test(lexJass(binding.signature ?? '').lines.flat().map(t => t.value).join(' ')))) return null;
+       type = receiver === 'thistype' ? owningType : binding ? declaredType(binding) : receiver === 'this' ? owningType : lookup(receiver, TYPES);
+     }
+     if (!type) return null;
+--- a/__tests__/jass-expansion.test.ts
++++ b/__tests__/jass-expansion.test.ts
+@@ -166,6 +166,12 @@
+     expect(calls('Run')).not.toContain('Other.tick'); // Instance operator [] remains unsupported.
+   });
+ 
++  it('resolves declared arrays with block comments between declaration tokens', async () => {
++    await init({ 'comments.j': 'struct S extends array\nmethod tick takes nothing returns nothing\nendmethod\nendstruct\nglobals\nS /* type */ array before\nS array /* name */ after\nendglobals\nfunction Before takes nothing returns nothing\ncall before[0].tick()\nendfunction\nfunction After takes nothing returns nothing\ncall after[0].tick()\nendfunction\n' });
++    expect(calls('Before')).toContain('S.tick');
++    expect(calls('After')).toContain('S.tick');
++  });
++
+   it('keeps debug-dependent exists fallbacks as potential paths', () => {
+     const result = extractFromSource('debug.j', 'struct S extends array\ndebug integer feature\nstatic if not thistype.feature.exists then\nstatic method fallback takes nothing returns nothing\nendmethod\nendif\nendstruct\n');
+     expect(result.nodes.some(n => n.qualifiedName === 'S.fallback')).toBe(true);

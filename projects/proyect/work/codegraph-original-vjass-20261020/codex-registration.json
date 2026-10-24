@@ -1,0 +1,14 @@
+{
+  "server": "codegraph",
+  "registered": {
+    "command": "/home/snz/.local/bin/codegraph",
+    "args": [
+      "serve",
+      "--mcp"
+    ],
+    "startup_timeout_sec": 30,
+    "tool_timeout_sec": 60
+  },
+  "old_bridge": "disabled; retained as fallback",
+  "unrelated_config_preserved": true
+}

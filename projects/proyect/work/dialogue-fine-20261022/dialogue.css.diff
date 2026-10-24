@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -25,3 +25,8 @@
+ .d-gameplay-view::after{display:none}.d-gameplay-view::before{content:"HUD DEL JUEGO · minimapa / unidad / órdenes";display:flex;align-items:center;justify-content:center;color:#bbb;font:12px Georgia,serif;letter-spacing:1px;background:#202226;border-top:2px solid #787259;z-index:2}.d-gameplay-view .d-frame{z-index:1}
+ 
+ .d-gameplay-view[data-background=terrain]{background-image:url('assets/dialogue/warcraft-unit-hud-1920x1080.png');background-size:100% 100%;background-position:center}.d-gameplay-view[data-background=terrain]::before{display:none}
++
++/* Native model fit is separate from the measured UIText anchor plane. */
++.d-model-art{display:block;position:absolute;inset:0;pointer-events:none}
++.d-frame .d-speaker{line-height:1.1}
++.d-frame .d-continue{line-height:1.1;white-space:nowrap}

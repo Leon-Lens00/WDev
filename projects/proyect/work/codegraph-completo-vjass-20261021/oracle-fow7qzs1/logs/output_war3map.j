@@ -1,0 +1,24 @@
+globals
+
+endglobals
+interface I
+method operator <
+endinterface
+struct S extends I
+method operator < takes I other returns boolean
+return true
+endmethod
+endstruct
+function Run takes S a,S b returns boolean
+return a<0 or a<b
+endfunction
+function main takes nothing returns nothing
+
+//! initstructs
+
+//! initdatastructs
+endfunction
+function config takes nothing returns nothing
+endfunction
+
+

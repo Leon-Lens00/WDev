@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "pjass",
+    "work/inventory-original-audit-20261022/demo-ab.j"
+  ],
+  "returncode": 0,
+  "stdout": "Parse successful:     2418 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j\nParse successful:    10230 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j\nParse successful:    10315 lines: work/inventory-original-audit-20261022/demo-ab.j\nParse successful:    22963 lines: <total>\n",
+  "stderr": ""
+}

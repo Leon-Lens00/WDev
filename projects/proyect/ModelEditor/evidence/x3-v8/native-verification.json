@@ -1,0 +1,76 @@
+{
+  "status": "Tested in map",
+  "modelSha256": "cc714b2acdc74df1380abd54f9b64cc951cf7f99a489f4abe35c126d896e685a",
+  "fixture": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v8-20261023-075740/X3BusterV8.w3x",
+    "sha256": "0356f39d3a689fe63cab2f06c136943f8ea0fb621b6376be1ff17f57f2252204",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 32,
+    "models": 2,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "loadedMap": {
+    "loadedMap": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v8-ydwe-runtime/pfx/drive_c/WarcraftIII/Maps/Test/WorldEditTestMap.w3x",
+    "sha256": "0356f39d3a689fe63cab2f06c136943f8ea0fb621b6376be1ff17f57f2252204",
+    "fixtureBytesIdentical": true
+  },
+  "scenarios": {
+    "stand-verified": {
+      "frames": 25,
+      "durationSeconds": 5.017195313004777,
+      "pid": 951847,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "move-verified": {
+      "frames": 25,
+      "durationSeconds": 5.204132613987895,
+      "pid": 951847,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "scale05-verified": {
+      "frames": 25,
+      "durationSeconds": 5.099412621988449,
+      "pid": 951847,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "scale3-verified": {
+      "frames": 25,
+      "durationSeconds": 5.152570589008974,
+      "pid": 951847,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "birth-verified": {
+      "frames": 25,
+      "durationSeconds": 5.200705571012804,
+      "pid": 951847,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    },
+    "impact-verified": {
+      "frames": 25,
+      "durationSeconds": 5.32103501301026,
+      "pid": 951847,
+      "screen": "DP-1",
+      "focusCheckedPerFrame": true
+    }
+  },
+  "totalFrames": 150,
+  "visualResult": "Periodic bright pink sweep is visible in Classic 1.27b, on the preserved V7 surface, from front toward tail. Core and blue tail remain continuous; end of Death disappears.",
+  "closure": {
+    "returnCode": 0,
+    "ownedProcesses": [],
+    "windowGone": true,
+    "privateRuntimeTrashed": true,
+    "normalizedPrefixGuard": "PASS"
+  },
+  "limits": [
+    "Birth is 160 ms, shorter than the approximately 200 ms capture interval; its individual native phases are not fully resolved.",
+    "No stress, FPS, multiplayer or game-physics integration test.",
+    "The chosen 480 ms pulse is an artistic setting, not a verified SNES native period."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "pjass",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261021-132648-969254/verified/war3map.j"
+  ],
+  "returncode": 0,
+  "stdout": "Parse successful:     2418 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j\nParse successful:    10230 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j\nParse successful:     5537 lines: /home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261021-132648-969254/verified/war3map.j\nParse successful:    18185 lines: <total>\n",
+  "stderr": ""
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Explosive Bolts",
+  "url": "https://www.hiveworkshop.com/threads/explosive-bolts.351836/",
+  "author": "Vinz",
+  "tags": [
+    "#Effect",
+    "#Missile",
+    "#Human"
+  ],
+  "listedResources": 1,
+  "date": "2026-10-22T19:15:12.390689-05:00",
+  "category": "03-Flechas-y-proyectiles",
+  "folder": "03-Flechas-y-proyectiles/explosive-bolts.351836",
+  "zip": "original.zip",
+  "zipBytes": 84663,
+  "zipSha256": "e54d69b5b85df22a905a134b59246a5258248adc378f0530737bfd002775ef86",
+  "crc": "PASS",
+  "files": [
+    {
+      "path": "originales/Explosive Bolts/readme.html",
+      "archivePath": "Explosive Bolts/readme.html",
+      "bytes": 4970,
+      "sha256": "1564b93aecc11b226d416568bfc72376fa425bb8bfeebef38fdce1a55b3a03af"
+    },
+    {
+      "path": "originales/Explosive Bolts/ExplosiveBolt.mdx",
+      "archivePath": "Explosive Bolts/ExplosiveBolt.mdx",
+      "bytes": 40657,
+      "sha256": "799d20433eea28aa90956041a76a481347582bfe480e9049a153019e633451ac"
+    },
+    {
+      "path": "originales/Explosive Bolts/AutumnGlow.blp",
+      "archivePath": "Explosive Bolts/AutumnGlow.blp",
+      "bytes": 9432,
+      "sha256": "201fb17a970f50f9adf56a82d83a5791cd724344896b4e1a835b4195300b6091"
+    },
+    {
+      "path": "originales/Explosive Bolts/AutumnStar.blp",
+      "archivePath": "Explosive Bolts/AutumnStar.blp",
+      "bytes": 12036,
+      "sha256": "57ae21f9aaf085ad051f43a0cf2ba804c39f290d25fdfee140ca378572add7b9"
+    },
+    {
+      "path": "originales/Explosive Bolts/dust3.blp",
+      "archivePath": "Explosive Bolts/dust3.blp",
+      "bytes": 25429,
+      "sha256": "7b2941b4e213a4669f7a46a90964517d365e5d64f509583d693bffd5ad888750"
+    },
+    {
+      "path": "originales/Explosive Bolts/SacredTail11Max.blp",
+      "archivePath": "Explosive Bolts/SacredTail11Max.blp",
+      "bytes": 15841,
+      "sha256": "7cab3a97cfafb74ac0b2411165ae49aab8a4c7bc8779eca5efa5ae405b2c1a8f"
+    },
+    {
+      "path": "originales/Explosive Bolts/largesmoke1.blp",
+      "archivePath": "Explosive Bolts/largesmoke1.blp",
+      "bytes": 19558,
+      "sha256": "e68dda63b8c4a5129469d8a1b1c559894477c324adf497245862985983afc3b4"
+    }
+  ],
+  "models": 1,
+  "textures": 5
+}

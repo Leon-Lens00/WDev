@@ -1,0 +1,26 @@
+{
+  "id": "classic127b-gameplay-1920x1080-20261022",
+  "originX": 961,
+  "originY": 432.3236690135403,
+  "unitX": 718.1893054298849,
+  "unitY": 387.7381926120089,
+  "source": "calibrated-moving-0.png; white frame edges; frame distinct from UIText mapping",
+  "landmarks": {
+    "source": {
+      "left": 79.5,
+      "right": 1862.5,
+      "top": 62,
+      "bottom": 751.5
+    },
+    "client": {
+      "left": 321.5,
+      "right": 1600.5,
+      "top": 256,
+      "bottom": 737
+    }
+  },
+  "depth": 400,
+  "scale": 3.014812785998197,
+  "source_sha256": "2c2f5e7249832ba3035dd5f27dcfebeee2358f4e12ecf1d8702c654ebb3a286e",
+  "native_projection_changed": false
+}

@@ -1,0 +1,261 @@
+{
+  "ok": false,
+  "tools": {
+    "Taller": {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3",
+      "exists": true
+    },
+    "Lanzador común": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "exists": true
+    },
+    "Forge Classic": {
+      "path": "/home/snz/Documentos/WarDatsPy/wc3-forge/build/bin/wc3-forge-classic-127b.exe",
+      "exists": false
+    },
+    "Forge fuente": {
+      "path": "/home/snz/Documentos/WarDatsPy/wc3-forge",
+      "exists": false
+    },
+    "Forge auxiliar MCP": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/bin/wc3-forge-headless",
+      "exists": true
+    },
+    "NewGen moderno": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/newgen-moderno.py",
+      "exists": true
+    },
+    "YDWE moderno": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/ydwe-moderno.py",
+      "exists": true
+    },
+    "JassHelper": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/clijasshelper.exe",
+      "exists": true
+    },
+    "pJASS": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/pjass",
+      "exists": true
+    },
+    "wc3ctl": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3ctl-classic-bin/wc3ctl.dll",
+      "exists": true
+    },
+    "Python con mpyq": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python/bin/python",
+      "exists": true
+    },
+    "API common.j": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+      "exists": true
+    },
+    "API Blizzard.j": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+      "exists": true
+    },
+    "Juego de pruebas": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/war3.exe",
+      "exists": true
+    },
+    "YDWE activo": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-ydwe-modern/pfx/drive_c/Tools/YDWE/YDWE.exe",
+      "exists": true
+    },
+    "NewGen activo": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/Tools/NewGen/bin/exehack.exe",
+      "exists": true
+    },
+    "Magos": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-magos-modern/pfx/drive_c/WarcraftIII/War3ModelEditor.exe",
+      "exists": true
+    },
+    "MdlVis": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-mdlvis-modern/pfx/drive_c/WarcraftIII/MdlVis.exe",
+      "exists": true
+    },
+    "Blender": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/toolchains/blender-4.3.2-linux-x64/blender",
+      "exists": true
+    },
+    "GE-Proton": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+      "exists": true
+    },
+    "DXVK": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/dxvk-3.1.1/x32/d3d9.dll",
+      "exists": true
+    },
+    "Go": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/toolchains/go/bin/go",
+      "exists": true
+    },
+    "Node": {
+      "path": "/usr/bin/node",
+      "exists": true
+    },
+    "FFmpeg": {
+      "path": "/usr/bin/ffmpeg",
+      "exists": true
+    },
+    "Mapas": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/maps",
+      "exists": true
+    },
+    "Guía": {
+      "path": "/home/snz/Documentos/ChatGPT/FrozenThone/docs/herramientas-wc3.txt",
+      "exists": true
+    }
+  },
+  "links": [
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Mapas",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/maps",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-taller.py",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/LEEME.txt",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/docs/taller-wc3.txt",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Editores/Instalaciones/NewGen-activo",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/Tools/NewGen",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Editores/Instalaciones/YDWE-activo",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-ydwe-modern/pfx/drive_c/Tools/YDWE",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Editores/Instalaciones/Forge",
+      "target": "/home/snz/Documentos/WarDatsPy/wc3-forge",
+      "exists": false
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Compilacion/JassHelper",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Compilacion/pJASS",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Compilacion/wc3ctl",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3ctl-classic-bin",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Compilacion/Python",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/python",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Compilacion/API-1.27b",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Pruebas/Diagnosticos",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/maps/diagnosticos",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Pruebas/Juego-1.27b",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Pruebas/Registros",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Pruebas/Proyectos-de-prueba",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/work",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Pruebas/Guia-pruebas.md",
+      "target": "/home/snz/.codex/skills/probar-warcraft3-classic-linux/references/guia-local.md",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Pruebas/Skill-pruebas.md",
+      "target": "/home/snz/.codex/skills/probar-warcraft3-classic-linux/SKILL.md",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Modelos-y-texturas/Modelos",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/models",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Modelos-y-texturas/Texturas",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/textures",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Modelos-y-texturas/Blender",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/toolchains/blender-4.3.2-linux-x64",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Documentacion/Informes",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/docs",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Documentacion/Guia-entorno.txt",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/docs/herramientas-wc3.txt",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Documentacion/Configuracion.json",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/wc3-environment.json",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Documentacion/Toolchain.json",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/wc3toolchain.json",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Soporte/Complementos",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Soporte/GE-Proton",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Soporte/DXVK",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/dxvk-3.1.1",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Soporte/Perfiles",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Soporte/Scripts",
+      "target": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts",
+      "exists": true
+    },
+    {
+      "path": "/home/snz/Documentos/WarDatsPy/Taller-WC3/Soporte/Control-escritorio.md",
+      "target": "/home/snz/.codex/skills/control-escritorio-linux/SKILL.md",
+      "exists": true
+    }
+  ]
+}

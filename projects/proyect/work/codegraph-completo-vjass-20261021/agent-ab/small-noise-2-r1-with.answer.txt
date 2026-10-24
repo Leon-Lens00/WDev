@@ -1,0 +1,8 @@
+The chain uses direct static calls: `perlin3D → grad3D → realTernaryOp`.
+
+- `perlin3D` computes `X/Y/Z = floor(coordinate) & 255`, replaces coordinates with their fractional parts, and computes fade weights `u/v/w`. It builds `A=P[X]+Y`, `B=P[X+1]+Y`, then `AA=P[A]+Z`, `AB=P[A+1]+Z`, `BA=P[B]+Z`, `BB=P[B+1]+Z`, where `P` is `permutation`. Evidence: [Noise.j:102–129](Noise.j#L102).
+- Eight unconditional `grad3D` calls cover the cube corners. The lower-z face uses hashes `P[AA/BA/AB/BB]`; the upper face uses those indices plus one. Coordinates receive the corresponding `−1` offsets. Results interpolate along x, then y, then z. Evidence: [Noise.j:130–134](Noise.j#L130).
+- `grad3D` sets `h=hash & 15`. It selects `u=x` when `h<8`, otherwise `y`; `v=y` when `h<4`, otherwise a nested helper selects `x` for `h==12 or h==14`, else `z`. Two more helper calls select signs using bits 1 and 2, then sum. Evidence: [Noise.j:94–98](Noise.j#L94).
+- `realTernaryOp(cond,a,b)` returns `a` if true, otherwise `b`: [Noise.j:40–46](Noise.j#L40).
+
+This establishes source wiring; runtime execution was not tested.

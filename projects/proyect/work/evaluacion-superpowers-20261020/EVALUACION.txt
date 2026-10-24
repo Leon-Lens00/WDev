@@ -1,0 +1,98 @@
+EVALUACIÓN DE SUPERPOWERS PARA ESTE PROYECTO
+20 de octubre de 2026
+Versión declarada: 7.0.0; commit: b739a8af570e10a95898f2bdf6cec97467fa6c12
+
+Do not install the full package. First candidate: adapt systematic-debugging; second: writing-plans for substantial multi-stage work. TDD selectively for code with an appropriate real test harness.
+
+ALCANCE
+15 skills y 13 archivos complementarios revisados. Dos auxiliares originales ensayados en un repositorio Git temporal. Cero pruebas A/B de agentes y cero pruebas de Warcraft.
+
+RESULTADO POR SKILL
+
+systematic-debugging — Adaptar primero
+Aporte: Secuencia concreta de reproducción, trazado hacia el origen, comparación y prueba de una hipótesis. Aporta más procedimiento que nuestras reglas generales.
+Adaptación/límite: Conservar referencias root-cause-tracing y condition-based-waiting. Desacoplar TDD/verificación universales; distinguir errores de Wine, compilador, MPQ y motor. Tres arreglos fallidos justifican revisar hipótesis, no prueban una arquitectura incorrecta.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/systematic-debugging/SKILL.md
+
+writing-plans — Adaptar para trabajos grandes
+Aporte: Contratos exactos entre tareas, restricciones globales, verificaciones y cobertura del diseño. Puede servir de relevo entre chats.
+Adaptación/límite: Activar para cambios de varias fases; mantener planes/decisiones en el proyecto. Usar verificaciones reales 1.27b y evitar commits o aprobaciones repetidas por rutina cuando la ejecución ya esté autorizada. Suprimir obligación de entrar en otros ejecutores.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/writing-plans/SKILL.md
+
+test-driven-development — Uso selectivo
+Aporte: Red-green real aporta a scripts Python/TypeScript y a regresiones reproducibles.
+Adaptación/límite: Para vJASS definir harness y mapa de ensayo reales. Un script Python que reescribe una fórmula no demuestra el comportamiento del JASS ni del motor. No borrar código útil para cumplir una secuencia ritual ni exigir pruebas para cada edición documental.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/test-driven-development/SKILL.md
+
+verification-before-completion — Mantener lo existente
+Aporte: Exige evidencia observable y distingue linter, compilación y corrección; nuestra AGENTS y skills Warcraft ya cubren esas distinciones.
+Adaptación/límite: Si se reutiliza alguna pauta, ligarla al hash/versión examinados y a cobertura real. No repetir verificaciones sólo porque empieza otro mensaje; repetir cuando cambia el estado o queda una duda pertinente.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/verification-before-completion/SKILL.md
+
+receiving-code-review — Mantener lo existente
+Aporte: Comprobar sugerencias contra el código y el entorno coincide con la política contra complacencia y Judgment Day.
+Adaptación/límite: Evitar paradas de todo el trabajo por una duda localizada; continuar lo independiente. Mantener autorización explícita para mensajes a GitHub y respetar alcance de una revisión sin permiso de corrección.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/receiving-code-review/SKILL.md
+
+brainstorming — Reservar para ideas abiertas
+Aporte: Puede ayudar a definir una habilidad o sistema cuando falta una decisión funcional importante. La versión revisada permite ejecutar directamente tareas claras.
+Adaptación/límite: Activación acotada. Evitar una cadena obligatoria de preguntas, aprobación y plan para ajustes ya definidos. El acompañante visual tiene poco aporte incremental frente a nuestras visualizaciones disponibles.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/brainstorming/SKILL.md
+
+executing-plans — Reservar; adaptación importante
+Aporte: Ejecución secuencial, ledger, recuperación por tarea y un revisor final pueden servir para trabajos largos.
+Adaptación/límite: Conservar logs/decisiones fuera del scratch antes de su limpieza; distinguir decisiones rutinarias de cambios de alcance. Cubrir fuentes y mapas sin commit. Sustituir modelo forzado por política vigente y TDD general por verificación pertinente.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/executing-plans/SKILL.md
+
+requesting-code-review — Reservar como revisión simple
+Aporte: Un revisor separado puede ser más proporcionado que dos jueces para una revisión común; no equivale al protocolo adversarial de Judgment Day.
+Adaptación/límite: Activarlo dentro de la autorización de delegación. Incluir snapshot/identidad y dependencias, no sólo un rango de commits si hay cambios sin commit. No añadir otra revisión duplicada cuando Judgment Day ya cubra el mismo alcance.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/requesting-code-review/SKILL.md
+
+dispatching-parallel-agents — Reservar para independencia demostrada
+Aporte: Aporta separación de contextos y tareas por dominio. Su propio texto excluye trabajos con estado compartido.
+Adaptación/límite: Respetar autorización y slots disponibles. Un escritor por W3X/MPQ; no controlar en paralelo el mismo juego/editor/prefijo o modificar el mismo núcleo. Integrar y verificar cambios relacionados juntos.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/dispatching-parallel-agents/SKILL.md
+
+subagent-driven-development — No adoptar como flujo base
+Aporte: Implementador por tarea, revisión de tarea y revisión final; conserva contexto por archivos. Los implementadores se ejecutan secuencialmente, no en paralelo.
+Adaptación/límite: Exige numerosas skills/auxiliares, commits y hasta cinco rondas de corrección por tarea, además de selección explícita de modelos. Adaptar autorización, presupuesto, evidencias, revisión tras arreglos y estados con hallazgos aparcados. No apilarlo sobre Judgment Day por defecto.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/subagent-driven-development/SKILL.md
+
+using-git-worktrees — Usar capacidades nativas actuales
+Aporte: Detecta worktrees existentes y prioriza herramientas nativas, ideas compatibles con nuestro entorno.
+Adaptación/límite: No inferir propiedad por nombre .worktrees/worktrees. Usar identidad del checkout gestionado por Codex; evitar instalar dependencias modernas genéricamente. Un worktree no aísla por sí mismo prefijos Wine o archivos referidos mediante rutas absolutas.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/using-git-worktrees/SKILL.md
+
+finishing-a-development-branch — Usar flujo nativo actual
+Aporte: Organiza integración, PR y conservación del trabajo; separa descarte solicitado de limpieza.
+Adaptación/límite: Usar controles de Codex para sus worktrees y adjuntar PRs creadas. No añadir menús/reconfirmaciones cuando exista decisión explícita. La ruta de una carpeta no demuestra que la creó esta tarea.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/finishing-a-development-branch/SKILL.md
+
+writing-skills — Conservar skill-creator oficial
+Aporte: Contiene métodos útiles para evaluar aplicación real y activación de una skill, no sólo su YAML.
+Adaptación/límite: Nuestra skill-creator ya contempla forward-testing cuando aporta. No adoptar obligación universal de baseline fallido, múltiples repeticiones, subagentes, borrar y rehacer documentación por cada cambio. Guardar pruebas A/B para casos de riesgo o fallos reales.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/writing-skills/SKILL.md
+
+using-superpowers — No activar globalmente
+Aporte: Su bootstrap carga un método global y exige usar skills incluso con una probabilidad mínima de pertinencia.
+Adaptación/límite: No necesitamos ese bootstrap para estudiar o adaptar una skill concreta. Su activación es demasiado amplia para nuestro criterio de pertinencia y llevaría a cargar cadenas redundantes. Las instrucciones de la sesión prevalecen sobre el repositorio.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/using-superpowers/SKILL.md
+
+diagnosing-superpowers — No hace falta actualmente
+Aporte: Audita sesiones y extrae evidencia sobre fallos de uso del paquete; exige siete dimensiones de análisis y protocolos de exportación.
+Adaptación/límite: Sólo tiene sentido si se usa Superpowers y hay un problema concreto que diagnosticar. Su protocolo completo no es una herramienta general ligera contra errores del agente. No exportar conversaciones ni abrir incidencias sin autorización.
+Fuente: https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/diagnosing-superpowers/SKILL.md
+
+HALLAZGOS TRANSVERSALES
+1. La skill de depuración no es autónoma: remite a TDD, verificación y referencias. Copiar sólo SKILL.md no reproduce el conjunto.
+2. Los flujos de ejecución registran evidencias y decisiones en scratch ignorado por Git y ordenan eliminarlo al terminar. Para memoria del proyecto hay que conservar lo relevante de forma duradera.
+3. La prueba real de review-package incluyó el delta con commit y excluyó cambios sin commit y un mapa no rastreado; ése es su contrato de rango, no una revisión del checkout completo. Rechazó correctamente un rango vacío con salida 3.
+4. La prueba real de sdd-workspace separó dos planes con el mismo nombre y reutilizó la carpeta del mismo plan. Esa separación funcionó en el caso probado.
+5. La política de modelos, esperas y creación/limpieza de worktrees debe ajustarse a las herramientas y reglas actuales de Codex. No copiar rutas, modelos o capacidades de otra sesión.
+6. No se ha demostrado que añadir estas instrucciones reduzca errores o ahorre tokens. Las skills no añaden soporte semántico de vJASS ni reemplazan JassHelper/pJASS y pruebas en motor.
+
+EVIDENCIA Y LÍMITES
+No measured reduction in agent errors, elapsed time or token use; no validation of the installed marketplace payload or compatibility with every Codex client; no execution of Superpowers as active skills.
+Only evaluation sources, evidence and reports under work/evaluacion-superpowers-20261020. No skill/plugin installation, Codex configuration changes, source/map modification, or global activation.
+Detalles estructurados: evaluacion.json. Hashes upstream: manifest.json. Ensayo reproducible: probar_auxiliares.py. Resultados: pruebas-auxiliares.json.

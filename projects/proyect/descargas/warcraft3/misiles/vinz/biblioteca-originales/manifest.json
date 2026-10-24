@@ -1,0 +1,3074 @@
+{
+  "date": "2026-10-22T19:16:12.273967-05:00",
+  "scope": "Hive Classic SD Models, author Vinz, tag Missile, complete pagination",
+  "listed": 50,
+  "downloaded": 50,
+  "models": 191,
+  "failures": [],
+  "entries": [
+    {
+      "title": "Arcade Bolts",
+      "url": "https://www.hiveworkshop.com/threads/arcade-bolts.314822/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 6,
+      "date": "2026-10-22T19:15:42.749525-05:00",
+      "category": "01-Energia-y-plasma",
+      "folder": "01-Energia-y-plasma/arcade-bolts.314822",
+      "zip": "original.zip",
+      "zipBytes": 11175,
+      "zipSha256": "93a33ef8c287e4796ec7e978d00fd0ab56a979088eb6919a7372ca506dd4f50d",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Arcade Bolts/readme.html",
+          "archivePath": "Arcade Bolts/readme.html",
+          "bytes": 6034,
+          "sha256": "383f8e5d01e2d8b655c13cdfab619ab928b7cf95c9fd3299195b462e8d21af1f"
+        },
+        {
+          "path": "originales/Arcade Bolts/Arcade Bolt Blues.mdx",
+          "archivePath": "Arcade Bolts/Arcade Bolt Blues.mdx",
+          "bytes": 6251,
+          "sha256": "45ff8f4c8a19b5dc952b8c70fde435256d93cbf4c1282b3fa612e14454c069f9"
+        },
+        {
+          "path": "originales/Arcade Bolts/Arcade Bolt FIre.mdx",
+          "archivePath": "Arcade Bolts/Arcade Bolt FIre.mdx",
+          "bytes": 6251,
+          "sha256": "627564998f74618bf820f92f3cc2cf800ee3e65f8c464e4df571b41727efdcbd"
+        },
+        {
+          "path": "originales/Arcade Bolts/Arcade Bolt Lemon.mdx",
+          "archivePath": "Arcade Bolts/Arcade Bolt Lemon.mdx",
+          "bytes": 6251,
+          "sha256": "d736ccc7c98681e7f4eb8aedc070d8fc2d5fce5394f4ea3309f31eb1737fb9ec"
+        },
+        {
+          "path": "originales/Arcade Bolts/Arcade Bolt Lime.mdx",
+          "archivePath": "Arcade Bolts/Arcade Bolt Lime.mdx",
+          "bytes": 6251,
+          "sha256": "35e53055e892023d3872a96eb2ab59a81ea8359990530d9266a944792c7f4518"
+        },
+        {
+          "path": "originales/Arcade Bolts/Arcade Bolt Psyche.mdx",
+          "archivePath": "Arcade Bolts/Arcade Bolt Psyche.mdx",
+          "bytes": 6251,
+          "sha256": "289bab168d5230875f6e9bbd2ae7346a6e214248dcbf30cf362335998b87986b"
+        },
+        {
+          "path": "originales/Arcade Bolts/Arcade Bolt Red.mdx",
+          "archivePath": "Arcade Bolts/Arcade Bolt Red.mdx",
+          "bytes": 6251,
+          "sha256": "7dbafbbbd5ba42ba9b5a5ce957921751d41c9fe4471efc06e936b21a98dfc146"
+        }
+      ],
+      "models": 6,
+      "textures": 0
+    },
+    {
+      "title": "Firebrand Shots",
+      "url": "https://www.hiveworkshop.com/threads/firebrand-shots.319649/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Modern",
+        "#Science Fiction"
+      ],
+      "listedResources": 9,
+      "date": "2026-10-22T19:15:28.336857-05:00",
+      "category": "01-Energia-y-plasma",
+      "folder": "01-Energia-y-plasma/firebrand-shots.319649",
+      "zip": "original.zip",
+      "zipBytes": 40213,
+      "zipSha256": "e1c2e46e67f95e37c7c5b2a60d68a9efdadc73b5edb3d07b6236d047058b7f8c",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Firebrand Shots/readme.html",
+          "archivePath": "Firebrand Shots/readme.html",
+          "bytes": 7544,
+          "sha256": "d93d1a6124515b97ada1b23e643914343974b3fa0bee60c1bd47f95d23d8b8dd"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Blue/Firebrand Shot Blue.mdx",
+          "archivePath": "Firebrand Shots/Firebrand Shot Blue/Firebrand Shot Blue.mdx",
+          "bytes": 8565,
+          "sha256": "cd02d6c572af402c35505edb52a520ad6ea1d5866fa67b6f77e30b0a512dee4d"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Blue/PsionicGlow.blp",
+          "archivePath": "Firebrand Shots/Firebrand Shot Blue/PsionicGlow.blp",
+          "bytes": 4861,
+          "sha256": "11483c99dae9617706110140b590c79f6d0c652a0c65dd16b494935daf50f5de"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Green/Firebrand Shot Green.mdx",
+          "archivePath": "Firebrand Shots/Firebrand Shot Green/Firebrand Shot Green.mdx",
+          "bytes": 8565,
+          "sha256": "e19f2c3f76e4c8b254d80e3d0e757055f4a4a7819465cb946e3bc21d915115b4"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Green/FelGlow.blp",
+          "archivePath": "Firebrand Shots/Firebrand Shot Green/FelGlow.blp",
+          "bytes": 4596,
+          "sha256": "02f72e48146a04dbcfdf58cda9fcfeabd80de0df79225093d39ab917dc93bdd4"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Orange.mdx",
+          "archivePath": "Firebrand Shots/Firebrand Shot Orange.mdx",
+          "bytes": 8565,
+          "sha256": "176b09ec83d12ca578dd7e4e89c804092ba54933a7373c7dd86db7008b8cf080"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Pink/Firebrand Shot Pink.mdx",
+          "archivePath": "Firebrand Shots/Firebrand Shot Pink/Firebrand Shot Pink.mdx",
+          "bytes": 8565,
+          "sha256": "7132704dfdd171e16a2f2adb7ab2300dec18abc193838a29b284427f9ce806d3"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Pink/BattlecastGlow.blp",
+          "archivePath": "Firebrand Shots/Firebrand Shot Pink/BattlecastGlow.blp",
+          "bytes": 4600,
+          "sha256": "b94fb7884643320b2134e720ea8be6647b8f2bdcb8ef78fae9bcb12e5268fdf8"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Purple/Firebrand Shot Purple.mdx",
+          "archivePath": "Firebrand Shots/Firebrand Shot Purple/Firebrand Shot Purple.mdx",
+          "bytes": 8565,
+          "sha256": "ba2bd642c913ffc9f1081f6a6c387e5cc46c2240061fe590312eb63e50a9ab9e"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Purple/VoidGlow.blp",
+          "archivePath": "Firebrand Shots/Firebrand Shot Purple/VoidGlow.blp",
+          "bytes": 4728,
+          "sha256": "1f8db522028b6c21c06fa77055e5d4bb64e009650a637729f82c54d5d36fdde7"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Red/Firebrand Shot Red.mdx",
+          "archivePath": "Firebrand Shots/Firebrand Shot Red/Firebrand Shot Red.mdx",
+          "bytes": 8565,
+          "sha256": "bc9fa7ac296dbb7c5c502d6fc46d9ec708685f5e1e9816798767e6b208a8bfc6"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Red/BattlecastGlow.blp",
+          "archivePath": "Firebrand Shots/Firebrand Shot Red/BattlecastGlow.blp",
+          "bytes": 4600,
+          "sha256": "b94fb7884643320b2134e720ea8be6647b8f2bdcb8ef78fae9bcb12e5268fdf8"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Silver.mdx",
+          "archivePath": "Firebrand Shots/Firebrand Shot Silver.mdx",
+          "bytes": 8565,
+          "sha256": "75573a5783bd651ba987a4e8354bcefdb1c08c2d9cd4566f27d7ff1d391b6c59"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Teal/Firebrand Shot Teal.mdx",
+          "archivePath": "Firebrand Shots/Firebrand Shot Teal/Firebrand Shot Teal.mdx",
+          "bytes": 8565,
+          "sha256": "bb2c8df0f8368ddb8b019f798e24c23b91daf9d00270caefb4e4210ff77590c1"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Teal/PsionicGlow.blp",
+          "archivePath": "Firebrand Shots/Firebrand Shot Teal/PsionicGlow.blp",
+          "bytes": 4861,
+          "sha256": "11483c99dae9617706110140b590c79f6d0c652a0c65dd16b494935daf50f5de"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Yellow/Firebrand Shot Yellow.mdx",
+          "archivePath": "Firebrand Shots/Firebrand Shot Yellow/Firebrand Shot Yellow.mdx",
+          "bytes": 8565,
+          "sha256": "4d2de096f35ea14efbf5fbad11501b92bf7d8762d6898057b8b21130c01641a2"
+        },
+        {
+          "path": "originales/Firebrand Shots/Firebrand Shot Yellow/RadiantGlow.blp",
+          "archivePath": "Firebrand Shots/Firebrand Shot Yellow/RadiantGlow.blp",
+          "bytes": 4531,
+          "sha256": "facfccd9b101e2872c747c0fd24465625e562fc0eb334a2169d1e8f4f2440271"
+        }
+      ],
+      "models": 9,
+      "textures": 7
+    },
+    {
+      "title": "Psionic Shots",
+      "url": "https://www.hiveworkshop.com/threads/psionic-shots.319594/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Modern",
+        "#Science Fiction",
+        "#Human"
+      ],
+      "listedResources": 9,
+      "date": "2026-10-22T19:15:29.171884-05:00",
+      "category": "01-Energia-y-plasma",
+      "folder": "01-Energia-y-plasma/psionic-shots.319594",
+      "zip": "original.zip",
+      "zipBytes": 41081,
+      "zipSha256": "2218f767697233879ba8d9a3fc3f3c4f08d59aa5c5d82237bafd4c0f8efe62e1",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Psionic Shots/readme.html",
+          "archivePath": "Psionic Shots/readme.html",
+          "bytes": 6238,
+          "sha256": "6a52c477297e5f49a127f12839ec028deebe0696435018058dbc73c3739f389c"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Blue/Psionic Shot Blue.mdx",
+          "archivePath": "Psionic Shots/Psionic Shot Blue/Psionic Shot Blue.mdx",
+          "bytes": 10326,
+          "sha256": "dd9f1aa480f066357ca0de352609357f91fe50ec2be73269dab7a7c697c044ff"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Blue/PsionicGlow.blp",
+          "archivePath": "Psionic Shots/Psionic Shot Blue/PsionicGlow.blp",
+          "bytes": 4861,
+          "sha256": "11483c99dae9617706110140b590c79f6d0c652a0c65dd16b494935daf50f5de"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Green/Psionic Shot Green.mdx",
+          "archivePath": "Psionic Shots/Psionic Shot Green/Psionic Shot Green.mdx",
+          "bytes": 10058,
+          "sha256": "32176c6725e56ffc69a31c4f06ce24a90ac1e2c5bf47b1bb431d58f79a240013"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Green/FelGlow.blp",
+          "archivePath": "Psionic Shots/Psionic Shot Green/FelGlow.blp",
+          "bytes": 4596,
+          "sha256": "02f72e48146a04dbcfdf58cda9fcfeabd80de0df79225093d39ab917dc93bdd4"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Orange.mdx",
+          "archivePath": "Psionic Shots/Psionic Shot Orange.mdx",
+          "bytes": 10058,
+          "sha256": "015b1b37504f1ffaa6e39759d9e95a4de5910b435e92a8f86dc1bcab6ab1ed1c"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Pink/Psionic Shot Pink.mdx",
+          "archivePath": "Psionic Shots/Psionic Shot Pink/Psionic Shot Pink.mdx",
+          "bytes": 10326,
+          "sha256": "271283eaa48a13493de92898c126de227393435c906220707acb748d06aeeaec"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Pink/BattlecastGlow.blp",
+          "archivePath": "Psionic Shots/Psionic Shot Pink/BattlecastGlow.blp",
+          "bytes": 4600,
+          "sha256": "b94fb7884643320b2134e720ea8be6647b8f2bdcb8ef78fae9bcb12e5268fdf8"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Purple/Psionic Shot Purple.mdx",
+          "archivePath": "Psionic Shots/Psionic Shot Purple/Psionic Shot Purple.mdx",
+          "bytes": 10326,
+          "sha256": "f78ce58046bf2e6bdb5c910441f4a52c520655f02e04468883ac25d9bc1e8fce"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Purple/VoidGlow.blp",
+          "archivePath": "Psionic Shots/Psionic Shot Purple/VoidGlow.blp",
+          "bytes": 4728,
+          "sha256": "1f8db522028b6c21c06fa77055e5d4bb64e009650a637729f82c54d5d36fdde7"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Red/Psionic Shot Red.mdx",
+          "archivePath": "Psionic Shots/Psionic Shot Red/Psionic Shot Red.mdx",
+          "bytes": 10326,
+          "sha256": "58e9fa2814f4dceae3f7b1373aa738433da046ece446dc7930a3fd1bb8edde71"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Red/BattlecastGlow.blp",
+          "archivePath": "Psionic Shots/Psionic Shot Red/BattlecastGlow.blp",
+          "bytes": 4600,
+          "sha256": "b94fb7884643320b2134e720ea8be6647b8f2bdcb8ef78fae9bcb12e5268fdf8"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Silver.mdx",
+          "archivePath": "Psionic Shots/Psionic Shot Silver.mdx",
+          "bytes": 10058,
+          "sha256": "01b0d1efcdcfb674377a63f06d21d772a5a81495b12c95901cbcba77a04622f1"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Teal/Psionic Shot Teal.mdx",
+          "archivePath": "Psionic Shots/Psionic Shot Teal/Psionic Shot Teal.mdx",
+          "bytes": 10058,
+          "sha256": "86cbc41bb1849d06a474cd95977ec652faecb22950e6c93f0f48e44ae74b711d"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Teal/PsionicGlow.blp",
+          "archivePath": "Psionic Shots/Psionic Shot Teal/PsionicGlow.blp",
+          "bytes": 4861,
+          "sha256": "11483c99dae9617706110140b590c79f6d0c652a0c65dd16b494935daf50f5de"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Yellow/Psionic Shot Yellow.mdx",
+          "archivePath": "Psionic Shots/Psionic Shot Yellow/Psionic Shot Yellow.mdx",
+          "bytes": 10058,
+          "sha256": "3caceefb38604cac52a798454841a5fa03ab3cda21bbe653e2eb11590b53c296"
+        },
+        {
+          "path": "originales/Psionic Shots/Psionic Shot Yellow/RadiantGlow.blp",
+          "archivePath": "Psionic Shots/Psionic Shot Yellow/RadiantGlow.blp",
+          "bytes": 4531,
+          "sha256": "facfccd9b101e2872c747c0fd24465625e562fc0eb334a2169d1e8f4f2440271"
+        }
+      ],
+      "models": 9,
+      "textures": 7
+    },
+    {
+      "title": "Shots Vol. I",
+      "url": "https://www.hiveworkshop.com/threads/shots-vol-i.315258/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Modern",
+        "#Science Fiction",
+        "#Human"
+      ],
+      "listedResources": 12,
+      "date": "2026-10-22T19:15:29.072309-05:00",
+      "category": "01-Energia-y-plasma",
+      "folder": "01-Energia-y-plasma/shots-vol-i.315258",
+      "zip": "original.zip",
+      "zipBytes": 26830,
+      "zipSha256": "979c89c7a1a6b4462af930ad6f8147613f094a0cfaf79fc1f410d11eff34f2f9",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Shots Vol. I/readme.html",
+          "archivePath": "Shots Vol. I/readme.html",
+          "bytes": 5773,
+          "sha256": "8764c0e3b33dd93af1e511dceedabb2bf4fa12cff472d6d667d5c98bc7e1f007"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Blue.mdx",
+          "archivePath": "Shots Vol. I/Shot Blue.mdx",
+          "bytes": 5900,
+          "sha256": "6d073549743b558396d9d9e3158d5b8130d1f7fda997e8da4136fdc42fba1a41"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Blue Double.mdx",
+          "archivePath": "Shots Vol. I/Shot Blue Double.mdx",
+          "bytes": 7311,
+          "sha256": "207792358ba184a7b8850db2cbaacafd9aa1b960c45b9905ee3eeca9e27ce47e"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Green.mdx",
+          "archivePath": "Shots Vol. I/Shot Green.mdx",
+          "bytes": 5872,
+          "sha256": "058de54f2f6deaf0183e92f9f75ce4eeee9a7da1417c2b74bf9eafe86ea9788a"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Green Double.mdx",
+          "archivePath": "Shots Vol. I/Shot Green Double.mdx",
+          "bytes": 7283,
+          "sha256": "7725166d413b36a26c7de1b4e6d168282237151025ff41427c6c6617966f6b5d"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Orange.mdx",
+          "archivePath": "Shots Vol. I/Shot Orange.mdx",
+          "bytes": 6140,
+          "sha256": "a093ab85380cde8804b746a4ff518b283936ecd0ca48aae74471d1bc77785818"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Orange Double.mdx",
+          "archivePath": "Shots Vol. I/Shot Orange Double.mdx",
+          "bytes": 7555,
+          "sha256": "78d9e5e05a08a692476048e90e2fe1637759e5692a1f494823840c221c8814e7"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Purple.mdx",
+          "archivePath": "Shots Vol. I/Shot Purple.mdx",
+          "bytes": 6704,
+          "sha256": "ae584daeb14319fb0c73ee05e6247c0b451a68ac2fbb88e713d808dd516beeb0"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Purple Double.mdx",
+          "archivePath": "Shots Vol. I/Shot Purple Double.mdx",
+          "bytes": 7315,
+          "sha256": "337175b73b35705a555b2085df0c9694da9aff2ddd0485169daaa48dcfe3d777"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Red.mdx",
+          "archivePath": "Shots Vol. I/Shot Red.mdx",
+          "bytes": 6492,
+          "sha256": "832aa9a629288eb1d099372e508297b457255e8b69e98b67666b1d248e6e57be"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Red Double.mdx",
+          "archivePath": "Shots Vol. I/Shot Red Double.mdx",
+          "bytes": 7367,
+          "sha256": "cf191e954957584f1f7121c44d7f6a1be91e86e7a4e32007b67223e88ec57510"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Yellow.mdx",
+          "archivePath": "Shots Vol. I/Shot Yellow.mdx",
+          "bytes": 6408,
+          "sha256": "c49816a0453f4a691d810d05e0411f50937d1d161df2dadbb9153ec3c0baa064"
+        },
+        {
+          "path": "originales/Shots Vol. I/Shot Yellow Double.mdx",
+          "archivePath": "Shots Vol. I/Shot Yellow Double.mdx",
+          "bytes": 7819,
+          "sha256": "a097691b8dd3386b4b5643f0ff197520715c57bec405c12265704110e2618343"
+        }
+      ],
+      "models": 12,
+      "textures": 0
+    },
+    {
+      "title": "Shots Vol. II",
+      "url": "https://www.hiveworkshop.com/threads/shots-vol-ii.315512/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Modern",
+        "#Science Fiction",
+        "#Human"
+      ],
+      "listedResources": 6,
+      "date": "2026-10-22T19:15:38.746925-05:00",
+      "category": "01-Energia-y-plasma",
+      "folder": "01-Energia-y-plasma/shots-vol-ii.315512",
+      "zip": "original.zip",
+      "zipBytes": 14587,
+      "zipSha256": "218b4b7ec70f616b4865704d26c99a3e78d48cd2680e0898545d5eba3a59ba23",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Shots Vol. II/readme.html",
+          "archivePath": "Shots Vol. II/readme.html",
+          "bytes": 3931,
+          "sha256": "5a562dfa9db43fe0d5cc5eaf23ae04edb7592fe822711f2ac76f5738da9240c8"
+        },
+        {
+          "path": "originales/Shots Vol. II/Shot II Blue.mdx",
+          "archivePath": "Shots Vol. II/Shot II Blue.mdx",
+          "bytes": 7188,
+          "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac"
+        },
+        {
+          "path": "originales/Shots Vol. II/Shot II Green.mdx",
+          "archivePath": "Shots Vol. II/Shot II Green.mdx",
+          "bytes": 7160,
+          "sha256": "4f206526f7eaff7394ef06bfcf5b00ea4a824ad0f16d154fb4d751b0ce69f926"
+        },
+        {
+          "path": "originales/Shots Vol. II/Shot II Orange.mdx",
+          "archivePath": "Shots Vol. II/Shot II Orange.mdx",
+          "bytes": 7132,
+          "sha256": "eac94529fc5f320803b34bdae7b1767d1679a15b6aa1d4d6a13712869479a1cf"
+        },
+        {
+          "path": "originales/Shots Vol. II/Shot II Purple.mdx",
+          "archivePath": "Shots Vol. II/Shot II Purple.mdx",
+          "bytes": 7188,
+          "sha256": "d2cc4430b8ec8c78ae38295396ff4163f5651b5e39ac051a3dcb211d9b0803f4"
+        },
+        {
+          "path": "originales/Shots Vol. II/Shot II Red.mdx",
+          "archivePath": "Shots Vol. II/Shot II Red.mdx",
+          "bytes": 7160,
+          "sha256": "a674ae72a5f1ace9f5cc77f29cdd1d52796fb7d3335695dfbb4c1f94d5a45703"
+        },
+        {
+          "path": "originales/Shots Vol. II/Shot II Yellow.mdx",
+          "archivePath": "Shots Vol. II/Shot II Yellow.mdx",
+          "bytes": 7132,
+          "sha256": "905b2fdac131ba1e72731946e321b9824025ec9e764fffba5dfc9c7b297e32ef"
+        }
+      ],
+      "models": 6,
+      "textures": 0
+    },
+    {
+      "title": "Airstrike Rocket",
+      "url": "https://www.hiveworkshop.com/threads/airstrike-rocket.314936/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:15:35.411222-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/airstrike-rocket.314936",
+      "zip": "original.zip",
+      "zipBytes": 7841,
+      "zipSha256": "3cfc3b4350ea28359d4a5f1a59730049aeafb0ba83699e1cdf7d678613cb4bf8",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Airstrike Rocket/readme.html",
+          "archivePath": "Airstrike Rocket/readme.html",
+          "bytes": 4035,
+          "sha256": "b59b3193a43d6c49af52e9e763d0e7e409cc0792900ead221f8d09da8b9b8043"
+        },
+        {
+          "path": "originales/Airstrike Rocket/Airstrike Rocket.mdx",
+          "archivePath": "Airstrike Rocket/Airstrike Rocket.mdx",
+          "bytes": 26724,
+          "sha256": "6f2c0a73bab1829e8bdb3fa4aedebd2dd3f74933ecffa2acf1db1a61b025fda7"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "Blood Elven Torpedo",
+      "url": "https://www.hiveworkshop.com/threads/blood-elven-torpedo.315903/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Blood Elf"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:15:49.738198-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/blood-elven-torpedo.315903",
+      "zip": "original.zip",
+      "zipBytes": 13478,
+      "zipSha256": "126c50f702c5e2a1073b8b924274e9498a329538ec5558eaf4876de342621042",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Blood Elven Torpedo/readme.html",
+          "archivePath": "Blood Elven Torpedo/readme.html",
+          "bytes": 3841,
+          "sha256": "2aa0bd0cdd02085c9529e95d634addf17cae946f39154991c2adab79d2d697f2"
+        },
+        {
+          "path": "originales/Blood Elven Torpedo/Blood Elven Torpedo.mdx",
+          "archivePath": "Blood Elven Torpedo/Blood Elven Torpedo.mdx",
+          "bytes": 48179,
+          "sha256": "1a2388aa622b56ca776f649321333bf70e750f5e78b83674d3d30da2cc5971fe"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "Blood Elven Voyager",
+      "url": "https://www.hiveworkshop.com/threads/blood-elven-voyager.312541/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Building",
+        "#Unit",
+        "#Historic",
+        "#Science Fiction",
+        "#Blood Elf",
+        "#Contest Entries"
+      ],
+      "listedResources": 5,
+      "date": "2026-10-22T19:15:33.055766-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/blood-elven-voyager.312541",
+      "zip": "original.zip",
+      "zipBytes": 168562,
+      "zipSha256": "17efaec0318a76e29ec14db6e800617cf17cbbb678e8882e6d8102f86cfcde2c",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Blood Elven Voyager/readme.html",
+          "archivePath": "Blood Elven Voyager/readme.html",
+          "bytes": 6682,
+          "sha256": "540015983b427185c8b5b31bcd2125753ccb0f74255316d6838f67ab341c62ea"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Harvester/BTNBE-Harvester.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Harvester/BTNBE-Harvester.blp",
+          "bytes": 6300,
+          "sha256": "14f85374a417d1afaa1f44536dc3cbabc1cfb2c4c1b65037a38d84b9c04c317a"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Harvester/DISBTNBE-Harvester.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Harvester/DISBTNBE-Harvester.blp",
+          "bytes": 2591,
+          "sha256": "7ac66ed1b87ce7638f6b5639b227a3882ac21f27c3c0b13bdfb199f8d4bc2440"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Harvester/PASBE-Harvester.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Harvester/PASBE-Harvester.blp",
+          "bytes": 3508,
+          "sha256": "f6704771bff70dacfe180a9469e5bd7660af98ee11abfcc57cfe615d82010b07"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Harvester/DISPASBE-Harvester.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Harvester/DISPASBE-Harvester.blp",
+          "bytes": 2591,
+          "sha256": "7ac66ed1b87ce7638f6b5639b227a3882ac21f27c3c0b13bdfb199f8d4bc2440"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Harvester/SSPBE-Harvester.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Harvester/SSPBE-Harvester.blp",
+          "bytes": 11420,
+          "sha256": "5a635e79486d3aa29fd7a5125f2e173d7dafb3cc32b42d24dafd79a6346aa1ed"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Voyager/BTNBE-Voyager.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Voyager/BTNBE-Voyager.blp",
+          "bytes": 6300,
+          "sha256": "50891e6086fa6d7f3e365235250828a91333c31653bc113f88f4f4b1002409c9"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Voyager/SSPBE-Voyager.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Voyager/SSPBE-Voyager.blp",
+          "bytes": 11420,
+          "sha256": "c638bcc943de39c060a2a4b87c7b2b80afb493eccca42e4c53645788058b4012"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Voyager/DISBTNBE-Voyager.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Voyager/DISBTNBE-Voyager.blp",
+          "bytes": 6300,
+          "sha256": "854626b9f0a77a5748dc9e716d2dfb1ebc80389bb8f4c2e113979e67ad75f2af"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Voyager/PASBE-Voyager.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Voyager/PASBE-Voyager.blp",
+          "bytes": 3467,
+          "sha256": "e0f57a99f060e05af00716b5c35f047a6535671dfa31067d5893fe164502d888"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elf Voyager/DISPASBE-Voyager.blp",
+          "archivePath": "Blood Elven Voyager/Blood Elf Voyager/DISPASBE-Voyager.blp",
+          "bytes": 6300,
+          "sha256": "854626b9f0a77a5748dc9e716d2dfb1ebc80389bb8f4c2e113979e67ad75f2af"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/Blood Elven Voyager.mdx",
+          "archivePath": "Blood Elven Voyager/Blood Elven Voyager.mdx",
+          "bytes": 528169,
+          "sha256": "ff8f07e4edbc6d41d67f86127cf0b872b3de9ca5c60d0cefc70dd0539b745d1c"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/GunImpact.mdx",
+          "archivePath": "Blood Elven Voyager/GunImpact.mdx",
+          "bytes": 2071,
+          "sha256": "202be0fa04f59fa71e55009140fa704e99027cc6e2906855a11da71fccbd8a93"
+        },
+        {
+          "path": "originales/Blood Elven Voyager/VoyagerRocket02.mdx",
+          "archivePath": "Blood Elven Voyager/VoyagerRocket02.mdx",
+          "bytes": 65825,
+          "sha256": "b65323606bf9a5f8e5c454f98e5d619501dcfa52194f12027e4214514546028f"
+        }
+      ],
+      "models": 3,
+      "textures": 10
+    },
+    {
+      "title": "Cannonball",
+      "url": "https://www.hiveworkshop.com/threads/cannonball.315873/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Historic",
+        "#Modern",
+        "#Human"
+      ],
+      "listedResources": 4,
+      "date": "2026-10-22T19:15:32.284785-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/cannonball.315873",
+      "zip": "original.zip",
+      "zipBytes": 23679,
+      "zipSha256": "eb31fec3d8ba52c6385c6f92d0f09a01f2915167308275dea36730753dc1e60f",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Cannonball/readme.html",
+          "archivePath": "Cannonball/readme.html",
+          "bytes": 4455,
+          "sha256": "1efb828ae64f67b23b83ff247dd6c8e61832127b7702b9d58ec650dcb2e49a58"
+        },
+        {
+          "path": "originales/Cannonball/Cannonball.mdx",
+          "archivePath": "Cannonball/Cannonball.mdx",
+          "bytes": 23398,
+          "sha256": "c4eadc8532901161a9b64ee353f02226a849a8e3a0f8c2228b4feb54825ad4f0"
+        },
+        {
+          "path": "originales/Cannonball/Cannonball C.mdx",
+          "archivePath": "Cannonball/Cannonball C.mdx",
+          "bytes": 21649,
+          "sha256": "c375e49dbc7073fb6e5ef1decdbc56cf4735cc1b7db4b7b428a7f58f1e87858c"
+        },
+        {
+          "path": "originales/Cannonball/Cannonball D.mdx",
+          "archivePath": "Cannonball/Cannonball D.mdx",
+          "bytes": 21381,
+          "sha256": "5aa2ce289cf4a9a30405f74b45777df0b9d7c663d8b8bd9210161f78c5d4d9cf"
+        },
+        {
+          "path": "originales/Cannonball/Cannonball D Rain.mdx",
+          "archivePath": "Cannonball/Cannonball D Rain.mdx",
+          "bytes": 21145,
+          "sha256": "03293479124392f6244afc41837c8398310d1e11341755c97da90b113a76c9b8"
+        }
+      ],
+      "models": 4,
+      "textures": 0
+    },
+    {
+      "title": "Chain Grenade",
+      "url": "https://www.hiveworkshop.com/threads/chain-grenade.315385/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Historic",
+        "#Dwarf",
+        "#Human"
+      ],
+      "listedResources": 4,
+      "date": "2026-10-22T19:15:39.129171-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/chain-grenade.315385",
+      "zip": "original.zip",
+      "zipBytes": 61736,
+      "zipSha256": "6b2e1ee04e38eaa85d546ced8340b5d82a3a6e3f070f5863bb837b2e855d5862",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Chain Grenade/readme.html",
+          "archivePath": "Chain Grenade/readme.html",
+          "bytes": 5742,
+          "sha256": "20c5936b11605d2feb56421868721e356e757217cee3974064628f6271f12c4a"
+        },
+        {
+          "path": "originales/Chain Grenade/Chain Grenade Blue.mdx",
+          "archivePath": "Chain Grenade/Chain Grenade Blue.mdx",
+          "bytes": 63929,
+          "sha256": "7eab0da7a03a68a9be71b83a11333bed121ac900281453c4b1aa8a12cdaa32a7"
+        },
+        {
+          "path": "originales/Chain Grenade/Chain Grenade Green.mdx",
+          "archivePath": "Chain Grenade/Chain Grenade Green.mdx",
+          "bytes": 63929,
+          "sha256": "38ff6dcefc7841849d084884b99e259a1371865a22aab7aceaa3dda12a38146f"
+        },
+        {
+          "path": "originales/Chain Grenade/Chain Grenade Orange.mdx",
+          "archivePath": "Chain Grenade/Chain Grenade Orange.mdx",
+          "bytes": 65001,
+          "sha256": "3e1b5c4d8a4746ffeea39ce6bcac790748614cdcd1432ab80e43e4a23beec868"
+        },
+        {
+          "path": "originales/Chain Grenade/Chain Grenade Purple.mdx",
+          "archivePath": "Chain Grenade/Chain Grenade Purple.mdx",
+          "bytes": 63881,
+          "sha256": "89da444998296913ddc2bd9d6f74c2cc31b7ce56e9386429506be7b824860033"
+        }
+      ],
+      "models": 4,
+      "textures": 0
+    },
+    {
+      "title": "Incendiary Bullets Vol. I",
+      "url": "https://www.hiveworkshop.com/threads/incendiary-bullets-vol-i.314966/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 6,
+      "date": "2026-10-22T19:15:35.562638-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/incendiary-bullets-vol-i.314966",
+      "zip": "original.zip",
+      "zipBytes": 36070,
+      "zipSha256": "9b67b35826c88b4b9cf861bedab86347d12eb9b6485bdc1898d21c99dcb8d040",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Incendiary Bullets Vol. I/readme.html",
+          "archivePath": "Incendiary Bullets Vol. I/readme.html",
+          "bytes": 3516,
+          "sha256": "ee2a3b19e2203efd0e95efd4ce47fc82c245e37001a5f2aae83100565163b55d"
+        },
+        {
+          "path": "originales/Incendiary Bullets Vol. I/Incendiary Bullet Blue.mdx",
+          "archivePath": "Incendiary Bullets Vol. I/Incendiary Bullet Blue.mdx",
+          "bytes": 23386,
+          "sha256": "ba84e7fb10969cefec37dbd257899fff9bb7702e2addca38e6ccb9ee84047d43"
+        },
+        {
+          "path": "originales/Incendiary Bullets Vol. I/Incendiary Bullet Green.mdx",
+          "archivePath": "Incendiary Bullets Vol. I/Incendiary Bullet Green.mdx",
+          "bytes": 23654,
+          "sha256": "d1dc9d8fb881971834e1859b70e81634057acc3ad450b066e0898176c8a6c9c9"
+        },
+        {
+          "path": "originales/Incendiary Bullets Vol. I/Incendiary Bullet Orange.mdx",
+          "archivePath": "Incendiary Bullets Vol. I/Incendiary Bullet Orange.mdx",
+          "bytes": 23654,
+          "sha256": "697590dab3b0435346803b91ae6afeee76719313f8670dd0475514d868b6dc9a"
+        },
+        {
+          "path": "originales/Incendiary Bullets Vol. I/Incendiary Bullet Purple.mdx",
+          "archivePath": "Incendiary Bullets Vol. I/Incendiary Bullet Purple.mdx",
+          "bytes": 23386,
+          "sha256": "bbf0365d38f9a4b2a8588b6b9af2368d598617eb50fa114888988db973ad490b"
+        },
+        {
+          "path": "originales/Incendiary Bullets Vol. I/Incendiary Bullet Red.mdx",
+          "archivePath": "Incendiary Bullets Vol. I/Incendiary Bullet Red.mdx",
+          "bytes": 23654,
+          "sha256": "0ac896fecb9c458b8389a647e43e3c5c73b6afd7a692f573eb782cb53175df1e"
+        },
+        {
+          "path": "originales/Incendiary Bullets Vol. I/Incendiary Bullet Yellow.mdx",
+          "archivePath": "Incendiary Bullets Vol. I/Incendiary Bullet Yellow.mdx",
+          "bytes": 23654,
+          "sha256": "44f895dced9a2b5f39c3ce58a073fef107fb25c0486b129904bbffa5821afcfb"
+        }
+      ],
+      "models": 6,
+      "textures": 0
+    },
+    {
+      "title": "Interceptor Shell",
+      "url": "https://www.hiveworkshop.com/threads/interceptor-shell.319609/",
+      "author": "Vinz",
+      "tags": [
+        "#Realistic / Non-fiction",
+        "#Science Fiction",
+        "#Human",
+        "#Buff / Effect",
+        "#Missile"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:12.176848-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/interceptor-shell.319609",
+      "zip": "original.zip",
+      "zipBytes": 51259,
+      "zipSha256": "97d8c25ff8ad5fccbb3e38d7ad4a1b76eb6881de7314c53e902d986d411dcdcb",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Interceptor Shell/readme.html",
+          "archivePath": "Interceptor Shell/readme.html",
+          "bytes": 4123,
+          "sha256": "cb22f2f5ab693a374b7bad2995331cd071d05476ae9944bdef0b5597c5816b0a"
+        },
+        {
+          "path": "originales/Interceptor Shell/Interceptor Shell.mdx",
+          "archivePath": "Interceptor Shell/Interceptor Shell.mdx",
+          "bytes": 93537,
+          "sha256": "9468e9560494a967ba95d5bb425de213b984eb45f211ebba6ddb264615fcd926"
+        },
+        {
+          "path": "originales/Interceptor Shell/Interceptor Shell Rain.mdx",
+          "archivePath": "Interceptor Shell/Interceptor Shell Rain.mdx",
+          "bytes": 94401,
+          "sha256": "ae6f55083acb9d58f5bda4f7f1fcabed7696731ff3cf9fc7adf136a1a78afcff"
+        }
+      ],
+      "models": 2,
+      "textures": 0
+    },
+    {
+      "title": "Runic Rocket",
+      "url": "https://www.hiveworkshop.com/threads/runic-rocket.315223/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Historic",
+        "#Modern",
+        "#Human"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:15:42.015094-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/runic-rocket.315223",
+      "zip": "original.zip",
+      "zipBytes": 7038,
+      "zipSha256": "1a38e7b2ce961bbd6846d5eb6a86297ef989884fe9d1f63c72203f59b2a401ae",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Runic Rocket/readme.html",
+          "archivePath": "Runic Rocket/readme.html",
+          "bytes": 4099,
+          "sha256": "c0406f0c13ee3d25206f099154cf3caef5fccd2b09d52aee031de73241b8420c"
+        },
+        {
+          "path": "originales/Runic Rocket/Runic Rocket.mdx",
+          "archivePath": "Runic Rocket/Runic Rocket.mdx",
+          "bytes": 24864,
+          "sha256": "899dd925627972639516e5efbe6e17e747171ac7471e561ce730dcc96c97af95"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "Shock Blast",
+      "url": "https://www.hiveworkshop.com/threads/shock-blast.315459/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Modern",
+        "#Science Fiction",
+        "#Human"
+      ],
+      "listedResources": 6,
+      "date": "2026-10-22T19:15:39.375892-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/shock-blast.315459",
+      "zip": "original.zip",
+      "zipBytes": 13119,
+      "zipSha256": "ae8736c1386d95913d316f93cae0aab3b985b44e23ae43481da0d68797b8dd39",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Shock Blast/readme.html",
+          "archivePath": "Shock Blast/readme.html",
+          "bytes": 3378,
+          "sha256": "226be219dc2121fde91274e93d5ac8f6e13ae0417698d2e9f71ce502f1c65383"
+        },
+        {
+          "path": "originales/Shock Blast/Shock Blast Blue.mdx",
+          "archivePath": "Shock Blast/Shock Blast Blue.mdx",
+          "bytes": 8194,
+          "sha256": "cbe29b98a1a326981be3885be85c23077437f897529ddf627c2a00ce42fd4f2c"
+        },
+        {
+          "path": "originales/Shock Blast/Shock Blast Green.mdx",
+          "archivePath": "Shock Blast/Shock Blast Green.mdx",
+          "bytes": 8194,
+          "sha256": "ef0d66ca62ffff889b233e10f6a5012976b23c4a0a6e937c3d1a49f80b13e597"
+        },
+        {
+          "path": "originales/Shock Blast/Shock Blast Orange.mdx",
+          "archivePath": "Shock Blast/Shock Blast Orange.mdx",
+          "bytes": 8194,
+          "sha256": "e88159747672bff5ab70c769f826977110d122531f14d8e55c8a8e6f9b024f61"
+        },
+        {
+          "path": "originales/Shock Blast/Shock Blast Purple.mdx",
+          "archivePath": "Shock Blast/Shock Blast Purple.mdx",
+          "bytes": 8194,
+          "sha256": "9f07a4ea40a98115b9fec83c608c98d0547cf68307625a6dfc1107cd3e72ae07"
+        },
+        {
+          "path": "originales/Shock Blast/Shock Blast Red.mdx",
+          "archivePath": "Shock Blast/Shock Blast Red.mdx",
+          "bytes": 8194,
+          "sha256": "da12df8581ff4e4719c2a6dfc238fffa83464dfb09586098aa67bd7002d68903"
+        },
+        {
+          "path": "originales/Shock Blast/Shock Blast Yellow.mdx",
+          "archivePath": "Shock Blast/Shock Blast Yellow.mdx",
+          "bytes": 8194,
+          "sha256": "5f8376a29b5dc1ffb158284329de971e0ac3744b1a2562c1b63233cda97f3ec4"
+        }
+      ],
+      "models": 6,
+      "textures": 0
+    },
+    {
+      "title": "Tank Shells",
+      "url": "https://www.hiveworkshop.com/threads/tank-shells.315646/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Modern",
+        "#Human"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:50.717472-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/tank-shells.315646",
+      "zip": "original.zip",
+      "zipBytes": 21180,
+      "zipSha256": "232889bdc376963c401703a0cbc5c58e3fdb524c6b227db6c2268829a6b4a2db",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Tank Shells/readme.html",
+          "archivePath": "Tank Shells/readme.html",
+          "bytes": 4974,
+          "sha256": "6db83f21e7a342e688ecfd6138f7ec97f8e7a5f374045fffcce6bfae05d3e910"
+        },
+        {
+          "path": "originales/Tank Shells/Tank Shell Black.mdx",
+          "archivePath": "Tank Shells/Tank Shell Black.mdx",
+          "bytes": 44503,
+          "sha256": "9163f3fffda5771a125e049b36c0f6826f5c551b7c6c7acd63e2a28c3574b4c0"
+        },
+        {
+          "path": "originales/Tank Shells/Tank Shell Silver.mdx",
+          "archivePath": "Tank Shells/Tank Shell Silver.mdx",
+          "bytes": 45927,
+          "sha256": "92d74d727c0f4d22c62fc3e3b6f8b6abd338e1d941180f8051a73c987572b5c2"
+        }
+      ],
+      "models": 2,
+      "textures": 0
+    },
+    {
+      "title": "Voyager Rocket",
+      "url": "https://www.hiveworkshop.com/threads/voyager-rocket.314981/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Night Elf",
+        "#Undead"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:15:32.284075-05:00",
+      "category": "02-Cohetes-y-artilleria",
+      "folder": "02-Cohetes-y-artilleria/voyager-rocket.314981",
+      "zip": "original.zip",
+      "zipBytes": 8193,
+      "zipSha256": "cc01743253bde420f5ed4972b60c68be96aa18ee5b3419b27f3ccd7af93ac8c3",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Voyager Rocket/readme.html",
+          "archivePath": "Voyager Rocket/readme.html",
+          "bytes": 4631,
+          "sha256": "d83d12908023c30b61f2204884d01153b5428e187ae9a623c1be8f65741bd287"
+        },
+        {
+          "path": "originales/Voyager Rocket/Voyager Rocket.mdx",
+          "archivePath": "Voyager Rocket/Voyager Rocket.mdx",
+          "bytes": 34133,
+          "sha256": "44c7e99654064f8316e44988027ee5968d615bb07fb577986c0f7cbc3f1e88cc"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "Bloodstone Arrows",
+      "url": "https://www.hiveworkshop.com/threads/bloodstone-arrows.309858/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile"
+      ],
+      "listedResources": 4,
+      "date": "2026-10-22T19:15:43.905685-05:00",
+      "category": "03-Flechas-y-proyectiles",
+      "folder": "03-Flechas-y-proyectiles/bloodstone-arrows.309858",
+      "zip": "original.zip",
+      "zipBytes": 26883,
+      "zipSha256": "eab42e87ab4f84e3cfbc76a5baca83123c1001634ad7b07a746a29cf2af9d335",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Bloodstone Arrows/readme.html",
+          "archivePath": "Bloodstone Arrows/readme.html",
+          "bytes": 1059,
+          "sha256": "f5901935c0ff290aa0d03d468b98bf206cf8e878dd830862a2aa6d4d4307157f"
+        },
+        {
+          "path": "originales/Bloodstone Arrows/Bloodstone Arrow.mdx",
+          "archivePath": "Bloodstone Arrows/Bloodstone Arrow.mdx",
+          "bytes": 15295,
+          "sha256": "958026fa566d77ff76f4ad1796238c97a17634332c45dd78b59a091727fc95b4"
+        },
+        {
+          "path": "originales/Bloodstone Arrows/Bloodstone Arrow Bloodless.mdx",
+          "archivePath": "Bloodstone Arrows/Bloodstone Arrow Bloodless.mdx",
+          "bytes": 14648,
+          "sha256": "56fcc98051bfa2ca9020e50f9921c9752dc43a886754a4e49613e8788ac0c791"
+        },
+        {
+          "path": "originales/Bloodstone Arrows/Bloodstone Arrow LSD.mdx",
+          "archivePath": "Bloodstone Arrows/Bloodstone Arrow LSD.mdx",
+          "bytes": 15343,
+          "sha256": "852958a7053e9cabb1afd3a851aab3c17410ad741c73221bef281ba105344281"
+        },
+        {
+          "path": "originales/Bloodstone Arrows/Bloodstone Arrow LSD 2.mdx",
+          "archivePath": "Bloodstone Arrows/Bloodstone Arrow LSD 2.mdx",
+          "bytes": 16006,
+          "sha256": "22e4da1ed75a0aced5457a278d868085459c5fbbffc7eb976b94fe09bf7a8b15"
+        }
+      ],
+      "models": 4,
+      "textures": 0
+    },
+    {
+      "title": "Daemonic Arrow",
+      "url": "https://www.hiveworkshop.com/threads/daemonic-arrow.337124/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:15:18.740043-05:00",
+      "category": "03-Flechas-y-proyectiles",
+      "folder": "03-Flechas-y-proyectiles/daemonic-arrow.337124",
+      "zip": "original.zip",
+      "zipBytes": 80928,
+      "zipSha256": "bf3287b9d1d85560b280f48d50bac85f9069a467e906daad12b3d171195473f7",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Daemonic Arrow/readme.html",
+          "archivePath": "Daemonic Arrow/readme.html",
+          "bytes": 3316,
+          "sha256": "1b53de60620a2b8deabfe42f9ded60890ec74d2499a85cb68724d5625eaad6b2"
+        },
+        {
+          "path": "originales/Daemonic Arrow/Daemonic Arrow.mdx",
+          "archivePath": "Daemonic Arrow/Daemonic Arrow.mdx",
+          "bytes": 92730,
+          "sha256": "0fd0d97b01839318d29cb03afe3e178b1d1ce65949fe5b2f9565d45ca49eb6e9"
+        },
+        {
+          "path": "originales/Daemonic Arrow/RoyalGlow.blp",
+          "archivePath": "Daemonic Arrow/RoyalGlow.blp",
+          "bytes": 41077,
+          "sha256": "6e2bdbc7fb76bf3c834445ca7f563c9c834e54d92f38788dec3d1dec6b4e3102"
+        }
+      ],
+      "models": 1,
+      "textures": 1
+    },
+    {
+      "title": "Explosive Bolts",
+      "url": "https://www.hiveworkshop.com/threads/explosive-bolts.351836/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:15:12.390689-05:00",
+      "category": "03-Flechas-y-proyectiles",
+      "folder": "03-Flechas-y-proyectiles/explosive-bolts.351836",
+      "zip": "original.zip",
+      "zipBytes": 84663,
+      "zipSha256": "e54d69b5b85df22a905a134b59246a5258248adc378f0530737bfd002775ef86",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Explosive Bolts/readme.html",
+          "archivePath": "Explosive Bolts/readme.html",
+          "bytes": 4970,
+          "sha256": "1564b93aecc11b226d416568bfc72376fa425bb8bfeebef38fdce1a55b3a03af"
+        },
+        {
+          "path": "originales/Explosive Bolts/ExplosiveBolt.mdx",
+          "archivePath": "Explosive Bolts/ExplosiveBolt.mdx",
+          "bytes": 40657,
+          "sha256": "799d20433eea28aa90956041a76a481347582bfe480e9049a153019e633451ac"
+        },
+        {
+          "path": "originales/Explosive Bolts/AutumnGlow.blp",
+          "archivePath": "Explosive Bolts/AutumnGlow.blp",
+          "bytes": 9432,
+          "sha256": "201fb17a970f50f9adf56a82d83a5791cd724344896b4e1a835b4195300b6091"
+        },
+        {
+          "path": "originales/Explosive Bolts/AutumnStar.blp",
+          "archivePath": "Explosive Bolts/AutumnStar.blp",
+          "bytes": 12036,
+          "sha256": "57ae21f9aaf085ad051f43a0cf2ba804c39f290d25fdfee140ca378572add7b9"
+        },
+        {
+          "path": "originales/Explosive Bolts/dust3.blp",
+          "archivePath": "Explosive Bolts/dust3.blp",
+          "bytes": 25429,
+          "sha256": "7b2941b4e213a4669f7a46a90964517d365e5d64f509583d693bffd5ad888750"
+        },
+        {
+          "path": "originales/Explosive Bolts/SacredTail11Max.blp",
+          "archivePath": "Explosive Bolts/SacredTail11Max.blp",
+          "bytes": 15841,
+          "sha256": "7cab3a97cfafb74ac0b2411165ae49aab8a4c7bc8779eca5efa5ae405b2c1a8f"
+        },
+        {
+          "path": "originales/Explosive Bolts/largesmoke1.blp",
+          "archivePath": "Explosive Bolts/largesmoke1.blp",
+          "bytes": 19558,
+          "sha256": "e68dda63b8c4a5129469d8a1b1c559894477c324adf497245862985983afc3b4"
+        }
+      ],
+      "models": 1,
+      "textures": 5
+    },
+    {
+      "title": "Fire Arrows",
+      "url": "https://www.hiveworkshop.com/threads/fire-arrows.310448/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Historic",
+        "#Human"
+      ],
+      "listedResources": 6,
+      "date": "2026-10-22T19:15:47.559882-05:00",
+      "category": "03-Flechas-y-proyectiles",
+      "folder": "03-Flechas-y-proyectiles/fire-arrows.310448",
+      "zip": "original.zip",
+      "zipBytes": 39536,
+      "zipSha256": "91abb82cb6d9dd272aaa949980c2c955c05a9b45884c7de09bbf1c54aa62ce44",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Fire Arrows/readme.html",
+          "archivePath": "Fire Arrows/readme.html",
+          "bytes": 2293,
+          "sha256": "e180b84983257a22921b0a8424e0127005160afd875e9dd0b050020eb8b1bb73"
+        },
+        {
+          "path": "originales/Fire Arrows/BonefireArrow1.mdx",
+          "archivePath": "Fire Arrows/BonefireArrow1.mdx",
+          "bytes": 14652,
+          "sha256": "5ad953769ca4a463f24ac277cb14d5feabbc7c181887cfe64222cef5850fb7a6"
+        },
+        {
+          "path": "originales/Fire Arrows/BonefireArrowFireless.mdx",
+          "archivePath": "Fire Arrows/BonefireArrowFireless.mdx",
+          "bytes": 9355,
+          "sha256": "f92432217bd51741b953b4bf8bfcb2a24b0ed645bc0229986fde98b8e1c52bbe"
+        },
+        {
+          "path": "originales/Fire Arrows/FirecrackerArrow.mdx",
+          "archivePath": "Fire Arrows/FirecrackerArrow.mdx",
+          "bytes": 16083,
+          "sha256": "5c3c1cd678a81048a64ed7d06775a7bb44f4076cce1572a7482b6f26d5e4c3ce"
+        },
+        {
+          "path": "originales/Fire Arrows/FirecrackerArrowFireless.mdx",
+          "archivePath": "Fire Arrows/FirecrackerArrowFireless.mdx",
+          "bytes": 15089,
+          "sha256": "eec25b86bef7cbd12dcf791c59bc48d07c848ede7dd1af2559bb6862be3da79d"
+        },
+        {
+          "path": "originales/Fire Arrows/SearingArrow.mdx",
+          "archivePath": "Fire Arrows/SearingArrow.mdx",
+          "bytes": 27176,
+          "sha256": "c7069fc6adfae3e15fe94df380301ebea23c0b5af3f4b2c84bbbb062fa6eda42"
+        },
+        {
+          "path": "originales/Fire Arrows/SearingArrowFireless.mdx",
+          "archivePath": "Fire Arrows/SearingArrowFireless.mdx",
+          "bytes": 24791,
+          "sha256": "4fde5a66c6904821a4a2864d8de2cfa24223afb9d980e908d64ae2f4d83fe269"
+        }
+      ],
+      "models": 6,
+      "textures": 0
+    },
+    {
+      "title": "Frost Arrows",
+      "url": "https://www.hiveworkshop.com/threads/frost-arrows.309707/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 3,
+      "date": "2026-10-22T19:15:48.886051-05:00",
+      "category": "03-Flechas-y-proyectiles",
+      "folder": "03-Flechas-y-proyectiles/frost-arrows.309707",
+      "zip": "original.zip",
+      "zipBytes": 31619,
+      "zipSha256": "3d70133d561f224ec9e5ec1a6abcf26491dbc426ac74c8f1bf7079ce02933c79",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Frost Arrows/readme.html",
+          "archivePath": "Frost Arrows/readme.html",
+          "bytes": 7478,
+          "sha256": "a29bc5bc517a293ba0ae09392f156d75513158bd4c1a7f220874207d4df5a955"
+        },
+        {
+          "path": "originales/Frost Arrows/Azul Arrow.mdx",
+          "archivePath": "Frost Arrows/Azul Arrow.mdx",
+          "bytes": 35749,
+          "sha256": "f57424196728a35a13f3c5c81be3bb22746478d4ff529e2b53a7f09ef61d143e"
+        },
+        {
+          "path": "originales/Frost Arrows/Azul Arrow Defrosted.mdx",
+          "archivePath": "Frost Arrows/Azul Arrow Defrosted.mdx",
+          "bytes": 33727,
+          "sha256": "9fd082191d9df5db577dd1c651bb38eec364a7d82eb0ae70c6253eea3c7d7095"
+        },
+        {
+          "path": "originales/Frost Arrows/Maiz con Arrow.mdx",
+          "archivePath": "Frost Arrows/Maiz con Arrow.mdx",
+          "bytes": 57523,
+          "sha256": "fc7fe3183b41111e51a488d398c9f878d26504ae2af723a6dca2ec1b10d79d97"
+        }
+      ],
+      "models": 3,
+      "textures": 0
+    },
+    {
+      "title": "HighElvenArrow",
+      "url": "https://www.hiveworkshop.com/threads/highelvenarrow.259593/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#High Elf"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:06.611300-05:00",
+      "category": "03-Flechas-y-proyectiles",
+      "folder": "03-Flechas-y-proyectiles/highelvenarrow.259593",
+      "zip": "original.zip",
+      "zipBytes": 3943,
+      "zipSha256": "4073ef5e771e5c72ac6ecdb655e7b4f1cb9bdf32e4043d86768c2cda91ed8fc0",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/HighElvenArrow/readme.html",
+          "archivePath": "HighElvenArrow/readme.html",
+          "bytes": 684,
+          "sha256": "648189e857a9ec4f07c8022353ecccf5d7047bffe8cee039e7f5211475cd0416"
+        },
+        {
+          "path": "originales/HighElvenArrow/HighElvenArrow.mdx",
+          "archivePath": "HighElvenArrow/HighElvenArrow.mdx",
+          "bytes": 7459,
+          "sha256": "a41778660d692ba4f80eaaa855f9d7b5b63e7ad4b971b3e1598cc634756afb35"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "SilverBolts",
+      "url": "https://www.hiveworkshop.com/threads/silverbolts.259287/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:51.342597-05:00",
+      "category": "03-Flechas-y-proyectiles",
+      "folder": "03-Flechas-y-proyectiles/silverbolts.259287",
+      "zip": "original.zip",
+      "zipBytes": 6100,
+      "zipSha256": "5756f6c72f4d11125dcf3d4dbe0cb353a886e9cfee1bef22f801ceb089780cd8",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/SilverBolts/readme.html",
+          "archivePath": "SilverBolts/readme.html",
+          "bytes": 895,
+          "sha256": "9f9712815f1022941cd1a2028fd3caf69c71c17f427abda9fcfea5e28505a8fb"
+        },
+        {
+          "path": "originales/SilverBolts/NightBolts.mdx",
+          "archivePath": "SilverBolts/NightBolts.mdx",
+          "bytes": 7601,
+          "sha256": "a51e852d5d50c1b88fac8ba6878b4a46ccf57313020fce3601c319527a86916d"
+        },
+        {
+          "path": "originales/SilverBolts/SilverBolts.mdx",
+          "archivePath": "SilverBolts/SilverBolts.mdx",
+          "bytes": 6406,
+          "sha256": "e5a5de574e96146e38d2b5a4733e727e0eb8dc38681b6571b2b8e8a5f8573fb5"
+        }
+      ],
+      "models": 2,
+      "textures": 0
+    },
+    {
+      "title": "SpiritArrow",
+      "url": "https://www.hiveworkshop.com/threads/spiritarrow.245374/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Undead"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:11.293711-05:00",
+      "category": "03-Flechas-y-proyectiles",
+      "folder": "03-Flechas-y-proyectiles/spiritarrow.245374",
+      "zip": "original.zip",
+      "zipBytes": 2060,
+      "zipSha256": "c5c4e3b3f3c8f51a995ff7132eea9bf0d09d4ff490325a87f86d8f2fa3279615",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/SpiritArrow/readme.html",
+          "archivePath": "SpiritArrow/readme.html",
+          "bytes": 676,
+          "sha256": "552745a5ffc383262b987c002617dbff03822b2bb7990bf9eae6e6397d0c5e8e"
+        },
+        {
+          "path": "originales/SpiritArrow/SpiritArrow.mdx",
+          "archivePath": "SpiritArrow/SpiritArrow.mdx",
+          "bytes": 4145,
+          "sha256": "e8f9869e42310f946cc9d53d877b1ca484c3a01b057a249dadcd44190e1be234"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "BouncingBlade",
+      "url": "https://www.hiveworkshop.com/threads/bouncingblade.258506/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:52.841796-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/bouncingblade.258506",
+      "zip": "original.zip",
+      "zipBytes": 4401,
+      "zipSha256": "f3f6009a0d6cfbf9c71889ad3a8e80ea20166fac5e7ef5e7e651119af38c32fe",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/BouncingBlade/readme.html",
+          "archivePath": "BouncingBlade/readme.html",
+          "bytes": 1039,
+          "sha256": "b86a1fce1b693895e327ceb8740c847a81480a4f2c5f88782444bdf153eea9f0"
+        },
+        {
+          "path": "originales/BouncingBlade/BouncingBlade7.mdx",
+          "archivePath": "BouncingBlade/BouncingBlade7.mdx",
+          "bytes": 4216,
+          "sha256": "ab5ed53868bdd85a353983315351ce52924c46257784f5b56043642369fedfb6"
+        },
+        {
+          "path": "originales/BouncingBlade/BouncingBladeBuff.mdx",
+          "archivePath": "BouncingBlade/BouncingBladeBuff.mdx",
+          "bytes": 4072,
+          "sha256": "0c47222cbbf6c66fedefaec9ad97849ec5e3e0d7b64959ebfae9ce983bc466f6"
+        }
+      ],
+      "models": 2,
+      "textures": 0
+    },
+    {
+      "title": "BurningSpear",
+      "url": "https://www.hiveworkshop.com/threads/burningspear.239752/",
+      "author": "Vinz",
+      "tags": [
+        "#Attachment",
+        "#Missile",
+        "#Fantasy",
+        "#Blood Elf"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:12.263552-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/burningspear.239752",
+      "zip": "original.zip",
+      "zipBytes": 2109,
+      "zipSha256": "3ce2952d88084229272afe2ac5c7bca57e5391df58306b8da30fc846ff0e573c",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/BurningSpear/readme.html",
+          "archivePath": "BurningSpear/readme.html",
+          "bytes": 1183,
+          "sha256": "b1159539f53626f8062814c81e4ae6c6bb1f2b248022f225a752a10f5d52df2d"
+        },
+        {
+          "path": "originales/BurningSpear/BurningSpear.mdx",
+          "archivePath": "BurningSpear/BurningSpear.mdx",
+          "bytes": 3911,
+          "sha256": "5185ac223a23cd97c3a2f165434f0269a60b556878231fe26b83b8ab0ceb49eb"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "Halberd",
+      "url": "https://www.hiveworkshop.com/threads/halberd.257144/",
+      "author": "Vinz",
+      "tags": [
+        "#Attachment",
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:04.307458-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/halberd.257144",
+      "zip": "original.zip",
+      "zipBytes": 2634,
+      "zipSha256": "3cf3c6f15d2b94821d552bcfcfc53f39e867a5867ca18255ad6867629f1dd562",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Halberd/readme.html",
+          "archivePath": "Halberd/readme.html",
+          "bytes": 719,
+          "sha256": "ef85e0ac41c7188bcc08db0b211b7247dd5b83fddc68f9b11cc8e896413550fb"
+        },
+        {
+          "path": "originales/Halberd/Halberd.mdx",
+          "archivePath": "Halberd/Halberd.mdx",
+          "bytes": 3998,
+          "sha256": "e76707c18a71a26696880b26bd208bcc9262ec85c6c6574d771418f9786ae6c5"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "JavelinToss",
+      "url": "https://www.hiveworkshop.com/threads/javelintoss.258228/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:05.950969-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/javelintoss.258228",
+      "zip": "original.zip",
+      "zipBytes": 2772,
+      "zipSha256": "bfcfccd94c325b39d485c616d77b11871ffc7870e4004d21679cf91089f7e5c7",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/JavelinToss/readme.html",
+          "archivePath": "JavelinToss/readme.html",
+          "bytes": 688,
+          "sha256": "2a1aa6dd08aebdd02e8a1f017b722d23c938446852908afe86f44c33fbd16fd3"
+        },
+        {
+          "path": "originales/JavelinToss/JavelinToss.mdx",
+          "archivePath": "JavelinToss/JavelinToss.mdx",
+          "bytes": 5745,
+          "sha256": "9e5a4927ffd31c21fdd8393490807eda9ce535a75c0024cf901afa4aa93b1688"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "Pike",
+      "url": "https://www.hiveworkshop.com/threads/pike.245376/",
+      "author": "Vinz",
+      "tags": [
+        "#Attachment",
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:09.097431-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/pike.245376",
+      "zip": "original.zip",
+      "zipBytes": 1930,
+      "zipSha256": "671ab2975c2d1019ca9926707d14fe4f4eaa33527019bb979c4fcde9881db9c8",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Pike/readme.html",
+          "archivePath": "Pike/readme.html",
+          "bytes": 636,
+          "sha256": "162e487699fc6f62ef1581f3940d86c53ea629f95a5a5ba19d92ae85548701af"
+        },
+        {
+          "path": "originales/Pike/Pike.mdx",
+          "archivePath": "Pike/Pike.mdx",
+          "bytes": 3993,
+          "sha256": "24a4a97d80a45c16ee421b0b2c4555ae0681bef6d1586edce59d75dc21fc3b39"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "Quantum Blade",
+      "url": "https://www.hiveworkshop.com/threads/quantum-blade.245373/",
+      "author": "Vinz",
+      "tags": [
+        "#Buff",
+        "#Effect",
+        "#Missile",
+        "#High Elf",
+        "#Blood Elf"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:10.475336-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/quantum-blade.245373",
+      "zip": "original.zip",
+      "zipBytes": 3692,
+      "zipSha256": "6f6118bde0f53c333d27b322b3f31caffd80332d990eda09596b65d7f9c64c29",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Quantum Blade/readme.html",
+          "archivePath": "Quantum Blade/readme.html",
+          "bytes": 686,
+          "sha256": "ffdfc90bbd0600af752a0ce797848ff4308a3e72847614d649ac54550edcdcdc"
+        },
+        {
+          "path": "originales/Quantum Blade/QuantumBlade.mdx",
+          "archivePath": "Quantum Blade/QuantumBlade.mdx",
+          "bytes": 11473,
+          "sha256": "e4f6bc9f20742146d9546a7e8a2215c551f90b66af6105e1db71ed751c45ec0e"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "RuneSpear",
+      "url": "https://www.hiveworkshop.com/threads/runespear.261783/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:15:53.569273-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/runespear.261783",
+      "zip": "original.zip",
+      "zipBytes": 3151,
+      "zipSha256": "09399e00f0e7c09c832ad6efb8f9ac1b28ccc8f7bac277900b4564e668c3dde6",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/RuneSpear/readme.html",
+          "archivePath": "RuneSpear/readme.html",
+          "bytes": 685,
+          "sha256": "bba440ec79a9fb86201f2098449d929c05c8bed071884c7a907e49d8aba7940e"
+        },
+        {
+          "path": "originales/RuneSpear/RuneSpear.mdx",
+          "archivePath": "RuneSpear/RuneSpear.mdx",
+          "bytes": 7245,
+          "sha256": "3772f4190869655d07073aac121f04744041e9086342abd2f626b193a05efa7e"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "StiflingDagger",
+      "url": "https://www.hiveworkshop.com/threads/stiflingdagger.259671/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:07.233759-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/stiflingdagger.259671",
+      "zip": "original.zip",
+      "zipBytes": 3871,
+      "zipSha256": "243705a713c09b2400c44f948b39b7dacc8369fd8562ae29ccd322e3cd8c7a91",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/StiflingDagger/readme.html",
+          "archivePath": "StiflingDagger/readme.html",
+          "bytes": 733,
+          "sha256": "80a94a39b57248d7286e3acc1b581e4f6d436f4919d606976bd5d2b5bb2f9351"
+        },
+        {
+          "path": "originales/StiflingDagger/StiflingDagger.mdx",
+          "archivePath": "StiflingDagger/StiflingDagger.mdx",
+          "bytes": 6394,
+          "sha256": "9b6ff5acac379c707c1fd43a53a8c9f6c5bb6d20a2609b82e6a517dd028a4416"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "SunSpear",
+      "url": "https://www.hiveworkshop.com/threads/sunspear.236541/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Blood Elf"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:09.079302-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/sunspear.236541",
+      "zip": "original.zip",
+      "zipBytes": 2197,
+      "zipSha256": "4e688d4085cea22c3da5a0422fb9b74b9989fe9ad62a6e1dbfb423f8dad843f5",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/SunSpear/readme.html",
+          "archivePath": "SunSpear/readme.html",
+          "bytes": 1309,
+          "sha256": "0c45cb29ae0e32fc59e08c9899785369521eb0dc78ff3ed8e8b4aecdf2d4dc67"
+        },
+        {
+          "path": "originales/SunSpear/SunSpear.mdx",
+          "archivePath": "SunSpear/SunSpear.mdx",
+          "bytes": 4473,
+          "sha256": "fad5d9f40238200f12e82c41df158fcd65bc096f2935d2ba186b2d10fb6ea7e2"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "WoodenSpear",
+      "url": "https://www.hiveworkshop.com/threads/woodenspear.245375/",
+      "author": "Vinz",
+      "tags": [
+        "#Attachment",
+        "#Missile",
+        "#Night Elf"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:11.507816-05:00",
+      "category": "04-Armas-arrojadizas",
+      "folder": "04-Armas-arrojadizas/woodenspear.245375",
+      "zip": "original.zip",
+      "zipBytes": 1722,
+      "zipSha256": "5c5c0e76247c7902a9bc108cd8d671ecf0a2cc7b3e87450f504a9dcd5f088938",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/WoodenSpear/readme.html",
+          "archivePath": "WoodenSpear/readme.html",
+          "bytes": 691,
+          "sha256": "38031eecc63e5aa8045f654f8170bfa631f3a56108ed05ab19421897a4d4148e"
+        },
+        {
+          "path": "originales/WoodenSpear/WoodenSpear.mdx",
+          "archivePath": "WoodenSpear/WoodenSpear.mdx",
+          "bytes": 3252,
+          "sha256": "6c02812aaceb6ec2e5fe4394afa0c61fa2d52005afe89101f383bfa2b93df521"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "Blizzard II",
+      "url": "https://www.hiveworkshop.com/threads/blizzard-ii.320476/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:25.576941-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/blizzard-ii.320476",
+      "zip": "original.zip",
+      "zipBytes": 8836,
+      "zipSha256": "b1a9c2799f91952c25e31a3a555a158685f99de571db1f2a0451174eae1e4038",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Blizzard II/readme.html",
+          "archivePath": "Blizzard II/readme.html",
+          "bytes": 5148,
+          "sha256": "551e8ef72b4631180590bb49ba4a1a1de0b6a0fbda059cd99543897d00fd162a"
+        },
+        {
+          "path": "originales/Blizzard II/Blizzard II.mdx",
+          "archivePath": "Blizzard II/Blizzard II.mdx",
+          "bytes": 18053,
+          "sha256": "b3855825e8363ef826ce599b1d0ae23babbd9f5cf3852ee68933e131d3d6c8eb"
+        },
+        {
+          "path": "originales/Blizzard II/Blizzard II Missile.mdx",
+          "archivePath": "Blizzard II/Blizzard II Missile.mdx",
+          "bytes": 18139,
+          "sha256": "a79322d56c16605ab45f28af77e8154ce49ec2187e35ef77fdb879e4471d1680"
+        }
+      ],
+      "models": 2,
+      "textures": 0
+    },
+    {
+      "title": "Carrion Bats (1.32)",
+      "url": "https://www.hiveworkshop.com/threads/carrion-bats-1-32.333134/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Undead"
+      ],
+      "listedResources": 6,
+      "date": "2026-10-22T19:15:20.822511-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/carrion-bats-1-32.333134",
+      "zip": "original.zip",
+      "zipBytes": 71590,
+      "zipSha256": "8716311545f1e30d8cbc10c0282660e5700af833f0a6bf21eb0675e88712db77",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Carrion Bats (1.32)/readme.html",
+          "archivePath": "Carrion Bats (1.32)/readme.html",
+          "bytes": 4307,
+          "sha256": "af5b7b35cff75023e79008bac094caa6795c857e2a6f399d21ade582b90cf997"
+        },
+        {
+          "path": "originales/Carrion Bats (1.32)/Carrion Bat Avocado HD.mdx",
+          "archivePath": "Carrion Bats (1.32)/Carrion Bat Avocado HD.mdx",
+          "bytes": 36315,
+          "sha256": "dbb85b7676462161709b83b62bc1c07783b4bbbfc2c0e4e129488c94b798702a"
+        },
+        {
+          "path": "originales/Carrion Bats (1.32)/Carrion Bat Avocado SD.mdx",
+          "archivePath": "Carrion Bats (1.32)/Carrion Bat Avocado SD.mdx",
+          "bytes": 36111,
+          "sha256": "573a7aef1b4fe83ae353f3c08a77e0a20e0748fb22c2c20ade65f4713a6eea43"
+        },
+        {
+          "path": "originales/Carrion Bats (1.32)/Carrion Bat Blood HD.mdx",
+          "archivePath": "Carrion Bats (1.32)/Carrion Bat Blood HD.mdx",
+          "bytes": 35535,
+          "sha256": "d337516a80852eb6600af6a1dcf68dc287a08372de12770364865aca4630f965"
+        },
+        {
+          "path": "originales/Carrion Bats (1.32)/Carrion Bat Blood SD.mdx",
+          "archivePath": "Carrion Bats (1.32)/Carrion Bat Blood SD.mdx",
+          "bytes": 35367,
+          "sha256": "aaeacba1106372f40c91f47cbcff43522b99e96d4a3b2868da5f8872239f3c6e"
+        },
+        {
+          "path": "originales/Carrion Bats (1.32)/Carrion Bat Jade HD.mdx",
+          "archivePath": "Carrion Bats (1.32)/Carrion Bat Jade HD.mdx",
+          "bytes": 35463,
+          "sha256": "17c620d089bb2fff4a48f058c2706e03796fcf964099dc4fcd14258d74da19e9"
+        },
+        {
+          "path": "originales/Carrion Bats (1.32)/Carrion Bat Jade SD.mdx",
+          "archivePath": "Carrion Bats (1.32)/Carrion Bat Jade SD.mdx",
+          "bytes": 35267,
+          "sha256": "c063bca4d3f65cc56c2f5d004f64a08f779e0dc051dad54c568efbb91d3c2622"
+        }
+      ],
+      "models": 6,
+      "textures": 0
+    },
+    {
+      "title": "Deadly Plumage (1.32)",
+      "url": "https://www.hiveworkshop.com/threads/deadly-plumage-1-32.333201/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile"
+      ],
+      "listedResources": 3,
+      "date": "2026-10-22T19:15:21.342373-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/deadly-plumage-1-32.333201",
+      "zip": "original.zip",
+      "zipBytes": 211966,
+      "zipSha256": "53047feff1053d46ab00bfe4d11918bde0bfe45860b6e6a172c22d6d0841e565",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Deadly Plumage (1.32)/readme.html",
+          "archivePath": "Deadly Plumage (1.32)/readme.html",
+          "bytes": 3990,
+          "sha256": "105eec0a2bd38a9a982ba3b24fb7d040170184951032d0a45fc5de879bfbc613"
+        },
+        {
+          "path": "originales/Deadly Plumage (1.32)/Deadly Plumage HD Gold/Deadly Plumage HD Gold.mdx",
+          "archivePath": "Deadly Plumage (1.32)/Deadly Plumage HD Gold/Deadly Plumage HD Gold.mdx",
+          "bytes": 28380,
+          "sha256": "738ea84843b9a1937c972b4a46cd3a625e599421a52a2978246183b813ae50bd"
+        },
+        {
+          "path": "originales/Deadly Plumage (1.32)/Deadly Plumage HD Gold/EmberGlow7.blp",
+          "archivePath": "Deadly Plumage (1.32)/Deadly Plumage HD Gold/EmberGlow7.blp",
+          "bytes": 56328,
+          "sha256": "af4608b974868126dd35ef6125b6d8992c8ddd05d0b4aa68ecaf67d6a0c860cd"
+        },
+        {
+          "path": "originales/Deadly Plumage (1.32)/Deadly Plumage HD Purple/Deadly Plumage HD Purple.mdx",
+          "archivePath": "Deadly Plumage (1.32)/Deadly Plumage HD Purple/Deadly Plumage HD Purple.mdx",
+          "bytes": 28380,
+          "sha256": "85ea52d867fdef0744e225b4e65333fa8b77680225a03009e87bdeabf8d99f00"
+        },
+        {
+          "path": "originales/Deadly Plumage (1.32)/Deadly Plumage HD Purple/RoyalGlow02.blp",
+          "archivePath": "Deadly Plumage (1.32)/Deadly Plumage HD Purple/RoyalGlow02.blp",
+          "bytes": 68544,
+          "sha256": "f5a903a62aca968c6732a0e8998c8b9669eeeb6f00229cc9cea35f651f091acb"
+        },
+        {
+          "path": "originales/Deadly Plumage (1.32)/Deadly Plumage SD Purple/Deadly Plumage SD Purple.mdx",
+          "archivePath": "Deadly Plumage (1.32)/Deadly Plumage SD Purple/Deadly Plumage SD Purple.mdx",
+          "bytes": 28380,
+          "sha256": "2094392bb8f23c8102b6f1979a3c29f1be5a227e928a952c0f86fe480a0e12eb"
+        },
+        {
+          "path": "originales/Deadly Plumage (1.32)/Deadly Plumage SD Purple/RoyalGlow02.blp",
+          "archivePath": "Deadly Plumage (1.32)/Deadly Plumage SD Purple/RoyalGlow02.blp",
+          "bytes": 68544,
+          "sha256": "f5a903a62aca968c6732a0e8998c8b9669eeeb6f00229cc9cea35f651f091acb"
+        }
+      ],
+      "models": 3,
+      "textures": 3
+    },
+    {
+      "title": "Fire Missiles",
+      "url": "https://www.hiveworkshop.com/threads/fire-missiles.313049/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Human",
+        "#Blood Elf"
+      ],
+      "listedResources": 12,
+      "date": "2026-10-22T19:15:46.494897-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/fire-missiles.313049",
+      "zip": "original.zip",
+      "zipBytes": 29738,
+      "zipSha256": "2b714bb5a67656de0977421164eeefa171a7e2adb369bead57dd26739a3b13e3",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Fire Missiles/readme.html",
+          "archivePath": "Fire Missiles/readme.html",
+          "bytes": 11739,
+          "sha256": "59e15e73c5005cb42beaa109a8811e978c84c3b489ee357115f09660d3ac825e"
+        },
+        {
+          "path": "originales/Fire Missiles/FireArrow.mdx",
+          "archivePath": "Fire Missiles/FireArrow.mdx",
+          "bytes": 10919,
+          "sha256": "b1b8244ec76156e44ebee1ff8d4f3439b45b6cf8efdec74653b820101391a4d6"
+        },
+        {
+          "path": "originales/Fire Missiles/Fire Crescent Tailed.mdx",
+          "archivePath": "Fire Missiles/Fire Crescent Tailed.mdx",
+          "bytes": 10633,
+          "sha256": "84171942ae911b38effc18a6a6ab5adce1ce3996775980eec6efb6d6f762b6da"
+        },
+        {
+          "path": "originales/Fire Missiles/Fire Spear.mdx",
+          "archivePath": "Fire Missiles/Fire Spear.mdx",
+          "bytes": 10208,
+          "sha256": "13ea15fe551a41320ae81918bd4848b33f9ad8e8376bb4811af52596cd42b33a"
+        },
+        {
+          "path": "originales/Fire Missiles/Fireball Major.mdx",
+          "archivePath": "Fire Missiles/Fireball Major.mdx",
+          "bytes": 13346,
+          "sha256": "a99fb3b9c801dab08ec311309bb45f25e1026adfd24e3afa08cc0ba4e486ffd9"
+        },
+        {
+          "path": "originales/Fire Missiles/Fireball Medium.mdx",
+          "archivePath": "Fire Missiles/Fireball Medium.mdx",
+          "bytes": 12915,
+          "sha256": "f9cd2bed12a8c36095d814f90cfabf5a4c65dd0c98619d062cf4bc008ca63c2a"
+        },
+        {
+          "path": "originales/Fire Missiles/Fireball Minor.mdx",
+          "archivePath": "Fire Missiles/Fireball Minor.mdx",
+          "bytes": 12915,
+          "sha256": "9de24dbd632b9d926d9b59ce69f3b48fa74214042d62b190d38e9687c6d94b44"
+        },
+        {
+          "path": "originales/Fire Missiles/Firebolt Major.mdx",
+          "archivePath": "Fire Missiles/Firebolt Major.mdx",
+          "bytes": 11121,
+          "sha256": "3a3c0a317ceaa40e1190c3af4506af9a03a03907830863e30397e96b0e59d1e3"
+        },
+        {
+          "path": "originales/Fire Missiles/Firebolt Medium.mdx",
+          "archivePath": "Fire Missiles/Firebolt Medium.mdx",
+          "bytes": 10729,
+          "sha256": "727e511f211e9ac9d92262acf51c6525aec1a61c2a0ac49a3f6cf1d6f12fa8ba"
+        },
+        {
+          "path": "originales/Fire Missiles/Firebolt Minor.mdx",
+          "archivePath": "Fire Missiles/Firebolt Minor.mdx",
+          "bytes": 8317,
+          "sha256": "574aa6cf9e615862a0a94fb832d69e720d3c5c70b3ff6b6ca2500447bd54aac1"
+        },
+        {
+          "path": "originales/Fire Missiles/Firebolt Rough Major.mdx",
+          "archivePath": "Fire Missiles/Firebolt Rough Major.mdx",
+          "bytes": 8755,
+          "sha256": "6de5b81d166e3b837ab3b94a20700fa0b6ec043fa71d6f32c9c2b9fc088cd572"
+        },
+        {
+          "path": "originales/Fire Missiles/Firebolt Rough Medium.mdx",
+          "archivePath": "Fire Missiles/Firebolt Rough Medium.mdx",
+          "bytes": 8316,
+          "sha256": "33af058d0db7e46497261dbbf2d0b7938fa7624f17c3c847a17740435798c0bf"
+        },
+        {
+          "path": "originales/Fire Missiles/Firebolt Rough Minor.mdx",
+          "archivePath": "Fire Missiles/Firebolt Rough Minor.mdx",
+          "bytes": 8316,
+          "sha256": "55d7ba4146404787e9e9d3e1d178e0da7ec7d6ab26d60d4719b5056c4deb8a2e"
+        }
+      ],
+      "models": 12,
+      "textures": 0
+    },
+    {
+      "title": "Firebolt",
+      "url": "https://www.hiveworkshop.com/threads/firebolt.340383/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Blood Elf"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:17.014938-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/firebolt.340383",
+      "zip": "original.zip",
+      "zipBytes": 229149,
+      "zipSha256": "1582178edb9175e63739c5cf7cbe108a54a832f70337a2139d06937c7ee746ac",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Firebolt/readme.html",
+          "archivePath": "Firebolt/readme.html",
+          "bytes": 4129,
+          "sha256": "218ce0b9f2421f5e03a5edb4fcf93a35168f04cb6d676b0d6db5879ead5ef3e3"
+        },
+        {
+          "path": "originales/Firebolt/Firebolt/Firebolt.mdx",
+          "archivePath": "Firebolt/Firebolt/Firebolt.mdx",
+          "bytes": 19064,
+          "sha256": "4eba56a1e4cb368ccf859fb7abc959ac79af7eac6861a68e8dc432655eaf5c60"
+        },
+        {
+          "path": "originales/Firebolt/Firebolt/flareshot_tail.blp",
+          "archivePath": "Firebolt/Firebolt/flareshot_tail.blp",
+          "bytes": 7468,
+          "sha256": "df1d142118aa1368c018c943d6b5551202630cfef46cd089d3097c7df7be0dbb"
+        },
+        {
+          "path": "originales/Firebolt/Firebolt Classic/Firebolt Classic.mdx",
+          "archivePath": "Firebolt/Firebolt Classic/Firebolt Classic.mdx",
+          "bytes": 19064,
+          "sha256": "7e96bc8e74803797485fcb827805b7dda55319b7b0beb40f8a1686e2b194a1a4"
+        },
+        {
+          "path": "originales/Firebolt/Firebolt Classic/flaresimple_bw.blp",
+          "archivePath": "Firebolt/Firebolt Classic/flaresimple_bw.blp",
+          "bytes": 4277,
+          "sha256": "5b7e1c02841d389a492f854b2a125795eda042a26cd7e5748811beced859bc29"
+        },
+        {
+          "path": "originales/Firebolt/Firebolt Classic/largesmoke1.blp",
+          "archivePath": "Firebolt/Firebolt Classic/largesmoke1.blp",
+          "bytes": 19566,
+          "sha256": "c32c681251f2624ed58d4f969adb18bb947a495d5a5bff7b50a0186dbb52fc1d"
+        },
+        {
+          "path": "originales/Firebolt/Firebolt Classic/fb_whisp_fire_8x8.blp",
+          "archivePath": "Firebolt/Firebolt Classic/fb_whisp_fire_8x8.blp",
+          "bytes": 190504,
+          "sha256": "13d7743597cf284e1c912ab421f0f7c841c7c0851b15f71f112da2169a322668"
+        },
+        {
+          "path": "originales/Firebolt/Firebolt Classic/flareshot_tail.blp",
+          "archivePath": "Firebolt/Firebolt Classic/flareshot_tail.blp",
+          "bytes": 7468,
+          "sha256": "df1d142118aa1368c018c943d6b5551202630cfef46cd089d3097c7df7be0dbb"
+        },
+        {
+          "path": "originales/Firebolt/Firebolt Classic/moon_bw.blp",
+          "archivePath": "Firebolt/Firebolt Classic/moon_bw.blp",
+          "bytes": 15768,
+          "sha256": "f08d18b1738ba0bfa26b49071b611ea679552931e5a0ab486bd2879f20f99f0c"
+        },
+        {
+          "path": "originales/Firebolt/Firebolt Classic/smoke_bw.blp",
+          "archivePath": "Firebolt/Firebolt Classic/smoke_bw.blp",
+          "bytes": 18095,
+          "sha256": "a1303cc23bf38fa22bda51d1961dfc376148054eeb084e32ac3b3a31e87f7b3a"
+        }
+      ],
+      "models": 2,
+      "textures": 7
+    },
+    {
+      "title": "Frost Bolt",
+      "url": "https://www.hiveworkshop.com/threads/frost-bolt.352867/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:12.405816-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/frost-bolt.352867",
+      "zip": "original.zip",
+      "zipBytes": 215023,
+      "zipSha256": "1797b66073ae4c83585f9143d30347777521267ecf52322c336c34d604d92fc8",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Frost Bolt/readme.html",
+          "archivePath": "Frost Bolt/readme.html",
+          "bytes": 5296,
+          "sha256": "464eb6498b642745d4ba532475281693406d6ab1a5c1dc08376d08f23ab8958b"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt/FrostBoltV1.mdx",
+          "archivePath": "Frost Bolt/Frost Bolt/FrostBoltV1.mdx",
+          "bytes": 46642,
+          "sha256": "7e7b02f625c0cb50f000eecdb89c6ce37dad769c93d8a4d940eda716726de555"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt/MidnightGlow.blp",
+          "archivePath": "Frost Bolt/Frost Bolt/MidnightGlow.blp",
+          "bytes": 7958,
+          "sha256": "db9d87763f9ba35995dd80edcd9d5c6358392d99f4d0bf4a3462be4a9e7c714f"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt/flaresimple_bw.blp",
+          "archivePath": "Frost Bolt/Frost Bolt/flaresimple_bw.blp",
+          "bytes": 4544,
+          "sha256": "23c0ff5e9bc733218f8d6d67bc309eb93c7070d9a5a91d19b0946e83f2cbdfd8"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt/dust3.blp",
+          "archivePath": "Frost Bolt/Frost Bolt/dust3.blp",
+          "bytes": 25429,
+          "sha256": "7b2941b4e213a4669f7a46a90964517d365e5d64f509583d693bffd5ad888750"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt/ChillGlow.blp",
+          "archivePath": "Frost Bolt/Frost Bolt/ChillGlow.blp",
+          "bytes": 2740,
+          "sha256": "74393cc26f26b338eeb29b0a489cd3efe2e0f8048106884ca352de9826e9f850"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt/ChillStar.blp",
+          "archivePath": "Frost Bolt/Frost Bolt/ChillStar.blp",
+          "bytes": 12133,
+          "sha256": "b51c68ab91f5caa2698e2234703eda53e32b1b37b0fbbf27da2095b93c4ed9b2"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt/shockwavewarp01_bw.blp",
+          "archivePath": "Frost Bolt/Frost Bolt/shockwavewarp01_bw.blp",
+          "bytes": 46910,
+          "sha256": "b9bd8e2795b6d0c50324f669a3e45bffcb4b410712dfe58ffd359d29ad4a34ab"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt/AzureTail4Faded.blp",
+          "archivePath": "Frost Bolt/Frost Bolt/AzureTail4Faded.blp",
+          "bytes": 5636,
+          "sha256": "81a3e466f8f790302d604eb3667a70ddb0223c0349daee72e1da4c32e1770323"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt/flarecross_bw.blp",
+          "archivePath": "Frost Bolt/Frost Bolt/flarecross_bw.blp",
+          "bytes": 10365,
+          "sha256": "5c82ea4752854abf753f8a2051a94079fa00cb79514d45777d0c186e69093886"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt Rain/FrostBoltRainV.mdx",
+          "archivePath": "Frost Bolt/Frost Bolt Rain/FrostBoltRainV.mdx",
+          "bytes": 45638,
+          "sha256": "7d91ce8523d5f66f4d2c371a9c4d16e722f6fdff076c4e906ae6379452d5cfce"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt Rain/MidnightGlow.blp",
+          "archivePath": "Frost Bolt/Frost Bolt Rain/MidnightGlow.blp",
+          "bytes": 7958,
+          "sha256": "db9d87763f9ba35995dd80edcd9d5c6358392d99f4d0bf4a3462be4a9e7c714f"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt Rain/flaresimple_bw.blp",
+          "archivePath": "Frost Bolt/Frost Bolt Rain/flaresimple_bw.blp",
+          "bytes": 4544,
+          "sha256": "23c0ff5e9bc733218f8d6d67bc309eb93c7070d9a5a91d19b0946e83f2cbdfd8"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt Rain/dust3.blp",
+          "archivePath": "Frost Bolt/Frost Bolt Rain/dust3.blp",
+          "bytes": 25429,
+          "sha256": "7b2941b4e213a4669f7a46a90964517d365e5d64f509583d693bffd5ad888750"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt Rain/ChillGlow.blp",
+          "archivePath": "Frost Bolt/Frost Bolt Rain/ChillGlow.blp",
+          "bytes": 2740,
+          "sha256": "74393cc26f26b338eeb29b0a489cd3efe2e0f8048106884ca352de9826e9f850"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt Rain/shockwavewarp01_bw.blp",
+          "archivePath": "Frost Bolt/Frost Bolt Rain/shockwavewarp01_bw.blp",
+          "bytes": 46910,
+          "sha256": "b9bd8e2795b6d0c50324f669a3e45bffcb4b410712dfe58ffd359d29ad4a34ab"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt Rain/AzureTail4Faded.blp",
+          "archivePath": "Frost Bolt/Frost Bolt Rain/AzureTail4Faded.blp",
+          "bytes": 5636,
+          "sha256": "81a3e466f8f790302d604eb3667a70ddb0223c0349daee72e1da4c32e1770323"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt Rain/ChillStar.blp",
+          "archivePath": "Frost Bolt/Frost Bolt Rain/ChillStar.blp",
+          "bytes": 12133,
+          "sha256": "b51c68ab91f5caa2698e2234703eda53e32b1b37b0fbbf27da2095b93c4ed9b2"
+        },
+        {
+          "path": "originales/Frost Bolt/Frost Bolt Rain/flarecross_bw.blp",
+          "archivePath": "Frost Bolt/Frost Bolt Rain/flarecross_bw.blp",
+          "bytes": 10365,
+          "sha256": "5c82ea4752854abf753f8a2051a94079fa00cb79514d45777d0c186e69093886"
+        }
+      ],
+      "models": 2,
+      "textures": 16
+    },
+    {
+      "title": "Penance",
+      "url": "https://www.hiveworkshop.com/threads/penance.337543/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:17.152796-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/penance.337543",
+      "zip": "original.zip",
+      "zipBytes": 274749,
+      "zipSha256": "8ec9bd7a68b9986ac5a6da4c546323272e88be05e9512bd5dce5cccf4c4aaf62",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Penance/readme.html",
+          "archivePath": "Penance/readme.html",
+          "bytes": 4197,
+          "sha256": "8aa5841536395e7ea5baeb2c3d7907d975353d7b378e4490c690a7a8223e37b5"
+        },
+        {
+          "path": "originales/Penance/Penance/flareshot_tail.blp",
+          "archivePath": "Penance/Penance/flareshot_tail.blp",
+          "bytes": 53308,
+          "sha256": "99cda1711f12beb2b2a45e63c9f4db9b6c2645f9539aa5a9b7cef8a73207fb34"
+        },
+        {
+          "path": "originales/Penance/Penance/Penance.mdx",
+          "archivePath": "Penance/Penance/Penance.mdx",
+          "bytes": 12851,
+          "sha256": "d678482314833439bd23f8482feea4ff658d524abdf57664d04d6911e5bf6d16"
+        },
+        {
+          "path": "originales/Penance/Penance - Classic/Penance - Classic.mdx",
+          "archivePath": "Penance/Penance - Classic/Penance - Classic.mdx",
+          "bytes": 12851,
+          "sha256": "8e832b689a274044405b2ed868d67a540039fce1699057915ebc27e63f7bd24d"
+        },
+        {
+          "path": "originales/Penance/Penance - Classic/flare_bw.blp",
+          "archivePath": "Penance/Penance - Classic/flare_bw.blp",
+          "bytes": 99575,
+          "sha256": "4e77ff28102d06d8af0da507654f0eca30c759d67e9bf5cf33a2d19434f572c1"
+        },
+        {
+          "path": "originales/Penance/Penance - Classic/rainbowlenseflare.blp",
+          "archivePath": "Penance/Penance - Classic/rainbowlenseflare.blp",
+          "bytes": 47042,
+          "sha256": "2cb6f90ddd52d9c5c06718d9a11f137604969b0b146cc396c6e1214c7f7b6e2d"
+        },
+        {
+          "path": "originales/Penance/Penance - Classic/flareshot_tail.blp",
+          "archivePath": "Penance/Penance - Classic/flareshot_tail.blp",
+          "bytes": 53308,
+          "sha256": "99cda1711f12beb2b2a45e63c9f4db9b6c2645f9539aa5a9b7cef8a73207fb34"
+        },
+        {
+          "path": "originales/Penance/Penance - Classic/flaresimple_bw.blp",
+          "archivePath": "Penance/Penance - Classic/flaresimple_bw.blp",
+          "bytes": 27149,
+          "sha256": "74b76a6623cc6183ef0a2038b8db2066d89ffb7ff2b586f67af3a5e001eb948c"
+        }
+      ],
+      "models": 2,
+      "textures": 5
+    },
+    {
+      "title": "Storm Bolt",
+      "url": "https://www.hiveworkshop.com/threads/storm-bolt.323769/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile",
+        "#Dwarf",
+        "#Human"
+      ],
+      "listedResources": 3,
+      "date": "2026-10-22T19:15:25.432414-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/storm-bolt.323769",
+      "zip": "original.zip",
+      "zipBytes": 56036,
+      "zipSha256": "c49ba14215e017b31d629dc2479e9224491b6149e72c1f2488b3349395cce087",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Storm Bolt/readme.html",
+          "archivePath": "Storm Bolt/readme.html",
+          "bytes": 4243,
+          "sha256": "5d689e80346819870fa81aec45a8dcd90bad9a39be61fd067ae8e456846fb854"
+        },
+        {
+          "path": "originales/Storm Bolt/Storm Bolt/PsionicGlow.blp",
+          "archivePath": "Storm Bolt/Storm Bolt/PsionicGlow.blp",
+          "bytes": 4861,
+          "sha256": "11483c99dae9617706110140b590c79f6d0c652a0c65dd16b494935daf50f5de"
+        },
+        {
+          "path": "originales/Storm Bolt/Storm Bolt/Storm Bolt.mdx",
+          "archivePath": "Storm Bolt/Storm Bolt/Storm Bolt.mdx",
+          "bytes": 62514,
+          "sha256": "cacc0b2e092e940d6be7c835cae84a44c47de523f303a83195e94f9007878db0"
+        },
+        {
+          "path": "originales/Storm Bolt/Storm Bolt Green.mdx",
+          "archivePath": "Storm Bolt/Storm Bolt Green.mdx",
+          "bytes": 62838,
+          "sha256": "f7bb476910f5cb417527c19c318e7a97b049126397b82c2f52892751ebd2fdca"
+        },
+        {
+          "path": "originales/Storm Bolt/Storm Bolt Red.mdx",
+          "archivePath": "Storm Bolt/Storm Bolt Red.mdx",
+          "bytes": 62838,
+          "sha256": "2d1beb99ad3f5df11431f5deb45bb3f2268b537e3689f9817b0f084fa9417545"
+        }
+      ],
+      "models": 3,
+      "textures": 1
+    },
+    {
+      "title": "Void Missiles",
+      "url": "https://www.hiveworkshop.com/threads/void-missiles.313156/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Neutral / Creep",
+        "#Human",
+        "#Undead"
+      ],
+      "listedResources": 12,
+      "date": "2026-10-22T19:15:46.015949-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/void-missiles.313156",
+      "zip": "original.zip",
+      "zipBytes": 48089,
+      "zipSha256": "12c69387ed83f7a8205af620b1486be0c23a72552da22e1c2693f7af718adf84",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Void Missiles/readme.html",
+          "archivePath": "Void Missiles/readme.html",
+          "bytes": 10594,
+          "sha256": "f521398646620fd4f4fd42c5409d99eec10d658601da94df7b817ac84730a77f"
+        },
+        {
+          "path": "originales/Void Missiles/Void Arrow.mdx",
+          "archivePath": "Void Missiles/Void Arrow.mdx",
+          "bytes": 11063,
+          "sha256": "5519ada18f084cc6a3bb7e8696991d5aa68913bcf12dd6b1a9cc47ee2e6ab9c7"
+        },
+        {
+          "path": "originales/Void Missiles/Void Crescent Tailed.mdx",
+          "archivePath": "Void Missiles/Void Crescent Tailed.mdx",
+          "bytes": 11973,
+          "sha256": "0fd656fbfbf0e603c56eb27a249eea86c5ec171b0dc49840187e9e751ae23525"
+        },
+        {
+          "path": "originales/Void Missiles/Void Spear.mdx",
+          "archivePath": "Void Missiles/Void Spear.mdx",
+          "bytes": 11816,
+          "sha256": "8f6bbab3bf86e3b0b332557a2b515919bd954b9797cc8dda9b24c40e7985fd87"
+        },
+        {
+          "path": "originales/Void Missiles/Voidball Major.mdx",
+          "archivePath": "Void Missiles/Voidball Major.mdx",
+          "bytes": 12597,
+          "sha256": "6ef260a025d6e5a41e9d4dfae4df5c158fb9bc891feeeaf4f6b134487326cf86"
+        },
+        {
+          "path": "originales/Void Missiles/Voidball Medium.mdx",
+          "archivePath": "Void Missiles/Voidball Medium.mdx",
+          "bytes": 12353,
+          "sha256": "e8804e1bad72a61e18076bb8e789f8ecc6283a324554c7bd5d1ecacdde28a0f0"
+        },
+        {
+          "path": "originales/Void Missiles/Voidball Minor.mdx",
+          "archivePath": "Void Missiles/Voidball Minor.mdx",
+          "bytes": 12085,
+          "sha256": "e39283d0acbf2e0a2ad618c7434efab70f46a447c981e10ba43605cd840ad698"
+        },
+        {
+          "path": "originales/Void Missiles/Voidbolt Major.mdx",
+          "archivePath": "Void Missiles/Voidbolt Major.mdx",
+          "bytes": 24721,
+          "sha256": "ac654e80cf86c4636f2b7c16660d78f0ee0296579b018ef096e9c39c756abf1a"
+        },
+        {
+          "path": "originales/Void Missiles/Voidbolt Medium.mdx",
+          "archivePath": "Void Missiles/Voidbolt Medium.mdx",
+          "bytes": 24721,
+          "sha256": "78f0ab16094711f778130ae92ba17a5352bde76e3b804f04a87174f3d5b2b5f7"
+        },
+        {
+          "path": "originales/Void Missiles/Voidbolt Minor.mdx",
+          "archivePath": "Void Missiles/Voidbolt Minor.mdx",
+          "bytes": 24721,
+          "sha256": "2ecc07006f0b6409ef9f3e8325b45d190fa5c804472201c755022c3f9c0cf1a8"
+        },
+        {
+          "path": "originales/Void Missiles/Voidbolt Rough Major.mdx",
+          "archivePath": "Void Missiles/Voidbolt Rough Major.mdx",
+          "bytes": 9219,
+          "sha256": "0fff88b7118e4db46c7276378190e3932cad05d85e1cb6067e4119e5506d2c56"
+        },
+        {
+          "path": "originales/Void Missiles/Voidbolt Rough Medium.mdx",
+          "archivePath": "Void Missiles/Voidbolt Rough Medium.mdx",
+          "bytes": 8415,
+          "sha256": "a4256e0ed30a9c953d11b89221ec618ccf04750234d57d37b589521b2ed251ab"
+        },
+        {
+          "path": "originales/Void Missiles/Voidbolt Rough Minor.mdx",
+          "archivePath": "Void Missiles/Voidbolt Rough Minor.mdx",
+          "bytes": 8147,
+          "sha256": "bb84a7f53ecd430a92e378af5d825981890961df83d0c32460346965ac69ce84"
+        }
+      ],
+      "models": 12,
+      "textures": 0
+    },
+    {
+      "title": "Void Rain",
+      "url": "https://www.hiveworkshop.com/threads/void-rain.316011/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:36.071089-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/void-rain.316011",
+      "zip": "original.zip",
+      "zipBytes": 5063,
+      "zipSha256": "4a825699fd46807f4bb2b7ad27d2d29d06bc6e806523837a45b8ee7b870b5209",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Void Rain/readme.html",
+          "archivePath": "Void Rain/readme.html",
+          "bytes": 3454,
+          "sha256": "d4a05e8e5817aca14804468047594cad237f9796e8030cf70b565f2498c396de"
+        },
+        {
+          "path": "originales/Void Rain/Void Rain.mdx",
+          "archivePath": "Void Rain/Void Rain.mdx",
+          "bytes": 8395,
+          "sha256": "20cc0dc296623b09944f4dccb4bb64aa96c90176b43426c00545cb0628e5c8a2"
+        },
+        {
+          "path": "originales/Void Rain/Void Rain Missile.mdx",
+          "archivePath": "Void Rain/Void Rain Missile.mdx",
+          "bytes": 8995,
+          "sha256": "ca623767a48b26f7fe8daf4f71e1ad183c089b420ee75ae3f4b2419877c8ede1"
+        }
+      ],
+      "models": 2,
+      "textures": 0
+    },
+    {
+      "title": "Widow Poison / Spider Toxin",
+      "url": "https://www.hiveworkshop.com/threads/widow-poison-spider-toxin.351827/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:15.115200-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/widow-poison-spider-toxin.351827",
+      "zip": "original.zip",
+      "zipBytes": 142836,
+      "zipSha256": "8b698836dedcd0b4ff6062b60b834c75370f0a6736bf0e93b2f5ea4a3f9f1285",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Widow Poison  Spider Toxin/readme.html",
+          "archivePath": "Widow Poison  Spider Toxin/readme.html",
+          "bytes": 5225,
+          "sha256": "e35d153e41694d73b4fbaa966c7e63b1c297cd3b554063c245d8110ed84e9cff"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Spider Toxin/SpiderToxin.mdx",
+          "archivePath": "Widow Poison  Spider Toxin/Spider Toxin/SpiderToxin.mdx",
+          "bytes": 8544,
+          "sha256": "76f42304873648c7f23075909af7e91e4b3aa4a1d910514b17c5f39d13e1e436"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Spider Toxin/greenblobs.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Spider Toxin/greenblobs.blp",
+          "bytes": 11054,
+          "sha256": "fe5be5a1d99350833ddda563155fb2f7222859e037a7601e58670cbb672be242"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Spider Toxin/greensplat.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Spider Toxin/greensplat.blp",
+          "bytes": 16988,
+          "sha256": "f57df76fbe0f4645f94003dcdad6ea2346fae03eca079370a563b9781668a866"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Spider Toxin/bubble.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Spider Toxin/bubble.blp",
+          "bytes": 8555,
+          "sha256": "4ebab47e4674e9a9778e2409c3ce0d442f9be7a1300fe5c7a87b4bc3447a06d7"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Spider Toxin/smoke_bw.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Spider Toxin/smoke_bw.blp",
+          "bytes": 18088,
+          "sha256": "bb33e6aa0f67e9017b2c060beea65536917ef63a3f87775435b50618e4b05d54"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Widow Poison/WidowPoison.mdx",
+          "archivePath": "Widow Poison  Spider Toxin/Widow Poison/WidowPoison.mdx",
+          "bytes": 29014,
+          "sha256": "bd0b65f9a8f2f1f202f9a85b2875b2fb524bc22968107ced0d1865835c152030"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Widow Poison/dust3.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Widow Poison/dust3.blp",
+          "bytes": 25429,
+          "sha256": "7b2941b4e213a4669f7a46a90964517d365e5d64f509583d693bffd5ad888750"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Widow Poison/flaresimple_bw.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Widow Poison/flaresimple_bw.blp",
+          "bytes": 4544,
+          "sha256": "23c0ff5e9bc733218f8d6d67bc309eb93c7070d9a5a91d19b0946e83f2cbdfd8"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Widow Poison/VerdantTail12.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Widow Poison/VerdantTail12.blp",
+          "bytes": 14099,
+          "sha256": "96e4836c0424bf1520918d1860ed15de26ed8a0ea772f6598f16f5e3e07cbe8d"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Widow Poison/greenblobs.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Widow Poison/greenblobs.blp",
+          "bytes": 11054,
+          "sha256": "fe5be5a1d99350833ddda563155fb2f7222859e037a7601e58670cbb672be242"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Widow Poison/EssenceGlow.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Widow Poison/EssenceGlow.blp",
+          "bytes": 9522,
+          "sha256": "4d5097c59d50f676d529c7eacdb55c6e7500e0e433a38f4419e11967746537d8"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Widow Poison/groundcrack04.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Widow Poison/groundcrack04.blp",
+          "bytes": 27675,
+          "sha256": "7ee55b3cd9c67c090cc0e4e2cf1e15ab3c3c54e90217d8aab5e679a497a73159"
+        },
+        {
+          "path": "originales/Widow Poison  Spider Toxin/Widow Poison/bubble.blp",
+          "archivePath": "Widow Poison  Spider Toxin/Widow Poison/bubble.blp",
+          "bytes": 8555,
+          "sha256": "4ebab47e4674e9a9778e2409c3ce0d442f9be7a1300fe5c7a87b4bc3447a06d7"
+        }
+      ],
+      "models": 2,
+      "textures": 11
+    },
+    {
+      "title": "Winter Blast (1.32)",
+      "url": "https://www.hiveworkshop.com/threads/winter-blast-1-32.333278/",
+      "author": "Vinz",
+      "tags": [
+        "#Effect",
+        "#Missile"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:15:22.467499-05:00",
+      "category": "05-Magia-y-elementales",
+      "folder": "05-Magia-y-elementales/winter-blast-1-32.333278",
+      "zip": "original.zip",
+      "zipBytes": 257915,
+      "zipSha256": "da2e2ba3c202834da4804e732762a2d9c8ef7c6900acf25361b65df5695624e4",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Winter Blast (1.32)/readme.html",
+          "archivePath": "Winter Blast (1.32)/readme.html",
+          "bytes": 3577,
+          "sha256": "b8f4eb3517911153eb7143e3336df6fc08fa41d443c959f27635e0b34bb4b9a3"
+        },
+        {
+          "path": "originales/Winter Blast (1.32)/Winter Blast HD/Winter Blast HD.mdx",
+          "archivePath": "Winter Blast (1.32)/Winter Blast HD/Winter Blast HD.mdx",
+          "bytes": 99397,
+          "sha256": "64af593b8e79ac91fb638b8ed8e3ed2c532c38842da77d9894211815d0490c3c"
+        },
+        {
+          "path": "originales/Winter Blast (1.32)/Winter Blast HD/AzureGlow5.blp",
+          "archivePath": "Winter Blast (1.32)/Winter Blast HD/AzureGlow5.blp",
+          "bytes": 80315,
+          "sha256": "cb8a905837f6380d516ca36cc3b053e9b9b154d1b171f49ac1fb12b28e856cf4"
+        },
+        {
+          "path": "originales/Winter Blast (1.32)/Winter Blast SD/Winter Blast SD.mdx",
+          "archivePath": "Winter Blast (1.32)/Winter Blast SD/Winter Blast SD.mdx",
+          "bytes": 98970,
+          "sha256": "85f1180f8c53eb93304922206bdbf8c060b9e624f92a838813e6df3c794aad25"
+        },
+        {
+          "path": "originales/Winter Blast (1.32)/Winter Blast SD/AzureGlow5.blp",
+          "archivePath": "Winter Blast (1.32)/Winter Blast SD/AzureGlow5.blp",
+          "bytes": 80315,
+          "sha256": "cb8a905837f6380d516ca36cc3b053e9b9b154d1b171f49ac1fb12b28e856cf4"
+        }
+      ],
+      "models": 2,
+      "textures": 2
+    },
+    {
+      "title": "BananaMissile",
+      "url": "https://www.hiveworkshop.com/threads/bananamissile.259787/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 2,
+      "date": "2026-10-22T19:16:04.078543-05:00",
+      "category": "06-Especiales-y-paquetes",
+      "folder": "06-Especiales-y-paquetes/bananamissile.259787",
+      "zip": "original.zip",
+      "zipBytes": 6394,
+      "zipSha256": "826b3f47f7f61753c9b223d3bea18c472874f5841f3cb2adbaf4f113c3c8b816",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/BananaMissile/readme.html",
+          "archivePath": "BananaMissile/readme.html",
+          "bytes": 1094,
+          "sha256": "250bfe0f0ab9d7860913ff2181ca6c364e2e6dd7301095eb037df07dbcd4acb0"
+        },
+        {
+          "path": "originales/BananaMissile/BananaMissile.mdx",
+          "archivePath": "BananaMissile/BananaMissile.mdx",
+          "bytes": 4724,
+          "sha256": "8755a26874f5e8957d703e2b89a558af0d5a12b3743a40fb3a2f8495bb5b95d6"
+        },
+        {
+          "path": "originales/BananaMissile/BananaBomb.mdx",
+          "archivePath": "BananaMissile/BananaBomb.mdx",
+          "bytes": 6980,
+          "sha256": "263cd9d5bd88ed275a8491fcce826c26cef8d12f8681e0f1a6bc2d7159ca9ae3"
+        }
+      ],
+      "models": 2,
+      "textures": 0
+    },
+    {
+      "title": "NutMissile",
+      "url": "https://www.hiveworkshop.com/threads/nutmissile.260357/",
+      "author": "Vinz",
+      "tags": [
+        "#Missile",
+        "#Human"
+      ],
+      "listedResources": 1,
+      "date": "2026-10-22T19:16:04.189495-05:00",
+      "category": "06-Especiales-y-paquetes",
+      "folder": "06-Especiales-y-paquetes/nutmissile.260357",
+      "zip": "original.zip",
+      "zipBytes": 3477,
+      "zipSha256": "69f3ffc7b5a719505dcfc7ab28c3180046a7edd49c9c88b2e60a0570d6bce0a8",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/NutMissile/readme.html",
+          "archivePath": "NutMissile/readme.html",
+          "bytes": 688,
+          "sha256": "842fa14be58fd752ae535b0e975c4f30c4f424c14f95eca9c2b46eaaa469d0a3"
+        },
+        {
+          "path": "originales/NutMissile/NutMissile.mdx",
+          "archivePath": "NutMissile/NutMissile.mdx",
+          "bytes": 6030,
+          "sha256": "532f84c5199a0481f34947215334be5d0a32b62591b4d1e66f74765e738adcf6"
+        }
+      ],
+      "models": 1,
+      "textures": 0
+    },
+    {
+      "title": "Seed Shot / Inside / Squirt",
+      "url": "https://www.hiveworkshop.com/threads/seed-shot-inside-squirt.340345/",
+      "author": "Vinz",
+      "tags": [
+        "#Buff",
+        "#Effect",
+        "#Missile",
+        "#Night Elf"
+      ],
+      "listedResources": 5,
+      "date": "2026-10-22T19:15:16.226989-05:00",
+      "category": "06-Especiales-y-paquetes",
+      "folder": "06-Especiales-y-paquetes/seed-shot-inside-squirt.340345",
+      "zip": "original.zip",
+      "zipBytes": 494727,
+      "zipSha256": "ddcfbd08d8a1656656c7570b0a75275377ccd61667b691d5528c2652fcad90c2",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/readme.html",
+          "archivePath": "Seed Shot  Inside  Squirt/readme.html",
+          "bytes": 5494,
+          "sha256": "f7d45d86943e512dfacea0fbafb42dc2496df9f8a243c8ea391d1ed6a057b6b5"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Inside/Seed Inside.mdx",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Inside/Seed Inside.mdx",
+          "bytes": 153422,
+          "sha256": "725f5d47b1a46ad4a073024dd882fd170f08621854ddc65f23d7b8a83c7ec754"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Inside/VerdantGlow2.blp",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Inside/VerdantGlow2.blp",
+          "bytes": 40348,
+          "sha256": "74b383d3d4f8a2548d407074a77fa39e666dfaae64155e2c2a30ae08ac0f7208"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Inside Classic/Seed Inside Classic.mdx",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Inside Classic/Seed Inside Classic.mdx",
+          "bytes": 153422,
+          "sha256": "b5477ad405fc23767bf4f92427a0a035a4899c9fd7a974022cc3b53539b4b91f"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Inside Classic/VerdantGlow2.blp",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Inside Classic/VerdantGlow2.blp",
+          "bytes": 40348,
+          "sha256": "74b383d3d4f8a2548d407074a77fa39e666dfaae64155e2c2a30ae08ac0f7208"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Inside Classic/flaresimple_bw.blp",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Inside Classic/flaresimple_bw.blp",
+          "bytes": 29821,
+          "sha256": "3d3315c401ffddc031656444dabb251fec584dc9a9e85216bee553cd1ed22a26"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Inside Classic/groundcrack03_bw.blp",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Inside Classic/groundcrack03_bw.blp",
+          "bytes": 253392,
+          "sha256": "270f7ddd05cc9519e428c85fe74a11d32cc954fdceceace6ae9af0d68b3905c1"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Shot.mdx",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Shot.mdx",
+          "bytes": 31880,
+          "sha256": "5413bc520d94bb6b7a7a98755303a35a010bec0d8a9a3b7ca4b931a68210d924"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Squirt.mdx",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Squirt.mdx",
+          "bytes": 10183,
+          "sha256": "99dc5770d1d6b326b3bb1c49f8f7a85a62edb9df4b9c7447326ee7b6a44945d0"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Squirt Classic/Seed Squirt Classic.mdx",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Squirt Classic/Seed Squirt Classic.mdx",
+          "bytes": 10183,
+          "sha256": "4057e6a5304f66bbb81f5733f8e7596175ff066e46d7c99936dd25e63a4174fe"
+        },
+        {
+          "path": "originales/Seed Shot  Inside  Squirt/Seed Squirt Classic/flaresimple_bw.blp",
+          "archivePath": "Seed Shot  Inside  Squirt/Seed Squirt Classic/flaresimple_bw.blp",
+          "bytes": 29821,
+          "sha256": "3d3315c401ffddc031656444dabb251fec584dc9a9e85216bee553cd1ed22a26"
+        }
+      ],
+      "models": 5,
+      "textures": 5
+    },
+    {
+      "title": "TC15 Model Bundle",
+      "url": "https://www.hiveworkshop.com/threads/tc15-model-bundle.326219/",
+      "author": "Vinz",
+      "tags": [
+        "#Buff",
+        "#Effect",
+        "#Missile",
+        "#Building",
+        "#Doodad / Decoration",
+        "#Historic",
+        "#Human"
+      ],
+      "listedResources": 30,
+      "date": "2026-10-22T19:15:24.380882-05:00",
+      "category": "06-Especiales-y-paquetes",
+      "folder": "06-Especiales-y-paquetes/tc15-model-bundle.326219",
+      "zip": "original.zip",
+      "zipBytes": 347620,
+      "zipSha256": "43ec4fce26f06f33392e4f61bf067b265793aa11152cefc2c88409b507642017",
+      "crc": "PASS",
+      "files": [
+        {
+          "path": "originales/TC15 Model Bundle/readme.html",
+          "archivePath": "TC15 Model Bundle/readme.html",
+          "bytes": 14279,
+          "sha256": "e7ea278ecf635f6298a3237e47c10cf31ec081a68f8dbf240bc19229824f9da7"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/BE Bloody Head0.mdx",
+          "archivePath": "TC15 Model Bundle/BE Bloody Head0.mdx",
+          "bytes": 16386,
+          "sha256": "dc228bc55b417be9c59b9a2eb5b5b5fbf68359e64d227721e6dc9291de0cc31f"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/BE Bloody Head1.mdx",
+          "archivePath": "TC15 Model Bundle/BE Bloody Head1.mdx",
+          "bytes": 16386,
+          "sha256": "37eca078d293d19b67573195622ba152ed94ecae1996edf0034019cb09e27504"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/BE Bloody Head2.mdx",
+          "archivePath": "TC15 Model Bundle/BE Bloody Head2.mdx",
+          "bytes": 16386,
+          "sha256": "77c3d12462904b1865238ea20c06a043b2d82d8bda04d13a0afcc087d1f7cebb"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/BE Head0.mdx",
+          "archivePath": "TC15 Model Bundle/BE Head0.mdx",
+          "bytes": 15794,
+          "sha256": "6cef50dda33a6e99139d31b91f677535e8a66fe843f5068337fa17be3f7be558"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/BE Head1.mdx",
+          "archivePath": "TC15 Model Bundle/BE Head1.mdx",
+          "bytes": 15794,
+          "sha256": "127398d38fc847ab56543242e9eb531f33cdd19ef1883174068438c7a0956a22"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/BE Head2.mdx",
+          "archivePath": "TC15 Model Bundle/BE Head2.mdx",
+          "bytes": 15794,
+          "sha256": "c51368baef17e986c4b5b341687ff5049b1325c64b7154b6da88ad6623661885"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Besieger Target.mdx",
+          "archivePath": "TC15 Model Bundle/Besieger Target.mdx",
+          "bytes": 3003,
+          "sha256": "977d412d6e3a50f2a4490041cd99167b5be75626864981a53dee64a9600da1f4"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Bloody Elf Head Missile.mdx",
+          "archivePath": "TC15 Model Bundle/Bloody Elf Head Missile.mdx",
+          "bytes": 23319,
+          "sha256": "1003fe97b1601be939c5b2ec602084c66935f097ba86b0f6801e2513af21afb8"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/MBuilding Fire Large.mdx",
+          "archivePath": "TC15 Model Bundle/MBuilding Fire Large.mdx",
+          "bytes": 3151,
+          "sha256": "e0ac663b0adee23ef0108e1a4931062611db2da11005d1fb91b85b162f61a233"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/MBuilding Fire Large NE.mdx",
+          "archivePath": "TC15 Model Bundle/MBuilding Fire Large NE.mdx",
+          "bytes": 3151,
+          "sha256": "e92b26c99d82b1acb29dde5f8ba6d854e8477fdf32f1c29ae0342c9aaa7111b3"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/MBuilding Fire Large UD.mdx",
+          "archivePath": "TC15 Model Bundle/MBuilding Fire Large UD.mdx",
+          "bytes": 3151,
+          "sha256": "89ee8b0af844679f3e09658d7662c221f95b5966bca3a76eda81e7f60c10e882"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/MBuilding Fire Small.mdx",
+          "archivePath": "TC15 Model Bundle/MBuilding Fire Small.mdx",
+          "bytes": 2768,
+          "sha256": "e9fcc48016b8659ca6f119d8ccd9a8ad5d2c3bb193b117b122289a74f06b7797"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/MBuilding Fire Small NE.mdx",
+          "archivePath": "TC15 Model Bundle/MBuilding Fire Small NE.mdx",
+          "bytes": 2768,
+          "sha256": "01becf988e943a46b115d051d4355b1ecea0c021ccfd9d54fcde9e97f665006d"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/MBuilding Fire Small UD.mdx",
+          "archivePath": "TC15 Model Bundle/MBuilding Fire Small UD.mdx",
+          "bytes": 2768,
+          "sha256": "b27cd42dcb28e5ebdb0e0512850ca583f7e841b08b4feb13b49c8eababa7f148"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Burning Spear/BurningSpear.mdx",
+          "archivePath": "TC15 Model Bundle/Burning Spear/BurningSpear.mdx",
+          "bytes": 34126,
+          "sha256": "540f8a2457b04347760c731aaf8dc61c86003c31b096263b501583ce0bc10201"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Burning Spear/EmberGlow6.blp",
+          "archivePath": "TC15 Model Bundle/Burning Spear/EmberGlow6.blp",
+          "bytes": 16331,
+          "sha256": "23eb7f85134a27c6cb653ae78158525aed76e376b0dfdd2ca247dadd5b858e4a"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Burning Spear Target/EmberGlow6.blp",
+          "archivePath": "TC15 Model Bundle/Burning Spear Target/EmberGlow6.blp",
+          "bytes": 16331,
+          "sha256": "23eb7f85134a27c6cb653ae78158525aed76e376b0dfdd2ca247dadd5b858e4a"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Burning Spear Target/Burning Spear Target.mdx",
+          "archivePath": "TC15 Model Bundle/Burning Spear Target/Burning Spear Target.mdx",
+          "bytes": 4871,
+          "sha256": "1521951047b3403f9f7791acc3789f6f8c1195e69ce08d9fd00979981d611718"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Chainsnare Air Target/Chainsnare_AirTarget.mdx",
+          "archivePath": "TC15 Model Bundle/Chainsnare Air Target/Chainsnare_AirTarget.mdx",
+          "bytes": 26480,
+          "sha256": "4b74bad2f732f9f8f6e66c66d5b6d4651184ff886176bbce38d602a5a9ef8d4d"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Chainsnare Air Target/Chainsnare.blp",
+          "archivePath": "TC15 Model Bundle/Chainsnare Air Target/Chainsnare.blp",
+          "bytes": 64005,
+          "sha256": "597f584c050d702eed88d6305c3dafe8ec67be505ce2de8d4b7c7845eec80e8a"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Chainsnare Ground Target/ChainsnareTarget.mdx",
+          "archivePath": "TC15 Model Bundle/Chainsnare Ground Target/ChainsnareTarget.mdx",
+          "bytes": 17232,
+          "sha256": "f57c039028b3bbcb0553c424c800413f78aa61a0835e9a0cea8a016995f53099"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Chainsnare Ground Target/Chainsnare.blp",
+          "archivePath": "TC15 Model Bundle/Chainsnare Ground Target/Chainsnare.blp",
+          "bytes": 64005,
+          "sha256": "597f584c050d702eed88d6305c3dafe8ec67be505ce2de8d4b7c7845eec80e8a"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Chainsnare Missile/ChainsnareMissile.mdx",
+          "archivePath": "TC15 Model Bundle/Chainsnare Missile/ChainsnareMissile.mdx",
+          "bytes": 8450,
+          "sha256": "7f938eea723f229b7464548823928f1f7d265b0c0324ef9606682bd841d9684a"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Chainsnare Missile/Chainsnare.blp",
+          "archivePath": "TC15 Model Bundle/Chainsnare Missile/Chainsnare.blp",
+          "bytes": 64005,
+          "sha256": "597f584c050d702eed88d6305c3dafe8ec67be505ce2de8d4b7c7845eec80e8a"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Mighty Finger.mdx",
+          "archivePath": "TC15 Model Bundle/Mighty Finger.mdx",
+          "bytes": 6799,
+          "sha256": "68745eda8eb0076d22e9af338ff5a1fb571960862469ce47fded01a67ed08f21"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Orb of Judgement Target.mdx",
+          "archivePath": "TC15 Model Bundle/Orb of Judgement Target.mdx",
+          "bytes": 4782,
+          "sha256": "f5657f66088ca66deca5ad677812ead93e781a243718515109dff6234229759d"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Tar Pool.mdx",
+          "archivePath": "TC15 Model Bundle/Tar Pool.mdx",
+          "bytes": 4786,
+          "sha256": "6ffafec35a818dc6cdf880751056189ad34b22f4251c3d8864b3e38b68fb29da"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Tar Target.mdx",
+          "archivePath": "TC15 Model Bundle/Tar Target.mdx",
+          "bytes": 1443,
+          "sha256": "e7acc6a1883daa21e68e0132611aea7d598befa7099f1316c4899eee8bd30f19"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Tarred Elf Head.mdx",
+          "archivePath": "TC15 Model Bundle/Tarred Elf Head.mdx",
+          "bytes": 23319,
+          "sha256": "654d37941db067156849a806e747921f822bfd0b168268d34d1b884bea55ced7"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Tarred Elf Head II.mdx",
+          "archivePath": "TC15 Model Bundle/Tarred Elf Head II.mdx",
+          "bytes": 23367,
+          "sha256": "e5b717bb546fe66d2c195f32b167c722171b73549ab282629452641f6def6753"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Valiant Rush I.mdx",
+          "archivePath": "TC15 Model Bundle/Valiant Rush I.mdx",
+          "bytes": 3425,
+          "sha256": "bdb4f94489329091c21d086be337bdcc8c7b0f45b48b71d4b01a7004c9339be2"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Valiant Rush II.mdx",
+          "archivePath": "TC15 Model Bundle/Valiant Rush II.mdx",
+          "bytes": 4906,
+          "sha256": "305da8535b3213ceaa0e3401e2b72c470f3558d49057d2b6d1ea7d757b6a8685"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Vanguard Explosion.mdx",
+          "archivePath": "TC15 Model Bundle/Vanguard Explosion.mdx",
+          "bytes": 6924,
+          "sha256": "cddc26e0ac606233dc81a67734481a84fb74b2853c74fa6f70ecda8b645abd15"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/VanquisherTarget.mdx",
+          "archivePath": "TC15 Model Bundle/VanquisherTarget.mdx",
+          "bytes": 5855,
+          "sha256": "b7cbc4c239590eb4b5bddb788ce58fe59222ecf631c9fce87faf98f185b3b9e7"
+        },
+        {
+          "path": "originales/TC15 Model Bundle/Windmill House.mdx",
+          "archivePath": "TC15 Model Bundle/Windmill House.mdx",
+          "bytes": 119169,
+          "sha256": "6ff70487e89bffba6c2f7cfb2a89da2541e30468e75eb2360204181847a3a204"
+        }
+      ],
+      "models": 30,
+      "textures": 5
+    }
+  ]
+}

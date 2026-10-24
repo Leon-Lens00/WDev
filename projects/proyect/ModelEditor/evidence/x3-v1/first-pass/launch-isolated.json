@@ -1,0 +1,17 @@
+{
+  "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-20261022-194407/X3Buster.w3x",
+  "sha256": "af7d1e2e5b0647c82567ed42ba8ed1421795650297fe1cedea25fc796cdb0120",
+  "staged": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-runtime/pfx/drive_c/WarcraftIII/Maps/CodexTest/af7d1e2e5b0647c8.w3x",
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-runtime/pfx",
+  "command": [
+    "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/_v2-entry-point",
+    "--verb=run",
+    "--",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+    "runinprefix",
+    "C:\\WarcraftIII\\war3.exe",
+    "-loadfile",
+    "Maps\\CodexTest\\af7d1e2e5b0647c8.w3x",
+    "-window"
+  ]
+}

@@ -1,0 +1,14 @@
+The chain is **`Noise.Noise.openSimplex2D → Noise.Noise.extrapolate2D` directly**. There is no intermediate method, callback, or dispatch mechanism.
+
+`openSimplex2D` computes lattice coordinates and displacement vectors, then conditionally calls the private static helper at four sites:
+
+- `(xsb+1, ysb, dx1, dy1)` when `attn1 > 0`.
+- `(xsb, ysb+1, dx2, dy2)` when `attn2 > 0`. Both calls: [Noise.j:170–176](Noise.j:170).
+- `(xsb, ysb, dx0, dy0)` when `attn0 > 0`: [Noise.j:223–226](Noise.j:223).
+- `(xsv_ext, ysv_ext, dx_ext, dy_ext)` when `attn_ext > 0`: [Noise.j:228–231](Noise.j:228).
+
+The intermediate wiring is **local-variable selection**: `inSum <= 1`, comparisons between `zins`, `xins`, and `yins`, and `xins > yins` select the extra vertex. The `inSum > 1` branch also increments both base coordinates and adjusts their displacements: [Noise.j:178–221](Noise.j:178).
+
+Each contribution is weighted by its original attenuation to the fourth power. `extrapolate2D` hashes the supplied lattice coordinates through `permutation`, masks the index with `7`, and returns the gradient–displacement dot product: [Noise.j:137–139](Noise.j:137).
+
+These are source-level conditions; no runtime execution was verified.

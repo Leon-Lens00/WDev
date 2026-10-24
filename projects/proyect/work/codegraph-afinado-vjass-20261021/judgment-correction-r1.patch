@@ -1,0 +1,246 @@
+diff --git a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/src/extraction/jass-extractor.ts b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/src/extraction/jass-extractor.ts
+index 3679021..aaef786 100644
+--- a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/src/extraction/jass-extractor.ts
++++ b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/src/extraction/jass-extractor.ts
+@@ -37,7 +37,11 @@ export function lexJass(source: string): JassLexed {
+       const lineEnd = end < 0 ? source.length : end;
+       const directive = source.slice(i, lineEnd).match(/^[\t \uFEFF]*\/\/![\t ]*(\w+)/)?.[1];
+       if (omitted || directive) {
+-        if (omitted && directive === `end${omitted}`) omitted = null;
++        if (omitted) {
++          // Other markers can be quoted as documentation/template content.
++          // Only this region's own terminator is active here.
++          if (directive === `end${omitted}`) omitted = null;
++        }
+         else if (directive && ['endtextmacro', 'endzinc', 'endnovjass'].includes(directive)) {
+           warn(`Unmatched ${directive} directive.`, line, 'error');
+         } else if (directive === 'textmacro' || directive === 'zinc' || directive === 'novjass') {
+@@ -178,7 +182,9 @@ export class JassExtractor {
+     if (kind) {
+       const name = tokens[p + 1];
+       if (!name || !IDENTIFIER.test(name.value)) { this.error(`Missing ${word} name.`, head.line); return; }
+-      const node = this.node(kind, name.value, head, parent, this.sourceLines[head.line - 1]?.trim());
++      // Persist executable header tokens: comments may quote another base.
++      const signature = tokens.map(t => t.value).join(' ').replace(/\s*\.\s*/g, '.');
++      const node = this.node(kind, name.value, head, parent, signature);
+       this.visibility(node, modifiers);
+       this.stack.push({ keyword: word === 'library_once' ? 'library' : word, node });
+       let dependencies = false;
+@@ -290,7 +296,8 @@ export class JassExtractor {
+       }
+       if (callback || tokens[j]?.value === '(') {
+         this.ref(owner, name, callback ? 'function_ref' : 'calls', first);
+-        if (name === 'ExecuteFunc' || /\.(execute|evaluate)$/.test(name)) this.error(`Dynamic dispatch ${name} is not expanded.`, first.line, 'warning');
++        if (name === 'ExecuteFunc') this.error(`Dynamic dispatch ${name} is not expanded.`, first.line, 'warning');
++        else if (/\.(execute|evaluate)$/.test(name)) this.error(`Potential indirect dispatch ${name} is not expanded unless a declared method matches the receiver.`, first.line, 'warning');
+         i = j - 1;
+       }
+     }
+diff --git a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/src/resolution/jass.ts b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/src/resolution/jass.ts
+index 8086447..5279faa 100644
+--- a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/src/resolution/jass.ts
++++ b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/src/resolution/jass.ts
+@@ -61,18 +61,21 @@ export function resolveJassReference(ref: UnresolvedRef, ctx: ResolutionContext)
+     }
+     return type ? lookup(type, TYPES, binding) : undefined;
+   };
+-  const member = (type: Node, name: string, kinds: Set<string>, visited = new Set<string>()): Node | undefined => {
+-    if (visited.has(type.id) || visited.size >= 16) return undefined;
++  // undefined means absent; null means ambiguous/unknown. The latter cannot
++  // permit a same-named global function to become a fallback target.
++  const member = (type: Node, name: string, kinds: Set<string>, visited = new Set<string>()): Node | null | undefined => {
++    if (visited.has(type.id) || visited.size >= 16) return null;
+     visited.add(type.id);
+     const candidates = ctx.getNodesByQualifiedName(type.qualifiedName + '.' + name).filter(n => visible(n) && kinds.has(n.kind));
+-    if (candidates.length) return unique(candidates);
++    if (candidates.length) return unique(candidates) ?? null;
+     const base = type.signature?.match(/\bextends\s+([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*)/)?.[1];
+-    if (!base) return undefined;
++    // JassHelper's array structs have no inherited member namespace.
++    if (!base || base === 'array') return undefined;
+     // The base name is resolved in the DECLARING type's scope, not the caller's
+     // namespace, which might have a different same-named type.
+     const baseCandidates = ctx.getNodesByQualifiedName(enclosing(type) ? enclosing(type) + '.' + base : base).filter(n => TYPES.has(n.kind));
+     const parent = baseCandidates.length ? unique(baseCandidates) : lookup(base, TYPES, type);
+-    return parent ? member(parent, name, kinds, visited) : undefined;
++    return parent ? member(parent, name, kinds, visited) : null;
+   };
+   const CALLABLE = new Set(['function', 'method']);
+   let target: Node | undefined;
+@@ -80,12 +83,12 @@ export function resolveJassReference(ref: UnresolvedRef, ctx: ResolutionContext)
+   if (ref.referenceKind === 'imports') target = lookup(ref.referenceName, new Set(['namespace']));
+   else if (['extends', 'implements', 'type_of', 'returns'].includes(ref.referenceKind)) target = lookup(ref.referenceName, TYPES);
+   else if (ref.referenceKind === 'calls' || ref.referenceKind === 'function_ref') {
+-    if (/\.(execute|evaluate)$/.test(ref.referenceName)) return null;
+     const parts = ref.referenceName.split('.');
+     if (parts.length === 1) {
+       // JassHelper resolves an unqualified method in the enclosing struct
+       // before a same-named global function. Never search unrelated structs.
+       const implicit = owningType && member(owningType, ref.referenceName, new Set(['method']));
++      if (implicit === null) return null;
+       if (implicit) {
+         const enclosingMethod = scopesFor(from).flatMap(s => ctx.getNodesByQualifiedName(s)).find(n => isJass(n) && n.kind === 'method');
+         if (!implicit.isStatic && (ref.referenceKind === 'function_ref' || enclosingMethod?.isStatic)) return null;
+@@ -110,7 +113,7 @@ export function resolveJassReference(ref: UnresolvedRef, ctx: ResolutionContext)
+         }
+       }
+       if (type) {
+-        target = member(type, method, new Set(['method']));
++        target = member(type, method, new Set(['method'])) ?? undefined;
+         if (staticReceiver && target && !target.isStatic) target = undefined;
+         reason = 'declared-receiver-type';
+       } else {
+diff --git a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/src/mcp/tools.ts b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/src/mcp/tools.ts
+index 28194f7..d76dd95 100644
+--- a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/src/mcp/tools.ts
++++ b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/src/mcp/tools.ts
+@@ -7619,7 +7619,7 @@ export class ToolHandler {
+ 
+     // Single definition — the common case.
+     if (matches.length === 1) {
+-      return this.textResult(this.truncateOutput(await this.renderNodeSection(cg, matches[0]!, includeCode)));
++      return this.answerResult(cg, this.truncateOutput(await this.renderNodeSection(cg, matches[0]!, includeCode)), [matches[0]!.filePath]);
+     }
+ 
+     // Multiple definitions share this name — overloads, or same-named methods on
+@@ -7633,9 +7633,9 @@ export class ToolHandler {
+     const header = `**${matches.length} definitions named "${symbol}"**`;
+     if (!includeCode) {
+       const list = matches.map((n) => `- \`${n.name}\` (${n.kind}) — ${n.filePath}:${n.startLine}`);
+-      return this.textResult(this.truncateOutput(
++      return this.answerResult(cg, this.truncateOutput(
+         [header, '', 'Re-query with `includeCode: true` to get every body in one call — no need to pick one first.', '', ...list].join('\n'),
+-      ));
++      ), matches.map(n => n.filePath));
+     }
+ 
+     const BODY_BUDGET = 12000; // leaves room under MAX_OUTPUT_LENGTH for the header + list
+@@ -7679,7 +7679,7 @@ export class ToolHandler {
+         `> Need one of these in full? Call codegraph_node again with \`file\` (e.g. \`"${listed[0]!.filePath.split('/').pop()}"\`) or \`line\` — do NOT Read it.`,
+       );
+     }
+-    return this.textResult(this.truncateOutput(out.join('\n')));
++    return this.answerResult(cg, this.truncateOutput(out.join('\n')), matches.map(n => n.filePath));
+   }
+ 
+   /**
+@@ -7795,7 +7795,7 @@ export class ToolHandler {
+       if (nodes.length) out.push(...symbolMap('**Symbols**'));
+       else out.push('_No indexed symbols in this file._');
+       out.push('', '> Drop `symbolsOnly` (or pass `offset`/`limit`) to read the source, like Read.');
+-      return this.textResult(this.truncateOutput(out.join('\n')));
++      return this.answerResult(cg, this.truncateOutput(out.join('\n')), [filePath]);
+     }
+ 
+     // SECURITY (#383): never dump a raw config/data file — a yaml/properties
+@@ -7818,7 +7818,7 @@ export class ToolHandler {
+       const out = [`**${filePath}** — could not read from disk (it may have moved since indexing). ${depSummary}`, ''];
+       if (nodes.length) out.push(...symbolMap('**Symbols**'));
+       out.push('', `> Read \`${filePath}\` directly for its current content.`);
+-      return this.textResult(this.truncateOutput(out.join('\n')));
++      return this.answerResult(cg, this.truncateOutput(out.join('\n')), [filePath]);
+     }
+ 
+     // Split exactly as Read does — keep the trailing empty line a final newline
+@@ -7862,7 +7862,7 @@ export class ToolHandler {
+       );
+     }
+     // Self-bounded to CHAR_BUDGET — do NOT route through truncateOutput (15k).
+-    return this.textResult(out.join('\n'));
++    return this.answerResult(cg, out.join('\n'), [filePath]);
+   }
+ 
+   /** Render one symbol: details + (optional) body/outline + its caller/callee trail. */
+diff --git a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/__tests__/jass-vjass.test.ts b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/__tests__/jass-vjass.test.ts
+index c578c2f..f442fae 100644
+--- a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/__tests__/jass-vjass.test.ts
++++ b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/__tests__/jass-vjass.test.ts
+@@ -114,6 +114,12 @@ describe('JASS/vJASS structural extraction', () => {
+     expect(result.unresolvedReferences.filter(r => r.referenceKind === 'calls').map(r => [r.referenceName, r.line, r.column])).toEqual([['Real', 6, 6]]);
+     expect(result.nodes.find(n => n.name === 'Run')?.endLine).toBe(7);
+   });
++
++  it('ignores unrelated preprocessor markers inside inactive novjass documentation', () => {
++    const result = extractFromSource('docs.j', `//! novjass\n//! zinc\n//! endzinc\n//! textmacro EXAMPLE\n//! endtextmacro\n//! endnovjass\n${fn('Real')}`);
++    expect(result.errors).toEqual([]);
++    expect(result.nodes.filter(n => n.kind === 'function').map(n => n.name)).toEqual(['Real']);
++  });
+ });
+ 
+ describe('JASS/vJASS original CodeGraph SQLite/index/resolver/sync', { timeout: 60_000 }, () => {
+@@ -199,6 +205,37 @@ describe('JASS/vJASS original CodeGraph SQLite/index/resolver/sync', { timeout:
+     expect(callees('Outside')).toEqual(['ping']);
+   });
+ 
++  it('uses parsed inheritance rather than extends text inside header comments', async () => {
++    await init({ 'bases.j': `struct WrongBase\n method tick takes nothing returns nothing\n endmethod\nendstruct\nstruct CorrectBase\n method tick takes nothing returns nothing\n endmethod\nendstruct\nstruct Child /* extends WrongBase */ extends CorrectBase\nendstruct\nfunction Probe takes Child c returns nothing\n call c.tick()\nendfunction\n` });
++    expect(callees('Probe')).toEqual(['CorrectBase.tick']);
++  });
++
++  it('preserves ambiguous conditional members without falling through to a global homonym', async () => {
++    await init({ 'conditional.j': `${fn('ping')}struct S\n static if FLAG then\n static method ping takes nothing returns nothing\n endmethod\n else\n static method ping takes nothing returns nothing\n endmethod\n endif\n static method run takes nothing returns nothing\n call ping()\n endmethod\nendstruct\n` });
++    expect(callees('S.run')).toEqual([]);
++  });
++
++  it('does not treat extends array as an unknown inherited member namespace', async () => {
++    await init({ 'array.j': `${fn('GlobalHelper')}struct S extends array\n static method run takes nothing returns nothing\n call GlobalHelper()\n endmethod\nendstruct\n` });
++    expect(callees('S.run')).toEqual(['GlobalHelper']);
++  });
++
++  it('resolves ordinary declared execute/evaluate methods on known receivers', async () => {
++    await init({ 'names.j': `struct S\n method execute takes nothing returns nothing\n endmethod\n method evaluate takes nothing returns nothing\n endmethod\nendstruct\nfunction Probe takes S s returns nothing\n call s.execute()\n call s.evaluate()\nendfunction\n` });
++    expect(callees('Probe')).toEqual(['S.evaluate', 'S.execute']);
++  });
++
++  it('preserves JASS coverage warnings in secondary symbol, overload and file responses', async () => {
++    await init({ 'one.j': `${fn('Ping')}//! runtextmacro NOT_EXPANDED()\n`, 'two.j': `library Two\n${fn('Ping')}endlibrary\n` });
++    const handler = new ToolHandler(cg!);
++    for (const args of [{symbol:'Ping',includeCode:true},{symbol:'Ping',file:'one.j',includeCode:true},{file:'one.j'}]) {
++      const response = await handler.execute('codegraph_node', args);
++      expect(response.isError).not.toBe(true);
++      expect(response.content[0]?.text).toContain('JASS/vJASS local support');
++      expect(response.content[0]?.text).toContain('Directive runtextmacro');
++    }
++  });
++
+   it('syncs changes, additions, deletion and line shifts to the same edge set as a fresh rebuild', async () => {
+     await init({ 'api.j': fn('Ping'), 'main.vjass': fn('Run', ' call Ping()') });
+     write('api.j', '\n' + fn('Ping', ' call Pong()'));
+diff --git a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/JASS-VJASS.md b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/JASS-VJASS.md
+index 43b344c..825d399 100644
+--- a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/JASS-VJASS.md
++++ b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/JASS-VJASS.md
+@@ -24,6 +24,11 @@ Inactive `//! novjass` documentation is excluded before lexical analysis, and
+ JassHelper multiline strings are masked without losing following coordinates.
+ Local initializer calls belong to their enclosing function/method. Unqualified
+ struct methods resolve in their owning type before same-named global functions.
++Inheritance headers exclude comments; ambiguous conditional members remain
++unresolved instead of falling through to a global homonym. Ordinary declared
++`execute`/`evaluate` methods resolve on known receivers; indirect helpers remain
++outside the supported subset. Secondary symbol/file MCP reads retain the same
++JASS coverage notes and diagnostics as exploration.
+ 
+ Resolution is case-sensitive and restricted to JASS/vJASS declarations. It uses
+ lexical scopes, private visibility, explicit public prefixes (`Library_Name`),
+@@ -104,7 +109,7 @@ general performance improvement from these checks.
+ Revision 2 evidence:
+ `/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/`.
+ It includes failing-before/passing-after regressions, JassHelper/pJASS fixtures,
+-1028 passing tests across seven suites, copied real TerrainDev/inventory/UI
++1054 passing tests across nine suites, copied real TerrainDev/inventory/UI
+ sources and three RapidFire flow probes, plus a Python graph comparison with
+ the pinned upstream package. Zero parse errors does not remove coverage warnings
+ or establish complete language support. Already-running MCP processes must be
+diff --git a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/CHANGELOG.md b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/CHANGELOG.md
+index b8e1ea7..c1c0ab5 100644
+--- a/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r1/CHANGELOG.md
++++ b/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/review-r2/CHANGELOG.md
+@@ -21,6 +21,8 @@ and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+ - JASS/vJASS documentation regions and multiline strings no longer create false symbols or corrupt the scope of the code that follows them.
+ - Calls from JASS/vJASS local initializers belong to the enclosing function, and unqualified struct methods resolve before same-named global functions.
+ - MCP guidance now reflects automatic watching and catch-up for explicitly selected projects.
++- JASS/vJASS inheritance ignores quoted comment text, conditional method ambiguity stays unresolved, and declared methods named execute or evaluate remain discoverable.
++- Secondary JASS/vJASS symbol and file reads preserve coverage warnings and extraction diagnostics.
+ 
+ ## [1.6.2] - 2026-10-03
+ 

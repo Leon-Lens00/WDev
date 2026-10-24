@@ -1,0 +1,36 @@
+{
+  "repo": "small-noise",
+  "flow": 1,
+  "names": [
+    "Noise.Noise.octavePerlin2D",
+    "Noise.Noise.perlin2D",
+    "Noise.Noise.floor"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 26.25303553199774,
+  "usage": {
+    "input_tokens": 67453,
+    "cached_input_tokens": 55936,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 822,
+    "reasoning_output_tokens": 107
+  },
+  "commands": 3,
+  "command_text": [
+    "/usr/bin/bash -lc \"pwd && rg --files -g '\"'!benchmark*'\"' -g '\"'!.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+    "/usr/bin/bash -lc \"rg -n 'octavePerlin2D|perlin2D|floor|struct|library|module|implement|interface' Noise.j OctavePerlin.j\"",
+    "/usr/bin/bash -lc \"nl -ba OctavePerlin.j | sed -n '1,70p'\nnl -ba Noise.j | sed -n '1,102p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"pwd && rg --files -g '\"'!benchmark*'\"' -g '\"'!.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16215-ad11-7032-80c9-9b2b6840d6d5"
+  ]
+}

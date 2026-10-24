@@ -1,0 +1,86 @@
+[
+  {
+    "case": "dynamic",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-6y4vn7mg",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "6674aa96b7e5e51fdfdd81dd5a87891715857885ae1883737847e368fc623460",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "multidim",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-6zurymih",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "889c5556425e30169ae92ec89a19447f1579d9197e62a911c8ba9fcd09dd5c55",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 10: [] Unexpected: \"[4]\"\n1\n"
+  },
+  {
+    "case": "base-destroy",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-krhmjln1",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "b4447820d6700dd1b785d886f6da9a356e3939a5390289bc4f5793519369983a",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "constructor",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-jl0ivljy",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "c3b46d7c2c5f70b40eb98d3b0e5dbfb4f3c442d97937934cbf25a6cd0bc99d14",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "gettype",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-khivbeco",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "c06f3dc42586e5abe53216dbd9137f113e675a6d20df5c9e4b576f402ec1303f",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "array-size",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-kwqlf4ph",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "d608e67b4e5d33defec6dd0446646ccb998561ff983b04da7d2570e098fbc093",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  }
+]

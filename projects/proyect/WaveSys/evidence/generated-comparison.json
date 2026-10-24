@@ -1,0 +1,23 @@
+{
+  "old_sections": 113,
+  "different_or_missing": [
+    "Environment/Config/VisionConfig.j",
+    "MyMissiles/Config/WeaponProfileConfig.j",
+    "MyMissiles/SwapMana.j",
+    "MyMissiles/UnitTypeMissileLoadout.j",
+    "Systems/Tender/TenderSystem.j",
+    "UI System/MyIU/EnemyPreviewConfig.j",
+    "WaveSysAnAI/AI/AIProfiles.j",
+    "WaveSysAnAI/AI/IAManager.j",
+    "WaveSysAnAI/SwlsWave/WavePointGroups.j",
+    "WaveSysAnAI/SwlsWave/WavePointGroupsConfig.j",
+    "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+    "libraries/CameraEQNoise.j",
+    "libraries/Missile.j",
+    "libraries/SpacebarDetect.j",
+    "libraries/SpellFinishEvent.j",
+    "libraries/SyncInteger.j",
+    "libraries/UnitDex.j",
+    "libraries/UserInterface.j"
+  ]
+}

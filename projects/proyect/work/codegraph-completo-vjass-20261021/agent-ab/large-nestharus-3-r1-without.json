@@ -1,0 +1,36 @@
+{
+  "repo": "large-nestharus",
+  "flow": 3,
+  "names": [
+    "TimerTools.Timer.destroy",
+    "TimerTools.DestructionQueue.add"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 29.206911210996623,
+  "usage": {
+    "input_tokens": 124663,
+    "cached_input_tokens": 106240,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 765,
+    "reasoning_output_tokens": 137
+  },
+  "commands": 4,
+  "command_text": [
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!benchmark*'\"' --glob '\"'!**/.codegraph/**'\"' 'library TimerTools|struct Timer|DestructionQueue|method destroy' .\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '380,790p'\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '125,330p'\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '334,383p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!benchmark*'\"' --glob '\"'!**/.codegraph/**'\"' 'library TimerTools|struct Timer|DestructionQueue|method destroy' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a1621c-6923-75f0-8478-e3135539d339"
+  ]
+}

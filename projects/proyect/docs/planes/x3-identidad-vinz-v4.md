@@ -1,0 +1,13 @@
+# X3V4 — identidad y estudio completo Vinz
+
+23/10/2026. Usuario pide acercar al máximo al X3 confirmado y estudiar cada misil descargado de Vinz. Destino Classic1.27b MDX800. Física externa; conservar V1..V3 y originales. Usar wc3-classic-modeling y writing-plans; CodeGraph-first sobre ModelEditor, dependencias externas/binarios fuera del índice.
+
+Base: V3 ZIPefd0786cfcc388f969e61762cabe731034d70ea05b91ead962d151525019c515.191MDX/50paquetes de la biblioteca original. Referencia Tenor aportada y muestrasABC locales.
+
+Fases autorizadas: (1) auditar todos los191 binarios y resolver texturas, curvas/materiales/emisores/estelas; (2) examinar visualmente cada modelo en visor3D, con atlas/contactos y cronologías representativas, distinguir variantes y familias; (3) registrar personalidad/técnica/aplicación por paquete y diferencias concretas X3; (4) construir V4 aparte, cuerpo compacto/corona dentada y creciente blanco, copa azul en A, centro rosa y aros verdes finos en C, orbes con corazón claro y residuos; (5) validar MDX/MDL/BLP, origen y secuencias, mostrar3D; (6) probar copia mediante YDWE un jugador/sinLAN en pantalla3, documentar y empaquetar.
+
+Criterios: distinguir A/B/C sin depender sólo del color, referencia al lado; silueta curva con frente enX0 y halo suave; conservar volumen varias vistas, partículas de rastro breves y núcleo que no se queme completamente; no convertir191 variantes en191 diseños distintos ni prometer equivalencia artística exacta por conteos. No modificar física TerrainDev ni recursos ajenos. Pruebas separan estructura, visor, motor y multijugador (fuera de alcance).
+
+Estado: estudio terminado (191MDX/50paquetes;178 recursos utilizados completos y13 vistas parciales explícitas). Atlas32páginas Stand/Death y notas por familia/archivo en references/vinz-estudio-v4/ESTUDIO.md. V4 construida aparte:8componentes,9máscaras originales; grupoB corregido a dos orbes verde/naranja, cian sólo individual extra. Lectores independientes/MDL/BLP/poses pasan. Visor3D real revisado lateral/frontal/oblicuo y cada componente. Primer ensayo YDWE SP pantalla3 pasó movimiento, aparición, desaparición y escalas0.5/3. Último ajusteB se vuelve a probar en mapa45f96cd4793d04f6c60cb5652d66d409cfaf4896ef01610c7281679a411caa13. Siguiente: finalizar ensayo actual, muestras/ZIP/hashes/documentación y cierre propio comprobado.
+
+Cierre: ensayo final completo (150frames), mapa reextraído/hash realYDWE verificado, partida propia cerrada/retorno0/perfil a papelera. Muestras PNG/GIF y ZIP97miembros verificados porCRC/bytes en evidence/x3-v4/release.json. Objetivo implementado y validado dentro del alcance visual/modelos; rendimiento masivo/multijugador/física fuera de alcance.

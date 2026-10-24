@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-22T14:58:07.851115-05:00",
+  "official_validator": "Skill is valid!",
+  "local_links_exist": true,
+  "changed_files": [
+    {
+      "path": "/home/snz/.codex/skills/build-warcraft3-vjass-127b/SKILL.md",
+      "sha256": "d5f3e77a2488e55d2484ba750866ab494708178d42f56727cf47ee679c17adce"
+    },
+    {
+      "path": "/home/snz/.codex/skills/build-warcraft3-vjass-127b/references/library-inventorysys-141.md",
+      "sha256": "68e381b52347176f3d5598b6ca9fa3ebec0fb346e1ebae406740b9fbe948cde6"
+    },
+    {
+      "path": "/home/snz/.codex/skills/build-warcraft3-vjass-127b/references/texttags-dialogos-127b.md",
+      "sha256": "9bde7d5198662ed95ef2676a1fba9dd2af35690cb7f5eab48d53df2f0d0ca06a"
+    }
+  ],
+  "scope": "documentation-only; no new in-game validation or renderer implementation"
+}

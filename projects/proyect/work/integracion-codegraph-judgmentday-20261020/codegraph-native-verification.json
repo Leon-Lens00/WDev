@@ -1,0 +1,96 @@
+[
+  {
+    "case": "vjass",
+    "args": [
+      "init",
+      "/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/vjass-only",
+      "--yes"
+    ],
+    "exit": 0,
+    "stdout": "\u250c  Initializing CodeGraph\n\u2502\n\u25c6  Initialized in /home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/vjass-only\n\u2502\nScanning files...\nParsing code...\n\u2502\n\u25b2  No supported source files found \u2014 3 file(s) present, none in a language CodeGraph indexes: .j (1), .jass (1), .vjass (1)\n\u2502\n\u25cf  CodeGraph is inactive for this workspace \u2014 searches will return nothing. Use your own file tools here.\n\u2502\n\u2514  Done\n\n",
+    "stderr": "codegraph collects anonymous usage stats (no code, paths, or names) \u2014 \"codegraph telemetry off\" or CODEGRAPH_TELEMETRY=0 disables. Details: https://github.com/colbymchenry/codegraph/blob/main/TELEMETRY.md\n"
+  },
+  {
+    "case": "vjass",
+    "args": [
+      "status",
+      "/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/vjass-only",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\"initialized\":true,\"version\":\"1.6.2\",\"projectPath\":\"/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/vjass-only\",\"indexPath\":\"/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/vjass-only/.codegraph\",\"lastIndexed\":null,\"fileCount\":0,\"nodeCount\":0,\"edgeCount\":0,\"dbSizeBytes\":172032,\"walSizeBytes\":0,\"backend\":\"node-sqlite\",\"journalMode\":\"wal\",\"nodesByKind\":{},\"languages\":[],\"pendingChanges\":{\"added\":0,\"modified\":0,\"removed\":0},\"worktreeMismatch\":null,\"index\":{\"builtWithVersion\":null,\"builtWithExtractionVersion\":null,\"currentExtractionVersion\":27,\"reindexRecommended\":false,\"state\":\"complete\",\"pendingRefs\":0}}\n",
+    "stderr": ""
+  },
+  {
+    "case": "vjass",
+    "args": [
+      "query",
+      "SpellPing",
+      "--path",
+      "/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/vjass-only",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "[]\n",
+    "stderr": ""
+  },
+  {
+    "case": "vjass",
+    "args": [
+      "explore",
+      "SpellPing",
+      "--path",
+      "/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/vjass-only"
+    ],
+    "exit": 0,
+    "stdout": "No relevant code found for \"SpellPing\"\n\nExplore matches symbol/file names and indexed code words lexically, not by meaning.\nThis project has nothing indexed.\n",
+    "stderr": ""
+  },
+  {
+    "case": "python",
+    "args": [
+      "init",
+      "/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/python-control",
+      "--yes"
+    ],
+    "exit": 0,
+    "stdout": "\u250c  Initializing CodeGraph\n\u2502\n\u25c6  Initialized in /home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/python-control\n\u2502\nScanning files...\nParsing code...\nResolving refs...\nLinking dynamic dispatch...\n\u2502\n\u25c6  Indexed 1 files\n\u2502\n\u25cf  3 nodes, 3 edges in 174ms\n\u2502\n\u2514  Done\n\n",
+    "stderr": ""
+  },
+  {
+    "case": "python",
+    "args": [
+      "status",
+      "/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/python-control",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "{\"initialized\":true,\"version\":\"1.6.2\",\"projectPath\":\"/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/python-control\",\"indexPath\":\"/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/python-control/.codegraph\",\"lastIndexed\":\"2026-10-21T01:24:46.036Z\",\"fileCount\":1,\"nodeCount\":3,\"edgeCount\":3,\"dbSizeBytes\":176128,\"walSizeBytes\":0,\"backend\":\"node-sqlite\",\"journalMode\":\"wal\",\"nodesByKind\":{\"file\":1,\"function\":2},\"languages\":[\"python\"],\"pendingChanges\":{\"added\":0,\"modified\":0,\"removed\":0},\"worktreeMismatch\":null,\"index\":{\"builtWithVersion\":\"1.6.2\",\"builtWithExtractionVersion\":27,\"currentExtractionVersion\":27,\"reindexRecommended\":false,\"state\":\"complete\",\"pendingRefs\":0}}\n",
+    "stderr": ""
+  },
+  {
+    "case": "python",
+    "args": [
+      "query",
+      "spell_ping",
+      "--path",
+      "/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/python-control",
+      "--json"
+    ],
+    "exit": 0,
+    "stdout": "[\n  {\n    \"node\": {\n      \"id\": \"function:a01a76f3be84004fe69e95e79760515b\",\n      \"kind\": \"function\",\n      \"name\": \"spell_ping\",\n      \"qualifiedName\": \"spell_ping\",\n      \"filePath\": \"probe.py\",\n      \"language\": \"python\",\n      \"startLine\": 1,\n      \"endLine\": 2,\n      \"startColumn\": 0,\n      \"endColumn\": 12,\n      \"signature\": \"()\",\n      \"visibility\": null,\n      \"isExported\": false,\n      \"isAsync\": false,\n      \"isStatic\": false,\n      \"isAbstract\": false,\n      \"updatedAt\": 1792545886038\n    },\n    \"score\": 91.0701813986583\n  }\n]\n",
+    "stderr": ""
+  },
+  {
+    "case": "python",
+    "args": [
+      "explore",
+      "spell_ping",
+      "--path",
+      "/home/snz/Documentos/ChatGPT/Proyect/work/integracion-codegraph-judgmentday-20261020/fixtures/python-control"
+    ],
+    "exit": 0,
+    "stdout": "**Exploration: spell_ping**\n\nFound 2 symbols across 1 file.\n\n**Blast radius \u2014 what depends on these (update/verify before editing)**\n\n- `spell_ping` (probe.py:1) \u2014 1 caller in `probe.py`; no tests found within 3 caller hops\n\n**Source Code**\n\n> The code below is the **verbatim, current on-disk source** of these files \u2014 re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.\n\n**`probe.py`** \u2014 spell_ping(function), main(function)\n\n```python\n1\tdef spell_ping():\n2\t    return 1\n3\t\n4\tdef main():\n5\t    return spell_ping()\n```\n\n",
+    "stderr": ""
+  }
+]

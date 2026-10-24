@@ -1,0 +1,31 @@
+Revisión funcional ampliada · 2026-10-02
+
+Objetivo del usuario: manipulación visual en tiempo real, escalado, facilidad
+sin perder precisión ni los enlaces del sistema clásico.
+
+Cambios comprobados en navegador:
+- 8 tiradores por selección. Yelmo se arrastró de (1224,60.75) a (1096,126)
+  en píxeles del diseño; se escaló de 72x72.95 a 156.9x129.56.
+  Dos operaciones de deshacer recuperaron posición y tamaño originales.
+- Conversión de unidades: X=1224px muestra X=0.53 en coordenadas del sistema.
+- Equipo, 17 elementos: tirador NW produjo 346.8x431px. Deshacer restauró
+  exactamente todo el proyecto, comprobado con lecturas WebMCP.
+- Ancho numérico del conjunto=350px produjo altura proporcional=434.97px.
+- Selección por recuadro contenida: 16 elementos. Mano cambió scroll de
+  (872,42) a (702,2). Navegación no cambió el proyecto.
+- Creación a760px: biblioteca cerrada, inspector abierto; contenido editable.
+  Esc desde el texto cierra el inspector. Deshacer edición y creación dejó
+  el proyecto exactamente igual al anterior a las pruebas.
+- Probar -> Editar conserva los17 elementos seleccionados.
+- Entrar en Probar desde Mano activa Seleccionar, permitiendo probar clics.
+- Búsqueda Casilla30 + Todo selecciona1 elemento, ya no36.
+- Valor fuera de rango: mensaje visible, aria-invalid, sin modificar el modelo.
+- Texturas: nombres, destino y búsqueda; Penguin devuelve1 tarjeta.
+- Exportación limpia ruta anterior y guarda JSON/JASS/guía en:
+  exports/2026-10-02T11-24-55-291Z.
+- Sin errores de consola recogidos.
+
+Pruebas automáticas:12/12; node --check app.js correcto.
+No se verificaron con automatización los gestos Ctrl+rueda, Espacio+arrastrar
+ni cancelación en medio de un gesto; se revisó su implementación.
+No se realizó prueba con lector de pantalla, WCAG completa ni juego1.27b.

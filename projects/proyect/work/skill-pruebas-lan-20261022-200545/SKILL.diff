@@ -1,0 +1,21 @@
+--- SKILL.md antes
++++ SKILL.md después
+@@ -1,6 +1,6 @@
+ ---
+ name: probar-warcraft3-classic-linux
+-description: "Probar mapas de Warcraft III Classic 1.27b en esta PC Linux: lanzamiento rápido, NewGen/YDWE/Forge, interacción con el juego, capturas, registros frescos y cierre de la partida propia. Usar para pruebas dentro del juego o manejo del editor; complementar build-warcraft3-vjass-127b para código y control-escritorio-linux para entradas gráficas. No acredita Reforged, otras PC ni multijugador sin ensayo específico."
++description: "Probar mapas de Warcraft III Classic 1.27b en esta PC Linux: lanzamiento LAN individual, NewGen/YDWE/Forge, interacción con el juego, capturas, registros frescos y cierre de la partida propia. Usar para pruebas dentro del juego o manejo del editor; complementar build-warcraft3-vjass-127b para código y control-escritorio-linux para entradas gráficas. No acredita Reforged, otras PC ni multijugador sin ensayo específico."
+ ---
+ 
+ # Pruebas Warcraft III Classic en Linux
+@@ -15,8 +15,8 @@
+ 
+ ## Bucle rápido
+ 
+-- Para pruebas independientes que deban seguir avanzando mientras el usuario o los agentes cambian de ventana, la preferencia del usuario es **un anfitrión LAN automático y un solo cliente Warcraft por ensayo**, con mapa y sesión propios. Leer [LAN individual y agentes](references/lan-individual.md) antes de lanzarlo. Validar continuidad fuera de foco; esta modalidad está respaldada por lectura del código local, todavía sin prueba específica de un cliente en juego. No presentarla como solución ya comprobada.
+-- Para pruebas individuales atendidas en primer plano, puede usarse `/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 play /ruta/absoluta/COPIA-COMPILADA.w3x`. El lanzador valida JASS y prepara una ruta corta en el perfil gráfico moderno; no implementa LAN ni evita por sí mismo la pausa al perder el foco. No abrir el editor sin necesidad.
++- **Usar lanzamiento LAN individual por defecto** en las pruebas independientes que deban seguir avanzando mientras el usuario o los agentes cambian de ventana: **un anfitrión LAN automático y un solo cliente Warcraft por ensayo**, con mapa y sesión propios. Cuando dos agentes prueben a la vez, cada uno debe tener su host, cliente, mapa y registros separados; no unirlos a la misma partida. Leer [LAN individual y agentes](references/lan-individual.md) antes de lanzarlo. Validar continuidad fuera de foco; esta modalidad está respaldada por lectura del código local, todavía sin prueba específica de un cliente en juego. No presentarla como solución ya comprobada.
++- Reservar `play` para pruebas individuales atendidas en primer plano o que requieran expresamente modo individual; en esos casos puede usarse `/home/snz/Documentos/WarDatsPy/Taller-WC3/wc3 play /ruta/absoluta/COPIA-COMPILADA.w3x`. El lanzador valida JASS y prepara una ruta corta en el perfil gráfico moderno; no implementa LAN ni evita por sí mismo la pausa al perder el foco. No abrir el editor sin necesidad.
+ - Si cambia vJASS, compilar con JassHelper, validar con pJASS y verificar el script reextraído de la copia antes de jugar. No confundir validación sintáctica con corrección en motor.
+ - Abrir editor cuando la tarea exija objetos, GUI, guardado o integración del editor. Usar los lanzadores del Taller, una copia y comprobar los registros de compilación/empaquetado al guardar.
+ - Arrancar en segundo plano o con una sesión de herramienta que permita seguir trabajando: `play` permanece esperando hasta que termina el juego. Identificar el nuevo proceso y su ventana; guardar identidad antes de enviar entradas.

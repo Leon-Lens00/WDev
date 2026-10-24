@@ -1,0 +1,7 @@
+The chain is **`Jass.Lexer.next → Jass.Lexer.parseIdent → Jass.isDelim`**. The requested `parseIdent → isDelim` edge is direct; no intermediate callback or wrapper exists.
+
+- `next` skips spaces/tabs and reads the current character (`Jass.j:748–755, 888–891`). After earlier newline, quoted-literal, keyword, and operator branches fail, `isLetter(c)` selects `.parseIdent()` (`Jass.j:895–1050`). `isLetter` accepts case-insensitive ASCII `a–z` (`Jass.j:677–683`).
+- `parseIdent` initializes `p = .pos` and reads `c`. Its loop explicitly calls `isDelim(c)` in `exitwhen isDelim(c) or p >= .length`, advancing and rereading otherwise (`Jass.j:758–767`).
+- `isDelim` recognizes whitespace and the listed punctuation/operators (`Jass.j:665–670`). On termination, `parseIdent` creates an `IDENT` from `[.pos,p)` and sets `.pos = p`, leaving the delimiter unconsumed (`Jass.j:769–771`).
+
+Separately, keyword helper `token` calls `isDelim` to check keyword boundaries (`Jass.j:698–700`); it is **not** between `parseIdent` and `isDelim`.

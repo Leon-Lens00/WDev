@@ -1,0 +1,69 @@
+Integración local, 2026-10-20
+
+JUDGMENT DAY: INSTALADO Y ADAPTADO
+Skill: /home/snz/.codex/skills/judgment-day/SKILL.md
+Procedencia upstream: Gentleman-Programming/gentle-shell, skills/judgment-day,
+commit 63d6065f924ec366a321dd21f7396f04026c026f, versión 1.7.
+Se adaptó el protocolo a los subagentes nativos de Codex, sin instalar el runtime Pi.
+Solicita respuesta si el agente propone activar la revisión, falta alcance o hace
+falta una decisión/autorización. No pide de nuevo lo ya autorizado por el usuario.
+Dos jueces reciben el mismo alcance congelado; el padre contrasta evidencia,
+comprueba integridad y verifica que los originales sigan coincidiendo.
+Validación: quick_validate correcto; 9 pruebas unitarias del auxiliar correctas;
+CLI create/verify y verify-source correctos con 3 fixtures propios de JASS/vJASS.
+Prueba independiente de instrucciones y auxiliar: hallazgos corregidos y límites
+documentados. No se ejecutó una revisión de código del usuario con dos jueces.
+La nueva skill estará disponible para descubrimiento a partir del siguiente turno.
+
+CODEGRAPH UPSTREAM: VERIFICADO, SIN SOPORTE JASS/vJASS; ADAPTADOR LOCAL INTEGRADO
+Paquete: @colbymchenry/codegraph 1.6.2, binario oficial linux-x64.
+Descarga aislada de verificación; integridad SHA-512 comprobada y SHA-256 registrado.
+En CachyOS: ejecuta correctamente. Control positivo Python: 1 archivo, 3 nodos,
+3 aristas, búsqueda y exploración útiles. Fixtures .j/.jass/.vjass: 0 archivos,
+0 nodos, 0 aristas; búsqueda vacía y exploración sin índice.
+El estado index.state=complete con cero archivos no demuestra soporte de lenguaje.
+No ofrece soporte JASS/vJASS de fábrica. La comprobación nativa inicial no cambió
+la configuración. Después, el usuario autorizó el adaptador con jassgraph.
+Se registró el servidor wc3-jass-explore en /home/snz/.codex/config.toml, con
+jass_query y jass_explore. Es exploración léxica local, no soporte upstream
+ni sustituto de JassHelper/pJASS o pruebas en Warcraft III 1.27b.
+
+EVIDENCIA
+codegraph-download.json: procedencia e integridad de la descarga.
+codegraph-native-verification.json: salidas de verificación nativa y fixtures.
+codegraph-summary.json: comparación de cobertura vJASS/Python.
+judgment-day-installed.json: hashes y validaciones del resultado instalado.
+judgment-forward-test-summary.json: comprobación independiente y correcciones.
+judgment-snapshot-smoke.json: primera comprobación CLI de instantánea.
+
+ADAPTADOR JASS EXPLORE: RESULTADO FINAL
+Instalación: /home/snz/.local/share/wc3-jass-explore/server.py
+Backend: /home/snz/Documentos/MCP W3/wc3-forge/scripts/jassgraph
+MCP stdio con Python del sistema; sin nuevas dependencias Python, Node, Go o Wine.
+Dos herramientas de lectura: buscar definiciones y explorar símbolos exactos,
+referencias candidatas, dependencias y fragmentos con SHA-256 comprobado.
+Raíz absoluta explícita en cada petición, paginación y cobertura/omisiones visibles.
+Sin red, índice persistente, compilación automática ni edición de fuentes/mapas.
+No es un fork/parche de CodeGraph; es un puente local al jassgraph existente.
+
+Comprobaciones completadas:
+- 11 pruebas unitarias/stdio de comportamiento correctas (tests/test_server.py).
+- Interoperabilidad con @modelcontextprotocol/sdk 1.29.0 ya presente en Forge:
+  inicialización, descubrimiento de ambas herramientas, búsqueda, exploración,
+  rechazo de raíz relativa y hashes de las 3 fuentes de muestra intactos.
+- Skill build-warcraft3-vjass-127b actualizada con referencia de uso y validada.
+- Registro confirmado con codex mcp get wc3-jass-explore --json.
+- Configuración anterior comparada por TOML y conservada; la CLI eliminó args=[]
+  de node_repl al normalizar, y se restituyó antes de validar el resultado final.
+
+Disponibilidad: el registro ya está guardado. El catálogo de herramientas de este
+chat no se recargó; recargar MCP o iniciar una sesión que lea la configuración.
+Mientras tanto está disponible la alternativa CLI descrita en la referencia.
+No se lanzó una revisión Judgment Day de código del usuario ni el juego.
+
+Evidencia adicional:
+- jass-mcp-sdk-verification.json y verify-jass-mcp.mjs
+- codex-jass-explore-registration.json y codex-jass-explore-config.diff
+- codex-config-before-jass-explore.toml (copia local con permisos 0600)
+- /home/snz/.local/share/wc3-jass-explore/provenance.json
+- /home/snz/.codex/skills/build-warcraft3-vjass-127b/references/jass-explore.md

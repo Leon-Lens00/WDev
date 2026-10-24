@@ -1,0 +1,36 @@
+{
+  "repo": "small-noise",
+  "flow": 3,
+  "names": [
+    "Noise.Noise.openSimplex2D",
+    "Noise.Noise.extrapolate2D"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 29.340617538000515,
+  "usage": {
+    "input_tokens": 68890,
+    "cached_input_tokens": 59648,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1044,
+    "reasoning_output_tokens": 114
+  },
+  "commands": 3,
+  "command_text": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\"",
+    "/usr/bin/bash -lc \"rg -n 'openSimplex2D|extrapolate2D|AGENTS' Noise.j; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"'\"",
+    "/usr/bin/bash -lc \"nl -ba Noise.j | sed -n '1,250p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\"",
+    "/usr/bin/bash -lc \"rg -n 'openSimplex2D|extrapolate2D|AGENTS' Noise.j; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"'\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16217-3d08-7862-8610-38f787f38d3b"
+  ]
+}

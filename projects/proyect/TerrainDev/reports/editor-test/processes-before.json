@@ -1,0 +1,8 @@
+[
+  {
+    "pid": 237423,
+    "start": "4273946",
+    "command": "/usr/bin/bash -c python3 - <<'PY'\nfrom pathlib import Path\nimport json,subprocess,shutil\nr=Path('TerrainDev').resolve(); out=r/'reports/editor-test';out.mkdir(exist_ok=True)\n(out/'clients-before.json').write_bytes(subprocess.check_output(['hyprctl','-j','clients']))\n# Capture only WC3 process identities; never dump the full environment.\nps=[]\nfor p in Path('/proc').glob('[0-9]*'):\n try:\n  cmd=(p/'cmdline').read_bytes().replace(b'\\0',b' ').decode(errors='replace')\n  if any(x in cmd.lower() for x in ['worldedit.exe','war3.exe','exehack.exe']) and not cmd.startswith(('python3 -','bash -')):\n   env=(p/'environ').read_bytes().split(b'\\0'); prefix=next((x.decode(errors='replace') for x in env if x.startswith(b'WINEPREFIX=')),None)\n   ps.append({'pid':int(p.name),'start':(p/'stat').read_text().rsplit(')',1)[1].split()[19],'command':cmd,'prefix':prefix})\n except OSError:pass\n(out/'processes-before.json').write_text(json.dumps(ps,indent=2))\ncopy=r/'maps/work/TerrainDev-editor-test.w3x';shutil.copy2(r/'TerrainDev.w3x',copy)\nf=(out/'launcher.log').open('w')\np=subprocess.Popen(['python3','/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py','newgen',str(copy)],stdout=f,stderr=subprocess.STDOUT,start_new_session=True)\n(out/'launcher-pid.txt').write_text(str(p.pid));print({'launcher_pid':p.pid,'map':str(copy),'existing_wc3_processes':ps})\nPY ",
+    "prefix": null
+  }
+]

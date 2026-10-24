@@ -1,0 +1,16 @@
+Shots Vol. II de Vinz — Classic 1.27b / MDX800
+
+Forma simple, conservada según la elección del usuario. Punta geométrica frontal en X=0.
+Modelo: Shot II Blue.mdx
+Ruta sugerida del modelo: ShotsVolIIOriginales\Shot II Blue.mdx
+
+Texturas internas de Warcraft incluidas para edición local (el juego ya las aporta):
+  Textures\Flare.blp
+  Textures\star5tga.blp
+  Textures\Blue_Glow2.blp
+
+Conservar las rutas ShotsVolII/Textures según corresponda. Para varios colores basta una copia de cada textura por ruta en el mapa.
+MDL = fuente editable opcional; no hace falta importarlo al mapa.
+El sonido se resuelve mediante las tablas internas del juego; el MDX no declara un WAV externo.
+Los halos/partículas pueden expandirse alrededor del origen. La colisión depende del sistema del mapa.
+Dar crédito al autor original Vinz. Fuente: https://www.hiveworkshop.com/threads/shots-vol-ii.315512/

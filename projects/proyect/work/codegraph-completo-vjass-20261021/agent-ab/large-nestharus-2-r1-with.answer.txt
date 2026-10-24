@@ -1,0 +1,9 @@
+All references below are to [Systems/TimerTools/script.j](Systems/TimerTools/script.j:151), including its **private** `TimerPool`.
+
+- **Immediate path:** `Timer.destroy` obtains `timerId = ExpirationCode(this).timerId`. If registered and `Handler.expiringTimer != timerId`, it calls `ExpirationCode.destroy`, then calls `TimerPool.recycleTimer` **only if the remaining count is zero** ([733–742](Systems/TimerTools/script.j:733)). `ExpirationCode.destroy` calls `TimerPool.unregister` when registered; that decrements the count even when the trigger condition is null ([401–436](Systems/TimerTools/script.j:401), [189–207](Systems/TimerTools/script.j:189)).
+
+- **Deferred path:** If that timer is currently expiring, destruction is queued ([736–738](Systems/TimerTools/script.j:736)). The actual callback wiring is `handler = function Handler.expire`, passed into `TimerStart` ([719–720](Systems/TimerTools/script.j:719), [629](Systems/TimerTools/script.j:629)). `expire` sets `expiringTimer` around `TriggerEvaluate`, processes creations, then calls `DestructionQueue.clean → ExpirationCode.destroy`; afterward it recycles only if count is zero ([700–715](Systems/TimerTools/script.j:700), [558–567](Systems/TimerTools/script.j:558)).
+
+- **Unregistered nodes:** destruction only sets `disabled`; `CreationQueue.register` later destroys disabled nodes ([753–754](Systems/TimerTools/script.j:753), [520–530](Systems/TimerTools/script.j:520)).
+
+`recycleTimer` pauses the timer and pushes its ID onto the recycler. Debug guards depend on `DEBUG_MODE`; its active build value is unverified ([268–283](Systems/TimerTools/script.j:268)).

@@ -1,0 +1,8 @@
+The chain is **direct static calls**: `Noise.Noise.perlin3D → grad3D → realTernaryOp`; no callback or module mediates these calls.
+
+- `perlin3D` computes `X,Y,Z = floor(coordinate) & 255`, reduces coordinates to fractional offsets, and calculates fade weights. It builds `A=permutation[X]+Y`, `B=permutation[X+1]+Y`; then `AA/AB=permutation[A/A+1]+Z` and `BA/BB=permutation[B/B+1]+Z`. [Noise.j:102–129](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:102)
+- Four `lerp` expressions directly call `grad3D` eight times: hashes are `permutation[AA,BA,AB,BB]` for the lower z face and those indices plus one for the upper face. Coordinate offsets cover all eight cube corners; results interpolate along x, y, then z. [Noise.j:130–134](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:130)
+- `grad3D` sets `h=hash & 15`. Ternary calls select `u=x` if `h<8`, otherwise y; `v=y` if `h<4`, otherwise x when `h==12 or h==14`, otherwise z. Two further calls select signs using bits 1 and 2, then sum. [Noise.j:94–98](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:94)
+- `realTernaryOp(cond,a,b)` returns a when true, otherwise b. [Noise.j:40–46](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:40)
+
+This establishes source wiring; runtime behavior was not tested.

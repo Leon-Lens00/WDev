@@ -1,0 +1,44 @@
+MEGA MAN X3 — COMPONENTES DEL SÚPER BUSTER · V14
+Warcraft III Classic 1.27b · MDX versión 800 · 23/10/2026
+
+PIEZAS
+A-Buster-aprobado-V12: copia exacta del Buster normal aprobado, con sus recursos V12.
+B-Orbes-individuales/Verde: núcleo blanco, halo verde, cuerpo compacto, cola y partículas.
+B-Orbes-individuales/Naranja: equivalente naranja/blanco.
+B-Orbes-individuales/Cian: variante auxiliar conservada del pack anterior; verde y naranja son la pareja de la referencia seleccionada.
+C-Buster-fusionado: Cross Buster rosa/blanco, cuerpo ancho, envoltura de flujo, electricidad secundaria y una onda verde que nace en la punta, se abre siguiendo el cuerpo y se apaga al recorrer la cola.
+C-Flash-union: destello independiente y finito de la unión, con expansión y residuo verde/rosa.
+
+Cada carpeta contiene MDX, fuente MDL y todos los recursos que referencia.
+Los componentes están separados. El sistema de juego debe decidir su desplazamiento, giro orbital de los orbes, cantidad, fusión, colisiones y creación/retiro. Este pack no modifica la física del mapa ni exporta un grupo con trayectoria prefijada. Los grupos visuales anteriores permanecen disponibles en V4.
+
+IMPORTACIÓN
+Importar el MDX de cada pieza y sus BLP. Cross Buster usa X3BusterV14\Nombre.blp. Los orbes y el flash conservan X3BusterV13\Nombre.blp; son copias exactas de V13. Recursos repetidos bajo la misma ruta sólo se importan una vez.
+A conserva X3BusterV12\Nombre.blp. No cambiar su prefijo a V13: sus bytes originales están preservados.
+El nombre/ruta de importación del propio MDX es libre.
+Los colores de estos componentes son fijos; no toman automáticamente el color de equipo.
+
+ANCLAJE Y SECUENCIAS
+Los proyectiles avanzan hacia +X. La punta geométrica del cuerpo está en (0,0,0); el resto queda hacia -X. La raíz no se traslada en Birth, Stand ni Death. El impacto y las partículas pueden expandirse alrededor de la punta como efecto visual.
+Orbes: longitud de geometría 46 unidades. Cross: 82.446 unidades; A: 105.7. El tamaño final se puede ajustar desde el juego.
+Birth 0–300 ms. Stand 400–1360 ms (bucle de 960 ms). Death 1500–2500 ms. En Death el cuerpo se desvanece al principio y un impacto independiente se expande y emite partículas; no se encoge el proyectil hasta un punto.
+Flash de unión: las tres secuencias son finitas, de 500 ms. Reproducir una sola secuencia al crear el destello y retirar el efecto cuando termine. No forzar un bucle de Stand en este componente.
+Permitir que termine Death antes de retirar la instancia si se quiere ver el impacto completo.
+
+PROCEDENCIA
+Diseño de personajes/efectos y sprites de referencia: Mega Man X3, Capcom. La referencia animada fue aportada por el usuario mediante https://tenor.com/iA3z0BfiPC1.gif y contrastada con las muestras A/B/C locales confirmadas.
+Base técnica y parte de geometría/UV, materiales y emisores: Shots Vol. II, Vinz, Hive Workshop https://www.hiveworkshop.com/threads/shots-vol-ii.315512/ . Conservar el crédito a Vinz al usar estos derivados. El estudio local adicional de sus otros misiles está en references/vinz-estudio-v4/.
+Adaptación X3: cambios de forma, paleta, envolturas, flujo UV, ciclos, pivotes y ondas en ModelEditor. No son modelos oficiales de Capcom ni publicaciones originales de Vinz.
+White_Glow2 conserva exactamente el alfa y el valor máximo RGB del Blue_Glow2 de referencia, eliminando su sesgo azul. Recursos procedurales restantes heredados del trabajo V12.
+
+ONDA VERDE V14
+Frentes nuevos cada 200 ms, con reloj continuo de 400 ms y dos fases alternadas. Recorrido local de 320 ms; brillo cae entre 190 y 300 ms y llega a cero antes de cerrar por completo. El radio aumenta hasta el hombro y disminuye hacia la cola. Material AddAlpha, halo suave, lenguas de fuego y filo eléctrico irregular; profundidad longitudinal para leer el volumen en la cámara lateral del juego.
+La onda no sobrepasa la punta. El cuerpo rosa, núcleo blanco, partículas, nacimiento e impacto existentes están preservados. El resto de modelos se incluye sin modificar. La escala de tiempo de la instancia puede afectar la velocidad de reproducción; los 200 ms corresponden a velocidad normal.
+
+PREVIEWS
+onda-oblique.gif y onda-lateral.gif: MDX real en visor 3D, al 50% para ver las fases.
+onda-en-juego.gif: recorte de la captura nativa, velocidad real, escala 2.4 para apreciar el detalle. La revisión nativa también incluyó escala 0.5 y 1.
+El visor orbital local permite comparar V13/V14 y revisar las otras piezas aprobadas.
+
+VALIDACIÓN
+Los informes JSON adjuntos identifican las pruebas estructurales y nativas. La validación de modelos no acredita la integración posterior con un sistema de proyectiles, rendimiento con cargas masivas ni multijugador.

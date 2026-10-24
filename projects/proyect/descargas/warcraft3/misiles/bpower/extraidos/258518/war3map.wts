@@ -1,0 +1,276 @@
+﻿STRING 1
+{
+Spieler 1
+}
+
+STRING 2
+{
+Streitmacht 1
+}
+
+STRING 18
+{
+Hydra
+}
+
+STRING 19
+{
+1
+}
+
+STRING 21
+{
+BPower
+}
+
+STRING 22
+{
+Hydra
+}
+
+STRING 118
+// Units: h000 (Particle), Name (Name (unam))
+{
+Particle
+}
+
+STRING 183
+// Abilities: A001 (Hydra), Name (Name (anam))
+{
+Hydra
+}
+
+STRING 185
+// Abilities: A001 (Hydra), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Summons a multiheaded hydra that spits avoidable fire bolts at enemies
+}
+
+STRING 187
+// Abilities: A001 (Hydra), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00H|rydra - [|cffffcc00Level 2|r]
+}
+
+STRING 188
+// Abilities: A001 (Hydra), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00H|rydra - [|cffffcc00Level 3|r]
+}
+
+STRING 189
+// Abilities: A001 (Hydra), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Summons a multiheaded hydra that spits avoidable fire bolts at enemies
+}
+
+STRING 192
+// Units: o002 (Hydra Head), Name (Name (unam))
+{
+Hydra Head
+}
+
+STRING 194
+// Abilities: A002 (Hydra), Hotkey (Hotkey - Normal (ahky))
+{
+W
+}
+
+STRING 196
+// Abilities: A002 (Hydra), Name (Name (anam))
+{
+Hydra
+}
+
+STRING 205
+// Abilities: A001 (Hydra), Hotkey (Hotkey - Normal (ahky))
+{
+Q
+}
+
+STRING 212
+// Abilities: A002 (Hydra), EditorSuffix (Editor Suffix (ansf))
+{
+(fire example)
+}
+
+STRING 217
+// Abilities: A001 (Hydra), Researchhotkey (Hotkey - Learn (arhk))
+{
+H
+}
+
+STRING 218
+// Abilities: A002 (Hydra), Tip (Tooltip - Normal (atp1))
+{
+|cffff0000Summon Fire Hydra|r
+}
+
+STRING 219
+// Abilities: A002 (Hydra), Researchtip (Tooltip - Learn (aret))
+{
+Learn  |cffffcc00F|rire Hydra - [|cffffcc00Level %d|r]
+}
+
+STRING 220
+// Abilities: A002 (Hydra), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+Summons a multiheaded hydra that spits avoidable fire bolts at nearby enemies.|n|n|cffdaa520Hotkey: W|r
+}
+
+STRING 221
+// Abilities: A002 (Hydra), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Summons a multiheaded hydra that spits avoidable fire bolts at nearby enemies.|n|n|cffdaa520Hotkey: W|r
+}
+
+STRING 222
+// Abilities: A002 (Hydra), Researchhotkey (Hotkey - Learn (arhk))
+{
+F
+}
+
+STRING 223
+// Units: Uktl (Summoner), Name (Name (unam))
+{
+Summoner
+}
+
+STRING 226
+// Abilities: A000 (Hydra), Hotkey (Hotkey - Normal (ahky))
+{
+E
+}
+
+STRING 227
+// Abilities: A000 (Hydra), Name (Name (anam))
+{
+Hydra
+}
+
+STRING 228
+// Abilities: A000 (Hydra), Tip (Tooltip - Normal (atp1))
+{
+|cff008b8bSummon Frost Hydra|r
+}
+
+STRING 229
+// Abilities: A000 (Hydra), Researchtip (Tooltip - Learn (aret))
+{
+Learn  |cffffcc00F|rrost Hydra - [|cffffcc00Level %d|r]
+}
+
+STRING 232
+// Abilities: A000 (Hydra), EditorSuffix (Editor Suffix (ansf))
+{
+(forst example)
+}
+
+STRING 233
+// Abilities: A000 (Hydra), Researchhotkey (Hotkey - Learn (arhk))
+{
+F
+}
+
+STRING 234
+// Units: o000 (Hydra Head 2), Name (Name (unam))
+{
+Hydra Head 2
+}
+
+STRING 235
+// Units: o001 (Hydra Head Easter Egg), Name (Name (unam))
+{
+Hydra Head Easter Egg
+}
+
+STRING 236
+// Abilities: A004 (Hydra), Hotkey (Hotkey - Normal (ahky))
+{
+R
+}
+
+STRING 237
+// Abilities: A004 (Hydra), Name (Name (anam))
+{
+Hydra
+}
+
+STRING 238
+// Abilities: A004 (Hydra), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Summon Muradin|r
+}
+
+STRING 239
+// Abilities: A004 (Hydra), Researchtip (Tooltip - Learn (aret))
+{
+Learn  |cffffcc00M|ruradin - [|cffffcc00Level %d|r]
+}
+
+STRING 240
+// Abilities: A004 (Hydra), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+Summons a Mountain King that throws avoidable strombolts at nearby enemies.|n|n|cffdaa520Hotkey: R|r
+}
+
+STRING 241
+// Abilities: A004 (Hydra), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Summons a Mountain King that throws avoidable strombolts at nearby enemies.|n|n|cffdaa520Hotkey: R|r
+}
+
+STRING 242
+// Abilities: A004 (Hydra), EditorSuffix (Editor Suffix (ansf))
+{
+(Easter Egg)
+}
+
+STRING 243
+// Abilities: A004 (Hydra), Researchhotkey (Hotkey - Learn (arhk))
+{
+M
+}
+
+STRING 244
+// Abilities: A001 (Hydra), Researchtip (Tooltip - Learn (aret))
+{
+Learn Heal |cffffcc00H|rydra - [|cffffcc00Level %d|r]
+}
+
+STRING 245
+// Abilities: A001 (Hydra), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+Summons a multiheaded hydra that spits holy bolts at nearby friends. Multiplies damage with against buildings.|n|n|cffdaa520Hotkey: Q|r
+}
+
+STRING 246
+// Abilities: A001 (Hydra), Tip (Tooltip - Normal (atp1))
+{
+|cffdeb887Summon Heal Hydra|r
+}
+
+STRING 247
+// Abilities: A001 (Hydra), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Summons a multiheaded hydra that spits holy bolts at nearby friends. Multiplies damage with against buildings.|n|n|cffdaa520Hotkey: Q|r
+}
+
+STRING 248
+// Abilities: A001 (Hydra), EditorSuffix (Editor Suffix (ansf))
+{
+(friendly example)
+}
+
+STRING 249
+// Abilities: A000 (Hydra), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+Summons a multiheaded hydra that spits avoidable frost bolts at nearby enemies. Deals double damage on buildings.|n|n|cffdaa520Hotkey: E|r
+}
+
+STRING 250
+// Abilities: A000 (Hydra), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Summons a multiheaded hydra that spits avoidable frost bolts at nearby enemies. Deals double damage on buildings.|n|n|cffdaa520Hotkey: E|r
+}
+

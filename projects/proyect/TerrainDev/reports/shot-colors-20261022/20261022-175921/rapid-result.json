@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "values": {
+    "checks": 44.0,
+    "failures": 0.0,
+    "observed": 46.0,
+    "minimum": 0.25,
+    "emitted": 63.0,
+    "live": 0.0,
+    "pairs": 2.0
+  },
+  "negative_controls_rejected": 5,
+  "production_sha256": "b15b320fe113fd84f5923ead07981e7781c1ba1242b54604728b4163c8a85b74",
+  "map_sha256": "3d4db5b5c1f08e2b3af8bf0e7bd175e3d257198d1d1f5a0bdd474352a96745c5",
+  "note": "Combined session after color fixture restored original actor position; emission totals include previous color test. All44 checks and measured timings evaluated."
+}

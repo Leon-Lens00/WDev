@@ -1,0 +1,36 @@
+{
+  "round": 1,
+  "code_tree_sha256": "d948b166d87d3c80d21f7edca1e41bdd19cf6828848364ee197b1dc6318bcf6d",
+  "evidence_tree_sha256": "30b37c59a0d965673e70c534160dacabe589846abce43e2187bdbc1361cff9d7",
+  "judges": [
+    {
+      "judge": "A",
+      "limitations": ["Reevaluación estática y de sólo lectura; registros de pruebas/compilación no reproducidos por el juez", "No comprobó la actualización de índices R1; éstos y los procesos previos requieren reconstrucción/recarga"],
+      "findings": [
+        {"id":"JD-A-001","status":"verified","evidence":"Cabeceras persistidas desde tokens sin comentarios; regresión y fixture compilada exigen CorrectBase.tick."},
+        {"id":"JD-A-002","status":"verified","evidence":"Sólo el propio terminador altera una región omitida; regresión y compilación novjass-zinc aportadas."},
+        {"id":"JD-A-003","status":"verified","evidence":"Símbolo, sobrecargas y archivos afectados pasan por answerResult; regresión exige aviso y diagnóstico."},
+        {"id":"JD-B-001","status":"verified","evidence":"member distingue ausencia undefined de ambigüedad null; no hay fallback global ambiguo y extends array conserva el fallback válido."},
+        {"id":"JD-B-002","status":"verified","evidence":"Sin exclusión por sufijo: se consultan tipos y métodos declarados; helpers sin destino siguen sin resolverse."},
+        {"id":"JD-B-003","status":"verified","evidence":"Misma causa y corrección que JD-A-003."}
+      ]
+    },
+    {
+      "judge": "B",
+      "limitations": ["Reevaluación estática limitada al delta y seis IDs; no ejecutó programas ni compiladores", "Fixture compilada aportada cubría execute; evaluate figuraba en la regresión automatizada"],
+      "findings": [
+        {"id":"JD-A-001","status":"verified","evidence":"La firma de contenedores sólo contiene tokens ejecutables; comentario WrongBase ya no determina extends."},
+        {"id":"JD-A-002","status":"verified","evidence":"Los marcadores ajenos dentro de novjass no alcanzan diagnósticos; regresión cubre zinc y textmacro."},
+        {"id":"JD-A-003","status":"verified","evidence":"Rutas de símbolo único, múltiples y archivo usan answerResult, también symbolsOnly y fallo de lectura."},
+        {"id":"JD-B-001","status":"verified","evidence":"null detiene miembros ambiguos antes del fallback; excepción extends array preservada."},
+        {"id":"JD-B-002","status":"verified","evidence":"execute/evaluate atraviesan resolución por tipo declarado; helpers indirectos no adquieren destino sin declaración."},
+        {"id":"JD-B-003","status":"verified","evidence":"Lectura secundaria conserva el mecanismo de cobertura y diagnósticos; comparte causa con JD-A-003."}
+      ]
+    }
+  ],
+  "parent_followup": {
+    "active_indexes_rebuilt_after_delta": "active-indexes-final.json",
+    "evaluate_compiler_check": "evaluate-method-compile.log",
+    "scope": "Revisión de la adaptación local y las correcciones corroboradas; no aceptación upstream de un lenguaje completo ni evaluación A/B de rendimiento."
+  }
+}

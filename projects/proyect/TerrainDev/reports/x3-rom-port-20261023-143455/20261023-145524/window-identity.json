@@ -1,0 +1,102 @@
+{
+  "window": {
+    "address": "0x558cbc51fb40",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      0,
+      0
+    ],
+    "size": [
+      1920,
+      1080
+    ],
+    "workspace": {
+      "id": 2,
+      "name": "2"
+    },
+    "floating": true,
+    "monitor": 0,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 1081315,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 2,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 0,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "18001021"
+  },
+  "monitor": {
+    "id": 0,
+    "name": "eDP-1",
+    "description": "Sharp Corporation LQ173M1JW12",
+    "make": "Sharp Corporation",
+    "model": "LQ173M1JW12",
+    "serial": "",
+    "width": 1920,
+    "height": 1080,
+    "physicalWidth": 380,
+    "physicalHeight": 210,
+    "refreshRate": 360.00601,
+    "x": 0,
+    "y": 0,
+    "activeWorkspace": {
+      "id": 2,
+      "name": "2"
+    },
+    "specialWorkspace": {
+      "id": 0,
+      "name": ""
+    },
+    "reserved": [
+      0,
+      45,
+      0,
+      0
+    ],
+    "scale": 1,
+    "transform": 0,
+    "focused": true,
+    "dpmsStatus": true,
+    "vrr": false,
+    "solitary": "558cbc51fb40",
+    "solitaryBlockedBy": null,
+    "activelyTearing": false,
+    "tearingBlockedBy": [
+      "NOT_TORN"
+    ],
+    "directScanoutTo": "0",
+    "directScanoutBlockedBy": [
+      "USER"
+    ],
+    "disabled": false,
+    "currentFormat": "XRGB8888",
+    "mirrorOf": "none",
+    "availableModes": [
+      "1920x1080@360.01Hz",
+      "1920x1080@60.00Hz"
+    ],
+    "colorManagementPreset": "srgb",
+    "sdrBrightness": 1,
+    "sdrSaturation": 1,
+    "sdrMinLuminance": 0.2,
+    "sdrMaxLuminance": 80,
+    "hardwareCursorsInUse": false
+  }
+}

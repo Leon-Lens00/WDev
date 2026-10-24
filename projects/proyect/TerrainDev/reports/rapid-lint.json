@@ -1,0 +1,446 @@
+{
+  "files": 15,
+  "findings": [
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/DummyCaster.j",
+      "line": 51,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/DummyCaster.j",
+      "line": 54,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "SYNC-LOCAL-PLAYER",
+      "path": "src/libraries/ErrorMessage.j",
+      "line": 54,
+      "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/ErrorMessage.j",
+      "line": 55,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "SYNC-LOCAL-PLAYER",
+      "path": "src/libraries/ErrorMessage.j",
+      "line": 67,
+      "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/GroundCollision.j",
+      "line": 10,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/GroundCollision.j",
+      "line": 11,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/GroundCollision.j",
+      "line": 12,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/GroundCollision.j",
+      "line": 154,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/IsDestructableTree.j",
+      "line": 63,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 444,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 445,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 446,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 447,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 448,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 449,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "ARRAY-STRUCT-LIFECYCLE",
+      "path": "src/libraries/Missile.j",
+      "line": 706,
+      "message": "`MissilePosition` extends array; verify a custom lifecycle instead of assuming normal allocation."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "ARRAY-STRUCT-LIFECYCLE",
+      "path": "src/libraries/Missile.j",
+      "line": 707,
+      "message": "`MissilePosition` extends array; verify a custom lifecycle instead of assuming normal allocation."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 735,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "INIT-ORDER",
+      "path": "src/libraries/Missile.j",
+      "line": 1169,
+      "message": "Module `onInit` has special priority; verify runtime dependencies, not only `requires`."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 1172,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 1181,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 1182,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 1183,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 1184,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 1361,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "ERROR",
+      "rule": "LEX-INCOMPLETE",
+      "path": "src/libraries/Missile.j",
+      "line": 1405,
+      "message": "Unterminated quoted literal; analysis is incomplete."
+    },
+    {
+      "severity": "ERROR",
+      "rule": "LEX-INCOMPLETE",
+      "path": "src/libraries/Missile.j",
+      "line": 1407,
+      "message": "Unterminated quoted literal; analysis is incomplete."
+    },
+    {
+      "severity": "ERROR",
+      "rule": "LEX-INCOMPLETE",
+      "path": "src/libraries/Missile.j",
+      "line": 1408,
+      "message": "Unterminated quoted literal; analysis is incomplete."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "INIT-ORDER",
+      "path": "src/libraries/Missile.j",
+      "line": 1641,
+      "message": "Module `onInit` has special priority; verify runtime dependencies, not only `requires`."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/Missile.j",
+      "line": 1741,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/MissileDiagnostics.j",
+      "line": 39,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/MissileDiagnostics.j",
+      "line": 40,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/MissileDiagnostics.j",
+      "line": 41,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "SYNC-LOCAL-PLAYER",
+      "path": "src/libraries/MissileDiagnostics.j",
+      "line": 388,
+      "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/MissileDiagnostics.j",
+      "line": 395,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/MissileRecycler.j",
+      "line": 160,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "UNIT-USERDATA-WRITE",
+      "path": "src/libraries/MissileRecycler.j",
+      "line": 196,
+      "message": "Only the authorized UnitIndexer should write unit user data."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/MissileRecycler.j",
+      "line": 209,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "UNIT-USERDATA-WRITE",
+      "path": "src/libraries/MissileRecycler.j",
+      "line": 258,
+      "message": "Only the authorized UnitIndexer should write unit user data."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/MissileRecycler.j",
+      "line": 306,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "UNIT-USERDATA-WRITE",
+      "path": "src/libraries/MissileRecycler.j",
+      "line": 309,
+      "message": "Only the authorized UnitIndexer should write unit user data."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RapidFire.j",
+      "line": 101,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RapidFire.j",
+      "line": 102,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "SYNC-LOCAL-PLAYER",
+      "path": "src/libraries/RapidFire.j",
+      "line": 276,
+      "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RapidFireDemo.j",
+      "line": 51,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RapidFireDemo.j",
+      "line": 52,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RapidFireDemo.j",
+      "line": 58,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "SYNC-LOCAL-PLAYER",
+      "path": "src/libraries/RapidFireDemo.j",
+      "line": 62,
+      "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RapidFireDemo.j",
+      "line": 76,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RapidFireDemo.j",
+      "line": 77,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RegisterPlayerUnitEvent.j",
+      "line": 40,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RegisterPlayerUnitEvent.j",
+      "line": 47,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RegisterPlayerUnitEvent.j",
+      "line": 53,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/RegisterPlayerUnitEvent.j",
+      "line": 56,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/SpellEffectEvent.j",
+      "line": 53,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/SpellEffectEvent.j",
+      "line": 55,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/SpellEffectEvent.j",
+      "line": 58,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/SpellEffectEvent.j",
+      "line": 60,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "ARRAY-STRUCT-LIFECYCLE",
+      "path": "src/libraries/Table.j",
+      "line": 360,
+      "message": "`Table` extends array; verify a custom lifecycle instead of assuming normal allocation."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/TimerUtils.j",
+      "line": 155,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/TimerUtils.j",
+      "line": 222,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    },
+    {
+      "severity": "WARNING",
+      "rule": "HANDLE-FACTORY",
+      "path": "src/libraries/TimerUtils.j",
+      "line": 232,
+      "message": "Document owner, lifetime, and cleanup or intentional persistence."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+The connection is direct: **`Jass.Lexer.parseIdent → Jass.isDelim`**. There is no intermediate callback, function-value assignment, or dispatch layer in the returned source.
+
+- **Entry:** `Lexer.next` reaches `.parseIdent()` when earlier token branches fail and `isLetter(c)` succeeds (`Jass.j:1049–1050`).
+- **Argument wiring:** `parseIdent` initializes `p = .pos` and `c = SubString(.input, p, p+1)` (`Jass.j:758–760`).
+- **Call and condition:** its loop directly evaluates `exitwhen isDelim(c) or p >= .length` (`Jass.j:763–764`). Otherwise, it increments `p`, refreshes `c`, and repeats (`Jass.j:765–767`).
+- **Delimiter predicate:** `isDelim` returns true for space, tab, newline, carriage return, or one of `[](),.<>/*+-$="'!%` (`Jass.j:665–670`).
+- **Completion:** it creates an `IDENT` token from the scanned substring and sets `.pos = p`, leaving the delimiter unconsumed (`Jass.j:769–771`).
+
+`token → isDelim` is a separate keyword-boundary check (`Jass.j:698–700`), not an intermediate hop from `parseIdent`.

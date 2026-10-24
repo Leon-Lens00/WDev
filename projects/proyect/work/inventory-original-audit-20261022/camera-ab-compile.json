@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "vjass",
+    "work/inventory-original-audit-20261022/camera-ab-input.j",
+    "work/inventory-original-audit-20261022/camera-ab-compiled.j"
+  ],
+  "returncode": 0,
+  "stdout": "{\"compiled\": true, \"validated\": true, \"output\": \"/home/snz/Documentos/ChatGPT/Proyect/work/inventory-original-audit-20261022/camera-ab-compiled.j\", \"report\": \"/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261022-163701-837882\"}\n",
+  "stderr": ""
+}

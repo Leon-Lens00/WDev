@@ -1,0 +1,55 @@
+{
+  "snapshot": "review-r1",
+  "tree_sha256": "7993aadb021dac007adf949406f0400f0cfb8263179bd793d21d91b1d2978e94",
+  "judges_finished": [
+    "A",
+    "B"
+  ],
+  "raw_reports": "Full independent reports retained in this conversation; normalized claims and reproduction state below",
+  "limitations": "Both judges read only; no execution by judges. Parent performs reproduction. No final approval.",
+  "correction_round": 1,
+  "findings": [
+    {
+      "id": "JD-A-001",
+      "severity": "CRITICAL",
+      "claim": "Destructor callback lookup lacks a language guard",
+      "status": "confirmed missing guard; normal TypeScript names use S::onDestroy, so supplied concrete TS collision example not reproduced; contract mock reproduces dotted-name collision",
+      "location": "src/resolution/jass-expression.ts:223"
+    },
+    {
+      "id": "JD-A-002",
+      "severity": "WARNING",
+      "claim": "Function values from array reads omitted",
+      "status": "confirmed red test",
+      "location": "src/resolution/jass-value-flow.ts:98"
+    },
+    {
+      "id": "JD-A-003",
+      "severity": "WARNING",
+      "claim": "Constant global/static initializers omitted from initialization synthesis",
+      "status": "confirmed red test",
+      "location": "src/resolution/jass-synthesizer.ts:98"
+    },
+    {
+      "id": "JD-B-001",
+      "severity": "CRITICAL",
+      "claim": "Shared constant expansion can be exponential and materialize excessive strings",
+      "status": "confirmed via guarded lookup count and oversized concatenate negative",
+      "location": "src/resolution/jass-value-flow.ts:68"
+    },
+    {
+      "id": "JD-B-002",
+      "severity": "CRITICAL",
+      "claim": "Runtime endif closes static conditional while pooling flags",
+      "status": "confirmed red test prunes No incorrectly",
+      "location": "src/extraction/jass-conditions.ts:70"
+    },
+    {
+      "id": "JD-B-003",
+      "severity": "WARNING",
+      "claim": "Injection body writers/calls omitted from function value flow",
+      "status": "confirmed red test using calls edge and resolutionScope; generic helper name reference was not sufficient evidence",
+      "location": "src/resolution/jass-value-flow.ts:34"
+    }
+  ]
+}

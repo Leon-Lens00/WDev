@@ -1,0 +1,84 @@
+{
+  "skill_validation": [
+    {
+      "skill": "/home/snz/.codex/skills/wc3-classic-modeling",
+      "returncode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "/home/snz/.codex/skills/optimize-slendytubbies-wc3-127b",
+      "returncode": 0,
+      "output": "Skill is valid!"
+    }
+  ],
+  "local_markdown_links": [
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/vinz.md"
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/entorno-linux.md"
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/optimization-classic.md"
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/references/optimization-classic.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/entorno-linux.md"
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/references/vinz.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/entorno-linux.md"
+    },
+    {
+      "source": "/home/snz/.codex/skills/optimize-slendytubbies-wc3-127b/SKILL.md",
+      "target": "/home/snz/.codex/skills/optimize-slendytubbies-wc3-127b/references/v11.md"
+    },
+    {
+      "source": "/home/snz/.codex/skills/optimize-slendytubbies-wc3-127b/SKILL.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md"
+    },
+    {
+      "source": "/home/snz/.codex/skills/optimize-slendytubbies-wc3-127b/references/v11.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/entorno-linux.md"
+    }
+  ],
+  "original_migration_skill_unchanged": true,
+  "blender_probe": {
+    "version": "3.4.1",
+    "mode": "--background --factory-startup",
+    "exit_code": 0,
+    "wc3_mdl_mdx_addons_detected": []
+  },
+  "validation_python": "/home/snz/Documentos/ChatGPT/Proyect/work/skill-modelado-20261022/validator-env/bin/python",
+  "pyyaml": "6.0.3",
+  "model_results": "/home/snz/Documentos/ChatGPT/Proyect/work/skill-modelado-20261022/smoke-result.json",
+  "installed_files": [
+    {
+      "path": "/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md",
+      "sha256": "d3a88ba3759d14abd45ba353da6c19bd64dbe72975b4c8b14739ff289e9e2e97"
+    },
+    {
+      "path": "/home/snz/.codex/skills/wc3-classic-modeling/references/entorno-linux.md",
+      "sha256": "837df2117cf176b721e173c01e8ec7c43ddf621d444942abca26438c454b5a87"
+    },
+    {
+      "path": "/home/snz/.codex/skills/wc3-classic-modeling/references/optimization-classic.md",
+      "sha256": "88d0557a33fd8cea493de8acd757f509d0af0f2f99959a4419376d0e946a5619"
+    },
+    {
+      "path": "/home/snz/.codex/skills/wc3-classic-modeling/references/vinz.md",
+      "sha256": "7a89a8d77135714971d583a2abf706f0c26256c14a35d5e66420c53be4e2eabe"
+    },
+    {
+      "path": "/home/snz/.codex/skills/optimize-slendytubbies-wc3-127b/SKILL.md",
+      "sha256": "f18462469afece24baea2b191d08f8f5f07e2b024bdc60b6caec2985a1939b30"
+    },
+    {
+      "path": "/home/snz/.codex/skills/optimize-slendytubbies-wc3-127b/references/v11.md",
+      "sha256": "4325b2704c7e3fb67785e3f5dcea881ebd6ff85b685257ccc22162fea6a5fdbe"
+    }
+  ]
+}

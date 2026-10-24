@@ -1,0 +1,54 @@
+{
+  "format": "wc3-dialogue-studio",
+  "version": 1,
+  "name": "Conversación · enlace de misión",
+  "target": "1.27b",
+  "viewport": "warcraft",
+  "background": "terrain",
+  "lettersPerSecond": 30,
+  "punctuationPause": true,
+  "layout": {
+    "width": 84.6,
+    "bottom": 6,
+    "font": 2.45,
+    "color": "#e78691",
+    "leftColor": "#81c8e2"
+  },
+  "portraits": {
+    "left": {
+      "name": "X",
+      "image": "reference-x"
+    },
+    "right": {
+      "name": "ALIA",
+      "image": "reference-alia"
+    }
+  },
+  "messages": [
+    {
+      "id": "message-1",
+      "speaker": "right",
+      "text": "Sé que has trabajado sin descanso.\nLos incidentes no dejan de llegar..."
+    },
+    {
+      "id": "message-2",
+      "speaker": "left",
+      "text": "Lo sé, Alia. Pero no podemos detenernos.\n¿Has encontrado la fuente de la señal?"
+    },
+    {
+      "id": "message-3",
+      "speaker": "right",
+      "text": "Sí. Proviene del bosque, al otro lado del río.\nTen cuidado. Estaremos en contacto."
+    }
+  ],
+  "calibration": {
+    "version": 1,
+    "planeWidth": 91.5,
+    "planeHeight": 64.7,
+    "planeTop": 12.8,
+    "depth": 400,
+    "frustumWidth": 0.81,
+    "centerY": -0.49,
+    "source": "verified-10 / 1920x1080; one camera position"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/TerrainDev.w3x",
+  "sha256": "3f8c1aada0ad82e27eab1fe3feeee46f2673d33c773a296bb0120ab6df741a04",
+  "original_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "libraries": [
+    "WorldBounds",
+    "ErrorMessage",
+    "TimerUtils",
+    "Table",
+    "RegisterPlayerUnitEvent",
+    "SpellEffectEvent",
+    "IsDestructableTree",
+    "DummyCaster",
+    "MissileDiagnostics",
+    "MissileRecycler",
+    "Missile",
+    "GroundCollision",
+    "GroundMotion",
+    "RapidFire",
+    "RapidFireDemo"
+  ],
+  "library_sha256": {
+    "WorldBounds": "0ed3c284b18694b744bdae4423f2b60e5e16346778116caffb5bf9a4267447c9",
+    "ErrorMessage": "b240c5c064d569ec89ba85e21363b27514bab66fb6517c1cd68d8ce9b40df147",
+    "TimerUtils": "cbc13cd7eb8679ee2d618dcfe70e8da47489a926506eb8059dc6fc09eba60f45",
+    "Table": "94d2fd1f89774efb2ad3e9d2ae7e3bdded3c121bb523f02425d4937fc7031fb4",
+    "RegisterPlayerUnitEvent": "a4513c10d93fdc26b7b86440a8f9171153b2d3108b815e7c57169b21c2202c2c",
+    "SpellEffectEvent": "222abb23791bd71eb96db71384ef40a91c16421176cc046c186f0af185050bd0",
+    "IsDestructableTree": "2f981785b5d01564b634ec35a62e3a008a83a313a4a61774e23b4632d69c6829",
+    "DummyCaster": "4437e9214cc7d30b30ad9d7654286d70a1b8c00c96c15d1f2952cebfe4c349c0",
+    "MissileDiagnostics": "5d13202a5116a67e3f49d2a095975b1fe33955fd34fed076eccd0a67d26bc990",
+    "MissileRecycler": "65189b805bf424f57c758eef1ee5497bddb0070a3f59d04a883e63821c7818eb",
+    "Missile": "333150566d2f55b665afd127e95374078cd80053fe617c9def01405ab93510a3",
+    "GroundCollision": "b39c3f2ef02aaea5643f5572eff90de86e38c0ca635c8abb08b3885e0369a095",
+    "GroundMotion": "4454585a76e191028a46b0238913bec48075fd41b93acf2ac8472a22e61dba8c",
+    "RapidFire": "a3e9534e9e87125400cc2502947f940f5cd640813238efa4f529ce9d2a191059",
+    "RapidFireDemo": "4228d177c8e0e204833d6ce0e683cb95277a7fd1a11c8e6fc7f142562a97f1a5"
+  },
+  "shot_assets": [
+    {
+      "internal": "ShotsTeam\\Shot_00_Red.mdx",
+      "file": "rapid-shot-colors/Shot_00_Red.mdx",
+      "sha256": "0c53a4291196491724b256563337d19e1a5d3cb827ee4dcda920947944ea1f83"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_01_Blue.mdx",
+      "file": "rapid-shot-colors/Shot_01_Blue.mdx",
+      "sha256": "dc72c421431b2acb110d7aa328ff4c6345788619ac4e132468e77bb222ff9d3b"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_02_Cyan.mdx",
+      "file": "rapid-shot-colors/Shot_02_Cyan.mdx",
+      "sha256": "a7d741b14c7b6d3da08a0244e1eb55442198224b9c978d1c73efc092e1f150cc"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_03_Purple.mdx",
+      "file": "rapid-shot-colors/Shot_03_Purple.mdx",
+      "sha256": "5662484a0129f6ba5c6e3c7bbde1c7b7db480134a1f667e8423736d18b650137"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_04_Yellow.mdx",
+      "file": "rapid-shot-colors/Shot_04_Yellow.mdx",
+      "sha256": "f753f451a61d0a62f8cfd3416166ad1a6967b5d3cab7945ecb387c24533b1430"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_05_Orange.mdx",
+      "file": "rapid-shot-colors/Shot_05_Orange.mdx",
+      "sha256": "88ad4ff1aba8d658af36242048ade7f14f02dfeac268369bec8878edc20efa04"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_06_Green.mdx",
+      "file": "rapid-shot-colors/Shot_06_Green.mdx",
+      "sha256": "6a0fd388d1d33bca8acb3b40771c0e88b0f6254a7012d7248c6fff9ca511aa81"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_07_Pink.mdx",
+      "file": "rapid-shot-colors/Shot_07_Pink.mdx",
+      "sha256": "beeb0f763b5021b0a0dada62c53d1a7baaa62bf467d47049f0dab70790b297b3"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_08_LightGray.mdx",
+      "file": "rapid-shot-colors/Shot_08_LightGray.mdx",
+      "sha256": "d150e4f4714d28751df4864de22eaa322c522b42bed0417c198797d4acb6a46d"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_09_LightBlue.mdx",
+      "file": "rapid-shot-colors/Shot_09_LightBlue.mdx",
+      "sha256": "7c1cad3561e069b7787c4f0666e847ec6ad31e2a346e9c731423ec09954edd4a"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_10_Aqua.mdx",
+      "file": "rapid-shot-colors/Shot_10_Aqua.mdx",
+      "sha256": "50009ee5b265935eb23f4e0a477a4252b9dab054a382484af13fbbabc38cc7f4"
+    },
+    {
+      "internal": "ShotsTeam\\Shot_11_Brown.mdx",
+      "file": "rapid-shot-colors/Shot_11_Brown.mdx",
+      "sha256": "1385ae892f0a1fcae79d456772a38b3355405d91c27c79e85f1d685f53b39e4a"
+    },
+    {
+      "internal": "ShotsTeam\\ShotFlareNeutral.blp",
+      "file": "rapid-shot-colors/ShotsTeam/ShotFlareNeutral.blp",
+      "sha256": "21bc983701ae77fb1ce5c0279854f3c3ca2c211329fec23d66b5f19eaf95e42f"
+    },
+    {
+      "internal": "ShotsTeam\\ShotStarNeutral.blp",
+      "file": "rapid-shot-colors/ShotsTeam/ShotStarNeutral.blp",
+      "sha256": "00f775c1b90586f46ce58f7d3de3c29b25f9942a7787a5c6341ef55a30d6616a"
+    },
+    {
+      "internal": "ShotsTeam\\ShotGlowNeutral.blp",
+      "file": "rapid-shot-colors/ShotsTeam/ShotGlowNeutral.blp",
+      "sha256": "79f8f9187fa30a253d0ec2d310ceba80dd4c39a3eb82e0c550478c8fe03bf06c"
+    }
+  ],
+  "checks": [
+    {
+      "member": "war3map.w3e",
+      "changed": false,
+      "sha256": "69db4c10eb5f55ef1676a801931ed57c5539c1cb26d0822eb9d8ae00dc337b84"
+    },
+    {
+      "member": "war3map.w3i",
+      "changed": false,
+      "sha256": "e4cdef030a11aa6ca712fef64dcc1ce65ca2a59ea39aa07f8e96ef65bc2d3a8e"
+    },
+    {
+      "member": "war3map.wtg",
+      "changed": true,
+      "sha256": "4ad40a6f8314881eaa21e76430382f1c21ba16843b390dbc7a470c231853faee"
+    },
+    {
+      "member": "war3map.wct",
+      "changed": true,
+      "sha256": "81c1bbcde6181eb5dcab656488b739adee05ec61c56f28347e9807b713701698"
+    },
+    {
+      "member": "war3map.wts",
+      "changed": false,
+      "sha256": "d441d19ac4348e32c7cca7d2031116337cd0dfb8533fe5c94c93c90b75050f5b"
+    },
+    {
+      "member": "war3map.j",
+      "changed": true,
+      "sha256": "b628af8651d1a3592cd2443e3cad9fbbdef5869a7a557b0dae55e160b501ec7c"
+    },
+    {
+      "member": "war3map.shd",
+      "changed": false,
+      "sha256": "f0048a8c89ce44900335bc5debc06b812bb0acf75d9edd1c6ab6847ae43ecc78"
+    },
+    {
+      "member": "war3mapMap.blp",
+      "changed": false,
+      "sha256": "3376b407917222c857eebc28fadee2e3b374404d4fcccd1ebc4874632a24da41"
+    },
+    {
+      "member": "war3map.mmp",
+      "changed": false,
+      "sha256": "2a2905f4d4e9b657d8538589fae5ccac62e4ec689800f3adc25239ed95d494ae"
+    },
+    {
+      "member": "war3map.wpm",
+      "changed": false,
+      "sha256": "5743498398689fb16b91acf2ec688d9f906caa737cc8224f3f2af02a551773fa"
+    },
+    {
+      "member": "war3map.doo",
+      "changed": false,
+      "sha256": "05e237d8bf2198f930c4edca8f4b1b6215e0d3c22463baea49ee1f78e2b95b81"
+    },
+    {
+      "member": "war3mapUnits.doo",
+      "changed": false,
+      "sha256": "acbb6e271291da2dab232e676b62c65693029e40383f9211a7d4a450ba3da766"
+    },
+    {
+      "member": "war3map.w3r",
+      "changed": false,
+      "sha256": "b347e2b76f72081b6c6ca14a18bc061a2f08183285f149eb4131c33dd2263aa3"
+    },
+    {
+      "member": "war3map.w3c",
+      "changed": false,
+      "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+    },
+    {
+      "member": "war3map.w3u",
+      "changed": true,
+      "sha256": "7e7fa3876c4673263dab30815d7f7ef6e5682cf1cb811129dec2390fd12e5a79"
+    },
+    {
+      "member": "war3map.w3t",
+      "changed": false,
+      "sha256": "899ffc64b6ec46588957d99235332035b184fd52635888d801106b4ab51969ea"
+    },
+    {
+      "member": "war3map.w3b",
+      "changed": false,
+      "sha256": "624fb6e3a913a4695bddbefe9f96d905ee7ff6ee78f24adf2438925ec03f4822"
+    },
+    {
+      "member": "war3map.w3d",
+      "changed": false,
+      "sha256": "f2b4a8e71bd24be9cbd38c1d130d0e264fc6c70390aab60dcc5e33df6348a1a3"
+    },
+    {
+      "member": "war3map.w3a",
+      "changed": true,
+      "sha256": "db61f5af9ec04046cca34bc45c9b880fc158add9b09066a9b3c16def1856c100"
+    },
+    {
+      "member": "war3map.w3s",
+      "changed": false,
+      "sha256": "3d1880b9df2640396c4c4afe0eceed6646bf0e01f3ff0c6243933c08f7feaa8d"
+    },
+    {
+      "member": "war3map.imp",
+      "changed": true,
+      "sha256": "50ae72204b025845616a01e936355204d4de764c2f53d2b924a195d925908cf8"
+    },
+    {
+      "member": "war3mapMisc.txt",
+      "changed": false,
+      "sha256": "22ec36975c748301ac0d5e9d1ebec0acc9c78c71b900c2b5ca49d09101fa786f"
+    },
+    {
+      "member": "war3mapSkin.txt",
+      "changed": false,
+      "sha256": "22ec36975c748301ac0d5e9d1ebec0acc9c78c71b900c2b5ca49d09101fa786f"
+    },
+    {
+      "member": "war3mapExtra.txt",
+      "changed": false,
+      "sha256": "fd261cfa00e19a3207483ac72a4ac3f0ec2b5676df77345c8bad71c4def83d33"
+    },
+    {
+      "member": "war3mapImported\\KoboldDigger.mdx",
+      "changed": false,
+      "sha256": "2af2e611364cfa0b7ce0181ace56c70c45d1d646ec7102e03486423f650386eb"
+    }
+  ],
+  "build_directory": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261022-174953-929920",
+  "report_directory": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/20261022-174953-929920",
+  "compiled": true,
+  "pjass": true,
+  "native_trigger_roundtrip": true,
+  "game_tested": false,
+  "editor_tested": false
+}

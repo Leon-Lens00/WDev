@@ -1,0 +1,44 @@
+{
+  "paladin": {
+    "name": "Paladín",
+    "rawcode": "Hpal",
+    "texture": "NativePaladin",
+    "nativePath": "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp",
+    "width": 64,
+    "height": 64,
+    "png": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/NativePaladin.png",
+    "icon": {
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/ReplaceableTextures_CommandButtons_BTNHeroPaladin.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+      "internal": "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp",
+      "sha256": "dae9fd254f6ebef8947a189c156df8cf5d97ea789f9cf281886462f5ac83209d"
+    },
+    "objectData": {
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/Units_HumanUnitFunc.txt",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "internal": "Units\\HumanUnitFunc.txt",
+      "sha256": "1631656b24484f02276d8aa09e61aa4d35ecbaeb128a2df667d2295beed0831d"
+    }
+  },
+  "tauren": {
+    "name": "Tauren",
+    "rawcode": "otau",
+    "texture": "NativeTauren",
+    "nativePath": "ReplaceableTextures\\CommandButtons\\BTNTauren.blp",
+    "width": 64,
+    "height": 64,
+    "png": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/NativeTauren.png",
+    "icon": {
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/ReplaceableTextures_CommandButtons_BTNTauren.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+      "internal": "ReplaceableTextures\\CommandButtons\\BTNTauren.blp",
+      "sha256": "78bb20d8e79ebf2af91f13cf87fff187e81353bafe872a2dc200fe4d276d6340"
+    },
+    "objectData": {
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-horizontal-v1/sources/native/Units_OrcUnitFunc.txt",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "internal": "Units\\OrcUnitFunc.txt",
+      "sha256": "e4d17018c2a294fdd15a75888d02d1f0f0ecf663360126138bd74974c984474c"
+    }
+  }
+}

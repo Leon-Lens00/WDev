@@ -1,0 +1,175 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/025-UserInterface.j
++++ TerrainDev/inventory-integration/src/Inventory_25_UserInterface.j
+@@ -102,7 +102,7 @@
+         static constant integer DUMMY_TYPE          = 'uidm'
+         
+         // model used in CreateWindow function
+-        static constant integer WINDOW_DUMMY        = 'uiwn'
++        static constant integer WINDOW_DUMMY        = 'bwn2'
+         
+         // destructable ID of the human border texture. the
+         // rest of the races should have consecutive ids.
+@@ -249,12 +249,14 @@
+         readonly boolean displayed
+         readonly integer texture 
+         
++        private timer clickTimer
+         private integer unitId
+         private static thistype array Unit2Button
+         
+         static method create takes real minx, real maxy, real W, real H, real z, integer texture returns thistype
+             local thistype this = thistype.allocate()
+ 
++            set .clickTimer      = null
+             set .texture        = texture
+             set .customValue    = 0
+             set .camera         = 0
+@@ -295,13 +297,17 @@
+         endmethod
+         
+         method destroy takes nothing returns nothing
++            call this.show(false, -1)
++            set Unit2Button[this.unitId] = 0
++            if this.clickTimer != null then
++                call PauseTimer(this.clickTimer)
++                call ReleaseTimer(this.clickTimer)
++                set this.clickTimer = null
++            endif
+             call RemoveUnit(.picture)
+-            
+-            if .displayed then
+-                set .AllShow[.index] = .AllShow[.CountShow]
+-                set .AllShow[.index].index = .index
+-                set .CountShow = .CountShow - 1
+-            endif
++            set .picture = null
++            set .selectUnit = null
++            call this.deallocate()
+         endmethod
+ 
+         method update takes nothing returns nothing
+@@ -350,6 +356,9 @@
+             
+             if (flag) then
+                 call SetUnitScale(.picture, LocalReal(p, .scale, 0), 0, 0)
++                // War Club needs the visible model refreshed after zero-scale hiding.
++                call ApplySkin(.picture, .texture)
++                call SetUnitAnimationByIndex(.picture, .animIndex)
+             endif
+         endmethod
+ 
+@@ -407,7 +416,7 @@
+         endmethod
+         
+         static method updateAll takes nothing returns nothing
+-            local integer i = .CountShow
++            local integer i = .CountShow - 1
+             loop
+                 exitwhen i < 0
+                 call .AllShow[i].update()
+@@ -438,7 +447,7 @@
+         endmethod
+         
+         static method clickEx takes real x, real y, boolean isLeft returns boolean
+-            local integer i = .CountShow
++            local integer i = .CountShow - 1
+             
+             loop
+                 exitwhen i < 0
+@@ -468,12 +477,20 @@
+                 local thistype btn = thistype(R2I(TimerGetRemaining(t) + 0.5))
+             endif
+ 
+-            set btn.disabled = false
++            if btn.clickTimer == t then
++                set btn.disabled = false
++                set btn.clickTimer = null
++            endif
++            static if (LIBRARY_TimerUtils) then
++                call ReleaseTimer(t)
++            else
++                call DestroyTimer(t)
++            endif
+             set t = null
+         endmethod
+ 
+         static method clickPeriodicSelect takes player p, boolean isLeft returns boolean
+-            local integer i = .CountShow
++            local integer i = .CountShow - 1
+             local timer t
+             
+             loop
+@@ -494,7 +511,8 @@
+                             set .AllShow[i].disabled = true
+ 
+                             static if (LIBRARY_TimerUtils) then
+-                                call TimerStart(NewTimerEx(.AllShow[i]), Interface.LEFT_CLICK_DELAY, false, function thistype.enableButtonCallback)
++                                set .AllShow[i].clickTimer = NewTimerEx(.AllShow[i])
++                                call TimerStart(.AllShow[i].clickTimer, Interface.LEFT_CLICK_DELAY, false, function thistype.enableButtonCallback)
+                             else
+                                 set t = CreateTimer()
+                                 call TimerStart(t, .AllShow[i], false, null)
+@@ -602,13 +620,10 @@
+         endmethod
+         
+         method destroy takes nothing returns nothing
++            call this.show(false, -1)
+             call RemoveUnit(.picture)
+-            
+-            if .displayed then
+-                set .AllShow[.index] = .AllShow[.CountShow]
+-                set .AllShow[.index].index = .index
+-                set .CountShow = .CountShow - 1
+-            endif
++            set .picture = null
++            call this.deallocate()
+         endmethod
+ 
+         method update takes nothing returns nothing
+@@ -654,6 +669,9 @@
+             
+             if (flag) then
+                 call SetUnitScale(.picture, LocalReal(p, .scale, 0), 0, 0)
++                // War Club needs the visible model refreshed after zero-scale hiding.
++                call ApplySkin(.picture, .texture)
++                call SetUnitAnimationByIndex(.picture, .animIndex)
+             endif
+         endmethod
+         
+@@ -678,7 +696,7 @@
+         endmethod
+         
+         static method updateAll takes nothing returns nothing
+-            local integer i = .CountShow
++            local integer i = .CountShow - 1
+ 
+             loop
+                 exitwhen i < 0
+@@ -753,13 +771,12 @@
+         endmethod
+         
+         method destroy takes nothing returns nothing
++            call this.show(false, -1)
+             call DestroyTextTag(.text)
+-            
+-            if .displayed then
+-                set .AllShow[.index] = .AllShow[.CountShow]
+-                set .AllShow[.index].index = .index
+-                set .CountShow = .CountShow - 1
+-            endif
++            call RemoveUnit(.dummy)
++            set .text = null
++            set .dummy = null
++            call this.deallocate()
+         endmethod
+         
+         method update takes nothing returns nothing
+@@ -803,7 +820,7 @@
+         endmethod
+         
+         static method updateAll takes nothing returns nothing
+-            local integer i = .CountShow
++            local integer i = .CountShow - 1
+             loop
+                 exitwhen i < 0
+                 call .AllShow[i].update()

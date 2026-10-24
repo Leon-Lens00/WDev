@@ -1,0 +1,18 @@
+{
+  "Rawcode": "rspl",
+  "Found": true,
+  "BaseRawcode": "rspl",
+  "Name": null,
+  "Fields": [
+    {
+      "Code": "iabi",
+      "Name": "iabi",
+      "Value": "A015",
+      "Source": "map",
+      "Display": "A015"
+    }
+  ],
+  "Diagnostics": [
+    "Warcraft III install not found (pass --game-dir \u003Cpath\u003E)"
+  ]
+}

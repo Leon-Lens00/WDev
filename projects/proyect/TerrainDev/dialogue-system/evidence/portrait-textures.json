@@ -1,0 +1,104 @@
+{
+  "textures": [
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/FrameOpenRed.blp",
+      "sha256": "c8752062e8b93b2a6f2ea555e967d15fcfcfec06fe69b81ff15a636d37cdaf56",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "mips": 11,
+      "alphaBits": 8,
+      "compression": 1
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/FrameOpenBlue.blp",
+      "sha256": "bf86915804b452937cd0bd531089624887161f3ec6a19ab0a746d9fd92c3b767",
+      "dimensions": [
+        1024,
+        512
+      ],
+      "mips": 11,
+      "alphaBits": 8,
+      "compression": 1
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/Signal.blp",
+      "sha256": "080ef6c6f18f56ab5fd55101df14428666661dfaf6c1089512495664feb85757",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mips": 9,
+      "alphaBits": 8,
+      "compression": 1
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/PortraitBackground.blp",
+      "sha256": "69a5ab42ae76a149713fb3476844f0efe40b9129180c216f138a6eebccecbaa1",
+      "dimensions": [
+        8,
+        8
+      ],
+      "mips": 4,
+      "alphaBits": 8,
+      "compression": 1
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/Line.blp",
+      "sha256": "da201e657cfd0335eae57e9a4c06424e68d732d2c91c8ed681fff4a09b0bc8d6",
+      "dimensions": [
+        8,
+        8
+      ],
+      "mips": 4,
+      "alphaBits": 8,
+      "compression": 1
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/assets/UI/Dialogue/PortraitTeamColor.blp",
+      "sha256": "d438e60a88d907e5a68ecf7a8b7880ab40cd6e7aa61aabbf4cc19b3aabc10686",
+      "dimensions": [
+        8,
+        8
+      ],
+      "mips": 4,
+      "alphaBits": 8,
+      "compression": 1
+    }
+  ],
+  "native": [
+    {
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "asset": "units\\human\\HeroPaladin\\HeroPaladin_portrait.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/HeroPaladin_portrait.mdx",
+      "sha256": "31fb76af561ed47c63b040d1924c10172e6c3142a2459023f2cb42b235d1db82",
+      "bytes": 33391,
+      "reader": "wc3ctl Classic"
+    },
+    {
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+      "asset": "units\\orc\\Tauren\\Tauren_portrait.mdx",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/Tauren_portrait.mdx",
+      "sha256": "8762cde89deff3c3e4adf6f2754bfd0951ea4b13dad287bb4b8c7e353728cd6f",
+      "bytes": 44174,
+      "reader": "wc3ctl Classic"
+    },
+    {
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "asset": "units\\Human\\HeroPaladin\\Heropaladin.blp",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/Heropaladin.blp",
+      "sha256": "f4522e240ca85e96ba65ed6102ceacf723e62fda963f3843dbaca50ec62a8f89",
+      "bytes": 74502,
+      "reader": "wc3ctl Classic"
+    },
+    {
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+      "asset": "units\\Orc\\Tauren\\Minotaur.blp",
+      "file": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/Minotaur.blp",
+      "sha256": "589048023c7853b9ff9a0ed602c9e124218d50bf35bb2f095f5680d3199e9314",
+      "bytes": 87611,
+      "reader": "wc3ctl Classic"
+    }
+  ]
+}

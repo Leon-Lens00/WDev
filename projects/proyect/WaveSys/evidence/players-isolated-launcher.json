@@ -1,0 +1,8 @@
+{
+  "original": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3-play.py",
+  "original_sha256": "bb98560748ccaee736ec04171b090051eb02b35f4d9b5eb72c91ed21780aef67",
+  "generated": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/players-isolated-play.py",
+  "generated_sha256": "aefc36671efcdae70d8f93d19612f474195dbf47700f5e47751c0ac25a3a40a1",
+  "changes": "Only override modern.DATA and DXVK/Proton log directories in generated copy; original launcher unchanged",
+  "pythonpath": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts"
+}

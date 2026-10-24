@@ -1,0 +1,20 @@
+--- config.before
++++ config.after
+@@ -73,6 +73,7 @@
+ args = ["/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py", "mcp"]
+ 
+ [mcp_servers.wc3-jass-explore]
++enabled = false
+ command = "/usr/bin/python3"
+ args = ["/home/snz/.local/share/wc3-jass-explore/server.py", "--jassgraph", "/home/snz/Documentos/MCP W3/wc3-forge/scripts/jassgraph"]
+ 
+@@ -96,3 +97,9 @@
+ 
+ [tui.model_availability_nux]
+ "gpt-6.1-sol" = 2
++
++[mcp_servers.codegraph]
++command = "/home/snz/.local/bin/codegraph"
++args = ["serve", "--mcp"]
++startup_timeout_sec = 30
++tool_timeout_sec = 60

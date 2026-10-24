@@ -1,0 +1,20 @@
+[
+  {
+    "label": "missiles",
+    "symbol_files": 15,
+    "files_with_resolved_cross_file_dependent": 13,
+    "warning": "This file-based measure is not a percentage of all calls, semantic completeness, precision or runtime behavior."
+  },
+  {
+    "label": "inventory",
+    "symbol_files": 56,
+    "files_with_resolved_cross_file_dependent": 28,
+    "warning": "This file-based measure is not a percentage of all calls, semantic completeness, precision or runtime behavior."
+  },
+  {
+    "label": "ui",
+    "symbol_files": 4,
+    "files_with_resolved_cross_file_dependent": 3,
+    "warning": "This file-based measure is not a percentage of all calls, semantic completeness, precision or runtime behavior."
+  }
+]

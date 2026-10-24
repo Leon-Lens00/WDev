@@ -1,0 +1,2116 @@
+{
+  "Files": [
+    {
+      "Name": "war3map.w3e",
+      "SizeBytes": 1619612,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3i",
+      "SizeBytes": 759,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.wtg",
+      "SizeBytes": 8533,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.wct",
+      "SizeBytes": 632,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.wts",
+      "SizeBytes": 66703,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.j",
+      "SizeBytes": 1642043,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.shd",
+      "SizeBytes": 3686400,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapMap.blp",
+      "SizeBytes": 7238,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.mmp",
+      "SizeBytes": 200,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.wpm",
+      "SizeBytes": 3686416,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.doo",
+      "SizeBytes": 96204,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapUnits.doo",
+      "SizeBytes": 2347,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3r",
+      "SizeBytes": 795,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3c",
+      "SizeBytes": 158,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3u",
+      "SizeBytes": 33418,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3t",
+      "SizeBytes": 707,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3b",
+      "SizeBytes": 6984,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3d",
+      "SizeBytes": 3311,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3a",
+      "SizeBytes": 30830,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3h",
+      "SizeBytes": 857,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3q",
+      "SizeBytes": 1484,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3s",
+      "SizeBytes": 352,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.imp",
+      "SizeBytes": 6025,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapMisc.txt",
+      "SizeBytes": 692,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapSkin.txt",
+      "SizeBytes": 1988,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapExtra.txt",
+      "SizeBytes": 31,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\RB.blp",
+      "SizeBytes": 6416,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Ui\\DMT.blp",
+      "SizeBytes": 6424,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\SMR.blp",
+      "SizeBytes": 6170,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\AzureGlow5.blp",
+      "SizeBytes": 80315,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\CLEAR.blp",
+      "SizeBytes": 1838,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\ConsoleMinimap1.blp",
+      "SizeBytes": 52101,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\test.blp",
+      "SizeBytes": 3100,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\test3.blp",
+      "SizeBytes": 2688,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Accelerator Gate Blue1.mdx",
+      "SizeBytes": 25936,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Intro.wav",
+      "SizeBytes": 72080,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\End.wav",
+      "SizeBytes": 115148,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Error.mp3",
+      "SizeBytes": 10953,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\BTNKeySetEmpty.blp",
+      "SizeBytes": 6300,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNKeySetEmpty.blp",
+      "SizeBytes": 6300,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\BTNKeySetLeft.blp",
+      "SizeBytes": 6300,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNKeySetLeft.blp",
+      "SizeBytes": 6300,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\BTNKeySetLeftRight.blp",
+      "SizeBytes": 5631,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNKeySetLeftRight.blp",
+      "SizeBytes": 6300,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\BTNKeySetAll.blp",
+      "SizeBytes": 6710,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNKeySetAll.blp",
+      "SizeBytes": 4043,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "IconModel\\GemOfTrueSight.mdx",
+      "SizeBytes": 12427,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "dummy.mdx",
+      "SizeBytes": 35040,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Spell Marker Green.mdx",
+      "SizeBytes": 99154,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\Cliff\\Cliff1.blp",
+      "SizeBytes": 73335,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "TerrainArt\\Ruins\\Ruins_LargeBricks.blp",
+      "SizeBytes": 111806,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Building 1.mdx",
+      "SizeBytes": 2944,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Building 4.mdx",
+      "SizeBytes": 2944,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Building 1.blp",
+      "SizeBytes": 38042,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Building 4.blp",
+      "SizeBytes": 39997,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\GM_shuimian03.MDX",
+      "SizeBytes": 14740,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\Cliff\\Cliff0.blp",
+      "SizeBytes": 80635,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "TerrainArt\\Ruins\\Ruins_Dirt.blp",
+      "SizeBytes": 178898,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\MansionDoor_by_Kitabatake.mdx",
+      "SizeBytes": 23031,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "FlagPole.blp",
+      "SizeBytes": 19042,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\FlagPole.mdx",
+      "SizeBytes": 61518,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Huron_0.blp",
+      "SizeBytes": 165117,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "FlagOverlay.blp",
+      "SizeBytes": 18189,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "FlagOverlay2.blp",
+      "SizeBytes": 6513,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Sofa02.mdx",
+      "SizeBytes": 21600,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Door 4.mdx",
+      "SizeBytes": 20660,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\WoodenThrone.mdx",
+      "SizeBytes": 15865,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Chair.mdx",
+      "SizeBytes": 8694,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\WoodenTable5.mdx",
+      "SizeBytes": 5062,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\WoodenTable6.mdx",
+      "SizeBytes": 5062,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Stand.mdx",
+      "SizeBytes": 18744,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Gallow1withHuman.mdx",
+      "SizeBytes": 42518,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Autumn_Computerbox.mdx",
+      "SizeBytes": 8277,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\ModernLightPost.mdx",
+      "SizeBytes": 10892,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PosteDeLuz.mdx",
+      "SizeBytes": 7685,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Streetlight.blp",
+      "SizeBytes": 14524,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Model\\Window3.mdx",
+      "SizeBytes": 6536,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "covenant.blp",
+      "SizeBytes": 247886,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UNSC_Console.blp",
+      "SizeBytes": 49360,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\BTNDrop.blp",
+      "SizeBytes": 14033,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\BTNSell.blp",
+      "SizeBytes": 16906,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\dummy.mdx",
+      "SizeBytes": 35040,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\RaceWindow.mdx",
+      "SizeBytes": 6276,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\RaceWindowLong.mdx",
+      "SizeBytes": 6276,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\dummy.mdl",
+      "SizeBytes": 15428,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Lobo.blp",
+      "SizeBytes": 28959,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Lobo.mdx",
+      "SizeBytes": 200901,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Marine.mdx",
+      "SizeBytes": 78694,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "US_Ranger.blp",
+      "SizeBytes": 30623,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PTA_1.mp3",
+      "SizeBytes": 2114062,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PTA_2.mp3",
+      "SizeBytes": 802088,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PTA_3.mp3",
+      "SizeBytes": 1890036,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PTA_4.mp3",
+      "SizeBytes": 1666010,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PTA_5.mp3",
+      "SizeBytes": 1722016,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PTA_6.mp3",
+      "SizeBytes": 620276,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PTA_7.mp3",
+      "SizeBytes": 528325,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PTA_8.mp3",
+      "SizeBytes": 494052,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PTA_9.mp3",
+      "SizeBytes": 686314,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\PASLightningOrb.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\PASChaosOrb.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\PASFireOrb.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASFireOrb.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASChaosOrb.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASLightningOrb.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\PASDarknessOrb.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASDarknessOrb.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\PASBloodOrb2.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASBloodOrb2.blp",
+      "SizeBytes": 6641,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\BTNda.blp",
+      "SizeBytes": 4978,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNda.blp",
+      "SizeBytes": 2756,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Yoshi TC By RTG.mdx",
+      "SizeBytes": 115995,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "YoshiSkin.blp",
+      "SizeBytes": 24611,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Hero_Shinigami.mdx",
+      "SizeBytes": 169348,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\BTNElementalConvergence.blp",
+      "SizeBytes": 10383,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalConvergence.blp",
+      "SizeBytes": 3660,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\BTNElementalObliteration.blp",
+      "SizeBytes": 16865,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalObliteration.blp",
+      "SizeBytes": 12002,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtons\\PASWindOrb.blp",
+      "SizeBytes": 10988,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASWindOrb.blp",
+      "SizeBytes": 8895,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot II Blue.mdx",
+      "SizeBytes": 7188,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot Blue.mdx",
+      "SizeBytes": 5900,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot Green.mdx",
+      "SizeBytes": 5872,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot Orange.mdx",
+      "SizeBytes": 6140,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot Purple.mdx",
+      "SizeBytes": 6704,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot Red.mdx",
+      "SizeBytes": 6492,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot Yellow.mdx",
+      "SizeBytes": 6408,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot II Green.mdx",
+      "SizeBytes": 7160,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot II Orange.mdx",
+      "SizeBytes": 7132,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot II Purple.mdx",
+      "SizeBytes": 7188,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot II Red.mdx",
+      "SizeBytes": 7160,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Shot II Yellow.mdx",
+      "SizeBytes": 7132,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Windwalk Blood.mdx",
+      "SizeBytes": 8703,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Windwalk Blue Soul.mdx",
+      "SizeBytes": 8463,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Windwalk Fire.mdx",
+      "SizeBytes": 8801,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Windwalk Necro Soul.mdx",
+      "SizeBytes": 8463,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Windwalk.mdx",
+      "SizeBytes": 8463,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Valiant Charge Fel.mdx",
+      "SizeBytes": 36993,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Valiant Charge Holy.mdx",
+      "SizeBytes": 36965,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Valiant Charge Royal.mdx",
+      "SizeBytes": 36993,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Valiant Charge Void.mdx",
+      "SizeBytes": 36485,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Miss\\Valiant Charge.mdx",
+      "SizeBytes": 37261,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Flamestrike Blood II.mdx",
+      "SizeBytes": 84094,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Flamestrike Dark Void II.mdx",
+      "SizeBytes": 84354,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Flamestrike Fel II.mdx",
+      "SizeBytes": 83058,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Flamestrike II.mdx",
+      "SizeBytes": 83322,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Flamestrike Mystic II.mdx",
+      "SizeBytes": 83306,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Flamestrike Nature II.mdx",
+      "SizeBytes": 84190,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "VerdantGlow2.blp",
+      "SizeBytes": 17101,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "RoyalGlow.blp",
+      "SizeBytes": 45623,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "EmberGlow6.blp",
+      "SizeBytes": 16331,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "AzureGlow4.blp",
+      "SizeBytes": 46538,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "Firebolt Rough Major.mdx",
+      "SizeBytes": 8755,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\01. Burnin\u0027 Up.mp3",
+      "SizeBytes": 1961049,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\02. Wild Rush.mp3",
+      "SizeBytes": 2200121,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\03. Edge Of Spirit.mp3",
+      "SizeBytes": 2185915,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\04. Caution!.mp3",
+      "SizeBytes": 1983199,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\06. Hot Soul.mp3",
+      "SizeBytes": 2142859,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\07. High And Scream.mp3",
+      "SizeBytes": 2118624,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\08. Shootout In Meteor.mp3",
+      "SizeBytes": 2154989,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\09. Power Scale.mp3",
+      "SizeBytes": 2093543,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\10. Dynamite Battle.mp3",
+      "SizeBytes": 2055095,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\05. Menace.mp3",
+      "SizeBytes": 2030425,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Penguin.mdx",
+      "SizeBytes": 81733,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\Nothing.blp",
+      "SizeBytes": 1486,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RaceWindowPortraitFont.mdx",
+      "SizeBytes": 1640,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RaceWindowPortraitOut.mdx",
+      "SizeBytes": 2870,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RaceWindowDiag.mdx",
+      "SizeBytes": 6276,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Hero_ShinigamiP.mdx",
+      "SizeBytes": 169092,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapPreview.blp",
+      "SizeBytes": 55888,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Bondage Gold SDC1.mdx",
+      "SizeBytes": 70464,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Bondage Blue SDC1.mdx",
+      "SizeBytes": 70464,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RaceWindowDiagExtra.mdx",
+      "SizeBytes": 14592,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PotraitRockGolemV1.mdx",
+      "SizeBytes": 85035,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RaceWindowDiagExtraMenor.mdx",
+      "SizeBytes": 11808,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbBloodXR.mdx",
+      "SizeBytes": 28353,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbLightXR.mdx",
+      "SizeBytes": 28037,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbLightningXR.mdx",
+      "SizeBytes": 28621,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbPoisonXR.mdx",
+      "SizeBytes": 28353,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbFireXR.mdx",
+      "SizeBytes": 28085,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbDarknessXR.mdx",
+      "SizeBytes": 28353,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Reaper\u0027s Claws Blue.mdx",
+      "SizeBytes": 17293,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Bondage Blue SD.mdx",
+      "SizeBytes": 70400,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\By_Yeti_Kcharte_vos.mp3",
+      "SizeBytes": 55169,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\YetixGemi.mp3",
+      "SizeBytes": 9194,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Spell Marker Blue.mdx",
+      "SizeBytes": 99282,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Spell Marker Gray.mdx",
+      "SizeBytes": 99182,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Spell Marker Green.mdx",
+      "SizeBytes": 99154,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Spell Marker Red.mdx",
+      "SizeBytes": 99182,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Spell Marker TC.mdx",
+      "SizeBytes": 111945,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Shock Blast Orange.mdx",
+      "SizeBytes": 8194,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Farm.mdx",
+      "SizeBytes": 85560,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_dominate_01.mp3",
+      "SizeBytes": 31448,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_double_01.mp3",
+      "SizeBytes": 34789,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_godlike_01.mp3",
+      "SizeBytes": 31447,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_holy_01.mp3",
+      "SizeBytes": 39803,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_mega_01.mp3",
+      "SizeBytes": 44400,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_monster_01.mp3",
+      "SizeBytes": 56106,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_rampage_01.mp3",
+      "SizeBytes": 33954,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_spree_01.mp3",
+      "SizeBytes": 40640,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_triple_01.mp3",
+      "SizeBytes": 33118,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_ultra_01.mp3",
+      "SizeBytes": 43984,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_unstop_01.mp3",
+      "SizeBytes": 34790,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_kill_wicked_01.mp3",
+      "SizeBytes": 44403,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_Domina1.mp3",
+      "SizeBytes": 28828,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_Domina2.mp3",
+      "SizeBytes": 31958,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_Domina3.mp3",
+      "SizeBytes": 40722,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_Domina4.mp3",
+      "SizeBytes": 33836,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_Domina5.mp3",
+      "SizeBytes": 36966,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_Domina6.mp3",
+      "SizeBytes": 32584,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_DotaA2.mp3",
+      "SizeBytes": 52616,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_DotaA3.mp3",
+      "SizeBytes": 60128,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_DotaA4.mp3",
+      "SizeBytes": 120850,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_DotaA5.mp3",
+      "SizeBytes": 117720,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_RompeCombo1.mp3",
+      "SizeBytes": 59502,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_RompeCombo2.mp3",
+      "SizeBytes": 55120,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\RDK_RompeRacha.mp3",
+      "SizeBytes": 39470,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\announcer_1stblood_01.wav",
+      "SizeBytes": 77428,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "grass.mdx",
+      "SizeBytes": 2232,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "AnimatedCatTailBv025.mdx",
+      "SizeBytes": 14721,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "GrassParticlesV015.blp",
+      "SizeBytes": 11823,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\hero_select.mp3",
+      "SizeBytes": 1537252,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Ubershield Azure.mdx",
+      "SizeBytes": 80956,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Ubershield Tidal.mdx",
+      "SizeBytes": 80956,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Ubershield Azure x3.mdx",
+      "SizeBytes": 80956,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Ubershield Azure x10.mdx",
+      "SizeBytes": 80956,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Ubershield Starfire x3.mdx",
+      "SizeBytes": 80956,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Ember Blue.mdx",
+      "SizeBytes": 6458,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\tEmber Blue.mdx",
+      "SizeBytes": 6094,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\ttEmber Blue.mdx",
+      "SizeBytes": 6094,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\ConsoleMinimap2.blp",
+      "SizeBytes": 91176,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "MiniMap-Hero.mdx",
+      "SizeBytes": 1020,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\MiniMap\\MiniMapIcon\\MinimapIconStartLoc.blp",
+      "SizeBytes": 1838,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "UI\\Minimap\\Minimap-WaypointMarker.blp",
+      "SizeBytes": 1838,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\CLEAR.blp",
+      "SizeBytes": 1838,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "MiniMap-Waypoint.mdx",
+      "SizeBytes": 1972,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "MiniMapUnitIcon.mdx",
+      "SizeBytes": 1296,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\PozoLife.mdx",
+      "SizeBytes": 27413,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\XPozoLife.mdx",
+      "SizeBytes": 24460,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbBloodX.mdx",
+      "SizeBytes": 28345,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbDarknessX.mdx",
+      "SizeBytes": 28345,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbFireX.mdx",
+      "SizeBytes": 28077,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbLightX.mdx",
+      "SizeBytes": 28029,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbLightningX.mdx",
+      "SizeBytes": 28613,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\OrbPoisonX.mdx",
+      "SizeBytes": 28345,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 1.wav",
+      "SizeBytes": 3399740,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 2.wav",
+      "SizeBytes": 3035196,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 3.wav",
+      "SizeBytes": 3147836,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 4.wav",
+      "SizeBytes": 2615356,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 5.wav",
+      "SizeBytes": 2832444,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 6.wav",
+      "SizeBytes": 2738236,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 7.wav",
+      "SizeBytes": 3541052,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 8.wav",
+      "SizeBytes": 3885116,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 9.wav",
+      "SizeBytes": 5378108,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Wave 11.wav",
+      "SizeBytes": 7553084,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\NuclearExplosion.mdx",
+      "SizeBytes": 19499,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Trader --- - Never Gonna Stay in The Abyss.wav",
+      "SizeBytes": 1159228,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Trader 1 - Meanwhile, in The Abyss.wav",
+      "SizeBytes": 776252,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Trader 9 - Weapon Check-up.wav",
+      "SizeBytes": 1888316,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Trader 10 - Columba Noachi.wav",
+      "SizeBytes": 2005052,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Trader 11 - Cold Wind.wav",
+      "SizeBytes": 1888316,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\Trader 12 - Crystal Breakin\u0027 Time.wav",
+      "SizeBytes": 1790012,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\emptytown.wav",
+      "SizeBytes": 944188,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\SurvivalEnd.wav",
+      "SizeBytes": 1191996,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "(listfile)",
+      "SizeBytes": 8246,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    }
+  ]
+}

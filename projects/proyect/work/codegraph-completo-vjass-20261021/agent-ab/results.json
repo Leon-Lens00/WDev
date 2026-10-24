@@ -1,0 +1,1259 @@
+[
+  {
+    "repo": "small-noise",
+    "flow": 1,
+    "names": [
+      "Noise.Noise.octavePerlin2D",
+      "Noise.Noise.perlin2D",
+      "Noise.Noise.floor"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 28.656591095001204,
+    "usage": {
+      "input_tokens": 88637,
+      "cached_input_tokens": 72960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 880,
+      "reasoning_output_tokens": 55
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16215-3d08-7001-a8ee-4342c121459d"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 1,
+    "names": [
+      "Noise.Noise.octavePerlin2D",
+      "Noise.Noise.perlin2D",
+      "Noise.Noise.floor"
+    ],
+    "repetition": 1,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 26.25303553199774,
+    "usage": {
+      "input_tokens": 67453,
+      "cached_input_tokens": 55936,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 822,
+      "reasoning_output_tokens": 107
+    },
+    "commands": 3,
+    "command_text": [
+      "/usr/bin/bash -lc \"pwd && rg --files -g '\"'!benchmark*'\"' -g '\"'!.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+      "/usr/bin/bash -lc \"rg -n 'octavePerlin2D|perlin2D|floor|struct|library|module|implement|interface' Noise.j OctavePerlin.j\"",
+      "/usr/bin/bash -lc \"nl -ba OctavePerlin.j | sed -n '1,70p'\nnl -ba Noise.j | sed -n '1,102p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"pwd && rg --files -g '\"'!benchmark*'\"' -g '\"'!.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16215-ad11-7032-80c9-9b2b6840d6d5"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 2,
+    "names": [
+      "Noise.Noise.perlin3D",
+      "Noise.Noise.grad3D",
+      "Noise.Noise.realTernaryOp"
+    ],
+    "repetition": 1,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 25.363710552002885,
+    "usage": {
+      "input_tokens": 67940,
+      "cached_input_tokens": 60032,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 771,
+      "reasoning_output_tokens": 119
+    },
+    "commands": 3,
+    "command_text": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\"",
+      "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.codegraph/**'\"' -g '\"'!**/.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' 'perlin3D|grad3D|realTernaryOp' .\"",
+      "/usr/bin/bash -lc \"nl -ba Noise.j | sed -n '1,155p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\"",
+      "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.codegraph/**'\"' -g '\"'!**/.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' 'perlin3D|grad3D|realTernaryOp' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16216-1377-7641-9339-dbbb1a9b2173"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 2,
+    "names": [
+      "Noise.Noise.perlin3D",
+      "Noise.Noise.grad3D",
+      "Noise.Noise.realTernaryOp"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 27.23723962999793,
+    "usage": {
+      "input_tokens": 56450,
+      "cached_input_tokens": 45696,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 808,
+      "reasoning_output_tokens": 206
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 1,
+    "mcp_tools": [
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16216-766b-7811-8a5c-7a775587187c"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 3,
+    "names": [
+      "Noise.Noise.openSimplex2D",
+      "Noise.Noise.extrapolate2D"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 23.528815126002883,
+    "usage": {
+      "input_tokens": 75743,
+      "cached_input_tokens": 49408,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 684,
+      "reasoning_output_tokens": 162
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 1,
+    "mcp_tools": [
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16216-e103-7863-8a2c-0266394833db"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 3,
+    "names": [
+      "Noise.Noise.openSimplex2D",
+      "Noise.Noise.extrapolate2D"
+    ],
+    "repetition": 1,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 29.340617538000515,
+    "usage": {
+      "input_tokens": 68890,
+      "cached_input_tokens": 59648,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1044,
+      "reasoning_output_tokens": 114
+    },
+    "commands": 3,
+    "command_text": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\"",
+      "/usr/bin/bash -lc \"rg -n 'openSimplex2D|extrapolate2D|AGENTS' Noise.j; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"'\"",
+      "/usr/bin/bash -lc \"nl -ba Noise.j | sed -n '1,250p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\"",
+      "/usr/bin/bash -lc \"rg -n 'openSimplex2D|extrapolate2D|AGENTS' Noise.j; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"'\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16217-3d08-7862-8610-38f787f38d3b"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 1,
+    "names": [
+      "Jass.assert",
+      "Jass.error",
+      "Jass.print"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 24.83878759700019,
+    "usage": {
+      "input_tokens": 81973,
+      "cached_input_tokens": 64384,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 752,
+      "reasoning_output_tokens": 110
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16217-af3f-7113-81ba-1fc03bbd2eac"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 1,
+    "names": [
+      "Jass.assert",
+      "Jass.error",
+      "Jass.print"
+    ],
+    "repetition": 1,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 33.58190050400299,
+    "usage": {
+      "input_tokens": 117934,
+      "cached_input_tokens": 103808,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 888,
+      "reasoning_output_tokens": 98
+    },
+    "commands": 5,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'Jass\\\\.(assert|error|print)|function Jass|class Jass|struct Jass' .\"",
+      "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/node_modules/**'\"' -g '\"'!**/.git/**'\"'\"",
+      "/usr/bin/bash -lc \"rg -n 'assert|error|print|Jass|Error|Print|Assert' Jass.j\"",
+      "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '1,155p'; rg -n 'init|onPrint|onError|Trigger|trigger|evaluate|execute|Execute|Evaluate|Filter|Condition|boolexpr|callback|debug|DEBUG' Jass.j\"",
+      "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '1335,1388p'; nl -ba Jass.j | sed -n '1625,1665p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'Jass\\\\.(assert|error|print)|function Jass|class Jass|struct Jass' .\"",
+      "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/node_modules/**'\"' -g '\"'!**/.git/**'\"'\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16218-1087-7781-956e-9c517d7fb320"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 2,
+    "names": [
+      "Jass.Lexer.parseIdent",
+      "Jass.isDelim"
+    ],
+    "repetition": 1,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 30.525168644999212,
+    "usage": {
+      "input_tokens": 129084,
+      "cached_input_tokens": 111360,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 854,
+      "reasoning_output_tokens": 107
+    },
+    "commands": 4,
+    "command_text": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/benchmark*/**'\"' -g '\"'!**/benchmarks/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+      "/usr/bin/bash -lc \"rg -n 'parseIdent|isDelim' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*bench*/*'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' .\"",
+      "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '1,55p;600,815p;990,1070p'\"",
+      "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '850,935p;1067,1085p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/benchmark*/**'\"' -g '\"'!**/benchmarks/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+      "/usr/bin/bash -lc \"rg -n 'parseIdent|isDelim' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*bench*/*'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16218-93a7-7712-8974-7eab5aff45b0"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 2,
+    "names": [
+      "Jass.Lexer.parseIdent",
+      "Jass.isDelim"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 24.58648816099594,
+    "usage": {
+      "input_tokens": 82366,
+      "cached_input_tokens": 58496,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 744,
+      "reasoning_output_tokens": 51
+    },
+    "commands": 1,
+    "command_text": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"'\""
+    ],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"'\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16219-0ad9-7a91-8bf5-183624f08634"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 3,
+    "names": [
+      "Jass.trace",
+      "Jass.print"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 27.007320928998524,
+    "usage": {
+      "input_tokens": 80826,
+      "cached_input_tokens": 67584,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 735,
+      "reasoning_output_tokens": 130
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16219-6ab2-7dc2-b91e-2dab4bae9e1a"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 3,
+    "names": [
+      "Jass.trace",
+      "Jass.print"
+    ],
+    "repetition": 1,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 25.90257782700064,
+    "usage": {
+      "input_tokens": 100177,
+      "cached_input_tokens": 91136,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 769,
+      "reasoning_output_tokens": 54
+    },
+    "commands": 6,
+    "command_text": [
+      "/usr/bin/bash -lc pwd",
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!*.sqlite*'\"' --glob '\"'!*.db'\"' 'Jass\\\\.(trace|print)|\\\\b(trace|print)\\\\s*[:=]' .\"",
+      "/usr/bin/bash -lc \"rg --files --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' -g '\"'!**/node_modules/**'\"'\"",
+      "/usr/bin/bash -lc \"rg -n -i 'trace|print|debug|interface|function|module|struct' Jass.j\"",
+      "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '1,145p'\"",
+      "/usr/bin/bash -lc \"rg -n '\\\\btrace\\\\b|\\\\bprint\\\\b|\\\\berror\\\\b|\\\\bassert\\\\b|ExecuteFunc|Trigger|Timer|SCOPE_PREFIX|library|scope' Jass.j\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!*.sqlite*'\"' --glob '\"'!*.db'\"' 'Jass\\\\.(trace|print)|\\\\b(trace|print)\\\\s*[:=]' .\"",
+      "/usr/bin/bash -lc \"rg --files --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' -g '\"'!**/node_modules/**'\"'\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16219-d424-7d22-845a-dc4c109cc65b"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 1,
+    "names": [
+      "TimerTools.Timer.create",
+      "TimerTools.TimerList.add",
+      "TimerTools.CreationQueue.add"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 29.563531881998642,
+    "usage": {
+      "input_tokens": 87128,
+      "cached_input_tokens": 69632,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 872,
+      "reasoning_output_tokens": 154
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621a-3988-7a81-aff5-0b8d89ba7521"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 1,
+    "names": [
+      "TimerTools.Timer.create",
+      "TimerTools.TimerList.add",
+      "TimerTools.CreationQueue.add"
+    ],
+    "repetition": 1,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 26.253699686996697,
+    "usage": {
+      "input_tokens": 94334,
+      "cached_input_tokens": 80640,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 812,
+      "reasoning_output_tokens": 97
+    },
+    "commands": 4,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg --files -g 'AGENTS.md' -g '*Timer*' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/benchmark*/**'\"' -g '\"'!**/benchmarks/**'\"'\"",
+      "/usr/bin/bash -lc \"pwd; rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'library TimerTools|struct CreationQueue|struct TimerList|struct Timer\\\\b' .\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '340,870p'\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '110,165p;275,345p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg --files -g 'AGENTS.md' -g '*Timer*' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/benchmark*/**'\"' -g '\"'!**/benchmarks/**'\"'\"",
+      "/usr/bin/bash -lc \"pwd; rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'library TimerTools|struct CreationQueue|struct TimerList|struct Timer\\\\b' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621a-ad39-7132-9734-b4fafc0d4f8a"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 2,
+    "names": [
+      "TimerTools.Timer.destroy",
+      "TimerTools.TimerPool.recycleTimer"
+    ],
+    "repetition": 1,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 29.762676044003456,
+    "usage": {
+      "input_tokens": 95475,
+      "cached_input_tokens": 78464,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 804,
+      "reasoning_output_tokens": 87
+    },
+    "commands": 4,
+    "command_text": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!benchmark*'\"' -g '\"'!.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!*.sqlite*'\"' --glob '\"'!*.db'\"' 'recycleTimer|library TimerTools|struct TimerPool' .\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '100,330p;540,820p'\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '330,545p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!benchmark*'\"' -g '\"'!.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!*.sqlite*'\"' --glob '\"'!*.db'\"' 'recycleTimer|library TimerTools|struct TimerPool' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621b-138f-7432-98ef-eda66830c8a2"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 2,
+    "names": [
+      "TimerTools.Timer.destroy",
+      "TimerTools.TimerPool.recycleTimer"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 28.712616419994447,
+    "usage": {
+      "input_tokens": 85523,
+      "cached_input_tokens": 63616,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 880,
+      "reasoning_output_tokens": 123
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621b-883c-7310-a84c-5c08a048f4ba"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 3,
+    "names": [
+      "TimerTools.Timer.destroy",
+      "TimerTools.DestructionQueue.add"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 28.918020737000916,
+    "usage": {
+      "input_tokens": 85322,
+      "cached_input_tokens": 64896,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 856,
+      "reasoning_output_tokens": 150
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621b-f819-7643-960c-0c207e075452"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 3,
+    "names": [
+      "TimerTools.Timer.destroy",
+      "TimerTools.DestructionQueue.add"
+    ],
+    "repetition": 1,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 29.206911210996623,
+    "usage": {
+      "input_tokens": 124663,
+      "cached_input_tokens": 106240,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 765,
+      "reasoning_output_tokens": 137
+    },
+    "commands": 4,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!benchmark*'\"' --glob '\"'!**/.codegraph/**'\"' 'library TimerTools|struct Timer|DestructionQueue|method destroy' .\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '380,790p'\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '125,330p'\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '334,383p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!benchmark*'\"' --glob '\"'!**/.codegraph/**'\"' 'library TimerTools|struct Timer|DestructionQueue|method destroy' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621c-6923-75f0-8478-e3135539d339"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 1,
+    "names": [
+      "Noise.Noise.octavePerlin2D",
+      "Noise.Noise.perlin2D",
+      "Noise.Noise.floor"
+    ],
+    "repetition": 2,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 28.556865074999223,
+    "usage": {
+      "input_tokens": 97772,
+      "cached_input_tokens": 83456,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 728,
+      "reasoning_output_tokens": 78
+    },
+    "commands": 4,
+    "command_text": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\"",
+      "/usr/bin/bash -lc 'nl -ba Noise.j'",
+      "/usr/bin/bash -lc \"rg --files -g '*.j' -g '*.jass' -g '*.vjass' -g 'AGENTS.md' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\"",
+      "/usr/bin/bash -lc 'nl -ba OctavePerlin.j'"
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\"",
+      "/usr/bin/bash -lc \"rg --files -g '*.j' -g '*.jass' -g '*.vjass' -g 'AGENTS.md' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621c-db51-7332-acd7-cd77f9aa4dad"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 1,
+    "names": [
+      "Noise.Noise.octavePerlin2D",
+      "Noise.Noise.perlin2D",
+      "Noise.Noise.floor"
+    ],
+    "repetition": 2,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 28.059609160001855,
+    "usage": {
+      "input_tokens": 84237,
+      "cached_input_tokens": 68608,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 843,
+      "reasoning_output_tokens": 120
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621d-4ad2-7d21-9ca6-b39f9c4f2568"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 2,
+    "names": [
+      "Noise.Noise.perlin3D",
+      "Noise.Noise.grad3D",
+      "Noise.Noise.realTernaryOp"
+    ],
+    "repetition": 2,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 25.702831673996116,
+    "usage": {
+      "input_tokens": 57403,
+      "cached_input_tokens": 45568,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 783,
+      "reasoning_output_tokens": 124
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 1,
+    "mcp_tools": [
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621d-b86e-7a53-ab68-5765aa705382"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 2,
+    "names": [
+      "Noise.Noise.perlin3D",
+      "Noise.Noise.grad3D",
+      "Noise.Noise.realTernaryOp"
+    ],
+    "repetition": 2,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 28.01795419499831,
+    "usage": {
+      "input_tokens": 70509,
+      "cached_input_tokens": 61952,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 813,
+      "reasoning_output_tokens": 143
+    },
+    "commands": 2,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!**/.codegraph/**'\"' -g '\"'!**/.git/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' 'perlin3D|grad3D|realTernaryOp' .\"",
+      "/usr/bin/bash -lc \"nl -ba Noise.j | sed -n '1,155p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!**/.codegraph/**'\"' -g '\"'!**/.git/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' 'perlin3D|grad3D|realTernaryOp' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621e-1cd6-7ed1-8a8d-763a4f039288"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 3,
+    "names": [
+      "Noise.Noise.openSimplex2D",
+      "Noise.Noise.extrapolate2D"
+    ],
+    "repetition": 2,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 24.794391088995326,
+    "usage": {
+      "input_tokens": 70766,
+      "cached_input_tokens": 63616,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 787,
+      "reasoning_output_tokens": 152
+    },
+    "commands": 2,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' 'openSimplex2D|extrapolate2D' .\"",
+      "/usr/bin/bash -lc \"nl -ba Noise.j | sed -n '1,245p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' 'openSimplex2D|extrapolate2D' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621e-8a5d-7881-82d0-71fa3e658233"
+    ]
+  },
+  {
+    "repo": "small-noise",
+    "flow": 3,
+    "names": [
+      "Noise.Noise.openSimplex2D",
+      "Noise.Noise.extrapolate2D"
+    ],
+    "repetition": 2,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 29.722131569003977,
+    "usage": {
+      "input_tokens": 56316,
+      "cached_input_tokens": 45056,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 943,
+      "reasoning_output_tokens": 306
+    },
+    "commands": 1,
+    "command_text": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\""
+    ],
+    "mcp": 1,
+    "mcp_tools": [
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"'\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621e-eb7d-75e1-a343-5d0320ed9136"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 1,
+    "names": [
+      "Jass.assert",
+      "Jass.error",
+      "Jass.print"
+    ],
+    "repetition": 2,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 30.880314122005075,
+    "usage": {
+      "input_tokens": 121866,
+      "cached_input_tokens": 95232,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 874,
+      "reasoning_output_tokens": 69
+    },
+    "commands": 4,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g 'AGENTS.md' -g '*Jass*' -g '*jass*' -g 'package.json'\"",
+      "/usr/bin/bash -lc \"rg -n 'assert|error|print|library|struct|module|onInit|init' Jass.j\"",
+      "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '1,135p;1348,1380p;1628,1665p;1690,1720p'\"",
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'TriggerAddAction|TriggerExecute|Jass_(assert|error|print)|printTrigger|errorTrigger|ExecuteFunc|function print|function error|function assert' .\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g 'AGENTS.md' -g '*Jass*' -g '*jass*' -g 'package.json'\"",
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'TriggerAddAction|TriggerExecute|Jass_(assert|error|print)|printTrigger|errorTrigger|ExecuteFunc|function print|function error|function assert' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621f-5f6d-78c1-9233-1191b9202d7e"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 1,
+    "names": [
+      "Jass.assert",
+      "Jass.error",
+      "Jass.print"
+    ],
+    "repetition": 2,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 22.585634496994317,
+    "usage": {
+      "input_tokens": 56523,
+      "cached_input_tokens": 42496,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 750,
+      "reasoning_output_tokens": 101
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 1,
+    "mcp_tools": [
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a1621f-d85d-7763-ad7e-de704999d3d7"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 2,
+    "names": [
+      "Jass.Lexer.parseIdent",
+      "Jass.isDelim"
+    ],
+    "repetition": 2,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 22.297195626997564,
+    "usage": {
+      "input_tokens": 81479,
+      "cached_input_tokens": 64128,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 793,
+      "reasoning_output_tokens": 88
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16220-3095-7ed0-b5cd-777ceb0bf193"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 2,
+    "names": [
+      "Jass.Lexer.parseIdent",
+      "Jass.isDelim"
+    ],
+    "repetition": 2,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 31.83316522699897,
+    "usage": {
+      "input_tokens": 180573,
+      "cached_input_tokens": 160000,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 931,
+      "reasoning_output_tokens": 108
+    },
+    "commands": 6,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' --glob '*.hs' --glob '*.lhs' --glob '*.js' --glob '*.ts' --glob '*.lua' 'parseIdent|isDelim' .\"",
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"' -g '\"'!**/node_modules/**'\"' -g '\"'!**/vendor/**'\"'\"",
+      "/usr/bin/bash -lc \"rg -n 'parseIdent|isDelim|library|scope|struct|interface|module' Jass.j\"",
+      "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '635,830p'\"",
+      "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '990,1080p'\"",
+      "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '864,927p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' --glob '*.hs' --glob '*.lhs' --glob '*.js' --glob '*.ts' --glob '*.lua' 'parseIdent|isDelim' .\"",
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"' -g '\"'!**/node_modules/**'\"' -g '\"'!**/vendor/**'\"'\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16220-87ad-70b2-8da4-a1d0f882bc1d"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 3,
+    "names": [
+      "Jass.trace",
+      "Jass.print"
+    ],
+    "repetition": 2,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 27.255175374004466,
+    "usage": {
+      "input_tokens": 117014,
+      "cached_input_tokens": 98176,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 743,
+      "reasoning_output_tokens": 140
+    },
+    "commands": 3,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'Jass\\\\.(trace|print)|\\\\b(trace|print)\\\\s*[:=]|function\\\\s+(trace|print)\\\\b' .\"",
+      "/usr/bin/bash -lc 'nl -ba Jass.j'",
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' '\\\\btrace\\\\b|\\\\bprint\\\\b' .\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'Jass\\\\.(trace|print)|\\\\b(trace|print)\\\\s*[:=]|function\\\\s+(trace|print)\\\\b' .\"",
+      "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' '\\\\btrace\\\\b|\\\\bprint\\\\b' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16221-043d-7f43-8c5b-26fd093d9947"
+    ]
+  },
+  {
+    "repo": "medium-jassjass",
+    "flow": 3,
+    "names": [
+      "Jass.trace",
+      "Jass.print"
+    ],
+    "repetition": 2,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 26.351649780001026,
+    "usage": {
+      "input_tokens": 81165,
+      "cached_input_tokens": 67200,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 661,
+      "reasoning_output_tokens": 92
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16221-6e7f-7761-895a-6d073831dce4"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 1,
+    "names": [
+      "TimerTools.Timer.create",
+      "TimerTools.TimerList.add",
+      "TimerTools.CreationQueue.add"
+    ],
+    "repetition": 2,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 33.5264796909978,
+    "usage": {
+      "input_tokens": 113084,
+      "cached_input_tokens": 97152,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 873,
+      "reasoning_output_tokens": 141
+    },
+    "commands": 4,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' 'library TimerTools|struct TimerList|struct CreationQueue|TimerTools\\\\.Timer' .\"",
+      "/usr/bin/bash -lc \"rg -n 'static method create|method add|CreationQueue|TimerList|struct Timer|implement|module|function interface' Systems/TimerTools/script.j\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '288,535p;573,738p'\"",
+      "/usr/bin/bash -lc \"rg -n 'CONSTANT_MERGE|RELATIVE_MERGE|code handler|enabled' Systems/TimerTools/script.j\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' 'library TimerTools|struct TimerList|struct CreationQueue|TimerTools\\\\.Timer' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16221-d5a7-7983-8614-f372e8cdf962"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 1,
+    "names": [
+      "TimerTools.Timer.create",
+      "TimerTools.TimerList.add",
+      "TimerTools.CreationQueue.add"
+    ],
+    "repetition": 2,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 29.358984690996294,
+    "usage": {
+      "input_tokens": 103941,
+      "cached_input_tokens": 82944,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 858,
+      "reasoning_output_tokens": 188
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16222-58a7-7f30-810e-eb7babe0de74"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 2,
+    "names": [
+      "TimerTools.Timer.destroy",
+      "TimerTools.TimerPool.recycleTimer"
+    ],
+    "repetition": 2,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 32.518053176005196,
+    "usage": {
+      "input_tokens": 87763,
+      "cached_input_tokens": 70144,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 924,
+      "reasoning_output_tokens": 182
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 2,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16222-cb77-7493-824d-bc8314d11004"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 2,
+    "names": [
+      "TimerTools.Timer.destroy",
+      "TimerTools.TimerPool.recycleTimer"
+    ],
+    "repetition": 2,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 34.93887834400084,
+    "usage": {
+      "input_tokens": 118464,
+      "cached_input_tokens": 100480,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1031,
+      "reasoning_output_tokens": 183
+    },
+    "commands": 5,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '*Timer*' -g 'AGENTS.md'\"",
+      "/usr/bin/bash -lc \"pwd\nrg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'recycleTimer|library TimerTools|scope TimerTools' .\"",
+      "/usr/bin/bash -lc \"rg -n 'struct Timer|method destroy|method recycle|method release|module|implement|onDestroy|TimerPool|TimerGroup|timerId' Systems/TimerTools/script.j\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '1,335p;540,840p;840,1120p'\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '334,540p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '*Timer*' -g 'AGENTS.md'\"",
+      "/usr/bin/bash -lc \"pwd\nrg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'recycleTimer|library TimerTools|scope TimerTools' .\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16223-4a7d-77d0-ab31-0e001463ed8f"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 3,
+    "names": [
+      "TimerTools.Timer.destroy",
+      "TimerTools.DestructionQueue.add"
+    ],
+    "repetition": 2,
+    "arm": "without",
+    "exit": 0,
+    "seconds": 41.22707954499492,
+    "usage": {
+      "input_tokens": 155914,
+      "cached_input_tokens": 137472,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1165,
+      "reasoning_output_tokens": 204
+    },
+    "commands": 6,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg --files -g 'AGENTS.md' -g '*Timer*' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"'\"",
+      "/usr/bin/bash -lc pwd",
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"' | head -60\"",
+      "/usr/bin/bash -lc \"rg -n 'DestructionQueue|method destroy|method add|struct Timer|destroyTimer|onDestroy|deallocate|implement' Systems/TimerTools/script.j\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '285,450p;450,573p;573,836p'\"",
+      "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '1,12p;125,286p'\""
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg --files -g 'AGENTS.md' -g '*Timer*' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"'\"",
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"' | head -60\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16223-d2f5-7873-90d3-eec236bb95f9"
+    ]
+  },
+  {
+    "repo": "large-nestharus",
+    "flow": 3,
+    "names": [
+      "TimerTools.Timer.destroy",
+      "TimerTools.DestructionQueue.add"
+    ],
+    "repetition": 2,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 41.67455567399884,
+    "usage": {
+      "input_tokens": 123116,
+      "cached_input_tokens": 81920,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1262,
+      "reasoning_output_tokens": 231
+    },
+    "commands": 0,
+    "command_text": [],
+    "mcp": 3,
+    "mcp_tools": [
+      "codegraph_explore",
+      "codegraph_explore",
+      "codegraph_explore"
+    ],
+    "mcp_errors": [],
+    "forbidden_commands": [],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16224-746a-7f43-ad5d-810de66a0e79"
+    ]
+  }
+]

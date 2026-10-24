@@ -1,0 +1,309 @@
+{
+  "preimages": [
+    {
+      "path": "CHANGELOG.md",
+      "existed": true,
+      "sha256": "b33ab43a129af7da671a174f48baf0015e69dddae34b6d6d6145cd5e32aa148f"
+    },
+    {
+      "path": "JASS-VJASS.md",
+      "existed": true,
+      "sha256": "f7683d156b55580ee87b16978c8c23ff0cb48068119881ec41589a425ca2d642"
+    },
+    {
+      "path": "README.md",
+      "existed": true,
+      "sha256": "db44062262108eea3ef8385caf6aacb68cb58f3638696113e4e119b2145ad622"
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/array-size.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/base-destroy.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/compare-zero.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/constructor.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/data.slk",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/deallocate-internal.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/dynamic.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/escaped.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/execute-strings.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/inject-config.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/inject.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/interface-compatible.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/macro-in-module.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/macro-module.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/method-helpers.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/module-conditional.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/module-diamond.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/module-repeat.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/multidim.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/once.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/private.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/fixtures/jass-conformance/slk.j",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/jass-conditions.test.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/jass-expansion.test.ts",
+      "existed": true,
+      "sha256": "9520d56925661c2c677ed159738f3c07750ec70c3be9e09b549ee9233604b878"
+    },
+    {
+      "path": "__tests__/jass-expression.test.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/jass-semantic-resolution.test.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/jass-slk.test.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/jass-value-bounds.test.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "__tests__/jass-vjass.test.ts",
+      "existed": true,
+      "sha256": "e839190f41d8c2cb3009c7f28a5cf09ab364017cadca0cf3f4edf1fc70ddcdb5"
+    },
+    {
+      "path": "__tests__/node-semantic-data.test.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/db/migrations.ts",
+      "existed": true,
+      "sha256": "7b212e12421c32f2d3066fdc15d7d4556e77c414c1a09ec52851bf92749e1c82"
+    },
+    {
+      "path": "src/db/queries.ts",
+      "existed": true,
+      "sha256": "2eb4888a324805f5ff0ec9471449da98def10fa37cdbb57c04c7c23cb1d167b2"
+    },
+    {
+      "path": "src/db/schema.sql",
+      "existed": true,
+      "sha256": "ff941578b3c6b0b3ac77ce2880a2730fe41ccd6e1e0196ee82f962cd3ff27e2a"
+    },
+    {
+      "path": "src/extraction/extraction-version.ts",
+      "existed": true,
+      "sha256": "85b743f3a27f66f5706cc03a62d9f329d3ef036e6e3e512bdfaa1b7581d51a95"
+    },
+    {
+      "path": "src/extraction/index.ts",
+      "existed": true,
+      "sha256": "ca9bd86deba53c1b8ff9747b4f35b4d9470fbd8f882cdfbe8dcb8c5a5dd56850"
+    },
+    {
+      "path": "src/extraction/jass-comments.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/extraction/jass-conditions.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/extraction/jass-constant.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/extraction/jass-expression.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/extraction/jass-extractor.ts",
+      "existed": true,
+      "sha256": "5b6b488c4a3c997d2980defaa889e4c1dc36244ae3d604b79337a2580d0f806c"
+    },
+    {
+      "path": "src/extraction/jass-lexer.ts",
+      "existed": true,
+      "sha256": "b85de400921546b006ace08428d7fffc5427c320faf6ca154da2d47fc706cb0c"
+    },
+    {
+      "path": "src/extraction/jass-preprocessor.ts",
+      "existed": true,
+      "sha256": "388e74720837e14ac30e9b90eaabfdbbaace42b90429ae788a70713b78f831f9"
+    },
+    {
+      "path": "src/extraction/jass-slk.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/jass-profile.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/mcp/server-instructions.ts",
+      "existed": true,
+      "sha256": "91f988e3a348e4658a47dcc38528d00d4f935765985dc33b17d95482f3da5317"
+    },
+    {
+      "path": "src/mcp/tools.ts",
+      "existed": true,
+      "sha256": "e3939ead0aaa341d51aa11dccd7a751ac5712d774c4bc9f89bcbfafe3a250ba8"
+    },
+    {
+      "path": "src/mcp/version.ts",
+      "existed": true,
+      "sha256": "12789f6ab0b8382ba909666254f9353f9fa060a39f89a66ddbc62e3a458fb031"
+    },
+    {
+      "path": "src/project-config.ts",
+      "existed": true,
+      "sha256": "2257fdcd55e2971b9b7e6dc1931d94d581d0faf99f20d0f750ed91a00c88715a"
+    },
+    {
+      "path": "src/resolution/callback-synthesizer.ts",
+      "existed": true,
+      "sha256": "d50ff0aeb54a9b65263002aea99230e9e8a7eabcb1600b23e99d9a500d089277"
+    },
+    {
+      "path": "src/resolution/index.ts",
+      "existed": true,
+      "sha256": "65297b6ef63472b3fd08cffc6e4b16ad8e90051d7d50ecc62718869561163f41"
+    },
+    {
+      "path": "src/resolution/jass-expression.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/resolution/jass-runtime-name.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/resolution/jass-synthesizer.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/resolution/jass-value-flow.ts",
+      "existed": false,
+      "sha256": null
+    },
+    {
+      "path": "src/resolution/jass.ts",
+      "existed": true,
+      "sha256": "277cc7e5aaea4932965fd099c5c05779f956c8de09c7fd567a33adcc6a430be9"
+    },
+    {
+      "path": "src/sync/watcher.ts",
+      "existed": true,
+      "sha256": "df848ca48638868dfa039cb1ba6e96ca13e842e094af4e97d4f44b500c41cf73"
+    },
+    {
+      "path": "src/types.ts",
+      "existed": true,
+      "sha256": "c2b35460d769ad782604a565a4d1a87ce6688fc6123e2a6f8ca8efa9ea34a07c"
+    }
+  ],
+  "index_roots": [
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+    "/home/snz/Documentos/WarDatsPy/ui-studio/dist"
+  ]
+}

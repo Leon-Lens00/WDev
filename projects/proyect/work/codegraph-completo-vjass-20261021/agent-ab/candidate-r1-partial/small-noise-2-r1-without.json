@@ -1,0 +1,36 @@
+{
+  "repo": "small-noise",
+  "flow": 2,
+  "names": [
+    "Noise.Noise.perlin3D",
+    "Noise.Noise.grad3D",
+    "Noise.Noise.realTernaryOp"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 32.69888817000174,
+  "usage": {
+    "input_tokens": 86448,
+    "cached_input_tokens": 72192,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 940,
+    "reasoning_output_tokens": 148
+  },
+  "commands": 3,
+  "command_text": [
+    "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\"",
+    "/usr/bin/bash -lc \"rg -n 'perlin3D|grad3D|realTernaryOp|function|endfunction|//\"'!'\"' Noise.j\"",
+    "/usr/bin/bash -lc 'nl -ba Noise.j'"
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!*lock*'\"' -g 'AGENTS.md' -g '*Noise*' -g '*noise*'\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16209-4a1f-76c3-90d0-3f1601f93205"
+  ]
+}

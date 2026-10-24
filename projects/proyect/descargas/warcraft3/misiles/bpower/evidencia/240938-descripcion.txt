@@ -1,0 +1,503 @@
+
+
+
+	Town Portal
+
+
+
+
+
+		
+	
+
+
+
+"...and through the shadows, a circular entity emerged. I couldn't distinguish it's substance; one would say that it was a portal. What could possibly lie on the other side? Was it an entrance to another dimension or was it an exit to our dimension...?".
+
+
+
+
+	Zephyr Challenge #10
+
+
+
+
+
+
+API
+
+function CreateTownPortal takes unit source, real x, real y, real z, real face, real duration returns nothing​
+
+Creates a new portal at x/y with a facing angle "face" over passed in duration.
+
+Argument "z" is the fly height of the bar dummy unit.
+
+Also destroys the previously created portal from unit "source", if one exists.
+
+
+function GetUnitTownPortal takes unit source returns TownPortal​
+
+Will return 0 if the unit doesn't have a portal.
+
+
+function DestroyTownPortal takes unit source returns nothing​
+
+Destroys an open portal or/and cancels the porting process.
+
+Does nothing on invalid unit argument ( fail safe function )
+
+
+function CancelUnitTownPortalCast takes unit source returns boolean​
+
+Cancels an ongoing port process for unit "source".
+
+Does nothing if the portal is already built or the unit argument is invalid.
+
+Call this function for instance to interupt a porting process on damage event.
+
+
+There is an object oriented API for each wrapper function, however unlike the wrapper functions,
+
+those don't check for invalid method arguments. Therefore please use the wrapper functions.​
+
+
+
+
+
+
+
+Obligatory RequirementsOptional Requirements
+
+
+Table
+
+TimerUtils
+
+MissileRecycler
+
+
+ARGB
+
+
+
+
+
+
+
+	
+
+		Reveal Code
+	
+	
+
+		
+
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library TownPortal/* v.5.0
+*************************************************************************************
+*
+*   TownPortal provides an unique teleport behaviour.
+*   After channeling a given time, the caster teleports to the desired location,
+*   creating a portal to ensure a save return journey. Other unit can also use an open portal.
+*   A portal closes, when the owning unit re-enters it or opens a new one. 
+*   Any attempt to teleport is interrupted on order event or dislocation.
+*
+*************************************************************************************
+*
+*   */ uses /*
+*
+*       */ Table           /* hiveworkshop.com/forums/jass-resources-412/snippet-new-table-188084/
+*       */ TimerUtils      /* wc3c.net/showthread.php?t=101322
+*       */ MissileRecycler /* hiveworkshop.com/forums/jass-resources-412/system-missilerecycler-206086/
+*       */ optional ARGB   /* wc3c.net/showthread.php?t=101858
+*
+************************************************************************************/
+                native UnitAlive takes unit id returns boolean
+//**
+//*  API:
+//*  ====
+//! novjass
+    function CreateTownPortal  takes unit source, real x, real y, real z, real face, real duration returns nothing
+    //* "z" is the fly height of the bar dummy unit. 
+    //* "duration" is the casting time for this instance.
+    
+    function GetUnitTownPortal        takes unit source returns TownPortal
+    //* Returns 0 if no instance is allocated for unit source.
+    
+    function DestroyTownPortal        takes unit source returns nothing
+    //* Destroy an instance in any phase.
+    
+    function CancelUnitTownPortalCast takes unit source returns boolean
+    //* Only destroy an instance during the channeling phase.
+//! endnovjass
+//**
+//*  User settings:
+//*  ==============
+    globals
+        //*  Set the bar unit raw.
+        private constant integer BAR_UNIT_ID             = 'n000'
+        //*  Units in this range of a portal center enter it.
+        private constant real DETECTION_RANGE            = 100.
+        //*  Set timer accuracity. If unsure set it to .031250000
+        private constant real ACCURATICY                 = .031250000
+        //*  Set the fx displayed while porting.
+        private constant string DURING_PORT_EFFECT       = "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTo.mdl"
+        private constant string DURING_PORT_ATTACH_POINT = "origin"
+        //*  Set the fx create on the destination coordinates.
+        private constant string AFTER_JOURNEY_EFFECT     = "Abilities\\Spells\\Undead\\OrbOfDeath\\OrbOfDeathMissile.mdl"
+        //*  Set the fx left behind after the portal creator disappears.
+        private constant string DEPARTURE_EFFECT         = "Abilities\\Spells\\NightElf\\Blink\\BlinkCaster.mdl"
+        //*  Set if a portal inherits a player color or not. ( Requires library ARGB )
+        private constant boolean PORTAL_USE_PLAYER_COLOR = true
+    endglobals
+
+    //*  Set the portal model.
+    private constant function GetPortalModel takes unit porter returns string
+        return "doodads\\cinematic\\ShimmeringPortal\\ShimmeringPortal.mdl"
+    endfunction
+    //*  Set the portal model scale.
+    private constant function GetPortalModelScale takes unit porter returns real
+        return 0.55
+    endfunction
+    //*  Set the delay within any unit can't use the portal after creation.
+    private constant function GetPortalBuildTime takes unit porter returns real
+        return 1.
+    endfunction
+    //*  Filter which units can use the portal.
+    private function FilterUnit takes unit porter, unit portalOwner returns boolean
+        return UnitAlive(porter)// and IsUnitAlly(porter, GetOwningPlayer(portalOwner))
+    endfunction
+    //*  Must return true to continue a port. False cancels a port right away.
+    private function UnitPositionCondition takes real prevX, real unitX, real prevY, real unitY returns boolean
+        return (prevX == unitX) and (prevY == unitY)
+    endfunction
+//**
+//*  Module initializer:
+//*  ===================
+    private module Inits
+        private static method onInit takes nothing returns nothing
+            call thistype.init()
+        endmethod
+    endmodule
+//**
+//*  Unit reference:
+//*  ===============
+    globals
+        //*  Use unit handle id.
+        private Table table = 0
+    endglobals
+//**
+//*  Unit Indexer setup:
+//*  ===================  
+    private function ToogleUnitIndexer takes boolean enable returns boolean 
+        local boolean prevSetup = true
+        static if LIBRARY_UnitIndexer then
+            set prevSetup = UnitIndexer.enabled
+            set UnitIndexer.enabled = enable
+        elseif LIBRARY_UnitIndexerGUI then
+            set prevSetup = udg_UnitIndexerEnabled
+            set udg_UnitIndexerEnabled = enable
+        elseif LIBRARY_UnitDex then
+            set prevSetup = UnitDex.Enabled
+            set UnitDex.Enabled = enable
+        endif
+        return prevSetup
+    endfunction
+//**
+//*  Sound implementation:
+//*  =====================
+    //*  Will fail on first play... I'm waiting for a good Sound library.
+    private function NewSound takes string path, unit source returns nothing
+        set bj_lastPlayedSound = null
+        set bj_lastPlayedSound = CreateSound(path, false, true, true, 10, 10, "CombatSoundsEAX")
+        call SetSoundChannel(bj_lastPlayedSound, 5)
+        call SetSoundVolume(bj_lastPlayedSound, 127)
+        call SetSoundDistances(bj_lastPlayedSound, 600, 10000)
+        call SetSoundDistanceCutoff(bj_lastPlayedSound, 3000)
+        call SetSoundConeAngles(bj_lastPlayedSound, 0, 0, 127)
+        call SetSoundConeOrientation(bj_lastPlayedSound, 0, 0, 0)
+        call AttachSoundToUnit(bj_lastPlayedSound, source)
+        call StartSound(bj_lastPlayedSound)
+        call KillSoundWhenDone(bj_lastPlayedSound)
+    endfunction
+
+    //*  You may delete or change the content of these 3 functions.
+    private function SoundOnPortalDestroy takes unit portal returns nothing
+        call NewSound("Sound\\Ambient\\DoodadEffects\\ShimmeringPortalDeath.wav", portal)
+    endfunction
+    
+    private function SoundOnUnitEnterPortal takes unit porter returns nothing
+        call NewSound("Sound\\Ambient\\DoodadEffects\\ShimmeringPortalEntrance.wav", porter)
+    endfunction
+    
+    private function SoundOnUnitStartPort takes unit porter returns nothing
+        call NewSound("Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.wav", porter)
+    endfunction
+//**
+//*  Error finding:
+//*  ==============
+static if PORTAL_USE_PLAYER_COLOR and not LIBRARY_ARGB then
+    "Error: Library TownPortal,  user setting PORTAL_USE_PLAYER_COLOR = true requires library ARGB!" 
+endif
+//**
+//*  Struct TownPortal:
+//*  ==================
+    struct TownPortal
+        private static boolexpr expression
+    
+        private unit    owner
+        private unit    dummy
+        private unit    bar
+        private effect  dummyFx
+        private effect  unitFx
+        private region  reg
+        private trigger trig
+        private timer   clock
+        private sound   audio
+        //*
+        private real    time
+        private integer order
+        private real    unitX
+        private real    unitY
+        
+        //*  Trys to disable unit indexers.
+        private method createBarUnit takes real x, real y, real z, real time returns nothing
+            local boolean prev = ToogleUnitIndexer(false)
+            local unit    temp = CreateUnit(GetOwningPlayer(owner), BAR_UNIT_ID, x, y, 270.)
+            call ToogleUnitIndexer(prev)
+            call UnitAddAbility(temp, 'Aloc')
+            call UnitAddAbility(temp, 'Amrf')
+            call SetUnitFlyHeight(temp, z, 0.)
+            call PauseUnit(temp, true)
+            call SetUnitTimeScale(temp, 1./time)
+            set bar  = temp
+            set temp = null
+        endmethod
+        
+        private method createPortalRegion takes real x, real y returns nothing
+            local real offset = DETECTION_RANGE*.5
+            local rect tempRect = Rect(x - offset, y - offset, x + offset, y + offset)
+            set reg = CreateRegion()
+            set trig = CreateTrigger()
+            call RegionAddRect(reg, tempRect)
+            call TriggerAddCondition(trig, thistype.expression)
+            call TriggerRegisterEnterRegion(trig, reg, null)
+            call RemoveRect(tempRect)
+            set tempRect = null
+        endmethod
+        
+        //*  Prevent visual glitches, as MissileRecycler adjust the dummy facing a bit.
+        private static method releaseDummy takes nothing returns nothing
+            local unit u = bj_lastCreatedUnit
+            set bj_lastCreatedUnit = null
+            call TriggerSleepAction(3.)
+            call RecycleMissile(u)
+            set u = null
+        endmethod
+        
+        method destroy takes nothing returns nothing
+            set bj_lastCreatedUnit = dummy
+            call ExecuteFunc(thistype.releaseDummy.name)
+            //*  Clean rest.
+            call table.remove(GetHandleId(trig))
+            call table.remove(GetHandleId(owner))
+            if (dummyFx != null) then
+                call DestroyEffect(dummyFx)
+                call SoundOnPortalDestroy(dummy)
+            endif
+            if (unitFx != null) then
+                call DestroyEffect(unitFx)
+            endif
+            call DestroyEffect(unitFx)
+            call RemoveRegion(reg)
+            call TriggerClearConditions(trig)
+            call DestroyTrigger(trig)
+            if (clock != null) then
+                call ReleaseTimer(clock)
+            endif
+            if (bar != null) then
+                call RemoveUnit(bar)
+            endif
+            if (audio != null) then
+                call StopSound(audio, true, true)
+            endif
+            //*
+            set bar     = null
+            set clock   = null
+            set dummy   = null
+            set owner   = null
+            set dummyFx = null
+            set unitFx  = null
+            set reg     = null
+            set trig    = null
+            set audio   = null
+        endmethod
+        
+        //*  Runs when a unit comes in portal range.
+        private static method onEnter takes nothing returns boolean
+            local thistype this = table[GetHandleId(GetTriggeringTrigger())]
+            local unit source   = GetTriggerUnit() 
+            //*  Clock is only null when the portal is ready.
+            if (clock == null) and FilterUnit(source, owner) then
+                call DestroyEffect(AddSpecialEffect(AFTER_JOURNEY_EFFECT, unitX, unitY))
+                call SetUnitPosition(source, unitX, unitY)
+                call SoundOnUnitEnterPortal(source)
+                if (source == owner) then
+                    call destroy()
+                endif
+            endif
+            set source = null
+            return false
+        endmethod
+        
+        method cancel takes nothing returns boolean
+            if (bar != null) then
+                call destroy()
+                return true
+            endif
+            return false
+        endmethod
+            
+        private static method callback takes nothing returns nothing
+            local thistype this = GetTimerData(GetExpiredTimer())
+            call ReleaseTimer(clock)
+            set clock = null
+        endmethod
+        
+        private static method onPeriodic takes nothing returns nothing
+            local thistype this = GetTimerData(GetExpiredTimer())
+            local unit source = owner
+            local real posX = GetUnitX(source)
+            local real posY = GetUnitY(source)
+            local real angle
+            static if LIBRARY_ARGB and PORTAL_USE_PLAYER_COLOR then
+                local ARGB color
+            endif
+
+            //*
+            set time = time - ACCURATICY
+            if UnitAlive(source) and (time <= 0.) then
+                set unitX = posX
+                set unitY = posY
+                set angle = GetUnitFacing(dummy)*bj_DEGTORAD
+                //*  Check for collision.
+                call DestroyEffect(unitFx)
+                call SetUnitPosition(source, GetUnitX(dummy), GetUnitY(dummy))
+                call SetUnitFacing(source, GetUnitFacing(dummy))
+                //*  Walk a few meters.
+                call IssuePointOrderById(source, 851986, GetUnitX(dummy) + DETECTION_RANGE*Cos(angle), GetUnitY(dummy) + DETECTION_RANGE*Sin(angle))
+                call DestroyEffect(AddSpecialEffect(DEPARTURE_EFFECT, posX, posY))
+                set dummyFx = AddSpecialEffectTarget(GetPortalModel(source), dummy, "origin")
+                static if PORTAL_USE_PLAYER_COLOR and LIBRARY_ARGB then
+                    set color = ARGB.fromPlayerColor(GetPlayerColor(GetOwningPlayer(source)))
+                    call SetUnitVertexColor(dummy, color.red, color.green, color.blue, color.alpha)
+                endif
+                //*
+                call TimerStart(clock, GetPortalBuildTime(source), false, function thistype.callback)
+                call RemoveUnit(bar)
+                set bar    = null
+                set unitFx = null
+            //*  Check continue condition.   
+            elseif not UnitAlive(source) or not UnitPositionCondition(unitX, posX, unitY, posY) or (order != GetUnitCurrentOrder(source)) then
+                //*  Cancel channeling order.
+                if (order == GetUnitCurrentOrder(source)) and (order != 0) then
+                    call IssueImmediateOrderById(source, 851972)
+                endif
+                call destroy()
+            //*  Adjust the last timer timeout.
+            elseif (time > 0.) and (time < ACCURATICY) then
+                call TimerStart(clock, time, true, function thistype.onPeriodic)
+            endif
+            set source = null
+        endmethod
+
+        //*  Use wrapper function CreatePortal() instead.
+        static method create takes unit source, real x, real y, real z, real angle, real duration returns thistype
+            local thistype this = thistype.allocate()
+            //*  Assign variables.
+            set owner  = source
+            set clock  = NewTimerEx(this)
+            set unitX  = GetUnitX(source)
+            set unitY  = GetUnitY(source)
+            set time   = duration
+            set order  = GetUnitCurrentOrder(source)
+            set dummy  = GetRecycledMissile(x, y, 0., angle)
+            set unitFx = AddSpecialEffectTarget(DURING_PORT_EFFECT, source, DURING_PORT_ATTACH_POINT)
+            call SetUnitScale(dummy, GetPortalModelScale(source), 0., 0.)
+            call createBarUnit(GetUnitX(source), GetUnitY(source), z, duration)
+            call createPortalRegion(x, y)
+            //*  Pointers to instance.
+            set table[GetHandleId(source)] = this
+            set table[GetHandleId(trig)]   = this
+            //*  Ambience.
+            call SoundOnUnitStartPort(source)
+            set audio = bj_lastPlayedSound 
+            call TimerStart(clock, RMinBJ(duration, ACCURATICY), true, function thistype.onPeriodic)
+            return this
+        endmethod
+        
+        private static method init takes nothing returns nothing
+            set table      = Table.create()
+            set expression = Condition(function thistype.onEnter)
+        endmethod
+        implement Inits
+    endstruct
+//**    
+//*  API:
+//*  ====
+    function GetUnitTownPortal takes unit source returns TownPortal
+        return table[GetHandleId(source)]
+    endfunction
+    
+    function CancelUnitTownPortalCast takes unit source returns boolean
+        if table.has(GetHandleId(source)) then
+            return TownPortal(table[GetHandleId(source)]).cancel()
+        endif
+        return false
+    endfunction
+    
+    function DestroyTownPortal takes unit source returns nothing
+        if table.has(GetHandleId(source)) then
+            call TownPortal(table[GetHandleId(source)]).destroy()
+        endif
+    endfunction
+    
+    function CreateTownPortal takes unit source, real x, real y, real z, real angle, real duration returns nothing
+        call DestroyTownPortal(source)
+        call TownPortal.create(source, x, y, z, angle, duration)
+    endfunction
+    
+endlibrary
+	
+
+		
+	
+
+
+Keywords:
+
+Diablo, Teleport, Teleportation, Townportal, Portal, System, RPG, Blink, Diablo3, Waypoint

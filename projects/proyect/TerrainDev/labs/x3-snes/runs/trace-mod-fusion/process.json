@@ -1,0 +1,13 @@
+{
+  "pid": 1069174,
+  "proc_start": "18052990",
+  "exe": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runtime/Mesen",
+  "rom_sha256": "bfb912b3438c965950a548efe355cdf4da278e980bccb53131a9eae517a1cf76",
+  "cmd": [
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runtime/Mesen",
+    "--testRunner",
+    "--timeout=40",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runs/trace-mod-fusion/driver.lua",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/analysis/static-20261023-134543/private/zero-project-v4.1.sfc"
+  ]
+}

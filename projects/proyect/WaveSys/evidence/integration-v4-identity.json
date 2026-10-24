@@ -1,0 +1,50 @@
+{
+  "window": {
+    "address": "0x558cbbe20b30",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      0,
+      0
+    ],
+    "size": [
+      1920,
+      1080
+    ],
+    "workspace": {
+      "id": 5,
+      "name": "5"
+    },
+    "floating": true,
+    "monitor": 0,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 977498,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 2,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 3,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "18000a14"
+  },
+  "start": "16064695",
+  "command": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\dce25940d1a43248.w3x -window                                                                                                                                                                                                                                     ",
+  "prefix": [
+    "WINEPREFIX=/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile/pfx/"
+  ]
+}

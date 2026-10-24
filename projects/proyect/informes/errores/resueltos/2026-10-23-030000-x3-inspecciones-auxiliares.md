@@ -1,0 +1,3 @@
+# X3V4: consultas auxiliares recuperadas
+
+23/10/2026, ModelEditor, agente raíz. Estado: resuelto. Una inspección del JSON intentó clave models aunque all-models.json usa entries; KeyError, sin modificar archivos. Se leyó su esquema real y se verificaron los191 hashes bajo entries. Un intento auxiliar de Pillow usó Python del sistema sin PIL; se volvió al entorno plot-env ya documentado. La generación de muestras terminó con ese entorno. Lecturas/capturas inexistentes después de una guardia de cierre rechazada se omitieron y se capturó sólo después de verificar estado; cierre documentado en informe específico. Ninguno de estos fallos alteró MDX ni evidencia de una prueba completada.

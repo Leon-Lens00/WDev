@@ -1,0 +1,149 @@
+<h1>Simple Spell Collection#1 v.2.0</h1>
+<p>Submitted by BPower</p>
+<p>Uploaded: 08 Dec, 2013</p>
+<p>Last edited: 13 Jan, 2016</p>
+<p>Source:</p>
+<p><a href="https://www.hiveworkshop.com/threads/simple-spell-collection-1-v-2-0.245192/">https://www.hiveworkshop.com/threads/simple-spell-collection-1-v-2-0.245192/</a></p>
+<p>Tags: Pack, vJASS, Spell</p>
+<p>Filesize: 189.08 KB</p>
+<h2>Simple Spell Collection #1</h2>
+<p>Filesize: 189.08 KB</p>
+<p>Filename: Simple Spell Collection #1.w3x</p>
+<p>Number of players: 1</p>
+<p>Recommended game:</p>
+<p>Warcraft 3: Pre-Reforged (1.19 - 1.21b)</p>
+<h2>Description</h2>
+<p><div class="vindit-align-center">
+	<b><h1 style="margin: 0">
+	<span style="color: LightBlue">Simple Spell Collection #1</span>
+</h1></b><br />
+<span style="font-size: 12px"><i>May these spells be an inspiration for you.</i></span><br />
+<br />
+</div><br />
+<span style="font-size: 12px"><div class="bbTable">
+<table style='width: 100%'><tr><td><b>Obligatory Requirements</b></td><td><b>Optional Requirements</b></td></tr><tr><td><br />
+<ul>
+<li data-xf-list-type="ul"><a href="http://hiveworkshop.com/forums/jass-resources-412/snippet-new-table-188084/" target="_blank" class="link link--external" rel="nofollow ugc noopener">Table</a></li>
+<li data-xf-list-type="ul"><a href="http://hiveworkshop.com/forums/jass-resources-412/missile-265370/" target="_blank" class="link link--external" rel="nofollow ugc noopener">Missile</a></li>
+<li data-xf-list-type="ul"><a href="http://wc3c.net/showthread.php?t=101322" target="_blank" class="link link--external" rel="nofollow ugc noopener">TimerUtils</a></li>
+<li data-xf-list-type="ul"><a href="http://github.com/nestharus/JASS/tree/master/jass/Systems/WorldBounds" target="_blank" class="link link--external" rel="nofollow ugc noopener">WorldBounds</a></li>
+<li data-xf-list-type="ul"><a href="http://github.com/nestharus/JASS/tree/master/jass/Systems/DummyCaster" target="_blank" class="link link--external" rel="nofollow ugc noopener">DummyCaster</a></li>
+<li data-xf-list-type="ul"><a href="http://hiveworkshop.com/forums/jass-resources-412/snippet-spelleffectevent-187193/" target="_blank" class="link link--external" rel="nofollow ugc noopener">SpellEffectEvent</a></li>
+<li data-xf-list-type="ul"><a href="http://hiveworkshop.com/forums/showthread.php?t=203338" target="_blank" class="link link--external" rel="nofollow ugc noopener">RegisterPlayerUnitEvent</a></li>
+</ul></td><td><ul>
+<li data-xf-list-type="ul"><a href="https://www.hiveworkshop.com/forums/jass-resources-412/cameraeqnoise-268630/" class="link link--internal">CameraEQNoise</a> ( for Leap )</li>
+<li data-xf-list-type="ul"><a href="http://www.wc3c.net/showthread.php?t=103862" target="_blank" class="link link--external" rel="nofollow ugc noopener">IsTerrainWalkable</a> ( for Leap )</li>
+<li data-xf-list-type="ul"><a href="https://www.hiveworkshop.com/forums/jass-resources-412/snippet-isdestructabletree-248054/" class="link link--internal">IsDestructableTree</a> ( for Chaotic Boulder )</li>
+</ul></td></tr></table>
+</div></span><br />
+<span style="font-size: 12px"><div class="bbTable">
+<table style='width: 100%'><tr><td><b>Spells included in the demo map</b></td></tr><tr><td><br />
+<ul>
+<li data-xf-list-type="ul">Chaos Flare v.2.0</li>
+<li data-xf-list-type="ul">Ice Siege v.2.0</li>
+<li data-xf-list-type="ul">Bone Spirit v.2.0</li>
+<li data-xf-list-type="ul">The Reaper&#039;s Scythe v.2.0</li>
+<li data-xf-list-type="ul">Fireball v.2.0</li>
+<li data-xf-list-type="ul">Whirlwind v.2.0</li>
+<li data-xf-list-type="ul">Leap v.1.0 ( <span style="color: lime">New!</span> )</li>
+<li data-xf-list-type="ul">Fist of Thunder v.1.0 ( <span style="color: lime">New!</span> )</li>
+<li data-xf-list-type="ul">Chaotic Boulder v.1.0 ( <span style="color: lime">New!</span> )</li>
+<li data-xf-list-type="ul">Guided Arrow v.1.0 ( <span style="color: lime">New!</span> )</li>
+</ul></td></tr></table>
+</div></span><br />
+Each spell is placed in a seperated library, but they all have library SpellIndex as common requirement.<br />
+It allocates spell instances and provides most important struct members for all spells.<br />
+<br />
+<div class="bbTable">
+<table style='width: 100%'><tr><td>
+
+
+<div class="bbcode-tabs" data-xf-init="tabs-tag">
+	<div class="titles">
+		
+			<h3 data-id="0" class="active">Spell Index</h3>
+		
+	</div>
+	<div class="bodies">
+		
+			<div data-id="0" class="active"><pre style="margin: 1em 0">library SpellIndex/* v1.1
+************************************************************
+*
+*   Makes spell indexing global and nulls members automatically.
+*   A screen freeze is more likely than an overflow.
+*
+*   API: 
+*       --&gt; SpellIndex.create() and index.destroy()
+*
+************************************************************
+*
+*   */ uses /*
+*       
+*       */ Table                   /* hiveworkshop.com/forums/jass-resources-412/snippet-new-table-188084/
+*       */ Missile                 /* hiveworkshop.com/forums/jass-resources-412/missile-265370/
+*       */ TimerUtils              /* wc3c.net/showthread.php?t=101322
+*       */ DummyCaster             /* github.com/nestharus/JASS/tree/master/jass/Systems/DummyCaster
+*       */ WorldBounds             /* github.com/nestharus/JASS/tree/master/jass/Systems/WorldBounds
+*       */ SpellEffectEvent        /* hiveworkshop.com/forums/jass-resources-412/snippet-spelleffectevent-187193/
+*       */ RegisterPlayerUnitEvent /* hiveworkshop.com/forums/showthread.php?t=203338
+*
+***************************************************************
+*
+*   Credits to Bribe, Nestharus, Maghteridon96 and Vexorian.
+*
+***************************************************************/
+    
+    native UnitAlive takes unit id returns boolean
+    
+    struct SpellIndex
+        //*  implement your Alloc module here.
+    
+        static constant group GLOBAL_GROUP = bj_lastCreatedGroup 
+        //*  Add or remove struct members you to needs.
+        //*  Units.
+        unit      source
+        unit      target
+        player    user
+        //* Effects.
+        effect    fx
+        ubersplat splat
+        lightning flash
+        //* Timer.
+        timer     clock
+        //*  Damage options.
+        real      damage
+        real      collision
+        //*  Misc.
+        real      time
+        integer   count
+        integer   level
+        integer   phase
+        
+        //*  Conditionally destroy an handle on instance.destroy().
+        //! textmacro SPELL_INDEX_CHECK_MEMBER takes VAR, TYPE
+            if $VAR$ != null then
+                call Destroy$TYPE$($VAR$) 
+                set $VAR$ = null
+            endif 
+        //! endtextmacro
+        
+        method destroy takes nothing returns nothing
+            //! runtextmacro SPELL_INDEX_CHECK_MEMBER(&quot;fx&quot;, &quot;Effect&quot;)
+            //! runtextmacro SPELL_INDEX_CHECK_MEMBER(&quot;splat&quot;, &quot;Ubersplat&quot;)
+            //! runtextmacro SPELL_INDEX_CHECK_MEMBER(&quot;flash&quot;, &quot;Lightning&quot;)
+            set target    = null
+            set clock     = null
+            set source    = null
+            call deallocate()
+        endmethod
+    
+    endstruct
+
+endlibrary</pre></div>
+		
+	</div>
+</div></td></tr></table>
+</div><br />
+<b>Keywords:</b><br />
+Pack, Collection, Simple, Ice Siege, Reaper&#039;s Scyte, Fireball, Chaosflare, Fire, Ice, Death, Necro</p>
+<p>Don't forget to credit the author.</p>

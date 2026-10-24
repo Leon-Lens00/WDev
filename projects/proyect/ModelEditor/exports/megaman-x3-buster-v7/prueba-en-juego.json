@@ -1,0 +1,68 @@
+{
+  "model": {
+    "name": "X3_Buster_Cargado",
+    "category": "A-Buster",
+    "path": "exports/megaman-x3-buster-v7/A-Buster/X3_Buster_Cargado.mdx",
+    "sha256": "09d138bb829c466e4dd7c3420e1ad4e641cc331972877755b4e2f7ca8ee67fd5",
+    "triangles": 2478,
+    "pe2": 11,
+    "ribbons": 1
+  },
+  "fixture": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v7-20261023-073618/X3BusterV7.w3x",
+    "sha256": "84a29552e0404750bd1856eb222b9eee2fe3a5a3ffe154c1806989e716874592",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 31,
+    "models": 2,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "mode": "YDWE single_test, one player, EnableHost0, no LAN",
+  "screen": "DP-1 screen3",
+  "scenarios": [
+    {
+      "scenario": "stand",
+      "frames": 25,
+      "seconds": 5.173155121010495,
+      "identityGuarded": true
+    },
+    {
+      "scenario": "move",
+      "frames": 25,
+      "seconds": 5.295337385992752,
+      "identityGuarded": true
+    },
+    {
+      "scenario": "scale05",
+      "frames": 25,
+      "seconds": 5.191527368995594,
+      "identityGuarded": true
+    },
+    {
+      "scenario": "scale3",
+      "frames": 25,
+      "seconds": 5.472316889994545,
+      "identityGuarded": true
+    },
+    {
+      "scenario": "birth",
+      "frames": 25,
+      "seconds": 5.351367121998919,
+      "identityGuarded": true
+    },
+    {
+      "scenario": "impact",
+      "frames": 25,
+      "seconds": 5.51046171298367,
+      "identityGuarded": true
+    }
+  ],
+  "totalFrames": 150,
+  "observed": "Longer blue tail and continuous pointed blue/cyan front. White core, pink flow and particles remain visible at0.5/2.4/3. Death fades to zero.",
+  "limits": "No multiplayer, stress/FPS or gameplay collision validation. Birth commanded and final state visible; native sampling~0.21s cannot resolve160ms transition fully.",
+  "closure": {
+    "returnCode": 0,
+    "liveOwnedProcesses": 0,
+    "closedBy": "Win+Q, confirmed Salir on owned PID"
+  }
+}

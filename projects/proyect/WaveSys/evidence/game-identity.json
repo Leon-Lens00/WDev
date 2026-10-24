@@ -1,0 +1,26 @@
+[
+  {
+    "pid": 898256,
+    "stat": "13565570",
+    "cmd": "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/pressure-vessel/libexec/steam-runtime-tools-0/srt-bwrap --args 26 /usr/lib/pressure-vessel/from-host/libexec/steam-runtime-tools-0/pv-adverb --prefix=/usr/lib/pressure-vessel/from-host --generate-locales --fd 11 --regenerate-ld.so-cache /var/pressure-vessel/ldso --add-ld.so-path /usr/lib/pressure-vessel/overrides/lib/x86_64-linux-gnu --add-ld.so-path /usr/lib/pressure-vessel/overrides/lib/i386-linux-gnu --set-ld-library-path /usr/lib/pressure-vessel/overrides/lib/x86_64-linux-gnu/aliases:/usr/lib/pressure-vessel/overrides/lib/i386-linux-gnu/aliases --overrides-path /usr/lib/pressure-vessel/overrides --assign-fd=1=3 --assign-fd=2=4 -- /home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton runinprefix C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\68a756b27e3a20bf.w3x -window ",
+    "prefix": null
+  },
+  {
+    "pid": 898317,
+    "stat": "13565656",
+    "cmd": "/usr/lib/pressure-vessel/from-host/libexec/steam-runtime-tools-0/pv-adverb --prefix=/usr/lib/pressure-vessel/from-host --generate-locales --fd 11 --regenerate-ld.so-cache /var/pressure-vessel/ldso --add-ld.so-path /usr/lib/pressure-vessel/overrides/lib/x86_64-linux-gnu --add-ld.so-path /usr/lib/pressure-vessel/overrides/lib/i386-linux-gnu --set-ld-library-path /usr/lib/pressure-vessel/overrides/lib/x86_64-linux-gnu/aliases:/usr/lib/pressure-vessel/overrides/lib/i386-linux-gnu/aliases --overrides-path /usr/lib/pressure-vessel/overrides --assign-fd=1=3 --assign-fd=2=4 -- /home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton runinprefix C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\68a756b27e3a20bf.w3x -window ",
+    "prefix": null
+  },
+  {
+    "pid": 898350,
+    "stat": "13565679",
+    "cmd": "python3 /home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton runinprefix C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\68a756b27e3a20bf.w3x -window ",
+    "prefix": null
+  },
+  {
+    "pid": 898351,
+    "stat": "13565692",
+    "cmd": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\68a756b27e3a20bf.w3x -window                                                                                                                                                                                                                                     ",
+    "prefix": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/"
+  }
+]

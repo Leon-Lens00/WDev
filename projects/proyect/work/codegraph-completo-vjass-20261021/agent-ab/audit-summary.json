@@ -1,0 +1,79 @@
+{
+  "summary": [
+    {
+      "repo": "large-nestharus",
+      "with": {
+        "runs": 6,
+        "mean_seconds": 31.790960429999057,
+        "median_seconds": 29.46125828649747,
+        "source_read_grep_commands": 0,
+        "all_commands": 0,
+        "mcp_calls": 13,
+        "failed_mcp": 0,
+        "mean_input_output_tokens": 96407.5
+      },
+      "without": {
+        "runs": 6,
+        "mean_seconds": 32.48595408699839,
+        "median_seconds": 31.64457786750063,
+        "source_read_grep_commands": 22,
+        "all_commands": 27,
+        "mcp_calls": 0,
+        "failed_mcp": 0,
+        "mean_input_output_tokens": 117897.33333333333
+      }
+    },
+    {
+      "repo": "medium-jassjass",
+      "with": {
+        "runs": 6,
+        "mean_seconds": 24.61117943183126,
+        "median_seconds": 24.712637878998066,
+        "source_read_grep_commands": 0,
+        "all_commands": 1,
+        "mcp_calls": 11,
+        "failed_mcp": 0,
+        "mean_input_output_tokens": 78127.83333333333
+      },
+      "without": {
+        "runs": 6,
+        "mean_seconds": 29.99638361650189,
+        "median_seconds": 30.702741383502143,
+        "source_read_grep_commands": 23,
+        "all_commands": 28,
+        "mcp_calls": 0,
+        "failed_mcp": 0,
+        "mean_input_output_tokens": 128617.83333333333
+      }
+    },
+    {
+      "repo": "small-noise",
+      "with": {
+        "runs": 6,
+        "mean_seconds": 27.151203042333993,
+        "median_seconds": 27.648424394999893,
+        "source_read_grep_commands": 0,
+        "all_commands": 1,
+        "mcp_calls": 8,
+        "failed_mcp": 0,
+        "mean_input_output_tokens": 70621.16666666667
+      },
+      "without": {
+        "runs": 6,
+        "mean_seconds": 27.054428996832332,
+        "median_seconds": 27.135494863498025,
+        "source_read_grep_commands": 11,
+        "all_commands": 17,
+        "mcp_calls": 0,
+        "failed_mcp": 0,
+        "mean_input_output_tokens": 74715.83333333333
+      }
+    }
+  ],
+  "all_sessions_unique": true,
+  "all_exit_zero": true,
+  "all_sources_unchanged": true,
+  "all_answers_names_and_citations": true,
+  "forbidden_actual": 0,
+  "method": "project-policy Codex A/B; provider differs from upstream Claude; 2 repetitions, not a statistical guarantee"
+}

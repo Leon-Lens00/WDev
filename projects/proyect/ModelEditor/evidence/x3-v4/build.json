@@ -1,0 +1,80 @@
+{
+  "target": "Classic1.27b MDX800",
+  "revision": "V4 compact crescent/white core/differentiated trails",
+  "worldTrajectory": false,
+  "referenceStudy": "study/all-models.json",
+  "entries": [
+    {
+      "name": "X3_Buster_Cargado",
+      "category": "A-Buster",
+      "path": "exports/megaman-x3-buster-v4/A-Buster/X3_Buster_Cargado.mdx",
+      "sha256": "6473fcb228569f7d575c4af0c813a7f3d862b4f46a0327201f63bc6d8477f6c3",
+      "triangles": 5412,
+      "pe2": 5,
+      "ribbons": 2
+    },
+    {
+      "name": "X3_Orbe_Verde",
+      "category": "B-Orbes-individuales/Verde",
+      "path": "exports/megaman-x3-buster-v4/B-Orbes-individuales/Verde/X3_Orbe_Verde.mdx",
+      "sha256": "4c76149bb104ac7208cc90d35594287145503b63f8f0f358567f6660ab066939",
+      "triangles": 708,
+      "pe2": 4,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Orbe_Naranja",
+      "category": "B-Orbes-individuales/Naranja",
+      "path": "exports/megaman-x3-buster-v4/B-Orbes-individuales/Naranja/X3_Orbe_Naranja.mdx",
+      "sha256": "8f124d069917d358a94d6bdcf6fd1601246d01fed4eea84e24384b0dad9b5447",
+      "triangles": 708,
+      "pe2": 4,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Orbe_Cian",
+      "category": "B-Orbes-individuales/Cian",
+      "path": "exports/megaman-x3-buster-v4/B-Orbes-individuales/Cian/X3_Orbe_Cian.mdx",
+      "sha256": "b33c0790da50ba4626e55885e451ea7e129774c6a94698971ef2e51a97b5f136",
+      "triangles": 708,
+      "pe2": 4,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Grupo_Orbital",
+      "category": "B-Grupo-visual",
+      "path": "exports/megaman-x3-buster-v4/B-Grupo-visual/X3_Grupo_Orbital.mdx",
+      "sha256": "18fa8f92dc99940b650b6a3ea4eb2bdb6542dfaae33cba1051d9ec8022016207",
+      "triangles": 1416,
+      "pe2": 8,
+      "ribbons": 2
+    },
+    {
+      "name": "X3_Cross_Buster",
+      "category": "C-Buster-fusionado",
+      "path": "exports/megaman-x3-buster-v4/C-Buster-fusionado/X3_Cross_Buster.mdx",
+      "sha256": "c678c40752ad03ac455c7ed526ea4d4089c6b8f9cb38e207dc3a4180f9cd4a3e",
+      "triangles": 6366,
+      "pe2": 7,
+      "ribbons": 2
+    },
+    {
+      "name": "X3_Conjunto_Fusionado",
+      "category": "C-Grupo-visual",
+      "path": "exports/megaman-x3-buster-v4/C-Grupo-visual/X3_Conjunto_Fusionado.mdx",
+      "sha256": "f2e3fe09c03650ed7cc7d0f14aef958790612760d85f741c7b3c4caa4d9df9a0",
+      "triangles": 9198,
+      "pe2": 23,
+      "ribbons": 6
+    },
+    {
+      "name": "X3_Flash_Union",
+      "category": "C-Flash-union",
+      "path": "exports/megaman-x3-buster-v4/C-Flash-union/X3_Flash_Union.mdx",
+      "sha256": "64f52c329b786467da581c95a9a61fe64971f876b0b33f1e7c2a3d011b32067c",
+      "triangles": 774,
+      "pe2": 3,
+      "ribbons": 0
+    }
+  ]
+}

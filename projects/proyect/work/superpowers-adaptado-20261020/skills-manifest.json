@@ -1,0 +1,78 @@
+[
+  {
+    "skill": "systematic-debugging",
+    "path": "/home/snz/.codex/skills/systematic-debugging",
+    "files": [
+      {
+        "path": "LICENSE",
+        "bytes": 1070,
+        "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+      },
+      {
+        "path": "SKILL.md",
+        "bytes": 4606,
+        "sha256": "ca616f5558c832f499039193b3c86df3d03e185198adcf53f06b738db3ab61ba"
+      },
+      {
+        "path": "agents/openai.yaml",
+        "bytes": 275,
+        "sha256": "79f6fbca6464c4b1344b3d864c3c187658a6e83f3ab5bd3b931abb69d51a9f68"
+      },
+      {
+        "path": "references/provenance.json",
+        "bytes": 1861,
+        "sha256": "37a6d2b84adadb41b8bf69812ae11ec5df4255cf368754f86b2fe31d1c9ada49"
+      },
+      {
+        "path": "references/trazado-y-esperas.md",
+        "bytes": 2105,
+        "sha256": "7f86d6f3a95cbbbea0c6e8a940f87144e990d8f171c5320c68192b3bcbe2114b"
+      },
+      {
+        "path": "references/warcraft-127b.md",
+        "bytes": 2911,
+        "sha256": "fa7c5990c80d482ae9862069473f9bae35cb9398b256419524b5f826b31ce3ee"
+      }
+    ],
+    "local_file_links_checked": 5,
+    "mode": "native skill discovery, default implicit invocation"
+  },
+  {
+    "skill": "writing-plans",
+    "path": "/home/snz/.codex/skills/writing-plans",
+    "files": [
+      {
+        "path": "LICENSE",
+        "bytes": 1070,
+        "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400"
+      },
+      {
+        "path": "SKILL.md",
+        "bytes": 4865,
+        "sha256": "e41b870ea6fd31a2f19f4c51e2cda9b3d6bc378a7f5af0d1c495586b3442c788"
+      },
+      {
+        "path": "agents/openai.yaml",
+        "bytes": 268,
+        "sha256": "38d7e94d920e0ff7909d89d35bc66d0d5336fdcd7c96872396f9cb016fc0bcb2"
+      },
+      {
+        "path": "assets/plan-template.md",
+        "bytes": 1216,
+        "sha256": "ce01d54bc645d25617d7576c3e845674a36b075d3240a70e9c70143564dd6c1b"
+      },
+      {
+        "path": "references/provenance.json",
+        "bytes": 954,
+        "sha256": "9d5e713ba39a3ee38510799ecd3e74a706d203ba8b70938d0439ea57df4ad444"
+      },
+      {
+        "path": "references/warcraft-y-continuidad.md",
+        "bytes": 3784,
+        "sha256": "5a074f328147ce9b2b442326d3b4145d114d3aad051d1eb656591ac8082a401e"
+      }
+    ],
+    "local_file_links_checked": 5,
+    "mode": "native skill discovery, default implicit invocation"
+  }
+]

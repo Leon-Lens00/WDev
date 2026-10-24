@@ -1,0 +1,521 @@
+{
+  "fresh141": {
+    "version": 1,
+    "trigger_count": 47,
+    "source_count": 42,
+    "sources": [
+      {
+        "index": 0,
+        "name": "StartGame",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/000-StartGame.j",
+        "sha256": "f3404463149e79ebb653e8e5be994704144976228e1c3b26547c90c9a4a5269f"
+      },
+      {
+        "index": 1,
+        "name": "InventoryCore",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/001-InventoryCore.j",
+        "sha256": "ebf08e6301f797d7e1ab6b44c070a3af65df21123369c7d50906b4d0c67bbf00"
+      },
+      {
+        "index": 2,
+        "name": "InventoryItem",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/002-InventoryItem.j",
+        "sha256": "6b9642bf454da250b649c92b3aa78e318d4162de89db6f4601f9a0a93fcaf3d6"
+      },
+      {
+        "index": 3,
+        "name": "InventoryPlugins",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/003-InventoryPlugins.j",
+        "sha256": "417b9601e177016a6055bd6d9d817ffa6ca692da6f6343b34b28c863a1ce914c"
+      },
+      {
+        "index": 4,
+        "name": "InventoryTooltip",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/004-InventoryTooltip.j",
+        "sha256": "3c776b2b6adea4cd1694ee0eb50ca6493dd42140fa8160e83bac0b7bae508732"
+      },
+      {
+        "index": 5,
+        "name": "InventoryBonuses",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/005-InventoryBonuses.j",
+        "sha256": "a7a98754294e58fdce7de68a92b9894c2e8dd2a4b172c3de63d9676e5da31579"
+      },
+      {
+        "index": 6,
+        "name": "trigger",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/006-trigger.j",
+        "sha256": "5f390858634f9b19e95ae09fbbec30a998de6d6e10d26e9643e00721789a5f66"
+      },
+      {
+        "index": 8,
+        "name": "EquipmentCore",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/008-EquipmentCore.j",
+        "sha256": "ae5369929f38aefab36cac12904f6855c0759e96c7105e06383018451292f3a3"
+      },
+      {
+        "index": 9,
+        "name": "EquipmentItem",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/009-EquipmentItem.j",
+        "sha256": "b44ebe6d6cdb0c3052096e1a68ab5acb20fa6546429c46ee58ed305ae4d65691"
+      },
+      {
+        "index": 10,
+        "name": "EquipmentSockets",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/010-EquipmentSockets.j",
+        "sha256": "8eb4cd6d298f61c96b895d4d654785f6331c1f499d1b82f63566b7ed0330b012"
+      },
+      {
+        "index": 11,
+        "name": "EquipHeroModels",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/011-EquipHeroModels.j",
+        "sha256": "91155657c48a297ce5469f5713d4a6c103fd655d3c7b45add3ecf2e9391109ea"
+      },
+      {
+        "index": 12,
+        "name": "EquipItemParser",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/012-EquipItemParser.j",
+        "sha256": "3983dd35cf115ec4a19de370f305a229f71be328fd136eb0c1d0bc3cc9b34fca"
+      },
+      {
+        "index": 14,
+        "name": "InvItemSetups",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/014-InvItemSetups.j",
+        "sha256": "ba639da53d72956328277e8662f285ab7827353e02abb994a226fc77872b38f7"
+      },
+      {
+        "index": 15,
+        "name": "trigger",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/015-trigger.j",
+        "sha256": "8a673664a78e234d866335300e090fafb57f656698028bd5bcc49e13802b37a9"
+      },
+      {
+        "index": 16,
+        "name": "trigger",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/016-trigger.j",
+        "sha256": "6d752aa77e8b2ef9766e2f142e1e8c361153728988bce90dfb54cb2d0349d5dd"
+      },
+      {
+        "index": 17,
+        "name": "AcquireItem",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/017-AcquireItem.j",
+        "sha256": "37bc6674075c6238a5074b1a32632f351e26341a96f401e2d4561889ba33c57e"
+      },
+      {
+        "index": 18,
+        "name": "EquipItem",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/018-EquipItem.j",
+        "sha256": "c644d4619513fc123c28ce4e3c26358938abfa6f8c7fa17c987bf33cc8d26e0c"
+      },
+      {
+        "index": 19,
+        "name": "UnequipItem",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/019-UnequipItem.j",
+        "sha256": "55da45824702705eac691a4018af743ca506ed16b1efa3916cb7991cfd3000dc"
+      },
+      {
+        "index": 20,
+        "name": "SellItem",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/020-SellItem.j",
+        "sha256": "338610643d9d78bec00345b2f190b395055ae6b48abbb336f6db8245aa86e166"
+      },
+      {
+        "index": 21,
+        "name": "DropItem",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/021-DropItem.j",
+        "sha256": "4945047c6e117b3bbf5a3a9918a2daeadb8e196347e7848318f43fccec90420b"
+      },
+      {
+        "index": 22,
+        "name": "SocketItem",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/022-SocketItem.j",
+        "sha256": "3a1d9e0e223cb78b3f4eb5d5d8f19a87ab219bd80654159e903ce1850889f116"
+      },
+      {
+        "index": 23,
+        "name": "HideInventory",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/023-HideInventory.j",
+        "sha256": "978c35cc0079d06266ab45958af6cc3f66848aa0acb3844418632cb3920f5a50"
+      },
+      {
+        "index": 24,
+        "name": "YesNoDialog",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/024-YesNoDialog.j",
+        "sha256": "8205a0df0c965b1661eda1c204be83158b504949a5b0ba908b21c04d2e513da6"
+      },
+      {
+        "index": 25,
+        "name": "UserInterface",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/025-UserInterface.j",
+        "sha256": "a167dc43e6ba4522ca9444849646021e038fa642dab3540359c83b743afa8b27"
+      },
+      {
+        "index": 27,
+        "name": "UnitDex",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/027-UnitDex.j",
+        "sha256": "fce553569be95f4d2356158b45db0aba7fdada93e4558348a075c88e39f4475a"
+      },
+      {
+        "index": 28,
+        "name": "PlayerUtils",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/028-PlayerUtils.j",
+        "sha256": "ccecc594e26b897e421936e2fa64bac26e07fcd56a80b07d42b053918499e933"
+      },
+      {
+        "index": 29,
+        "name": "Camera",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/029-Camera.j",
+        "sha256": "296c37079ab1f7d106899fb7439e427d98bbdffc76dd94387d3dc5a0589caf69"
+      },
+      {
+        "index": 30,
+        "name": "UIMath",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/030-UIMath.j",
+        "sha256": "09af17982f6e257ce463649f687fdfc84bf5fb86deed568c8b6c0ca88ee7cf65"
+      },
+      {
+        "index": 32,
+        "name": "TimerUtils",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/032-TimerUtils.j",
+        "sha256": "6783c7a74100e9cf18fc007e5aea26b0649aaa73c01f41c1a9c4bb3bbe88216e"
+      },
+      {
+        "index": 33,
+        "name": "Table",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/033-Table.j",
+        "sha256": "211500f4b1057ba7a94f0cf83dcc026857aa80785119ae4e8f5f1b5a0a93e45d"
+      },
+      {
+        "index": 35,
+        "name": "SimError",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/035-SimError.j",
+        "sha256": "ab04e75ef12b84eb00af4b74ae9da5de92b5dee6732e8d1a1a7678d97efb23a1"
+      },
+      {
+        "index": 36,
+        "name": "BoundSentinel",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/036-BoundSentinel.j",
+        "sha256": "eba19e17cba62794920204ae25b7fc30804fb88c4251447d22bdb960be55e41d"
+      },
+      {
+        "index": 37,
+        "name": "BonusMod",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/037-BonusMod.j",
+        "sha256": "25f51ec4f39cd6e166ba834b93c09f5b2a926e0f2ac67dcb5a051f726dff3b90"
+      },
+      {
+        "index": 38,
+        "name": "RegenBonuses",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/038-RegenBonuses.j",
+        "sha256": "745218b65f46edf2152a9a339fe28fdb61ed18dafdf4ab490b346f5273e7a25e"
+      },
+      {
+        "index": 39,
+        "name": "UnitMaxStateBonuses",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/039-UnitMaxStateBonuses.j",
+        "sha256": "c01808973bc98bdebd10f7a0d8b578814d5cd6c176272c06d0b2212f1eba3e07"
+      },
+      {
+        "index": 40,
+        "name": "MovementBonus",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/040-MovementBonus.j",
+        "sha256": "b007274741ce5f2d6cdfeb72111c1569642a6fe48bdb64e70385059aa7ee60ed"
+      },
+      {
+        "index": 41,
+        "name": "UnitMaxState",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/041-UnitMaxState.j",
+        "sha256": "159a330d2801dfffa7a71482f0de5187e7e43a6f6799b81c676cd1728c4fe862"
+      },
+      {
+        "index": 42,
+        "name": "AutoIndex",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/042-AutoIndex.j",
+        "sha256": "aca7cc85fb959497dd7a94d6859d90432f5184ccf82967eda45c9188b79ac38f"
+      },
+      {
+        "index": 43,
+        "name": "AutoIndex",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/043-AutoIndex.j",
+        "sha256": "836d44d23fc9802656a5b24e81c5683e1c48b8c369d7934b91b815692d8bbcea"
+      },
+      {
+        "index": 44,
+        "name": "xebasic",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/044-xebasic.j",
+        "sha256": "31eaeeeed47027c4711745a441c2aeddb9b1dcff8062ace893364eec1239bfd7"
+      },
+      {
+        "index": 45,
+        "name": "xepreload",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/045-xepreload.j",
+        "sha256": "73e38cb822ee5159b88baa0d1076038abb139fd02476e9e83f283b5102e017e1"
+      },
+      {
+        "index": 46,
+        "name": "AbilityPreload",
+        "path": "work/inventory-original-audit-20261022/fresh141/sources/046-AbilityPreload.j",
+        "sha256": "78b36eb4fe04bb03e42cb667d72128d3a5141dbe24a936a29c8b6e00802b65cd"
+      }
+    ]
+  },
+  "old_source_demo_differences": [],
+  "fresh143": {
+    "version": 1,
+    "trigger_count": 47,
+    "source_count": 42,
+    "sources": [
+      {
+        "index": 0,
+        "name": "StartGame",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/000-StartGame.j",
+        "sha256": "f3404463149e79ebb653e8e5be994704144976228e1c3b26547c90c9a4a5269f"
+      },
+      {
+        "index": 1,
+        "name": "InventoryCore",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/001-InventoryCore.j",
+        "sha256": "69ee8bbe709f19090c996237a549fc06eaa7c9837073d3b05b2d52df43c4f3d9"
+      },
+      {
+        "index": 2,
+        "name": "InventoryItem",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/002-InventoryItem.j",
+        "sha256": "6b9642bf454da250b649c92b3aa78e318d4162de89db6f4601f9a0a93fcaf3d6"
+      },
+      {
+        "index": 3,
+        "name": "InventoryPlugins",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/003-InventoryPlugins.j",
+        "sha256": "417b9601e177016a6055bd6d9d817ffa6ca692da6f6343b34b28c863a1ce914c"
+      },
+      {
+        "index": 4,
+        "name": "InventoryTooltip",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/004-InventoryTooltip.j",
+        "sha256": "08dc8fd7b3d8c5e58f4d27253c0760761f1f9778b1e75c96a47ac900a2c4be84"
+      },
+      {
+        "index": 5,
+        "name": "InventoryBonuses",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/005-InventoryBonuses.j",
+        "sha256": "a7a98754294e58fdce7de68a92b9894c2e8dd2a4b172c3de63d9676e5da31579"
+      },
+      {
+        "index": 6,
+        "name": "trigger",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/006-trigger.j",
+        "sha256": "5f390858634f9b19e95ae09fbbec30a998de6d6e10d26e9643e00721789a5f66"
+      },
+      {
+        "index": 8,
+        "name": "EquipmentCore",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/008-EquipmentCore.j",
+        "sha256": "61a34b8706936e4868bfa0747c3ccf8c497a9593a6a6f9d6fef987f338fcfa76"
+      },
+      {
+        "index": 9,
+        "name": "EquipmentItem",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/009-EquipmentItem.j",
+        "sha256": "0ac0ae52fa61c071b6da4edc878c4f4889d9a360ff192c1a036b7025a2d952f1"
+      },
+      {
+        "index": 10,
+        "name": "EquipmentSockets",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/010-EquipmentSockets.j",
+        "sha256": "8eb4cd6d298f61c96b895d4d654785f6331c1f499d1b82f63566b7ed0330b012"
+      },
+      {
+        "index": 11,
+        "name": "EquipHeroModels",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/011-EquipHeroModels.j",
+        "sha256": "91155657c48a297ce5469f5713d4a6c103fd655d3c7b45add3ecf2e9391109ea"
+      },
+      {
+        "index": 12,
+        "name": "EquipItemParser",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/012-EquipItemParser.j",
+        "sha256": "3983dd35cf115ec4a19de370f305a229f71be328fd136eb0c1d0bc3cc9b34fca"
+      },
+      {
+        "index": 14,
+        "name": "InvItemSetups",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/014-InvItemSetups.j",
+        "sha256": "b88eebc6dc0c5ca7c8f67669287b3c7026fed883deb83a0096f35dd182a3cc24"
+      },
+      {
+        "index": 15,
+        "name": "trigger",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/015-trigger.j",
+        "sha256": "8a673664a78e234d866335300e090fafb57f656698028bd5bcc49e13802b37a9"
+      },
+      {
+        "index": 16,
+        "name": "trigger",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/016-trigger.j",
+        "sha256": "6d752aa77e8b2ef9766e2f142e1e8c361153728988bce90dfb54cb2d0349d5dd"
+      },
+      {
+        "index": 17,
+        "name": "AcquireItem",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/017-AcquireItem.j",
+        "sha256": "37bc6674075c6238a5074b1a32632f351e26341a96f401e2d4561889ba33c57e"
+      },
+      {
+        "index": 18,
+        "name": "EquipItem",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/018-EquipItem.j",
+        "sha256": "c644d4619513fc123c28ce4e3c26358938abfa6f8c7fa17c987bf33cc8d26e0c"
+      },
+      {
+        "index": 19,
+        "name": "UnequipItem",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/019-UnequipItem.j",
+        "sha256": "55da45824702705eac691a4018af743ca506ed16b1efa3916cb7991cfd3000dc"
+      },
+      {
+        "index": 20,
+        "name": "SellItem",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/020-SellItem.j",
+        "sha256": "338610643d9d78bec00345b2f190b395055ae6b48abbb336f6db8245aa86e166"
+      },
+      {
+        "index": 21,
+        "name": "DropItem",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/021-DropItem.j",
+        "sha256": "4945047c6e117b3bbf5a3a9918a2daeadb8e196347e7848318f43fccec90420b"
+      },
+      {
+        "index": 22,
+        "name": "SocketItem",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/022-SocketItem.j",
+        "sha256": "175385b2ff3e101b91ae87f7b757b3ca4ce2ffa1eccdc7028eb4735f9af3b4c3"
+      },
+      {
+        "index": 23,
+        "name": "HideInventory",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/023-HideInventory.j",
+        "sha256": "978c35cc0079d06266ab45958af6cc3f66848aa0acb3844418632cb3920f5a50"
+      },
+      {
+        "index": 24,
+        "name": "YesNoDialog",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/024-YesNoDialog.j",
+        "sha256": "8205a0df0c965b1661eda1c204be83158b504949a5b0ba908b21c04d2e513da6"
+      },
+      {
+        "index": 25,
+        "name": "UserInterface",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/025-UserInterface.j",
+        "sha256": "a167dc43e6ba4522ca9444849646021e038fa642dab3540359c83b743afa8b27"
+      },
+      {
+        "index": 27,
+        "name": "UnitDex",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/027-UnitDex.j",
+        "sha256": "fce553569be95f4d2356158b45db0aba7fdada93e4558348a075c88e39f4475a"
+      },
+      {
+        "index": 28,
+        "name": "PlayerUtils",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/028-PlayerUtils.j",
+        "sha256": "ccecc594e26b897e421936e2fa64bac26e07fcd56a80b07d42b053918499e933"
+      },
+      {
+        "index": 29,
+        "name": "Camera",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/029-Camera.j",
+        "sha256": "296c37079ab1f7d106899fb7439e427d98bbdffc76dd94387d3dc5a0589caf69"
+      },
+      {
+        "index": 30,
+        "name": "UIMath",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/030-UIMath.j",
+        "sha256": "09af17982f6e257ce463649f687fdfc84bf5fb86deed568c8b6c0ca88ee7cf65"
+      },
+      {
+        "index": 32,
+        "name": "TimerUtils",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/032-TimerUtils.j",
+        "sha256": "6783c7a74100e9cf18fc007e5aea26b0649aaa73c01f41c1a9c4bb3bbe88216e"
+      },
+      {
+        "index": 33,
+        "name": "Table",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/033-Table.j",
+        "sha256": "211500f4b1057ba7a94f0cf83dcc026857aa80785119ae4e8f5f1b5a0a93e45d"
+      },
+      {
+        "index": 35,
+        "name": "SimError",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/035-SimError.j",
+        "sha256": "ab04e75ef12b84eb00af4b74ae9da5de92b5dee6732e8d1a1a7678d97efb23a1"
+      },
+      {
+        "index": 36,
+        "name": "BoundSentinel",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/036-BoundSentinel.j",
+        "sha256": "eba19e17cba62794920204ae25b7fc30804fb88c4251447d22bdb960be55e41d"
+      },
+      {
+        "index": 37,
+        "name": "BonusMod",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/037-BonusMod.j",
+        "sha256": "25f51ec4f39cd6e166ba834b93c09f5b2a926e0f2ac67dcb5a051f726dff3b90"
+      },
+      {
+        "index": 38,
+        "name": "RegenBonuses",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/038-RegenBonuses.j",
+        "sha256": "745218b65f46edf2152a9a339fe28fdb61ed18dafdf4ab490b346f5273e7a25e"
+      },
+      {
+        "index": 39,
+        "name": "UnitMaxStateBonuses",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/039-UnitMaxStateBonuses.j",
+        "sha256": "c01808973bc98bdebd10f7a0d8b578814d5cd6c176272c06d0b2212f1eba3e07"
+      },
+      {
+        "index": 40,
+        "name": "MovementBonus",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/040-MovementBonus.j",
+        "sha256": "b007274741ce5f2d6cdfeb72111c1569642a6fe48bdb64e70385059aa7ee60ed"
+      },
+      {
+        "index": 41,
+        "name": "UnitMaxState",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/041-UnitMaxState.j",
+        "sha256": "159a330d2801dfffa7a71482f0de5187e7e43a6f6799b81c676cd1728c4fe862"
+      },
+      {
+        "index": 42,
+        "name": "AutoIndex",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/042-AutoIndex.j",
+        "sha256": "aca7cc85fb959497dd7a94d6859d90432f5184ccf82967eda45c9188b79ac38f"
+      },
+      {
+        "index": 43,
+        "name": "AutoIndex",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/043-AutoIndex.j",
+        "sha256": "836d44d23fc9802656a5b24e81c5683e1c48b8c369d7934b91b815692d8bbcea"
+      },
+      {
+        "index": 44,
+        "name": "xebasic",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/044-xebasic.j",
+        "sha256": "31eaeeeed47027c4711745a441c2aeddb9b1dcff8062ace893364eec1239bfd7"
+      },
+      {
+        "index": 45,
+        "name": "xepreload",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/045-xepreload.j",
+        "sha256": "73e38cb822ee5159b88baa0d1076038abb139fd02476e9e83f283b5102e017e1"
+      },
+      {
+        "index": 46,
+        "name": "AbilityPreload",
+        "path": "work/inventory-original-audit-20261022/fresh143/sources/046-AbilityPreload.j",
+        "sha256": "78b36eb4fe04bb03e42cb667d72128d3a5141dbe24a936a29c8b6e00802b65cd"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "python_tests": {
+    "total": 36,
+    "wc3lint_tests": 13,
+    "exit": 0,
+    "command": "python3 -m unittest discover -s /home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/tests -v"
+  },
+  "go_tests": {
+    "total": 13,
+    "exit": 0,
+    "packages": [
+      "./internal/jassgraph",
+      "./cmd/jassgraph"
+    ]
+  },
+  "go_vet_exit": 0,
+  "go_build_exit": 0,
+  "skill_quick_validate": "Skill is valid!",
+  "versions": {
+    "/home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/wc3lint.py": "f181361c350a5c91eb88d99d1c4a9e07558b5fdc700b83ae0ca712fcd1e2b8de",
+    "/home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/tests/test_wc3lint.py": "02fd3a7999e62547577d1badf4b43b37197f5d3343ca03bf2201341c4ede13c1",
+    "/home/snz/Documentos/MCP W3/wc3-forge/.tools/jassgraph/wc3-jassgraph": "32a890a312acb6b83030a2b9e05f13894c1c71a0d81de9dd2f227a6b1ccd316d"
+  },
+  "integration_report": "integration-summary.json"
+}

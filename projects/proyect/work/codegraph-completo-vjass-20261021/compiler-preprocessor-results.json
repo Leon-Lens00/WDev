@@ -1,0 +1,86 @@
+[
+  {
+    "case": "macro-module",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-_utp42ku",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "d1f64d9fda8c36f8e12f122c4017700f36f4c8e6463c7475dd96c9044a239ed4",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "escaped",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-ft_or9mt",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "3bec08c4c78019e4cac9cff30581398f42903d7634b502a96e56362b7b38a842",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "private",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-zwymopdo",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "8c38173b5ba3d1eb69721e5a3d5c488bc546543fc8440f75c5c3c9ac040fa616",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "macro-in-module",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-4d6ph18h",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "9b294ecc21f4a60c6d1f3bafee9c5b0b4ed950ea6a9cf938a1097bc321d930df",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "once",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-q3175vrf",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "8f4d6b9242844a612dd3fc0468810f96edc443b4d789ca71b607605461d35ada",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "nested-macro",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-sltkuh9r",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "7052b4966f83609a3717ecd031392bb1e033211616c437b106edf820befa079e",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 1 (textmacros, libraries, scopes)\nLine 6: [] runtextmacro inside a textmacro is not allowed\nLine 5: [] `--- textmacro began here\n1\n"
+  }
+]

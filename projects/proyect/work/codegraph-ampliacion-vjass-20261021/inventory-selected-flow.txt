@@ -1,0 +1,454 @@
+> JASS/vJASS local support: structural/static subset. Bounded macro/module projections and indexed-file import links; generated members anchor to invocation source, not expanded bodies. Computed dispatch and other unmodeled cases remain unresolved; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+> src/Inventory_08_Equipment.j:10: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> src/Inventory_08_Equipment.j:69: Index operator dispatch is not resolved.
+> src/Inventory_08_Equipment.j:101: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> src/Inventory_08_Equipment.j:102: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> src/Inventory_08_Equipment.j:104: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> src/Inventory_08_Equipment.j:129: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> 344 more extraction diagnostics in these files.
+
+**Additional graph links among your symbols**
+(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)
+
+- InventoryCore → LClickItemSlot   [contains]
+- Init → LClickItemSlot   [static JASS: references]
+- LClickItemSlot → GetTriggerButton   [static JASS: calls]
+- LClickItemSlot → DisableButtonIfUsingTimer   [static JASS: calls]
+- LClickItemSlot → GetItemDescription   [static JASS: calls]
+- LClickItemSlot → GetItemIcon   [static JASS: calls]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: InventoryCore.LClickItemSlot InventoryCore.Inventory.setTooltipTitle**
+
+Found 113 symbols across 4 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `LClickItemSlot` (src/Inventory_01_Inventory.j:474) — 1 caller in `src/Inventory_01_Inventory.j`; no tests found within 3 caller hops
+- `setTooltipTitle` (src/Inventory_01_Inventory.j:275) — 3 callers in `src/Inventory_01_Inventory.j`, `src/Inventory_08_Equipment.j`, `src/Inventory_22_Socket_Item.j`; no tests found within 3 caller hops
+- `OnInventoryItemClick` (src/Inventory_08_Equipment.j:403) — 1 caller in `src/Inventory_08_Equipment.j`; no tests found within 3 caller hops
+- `OnInventoryItemRightClick` (src/Inventory_08_Equipment.j:449) — 1 caller in `src/Inventory_08_Equipment.j`; no tests found within 3 caller hops
+- `LClickItemSlot` (src/Inventory_08_Equipment.j:526) — 1 caller in `src/Inventory_08_Equipment.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`src/Inventory_01_Inventory.j`** — getItem(calls), getItemId(calls), show(calls), setItem(calls), localInt(calls), +71 more
+
+```jass
+272	            endloop
+273	        endmethod
+274	        
+275	        implement InvPlugins
+276	        
+277	        static method create takes unit owner returns thistype
+278	            local thistype this = thistype.allocate()
+
+... (gap) ...
+
+393	                endif
+394	                
+395	                if (PlayerCurrent[this.pid] > 0 and PlayerCurrent[this.pid] != this) then
+396	                    call PlayerCurrent[this.pid].show(false, cam)
+397	                endif
+398	                
+399	                set PlayerCurrent[this.pid] = this
+400	
+401	                call PauseTimer(.UpdateTimer)
+402	                call TimerStart(.UpdateTimer, UI_REFRESH_RATE, true, function thistype.onDisplay)
+403	            else
+404	                set .DisplayCount = .DisplayCount - 1
+405	                
+406	                if (DisplayCount == 0) then
+407	                    call PauseTimer(.UpdateTimer)
+408	                else
+409	                    call TimerStart(.UpdateTimer, UI_REFRESH_RATE, true, function thistype.onDisplay)
+410	                endif
+411	                
+412	                if (User.LocalId == this.pid) then
+
+... (gap) ...
+
+455	        endmethod*/
+456	    endstruct
+457	    
+458	    public function GracePeriod takes nothing returns nothing
+459	        local timer t = GetExpiredTimer()
+460	        local UIButton but = UIButton(GetTimerData(t))
+461	        
+462	        set InvButtonDisabled[but] = false
+463	        
+464	        call ReleaseTimer(t)
+465	    endfunction
+466	    
+467	    function DisableButtonIfUsingTimer takes UIButton but, real time returns nothing
+468	        static if (Inventory.USE_LEFT_CLICK_TIMER) then
+469	            call TimerStart(NewTimerEx(but), time, false, function GracePeriod)
+470	            set InvButtonDisabled[but] = true
+471	        endif
+472	    endfunction
+473	    
+474	    private function LClickItemSlot takes nothing returns boolean
+475	        local UIButton but = GetTriggerButton()
+476	        local player p = GetClickingPlayer()
+477	        local integer pid = GetPlayerId(p)
+478	        local Inventory inv =  Inventory.PlayerCurrent[pid]
+479	        local integer slot =  but.customValue
+480	        local integer itemId = 0
+481	        local integer icon = 0
+482	        local integer last = InvPlayerLastSlot[inv.pid] - 1
+483	        local integer lastItemId
+484	        local InvItem lastItem
+485	        local UIButton lastButton = InvPlayerLastButton[inv.pid]
+486	
+487	        if (User.Local == p) then
+488	            call SelectUnit(but.picture, false)
+489	            call SelectUnit(inv.owner, true)
+490	        endif
+491	        
+492	        if (InvButtonDisabled[but]) then
+493	            return false
+494	        endif
+495	        
+496	        // sell item
+497	        if (but == Inventory.btnSell[inv.pid]) then
+498	            set last = InvPlayerLastSlot[inv.pid] - 1
+499	            
+500	            if (last < 0) then
+501	                return false 
+502	            endif
+503	            
+504	           if (p != User(inv.pid).handle) then
+505	                return false 
+506	            endif
+507	            
+508	            // run onSell event
+509	            set InvEventPlayer = User(inv.pid).handle
+510	            set InvEventItem = inv.getItem((Inventory.MAX_SLOTS*inv.currentPage)+last)
+511	            set InvEventSlot = (Inventory.MAX_SLOTS*inv.currentPage)+last
+512	            
+513	            if (Inventory.onSell != null and TriggerEvaluate(Inventory.onSell)) then
+514	                call TriggerExecute(Inventory.onSell)
+515	            endif
+516	            
+517	            call DisableButtonIfUsingTimer(but, 2)
+518	            
+519	            return false
+520	        elseif (but == Inventory.btnDrop[inv.pid]) then
+521	            set last = InvPlayerLastSlot[inv.pid] - 1
+522	            
+523	            if (last < 0) then
+524	                return false 
+525	            endif
+526	            
+527	           if (p != User(inv.pid).handle) then
+528	                return false 
+529	            endif
+530	            
+531	            // run onSell event
+532	            set InvEventPlayer = User(inv.pid).handle
+533	            set InvEventItem = inv.getItem((Inventory.MAX_SLOTS*inv.currentPage)+last)
+534	            set InvEventSlot = (Inventory.MAX_SLOTS*inv.currentPage)+last
+535	            
+536	            if (Inventory.onDrop != null and TriggerEvaluate(Inventory.onDrop)) then
+537	                call TriggerExecute(Inventory.onDrop)
+538	                return false
+539	            endif
+540	            
+541	            call DisableButtonIfUsingTimer(but, 2)
+542	        elseif (but == Inventory.btnPageDown[inv.pid]) then
+543	           if (p != User(inv.pid).handle) then
+544	                return false
+545	            endif
+546	        
+547	            set inv.currentPage = inv.currentPage + 1
+548	            call inv.show(true, inv.camera)
+549	            call DisableButtonIfUsingTimer(but, .6)
+550	            return false
+551	        elseif (but == Inventory.btnPageUp[inv.pid]) then
+552	           if (p != User(inv.pid).handle) then
+553	                return false
+554	            endif
+555	            
+556	            set inv.currentPage = inv.currentPage - 1
+557	            call inv.show(true, inv.camera)
+558	            call DisableButtonIfUsingTimer(but, .6)
+559	            return false
+560	        else
+561	            call Inventory.selector[inv.pid].show(true, inv.camera)
+562	            call Inventory.selector[pid].setPosition(but.centerx - 0.004, but.centery + 0.0262)
+563	            call Inventory.selector[pid].showPlayer(Player(pid), true, inv.camera)
+564	        endif
+565	
+566	        if (p != User(inv.pid).handle) then
+567	            return false
+568	        endif
+569	        
+570	        if (last + 1 != slot) then
+571	            call inv.showLines(inv.pid, false, inv.camera)
+572	        endif
+573	        
+574	        call TriggerExecute(Inventory.ExecL)
+575	        
+576	        // get item in slot
+577	        set itemId = inv.getItem((Inventory.MAX_SLOTS*inv.currentPage)+slot).id
+578	        
+579	         // check for switch
+580	        if (last+1 != 0) then
+581	
+582	            call SetUnitVertexColor(lastButton.picture, 255, 255, 255, 255)
+583	            call SetUnitVertexColor(but.picture, 255, 255, 255, 255)
+584	            
+585	            set InvPlayerLastSlot[inv.pid] = 0
+586	            set InvPlayerLastButton[inv.pid] = but
+587	                
+588	            if (itemId == 0) then
+589	                set last = (Inventory.MAX_SLOTS * inv.currentPage) + last
+590	                
+591	                set lastItem = inv.getItem(last)
+592	            
+593	                set lastItemId = lastItem.id
+594	                
+595	                set lastItem.tempCustomId = inv.getItemId(last)
+596	            
+597	                call inv.setItem((Inventory.MAX_SLOTS*inv.currentPage)+slot, lastItem)
+598	                call inv.setItem(last, 0)
+599	                
+600	                call DisableButtonIfUsingTimer(but, 2)
+601	            elseif (inv.getItem((Inventory.MAX_SLOTS * inv.currentPage) + last).isSocket) then
+602	                
+603	                set last = (Inventory.MAX_SLOTS * inv.currentPage) + last
+604	                
+605	                set lastItem = inv.getItem(last)
+606	                set lastItem.tempCustomId = inv.getItemId(last)
+607	                set slot = (Inventory.MAX_SLOTS*inv.currentPage)+slot
+608	                
+609	                if (Equipment.onSocket != null) then
+610	                    if (lastItem.sockets <= lastItem.maxSockets) then
+611	                        set SocketInv = inv
+612	                        set SocketLast = last
+613	                        set SocketSlot = slot
+614	                        
+615	                        if (not inv.getItem(slot).isSocket and Equipment.onSocket != null and TriggerEvaluate(Equipment.onSocket)) then
+616	                            call TriggerExecute(Equipment.onSocket)
+617	                            return false
+618	                        endif
+619	                    endif
+620	                else
+621	                    set inv.getItem(slot).tempCustomId = inv.getItemId(slot)
+622	                    
+623	                    if (inv.getItem(slot).addSocket(lastItem)) then
+624	                        call inv.setItem(last, 0)
+625	                    endif
+626	                endif
+627	    
+628	            endif
+629	        else//if (itemId != 0) then
+630	            set InvPlayerLastSlot[inv.pid] = 0
+631	            set InvPlayerLastButton[inv.pid] = but
+632	        endif
+633	        
+634	        if (itemId == 0 or InvPlayerLastSlot[inv.pid] != 0) then
+635	        else
+636	            set InvPlayerLastSlot[inv.pid] = slot + 1
+637	        endif
+638	        
+639	        if (but != lastButton) then
+640	            call SetUnitVertexColor(lastButton.picture, 255, 255, 255, 255)
+641	            call SetUnitVertexColor(but.picture, 175, 175, 175, 255)
+642	        endif
+643	        
+644	        if (itemId > 0) then
+645	            
+646	            call inv.setTooltipTitle(GetObjectName(itemId))
+647	            
+648	            static if (InvItem.buildDescription.exists) then
+649	                set GetInvItem(itemId).tempCustomId = inv.getItemId((Inventory.MAX_SLOTS*inv.currentPage)+slot)
+650	
+651	                call GetInvItem(itemId).buildDescription(inv.owner)
+652	            else
+653	                call inv.setTooltipInfo(GetItemDescription(itemId))
+654	            endif
+655	            
+656	            call inv.setTooltipCost("|cffffcc00" + I2S(GetInvItem(itemId).cost) + "|r")
+657	            
+658	            call inv.setTooltipIcon(inv.localInt(inv.pid, GetItemIcon(itemId), Inventory.ICON_TRANSPARENT))
+659	        endif
+660	        
+661	        set Inventory.TOOLTIP_X = but.minx - 0.4
+662	        set Inventory.TOOLTIP_Y = but.maxy + 0.4
+663	        
+664	        call inv.showTooltip(inv, itemId > 0)
+665	        
+666	        return false
+667	    endfunction
+668	
+669	    private function RClickItemSlot takes nothing returns boolean
+670	        local UIButton but = GetTriggerButton()
+671	        local player p = GetClickingPlayer()
+672	        local integer pid = GetPlayerId(p)
+673	        local Inventory inv =  Inventory.PlayerCurrent[pid]
+674	        
+675	        local integer slot =  but.customValue
+676	        local integer itemId
+677	 
+678	        if (p != User(inv.pid).handle) then
+679	            return false
+680	        endif
+681	        
+682	        call TriggerExecute(Inventory.ExecR)
+683	        
+684	        set slot = (Inventory.MAX_SLOTS * inv.currentPage) + slot
+685	
+686	        set itemId = inv.getItem(slot).id
+687	
+688	        if (itemId == 0) then
+689	            return false
+690	        endif
+691	        
+692	        call inv.showTooltip(inv, false)
+693	        
+694	        /*call SetItemUserData(CreateItem(itemId, GetUnitX(inv.owner), GetUnitY(inv.owner)), inv.getItemId(slot))
+695	        
+696	        call inv.setItem(slot, 0)*/
+697	        
+698	        return false
+699	    endfunction
+700	    
+701	    private function Init takes nothing returns nothing
+702	        set InvFuncLClickSlot = Filter(function LClickItemSlot)
+703	        set InvFuncRClickSlot = Filter(function RClickItemSlot)
+704	    endfunction
+705	    
+706	endlibrary
+```
+
+**`src/Inventory_08_Equipment.j`** — UIButton(type_of), InvItem(type_of), getItem(calls), equip(calls), unequip(calls), +48 more
+
+```jass
+446	        endif
+447	    endfunction
+448	    
+449	    private function OnInventoryItemRightClick takes nothing returns nothing
+450	        local UIButton but = GetTriggerButton()
+451	        local player p = GetClickingPlayer()
+452	        local integer pid = GetPlayerId(p)
+453	        local Inventory inv =  Inventory.PlayerCurrent[pid]
+454	        local integer slot =  but.customValue
+455	        local Equipment gear = Equipment[Equipment.PlayerCurrentUnit[inv.pid]]
+456	        local InvItem itm = inv.getItem(slot)
+457	        local integer gearSlot = itm.slot - 1
+458	        local integer unequippedSlot = 0
+459	        local InvItem unequipItem = 0
+460	        local integer unequipId = 0
+461	        
+462	        if (gear <= 0 or itm <= 0) then
+463	            return
+464	        endif
+465	        
+466	        set itm.tempCustomId = inv.getItemId(slot)
+467	        
+468	        if (gear.item[gearSlot] > 0) then
+469	            set unequipId = gear.itemId[gearSlot]
+470	            set gear.item[gearSlot].tempCustomId = unequipId
+471	            call gear.unequip(gear.item[gearSlot], gearSlot)
+472	            set unequippedSlot = InvEventSlot
+473	            set unequipItem = InvEventItem
+474	        endif
+475	        
+476	        set itm.tempCustomId = inv.getItemId(slot)
+477	        
+478	        if (gear.equip(itm, itm.slot - 1)) then
+479	            call inv.setItem(slot, 0)
+480	            set unequipItem.tempCustomId = unequipId
+481	            call inv.addItem(unequipItem)
+482	        elseif (unequipItem > 0) then
+483	            call gear.equip(unequipItem, unequippedSlot)
+484	        endif
+485	    endfunction
+486	
+487	    private function RClickItemSlot takes nothing returns boolean
+488	        local UIButton but   = GetTriggerButton()
+```
+
+**`src/Inventory_04_InventoryTooltip.j`** — localInt(calls), calls(calls), TOOLTIP_LINE_LENGTH(constant), TOOLTIP_LINES_MAX(constant), TOOLTIP_TEXTURE(constant), +19 more
+
+```jass
+31	        static UIPicture array infoIcon 
+32	        static UIPicture array costIcon 
+33	        
+34	        method setTooltipTitle takes string title returns nothing
+35	            call SetTextTagText(thistype.infoBoxTitle[this.pid].text, title, 10 * 0.0023)
+36	        endmethod
+37	        
+38	        method setTooltipInfo takes string desc returns nothing
+39	            call SetTextTagText(thistype.infoBoxTitle[this.pid].text, desc, TOOLTIP_FONT_SIZE * 0.0023)
+
+... (gap) ...
+
+91	        
+92	            //if (showLocally) then
+93	                if (thistype.infoBoxTitle[this.pid] == null) then
+94	                    set thistype.infoBoxTitle[this.pid] = UIText.createEx(this.user.toPlayer(), TOOLTIP_X - 0.1, TOOLTIP_Y + .22, 1)
+95	                    
+96	                    set thistype.infoBoxDesc[this.pid] = UIText.createEx(this.user.toPlayer(), TOOLTIP_X - 0.1, TOOLTIP_Y + .25, 1)
+97	                endif
+98	                
+99	                if (thistype.infoBoxCost[this.pid] == null) then
+```
+
+**`src/TerrainInventory.j`** — calls(calls), Start(function), Start(references), ToggleEquipment(calls), ToggleInventory(calls), +14 more
+
+```jass
+1	// Integration of TriggerHappy's InventorySys 1.4.1 into the TerrainDev copy.
+2	// Original terrain, placed units, melee initialization and missile sources retained.
+3	scope TerrainInventory initializer Init
+4	    globals
+5	        Camera array PlayerCamera
+6	        unit array PlayerHero
+7	    endglobals
+8	
+9	    private function ToggleInventory takes integer pid returns nothing
+10	        local Inventory inv = Inventory[PlayerHero[pid]]
+11	        if inv != 0 then
+12	            call inv.show(not inv.displayed, PlayerCamera[pid])
+13	        endif
+14	    endfunction
+15	
+16	    private function ToggleEquipment takes integer pid returns nothing
+17	        local Equipment eq = Equipment[PlayerHero[pid]]
+
+... (gap) ...
+
+20	        endif
+21	    endfunction
+22	
+23	    private function Spell takes nothing returns nothing
+24	        local unit u = GetTriggerUnit()
+25	        local integer pid = GetPlayerId(GetOwningPlayer(u))
+26	        if u == PlayerHero[pid] then
+27	            if GetSpellAbilityId() == 'A001' then
+28	                call ToggleEquipment(pid)
+29	            elseif GetSpellAbilityId() == 'A002' then
+30	                call ToggleInventory(pid)
+31	            endif
+32	        endif
+33	        set u = null
+34	    endfunction
+35	
+36	    private function Chat takes nothing returns nothing
+37	        local integer pid = GetPlayerId(GetTriggerPlayer())
+```
+
+**Not shown above — explore these names for their source**
+
+- src/Inventory_25_UserInterface.j: GetTriggerButton:150, GetClickingPlayer:154, show:641, setPosition:678, showPlayer:667, UIButton:218, +5 more
+- src/Inventory_02_InventoryItem.j: InvItem:8, GetItemIcon:49, GetInvItem:37, GetItemDescription:45, addSocket:18, InventoryItem:1, +1 more
+- foundation-src/TimerUtils.j: NewTimerEx:144, TimerUtils:1, ReleaseTimer:186, GetTimerData:101
+- src/Inventory_22_Socket_Item.j: OnAgree:14
+- src/Inventory_28_PlayerUtils.j: PlayerUtils:1
+- src/Inventory_09_EquipmentItem.j: EquipmentItem:1
+- InventoryProbe.j: Tests:23, Start:133
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

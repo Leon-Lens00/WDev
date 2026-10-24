@@ -1,0 +1,119 @@
+{
+  "Categories": [
+    {
+      "Id": 0,
+      "Name": "Initialization",
+      "Kind": "Category"
+    }
+  ],
+  "Triggers": [
+    {
+      "Id": 0,
+      "ParentCategoryId": 0,
+      "Name": "Melee Initialization",
+      "Description": "Default melee game initialization for all players",
+      "Enabled": true,
+      "InitiallyOn": true,
+      "IsCustomText": false,
+      "Functions": [
+        {
+          "Kind": "Event",
+          "Name": "MapInitializationEvent",
+          "Enabled": true,
+          "Parameters": [],
+          "Children": []
+        },
+        {
+          "Kind": "Action",
+          "Name": "MeleeStartingVisibility",
+          "Enabled": true,
+          "Parameters": [],
+          "Children": []
+        },
+        {
+          "Kind": "Action",
+          "Name": "MeleeStartingHeroLimit",
+          "Enabled": true,
+          "Parameters": [],
+          "Children": []
+        },
+        {
+          "Kind": "Action",
+          "Name": "MeleeGrantHeroItems",
+          "Enabled": true,
+          "Parameters": [],
+          "Children": []
+        },
+        {
+          "Kind": "Action",
+          "Name": "MeleeStartingResources",
+          "Enabled": true,
+          "Parameters": [],
+          "Children": []
+        },
+        {
+          "Kind": "Action",
+          "Name": "MeleeClearExcessUnits",
+          "Enabled": true,
+          "Parameters": [],
+          "Children": []
+        },
+        {
+          "Kind": "Action",
+          "Name": "MeleeStartingUnits",
+          "Enabled": true,
+          "Parameters": [],
+          "Children": []
+        },
+        {
+          "Kind": "Action",
+          "Name": "MeleeStartingAI",
+          "Enabled": true,
+          "Parameters": [],
+          "Children": []
+        },
+        {
+          "Kind": "Action",
+          "Name": "MeleeInitVictoryDefeat",
+          "Enabled": true,
+          "Parameters": [],
+          "Children": []
+        }
+      ],
+      "CustomText": null
+    },
+    {
+      "Id": 0,
+      "ParentCategoryId": 0,
+      "Name": "TurtleNet",
+      "Description": "",
+      "Enabled": true,
+      "InitiallyOn": true,
+      "IsCustomText": false,
+      "Functions": [
+        {
+          "Kind": "Action",
+          "Name": "KillUnit",
+          "Enabled": false,
+          "Parameters": [
+            ""
+          ],
+          "Children": []
+        },
+        {
+          "Kind": "Event",
+          "Name": "TriggerRegisterUnitEvent",
+          "Enabled": true,
+          "Parameters": [
+            "gg_unit_ntrd_0023",
+            "UnitEventTargetInRange"
+          ],
+          "Children": []
+        }
+      ],
+      "CustomText": null
+    }
+  ],
+  "Variables": [],
+  "ScriptLanguage": "Jass"
+}

@@ -1,0 +1,42 @@
+{
+  "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/evidence/brillo/comparison-final-scale3.png",
+  "crops": [
+    {
+      "label": "Vol. I\nAzul",
+      "box": [
+        400,
+        210,
+        1390,
+        305
+      ]
+    },
+    {
+      "label": "Vol. I\nRojo",
+      "box": [
+        400,
+        325,
+        1390,
+        425
+      ]
+    },
+    {
+      "label": "Vol. II\nAzul",
+      "box": [
+        400,
+        450,
+        1390,
+        570
+      ]
+    },
+    {
+      "label": "Vol. II\nRojo",
+      "box": [
+        400,
+        615,
+        1390,
+        740
+      ]
+    }
+  ],
+  "operation": "crop and label only; no pixel recolor or enhancement"
+}

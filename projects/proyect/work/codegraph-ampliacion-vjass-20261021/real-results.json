@@ -1,0 +1,646 @@
+[
+  {
+    "label": "missiles",
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-ampliacion-vjass-20261021/real-missiles",
+    "files": 16,
+    "nodes": 1277,
+    "edges": 1739,
+    "projected_nodes": 427,
+    "errors": [],
+    "warnings": 391,
+    "index_ms": 170,
+    "stable_full_rebuild": true,
+    "original_hashes_unchanged": true,
+    "flows": [
+      {
+        "from": "RapidFire.RapidBolt.shoot",
+        "to": "RapidFire.RapidBolt.launch",
+        "path": [
+          {
+            "node": {
+              "id": "method:af15b8dbb704691b02952b741c4a56a4",
+              "kind": "method",
+              "name": "shoot",
+              "qualifiedName": "RapidFire.RapidBolt.shoot",
+              "filePath": "libraries/RapidFire.j",
+              "language": "jass",
+              "startLine": 41,
+              "endLine": 72,
+              "startColumn": 11,
+              "endColumn": 13,
+              "signature": "static method shoot takes unit caster, real px, real py returns Missile",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "Missile",
+              "updatedAt": 1792631994109
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:36f2081aac1a6b9be982586b2b16255a",
+              "kind": "method",
+              "name": "launch",
+              "qualifiedName": "RapidFire.RapidBolt.launch",
+              "filePath": "libraries/RapidFire.j",
+              "language": "jass",
+              "startLine": 39,
+              "endLine": 39,
+              "startColumn": 0,
+              "endColumn": 27,
+              "docstring": "CodeGraph static projection: module Missile.MissileStruct defined at libraries/Missile.j:1636; invoked at libraries/RapidFire.j:39 -> module Missile.MissileLaunch defined at libraries/Missile.j:1449; invoked at libraries/RapidFire.j:39. Declaration origin libraries/Missile.j:1450. Source below is the invocation, not an expanded body.",
+              "signature": "static method launch takes Missile missile returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792631994109
+            },
+            "edge": {
+              "source": "method:af15b8dbb704691b02952b741c4a56a4",
+              "target": "method:36f2081aac1a6b9be982586b2b16255a",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "enclosing-struct-method",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "launch"
+              },
+              "line": 70,
+              "column": 13,
+              "provenance": "heuristic"
+            }
+          }
+        ]
+      },
+      {
+        "from": "RapidFire.RapidBolt.missileIterateP",
+        "to": "RapidFire.RapidBolt.onPeriod",
+        "path": [
+          {
+            "node": {
+              "id": "method:e83dc34b00450dd2d4ae70ea33f408b2",
+              "kind": "method",
+              "name": "missileIterateP",
+              "qualifiedName": "RapidFire.RapidBolt.missileIterateP",
+              "filePath": "libraries/RapidFire.j",
+              "language": "jass",
+              "startLine": 39,
+              "endLine": 39,
+              "startColumn": 0,
+              "endColumn": 27,
+              "docstring": "CodeGraph static projection: module Missile.MissileStruct defined at libraries/Missile.j:1636; invoked at libraries/RapidFire.j:39 -> module Missile.MissileAction defined at libraries/Missile.j:1483; invoked at libraries/RapidFire.j:39. Declaration origin libraries/Missile.j:1524. Source below is the invocation, not an expanded body.",
+              "signature": "static method missileIterateP takes nothing returns boolean",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "boolean",
+              "updatedAt": 1792631994109
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:967409026d2fd6bc6db2a5ba7a2cdae1",
+              "kind": "method",
+              "name": "onPeriod",
+              "qualifiedName": "RapidFire.RapidBolt.onPeriod",
+              "filePath": "libraries/RapidFire.j",
+              "language": "jass",
+              "startLine": 26,
+              "endLine": 28,
+              "startColumn": 11,
+              "endColumn": 13,
+              "signature": "static method onPeriod takes Missile m returns boolean",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "boolean",
+              "updatedAt": 1792631994109
+            },
+            "edge": {
+              "source": "method:e83dc34b00450dd2d4ae70ea33f408b2",
+              "target": "method:967409026d2fd6bc6db2a5ba7a2cdae1",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "thistype.onPeriod"
+              },
+              "line": 39,
+              "column": 0,
+              "provenance": "heuristic"
+            }
+          }
+        ]
+      },
+      {
+        "from": "RapidFire.RapidBolt.missileTerminateP",
+        "to": "RapidFire.RapidBolt.onRemove",
+        "path": [
+          {
+            "node": {
+              "id": "method:363d6cce953c5828d0ce27aa2fe21367",
+              "kind": "method",
+              "name": "missileTerminateP",
+              "qualifiedName": "RapidFire.RapidBolt.missileTerminateP",
+              "filePath": "libraries/RapidFire.j",
+              "language": "jass",
+              "startLine": 39,
+              "endLine": 39,
+              "startColumn": 0,
+              "endColumn": 27,
+              "docstring": "CodeGraph static projection: module Missile.MissileStruct defined at libraries/Missile.j:1636; invoked at libraries/RapidFire.j:39 -> module Missile.MissileTerminate defined at libraries/Missile.j:1461; invoked at libraries/RapidFire.j:39. Declaration origin libraries/Missile.j:1463. Source below is the invocation, not an expanded body.",
+              "signature": "static method missileTerminateP takes Missile node returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792631994109
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:2ad4df6f78fe5a6e0c451bbe06e86fea",
+              "kind": "method",
+              "name": "onRemove",
+              "qualifiedName": "RapidFire.RapidBolt.onRemove",
+              "filePath": "libraries/RapidFire.j",
+              "language": "jass",
+              "startLine": 33,
+              "endLine": 38,
+              "startColumn": 11,
+              "endColumn": 13,
+              "signature": "static method onRemove takes Missile m returns boolean",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "boolean",
+              "updatedAt": 1792631994109
+            },
+            "edge": {
+              "source": "method:363d6cce953c5828d0ce27aa2fe21367",
+              "target": "method:2ad4df6f78fe5a6e0c451bbe06e86fea",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "thistype.onRemove"
+              },
+              "line": 39,
+              "column": 0,
+              "provenance": "heuristic"
+            }
+          }
+        ]
+      },
+      {
+        "from": "Missile.Missile.createXYZ",
+        "to": "Missile.Missile.createEx",
+        "path": [
+          {
+            "node": {
+              "id": "method:fa5f4e1504d8c2b68b895750a4003efa",
+              "kind": "method",
+              "name": "createXYZ",
+              "qualifiedName": "Missile.Missile.createXYZ",
+              "filePath": "libraries/Missile.j",
+              "language": "jass",
+              "startLine": 775,
+              "endLine": 779,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method createXYZ takes real x, real y, real z, real impactX, real impactY, real impactZ returns thistype",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "thistype",
+              "updatedAt": 1792631994089
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:0ac384bc551355dd777e3e0a8c431763",
+              "kind": "method",
+              "name": "createEx",
+              "qualifiedName": "Missile.Missile.createEx",
+              "filePath": "libraries/Missile.j",
+              "language": "jass",
+              "startLine": 698,
+              "endLine": 729,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method createEx takes unit missileDummy, real impactX, real impactY, real impactZ returns thistype",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "thistype",
+              "updatedAt": 1792631994089
+            },
+            "edge": {
+              "source": "method:fa5f4e1504d8c2b68b895750a4003efa",
+              "target": "method:0ac384bc551355dd777e3e0a8c431763",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "enclosing-struct-method",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "createEx"
+              },
+              "line": 778,
+              "column": 0,
+              "provenance": "heuristic"
+            }
+          }
+        ]
+      },
+      {
+        "from": "RapidFire.RapidPair.emit",
+        "to": "RapidFire.RapidBolt.shoot",
+        "path": [
+          {
+            "node": {
+              "id": "method:020332d0f139db38111d131b409dc0c8",
+              "kind": "method",
+              "name": "emit",
+              "qualifiedName": "RapidFire.RapidPair.emit",
+              "filePath": "libraries/RapidFire.j",
+              "language": "jass",
+              "startLine": 121,
+              "endLine": 134,
+              "startColumn": 12,
+              "endColumn": 13,
+              "signature": "private method emit takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792631994109
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:af15b8dbb704691b02952b741c4a56a4",
+              "kind": "method",
+              "name": "shoot",
+              "qualifiedName": "RapidFire.RapidBolt.shoot",
+              "filePath": "libraries/RapidFire.j",
+              "language": "jass",
+              "startLine": 41,
+              "endLine": 72,
+              "startColumn": 11,
+              "endColumn": 13,
+              "signature": "static method shoot takes unit caster, real px, real py returns Missile",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "Missile",
+              "updatedAt": 1792631994109
+            },
+            "edge": {
+              "source": "method:020332d0f139db38111d131b409dc0c8",
+              "target": "method:af15b8dbb704691b02952b741c4a56a4",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "RapidBolt.shoot"
+              },
+              "line": 133,
+              "column": 26,
+              "provenance": "heuristic"
+            }
+          }
+        ]
+      }
+    ],
+    "projection_examples": [
+      {
+        "name": "DummyCaster.DummyCaster.__cg_DummyCaster_N_onInit",
+        "file": "libraries/DummyCaster.j",
+        "line": 60,
+        "origin": "CodeGraph static projection: module DummyCaster.N defined at libraries/DummyCaster.j:47; invoked at libraries/DummyCaster.j:60. Declaration origin libraries/DummyCaster.j:48. Source below is the invocation, not an expanded body."
+      },
+      {
+        "name": "IsDestructableTree.I.__cg_IsDestructableTree_Inits_onInit",
+        "file": "libraries/IsDestructableTree.j",
+        "line": 78,
+        "origin": "CodeGraph static projection: module IsDestructableTree.Inits defined at libraries/IsDestructableTree.j:72; invoked at libraries/IsDestructableTree.j:78. Declaration origin libraries/IsDestructableTree.j:73. Source below is the invocation, not an expanded body."
+      },
+      {
+        "name": "Missile.RecycleBin.onPeriodic",
+        "file": "libraries/Missile.j",
+        "line": 477,
+        "origin": "CodeGraph static projection: textmacro WRITE_MISSILE_RECYCLE_BIN defined at libraries/Missile.j:1737; invoked at libraries/Missile.j:477. Declaration origin libraries/Missile.j:1746. Source below is the invocation, not an expanded body."
+      },
+      {
+        "name": "Missile.RecycleBin.recycle",
+        "file": "libraries/Missile.j",
+        "line": 477,
+        "origin": "CodeGraph static projection: textmacro WRITE_MISSILE_RECYCLE_BIN defined at libraries/Missile.j:1737; invoked at libraries/Missile.j:477. Declaration origin libraries/Missile.j:1782. Source below is the invocation, not an expanded body."
+      },
+      {
+        "name": "Missile.RecycleBin",
+        "file": "libraries/Missile.j",
+        "line": 477,
+        "origin": "CodeGraph static projection: textmacro WRITE_MISSILE_RECYCLE_BIN defined at libraries/Missile.j:1737; invoked at libraries/Missile.j:477. Declaration origin libraries/Missile.j:1740. Source below is the invocation, not an expanded body."
+      }
+    ]
+  },
+  {
+    "label": "inventory",
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-ampliacion-vjass-20261021/real-inventory",
+    "files": 56,
+    "nodes": 3333,
+    "edges": 4954,
+    "projected_nodes": 762,
+    "errors": [],
+    "warnings": 858,
+    "index_ms": 306,
+    "stable_full_rebuild": true,
+    "original_hashes_unchanged": true,
+    "flows": [
+      {
+        "from": "InventoryCore.LClickItemSlot",
+        "to": "InventoryCore.Inventory.setTooltipTitle",
+        "path": [
+          {
+            "node": {
+              "id": "function:4702b61e2ee1cd18c7b8af2f4a929f08",
+              "kind": "function",
+              "name": "LClickItemSlot",
+              "qualifiedName": "InventoryCore.LClickItemSlot",
+              "filePath": "src/Inventory_01_Inventory.j",
+              "language": "jass",
+              "startLine": 474,
+              "endLine": 667,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function LClickItemSlot takes nothing returns boolean",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "boolean",
+              "updatedAt": 1792631995251
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:5e0c3931cf4f45573752b3c600aeac3a",
+              "kind": "method",
+              "name": "setTooltipTitle",
+              "qualifiedName": "InventoryCore.Inventory.setTooltipTitle",
+              "filePath": "src/Inventory_01_Inventory.j",
+              "language": "jass",
+              "startLine": 275,
+              "endLine": 275,
+              "startColumn": 0,
+              "endColumn": 28,
+              "docstring": "CodeGraph static projection: module InventoryPlugins.InvPlugins defined at src/Inventory_03_InventoryPlugins.j:4; invoked at src/Inventory_01_Inventory.j:275 -> module InventoryTooltip.InvTooltip defined at src/Inventory_04_InventoryTooltip.j:3; invoked at src/Inventory_01_Inventory.j:275. Declaration origin src/Inventory_04_InventoryTooltip.j:34. Source below is the invocation, not an expanded body.",
+              "signature": "method setTooltipTitle takes string title returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792631995250
+            },
+            "edge": {
+              "source": "function:4702b61e2ee1cd18c7b8af2f4a929f08",
+              "target": "method:5e0c3931cf4f45573752b3c600aeac3a",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "inv.setTooltipTitle"
+              },
+              "line": 646,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          }
+        ]
+      },
+      {
+        "from": "InventoryItem.InvItem.buildDescription",
+        "to": "InventoryCore.Inventory.setTooltipLine",
+        "path": [
+          {
+            "node": {
+              "id": "method:8b7451f41a7f157f8627a937bb265c8d",
+              "kind": "method",
+              "name": "buildDescription",
+              "qualifiedName": "InventoryItem.InvItem.buildDescription",
+              "filePath": "src/Inventory_02_InventoryItem.j",
+              "language": "jass",
+              "startLine": 18,
+              "endLine": 18,
+              "startColumn": 0,
+              "endColumn": 32,
+              "docstring": "CodeGraph static projection: module InventoryPlugins.InvItemPlugins defined at src/Inventory_03_InventoryPlugins.j:8; invoked at src/Inventory_02_InventoryItem.j:18 -> module EquipmentItem.InvItemEquipment defined at src/Inventory_09_EquipmentItem.j:22; invoked at src/Inventory_02_InventoryItem.j:18. Declaration origin src/Inventory_09_EquipmentItem.j:184. Source below is the invocation, not an expanded body.",
+              "signature": "method buildDescription takes unit forUnit returns string",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "string",
+              "updatedAt": 1792631995256
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:fdca7f30dbf930c8ca9eaa6e833dd679",
+              "kind": "method",
+              "name": "setTooltipLine",
+              "qualifiedName": "InventoryCore.Inventory.setTooltipLine",
+              "filePath": "src/Inventory_01_Inventory.j",
+              "language": "jass",
+              "startLine": 275,
+              "endLine": 275,
+              "startColumn": 0,
+              "endColumn": 28,
+              "docstring": "CodeGraph static projection: module InventoryPlugins.InvPlugins defined at src/Inventory_03_InventoryPlugins.j:4; invoked at src/Inventory_01_Inventory.j:275 -> module InventoryTooltip.InvTooltip defined at src/Inventory_04_InventoryTooltip.j:3; invoked at src/Inventory_01_Inventory.j:275. Declaration origin src/Inventory_04_InventoryTooltip.j:50. Source below is the invocation, not an expanded body.",
+              "signature": "static method setTooltipLine takes integer pid, integer line, string str returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792631995251
+            },
+            "edge": {
+              "source": "method:8b7451f41a7f157f8627a937bb265c8d",
+              "target": "method:fdca7f30dbf930c8ca9eaa6e833dd679",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Inventory.setTooltipLine"
+              },
+              "line": 18,
+              "column": 0,
+              "provenance": "heuristic"
+            }
+          }
+        ]
+      },
+      {
+        "from": "SocketItem.OnAgree",
+        "to": "InventoryCore.Inventory.setTooltipInfo",
+        "path": [
+          {
+            "node": {
+              "id": "function:e0a76a7e6b9b558f899ffbb3a9e34102",
+              "kind": "function",
+              "name": "OnAgree",
+              "qualifiedName": "SocketItem.OnAgree",
+              "filePath": "src/Inventory_22_Socket_Item.j",
+              "language": "jass",
+              "startLine": 14,
+              "endLine": 43,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function OnAgree takes nothing returns boolean",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "boolean",
+              "updatedAt": 1792631995279
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:1ba116447487b0557e4ebdea653bbc77",
+              "kind": "method",
+              "name": "setTooltipInfo",
+              "qualifiedName": "InventoryCore.Inventory.setTooltipInfo",
+              "filePath": "src/Inventory_01_Inventory.j",
+              "language": "jass",
+              "startLine": 275,
+              "endLine": 275,
+              "startColumn": 0,
+              "endColumn": 28,
+              "docstring": "CodeGraph static projection: module InventoryPlugins.InvPlugins defined at src/Inventory_03_InventoryPlugins.j:4; invoked at src/Inventory_01_Inventory.j:275 -> module InventoryTooltip.InvTooltip defined at src/Inventory_04_InventoryTooltip.j:3; invoked at src/Inventory_01_Inventory.j:275. Declaration origin src/Inventory_04_InventoryTooltip.j:38. Source below is the invocation, not an expanded body.",
+              "signature": "method setTooltipInfo takes string desc returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792631995250
+            },
+            "edge": {
+              "source": "function:e0a76a7e6b9b558f899ffbb3a9e34102",
+              "target": "method:1ba116447487b0557e4ebdea653bbc77",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "inv.setTooltipInfo"
+              },
+              "line": 30,
+              "column": 21,
+              "provenance": "heuristic"
+            }
+          }
+        ]
+      }
+    ],
+    "projection_examples": [
+      {
+        "name": "InventoryProbe.Flight.missileActionDest",
+        "file": "InventoryProbe.j",
+        "line": 12,
+        "origin": "CodeGraph static projection: module Missile.MissileStruct defined at foundation-src/Missile.j:1636; invoked at InventoryProbe.j:12 -> module Missile.MissileAction defined at foundation-src/Missile.j:1483; invoked at InventoryProbe.j:12. Declaration origin foundation-src/Missile.j:1510. Source below is the invocation, not an expanded body."
+      },
+      {
+        "name": "InventoryProbe.Flight.missileTerminateP",
+        "file": "InventoryProbe.j",
+        "line": 12,
+        "origin": "CodeGraph static projection: module Missile.MissileStruct defined at foundation-src/Missile.j:1636; invoked at InventoryProbe.j:12 -> module Missile.MissileTerminate defined at foundation-src/Missile.j:1461; invoked at InventoryProbe.j:12. Declaration origin foundation-src/Missile.j:1463. Source below is the invocation, not an expanded body."
+      },
+      {
+        "name": "InventoryProbe.Flight.missileActionItem",
+        "file": "InventoryProbe.j",
+        "line": 12,
+        "origin": "CodeGraph static projection: module Missile.MissileStruct defined at foundation-src/Missile.j:1636; invoked at InventoryProbe.j:12 -> module Missile.MissileAction defined at foundation-src/Missile.j:1483; invoked at InventoryProbe.j:12. Declaration origin foundation-src/Missile.j:1496. Source below is the invocation, not an expanded body."
+      },
+      {
+        "name": "InventoryProbe.Flight.__cg_Missile_MissileStruct_onInit",
+        "file": "InventoryProbe.j",
+        "line": 12,
+        "origin": "CodeGraph static projection: module Missile.MissileStruct defined at foundation-src/Missile.j:1636; invoked at InventoryProbe.j:12. Declaration origin foundation-src/Missile.j:1641. Source below is the invocation, not an expanded body."
+      },
+      {
+        "name": "InventoryProbe.Flight.missileIterateP",
+        "file": "InventoryProbe.j",
+        "line": 12,
+        "origin": "CodeGraph static projection: module Missile.MissileStruct defined at foundation-src/Missile.j:1636; invoked at InventoryProbe.j:12 -> module Missile.MissileAction defined at foundation-src/Missile.j:1483; invoked at InventoryProbe.j:12. Declaration origin foundation-src/Missile.j:1524. Source below is the invocation, not an expanded body."
+      }
+    ]
+  },
+  {
+    "label": "ui",
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-ampliacion-vjass-20261021/real-ui",
+    "files": 4,
+    "nodes": 126,
+    "edges": 734,
+    "projected_nodes": 0,
+    "errors": [],
+    "warnings": 0,
+    "index_ms": 151,
+    "stable_full_rebuild": true,
+    "original_hashes_unchanged": true,
+    "flows": [],
+    "projection_examples": []
+  }
+]

@@ -1,0 +1,39 @@
+Barras horizontales con iconos nativos · Classic1.27b
+
+Héroe:marco azul completo con icono Art nativo, a la izquierda. UnidadHpal de
+Player10(auxiliar reservado), controlada porPlayer0 y con su color visual.
+ALLIANCE_SHARED_CONTROL=true y ALLIANCE_SHARED_ADVANCED_CONTROL=false:
+el control avanzado añade un icono lateral nativo; el básico lo oculta y permite
+mover y lanzar Luz sagrada. No se añadió un campo deobjeto ajeno a1.27b.
+La alianza comparte todas las unidades del propietarioauxiliar:reservarlo.
+
+Enemigo:iconoArt nativo al extremo derecho; relleno325px frente a133px dehéroe,
+anclado a la izquierda. Grosor10px. Ambos iconos64×64 desdearchivos internos.
+Marcos256×128/512×128,4BLP propios288752bytes y37mips;3MDX800112716bytes.
+No se reimportan BTNHeroPaladin/BTNTauren. RegistroHpal/otau yprocedencia
+sources/native/icons.json. Para otros tipos, ampliar registro/modelo/rawcode.
+
+Mapa y alcance:vermanifest.json/latest-healthbar-test.json parahash yprueba.
+NativeSP1920×1080:selección, movimiento de ratón, habilidad(manà255→190),
+vida normal/crítica/cero, iconos, patrulla y diálogo. Otros aspectos/multijugador
+pendientes. Las bibliotecasCamera/UserInterface yfoundation se conservan.
+
+API:HealthBarsBind(Camera,hero,target), HealthBarsTarget(unit),
+HealthBarsSetVisible(boolean), HealthBarsUpdate() después deactualizar lacámara.
+Vida consultada cada0,05s y proyección cada0,01s, en el reloj de cámara existente.
+
+Comandos demo:
+-vidaheroe 75 / -vidaenemigo 86 (vida real;0 mata la unidad)
+-barrasocultar / -barrasmostrar
+-barrasobjetivopaladin / -barrasobjetivotauren
+-patrullardialogo / -parardialogo
+-dialogo / -reiniciardialogo / -cerrardialogo
+-controlbasico (siniconolateral) / -controlavanzado (prueba comparativa)
+-misiles:cuadrodiagnóstico, oculto aliniciar.
+
+Fuentes:healthbar-native-icons.cjs extraeiconos efectivos deClassic;
+healthbar-horizontal.py(PythonPillow documentado) genera texturas ycontrato;
+build.py generaMDX, compilaJASS e importa enuna copia. Validadores:
+verify-healthbar-horizontal.cjs y verify-healthbar-models.cjs. Builder reextrae
+los miembros para compararlos. La vista UI Studio usa los mismos texelesBLP y
+un fondo real nuevo con barras ocultas. La variantevertical queda conservada.

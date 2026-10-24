@@ -1,0 +1,46 @@
+Browser tab: 3, Title: "Vinz · estudio de 191 modelos", URL: "http://127.0.0.1:34801/vinz-study-v4/".
+0 AXWebArea Vinz · estudio de 191 modelos, URL: 127.0.0.1:34801/vinz-study-v4/
+	1 container
+		2 heading Vinz · estudio191, Value: 1
+			3 text Vinz · estudio191
+		4 button Anterior, ID: prev
+		5 text Página 
+		6 stepper (settable, integer) Página, Value: 29, ID: page
+		7 button Siguiente, ID: next
+		8 text Secuencia 
+		9 pop up button (collapsed, settable) Secuencia, Value: Stand, ID: sequence, Secondary Actions: Expand
+			10 menu
+				11 (selected) Stand
+				12 Birth120ms
+				13 Death120ms
+		14 text Cámara 
+		15 pop up button (collapsed, settable) Cámara, Value: Oblicua, ID: camera, Secondary Actions: Expand
+			16 menu
+				17 (selected) Oblicua
+				18 Lateral
+				19 Frontal
+		20 button Movimiento prueba | activar, ID: motion
+		25 text Página29/32 · 6 modelos · partículas366 · errores40
+	22 container
+		23 image view
+		24 container cells
+			26 container
+				27 text 168 · TC15 Model Bundle · Bloody Elf Head Missile
+				28 text Recursos resueltos 213 tris · 15 PE2 · 0 estelas · Stand · t4089ms
+			29 container
+				30 text 169 · TC15 Model Bundle · MBuilding Fire Large
+				31 text Recursos resueltos 0 tris · 5 PE2 · 0 estelas · Stand · t926ms
+			32 container
+				33 text 170 · TC15 Model Bundle · MBuilding Fire Large NE
+				34 text Recursos resueltos 0 tris · 5 PE2 · 0 estelas · Stand · t926ms
+			35 container
+				36 text 171 · TC15 Model Bundle · MBuilding Fire Large UD
+				37 text Recursos resueltos 0 tris · 5 PE2 · 0 estelas · Stand · t926ms
+			38 container
+				39 text 172 · TC15 Model Bundle · MBuilding Fire Small
+				40 text Recursos resueltos 0 tris · 4 PE2 · 0 estelas · Stand · t926ms
+			41 container
+				42 text 173 · TC15 Model Bundle · MBuilding Fire Small NE
+				43 text Recursos resueltos 0 tris · 4 PE2 · 0 estelas · Stand · t926ms
+
+The focused UI element is 7 button Siguiente, ID: next

@@ -1,0 +1,800 @@
+{
+  "target": "Warcraft III Classic 1.27b / MDX800",
+  "revision": "V15 conservative geometry and texture optimization",
+  "entries": [
+    {
+      "name": "X3_Cross_Buster",
+      "category": "C-Buster-fusionado",
+      "path": "exports/megaman-x3-buster-v15/C-Buster-fusionado/X3_Cross_Buster.mdx",
+      "sha256": "8a7fe1c970b745fb8d27fbb35c8aec0e2fcd867830811808daf1bc593217b623",
+      "triangles": 7124,
+      "pe2": 15,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Orbe_Verde",
+      "category": "B-Orbes-individuales/Verde",
+      "path": "exports/megaman-x3-buster-v15/B-Orbes-individuales/Verde/X3_Orbe_Verde.mdx",
+      "sha256": "c2dd8346bb17e5b8a1ab1737c8048264233eec5d6c5cb990187f64278678e39d",
+      "triangles": 1192,
+      "pe2": 8,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Orbe_Naranja",
+      "category": "B-Orbes-individuales/Naranja",
+      "path": "exports/megaman-x3-buster-v15/B-Orbes-individuales/Naranja/X3_Orbe_Naranja.mdx",
+      "sha256": "006f92eef579b984aa370090af3fd74ff818029a6e9fe6adcedfb43c2719575d",
+      "triangles": 1192,
+      "pe2": 8,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Orbe_Cian",
+      "category": "B-Orbes-individuales/Cian",
+      "path": "exports/megaman-x3-buster-v15/B-Orbes-individuales/Cian/X3_Orbe_Cian.mdx",
+      "sha256": "a7bb49f58bdfabb78f333915cfdf8b5c4e3aee2d3130c9e8c9f495980f650ef1",
+      "triangles": 1192,
+      "pe2": 8,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Flash_Union",
+      "category": "C-Flash-union",
+      "path": "exports/megaman-x3-buster-v15/C-Flash-union/X3_Flash_Union.mdx",
+      "sha256": "c4f867093b74d4820e7803ee193e2ad0984b0e65978b42484db929f24aa25571",
+      "triangles": 780,
+      "pe2": 2,
+      "ribbons": 0
+    },
+    {
+      "name": "X3_Buster_Cargado",
+      "category": "A-Buster-aprobado-V12",
+      "path": "exports/megaman-x3-buster-v15/A-Buster-aprobado-V12/X3_Buster_Cargado.mdx",
+      "sha256": "87bf4b6456c8008eb0b5e878d89ef164ad79f5bc2ece1034cbc47b6f8349868b",
+      "triangles": 4244,
+      "pe2": 15,
+      "ribbons": 1
+    }
+  ],
+  "details": {
+    "X3_Orbe_Verde": {
+      "birthMs": 300,
+      "standMs": 960,
+      "deathMs": 1000,
+      "flightCount": 25,
+      "flightEmitters": 4,
+      "bodyFadeMs": 90,
+      "bodyDeathScale": [
+        1,
+        1,
+        1
+      ],
+      "impactGeosets": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bursts": [
+        {
+          "name": "Impact / Shot II Stars",
+          "on": 40,
+          "off": 240,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            8.25,
+            13.75,
+            0.2750000059604645
+          ],
+          "rate": 90
+        },
+        {
+          "name": "Impact / Shot II Lumps",
+          "on": 50,
+          "off": 280,
+          "lifeMs": 330.00001311302185,
+          "size": [
+            11.399999618530273,
+            5.699999809265137,
+            0.1899999976158142
+          ],
+          "rate": 65
+        },
+        {
+          "name": "Impact / Shot II Flashes",
+          "on": 40,
+          "off": 280,
+          "lifeMs": 300.00001192092896,
+          "size": [
+            3.25,
+            5.199999809265137,
+            3.25
+          ],
+          "rate": 75
+        },
+        {
+          "name": "Impact / Shot II Avante Uno",
+          "on": 0,
+          "off": 160,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            6,
+            5.5,
+            0.25
+          ],
+          "rate": 80
+        }
+      ],
+      "reference": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Blue.mdx",
+      "root": "fixed at origin in every sequence",
+      "death": "flight fades in 90 ms; local flash expands; four reference-derived PE2 bursts decay independently"
+    },
+    "X3_Orbe_Naranja": {
+      "birthMs": 300,
+      "standMs": 960,
+      "deathMs": 1000,
+      "flightCount": 25,
+      "flightEmitters": 4,
+      "bodyFadeMs": 90,
+      "bodyDeathScale": [
+        1,
+        1,
+        1
+      ],
+      "impactGeosets": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bursts": [
+        {
+          "name": "Impact / Shot II Stars",
+          "on": 40,
+          "off": 240,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            8.25,
+            13.75,
+            0.2750000059604645
+          ],
+          "rate": 90
+        },
+        {
+          "name": "Impact / Shot II Lumps",
+          "on": 50,
+          "off": 280,
+          "lifeMs": 330.00001311302185,
+          "size": [
+            11.399999618530273,
+            5.699999809265137,
+            0.1899999976158142
+          ],
+          "rate": 65
+        },
+        {
+          "name": "Impact / Shot II Flashes",
+          "on": 40,
+          "off": 280,
+          "lifeMs": 300.00001192092896,
+          "size": [
+            3.25,
+            5.199999809265137,
+            3.25
+          ],
+          "rate": 75
+        },
+        {
+          "name": "Impact / Shot II Avante Uno",
+          "on": 0,
+          "off": 160,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            6,
+            5.5,
+            0.25
+          ],
+          "rate": 80
+        }
+      ],
+      "reference": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Blue.mdx",
+      "root": "fixed at origin in every sequence",
+      "death": "flight fades in 90 ms; local flash expands; four reference-derived PE2 bursts decay independently"
+    },
+    "X3_Orbe_Cian": {
+      "birthMs": 300,
+      "standMs": 960,
+      "deathMs": 1000,
+      "flightCount": 25,
+      "flightEmitters": 4,
+      "bodyFadeMs": 90,
+      "bodyDeathScale": [
+        1,
+        1,
+        1
+      ],
+      "impactGeosets": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bursts": [
+        {
+          "name": "Impact / Shot II Stars",
+          "on": 40,
+          "off": 240,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            8.25,
+            13.75,
+            0.2750000059604645
+          ],
+          "rate": 90
+        },
+        {
+          "name": "Impact / Shot II Lumps",
+          "on": 50,
+          "off": 280,
+          "lifeMs": 330.00001311302185,
+          "size": [
+            11.399999618530273,
+            5.699999809265137,
+            0.1899999976158142
+          ],
+          "rate": 65
+        },
+        {
+          "name": "Impact / Shot II Flashes",
+          "on": 40,
+          "off": 280,
+          "lifeMs": 300.00001192092896,
+          "size": [
+            3.25,
+            5.199999809265137,
+            3.25
+          ],
+          "rate": 75
+        },
+        {
+          "name": "Impact / Shot II Avante Uno",
+          "on": 0,
+          "off": 160,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            6,
+            5.5,
+            0.25
+          ],
+          "rate": 80
+        }
+      ],
+      "reference": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Blue.mdx",
+      "root": "fixed at origin in every sequence",
+      "death": "flight fades in 90 ms; local flash expands; four reference-derived PE2 bursts decay independently"
+    },
+    "X3_Cross_Buster": {
+      "flightGeosets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "impactGeosets": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "approvedSource": "a8c3dc9992b743fb17a52765a6e943370879926a55326a2f94d00182b9f1b390",
+      "shapeScale": [
+        0.78,
+        1.2,
+        1.2
+      ],
+      "worldTrajectory": false,
+      "localRingRollMs": null,
+      "waves": {
+        "intervalMs": 200,
+        "travelMs": 320,
+        "clockMs": 400,
+        "globalId": 0,
+        "alphaZeroFromMs": 300,
+        "radiusWhenInvisible": 7.9575477076641,
+        "records": [
+          {
+            "phaseMs": 0,
+            "boneName": "Travelling green wave 0",
+            "geosets": [
+              61,
+              62,
+              63
+            ]
+          },
+          {
+            "phaseMs": 200,
+            "boneName": "Travelling green wave 200",
+            "geosets": [
+              64,
+              65,
+              66
+            ]
+          }
+        ],
+        "profile": [
+          {
+            "time": 0,
+            "x": -0.5,
+            "r": 6.294804681022461,
+            "alpha": 0
+          },
+          {
+            "time": 5,
+            "x": -1.75,
+            "r": 11.620514180809248,
+            "alpha": 0.15625
+          },
+          {
+            "time": 10,
+            "x": -3,
+            "r": 15.00781046655374,
+            "alpha": 0.5
+          },
+          {
+            "time": 15,
+            "x": -4.25,
+            "r": 17.61302476842225,
+            "alpha": 0.84375
+          },
+          {
+            "time": 20,
+            "x": -5.5,
+            "r": 19.748142933085013,
+            "alpha": 1
+          },
+          {
+            "time": 25,
+            "x": -6.75,
+            "r": 21.55332685312177,
+            "alpha": 1
+          },
+          {
+            "time": 30,
+            "x": -8,
+            "r": 23.106035767497826,
+            "alpha": 1
+          },
+          {
+            "time": 35,
+            "x": -9.25,
+            "r": 24.454409022908777,
+            "alpha": 1
+          },
+          {
+            "time": 40,
+            "x": -10.5,
+            "r": 25.63071582593822,
+            "alpha": 1
+          },
+          {
+            "time": 45,
+            "x": -11.75,
+            "r": 26.657743868522,
+            "alpha": 1
+          },
+          {
+            "time": 50,
+            "x": -13,
+            "r": 27.552191634947825,
+            "alpha": 1
+          },
+          {
+            "time": 55,
+            "x": -14.25,
+            "r": 28.32662106460105,
+            "alpha": 1
+          },
+          {
+            "time": 60,
+            "x": -15.5,
+            "r": 28.99065192964028,
+            "alpha": 1
+          },
+          {
+            "time": 65,
+            "x": -16.75,
+            "r": 29.551727174448796,
+            "alpha": 1
+          },
+          {
+            "time": 70,
+            "x": -18,
+            "r": 30.01562093310748,
+            "alpha": 1
+          },
+          {
+            "time": 75,
+            "x": -19.25,
+            "r": 30.38678433672094,
+            "alpha": 1
+          },
+          {
+            "time": 80,
+            "x": -20.5,
+            "r": 30.66858434900806,
+            "alpha": 1
+          },
+          {
+            "time": 85,
+            "x": -21.75,
+            "r": 30.863468874018356,
+            "alpha": 1
+          },
+          {
+            "time": 90,
+            "x": -23,
+            "r": 30.973078588061313,
+            "alpha": 1
+          },
+          {
+            "time": 95,
+            "x": -24.25,
+            "r": 30.99940242778925,
+            "alpha": 1
+          },
+          {
+            "time": 100,
+            "x": -25.5,
+            "r": 30.97848928171444,
+            "alpha": 1
+          },
+          {
+            "time": 105,
+            "x": -26.75,
+            "r": 30.92771543793247,
+            "alpha": 1
+          },
+          {
+            "time": 110,
+            "x": -28,
+            "r": 30.847118933009313,
+            "alpha": 1
+          },
+          {
+            "time": 115,
+            "x": -29.25,
+            "r": 30.736760099636005,
+            "alpha": 1
+          },
+          {
+            "time": 120,
+            "x": -30.5,
+            "r": 30.59672145930643,
+            "alpha": 1
+          },
+          {
+            "time": 125,
+            "x": -31.75,
+            "r": 30.427107574278022,
+            "alpha": 1
+          },
+          {
+            "time": 130,
+            "x": -33,
+            "r": 30.228044857874057,
+            "alpha": 1
+          },
+          {
+            "time": 135,
+            "x": -34.25,
+            "r": 29.99968134188483,
+            "alpha": 1
+          },
+          {
+            "time": 140,
+            "x": -35.5,
+            "r": 29.742186399487363,
+            "alpha": 1
+          },
+          {
+            "time": 145,
+            "x": -36.75,
+            "r": 29.455750421718072,
+            "alpha": 1
+          },
+          {
+            "time": 150,
+            "x": -38,
+            "r": 29.140584445088,
+            "alpha": 1
+          },
+          {
+            "time": 155,
+            "x": -39.25,
+            "r": 28.796919727408696,
+            "alpha": 1
+          },
+          {
+            "time": 160,
+            "x": -40.5,
+            "r": 28.425007268280517,
+            "alpha": 1
+          },
+          {
+            "time": 165,
+            "x": -41.75,
+            "r": 28.025117269958685,
+            "alpha": 1
+          },
+          {
+            "time": 170,
+            "x": -43,
+            "r": 27.59753853342593,
+            "alpha": 1
+          },
+          {
+            "time": 175,
+            "x": -44.25,
+            "r": 27.142577783424965,
+            "alpha": 1
+          },
+          {
+            "time": 180,
+            "x": -45.5,
+            "r": 26.66055891488945,
+            "alpha": 1
+          },
+          {
+            "time": 185,
+            "x": -46.75,
+            "r": 26.151822151594043,
+            "alpha": 1
+          },
+          {
+            "time": 190,
+            "x": -48,
+            "r": 25.61672310583874,
+            "alpha": 1
+          },
+          {
+            "time": 195,
+            "x": -49.25,
+            "r": 25.055631725478342,
+            "alpha": 0.9939894815927873
+          },
+          {
+            "time": 200,
+            "x": -50.5,
+            "r": 24.46893111145858,
+            "alpha": 0.976709241172051
+          },
+          {
+            "time": 205,
+            "x": -51.75,
+            "r": 23.85701618502708,
+            "alpha": 0.9492862509391435
+          },
+          {
+            "time": 210,
+            "x": -53,
+            "r": 23.220292178684023,
+            "alpha": 0.912847483095417
+          },
+          {
+            "time": 215,
+            "x": -54.25,
+            "r": 22.55917291835615,
+            "alpha": 0.8685199098422239
+          },
+          {
+            "time": 220,
+            "x": -55.5,
+            "r": 21.87407885571223,
+            "alpha": 0.8174305033809166
+          },
+          {
+            "time": 225,
+            "x": -56.75,
+            "r": 21.165434798276056,
+            "alpha": 0.7607062359128475
+          },
+          {
+            "time": 230,
+            "x": -58,
+            "r": 20.433667270023918,
+            "alpha": 0.6994740796393689
+          },
+          {
+            "time": 235,
+            "x": -59.25,
+            "r": 19.67920141502063,
+            "alpha": 0.6348610067618332
+          },
+          {
+            "time": 240,
+            "x": -60.5,
+            "r": 18.902457329220038,
+            "alpha": 0.5679939894815929
+          },
+          {
+            "time": 245,
+            "x": -61.75,
+            "r": 18.10384566766062,
+            "alpha": 0.5
+          },
+          {
+            "time": 250,
+            "x": -63,
+            "r": 17.283762321116132,
+            "alpha": 0.43200601051840726
+          },
+          {
+            "time": 255,
+            "x": -64.25,
+            "r": 16.442581880378082,
+            "alpha": 0.3651389932381667
+          },
+          {
+            "time": 260,
+            "x": -65.5,
+            "r": 15.58064949598837,
+            "alpha": 0.3005259203606311
+          },
+          {
+            "time": 265,
+            "x": -66.75,
+            "r": 14.698270577332607,
+            "alpha": 0.23929376408715253
+          },
+          {
+            "time": 270,
+            "x": -68,
+            "r": 13.795697525750986,
+            "alpha": 0.1825694966190834
+          },
+          {
+            "time": 275,
+            "x": -69.25,
+            "r": 12.873112307032429,
+            "alpha": 0.13148009015777617
+          },
+          {
+            "time": 280,
+            "x": -70.5,
+            "r": 11.930603041867123,
+            "alpha": 0.08715251690458292
+          },
+          {
+            "time": 285,
+            "x": -71.75,
+            "r": 10.96813174764863,
+            "alpha": 0.05071374906085646
+          },
+          {
+            "time": 290,
+            "x": -73,
+            "r": 9.985488549521765,
+            "alpha": 0.023290758827948954
+          },
+          {
+            "time": 295,
+            "x": -74.25,
+            "r": 8.982224369197281,
+            "alpha": 0.006010518407212562
+          },
+          {
+            "time": 300,
+            "x": -75.5,
+            "r": 7.9575477076641,
+            "alpha": 0
+          },
+          {
+            "time": 305,
+            "x": -76.75,
+            "r": 6.910157880459081,
+            "alpha": 0
+          },
+          {
+            "time": 310,
+            "x": -78,
+            "r": 5.8379569896097125,
+            "alpha": 0
+          },
+          {
+            "time": 315,
+            "x": -79.25,
+            "r": 4.737506197400649,
+            "alpha": 0
+          },
+          {
+            "time": 320,
+            "x": -80.5,
+            "r": 3.6028617116851027,
+            "alpha": 0
+          }
+        ],
+        "scope": "local wave only; root, body and existing lifecycle retained"
+      }
+    },
+    "X3_Flash_Union": {
+      "finiteAllSequences": true,
+      "durationMs": 500,
+      "center": "union origin",
+      "worldTrajectory": false
+    }
+  },
+  "sourceCross": {
+    "path": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v13/C-Buster-fusionado/X3_Cross_Buster.mdx",
+    "sha256": "459d9c6255538ebc4ba157078715be0129991c8f2cbdb6885d6c46b54748e51e"
+  },
+  "source": {
+    "author": "Vinz",
+    "pack": "Shots Vol. II",
+    "path": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/shots-vol-ii/originales/Shots Vol. II/Shot II Blue.mdx",
+    "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac"
+  },
+  "worldTrajectory": false
+}

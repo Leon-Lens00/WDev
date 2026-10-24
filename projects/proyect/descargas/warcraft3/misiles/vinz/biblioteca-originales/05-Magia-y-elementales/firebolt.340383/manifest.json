@@ -1,0 +1,82 @@
+{
+  "title": "Firebolt",
+  "url": "https://www.hiveworkshop.com/threads/firebolt.340383/",
+  "author": "Vinz",
+  "tags": [
+    "#Effect",
+    "#Missile",
+    "#Blood Elf"
+  ],
+  "listedResources": 2,
+  "date": "2026-10-22T19:15:17.014938-05:00",
+  "category": "05-Magia-y-elementales",
+  "folder": "05-Magia-y-elementales/firebolt.340383",
+  "zip": "original.zip",
+  "zipBytes": 229149,
+  "zipSha256": "1582178edb9175e63739c5cf7cbe108a54a832f70337a2139d06937c7ee746ac",
+  "crc": "PASS",
+  "files": [
+    {
+      "path": "originales/Firebolt/readme.html",
+      "archivePath": "Firebolt/readme.html",
+      "bytes": 4129,
+      "sha256": "218ce0b9f2421f5e03a5edb4fcf93a35168f04cb6d676b0d6db5879ead5ef3e3"
+    },
+    {
+      "path": "originales/Firebolt/Firebolt/Firebolt.mdx",
+      "archivePath": "Firebolt/Firebolt/Firebolt.mdx",
+      "bytes": 19064,
+      "sha256": "4eba56a1e4cb368ccf859fb7abc959ac79af7eac6861a68e8dc432655eaf5c60"
+    },
+    {
+      "path": "originales/Firebolt/Firebolt/flareshot_tail.blp",
+      "archivePath": "Firebolt/Firebolt/flareshot_tail.blp",
+      "bytes": 7468,
+      "sha256": "df1d142118aa1368c018c943d6b5551202630cfef46cd089d3097c7df7be0dbb"
+    },
+    {
+      "path": "originales/Firebolt/Firebolt Classic/Firebolt Classic.mdx",
+      "archivePath": "Firebolt/Firebolt Classic/Firebolt Classic.mdx",
+      "bytes": 19064,
+      "sha256": "7e96bc8e74803797485fcb827805b7dda55319b7b0beb40f8a1686e2b194a1a4"
+    },
+    {
+      "path": "originales/Firebolt/Firebolt Classic/flaresimple_bw.blp",
+      "archivePath": "Firebolt/Firebolt Classic/flaresimple_bw.blp",
+      "bytes": 4277,
+      "sha256": "5b7e1c02841d389a492f854b2a125795eda042a26cd7e5748811beced859bc29"
+    },
+    {
+      "path": "originales/Firebolt/Firebolt Classic/largesmoke1.blp",
+      "archivePath": "Firebolt/Firebolt Classic/largesmoke1.blp",
+      "bytes": 19566,
+      "sha256": "c32c681251f2624ed58d4f969adb18bb947a495d5a5bff7b50a0186dbb52fc1d"
+    },
+    {
+      "path": "originales/Firebolt/Firebolt Classic/fb_whisp_fire_8x8.blp",
+      "archivePath": "Firebolt/Firebolt Classic/fb_whisp_fire_8x8.blp",
+      "bytes": 190504,
+      "sha256": "13d7743597cf284e1c912ab421f0f7c841c7c0851b15f71f112da2169a322668"
+    },
+    {
+      "path": "originales/Firebolt/Firebolt Classic/flareshot_tail.blp",
+      "archivePath": "Firebolt/Firebolt Classic/flareshot_tail.blp",
+      "bytes": 7468,
+      "sha256": "df1d142118aa1368c018c943d6b5551202630cfef46cd089d3097c7df7be0dbb"
+    },
+    {
+      "path": "originales/Firebolt/Firebolt Classic/moon_bw.blp",
+      "archivePath": "Firebolt/Firebolt Classic/moon_bw.blp",
+      "bytes": 15768,
+      "sha256": "f08d18b1738ba0bfa26b49071b611ea679552931e5a0ab486bd2879f20f99f0c"
+    },
+    {
+      "path": "originales/Firebolt/Firebolt Classic/smoke_bw.blp",
+      "archivePath": "Firebolt/Firebolt Classic/smoke_bw.blp",
+      "bytes": 18095,
+      "sha256": "a1303cc23bf38fa22bda51d1961dfc376148054eeb084e32ac3b3a31e87f7b3a"
+    }
+  ],
+  "models": 2,
+  "textures": 7
+}

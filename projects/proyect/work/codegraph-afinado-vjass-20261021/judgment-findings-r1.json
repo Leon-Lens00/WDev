@@ -1,0 +1,29 @@
+{
+  "judges": {
+    "A": {
+      "limitations": ["Revisión estática y sólo de lectura; sin ejecución independiente de programas, pruebas o compiladores", "Contexto upstream seleccionado; no se revisó todo el pipeline original"],
+      "findings": [
+        {"id":"JD-A-001","location":"src/resolution/jass.ts:69","severity":"WARNING","confidence":"demonstrated","claim":"La búsqueda de miembros heredados interpreta comentarios de la cabecera como sintaxis y puede crear una arista hacia una implementación incorrecta en código válido."},
+        {"id":"JD-A-002","location":"src/extraction/jass-extractor.ts:40","severity":"WARNING","confidence":"demonstrated","claim":"El contenido de una región omitida sigue interpretándose como directivas de otras regiones y produce errores de parseo falsos en documentación novjass."},
+        {"id":"JD-A-003","location":"src/mcp/tools.ts:7622","severity":"WARNING","confidence":"demonstrated","claim":"codegraph_node puede devolver fuentes JASS/vJASS sin la nota de cobertura ni sus diagnósticos, por lo que el aviso añadido no cubre todas las respuestas MCP documentadas."}
+      ]
+    },
+    "B": {
+      "limitations": ["Revisión estática exclusivamente de lectura; resultados registrados no son reproducciones independientes", "Los nuevos casos requieren regresiones y compilación con JassHelper para confirmar su aceptación"],
+      "findings": [
+        {"id":"JD-B-001","location":"src/resolution/jass.ts:88","severity":"WARNING","confidence":"demonstrated","claim":"Una ambigüedad entre métodos del struct permite resolver la llamada a una función global homónima, produciendo una arista falsa cuando static-if contiene declaraciones alternativas."},
+        {"id":"JD-B-002","location":"src/resolution/jass.ts:83","severity":"WARNING","confidence":"demonstrated","claim":"Se descartan llamadas directas a métodos declarados execute o evaluate, aunque el receptor tenga un tipo conocido y no sea una function-interface."},
+        {"id":"JD-B-003","location":"src/mcp/tools.ts:2646","severity":"WARNING","confidence":"demonstrated","claim":"La advertencia de cobertura y los diagnósticos JASS sólo se añaden mediante answerResult; codegraph_node devuelve fuentes y relaciones sin pasar por esa función."}
+      ]
+    }
+  },
+  "parent_triage": [
+    {"ids":["JD-A-001"],"status":"confirmed","impact":"material: arista hacia una base equivocada","evidence":["comment-inheritance-probe/before.json","comment-inheritance-compiled.j","comment-inheritance-compile.log"]},
+    {"ids":["JD-B-001"],"status":"confirmed","impact":"material: ambigüedad convertida en llamada global inexistente","evidence":["judgment-regressions-before.log","conditional-method-compiled.j","conditional-method-compile.log"]},
+    {"ids":["JD-A-002"],"status":"confirmed","impact":"regresión del contrato de regiones omitidas, dentro del lexer corregido","evidence":["judgment-regressions-before.log","novjass-zinc-compile.log"]},
+    {"ids":["JD-B-002"],"status":"confirmed","impact":"método directo válido oculto bajo una exclusión de dispatch indirecto","evidence":["judgment-regressions-before.log","execute-method-compile.log"]},
+    {"ids":["JD-A-003","JD-B-003"],"status":"confirmed","impact":"mismo defecto: pérdida de advertencias en la superficie secundaria MCP","evidence":["judgment-regressions-before.log"]}
+  ],
+  "correction_round": 1,
+  "rationale": "Se abre una sola ronda por dos defectos corroborados que fabrican aristas incorrectas. En el mismo delta acotado se corrigen los contratos funcionales del lexer y de las consultas señalados; no se introducen cambios de estilo ni una expansión de lenguaje. Reevaluar estos IDs y regresiones del delta; máximo dos rondas totales."
+}

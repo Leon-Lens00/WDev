@@ -1,0 +1,17 @@
+{
+  "map_sha256": "5bbb04f5b622227d2ea60bcd9b1ea84da937955fe959165028ddaefd277ccb3a",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/TerrainDev-Dialogue.w3x",
+  "staged": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/runtime-lan/pfx/drive_c/WarcraftIII/Maps/CodexTest/5bbb04f5b622227d.w3x",
+  "profile": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/runtime-lan",
+  "port": 6218,
+  "command": [
+    "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/_v2-entry-point",
+    "--verb=run",
+    "--",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+    "runinprefix",
+    "C:\\WarcraftIII\\war3.exe",
+    "-window"
+  ],
+  "mode": "LAN menu; host not yet created"
+}

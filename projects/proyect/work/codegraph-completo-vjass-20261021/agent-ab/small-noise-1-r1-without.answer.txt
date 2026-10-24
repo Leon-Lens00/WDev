@@ -1,0 +1,8 @@
+`codegraph_explore` was unavailable; I inspected the two source files directly.
+
+- **Intermediate wiring:** `NoisePlugin requires Noise` defines module `OctavePerlin` ([OctavePerlin.j:10](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/OctavePerlin.j:10)). Library `Noise` contains struct `Noise`, which uses `implement optional OctavePerlin`; when that module is available, its methods become struct methods ([Noise.j:30](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:30)).
+- **`octavePerlin2D → perlin2D`:** Starting with `i=0`, frequency/amplitude `1`, the loop exits when `i >= octaves`; otherwise it directly calls `perlin2D(x * frequency, y * frequency)`. Each iteration doubles frequency and multiplies amplitude by persistence. `total` is **overwritten**, then divided by accumulated amplitude. Nonpositive octaves skip the call and leave a zero denominator ([OctavePerlin.j:29](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/OctavePerlin.j:29)).
+- **`perlin2D → floor`:** Four unconditional calls floor each coordinate for masked lattice indices and fractional coordinates ([Noise.j:74](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:74)).
+- **`floor`:** The private static method computes `n=R2I(value)`, decrementing only when `value < 0.` and `value - n != 0.` ([Noise.j:32](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:32)).
+
+This establishes source wiring; compiled inclusion was not verified.

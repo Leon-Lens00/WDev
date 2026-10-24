@@ -1,0 +1,1346 @@
+{
+  "pixels": [
+    1920,
+    1080
+  ],
+  "mask": "R>190,G<120,B>135; x<1600,120<=y<800; merges y gaps<=2; bounding ink, not engine rectangle",
+  "ocr": "Tesseract auxiliary, requires visual confirmation",
+  "cases": [
+    {
+      "case": 0,
+      "name": "words-0.018-40",
+      "font": 0.018,
+      "text": "0123 56789 0123 56789 0123 56789 012 FIN",
+      "kind": "static",
+      "bytes": 40,
+      "graphemes": 40,
+      "explicitLines": 1,
+      "nativeBytes": 40,
+      "bbox": [
+        89,
+        660,
+        439,
+        674
+      ],
+      "visibleRowsApprox": 1,
+      "inkSpans": 1,
+      "lineMetrics": [
+        {
+          "y": 660,
+          "height": 14,
+          "left": 89,
+          "width": 350
+        }
+      ],
+      "ocr": "0123 56789 0123 56789 0123 56789 012 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/00-words-0.018-40.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 1,
+      "name": "words-0.018-80",
+      "font": 0.018,
+      "text": "0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 FIN",
+      "kind": "static",
+      "bytes": 80,
+      "graphemes": 80,
+      "explicitLines": 1,
+      "nativeBytes": 80,
+      "bbox": [
+        89,
+        641,
+        517,
+        674
+      ],
+      "visibleRowsApprox": 2,
+      "inkSpans": 2,
+      "lineMetrics": [
+        {
+          "y": 641,
+          "height": 14,
+          "left": 89,
+          "width": 428
+        },
+        {
+          "y": 660,
+          "height": 14,
+          "left": 89,
+          "width": 278
+        }
+      ],
+      "ocr": "0123 56789 0123 56789 0123 56789 0123 56789 0123\n56789 0123 56789 0123 56789 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/01-words-0.018-80.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 2,
+      "name": "words-0.018-160",
+      "font": 0.018,
+      "text": "0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 01 FIN",
+      "kind": "static",
+      "bytes": 160,
+      "graphemes": 160,
+      "explicitLines": 1,
+      "nativeBytes": 160,
+      "bbox": [
+        89,
+        603,
+        533,
+        674
+      ],
+      "visibleRowsApprox": 4,
+      "inkSpans": 4,
+      "lineMetrics": [
+        {
+          "y": 603,
+          "height": 14,
+          "left": 89,
+          "width": 428
+        },
+        {
+          "y": 622,
+          "height": 14,
+          "left": 89,
+          "width": 444
+        },
+        {
+          "y": 641,
+          "height": 14,
+          "left": 89,
+          "width": 428
+        },
+        {
+          "y": 660,
+          "height": 14,
+          "left": 89,
+          "width": 103
+        }
+      ],
+      "ocr": "0123 56789 0123 56789 0123 56789 0123 56789 0123\n56789 0123 56789 0123 56789 0123 56789 0123 56789\n0123 56789 0123 56789 0123 56789 0123 56789 0123\n56789 01 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/02-words-0.018-160.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 3,
+      "name": "words-0.027-40",
+      "font": 0.027,
+      "text": "0123 56789 0123 56789 0123 56789 012 FIN",
+      "kind": "static",
+      "bytes": 40,
+      "graphemes": 40,
+      "explicitLines": 1,
+      "nativeBytes": 40,
+      "bbox": [
+        89,
+        623,
+        523,
+        674
+      ],
+      "visibleRowsApprox": 2,
+      "inkSpans": 2,
+      "lineMetrics": [
+        {
+          "y": 623,
+          "height": 21,
+          "left": 89,
+          "width": 434
+        },
+        {
+          "y": 652,
+          "height": 22,
+          "left": 89,
+          "width": 86
+        }
+      ],
+      "ocr": "0123 56789 0123 56789 0123 56789\nO1Z2 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/03-words-0.027-40.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 4,
+      "name": "words-0.027-80",
+      "font": 0.027,
+      "text": "0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 FIN",
+      "kind": "static",
+      "bytes": 80,
+      "graphemes": 80,
+      "explicitLines": 1,
+      "nativeBytes": 80,
+      "bbox": [
+        89,
+        594,
+        523,
+        674
+      ],
+      "visibleRowsApprox": 3,
+      "inkSpans": 3,
+      "lineMetrics": [
+        {
+          "y": 594,
+          "height": 21,
+          "left": 89,
+          "width": 434
+        },
+        {
+          "y": 623,
+          "height": 21,
+          "left": 89,
+          "width": 434
+        },
+        {
+          "y": 652,
+          "height": 22,
+          "left": 89,
+          "width": 187
+        }
+      ],
+      "ocr": "0123 56789 0123 56789 0123 56789\n0123 56789 0123 56789 0123 56789\n0123 56789 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/04-words-0.027-80.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 5,
+      "name": "words-0.027-160",
+      "font": 0.027,
+      "text": "0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 01 FIN",
+      "kind": "static",
+      "bytes": 160,
+      "graphemes": 160,
+      "explicitLines": 1,
+      "nativeBytes": 160,
+      "bbox": [
+        89,
+        537,
+        523,
+        675
+      ],
+      "visibleRowsApprox": 5,
+      "inkSpans": 5,
+      "lineMetrics": [
+        {
+          "y": 537,
+          "height": 21,
+          "left": 89,
+          "width": 434
+        },
+        {
+          "y": 566,
+          "height": 21,
+          "left": 89,
+          "width": 434
+        },
+        {
+          "y": 595,
+          "height": 21,
+          "left": 89,
+          "width": 434
+        },
+        {
+          "y": 624,
+          "height": 21,
+          "left": 89,
+          "width": 434
+        },
+        {
+          "y": 653,
+          "height": 22,
+          "left": 89,
+          "width": 365
+        }
+      ],
+      "ocr": "0123 56789 0123 56789 0123 56789\n0123 56789 0123 56789 0123 56789\n0123 56789 0123 56789 0123 56789\n0123 56789 0123 56789 0123 56789\n0123 56789 0123 56789 01 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/05-words-0.027-160.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 6,
+      "name": "words-0.036-40",
+      "font": 0.036,
+      "text": "0123 56789 0123 56789 0123 56789 012 FIN",
+      "kind": "static",
+      "bytes": 40,
+      "graphemes": 40,
+      "explicitLines": 1,
+      "nativeBytes": 40,
+      "bbox": [
+        90,
+        604,
+        556,
+        671
+      ],
+      "visibleRowsApprox": 2,
+      "inkSpans": 2,
+      "lineMetrics": [
+        {
+          "y": 604,
+          "height": 28,
+          "left": 90,
+          "width": 466
+        },
+        {
+          "y": 642,
+          "height": 29,
+          "left": 90,
+          "width": 229
+        }
+      ],
+      "ocr": "0123 56789 0123 56789 0123\n56789 012 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/06-words-0.036-40.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 7,
+      "name": "words-0.036-80",
+      "font": 0.036,
+      "text": "0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 FIN",
+      "kind": "static",
+      "bytes": 80,
+      "graphemes": 80,
+      "explicitLines": 1,
+      "nativeBytes": 80,
+      "bbox": [
+        90,
+        528,
+        556,
+        671
+      ],
+      "visibleRowsApprox": 4,
+      "inkSpans": 4,
+      "lineMetrics": [
+        {
+          "y": 528,
+          "height": 28,
+          "left": 90,
+          "width": 466
+        },
+        {
+          "y": 566,
+          "height": 28,
+          "left": 90,
+          "width": 383
+        },
+        {
+          "y": 604,
+          "height": 28,
+          "left": 90,
+          "width": 383
+        },
+        {
+          "y": 642,
+          "height": 29,
+          "left": 90,
+          "width": 166
+        }
+      ],
+      "ocr": "0123 56789 0123 56789 0123\n56789 0123 56789 0123\n56789 0123 56789 0123\n56789 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/07-words-0.036-80.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 8,
+      "name": "words-0.036-160",
+      "font": 0.036,
+      "text": "0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 01 FIN",
+      "kind": "static",
+      "bytes": 160,
+      "graphemes": 160,
+      "explicitLines": 1,
+      "nativeBytes": 160,
+      "bbox": [
+        90,
+        414,
+        556,
+        671
+      ],
+      "visibleRowsApprox": 7,
+      "inkSpans": 7,
+      "lineMetrics": [
+        {
+          "y": 414,
+          "height": 28,
+          "left": 90,
+          "width": 466
+        },
+        {
+          "y": 452,
+          "height": 28,
+          "left": 90,
+          "width": 383
+        },
+        {
+          "y": 490,
+          "height": 28,
+          "left": 90,
+          "width": 383
+        },
+        {
+          "y": 528,
+          "height": 28,
+          "left": 90,
+          "width": 383
+        },
+        {
+          "y": 566,
+          "height": 28,
+          "left": 90,
+          "width": 383
+        },
+        {
+          "y": 604,
+          "height": 28,
+          "left": 90,
+          "width": 383
+        },
+        {
+          "y": 642,
+          "height": 29,
+          "left": 90,
+          "width": 405
+        }
+      ],
+      "ocr": "0123 56789 0123 56789 0123\n56789 0123 56789 0123\n56789 0123 56789 0123\n56789 0123 56789 0123\n56789 0123 56789 0123\n56789 0123 56789 0123\n56789 0123 56789 01 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/08-words-0.036-160.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 9,
+      "name": "words-0.045-40",
+      "font": 0.045,
+      "text": "0123 56789 0123 56789 0123 56789 012 FIN",
+      "kind": "static",
+      "bytes": 40,
+      "graphemes": 40,
+      "explicitLines": 1,
+      "nativeBytes": 40,
+      "bbox": [
+        90,
+        586,
+        573,
+        670
+      ],
+      "visibleRowsApprox": 2,
+      "inkSpans": 2,
+      "lineMetrics": [
+        {
+          "y": 586,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        },
+        {
+          "y": 634,
+          "height": 36,
+          "left": 90,
+          "width": 393
+        }
+      ],
+      "ocr": "O123 56789 0123 56789\n0123 56789 012 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/09-words-0.045-40.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 10,
+      "name": "words-0.045-80",
+      "font": 0.045,
+      "text": "0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 FIN",
+      "kind": "static",
+      "bytes": 80,
+      "graphemes": 80,
+      "explicitLines": 1,
+      "nativeBytes": 80,
+      "bbox": [
+        90,
+        491,
+        573,
+        671
+      ],
+      "visibleRowsApprox": 4,
+      "inkSpans": 4,
+      "lineMetrics": [
+        {
+          "y": 491,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        },
+        {
+          "y": 539,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        },
+        {
+          "y": 587,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        },
+        {
+          "y": 635,
+          "height": 36,
+          "left": 90,
+          "width": 314
+        }
+      ],
+      "ocr": "O123 56789 0123 56789\nO123 56789 0123 56789\nO123 56789 0123 56789\n0123 56789 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/10-words-0.045-80.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 11,
+      "name": "words-0.045-160",
+      "font": 0.045,
+      "text": "0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 01 FIN",
+      "kind": "static",
+      "bytes": 160,
+      "graphemes": 160,
+      "explicitLines": 1,
+      "nativeBytes": 160,
+      "bbox": [
+        90,
+        395,
+        573,
+        670
+      ],
+      "visibleRowsApprox": 6,
+      "inkSpans": 6,
+      "lineMetrics": [
+        {
+          "y": 395,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        },
+        {
+          "y": 443,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        },
+        {
+          "y": 491,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        },
+        {
+          "y": 539,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        },
+        {
+          "y": 587,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        },
+        {
+          "y": 635,
+          "height": 35,
+          "left": 90,
+          "width": 483
+        }
+      ],
+      "ocr": "O123 56789 0123 56789\nO123 56789 0123 56789\nO123 56789 0123 56789\nO123 56789 0123 56789\nO123 56789 0123 56789\n0123 56789 0123 56789",
+      "finDetectedOCR": false,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/11-words-0.045-160.png",
+      "finVisualReview": false,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 12,
+      "name": "unbroken-.027-40",
+      "font": 0.027,
+      "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWFIN",
+      "kind": "static",
+      "bytes": 40,
+      "graphemes": 40,
+      "explicitLines": 1,
+      "nativeBytes": 40,
+      "bbox": [
+        90,
+        595,
+        598,
+        674
+      ],
+      "visibleRowsApprox": 3,
+      "inkSpans": 3,
+      "lineMetrics": [
+        {
+          "y": 595,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 624,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 653,
+          "height": 21,
+          "left": 90,
+          "width": 129
+        }
+      ],
+      "ocr": "WWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWFIN",
+      "finDetectedOCR": false,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/12-unbroken-.027-40.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 13,
+      "name": "unbroken-.027-80",
+      "font": 0.027,
+      "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWFIN",
+      "kind": "static",
+      "bytes": 80,
+      "graphemes": 80,
+      "explicitLines": 1,
+      "nativeBytes": 80,
+      "bbox": [
+        90,
+        538,
+        598,
+        675
+      ],
+      "visibleRowsApprox": 5,
+      "inkSpans": 5,
+      "lineMetrics": [
+        {
+          "y": 538,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 567,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 596,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 625,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 654,
+          "height": 21,
+          "left": 90,
+          "width": 309
+        }
+      ],
+      "ocr": "WWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWEIN",
+      "finDetectedOCR": false,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/13-unbroken-.027-80.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 14,
+      "name": "unbroken-.027-160",
+      "font": 0.027,
+      "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWFIN",
+      "kind": "static",
+      "bytes": 160,
+      "graphemes": 160,
+      "explicitLines": 1,
+      "nativeBytes": 160,
+      "bbox": [
+        90,
+        424,
+        598,
+        676
+      ],
+      "visibleRowsApprox": 9,
+      "inkSpans": 9,
+      "lineMetrics": [
+        {
+          "y": 424,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 453,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 482,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 511,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 540,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 569,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 598,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 627,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 656,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        }
+      ],
+      "ocr": "WWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW",
+      "finDetectedOCR": false,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/14-unbroken-.027-160.png",
+      "finVisualReview": false,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 15,
+      "name": "narrow-i-80",
+      "font": 0.027,
+      "text": "iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiFIN",
+      "kind": "static",
+      "bytes": 80,
+      "graphemes": 80,
+      "explicitLines": 1,
+      "nativeBytes": 80,
+      "bbox": [
+        90,
+        653,
+        514,
+        674
+      ],
+      "visibleRowsApprox": 1,
+      "inkSpans": 1,
+      "lineMetrics": [
+        {
+          "y": 653,
+          "height": 21,
+          "left": 90,
+          "width": 424
+        }
+      ],
+      "ocr": "I e N",
+      "finDetectedOCR": false,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/15-narrow-i-80.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 16,
+      "name": "wide-W-80",
+      "font": 0.027,
+      "text": "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWFIN",
+      "kind": "static",
+      "bytes": 80,
+      "graphemes": 80,
+      "explicitLines": 1,
+      "nativeBytes": 80,
+      "bbox": [
+        90,
+        538,
+        598,
+        675
+      ],
+      "visibleRowsApprox": 5,
+      "inkSpans": 5,
+      "lineMetrics": [
+        {
+          "y": 538,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 567,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 596,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 625,
+          "height": 20,
+          "left": 90,
+          "width": 508
+        },
+        {
+          "y": 654,
+          "height": 21,
+          "left": 90,
+          "width": 309
+        }
+      ],
+      "ocr": "WWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWWWWWWWWW\nWWWWWWWWWEFIN",
+      "finDetectedOCR": false,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/16-wide-W-80.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 17,
+      "name": "paragraph-2x70",
+      "font": 0.027,
+      "text": "L01 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 \nL02 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789 0123 56789  FIN",
+      "kind": "static",
+      "bytes": 145,
+      "graphemes": 145,
+      "explicitLines": 2,
+      "nativeBytes": 145,
+      "bbox": [
+        89,
+        509,
+        523,
+        676
+      ],
+      "visibleRowsApprox": 6,
+      "inkSpans": 6,
+      "lineMetrics": [
+        {
+          "y": 509,
+          "height": 21,
+          "left": 90,
+          "width": 393
+        },
+        {
+          "y": 538,
+          "height": 21,
+          "left": 89,
+          "width": 434
+        },
+        {
+          "y": 567,
+          "height": 21,
+          "left": 89,
+          "width": 79
+        },
+        {
+          "y": 596,
+          "height": 21,
+          "left": 90,
+          "width": 403
+        },
+        {
+          "y": 625,
+          "height": 21,
+          "left": 89,
+          "width": 434
+        },
+        {
+          "y": 654,
+          "height": 22,
+          "left": 89,
+          "width": 133
+        }
+      ],
+      "ocr": "LO1 0123 56789 0123 56789 0123\n56789 0123 56789 0123 56789 0123\n56789\n\nLOZ2 O123 56789 0123 56789 0123\n56789 0123 56789 0123 56789 0123\n56789 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/17-paragraph-2x70.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 18,
+      "name": "paragraph-4x35",
+      "font": 0.027,
+      "text": "L01 0123 56789 0123 56789 0123 5678\nL02 0123 56789 0123 56789 0123 5678\nL03 0123 56789 0123 56789 0123 5678\nL04 0123 56789 0123 56789 0123 5678 FIN",
+      "kind": "static",
+      "bytes": 147,
+      "graphemes": 147,
+      "explicitLines": 4,
+      "nativeBytes": 147,
+      "bbox": [
+        90,
+        537,
+        563,
+        675
+      ],
+      "visibleRowsApprox": 5,
+      "inkSpans": 5,
+      "lineMetrics": [
+        {
+          "y": 537,
+          "height": 21,
+          "left": 90,
+          "width": 462
+        },
+        {
+          "y": 566,
+          "height": 21,
+          "left": 90,
+          "width": 472
+        },
+        {
+          "y": 595,
+          "height": 21,
+          "left": 90,
+          "width": 470
+        },
+        {
+          "y": 624,
+          "height": 21,
+          "left": 90,
+          "width": 473
+        },
+        {
+          "y": 654,
+          "height": 21,
+          "left": 90,
+          "width": 39
+        }
+      ],
+      "ocr": "LO1 0123 56789 0123 56789 0123 5678\nLOZ O123 56789 0123 56789 0123 5678\nLO3 0123 56789 0123 56789 0123 5678\nLO4 0123 56789 0123 56789 0123 5678\nFIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/18-paragraph-4x35.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 19,
+      "name": "paragraph-8x18",
+      "font": 0.027,
+      "text": "L01 0123 56789 012\nL02 0123 56789 012\nL03 0123 56789 012\nL04 0123 56789 012\nL05 0123 56789 012\nL06 0123 56789 012\nL07 0123 56789 012\nL08 0123 56789 012 FIN",
+      "kind": "static",
+      "bytes": 155,
+      "graphemes": 155,
+      "explicitLines": 8,
+      "nativeBytes": 155,
+      "bbox": [
+        90,
+        452,
+        378,
+        677
+      ],
+      "visibleRowsApprox": 8,
+      "inkSpans": 8,
+      "lineMetrics": [
+        {
+          "y": 452,
+          "height": 21,
+          "left": 90,
+          "width": 230
+        },
+        {
+          "y": 481,
+          "height": 21,
+          "left": 90,
+          "width": 240
+        },
+        {
+          "y": 510,
+          "height": 21,
+          "left": 90,
+          "width": 238
+        },
+        {
+          "y": 539,
+          "height": 21,
+          "left": 90,
+          "width": 241
+        },
+        {
+          "y": 568,
+          "height": 21,
+          "left": 90,
+          "width": 238
+        },
+        {
+          "y": 597,
+          "height": 21,
+          "left": 90,
+          "width": 239
+        },
+        {
+          "y": 626,
+          "height": 21,
+          "left": 90,
+          "width": 237
+        },
+        {
+          "y": 655,
+          "height": 22,
+          "left": 90,
+          "width": 288
+        }
+      ],
+      "ocr": "LO1 0123 56789 012\n\nLO2 O123 56789 012\nLO3 0123 56789 012\nLO4 0123 56789 012\nLO5 0123 56789 012\nLOG 0123 56789 012\nLO7 O123 56789 012\nLOS 0123 56789 012 FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/19-paragraph-8x18.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 20,
+      "name": "payload-128-bytes",
+      "font": 0.01,
+      "text": "L01 abcdefghijklmnopqrstuvwx0123\nL02 abcdefghijklmnopqrstuvwx0123\nL03 abcdefghijklmnopqrstuvwx0123\nL04 abcdefghijklmnopqrstu FIN",
+      "kind": "static",
+      "bytes": 128,
+      "graphemes": 128,
+      "explicitLines": 4,
+      "nativeBytes": 128,
+      "bbox": [
+        89,
+        637,
+        267,
+        680
+      ],
+      "visibleRowsApprox": 4,
+      "inkSpans": 1,
+      "lineMetrics": [
+        {
+          "y": 637,
+          "height": 40,
+          "left": 89,
+          "width": 178
+        }
+      ],
+      "ocr": "LOI abecet zhilcmnoaastuywxllZ 3\nL2Z aboccetghlilcnnoaastuvwxllZ 3\nL23 abccetzhilcnnoaastuvwxllZ 3\nLC4 abecetzhilcnneaarstu FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/20-payload-128-bytes.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 21,
+      "name": "payload-256-bytes",
+      "font": 0.01,
+      "text": "L01 abcdefghijklmnopqrstuvwx0123\nL02 abcdefghijklmnopqrstuvwx0123\nL03 abcdefghijklmnopqrstuvwx0123\nL04 abcdefghijklmnopqrstuvwx0123\nL05 abcdefghijklmnopqrstuvwx0123\nL06 abcdefghijklmnopqrstuvwx0123\nL07 abcdefghijklmnopqrstuvwx0123\nL08 abcdefghijklmnopq FIN",
+      "kind": "static",
+      "bytes": 256,
+      "graphemes": 256,
+      "explicitLines": 8,
+      "nativeBytes": 256,
+      "bbox": [
+        89,
+        595,
+        267,
+        682
+      ],
+      "visibleRowsApprox": 8,
+      "inkSpans": 1,
+      "lineMetrics": [
+        {
+          "y": 595,
+          "height": 80,
+          "left": 89,
+          "width": 178
+        }
+      ],
+      "ocr": "LOI abecet zhilcmnoaastuywxllZ 3\nL2Z abccetghlilcnnoaastuvwxllZ 3\nL23 abccetzhilcnnoaastuvwxllZ 3\nLC4 abccetghlilcnneaarstuv wxllZ 3\nLOS abecetghilcnnoaastuywxllZ 3\nLOG abecet ghilcnnoaastuvwxllZ 3\nLO7 abecetzhilcnnoaastuywxllZ 3\nLO8 abccetzhilcnneae FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/21-payload-256-bytes.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 22,
+      "name": "payload-512-bytes",
+      "font": 0.01,
+      "text": "L01 abcdefghijklmnopqrstuvwx0123\nL02 abcdefghijklmnopqrstuvwx0123\nL03 abcdefghijklmnopqrstuvwx0123\nL04 abcdefghijklmnopqrstuvwx0123\nL05 abcdefghijklmnopqrstuvwx0123\nL06 abcdefghijklmnopqrstuvwx0123\nL07 abcdefghijklmnopqrstuvwx0123\nL08 abcdefghijklmnopqrstuvwx0123\nL09 abcdefghijklmnopqrstuvwx0123\nL10 abcdefghijklmnopqrstuvwx0123\nL11 abcdefghijklmnopqrstuvwx0123\nL12 abcdefghijklmnopqrstuvwx0123\nL13 abcdefghijklmnopqrstuvwx0123\nL14 abcdefghijklmnopqrstuvwx0123\nL15 abcdefghijklmnopqrstuvwx0123\nL16 abcdefghi FIN",
+      "kind": "static",
+      "bytes": 512,
+      "graphemes": 512,
+      "explicitLines": 16,
+      "nativeBytes": 512,
+      "bbox": [
+        89,
+        510,
+        267,
+        685
+      ],
+      "visibleRowsApprox": 16,
+      "inkSpans": 1,
+      "lineMetrics": [
+        {
+          "y": 510,
+          "height": 160,
+          "left": 89,
+          "width": 178
+        }
+      ],
+      "ocr": "LOI abecet zhilcmnoaastuywxllZ 3\nL2Z abccetghlilcnnoaastuvwxllZ 3\nL23 abccetzhilcnnoaastuvwxllZ 3\nLC4 abccetghlilcnneaarstuv wxllZ 3\nLOS abecetghilcnnoaastuywxllZ 3\nLOG abecet ghilcnnoaastuvwxllZ 3\nLO7 abecetzhilcnnoaastuywxllZ 3\nLO8 abocetghlilcnnoaarstuv wxllZ 3\nLO% abecetghlilcnnoaarstuv wxllZ 3\nLIC abecetzhilcnnoaastuywxlZ 3\nLIl abceetzhlijlconnoxastuy wxDIZ 3\nLIZ abecetzhilcnnoaastuywxlZ 3\nLB abecetzhilcmnnoaxastuywx0lZ 3\nL14 abecetzhilcnnoaastuywxClZ 3\nLE abecetzhilcmnnoaastuywx0lZ 3\nL& abecetzhl EIN",
+      "finDetectedOCR": false,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/22-payload-512-bytes.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 23,
+      "name": "payload-1024-bytes",
+      "font": 0.01,
+      "text": "L01 abcdefghijklmnopqrstuvwx0123\nL02 abcdefghijklmnopqrstuvwx0123\nL03 abcdefghijklmnopqrstuvwx0123\nL04 abcdefghijklmnopqrstuvwx0123\nL05 abcdefghijklmnopqrstuvwx0123\nL06 abcdefghijklmnopqrstuvwx0123\nL07 abcdefghijklmnopqrstuvwx0123\nL08 abcdefghijklmnopqrstuvwx0123\nL09 abcdefghijklmnopqrstuvwx0123\nL10 abcdefghijklmnopqrstuvwx0123\nL11 abcdefghijklmnopqrstuvwx0123\nL12 abcdefghijklmnopqrstuvwx0123\nL13 abcdefghijklmnopqrstuvwx0123\nL14 abcdefghijklmnopqrstuvwx0123\nL15 abcdefghijklmnopqrstuvwx0123\nL16 abcdefghijklmnopqrstuvwx0123\nL17 abcdefghijklmnopqrstuvwx0123\nL18 abcdefghijklmnopqrstuvwx0123\nL19 abcdefghijklmnopqrstuvwx0123\nL20 abcdefghijklmnopqrstuvwx0123\nL21 abcdefghijklmnopqrstuvwx0123\nL22 abcdefghijklmnopqrstuvwx0123\nL23 abcdefghijklmnopqrstuvwx0123\nL24 abcdefghijklmnopqrstuvwx0123\nL25 abcdefghijklmnopqrstuvwx0123\nL26 abcdefghijklmnopqrstuvwx0123\nL27 abcdefghijklmnopqrstuvwx0123\nL28 abcdefghijklmnopqrstuvwx0123\nL29 abcdefghijklmnopqrstuvwx0123\nL30 abcdefghijklmnopqrstuvwx0123\nL31 abcdefghijklmnopqrstuvwx01 FIN",
+      "kind": "static",
+      "bytes": 1024,
+      "graphemes": 1024,
+      "explicitLines": 31,
+      "nativeBytes": 1024,
+      "bbox": [
+        89,
+        415,
+        267,
+        689
+      ],
+      "visibleRowsApprox": 25,
+      "inkSpans": 1,
+      "lineMetrics": [
+        {
+          "y": 415,
+          "height": 250,
+          "left": 89,
+          "width": 178
+        }
+      ],
+      "ocr": "LOI abecet zhilcmnoaastuywxllZ 3\nL2Z abccetghlilcnnoaastuvwxllZ 3\nL23 abccetzhilcnnoaastuvwxllZ 3\nLC4 abccetghlilcnneaarstuv wxllZ 3\nLOS abecetghilcnnoaastuywxllZ 3\nLOG abecet ghilcnnoaastuvwxllZ 3\nLO7 abecetzhilcnnoaastuywxllZ 3\nLO8 abocetghlilcnnoaarstuv wxllZ 3\nLO% abecetghlilcnnoaarstuv wxllZ 3\nLIC abecetzhilcnnoaastuywxlZ 3\nLIl abceetzhlijlconnoxastuy wxDIZ 3\nLIZ abecetzhilcnnoaastuywxlZ 3\nLB abecetzhilcmnoaxastuywx0lZ 3\nL4 abecetzhilcnnoaastuywx0lZ 3\nLE abecetzhilcmnoaastuywx0lZ 3\nLI& abecet zhilcmnnoaastuywxClZ 3\nL7 abecetzhilcmnoaxastuywx0lZ 3\nL& abecetzhilcmnnoaastuywx0lZ 3\nLE abecetzhilcmnnoaastuywx0lZ 3\nLZ0 abecetghlilcnnoaarstuv wxllZ 3\nLZl abecetzhilcmnnoaastuywxllZ 3\nLZ2Z abccetghlilcnnoaastuvwxliZ 3\nLZ3 abccetzhilcnnoaastuvwxllZ 3\nLZ4 abccetghlilcnneaastuvwxllZ 3\nLZ5 abecetghilcnnoaastuywxllZ 3",
+      "finDetectedOCR": false,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/23-payload-1024-bytes.png",
+      "finVisualReview": false,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 24,
+      "name": "spanish-accents",
+      "font": 0.027,
+      "text": "¿Dónde está la señal? El pingüino cruzó el río. ¡Sí, aquí está! FIN",
+      "kind": "static",
+      "bytes": 78,
+      "graphemes": 67,
+      "explicitLines": 1,
+      "nativeBytes": 78,
+      "bbox": [
+        89,
+        623,
+        494,
+        679
+      ],
+      "visibleRowsApprox": 2,
+      "inkSpans": 1,
+      "lineMetrics": [
+        {
+          "y": 623,
+          "height": 55,
+          "left": 89,
+          "width": 405
+        }
+      ],
+      "ocr": "¢Donde esta la senal? El pinguino\ncruzo el ro. {SI, aqui esta! FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/24-spanish-accents.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 25,
+      "name": "newlines-backslash-n",
+      "font": 0.027,
+      "text": "PRIMERA LINEA\nSEGUNDA LINEA\nTERCERA LINEA FIN",
+      "kind": "static",
+      "bytes": 45,
+      "graphemes": 45,
+      "explicitLines": 3,
+      "nativeBytes": 45,
+      "bbox": [
+        89,
+        595,
+        349,
+        674
+      ],
+      "visibleRowsApprox": 3,
+      "inkSpans": 3,
+      "lineMetrics": [
+        {
+          "y": 595,
+          "height": 21,
+          "left": 90,
+          "width": 212
+        },
+        {
+          "y": 623,
+          "height": 22,
+          "left": 89,
+          "width": 220
+        },
+        {
+          "y": 652,
+          "height": 22,
+          "left": 90,
+          "width": 259
+        }
+      ],
+      "ocr": "PRIMERA LINEA\nSEGUNDA LINEA\nTERCERA LINEA FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/25-newlines-backslash-n.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 26,
+      "name": "newlines-pipe-n",
+      "font": 0.027,
+      "text": "PRIMERA LINEA|nSEGUNDA LINEA|nTERCERA LINEA FIN",
+      "kind": "static",
+      "bytes": 47,
+      "graphemes": 47,
+      "explicitLines": 1,
+      "nativeBytes": 47,
+      "bbox": [
+        89,
+        595,
+        349,
+        674
+      ],
+      "visibleRowsApprox": 3,
+      "inkSpans": 3,
+      "lineMetrics": [
+        {
+          "y": 595,
+          "height": 21,
+          "left": 90,
+          "width": 212
+        },
+        {
+          "y": 623,
+          "height": 22,
+          "left": 89,
+          "width": 220
+        },
+        {
+          "y": 652,
+          "height": 22,
+          "left": 90,
+          "width": 259
+        }
+      ],
+      "ocr": "PRIMERA LINEA\nSEGUNDA LINEA\nTERCERA LINEA FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/26-newlines-pipe-n.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 27,
+      "name": "inline-colors",
+      "font": 0.027,
+      "text": "Inicio |cFFFF0000ROJO|r y |cFF00FFFFCIAN|r. FIN",
+      "kind": "static",
+      "bytes": 47,
+      "graphemes": 47,
+      "explicitLines": 1,
+      "nativeBytes": 47,
+      "bbox": [
+        91,
+        653,
+        386,
+        679
+      ],
+      "visibleRowsApprox": 1,
+      "inkSpans": 1,
+      "lineMetrics": [
+        {
+          "y": 653,
+          "height": 26,
+          "left": 91,
+          "width": 295
+        }
+      ],
+      "ocr": "[nicio y . FIN",
+      "finDetectedOCR": true,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/27-inline-colors.png",
+      "finVisualReview": true,
+      "reviewNote": "End marker checked by image inspection or OCR; OCR alone not authoritative"
+    },
+    {
+      "case": 28,
+      "name": "typewriter-unicode",
+      "font": 0.027,
+      "text": "¿Dónde está la señal? El pingüino cruzó el río. Ahora podemos continuar la conversación sin cortar las letras. FIN",
+      "kind": "typing",
+      "bytes": 122,
+      "graphemes": 114,
+      "explicitLines": 1,
+      "nativeBytes": 122,
+      "bbox": [
+        89,
+        623,
+        494,
+        673
+      ],
+      "visibleRowsApprox": 2,
+      "inkSpans": 1,
+      "lineMetrics": [
+        {
+          "y": 623,
+          "height": 49,
+          "left": 89,
+          "width": 405
+        }
+      ],
+      "ocr": "¢Donde esta la senal? El pinguino\ncruzoelrio",
+      "finDetectedOCR": false,
+      "screenshot": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/texttag-lab/run-20261022-144050/28-typewriter-unicode.png",
+      "finVisualReview": null,
+      "reviewNote": "Typewriter captured at a partial prefix, not final phrase"
+    }
+  ]
+}

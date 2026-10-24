@@ -1,0 +1,387 @@
+{
+  "monitors": [
+    {
+      "id": 0,
+      "name": "eDP-1",
+      "description": "Sharp Corporation LQ173M1JW12",
+      "make": "Sharp Corporation",
+      "model": "LQ173M1JW12",
+      "serial": "",
+      "width": 1920,
+      "height": 1080,
+      "physicalWidth": 380,
+      "physicalHeight": 210,
+      "refreshRate": 360.00601,
+      "x": 0,
+      "y": 0,
+      "activeWorkspace": {
+        "id": 1,
+        "name": "1"
+      },
+      "specialWorkspace": {
+        "id": 0,
+        "name": ""
+      },
+      "reserved": [
+        0,
+        45,
+        0,
+        0
+      ],
+      "scale": 1,
+      "transform": 0,
+      "focused": true,
+      "dpmsStatus": true,
+      "vrr": false,
+      "solitary": "558cbd4a9e60",
+      "solitaryBlockedBy": null,
+      "activelyTearing": false,
+      "tearingBlockedBy": [
+        "NOT_TORN"
+      ],
+      "directScanoutTo": "0",
+      "directScanoutBlockedBy": [
+        "USER"
+      ],
+      "disabled": false,
+      "currentFormat": "XRGB8888",
+      "mirrorOf": "none",
+      "availableModes": [
+        "1920x1080@360.01Hz",
+        "1920x1080@60.00Hz"
+      ],
+      "colorManagementPreset": "srgb",
+      "sdrBrightness": 1,
+      "sdrSaturation": 1,
+      "sdrMinLuminance": 0.2,
+      "sdrMaxLuminance": 80,
+      "hardwareCursorsInUse": false
+    },
+    {
+      "id": 1,
+      "name": "DP-1",
+      "description": "LG Electronics LG TV 0x01010101",
+      "make": "LG Electronics",
+      "model": "LG TV",
+      "serial": "0x01010101",
+      "width": 1920,
+      "height": 1080,
+      "physicalWidth": 700,
+      "physicalHeight": 390,
+      "refreshRate": 60.0,
+      "x": 3840,
+      "y": 0,
+      "activeWorkspace": {
+        "id": 12,
+        "name": "12"
+      },
+      "specialWorkspace": {
+        "id": 0,
+        "name": ""
+      },
+      "reserved": [
+        0,
+        45,
+        0,
+        0
+      ],
+      "scale": 1,
+      "transform": 0,
+      "focused": false,
+      "dpmsStatus": true,
+      "vrr": false,
+      "solitary": "0",
+      "solitaryBlockedBy": [
+        "WINDOWED",
+        "CANDIDATE"
+      ],
+      "activelyTearing": false,
+      "tearingBlockedBy": [
+        "NOT_TORN",
+        "CANDIDATE"
+      ],
+      "directScanoutTo": "0",
+      "directScanoutBlockedBy": [
+        "USER",
+        "CANDIDATE"
+      ],
+      "disabled": false,
+      "currentFormat": "XRGB8888",
+      "mirrorOf": "none",
+      "availableModes": [
+        "1024x768@61.34Hz",
+        "1920x1080@60.00Hz",
+        "1920x1080@59.94Hz",
+        "1920x1080@50.00Hz",
+        "1920x1080@30.00Hz",
+        "1920x1080@29.97Hz",
+        "1920x1080@25.00Hz",
+        "1920x1080@24.00Hz",
+        "1920x1080@23.98Hz",
+        "1360x768@59.80Hz",
+        "1920x540@60.05Hz",
+        "1280x720@59.65Hz",
+        "1280x720@60.00Hz",
+        "1280x720@59.94Hz",
+        "1280x720@50.00Hz",
+        "1024x768@60.00Hz",
+        "800x600@60.32Hz",
+        "720x576@50.00Hz",
+        "720x576@50.00Hz",
+        "720x480@60.00Hz",
+        "720x480@60.00Hz",
+        "720x480@59.94Hz",
+        "1440x240@60.05Hz",
+        "720x480@59.94Hz",
+        "720x480@59.94Hz",
+        "640x480@60.00Hz",
+        "640x480@59.94Hz",
+        "640x480@59.94Hz",
+        "720x400@70.08Hz"
+      ],
+      "colorManagementPreset": "srgb",
+      "sdrBrightness": 1,
+      "sdrSaturation": 1,
+      "sdrMinLuminance": 0.2,
+      "sdrMaxLuminance": 80,
+      "hardwareCursorsInUse": false
+    },
+    {
+      "id": 2,
+      "name": "HDMI-A-1",
+      "description": "Samsung Electric Company SA300/SA350 H9NB304808",
+      "make": "Samsung Electric Company",
+      "model": "SA300/SA350",
+      "serial": "H9NB304808",
+      "width": 1920,
+      "height": 1080,
+      "physicalWidth": 410,
+      "physicalHeight": 230,
+      "refreshRate": 59.939,
+      "x": 1920,
+      "y": 0,
+      "activeWorkspace": {
+        "id": 32,
+        "name": "32"
+      },
+      "specialWorkspace": {
+        "id": 0,
+        "name": ""
+      },
+      "reserved": [
+        0,
+        45,
+        0,
+        0
+      ],
+      "scale": 1,
+      "transform": 0,
+      "focused": false,
+      "dpmsStatus": true,
+      "vrr": false,
+      "solitary": "0",
+      "solitaryBlockedBy": [
+        "WINDOWED",
+        "CANDIDATE"
+      ],
+      "activelyTearing": false,
+      "tearingBlockedBy": [
+        "NOT_TORN",
+        "CANDIDATE"
+      ],
+      "directScanoutTo": "0",
+      "directScanoutBlockedBy": [
+        "USER",
+        "CANDIDATE"
+      ],
+      "disabled": false,
+      "currentFormat": "XRGB8888",
+      "mirrorOf": "none",
+      "availableModes": [
+        "1366x768@59.79Hz",
+        "1920x1080@59.94Hz",
+        "1280x720@59.94Hz",
+        "1024x768@75.03Hz",
+        "1024x768@70.07Hz",
+        "1024x768@60.00Hz",
+        "800x600@75.00Hz",
+        "800x600@72.19Hz",
+        "800x600@60.32Hz",
+        "800x600@56.25Hz",
+        "720x480@59.94Hz",
+        "720x480@59.94Hz",
+        "640x480@75.00Hz",
+        "640x480@72.81Hz",
+        "640x480@59.94Hz"
+      ],
+      "colorManagementPreset": "srgb",
+      "sdrBrightness": 1,
+      "sdrSaturation": 1,
+      "sdrMinLuminance": 0.2,
+      "sdrMaxLuminance": 80,
+      "hardwareCursorsInUse": false
+    }
+  ],
+  "clients": [
+    {
+      "address": "0x558cbca13560",
+      "mapped": true,
+      "hidden": false,
+      "visible": true,
+      "acceptsInput": true,
+      "at": [
+        1926,
+        51
+      ],
+      "size": [
+        1908,
+        1023
+      ],
+      "workspace": {
+        "id": 32,
+        "name": "32"
+      },
+      "floating": false,
+      "monitor": 2,
+      "class": "org.kde.dolphin",
+      "title": "struct \u2014 Dolphin",
+      "initialClass": "org.kde.dolphin",
+      "initialTitle": "V\u00eddeos \u2014 Dolphin",
+      "pid": 829951,
+      "xwayland": false,
+      "pinned": false,
+      "pinFullscreened": false,
+      "fullscreen": 0,
+      "fullscreenClient": 0,
+      "fullscreenHandler": "default",
+      "allowedOverFullscreen": true,
+      "grouped": [],
+      "tags": [],
+      "swallowing": "0x0",
+      "focusHistoryID": 2,
+      "inhibitingIdle": false,
+      "xdgTag": "",
+      "xdgDescription": "",
+      "contentType": "none",
+      "tearingHint": false,
+      "stableId": "18000431"
+    },
+    {
+      "address": "0x558cbcbae850",
+      "mapped": true,
+      "hidden": false,
+      "visible": true,
+      "acceptsInput": true,
+      "at": [
+        6,
+        51
+      ],
+      "size": [
+        1908,
+        1023
+      ],
+      "workspace": {
+        "id": 2,
+        "name": "2"
+      },
+      "floating": false,
+      "monitor": 0,
+      "class": "Chatgpt",
+      "title": "ChatGPT",
+      "initialClass": "Chatgpt",
+      "initialTitle": "ChatGPT",
+      "pid": 743463,
+      "xwayland": true,
+      "pinned": false,
+      "pinFullscreened": false,
+      "fullscreen": 0,
+      "fullscreenClient": 0,
+      "fullscreenHandler": "default",
+      "allowedOverFullscreen": true,
+      "grouped": [],
+      "tags": [],
+      "swallowing": "0x0",
+      "focusHistoryID": 1,
+      "inhibitingIdle": false,
+      "xdgTag": "",
+      "xdgDescription": "",
+      "contentType": "none",
+      "tearingHint": false,
+      "stableId": "18000007"
+    },
+    {
+      "address": "0x558cbd4a9e60",
+      "mapped": true,
+      "hidden": false,
+      "visible": true,
+      "acceptsInput": true,
+      "at": [
+        0,
+        0
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "workspace": {
+        "id": 1,
+        "name": "1"
+      },
+      "floating": true,
+      "monitor": 0,
+      "class": "steam_app_0",
+      "title": "Warcraft III",
+      "initialClass": "steam_app_0",
+      "initialTitle": "Warcraft III",
+      "pid": 967621,
+      "xwayland": true,
+      "pinned": false,
+      "pinFullscreened": false,
+      "fullscreen": 2,
+      "fullscreenClient": 0,
+      "fullscreenHandler": "default",
+      "allowedOverFullscreen": true,
+      "grouped": [],
+      "tags": [],
+      "swallowing": "0x0",
+      "focusHistoryID": 0,
+      "inhibitingIdle": false,
+      "xdgTag": "",
+      "xdgDescription": "",
+      "contentType": "none",
+      "tearingHint": false,
+      "stableId": "1800097f"
+    }
+  ],
+  "version": {
+    "branch": "v0.56.2",
+    "commit": "efb50993780079460b0cbed1363e2166a2de1d9f",
+    "version": "0.56.2",
+    "dirty": false,
+    "commit_message": "[gha] Nix: update inputs",
+    "commit_date": "Wed Aug 5 14:13:21 2026",
+    "tag": "v0.56.2",
+    "commits": "7661",
+    "buildAquamarine": "0.15.1",
+    "buildHyprlang": "0.6.8",
+    "buildHyprutils": "0.14.2",
+    "buildHyprcursor": "0.1.13",
+    "buildHyprgraphics": "0.5.1",
+    "systemAquamarine": "0.15.1",
+    "systemHyprlang": "0.6.8",
+    "systemHyprutils": "0.14.2",
+    "systemHyprcursor": "0.1.13",
+    "systemHyprgraphics": "0.5.1",
+    "abiHash": "efb50993780079460b0cbed1363e2166a2de1d9f_aq_0.15_hu_0.14_hg_0.5_hc_0.1_hlg_0.6",
+    "flags": []
+  },
+  "uinputWritable": true,
+  "ydotool": "active",
+  "gameProcesses": [
+    {
+      "pid": 967621,
+      "cmd": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\480275f2a5e0587c.w3x -window                                                                                                                                                                                                                                     ",
+      "prefix": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile/pfx/"
+    }
+  ]
+}

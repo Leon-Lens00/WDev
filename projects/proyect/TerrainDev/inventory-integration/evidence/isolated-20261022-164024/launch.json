@@ -1,0 +1,17 @@
+{
+  "source": "/home/snz/Documentos/ChatGPT/Proyect/work/inventory-original-audit-20261022/OriginalDemo-Camera-AB.w3x",
+  "sha256": "40736c1fe3a5e961dcd2a414b1ace04a2da8b641215bd4359fed13b77ea5aad2",
+  "command": [
+    "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/_v2-entry-point",
+    "--verb=run",
+    "--",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+    "runinprefix",
+    "C:\\WarcraftIII\\war3.exe",
+    "-loadfile",
+    "Maps\\CodexTest\\40736c1fe3a5e961.w3x",
+    "-window"
+  ],
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/runtime-isolated/pfx",
+  "report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/evidence/isolated-20261022-164024"
+}

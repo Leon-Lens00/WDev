@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "file",
+    "set",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261021-133143-771381/stage-3.w3x",
+    "war3map.wct",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261021-133143-771381/payload-4.bin",
+    "-o",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261021-133143-771381/stage-4.w3x",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.wct, 175365 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261021-133143-771381/stage-4.w3x\"\n}\n",
+  "stderr": ""
+}

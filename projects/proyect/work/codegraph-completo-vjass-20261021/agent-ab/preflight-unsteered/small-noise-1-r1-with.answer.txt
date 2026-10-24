@@ -1,0 +1,8 @@
+The chain is **optional module inclusion → direct `perlin2D` call → direct `floor` calls**.
+
+- **Wiring:** `library Noise` contains `struct Noise` ([Noise.j:8–16](Noise.j#L8)). The struct uses `implement optional OctavePerlin` ([Noise.j:30](Noise.j#L30)). That module is declared inside `library NoisePlugin requires Noise` and supplies `octavePerlin2D` ([OctavePerlin.j:10–29](OctavePerlin.j#L10)). Inclusion makes its unqualified `perlin2D(...)` call resolve to the hosting struct’s static method.
+- **First edge:** starting with `i = 0`, frequency and amplitude `1`, the loop exits when `i >= octaves`; otherwise it calls `perlin2D(x * frequency, y * frequency)`. Frequency doubles and amplitude multiplies by persistence each iteration ([OctavePerlin.j:29–43](OctavePerlin.j#L29)). Nonpositive octaves produce no calls. `total` is overwritten each iteration.
+- **Second edge:** `perlin2D` unconditionally calls `floor(x)` and `floor(y)` for masked lattice indices, then again for fractional coordinates—four calls per invocation ([Noise.j:74–84](Noise.j#L74)).
+- **Floor condition:** it starts with `R2I(value)`, decrementing only when `value < 0.` and `value - n != 0.` ([Noise.j:32–37](Noise.j#L32)).
+
+Source wiring is established; actual build inclusion was not verified.

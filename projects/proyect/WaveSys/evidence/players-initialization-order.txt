@@ -1,0 +1,6 @@
+        if SelectionSystem___selectionPhase != SelectionSystem___SELECTION_PHASE_NONE and SelectionSystem___totalFinished >= (s__WavePlayerRoster_count[WavePlayerUtils__ActivePlayers]) then // INLINED!!
+call ExecuteFunc("WavePlayerUtils__Init")
+call ExecuteFunc("HealthBarTextTags___Init")
+call ExecuteFunc("HeroLives__Init")
+call ExecuteFunc("MapBootstrap___Init")
+call ExecuteFunc("stage1___InitStage1")

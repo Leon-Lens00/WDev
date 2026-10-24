@@ -1,0 +1,9 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "case=22 name=payload-512-bytes expectedBytes=512 nativeStringLength=512 size=0.010" )
+	call Preload( "eye=0.001,-922.667,1547.022 tagCount=5" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

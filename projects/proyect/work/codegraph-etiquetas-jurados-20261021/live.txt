@@ -1,0 +1,29 @@
+> JASS/vJASS local support: structural/static subset. No macro/import/module expansion or dynamic dispatch; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+> libraries/RapidFire.j:39: implement expansion/dispatch is not modeled.
+> libraries/RapidFire.j:194: Chained call/index receiver is not inferred.
+> libraries/RapidFire.j:210: Chained call/index receiver is not inferred.
+> libraries/RapidFire.j:213: Chained call/index receiver is not inferred.
+> libraries/Missile.j:477: Directive runtextmacro is not expanded; coverage is partial.
+> libraries/Missile.j:481: Directive runtextmacro is not expanded; coverage is partial.
+> 245 more extraction diagnostics in these files.
+
+**Additional graph links among your symbols**
+(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)
+
+- cast → emit   [static JASS: calls]
+- RapidPair → emit   [contains]
+- emit → now   [static JASS: calls]
+- emit → shoot   [static JASS: calls]
+- emit → face   [static JASS: calls]
+- emit → gap   [contains]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: RapidPair.emit RapidPair.spell RapidPair.initialize RapidBolt.onPeriod RapidBolt.onRemove**
+
+Found 67 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `emit` (libraries/RapidFire.j:121) — 1 caller in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `spell` (libraries/RapidFire.j:268) — 1 caller in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `initialize` (libraries/RapidFire.j:282) — 1 caller in `libraries/RapidFire.j`; no tests found within 3 caller hops

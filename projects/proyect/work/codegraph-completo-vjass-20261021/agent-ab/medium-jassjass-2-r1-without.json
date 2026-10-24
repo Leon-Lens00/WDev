@@ -1,0 +1,37 @@
+{
+  "repo": "medium-jassjass",
+  "flow": 2,
+  "names": [
+    "Jass.Lexer.parseIdent",
+    "Jass.isDelim"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 30.525168644999212,
+  "usage": {
+    "input_tokens": 129084,
+    "cached_input_tokens": 111360,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 854,
+    "reasoning_output_tokens": 107
+  },
+  "commands": 4,
+  "command_text": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/benchmark*/**'\"' -g '\"'!**/benchmarks/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+    "/usr/bin/bash -lc \"rg -n 'parseIdent|isDelim' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*bench*/*'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' .\"",
+    "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '1,55p;600,815p;990,1070p'\"",
+    "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '850,935p;1067,1085p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/benchmark*/**'\"' -g '\"'!**/benchmarks/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+    "/usr/bin/bash -lc \"rg -n 'parseIdent|isDelim' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*bench*/*'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16218-93a7-7712-8974-7eab5aff45b0"
+  ]
+}

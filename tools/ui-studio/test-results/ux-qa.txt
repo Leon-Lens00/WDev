@@ -1,0 +1,30 @@
+UI Studio: revisión de interfaz, 2026-10-02
+
+Entrega: renovación visual del editor, temas claro/oscuro, iconos Lucide locales,
+capas plegables con miniaturas y búsqueda, propiedades por secciones,
+paneles ocultables, ajuste del lienzo por ancho y alto y zoom a la selección.
+Se conserva el esquema JSON v1 y el exportador core.js.
+
+Evidencia visual:
+- ux-before.jpg y ux-after.jpg: 1440x900, diseño original sin selección.
+- ux-mobile-dark.jpg: 390x844, inspector abierto; objetos del lienzo aislados.
+
+Validación:
+- node --check dist/app.js: correcto.
+- node --test tests/core.test.mjs: 5/5.
+- Navegador: plegar todo, búsqueda de casilla 30, editar X, deshacer/rehacer.
+- Duplicar: 74 a 75 elementos; deshacer vuelve a 74.
+- Bloquear y ocultar Yelmo; deshacer ambos. Lectura del proyecto por WebMCP
+  idéntica a la lectura anterior a esas operaciones.
+- Simulación: Página siguiente cambia de 1/5 a 2/5.
+- Proporción 4:3: relación 1.33336 y lienzo dentro del viewport; deshacer.
+- Selección de grupo Equipo: zoom 180%; Solo lienzo oculta los dos paneles.
+- Sección Apariencia: plegar y desplegar.
+- 760x900: paneles alternativos; 390x844 y 1024x768 sin desbordamiento horizontal.
+- Tema claro y oscuro, botones de paneles y búsqueda en ventana estrecha.
+- Exportación local completa verificada en exports/2026-10-02T11-09-58-884Z.
+- Sin errores de consola recogidos durante la revisión.
+
+Límites: revisión funcional y visual local, no certificación WCAG ni prueba
+con lector de pantalla. La vista del juego sigue siendo una aproximación 2D.
+No se volvió a compilar JASS: el exportador y core.js no cambiaron.

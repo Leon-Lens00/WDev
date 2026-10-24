@@ -1,0 +1,44 @@
+[
+  {
+    "case": "joined-identifiers",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-730n1bzv",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "4c0b902b215b647f867078ae4e53e81cabd1de442738cdd1d7c0251d1a227d56",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "comment-directive",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-swva2mdj",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "dd4330091a48e594595492c0b1f650777cd6b7625a59cee8ebb2b413dec2d993",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "global-flag",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-p00_l3h8",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "996b163492689b647ec13a73d43f68bffedbce31b14fd1d3ef337988b91468f2",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  }
+]

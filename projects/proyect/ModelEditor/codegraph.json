@@ -1,0 +1,12 @@
+{
+  "exclude": [
+    "exports/",
+    "evidence/",
+    "assets/",
+    "build/",
+    "node_modules/",
+    "__pycache__/",
+    "viewer/"
+  ],
+  "deprioritize": []
+}

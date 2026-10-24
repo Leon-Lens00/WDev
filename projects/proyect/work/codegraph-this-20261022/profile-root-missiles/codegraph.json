@@ -1,0 +1,13 @@
+{
+  "jass": {
+    "mode": "release",
+    "completeInputs": false,
+    "apiFiles": [
+      "codegraph-api/common.j",
+      "codegraph-api/Blizzard.j"
+    ]
+  },
+  "deprioritize": [
+    "codegraph-api/"
+  ]
+}

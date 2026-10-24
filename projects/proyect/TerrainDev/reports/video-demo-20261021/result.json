@@ -1,0 +1,27 @@
+{
+  "video": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/video-demo-20261021/TerrainDev-demostracion.mp4",
+  "sha256": "cc43b0177cc023ccb7d44d1bc987cf08c8fa08f60462d8a542b0334b4653dc77",
+  "duration_seconds": 44,
+  "size_bytes": 15827810,
+  "full_decode_errors": false,
+  "capture": "Actual Warcraft III Classic 1.27b, CachyOS/Wine. Scripted inputs; production libraries unchanged.",
+  "coverage": [
+    "six-shot burst",
+    "recast retarget without resetting interval",
+    "native-to-artificial transition at 350",
+    "facing independent of motion",
+    "native movement resumes",
+    "tree blocks actor and projectiles",
+    "removed tree permits travel and hits",
+    "cliff blocks artificial motion",
+    "final diagnostic counters"
+  ],
+  "closed": {
+    "own_pid": 68555,
+    "exited": true,
+    "own_windows_remaining": [],
+    "sigterm_fallback": false,
+    "production_sha256": "d7fd80bfeb175762ee9ed80331f1ac72a3913c3a7d5257c520338f1f467f0414"
+  },
+  "final_engine_log": "emitted=55 recasts=4 live=0 pending=0"
+}

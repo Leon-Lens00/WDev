@@ -1,0 +1,219 @@
+{
+  "textures": 4,
+  "mips": 37,
+  "totalBlpBytes": 288752,
+  "independentReaders": true,
+  "activeMapMatchesManifest": true,
+  "nativeTested": true,
+  "checks": [
+    {
+      "name": "FrameHeroHorizontal",
+      "bytes": 88562,
+      "levels": [
+        {
+          "width": 256,
+          "height": 128,
+          "rgbaSha256": "690220193f0eddf4a21ce79a0bc801ac6493482d20a292e3a70429c70e722147"
+        },
+        {
+          "width": 128,
+          "height": 64,
+          "rgbaSha256": "96911839da3b7e874fa53dbbd77866e9fc29f807ff9f0c3b7c1c88c34d0356aa"
+        },
+        {
+          "width": 64,
+          "height": 32,
+          "rgbaSha256": "3d1d56605690d3b0ff4000d3c16676a6cb7a236d6b8bf3c59c1f9b212ac4ceb6"
+        },
+        {
+          "width": 32,
+          "height": 16,
+          "rgbaSha256": "41f5eaa2f0a99dae5dc97e41f8721da585ce2443d7c14ab7fd06bc56a3f3579d"
+        },
+        {
+          "width": 16,
+          "height": 8,
+          "rgbaSha256": "016376c410353d08bcb373819ff40afac0e83ef65082f8f8f5118bf0602bb375"
+        },
+        {
+          "width": 8,
+          "height": 4,
+          "rgbaSha256": "9e89dc05505834e597c1f3b118de4254e16485129ee89aa1caaa4c036d535953"
+        },
+        {
+          "width": 4,
+          "height": 2,
+          "rgbaSha256": "681dcebfd19565eeec3d9bc1ab000a233dc65acddca7c6eb6ec9d9dcf0279633"
+        },
+        {
+          "width": 2,
+          "height": 1,
+          "rgbaSha256": "bb37ac03957f2e60b99baead84ace514571134e3e1b22a9448eb402b589e4f6e"
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "rgbaSha256": "b25dedc4464d3879a00e54b62fe682327c599a0b9147979a773a6c7fde273567"
+        }
+      ]
+    },
+    {
+      "name": "FrameEnemyHorizontal",
+      "bytes": 175946,
+      "levels": [
+        {
+          "width": 512,
+          "height": 128,
+          "rgbaSha256": "2f8fad8b27c4ca1757ddb7e9d12d4fa948b0cb51d1c5699a33aacd3e97996ea3"
+        },
+        {
+          "width": 256,
+          "height": 64,
+          "rgbaSha256": "7fcfa8146d6a450171d72d028bea28262edca2438c2bf97e2e4cd01ae0e89311"
+        },
+        {
+          "width": 128,
+          "height": 32,
+          "rgbaSha256": "4ee1f05e2af7a3f608a0c79b94d8265bc2faec8d2ce1926d2cf949d066d80f5e"
+        },
+        {
+          "width": 64,
+          "height": 16,
+          "rgbaSha256": "9146621d6fbc3bc4f456f1bc89b63be843e2e850542c5f6215b06664e1b9e8d1"
+        },
+        {
+          "width": 32,
+          "height": 8,
+          "rgbaSha256": "872a09504476e2ceef6db5711f3f8863a56c72bbb629175cb3ea931f399c3132"
+        },
+        {
+          "width": 16,
+          "height": 4,
+          "rgbaSha256": "32cc28b1f1dc3cfbac0da2c3d8a5cd8481fd1d55d348d04e0c31290e18018b2f"
+        },
+        {
+          "width": 8,
+          "height": 2,
+          "rgbaSha256": "16ec620469da9b34d2c7e0d76d2233f6e8ee1133dc04725d427e4936790bdbf4"
+        },
+        {
+          "width": 4,
+          "height": 1,
+          "rgbaSha256": "fefbef8aaf2042236857423d6bfe95fd27f22aef461f75c411d5974219b652c4"
+        },
+        {
+          "width": 2,
+          "height": 1,
+          "rgbaSha256": "ece9eb30b2abdda2f3dd42148f524b8b60be1eebd7672c288e2068c4a922123d"
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "rgbaSha256": "90beb1524972b9cf51632008096a881b9a0525a7954cc4c732f1090d2e1319a5"
+        }
+      ]
+    },
+    {
+      "name": "LifeNormalHorizontal",
+      "bytes": 12122,
+      "levels": [
+        {
+          "width": 256,
+          "height": 16,
+          "rgbaSha256": "f9c7644c3e2625779537b461e3c367c54d42d4afab7880ef322498c1f9891e60"
+        },
+        {
+          "width": 128,
+          "height": 8,
+          "rgbaSha256": "da4ed32a18672af03be9e40fdee45acf599a71b3ed5878c912d840a132b07316"
+        },
+        {
+          "width": 64,
+          "height": 4,
+          "rgbaSha256": "68a92303a9905ec11f042b98e9abb3d2291d219ac3c773973bb09536a30338c2"
+        },
+        {
+          "width": 32,
+          "height": 2,
+          "rgbaSha256": "71e4783385ab0b437b66e8aa75ecb3757ce4276a26f6d3c9d527eb2445377f93"
+        },
+        {
+          "width": 16,
+          "height": 1,
+          "rgbaSha256": "a3d5c015cb02eabb432cc4413166bdd48a12238af6b3c4c0b2d1e47d6595d8f7"
+        },
+        {
+          "width": 8,
+          "height": 1,
+          "rgbaSha256": "574dfde087ac7f8d4b9902d00dc930802bbd8cd85167c2184b8ea6296742a7f6"
+        },
+        {
+          "width": 4,
+          "height": 1,
+          "rgbaSha256": "44e853d2ffdeec9b87223ab538007a6a150c0b483ddb9dcf42e959615edba425"
+        },
+        {
+          "width": 2,
+          "height": 1,
+          "rgbaSha256": "5cbb9457d862946c95feb2afcab54745ff60ab2d67e356d9f1ac76bfdaa1b87d"
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "rgbaSha256": "a590f689822aa8bc4d9f9be76f3f67475532306b18de7c15445a264cefcf5577"
+        }
+      ]
+    },
+    {
+      "name": "LifeCriticalHorizontal",
+      "bytes": 12122,
+      "levels": [
+        {
+          "width": 256,
+          "height": 16,
+          "rgbaSha256": "1ed5101edc8400fbd52a1ed9587bf1c59d5a98b2a0be6918ceba957fd0f77138"
+        },
+        {
+          "width": 128,
+          "height": 8,
+          "rgbaSha256": "b0812dc704080bbe1bea726b7430b65e72312d5b0f2637edbc55f643c6c540a3"
+        },
+        {
+          "width": 64,
+          "height": 4,
+          "rgbaSha256": "1245e115986e960012cd0779b314e531c94c1771a0b509fc72ace81fcdbac9e6"
+        },
+        {
+          "width": 32,
+          "height": 2,
+          "rgbaSha256": "3fac488065654235ab279b3e81d3d5690cdf360da5ff38db6a2227bd33a19f28"
+        },
+        {
+          "width": 16,
+          "height": 1,
+          "rgbaSha256": "b51c28687ccbb1b16f484cd9ee5612f97477405df128c5d9d92f766bb598cb9d"
+        },
+        {
+          "width": 8,
+          "height": 1,
+          "rgbaSha256": "545f5f13c93e8672e99b1117c31fb6fa28432d384cd4a5a801556b2087a4a5b0"
+        },
+        {
+          "width": 4,
+          "height": 1,
+          "rgbaSha256": "f46dfe8e3ae0c85babd4bcc623a42d8f580fb743cd52f6a27551593b506c6360"
+        },
+        {
+          "width": 2,
+          "height": 1,
+          "rgbaSha256": "7000a4879b091aff911c68f6ae31bb75f7bff98541a8e53969d4b9c37315312c"
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "rgbaSha256": "760f71ab93c20cc65416b2276a62acd08ebb8e75328d22acb9364b634b941625"
+        }
+      ]
+    }
+  ]
+}

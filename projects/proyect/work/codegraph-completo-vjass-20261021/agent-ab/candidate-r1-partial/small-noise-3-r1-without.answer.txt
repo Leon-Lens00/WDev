@@ -1,0 +1,6 @@
+CodeGraph MCP was unavailable; source inspection shows a **direct call**, with no intermediate method: `Noise.Noise.openSimplex2D → Noise.Noise.extrapolate2D`.
+
+- `openSimplex2D` stretches coordinates, computes floored lattice coordinates `(xsb,ysb)`, fractional coordinates `(xins,yins)`, and displacements ([Noise.j:142](Noise.j:142)).
+- Four call sites invoke `extrapolate2D`: `(xsb+1,ysb,dx1,dy1)`, `(xsb,ysb+1,dx2,dy2)`, `(xsb,ysb,dx0,dy0)`, and `(xsv_ext,ysv_ext,dx_ext,dy_ext)`. Each requires its corresponding attenuation `2−dx²−dy² > 0`; its contribution receives the fourth power of that attenuation ([Noise.j:170](Noise.j:170), [Noise.j:223](Noise.j:223)).
+- Intermediate **data wiring** selects the extra vertex. For `inSum≤1`, `zins=1−inSum`: if `zins>xins or zins>yins`, choose offset `(1,−1)` when `xins>yins`, otherwise `(−1,1)`; else `(1,1)`. For `inSum>1`, `zins=2−inSum`: if `zins<xins or zins<yins`, choose `(2,0)` or `(0,2)` using the same comparison; else `(0,0)`. This latter branch also advances the base vertex to `(1,1)` and adjusts displacements ([Noise.j:178](Noise.j:178)).
+- `extrapolate2D` hashes lattice coordinates through `permutation`, masks the index with `7`, and returns the gradient dot displacement ([Noise.j:137](Noise.j:137)).

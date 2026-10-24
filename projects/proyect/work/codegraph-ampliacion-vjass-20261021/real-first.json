@@ -1,0 +1,95 @@
+{
+  "stats": {
+    "nodeCount": 1277,
+    "edgeCount": 1702,
+    "fileCount": 16,
+    "nodesByKind": {
+      "constant": 46,
+      "field": 187,
+      "file": 16,
+      "function": 42,
+      "method": 301,
+      "module": 50,
+      "namespace": 15,
+      "parameter": 337,
+      "struct": 60,
+      "variable": 223
+    },
+    "edgesByKind": {
+      "calls": 297,
+      "contains": 1261,
+      "imports": 30,
+      "references": 26,
+      "returns": 51,
+      "type_of": 37
+    },
+    "filesByLanguage": {
+      "jass": 16
+    },
+    "dbSizeBytes": 2457600,
+    "walSizeBytes": 0,
+    "lastUpdated": 1792630064425
+  },
+  "errors": [],
+  "probes": [
+    {
+      "name": "RapidFire.RapidBolt.launch",
+      "nodes": [
+        {
+          "name": "RapidFire.RapidBolt.launch",
+          "line": 39,
+          "origin": "CodeGraph static projection: module Missile.MissileStruct defined at libraries/Missile.j:1636; invoked at libraries/RapidFire.j:39 -> module Missile.MissileLaunch defined at libraries/Missile.j:1449; invoked at libraries/RapidFire.j:39. Declaration origin libraries/Missile.j:1450. Source below is the invocation, not an expanded body.",
+          "callees": [
+            "Missile.StartPeriodic",
+            "ErrorMessage.ThrowError"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RapidFire.RapidBolt.missileIterateP",
+      "nodes": [
+        {
+          "name": "RapidFire.RapidBolt.missileIterateP",
+          "line": 39,
+          "origin": "CodeGraph static projection: module Missile.MissileStruct defined at libraries/Missile.j:1636; invoked at libraries/RapidFire.j:39 -> module Missile.MissileAction defined at libraries/Missile.j:1483; invoked at libraries/RapidFire.j:39. Declaration origin libraries/Missile.j:1524. Source below is the invocation, not an expanded body.",
+          "callees": [
+            "Missile.GetUnitBodySize",
+            "Missile.GetLocZ",
+            "RapidFire.RapidBolt.missileTerminateP",
+            "RapidFire.RapidBolt.onFinish",
+            "RapidFire.RapidBolt.onPeriod",
+            "RapidFire.RapidBolt.missileActionDest",
+            "RapidFire.RapidBolt.missileActionItem"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RapidFire.RapidBolt.onPeriod",
+      "nodes": [
+        {
+          "name": "RapidFire.RapidBolt.onPeriod",
+          "line": 26,
+          "callees": [
+            "RapidFire.RapidBolt.resolve"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Missile.Missile.createXYZ",
+      "nodes": [
+        {
+          "name": "Missile.Missile.createXYZ",
+          "line": 775,
+          "callees": [
+            "MissileRecycler.GetRecycledMissile",
+            "Missile.Missile.createEx",
+            "Missile.Missile.newMissileUnit"
+          ]
+        }
+      ]
+    }
+  ]
+}

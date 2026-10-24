@@ -1,0 +1,12 @@
+// TerrainDev foundation: exact editable libraries are also embedded in WCT.
+//! import "libraries/WorldBounds.j"
+//! import "libraries/ErrorMessage.j"
+//! import "libraries/TimerUtils.j"
+//! import "libraries/Table.j"
+//! import "libraries/RegisterPlayerUnitEvent.j"
+//! import "libraries/SpellEffectEvent.j"
+//! import "libraries/IsDestructableTree.j"
+//! import "libraries/DummyCaster.j"
+//! import "libraries/MissileDiagnostics.j"
+//! import "libraries/MissileRecycler.j"
+//! import "libraries/Missile.j"

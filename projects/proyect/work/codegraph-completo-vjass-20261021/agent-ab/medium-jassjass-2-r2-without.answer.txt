@@ -1,0 +1,10 @@
+`codegraph_explore` was unavailable, so I inspected `Jass.j` directly.
+
+The source call chain is **`Lexer.next()` → `Lexer.parseIdent()` → `isDelim(c)`**. There is no intermediate function between `parseIdent` and `isDelim`.
+
+- `next()` skips spaces/tabs, reads the current character, and reaches `.parseIdent()` when earlier branches fail and `isLetter(c)` succeeds ([Jass.j:884](Jass.j#L884), [Jass.j:1049](Jass.j#L1049)).
+- `parseIdent()` initializes `p = .pos` and `c = SubString(.input, p, p+1)`. Its loop directly calls `isDelim(c)` in `exitwhen isDelim(c) or p >= .length`; otherwise it advances `p` and refreshes `c` ([Jass.j:758](Jass.j#L758)).
+- The library-private `isDelim` recognizes whitespace and `[](),.<>/*+-$="'!%` ([Jass.j:665](Jass.j#L665)).
+- After stopping, `parseIdent` creates an `IDENT` token from `[.pos, p)` and sets `.pos = p`, leaving any delimiter unconsumed ([Jass.j:769](Jass.j#L769)).
+
+Separately, keyword matching uses `next()` → `token()` → `isDelim()` to check keyword boundaries; that helper is **not** inside `parseIdent`’s call path ([Jass.j:698](Jass.j#L698), [Jass.j:908](Jass.j#L908)).

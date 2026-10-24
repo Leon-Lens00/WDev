@@ -1,0 +1,39 @@
+--- work/camera-restore-20261022/TerrainInventory-before.j	2026-10-21 13:03:19.276974831 -0500
++++ TerrainDev/inventory-integration/src/TerrainInventory.j	2026-10-22 17:03:13.532670179 -0500
+@@ -48,6 +48,19 @@
+         endif
+     endfunction
+ 
++    private function CalibrateCameras takes nothing returns nothing
++        local integer pid = 0
++        loop
++            exitwhen pid == 12
++            if PlayerHero[pid] != null then
++                call PlayerCamera[pid].calibrateHeightForPlayer(Player(pid))
++                call PlayerCamera[pid].applyCameraForPlayer(Player(pid),true)
++            endif
++            set pid = pid+1
++        endloop
++        call DestroyTimer(GetExpiredTimer())
++    endfunction
++
+     private function Start takes nothing returns nothing
+         local integer pid = 0
+         local unit u
+@@ -80,12 +93,15 @@
+                 if GetLocalPlayer() == Player(pid) then
+                     call ClearSelection()
+                     call SelectUnit(u, true)
+-                    call PanCameraToTimed(x+220,y,0)
++                    // The shared camera controller is primed below before calibration.
+                 endif
++                call PlayerCamera[pid].setPosition(GetUnitX(u),GetUnitY(u),GetTerrainZ(GetUnitX(u),GetUnitY(u))+GetUnitFlyHeight(u))
++                call PlayerCamera[pid].applyCameraForPlayer(Player(pid),true)
+                 call DisplayTimedTextToPlayer(Player(pid),0,0,25,"TerrainDev + InventorySys 1.4.1. -ui abre inventario y equipo; -ayudaui muestra controles. Heroe de integracion con ocho objetos de la demo.")
+             endif
+             set pid = pid+1
+         endloop
++        call TimerStart(CreateTimer(),0.10,false,function CalibrateCameras)
+         call DestroyTimer(GetExpiredTimer())
+         set u = null
+     endfunction

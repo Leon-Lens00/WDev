@@ -1,0 +1,36 @@
+{
+  "scope": "Two original Bash helpers, isolated synthetic Git fixture. No model-behavior or Warcraft tests.",
+  "commands": [
+    "bash review-package PLAN BASE HEAD OUTFILE",
+    "bash review-package PLAN HEAD HEAD OUTFILE",
+    "bash sdd-workspace PLAN"
+  ],
+  "results": [
+    {
+      "name": "review-package committed range coverage",
+      "exit": 0,
+      "committed_delta_included": true,
+      "dirty_worktree_delta_included": false,
+      "untracked_map_included": false,
+      "conclusion": "Correct commit-range output; caller must separately cover non-committed deliverables.",
+      "artifact": "evidencia-review-package.diff",
+      "sha256": "6528c80a89034f94991b72cfdee769620e1ba69412fde9bb4bd8f2aa7cfa53b4"
+    },
+    {
+      "name": "review-package rejects empty range",
+      "exit": 3,
+      "stderr": "empty commit range: dc5c9f81d0ecdce9a22cc8d55d74a481018d4fea..dc5c9f81d0ecdce9a22cc8d55d74a481018d4fea"
+    },
+    {
+      "name": "plan workspaces avoid basename collision and reuse exact plan",
+      "separate_plan_paths": true,
+      "same_plan_path_stable": true,
+      "git_ignored": true,
+      "workspace_names": [
+        "plan",
+        "plan-beta"
+      ]
+    }
+  ],
+  "temporary_repository_removed": true
+}

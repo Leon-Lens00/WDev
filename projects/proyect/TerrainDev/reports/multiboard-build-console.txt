@@ -1,0 +1,165 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/TerrainDev.w3x",
+  "sha256": "37dcc7954b5318d512bb747e1d3dbae63030392895776759ba1a6933142f86c7",
+  "original_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "libraries": [
+    "WorldBounds",
+    "ErrorMessage",
+    "TimerUtils",
+    "Table",
+    "RegisterPlayerUnitEvent",
+    "SpellEffectEvent",
+    "IsDestructableTree",
+    "DummyCaster",
+    "MissileDiagnostics",
+    "MissileRecycler",
+    "Missile"
+  ],
+  "library_sha256": {
+    "WorldBounds": "0ed3c284b18694b744bdae4423f2b60e5e16346778116caffb5bf9a4267447c9",
+    "ErrorMessage": "b240c5c064d569ec89ba85e21363b27514bab66fb6517c1cd68d8ce9b40df147",
+    "TimerUtils": "cbc13cd7eb8679ee2d618dcfe70e8da47489a926506eb8059dc6fc09eba60f45",
+    "Table": "94d2fd1f89774efb2ad3e9d2ae7e3bdded3c121bb523f02425d4937fc7031fb4",
+    "RegisterPlayerUnitEvent": "a4513c10d93fdc26b7b86440a8f9171153b2d3108b815e7c57169b21c2202c2c",
+    "SpellEffectEvent": "222abb23791bd71eb96db71384ef40a91c16421176cc046c186f0af185050bd0",
+    "IsDestructableTree": "2f981785b5d01564b634ec35a62e3a008a83a313a4a61774e23b4632d69c6829",
+    "DummyCaster": "4437e9214cc7d30b30ad9d7654286d70a1b8c00c96c15d1f2952cebfe4c349c0",
+    "MissileDiagnostics": "5d13202a5116a67e3f49d2a095975b1fe33955fd34fed076eccd0a67d26bc990",
+    "MissileRecycler": "65189b805bf424f57c758eef1ee5497bddb0070a3f59d04a883e63821c7818eb",
+    "Missile": "333150566d2f55b665afd127e95374078cd80053fe617c9def01405ab93510a3"
+  },
+  "checks": [
+    {
+      "member": "war3map.w3e",
+      "changed": false,
+      "sha256": "69db4c10eb5f55ef1676a801931ed57c5539c1cb26d0822eb9d8ae00dc337b84"
+    },
+    {
+      "member": "war3map.w3i",
+      "changed": false,
+      "sha256": "e4cdef030a11aa6ca712fef64dcc1ce65ca2a59ea39aa07f8e96ef65bc2d3a8e"
+    },
+    {
+      "member": "war3map.wtg",
+      "changed": true,
+      "sha256": "3cda0b36a3c08c2d496da381bd3a15c352ad8a141ab06532d853732ccdf169e2"
+    },
+    {
+      "member": "war3map.wct",
+      "changed": true,
+      "sha256": "d834239bdde4e0175bafb4cce8e4cf9401883ab77a66dfcd6715e407df033276"
+    },
+    {
+      "member": "war3map.wts",
+      "changed": false,
+      "sha256": "d441d19ac4348e32c7cca7d2031116337cd0dfb8533fe5c94c93c90b75050f5b"
+    },
+    {
+      "member": "war3map.j",
+      "changed": true,
+      "sha256": "faef31157761a4b22ce65c94104cb20cc119a6192c4a37dd9230b12780db6299"
+    },
+    {
+      "member": "war3map.shd",
+      "changed": false,
+      "sha256": "f0048a8c89ce44900335bc5debc06b812bb0acf75d9edd1c6ab6847ae43ecc78"
+    },
+    {
+      "member": "war3mapMap.blp",
+      "changed": false,
+      "sha256": "3376b407917222c857eebc28fadee2e3b374404d4fcccd1ebc4874632a24da41"
+    },
+    {
+      "member": "war3map.mmp",
+      "changed": false,
+      "sha256": "2a2905f4d4e9b657d8538589fae5ccac62e4ec689800f3adc25239ed95d494ae"
+    },
+    {
+      "member": "war3map.wpm",
+      "changed": false,
+      "sha256": "5743498398689fb16b91acf2ec688d9f906caa737cc8224f3f2af02a551773fa"
+    },
+    {
+      "member": "war3map.doo",
+      "changed": false,
+      "sha256": "05e237d8bf2198f930c4edca8f4b1b6215e0d3c22463baea49ee1f78e2b95b81"
+    },
+    {
+      "member": "war3mapUnits.doo",
+      "changed": false,
+      "sha256": "acbb6e271291da2dab232e676b62c65693029e40383f9211a7d4a450ba3da766"
+    },
+    {
+      "member": "war3map.w3r",
+      "changed": false,
+      "sha256": "b347e2b76f72081b6c6ca14a18bc061a2f08183285f149eb4131c33dd2263aa3"
+    },
+    {
+      "member": "war3map.w3c",
+      "changed": false,
+      "sha256": "af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc"
+    },
+    {
+      "member": "war3map.w3u",
+      "changed": true,
+      "sha256": "36ad4fa66e51e69ba4693575b80215c6d8041e1b45776b8c4bc33c166a5106dd"
+    },
+    {
+      "member": "war3map.w3t",
+      "changed": false,
+      "sha256": "899ffc64b6ec46588957d99235332035b184fd52635888d801106b4ab51969ea"
+    },
+    {
+      "member": "war3map.w3b",
+      "changed": false,
+      "sha256": "624fb6e3a913a4695bddbefe9f96d905ee7ff6ee78f24adf2438925ec03f4822"
+    },
+    {
+      "member": "war3map.w3d",
+      "changed": false,
+      "sha256": "f2b4a8e71bd24be9cbd38c1d130d0e264fc6c70390aab60dcc5e33df6348a1a3"
+    },
+    {
+      "member": "war3map.w3a",
+      "changed": false,
+      "sha256": "e79a654afb9476ba5035de7d9d5326b7da68d464f993177afc498dea6fc4e675"
+    },
+    {
+      "member": "war3map.w3s",
+      "changed": false,
+      "sha256": "3d1880b9df2640396c4c4afe0eceed6646bf0e01f3ff0c6243933c08f7feaa8d"
+    },
+    {
+      "member": "war3map.imp",
+      "changed": true,
+      "sha256": "96711a94c697b281b16705eec02ef93ff0a9046fa68b3b3259a7aa178c08b4b7"
+    },
+    {
+      "member": "war3mapMisc.txt",
+      "changed": false,
+      "sha256": "22ec36975c748301ac0d5e9d1ebec0acc9c78c71b900c2b5ca49d09101fa786f"
+    },
+    {
+      "member": "war3mapSkin.txt",
+      "changed": false,
+      "sha256": "22ec36975c748301ac0d5e9d1ebec0acc9c78c71b900c2b5ca49d09101fa786f"
+    },
+    {
+      "member": "war3mapExtra.txt",
+      "changed": false,
+      "sha256": "fd261cfa00e19a3207483ac72a4ac3f0ec2b5676df77345c8bad71c4def83d33"
+    },
+    {
+      "member": "war3mapImported\\KoboldDigger.mdx",
+      "changed": false,
+      "sha256": "2af2e611364cfa0b7ce0181ace56c70c45d1d646ec7102e03486423f650386eb"
+    }
+  ],
+  "build_directory": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261021-023857-288028",
+  "report_directory": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/20261021-023857-288028",
+  "compiled": true,
+  "pjass": true,
+  "native_trigger_roundtrip": true,
+  "game_tested": false,
+  "editor_tested": false
+}

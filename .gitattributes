@@ -1,0 +1,4 @@
+# Estas incorporaciones son snapshots de fuentes/recursos: preservar sus bytes,
+# incluidas codificaciones JASS históricas y finales de línea ya existentes.
+projects/proyect/** -text
+tools/ui-studio/** -text

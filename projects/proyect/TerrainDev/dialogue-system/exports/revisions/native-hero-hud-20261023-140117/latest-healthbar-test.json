@@ -1,0 +1,45 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/TerrainDev-Dialogue.w3x",
+  "sha256": "fb87a18cb24457d2751ed2e2d812bd7325d64f3c32b74e4316a2c96610bacb7c",
+  "target": "Warcraft III Classic1.27b / RenderEdge",
+  "mode": "SP",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "display": "HDMI-A-1",
+  "cases": [
+    "initial100; debug board hidden",
+    "diagnostic -misiles visible/hidden",
+    "actual life75/86",
+    "critical10/15",
+    "native Tauren/Paladin icon switching",
+    "patrol with dialogue opening, text, pause and closing",
+    "bars hide/show",
+    "enemy actual life0 / empty fill"
+  ],
+  "evidence": "/home/snz/Documentos/ChatGPT/Proyect/work/healthbars-native-20261023",
+  "video": "/home/snz/Documentos/ChatGPT/Proyect/work/healthbars-native-20261023/barras-horizontales-prueba.mp4",
+  "videoSeconds": 50.866667,
+  "videoSha256": "c6538331129e1a34328a7235e99938e663cd84bc3b51a037ecb09ba690cd0335",
+  "modelStatesValidated": 303,
+  "textureMipsValidated": 37,
+  "cameraLibraryChanged": false,
+  "foundationHashesPreserved": true,
+  "nativeTested": true,
+  "multiplayerTested": false,
+  "limitations": [
+    "Native icon registry currently Hpal/otau; extend registry/model/rawcode for additional units",
+    "Unsupported target types clear enemy bar rather than guessing icon",
+    "Single fixed camera-plane calibration1920x1080; other aspect ratios pending",
+    "Life poll0.05s; projection0.01s using existing unit-camera update; integer percent states",
+    "Demo target is paused/invulnerable; life test commands change actual life",
+    "LAN menu not completed; authorized SP fallback"
+  ],
+  "closed": {
+    "pid": 1060685,
+    "start": "17912050",
+    "closed": true,
+    "method": "Win+Q; confirmation visually checked; S"
+  }
+}

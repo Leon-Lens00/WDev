@@ -1,0 +1,47 @@
+[
+  {
+    "label": "missiles",
+    "metadata": {
+      "index_state": "complete",
+      "indexed_with_version": "1.6.2+jass-vjass.3",
+      "indexed_with_extraction_version": "30"
+    },
+    "counts": {
+      "files": 16,
+      "nodes": 1277,
+      "edges": 1739
+    },
+    "integrity": "ok",
+    "original_sources_changed": []
+  },
+  {
+    "label": "inventory",
+    "metadata": {
+      "index_state": "complete",
+      "indexed_with_version": "1.6.2+jass-vjass.3",
+      "indexed_with_extraction_version": "30"
+    },
+    "counts": {
+      "files": 56,
+      "nodes": 3333,
+      "edges": 4958
+    },
+    "integrity": "ok",
+    "original_sources_changed": []
+  },
+  {
+    "label": "ui",
+    "metadata": {
+      "index_state": "complete",
+      "indexed_with_version": "1.6.2+jass-vjass.3",
+      "indexed_with_extraction_version": "30"
+    },
+    "counts": {
+      "files": 4,
+      "nodes": 126,
+      "edges": 734
+    },
+    "integrity": "ok",
+    "original_sources_changed": []
+  }
+]

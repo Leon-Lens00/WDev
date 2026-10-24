@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "target": "Warcraft III Classic 1.27b",
+  "maxTextureDimension": 512,
+  "player": {
+    "textureSize": [
+      128,
+      256
+    ],
+    "contentRect": [
+      0,
+      0,
+      128,
+      256
+    ],
+    "lifeRect": [
+      56,
+      21,
+      16,
+      133
+    ],
+    "portraitRect": [
+      32,
+      171,
+      64,
+      64
+    ],
+    "readoutRect": [
+      31,
+      237,
+      66,
+      12
+    ],
+    "frame": "FrameBlue",
+    "contentVMax": 1.0
+  },
+  "enemy": {
+    "textureSize": [
+      128,
+      512
+    ],
+    "contentRect": [
+      0,
+      0,
+      128,
+      448
+    ],
+    "lifeRect": [
+      56,
+      21,
+      16,
+      325
+    ],
+    "portraitRect": [
+      32,
+      363,
+      64,
+      64
+    ],
+    "readoutRect": [
+      31,
+      429,
+      66,
+      12
+    ],
+    "frame": "FrameRed",
+    "contentVMax": 0.875
+  },
+  "enemyLifeHeightRatio": 2.443609022556391,
+  "portraits": {
+    "paladin": {
+      "name": "Paladín",
+      "texture": "PortraitPaladin"
+    },
+    "tauren": {
+      "name": "Tauren",
+      "texture": "PortraitTauren"
+    }
+  },
+  "fill": {
+    "normal": "LifeNormal",
+    "critical": "LifeCritical",
+    "criticalAtPercent": 20,
+    "anchor": "bottom",
+    "uvPolicy": "crop top of full fill, do not rescale its gradient"
+  },
+  "layersBackToFront": [
+    "portrait",
+    "frame",
+    "fill inside lifeRect",
+    "dynamic text inside readoutRect"
+  ],
+  "notes": "Rectangles are top-left pixel coordinates inside texture. Enemy geometry uses only contentRect: vMax=448/512. BLP portraits are static pictures, not animated actors."
+}

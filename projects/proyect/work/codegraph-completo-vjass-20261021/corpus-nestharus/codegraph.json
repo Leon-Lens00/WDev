@@ -1,0 +1,8 @@
+{
+  "include": [
+    "jass/**/*.j"
+  ],
+  "jass": {
+    "mode": "conservative"
+  }
+}

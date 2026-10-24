@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-22T21:21:47.126650-05:00",
+  "target": "Classic 1.27b SP 1920x1080",
+  "status": "Tested in map",
+  "map_sha256": "e7b9e5353a91cd6986550d63177a565e9c9db4176e4c70e3373f7ecd891dd5f8",
+  "build": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/build/20261022-210943-842510",
+  "pid": 792985,
+  "monitor": "HDMI-A-1",
+  "workspace": 32,
+  "passed": [
+    "45 UI Studio Node tests, including punctuation talk continuity and full idle cycle boundaries",
+    "JassHelper release/pJASS; map header, members and imports reextracted and verified",
+    "Actual MDX readback: all exported keys and SEQS chronological; parents precede children; NonLooping=0; local palettes, faces, textures and depth checked",
+    "Negative control: previous exact assets rejected for out-of-order sequence intervals; current models pass",
+    "Gray backing no longer occludes totem; body/arms/hands/totem retained",
+    "Native automatic idle head turns and full body/face motion repeat after speech; three moving idle variants per pilot",
+    "Tauren automatic talk, blue panel/Paladin idle; Paladin talk additionally exercised by explicit index probe",
+    "Native unit movement with camera/HUD visible, close/static/fold/fully closed and reopen",
+    "Shared Camera hash unchanged"
+  ],
+  "evidence_directory": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-tauren-hud-20261022",
+  "editor_screenshot": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-tauren-hud-20261022/editor-ordered-final.png",
+  "native_screenshot": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-tauren-hud-20261022/ordered-reopened-1.png",
+  "idle_evidence": [
+    "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-tauren-hud-20261022/ordered-idle-paladin.png",
+    "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-tauren-hud-20261022/ordered-idle-tauren.png"
+  ],
+  "exit": {
+    "pid": 792985,
+    "exited": true,
+    "confirmation_observed": true,
+    "confirmation_sent": null,
+    "already_exited_before_confirmation": true,
+    "sigterm_needed": false
+  },
+  "visual_approved": false,
+  "limitations": [
+    "Two pilot models only; original curves sampled every25ms and projected with calibrated horizontal-FOV interpretation",
+    "Native Stand-1 in Tauren portrait is static: retained in MDX, excluded from automatic idle cycle",
+    "Web font rasterization approximate; preview terrain/HUD uses historical screenshot",
+    "Integrated browser repeatedly crashed; final screenshot valid, long-running browser stability unresolved",
+    "No LAN game started; SP fallback authorized. No multiplayer, other resolutions, compact native or NewGen roundtrip certification",
+    "Instant visibility during debug teleport remains a separate open issue",
+    "ordered-closed.png is mid-fold; ordered-closure-final-3.png proves fully closed",
+    "Early chronological-auto captures include missile board; final ordered-* series after board hide used for unobstructed contrast"
+  ]
+}

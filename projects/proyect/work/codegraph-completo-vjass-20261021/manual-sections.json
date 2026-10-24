@@ -1,0 +1,478 @@
+[
+  {
+    "section": "Table of contents",
+    "examples": []
+  },
+  {
+    "section": "I. vJass reference:",
+    "examples": []
+  },
+  {
+    "section": "II. Installation",
+    "examples": []
+  },
+  {
+    "section": "III. Usage",
+    "examples": []
+  },
+  {
+    "section": "I. vJass reference:",
+    "examples": []
+  },
+  {
+    "section": "Global declaration Freedom",
+    "examples": [
+      "function something takes nothing returns nothing\n    set somearray[SOMETHING_INDEX]=4\nendfunction\n\nglobals\n    constant integer SOMETHING_INDEX = 45\n    integer array somearray\nendglobals\n\n"
+    ]
+  },
+  {
+    "section": "Notes:",
+    "examples": []
+  },
+  {
+    "section": "Better looping: for, while, break",
+    "examples": [
+      "\n// while unit has some buff do some healing\nwhile GetUnitAbilityLevel(whichUnit, 'Bhea') > 0\n    call SetWidgetLife(whichUnit, GetWidgetLife(whichUnit) + 10.)\n    call TriggerSleepAction(0.1)\nendwhile\n",
+      "\n// print out numbers from 1 to 10 with for loop\nfor i = 1 to 10\n    call BJDebugMsg(I2S(i))\nendfor\n",
+      "\n// print only 1 2 3\nfor i = 1 to 10\n    call BJDebugMsg(I2S(i))\n    if i == 3 then\n        break\n    endif\nendfor\n",
+      "\n// print out numbers from 10 downto 1\nfor i = 10 downto 1\n    call BJDebugMsg(I2S(i))\nendfor\n",
+      "\n// kill all units in a group\nfor enumUnit in someGroup\n    call KillUnit(enumUnit)\nendfor\n// WARNING: groups are empty after for loop\n"
+    ]
+  },
+  {
+    "section": "Native declaration Freedom",
+    "examples": [
+      "native GetUnitGoldCost takes integer unitid returns integer\n\nfunction test takes nothing returns nothing\n    call BJDebugMsg(\"A footman consts : \"+I2S( GetUnitGoldCost('hfoo')+\" gold coins\" ) )\nendfunction\n\n"
+    ]
+  },
+  {
+    "section": "Debug preprocessor",
+    "examples": [
+      "function Something takes integer a returns nothing\n   debug call BJDebugMsg(\"a is \"+I2S(a))\n   call KillNUnits(a)\nendfunction\n\n"
+    ]
+  },
+  {
+    "section": "Local variables shadowing",
+    "examples": []
+  },
+  {
+    "section": "Patch 1.24 return bug false positive fixer",
+    "examples": []
+  },
+  {
+    "section": "Side effects and limitations",
+    "examples": []
+  },
+  {
+    "section": "Enabling the return fixer",
+    "examples": []
+  },
+  {
+    "section": "Import external script files",
+    "examples": []
+  },
+  {
+    "section": "Zinc",
+    "examples": []
+  },
+  {
+    "section": "No vjass!",
+    "examples": [
+      " function VerifyVJass takes nothing returns nothing\n  local boolean b=true\n    //! novjass\n        set b=false\n    //! endnovjass\n    if(b) then\n        call BJDebugMsg(\"You got vJass\")\n    else\n        call BJDebugMsg(\"Where's vJass?\")\n    endif\n endfunction\n\n"
+    ]
+  },
+  {
+    "section": "Libraries",
+    "examples": [
+      "library B\n    function Bfun takes nothing returns nothing\n    endfunction\nendlibrary\n\nlibrary A\n    function Afun takes nothing returns nothing\n    endfunction\nendlibrary\n\n",
+      "    library C requires A, B, D\n        function Cfun takes nothing returns nothing\n            call Afun()\n            call Bfun()\n            call Dfun()\n        endfunction\n    endlibrary\n\n    library D\n        function Dfun takes nothing returns nothing\n        endfunction\n    endlibrary\n\n    library B requires A\n        function Bfun takes nothing returns nothing\n            call Afun()\n        endfunction\n    endlibrary\n\n    library A\n        function Afun takes nothing returns nothing\n        endfunction\n    endlibrary\n    \n",
+      "    function Afun takes nothing returns nothing\n    endfunction\n    function Dfun takes nothing returns nothing\n    endfunction\n    function Bfun takes nothing returns nothing\n        call Afun()\n    endfunction\n    function Cfun takes nothing returns nothing\n        call Afun()\n        call Bfun()\n        call Dfun()\n    endfunction\n    \n",
+      "    library A initializer InitA requires B\n    \n        function InitA takes nothing returns nothing\n           call StoreInteger(B_gamecache , \"a_rect\" , Rect(-100.0 , 100.0 , -100.0 , 100  ) )\n        endfunction\n    \n    endlibrary\n\n    library B initializer InitB\n        globals\n            gamecache B_gamecache\n        endglobals\n    \n        function InitB takes nothing returns nothing\n            set B_gamecache=InitGameCache(\"B\")\n        endfunction\n    endlibrary\n\n"
+    ]
+  },
+  {
+    "section": "Static ifs",
+    "examples": [
+      "    library OptionalCode requires optional UnitKiller\n        globals\n            constant boolean DO_KILL_LIB = true\n        endglobals\n\n        function fun takes nothing returns nothing\n            local unit u = GetTriggerUnit()\n            //the following code may need to kill the unit\n            //but is alternatively able to use the external\n            //'UnitKiller' library to do the library.\n            // ONLY when DO_KILL_LIB is true AND the\n            // library UnitKiller is in the map.\n            static if DO_KILL_LIB and LIBRARY_UnitKiller then\n                //static if because if the UnitKiller\n                // library was not in the map, using a normal\n                // if would not remove this line of code and\n                // therefore it would cause a syntax error.\n                // (unable to find function UnitKiller)\n                call UnitKiller(u)\n            else\n                call KillUnit(u)\n            endif\n        endfunction\n\n    endlibrary\n\n    library UnitKiller\n\n        function UnitKiller(unit u)\n            call BJDebugMsg(\"Unit kill!\")\n            call KillUnit(u)\n        endfunction\n\n    endfunction\n\n"
+    ]
+  },
+  {
+    "section": "Private members",
+    "examples": [
+      "library privatetest\n    globals\n        private integer N=0\n    endglobals\n    private function x takes nothing returns nothing\n        set N=N+1\n    endfunction\n\n    function privatetest takes nothing returns nothing\n        call x()\n        call x()\n    endfunction\nendlibrary\n\nlibrary otherprivatetest\n    globals\n        private integer N=5\n    endglobals\n    private function x takes nothing returns nothing\n        set N=N+1\n    endfunction\n\n    function otherprivatetest takes nothing returns nothing\n        call x()\n        call x()\n    endfunction\nendlibrary\n",
+      "\nscope GetUnitDebugStr\n\n    private function H2I takes handle h returns integer\n        return h\n        return 0\n    endfunction\n\n    function GetUnitDebugStr takes unit u returns string\n        return GetUnitName(u)+\"_\"+I2S(H2I(u))\n    endfunction\nendscope\n"
+    ]
+  },
+  {
+    "section": "Public members",
+    "examples": [
+      "\n    library cookiesystem\n        public function ko takes nothing returns nothing\n            call BJDebugMsg(\"a\")\n        endfunction\n\n        function thisisnotpublicnorprivate takes nothing returns nothing\n             call ko()\n             call cookiesystem_ko() //cookiesystem_ preffix is optional\n        endfunction\n    endlibrary\n\n    function outside takes nothing returns nothing\n         call cookiesystem_ko() //cookiesystem_ preffix is required\n    endfunction\n\n",
+      "    library cookiesystem\n        public function ko takes nothing returns nothing\n            call BJDebugMsg(\"a\")\n        endfunction\n\n        function thisisnotpublicnorprivate takes nothing returns nothing\n             call ExecuteFunc(\"cookiesystem_ko\") //Needs the prefix no matter it is inside the scope\n\n             call ExecuteFunc(\"ko\") //This will most likely crash the game.\n             call cookiesystem_ko() //Does not need the prefix but can use it.\n             call ko() //since it doesn't need the prefix, the line works correctly.\n        endfunction\n    endlibrary\n"
+    ]
+  },
+  {
+    "section": "Nested scopes",
+    "examples": [
+      "\n    library nestedtest\n        scope A\n          globals\n            private integer N=4\n          endglobals\n\n          public function display takes nothing returns nothing\n            call BJDebugMsg(I2S(N))\n          endfunction\n        endscope\n\n        scope B\n            globals\n                public integer N=5\n            endglobals\n\n            public function display takes nothing returns nothing\n                call BJDebugMsg(I2S(N))\n            endfunction\n        endscope\n\n        function nestedDoTest takes nothing returns nothing\n            call B_display()\n            call A_display()\n        endfunction\n\n    endlibrary\n\n    public function outside takes nothing returns nothing\n        set nestedtest_B_N= -4\n        call nestedDoTest()\n        call nestedtest_A_display()\n\n    endfunction\n\n",
+      "\n    library nestedtest\n        globals\n            private integer N=3\n        endglobals\n\n        scope A\n          globals\n            private integer N=4 //Error: 'N' redeclared\n          endglobals\n        endscope\n\n    endlibrary\n\n",
+      "\n    library nestedtest\n        scope A\n          globals\n            private integer N=4\n          endglobals\n        endscope\n\n        globals\n            private integer N=3\n        endglobals\n\n    endlibrary\n\n\n",
+      "    library nestedtest\n      scope A\n        function kkk takes nothing returns nothing\n            set N=N+5  // By the time JassHelper gets to this line, it did not see the private integer N\n                       // declaration yet, so it assumes N is an attempt to use a global variable and does not\n                       // do any replacement\n        endfunction\n      endscope\n\n   endlibrary\n\n   scope X\n       scope A\n          //Declaring scope A again does not cause any problem, it is because the scope is actually X_A , the\n          // previous declaration of A was actually nestedtest_A\n          function DoSomething takes nothing returns nothing\n          endfunction\n\n       endscope\n    endscope"
+    ]
+  },
+  {
+    "section": "SCOPE_PREFIX and SCOPE_PRIVATE",
+    "examples": [
+      "\nscope test\n\n    private function kol takes nothing returns nothing\n        call BJDebugMsg(\"...\")\n    endfunction\n\n    function lala takes nothing returns nothing\n         call ExecuteFunc(SCOPE_PRIVATE+\"kol\")\n    endfunction\n\nendscope\n\n"
+    ]
+  },
+  {
+    "section": "keyword",
+    "examples": [
+      "\nscope myScope\n\n   private keyword B //we were able to declare B as private without having to actually\n                     //include the statement of the function which would cause conflicts.\n\n   private function A takes integer i returns nothing\n       if(i!=0) then\n           return B.evaluate(i-1)*2 //we can safely use B since it was already\n                                    //declared as a private member of the scope\n       endif\n       return 0\n   endfunction\n\n   private function B takes integer i returns nothing\n       if(i!=0) then\n           return A(i-1)*3\n       endif\n       return 0\n   endfunction\n\nendscope\n"
+    ]
+  },
+  {
+    "section": "Text Macros",
+    "examples": [
+      "    //! textmacro Increase takes TYPEWORD\n    function IncreaseStored$TYPEWORD$ takes gamecache g, string m, string l returns nothing\n        call Store$TYPEWORD$(g,m,l,GetStored$TYPEWORD$(g,m,l)+1)\n    endfunction\n    //! endtextmacro\n\n    //! runtextmacro Increase(\"Integer\")\n    //! runtextmacro Increase(\"Real\")",
+      "    function IncreaseStoredInteger takes gamecache g, string m, string l returns nothing\n        call StoreInteger(g,m,l,GetStoredInteger(g,m,l)+1)\n    endfunction\n    function IncreaseStoredReal takes gamecache g, string m, string l returns nothing\n        call StoreReal(g,m,l,GetStoredReal(g,m,l)+1)\n    endfunction",
+      "    //! textmacro bye\n    call BJDebugMsg(\"1\")\n    call BJDebugMsg(\"2\")\n    call BJDebugMsg(\"3\")\n    //! endtextmacro\n\n    function test takes nothing returns nothing\n        //! runtextmacro bye()\n        //! runtextmacro bye()\n    endfunction",
+      "    //! textmacro GetSetHandle takes TYPE, TYPENAME\n        function GetHandle$TYPENAME$ takes handle h, string k returns $TYPE$\n            return GetStoredInteger(udg_handlevars, I2S(H2I(h)), k)\n            return null\n        endfunction\n        function SetHandle$TYPENAME$ takes handle h, string k, $TYPE$ v returns nothing\n            call StoredInteger(udg_handlevars,I2S(H2I(h)),k, H2I(v))\n        endfunction\n    //! endtextmacro\n\n    //! runtextmacro GetSetHandle(\"unit\",\"Unit\")\n    //! runtextmacro GetSetHandle(\"location\",\"Loc\")\n    //! runtextmacro GetSetHandle(\"item\",\"Item\")",
+      "\n    //! textmacro STACK takes NAME, TYPE, TYPE2STRING\n        scope $NAME$\n            globals\n                private $TYPE$ array V\n                private integer N=0\n            endglobals\n            public function push takes $TYPE$ val returns nothing\n                set V[N]=val\n                set N=N+1\n            endfunction\n\n            public function pop takes nothing returns $TYPE$\n                set N=N-1\n                return V[N]\n            endfunction\n\n            public function print takes nothing returns nothing\n             local integer a=N-1\n                call BJDebugMsg(\"Contents of $TYPE$ stack $NAME$:\")\n                loop\n                    exitwhen a<0\n                    call BJDebugMsg(\" \"+$TYPE2STRING$(V[a]))\n                    set a=a-1\n                endloop\n            endfunction\n        endscope\n    //! endtextmacro\n\n    //! runtextmacro STACK(\"StackA\",\"integer\",\"I2S\")\n    //! runtextmacro STACK(\"StackB\",\"integer\",\"I2S\")\n    //! runtextmacro STACK(\"StackC\",\"string\",\"\")\n    function Test takes nothing returns nothing\n        call StackA_push(4)\n        call StackA_push(5)\n        call StackB_push(StackA_pop())\n        call StackA_push(7)\n        call StackA_print()\n        call StackB_print()\n        call StackC_push(\"A\")\n        call StackC_push(\"B\")\n        call StackC_push(\"C\")\n        call StackC_print()\n    endfunction\n\n"
+    ]
+  },
+  {
+    "section": "Structs",
+    "examples": [
+      "\nstruct pair\n    integer x\n    integer y\nendstruct\n\nfunction testpairs takes nothing returns nothing\n local pair A=pair.create()\n    set A.x=5\n    set A.x=8\n\n    call BJDebugMsg(I2S(A.x)+\" : \"+I2S(A.y))\n\n    call pair.destroy(A)\n\nendfunction"
+    ]
+  },
+  {
+    "section": "Declaring structs",
+    "examples": []
+  },
+  {
+    "section": "Creating and destroying structs",
+    "examples": []
+  },
+  {
+    "section": "Struct usage",
+    "examples": [
+      "\nstruct pair\n    integer x=1\n    integer y=2\nendstruct\n\nfunction pair_sum takes pair A, pair B returns pair\n local pair C=pair.create()\n    set C.x=A.x+B.x\n    set C.y=A.y+B.y\n return C\nendfunction\n\nfunction testpairs takes nothing returns nothing\n local pair A=pair.create()\n local pair B=pair_sum(A, A)\n local pair C=pair_sum(A,B)\n\n    call BJDebugMsg(I2S(C.x)+\" : \"+I2S(C.y))\n\n    //Dont forget, if you are not using an struct instance anymore, you destroy it\n    call B.destroy()\n    call C.destroy()\n    call pair.destroy(A)\n\nendfunction"
+    ]
+  },
+  {
+    "section": "Instance members",
+    "examples": [
+      "struct pairpair\n    pair x=0 //you cannot use pair.create() and should actually only use constants for default initial values.\n    pair y=0\nendstruct\n\nfunction testpairs takes nothing returns nothing\n local pairpair A=pairpair.create()\n local pair x\n\n    set A.x=pair.create()\n    set A.y=pair.create()\n\n    set x=A.y //notice we are saving A.y in a backup variable so we can destroy it.\n    set A.y= pair_sum(A.x,A.y) //this replaces A.y that's the reason we saved it\n\n    call BJDebugMsg(I2S(  A.y.x )+\" : \"+I2S( A.y.y )) //notice the nesting of the . operator\n\n    call A.x.destroy()\n    call A.y.destroy()\n    call A.destroy()\n    call x.destroy()\nendfunction"
+    ]
+  },
+  {
+    "section": "Globals of struct types",
+    "examples": [
+      "\nglobals\n     pair globalpair=0 //legal\n     pair globalpair2= pair.create() //not legal\nendglobals"
+    ]
+  },
+  {
+    "section": "Static members",
+    "examples": []
+  },
+  {
+    "section": "public/private Structs",
+    "examples": [
+      "\nscope cool\n    public struct a\n        integer x\n    endstruct\n\n    globals\n        a x\n        public a b\n    endglobals\n\n\n    public function test takes nothing returns nothing\n        set b = a.create()\n        set b.x = 3\n        call b.destroy()\n    endfunction\n\nendscope\n\nfunction test takes nothing returns nothing\n local cool_a x=cool_a.create()\n    set a.x=6\n    call a.destroy()\nendfunction\n"
+    ]
+  },
+  {
+    "section": "Methods",
+    "examples": [
+      "\n    struct point\n        real x=0.0\n        real y=0.0\n\n        method move takes real tx, real ty returns nothing\n            set this.x=tx\n            set this.y=ty\n        endmethod\n\n    endstruct\n\n    function testpoint takes nothing returns nothing\n     local point p=point.create()\n        call p.move(56,89)\n\n        call BJDebugMsg(R2S(p.x))\n    endfunction\n"
+    ]
+  },
+  {
+    "section": "Encapsullation",
+    "examples": [
+      "\n    struct encap\n        real a=0.0\n        private real b=0.0\n        public real c=4.5\n\n        method randomize takes nothing returns nothing\n            // All legal:\n            set this.a= GetRandomReal(0,45.0)\n            set this.b= GetRandomReal(0,45.0)\n            set this.c= GetRandomReal(0,45.0)\n        endmethod\n\n    endstruct\n\n    function test takes nothing returns nothing\n     local encap e=encap.create()\n\n         call BJDebugMsg(R2S(e.a)) //legal\n         call BJDebugMsg(R2S(e.c)) //legal\n         call BJDebugMsg(R2S(e.b)) //syntax error\n\n    endfunction\n"
+    ]
+  },
+  {
+    "section": "Static methods",
+    "examples": [
+      "\n    struct encap\n        real a=0.0\n        private real b=0.0\n        public real c=4.5\n\n        private method dosomething takes nothing returns nothing\n            if (this.a==5) then\n                set this.a=56\n            endif\n        endmethod\n\n        static method altcreate takes real a, real b, real c returns encap\n         local encap r=encap.create()\n            set r.a=a\n            set r.b=b\n            set r.c=c\n            call r.dosomething() //even though it is private you can use\n                                 //it since we are inside the struct declaration\n         return r\n        endmethod\n\n        method randomize takes nothing returns nothing\n            // All legal:\n            set this.a= GetRandomReal(0,45.0)\n            set this.b= GetRandomReal(0,45.0)\n            set this.c= GetRandomReal(0,45.0)\n        endmethod\n\n    endstruct\n\n    function test takes nothing returns nothing\n     local encap e=encap.altcreate(5,12.4,78.0)\n         call BJDebugMsg(R2S(e.a)+\" , \"+R2S(e.c))\n    endfunction\n",
+      "\nstruct vec\n   real x\n   real y\n   real z\n\n   // static method create must return a value of the struct's type\n   // create may have arguments.\n   static method create takes real ax, real ay, real az returns vec\n     local vec r= vec.allocate() //allocate() is private and\n                                 //it gets a unique id for the struct\n         set r.x=ax\n         set r.y=ay\n         set r.z=az\n\n     return r\n   endmethod\n\nendstruct\n\nfunction test takes nothing returns nothing\n local vec v= vec.create(1.0 , 0.0 , -1.0 )\n\n    call BJDebugMsg( R2S(v.z) )\n\n    call v.destroy()\nendfunction\n",
+      "\n    struct something\n        static method bb takes nothing returns nothing\n            call BJDebugMsg(\"!!\")\n        endmethod\n    endstruct\n\n    function atest takes nothing returns nothing\n     local trigger t=CreateTrigger()\n         call TriggerAddAction(t, function something.bb)\n         call TriggerExecute(t)\n    endfunction\n"
+    ]
+  },
+  {
+    "section": "The onDestroy method",
+    "examples": [
+      "\n    struct sta\n        real a\n        real b\n    endstruct\n\n    struct stb\n        sta H=0\n        sta K=0\n\n        method onDestroy takes nothing returns nothing\n            if (H!=0) then\n                call sta.destroy(H)\n            endif\n            if (K!=0) then\n                call sta.destroy(K)\n            endif\n        endmethod\n    endstruct\n\n"
+    ]
+  },
+  {
+    "section": "The onInit method",
+    "examples": [
+      "\n     struct A\n        static integer array ko\n\n        private static method onInit takes nothing returns nothing //may be public as well\n         local integer i=1000\n             loop\n                 exitwhen (i<0)\n                 set A.ko[i]=i*2\n                 set i=i-1\n             endloop\n        endmethod\n     endstruct\n"
+    ]
+  },
+  {
+    "section": "Interfaces",
+    "examples": [
+      "\n    interface printable\n        method toString takes nothing returns string\n    endinterface\n\n    struct singleint extends printable\n        integer v\n        method toString takes nothing returns string\n            return I2S(this.v)\n        endmethod\n    endstruct\n\n    struct intpair extends printable\n        integer a\n        integer b\n\n        method toString takes nothing returns string\n            return \"(\"+I2S(this.a)+\",\"+I2S(this.b)+\")\"\n        endmethod\n    endstruct\n\n    function printmany takes printable a, printable b, printable c returns nothing\n        call BJDebugMsg( a.toString()+\" - \"+b.toString()+\" - \"+c.toString())\n    endfunction\n\n\n    function test takes nothing returns nothing\n     local singleint x=singleint.create()\n     local singleint y=singleint.create()\n     local intpair z=intpair.create()\n\n        set x.v=56\n        set y.v=12\n        set z.a=45\n        set z.b=12\n\n        call printmany(x,y,z)\n    endfunction\n\n\n",
+      "\n    interface withpos\n        real x\n        real y\n    endinterface\n\n    struct rectangle extends withpos\n        real a\n        real b\n\n        static method from takes real x, real y, real a, real b returns rectangle\n         local rectangle r=rectangle.create()\n            set r.x=x\n            set r.y=y\n            set r.a=a\n            set r.b=b\n            return r\n        endmethod\n\n    endstruct\n\n    struct circle extends withpos\n        real radius=67.0\n\n        static method from takes real x, real y, real rad returns circle\n         local circle r=circle.create()\n            set r.x=x\n            set r.y=y\n            set r.radius=rad\n            return r\n        endmethod\n\n    endstruct\n\n\n    function distance takes withpos A, withpos B returns real\n     local real dy=A.y-B.y\n     local real dx=A.x-B.x\n\n     return SquareRoot( dy*dy+dx*dx)\n    endfunction\n\n    function test takes nothing returns nothing\n     local circle c= circle.from(12.0, 45.0 , 13.0)\n     local rectangle r = rectangle.from ( 12.3 , 67.8, 12.0 , 10.0)\n\n         call BJDebugMsg(R2S(distance(c,r)))\n\n    endfunction\n",
+      "\ninterface A\n    integer x\nendinterface\n\nstruct B extends A\n    integer y\nendstruct\n\nstruct C extends A\n    integer y\n    integer z\nendstruct\n\nfunction test takes A inst returns nothing\n   if (inst.getType()==C.typeid) then\n     // We know for sure inst is actually an instance of type C\n       set C(inst).z=5 //notice the typecast operator\n   endif\n   if (inst.getType()==B.typeid) then\n       call BJDebugMsg(\"It was of type B with value \"+I2S( B(inst).y  ) )\n   endif\nendfunction\n",
+      "interface myinterface\n    method msg takes nothing returns string\nendinterface\n\nstruct mystructA extends myinterface\n    method msg takes nothing returns string\n        return \"oranges\"\n    endmethod\nendstruct\n\nstruct mystructB extends myinterface\n\n   string x\n   static method create takes nothing returns mystructB\n    local mystructB m=mystructB.allocate()\n\n       set m.x=\"apples\"\n\n       return m\n   endmethod\n\n   method msg takes nothing returns string\n       return this.x\n   endmethod\nendstruct\n\nstruct mystructC extends myinterface\n   string x\n\n   //myinterface.create(...) can only use the default allocator or custom create\n   //methods that take nothing.\n   //\n   //this declaration is not going to be taken into account if mystructC\n   //is used in myinterface.create(...)\n   //\n   static method create takes string astring returns mystructC\n    local mystructB m=mystructB.allocate()\n\n       set m.x=astring\n\n       return m\n   endmethod\n\n   method msg takes nothing returns string\n       return this.x\n   endmethod\nendstruct\n\nfunction test takes nothing returns nothing\n local integer T = mystructB.typeid\n local myinterface A\n\n\n    set A=myinterface.create(mystructA.typeid) //this is not that useful since mystructA.create() does the same\n    call BJDebugMsg(A.msg())\n\n    set A=myinterface.create(T) //this is more useful, we can create objects of variable types...\n    call BJDebugMsg(B.msg())\n\n    set A=myinterface.create(122345) //using invalid values or 0 will make .create return 0 (no object)\n\n    set A=myinterface.create(mystructC.typeid) //note that this will not use mystructC.create, just \n                                               //mystructC.allocate, possibly causing errors, if this\n                                               //happens you can an error message in-game if you compile under debug mode\n\n    call BJDebugMsg(C.msg())\n\nendfunction\n\n",
+      "\ninterface myinterface\n    static method create takes nothing\n\n    method qr takes unit u returns nothing\nendinterface\n\nstruct st1 extends myinterface\n\n    static method create takes nothing returns st1 //legal\n        return st1.allocate()\n    endmethod\n\n    method qr takes unit u returns nothing\n        call KillUnit(u)\n    endmethod\nendstruct\n\n\nstruct st2 extends myinterface\n integer k\n\n    static method create takes integer f, integer k returns st2 //not legal\n     local st2 s=st2.allocate()\n        set st2.k=f+k*f\n     return st2\n    endmethod\n\n    method qr takes unit u returns nothing\n        call ExplodeUnitBJ(u)\n    endmethod\nendstruct\n\n",
+      "\ninterface whattodo\n    method onStrike takes real x, real y returns boolean defaults false\n    method onBegin  takes real x, real y returns nothing defaults nothing\n\n    method onFinish takes nothing returns nothing\nendinterface\n\nstruct A extends whattodo //don't forget the extends...\n\n    method onFinish takes nothing returns nothing //must be implemented\n        //.. code\n    endmethod\n\n    // We are allowed to add onBegin, but not forced to\n    method onBegin takes real x, real y returns nothing\n\n        //.. code \n    endmethod\n\n    // when somebody calls .onStrike on a whattodo of type A, it will return false\nendstruct\n\nstruct B extends whattodo\n    method onFinish takes nothing returns nothing //must be implemented\n        //.. code\n    endmethod\n\n    // when somebody calls .onBegin on a whattodo of type A, it will do nothing\nendstruct"
+    ]
+  },
+  {
+    "section": "Operator making",
+    "examples": [
+      "\n\n    struct operatortest\n        string str=\"\"\n\n        method operator [] takes integer i returns string\n            return SubString(.str,i,i+1)\n        endmethod\n\n        method operator[]= takes integer i, string ch returns nothing\n            set .str=SubString(.str,0,i)+ch+SubString(.str,i+1,StringLength(.str)-i)\n        endmethod\n\n    endstruct\n\n\n    function test takes nothing returns nothing\n     local operatortest x=operatortest.create()\n        set x.str=\"Test\"\n        call BJDebugMsg( x[1])\n        call BJDebugMsg( x[0]+x[3])\n\n        set x[1] = \".\"\n        call BJDebugMsg( x.str)\n    endfunction\n\n\n",
+      "\n\n    struct operatortest\n        string str=\"\"\n\n        method operator [] takes integer i returns string\n            return SubString(.str,i,i+1)\n        endmethod\n\n        method operator[]= takes integer i, string ch returns nothing\n            set .str=SubString(.str,0,i)+ch+SubString(.str,i+1,StringLength(.str)-i)\n        endmethod\n\n        method operator< takes  operatortest b returns boolean\n            return StringLength(this.str) < StringLength(b.str)\n        endmethod\n\n    endstruct\n\n\n    function test takes nothing returns nothing\n     local operatortest x=operatortest.create()\n     local operatortest y=operatortest.create()\n\n        set x.str=\"Test...\"\n        set y.str=\".Test\"\n\n        if (x<y) then\n            call BJDebugMsg(\"Less than\")\n        endif\n        if (x>y) then\n            call BJDebugMsg(\"Greater than\")\n        endif\n    endfunction\n\n\n",
+      "\n    interface ordered\n        method operator <\n    endinterface\n\n    interface indexed\n        method operator [] takes integer index returns ordered\n        method operator []= takes integer index, ordered v returns nothing\n    endinterface\n\n    function sort takes indexed a, integer from, integer to returns nothing\n     local integer i\n     local integer j\n     local ordered aux\n\n        set i=from\n        loop\n            exitwhen (i>=to)\n            set j=i+1\n            loop\n                exitwhen (j>to)\n                if (a[j]<a[i]) then\n                    set aux = a[i]\n                    set a[i] = a[j]\n                    set a[j] = aux\n                endif\n                set j=j+1\n            endloop\n\n            set i=i+1\n        endloop\n    endfunction\n\n",
+      "\n\n    struct integerpair extends ordered\n        integer x\n        integer y\n\n        method operator< takes integerpair b returns boolean\n            if (b.x==this.x) then\n                return (this.y<b.y)\n            endif\n            return (this.x<b.x)\n        endmethod\n    endstruct\n\n    type ipairarray extends integerpair array [400]\n\n    struct integerpairarray extends indexed\n        ipairarray data\n\n        method operator[] takes integer index returns ordered\n            return ordered( this.data[index] )\n        endmethod\n\n        method operator[]= takes integer index, ordered value returns nothing\n            set this.data[index] = integerpair( value)\n        endmethod\n    endstruct\n\n",
+      "\nstruct X\n    integer a=2\n    integer b=2\n\n    method operator x takes nothing returns integer\n        return this.a*this.b\n    endmethod\n\n    method operator x= takes integer v returns nothing\n        set this.a=v/this.b\n    endmethod\n\n\nendstruct\n\n\n\nfunction test takes nothing returns nothing\n local X obj= X.create()\n\n    set obj.x= obj.x + 4\n\n    call BJDebugMsg(I2S( obj.x) ) //outputs 8\n    set obj.b=4\n\n    call BJDebugMsg(I2S( obj.x) ) //outputs 16\n\nendfunction\n",
+      "\nstruct X\n    private integer va=2\n\n    method operator a takes nothing returns integer\n        return this.a\n    endmethod\n\nendstruct\n\n\n\nfunction test takes nothing returns nothing\n local X obj= X.create()\n\n    call BJDebugMsg(I2S( obj.a) ) //This is legal\n\n    set obj.a=2 //this is not\n\nendfunction\n",
+      "\nstruct movableEffect\n\n    private unit dummy\n    private string rfx\n    private effect uniteffect\n\n    //...\n        //(A lot of code implementing other actions and creation)\n    //...\n\n    method operator x takes nothing returns real\n        return GetUnitX(this.dummy)\n    endmethod\n\n    method operator y takes nothing returns real\n        return GetUnitY(this.dummy)\n    endmethod\n\n    method operator x= takes real value returns nothing\n        call SetUnitX(this.dummy, value)\n    endmethod\n\n    method operator y= takes real value returns nothing\n        call SetUnitY(this.dummy, value)\n    endmethod\n\n\n    method operator effectpath takes nothing returns string\n        return this.rfx\n    endmethod\n\n    method operator effectpath= takes string path returns nothing\n        set this.rfx=path\n        call DestroyEffect( this.uniteffect)\n        set this.uniteffect = AddSpecialEffectTarget(this.dummy, path, \"origin\")\n    endmethod\n\nendstruct\n\n\nfunction moveRandom takes movableEffect me returns nothing\n    set me.x= me.x + GetRandomReal(-50,50)\n    set me.y= me.y + GetRandomReal(-50,50)\nendfunction\n\nfunction toFire takes movableEffect me returns nothing\n    set me.effectpath =\"war3mapimporte\\\\cutefireeffect.mdl\"\nendfunction\n"
+    ]
+  },
+  {
+    "section": "Extending structs",
+    "examples": [
+      "\nstruct A\n   integer x\n   integer y\n\n   method setxy takes integer cx, integer cy returns nothing\n       set this.x=cx\n       set this.y=cy\n   endmethod\nendstruct\n\nstruct B extends A\n   integer z\n   method setxyz takes integer cx, integer cy, integer cz returns nothing\n       call this.setxy(cx,cy) //we can use A's members\n       set this.z=cz\n   endmethod\nendstruct\n",
+      "\nstruct A\n   integer x\n   static method create takes integer k returns A\n    local A s=A.allocate()\n       set A.x=k\n    return s\n   endmethod\nendstruct\n\nstruct B extends A\n    static method create takes nothing returns B\n        return s= B.allocate(445)  //notice that B.allocate requires the same arguments as A.create()\n    endmethod\nendstruct\n\nstruct C extends B //yep, it is possible to extend an struct that is extending another one\n    static method create takes nothing returns B\n     local C s=C.allocate() //C is a child of B that got a custom create method that takes nothing, so allocate takes nothing as well.\n       set s.x=s.x*s.x //once again reusing the parents' members.\n     return s\n    endmethod\nendstruct\n",
+      "\ninterface myinterface\n   method processunit takes unit u returns nothing\n   method onAnEvent takes nothing returns boolean\nendinterface\n\nstruct A extends myinterface\n\n   method processunit takes unit u returns nothing\n       call KillUnit(u)\n   endmethod\n\n   method onAnEvent takes nothing returns boolean\n       return false\n   endmethod\nendstruct\n\nstruct B extends A\n\n   method processunit takes unit u returns nothing\n      //we have just replaced A&apos;s processunit method,\n      //if an interface variable of type myinterface holds an instance of \n      //type B it will explode the unit.\n      call ExplodeUnitBJ(u)\n   endmethod\n   // we are implementing processunit but we do not have to implement onAnEvent   \n\nendstruct\n\n"
+    ]
+  },
+  {
+    "section": "Stub methods",
+    "examples": []
+  },
+  {
+    "section": "super",
+    "examples": []
+  },
+  {
+    "section": "Dynamic arrays",
+    "examples": [
+      "\ntype arsample extends integer array[8]\n\nfunction test takes nothing returns arsample\n local arsample r=arsample.create()\n local integer i=0\n     loop\n         exitwhen i==arsample.size //holds size of the array type\n         set r[i]=i\n         set i=i+1\n     endloop\n return r\nendfunction\n\nfunction test2 takes nothing returns arsample\n local arsample r=test()\n local integer i=0\n     loop\n         exitwhen i==arsample.size\n         call BJDebugMsg(I2S(r[i]))\n         set i=i+1\n     endloop\n return r\nendfunction\n",
+      "\ntype iar extends integer array[3]\ntype iar_ar extends iar array[3]\n\nfunction test takes nothing returns arsample\n local iar_ar r=iar_ar.create()\n local integer i=0\n local integer j\n     loop\n         exitwhen i==iar_ar.size //holds size of the array type\n         set r[i]=iar.create()\n         set j=0\n         loop\n             exitwhen j==iar.size\n             set r[i][j]=j*i\n             set j=j+1\n         endloop\n\n         set i=i+1\n     endloop\n return r\nendfunction\n\n\n",
+      "\n\ntype stackarray extends integer array [20]\n\nstruct stack\n   private stackarray V\n   private integer N=0\n\n   method Create takes nothing returns stack\n    local stack s=stack.create()\n       set s.V=stackarray.create()\n       if (s.V==0) then\n           debug call BJDebugMsg(\"Warning: not enough space for stack array\")\n           return 0\n       endif\n   endmethod\n\n   method push takes integer i returns nothing\n       if (this.N==stackarray.size) then\n           debug call BJDebugMsg(\"Warning: stack is full\")\n       else\n           set this.V[this.N]=i\n           set .N = .N +1 //remember this syntax is valid as well\n       endif\n   endmethod\n\n   method pop takes nothing returns nothing\n       if (this.N>0) then\n           set this.N=this.N-1\n       else\n           debug call BJDebugMsg(\"Warning: attempt to pop an empty stack\");\n       endif\n   endmethod\n\n   method top takes nothing returns integer\n       return .V[.N-1]\n   endmethod\n\n   method empty takes nothing returns boolean\n       return (.N==0)\n   endmethod\n\n   method onDestroy takes nothing returns nothing\n       call this.V.destroy()\n   endmethod\nendstruct\n"
+    ]
+  },
+  {
+    "section": "Array members",
+    "examples": [
+      "\nstruct stack\n   private integer array V[100]\n   private integer N=0\n\n   method push takes integer i returns nothing\n      set .V[.N]=i\n      set .N=.N+1\n   endmethod\n\n   method pop takes nothing returns nothing\n      set .N=.N-1\n   endmethod\n\n   method top takes nothing returns integer\n      return .V[.N-1]\n   endmethod\n\n   method empty takes nothing returns boolean\n      return (.N==0)\n   endmethod\n\n   method full takes nothing returns boolean\n      return (.N==.V.size)\n   endmethod\n\nendstruct\n\n"
+    ]
+  },
+  {
+    "section": "Delegate",
+    "examples": []
+  },
+  {
+    "section": "thistype",
+    "examples": []
+  },
+  {
+    "section": "Module",
+    "examples": []
+  },
+  {
+    "section": "Functions as objects",
+    "examples": [
+      "\nfunction A takes real x returns real\n if(GetRandomInt(0,1)==0) then\n    return B(x*0.02)\n endif\n return x\nendfunction\n\nfunction B takes real x returns real\n if(GetRandomInt(0,1)==1) then\n    return A(x*1000.)\n endif\n return x\nendfunction\n",
+      "\nfunction A takes real x returns real\n if(GetRandomInt(0,1)==0) then\n    return B.evaluate(x*0.02)\n endif\n return x\nendfunction\n\nfunction B takes real x returns real\n if(GetRandomInt(0,1)==1) then\n    return A(x*1000.)\n endif\n return x\nendfunction\n",
+      "\nfunction DestroyEffectAfter takes effect fx, real t returns nothing\n    call TriggerSleepAction(t)\n    call DestroyEffect(fx)\nendfunction\n\nfunction test takes nothing returns nothing\n local unit u=GetTriggerUnit()\n local effect f=AddSpecialEffectTarget(\"Abilities\\\\Spells\\\\Undead\\\\Cripple\\\\CrippleTarget.mdl\",u,\"chest\")\n\n  call DestroyEffectAfter.execute(f,3.0)\n\n  set u=null\n  set f=null\nendfunction\n"
+    ]
+  },
+  {
+    "section": "Function interfaces",
+    "examples": [
+      "\nfunction interface Arealfunction takes real x returns real\n\nfunction double takes real x returns real\n    return x*2.0\nendfunction\n\nfunction triple takes real x returns real\n    return x*2.0\nendfunction\n\nfunction Test1 takes real x, Arealfunction F returns real\n    return F.evaluate(F.evaluate(x)*F.evaluate(x))\nendfunction\n\nfunction Test2 takes nothing returns nothing\n local Arealfunction fun = Arealfunction.double //syntax to get pointer to function\n\n   call BJDebugMsg( R2S(  Test1(1.2, fun) ))\n\n   call BJDebugMsg( R2S(  Test1(1.2, Arealfunction.triple ) )) //also possible...\nendfunction\n"
+    ]
+  },
+  {
+    "section": "Typecast",
+    "examples": [
+      "\ninterface  wack\n    //... some declarations\nendinterface\n\nstruct wek extends wack\n   integer x\n   // some more declarations\nendstruct\n\nfunction test takes wack W returns nothing\n   //You are certain that W is of type wek, a way to cast the value is:\n local wek jo = W\n   set jo.x= 5 //done\n\n   // but sometimes creating a variable is too much work for the virtual machine and you\n   // are only accessing it once \n\n   set wek(W).x=5 //also works.\nendfunction\n\n\ntype anarrayofdata extends integer array [6]\n\nfunction getdata5 takes unit u returns integer\n    //a reference to an object of type anarrayofdata is saved as the unit's custom value\n    return anarrayofdata(GetUnitUserData(u))[5]\nendfunction\n\nfunction setdata5 takes unit u, anarrayofdata x returns nothing\n    // Here we are doing the opposite, notice that integer may be used as a type cast\n    // operator for struct and dynamic array types.\n    call SetUnitUserData(u,  integer(x))\nendfunction\n\n"
+    ]
+  },
+  {
+    "section": "Method function name",
+    "examples": [
+      "\n\n\nstruct mystruct\n    static method mymethod takes nothing returns nothing\n        call BJDebugMsg(\"this works\")\n    endmethod\nendstruct\n\nfunction myfunction takes nothing returns nothing\n    call ExecuteFunc(mystruct.mymethod.name) //ExecuteFunc compatibility\n\n    call OnAbilityCast('A000',mystruct.mymethod.name)\n    //for example, caster system's OnAbilityCast, requires a function name\nendfunction\n"
+    ]
+  },
+  {
+    "section": "Method exists",
+    "examples": []
+  },
+  {
+    "section": "Array structs",
+    "examples": []
+  },
+  {
+    "section": "Keys",
+    "examples": []
+  },
+  {
+    "section": "Storage enhancers",
+    "examples": []
+  },
+  {
+    "section": "Introduction",
+    "examples": []
+  },
+  {
+    "section": "Sized arrays",
+    "examples": [
+      "\nglobals\n    integer array myArray [500]\nendglobals\n\nfunction test takes nothing returns nothing\n local integer i=0\n\n    call BJDebugMsg(I2S(myArray.size)) //prints 500\n\n    loop\n        exitwhen i>=myArray.size\n        set myArray[i]=i\n        set i=i+1\n    endloop\nendfunction\n",
+      "\n\nglobals\n    integer array myArray [9000]\nendglobals\n",
+      "\nglobals\n    constant integer Q= 60000\n    integer array myArray [Q]\nendglobals\n"
+    ]
+  },
+  {
+    "section": "2D arrays",
+    "examples": []
+  },
+  {
+    "section": "Structs with more index space",
+    "examples": [
+      "\n\nstruct X\n    integer a\n    integer b\nendstruct\n",
+      "\n\nstruct X[10000]\n    integer a\n    integer b\nendstruct\n",
+      "\n\nstruct X[10000]\n    integer a[2]\n    integer b[5]\nendstruct\n",
+      "\n\nstruct X[10000] extends Y //bad\n    integer a[2]\n    integer b[5]\nendstruct\n\ninterface A[20000] //good\n    method a takes nothing returns nothing\nendinterface\n\nstruct B extends A\n    method a takes nothing returns nothing\n       call BJDebugMsg(\"...\")\n    endmethod\nendstruct\n\nstruct C[20000] //good\n    integer x\nendstruct\n\nstruct D extends C\n    integer y\nendstruct\n",
+      "\nstruct aBigOne extends array [ 20000]\n   integer a\n   integer b\n   integer c\nendstruct\n\nfunction meh takes nothing returns nothing\n   set aBigOne[19990].a = 12\nendfunction\n"
+    ]
+  },
+  {
+    "section": "Dynamic arrays with more index space",
+    "examples": [
+      "\n\ntype myDyArray extends integer array [200] //a normal dynamic array type of size 200\n                                           //max 40 instances\n\n\ntype myDyArray extends integer array [200,40000] //an enhanced dynamic array type of size 200\n                                                 //max 200 instances\n\n"
+    ]
+  },
+  {
+    "section": "Jass Syntax extensions",
+    "examples": []
+  },
+  {
+    "section": "Colon",
+    "examples": [
+      "\nfunction test takes nothing returns nothing\n local integer a=3\n local integer array X\n\n    set X[a]=10 //both of these statements do the same\n    set a:X =10\n\n    set X[a] = X[a] + 10 //The same.\n    set a:X = a:X +10 \n\n    set X[3]=1000\n    set 3:X =1000 //this is invalid syntax, sorry, only use : on variables and stuff like that.\n\nendfunction\n"
+    ]
+  },
+  {
+    "section": "Delimited comments",
+    "examples": []
+  },
+  {
+    "section": "hook",
+    "examples": []
+  },
+  {
+    "section": "inject",
+    "examples": [
+      "\n\n//! inject main\n   //some function calls may go here\n\n   // this places vjass initializations there, notice structs are first initialized then library initializers\n   // are called\n   //! dovjassinit\n\n\n   //other calls may go here\n\n   call InitCustomTriggers() //maybe you want to exploit that world editor function...\n//! endinject\n\n\n\n"
+    ]
+  },
+  {
+    "section": "Loading structs from SLK files",
+    "examples": []
+  },
+  {
+    "section": "The SLK",
+    "examples": []
+  },
+  {
+    "section": "The struct type",
+    "examples": [
+      "struct stname\n    integer this\n    integer is\n    integer just\n    integer an\n    integer example\n\n    static stname array values\n\n    static method getFromKey takes integer i returns thistype\n        if (stname.values[i]==0) then\n            set values[i]=stname.create()\n        endif\n     return stname.values[i]\n    endmethod\n\nendstruct\n",
+      "\n    set s=stname.getFromKey(1)\n    set s.this=2\n    set s.is=3\n    set s.just=4\n    set s.an=5\n    set s.example=6\n    set s=stname.getFromKey(7)\n    set s.this=8\n    set s.is=9\n    set s.just=10\n    set s.an=11\n    set s.example=12\n"
+    ]
+  },
+  {
+    "section": "Script optimization",
+    "examples": []
+  },
+  {
+    "section": "Function inlining",
+    "examples": [
+      "\nfunction MyFunction takes integer a, integer b returns integer\n    return myarray[a]*b\nendfunction\n\nfunction MyOtherFunction takes nothing returns integer\n    return MyFunction(3,4)\nendfunction\n\n//becomes:\n\nfunction MyOtherFunction takes nothing returns integer\n    return myarray[3]*4\nendfunction\n\n"
+    ]
+  },
+  {
+    "section": "External Tools",
+    "examples": []
+  },
+  {
+    "section": "What kind of tool?",
+    "examples": []
+  },
+  {
+    "section": "Linebreak fixer.",
+    "examples": []
+  },
+  {
+    "section": "II. Installation",
+    "examples": []
+  },
+  {
+    "section": "* Supported platforms",
+    "examples": []
+  },
+  {
+    "section": "* Jass New Gen Pack",
+    "examples": []
+  },
+  {
+    "section": "* WEHelper Plugin",
+    "examples": []
+  },
+  {
+    "section": "* Grimoire",
+    "examples": []
+  },
+  {
+    "section": "* Standalone",
+    "examples": []
+  },
+  {
+    "section": "III. Usage",
+    "examples": []
+  },
+  {
+    "section": "* Newgen Pack",
+    "examples": []
+  },
+  {
+    "section": "* Grimoire",
+    "examples": []
+  },
+  {
+    "section": "Command line",
+    "examples": [
+      "jasshelper.exe <path_to_common.j> <path_to_blizzard.j> <path_to_map.w3x>",
+      "jasshelper.exe <path_to_common.j> <path_to_blizzard.j> <path_to_mapscript.j> <path_to_map.w3x> ",
+      "jasshelper.exe --scriptonly <path_to_common.j> <path_to_blizzard.j> <path_to_input.j> <path_to_output.j>"
+    ]
+  },
+  {
+    "section": "IV. Updating",
+    "examples": []
+  },
+  {
+    "section": "IV. Uninstalling",
+    "examples": []
+  },
+  {
+    "section": "VI. Credits and thanks",
+    "examples": []
+  },
+  {
+    "section": "VII. Changelog",
+    "examples": []
+  }
+]

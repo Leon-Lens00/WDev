@@ -1,0 +1,14 @@
+{
+  "manifestFilesVerified": 96,
+  "modelAndTextureChecks": [
+    8,
+    9
+  ],
+  "release": "PASS",
+  "nativeCurrentCommands": 6,
+  "nativeCurrentFrames": 150,
+  "studyCoverage": "191 structural;178 resources resolved/13 partial;50 packs",
+  "codegraph": "MCP explored V4 sources; runtime dependencies, binaries and JASS in Python strings outside graph; compiler/native tests separate",
+  "originalsAndPreviousRelease": "191 source hashes and V3 ZIP unchanged",
+  "limits": "no multiplayer/physics/load benchmark; no exact 2D to 3D artistic equivalence claim"
+}

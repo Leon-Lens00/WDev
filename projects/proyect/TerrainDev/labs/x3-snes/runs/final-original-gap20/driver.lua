@@ -1,0 +1,2 @@
+LAB_CONFIG = { out = "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runs/final-original-gap20", variant = "original", lab = "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes", facing = "right", gap = 20, state = "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runs/ready-original-fixed/ready.mss" }
+dofile("/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runs/final-original-gap20/scenario.lua")

@@ -1,0 +1,490 @@
+{
+  "status": "PASS",
+  "independentReader": "war3-model 4.0.1",
+  "models": [
+    {
+      "name": "X3_Cross_Buster",
+      "sha256": "2c036d7cbac797544f553d655b068f2450c61935e6f78b00a47f49d87e571d45",
+      "status": "PASS",
+      "poses": 259,
+      "flightX": [
+        -88.27656682546342,
+        0
+      ],
+      "rootFixed": true,
+      "finiteFlash": false,
+      "deathBodyContraction": false,
+      "textures": [
+        {
+          "path": "X3BusterV14\\Glow.blp",
+          "mips": 8,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4"
+        },
+        {
+          "path": "X3BusterV14\\Core.blp",
+          "mips": 8,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10"
+        },
+        {
+          "path": "X3BusterV14\\Band.blp",
+          "mips": 8,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42"
+        },
+        {
+          "path": "X3BusterV14\\Filament.blp",
+          "mips": 8,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630"
+        },
+        {
+          "path": "X3BusterV14\\Ring.blp",
+          "mips": 8,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533"
+        },
+        {
+          "path": "X3BusterV14\\Ribbon.blp",
+          "mips": 7,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a"
+        },
+        {
+          "path": "X3BusterV14\\Spark.blp",
+          "mips": 7,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f"
+        },
+        {
+          "path": "X3BusterV14\\Motes.blp",
+          "mips": 8,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665"
+        },
+        {
+          "path": "X3BusterV14\\Shell.blp",
+          "mips": 8,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2"
+        },
+        {
+          "path": "X3BusterV14\\Flow.blp",
+          "mips": 8,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa"
+        },
+        {
+          "path": "X3BusterV14\\Flare.blp",
+          "mips": 6,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2"
+        },
+        {
+          "path": "X3BusterV14\\star5tga.blp",
+          "mips": 7,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11"
+        },
+        {
+          "path": "X3BusterV14\\White_Glow2.blp",
+          "mips": 6,
+          "sha256": "cd7ea717ba182812a93b14e8c56a3490e574e24f73db8594e5044cf0f3ab3884"
+        },
+        {
+          "path": "X3BusterV14\\Pulse.blp",
+          "mips": 9,
+          "sha256": "0adcb10e5bfbe98122a1dac3256c2aa3aa5fbc1d82e0b66b9a3bd3e22e4348bf"
+        },
+        {
+          "path": "X3BusterV14\\Arc.blp",
+          "mips": 8,
+          "sha256": "844ed1360f7782c8fbf7f99282c4f58778af5060fa9ed9b1c1a3774f375aab38"
+        }
+      ]
+    },
+    {
+      "name": "X3_Orbe_Verde",
+      "sha256": "38f6f0687b08b395986af9c447d8bae4f45bb71a6b6388ac5c3047dccaaf67de",
+      "status": "PASS",
+      "poses": 229,
+      "flightX": [
+        -46,
+        0
+      ],
+      "rootFixed": true,
+      "finiteFlash": false,
+      "deathBodyContraction": false,
+      "textures": [
+        {
+          "path": "X3BusterV13\\Glow.blp",
+          "mips": 8,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4"
+        },
+        {
+          "path": "X3BusterV13\\Core.blp",
+          "mips": 8,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10"
+        },
+        {
+          "path": "X3BusterV13\\Band.blp",
+          "mips": 8,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42"
+        },
+        {
+          "path": "X3BusterV13\\Filament.blp",
+          "mips": 8,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630"
+        },
+        {
+          "path": "X3BusterV13\\Ring.blp",
+          "mips": 8,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533"
+        },
+        {
+          "path": "X3BusterV13\\Ribbon.blp",
+          "mips": 7,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a"
+        },
+        {
+          "path": "X3BusterV13\\Spark.blp",
+          "mips": 7,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f"
+        },
+        {
+          "path": "X3BusterV13\\Motes.blp",
+          "mips": 8,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665"
+        },
+        {
+          "path": "X3BusterV13\\Shell.blp",
+          "mips": 8,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2"
+        },
+        {
+          "path": "X3BusterV13\\Flow.blp",
+          "mips": 8,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa"
+        },
+        {
+          "path": "X3BusterV13\\Flare.blp",
+          "mips": 6,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2"
+        },
+        {
+          "path": "X3BusterV13\\star5tga.blp",
+          "mips": 7,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11"
+        },
+        {
+          "path": "X3BusterV13\\White_Glow2.blp",
+          "mips": 6,
+          "sha256": "cd7ea717ba182812a93b14e8c56a3490e574e24f73db8594e5044cf0f3ab3884"
+        }
+      ]
+    },
+    {
+      "name": "X3_Orbe_Naranja",
+      "sha256": "35912e3f95821f1727fe2d7104591d1e1751450d098b93fb4999bdd56e73eabf",
+      "status": "PASS",
+      "poses": 229,
+      "flightX": [
+        -46,
+        0
+      ],
+      "rootFixed": true,
+      "finiteFlash": false,
+      "deathBodyContraction": false,
+      "textures": [
+        {
+          "path": "X3BusterV13\\Glow.blp",
+          "mips": 8,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4"
+        },
+        {
+          "path": "X3BusterV13\\Core.blp",
+          "mips": 8,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10"
+        },
+        {
+          "path": "X3BusterV13\\Band.blp",
+          "mips": 8,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42"
+        },
+        {
+          "path": "X3BusterV13\\Filament.blp",
+          "mips": 8,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630"
+        },
+        {
+          "path": "X3BusterV13\\Ring.blp",
+          "mips": 8,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533"
+        },
+        {
+          "path": "X3BusterV13\\Ribbon.blp",
+          "mips": 7,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a"
+        },
+        {
+          "path": "X3BusterV13\\Spark.blp",
+          "mips": 7,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f"
+        },
+        {
+          "path": "X3BusterV13\\Motes.blp",
+          "mips": 8,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665"
+        },
+        {
+          "path": "X3BusterV13\\Shell.blp",
+          "mips": 8,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2"
+        },
+        {
+          "path": "X3BusterV13\\Flow.blp",
+          "mips": 8,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa"
+        },
+        {
+          "path": "X3BusterV13\\Flare.blp",
+          "mips": 6,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2"
+        },
+        {
+          "path": "X3BusterV13\\star5tga.blp",
+          "mips": 7,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11"
+        },
+        {
+          "path": "X3BusterV13\\White_Glow2.blp",
+          "mips": 6,
+          "sha256": "cd7ea717ba182812a93b14e8c56a3490e574e24f73db8594e5044cf0f3ab3884"
+        }
+      ]
+    },
+    {
+      "name": "X3_Orbe_Cian",
+      "sha256": "0b7ec413289ed0bb6d7bd2a90510bb5281c477757239b3ab2a5097c9b2b095d7",
+      "status": "PASS",
+      "poses": 229,
+      "flightX": [
+        -46,
+        0
+      ],
+      "rootFixed": true,
+      "finiteFlash": false,
+      "deathBodyContraction": false,
+      "textures": [
+        {
+          "path": "X3BusterV13\\Glow.blp",
+          "mips": 8,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4"
+        },
+        {
+          "path": "X3BusterV13\\Core.blp",
+          "mips": 8,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10"
+        },
+        {
+          "path": "X3BusterV13\\Band.blp",
+          "mips": 8,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42"
+        },
+        {
+          "path": "X3BusterV13\\Filament.blp",
+          "mips": 8,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630"
+        },
+        {
+          "path": "X3BusterV13\\Ring.blp",
+          "mips": 8,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533"
+        },
+        {
+          "path": "X3BusterV13\\Ribbon.blp",
+          "mips": 7,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a"
+        },
+        {
+          "path": "X3BusterV13\\Spark.blp",
+          "mips": 7,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f"
+        },
+        {
+          "path": "X3BusterV13\\Motes.blp",
+          "mips": 8,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665"
+        },
+        {
+          "path": "X3BusterV13\\Shell.blp",
+          "mips": 8,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2"
+        },
+        {
+          "path": "X3BusterV13\\Flow.blp",
+          "mips": 8,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa"
+        },
+        {
+          "path": "X3BusterV13\\Flare.blp",
+          "mips": 6,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2"
+        },
+        {
+          "path": "X3BusterV13\\star5tga.blp",
+          "mips": 7,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11"
+        },
+        {
+          "path": "X3BusterV13\\White_Glow2.blp",
+          "mips": 6,
+          "sha256": "cd7ea717ba182812a93b14e8c56a3490e574e24f73db8594e5044cf0f3ab3884"
+        }
+      ]
+    },
+    {
+      "name": "X3_Flash_Union",
+      "sha256": "bf3dd00d062f6a3d67c3a7b6b34b81aa6641c7b3415d25cdd9fbdde9705698d7",
+      "status": "PASS",
+      "poses": 159,
+      "flightX": null,
+      "rootFixed": true,
+      "finiteFlash": true,
+      "deathBodyContraction": false,
+      "textures": [
+        {
+          "path": "X3BusterV13\\Glow.blp",
+          "mips": 8,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4"
+        },
+        {
+          "path": "X3BusterV13\\Core.blp",
+          "mips": 8,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10"
+        },
+        {
+          "path": "X3BusterV13\\Band.blp",
+          "mips": 8,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42"
+        },
+        {
+          "path": "X3BusterV13\\Filament.blp",
+          "mips": 8,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630"
+        },
+        {
+          "path": "X3BusterV13\\Ring.blp",
+          "mips": 8,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533"
+        },
+        {
+          "path": "X3BusterV13\\Ribbon.blp",
+          "mips": 7,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a"
+        },
+        {
+          "path": "X3BusterV13\\Spark.blp",
+          "mips": 7,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f"
+        },
+        {
+          "path": "X3BusterV13\\Motes.blp",
+          "mips": 8,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665"
+        },
+        {
+          "path": "X3BusterV13\\Shell.blp",
+          "mips": 8,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2"
+        },
+        {
+          "path": "X3BusterV13\\Flow.blp",
+          "mips": 8,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa"
+        }
+      ]
+    },
+    {
+      "name": "X3_Buster_Cargado",
+      "sha256": "a8c3dc9992b743fb17a52765a6e943370879926a55326a2f94d00182b9f1b390",
+      "status": "PASS",
+      "poses": 229,
+      "flightX": [
+        -105.69999694824219,
+        0
+      ],
+      "rootFixed": true,
+      "finiteFlash": false,
+      "deathBodyContraction": false,
+      "textures": [
+        {
+          "path": "X3BusterV12\\Glow.blp",
+          "mips": 8,
+          "sha256": "3befe49db2c0a2f5083d7c3c0168a70d89e29c486249a172584253ed64f893d4"
+        },
+        {
+          "path": "X3BusterV12\\Core.blp",
+          "mips": 8,
+          "sha256": "9d816109341c700f1626c18d6b10c4850451d725ab945d011ccd59cfca125e10"
+        },
+        {
+          "path": "X3BusterV12\\Band.blp",
+          "mips": 8,
+          "sha256": "02eab3af69e0cc2062a6258a9584a4e3ab9308ebc79c3006ac743eea468b3d42"
+        },
+        {
+          "path": "X3BusterV12\\Filament.blp",
+          "mips": 8,
+          "sha256": "a92d2cff6023eaf9ca9050e555e142e9ed1ff1bb3809f70967b97aaa92ab8630"
+        },
+        {
+          "path": "X3BusterV12\\Ring.blp",
+          "mips": 8,
+          "sha256": "16558559af3224b7b0d6d40c31b93d8a1603c8e5549535ebf6539c14b5547533"
+        },
+        {
+          "path": "X3BusterV12\\Ribbon.blp",
+          "mips": 7,
+          "sha256": "803a24fe6b9972cbf3db652bc470cc0f376816dac1c872f47dfafb5a2a95951a"
+        },
+        {
+          "path": "X3BusterV12\\Spark.blp",
+          "mips": 7,
+          "sha256": "2f3f032265c49427005dd1449317fecba0ee86633434fd903111eaa1fc0bb85f"
+        },
+        {
+          "path": "X3BusterV12\\Motes.blp",
+          "mips": 8,
+          "sha256": "aef97ae1bb954acbd79f5ed5135de8716010e88fff1f3109cfaa349d478cc665"
+        },
+        {
+          "path": "X3BusterV12\\Shell.blp",
+          "mips": 8,
+          "sha256": "4bf715120ef947ddbbb45cf537a12de41e1608ce2ee81ff1e4cdd0d317ceabb2"
+        },
+        {
+          "path": "X3BusterV12\\Flow.blp",
+          "mips": 8,
+          "sha256": "7be2a5ae6b6159328a0ca79b22c3c7499512d630daa5a4fd33463bc81b456faa"
+        },
+        {
+          "path": "X3BusterV12\\Flare.blp",
+          "mips": 6,
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2"
+        },
+        {
+          "path": "X3BusterV12\\star5tga.blp",
+          "mips": 7,
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11"
+        },
+        {
+          "path": "X3BusterV12\\Blue_Glow2.blp",
+          "mips": 6,
+          "sha256": "f034effe383cb39eae294b2a06a6f7ca3e447cb98eb98907e995fda86d91ceb7"
+        },
+        {
+          "path": "X3BusterV12\\Pulse.blp",
+          "mips": 9,
+          "sha256": "0adcb10e5bfbe98122a1dac3256c2aa3aa5fbc1d82e0b66b9a3bd3e22e4348bf"
+        },
+        {
+          "path": "X3BusterV12\\Arc.blp",
+          "mips": 8,
+          "sha256": "844ed1360f7782c8fbf7f99282c4f58778af5060fa9ed9b1c1a3774f375aab38"
+        }
+      ]
+    }
+  ],
+  "preservedFiles": 106,
+  "limitations": "Structure, BLP mips and poses; native and visual evidence separate."
+}

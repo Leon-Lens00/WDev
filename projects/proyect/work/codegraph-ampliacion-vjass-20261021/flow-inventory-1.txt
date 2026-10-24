@@ -1,0 +1,389 @@
+> JASS/vJASS local support: structural/static subset. Bounded macro/module projections and indexed-file import links; generated members anchor to invocation source, not expanded bodies. Computed dispatch and other unmodeled cases remain unresolved; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+> src/Inventory_02_InventoryItem.j:18: Conditional compilation is not evaluated; extracted references are potential paths.
+> src/Inventory_02_InventoryItem.j:18: key expansion/dispatch is not modeled.
+> src/Inventory_02_InventoryItem.j:18: key expansion/dispatch is not modeled.
+> src/Inventory_02_InventoryItem.j:18: key expansion/dispatch is not modeled.
+> src/Inventory_02_InventoryItem.j:18: key expansion/dispatch is not modeled.
+> src/Inventory_02_InventoryItem.j:18: key expansion/dispatch is not modeled.
+> 322 more extraction diagnostics in these files.
+
+**Additional graph links among your symbols**
+(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)
+
+- LClickItemSlot → buildDescription   [static JASS: calls]
+- OnAgree → buildDescription   [static JASS: calls]
+- InvItem → buildDescription   [contains]
+- buildDescription → Init   [static JASS: calls]
+- buildDescription → getBonusTotal   [static JASS: calls]
+- buildDescription → Bonus2S   [static JASS: calls]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: InventoryItem.InvItem.buildDescription InventoryCore.Inventory.setTooltipLine**
+
+Found 66 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `buildDescription` (src/Inventory_02_InventoryItem.j:18) — 3 callers in `src/Inventory_01_Inventory.j`, `src/Inventory_08_Equipment.j`, `src/Inventory_22_Socket_Item.j`; no tests found within 3 caller hops
+- `setTooltipLine` (src/Inventory_01_Inventory.j:275) — 4 callers in `src/Inventory_02_InventoryItem.j`, `src/Inventory_09_EquipmentItem.j`, `src/Inventory_04_InventoryTooltip.j`; no tests found within 3 caller hops
+- `InvItem` (src/Inventory_02_InventoryItem.j:8) — 2 callers in `src/Inventory_02_InventoryItem.j`, `src/Inventory_12_EquipItemParser.j`; no tests found within 3 caller hops
+- `GetItemDescription` (src/Inventory_02_InventoryItem.j:45) — 2 callers in `src/Inventory_01_Inventory.j`, `src/Inventory_22_Socket_Item.j`; no tests found within 3 caller hops
+- `buildDescriptionLines` (src/Inventory_02_InventoryItem.j:18) — 1 caller in `src/Inventory_02_InventoryItem.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`src/Inventory_02_InventoryItem.j`** — InvItem(struct), GetItemDescription(function), buildDescriptionLines(method), MAX_BONUSES(constant), getBonusTotal(method), +35 more
+
+```jass
+1	library InventoryItem uses InventoryTable, optional InventoryBonus
+2	    
+3	    globals
+4	        public constant integer SEED_START = 0
+5	        public constant integer SEED_END   = 999
+6	    endglobals
+7	    
+8	    struct InvItem
+9	        readonly static InventoryTable InventoryTable
+10	        
+11	        integer id
+12	        integer icon
+13	        integer cost
+14	        integer ability
+15	        string info
+16	        integer tempCustomId
+17	        
+18	        implement InvItemPlugins
+19	        
+20	        static if not thistype.buildDescriptionLines.exists then
+21	            method buildDescriptionLines takes integer pid, integer startLine returns integer
+22	                return buildDescriptionLines(GetPlayerId(GetOwningPlayer(forUnit)), 0)
+23	            endmethod
+24	        endif
+25	        
+26	        static if not thistype.buildDescription.exists then
+27	            method buildDescription takes unit forUnit returns string
+28	                return buildDescriptionLines(GetPlayerId(GetOwningPlayer(forUnit)), 0)
+29	            endmethod
+30	        endif
+31	        
+32	        private static method onInit takes nothing returns nothing
+33	            set InvItem.InventoryTable = InventoryTable.create()
+34	        endmethod
+35	    endstruct
+36	    
+37	    function GetInvItem takes integer id returns InvItem
+38	        return InvItem(InvItem.InventoryTable[id])
+39	    endfunction
+40	    
+41	    function GetItemInfo takes integer id returns string
+42	        return InvItem(InvItem.InventoryTable[id]).info
+43	    endfunction
+44	    
+45	    function GetItemDescription takes integer id returns string
+46	        return InvItem(InvItem.InventoryTable[id]).info
+47	    endfunction
+48	    
+49	    function GetItemIcon takes integer id returns integer
+50	        local integer icon = InvItem(InvItem.InventoryTable[id]).icon
+51	        if (icon == 0) then
+52	            return Inventory.ICON_EMPTY
+53	        endif
+54	        return icon
+55	    endfunction
+56	    
+57	    function CreateInvItem takes integer id, integer icon, integer cost, integer abil, string info returns InvItem
+58	        local InvItem itm = InvItem.create()
+59	        set itm.id   = id
+60	        set itm.icon = icon
+61	        set itm.cost = cost
+62	        set itm.info = info
+63	        set itm.ability = abil
+64	        set InvItem.InventoryTable[itm.id] = itm
+65	        return itm
+66	    endfunction
+67	    
+68	    struct InvCustomItem extends array
+69	        static integer Counter = 1
+70	        static InventoryTable SeedTable
+71	        
+72	        static method create takes nothing returns thistype
+73	            local thistype this = Counter
+74	            set SeedTable[this] = GetRandomInt(SEED_START, SEED_END)
+75	            set Counter = Counter + 1
+76	            return this
+77	        endmethod
+78	        
+79	        method seed takes nothing returns integer
+80	            return SeedTable[this]
+81	        endmethod
+82	        
+83	        static method onInit takes nothing returns nothing
+84	            set SeedTable = SeedTable.create()
+85	        endmethod
+86	    endstruct
+87	
+88	endlibrary
+```
+
+**`src/Inventory_01_Inventory.j`** — calls(calls), getItemId(calls), setItem(calls), Init(calls), Init(function), +46 more
+
+```jass
+130	            set this.buttons[(this.pid * MAX_SLOTS) + index] = value
+131	        endmethod
+132	        
+133	        method getItem takes integer index returns InvItem
+134	            return LoadInteger(.Hashtable, this, (MAX_ITEMS * .KEY_ITEMS) + index)
+135	        endmethod
+136	        
+137	        method itemsOfType takes integer id returns integer
+138	            return this.countTable[id]
+
+... (gap) ...
+
+272	            endloop
+273	        endmethod
+274	        
+275	        implement InvPlugins
+276	        
+277	        static method create takes unit owner returns thistype
+278	            local thistype this = thistype.allocate()
+
+... (gap) ...
+
+455	        endmethod*/
+456	    endstruct
+457	    
+458	    public function GracePeriod takes nothing returns nothing
+459	        local timer t = GetExpiredTimer()
+460	        local UIButton but = UIButton(GetTimerData(t))
+461	        
+462	        set InvButtonDisabled[but] = false
+463	        
+464	        call ReleaseTimer(t)
+465	    endfunction
+466	    
+467	    function DisableButtonIfUsingTimer takes UIButton but, real time returns nothing
+468	        static if (Inventory.USE_LEFT_CLICK_TIMER) then
+469	            call TimerStart(NewTimerEx(but), time, false, function GracePeriod)
+470	            set InvButtonDisabled[but] = true
+471	        endif
+472	    endfunction
+473	    
+474	    private function LClickItemSlot takes nothing returns boolean
+475	        local UIButton but = GetTriggerButton()
+476	        local player p = GetClickingPlayer()
+477	        local integer pid = GetPlayerId(p)
+478	        local Inventory inv =  Inventory.PlayerCurrent[pid]
+479	        local integer slot =  but.customValue
+480	        local integer itemId = 0
+481	        local integer icon = 0
+482	        local integer last = InvPlayerLastSlot[inv.pid] - 1
+483	        local integer lastItemId
+484	        local InvItem lastItem
+485	        local UIButton lastButton = InvPlayerLastButton[inv.pid]
+486	
+487	        if (User.Local == p) then
+488	            call SelectUnit(but.picture, false)
+
+... (gap) ...
+
+507	            
+508	            // run onSell event
+509	            set InvEventPlayer = User(inv.pid).handle
+510	            set InvEventItem = inv.getItem((Inventory.MAX_SLOTS*inv.currentPage)+last)
+511	            set InvEventSlot = (Inventory.MAX_SLOTS*inv.currentPage)+last
+512	            
+513	            if (Inventory.onSell != null and TriggerEvaluate(Inventory.onSell)) then
+514	                call TriggerExecute(Inventory.onSell)
+515	            endif
+516	            
+517	            call DisableButtonIfUsingTimer(but, 2)
+518	            
+519	            return false
+520	        elseif (but == Inventory.btnDrop[inv.pid]) then
+
+... (gap) ...
+
+530	            
+531	            // run onSell event
+532	            set InvEventPlayer = User(inv.pid).handle
+533	            set InvEventItem = inv.getItem((Inventory.MAX_SLOTS*inv.currentPage)+last)
+534	            set InvEventSlot = (Inventory.MAX_SLOTS*inv.currentPage)+last
+535	            
+536	            if (Inventory.onDrop != null and TriggerEvaluate(Inventory.onDrop)) then
+
+... (gap) ...
+
+538	                return false
+539	            endif
+540	            
+541	            call DisableButtonIfUsingTimer(but, 2)
+542	        elseif (but == Inventory.btnPageDown[inv.pid]) then
+543	           if (p != User(inv.pid).handle) then
+544	                return false
+545	            endif
+546	        
+547	            set inv.currentPage = inv.currentPage + 1
+548	            call inv.show(true, inv.camera)
+549	            call DisableButtonIfUsingTimer(but, .6)
+550	            return false
+551	        elseif (but == Inventory.btnPageUp[inv.pid]) then
+552	           if (p != User(inv.pid).handle) then
+
+... (gap) ...
+
+554	            endif
+555	            
+556	            set inv.currentPage = inv.currentPage - 1
+557	            call inv.show(true, inv.camera)
+558	            call DisableButtonIfUsingTimer(but, .6)
+559	            return false
+560	        else
+561	            call Inventory.selector[inv.pid].show(true, inv.camera)
+562	            call Inventory.selector[pid].setPosition(but.centerx - 0.004, but.centery + 0.0262)
+563	            call Inventory.selector[pid].showPlayer(Player(pid), true, inv.camera)
+564	        endif
+565	
+566	        if (p != User(inv.pid).handle) then
+
+... (gap) ...
+
+568	        endif
+569	        
+570	        if (last + 1 != slot) then
+571	            call inv.showLines(inv.pid, false, inv.camera)
+572	        endif
+573	        
+574	        call TriggerExecute(Inventory.ExecL)
+575	        
+576	        // get item in slot
+577	        set itemId = inv.getItem((Inventory.MAX_SLOTS*inv.currentPage)+slot).id
+578	        
+579	         // check for switch
+580	        if (last+1 != 0) then
+
+... (gap) ...
+
+588	            if (itemId == 0) then
+589	                set last = (Inventory.MAX_SLOTS * inv.currentPage) + last
+590	                
+591	                set lastItem = inv.getItem(last)
+592	            
+593	                set lastItemId = lastItem.id
+594	                
+595	                set lastItem.tempCustomId = inv.getItemId(last)
+596	            
+597	                call inv.setItem((Inventory.MAX_SLOTS*inv.currentPage)+slot, lastItem)
+598	                call inv.setItem(last, 0)
+599	                
+600	                call DisableButtonIfUsingTimer(but, 2)
+601	            elseif (inv.getItem((Inventory.MAX_SLOTS * inv.currentPage) + last).isSocket) then
+602	                
+603	                set last = (Inventory.MAX_SLOTS * inv.currentPage) + last
+604	                
+605	                set lastItem = inv.getItem(last)
+606	                set lastItem.tempCustomId = inv.getItemId(last)
+607	                set slot = (Inventory.MAX_SLOTS*inv.currentPage)+slot
+608	                
+609	                if (Equipment.onSocket != null) then
+610	                    if (lastItem.sockets <= lastItem.maxSockets) then
+611	                        set SocketInv = inv
+612	                        set SocketLast = last
+613	                        set SocketSlot = slot
+614	                        
+615	                        if (not inv.getItem(slot).isSocket and Equipment.onSocket != null and TriggerEvaluate(Equipment.onSocket)) then
+616	                            call TriggerExecute(Equipment.onSocket)
+617	                            return false
+618	                        endif
+619	                    endif
+620	                else
+621	                    set inv.getItem(slot).tempCustomId = inv.getItemId(slot)
+622	                    
+623	                    if (inv.getItem(slot).addSocket(lastItem)) then
+624	                        call inv.setItem(last, 0)
+625	                    endif
+626	                endif
+627	    
+
+... (gap) ...
+
+643	        
+644	        if (itemId > 0) then
+645	            
+646	            call inv.setTooltipTitle(GetObjectName(itemId))
+647	            
+648	            static if (InvItem.buildDescription.exists) then
+649	                set GetInvItem(itemId).tempCustomId = inv.getItemId((Inventory.MAX_SLOTS*inv.currentPage)+slot)
+650	
+651	                call GetInvItem(itemId).buildDescription(inv.owner)
+652	            else
+653	                call inv.setTooltipInfo(GetItemDescription(itemId))
+654	            endif
+655	            
+656	            call inv.setTooltipCost("|cffffcc00" + I2S(GetInvItem(itemId).cost) + "|r")
+657	            
+658	            call inv.setTooltipIcon(inv.localInt(inv.pid, GetItemIcon(itemId), Inventory.ICON_TRANSPARENT))
+659	        endif
+660	        
+661	        set Inventory.TOOLTIP_X = but.minx - 0.4
+662	        set Inventory.TOOLTIP_Y = but.maxy + 0.4
+663	        
+664	        call inv.showTooltip(inv, itemId > 0)
+665	        
+666	        return false
+667	    endfunction
+668	
+669	    private function RClickItemSlot takes nothing returns boolean
+670	        local UIButton but = GetTriggerButton()
+671	        local player p = GetClickingPlayer()
+672	        local integer pid = GetPlayerId(p)
+673	        local Inventory inv =  Inventory.PlayerCurrent[pid]
+674	        
+675	        local integer slot =  but.customValue
+676	        local integer itemId
+677	 
+678	        if (p != User(inv.pid).handle) then
+679	            return false
+680	        endif
+681	        
+682	        call TriggerExecute(Inventory.ExecR)
+683	        
+684	        set slot = (Inventory.MAX_SLOTS * inv.currentPage) + slot
+685	
+686	        set itemId = inv.getItem(slot).id
+687	
+688	        if (itemId == 0) then
+689	            return false
+690	        endif
+691	        
+692	        call inv.showTooltip(inv, false)
+693	        
+694	        /*call SetItemUserData(CreateItem(itemId, GetUnitX(inv.owner), GetUnitY(inv.owner)), inv.getItemId(slot))
+695	        
+696	        call inv.setItem(slot, 0)*/
+697	        
+698	        return false
+699	    endfunction
+700	    
+701	    private function Init takes nothing returns nothing
+702	        set InvFuncLClickSlot = Filter(function LClickItemSlot)
+703	        set InvFuncRClickSlot = Filter(function RClickItemSlot)
+704	    endfunction
+705	    
+706	endlibrary
+```
+
+**Not shown above — explore these names for their source**
+
+- src/Inventory_04_InventoryTooltip.j: InvItemTooltip:173, InventoryTooltip:1, buildDescriptionLines:211, lTrim:201, getStringLine:178, j:215, +32 more
+- src/Inventory_08_Equipment.j: OnInventoryItemRightClick:449, unequipId:460, but:450, itm:456, gearSlot:457, inv:453, +11 more
+- src/Inventory_25_UserInterface.j: GetTriggerButton:150, GetClickingPlayer:154, UIButton:218, UserInterface:1
+- src/Inventory_09_EquipmentItem.j: buildDescription:184, EquipmentItem:1
+- foundation-src/TimerUtils.j: TimerUtils:1, ReleaseTimer:186, GetTimerData:101, NewTimerEx:144
+- src/Inventory_22_Socket_Item.j: OnAgree:14
+- src/Inventory_28_PlayerUtils.j: PlayerUtils:1
+- src/Inventory_33_Table.j: InventoryTable:1
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

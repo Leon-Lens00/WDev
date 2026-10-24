@@ -1,0 +1,13 @@
+X3 A V12 — corrección de silueta y brillo
+Base V11 MDX 570738e214e42c4610a56655278f9b52b2557cd3f9fe5c86ed516f261123e7d7. Classic 1.27b, MDX800.
+Objetivo: eliminar el rombo rosa/verde, envolver el cuerpo ovalado con cola abierta y recuperar luminosidad aditiva del rayo sin ocultar el azul.
+1. Diagnóstico confirmado: perfil lineal cerrado en X=-107, punta trasera convergente; rayo grueso Blend2.
+2. Modificar sólo fuentes/recursos V12, conservar azul y lifecycle V11; perfil curvo continuo con cola abierta y desvanecimiento por alfa; rayo fino + halo AddAlpha.
+3. Leer binario independiente, comparar azul, anclaje y fases; inspeccionar 3D lateral/oblicua/frontal y animación antes del juego.
+4. Ensayo YDWE SP propio en pantalla3, escalas .5/1/2.4 y Birth/Death.
+5. Empaquetar revisión separada con recursos, evidencia y límites.
+Estado: diagnóstico completo; implementación en curso.
+
+Avance: V12 candidato A corregía silueta pero perdía verde en motor. Se ajustó separación radial y se cruzaron las bandas de halo/núcleo para evitar ángulos de canto. Final MDX a8c3dc9992b743fb17a52765a6e943370879926a55326a2f94d00182b9f1b390;4608tris. Estructura y texturas PASS455poses. Visor lateral/oblicuo y tres secuencias capturadas. Native escala.5/1/2.4 verificada; completando Birth/Death y empaque.
+
+Completado: forma/verde corregidos, visor3D y8casos nativos/200capturas revisados; cierrepropio0. V11/ZIP37archivos intactos. Informe resuelto: informes/errores/resueltos/2026-10-23-100419-x3-v11-silueta-rombo.md. Empaque final en exports/megaman-x3-buster-v12; pruebas y límites en VALIDACION.txt.

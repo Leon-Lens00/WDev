@@ -1,0 +1,11 @@
+--- fresh141/009-EquipmentItem.j
++++ fresh143/009-EquipmentItem.j
+@@ -368,6 +368,8 @@
+                 
+                 set i = i + 1
+             endloop
++            
++            call Inventory.infoBoxTitle[pid].setPosition(Inventory.TOOLTIP_X - 0.215, Inventory.TOOLTIP_Y + 0.1)
+ 
+             return out
+         endmethod

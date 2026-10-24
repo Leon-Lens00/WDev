@@ -1,0 +1,13 @@
+`codegraph_explore` was unavailable; I inspected source directly.
+
+The call is **direct**, with no intermediate method:
+
+`TimerTools.Timer.destroy → DestructionQueue.add(this)`
+
+- `destroy` obtains `timerId = ExpirationCode(this).timerId`. It queues destruction only when that expiration node is **registered** and `Handler.expiringTimer == timerId`. Otherwise, registered nodes are destroyed immediately; unregistered nodes are marked disabled. [script.j:733–755](</home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:733>)
+
+The surrounding callback wiring explains that condition:
+
+- `Handler.init` assigns `handler = function thistype.expire`; `TimerList.add` passes `handler` to `TimerStart`. [script.j:719](</home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:719>), [script.j:627](</home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:627>)
+- `Handler.expire` sets `expiringTimer`, evaluates the timer’s trigger, then clears it. Thus a callback calling `destroy` during evaluation reaches the queue branch for the same parent timer. After evaluation, it calls `DestructionQueue.clean`. [script.j:700–705](</home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:700>)
+- `DestructionQueue.add` appends the expiration-node ID to a linked queue indexed by its `timerId`; `clean` later calls `ExpirationCode.destroy` on queued nodes. [script.j:545–569](</home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:545>)

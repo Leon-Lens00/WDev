@@ -1,0 +1,7 @@
+The chain uses direct function calls:
+
+- **`Jass.assert(b, s)` → `Jass.error("assert: " + s)`** only when `b` is false. When true, it returns without printing. [Jass.j:114](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:114)
+- **`Jass.error(s)` → `Jass.print(s)`** unconditionally, then executes `set i = 1/0`. Printing therefore precedes the division by zero; its runtime consequences were not tested. [Jass.j:108](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:108)
+- **`Jass.print(s)` → `DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 120, s)`**, displaying the message to the local player. [Jass.j:99](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:99)
+
+The concrete caller shown is `Parser.parseIf`: after parsing elseif clauses, it asserts `LastElseif.elseBody == 0` with message `"last elseif body zero"`. Failure sends `"assert: last elseif body zero"` through the chain. [Jass.j:1370](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:1370)

@@ -1,0 +1,28 @@
+{
+  "old_pids": [
+    98487,
+    98761,
+    99030
+  ],
+  "old_pids_exited": true,
+  "new_pids": [
+    106858
+  ],
+  "mcp_live_query": {
+    "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+    "query": "RapidPair.emit RapidPair.spell RapidPair.initialize RapidBolt.onPeriod RapidBolt.onRemove",
+    "maxFiles": 2
+  },
+  "tests": {
+    "files": 3,
+    "passed": 65,
+    "failed": 0
+  },
+  "build": "npm run build succeeded; viewer and copied grammars checked",
+  "presentation_source_sha256": "132cab859ecb7da5e5ce5dc8806ff5abc45fb85d559f26e747c124bb6d3b2989",
+  "snapshot": {
+    "snapshot": "/tmp/codegraph-etiquetas-review-20261021-r1",
+    "tree_sha256": "13bba935837a3afa17b67f3eb989ce0667c9bb95c0329b0858a9edb4dfd04c31",
+    "files": 19
+  }
+}

@@ -1,0 +1,24 @@
+✔ map layout keeps row-major inventory and equipment identities (7.565367ms)
+✔ screen conversion round-trips at common aspects (0.198024ms)
+✔ invalid imports cannot introduce duplicate bindings or code through rawcodes (1.107244ms)
+✔ JASS preserves text escapes and runtime texture override (1.062415ms)
+✔ model bounds yield original constructor anchors and scales (0.226155ms)
+✔ group movement clamps one delta without changing relative spacing (1.341976ms)
+✔ each resize handle anchors the opposite side; no flipped or zero sizes (0.409637ms)
+✔ groups scale uniformly with their spacing and frame proportions (0.144023ms)
+✔ single panel and Shift resizing preserve aspect ratio (0.117704ms)
+✔ pixel coordinates use top-left origin and round-trip without exporting pixels (0.715514ms)
+✔ transformed original groups continue to validate as a v1 project (2.397794ms)
+✔ group scaling also scales text and respects its exportable font range (0.16242ms)
+✔ measured button centers match the captured 1920x1080 client within five pixels (4.795147ms)
+✔ calibrated dragging, dimensions and inspector coordinates share one transform (0.434002ms)
+✔ tooltip follows the clicked slot without changing saved design coordinates (0.5053ms)
+✔ preview calibration never changes exported vJASS coordinates (3.590958ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 59.506073

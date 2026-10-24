@@ -1,0 +1,18 @@
+{
+  "status": "registered; awaiting host tool catalog reload",
+  "unit_tests": {
+    "passed": 11,
+    "failed": 0
+  },
+  "sdk_interoperability": "passed",
+  "skill_validation": "passed",
+  "config_preserved": "passed",
+  "files_sha256": {
+    "/home/snz/.local/share/wc3-jass-explore/server.py": "062924a3e81fea3a0894cbdb08be7374b8fd738f15caad5c419e84ae3bb92d04",
+    "/home/snz/.local/share/wc3-jass-explore/tests/test_server.py": "55ba2fd85ce3ba869d3d4cb8a551b2f30eac77e824f61ba8a0cc00ec8d45c88d",
+    "/home/snz/.local/share/wc3-jass-explore/provenance.json": "a187d2d86900bfaf72f0dbb98e57e45447d700483287563e29101a85d594b1c1",
+    "/home/snz/.codex/skills/build-warcraft3-vjass-127b/SKILL.md": "f0066d21b0dcdb167ffaeae54d4cc65161e6c9d0b24ff99e71233f4a0f87def5",
+    "/home/snz/.codex/skills/build-warcraft3-vjass-127b/references/jass-explore.md": "aca9c1a7d891a116569c2138bb396c9ad49d767129a1cc29ff672c634f9b4e34",
+    "/home/snz/.codex/skills/build-warcraft3-vjass-127b/references/entorno-local.md": "3b800dbf6f6be8ac243b8b2c477e2e6cf3c2fc27ab241ad2364bbbe1fe16a215"
+  }
+}

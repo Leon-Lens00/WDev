@@ -1,0 +1,20 @@
+{
+  "run": "20261021-015706",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/work/TerrainDev-probe-20261021-015706.w3x",
+  "map_sha256": "6c7d76b6fefb7d75098e404d70b304af282d4a0f8ea9a9109ad104383568b039",
+  "production_map_sha256": "39222d0bb6257925661ee6d8c0f27c0718b2f696c2f3d41745c0da037b671d02",
+  "source_sha256": "3d3bd2b6fb1b379081e12de8908c0ea16f3a12d2f015737bc673f5e7e6ecd60e",
+  "expected": {
+    "created": 90,
+    "removed": 90,
+    "finished": 70,
+    "collided": 10,
+    "cancelled": 10,
+    "dummies": 96,
+    "pooled": 96,
+    "casters": 1,
+    "reused": 30,
+    "timerChecks": 1,
+    "failures": 0
+  }
+}

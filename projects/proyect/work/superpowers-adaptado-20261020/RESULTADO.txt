@@ -1,0 +1,24 @@
+DOS SKILLS ADAPTADAS PARA CODEX Y EL ENTORNO LOCAL
+2026-10-20 America/Lima
+
+systematic-debugging: diagnóstico por reproducción, trazado, hipótesis y verificación proporcional; soporte Warcraft condicional mediante las skills existentes.
+writing-plans: fases, interfaces, dependencias, decisiones y evidencias persistentes; distingue planificar de implementar según autorización.
+
+INTEGRACIÓN
+Rutas: /home/snz/.codex/skills/systematic-debugging y /home/snz/.codex/skills/writing-plans.
+AGENTS.md del proyecto enlaza ambas por tipo de tarea. No se instaló el paquete completo, bootstrap, servidores MCP, dependencias ni configuración adicional.
+Procedencia Superpowers 7.0.0, commit b739a8af570e10a95898f2bdf6cec97467fa6c12. Ambas conservan licencia MIT y hashes de las fuentes de origen.
+
+VERIFICACIÓN
+Estructura, metadatos UI y enlaces locales comprobados. Las identidades probadas coinciden con las instaladas.
+Depuración: agente independiente reprodujo pJASS=1 con dos errores y validó una copia con pJASS=0 después de dos inicializaciones. Entrada y mapas originales intactos.
+Planificación: otro agente inspeccionó las fuentes, detectó conflicto entre target y arco/curva, propuso una guía local y guardó un plan con verificaciones pendientes. No implementó ni ejecutó sus fases.
+
+LÍMITES
+Un caso por skill. No prueba A/B ni medición de ahorro/errores. La copia de diagnóstico no actualiza el mapa ni las fuentes editables originales. La propuesta del misil no está compilada ni ensayada en juego o multijugador.
+
+EVIDENCIAS
+RESULTADO.json; validation.json; skills-manifest.json; AGENTS.diff; forward-tests/ (casos y resultados conservados).
+
+CORRECCIÓN DOCUMENTAL PUNTUAL
+Se corrigió la referencia de Frozen Orb: su rama aleatoria puede llamar RemoveUnit sin comprobar muerte; no es necesariamente sólo eliminación de cadáveres. No se modificó código de la biblioteca ni mapas.

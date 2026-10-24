@@ -1,0 +1,7 @@
+V10: corrección visual solicitada sobre V9. Rosa aprobado cada240ms conservado. Verde visible en capa intermedia entre azul y rosa, rayo angular que recorre hacia atrás; ciclo120ms con pares desfasados. Probar mezcla alfa para conservar verde sobre núcleo aditivo. Mantener anclaje, dimensiones, fuenteV7 yV8/V9.
+Fases: máscara/curvas, relectura y regresión, visor3D, YDWE SP pantalla3, ZIP independiente.
+
+Prueba nativa detectó rombos por simetría desde cámara superior. Candidato conservado en candidate-symmetric. Ajuste: fases0/30/60/90ms y quiebres distintos en cada rayo.
+
+Final:3D y prueba nativa150capturas completadas. ZIP e7b98d0bffea993ae7fe65969c2fa8e91bd99f4a15855e2b54169e067a933556
+MDX cd479d2c0a35d84ece4d0d4680fe98740c7410a063d3bbcb08a767d18df93334

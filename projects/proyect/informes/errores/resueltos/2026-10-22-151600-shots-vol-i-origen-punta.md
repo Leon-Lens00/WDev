@@ -1,0 +1,19 @@
+# Shots Vol. I: desfase entre el origen y la punta de vuelo
+
+- Fecha: 2026-10-22T15:16:00.489304-05:00. Agente Codex; proyecto Proyect. Entorno objetivo: Warcraft III Classic 1.27b, MDX800; Vinz, Shots Vol. I descargado de Hive.
+- Estado: verificado numéricamente, pendiente decisión y corrección; sin prueba en juego. No se declara que el diseño original sea universalmente defectuoso: no cumple el anclaje de punta que desea el usuario para su sistema.
+- Síntoma: el usuario observa que a escalas grandes la punta parece alcanzar o atravesar el objetivo antes de que llegue el punto seguido por el sistema de proyectiles.
+- Evidencia: los 12 MDX mantienen el origen (0,0,0) dentro del tramo longitudinal de la malla. En coordenadas sin animar: X = [-62.551399, +47.217300]. En Stand, con transformaciones esqueléticas: X = [-61.344860, +48.423840], longitud 109.768700. Centro de la caja X = -6.460510, por tanto el origen tampoco es el centro exacto de esa caja.
+- Reproducción: analizar los MDX descargados con war3-model 4.0.1 y mdx-m3-viewer 5.12.0; evaluar la jerarquía y grupos clásicos en Stand, tiempos 100/300/500; comparar ambos lectores y sus posiciones. Error máximo entre evaluadores: 8.35e-7 unidades. Las curvas relevantes para la malla son constantes durante Stand. Todos los hashes de originales coinciden con el manifiesto de descarga.
+- Causa geométrica confirmada: la punta longitudinal no está en el origen. Si el sistema sigue el origen y aplica una escala uniforme s, el adelanto geométrico es 48.423840*s. No se ha inspeccionado el sistema de colisión concreto ni reproducido el síntoma en Warcraft; esas partes siguen siendo condicionales. Los archivos no contienen CollisionShapes.
+- Impacto: adelanto de 24.211920/48.423840/96.847679/145.271519 unidades para escala 0.5/1/2/3. Cambiar el anclaje puede reducir esa discrepancia visual, pero no cambia por sí mismo el algoritmo/radio/paso de colisión.
+- Evaluación previa: en Double hay dos puntas, lateralmente separadas aproximadamente 30 unidades; un origen único puede alinearse con su plano frontal, no coincidir con ambas puntas a la vez. Hay un pequeño offset lateral (~-0.167 en simple y ~-0.129 en el centro de Double). Los emisores de vuelo están cerca de X=33.20654 y los de impacto se anclan en el origen actual. Una traslación global indiscriminada desplazaría también los impactos; se requiere decidir el contrato Birth/Stand/Death y revisar emisores, pivotes, curvas y extents antes de una edición. No basta mover un pivote ni editar sólo los vértices.
+- Acciones: diagnóstico únicamente; extracción de medidas y plano de la malla actual. No se alteran MDX, ZIP ni mapas.
+- Límites: plano geométrico sin texturas, sin simulación de halos/partículas/estelas ni render del juego. Birth y Death se observaron sólo en tres tiempos diagnósticos por secuencia; no se afirma cobertura continua de esos efectos. No se promete que la punta de malla sea el último píxel luminoso.
+- Evidencia: [mediciones](../../../work/shots-vol-i-origen-20261022/mediciones.json), [plano](../../../work/shots-vol-i-origen-20261022/plano-original.png).
+- Siguiente paso, sólo si el usuario pide continuar: preparar una variante separada con anclaje frontal coherente entre secuencias y validar el resultado numérico, visual y en juego con distintas escalas.
+
+
+## Cierre — 22 de octubre de 2026
+
+Corrección autorizada y comprobada en derivados: 12 MDX con cuerpo/vuelo desplazados y Death compensado. Punta Stand X=0 en todos; Birth acotado sin adelanto; impactos/luz/eventos conservan su origen. Relectura y 11628 poses, más escenas en 1.27b con escalas 0.5/1.5/3. Originales intactos. El objetivo de anclaje está resuelto en los derivados, sin acreditar colisión del sistema ni último píxel luminoso. Evidencia: ModelEditor/VALIDACION.md y ModelEditor/evidence/plano-ajustado.png. Estado final: resuelto.

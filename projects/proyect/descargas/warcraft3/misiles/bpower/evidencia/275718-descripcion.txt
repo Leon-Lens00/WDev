@@ -1,0 +1,1264 @@
+
+
+
+
+	Missile [GUI]
+
+
+
+A system made to handle, optimize and ease projectile creation in your map.
+
+
+
+
+
+
+
+
+Table of Content
+
+
+
+
+Three golden rules
+
+Create & destroy missiles
+
+Trigger interface - Customizing missile events
+
+Variables
+
+Example Trigger Action function
+
+Directly to download
+
+
+
+
+
+The three golden rules for Missile
+
+top
+
+
+
+Neither Missile__Origin nor Missile__Impact leak. 
+
+Missile removes both location handles internally.
+
+---
+
+All variables storing missile properties such as Missile__Owner or Missile__Damage
+
+are only valid within a trigger action function fired from the Missile trigger interface.
+
+Otherwise they will be null, 0 or false. To put it simple invalid. 
+
+---
+
+Every Missile related variable is prefixed with Missile
+
+You may only use variables with two underscores __, such as Missile__Source
+
+or variables with one underscore _, such as Missile_Source[index].
+
+All other variables are private and strictly reserved for the internal structure of Missile.
+
+
+
+
+Create & destroy missiles
+
+top
+
+
+
+Create a missiles via Run Missile Configuration <gen> - Set missile properties - Run Missile <gen> syntax.
+
+For example like here in my Fireball trigger:
+
+
+
+
+
+	
+		
+			
+
+				Fireball Cast
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Events
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Unit - A unit Starts the effect of an ability
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Conditions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				(Ability being cast) Equal to Fireball
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__TempLoc = (Target point of ability being cast)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				--------   --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Trigger - Run Missile Configurate <gen> (ignoring conditions)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Source = (Triggering unit)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Owner = (Triggering player)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Origin = (Position of Missile__Source)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Impact = (Missile__Origin offset by 550.00 towards (Angle from Missile__Origin to Missile__TempLoc) degrees)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__ImpactZ = 50.00
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__OriginZ = 50.00
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Speed = 500.00
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Model = Abilities\Weapons\FireBallMissile\FireBallMissile.mdl
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Trigger - Run Missile <gen> (ignoring conditions)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				--------   --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Custom script:   call RemoveLocation(udg_Missile__TempLoc)
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+A missile can be manually destroyed during each trigger event via
+
+
+
+
+
+	
+		
+			
+
+				Set Missile__WantDestroy = True
+				
+					
+				
+		
+		
+	
+or automatically when reaching the impact point.
+
+
+
+
+
+Missile trigger interface
+
+top
+
+
+
+Missile optionally runs the five below listed trigger events.
+
+Each event will upon occurrence run the trigger set to the trigger variable.
+
+In the example below Fireball Actions <gen> would run for all events.
+
+
+
+
+
+	
+		
+			
+
+				Set Missile__OnPeriodic = Fireball Actions <gen>
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__OnCollideUnit = Fireball Actions <gen>
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__OnCollideDestructable = Fireball Actions <gen>
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__OnFinish = Fireball Actions <gen>
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__OnRemove = Fireball Actions <gen>
+				
+					
+				
+		
+		
+	
+You can identify the dispatched trigger by evaluating Missile__EventId in an integer comparison with
+
+these constant Missile event variables for example Missile__EventId equals EVENT_MISSILE_FINISH
+
+
+
+EVENT_MISSILE_PERIODIC runs every timer interval.
+
+EVENT_MISSILE_COLLIDE_UNIT  runs on unit collision.
+
+EVENT_MISSILE_COLLIDE_DEST  runs on destructable collision.
+
+EVENT_MISSILE_FINISH  runs if the impact point is reached. If on finish is defined you must destroy the missile manually.
+
+EVENT_MISSILE_REMOVE  runs when a missile is irrevocably destroyed.
+
+
+Missile variables - Documentated in JASS format
+
+top
+
+
+
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+//=============================================================
+//  Missile API. 
+//=============================================================  
+// Syntax for missile creation in GUI:
+//    1. Run trigger Missile Configurate <gen> 
+//    2. Set properties via scalar variables.
+//    3. Run trigger Missile <gen>
+// JASS users may call the create and launch function directly.
+//
+// Missile operates with custom events.
+// This means that you have access to 
+// a missile's properties within action functions
+// of the Missile trigger interface. 
+//
+// "udg_Missile__EventId" indicates
+// which event trigger has been dispatched.
+//
+// "udg_Missile__EventIndex" is the array index
+// of the triggering missile.
+//
+// Avaliable events are:
+//
+//   1.) udg_EVENT_MISSILE_COLLIDE_UNIT
+//        • Runs when a missile collides with a unit.
+//
+//   2.) udg_EVENT_MISSILE_COLLIDE_DEST
+//        • Runs when a missile collides with a destructable.
+//
+//   3.) udg_EVENT_MISSILE_PERIODIC
+//        • Runs every missile timer interval.
+//
+//   4.) udg_EVENT_MISSILE_FINISH
+//        • Runs when a missile reaches its impact position.
+//
+//   5.) udg_EVENT_MISSILE_REMOVE
+//        • Runs when a missile is destroyed.
+//
+//   6.) udg_EVENT_MISSILE_NOTHING
+//        • Value of udg_Missile__EventId when accessed
+//          from outside a trigger action function.
+//
+// During every missile event you may use the 
+// following GUI generated variables.
+// Every scalar variable has an equivalent array variable,
+// which you can read and use at any time. 
+// For exmple: udg_Missile__Source vs. udg_Missile_Source[index]
+//
+// Trigger variables which fire Missile events:
+//
+//    trigger udg_Missile__OnCollideUnit            -    trigger array udg_Missile_OnUnit 
+//    trigger udg_Missile__OnCollideDestructable    -    trigger array udg_Missile_OnDest
+//    trigger udg_Missile__OnPeridoic               -    trigger array udg_Missile_OnPeriodic
+//    trigger udg_Missile__OnRemove                 -    trigger array udg_Missile_OnRemove
+//    trigger udg_Missile__OnFinish                 -    trigger array udg_Missile_OnFinish
+//
+// Variables which mimic a function call:
+//
+//    location udg_Missile__Origin    
+//    location udg_Missile__Impact      
+//    boolean  udg_Missile__WantDestroy    -    boolean array udg_Missile_WantDestroy
+//    boolean  udg_Missile__Recycle        -    boolean array udg_Missile_Recycle
+//    real     udg_Missile__Scale          -    real    array udg_Missile_Scale
+//    real     udg_Missile__FlyTime        -    real    array udg_Missile_FlyTime ( Converts time in seconds to a vector lenght )
+//    real     udg_Missile__Model          -    string  array udg_Missile_Model   ( Converts a string path to a special effect )
+//    real     udg_Missile__Arc            -    real    array udg_Missile_Arc     ( Converts an arc in degree to height value )
+//    real     udg_Missile__Curve          -    real    array udg_Missile_Curve   ( Converts a curve in degree to an open value )
+//
+// Variables for read-only:
+//
+//    integer udg_Missile__EventId     
+//    integer udg_Missile__EventIndex  
+//    unit    udg_Missile__Dummy           -    unit array udg_Missile_Dummy
+//    real    udg_Missile__Angle           -    real array udg_Missile_Angle    ( In radians )
+//    real    udg_Missile__Distance        -    real array udg_Missile_Distance ( Total distance traveled )
+//
+// Variables for read and set.
+//
+//    unit    udg_Missile__Source          -    unit    array udg_Missile_Source
+//    unit    udg_Missile__Target          -    unit    array udg_Missile_Target    ( Enables homing behaviour towards a target unit )
+//    player  udg_Missile__Owner           -    unit    array udg_Missile_Owner     ( Pseudo-owner for better onCollide evaluation ) 
+//    real    udg_Missile__ImpactZ         -    real    array udg_Missile_ImpactZ
+//    real    udg_Missile__OriginZ         -    real    array udg_Missile_OriginZ
+//    real    udg_Missile__Damage          -    real    array udg_Missile_Damage
+//    real    udg_Missile__Collision       -    real    array udg_Missile_Collision
+//    real    udg_Missile__Speed           -    real    array udg_Missile_Speed
+//    real    udg_Missile__Acceleration    -    real    array udg_Missile_Acceleration
+//    real    udg_Missile__Height          -    real    array udg_Missile_Height    ( Highest point of the parabola )
+//    real    udg_Missile__Open            -    real    array udg_Missile_Open      
+//    real    udg_Missile__Turn            -    real    array udg_Missile_Turn      ( Turn ratio per second )
+//    real    udg_Missile__Data            -    integer array udg_Missile_Data
+	
+
+
+
+
+Example trigger action function
+
+top
+
+
+
+Let's see how the event triggers run code in an action function.
+
+We stick to the fireball scenario. This spell is also included in the demo map.
+
+
+
+
+
+	
+		
+			
+
+				Fireball Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Events
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Conditions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				-------- As you can see Missile__EventId allows you  --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				-------- to identify which event trigger dispatched. --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				-------- Therefore you can run all actions from one trigger function. --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				-------- Of course you can also seperate triggers into different triggers. --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				If - Conditions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Missile__EventId Equal to EVENT_MISSILE_REMOVE
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Then - Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				If - Conditions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Missile__Data Equal to 1
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Then - Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				-------- Create more fireballs --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				-------- Reference to Missile__Dummy will be removed --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				-------- Once you call Run Missile Configurate <gen> --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__TempLoc = (Position of Missile__Dummy)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				For each (Integer A) from 1 to 6, do (Actions)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Loop - Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Trigger - Run Missile Configurate <gen> (ignoring conditions)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Origin = (Point((X of Missile__TempLoc), (Y of Missile__TempLoc)))
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Impact = (Missile__Origin offset by 450.00 towards (60.00 x (Real((Integer A)))) degrees)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__ImpactZ = 50.00
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Height = 350.00
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__OriginZ = 50.00
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Speed = 500.00
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Damage = 150.00
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Source = Missile_Source[Missile__EventIndex]
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Owner = Missile_Owner[Missile__EventIndex]
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Model = Abilities\Weapons\FireBallMissile\FireBallMissile.mdl
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__OnCollideUnit = Fireball Actions <gen>
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__OnRemove = Fireball Actions <gen>
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__Data = 2
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Trigger - Run Missile <gen> (ignoring conditions)
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Custom script:   call RemoveLocation(udg_Missile__TempLoc)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Custom script:   set udg_Missile__TempLoc = null
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Else - Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__TempLoc = (Position of Missile__Dummy)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Temp_Group = (Units within 128.00 of Missile__TempLoc matching ((((Matching unit) belongs to an enemy of Missile__Owner) Equal to True) and (((Matching unit) is alive) Equal to True)))
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Unit Group - Pick every unit in Temp_Group and do (Actions)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Loop - Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Unit - Cause Missile__Source to damage (Picked unit), dealing Missile__Damage damage of attack type Spells and damage type Normal
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Special Effect - Create a special effect at Missile__TempLoc using Abilities\Spells\Other\Doom\DoomDeath.mdl
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Special Effect - Destroy (Last created special effect)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Custom script:   call DestroyGroup(udg_Temp_Group)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Custom script:   call RemoveLocation(udg_Missile__TempLoc)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Custom script:   set udg_Missile__TempLoc = null
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Else - Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				If (All Conditions are True) then do (Then Actions) else do (Else Actions)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				If - Conditions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Missile__EventId Equal to EVENT_MISSILE_COLLIDE_UNIT
+				
+					
+				
+		
+		
+	
+		
+			
+
+				(Missile__UnitHit belongs to an enemy of Missile__Owner) Equal to True
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Then - Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				-------- See how easy damaging got. --------
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Unit - Cause Missile__Source to damage Missile__UnitHit, dealing Missile__Damage damage of attack type Normal and damage type Normal
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set Missile__WantDestroy = True
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Else - Actions
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+
+
+
+
+Keywords:
+
+Missile, Projectile, System

@@ -1,0 +1,39 @@
+--- fresh141/004-InventoryTooltip.j
++++ fresh143/004-InventoryTooltip.j
+@@ -9,7 +9,7 @@
+         // line lengths are resolution and char-width 
+         // dependent for textags, so a new text tag
+         // is created per-line.
+-        static constant integer TOOLTIP_LINE_LENGTH  = 32
++        static constant integer TOOLTIP_LINE_LENGTH  = 30
+         static constant integer TOOLTIP_LINES_MAX    = 16
+         static constant integer TOOLTIP_TEXTURE      = 'B014'
+         static constant real TOOLTIP_LINE_SPACING    = .05
+@@ -135,18 +135,18 @@
+             loop
+                 exitwhen i == TOOLTIP_LINES_MAX
+                 if (i < Inventory.RightSideStart[this.pid]) then
+-                    call ItemInfoTags[this.pid][i].setPosition(TOOLTIP_X - 0.15, (TOOLTIP_Y - 0.05) - ((TOOLTIP_LINE_SPACING*i)))
++                    call ItemInfoTags[this.pid][i].setPosition(TOOLTIP_X - 0.215, (TOOLTIP_Y - 0.05) - ((TOOLTIP_LINE_SPACING*i)))
+                 else
+-                    call ItemInfoTags[this.pid][i].setPosition(TOOLTIP_X + 0.175, (TOOLTIP_Y - 0.05) - ((TOOLTIP_LINE_SPACING*(i-Inventory.RightSideStart[this.pid]))))
+-                endif
+-                set i = i + 1
+-            endloop
+-                    
+-            call Inventory.ItemInfoTags[pid][TOOLTIP_LINES_MAX-1].setPosition(TOOLTIP_X + 0.175, TOOLTIP_Y + 0.05)
++                    call ItemInfoTags[this.pid][i].setPosition(TOOLTIP_X + 0.150, (TOOLTIP_Y - 0.05) - ((TOOLTIP_LINE_SPACING*(i-Inventory.RightSideStart[this.pid]))))
++                endif
++                set i = i + 1
++            endloop
++                    
++            call Inventory.ItemInfoTags[pid][TOOLTIP_LINES_MAX-1].setPosition(TOOLTIP_X + 0.150, TOOLTIP_Y + 0.021)
+             
+             call .infoBox[this.pid].setPosition(TOOLTIP_X, TOOLTIP_Y)
+-            call .infoBoxTitle[this.pid].setPosition(TOOLTIP_X - 0.15, TOOLTIP_Y + 0.1)
+-            call .infoBoxCost[this.pid].setPosition(TOOLTIP_X - 0.11, TOOLTIP_Y + 0.022)
++            call .infoBoxTitle[this.pid].setPosition(TOOLTIP_X - 0.215, TOOLTIP_Y + 0.1)
++            call .infoBoxCost[this.pid].setPosition(TOOLTIP_X - 0.175, TOOLTIP_Y + 0.021)
+             call .costIcon[this.pid].setPosition(TOOLTIP_X - 0.15 , TOOLTIP_Y + 0.1)
+ 
+             call .infoBox[this.pid].show(flag, this.camera)

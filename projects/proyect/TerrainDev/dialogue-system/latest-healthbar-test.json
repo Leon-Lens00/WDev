@@ -1,0 +1,49 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/TerrainDev-Dialogue.w3x",
+  "sha256": "94ca3ebfd1249033f1ea1f868792d2aac59df659edcf6e96519433427caa3e81",
+  "target": "Warcraft III Classic1.27b/RenderEdge",
+  "mode": "SP",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "ownerIndex": 10,
+  "controllerIndex": 0,
+  "sharedControl": true,
+  "advancedControl": false,
+  "unitColor": "GetPlayerColor(Player(0))",
+  "nativeHeroHudIconHidden": true,
+  "heroIconInOwnBlueFrame": true,
+  "enemyIconAtRight": true,
+  "cases": [
+    "native selection/order card for shared Hpal",
+    "right-click smart order; world position changes",
+    "Luz sagrada via localized L + native left click; mana255→190 and heal effect",
+    "normal, critical and zero actual life",
+    "Tauren/Paladin target icon switching",
+    "patrol + dialogue opening/reveal/closing",
+    "bars hide/show; background captured without native hero icon"
+  ],
+  "textureMipsValidated": 37,
+  "modelStatesValidated": 303,
+  "evidence": "/home/snz/Documentos/ChatGPT/Proyect/work/healthbars-shared-native-20261023",
+  "video": "/home/snz/Documentos/ChatGPT/Proyect/work/healthbars-shared-native-20261023/barras-control-compartido.mp4",
+  "videoSeconds": 46.633333,
+  "videoSha256": "529b83e9d9d69902e86e4be79a179ea517c4da6b463de27659ea5676f94d8d37",
+  "closed": {
+    "pid": 1067943,
+    "closed": true,
+    "method": "Win+Q / inspected confirmation / S"
+  },
+  "nativeTested": true,
+  "multiplayerTested": false,
+  "cameraLibraryChanged": false,
+  "limitations": [
+    "SP1920x1080 only; multiplayer and other aspect ratios pending",
+    "Dedicated owner10 is outside map user slots0/1; sharing applies to all units of this owner",
+    "Advanced shared control adds native allied-hero icon; keep it false",
+    "Native icon registry currently Hpal/otau; extend before targeting other types",
+    "Life polling0.05s, visual projection0.01s; 1-percent model states",
+    "No ability/inventory/ownership gameplay system migration beyond this prototype"
+  ]
+}

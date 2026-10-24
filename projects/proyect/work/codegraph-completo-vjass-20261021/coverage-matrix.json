@@ -1,0 +1,890 @@
+[
+  {
+    "id": "VJ-05",
+    "feature": "Global declaration Freedom",
+    "manual_section": 5,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-07",
+    "feature": "Better looping: for, while, break",
+    "manual_section": 7,
+    "manual_examples": 5,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-08",
+    "feature": "Native declaration Freedom",
+    "manual_section": 8,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-09",
+    "feature": "Debug preprocessor",
+    "manual_section": 9,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-conditions.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-condition-results.json",
+      "compiler-condition-detail-results.json"
+    ],
+    "note": "Tri-state selection; known profiles prune, missing input context remains conditional. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-10",
+    "feature": "Local variables shadowing",
+    "manual_section": 10,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-14",
+    "feature": "Import external script files",
+    "manual_section": 14,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-expansion.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-preprocessor-results.json",
+      "compiler-modules-results.json",
+      "compiler-once-result.json"
+    ],
+    "note": "Bounded projections/imports in authorized scope; duplicates across files remain ambiguous. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-16",
+    "feature": "No vjass!",
+    "manual_section": 16,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-expansion.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-preprocessor-results.json",
+      "compiler-modules-results.json",
+      "compiler-once-result.json"
+    ],
+    "note": "Bounded projections/imports in authorized scope; duplicates across files remain ambiguous. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-17",
+    "feature": "Libraries",
+    "manual_section": 17,
+    "manual_examples": 4,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-18",
+    "feature": "Static ifs",
+    "manual_section": 18,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-conditions.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-condition-results.json",
+      "compiler-condition-detail-results.json"
+    ],
+    "note": "Tri-state selection; known profiles prune, missing input context remains conditional. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-19",
+    "feature": "Private members",
+    "manual_section": 19,
+    "manual_examples": 2,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-20",
+    "feature": "Public members",
+    "manual_section": 20,
+    "manual_examples": 2,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-21",
+    "feature": "Nested scopes",
+    "manual_section": 21,
+    "manual_examples": 4,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-22",
+    "feature": "SCOPE_PREFIX and SCOPE_PRIVATE",
+    "manual_section": 22,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-control-results.json",
+      "compiler-helpers-results.json",
+      "compiler-scope-module-result.json",
+      "compiler-type-compatible-fixed.json"
+    ],
+    "note": "Bounded possible values and compiler runtime names; unknown dynamic values are not execution proof. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-23",
+    "feature": "keyword",
+    "manual_section": 23,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-24",
+    "feature": "Text Macros",
+    "manual_section": 24,
+    "manual_examples": 5,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-expansion.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-preprocessor-results.json",
+      "compiler-modules-results.json",
+      "compiler-once-result.json"
+    ],
+    "note": "Bounded projections/imports in authorized scope; duplicates across files remain ambiguous. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-25",
+    "feature": "Structs",
+    "manual_section": 25,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-26",
+    "feature": "Declaring structs",
+    "manual_section": 26,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-27",
+    "feature": "Creating and destroying structs",
+    "manual_section": 27,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-28",
+    "feature": "Struct usage",
+    "manual_section": 28,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-29",
+    "feature": "Instance members",
+    "manual_section": 29,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-30",
+    "feature": "Globals of struct types",
+    "manual_section": 30,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-31",
+    "feature": "Static members",
+    "manual_section": 31,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-32",
+    "feature": "public/private Structs",
+    "manual_section": 32,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-33",
+    "feature": "Methods",
+    "manual_section": 33,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-34",
+    "feature": "Encapsullation",
+    "manual_section": 34,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-35",
+    "feature": "Static methods",
+    "manual_section": 35,
+    "manual_examples": 3,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-vjass.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-general-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declarations, scopes, visibility and references; compiler ordering/type errors are not fully validated by CodeGraph. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-36",
+    "feature": "The onDestroy method",
+    "manual_section": 36,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-37",
+    "feature": "The onInit method",
+    "manual_section": 37,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-38",
+    "feature": "Interfaces",
+    "manual_section": 38,
+    "manual_examples": 6,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-39",
+    "feature": "Operator making",
+    "manual_section": 39,
+    "manual_examples": 7,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-40",
+    "feature": "Extending structs",
+    "manual_section": 40,
+    "manual_examples": 3,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-41",
+    "feature": "Stub methods",
+    "manual_section": 41,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-42",
+    "feature": "super",
+    "manual_section": 42,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-43",
+    "feature": "Dynamic arrays",
+    "manual_section": 43,
+    "manual_examples": 3,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-storage-results.json",
+      "compiler-storage-fixed-results.json"
+    ],
+    "note": "Declared storage types/dimensions/lifecycle dependencies; allocator implementation and index-capacity execution are outside graph semantics. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-44",
+    "feature": "Array members",
+    "manual_section": 44,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-storage-results.json",
+      "compiler-storage-fixed-results.json"
+    ],
+    "note": "Declared storage types/dimensions/lifecycle dependencies; allocator implementation and index-capacity execution are outside graph semantics. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-45",
+    "feature": "Delegate",
+    "manual_section": 45,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-46",
+    "feature": "thistype",
+    "manual_section": 46,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-47",
+    "feature": "Module",
+    "manual_section": 47,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-expansion.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-preprocessor-results.json",
+      "compiler-modules-results.json",
+      "compiler-once-result.json"
+    ],
+    "note": "Bounded projections/imports in authorized scope; duplicates across files remain ambiguous. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-48",
+    "feature": "Functions as objects",
+    "manual_section": 48,
+    "manual_examples": 3,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-control-results.json",
+      "compiler-helpers-results.json",
+      "compiler-scope-module-result.json",
+      "compiler-type-compatible-fixed.json"
+    ],
+    "note": "Bounded possible values and compiler runtime names; unknown dynamic values are not execution proof. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-49",
+    "feature": "Function interfaces",
+    "manual_section": 49,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-control-results.json",
+      "compiler-helpers-results.json",
+      "compiler-scope-module-result.json",
+      "compiler-type-compatible-fixed.json"
+    ],
+    "note": "Bounded possible values and compiler runtime names; unknown dynamic values are not execution proof. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-50",
+    "feature": "Typecast",
+    "manual_section": 50,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-51",
+    "feature": "Method function name",
+    "manual_section": 51,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-control-results.json",
+      "compiler-helpers-results.json",
+      "compiler-scope-module-result.json",
+      "compiler-type-compatible-fixed.json"
+    ],
+    "note": "Bounded possible values and compiler runtime names; unknown dynamic values are not execution proof. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-52",
+    "feature": "Method exists",
+    "manual_section": 52,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-conditions.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-condition-results.json",
+      "compiler-condition-detail-results.json"
+    ],
+    "note": "Tri-state selection; known profiles prune, missing input context remains conditional. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-53",
+    "feature": "Array structs",
+    "manual_section": 53,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-storage-results.json",
+      "compiler-storage-fixed-results.json"
+    ],
+    "note": "Declared storage types/dimensions/lifecycle dependencies; allocator implementation and index-capacity execution are outside graph semantics. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-54",
+    "feature": "Keys",
+    "manual_section": 54,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-57",
+    "feature": "Sized arrays",
+    "manual_section": 57,
+    "manual_examples": 3,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-storage-results.json",
+      "compiler-storage-fixed-results.json"
+    ],
+    "note": "Declared storage types/dimensions/lifecycle dependencies; allocator implementation and index-capacity execution are outside graph semantics. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-58",
+    "feature": "2D arrays",
+    "manual_section": 58,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-storage-results.json",
+      "compiler-storage-fixed-results.json"
+    ],
+    "note": "Declared storage types/dimensions/lifecycle dependencies; allocator implementation and index-capacity execution are outside graph semantics. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-59",
+    "feature": "Structs with more index space",
+    "manual_section": 59,
+    "manual_examples": 5,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-storage-results.json",
+      "compiler-storage-fixed-results.json"
+    ],
+    "note": "Declared storage types/dimensions/lifecycle dependencies; allocator implementation and index-capacity execution are outside graph semantics. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-60",
+    "feature": "Dynamic arrays with more index space",
+    "manual_section": 60,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-storage-results.json",
+      "compiler-storage-fixed-results.json"
+    ],
+    "note": "Declared storage types/dimensions/lifecycle dependencies; allocator implementation and index-capacity execution are outside graph semantics. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-62",
+    "feature": "Colon",
+    "manual_section": 62,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-types-results.json",
+      "compiler-general-results.json",
+      "compiler-expression-results.json",
+      "compiler-declaration-results.json"
+    ],
+    "note": "Declared types/lifecycle/operator/virtual candidate dependencies, not a complete type checker. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-63",
+    "feature": "Delimited comments",
+    "manual_section": 63,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-expression.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-comments-flags-results.json",
+      "compiler-extra-types-results.json"
+    ],
+    "note": "Lexical normalization/source mapping, also covered by jass-expansion multiline declaration tests. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-64",
+    "feature": "hook",
+    "manual_section": 64,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-dispatch-results.json"
+    ],
+    "note": "Hook dependencies are candidates at actual native/API call sites; arbitrary function hooks are not guessed. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-65",
+    "feature": "inject",
+    "manual_section": 65,
+    "manual_examples": 1,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-expansion.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-control-inject-fixed.json"
+    ],
+    "note": "main/config replacement, explicit injection region and dovjassinit dependencies. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-66",
+    "feature": "Loading structs from SLK files",
+    "manual_section": 66,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-slk.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-slk-result.json",
+      "compiler-scope-slk-result.json"
+    ],
+    "note": "Explicit in-scope SLK data only; typed expressions and data-only incremental invalidation. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-68",
+    "feature": "The struct type",
+    "manual_section": 68,
+    "manual_examples": 2,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-semantic-resolution.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-storage-results.json",
+      "compiler-storage-fixed-results.json"
+    ],
+    "note": "Declared storage types/dimensions/lifecycle dependencies; allocator implementation and index-capacity execution are outside graph semantics. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-71",
+    "feature": "External Tools",
+    "manual_section": 71,
+    "manual_examples": 0,
+    "status": "boundary-recorded",
+    "tests": [
+      "jass-expansion.test.ts"
+    ],
+    "compiler_evidence": [],
+    "note": "External tools are recorded, never executed. Index authorized generated output separately. Not an implementation of external languages/tools. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  },
+  {
+    "id": "VJ-73",
+    "feature": "Linebreak fixer.",
+    "manual_section": 73,
+    "manual_examples": 0,
+    "status": "structural-coverage-with-explicit-bounds",
+    "tests": [
+      "jass-expression.test.ts"
+    ],
+    "compiler_evidence": [
+      "compiler-comments-flags-results.json",
+      "compiler-extra-types-results.json"
+    ],
+    "note": "Lexical normalization/source mapping, also covered by jass-expansion multiline declaration tests. Evidence files retain intermediate failures and negative cases; only individual successful compiler/checker outcomes certify valid fixtures. Sections overlap and are not independent feature counts."
+  }
+]

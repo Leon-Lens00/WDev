@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-22T19:06:55.703918-05:00",
+  "target": "Classic 1.27b SP 1920x1080",
+  "map_sha256": "ce990503fcb35ab0672662d1fd31bf55cd26558ff2a2513d05cf835f2bcb0b46",
+  "build": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/build/20261022-190110-263421",
+  "pid": 708387,
+  "passed": [
+    "JassHelper release/pJASS; header/member preservation and script reextraction",
+    "41 UI Studio Node tests",
+    "MDX800 independent MDL/MDX readback; face counts/index validation; skinned cut bounds",
+    "Editor actual MDX frame and busts, idle/talk and transition scrub",
+    "Native busts show upper torso; active/inactive and two talk sequences",
+    "Opening/static/reveal; closing/static/fold; line visible in queued close",
+    "Five movement captures, reopen, queued close completes; two settled zones",
+    "Camera shared SHA unchanged fde7cb040982ed99b2986e34513c62b4f3d58e1edc6f74237be37f4162d2caae",
+    "Final ce990503: four left-speaker captures, right speaker, movement, close and normal S exit with both torsos held in idle"
+  ],
+  "evidence_directory": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022",
+  "editor_screenshot": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/editor-body-stand.png",
+  "native_screenshot": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/stand-left-talk-2.png",
+  "measurements": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/safe-frame-measurements.json",
+  "limitations": [
+    "Two registered pilot portraits only; not arbitrary MDX clipping",
+    "Both pilots hold chest/shoulders in a fixed reference idle pose and retain neck/head/facial idle/talk; no lip sync",
+    "25ms pose sampling does not prove continuous bounds for every possible animation",
+    "No compact native sample, other resolutions, LAN, endurance or NewGen roundtrip in this revision",
+    "Instant visibility on debug teleport not certified; earlier transient disappearance recorded separately",
+    "Font rasterization remains approximate; editor screenshot background is a previous native capture",
+    "safe-blue-talk.png is red second page; actual blue speaker evidence is safe-left-speaking.png",
+    "safe-queued-close.png is still the final line phase; safe-queued-closed-final.png proves fully closed"
+  ],
+  "exit": {
+    "pid": 708387,
+    "exited": true,
+    "confirmation": "S",
+    "sigterm_needed": false
+  },
+  "visual_approved": false,
+  "previous_revision_coverage": {
+    "map_sha256": "744544ae287f7937892026696723b61ddfa5dd4b40156095244677908af1bbdf",
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/test-bust-safe.json",
+    "changed_members": [
+      "(attributes)",
+      "UI/Dialogue/Portraits/paladin.mdx"
+    ],
+    "note": "Transition/Camera/text/tauren unchanged; final run rechecks both actors, four paladin talking captures, movement and close."
+  }
+}

@@ -1,0 +1,33 @@
+# Preparación de recursos del diálogo
+Fecha22/10/2026 18:02, chat de diálogo; Classic1.27b, UI Studio.
+Estado: en recuperación. Fuentes de producción respaldadas en work/dialogue-animated-20261022/before.
+
+- Dos lecturas auxiliares solicitaron nombres de archivo que no existen (assets.py y animation.d.ts). Se localizaron los nombres reales textures.py y animations.d.ts. Sin cambios de herramientas ni efecto sobre el mapa.
+- portrait-assets.py terminó con Missing native texture ReplaceableTextures\TeamColor\TeamColor00.blp al consultar mpyq. Paladín y Tauren y sus texturas corporales sí se leyeron. No se ha demostrado ausencia de esa textura en el juego; sólo falló esta vía de extracción.
+- Recuperación elegida: no depender de extraer la textura reemplazable para el piloto. Generar un color rojo explícito y declarar su procedencia generada en el perfil; conservar los originales. Comprobar la nueva preparación y la carga en visor antes de resolver.
+Impacto: detuvo preparación de recursos de vista previa; no afectó mapas existentes. No acredita compatibilidad o render hasta las comprobaciones siguientes.
+
+18:13: el UMD mdx-m3-viewer no pudo crear recursos desde Heropaladin.blp/Minotaur.blp; geometría blanca. Diagnóstico capturado por viewer.on(error) y consola del navegador. Se preparan PNG equivalentes para el visor con Pillow, conservando BLP nativos para el mapa. Se corrigió también stacking del texto y fondo opaco por defecto de startFrame. Pendiente nueva comprobación visual. npm no está en PATH; runner node --test ejecutado directamente:36/36 PASS de suite previa.
+
+Causa aislada: las texturas obtenidas con mpyq son distintas de wc3ctl (Paladín74711 frente74502bytes). Tanto Pillow como el visor rechazan la JPEG del primer archivo. La copia wc3ctl sí decodifica256×256RGBA. Se sustituye el lector de preparación por copias extraídas con wc3ctl, con procedencia nueva, sin sobrescribir evidencias originales. Prueba auxiliar se repitió con venv porque Python del sistema no tiene PIL.
+
+## Recuperación comprobada
+Estado final: resuelto mediante herramientas/lectores alternativos, sin cambiar instalación. Texturas wc3ctl con hashes en originals/provenance.json decodifican y se ven en visor y Classic1.27b. La conversión PNG de Pillow perdía el alfa corporal usado por capas del Paladín: ambos consumidores usan ahora los BLP originales correctos, y los hombros rojos aparecen (editor-bust-final.png, safe-move-4.png). La extracción mpyq antigua no se reutiliza.
+Se usó venv con Pillow y node --test (41PASS), sin instalar npm. Un cat de codegraph.json ausente y un error auxiliar de indentación no alteraron fuentes; lectura por MCP/SQLite y comando corregido recuperados. WM_CLOSE no confirmó salida; Win+Q yS cerraron los procesos propios. ydotool type requiere -- antes de comandos con guion; después se verificó su efecto en capturas. La captura de monitor incorrecto inicial se descartó y se repitió asociando PID/ventana/monitor.
+La consulta web al PDF Art Tools devolvió Unsupported content-type; se leyó su copia local ya disponible art-tools.txt (líneas87–112,193–244). Las fuentes primarias de parser se abrieron por web correctamente. No cambia la evaluación.
+
+22/10/2026: `npm test --prefix ui-studio` no se ejecutó porque npm no está en PATH (127). Node sí está disponible y el package declara `node --test tests/*.test.mjs`; se usa directamente ese runner, sin instalar herramientas. Resultado se registrará en ui-tests-final.log. La partida propia714858 ya no existía al verificar la confirmación; no se enviaron teclas a otra ventana ni se atribuye su cierre al agente.
+
+El Python del PATH carece dePIL, por lo que no produjo screen2-idle-contact.png; lectura de esa salida falló en cascada. Se utiliza herramienta de imágenes disponible para contacto o fuentes de entorno Python ya configuradas. Pruebas Node directas:44/44PASS, sin npm.
+
+Auxiliares de esta revisión: `wc3ctl file get` no existe en0.3.0; ayuda consultada y extracción corregida a `wc3ctl extract ARCHIVO RUTA --out SALIDA --json`, devuelve212765bytes de Tauren.mdx. `magick montage` requería fuente explícita: `-font DejaVu-Sans` recupera idle-contact.png. El visor diagnóstico inicialmente remapeaba el MDX raíz a portraits en lugar de source; resuelto por extensión, tab11 cargó geometría original y source-original-camera.png acredita recuperación.
+
+Preparación LAN: perfil privado creado, puerto6218 y menú Red de Área Local abiertos. La escritura del nombre con entrada de escritorio no se aplicó, Crear juego devolvió «Escribe un nombre de jugador». No se creó ni inició partidaLAN y no se atribuye error de red. El usuario autoriza volver aSP siLAN tarda; se cierra la instancia propia y se retoma el lanzador previo. El auxiliarLAN queda identificado como preparación de menú, sin automatizar ni acreditar host iniciado.
+
+22/10, captura auxiliar de detalle: montage se lanzó antes de terminar la serie y sin fuente explícita; faltaba idle9 y RenderFreetype devolvió fuente inválida. La serie terminó correctamente y se repitió con DejaVu-Sans; depth-idle-detail-final.png generado/revisado. No se usa la imagen parcial para validar el ciclo.
+
+22/10, medición auxiliar de movimiento: ModelEditor.pose rechazó Unsupported inheritance/billboard al evaluar el MDX adaptado, que sí tiene billboard. El helper no cubre ese caso; no es un fallo del MDX. La validación por tracks y la reproducción real del editor/motor se conservan, sin afirmar validación de pose mediante ese evaluador.
+
+Grabación: primera toma no acredita pausa durante escritura ni movimiento con panel porque avanzó hasta cerrar; conservada como control, repetida. La segunda toma pausa demasiado tarde para texto parcial; se corregirá el procedimiento de entrada, no se atribuye al controlador. Una lectura de video-paused-text.png se intentó antes de crearse; recuperada tras verificar existencia. Un arranque Popen no persistió tras finalizar la celda (sin ventana/log); native_probe rechazó identidad antigua cerrada, sin enviar entradas. Se relanza en sesión persistente y se exige identidad nueva antes de continuar.
+
+Verificación de grabación: PIL no disponible en Python del sistema. Relectura equivalente con ffmpeg. La primera aserción de igualdad binaria entre los píxeles del texto no pasó: diferencia media0.0022/255, sin canales con diferencia>16, compatible con redondeo de render; no prueba cambio de texto. Se conserva ese resultado y se compara la imagen con tolerancia explícita: contenido visual pausado igual, frente a19.83/255 del retrato móvil. Vídeo decodificado íntegro y fotogramas extraídos. Sin instalar dependencias ni modificar el vídeo/mapa.

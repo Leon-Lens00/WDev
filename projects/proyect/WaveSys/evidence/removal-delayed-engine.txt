@@ -1,0 +1,13 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "WAVESYS REMOVAL removal-delayed COMPLETE" )
+	call Preload( "setup=1" )
+	call Preload( "engineRemoved=1" )
+	call Preload( "active=1 tracked=1" )
+	call Preload( "finished=0" )
+	call Preload( "forceTerminated=0" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

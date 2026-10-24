@@ -1,0 +1,473 @@
+// Aerial Shackles
+[Amls]
+Name=Ataduras aéreas
+Tip=A|cffffcc00t|raduras aéreas
+Ubertip="Sujeta mágicamente con ataduras a una unidad de aire enemiga seleccionada para que no pueda moverse ni atacar y recibe <Amls,DataA1> de daño por segundo. |nDura <Amls,Dur1> segundos."
+Hotkey=T
+
+// Aerial Shackles Target
+[Bmlt]
+Bufftip=Ataduras aéreas
+Buffubertip="Esta unidad está sujeta con ataduras aéreas: no se puede mover ni atacar y recibirá daño gradualmente."
+
+// area of effect detection (scry)
+[AHta]
+Name=Mostrar
+Tip=|cffffcc00M|rostrar
+Ubertip="Muestra un área del mapa. |nDetecta unidades invisibles. |nDura <AHta,Dur1> segundos."
+Hotkey=M
+
+// Feedback
+[Afbk]
+Name=Reacción
+EditorSuffix= (Deshacedor de hechizos)
+Tip=Reacción
+Ubertip="Los ataques del deshacedor de hechizos destruyen <Afbk,DataA1> de maná por impacto. El maná se consume, causando daño a la unidad atacada."
+
+// Feedback
+[Afbt]
+Name=Reacción
+EditorSuffix= (Torre arcana)
+Tip=Reacción
+Ubertip="Los ataques de esta torre destruyen <Afbt,DataA1> de maná por impacto. El maná se consume, causando daño a la unidad atacada."
+
+
+// Control Magic
+[Acmg]
+Name=Control mágico
+Tip=Control má|cffffcc00g|rico
+Ubertip="Toma el control de una unidad enemiga invocada. El coste de maná es de un <Acmg,DataB1,%>% de puntos de impacto básicos de la unidad."
+Hotkey=G
+
+[Bcmg]
+Bufftip=Control mágico
+Buffubertip="Esta unidad está controlada: ahora obedece a un nuevo señor."
+
+// Siphon Mana
+[AHdr]
+Name=Sifón de maná
+Tip=Sifón de ma|cffffcc00n|rá - [|cffffcc00Nivel 1|r],Sifón de ma|cffffcc00n|rá - [|cffffcc00Nivel 2|r],Sifón de ma|cffffcc00n|rá - [|cffffcc00Nivel 3|r]
+Ubertip="Absorbe la energía mágica de una unidad enemiga seleccionada, le quita <AHdr,DataB1> maná por segundo y se lo da al mago sanguinario. |nDura <AHdr,Dur1> segundos.","Absorbe la energía mágica de una unidad enemiga seleccionada, le quita <AHdr,DataB2> maná por segundo y se lo da al mago sanguinario. |nDura <AHdr,Dur2> segundos.","Absorbe la energía mágica de una unidad enemiga seleccionada, le quita <AHdr,DataB3> maná por segundo y se lo da al mago sanguinario. |nDura <AHdr,Dur3> segundos."
+Hotkey=N
+Researchtip="Aprender Sifón de ma|cffffcc00n|rá - [|cffffcc00Nivel %d|r]"
+Researchubertip="Absorbe la energía mágica de una unidad seleccionada, le quita maná cada segundo y se lo da al mago sanguinario. |nDura <AHdr,Dur1> segundos. |n|n|cffffcc00Nivel 1|r - <AHdr,DataB1> de maná consumido por segundo. |n|cffffcc00Nivel 2|r - <AHdr,DataB2> de maná consumido por segundo. |n|cffffcc00Nivel 3|r - <AHdr,DataB3> de maná consumido por segundo." 
+Researchhotkey=N
+
+// Flak Cannons
+[Aflk]
+Name=Cañones de fuego antiaéreo
+Tip=Cañones de fuego antiaéreo
+Ubertip="Utiliza poderosos cañones para causar daño de zona a las unidades enemigas de aire."
+
+// Frag Shards
+[Afsh]
+Name=Fragmentos
+Tip=Fragmentos
+Ubertip="Utiliza morteros fragmentados para aumentar el daño de zona que causa el ataque de los Equipos mortero."
+
+// Barrage
+[Aroc]
+Name=Descarga
+Tip=Descarga
+Ubertip="Dispara poderosos cohetes a unidades de aire enemigas cercanas causando <Aroc,DataA1> de daño por impacto."
+
+// Tank upgrade
+[Srtt]
+Requires=Rhrt
+
+// Magic Defense
+[Amdf]
+Name=Defensa mágica
+Tip=|cffffcc00D|refensa mágica
+Untip=Parar |cffffcc00D|refensa mágica
+Ubertip="Activar para conseguir inmunidad mágica. La velocidad de movimiento se reduce en un <Adef,DataC1,%>%."
+Unubertip="Desactivar para moverse a velocidad normal. Recibe daño de conjuros."
+Hotkey=D
+Unhotkey=D
+
+// Sphere
+[Asph]
+Name=Esfera
+
+// Spell Steal
+[Asps]
+Name=Robar conjuro
+Tip=|cffffcc00R|robar conjuro
+Ubertip="Roba un conjuro positivo de una unidad enemiga y lo aplica a una unidad amiga cercana, o toma un conjuro negativo de una unidad amiga y lo aplica a una unidad enemiga cercana."
+Untip="|cffc3dbffHaz clic con el botón derecho del ratón para activar la conjuración automática.|r"
+Unubertip="|cffc3dbffHaz clic con el botón derecho del ratón para desactivar la conjuración automática.|r"
+Hotkey=R
+Unhotkey=R
+
+// Cloud
+[Aclf]
+Name=Nube
+Tip=|cffffcc00N|rube
+Ubertip="Se lanza contra edificios enemigos con ataque a distancia para evitar que puedan atacar. |nDura <Aclf,Dur1> segundos."
+Hotkey=N
+
+[Bclf]
+Bufftip=Nube
+Buffubertip="Este edificio tiene una Nube encima. No puede utilizar su ataque a distancia."
+
+// Flame Strike
+[AHfs]
+Name=Llamarada
+Tip=|cffffcc00L|rlamarada - [|cffffcc00Nivel 1|r],|cffffcc00L|rlamarada - [|cffffcc00Nivel 2|r],|cffffcc00L|rlamarada - [|cffffcc00Nivel 3|r]
+Ubertip="Conjura un pilar de llamas que quema a las unidades de tierra con 45 puntos de daño por segundo durante 3 segundos. Cuando el pilar de llamas empieza a calmarse, las unidades que están dentro siguen recibiendo un daño menor.","Conjura un pilar de llamas que quema a las unidades de tierra con 80 puntos de daño por segundo durante 3 segundos. Cuando el pilar de llamas empieza a calmarse, las unidades que están dentro siguen recibiendo un daño menor.","Conjura un pilar de llamas que quema a las unidades de tierra con 110 puntos de daño por segundo durante 3 segundos. Cuando el pilar de llamas empieza a calmarse, las unidades que están dentro siguen recibiendo un daño menor."
+Hotkey=L
+Researchtip="Aprender |cffffcc00L|rlamarada - [|cffffcc00Nivel %d|r]"
+Researchubertip="Conjura un pilar de fuego que daña gradualmente unidades de tierra en un área seleccionada. |n|n|cffffcc00Nivel 1|r - 45 daños por segundo durante 3 segundos, seguido de un daño menor de 6 segundos. |n|cffffcc00Nivel 2|r - 80 daños por segundo durante 3 segundos, seguido de un daño suave de 6 segundos. |n|cffffcc00Nivel 3|r - 110 daños por segundo durante 3 segundos, seguido de un daño moderado durante 6 segundos."
+Researchhotkey=L
+
+[BHfs]
+Bufftip=Llamarada
+Buffubertip="Esta unidad está bajo los efectos de Llamarada y está recibiendo daño gradualmente."
+
+// Banish
+[AHbn]
+Name=Desaparición
+Tip=D|cffffcc00e|rsaparición - [|cffffcc00Nivel 1|r],D|cffffcc00e|rsaparición - [|cffffcc00Nivel 2|r],D|cffffcc00e|rsaparición - [|cffffcc00Nivel 3|r]
+Ubertip="Convierte a una unidad no mecánica en etérea y reduce su velocidad de movimiento en un <AHbn,DataA1,%>% durante <AHbn,Dur1> segundos. Las criaturas etéreas no pueden atacar, pero pueden lanzar conjuros y determinados conjuros lanzados sobre ellas tendrán un efecto mayor.","Convierte a una unidad en etérea y reduce su velocidad de movimiento en un <AHbn,DataA2,%>% durante <AHbn,Dur2> segundos. Las criaturas etéreas no pueden atacar, pero pueden lanzar conjuros y determinados conjuros lanzados sobre ellas tendrán un efecto mayor.","Convierte a una unidad en etérea y reduce su velocidad de movimiento en un <AHbn,DataA3,%>% durante <AHbn,Dur3> segundos. Las criaturas etéreas no pueden atacar, pero pueden lanzar conjuros y determinados conjuros lanzados sobre ellas tendrán un efecto mayor."
+Hotkey=E
+Researchtip="Aprender D|cffffcc00e|rsaparición - [|cffffcc00Nivel %d|r]"
+Researchubertip="Convierte a una unidad no mecánica en etérea y reduce su velocidad de movimiento en un <AHbn,DataA1,%>% durante un corto período. Las criaturas etéreas no pueden atacar, pero pueden lanzar conjuros y determinados conjuros lanzados sobre ellas tendrán un efecto mayor. |n|n|cffffcc00Nivel 1|r - Dura <AHbn,Dur1> segundos por <AHbn,Cost1> maná. |n|cffffcc00Nivel 2|r - Dura <AHbn,Dur2> segundos por <AHbn,Cost2> maná. |n|cffffcc00Nivel 3|r - Dura <AHbn,Dur3> segundos por <AHbn,Cost3> maná."
+Researchhotkey=E
+
+[BHbn]
+Bufftip=Desaparición
+Buffubertip="Esta unidad está bajo los efectos de Desaparición: las criaturas desaparecidas no pueden atacar pero pueden lanzar conjuros y reciben un daño extra de los ataques mágicos y los conjuros."
+
+// Summon Phoenix
+[AHpx]
+Name=Fénix
+Tip=Féni|cffffcc00x|r
+Ubertip="Invoca un poderoso fénix. El fénix quema con tanta intensidad que se daña a sí mismo y a las unidades enemigas cercanas. Tiene Conjuro de inmunidad y Piel resistente. Cuando un fénix muere, deja un huevo que incubará otra cría de fénix. |n|n|cffffcc00Ataca a unidades de tierra y aire.|r"
+Hotkey=X
+Researchtip=Aprender Féni|cffffcc00x|r
+Researchubertip="Invoca un poderoso fénix. El fénix quema con tanta intensidad que se daña a sí mismo y a las unidades enemigas cercanas. Tiene Conjuro de inmunidad y Piel resistente. Cuando un fénix muere, deja un huevo que incubará otra cría de fénix. |n|n|cffffcc00Ataca a unidades de tierra y aire.|r"
+Researchhotkey=X
+
+// Phoenix (morph)
+[Aphx]
+Name=Metamorfosear fénix (relativo al huevo)
+
+// Phoenix (progress bar)
+[Bphx]
+Bufftip=Fénix
+Buffubertip="El poder del fénix se extiende."
+
+// Phoenix Fire
+[Apxf]
+Name=Fuego de fénix
+Tip=Fuego de fénix
+Ubertip="Dispara llamas e incendia a los enemigos cercanos."
+
+// Phoenix Fire
+[Bpxf]
+Bufftip=Fuego de fénix
+Buffubertip="Esta unidad está siendo quemada por Fuego Fénix; irá recibiendo daño gradualmente."
+
+// Flying Machine Bombs
+[Agyb]
+Name=Bombas de Máquina voladora
+Tip=Bombas de Máquina voladora
+Ubertip="Permite que las Máquinas voladoras ataquen a unidades de tierra."
+
+// Storm hammers
+[Asth]
+Name=Martillos de tormenta
+Tip=Martillos de tormenta
+Ubertip="Permite que los ataques de los jinetes de grifos, causen daño a múltiples unidades."
+
+// Flying Machine Vision
+[Agyv]
+Name=Vista certera
+Tip=Vista certera
+Ubertip="Muestra a las unidades invisibles cercanas."
+EditorSuffix= (Máquina voladora)
+
+// Defend
+[Adef]
+Name=Defender
+Tip=De|cffffcc00f|render
+Ubertip="Si lo activas recibes sólo <Adef,DataA1,%>% de daño de los ataques perforadores, pero tu velocidad de movimiento se reduce un <Adef,DataC1,%>%."
+Untip=Detener de|cffffcc00f|render
+Unubertip="Si lo desactivas te moverás a velocidad normal, pero recibirás el daño normal en los ataques perforadores."
+Hotkey=F
+Unhotkey=F
+
+// Flare
+[Afla]
+Name=Bengala
+Tip=|cffffcc00B|rengala
+Ubertip="Lanza una llamarada sobre el objetivo y muestra la zona durante <Afla,Dur1> segundos. |nRevela unidades invisibles."
+Hotkey=B
+
+// Magic Sentry (passive)
+[Adts]
+Name=Centinela mágico
+Tip=Centinela mágico
+Ubertip="Muestra las unidades invisibles cercanas."
+EditorSuffix= (Torres humanas)
+
+// Inner Fire
+[Ainf]
+Name=Fuego interior
+Tip=|cffffcc00F|ruego interior
+Ubertip="Aumenta el daño que infringe la unidad amiga seleccionada en <Ainf,DataA1,%>% y su armadura en <Ainf,DataB1>. |nDura <Ainf,Dur1> segundos."
+Untip="|cffc3dbffHaz clic con el botón derecho del ratón para activar la acción automática.|r"
+Unubertip="|cffc3dbffHaz clic con el botón derecho del ratón para desactivar la acción automática.|r"
+Hotkey=F
+Unhotkey=F
+
+[Binf]
+Bufftip=Fuego interior
+Buffubertip="Esta unidad tiene Fuego interior: tiene un aumento de armadura y daño de ataque."
+
+// Dispel Magic
+[Adis]
+Name=Disipar magia
+Tip=Di|cffffcc00s|ripar magia
+UberTip="Quita todos los conjuros benéficos de las unidades en un área seleccionada. |n|cffffcc00Causa <Adis,DataB1> de daño a las unidades invocadas.|r"
+Hotkey=S
+
+// Heal
+[Ahea]
+Name=Curar
+Tip=|cffffcc00C|rurar
+Ubertip="Cura <Ahea,DataA1> puntos de impacto de una unidad amiga que esté herida y no sea mecánica."
+Untip="|cffc3dbffHaz clic con el botón derecho del ratón para activar la acción automática.|r"
+Unubertip="|cffc3dbffHaz clic con el botón derecho del ratón para desactivar la acción automática.|r"
+Hotkey=C
+Unhotkey=C
+
+[Bhea]
+Bufftip=Curar
+Buffubertip="Esta unidad está siendo curada: se están restaurando los puntos de impacto perdidos."
+
+// Slow
+[Aslo]
+Name=Ralentizar
+Tip=|cffffcc00R|ralentizar
+Ubertip="Ralentiza un <Aslo,DataB1,%>% el índice de ataque de una unidad y su velocidad de movimiento en un <Aslo,DataA1,%>%. |nDura <Aslo,Dur1> segundos."
+Untip="|cffc3dbffHaz clic con el botón derecho del ratón para activar la acción automática.|r"
+Unubertip="|cffc3dbffHaz clic con el botón derecho del ratón para desactivar la acción automática.|r"
+Hotkey=R
+Unhotkey=R
+
+[Bslo]
+Bufftip=Ralentizar
+Buffubertip="Esta unidad está ralentizada: su velocidad de movimiento e índice de ataque se han reducido."
+
+// Invisibility
+[Aivs]
+Name=Invisibilidad
+Tip=|cffffcc00I|rnvisibilidad
+Ubertip="Vuelve invisible una unidad. Si la unidad ataca, usa una habilidad o un conjuro, se volverá visible. |nDura <Aivs,Dur1> segundos."
+Hotkey=I
+
+[Binv]
+Bufftip=Invisibilidad
+Buffubertip="Esta unidad es invisible: las unidades enemigas no pueden verla. Si ataca o lanza un conjuro, se volverá visible."
+
+// Polymorph
+[Aply]
+Name=Polimorfismo
+Tip=P|cffffcc00o|rlimorfismo
+Ubertip="Convierte a una unidad enemiga objetivo en oveja. La unidad seleccionada mantiene sus puntos de impacto y su armadura, pero no puede atacar. |nNo puede lanzarse contra los héroes. |nDura <Aply,Dur1> segundos."
+Hotkey=O
+
+[Bply]
+Bufftip=Polimorfismo
+Buffubertip="Esta unidad está Polimorfoseada: ha sido transformada en una oveja."
+
+// Blizzard
+[AHbz]
+Name=Ventisca
+Tip=Venti|cffffcc00s|rca - [|cffffcc00Nivel 1|r], Venti|cffffcc00s|rca - [|cffffcc00Nivel 2|r], Venti|cffffcc00s|rca - [|cffffcc00Nivel 3|r]
+Ubertip="Invoca <AHbz,DataA1> olas de fragmentos de hielo; cada ola provoca <AHbz,DataB1> de daño a las unidades de una zona","Invoca <AHbz,DataA2> olas de fragmentos de hielo; cada ola provoca <AHbz,DataB2> de daño a las unidades de una zona","Invoca <AHbz,DataA3> olas de fragmentos de hielo; cada ola provoca <AHbz,DataB3> de daño a las unidades de una zona."
+Hotkey=S
+Researchtip="Aprender Venti|cffffcc00s|rca - [|cffffcc00Nivel %d|r]"
+Researchubertip="Atrae olas de fragmentos de hielo que dañan a las unidades de una zona seleccionada. |n|n|cffffcc00Nivel 1|r - <AHbz,DataA1> olas de <AHbz,DataB1> daño cada una. |n|cffffcc00Nivel 2|r - <AHbz,DataA2> olas de <AHbz,DataB2> daño cada una. |n|cffffcc00Nivel 3|r - <AHbz,DataA3> olas de <AHbz,DataB3> daño cada una."
+Researchhotkey=S
+
+[BHbd]
+Bufftip=Ventisca
+Buffubertip="Esta unidad está recibiendo daño de la ventisca."
+
+// Summon Water Elemental
+[AHwe]
+Name=Invocar Elemental del agua
+Tip=Invoca |cffffcc00E|rlemental del Agua - [|cffffcc00Nivel 1|r], Invoca |cffffcc00E|rlemental del Agua - [|cffffcc00Nivel 2|r], Invoca |cffffcc00E|rlemental del Agua - [|cffffcc00Nivel 3|r] 
+Ubertip="Invoca a un Elemental del agua para que ataque a los enemigos del archimago. Tiene <hwat,realHP> puntos de impacto y causa un daño de <hwat,mindmg1> - <hwat,maxdmg1>. |nDura <AHwe,Dur1> segundos. |n|n|cffffcc00Ataca a unidades de tierra y aire.|r","Invoca a un Elemental del agua para que ataque a los enemigos del archimago. Tiene <hwt2,realHP> puntos de impacto y causa un daño de <hwt2,mindmg1> - <hwt2,maxdmg1>. |nDura <AHwe,Dur1> segundos. |n|n|cffffcc00Ataca a unidades de tierra y aire.|r","Invoca a un Elemental del agua para que ataque a los enemigos del archimago. Tiene <hwt3,realHP> puntos de impacto y causa un daño de <hwt3,mindmg1> - <hwt3,maxdmg1>. |nDura <AHwe,Dur1> segundos. |n|n|cffffcc00Ataca a unidades de tierra y aire.|r"
+ResearchUberTip="Invoca a un Elemental del agua para que ataque a los enemigos del archimago. |nDura <AHwe,Dur1> segundos. |n|n|cffffcc00Ataca a unidades de tierra y aire.|r |n|n|cffffcc00Nivel 1|r - <hwat,realHP> puntos de impacto, <hwat,mindmg1> - <hwat,maxdmg1> de daño. |n|cffffcc00Nivel 2|r - <hwt2,realHP> puntos de impacto, <hwt2,mindmg1> - <hwt2,maxdmg1> de daño. |n|cffffcc00Nivel 3|r - <hwt3,realHP> puntos de impacto, <hwt3,mindmg1> - <hwt3,maxdmg1> de daño."
+Hotkey=E
+Researchtip="Aprender a invocar |cffffcc00E|rlemental del Agua - [|cffffcc00Nivel %d|r]"
+Researchhotkey=E
+
+[BHwe]
+Bufftip=Elememtal del agua
+Buffubertip="Las unidades invocadas son vulnerables a los hechizos que disipan magia."
+
+// Brilliance Aura
+[AHab]
+Name=Aura de brillantez
+Tip=Aura de Brillantez - [|cffffcc00Nivel 1|r], Aura de Brillantez - [|cffffcc00Nivel 2|r], Aura de Brillantez - [|cffffcc00Nivel 3|r]
+Ubertip="Proporciona regeneración adicional de maná a las unidades amigas cercanas.","Proporciona regeneración adicional de maná a las unidades amigas cercanas.","Proporciona regeneración adicional de maná a las unidades amigas cercanas."
+Researchtip="Aprender Aura de |cffffcc00B|rrillantez - [|cffffcc00Nivel %d|r]"
+Researchubertip="Proporciona una regeneración del maná adicional a las unidades amigas cercanas. |n|n|cffffcc00Nivel 1|r - Concede regeneración de maná menor. |n|cffffcc00Nivel 2|r - Concede regeneración de maná moderada. |n|cffffcc00Nivel 3|r - Concede regeneración de maná mayor."
+Researchhotkey=B
+
+[BHab]
+Bufftip=Aura de brillantez
+Buffubertip="Esta unidad está bajo los efectos de Aura de brillantez: tiene un aumento de regeneración de maná."
+
+// Mass Teleport
+[AHmt]
+Name=Teletransporte de masa
+Tip=|cffffcc00T|reletransporte de masa
+Ubertip="Teletransporta <AHmt,DataA1> de las unidades cercanas al jugador, incluyendo el archimago, hasta una unidad amiga de tierra o estructura."
+Hotkey=T
+Researchtip=Aprender |cffffcc00T|reletransporte de masa
+Researchubertip="Teletransporta <AHmt,DataA1> de las unidades cercanas al jugador, incluyendo el archimago, hasta una unidad amiga de tierra o estructura."
+Researchhotkey=T
+Globalmessage=
+Globalsound=
+
+// Storm Bolt
+[AHtb]
+Name=Rayo de tormenta
+Tip=|cffffcc00R|rayo de Tormenta - [|cffffcc00Nivel 1|r], |cffffcc00R|rayo de Tormenta - [|cffffcc00Nivel 2|r], |cffffcc00R|rayo de Tormenta - [|cffffcc00Nivel 3|r]
+Ubertip="Lanza un martillo mágico contra la unidad enemiga provocando un daño de <AHtb,DataA1> y aturdiendo al objetivo durante <AHtb,Dur1> segundos.","Lanza un martillo mágico contra la unidad enemiga provocando un daño de <AHtb,DataA2> y aturdiendo al objetivo durante <AHtb,Dur2> segundos.","Lanza un martillo mágico contra la unidad enemiga provocando un daño de <AHtb,DataA3> y aturdiendo al objetivo durante <AHtb,Dur3> segundos."
+Hotkey=R
+Researchtip="Aprender |cffffcc00R|rayo de Tormenta - [|cffffcc00Nivel %d|r]"
+Researchubertip="Un martillo mágico que se lanza contra la unidad enemiga provocando daño y aturdiendo al objetivo. |n|n|cffffcc00Nivel 1|r - <AHtb,DataA1> daño, <AHtb,Dur1> segundos de aturdimiento. |n|cffffcc00Nivel 2|r - <AHtb,DataA2> daño, <AHtb,Dur2> segundos de aturdimiento. |n|cffffcc00Nivel 3|r - <AHtb,DataA3> daño, <AHtb,Dur3> segundos de aturdimiento."
+Researchhotkey=R
+
+[BHtb]
+Bufftip=Rayo de tormenta
+Buffubertip="Esta unidad ha sido aturdida por un Rayo de tormenta: no puede moverse, atacar o lanzar conjuros."
+
+// Thunder Clap
+[AHtc]
+Name=Trueno
+Tip=Tru|cffffcc00e|rno - [|cffffcc00Nivel 1|r], Tru|cffffcc00e|rno - [|cffffcc00Nivel 2|r], Tru|cffffcc00e|rno - [|cffffcc00Nivel 3|r]
+Ubertip="Golpea el suelo provocando un daño de <AHtc,DataA1> a las unidades enemigas de tierra cercanas y ralentizando su velocidad de movimiento en un <AHtc,DataC1,%>% y su índice de ataque en un <AHtc,DataD1,%>%.","Golpea el suelo provocando un daño de <AHtc,DataA2> a las unidades enemigas de tierra cercanas y ralentizando su velocidad de movimiento en un <AHtc,DataC2,%>% y su índice de ataque en un <AHtc,DataD2,%>%.","Golpea el suelo provocando un daño de <AHtc,DataA3> a las unidades enemigas de tierra cercanas y ralentizando su velocidad de movimiento en un <AHtc,DataC3,%>% y su índice de ataque en un <AHtc,DataD3,%>%."
+Hotkey=E
+Researchtip="Aprender Tru|cffffcc00e|rno - [|cffffcc00Nivel %d|r]"
+Researchubertip="Golpea el suelo provocando daño y ralentizando la velocidad de movimiento y el índice de ataque de las unidades enemigas de tierra cercanas. |n|n|cffffcc00Nivel 1|r - <AHtc,DataA1> de daño, <AHtc,DataC1,%>% de movimiento, <AHtc,DataD1,%>% de índice de ataque. |n|cffffcc00Nivel 2|r - <AHtc,DataA2> de daño, <AHtc,DataC2,%>% de movimiento, <AHtc,DataD2,%>% de índice de ataque. |n|cffffcc00Nivel 3|r - <AHtc,DataA3> de daño, <AHtc,DataC3,%>% de movimiento, <AHtc,DataD3,%>% de índice de ataque."
+Researchhotkey=E
+
+[BHtc]
+Bufftip=Trueno
+Buffubertip="Esta unidad ha sido alcanzada por un Rayo: su velocidad de movimiento y su índice de ataque se han reducido."
+
+// Bash
+[AHbh]
+Name=Porrazo
+Tip=Maza - [|cffffcc00Nivel 1|r], Maza - [|cffffcc00Nivel 2|r], Maza - [|cffffcc00Nivel 3|r]
+Ubertip="Proporciona un <AHbh,DataA1>% de posibilidad de que un ataque cause <AHbh,DataC1> de bonificación de daño y aturda al adversario durante <AHbh,Dur1> segundos.","Proporciona un <AHbh,DataA2>% de posibilidad de que un ataque cause <AHbh,DataC1> de bonificación de daño y aturda al adversario durante <AHbh,Dur1> segundos.","Proporciona un <AHbh,DataA3>% de posibilidad de que un ataque cause <AHbh,DataC1> de bonificación de daño y aturda al adversario durante <AHbh,Dur1> segundos."
+Researchtip="Aprender |cffffcc00M|raza - [|cffffcc00Nivel %d|r]"
+Researchubertip="Proporciona la oportunidad de que un ataque provoque una bonificación de daño de <AHbh,DataC1> y aturda a su adversario durante <AHbh,Dur1> segundos. |n|n|cffffcc00Nivel 1|r - <AHbh,DataA1>% de posibilidades por ataque. |n|cffffcc00Nivel 2|r - <AHbh,DataA2>% de posibilidades por ataque. |n|cffffcc00Nivel 3|r - <AHbh,DataA3>% de posibilidades por ataque."
+Researchhotkey=M
+
+[BHbh]
+Bufftip=Porrazo
+Buffubertip="Se ha utilizado la Maza contra esta unidad: no puede moverse, atacar o lanzar conjuros."
+
+// Avatar
+[AHav]
+Name=Gran Avatar
+Tip=Activar |cffffcc00G|rran Avatar
+UberTip="Si activas el Avatar proporcionarás al rey de la montaña una bonificación de armadura de <AHav,DataA1>, una bonificación de puntos de impacto de <AHav,DataB1>, una bonificación de <AHav,DataC1> de daño e inmunidad a los conjuros. |nDura <AHav,Dur1> segundos."
+Untip=Desactivar |cffffcc00G|rran Avatar
+UnUberTip=""
+Hotkey=G
+Unhotkey=G
+Researchtip=Aprender |cffffcc00G|rran Avatar
+ResearchUberTip="Cuando está activado el Avatar, proporciona al rey de la montaña una bonificación de armadura de <AHav,DataA1>, una bonificación de puntos de impacto de <AHav,DataB1>, una bonificación de <AHav,DataC1> de daño e inmunidad a los conjuros. |nDura <AHav,Dur1> segundos."
+Researchhotkey=G
+
+[BHav]
+Bufftip=Avatar
+Buffubertip="Esta unidad está en forma de Avatar: tiene un aumento de puntos de impacto, daño de ataque, armadura y es inmune a los conjuros."
+
+// Holy Light
+[AHhb]
+Name=Luz sagrada
+Tip=|cffffcc00L|ruz sagrada - [|cffffcc00Nivel 1|r], |cffffcc00L|ruz sagrada - [|cffffcc00Nivel 2|r], |cffffcc00L|ruz sagrada - [|cffffcc00Nivel 3|r]
+UberTip="Una luz sagrada que puede curar <AHhb,DataA1> a una unidad amiga de vivos o causar medio daño a una unidad enemiga de muertos vivientes.","Una luz sagrada que puede curar <AHhb,DataA2> a una unidad amiga de vivos o causar medio daño a una unidad enemiga de muertos vivientes.","Una luz sagrada que puede curar <AHhb,DataA3> a una unidad amiga de vivos o causar medio daño a una unidad enemiga de muertos vivientes."
+Hotkey=L
+Researchtip="Aprender |cffffcc00L|ruz sagrada - [|cffffcc00Nivel %d|r]"
+Researchubertip="Una luz sagrada que puede curar a una unidad amiga de vivos o dañar a una unidad enemiga de muertos vivientes. |n|n|cffffcc00Nivel 1|r - Cura <AHhb,DataA1> puntos de impacto. |n|cffffcc00Nivel 2|r - Cura <AHhb,DataA2> puntos de impacto. |n|cffffcc00Nivel 3|r - Cura <AHhb,DataA3> puntos de impacto. "
+Researchhotkey=L
+
+// Divine Shield
+[AHds]
+Name=Escudo divino
+Tip=Activar |cffffcc00E|rscudo divino - [|cffffcc00Nivel 1|r], Activar |cffffcc00E|rscudo divino - [|cffffcc00Nivel 2|r], Activar |cffffcc00E|rscudo divino - [|cffffcc00Nivel 3|r]
+Ubertip="Un escudo impenetrable que rodea esta unidad y la protege de todo daño y conjuro durante <AHds,Dur1> segundos.","Un escudo impenetrable que rodea esta unidad y la protege de todo daño y conjuro durante <AHds,Dur2> segundos.","Un escudo impenetrable que rodea esta unidad y la protege de todo daño y conjuro durante <AHds,Dur3> segundos."
+Untip=Desactivar |cffffcc00E|rscudo Divino
+Hotkey=E
+Unhotkey=E
+Researchtip="Aprender |cffffcc00E|rscudo divino - [|cffffcc00Nivel %d|r]"
+Researchubertip="Un escudo impenetrable que rodea al Paladín y le protege de todo daño y conjuro durante un periodo de tiempo determinado. |n|n|cffffcc00Nivel 1|r - Dura <AHds,Dur1> segundos. |n|cffffcc00Nivel 2|r - Dura <AHds,Dur2> segundos. |n|cffffcc00Nivel 3|r - Dura <AHds,Dur3> segundos."
+Researchhotkey=E
+Globalmessage=
+Globalsound=
+
+[BHds]
+Bufftip=Escudo divino
+Buffubertip="Esta unidad está bajo un Escudo divino: es invulnerable."
+
+// Devotion Aura
+[AHad]
+Name=Aura de devoción
+Tip=Aura de devoción - [|cffffcc00Nivel 1|r], Aura de devoción - [|cffffcc00Nivel 2|r], Aura de devoción - [|cffffcc00Nivel 3|r]
+Ubertip="Proporciona <AHad,DataA1> armadura adicional a las unidades amigas cercanas.","Proporciona <AHad,DataA2> armadura adicional a las unidades amigas cercanas.","Proporciona <AHad,DataA3> armadura adicional a las unidades amigas cercanas."
+Researchtip="Aprender |cffffcc00A|rura de devoción - [|cffffcc00Nivel %d|r]"
+Researchubertip="Proporciona armadura adicional a las unidades amigas cercanas. |n|n|cffffcc00Nivel 1|r - Aumenta en <AHad,DataA1> la armadura básica. |n|cffffcc00Nivel 2|r - Aumenta en <AHad,DataA2> la armadura básica. |n|cffffcc00Nivel 3|r - Aumenta en <AHad,DataA3> la armadura básica."
+Researchhotkey=A
+
+[BHad]
+Bufftip=Aura de devoción
+Buffubertip="Esta unidad está bajo los efectos de Aura de devoción: tiene un aumento de armadura."
+
+// Resurrection
+[AHre]
+Name=Resurrección
+Tip=|cffffcc00R|resurrección
+Ubertip="Devuelve a la vida los cadáveres de <AHre,DataA1> unidades amigas cercanas."
+Hotkey=R
+Researchtip=Aprender |cffffcc00R|resurrección
+Researchubertip="Devuelve a la vida los cadáveres de <AHre,DataA1> unidades amigas cercanas."
+Researchhotkey=R
+
+// Militia
+[Amil]
+Name=Llamamiento a las armas
+Tip=|cffffcc00L|rlamamiento a las armas
+Untip=Vuelta al |cffffcc00T|rrabajo
+Ubertip="Corre al Ayuntamiento más cercano para armar al campesino y convertirlo en soldado. |nDura <Amil,Dur1> segundos."
+Unubertip="Corre al Ayuntamiento más cercano para desarmar al soldado y convertirlo en campesino."
+Hotkey=L
+Unhotkey=T
+EditorSuffix= (Campesino)
+
+[Bmil]
+Bufftip=Milicia
+Buffubertip="Esta unidad se ha convertido en Milicia: tiene un aumento de velocidad de movimiento, índice de ataque, daño de ataque y armadura."
+
+// Militia Conversion
+[Amic]
+Name=Llamamiento a las armas
+Tip=|cffffcc00L|rlamamiento a las armas
+Untip=Vuelta al |cffffcc00T|rrabajo
+Ubertip="Convoca a todos los campesinos cercanos en el Ayuntamiento para ser convertidos en milicia. |nDura <Amil,Dur1> segundos."
+Unubertip="Convoca a toda la milicia en el Ayuntamiento para convertirlos en campesinos."
+Hotkey=L
+Unhotkey=T
+EditorSuffix= (Ayuntamiento)
+
+

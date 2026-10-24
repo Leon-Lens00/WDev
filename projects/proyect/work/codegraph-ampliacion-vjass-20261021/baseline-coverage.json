@@ -1,0 +1,35 @@
+[
+  {
+    "label": "missiles",
+    "counts": {
+      "files": 16,
+      "nodes": 850,
+      "edges": 1141
+    },
+    "symbol_files": 15,
+    "files_with_resolved_cross_file_dependent": 13,
+    "no_semantic_recall_claim": true
+  },
+  {
+    "label": "inventory",
+    "counts": {
+      "files": 56,
+      "nodes": 2576,
+      "edges": 3737
+    },
+    "symbol_files": 56,
+    "files_with_resolved_cross_file_dependent": 27,
+    "no_semantic_recall_claim": true
+  },
+  {
+    "label": "ui",
+    "counts": {
+      "files": 4,
+      "nodes": 126,
+      "edges": 734
+    },
+    "symbol_files": 4,
+    "files_with_resolved_cross_file_dependent": 3,
+    "no_semantic_recall_claim": true
+  }
+]

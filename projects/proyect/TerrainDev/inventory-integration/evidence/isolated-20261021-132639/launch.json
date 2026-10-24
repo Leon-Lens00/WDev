@@ -1,0 +1,17 @@
+{
+  "source": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/TerrainDev-Inventory-probe.w3x",
+  "sha256": "48d306bc335998ae10a6d55e0ae4efd23a33164e62d7590a5d1fe98107abb524",
+  "command": [
+    "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/_v2-entry-point",
+    "--verb=run",
+    "--",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+    "runinprefix",
+    "C:\\WarcraftIII\\war3.exe",
+    "-loadfile",
+    "Maps\\CodexTest\\48d306bc335998ae.w3x",
+    "-window"
+  ],
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/runtime-isolated/pfx",
+  "report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/evidence/isolated-20261021-132639"
+}

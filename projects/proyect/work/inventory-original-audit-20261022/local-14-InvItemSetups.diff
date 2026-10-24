@@ -1,0 +1,20 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/014-InvItemSetups.j
++++ TerrainDev/inventory-integration/src/Inventory_14_Item_Setups.j
+@@ -78,7 +78,7 @@
+         set itm.maxSockets = 1
+         
+         // Pauldron
+-        set itm = CreateInvItem('I000', 'B00P',  600, 0, " Increases the armor of the Hero by 4 when worn.")
++        set itm = CreateInvItem('V001', 'B00P',  600, 0, " Increases the armor of the Hero by 4 when worn.")
+         set itm.slot = 2
+         set itm.slotAlt = 8
+         call itm.addBonus(BONUS_ARMOR, 4)
+@@ -144,7 +144,7 @@
+         set itm.maxSockets = 1
+         
+         // Searing Blade
+-        set itm = CreateInvItem('srbd', 'B000',  1650, 0, "Adds 10 bonus fire damage to the attack of a Hero when carried. The Hero's attacks also do splash damage to nearby enemy units.")
++        set itm = CreateInvItem('srbd', 'V000',  1650, 0, "Adds 10 bonus fire damage to the attack of a Hero when carried. The Hero's attacks also do splash damage to nearby enemy units.")
+         set itm.slot = 13
+         set itm.equipAbility = 'AIfw'
+         set itm.equipCondition = Filter(function CustomItemCondition)

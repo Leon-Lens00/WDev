@@ -1,0 +1,11 @@
+`codegraph_explore` was unavailable; I inspected source read-only.
+
+**The call is direct:** `Timer.destroy → DestructionQueue.add(this)`. There is no intermediate destroy wrapper. `destroy` reads `ExpirationCode(this).timerId` and queues only when `registered` is true **and** `Handler.expiringTimer == timerId`. Otherwise, registered entries are destroyed immediately; unregistered entries are marked disabled. [Systems/TimerTools/script.j:733–755](Systems/TimerTools/script.j#L733)
+
+The surrounding callback wiring explains that condition:
+
+- `Handler.init` assigns `handler = function thistype.expire`; `TimerList.add` passes `handler` to `TimerStart`. [script.j:719–723](Systems/TimerTools/script.j#L719), [script.j:627–629](Systems/TimerTools/script.j#L627)
+- `ExpirationCode.register` connects the callback through `TimerPool.register`, which uses `TriggerAddCondition`. [script.j:363–381](Systems/TimerTools/script.j#L363), [script.j:174–186](Systems/TimerTools/script.j#L174)
+- `Handler.expire` sets `expiringTimer`, evaluates that timer’s trigger, then clears it. A callback calling `Timer.destroy` during evaluation therefore reaches the queue under the conditions above. [script.j:700–705](Systems/TimerTools/script.j#L700)
+
+`DestructionQueue.add` appends the entry to its parent timer’s queue; subsequent `clean` calls `ExpirationCode.destroy`. The supplied callback’s own call to `Timer.destroy` is caller-dependent, not guaranteed here. [script.j:545–569](Systems/TimerTools/script.j#L545)

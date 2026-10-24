@@ -1,0 +1,20 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/041-UnitMaxState.j
++++ TerrainDev/inventory-integration/src/Inventory_41_UnitMaxState.j
+@@ -120,7 +120,7 @@
+ 
+ //! textmacro UnitMaxState_Configuration takes LOAD_ABILITIES, ABILITY_COUNT, LIFE_PREFIX, MANA_PREFIX
+     //*
+-    //! externalblock extension=lua ObjectMerger $FILENAME$
++    // externalblock extension=lua ObjectMerger $FILENAME$
+     //! i function CreateAbilities(baseAbility, rawcodePrefix, field, name, icon)
+     //! i     k = 0
+     //! i     for sign = -1, 1, 2 do
+@@ -152,7 +152,7 @@
+     //! i     CreateAbilities("AIlf", "$LIFE_PREFIX$", "Ilif", "Life", "BTNHealthStone.blp")
+     //! i     CreateAbilities("AImz", "$MANA_PREFIX$", "Iman", "Mana", "BTNManaStone.blp")
+     //! i end
+-    //! endexternalblock
++    // endexternalblock
+     // */
+     
+     globals

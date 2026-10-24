@@ -1,0 +1,321 @@
+> JASS/vJASS local support: structural/static subset. Bounded macro/module projections and indexed-file import links; generated members anchor to invocation source, not expanded bodies. Computed dispatch and other unmodeled cases remain unresolved; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:39: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> 378 more extraction diagnostics in these files.
+
+**Additional graph links among your symbols**
+(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)
+
+- missileActionDest → missileTerminateP   [static JASS: calls]
+- missileActionItem → missileTerminateP   [static JASS: calls]
+- missileIterateP → missileTerminateP   [static JASS: calls]
+- RapidBolt → missileTerminateP   [contains]
+- missileTerminateP → StopPeriodic   [static JASS: calls]
+- missileTerminateP → onRemove   [static JASS: calls]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: RapidFire.RapidBolt.missileTerminateP RapidFire.RapidBolt.onRemove**
+
+Found 76 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `missileTerminateP` (libraries/RapidFire.j:39) — 3 callers in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `onRemove` (libraries/RapidFire.j:33) — 1 caller in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `terminate` (libraries/Missile.j:647) — 2 callers in `libraries/RapidFire.j`, `libraries/Missile.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`libraries/RapidFire.j`** — INTERVAL(constant), now(calls), now(method), fromActor(calls), fromActor(method), +66 more
+
+```jass
+1	library RapidFire initializer Init requires GroundMotion, Missile, Table, TimerUtils, SpellEffectEvent, RegisterPlayerUnitEvent
+2	struct RapidBolt extends array
+3	    private static unit array source
+4	    private static player array owner
+5	    readonly static integer live = 0
+6	    readonly static integer hits = 0
+7	    readonly static integer walls = 0
+8	
+9	    private static method resolve takes Missile m returns boolean
+10	        local integer result = GroundCollision.trace(m.prevX,m.prevY,m.x,m.y,16.,source[m],owner[m],true)
+11	        local unit target = GroundCollision.hit
+12	        local unit caster = source[m]
+13	        if result == 2 then
+14	            set hits = hits+1
+15	            if GetUnitTypeId(caster) != 0 then
+16	                call UnitDamageTarget(caster,target,25.,false,false,ATTACK_TYPE_NORMAL,DAMAGE_TYPE_MAGIC,null)
+17	            endif
+18	        elseif result == 1 or m.z < 0. then
+19	            set walls = walls+1
+20	            set result = 1
+21	        endif
+22	        set target = null
+23	        set caster = null
+24	        return result != 0
+25	    endmethod
+26	    static method onPeriod takes Missile m returns boolean
+27	        return resolve(m)
+28	    endmethod
+29	    static method onFinish takes Missile m returns boolean
+30	        call resolve(m)
+31	        return true
+32	    endmethod
+33	    static method onRemove takes Missile m returns boolean
+34	        set source[m] = null
+35	        set owner[m] = null
+36	        set live = live-1
+37	        return false
+38	    endmethod
+39	    implement MissileStruct
+40	
+41	    static method shoot takes unit caster, real px, real py returns Missile
+42	        local real x = GetUnitX(caster)
+43	        local real y = GetUnitY(caster)
+44	        local real dx = px-x
+45	        local real dy = py-y
+46	        local real distance = SquareRoot(dx*dx+dy*dy)
+47	        local real angle
+48	        local real length
+49	        local Missile m
+50	        if distance < 8. then
+51	            set angle = GetUnitFacing(caster)*bj_DEGTORAD
+52	            set distance = 600.
+53	            set dx = distance*Cos(angle)
+54	            set dy = distance*Sin(angle)
+55	        endif
+56	        set length = RMinBJ(distance,1000.)
+57	        set px = x+dx*length/distance
+58	        set py = y+dy*length/distance
+59	        call GroundCollision.trace(x,y,x+dx*24./distance,y+dy*24./distance,16.,caster,GetOwningPlayer(caster),false)
+60	        set m = Missile.createXYZ(GroundCollision.x,GroundCollision.y,70.,px,py,70.)
+61	        set source[m] = caster
+62	        set owner[m] = GetOwningPlayer(caster)
+63	        set m.owner = owner[m]
+64	        // Ability-specific swept collision chooses obstacles before damage;
+65	        // it does not change the common module's callback ordering.
+66	        set m.collision = 0.
+67	        set m.model = "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl"
+68	        call m.setMovementSpeed(1200.)
+69	        set live = live+1
+70	        call launch(m)
+71	        return m
+72	    endmethod
+73	endstruct
+74	
+75	struct RapidPair
+76	    readonly unit controller
+
+... (gap: actor (libraries/RapidFire.j:77), motion (libraries/RapidFire.j:78), firing (libraries/RapidFire.j:79), pending (libraries/RapidFire.j:80), aimX (libraries/RapidFire.j:81), aimY (libraries/RapidFire.j:82), +35 more) ...
+
+167	            call motion.leave(resume)
+168	        endif
+169	    endmethod
+170	    private static method park takes nothing returns nothing
+171	        local thistype this = GetTimerData(GetExpiredTimer())
+172	        call SetUnitPosition(controller,WorldBounds.minX+256.,WorldBounds.minY+256.)
+173	    endmethod
+174	    method move takes real px, real py returns nothing
+175	        call motion.destination(px,py)
+176	    endmethod
+177	    static method create takes unit proxy, unit visible returns thistype
+178	        local thistype this = thistype.allocate()
+179	        set controller = proxy
+180	        set actor = visible
+181	        set firing = false
+182	        set pending = 0
+183	        set lastShot = -1000.
+184	        set lastMissile = 0
+185	        set aimX = GetUnitX(visible)+500.
+186	        set aimY = GetUnitY(visible)
+187	        set reset = NewTimerEx(this)
+188	        set motion = GroundMotion.create(visible)
+189	        set controls[GetHandleId(proxy)] = this
+190	        set actors[GetHandleId(visible)] = this
+191	        set previous = 0
+192	        set next = first
+193	        if first != 0 then
+194	            set thistype(first).previous = this
+195	        endif
+196	        set first = this
+197	        set pairs = pairs+1
+198	        return this
+199	    endmethod
+200	    method destroy takes nothing returns nothing
+201	        call finish(false)
+202	        call motion.destroy()
+203	        call controls.remove(GetHandleId(controller))
+204	        call actors.remove(GetHandleId(actor))
+205	        call ReleaseTimer(reset)
+206	        call RemoveUnit(controller)
+207	        if previous == 0 then
+208	            set first = next
+209	        else
+210	            set thistype(previous).next = next
+211	        endif
+212	        if next != 0 then
+213	            set thistype(next).previous = previous
+214	        endif
+215	        set controller = null
+216	        set actor = null
+217	        set reset = null
+218	        set pairs = pairs-1
+219	        call deallocate()
+220	    endmethod
+221	    private static method tick takes nothing returns nothing
+222	        local thistype this = first
+223	        local thistype following
+224	        local real time = now()
+225	        set moving = 0
+226	        set blocked = 0
+227	        loop
+228	            exitwhen this == 0
+229	            set following = next
+230	            if not GroundCollision.alive(actor) or not GroundCollision.alive(controller) then
+231	                call destroy()
+232	            else
+233	                call SetWidgetLife(controller,GetWidgetLife(actor))
+234	                if firing then
+235	                    call motion.step(1./32.)
+236	                    call face()
+237	                    if time+0.0001 >= nextShot then
+238	                        if pending > 0 then
+239	                            call emit()
+240	                            set nextShot = nextShot+INTERVAL
+241	                        else
+242	                            call finish(true)
+243	                        endif
+244	                    endif
+245	                    if motion.hasGoal then
+246	                        set moving = moving+1
+247	                    endif
+248	                    if motion.blocked then
+249	                        set blocked = blocked+1
+250	                    endif
+251	                endif
+252	            endif
+253	            set this = following
+254	        endloop
+255	    endmethod
+256	    private static method pointOrder takes nothing returns nothing
+257	        local thistype this = fromController(GetTriggerUnit())
+258	        local integer order = GetIssuedOrderId()
+259	        if this != 0 then
+260	            // A new cast must not be cancelled by a queued proxy move reset.
+261	            call PauseTimer(reset)
+262	            if order == 851986 or order == 851971 then
+263	                call move(GetOrderPointX(),GetOrderPointY())
+264	                call TimerStart(reset,0.,false,function thistype.park)
+265	            endif
+266	        endif
+267	    endmethod
+268	    private static method spell takes nothing returns nothing
+269	        local thistype this = fromController(GetTriggerUnit())
+270	        if this != 0 then
+271	            call cast(GetSpellTargetX(),GetSpellTargetY())
+272	        endif
+273	    endmethod
+274	    private static method selected takes nothing returns nothing
+275	        local thistype this = fromActor(GetTriggerUnit())
+276	        if this != 0 and GetLocalPlayer() == GetTriggerPlayer() then
+277	            // Selection only; all gameplay state is outside the local branch.
+278	            call ClearSelection()
+279	            call SelectUnit(controller,true)
+280	        endif
+281	    endmethod
+282	    static method initialize takes nothing returns nothing
+283	        set controls = Table.create()
+284	        set actors = Table.create()
+285	        call TimerStart(clock,1000000.,false,null)
+286	        call TimerStart(ticker,1./32.,true,function thistype.tick)
+287	        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER,function thistype.pointOrder)
+288	        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SELECTED,function thistype.selected)
+289	        call RegisterSpellEffectEvent('Arpf',function thistype.spell)
+290	    endmethod
+291	endstruct
+292	private function Init takes nothing returns nothing
+293	    call RapidPair.initialize()
+294	endfunction
+295	endlibrary
+296	
+```
+
+**`libraries/Missile.j`** — TIMER_TIMEOUT(constant), NEUTRAL_PASSIVE(constant), MAXIMUM_COLLISION_SIZE(constant), COLLISION_TYPE_CIRCLE(constant), COLLISION_TYPE_RECTANGLE(constant), +43 more
+
+```jass
+1370	    // =====
+1371	    //
+1372	    // Fires every Missile_TIMER_TIMEOUT.
+1373	    private function Fire takes nothing returns nothing
+1374	        local integer i = remove[0]
+1375	        set remove[0] = 0
+1376	        loop
+1377	            exitwhen 0 == i
+1378	            if recycling[i] then
+1379	                call TriggerRemoveCondition(CORE, condition[i])
+1380	                set condition[i] = null
+1381	                set active = active - 1
+1382	            endif
+1383	            set destroying[i] = false
+1384	            set recycling[i] = false
+1385	            set i = remove[i]
+1386	        endloop
+1387	        
+1388	        if 0 == active then
+1389	            call PauseTimer(TMR)
+1390	        else
+1391	            // Move all launched missiles.
+1392	            set Missile.temp = nextNode[0]
+1393	            set i = 0
+1394	            loop
+1395	                exitwhen TriggerEvaluate(MOVE)
+1396	                exitwhen i == 60// Moved over 8910 missiles, something buggy happened.
+1397	                set i = i + 1   // This case is impossible, hence never happens. But if I'm wrong, which also never happens 
+1398	            endloop             // then the map 100% crashes. i == 66 will prevent the game crash and Missile will start to 
+1399	                                // to debug itself over the next iterations.
+1400	        
+1401	            // Access all structs using module MissileStruct. 
+1402	            static if DEBUG_MODE and LIBRARY_ErrorMesssage then
+1403	                if not TriggerEvaluate(CORE) then
+1404	                    call ThrowWarning(true, "Missile", "Fire", "op limit", 0, /*
+1405	*/"You just ran into a op limit!
+1406	The op limit protection of Missile is insufficient for your map.
+
+... (gap) ...
+
+1458	        endmethod
+1459	    endmodule
+1460	    
+1461	    module MissileTerminate
+1462	        // Called from missileIterate. "P" to avoid code collision.
+1463	        static method missileTerminateP takes Missile node returns nothing
+1464	            if node.allocated then
+1465	                static if thistype.onRemove.exists then
+1466	                    static if Missile_WRITE_DELAYED_MISSILE_RECYCLING and RecycleBin.recycle.exists then
+1467	                        if thistype.onRemove(node) and GetUnitTypeId(node.dummy) == Missile_DUMMY_UNIT_ID then
+1468	                            call RecycleBin.recycle(node.dummy)
+1469	                            call node.nullBefore()
+1470	                        endif
+1471	                    else
+1472	                        call thistype.onRemove(node)
+1473	                    endif
+1474	                endif
+1475	            
+1476	                call node.terminate()
+1477	                call StopPeriodic(thistype.typeid)
+1478	            endif
+1479	        endmethod
+1480	    endmodule
+1481	    
+1482	    // Allows you to inject missile in certain stages of the motion process.
+1483	    module MissileAction
+```
+
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

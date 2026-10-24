@@ -1,0 +1,31 @@
+Materiales de barras de vida · Classic 1.27b
+
+Jugador: carcasa azul128×256. Enemigo: granate128×512; contenido128×448,
+UV vertical máximo0.875. Canal de vida enemigo2.44 veces más alto.
+Relleno de vida10px de ancho y tramo vertical del marco34px, centrados;
+base del retrato y altura conservadas, proporción fina como la referencia inicial.
+Cada foto de portrait128×128 va aparte del marco; no requiere duplicarlo.
+Se incluyen fotos estáticas de Paladín/Tauren desde geometría y cámara animada
+del MDX original, posePortrait-1 +600ms, raster local con texturas reales.
+La iluminación del render local es aproximada; no se presenta como capturaHUD.
+
+6 BLP1 paletizados alfa8, mipmaps hasta1×1; total378492bytes.
+PNG para preview y SVG editables para carcasas. game/ conserva rutas importables.
+Contratohealthbars.json: rectángulos, orden de capas, UV y elección de personaje.
+Para vida0 ocultar el relleno; para1..100 recortar desde arriba, anclajeabajo;
+20% o menos usaLifeCritical. Los números NO están pintados en textura.
+
+Reproducir desdeProyect:
+node TerrainDev/dialogue-system/tools/render-healthbar-portraits.cjs
+work/shots-vol-i-origen-20261022/plot-env/bin/python TerrainDev/dialogue-system/tools/healthbar-materials.py
+node TerrainDev/dialogue-system/tools/verify-healthbar-materials.cjs
+work/shots-vol-i-origen-20261022/plot-env/bin/python TerrainDev/dialogue-system/tools/healthbar-materials.py --pack
+
+Para añadir personaje: preparar fotoPNG128×128 del portrait, registrar fuente,
+pose/cámara y hash; convertir mediante el mismo escritorBLP, comprobar mipmaps
+y alfa, añadir entradaenportraits. Las rutas son porpersonaje, no porfacción.
+Los originales de Blizzard conservan su procedencia; estos derivados no cambian
+autoría de los personajes. Materiales del marco generados localmente desdeSVG.
+
+PreviewUI Studio independiente: http://127.0.0.1:4317/healthbars.html
+Mapa activo conservado. IntegraciónMDX/JASS y prueba nativa pendientes.

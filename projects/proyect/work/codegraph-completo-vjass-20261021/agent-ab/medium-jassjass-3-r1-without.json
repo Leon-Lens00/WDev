@@ -1,0 +1,39 @@
+{
+  "repo": "medium-jassjass",
+  "flow": 3,
+  "names": [
+    "Jass.trace",
+    "Jass.print"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 25.90257782700064,
+  "usage": {
+    "input_tokens": 100177,
+    "cached_input_tokens": 91136,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 769,
+    "reasoning_output_tokens": 54
+  },
+  "commands": 6,
+  "command_text": [
+    "/usr/bin/bash -lc pwd",
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!*.sqlite*'\"' --glob '\"'!*.db'\"' 'Jass\\\\.(trace|print)|\\\\b(trace|print)\\\\s*[:=]' .\"",
+    "/usr/bin/bash -lc \"rg --files --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' -g '\"'!**/node_modules/**'\"'\"",
+    "/usr/bin/bash -lc \"rg -n -i 'trace|print|debug|interface|function|module|struct' Jass.j\"",
+    "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '1,145p'\"",
+    "/usr/bin/bash -lc \"rg -n '\\\\btrace\\\\b|\\\\bprint\\\\b|\\\\berror\\\\b|\\\\bassert\\\\b|ExecuteFunc|Trigger|Timer|SCOPE_PREFIX|library|scope' Jass.j\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!*.sqlite*'\"' --glob '\"'!*.db'\"' 'Jass\\\\.(trace|print)|\\\\b(trace|print)\\\\s*[:=]' .\"",
+    "/usr/bin/bash -lc \"rg --files --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"' -g '\"'!**/node_modules/**'\"'\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16219-d424-7d22-845a-dc4c109cc65b"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "pid": 1071678,
+  "proc_start": "18086867",
+  "exe": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runtime/Mesen",
+  "rom_sha256": "65b03268afac296330e8ff8d60dd0825879e13ed658b37713c034a3bd074f1d7",
+  "cmd": [
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runtime/Mesen",
+    "--testRunner",
+    "--timeout=40",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runs/final-original-gap20/driver.lua",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/analysis/static-20261023-134543/private/original.sfc"
+  ],
+  "scenario_sha256": "0132900fc2cec3aa5b5da4227f327ad713c5853959be4fd653c16219343ca117",
+  "launcher_sha256": "313b363e1d92f4ea4973a249af73aec798318a2be4dd65c784475f201fa8b1a5",
+  "parameters": {
+    "out": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runs/final-original-gap20",
+    "variant": "original",
+    "lab": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes",
+    "facing": "right",
+    "gap": 20,
+    "state": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runs/ready-original-fixed/ready.mss"
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "repo": "small-noise",
+    "flow": 1,
+    "names": [
+      "Noise.Noise.octavePerlin2D",
+      "Noise.Noise.perlin2D",
+      "Noise.Noise.floor"
+    ],
+    "repetition": 1,
+    "arm": "with",
+    "exit": 0,
+    "seconds": 17.79216372299561,
+    "usage": {
+      "input_tokens": 53886,
+      "cached_input_tokens": 43392,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 629,
+      "reasoning_output_tokens": 113
+    },
+    "commands": 3,
+    "command_text": [
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"'\"",
+      "/usr/bin/bash -lc 'nl -ba Noise.j'",
+      "/usr/bin/bash -lc 'nl -ba OctavePerlin.j'"
+    ],
+    "mcp": 0,
+    "mcp_tools": [],
+    "mcp_errors": [],
+    "forbidden_commands": [
+      "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"'\""
+    ],
+    "source_hashes_unchanged": true,
+    "session_ids": [
+      "01a16207-a44d-72f2-bccb-23f4a9cbd147"
+    ]
+  }
+]

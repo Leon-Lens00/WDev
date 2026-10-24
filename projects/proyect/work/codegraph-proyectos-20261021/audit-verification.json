@@ -1,0 +1,379 @@
+{
+  "timestamp": "2026-10-21T19:36:50.217235+00:00",
+  "upstream_commit": "6560052a6f856855d3f71eee838fd66ccfa4285d",
+  "checks": {
+    "src/mcp/engine.ts": {
+      "identical_to_upstream": true
+    },
+    "src/mcp/project-lifecycle.ts": {
+      "identical_to_upstream": true
+    },
+    "src/mcp/writer-lock.ts": {
+      "identical_to_upstream": true
+    },
+    "src/sync/watcher.ts": {
+      "identical_to_upstream": true
+    },
+    "src/installer/targets/codex.ts": {
+      "identical_to_upstream": true
+    },
+    "src/installer/instructions-template.ts": {
+      "identical_to_upstream": true
+    }
+  },
+  "indexes": [
+    {
+      "label": "missiles",
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "status_exit": 0,
+      "status": {
+        "initialized": true,
+        "version": "1.6.2",
+        "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+        "indexPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src/.codegraph",
+        "lastIndexed": "2026-10-21T19:23:19.043Z",
+        "fileCount": 16,
+        "nodeCount": 938,
+        "edgeCount": 1124,
+        "dbSizeBytes": 2060288,
+        "walSizeBytes": 4152,
+        "backend": "node-sqlite",
+        "journalMode": "wal",
+        "nodesByKind": {
+          "constant": 47,
+          "field": 162,
+          "file": 16,
+          "function": 46,
+          "method": 176,
+          "module": 11,
+          "namespace": 15,
+          "parameter": 242,
+          "struct": 18,
+          "variable": 205
+        },
+        "languages": [
+          "jass"
+        ],
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "worktreeMismatch": null,
+        "index": {
+          "builtWithVersion": "1.6.2+jass-vjass.1",
+          "builtWithExtractionVersion": 28,
+          "currentExtractionVersion": 28,
+          "reindexRecommended": false,
+          "state": "complete",
+          "pendingRefs": 0
+        }
+      },
+      "sqlite_quick_check": [
+        [
+          "ok"
+        ]
+      ],
+      "counts": {
+        "files": 16,
+        "nodes": 938,
+        "edges": 1124
+      },
+      "probe_files_remaining": [],
+      "probe_symbols_remaining": [],
+      "fixture_files_remaining": [],
+      "writer": {
+        "pid": 3434,
+        "mode": "fallback",
+        "startedAt": 1792611275125,
+        "ready": true
+      }
+    },
+    {
+      "label": "inventory",
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "status_exit": 0,
+      "status": {
+        "initialized": true,
+        "version": "1.6.2",
+        "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+        "indexPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/.codegraph",
+        "lastIndexed": "2026-10-21T19:23:19.612Z",
+        "fileCount": 56,
+        "nodeCount": 2664,
+        "edgeCount": 3747,
+        "dbSizeBytes": 5136384,
+        "walSizeBytes": 4152,
+        "backend": "node-sqlite",
+        "journalMode": "wal",
+        "nodesByKind": {
+          "class": 1,
+          "constant": 132,
+          "field": 361,
+          "file": 56,
+          "function": 210,
+          "import": 49,
+          "interface": 1,
+          "method": 339,
+          "module": 27,
+          "namespace": 47,
+          "parameter": 690,
+          "struct": 43,
+          "type_alias": 1,
+          "variable": 707
+        },
+        "languages": [
+          "jass",
+          "python"
+        ],
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "worktreeMismatch": null,
+        "index": {
+          "builtWithVersion": "1.6.2+jass-vjass.1",
+          "builtWithExtractionVersion": 28,
+          "currentExtractionVersion": 28,
+          "reindexRecommended": false,
+          "state": "complete",
+          "pendingRefs": 0
+        }
+      },
+      "sqlite_quick_check": [
+        [
+          "ok"
+        ]
+      ],
+      "counts": {
+        "files": 56,
+        "nodes": 2664,
+        "edges": 3747
+      },
+      "probe_files_remaining": [],
+      "probe_symbols_remaining": [],
+      "excluded_paths_remaining": [],
+      "fixture_files_remaining": [],
+      "writer": {
+        "pid": 3434,
+        "mode": "fallback",
+        "startedAt": 1792611275454,
+        "ready": true
+      }
+    },
+    {
+      "label": "ui-studio",
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "status_exit": 0,
+      "status": {
+        "initialized": true,
+        "version": "1.6.2",
+        "projectPath": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+        "indexPath": "/home/snz/Documentos/WarDatsPy/ui-studio/dist/.codegraph",
+        "lastIndexed": "2026-10-21T19:23:20.250Z",
+        "fileCount": 4,
+        "nodeCount": 126,
+        "edgeCount": 734,
+        "dbSizeBytes": 749568,
+        "walSizeBytes": 0,
+        "backend": "node-sqlite",
+        "journalMode": "wal",
+        "nodesByKind": {
+          "constant": 11,
+          "file": 4,
+          "function": 79,
+          "import": 5,
+          "variable": 27
+        },
+        "languages": [
+          "javascript"
+        ],
+        "pendingChanges": {
+          "added": 0,
+          "modified": 0,
+          "removed": 0
+        },
+        "worktreeMismatch": null,
+        "index": {
+          "builtWithVersion": "1.6.2+jass-vjass.1",
+          "builtWithExtractionVersion": 28,
+          "currentExtractionVersion": 28,
+          "reindexRecommended": false,
+          "state": "complete",
+          "pendingRefs": 0
+        }
+      },
+      "sqlite_quick_check": [
+        [
+          "ok"
+        ]
+      ],
+      "counts": {
+        "files": 4,
+        "nodes": 126,
+        "edges": 734
+      },
+      "probe_files_remaining": [],
+      "probe_symbols_remaining": [],
+      "fixture_files_remaining": [],
+      "writer": {
+        "pid": 3434,
+        "mode": "fallback",
+        "startedAt": 1792611275650,
+        "ready": true
+      }
+    }
+  ],
+  "source_map_hash_check": {
+    "files": 71,
+    "changed": []
+  },
+  "automatic_update": {
+    "method": "Existing MCP process only. No sync, query or other CodeGraph call during observation; read-only SQLite polling.",
+    "roots": [
+      {
+        "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+        "fixture": "cg_autosync_probe_76855.j",
+        "writer_before": {
+          "pid": 3434,
+          "mode": "fallback",
+          "startedAt": 1792611275125,
+          "ready": true
+        },
+        "transitions": {
+          "create": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe76855A"
+            ],
+            "passed": true,
+            "seconds": 0.416
+          },
+          "modify": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe76855B"
+            ],
+            "passed": true,
+            "seconds": 0.401
+          },
+          "delete": {
+            "files": 0,
+            "names": [],
+            "passed": true,
+            "seconds": 0.602
+          }
+        },
+        "fixture_removed": true,
+        "writer_after": {
+          "pid": 3434,
+          "mode": "fallback",
+          "startedAt": 1792611275125,
+          "ready": true
+        }
+      },
+      {
+        "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+        "fixture": "cg_autosync_probe_76855.j",
+        "writer_before": {
+          "pid": 3434,
+          "mode": "fallback",
+          "startedAt": 1792611275454,
+          "ready": true
+        },
+        "transitions": {
+          "create": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe76855A"
+            ],
+            "passed": true,
+            "seconds": 0.401
+          },
+          "modify": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe76855B"
+            ],
+            "passed": true,
+            "seconds": 0.401
+          },
+          "delete": {
+            "files": 0,
+            "names": [],
+            "passed": true,
+            "seconds": 0.602
+          }
+        },
+        "fixture_removed": true,
+        "writer_after": {
+          "pid": 3434,
+          "mode": "fallback",
+          "startedAt": 1792611275454,
+          "ready": true
+        }
+      },
+      {
+        "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+        "fixture": "cg_autosync_probe_76855.js",
+        "writer_before": {
+          "pid": 3434,
+          "mode": "fallback",
+          "startedAt": 1792611275650,
+          "ready": true
+        },
+        "transitions": {
+          "create": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe76855A"
+            ],
+            "passed": true,
+            "seconds": 0.401
+          },
+          "modify": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe76855B"
+            ],
+            "passed": true,
+            "seconds": 0.401
+          },
+          "delete": {
+            "files": 0,
+            "names": [],
+            "passed": true,
+            "seconds": 0.401
+          }
+        },
+        "fixture_removed": true,
+        "writer_after": {
+          "pid": 3434,
+          "mode": "fallback",
+          "startedAt": 1792611275650,
+          "ready": true
+        }
+      }
+    ],
+    "passed": true
+  },
+  "tests": {
+    "files_passed": 6,
+    "cases_passed": 92,
+    "skipped": 0,
+    "log": "upstream-audit-tests.log"
+  },
+  "runtime": "v24.16.0",
+  "mcp_entry": {
+    "command": "/home/snz/.local/bin/codegraph",
+    "args": [
+      "serve",
+      "--mcp"
+    ],
+    "startup_timeout_sec": 30,
+    "tool_timeout_sec": 60
+  },
+  "other_chats_messaged": false,
+  "checks_passed": true
+}

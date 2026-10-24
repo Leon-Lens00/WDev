@@ -1,0 +1,28 @@
+{
+  "paladin": {
+    "blendTimeMs": 200,
+    "tracks": 237,
+    "chronological": true,
+    "depthAtMaximumEditorScale": [
+      -2.6299999833106993,
+      -1.7551418606191873
+    ],
+    "idleVariants": 3,
+    "sequences": 5,
+    "nodes": 238,
+    "geosets": 2
+  },
+  "tauren": {
+    "blendTimeMs": 200,
+    "tracks": 424,
+    "chronological": true,
+    "depthAtMaximumEditorScale": [
+      -2.6299999833106993,
+      -1.9125810278579594
+    ],
+    "idleVariants": 3,
+    "sequences": 6,
+    "nodes": 425,
+    "geosets": 4
+  }
+}

@@ -1,0 +1,9 @@
+`TimerTools.Timer.destroy → DestructionQueue.add` is a **direct conditional call**, with no intermediate method:
+
+- `destroy` reads `ExpirationCode(this).timerId`. It calls `DestructionQueue.add(this)` only when that expiration record is `registered` **and** `Handler.expiringTimer == timerId`. Otherwise, it destroys immediately if registered, or sets `disabled = true` ([script.j:733](Systems/TimerTools/script.j:733)).
+- The expiration context comes from actual callback wiring: `Handler.init` assigns `handler = function thistype.expire`; `implement Init` invokes initialization through `onInit` ([script.j:719](Systems/TimerTools/script.j:719), [script.j:145](Systems/TimerTools/script.j:145)). `TimerList.add` passes `handler` to `TimerStart` ([script.j:629](Systems/TimerTools/script.j:629)).
+- `ExpirationCode.register → TimerPool.register → TriggerAddCondition` installs the supplied expiration callback for the first matching function group ([script.j:363](Systems/TimerTools/script.j:363), [script.j:174](Systems/TimerTools/script.j:174)).
+- `Handler.expire` sets `expiringTimer`, evaluates that trigger, then clears it. A callback calling `Timer.destroy` during evaluation can therefore enqueue destruction ([script.j:700](Systems/TimerTools/script.j:700)).
+- `add` appends the record to its parent timer’s queue; afterward, `Handler.expire → DestructionQueue.clean → ExpirationCode.destroy` performs deferred destruction ([script.j:545](Systems/TimerTools/script.j:545), [script.j:704](Systems/TimerTools/script.j:704)).
+
+This establishes source wiring; runtime callback execution was not tested.

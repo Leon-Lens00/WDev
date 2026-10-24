@@ -1,0 +1,13 @@
+Comparación del panel de diálogo
+
+Antes: texturas originales 1024x512.
+512: texturas 512x256 (mip1 original).
+Sólo cambian FrameOpenRed.blp y FrameOpenBlue.blp.
+Comandos: -dialogo, -siguiente, -reiniciardialogo, -patrullardialogo, -cerrardialogo.
+Esc: completar texto o avanzar página. -misiles: ocultar diagnóstico heredado.
+
+Prueba nativa realizada en Classic1.27b/RenderEdge/SP,1920x1080,monitor2.
+Ambos colores cargan; versión512 mantiene el panel durante patrulla y cierra.
+Sin pérdida visual importante observada en estas muestras; no se midióFPS.
+Mapa: 9.614.934 → 9.414.585bytes; ahorro200.349bytes(2,08%).
+Fuentes activas conservadas. Pruebas propias cerradas.

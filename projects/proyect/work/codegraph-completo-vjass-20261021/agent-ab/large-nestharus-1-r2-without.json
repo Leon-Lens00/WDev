@@ -1,0 +1,37 @@
+{
+  "repo": "large-nestharus",
+  "flow": 1,
+  "names": [
+    "TimerTools.Timer.create",
+    "TimerTools.TimerList.add",
+    "TimerTools.CreationQueue.add"
+  ],
+  "repetition": 2,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 33.5264796909978,
+  "usage": {
+    "input_tokens": 113084,
+    "cached_input_tokens": 97152,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 873,
+    "reasoning_output_tokens": 141
+  },
+  "commands": 4,
+  "command_text": [
+    "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' 'library TimerTools|struct TimerList|struct CreationQueue|TimerTools\\\\.Timer' .\"",
+    "/usr/bin/bash -lc \"rg -n 'static method create|method add|CreationQueue|TimerList|struct Timer|implement|module|function interface' Systems/TimerTools/script.j\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '288,535p;573,738p'\"",
+    "/usr/bin/bash -lc \"rg -n 'CONSTANT_MERGE|RELATIVE_MERGE|code handler|enabled' Systems/TimerTools/script.j\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg -n --hidden -g '\"'!.git/**'\"' -g '\"'!.codegraph/**'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' 'library TimerTools|struct TimerList|struct CreationQueue|TimerTools\\\\.Timer' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16221-d5a7-7983-8614-f372e8cdf962"
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "method": "Fresh MCP stdio connection to the installed launcher, explicit projectPath. Watcher observations are read-only SQLite: no query or sync during transitions.",
+  "roots": [
+    {
+      "label": "missiles",
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "query": "RapidBolt.shoot RapidBolt.launch RapidBolt.missileIterateP RapidBolt.onPeriod",
+      "response_characters": 15259,
+      "transitions": {
+        "create_definition_and_consumer": {
+          "files": 1,
+          "symbols": [
+            "first"
+          ],
+          "seconds": 0.644,
+          "passed": true
+        },
+        "modify_definition_only": {
+          "files": 1,
+          "symbols": [
+            "second"
+          ],
+          "seconds": 0.602,
+          "passed": true
+        },
+        "delete_definition_only": {
+          "files": 1,
+          "symbols": [],
+          "seconds": 0.803,
+          "passed": true
+        },
+        "delete_consumer": {
+          "files": 0,
+          "symbols": [],
+          "seconds": 0.602,
+          "passed": true
+        }
+      },
+      "original_hashes_unchanged": true
+    },
+    {
+      "label": "inventory",
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "query": "InventoryCore.LClickItemSlot InventoryCore.Inventory.setTooltipTitle",
+      "response_characters": 19281,
+      "transitions": {
+        "create_definition_and_consumer": {
+          "files": 1,
+          "symbols": [
+            "first"
+          ],
+          "seconds": 0.602,
+          "passed": true
+        },
+        "modify_definition_only": {
+          "files": 1,
+          "symbols": [
+            "second"
+          ],
+          "seconds": 1.204,
+          "passed": true
+        },
+        "delete_definition_only": {
+          "files": 1,
+          "symbols": [],
+          "seconds": 1.204,
+          "passed": true
+        },
+        "delete_consumer": {
+          "files": 0,
+          "symbols": [],
+          "seconds": 1.203,
+          "passed": true
+        }
+      },
+      "original_hashes_unchanged": true
+    },
+    {
+      "label": "ui",
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "query": "projectionRect renderStage",
+      "response_characters": 15042,
+      "transitions": {
+        "create": {
+          "files": 1,
+          "symbols": [
+            "CGExpandedProbe176601First"
+          ],
+          "seconds": 0.602,
+          "passed": true
+        },
+        "modify": {
+          "files": 1,
+          "symbols": [
+            "CGExpandedProbe176601Second"
+          ],
+          "seconds": 0.401,
+          "passed": true
+        },
+        "delete": {
+          "files": 0,
+          "symbols": [],
+          "seconds": 0.401,
+          "passed": true
+        }
+      },
+      "original_hashes_unchanged": true
+    }
+  ],
+  "server": {
+    "name": "codegraph",
+    "version": "1.6.2+jass-vjass.3"
+  },
+  "juror_semantics": {
+    "array_with_block_comment": [
+      "CGJuror176601S.tick"
+    ],
+    "scalar_with_array_comment": [],
+    "debug_fallback_preserved": true,
+    "passed": true,
+    "cleanup": {
+      "files": 0,
+      "symbols": [],
+      "seconds": 0.414,
+      "passed": true
+    }
+  },
+  "passed": true,
+  "fixture_files_removed": true
+}

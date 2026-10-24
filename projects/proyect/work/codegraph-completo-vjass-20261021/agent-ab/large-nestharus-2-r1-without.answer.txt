@@ -1,0 +1,9 @@
+`codegraph_explore` is unavailable. Source shows three paths in `Systems/TimerTools/script.j`:
+
+- **Immediate:** `Timer.destroy` obtains `ExpirationCode(this).timerId`. If registered and that timer is **not currently expiring**, it calls `ExpirationCode.destroy`, then directly calls `TimerPool.recycleTimer` only when the pool count becomes zero ([script.j:733–751](Systems/TimerTools/script.j#L733)). The intermediate destruction calls `TimerPool.unregister`, which decrements that count ([script.j:436](Systems/TimerTools/script.j#L436), [script.j:189–207](Systems/TimerTools/script.j#L189)).
+
+- **Deferred:** If registered and currently expiring, `destroy → DestructionQueue.add`. After evaluating callbacks, `Handler.expire → DestructionQueue.clean → ExpirationCode.destroy → TimerPool.unregister`; then Handler recycles only if count is zero, after processing pending creations ([script.j:545–570](Systems/TimerTools/script.j#L545), [script.j:700–715](Systems/TimerTools/script.j#L700)). Actual callback wiring is `handler = function Handler.expire`, passed into `TimerStart` ([script.j:720](Systems/TimerTools/script.j#L720), [script.j:629](Systems/TimerTools/script.j#L629)).
+
+- **Unregistered:** `destroy` only sets `disabled`; `CreationQueue.register` later destroys that pending node ([script.j:753](Systems/TimerTools/script.j#L753), [script.j:520](Systems/TimerTools/script.j#L520)).
+
+`recycleTimer` pauses the native timer and pushes its ID onto the recycler ([script.j:280–283](Systems/TimerTools/script.j#L280)). This is static source evidence; runtime behavior was not tested.

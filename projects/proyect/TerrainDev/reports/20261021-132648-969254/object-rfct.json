@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "object",
+    "get",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261021-132648-969254/stage-6.w3x",
+    "rfct",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Rawcode\": \"rfct\",\n  \"Found\": true,\n  \"BaseRawcode\": \"hrif\",\n  \"Name\": \"Rapid Fire - Controlador (Q)\",\n  \"Fields\": [\n    {\n      \"Code\": \"uabi\",\n      \"Name\": \"uabi\",\n      \"Value\": \"Arpf,Avul\",\n      \"Source\": \"map\",\n      \"Display\": \"Arpf,Avul\"\n    },\n    {\n      \"Code\": \"uacq\",\n      \"Name\": \"uacq\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"uaen\",\n      \"Name\": \"uaen\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ucbs\",\n      \"Name\": \"ucbs\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ucol\",\n      \"Name\": \"ucol\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ucpt\",\n      \"Name\": \"ucpt\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ufle\",\n      \"Name\": \"ufle\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ufoo\",\n      \"Name\": \"ufoo\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"uhom\",\n      \"Name\": \"uhom\",\n      \"Value\": \"1\",\n      \"Source\": \"map\",\n      \"Display\": \"1\"\n    },\n    {\n      \"Code\": \"uhpm\",\n      \"Name\": \"uhpm\",\n      \"Value\": \"800\",\n      \"Source\": \"map\",\n      \"Display\": \"800\"\n    },\n    {\n      \"Code\": \"umvs\",\n      \"Name\": \"umvs\",\n      \"Value\": \"350\",\n      \"Source\": \"map\",\n      \"Display\": \"350\"\n    },\n    {\n      \"Code\": \"unam\",\n      \"Name\": \"unam\",\n      \"Value\": \"Rapid Fire - Controlador (Q)\",\n      \"Source\": \"map\",\n      \"Display\": \"Rapid Fire - Controlador (Q)\"\n    },\n    {\n      \"Code\": \"usid\",\n      \"Name\": \"usid\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"usin\",\n      \"Name\": \"usin\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    }\n  ],\n  \"Diagnostics\": [\n    \"Warcraft III install not found (pass --game-dir \\u003Cpath\\u003E)\"\n  ]\n}\n",
+  "stderr": ""
+}

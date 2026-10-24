@@ -1,0 +1,141 @@
+**Exploration: projectionRect renderStage**
+
+Found 53 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `projectionRect` (projection.js:3) — 5 callers in `projection.js`, `app.js`; no tests found within 3 caller hops
+- `renderStage` (app.js:53) — 3 callers in `app.js`; no tests found within 3 caller hops
+- `render` (app.js:43) — 7 callers in `app.js`; no tests found within 3 caller hops
+- `renderLayers` (app.js:88) — 3 callers in `app.js`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`app.js`** — $(calls), html(calls), imports(imports), field(calls), selected(calls), +92 more
+
+```javascript
+11	function applyTheme(){document.body.dataset.theme=theme;$('#theme').innerHTML=icon(theme==='light'?'moon':'sun');$('#theme').setAttribute('aria-label',theme==='light'?'Cambiar a tema oscuro':'Cambiar a tema claro');}
+12	$('#theme').onclick=()=>{theme=theme==='light'?'dark':'light';applyTheme();try{localStorage.setItem('wc3-ui-studio-theme',theme);}catch{}};
+13	applyTheme();
+14	let project=preset(),selection=[],past=[],future=[],mode='edit',zoom=1,showSamples=false,page=1,simSelected='',simHidden=new Set(),filterGroups=new Set(Object.keys(GROUPS));
+15	let saveTimer,toastTimer,storageError=false;
+16	const collapsedGroups=new Set(['tooltip']),closedSections=new Set(['interaction','organization']);
+17	let units='px',canvasTool='select',spaceDown=false,editSelection=[],pendingTransform=null;
+
+... (gap) ...
+
+40	function switchTab(assets){$('#asset-panel').hidden=!assets;$('#layer-panel').hidden=assets;$('#tab-assets').classList.toggle('active',assets);$('#tab-layers').classList.toggle('active',!assets);$('#tab-assets').setAttribute('aria-pressed',assets);$('#tab-layers').setAttribute('aria-pressed',!assets);if(assets){libraryOpen=true;if(innerWidth<=1000)inspectorOpen=false;updatePanels();renderAssets();}}
+41	function visible(e){return e.visible&&filterGroups.has(e.group)&&!simHidden.has(e.group);}
+42	function textureURL(id){return textures.get(id)?.preview;}
+43	function render(){
+44	 $('#project-name').value=project.name;$('#count').textContent=project.elements.length;
+45	 $('#aspect').value=project.viewport.width+','+project.viewport.height;
+46	 $('#stage').style.aspectRatio=project.viewport.width+'/'+project.viewport.height;
+47	 $('#stage-size').textContent=`${project.viewport.width} × ${project.viewport.height}`;
+48	 $('#undo').disabled=!past.length;$('#redo').disabled=!future.length;$('#fit-selection').disabled=!selected().some(visible);
+49	 $('#selection-status').textContent=mode==='preview'?'Simulación local · los clics no modifican el mapa':selection.length?`${selection.length} seleccionado${selection.length>1?'s':''} · ${selected()[0]?.id||''}`:'Selecciona un elemento para editarlo';
+50	 $('#group-filters').innerHTML=Object.entries(GROUPS).filter(([g])=>g!=='custom'||project.elements.some(e=>e.group===g)).map(([g,n])=>`<button data-filter="${g}" aria-pressed="${filterGroups.has(g)}" class="${filterGroups.has(g)?'active':''}">${n}</button>`).join('');
+51	 applyZoom();renderLayers();renderInspector();renderIssues();if(!$('#asset-panel').hidden)renderAssets();
+52	}
+53	function renderStage(){
+54	 const height=$('#stage').clientHeight,width=$('#stage').clientWidth;
+55	 const view={...project.viewport,width,height},area=projectionRect(view);
+
+... (gap) ...
+
+85	 const px=displayGeometry(b,project.viewport),labels={nw:'superior izquierda',n:'superior',ne:'superior derecha',e:'derecha',se:'inferior derecha',s:'inferior',sw:'inferior izquierda',w:'izquierda'};
+86	 frame.innerHTML=`<span class="transform-label">${es.length>1?es.length+' elementos · ':''}${Math.round(px.w)} × ${Math.round(px.h)} px</span>`+Object.entries(labels).map(([h,label])=>`<button class="transform-handle handle-${h}" data-handle="${h}" tabindex="-1" aria-label="Escalar desde ${label}"></button>`).join('');
+87	}
+88	function renderLayers(){
+89	 const q=$('#layer-search').value.trim().toLowerCase();let total=0;
+90	 $('#layers').innerHTML=Object.entries(GROUPS).map(([g,name])=>{
+91	  const es=matchingLayers(g);if(!es.length)return '';total+=es.length;
+92	  const open=!!q||!collapsedGroups.has(g);
+93	  return `<section class="layer-group"><div class="group-heading"><button data-toggle-group="${g}" aria-expanded="${open}" aria-controls="group-${g}">${name}<span>${es.length}</span></button><button data-select-group="${g}" title="Seleccionar ${es.length} elementos mostrados de ${name}" aria-label="Seleccionar ${es.length} elementos mostrados de ${name}">Todo</button></div><div id="group-${g}" ${open?'':'hidden'}>`+es.map(e=>`<div class="layer ${selection.includes(e.id)?'selected':''} ${e.visible?'':'is-hidden'}"><button class="layer-select" data-layer="${html(e.id)}" aria-pressed="${selection.includes(e.id)}" title="${html(title(e))} · ${html(e.id)}">${textureURL(e.texture)?`<img src="${html(textureURL(e.texture))}" alt="">`:`<span class="type-icon" aria-hidden="true">${e.type==='text'?'T':e.type==='model'?'3D':'UI'}</span>`}<span class="layer-name">${html(title(e))}</span></button><button data-lock="${html(e.id)}" aria-pressed="${e.locked}" aria-label="${e.locked?'Desbloquear':'Bloquear'} ${html(title(e))}" title="${e.locked?'Desbloquear':'Bloquear'}">${icon(e.locked?'lock':'lock-open')}</button><button data-visible="${html(e.id)}" aria-pressed="${e.visible}" aria-label="${e.visible?'Ocultar':'Mostrar'} ${html(title(e))}" title="${e.visible?'Ocultar':'Mostrar'}">${icon(e.visible?'eye':'eye-off')}</button></div>`).join('')+'</div></section>';
+94	 }).join('')||'<p class="search-empty">No hay coincidencias.<br>Prueba otro nombre o ID.</p>';
+95	 $('#layer-results').textContent=`${total} elemento${total===1?'':'s'}`;
+96	 $('#collapse-groups').disabled=!!q;
+97	 $('#collapse-groups').textContent=collapsedGroups.size===Object.keys(GROUPS).length?'Desplegar todo':'Plegar todo';
+98	}
+99	$('#collapse-groups').onclick=()=>{if(collapsedGroups.size===Object.keys(GROUPS).length)collapsedGroups.clear();else Object.keys(GROUPS).forEach(g=>collapsedGroups.add(g));renderLayers();};
+100	function section(id,label,content){return `<details class="property-section" data-section="${id}" ${closedSections.has(id)?'':'open'}><summary>${label}</summary><div>${content}</div></details>`;}
+101	$('#inspector').addEventListener('toggle',ev=>{const id=ev.target.dataset.section;if(id)ev.target.open?closedSections.delete(id):closedSections.add(id);},true);
+
+... (gap) ...
+
+112	 const es=selected().filter(e=>!e.locked&&visible(e)),e=selection.length>1?selectionBounds(es):selected()[0];if(!e)return;
+113	 const values=displayGeometry(e,project.viewport,units);for(const key of ['x','y','w','h']){const input=$(`#inspector [data-field="${key}"],#inspector [data-transform="${key}"]`);if(input&&document.activeElement!==input)input.value=values[key];}
+114	}
+115	function renderInspector(){
+116	 const es=selected(),e=es[0];$('#selection-type').textContent=es.length===1?TYPES[e.type]:'';
+117	 if(!es.length){$('#inspector').innerHTML='<div class="empty-inspector"><div class="empty-icon">'+icon('mouse-pointer-2')+'</div><strong>Todo empieza con una selección</strong><p>Elige un elemento del lienzo o de la biblioteca para editarlo.</p></div><div class="inspector-tip"><b>Un poco más rápido</b><p>Mantén Mayús para seleccionar varios elementos. Usa «Selección» para acercarte a ellos.</p><kbd>Mayús</kbd> + <kbd>2</kbd></div>';return;}
+118	 if(es.length>1){const movable=es.filter(e=>!e.locked&&visible(e)),b=selectionBounds(movable);$('#inspector').innerHTML=`<div class="multi-label">${es.length} elementos</div><p class="hint">Mueve y escala el conjunto desde su marco. ${es.length-movable.length} bloqueados u ocultos quedan fuera de la transformación.</p>`+(b?section('geometry','Transformar conjunto',geometryFields(b,true)):'')+section('alignment','Alinear',`<div class="align-tools">${[['left','Izquierda'],['center','Centro X'],['right','Derecha'],['top','Arriba'],['middle','Centro Y'],['bottom','Abajo']].map(([v,l])=>`<button data-align="${v}">${l}</button>`).join('')}</div>`)+`<div class="property-actions"><button data-cmd="duplicate">Duplicar</button><button data-cmd="delete">Eliminar</button></div>`;return;}
+119	 const src=textureURL(e.texture);
+120	 const geometry=geometryFields(e);
+121	 let appearance='<div class="field-grid">'+field('Profundidad','z',e.z,'number','step="0.1" min="0" max="100"')+field('Opacidad %','opacity',e.opacity,'number','step="1" min="0" max="100"')+'</div>';
+122	 if(e.type==='panel')appearance+=selectField('Modelo de ventana','modelId',e.modelId,Object.fromEntries(Object.entries(MODELS).map(([k,v])=>[k,v.name])))+'<p class="hint">El marco conserva su proporción al cambiar el tamaño.</p>';
+123	 if(e.type==='text')appearance+='<label class="field">Contenido<textarea aria-label="Contenido" data-field="text">'+html(e.text)+'</textarea></label><div class="field-grid">'+field('Tamaño','font',e.font,'number','step="0.5" min="1" max="40"')+field('Color','color',e.color,'color')+'</div>';
+124	 else if(e.type==='model')appearance+='<p class="notice">Guía de posición 2D. El modelo y su escala se integran en el mapa.</p>';
+125	 else appearance+='<div class="texture-current">'+(src?`<img src="${html(src)}" alt="Textura actual">`:'')+'<button data-cmd="texture">Elegir textura</button></div>'+field('Rawcode de destructible','texture',e.texture,'text','maxlength="4"')+field('Color','color',e.color,'color');
+126	 $('#inspector').innerHTML=field('Nombre','name',e.name)+`<div class="element-id">${html(e.id)}</div>`+(e.locked?'<p class="notice">Posición bloqueada para arrastre y flechas.</p>':'')+
+127	 section('geometry','Posición y tamaño',geometry)+section('appearance',e.type==='text'?'Texto y apariencia':'Apariencia',appearance)+
+128	 (e.type==='button'?section('interaction','Interacción',selectField('Clic izquierdo','action',e.action,ACTIONS)+selectField('Clic derecho','rightAction',e.rightAction,ACTIONS)+(e.action==='custom'||e.rightAction==='custom'?field('Nombre de la acción','customAction',e.customAction):'')):'')+
+129	 section('organization','Organización y enlace',selectField('Grupo','group',e.group,GROUPS)+`<label class="checkbox"><input data-field="locked" type="checkbox" ${e.locked?'checked':''}>Bloquear posición</label><label class="checkbox"><input data-field="visible" type="checkbox" ${e.visible?'checked':''}>Visible en el diseño</label>`+(e.binding?'<p class="hint">Enlace al mapa</p><div class="binding">'+html(e.binding)+'</div>':''))+
+130	 '<div class="property-actions"><button data-cmd="duplicate">Duplicar</button><button data-cmd="front">Al frente</button><button data-cmd="delete" class="danger">Eliminar</button></div>';
+131	
+132	}
+133	function renderIssues(){const list=issues(project);$('#issue-count').textContent=list.length;$('#issues').innerHTML=list.length?list.map(i=>`<div class="issue" data-issue="${html(i.id)}"><b>${html(i.id)}</b><br>${html(i.message)}</div>`).join(''):'<p class="hint">Sin elementos fuera del área ni enlaces pendientes detectados.</p>';}
+134	function renderAssets(){
+135	 const q=$('#asset-search').value.trim().toLowerCase(),targets=selected().filter(e=>['button','picture','panel'].includes(e.type));
+136	 const matches=catalog.filter(t=>(t.id+' '+t.name.replace(/([a-z])([A-Z])/g,'$1 $2')).toLowerCase().includes(q));
+137	 $('#asset-context').textContent=targets.length===1?'Aplicar a: '+title(targets[0]):targets.length?`Aplicar a ${targets.length} elementos`:'Selecciona un botón, una imagen o una ventana para aplicar una textura.';
+138	 $('#assets').innerHTML=matches.map(t=>`<button data-texture="${t.id}" aria-label="Aplicar ${html(t.name)}" aria-pressed="${targets.length>0&&targets.every(e=>e.texture===t.id)}" ${targets.length?'':'disabled'} title="${html(t.name)} · ${t.id}"><img src="${t.preview}" alt="" loading="lazy"><span class="asset-name">${html(t.name.replace(/([a-z])([A-Z])/g,'$1 $2'))}</span><small>${t.id}</small></button>`).join('')||'<p class="search-empty">No hay texturas con ese nombre o código.</p>';
+139	}
+140	function revealCreated(){
+141	 $('#layer-search').value='';collapsedGroups.delete('custom');switchTab(false);renderLayers();
+142	 if(innerWidth<=1000){libraryOpen=false;inspectorOpen=true;updatePanels();}
+```
+
+**`projection.js`** — projectionRect(function), previewDelta(function), previewValue(function), previewGeometry(function), tooltipPreview(function)
+
+```javascript
+1	// Empirical view from TerrainDev / Classic 1.27b / RenderEdge, 1920x1080.
+2	// Coordinates remain UserInterface coordinates; this is a preview transform only.
+3	export function projectionRect(view){
+4	 if(view.projection!=='classic-127b')return {x:0,y:0,w:view.width,h:view.height};
+5	 const w=Math.min(view.width,view.height*4/3);
+6	 return {x:(view.width-w)/2,y:view.height*.04,w,h:view.height*.72};
+7	}
+8	export function previewGeometry(e,view,{textBaseline=true}={}){
+9	 const r=projectionRect(view);
+10	 const textOffset=textBaseline&&e.type==='text'?(e.font*.0023+.0065)*view.height:0;
+11	 return {x:r.x+(e.x+1)*r.w/2,y:r.y+(1-e.y)*r.h/2-textOffset,w:e.w*r.w/2,h:e.h*r.h/2};
+12	}
+13	export function previewValue(key,value,view){
+14	 const r=projectionRect(view);
+15	 return key==='x'?(value-r.x)*2/r.w-1:key==='y'?1-(value-r.y)*2/r.h:value*2/(key==='w'?r.w:r.h);
+16	}
+17	export function previewDelta(dx,dy,view){const r=projectionRect(view);return {x:dx*2/r.w,y:-dy*2/r.h};}
+18	
+19	// Match the original callbacks: tooltips follow the selected slot at runtime.
+20	export function tooltipPreview(elements,selectedId){
+21	 const slot=elements.find(e=>e.id===selectedId);
+22	 const background=elements.find(e=>e.id==='tooltip.background');
+23	 if(!slot||!background||!/^inventory\.slot\.|^equipment\.slot\./.test(slot.id))return elements;
+24	 const tx=slot.x-.4,ty=slot.group==='equipment'?slot.y-slot.h-.08:slot.y+.4;
+25	 // Reconstruct the original createEx anchor from its visible model bounds.
+26	 const scale=background.w*.544*(100.2+background.z)/338.6934;
+27	 const oldX=background.x+background.w/2-120*scale/(2*.544*(100.2+background.z));
+28	 const oldY=background.y-background.h/2+60*scale/(2*.302*(100.2+background.z));
+29	 return elements.map(e=>e.group==='tooltip'?{...e,x:e.x+tx-oldX,y:e.y+ty-oldY}:e);
+30	}
+```
+
+**Not shown above — explore these names for their source**
+
+- core.js: round:7, preset:18, panelFromSource:13, element:10, ASPECT:1, GROUPS:2, +4 more
+- geometry.js: geometryValue:46, displayGeometry:41, selectionBounds:4
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

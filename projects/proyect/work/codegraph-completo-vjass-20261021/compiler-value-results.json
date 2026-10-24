@@ -1,0 +1,16 @@
+[
+  {
+    "id": 7,
+    "expected_valid": true,
+    "valid": false,
+    "launcher_exit": 1,
+    "passed": false
+  },
+  {
+    "id": 8,
+    "expected_valid": true,
+    "valid": true,
+    "launcher_exit": 0,
+    "passed": true
+  }
+]

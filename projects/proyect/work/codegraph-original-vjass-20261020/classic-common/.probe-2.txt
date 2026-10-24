@@ -1,0 +1,75 @@
+> JASS/vJASS local support: structural/static subset. No macro/import/module expansion or dynamic dispatch; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+
+**Flow (call path among the symbols you queried)**
+
+1. run (probe.vjass:12)
+   ↓ calls
+2. step (probe.vjass:9)
+   ↓ calls
+3. Ping (probe.vjass:5)
+
+**Dynamic-dispatch links among your symbols**
+(synthesized — the indirect hops grep/Read would reconstruct; the `@file:line` is the wiring site)
+
+- Done → run   [calls]
+- Counter → run   [contains]
+- run → this   [contains]
+- CodeGraphProbe → Ping   [contains]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: CodeGraphProbe.Counter.run CodeGraphProbe.Ping**
+
+Found 14 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `run` (probe.vjass:12) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+- `Ping` (probe.vjass:5) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+- `step` (probe.vjass:9) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`probe.vjass`** — CodeGraphProbe(namespace), run(method), Counter(struct), Ping(function), step(method), +4 more
+
+```vjass
+1	library CodeGraphProbe initializer Init
+2	    globals
+3	        private integer hits = 0
+4	    endglobals
+5	    private function Ping takes nothing returns nothing
+6	        set hits = hits + 1
+7	    endfunction
+8	    private struct Counter
+9	        method step takes nothing returns nothing
+10	            call Ping()
+11	        endmethod
+12	        static method run takes nothing returns nothing
+13	            local thistype this = thistype.allocate()
+14	            call this.step()
+15	            call this.destroy()
+16	        endmethod
+17	    endstruct
+18	    private function Done takes nothing returns nothing
+19	        call Counter.run()
+20	    endfunction
+21	    private function Init takes nothing returns nothing
+22	        call TimerStart(CreateTimer(), 0.0, false, function Done)
+23	    endfunction
+24	endlibrary
+25	function main takes nothing returns nothing
+26	endfunction
+27	function config takes nothing returns nothing
+28	endfunction
+```
+
+**`common.j`** — PingMinimap, PingMinimapEx, CreateTimer, TimerStart, timer · skeleton (signatures only — codegraph_explore a name for its full body; do NOT Read)
+
+```jass
+19	type timer              extends     agent
+912	native CreateTimer          takes nothing returns timer
+914	native TimerStart           takes timer whichTimer, real timeout, boolean periodic, code handlerFunc returns nothing
+1987	native PingMinimap                  takes real x, real y, real duration returns nothing
+1988	native PingMinimapEx                takes real x, real y, real duration, integer red, integer green, integer blue, boolean extraEffects returns nothing
+```

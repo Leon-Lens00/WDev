@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "values": {
+    "checks": 44.0,
+    "failures": 0.0,
+    "observed": 47.0,
+    "minimum": 0.25,
+    "emitted": 54.0,
+    "live": 0.0,
+    "pairs": 2.0
+  },
+  "negative_controls_rejected": 5,
+  "production_sha256": "d7fd80bfeb175762ee9ed80331f1ac72a3913c3a7d5257c520338f1f467f0414",
+  "map_sha256": "f8f6c5b308693d9f369ff911a9565b208db6ad528aad9b4f4730ea168e1177ff",
+  "scope": "Local Classic 1.27b; runtime mechanics and authored terrain samples, not multiplayer or arbitrary models"
+}

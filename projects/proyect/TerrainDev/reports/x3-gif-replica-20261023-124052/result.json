@@ -1,0 +1,107 @@
+{
+  "status": "Tested in map",
+  "production_sha256": "ad594a94d93592d0bdb0a90d38cad420deed8b92ac67179891519b3c16bdc7f1",
+  "laboratory_sha256": "9b8d056a6717d3ed50ae377cffc0e9e47f2abe8b8e7318b12a63d60e5bc14c13",
+  "checks": {
+    "passed": true,
+    "production_sha256": "ad594a94d93592d0bdb0a90d38cad420deed8b92ac67179891519b3c16bdc7f1",
+    "x3": {
+      "checks": 69.0,
+      "failures": 0.0,
+      "casts": 0.0,
+      "live": 0.0,
+      "created": 198.0,
+      "retired": 198.0,
+      "fusions": 7.0,
+      "flashes": 0.0
+    },
+    "colors": {
+      "checks": 40.0,
+      "failures": 0.0,
+      "live": 0.0,
+      "created": 221.0,
+      "retired": 221.0,
+      "scale": 2.743
+    },
+    "rapid_fire": {
+      "checks": 44.0,
+      "failures": 0.0,
+      "observed": 46.0,
+      "minimum": 0.25,
+      "emitted": 63.0,
+      "live": 0.0,
+      "pairs": 2.0
+    },
+    "checks_total": 153,
+    "negative_controls_rejected": 15,
+    "x3_fixture": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-gif-replica-20261023-124052/20261023-130447/fixture.json",
+    "regression_fixture": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-gif-replica-20261023-124052/20261023-130447/fixture.json"
+  },
+  "measured_in_engine": {
+    "greenRetreat": 44.555,
+    "greenFinalSpeed": 1140.0,
+    "orangeFinalSpeed": 1080.0,
+    "reverseDamageEvents": 1.0,
+    "physicalCallbacks": 546.0,
+    "repeatedClockReadings": 272.0
+  },
+  "curve_fit": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-gif-replica-20261023-124052/gif-curve-fit.json",
+  "video": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-gif-replica-20261023-124052/20261023-130447/demo-replica-gif.mp4",
+  "video_capture": {
+    "valid": true,
+    "reason": "completed",
+    "duration_wall_seconds": 12.129207011021208,
+    "recorder_return": 0,
+    "monitor": "DP-1",
+    "own_pid": 1048507,
+    "window": "0x558cbc39d6d0",
+    "last_pid": 1048507
+  },
+  "closure": {
+    "pid": 1048507,
+    "closed": true,
+    "method": "Win+Q; screenshot-confirmed own exit dialog; click Salir; fallback scoped SIGTERM",
+    "own_prefix_empty": true,
+    "other_games_preserved": []
+  },
+  "shared_libraries_unchanged": 16,
+  "error_report": "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-125112-x3-replica-pasos-fisicos.md",
+  "compiler": {
+    "JassHelper": true,
+    "pJASS": true,
+    "MPQ_roundtrip": true
+  },
+  "limits": [
+    "Local attended single-client Classic1.27b; multiplayer not certified.",
+    "GIF-based approximation; ROM constants and community variant not implemented.",
+    "Green motion fitted at an artistic scale of2 WC3 units/pixel; other curves approximate.",
+    "Missile remains32Hz; collision substeps do not raise rendered FPS.",
+    "Existing five MDX/four BLP unchanged; no new model pack imported.",
+    "W/E discrete controls, fixed cast origin/direction, ground XY collision; no held-key charge or flying targets.",
+    "No new editor save/reopen; builder reextracted/verified17editable sources, objects and35visual imports.",
+    "Demo recorded in a laboratory copy after the153checks; its repeat emitter is not in production.",
+    "Exit confirmation did not close reliably; final own game was terminated through the user-authorized, identity-checked SIGTERM fallback."
+  ],
+  "codegraph": {
+    "roots": [
+      "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/scripts"
+    ],
+    "src_query": "X3Buster.j prepared onPeriod origin.distance travel GREEN_INITIAL",
+    "scripts_query": "X3Probe.j Tick Save verify_x3_probe.py x3_evaluate reject_controls",
+    "evidence": [
+      "codegraph-final-src.txt",
+      "codegraph-final-scripts.txt"
+    ],
+    "limits": "Compiler-profile partial static graph; macro/conditional projections and dynamic order-dispatch candidates. No cross-root edges or replacement for compiler/engine."
+  },
+  "video_processing": {
+    "source": "20261023-130447/demo-raw.mp4",
+    "output": "20261023-130447/demo-replica-gif.mp4",
+    "operation": "crop1500x650 at300,80; scale1280x554; H264; no interpolation, no speed change; no audio",
+    "duration_seconds": 12.033333,
+    "recording_rate": 60,
+    "physics_rate": 32,
+    "contact_sheet": "20261023-130447/demo-contact-sheet.png"
+  }
+}

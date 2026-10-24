@@ -1,0 +1,46 @@
+Browser tab: 3, Title: "Vinz · estudio de 191 modelos", URL: "http://127.0.0.1:34801/vinz-study-v4/".
+0 AXWebArea Vinz · estudio de 191 modelos, URL: 127.0.0.1:34801/vinz-study-v4/
+	1 container
+		2 heading Vinz · estudio191, Value: 1
+			3 text Vinz · estudio191
+		4 button Anterior, ID: prev
+		5 text Página 
+		6 stepper (settable, integer) Página, Value: 4, ID: page
+		7 button Siguiente, ID: next
+		8 text Secuencia 
+		9 pop up button (collapsed, settable) Secuencia, Value: Death120ms, ID: sequence, Secondary Actions: Expand
+			10 menu
+				11 Stand
+				12 Birth120ms
+				13 (selected) Death120ms
+		14 text Cámara 
+		15 pop up button (collapsed, settable) Cámara, Value: Oblicua, ID: camera, Secondary Actions: Expand
+			16 menu
+				17 (selected) Oblicua
+				18 Lateral
+				19 Frontal
+		20 button Movimiento prueba | activar, ID: motion
+		25 text Página4/32 · 6 modelos · partículas498
+	22 container
+		23 image view
+		24 container cells
+			26 container
+				27 text 018 · Psionic Shots · Psionic Shot Pink
+				28 text Recursos resueltos 1 tris · 9 PE2 · 10 estelas · Death · t2120ms
+			29 container
+				30 text 019 · Psionic Shots · Psionic Shot Purple
+				31 text Recursos resueltos 1 tris · 9 PE2 · 10 estelas · Death · t2120ms
+			32 container
+				33 text 020 · Psionic Shots · Psionic Shot Red
+				34 text Recursos resueltos 1 tris · 9 PE2 · 10 estelas · Death · t2120ms
+			35 container
+				36 text 021 · Psionic Shots · Psionic Shot Silver
+				37 text Recursos resueltos 1 tris · 9 PE2 · 10 estelas · Death · t2120ms
+			38 container
+				39 text 022 · Psionic Shots · Psionic Shot Teal
+				40 text Recursos resueltos 1 tris · 9 PE2 · 10 estelas · Death · t2120ms
+			41 container
+				42 text 023 · Psionic Shots · Psionic Shot Yellow
+				43 text Recursos resueltos 1 tris · 9 PE2 · 10 estelas · Death · t2120ms
+
+The focused UI element is 7 button Siguiente, ID: next

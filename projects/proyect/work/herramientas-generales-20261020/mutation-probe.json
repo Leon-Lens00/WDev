@@ -1,0 +1,36 @@
+{
+  "version": "1.14.1",
+  "package_url": "https://files.pythonhosted.org/packages/25/ec/d957a251aec2b69ebd4531d415ed672e121c6b04a4bd4873ffb3612827a5/universalmutator-1.14.1-py2-none-any.whl",
+  "package_sha256": "87f27076cc413e6f1fadf0fd6ca66170448ec5a19f610ddc48227d80b4e94690",
+  "script_sha256": "a6625aa1463e45bd9c93d1d470909d94cbb96744e54dd7db036d994da8c2c3a1",
+  "method": "Ran analyze.py extracted from a hash-verified PyPI distribution; no pip install; one artificial mutant and deterministic exit-code controls. This does not evaluate vJASS compilation or gameplay.",
+  "cases": [
+    {
+      "case": "all",
+      "exit": 0,
+      "stdout": "ANALYZING /home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/probe.j\nCOMMAND: ** ['python3 /home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/always_fail.py MUTANT'] **\n================================================================================\n#1: [0.0s 0.0% DONE]\nRUNNING /home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/mutants/probe.mutant.0.j...\n/home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/mutants/probe.mutant.0.j KILLED IN 0.051535606384277344 (RETURN CODE 1)\n  RUNNING SCORE: 1.0\n================================================================================\nMUTATION SCORE: 1.0\n",
+      "stderr": "",
+      "killed": "probe.mutant.0.j\n",
+      "notkilled": "",
+      "compiler_invoked": false
+    },
+    {
+      "case": "limit-one",
+      "exit": 0,
+      "stdout": "ANALYZING /home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/probe.j\nCOMMAND: ** ['python3 /home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/always_fail.py MUTANT'] **\n================================================================================\n#1: [0.0s 0.0% DONE]\nRUNNING /home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/mutants/probe.mutant.0.j...\n================================================================================\nMUTATION SCORE: 0.0\n",
+      "stderr": "",
+      "killed": "",
+      "notkilled": "",
+      "compiler_invoked": false
+    },
+    {
+      "case": "compile-reject-default",
+      "exit": 0,
+      "stdout": "ANALYZING /home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/probe.j\nCOMMAND: ** ['python3 /home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/always_fail.py MUTANT'] **\n================================================================================\n#1: [0.0s 0.0% DONE]\nRUNNING /home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/mutants/probe.mutant.0.j...\n/home/snz/Documentos/ChatGPT/Proyect/work/herramientas-generales-20261020/mutation-probe/mutants/probe.mutant.0.j KILLED IN 0.051303863525390625 (RETURN CODE 1)\n  RUNNING SCORE: 1.0\n================================================================================\nMUTATION SCORE: 1.0\n",
+      "stderr": "",
+      "killed": "probe.mutant.0.j\n",
+      "notkilled": "",
+      "compiler_invoked": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+X3 Buster A — V9 | Warcraft III Classic 1.27b | MDX800
+
+Oleada luminosa cada 240 ms: el doble de frecuencia de V8 (480 ms). Cuatro oleadas por Stand de 960 ms; barrido UV de 210 ms y breve descanso. El movimiento sigue desde la punta hacia la cola.
+Pulido según el sprite: borde rosa recortado, lenguas asimétricas y cresta blanca más fina. Cuatro filamentos verdes eléctricos breves se mezclan con la luz azul/rosa; se mantienen discretos y dentro de las dimensiones previas.
+Cuerpo, centro blanco, cola, punta, envoltura rosa continua, 11 emisores y ribbon de la base V7 preservados. Se reconstruye el binario V7 exacto al retirar las cinco capas de geometría extra, el material, textura y animación UV del pulido. V8 y V7 permanecen en carpetas/ZIP separados.
+
+Importación: A-Buster/X3_Buster_Cargado.mdx y las 14 texturas de A-Buster/X3BusterV9. Usar rutas internas X3BusterV9\Nombre.blp. MDL editable incluido.
+Frente +X; raíz/punta (0,0,0); Birth 0–160 ms, Stand 200–1160 ms, Death 1300–1720 ms. Física/colisiones externas.
+3110 triángulos, 11 PE2, 1 ribbon y 14 texturas. Frente a V8: 56 triángulos y cuatro geosets adicionales; mismos emisores/texturas. No se midieron FPS.
+
+RITMO-1X.gif: 48 capturas de MDX real en pasos de20ms, velocidad normal, cuatro barridos. DETALLE-05X.gif contiene los mismos fotogramas a media velocidad. COMPARACION-3D.png: V8 izquierda/V9 derecha.
+Créditos: Vinz, Shots Vol.II https://www.hiveworkshop.com/threads/shots-vol-ii.315512/ (geometría/UV/apilado y emisores adaptados); conservar atribución. Mega Man X3: Capcom; sprites Random Talking Bush/Spriters Resource, animación Retropixel. Interpretación3D; 240ms es una decisión artística, no timing nativo SNES verificado.
+Sólo modelo Buster A; B/C continúan enV4. No integración de física.

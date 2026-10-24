@@ -1,0 +1,1052 @@
+import("./provider/data-enter-manager");
+import * as vscode from 'vscode';
+import * as path from 'path';
+import * as fs from 'fs';
+import { spawn } from 'child_process';
+
+import("./provider/data-enter-manager");
+import { CompletionProvider } from './provider/completion-provider';
+import { SignatureHelpProvider } from './provider/signature-help-provider';
+import { OutlineProvider } from './provider/outline-provider';
+import { HoverProvider } from './provider/hover-provider';
+import { DefinitionProvider } from './provider/definition-provider';
+import { TypeDefinitionProvider } from './provider/type-definition-provider';
+import { ReferenceProvider } from './provider/reference-provider';
+import { InlayHintsProvider } from './provider/inlay-hints-provider';
+import { ImplementationProvider } from './provider/implementation-provider';
+import { DiagnosticProvider } from './provider/diagnostic-provider';
+import { ZincCompletionProvider } from './provider/zinc/zinc-completion-provider';
+import { ZincDefinitionProvider } from './provider/zinc/zinc-definition-provider';
+import { ZincHoverProvider } from './provider/zinc/zinc-hover-provider';
+import { ZincSignatureHelpProvider } from './provider/zinc/zinc-signature-help-provider';
+import { ZincOutlineProvider } from './provider/zinc/zinc-outline-provider';
+import { ZincDiagnosticProvider } from './provider/zinc/zinc-diagnostic-provider';
+// import { FormattingProvider } from './provider/formatting-provider';
+import { DocumentFormattingSortEditProvider } from './provider/formatting-edit-provider';
+
+import { ZincFormattingProvider } from './provider/zinc/zinc-formatting-provider';
+import { DataEnterManager } from './provider/data-enter-manager';
+import { JassDocumentColorProvider } from './provider/color-provider';
+import { ZincInlayHintsProvider } from './provider/zinc/zinc-inlay-hints-provider';
+import { SpecialFileManager } from './provider/special/special-file-manager';
+import { SpecialCompletionProvider } from './provider/special/special-completion-provider';
+import { SpecialHoverProvider } from './provider/special/special-hover-provider';
+import { SpecialDefinitionProvider } from './provider/special/special-definition-provider';
+import { DocumentLinkProvider } from './provider/link-provider';
+import { CodeActionProvider } from './provider/code-action-provider';
+import { WorkspaceSymbolProvider } from './provider/workspace-symbol-provider';
+import { DocumentInfoManager } from './provider/document-info-manager';
+
+// 实验性：ydwe-compiler(exe) 语言服务器接入
+import { LSP_DOCUMENT_SELECTOR, LspModeController } from './lsp/lsp-mode-controller';
+import { JassFeatureId } from './lsp/takeover';
+
+// JASS 语言选择器（同时支持已保存的 file 和未保存的 untitled 两种 scheme）
+const jassSelector: vscode.DocumentSelector = [
+    { scheme: 'file', language: 'jass' },
+    { scheme: 'untitled', language: 'jass' }
+];
+const jassZincSelector: vscode.DocumentSelector = [
+    { scheme: 'file', language: 'jass-zinc' },
+    { scheme: 'untitled', language: 'jass-zinc' }
+];
+
+// 全局 DataEnterManager 实例
+let dataEnterManager: DataEnterManager | undefined;
+
+const SUPPORT_PROMPT_SNOOZE_UNTIL_KEY = 'supportPrompt.snoozeUntil';
+const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
+
+function renderSupportWebview(panel: vscode.WebviewPanel, context: vscode.ExtensionContext): void {
+    const webview = panel.webview;
+    const toWebviewUri = (segments: string[]): string => {
+        const uri = vscode.Uri.joinPath(context.extensionUri, ...segments);
+        return webview.asWebviewUri(uri).toString();
+    };
+
+    const imageStore = toWebviewUri(['static', 'images', '渴望可乐.png']);
+    const imageCoding = toWebviewUri(['static', 'images', '零食充足才有精力修BUG.png']);
+    const imageQQ = toWebviewUri(['static', 'images', 'qrcode.png']);
+    const imageWechat = toWebviewUri(['static', 'images', 'wechatqrcode.png']);
+
+    panel.webview.html = `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>支持作者</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: var(--vscode-foreground);
+      background: var(--vscode-editor-background);
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+    }
+    .hero {
+      border: 1px solid var(--vscode-panel-border);
+      border-radius: 14px;
+      padding: 16px;
+      background: linear-gradient(135deg, rgba(255,145,77,0.12), rgba(255,80,120,0.08));
+    }
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .desc {
+      margin: 10px 0 0;
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+    .tip {
+      margin: 10px 0 0;
+      font-size: 12px;
+      opacity: 0.75;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+    .card {
+      border: 1px solid var(--vscode-panel-border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--vscode-editorWidget-background);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .card img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .label {
+      padding: 10px 12px;
+      font-size: 13px;
+      opacity: 0.9;
+      border-top: 1px solid var(--vscode-panel-border);
+    }
+    .qr .label {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1 class="title">如果项目帮到你，欢迎请我喝杯奶茶 ❤️</h1>
+      <p class="desc">你的支持会用于持续维护、修复问题和更新文档。完全自愿，不影响功能使用。<br/>感谢风云地图编辑器QQ群：534186949的维护支持。</p>
+      <p class="tip">每一份支持，都会优先转化成更快的修复与更稳的版本。</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img src="${imageStore}" alt="support-image-1" />
+        <div class="label">渴望可乐</div>
+      </div>
+      <div class="card">
+        <img src="${imageCoding}" alt="support-image-2" />
+        <div class="label">零食充足才有精力修 BUG</div>
+      </div>
+      <div class="card qr">
+        <img src="${imageQQ}" alt="qq-qrcode" />
+        <div class="label">QQ 扫码支持</div>
+      </div>
+      <div class="card qr">
+        <img src="${imageWechat}" alt="wechat-qrcode" />
+        <div class="label">微信扫码支持</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>`;
+}
+
+async function showSupportPrompt(context: vscode.ExtensionContext): Promise<void> {
+    const now = Date.now();
+    const snoozeUntil = context.globalState.get<number>(SUPPORT_PROMPT_SNOOZE_UNTIL_KEY, 0);
+    if (now < snoozeUntil) {
+        return;
+    }
+
+    const choice = await vscode.window.showInformationMessage(
+        '如果这个扩展帮到了你，欢迎支持作者持续维护 ❤️（温馨提示）。\n感谢风云地图编辑器QQ群：534186949的维护支持。',
+        '去支持',
+        '不再提示',
+        '稍后提醒',
+        '狠心拒绝'
+    );
+
+    if (choice === '去支持') {
+        const panel = vscode.window.createWebviewPanel(
+            'jassSupportAuthor',
+            '支持 JASS 扩展作者',
+            vscode.ViewColumn.Beside,
+            {
+                enableScripts: false,
+                localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, 'static', 'images')]
+            }
+        );
+        renderSupportWebview(panel, context);
+        return;
+    }
+
+    if (choice === '不再提示') {
+        // 按产品策略：这里不是永久不提示，而是冷却 7 天
+        await context.globalState.update(SUPPORT_PROMPT_SNOOZE_UNTIL_KEY, now + WEEK_MS);
+        return;
+    }
+
+    if (choice === '稍后提醒') {
+        // 每次打开都询问，因此"稍后提醒"不写入冷却状态
+        return;
+    }
+
+    if (choice === '狠心拒绝') {
+        // 每次打开都询问，因此"狠心拒绝"不写入冷却状态
+        return;
+    }
+}
+
+export async function activate(context: vscode.ExtensionContext) {
+    console.log('JASS Extension is activating...');
+
+    // 创建并初始化 DataEnterManager
+    dataEnterManager = new DataEnterManager({
+        ignoreConfig: false,
+        debounceDelay: 300, // 减少防抖延迟，提高响应速度
+        enableFileWatcher: true
+    });
+
+    // 初始化工作区（两阶段解析：先收集 textmacro，再解析文件）
+    try {
+        await dataEnterManager.initializeWorkspace();
+        console.log('✅ DataEnterManager initialized successfully');
+    } catch (error) {
+        console.error('❌ Failed to initialize DataEnterManager:', error);
+        vscode.window.showErrorMessage('Failed to initialize JASS extension workspace');
+    }
+
+    // 初始化特殊文件管理器（在 DataEnterManager 初始化之后，确保 static 文件已加载）
+    try {
+        const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+        const workspaceRoot = workspaceFolder?.uri.fsPath;
+        const specialFileManager = SpecialFileManager.getInstance();
+        await specialFileManager.initialize(workspaceRoot);
+        console.log('✅ SpecialFileManager initialized successfully');
+        
+        context.subscriptions.push({
+            dispose: () => {
+                specialFileManager.dispose();
+            }
+        });
+    } catch (error) {
+        console.error('❌ Failed to initialize SpecialFileManager:', error);
+    }
+
+    // ============================================================
+    // 语言特性注册
+    //
+    // 语言特性分两类：
+    //  1. 独占特性（nativeFeatureFactories）：可被 `jass.lsp` 接入的 exe 语言服务器接管。
+    //     由 LspModeController 决定当前装「原生实现」还是让位给服务端，两者互斥，
+    //     避免 VSCode 把两套结果合并（补全重复、hover 出现两段）。
+    //  2. 常驻特性：在下方直接注册，与 LSP 模式无关。
+    // ============================================================
+
+    // dataEnterManager 已在上面完成初始化；取局部常量，便于在工厂闭包中安全使用
+    const manager: DataEnterManager = dataEnterManager;
+
+    // 触发字符：代码补全（引号、斜杠 + 所有字母数字与下划线、点号）
+    const triggerChars = [
+        "\"", "/", "\\",
+        ..."abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_0123456789_.".split("")
+    ];
+    // 触发字符：特殊文件（字符串/数值/路径等字面量）补全
+    const specialCompletionTriggerChars = [
+        '"', "'", ..."0123456789xbBX$abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$".split("")
+    ];
+    // 触发字符：参数提示
+    const signatureTriggerChars = [
+        "(",
+        ",",
+        ..."abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_".split("")
+    ];
+
+    // 按扩展名匹配的 Zinc 文件选择器
+    const zincFileSelector = { scheme: 'file', pattern: '**/*.zn' };
+
+    /**
+     * 各语言特性的原生实现工厂。
+     *
+     * 约定：
+     * - 工厂返回该特性对应的全部 disposable，调用即完成注册；
+     * - 未列出的特性视为「没有原生等价物」（符号高亮、语义着色）；
+     * - 每次模式切换都会重新调用工厂，因此内部不要持有跨次状态。
+     */
+    const nativeFeatureFactories: Partial<Record<JassFeatureId, () => vscode.Disposable[]>> = {
+        // 代码补全：vJASS + 特殊文件字面量 + Zinc
+        completion: () => {
+            const completionProvider = new CompletionProvider(manager);
+            const specialCompletionProvider = new SpecialCompletionProvider();
+            const zincCompletionProvider = new ZincCompletionProvider(manager);
+            return [
+                vscode.languages.registerCompletionItemProvider(
+                    jassSelector,
+                    completionProvider,
+                    ...triggerChars
+                ),
+                vscode.languages.registerCompletionItemProvider(
+                    jassSelector,
+                    specialCompletionProvider,
+                    ...specialCompletionTriggerChars
+                ),
+                vscode.languages.registerCompletionItemProvider(
+                    jassZincSelector,
+                    zincCompletionProvider,
+                    ...triggerChars
+                )
+            ];
+        },
+
+        // 参数提示：vJASS + Zinc
+        signatureHelp: () => {
+            const signatureHelpProvider = new SignatureHelpProvider(manager);
+            const zincSignatureHelpProvider = new ZincSignatureHelpProvider(manager);
+            return [
+                vscode.languages.registerSignatureHelpProvider(
+                    jassSelector,
+                    signatureHelpProvider,
+                    ...signatureTriggerChars
+                ),
+                vscode.languages.registerSignatureHelpProvider(
+                    jassZincSelector,
+                    zincSignatureHelpProvider,
+                    ...signatureTriggerChars
+                )
+            ];
+        },
+
+        // 文档大纲：vJASS + Zinc
+        documentSymbol: () => {
+            const outlineProvider = new OutlineProvider(manager);
+            const zincOutlineProvider = new ZincOutlineProvider(manager);
+            return [
+                vscode.languages.registerDocumentSymbolProvider(
+                    jassSelector,
+                    outlineProvider
+                ),
+                vscode.languages.registerDocumentSymbolProvider(
+                    jassZincSelector,
+                    zincOutlineProvider
+                )
+            ];
+        },
+
+        // 悬停提示：vJASS + 特殊文件 + Zinc
+        hover: () => {
+            const hoverProvider = new HoverProvider(manager);
+            const specialHoverProvider = new SpecialHoverProvider();
+            const zincHoverProvider = new ZincHoverProvider(manager);
+            return [
+                vscode.languages.registerHoverProvider(
+                    jassSelector,
+                    hoverProvider
+                ),
+                { dispose: () => hoverProvider.dispose() },
+                vscode.languages.registerHoverProvider(
+                    jassSelector,
+                    specialHoverProvider
+                ),
+                vscode.languages.registerHoverProvider(
+                    jassZincSelector,
+                    zincHoverProvider
+                ),
+                { dispose: () => zincHoverProvider.dispose() }
+            ];
+        },
+
+        // 跳转定义：vJASS + 特殊文件 + Zinc
+        definition: () => {
+            const definitionProvider = new DefinitionProvider(manager);
+            const specialDefinitionProvider = new SpecialDefinitionProvider();
+            const zincDefinitionProvider = new ZincDefinitionProvider(manager);
+            return [
+                vscode.languages.registerDefinitionProvider(
+                    jassSelector,
+                    definitionProvider
+                ),
+                vscode.languages.registerDefinitionProvider(
+                    jassSelector,
+                    specialDefinitionProvider
+                ),
+                vscode.languages.registerDefinitionProvider(
+                    jassZincSelector,
+                    zincDefinitionProvider
+                )
+            ];
+        },
+
+        /**
+         * 内联提示（参数名/类型）：实验特性，由 `jass.hint` 控制，默认关闭。
+         * 关闭时返回空数组，等价于「不注册」——同时保持注册表条目的语义。
+         */
+        inlayHints: () => {
+            const hintEnabled = vscode.workspace
+                .getConfiguration('jass')
+                .get<boolean>('hint', false);
+            if (!hintEnabled) {
+                return [];
+            }
+
+            const inlayHintsProvider = new InlayHintsProvider(manager);
+            const zincInlayHintsProvider = new ZincInlayHintsProvider(manager);
+            return [
+                vscode.languages.registerInlayHintsProvider(
+                    jassSelector,
+                    inlayHintsProvider
+                ),
+                vscode.languages.registerInlayHintsProvider(
+                    zincFileSelector,
+                    zincInlayHintsProvider
+                ),
+                { dispose: () => zincInlayHintsProvider.dispose() }
+            ];
+        },
+
+        // 错误诊断：vJASS + Zinc
+        diagnostics: () => {
+            const diagnosticProvider = new DiagnosticProvider(manager);
+            const zincDiagnosticProvider = new ZincDiagnosticProvider(manager);
+
+            // jass.config.json 重新加载时同步诊断配置
+            const onConfigReload = (): void => {
+                const config = manager.getConfig();
+                if (config?.diagnostics) {
+                    diagnosticProvider.updateDiagnosticsConfig(config.diagnostics);
+                }
+            };
+            manager.onConfigReload(onConfigReload);
+
+            // 初始诊断配置
+            const initialConfig = manager.getConfig();
+            if (initialConfig?.diagnostics) {
+                diagnosticProvider.updateDiagnosticsConfig(initialConfig.diagnostics);
+            }
+
+            return [
+                diagnosticProvider.getDiagnosticCollection(),
+                zincDiagnosticProvider.getDiagnosticCollection(),
+                { dispose: () => manager.offConfigReload(onConfigReload) },
+                { dispose: () => diagnosticProvider.dispose() },
+                { dispose: () => zincDiagnosticProvider.dispose() }
+            ];
+        },
+
+        // 查找引用：vJASS
+        references: () => {
+            const referenceProvider = new ReferenceProvider(manager);
+            return [
+                vscode.languages.registerReferenceProvider(
+                    jassSelector,
+                    referenceProvider
+                )
+            ];
+        },
+
+        // 工作区符号搜索
+        workspaceSymbol: () => {
+            const workspaceSymbolProvider = new WorkspaceSymbolProvider(manager);
+            return [
+                vscode.languages.registerWorkspaceSymbolProvider(workspaceSymbolProvider)
+            ];
+        },
+
+        // 查找实现：vJASS
+        implementation: () => {
+            const implementationProvider = new ImplementationProvider(manager);
+            return [
+                vscode.languages.registerImplementationProvider(
+                    jassSelector,
+                    implementationProvider
+                )
+            ];
+        },
+
+        // 代码操作（Quick Fix）：vJASS
+        codeAction: () => {
+            const codeActionProvider = new CodeActionProvider(manager);
+            return [
+                vscode.languages.registerCodeActionsProvider(
+                    jassSelector,
+                    codeActionProvider,
+                    {
+                        providedCodeActionKinds: [vscode.CodeActionKind.QuickFix]
+                    }
+                )
+            ];
+        },
+
+        // 代码格式化：vJASS + Zinc
+        formatting: () => {
+            const formattingProvider = new DocumentFormattingSortEditProvider();
+            const zincFormattingProvider = new ZincFormattingProvider(manager);
+            return [
+                vscode.languages.registerDocumentFormattingEditProvider(
+                    jassSelector,
+                    formattingProvider
+                ),
+                vscode.languages.registerDocumentFormattingEditProvider(
+                    zincFileSelector,
+                    zincFormattingProvider
+                ),
+                vscode.languages.registerDocumentRangeFormattingEditProvider(
+                    zincFileSelector,
+                    zincFormattingProvider
+                )
+            ];
+        }
+    };
+
+    // ------------------------------------------------------------
+    // LSP 模式控制器：`jass.lsp` 开启时，由 exe 的 `--lsp` 接管上表中的部分特性
+    // ------------------------------------------------------------
+    const lspModeController = new LspModeController({
+        context,
+        nativeFeatureFactories,
+        documentSelector: LSP_DOCUMENT_SELECTOR
+    });
+    context.subscriptions.push({
+        dispose: () => lspModeController.dispose()
+    });
+
+    context.subscriptions.push(
+        vscode.workspace.onDidChangeConfiguration((e) => {
+            // 日志级别无需重启，直接下发给客户端
+            if (e.affectsConfiguration('jass.lsp.trace.server')) {
+                lspModeController.refreshTraceLevel();
+            }
+            // 开关或 exe 路径变化：整体重建特性归属
+            // 注意 'jass.lsp' 会同时匹配 jass.lsp.* 子项，因此上面的 trace 分支先处理
+            if (e.affectsConfiguration('jass.lsp')) {
+                void lspModeController.apply();
+            }
+            // 内联提示的开关只影响原生实现，不涉及 LSP 归属
+            if (e.affectsConfiguration('jass.hint')) {
+                lspModeController.refreshNativeFeature('inlayHints');
+            }
+        })
+    );
+
+    // 按当前配置决定每个特性由谁负责
+    await lspModeController.apply();
+
+    // 创建并注册 TypeDefinitionProvider（跳转到类型定义支持）
+    const typeDefinitionProvider = new TypeDefinitionProvider(dataEnterManager);
+    context.subscriptions.push(
+        vscode.languages.registerTypeDefinitionProvider(
+            jassSelector,
+            typeDefinitionProvider
+        )
+    );
+
+    // 创建并注册 JassDocumentColorProvider（颜色提供者支持）
+    const documentColorProvider = new JassDocumentColorProvider();
+    context.subscriptions.push(
+        vscode.languages.registerColorProvider(
+            jassSelector,
+            documentColorProvider
+        )
+    );
+
+    // 创建并注册 DocumentLinkProvider（文档链接支持，用于 #include 和 //! import）
+    const documentLinkProvider = new DocumentLinkProvider();
+    context.subscriptions.push(
+        vscode.languages.registerDocumentLinkProvider(
+            jassSelector,
+            documentLinkProvider
+        )
+    );
+
+    // 注册调试命令：查看缓存状态
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jass.showCacheStats', () => {
+            if (!dataEnterManager) {
+                vscode.window.showErrorMessage('DataEnterManager is not initialized');
+                return;
+            }
+            
+            const stats = dataEnterManager.getCacheStats();
+            const message = `📊 JASS Cache Statistics\n\n` +
+                `Total Files: ${stats.totalFiles}\n` +
+                `Immutable Files: ${stats.immutableFiles}\n\n` +
+                `Cached Files:\n${stats.cachedFiles.map(f => `  - ${f}`).join('\n')}\n\n` +
+                `Immutable Files:\n${stats.immutableFileList.map(f => `  - ${f}`).join('\n')}`;
+            
+            vscode.window.showInformationMessage(message, { modal: true });
+            console.log('📊 Cache Stats:', stats);
+        })
+    );
+
+    // 注册命令：跳转到替代符号（用于 @deprecated use XXX 的直达跳转）
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jass.openReplacementSymbol', async (symbolName?: string) => {
+            if (!symbolName || typeof symbolName !== 'string') {
+                vscode.window.showWarningMessage('Replacement symbol is empty');
+                return;
+            }
+
+            try {
+                const symbols = await vscode.commands.executeCommand<vscode.SymbolInformation[]>(
+                    'vscode.executeWorkspaceSymbolProvider',
+                    symbolName
+                ) || [];
+
+                if (symbols.length === 0) {
+                    vscode.window.showWarningMessage(`Replacement symbol '${symbolName}' not found in workspace`);
+                    return;
+                }
+
+                const exact = symbols.find(s => s.name === symbolName)
+                    || symbols.find(s => s.name.toLowerCase() === symbolName.toLowerCase())
+                    || symbols[0];
+
+                const doc = await vscode.workspace.openTextDocument(exact.location.uri);
+                const editor = await vscode.window.showTextDocument(doc);
+                editor.selection = new vscode.Selection(exact.location.range.start, exact.location.range.end);
+                editor.revealRange(exact.location.range, vscode.TextEditorRevealType.InCenter);
+            } catch (error) {
+                console.error('Failed to open replacement symbol:', error);
+                vscode.window.showErrorMessage(`Failed to navigate to replacement symbol '${symbolName}'`);
+            }
+        })
+    );
+
+    // 注册命令：重启语言服务器（实验性功能 jass.lsp）
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jass.restartLspServer', async () => {
+            const config = vscode.workspace.getConfiguration('jass');
+            if (!config.get<boolean>('lsp', false)) {
+                const choice = await vscode.window.showInformationMessage(
+                    'jass.lsp 当前处于关闭状态，语言特性由扩展内置实现提供。是否开启并接入 ydwe-compiler 语言服务器？',
+                    '开启',
+                    '取消'
+                );
+                if (choice !== '开启') {
+                    return;
+                }
+                // 写入后由配置变更监听触发重建，无需在这里再调一次 restart
+                await config.update('lsp', true, vscode.ConfigurationTarget.Workspace);
+                return;
+            }
+
+            await lspModeController.restart();
+            vscode.window.showInformationMessage('JASS 语言服务器已重启。');
+        })
+    );
+
+    // 旧版扩展共存检测：Warcraft-III-VJassHelper（jass.warcraft-iii-vjasshelper）同样
+    // 为 JASS 语言注册补全/悬停/诊断，与本扩展同时启用会导致特性重复、结果互相叠加；
+    // 其旧版本还会因内置 data 目录缺失抛出 `data\blizzard.j ENOENT` 未处理异常。
+    // 这里只提示不干预，由用户决定是否禁用旧版。
+    const legacyExtension = vscode.extensions.getExtension('jass.warcraft-iii-vjasshelper');
+    if (legacyExtension) {
+        void vscode.window.showWarningMessage(
+            '检测到旧版扩展「Warcraft-III-VJassHelper」与本扩展同时启用。两者都会为 JASS 提供' +
+            '悬停/诊断等功能，会导致结果重复或相互干扰（旧版还会报 data\\blizzard.j 缺失错误）。',
+            '打开扩展面板',
+            '忽略'
+        ).then((choice) => {
+            if (choice === '打开扩展面板') {
+                void vscode.commands.executeCommand(
+                    'workbench.extensions.search',
+                    '@installed Warcraft-III-VJassHelper'
+                );
+            }
+        });
+    }
+
+    // 注册调试命令：测试 special 解析器（使用测试数据）
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jass.testSpecialParsers', async () => {
+            const { SpecialParserDebugger } = await import('./provider/special/special-parser-debug');
+            
+            vscode.window.showInformationMessage('Testing special parsers with sample data... Check output panel for results.');
+            SpecialParserDebugger.testParsersWithSampleData();
+            vscode.window.showInformationMessage('Special parser test completed! Check output panel for details.');
+        })
+    );
+
+    // 注册调试命令：测试 special 解析器（从工作区文件）
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jass.testSpecialParsersFromWorkspace', async () => {
+            const { SpecialParserDebugger } = await import('./provider/special/special-parser-debug');
+            const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+            const workspaceRoot = workspaceFolder?.uri.fsPath;
+            
+            if (!workspaceRoot) {
+                vscode.window.showErrorMessage('No workspace folder found');
+                return;
+            }
+
+            vscode.window.showInformationMessage('Testing special parsers from workspace... Check output panel for results.');
+            await SpecialParserDebugger.testParsers(workspaceRoot);
+            vscode.window.showInformationMessage('Special parser test completed! Check output panel for details.');
+        })
+    );
+
+    // 注册命令：创建 jass.config.json
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jass.createConfigFile', async (uri?: vscode.Uri) => {
+            const workspaceFolder = vscode.workspace.workspaceFolders?.[0];
+            if (!workspaceFolder) {
+                vscode.window.showErrorMessage('No workspace folder found');
+                return;
+            }
+
+            // 确定配置文件路径
+            let configPath: string;
+            if (uri && uri.scheme === 'file') {
+                // 如果右键点击了文件夹，在该文件夹下创建
+                const fsPath = uri.fsPath;
+                const stats = await vscode.workspace.fs.stat(uri);
+                if (stats.type === vscode.FileType.Directory) {
+                    configPath = path.join(fsPath, 'jass.config.json');
+                } else {
+                    // 如果是文件，在文件所在目录创建
+                    configPath = path.join(path.dirname(fsPath), 'jass.config.json');
+                }
+            } else {
+                // 默认在工作区根目录创建
+                configPath = path.join(workspaceFolder.uri.fsPath, 'jass.config.json');
+            }
+
+            // 检查文件是否已存在
+            const configUri = vscode.Uri.file(configPath);
+            try {
+                await vscode.workspace.fs.stat(configUri);
+                const overwrite = await vscode.window.showWarningMessage(
+                    `jass.config.json already exists at ${path.relative(workspaceFolder.uri.fsPath, configPath)}. Overwrite?`,
+                    'Yes',
+                    'No'
+                );
+                if (overwrite !== 'Yes') {
+                    return;
+                }
+            } catch {
+                // 文件不存在，继续创建
+            }
+
+            // 创建默认配置内容
+            const defaultConfig = {
+                "excludes": [
+                    "**/node_modules/**",
+                    "**/.git/**",
+                    "**/dist/**",
+                    "**/build/**"
+                ],
+                "includes": [
+                    "**/*.j",
+                    "**/*.jass",
+                    "**/*.ai",
+                    "**/*.zn"
+                ],
+                "standardLibraries": {
+                    "common.j": "./libs/common.j",
+                    "common.ai": "./libs/common.ai",
+                    "blizzard.j": "./libs/blizzard.j",
+                    "DzAPI.j": "./libs/DzAPI.j",
+                    "war3map.j": "./libs/war3map.j",
+                    "AIScripts.ai": "./libs/AIScripts.ai",
+                    "Cheats.j": "./libs/Cheats.j",
+                    "InitCheats.j": "./libs/InitCheats.j"
+                },
+                "diagnostics": {
+                    "enable": true,
+                    "severity": {
+                        "errors": "error",
+                        "warnings": "warning"
+                    },
+                    "checkTypes": true,
+                    "checkUndefined": true,
+                    "checkUnused": false,
+                    "checkArrayBounds": true
+                }
+            };
+
+            // 写入文件
+            const content = JSON.stringify(defaultConfig, null, 4);
+            fs.writeFileSync(configPath, content, 'utf-8');
+
+            // 打开文件
+            const document = await vscode.workspace.openTextDocument(configUri);
+            await vscode.window.showTextDocument(document);
+
+            vscode.window.showInformationMessage(`Created jass.config.json at ${path.relative(workspaceFolder.uri.fsPath, configPath)}`);
+            
+            // 如果 DataEnterManager 已初始化，重新加载配置
+            // 配置重新加载会自动触发回调更新诊断提供者
+            if (dataEnterManager) {
+                dataEnterManager.reloadConfig();
+            }
+        })
+    );
+
+    // ========== JASS 编译检查功能 ==========
+
+    // 使用 Pseudoterminal 输出到终端（终端会自动识别 filepath:line:col 为可点击链接）
+    class JassCompilerTerminal implements vscode.Pseudoterminal {
+        private writeEmitter = new vscode.EventEmitter<string>();
+        onDidWrite: vscode.Event<string> = this.writeEmitter.event;
+        private closeEmitter = new vscode.EventEmitter<number>();
+        onDidClose?: vscode.Event<number> = this.closeEmitter.event;
+
+        writeLine(text: string) {
+            this.writeEmitter.fire(text + '\r\n');
+        }
+
+        open(_initialDimensions: vscode.TerminalDimensions | undefined): void {}
+        close(): void {}
+    }
+
+    /**
+     * 获取标准库文件路径
+     */
+    function getStandardLibraryPaths(): { commonJ: string; blizzardJ: string; commonAi: string } {
+        const config = vscode.workspace.getConfiguration('jass');
+        const extensionPath = context.extensionPath;
+
+        const commonJ = config.get<string>('compiler.commonJ', '') || path.join(extensionPath, 'static', 'common.j');
+        const blizzardJ = config.get<string>('compiler.blizzardJ', '') || path.join(extensionPath, 'static', 'blizzard.j');
+        const commonAi = config.get<string>('compiler.commonAi', '') || path.join(extensionPath, 'static', 'common.ai');
+
+        return { commonJ, blizzardJ, commonAi };
+    }
+
+    /**
+     * 获取编译检查用的标准库文件路径
+     */
+    function getCheckLibraryPaths(): { commonJ: string; blizzardJ: string; commonAi: string } {
+        const config = vscode.workspace.getConfiguration('jass');
+        const extensionPath = context.extensionPath;
+
+        const checkCommonJ = config.get<string>('compiler.checkCommonJ', '');
+        const checkBlizzardJ = config.get<string>('compiler.checkBlizzardJ', '');
+        const checkCommonAi = config.get<string>('compiler.checkCommonAi', '');
+
+        const commonJ = checkCommonJ
+            || config.get<string>('compiler.commonJ', '')
+            || path.join(extensionPath, 'static', 'common.j');
+        const blizzardJ = checkBlizzardJ
+            || config.get<string>('compiler.blizzardJ', '')
+            || path.join(extensionPath, 'static', 'blizzard.j');
+        const commonAi = checkCommonAi
+            || config.get<string>('compiler.commonAi', '')
+            || path.join(extensionPath, 'static', 'common.ai');
+
+        return { commonJ, blizzardJ, commonAi };
+    }
+
+    /**
+     * 获取 pjass.exe 路径
+     */
+    function getPjassPath(): string {
+        const config = vscode.workspace.getConfiguration('jass');
+        const userPath = config.get<string>('compiler.pjassPath', '');
+
+        if (userPath) {
+            return userPath;
+        }
+
+        return path.join(context.extensionPath, 'out', 'extern', 'pjass', 'pjass.exe');
+    }
+
+    /**
+     * 执行 jassparser 进行语法检查
+     */
+    async function runJassParser(
+        checkType: 'trigger' | 'aiLibrary' | 'ai',
+        filePath: string
+    ): Promise<void> {
+        const pjassPath = getPjassPath();
+        const libPaths = getCheckLibraryPaths();
+
+        if (!fs.existsSync(pjassPath)) {
+            vscode.window.showErrorMessage(
+                `找不到 pjass.exe: ${pjassPath}\n` +
+                `请在设置中配置 "jass.compiler.pjassPath"，或将 pjass.exe 放到扩展目录 (out/extern/pjass/pjass.exe)。`
+            );
+            return;
+        }
+
+        if (!fs.existsSync(filePath)) {
+            vscode.window.showErrorMessage(`找不到文件: ${filePath}`);
+            return;
+        }
+
+        let args: string[];
+        let checkTypeName: string;
+
+        switch (checkType) {
+            case 'trigger':
+                args = [`"${libPaths.commonJ}"`, `"${libPaths.blizzardJ}"`, `"${filePath}"`];
+                checkTypeName = '编译自定义触发';
+                break;
+            case 'aiLibrary':
+                args = [`"${libPaths.commonJ}"`, `"${filePath}"`];
+                checkTypeName = '编译自定义库(Blizzard.j或common.ai)';
+                break;
+            case 'ai':
+                args = [`"${libPaths.commonJ}"`, `"${libPaths.commonAi}"`, `"${filePath}"`];
+                checkTypeName = '编译自定义ai脚本';
+                break;
+        }
+
+        // 创建终端并显示
+        const pty = new JassCompilerTerminal();
+        const terminal = vscode.window.createTerminal({
+            name: `JASS ${checkTypeName}`,
+            pty
+        });
+        terminal.show(true);
+
+        pty.writeLine(`═══════════════════════════════════════════════════════════`);
+        pty.writeLine(`📋 JASS ${checkTypeName}`);
+        pty.writeLine(`📁 文件: ${filePath}`);
+        pty.writeLine(`🔧 编译器: ${pjassPath}`);
+        pty.writeLine(`📚 入参文件:`);
+        args.forEach((arg, i) => {
+            const displayPath = arg.replace(/^.|.$/g, '');
+            const isLast = i === args.length - 1;
+            const label = isLast ? '🎯 目标文件' : `📖 标准库 ${i + 1}`;
+            pty.writeLine(`   ${label}: ${displayPath}`);
+        });
+        pty.writeLine(`───────────────────────────────────────────────────────────`);
+        pty.writeLine('');
+
+        const proc = spawn(`"${pjassPath}"`, args, { shell: true });
+        const stdoutChunks: Buffer[] = [];
+        const stderrChunks: Buffer[] = [];
+
+        proc.stdout.on('data', (data: Buffer) => { stdoutChunks.push(data); });
+        proc.stderr.on('data', (data: Buffer) => { stderrChunks.push(data); });
+
+        proc.on('close', (code) => {
+            const stdoutBuf = Buffer.concat(stdoutChunks);
+            const stderrBuf = Buffer.concat(stderrChunks);
+
+            let decoded = '';
+            try {
+                const decoder = new (globalThis as any).TextDecoder('gbk');
+                decoded = decoder.decode(Buffer.concat([stdoutBuf, stderrBuf]));
+            } catch {
+                decoded = Buffer.concat([stdoutBuf, stderrBuf]).toString();
+            }
+
+            const allOutput = decoded.trim();
+
+            if (code === 0) {
+                pty.writeLine('✅ 检查通过，没有发现语法错误。');
+            } else if (allOutput) {
+                // 输出 pjass 原始内容，终端会自动识别 filepath:line:col 为可点击链接
+                pty.writeLine(allOutput);
+            } else {
+                pty.writeLine('❌ 检查失败，但没有输出信息。');
+            }
+
+            pty.writeLine('');
+            pty.writeLine(`═══════════════════════════════════════════════════════════`);
+
+            if (code === 0) {
+                vscode.window.showInformationMessage(`✅ ${checkTypeName} 完成：没有发现语法错误`);
+            } else {
+                pty.writeLine('');
+                pty.writeLine('💡 按住 Ctrl 点击上方的错误路径行即可跳转到对应代码行（macOS 按 Cmd）');
+                vscode.window.showWarningMessage(`⚠️ ${checkTypeName} 完成：发现错误，请查看终端`);
+            }
+        });
+
+        proc.on('error', (err) => {
+            pty.writeLine(`❌ 执行失败: ${err.message}`);
+            pty.writeLine('');
+            pty.writeLine(`请确保 pjass.exe 存在且可执行。`);
+            vscode.window.showErrorMessage(`执行 ${checkTypeName} 失败: ${err.message}`);
+        });
+    }
+
+    // 注册触发编译检查命令
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jass.checkTrigger', async () => {
+            const editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                vscode.window.showWarningMessage('请先打开一个 JASS 文件');
+                return;
+            }
+            const filePath = editor.document.uri.fsPath;
+            await runJassParser('trigger', filePath);
+        })
+    );
+
+    // 注册 AI库编译检查命令
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jass.checkAILibrary', async () => {
+            const editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                vscode.window.showWarningMessage('请先打开一个 JASS 文件');
+                return;
+            }
+            const filePath = editor.document.uri.fsPath;
+            await runJassParser('aiLibrary', filePath);
+        })
+    );
+
+    // 注册 AI编译检查命令
+    context.subscriptions.push(
+        vscode.commands.registerCommand('jass.checkAI', async () => {
+            const editor = vscode.window.activeTextEditor;
+            if (!editor) {
+                vscode.window.showWarningMessage('请先打开一个 JASS 文件');
+                return;
+            }
+            const filePath = editor.document.uri.fsPath;
+            await runJassParser('ai', filePath);
+        })
+    );
+
+    // 将 DataEnterManager 与 DocumentInfoManager 的清理添加到订阅中，以便在扩展停用时释放资源
+    context.subscriptions.push({
+        dispose: () => {
+            if (dataEnterManager) {
+                dataEnterManager.dispose();
+                dataEnterManager = undefined;
+            }
+            DocumentInfoManager.resetInstance();
+        }
+    });
+
+    // 每次打开编辑器温和提示一次（受冷却策略控制），避免强打断用户
+    setTimeout(() => {
+        showSupportPrompt(context).catch((error) => {
+            console.error('Failed to show support prompt:', error);
+        });
+    }, 2800);
+
+    console.log('✅ JASS Extension activated successfully');
+}
+
+export function deactivate() {
+    // 清理资源
+    if (dataEnterManager) {
+        dataEnterManager.dispose();
+        dataEnterManager = undefined;
+    }
+    // 引用计数：强制清理并重置单例，确保下次激活时状态干净
+    DocumentInfoManager.resetInstance();
+    console.log('JASS Extension deactivated');
+}

@@ -1,0 +1,10 @@
+{
+  "args": [
+    "/home/snz/.local/bin/codegraph",
+    "sync",
+    "/home/snz/Documentos/WarDatsPy/ui-studio/dist"
+  ],
+  "code": 0,
+  "stdout": "\u250c  Syncing CodeGraph\n\u2502\nScanning files...\n\u2502\n\u25cf  Already up to date\n\u2502\n\u2514  Done\n\n",
+  "stderr": ""
+}

@@ -1,0 +1,590 @@
+{
+  "sha": "371c3e83b97c258ac553430742b2f79d7e93ebe9",
+  "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/371c3e83b97c258ac553430742b2f79d7e93ebe9",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4220c97036d3893d02c3a94cb2d8163d6e5af1c",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/c4220c97036d3893d02c3a94cb2d8163d6e5af1c"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1494112b9e8d33d255642200a06897f4943835dc",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/1494112b9e8d33d255642200a06897f4943835dc"
+    },
+    {
+      "path": ".github/workflows/build.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bf490bfb7993af782686a453a4a563f21666ab4",
+      "size": 702,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/0bf490bfb7993af782686a453a4a563f21666ab4"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8113cc0fe6c1fd72cbe4928b6e25f4473160eab",
+      "size": 680,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/f8113cc0fe6c1fd72cbe4928b6e25f4473160eab"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5f5fe746ca235671ae688dcb397fcf758401378",
+      "size": 325,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/b5f5fe746ca235671ae688dcb397fcf758401378"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3079f8913c7951e3351a5f4fa36d2299e8ba7af",
+      "size": 2341,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/d3079f8913c7951e3351a5f4fa36d2299e8ba7af"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b981b950da9e5e7363b08bd3c573cf0f479e07f6",
+      "size": 3755,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/b981b950da9e5e7363b08bd3c573cf0f479e07f6"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb16b7dc0f249c4a8064ce9beadfcdc85852d4dc",
+      "size": 6212,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/fb16b7dc0f249c4a8064ce9beadfcdc85852d4dc"
+    },
+    {
+      "path": "RELEASE_NOTES_v0.0.1.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "165359f0c7851d4af056a2507e959582bf131f25",
+      "size": 563,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/165359f0c7851d4af056a2507e959582bf131f25"
+    },
+    {
+      "path": "RELEASE_NOTES_v0.0.2.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88b5014a67f8f960da716ad3b8618fe8ab8a5a1c",
+      "size": 705,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/88b5014a67f8f960da716ad3b8618fe8ab8a5a1c"
+    },
+    {
+      "path": "VERSION",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1750564f270b91dbcbd20a6e91b49ca281b350c3",
+      "size": 6,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/1750564f270b91dbcbd20a6e91b49ca281b350c3"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42dc8ea22b16ab23630601be9c8b84947bea9854",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/42dc8ea22b16ab23630601be9c8b84947bea9854"
+    },
+    {
+      "path": "docs/COVERAGE_2026-10-18.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2430109c6f7ac8250cf6613444424e7dc8b79862",
+      "size": 2175,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/2430109c6f7ac8250cf6613444424e7dc8b79862"
+    },
+    {
+      "path": "docs/CX4.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7be4e0a4dc32903fac58e00e24d1afd4e2b3535f",
+      "size": 4184,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/7be4e0a4dc32903fac58e00e24d1afd4e2b3535f"
+    },
+    {
+      "path": "docs/SAVE_STATES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f57ddf83cfc43dd9ab766d0c6ad1479b506af373",
+      "size": 1833,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/f57ddf83cfc43dd9ab766d0c6ad1479b506af373"
+    },
+    {
+      "path": "docs/WIDESCREEN.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf22bf63c787870fe88c1f21b62d537bd2ef3931",
+      "size": 8076,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/bf22bf63c787870fe88c1f21b62d537bd2ef3931"
+    },
+    {
+      "path": "framework_pins.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c985339636c7584db98f4a2be4fcfbab5cda6b14",
+      "size": 213,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/c985339636c7584db98f4a2be4fcfbab5cda6b14"
+    },
+    {
+      "path": "keybinds.ini",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b994bce0a8ffaa65b16aba80a55c10ca4f221da2",
+      "size": 797,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/b994bce0a8ffaa65b16aba80a55c10ca4f221da2"
+    },
+    {
+      "path": "mods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bed446e3776d1e05494eb22e0ef4a7d5f1684140",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/bed446e3776d1e05494eb22e0ef4a7d5f1684140"
+    },
+    {
+      "path": "mods/preloaded",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d4f26cfa5e18c890b6877f8fe66efd46eba15b79",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/d4f26cfa5e18c890b6877f8fe66efd46eba15b79"
+    },
+    {
+      "path": "mods/preloaded/packages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bbc226d1308e268603020cdd30db1cee604ef8bf",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/bbc226d1308e268603020cdd30db1cee604ef8bf"
+    },
+    {
+      "path": "mods/preloaded/packages/megaman-x3.enhancement.widescreen",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d3ceb0015a04d10cf305216355b9a11fdddb311f",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/d3ceb0015a04d10cf305216355b9a11fdddb311f"
+    },
+    {
+      "path": "mods/preloaded/packages/megaman-x3.enhancement.widescreen/1.0.0",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b7605bf3621d12ea11a7962f9a961dfbafa1684",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/7b7605bf3621d12ea11a7962f9a961dfbafa1684"
+    },
+    {
+      "path": "mods/preloaded/packages/megaman-x3.enhancement.widescreen/1.0.0/manifest.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8954467ea02882606453540dd4c8c3d92702f0d7",
+      "size": 724,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/8954467ea02882606453540dd4c8c3d92702f0d7"
+    },
+    {
+      "path": "recomp-ui",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "0546fbcb0126bb14bf88d2128b4fe8a4229570a3"
+    },
+    {
+      "path": "recomp",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d574f884f0a4a35f03f11b8117a15c704c4ec209",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/d574f884f0a4a35f03f11b8117a15c704c4ec209"
+    },
+    {
+      "path": "recomp/bank00.cfg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2eb1424ba15f1543b65292b46229a3ca6d4363d",
+      "size": 2219,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/b2eb1424ba15f1543b65292b46229a3ca6d4363d"
+    },
+    {
+      "path": "recomp/generate.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8be77641faea2b18d09e10c542027edec0ad9ade",
+      "size": 447,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/8be77641faea2b18d09e10c542027edec0ad9ade"
+    },
+    {
+      "path": "recomp/launcher",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "72462f1d361f72768aab58894e911bf898b54aae",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/72462f1d361f72768aab58894e911bf898b54aae"
+    },
+    {
+      "path": "recomp/launcher/boxart.tga",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4cf51e843a60153e135121bd7dd9e805c3ff358",
+      "size": 298286,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/e4cf51e843a60153e135121bd7dd9e805c3ff358"
+    },
+    {
+      "path": "recomp/tier2_coverage.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c7c6da91446aa0c8b0d9e07ee0649037eee1787",
+      "size": 321541,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/2c7c6da91446aa0c8b0d9e07ee0649037eee1787"
+    },
+    {
+      "path": "rom_identity.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a0d2b5f14bf5f5675795f1adca16bccc2f4cf0e",
+      "size": 234,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/5a0d2b5f14bf5f5675795f1adca16bccc2f4cf0e"
+    },
+    {
+      "path": "snesrecomp",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "f68aa0fe8edae75cbc7d4b9473c71687b45ce702"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6f66eaa4d806b7f967c2138604cd21e367f36c22",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/6f66eaa4d806b7f967c2138604cd21e367f36c22"
+    },
+    {
+      "path": "src/banks.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2388a5fb5b9e1db99ea10def2a8c295bfe6f5cd",
+      "size": 288,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/b2388a5fb5b9e1db99ea10def2a8c295bfe6f5cd"
+    },
+    {
+      "path": "src/gen",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d564d0bc3dd917926892c55e3706cc116d5b165e",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/d564d0bc3dd917926892c55e3706cc116d5b165e"
+    },
+    {
+      "path": "src/gen/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "src/gen_stubs.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44016fc2e9c3b9ed3e6a5c376d4b9f8d1da804f4",
+      "size": 477,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/44016fc2e9c3b9ed3e6a5c376d4b9f8d1da804f4"
+    },
+    {
+      "path": "src/main.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b22ff78d81d91ae81e8ee6a5dfedd5827cd2cf60",
+      "size": 1822,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/b22ff78d81d91ae81e8ee6a5dfedd5827cd2cf60"
+    },
+    {
+      "path": "src/mods",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69c946cc000d2423a9b4941ad424803d7c353b59",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/69c946cc000d2423a9b4941ad424803d7c353b59"
+    },
+    {
+      "path": "src/mods/x3_widescreen_plugin.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bce8a96d2f7720c372d407ce1678f943135c885c",
+      "size": 624,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/bce8a96d2f7720c372d407ce1678f943135c885c"
+    },
+    {
+      "path": "src/platform",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f8e7711dcbf46856a5949c58279e5d755a7f7671",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/f8e7711dcbf46856a5949c58279e5d755a7f7671"
+    },
+    {
+      "path": "src/platform/win32",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa4a1c732d322fb5689f63309d4a2f625c6a7089",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/fa4a1c732d322fb5689f63309d4a2f625c6a7089"
+    },
+    {
+      "path": "src/platform/win32/resource.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b90ed11dd7b995745716a15418e3084732632df",
+      "size": 449,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/5b90ed11dd7b995745716a15418e3084732632df"
+    },
+    {
+      "path": "src/platform/win32/smw.rc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "580608d7b359428e74ac31d8a4415831ed268dee",
+      "size": 1694,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/580608d7b359428e74ac31d8a4415831ed268dee"
+    },
+    {
+      "path": "src/platform/win32/volume_control.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "591940a96ffc98612162735f50036d42ddb6c075",
+      "size": 3076,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/591940a96ffc98612162735f50036d42ddb6c075"
+    },
+    {
+      "path": "src/platform/win32/volume_control.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb56ba8e200565b3dd44c271aa64d6898deb0b99",
+      "size": 415,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/fb56ba8e200565b3dd44c271aa64d6898deb0b99"
+    },
+    {
+      "path": "src/variables.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59cde10fe884cb200eb7149f56543615e63cc9e4",
+      "size": 430,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/59cde10fe884cb200eb7149f56543615e63cc9e4"
+    },
+    {
+      "path": "src/x3_cpu_infra.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a653ced83d8100670b6c1d7ad65f605821895436",
+      "size": 491,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/a653ced83d8100670b6c1d7ad65f605821895436"
+    },
+    {
+      "path": "src/x3_display.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8073d35abc4718a3bc112ef9c5caea261cadefbb",
+      "size": 4094,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/8073d35abc4718a3bc112ef9c5caea261cadefbb"
+    },
+    {
+      "path": "src/x3_display.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dda93e8dc4aa181767f0a615d9107937af059124",
+      "size": 1319,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/dda93e8dc4aa181767f0a615d9107937af059124"
+    },
+    {
+      "path": "src/x3_rtl.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a90a964588dc69c2eaeceb05373563049d1f7873",
+      "size": 35885,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/a90a964588dc69c2eaeceb05373563049d1f7873"
+    },
+    {
+      "path": "src/x3_rtl.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d93874d060a56e665691f54d4ac0137d8018389",
+      "size": 886,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/0d93874d060a56e665691f54d4ac0137d8018389"
+    },
+    {
+      "path": "src/x3_spc_player.c",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5b9d2ac777ee501fc1f2562b1951639a81354ba",
+      "size": 2184,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/f5b9d2ac777ee501fc1f2562b1951639a81354ba"
+    },
+    {
+      "path": "src/x3_spc_player.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84ae69a980079737aa41d47c3598f42a250a4c5d",
+      "size": 76,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/84ae69a980079737aa41d47c3598f42a250a4c5d"
+    },
+    {
+      "path": "symbols",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "70c334d865a9fbc589ada73241c9cbac933eb128",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/70c334d865a9fbc589ada73241c9cbac933eb128"
+    },
+    {
+      "path": "symbols/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c463ede1a2d2fbbae6727256d4d7b12d5b64d70a",
+      "size": 4608,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/c463ede1a2d2fbbae6727256d4d7b12d5b64d70a"
+    },
+    {
+      "path": "symbols/classification.tsv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c644b684240f08c21a9ad65d499f86b9b22a29c9",
+      "size": 71441,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/c644b684240f08c21a9ad65d499f86b9b22a29c9"
+    },
+    {
+      "path": "symbols/diz_annotations.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4199d80e333f72032ab8359c477ce4574212cf0",
+      "size": 1057,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/c4199d80e333f72032ab8359c477ce4574212cf0"
+    },
+    {
+      "path": "symbols/imported_symbols.tsv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23e8b4bc2ba90dd003a68078f98cc09edbc05237",
+      "size": 63,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/23e8b4bc2ba90dd003a68078f98cc09edbc05237"
+    },
+    {
+      "path": "symbols/instruction_metadata.tsv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b98bae92fc6fe74e6a7baebb9d587eff659d4fd7",
+      "size": 1772958,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/b98bae92fc6fe74e6a7baebb9d587eff659d4fd7"
+    },
+    {
+      "path": "third_party",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08543135b6dfd47431c69e83dc180c9fb74176f4",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/08543135b6dfd47431c69e83dc180c9fb74176f4"
+    },
+    {
+      "path": "third_party/dizProjects",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "c16f01134f29e4a61b41a3d8ddf5121b556cbdc7"
+    },
+    {
+      "path": "third_party/stb",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "34c70cc85560753dab9009007572038dba9f1f94",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/34c70cc85560753dab9009007572038dba9f1f94"
+    },
+    {
+      "path": "third_party/stb/stb_image.h",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef76fc1a530a3d23ff39683ae9b87ff8f0aaed46",
+      "size": 287236,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/ef76fc1a530a3d23ff39683ae9b87ff8f0aaed46"
+    },
+    {
+      "path": "tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c457ae15a52ea28caccf02017214b23ebed5401e",
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/trees/c457ae15a52ea28caccf02017214b23ebed5401e"
+    },
+    {
+      "path": "tools/apply_overrides.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de7903157310081d66233cb30a1bd5b58163a17c",
+      "size": 12918,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/de7903157310081d66233cb30a1bd5b58163a17c"
+    },
+    {
+      "path": "tools/bootstrap.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "699e1eac5731e31f549827b6c82aa5deb60a49d5",
+      "size": 3405,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/699e1eac5731e31f549827b6c82aa5deb60a49d5"
+    },
+    {
+      "path": "tools/build-linux.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a518c45fd08ba24c319991b42a47a1cb232f42cc",
+      "size": 15251,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/a518c45fd08ba24c319991b42a47a1cb232f42cc"
+    },
+    {
+      "path": "tools/dbgprobe.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a15850cda252410a6e417887027b899ec82f08ec",
+      "size": 2396,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/a15850cda252410a6e417887027b899ec82f08ec"
+    },
+    {
+      "path": "tools/diz_annotations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c25d429c0d94edda39a3a410137687d36402683e",
+      "size": 18397,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/c25d429c0d94edda39a3a410137687d36402683e"
+    },
+    {
+      "path": "tools/make_release.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18de2d5f114da76c26a9b1a621e168781134399f",
+      "size": 8963,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/18de2d5f114da76c26a9b1a621e168781134399f"
+    },
+    {
+      "path": "tools/navigate.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff3f1ed64539034db4a5eced9b29d4c93c56ed81",
+      "size": 7566,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/ff3f1ed64539034db4a5eced9b29d4c93c56ed81"
+    },
+    {
+      "path": "tools/play.ps1",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4378c0e94e51d5da6532270217fbada1ba1bff60",
+      "size": 2572,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/4378c0e94e51d5da6532270217fbada1ba1bff60"
+    },
+    {
+      "path": "tools/regen.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf2c32180b7991173e16530fe7782c27dbe4de4d",
+      "size": 271,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/bf2c32180b7991173e16530fe7782c27dbe4de4d"
+    },
+    {
+      "path": "tools/test_appimage_layout.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "388b9f2ee47fade9e5179f75630a222cb68aa29e",
+      "size": 5393,
+      "url": "https://api.github.com/repos/mstan/MegamanX3SNESRecomp/git/blobs/388b9f2ee47fade9e5179f75630a222cb68aa29e"
+    }
+  ],
+  "truncated": false
+}

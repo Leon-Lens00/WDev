@@ -1,0 +1,43 @@
+{
+  "initialized": true,
+  "version": "1.6.2",
+  "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+  "indexPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src/.codegraph",
+  "lastIndexed": "2026-10-21T19:23:19.043Z",
+  "fileCount": 16,
+  "nodeCount": 938,
+  "edgeCount": 1124,
+  "dbSizeBytes": 2011136,
+  "walSizeBytes": 32992,
+  "backend": "node-sqlite",
+  "journalMode": "wal",
+  "nodesByKind": {
+    "constant": 47,
+    "field": 162,
+    "file": 16,
+    "function": 46,
+    "method": 176,
+    "module": 11,
+    "namespace": 15,
+    "parameter": 242,
+    "struct": 18,
+    "variable": 205
+  },
+  "languages": [
+    "jass"
+  ],
+  "pendingChanges": {
+    "added": 0,
+    "modified": 0,
+    "removed": 0
+  },
+  "worktreeMismatch": null,
+  "index": {
+    "builtWithVersion": "1.6.2+jass-vjass.1",
+    "builtWithExtractionVersion": 28,
+    "currentExtractionVersion": 28,
+    "reindexRecommended": false,
+    "state": "complete",
+    "pendingRefs": 0
+  }
+}

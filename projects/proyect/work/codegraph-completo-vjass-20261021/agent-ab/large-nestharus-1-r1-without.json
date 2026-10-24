@@ -1,0 +1,38 @@
+{
+  "repo": "large-nestharus",
+  "flow": 1,
+  "names": [
+    "TimerTools.Timer.create",
+    "TimerTools.TimerList.add",
+    "TimerTools.CreationQueue.add"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 26.253699686996697,
+  "usage": {
+    "input_tokens": 94334,
+    "cached_input_tokens": 80640,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 812,
+    "reasoning_output_tokens": 97
+  },
+  "commands": 4,
+  "command_text": [
+    "/usr/bin/bash -lc \"rg --files -g 'AGENTS.md' -g '*Timer*' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/benchmark*/**'\"' -g '\"'!**/benchmarks/**'\"'\"",
+    "/usr/bin/bash -lc \"pwd; rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'library TimerTools|struct CreationQueue|struct TimerList|struct Timer\\\\b' .\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '340,870p'\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '110,165p;275,345p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg --files -g 'AGENTS.md' -g '*Timer*' -g '\"'!'\"\\\\.codegraph/**' -g '\"'!**/benchmark*/**'\"' -g '\"'!**/benchmarks/**'\"'\"",
+    "/usr/bin/bash -lc \"pwd; rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'library TimerTools|struct CreationQueue|struct TimerList|struct Timer\\\\b' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a1621a-ad39-7132-9734-b4fafc0d4f8a"
+  ]
+}

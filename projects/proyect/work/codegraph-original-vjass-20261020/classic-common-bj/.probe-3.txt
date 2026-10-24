@@ -1,0 +1,277 @@
+> JASS/vJASS local support: structural/static subset. No macro/import/module expansion or dynamic dispatch; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+
+**Dynamic-dispatch links among your symbols**
+(synthesized — the indirect hops grep/Read would reconstruct; the `@file:line` is the wiring site)
+
+- CodeGraphProbe → Done   [contains]
+- Init → Done   [references]
+- Done → run   [calls]
+- step → Ping   [calls]
+- CodeGraphProbe → Ping   [contains]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: CodeGraphProbe.Done CodeGraphProbe.Ping**
+
+Found 58 symbols across 3 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `Done` (probe.vjass:18) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+- `Ping` (probe.vjass:5) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+- `PingMinimap` (common.j:1987) — 3 callers in `Blizzard.j`; no tests found within 3 caller hops
+- `PingMinimapEx` (common.j:1988) — 1 caller in `Blizzard.j`; no tests found within 3 caller hops
+- `PingMinimapForForce` (Blizzard.j:6221) — 1 caller in `Blizzard.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`probe.vjass`** — CodeGraphProbe(namespace), Ping(function), Init(function), Done(function), Counter(struct), +4 more
+
+```vjass
+1	library CodeGraphProbe initializer Init
+2	    globals
+3	        private integer hits = 0
+4	    endglobals
+5	    private function Ping takes nothing returns nothing
+6	        set hits = hits + 1
+7	    endfunction
+8	    private struct Counter
+9	        method step takes nothing returns nothing
+10	            call Ping()
+11	        endmethod
+12	        static method run takes nothing returns nothing
+13	            local thistype this = thistype.allocate()
+14	            call this.step()
+15	            call this.destroy()
+16	        endmethod
+17	    endstruct
+18	    private function Done takes nothing returns nothing
+19	        call Counter.run()
+20	    endfunction
+21	    private function Init takes nothing returns nothing
+22	        call TimerStart(CreateTimer(), 0.0, false, function Done)
+23	    endfunction
+24	endlibrary
+25	function main takes nothing returns nothing
+26	endfunction
+27	function config takes nothing returns nothing
+28	endfunction
+```
+
+**`Blizzard.j`** — calls(calls), GetLocalPlayer(calls), GetLocationY(calls), GetLocationX(calls), QueuedTriggerAttemptExec(function), +50 more
+
+```jass
+2772	endfunction
+2773	
+2774	//===========================================================================
+2775	function UnitUseItemPointLoc takes unit whichUnit, item whichItem, location loc returns boolean
+2776	    return UnitUseItemPoint(whichUnit, whichItem, GetLocationX(loc), GetLocationY(loc))
+2777	endfunction
+2778	
+2779	//===========================================================================
+2780	// Translates 0-based slot indices to 1-based slot indices.
+
+... (gap) ...
+
+5490	
+5491	//===========================================================================
+5492	function QuestMessageBJ takes force f, integer messageType, string message returns nothing
+5493	    if (IsPlayerInForce(GetLocalPlayer(), f)) then
+5494	        // Use only local code (no net traffic) within this block to avoid desyncs.
+5495	
+5496	        if (messageType == bj_QUESTMESSAGE_DISCOVERED) then
+5497	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_QUEST, " ")
+5498	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_QUEST, message)
+5499	            call StartSound(bj_questDiscoveredSound)
+5500	            call FlashQuestDialogButton()
+5501	
+5502	        elseif (messageType == bj_QUESTMESSAGE_UPDATED) then
+5503	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_QUESTUPDATE, " ")
+5504	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_QUESTUPDATE, message)
+5505	            call StartSound(bj_questUpdatedSound)
+5506	            call FlashQuestDialogButton()
+5507	
+5508	        elseif (messageType == bj_QUESTMESSAGE_COMPLETED) then
+5509	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_QUESTDONE, " ")
+5510	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_QUESTDONE, message)
+5511	            call StartSound(bj_questCompletedSound)
+5512	            call FlashQuestDialogButton()
+5513	
+5514	        elseif (messageType == bj_QUESTMESSAGE_FAILED) then
+5515	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_QUESTFAILED, " ")
+5516	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_QUESTFAILED, message)
+5517	            call StartSound(bj_questFailedSound)
+5518	            call FlashQuestDialogButton()
+5519	
+5520	        elseif (messageType == bj_QUESTMESSAGE_REQUIREMENT) then
+5521	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_QUESTREQUIREMENT, message)
+5522	
+5523	        elseif (messageType == bj_QUESTMESSAGE_MISSIONFAILED) then
+5524	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_MISSIONFAILED, " ")
+5525	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_MISSIONFAILED, message)
+5526	            call StartSound(bj_questFailedSound)
+5527	
+5528	        elseif (messageType == bj_QUESTMESSAGE_HINT) then
+5529	            call DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, bj_TEXT_DELAY_HINT, " ")
+
+... (gap) ...
+
+6218	endfunction
+6219	
+6220	//===========================================================================
+6221	function PingMinimapForForce takes force whichForce, real x, real y, real duration returns nothing
+6222	    if (IsPlayerInForce(GetLocalPlayer(), whichForce)) then
+6223	        // Use only local code (no net traffic) within this block to avoid desyncs.
+6224	        call PingMinimap(x, y, duration)
+6225	        //call StartSound(bj_pingMinimapSound)
+6226	    endif
+6227	endfunction
+6228	
+6229	//===========================================================================
+6230	function PingMinimapLocForForce takes force whichForce, location loc, real duration returns nothing
+6231	    call PingMinimapForForce(whichForce, GetLocationX(loc), GetLocationY(loc), duration)
+6232	endfunction
+6233	
+6234	//===========================================================================
+6235	function PingMinimapForPlayer takes player whichPlayer, real x, real y, real duration returns nothing
+6236	    if (GetLocalPlayer() == whichPlayer) then
+6237	        // Use only local code (no net traffic) within this block to avoid desyncs.
+6238	        call PingMinimap(x, y, duration)
+6239	        //call StartSound(bj_pingMinimapSound)
+6240	    endif
+6241	endfunction
+6242	
+6243	//===========================================================================
+6244	function PingMinimapLocForPlayer takes player whichPlayer, location loc, real duration returns nothing
+6245	    call PingMinimapForPlayer(whichPlayer, GetLocationX(loc), GetLocationY(loc), duration)
+6246	endfunction
+6247	
+6248	//===========================================================================
+6249	function PingMinimapForForceEx takes force whichForce, real x, real y, real duration, integer style, real red, real green, real blue returns nothing
+6250	    local integer red255   = PercentTo255(red)
+6251	    local integer green255 = PercentTo255(green)
+6252	    local integer blue255  = PercentTo255(blue)
+6253	
+6254	    if (IsPlayerInForce(GetLocalPlayer(), whichForce)) then
+6255	        // Use only local code (no net traffic) within this block to avoid desyncs.
+6256	
+6257	        // Prevent 100% red simple and flashy pings, as they become "attack" pings.
+6258	        if (red255 == 255) and (green255 == 0) and (blue255 == 0) then
+6259	            set red255 = 254
+6260	        endif
+6261	
+6262	        if (style == bj_MINIMAPPINGSTYLE_SIMPLE) then
+6263	            call PingMinimapEx(x, y, duration, red255, green255, blue255, false)
+6264	        elseif (style == bj_MINIMAPPINGSTYLE_FLASHY) then
+6265	            call PingMinimapEx(x, y, duration, red255, green255, blue255, true)
+6266	        elseif (style == bj_MINIMAPPINGSTYLE_ATTACK) then
+6267	            call PingMinimapEx(x, y, duration, 255, 0, 0, false)
+6268	        else
+6269	            // Unrecognized ping style - ignore the request.
+6270	        endif
+6271	        
+6272	        //call StartSound(bj_pingMinimapSound)
+6273	    endif
+6274	endfunction
+6275	
+6276	//===========================================================================
+6277	function PingMinimapLocForForceEx takes force whichForce, location loc, real duration, integer style, real red, real green, real blue returns nothing
+6278	    call PingMinimapForForceEx(whichForce, GetLocationX(loc), GetLocationY(loc), duration, style, red, green, blue)
+6279	endfunction
+6280	
+6281	//===========================================================================
+6282	function EnableWorldFogBoundaryBJ takes boolean enable, force f returns nothing
+6283	    if (IsPlayerInForce(GetLocalPlayer(), f)) then
+6284	        // Use only local code (no net traffic) within this block to avoid desyncs.
+6285	        call EnableWorldFogBoundary(enable)
+6286	    endif
+6287	endfunction
+6288	
+6289	//===========================================================================
+6290	function EnableOcclusionBJ takes boolean enable, force f returns nothing
+6291	    if (IsPlayerInForce(GetLocalPlayer(), f)) then
+6292	        // Use only local code (no net traffic) within this block to avoid desyncs.
+6293	        call EnableOcclusion(enable)
+6294	    endif
+6295	endfunction
+6296	
+6297	
+6298	
+
+... (gap) ...
+
+6387	endfunction
+6388	
+6389	//===========================================================================
+6390	function DoTransmissionBasicsXYBJ takes integer unitId, playercolor color, real x, real y, sound soundHandle, string unitName, string message, real duration returns nothing
+6391	    call SetCinematicSceneBJ(soundHandle, unitId, color, unitName, message, duration + bj_TRANSMISSION_PORT_HANGTIME, duration)
+6392	
+6393	    if (unitId != 0) then
+6394	        call PingMinimap(x, y, bj_TRANSMISSION_PING_TIME)
+6395	        //call SetCameraQuickPosition(x, y)
+6396	    endif
+6397	endfunction
+6398	
+6399	//===========================================================================
+6400	// Display a text message to a Player Group with an accompanying sound,
+
+... (gap) ...
+
+6695	// including a rescue sound, flashing selection circle, ownership change,
+6696	// and optionally a unit color change.
+6697	//
+6698	function RescueUnitBJ takes unit whichUnit, player rescuer, boolean changeColor returns nothing
+6699	    if IsUnitDeadBJ(whichUnit) or (GetOwningPlayer(whichUnit) == rescuer) then
+6700	        return
+6701	    endif
+6702	
+6703	    call StartSound(bj_rescueSound)
+6704	    call SetUnitOwner(whichUnit, rescuer, changeColor)
+6705	    call UnitAddIndicator(whichUnit, 0, 255, 0, 255)
+6706	    call PingMinimapForPlayer(rescuer, GetUnitX(whichUnit), GetUnitY(whichUnit), bj_RESCUE_PING_TIME)
+6707	endfunction
+6708	
+6709	//===========================================================================
+6710	function TriggerActionUnitRescuedBJ takes nothing returns nothing
+```
+
+**`common.j`** — timer(type_alias), extends(extends), CreateTimer(function), TimerStart(function), GetLocalPlayer(function), +6 more
+
+```jass
+1000	native Location                 takes real x, real y returns location
+1001	native RemoveLocation           takes location whichLocation returns nothing
+1002	native MoveLocation             takes location whichLocation, real newX, real newY returns nothing
+1003	native GetLocationX             takes location whichLocation returns real
+1004	native GetLocationY             takes location whichLocation returns real
+1005	
+1006	// This function is asynchronous. The values it returns are not guaranteed synchronous between each player.
+1007	//  If you attempt to use it in a synchronous manner, it may cause a desync.
+
+... (gap) ...
+
+1673	//============================================================================
+1674	// Player API
+1675	constant native Player              takes integer number returns player
+1676	constant native GetLocalPlayer      takes nothing returns player
+1677	constant native IsPlayerAlly        takes player whichPlayer, player otherPlayer returns boolean
+1678	constant native IsPlayerEnemy       takes player whichPlayer, player otherPlayer returns boolean
+1679	constant native IsPlayerInForce     takes player whichPlayer, force whichForce returns boolean
+1680	constant native IsPlayerObserver    takes player whichPlayer returns boolean
+1681	constant native IsVisibleToPlayer           takes real x, real y, player whichPlayer returns boolean
+1682	constant native IsLocationVisibleToPlayer   takes location whichLocation, player whichPlayer returns boolean
+
+... (gap) ...
+
+1984	native PauseGame                    takes boolean flag returns nothing
+1985	native UnitAddIndicator             takes unit whichUnit, integer red, integer green, integer blue, integer alpha returns nothing
+1986	native AddIndicator                 takes widget whichWidget, integer red, integer green, integer blue, integer alpha returns nothing
+1987	native PingMinimap                  takes real x, real y, real duration returns nothing
+1988	native PingMinimapEx                takes real x, real y, real duration, integer red, integer green, integer blue, boolean extraEffects returns nothing
+1989	native EnableOcclusion              takes boolean flag returns nothing
+1990	native SetIntroShotText             takes string introText returns nothing
+1991	native SetIntroShotModel            takes string introModelPath returns nothing
+```
+
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

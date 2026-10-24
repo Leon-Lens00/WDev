@@ -1,0 +1,48 @@
+{
+  "pid": 524804,
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/runtime-isolated/pfx",
+  "stat": "524804 (war3.exe) R 524796 524762 524762 0 -1 4194304 36817 122 33 1 31 27 0 0 19 -1 10 0 9255433 2210914304 35032 18446744073709551615 2101346304 2101353425 4291029584 0 0 0 0 4096 1790 0 0 0 17 2 0 0 0 0 0 2101362676 2101362768 2131587072 4291038114 4291038420 4291038420 4291047297 0\n",
+  "window": {
+    "address": "0x55bb07088f90",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      244,
+      165
+    ],
+    "size": [
+      1432,
+      776
+    ],
+    "workspace": {
+      "id": 3,
+      "name": "3"
+    },
+    "floating": true,
+    "monitor": 0,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 524804,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 0,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 0,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "1800124b"
+  }
+}

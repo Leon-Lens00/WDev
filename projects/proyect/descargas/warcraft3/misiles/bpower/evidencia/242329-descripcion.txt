@@ -1,0 +1,581 @@
+
+Meat Hook
+
+
+
+Launches a bloody hook at a unit or location. The hook will snag the first target it encounters, dealing damage then dragging the victim back to the caster. 
+
+
+
+The demo map:
+
+
+
+
+
+	
+
+		Contains:
+	
+	
+
+		
+
+			
+
+
+Meat Hook with all required resources
+
+Detailed information how to import and use Meat Hook
+
+A small demo map
+
+		
+	
+Requires:
+
+
+
+UnitIndexer
+
+Dummy
+
+List
+
+WorldBounds
+
+CTL
+
+optional SpellEffectEvent
+
+
+Credits:
+
+
+
+
+
+
+
+	
+
+		Nestharus
+	
+	
+
+		
+
+			
+
+
+CTL
+
+WorldBounds
+
+UnitIndexer
+
+Event
+
+Dummy
+
+List
+
+ErrorMessage
+
+		
+	
+
+
+
+
+	
+
+		Bribe
+	
+	
+
+		
+
+			
+
+
+Table
+
+SpellEffectEvent
+
+		
+	
+
+
+
+
+	
+
+		Magtheridon96
+	
+	
+
+		
+
+			
+
+
+RegisterPlayerUnitEvent
+
+		
+	
+
+
+
+
+Author's Note:
+
+This resource gave me alot of headaches, but finally its done and I kept all my promises. 
+
+
+
+Known Issues:
+
+
+
+While retracting a hook can only once catch a target.
+
+Sometimes a tail appears on the screen, because of the Dummy library and the fact that sfx maiev//.. which is used as chain model has a tail
+
+  That's the price for recycling units, you have to use a different model to prevent this issue.
+
+
+
+In case you want a hook which supports headshots and grappling please use kenny's MeatHook on TH. There is nearly no performace gap between mine and his version.
+
+
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+scope MeatHook /* v4.0
+*************************************************************************************
+*
+*   Launches a bloody hook at an unit or location. The hook will snag the first target it encounters,
+*   dealing damage, then dragging the victim back to the caster. 
+*
+*************************************************************************************
+*
+*   Credits
+*
+*       To Nestharus
+*       -----------------------
+*
+*           For CTL , UnitIndexer, WorldBounds, Event, ErrorMessage, List, Dummy
+*      
+*       To Maghteridon96
+*       -----------------------
+*
+*           For RegisterPlayerUnitEvent
+*
+*       To Bribe
+*       -----------------------
+*
+*           For SpellEffectEvent, Table
+*
+*
+**************************************************************************************
+*       
+*   Configuration
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯
+*/
+    native UnitAlive takes unit id returns boolean
+    
+    globals     
+        /*                General Meat Hook settings
+        *                 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+        */
+        private constant integer HOOK_ABILITY               = 'A002'//Ability raw-code of Meat Hook
+        private constant attacktype ATTACK_TYPE             = ATTACK_TYPE_NORMAL
+        private constant damagetype DAMAGE_TYPE             = DAMAGE_TYPE_NORMAL
+        private constant boolean SEARCH_TARGETS_ON_RETRACT  = true
+        /*
+        *   SEARCH_TARGETS_ON_RETRACT is a constant boolean, if true the hook looks up for targets while retracting
+        *       --> A hook can only have one target at the same time.
+        */
+        private constant real HOOK_HEIGHT                   = 50.
+        /*
+        *   Offset of each chainlink towards the ground.
+        */
+        private constant real DETECTION_AOE                 = 100.
+        /*
+        *   Aoe in which the head is detecting valid targets.
+        */
+        private constant real MODEL_SCALING                 = 1.5
+        /*
+        *   Model scaling of each hook link.
+        */
+        private constant real GAP_BETWEEN_LINKS_FACTOR      = 2.2
+        /*
+        *   Is calculated GAP_BETWEEN_LINKS_FACTOR *TimerTimeout*Hookspeed. For instance 2.2*0.03125*600 = 41.25
+        */
+        private constant string HEAD_MODEL                  = "Abilities\\Weapons\\SentinelMissile\\SentinelMissile.mdl"
+        private constant string CHAIN_MODEL                 = "Abilities\\Weapons\\WardenMissile\\WardenMissile.mdl"
+        private constant string EFFECT_ONHIT                = "Objects\\Spawnmodels\\Human\\HumanBlood\\BloodElfSpellThiefBlood.mdl"
+        private constant string ATTACH_POINT                = "origin"
+        /*
+        *                 FPS drop protection
+        *                 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+        *   MAX_LINKS_PER_LOOP prevents spamming hook links during one loop. A number of 10 is recommended.
+        */
+        private constant integer MAX_LINKS_CREATED_PER_LOOP = 10
+    endglobals
+        
+    //Define which units are considered as targets
+    private function TargetFilter takes unit target, unit caster returns boolean
+        return UnitAlive(target) and not IsUnitType(target, UNIT_TYPE_STRUCTURE) and (target != caster) and (not IsUnitType(target, UNIT_TYPE_FLYING))
+    endfunction
+    
+    //Define the hit damage. level is the ability "level" for the caster 
+    private constant function GetDamage takes integer level returns real
+        return 100. + 100.*level
+    endfunction
+    
+    //Define the maximum range of the hook. "level" is the ability level for the caster 
+    private constant function GetRange takes integer level returns real
+        return 1000. + 200.*level
+    endfunction
+    
+    //Define the speed of the hook measured in movement speed. "level" is the ability level for the caster 
+    private constant function GetSpeed takes integer level returns real
+        return 600.00 + (0.*level)
+    endfunction
+
+//Script code. Don't edit enything below.
+    private keyword MEAT_HOOK_INITIALIZER
+    private struct Link extends array
+        implement List
+        real x
+        real y
+        real angle
+        effect sfx
+        Dummy dum
+        
+        method attach takes real x, real y, real angle, string sfx returns nothing
+            set this.x     = x
+            set this.y     = y
+            set this.angle = angle
+        
+            set this.dum   = Dummy.create(x, y, angle*bj_RADTODEG)
+            set this.sfx   = AddSpecialEffectTarget(sfx, this.dum.unit, "origin")
+            
+            call SetUnitScale(this.dum.unit,MODEL_SCALING, 1, 1)
+            call SetUnitFlyHeight(this.dum.unit, HOOK_HEIGHT, 0)
+        endmethod
+    endstruct
+        
+    private struct Main extends array
+        static group enu = CreateGroup()
+        static thistype array index//Use to release units from an hook on double hit.
+        Link list
+        player owner
+        unit caster
+        unit aim
+        real damage
+        real range
+        real speed
+        real angle
+        real gap
+        boolean end
+        boolean hit
+        boolean extend
+        
+        implement CTL
+            local integer i//Required to prevent spamming within one loop
+            local real x
+            local real y
+            local real x0
+            local real y0
+            local real a
+            local real d
+            local Link cur
+            local thistype node//Required for the linked list
+            local unit u//Group enumeration
+        implement CTLExpire
+            if (UnitAlive(caster)) then
+                set i   = 0
+                
+                set cur = list.last
+                
+                set x   = GetUnitX(caster)
+                set y   = GetUnitY(caster)
+                
+                set d   = SquareRoot((cur.x - x)*(cur.x - x) + (cur.y - y)*(cur.y - y))//Distance between the last link and the caster
+                
+                if (d > gap)then//Check if additional chain members have to be created
+                    loop
+                        exitwhen (d < gap) or MAX_LINKS_CREATED_PER_LOOP == i
+                        set a  = Atan2(y - cur.y, x - cur.x)
+                        set x0 = cur.x
+                        set y0 = cur.y
+                        /*
+                        *   enqueue the list and attach a dummy to the returned instance.
+                        */
+                        set node = list.enqueue()
+                        set cur  = node
+                        call cur.attach(x0 + gap*Cos(a), y0 + gap*Sin(a), a, CHAIN_MODEL)
+                        
+                        set d = d - speed
+                        set i = i + 1
+                    endloop
+                endif
+
+                if (extend) then
+                    set cur = list.first//Head of the hook
+                    loop
+                        exitwhen cur == cur.sentinel//sentinel equals 0
+                        if (cur == list.first) then//Determine the correct angle
+                            set cur.angle = angle
+                        else
+                            set cur.angle = Atan2(y - cur.y, x - cur.x)
+                        endif
+                        
+                        set cur.x = cur.x + speed*Cos(cur.angle)//The correct new x/y coordinate according to the new angle
+                        set cur.y = cur.y + speed*Sin(cur.angle)
+                        set x     = cur.x
+                        set y     = cur.y 
+                        /*
+                        *   WorldBounds is very important, otherwise the game may crash, if units are moved outside boundaries.
+                        *   A good alternative would be BoundSentinel.
+                        *   BoundSentinel creates less overhead.
+                        */
+                        if (x < WorldBounds.maxX) and (x > WorldBounds.minX) and (y < WorldBounds.maxY) and (y > WorldBounds.minY) then
+                            call SetUnitX(cur.dum.unit, x)
+                            call SetUnitY(cur.dum.unit, y)
+                        else
+                            set end = true
+                        endif
+      
+                        if (cur == list.first) then
+                            call GroupEnumUnitsInRange(enu, x, y, DETECTION_AOE, null)
+                            loop
+                                set u = FirstOfGroup(enu)
+                                exitwhen u == null
+                                call GroupRemoveUnit(enu, u)
+            
+                                if (TargetFilter(u, caster)) then
+                                    set aim = u
+                                    /*
+                                    *   Detect if the unit has already been hooked
+                                    *   ind[i] is a thistype array which stores
+                                    *   this struct instance to the UnitId of aim.
+                                    */
+                                    set i = GetUnitId(u)
+                                    if (0 == index[i]) then//Has already been hooked?
+                                        set index[i]     = this
+                                    else
+                                        set index[i].aim = null//Release the unit from the other hook
+                                        set index[i]     = this//And connect it to this struct instance
+                                    endif
+                                    
+                                    if (IsUnitEnemy(aim, owner)) then//Damage only enemies.
+                                        call UnitDamageTarget(caster, aim, damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
+                                        call DestroyEffect(AddSpecialEffectTarget(EFFECT_ONHIT, aim, ATTACH_POINT))
+                                    endif
+                                    set extend = false
+                                    set u      = null
+                                endif
+                                exitwhen u == null
+                            endloop
+                        endif
+      
+                        set cur = cur.next//Move on to the next chain member
+                    endloop
+                
+                    set range = range - speed
+                    if (0.00 > range) then
+                        set extend = false
+                    endif
+                
+                else
+                    set cur = list.last//Nothing new here, just the other way around
+                    loop
+                        exitwhen cur == cur.sentinel
+                        set node = cur.prev
+                        if cur == list.last then
+                            set angle = Atan2((GetUnitY(caster) - cur.y),(GetUnitX(caster) - cur.x))
+                        else
+                            set angle = Atan2((y - cur.y),(x - cur.x))
+                        endif
+                        
+                        set cur.x = cur.x + speed*Cos(angle)
+                        set cur.y = cur.y + speed*Sin(angle)
+                        
+                        set x     = cur.x
+                        set y     = cur.y
+                    
+                        call SetUnitX(cur.dum.unit, x)
+                        call SetUnitY(cur.dum.unit, y)
+                        call SetUnitFacing(cur.dum.unit,(angle*bj_RADTODEG) + 180.00)
+                        
+                        if (cur == list.first) then
+                            if (aim != null) and UnitAlive(aim) then
+                                call SetUnitX(aim, x)
+                                call SetUnitY(aim, y)
+                            endif
+                            
+                            static if SEARCH_TARGETS_ON_RETRACT then
+                                if (aim == null) and (not hit) then//You can only drag a unit once on retract to prevent abuses
+                                    call GroupEnumUnitsInRange(enu, x, y, DETECTION_AOE, null)
+                                    loop
+                                        set u = FirstOfGroup(enu)
+                                        exitwhen u == null
+                                        call GroupRemoveUnit(enu, u)
+            
+                                        if (TargetFilter(u, caster)) then
+                                            set aim = u
+                                            set hit = not hit// == set .hit = true
+                                            set i = GetUnitId(u)
+                                            if (0 == index[i]) then
+                                                set index[i]     = this
+                                            else
+                                                set index[i].aim = null
+                                                set index[i]     = this
+                                            endif
+                                    
+                                            if (IsUnitEnemy(aim, owner)) then
+                                                call UnitDamageTarget(caster, aim, damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
+                                                call DestroyEffect(AddSpecialEffectTarget(EFFECT_ONHIT, aim, ATTACH_POINT))
+                                            endif
+                                            set u = null
+                                        endif
+                                        exitwhen u == null
+                                    endloop
+                                endif
+                            endif
+                        endif
+                        
+                        if (cur == list.last) and (IsUnitInRange(cur.dum.unit, caster, speed)) then//Check if the member should be destroyed
+                            call DestroyEffect(cur.sfx)
+                            set cur.sfx = null
+                            call SetUnitScale(cur.dum.unit, 1, 1, 1)
+                            call SetUnitFlyHeight(cur.dum.unit, 0, 0)
+                            call cur.dum.destroy()
+                            call list.dequeue()
+                            if (0 == node) then//Check if the list is empty
+                                set end = true
+                            endif
+                        endif
+                        
+                        set cur = node
+                    endloop
+                endif
+            else 
+                set end = true 
+            endif
+                    
+            if (end) then
+                set cur = .list.last
+                loop
+                    exitwhen cur == cur.sentinel
+                    call DestroyEffect(cur.sfx)
+                    set cur.sfx = null
+                    call SetUnitScale(cur.dum.unit, 1, 1, 1)
+                    call SetUnitFlyHeight(cur.dum.unit, 0, 0)
+                    call cur.dum.destroy()
+                    set cur = cur.prev
+                    call list.dequeue()
+                endloop
+                    
+                call destroy()
+                call list.destroy()
+                set owner  = null
+                set caster = null
+                if (aim != null) then//Check if we had a target
+                    set index[GetUnitId(aim)] = 0//Clear the thistype array
+                    set aim = null
+                endif
+            endif
+        implement CTLEnd
+        
+        private static method run takes nothing returns boolean
+            local thistype this = create()
+            local thistype node
+            local Link cur
+            
+            local integer level 
+            local real x 
+            local real y
+            
+            set caster = GetTriggerUnit()
+            set owner  = GetTriggerPlayer()
+            
+            set x      = GetUnitX(caster)
+            set y      = GetUnitY(caster)            
+            set angle  = Atan2(GetSpellTargetY() - y, GetSpellTargetX() - x)
+            
+            set level  = GetUnitAbilityLevel(caster, HOOK_ABILITY)
+            set damage = GetDamage(level)
+            set speed  = GetSpeed(level)*0.031250000
+            set range  = GetRange(level)
+            set gap    = speed*GAP_BETWEEN_LINKS_FACTOR
+            
+            set list   = Link.create()
+            set node   = list.enqueue()
+            set cur    = node
+            call cur.attach(x + speed*Cos(angle), y + speed*Sin(angle), angle, HEAD_MODEL)
+            
+            set extend = true
+            set end    = false
+            set hit    = false
+            
+            return false
+        endmethod
+        
+        static if not LIBRARY_SpellEffectEvent then
+            private static method check takes nothing returns boolean
+                if (GetSpellAbilityId() == HOOK_ABILITY) then
+                    call thistype.run()
+                endif
+                return false
+            endmethod
+        endif
+        
+        implement MEAT_HOOK_INITIALIZER 
+        
+    endstruct
+    
+    private module MEAT_HOOK_INITIALIZER 
+        private static method onInit takes nothing returns nothing
+            static if LIBRARY_SpellEffectEvent then
+                call RegisterSpellEffectEvent(HOOK_ABILITY, function thistype.run)
+            else
+                local trigger t = CreateTrigger()
+                call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+                call TriggerAddCondition(t, Condition(function thistype.check))
+                set t = null
+            endif
+        endmethod
+    endmodule
+endscope
+	
+
+
+Keywords:
+
+Dota, Pudge, Hook, Meat Hook, Pull, drag, extend, retract, PudgeWars

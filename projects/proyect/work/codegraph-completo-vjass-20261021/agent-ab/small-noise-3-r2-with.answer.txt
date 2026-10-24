@@ -1,0 +1,12 @@
+The chain is **`Noise.Noise.openSimplex2D → Noise.Noise.extrapolate2D`**, through four direct static calls. There is no intermediate callback or dispatcher.
+
+`openSimplex2D` stretches coordinates, calls `floor` to obtain the lattice base, and computes offsets ([Noise.j:142](Noise.j#L142)). Each contribution calls `extrapolate2D` only when its attenuation, `2 − dx² − dy²`, is positive:
+
+- `(xsb+1, ysb, dx1, dy1)` when `attn1 > 0` ([Noise.j:170](Noise.j#L170)).
+- `(xsb, ysb+1, dx2, dy2)` when `attn2 > 0` ([Noise.j:174](Noise.j#L174)).
+- `(xsb, ysb, dx0, dy0)` when `attn0 > 0` ([Noise.j:223](Noise.j#L223)).
+- `(xsv_ext, ysv_ext, dx_ext, dy_ext)` when `attn_ext > 0` ([Noise.j:228](Noise.j#L228)).
+
+The intermediate **argument wiring** branches on `inSum <= 1`, then comparisons involving `zins`, `xins`, and `yins`; the other branch also increments the base coordinates ([Noise.j:178](Noise.j#L178)).
+
+`extrapolate2D` hashes lattice coordinates through `permutation`, masks the index with `7`, and returns the gradient dot product ([Noise.j:137](Noise.j#L137)). Contributions receive fourth-power attenuation; the total is normalized ([Noise.j:233](Noise.j#L233)). Runtime inputs determine which calls execute.

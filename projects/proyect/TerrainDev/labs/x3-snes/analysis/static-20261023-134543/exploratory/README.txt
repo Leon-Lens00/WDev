@@ -1,0 +1,1 @@
+Borradores de decodificación lineal para localizar regiones. Algunos incluyen tablas de datos como instrucciones o anchos no propagados entre ramas. NO usarlos como desensamblado acreditado. Ver focused-disassembly-*.txt y los PCs realmente ejecutados de isolated-checks.json.

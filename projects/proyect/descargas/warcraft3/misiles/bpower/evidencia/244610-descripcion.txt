@@ -1,0 +1,653 @@
+
+
+
+	Item Pickup
+
+
+
+Automatically picks up items for an unit in a configurable radius.
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+			Available versions
+		
+			Limitations
+		
+			Manual
+		
+	
+	
+
+		
+			
+
+
+
+
+ItemPickup vJass
+
+ItemPickup JASS
+
+		
+			
+
+
+
+
+None hero units can't pick up items of type power up.
+
+If the pickup range is too large, items can't be dropped ( game constants ).
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+//*                                                                                                         19.06.2016
+//*                                              READ ME
+//*
+//*  ItemPickup allows units with inventory to pick up items automatically in a variable radius around its position.
+//* Of course ItemPickup is MUI, leakless and runs very smooth.
+//*
+//*  What is the optimal timer timeout for the periodic pickup loop?
+//*    o Mainly depends on your type of map. I would recommend something between 0.1 and 0.2. Requires in-game feedback.
+//*      Note: Permanent active timers over a game season, with small timeouts are perfomance killers for weaker enignes.
+//*
+//*  Important information, when dealing with items in Warcraft III:
+//*
+//*      Warcraft III doesn't remove dead items from the game automatically. It's recommended to
+//*      use a snippet to remove those items for memory management and ingame performance (rendered objects).
+//*      You can find such a snippet on TheHiveWorkshop.com in the JASS section.
+//*
+//*
+//*  ItemPickup written by BPower.
+	
+
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+			ItemPickup vJass
+		
+			ItemPickup JASS
+		
+			ItemPickup GUI Demo
+		
+	
+	
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library ItemPickup /* Version 4.0.1
+*************************************************************************************
+*
+*   Automatically pickup items for a unit in a configurable radius.
+*
+*   The system automatically clean invalid units ( removed )
+*   from the stack. Ergo no unit cleanup from your side is required.
+*
+*   Note: The system doesn't clean powerup items and dead items!
+*         Hence you should consider to import the following snippet aswell:
+*             - ItemCleanup: hiveworkshop.com/forums/jass-resources-412/system-item-cleanup-175663/
+*
+*   If you wish to use ItemPickup on more than ~40 units during the same time,
+*   you should consider adding a Table to lower the lookup complexity
+*   on start & stop from O(n) to O(1).
+*
+*************************************************************************************
+*
+*   */ uses /*
+*
+*       */ optional ErrorMessage /* github.com/nestharus/JASS/tree/master/jass/Systems/ErrorMessage
+*
+**************************************************************************************
+*
+*   Import instructions:
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*       • Copy library ItemPickup into your map.
+*
+*   API:
+*   ¯¯¯¯
+*      function StartItemPickup takes unit whichUnit, real radius returns nothing
+*          • Note: The system always checks if "whichUnit" is already in the stack.
+*                  This makes the function 100% fail-safe against a double allocation.
+*
+*      function StopItemPickup takes unit whichUnit returns nothing
+*          • Does nothing on an invalid "whichUnit" argument.
+*
+**************************************************************************************/
+
+// User settings:
+// ==============
+
+    globals
+
+        // Set the timer interval in which nearby items are enumerated.
+        //
+        private constant real TIMER_TIMEOUT = 0.1
+    endglobals
+  
+    // Define the item filter for picked up items
+    //     • A is widget alive check is done internally.
+    //
+    private function FilterItem takes unit picker, item whichItem returns boolean
+        return true
+    endfunction
+ 
+//===============================================================================
+// Functions, constants and variables used by ItemPickup. Make changes carefully.
+//===============================================================================
+
+    native UnitAlive takes unit id returns boolean
+
+    globals
+        //======================================================
+        // Constants
+        //
+
+        private constant timer TIMER = CreateTimer()
+ 
+        //======================================================
+        // Variables
+        //
+ 
+        // Max index and item enum helper variable
+        private integer size  = 0
+        private integer temp  = -1
+ 
+        // Array variables
+        private unit array source
+        private rect array square
+    endglobals
+ 
+    private function EnumItems takes nothing returns nothing
+        local item i = GetFilterItem()
+ 
+        if GetWidgetLife(i) > 0.405 and FilterItem(source[temp], i) and UnitAddItem(source[temp], i) then
+        endif
+ 
+        set i = null
+    endfunction
+ 
+    // The stack has a lookup speed of O(n).
+    // This is utterly acceptable as this function is only
+    // called on start and stop. If you think different, then implement a Table.
+    private function Get takes unit whichUnit returns integer
+        local integer index = 0
+ 
+        loop
+            exitwhen index == size
+            if source[index] == whichUnit then
+                return index
+            endif
+            set index = index + 1
+        endloop
+        return -1
+    endfunction
+
+    private function Clear takes unit whichUnit returns nothing
+        local integer index = Get(whichUnit)
+ 
+        if index != -1 then
+            set size = size - 1
+            set source[index] = source[size]
+            set square[index] = square[size]
+            call RemoveRect(square[size])
+            set square[size] = null
+            set source[size] = null
+            if size == 0 then
+                call PauseTimer(TIMER)
+            endif
+        endif
+    endfunction
+
+    private function OnPeriodic takes nothing returns nothing
+        local integer index = 0
+ 
+        loop
+            exitwhen index == size
+            if UnitAlive(source[index]) then
+                call MoveRectTo(square[index], GetUnitX(source[index]), GetUnitY(source[index]))
+                set temp = index
+                call EnumItemsInRect(square[index], null, function EnumItems)
+        
+            // Automatically pops invalid indexes.
+            elseif GetUnitTypeId(source[index]) == 0 then
+                call Clear(source[index])
+            endif
+            set index = index + 1
+        endloop
+    endfunction
+
+    function StartItemPickup takes unit whichUnit, real radius returns nothing
+
+        static if LIBRARY_ErrorMessage then
+            debug call ThrowWarning(GetUnitTypeId(whichUnit) == 0, "ItemPickup", "StartItemPickup", "whichUnit", 0, "Invalid unit argument ( null )!")
+        endif
+
+        call Clear(whichUnit)
+        if size == 0 then
+            call TimerStart(TIMER, TIMER_TIMEOUT, true, function OnPeriodic)
+        endif
+        set source[size] = whichUnit
+        set square[size] = Rect(-radius, -radius, radius, radius)
+        set size = size + 1
+    endfunction
+
+    function StopItemPickup takes unit whichUnit returns nothing
+        call Clear(whichUnit)
+    endfunction
+
+endlibrary
+	
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+//===============================================================================
+// ItemPickup. Version 1.0
+//===============================================================================
+//
+// Automatically pickup items for a unit in a configurable radius.
+//
+// Furthermore the system automatically clean invalid units ( removed )
+// from the stack. Ergo no extra cleanup from your side is required.
+//
+// Note: ItemPickup doesn't clean powerup- and dead items!
+//       Therefore you should consider importing the following system aswell:
+//           - ItemCleanup: hiveworkshop.com/threads/item-cleanup-1-2.201057/
+//
+//   Import instructions:
+//   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//       • Copy this trigger into your map.
+//
+//   API:
+//   ¯¯¯¯
+//       unit    udg_ItemPickup_Unit
+//                   • The unit you wish to add / remove.
+//
+//       real    udg_ItemPickup_Radius
+//                   • The desired pickup radius.
+//
+//       boolean udg_ItemPickup_AddUnit
+//                    • Determines whether the unit should be added or removed.
+//
+//       Trigger - Run ItemPickup JASS <gen> ( Ignoring/Checking conditions )
+//           • Executes your settings.
+//
+// User settings:
+// ==============
+
+// Set the timer interval in which nearby items are enumerated.
+//
+constant function ItemPickup_GetTimerTimeout takes nothing returns real
+    return 0.1
+endfunction
+
+// Define the item filter for picked up items
+//     • A is widget alive check is done internally.
+//
+function ItemPickup_FilterItem takes unit picker, item whichItem returns boolean
+    return true
+endfunction
+
+//===============================================================================
+// ItemPickup source code. Make changes carefully.
+//===============================================================================
+
+function ItemPickup_EnumItems takes nothing returns nothing
+    local item i = GetFilterItem()
+ 
+    if GetWidgetLife(i) > 0.405 and ItemPickup_FilterItem(udg_ItemPickup_Unit[udg_ItemPickup_Index], i) then
+        call UnitAddItem(udg_ItemPickup_Unit[udg_ItemPickup_Index], i)
+    endif
+ 
+    set i = null
+endfunction
+
+function ItemPickup_GetIndexByUnit takes unit whichUnit returns integer
+    local integer index = 0
+ 
+    loop
+        exitwhen index == udg_ItemPickup_Max
+        if udg_ItemPickup_Unit[index] == whichUnit then
+            return index
+        endif
+        set index = index + 1
+    endloop
+    return -1
+endfunction
+
+function ItemPickup_Clear takes unit whichUnit returns nothing
+    local integer index = ItemPickup_GetIndexByUnit(whichUnit)
+ 
+    if index != -1 then
+        set udg_ItemPickup_Max = udg_ItemPickup_Max - 1
+        set udg_ItemPickup_Unit[index] = udg_ItemPickup_Unit[udg_ItemPickup_Max]
+        set udg_ItemPickup_Rect[index] = udg_ItemPickup_Rect[udg_ItemPickup_Max]
+        call RemoveRect(udg_ItemPickup_Rect[udg_ItemPickup_Max])
+        set udg_ItemPickup_Rect[udg_ItemPickup_Max] = null
+        set udg_ItemPickup_Unit[udg_ItemPickup_Max] = null
+        if udg_ItemPickup_Max == 0 then
+            call PauseTimer(udg_ItemPickup_Timer)
+        endif
+    endif
+endfunction
+
+function ItemPickup_OnPeriodic takes nothing returns nothing
+    local integer index = 0
+ 
+    loop
+        exitwhen index == udg_ItemPickup_Max
+
+       // Automatically pops invalid indexes.
+        if GetUnitTypeId(udg_ItemPickup_Unit[index]) == 0 then
+            call ItemPickup_Clear(udg_ItemPickup_Unit[index])
+ 
+        elseif not IsUnitType(udg_ItemPickup_Unit[index], UNIT_TYPE_DEAD) then
+            call MoveRectTo(udg_ItemPickup_Rect[index], GetUnitX(udg_ItemPickup_Unit[index]), GetUnitY(udg_ItemPickup_Unit[index]))
+            set udg_ItemPickup_Index = index
+            call EnumItemsInRect(udg_ItemPickup_Rect[index], null, function ItemPickup_EnumItems)
+        endif
+        set index = index + 1
+    endloop
+endfunction
+
+function ItemPickup_TriggerResponse takes nothing returns nothing
+    call ItemPickup_Clear(udg_ItemPickup__Unit)
+
+    if not udg_ItemPickup__AddUnit or GetUnitTypeId(udg_ItemPickup__Unit) == 0 or udg_ItemPickup__Radius < 0.00 then
+        return
+    endif
+
+    if udg_ItemPickup_Max == 0 then
+        call TimerStart(udg_ItemPickup_Timer, ItemPickup_GetTimerTimeout(), true, function ItemPickup_OnPeriodic)
+    endif
+    set udg_ItemPickup_Unit[udg_ItemPickup_Max] = udg_ItemPickup__Unit
+    set udg_ItemPickup_Rect[udg_ItemPickup_Max] = Rect(-udg_ItemPickup__Radius, -udg_ItemPickup__Radius, udg_ItemPickup__Radius, udg_ItemPickup__Radius)
+    set udg_ItemPickup_Max = udg_ItemPickup_Max + 1
+endfunction
+
+//===========================================================================
+function InitTrig_Item_Pickup_JASS takes nothing returns nothing
+    set gg_trg_Item_Pickup_JASS = CreateTrigger()
+    call TriggerAddAction(gg_trg_Item_Pickup_JASS, function ItemPickup_TriggerResponse)
+endfunction
+	
+
+		
+			
+
+
+
+
+	
+		
+			
+
+				Demo Map
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Events
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Map initialization
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+			
+
+				Conditions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Custom script:   set bj_wantDestroyGroup = true
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Unit Group - Pick every unit in (Units in (Playable map area)) and do (Actions)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Loop - Actions
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set ItemPickup__Unit = (Picked unit)
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set ItemPickup__Radius = 50.00
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Set ItemPickup__AddUnit = True
+				
+					
+				
+		
+		
+	
+		
+			
+
+				Trigger - Run Item Pickup JASS <gen> (checking conditions)
+				
+					
+				
+		
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+		
+		
+			
+			
+		
+	
+
+		
+	
+
+
+
+
+
+
+
+
+	Final note:
+
+Warcraft III doesn't remove dead items from the game automatically. It's recommended to
+
+use a snippet to remove those items for memory management and ingame performance ( rendered objects ).
+
+You can find such a snippet on TheHiveWorkshop.com in the JASS section ( link ) or for GUI'ers here in the spell section. ( link )
+
+
+Keywords:
+
+GUI, vJass, Item, pickup, pick , up, system, auto, atuomatic, autoitem, itemsystem, itempickup,
+
+autopickup

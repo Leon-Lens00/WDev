@@ -1,0 +1,8 @@
+{
+  "same_fixture": true,
+  "only_behavioral_change": "Initialize local WaveSlot s=0 inside OnUnitDeath",
+  "run_label_difference": true,
+  "baseline_failures": 7,
+  "diagnostic_failures": 5,
+  "canonical_sources_changed": false
+}

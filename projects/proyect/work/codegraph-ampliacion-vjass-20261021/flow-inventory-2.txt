@@ -1,0 +1,275 @@
+> JASS/vJASS local support: structural/static subset. Bounded macro/module projections and indexed-file import links; generated members anchor to invocation source, not expanded bodies. Computed dispatch and other unmodeled cases remain unresolved; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+> src/Inventory_22_Socket_Item.j:25: Conditional compilation is not evaluated; extracted references are potential paths.
+> src/Inventory_22_Socket_Item.j:34: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> src/Inventory_20_Sell_Item.j:25: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> src/Inventory_21_Drop_Item.j:26: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> src/Inventory_04_InventoryTooltip.j:35: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> src/Inventory_04_InventoryTooltip.j:39: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> 362 more extraction diagnostics in these files.
+
+**Additional graph links among your symbols**
+(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)
+
+- SocketItem → OnAgree   [contains]
+- Actions → OnAgree   [static JASS: references]
+- OnAgree → GetItemDescription   [static JASS: calls]
+- OnAgree → GetItemIcon   [static JASS: calls]
+- OnAgree → GetInvItem   [static JASS: calls]
+- OnAgree → setTooltipInfo   [static JASS: calls]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: SocketItem.OnAgree InventoryCore.Inventory.setTooltipInfo**
+
+Found 59 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `OnAgree` (src/Inventory_22_Socket_Item.j:14) — 1 caller in `src/Inventory_22_Socket_Item.j`; no tests found within 3 caller hops
+- `setTooltipInfo` (src/Inventory_01_Inventory.j:275) — 2 callers in `src/Inventory_01_Inventory.j`, `src/Inventory_22_Socket_Item.j`; no tests found within 3 caller hops
+- `OnAgree` (src/Inventory_20_Sell_Item.j:9) — 1 caller in `src/Inventory_20_Sell_Item.j`; no tests found within 3 caller hops
+- `OnAgree` (src/Inventory_21_Drop_Item.j:9) — 1 caller in `src/Inventory_21_Drop_Item.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`src/Inventory_01_Inventory.j`** — localInt(calls), Init(calls), TimerUtils(imports), InventoryItem(imports), UserInterface(imports), +55 more
+
+```jass
+122	            call SaveInteger(.Hashtable, KEY_UNIT, GetHandleId(u), value)
+123	        endmethod
+124	 
+125	        method getButton takes integer index returns UIButton
+126	            return this.buttons[(this.pid * MAX_SLOTS) + index]
+127	        endmethod
+128	        
+129	        method setButton takes integer index, UIButton value returns nothing
+130	            set this.buttons[(this.pid * MAX_SLOTS) + index] = value
+131	        endmethod
+132	        
+133	        method getItem takes integer index returns InvItem
+134	            return LoadInteger(.Hashtable, this, (MAX_ITEMS * .KEY_ITEMS) + index)
+135	        endmethod
+136	        
+137	        method itemsOfType takes integer id returns integer
+138	            return this.countTable[id]
+
+... (gap) ...
+
+146	            call TriggerAddAction(ExecR, func)
+147	        endmethod
+148	        
+149	        method getItemId takes integer index returns integer
+150	            return LoadInteger(.Hashtable, this, (MAX_ITEMS * .KEY_ITEM_ID) + index)
+151	        endmethod
+152	        
+153	        method setItem takes integer index, InvItem itm returns nothing
+154	            local UIButton btn
+155	            local integer slot = index
+156	            local integer id = itm.id
+157	            local integer icon = GetItemIcon(id)
+158	            local InvItem oldItem
+159	            
+160	            if (this.currentPage > 0) then
+161	                set slot = index - (.MAX_SLOTS*this.currentPage)
+162	            endif
+163	            
+164	            set btn = this.getButton(slot)
+165	
+166	            set oldItem = this.getItem(index)
+167	            
+168	            call SaveInteger(.Hashtable, this, (MAX_ITEMS * .KEY_ITEMS) + index, itm)
+169	            
+170	            if (itm.tempCustomId > 0) then
+171	                call SaveInteger(.Hashtable, this, (MAX_ITEMS * .KEY_ITEM_ID) + index, itm.tempCustomId)
+172	            endif
+173	            
+174	            set itm.tempCustomId = 0
+175	            
+176	            if (id == 0 and HaveSavedInteger(.Hashtable, this, (MAX_ITEMS * .KEY_ITEMS) + index)) then
+177	                set id = oldItem.id
+178	                
+179	                set this.itemCount = this.itemCount - 1
+180	                set this.countTable[id] = this.countTable[id] - 1
+181	                
+182	                call RemoveSavedInteger(.Hashtable, this, (MAX_ITEMS * .KEY_ITEMS) + index)
+183	                
+184	                // remove ability
+185	                if (oldItem.ability > 0 and itemsOfType(id) <= 0) then
+186	                    call UnitRemoveAbility(this.owner, oldItem.ability)
+187	                endif
+188	            elseif (id > 0) then
+189	                set this.itemCount = this.itemCount + 1
+190	                set this.countTable[id] = this.countTable[id] + 1
+191	                
+192	                // add ability
+193	                if (itm.ability > 0 and itemsOfType(id) == 1) then
+194	                    call UnitAddAbility(this.owner, itm.ability)
+195	                endif
+196	            endif
+197	            
+198	            call btn.setTexture(.localInt(this.pid, icon, ICON_TRANSPARENT))
+199	            call btn.showPlayer(this.user.handle, this.displayed, this.camera)
+200	        endmethod
+201	        
+202	        method findFreeSlot takes integer page returns integer //O(n)
+203	            local integer i = 0
+
+... (gap) ...
+
+211	            return -1
+212	        endmethod
+213	
+214	        method createButtons takes nothing returns nothing
+215	            local integer row = 0
+216	            local integer col = 0
+217	            local UIButton btn = 0
+218	            local integer i = 0
+219	
+220	            if (btnPageUp[this.pid] == 0) then
+221	                set btnPageUp[this.pid] = UIButton.create(X - 0.15, (Y + SLOT_OFFSET_Y) - (col * (SLOT_HEIGHT*SLOT_SPACING)), .SLOT_WIDTH, .SLOT_HEIGHT, 0.5, thistype.localInt(this.pid, ICON_PAGEUP, ICON_TRANSPARENT))
+222	                set btnPageDown[this.pid] = UIButton.create(X - 0.15, (Y + SLOT_OFFSET_Y) - ((.BUTTON_COLS-1) * (SLOT_HEIGHT*SLOT_SPACING)), .SLOT_WIDTH, .SLOT_HEIGHT, 0.5, thistype.localInt(this.pid, ICON_PAGEDOWN, ICON_TRANSPARENT))
+223	                set btnSell[this.pid] = UIButton.create(X - 0.15, (Y + SLOT_OFFSET_Y) - .300, .SLOT_WIDTH, .SLOT_HEIGHT, 0.5, thistype.localInt(this.pid, ICON_SELL, ICON_TRANSPARENT))
+224	                set btnDrop[this.pid] = UIButton.create(X - 0.15, (Y + SLOT_OFFSET_Y) - .150, .SLOT_WIDTH, .SLOT_HEIGHT, 0.5, thistype.localInt(this.pid, ICON_DROP, ICON_TRANSPARENT))
+225	                
+226	                set btnPageUp[this.pid].onLeftClick = InvFuncLClickSlot
+227	                set btnPageDown[this.pid].onLeftClick = InvFuncLClickSlot
+228	                set btnSell[this.pid].onLeftClick = InvFuncLClickSlot
+229	                set btnDrop[this.pid].onLeftClick = InvFuncLClickSlot
+230	                
+231	                set btnPageUp[this.pid].selectUnit = this.owner
+232	                set btnPageDown[this.pid].selectUnit = this.owner
+233	                set btnSell[this.pid].selectUnit = this.owner
+234	                set btnDrop[this.pid].selectUnit = this.owner
+235	                
+236	                set selector[this.pid] = UIPicture.createEx(X - 0.15, (Y + SLOT_OFFSET_Y) - .250, 0, .55, 'e000', 1, 1, 0)
+237	                set selector[this.pid].animIndex = 56
+238	                call selector[this.user.id].show(false, this.camera)
+239	                
+240	                call AddSpecialEffectTarget("UI\\TRSHerolevel.mdx", selector[this.pid].picture, "origin")
+241	            endif
+242	            
+243	            loop
+244	                exitwhen col == BUTTON_COLS
+245	                
+246	                set row = 0
+247	                
+248	                loop
+249	                    exitwhen row == BUTTON_ROWS
+250	                    
+251	                    if (this.getButton(i) == 0) then
+252	                    
+253	                        set btn = UIButton.create( (X + SLOT_OFFSET_X) + (row * (SLOT_WIDTH*SLOT_SPACING)), (Y + SLOT_OFFSET_Y) - (col * (SLOT_HEIGHT*SLOT_SPACING)), .SLOT_WIDTH, .SLOT_HEIGHT, 0.5, GetItemIcon(this.getItem(i).id))
+254	                        
+255	                        set btn.customValue = i
+256	                        
+257	                        set btn.selectUnit = this.owner
+258	                        
+259	                        set btn.onLeftClick = InvFuncLClickSlot
+260	                        set btn.onRightClick = InvFuncRClickSlot
+261	                        
+262	                        call this.setButton(i, btn)
+263	
+264	                        //call SetUnitVertexColor(.background[this.pid].picture, 255, 255, 255, thistype.localInt(this.pid, 255, 0))
+265	                    endif
+266	                    set i = i + 1
+267	                    
+268	                    set row = row + 1
+269	                endloop
+270	                
+271	                set col = col + 1
+272	            endloop
+273	        endmethod
+274	        
+275	        implement InvPlugins
+276	        
+277	        static method create takes unit owner returns thistype
+278	            local thistype this = thistype.allocate()
+```
+
+**`src/Inventory_22_Socket_Item.j`** — OnAgree(function), SocketItem(namespace), itm(variable), inv(variable), socketItm(variable), +11 more
+
+```jass
+1	scope SocketItem initializer Init
+2	
+3	    globals
+4	        private InvItem array SockItem
+5	        private integer array SockSlot
+6	        private Inventory array SockInv
+7	        private integer array SockLast
+8	        
+9	        integer SocketLast
+10	        integer SocketSlot
+11	        Inventory SocketInv
+12	    endglobals 
+13	    
+14	    private function OnAgree takes nothing returns boolean
+15	        local User user = User[GetTriggerPlayer()]
+16	        local InvItem itm = SockItem[user.id]
+17	        local integer slot = SockSlot[user.id]
+18	        local Inventory inv = SockInv[user.id] 
+19	        local InvItem socketItm = inv.getItem(slot)
+20	        
+21	        set socketItm.tempCustomId = inv.getItemId(slot)
+22	        
+23	        if (socketItm.addSocket(itm)) then
+24	        
+25	            static if (InvItem.buildDescription.exists) then
+26	                set socketItm.tempCustomId = inv.getItemId((Inventory.MAX_SLOTS*inv.currentPage)+slot)
+27	
+28	                call socketItm.buildDescription(inv.owner)
+29	            else
+30	                call inv.setTooltipInfo(GetItemDescription(socketItm.id))
+31	            endif
+32	            
+33	            call inv.setTooltipTitle(GetObjectName(socketItm.id))
+34	            call inv.setTooltipCost("|cffffcc00" + I2S(GetInvItem(socketItm.id).cost) + "|r")
+35	            call inv.setTooltipIcon(inv.localInt(inv.pid, GetItemIcon(socketItm.id), Inventory.ICON_TRANSPARENT))
+36	            
+37	            call inv.showTooltip(inv, true)
+38	            
+39	            call inv.setItem(SockLast[user.id], 0)
+40	        endif
+41	        
+42	        return false
+43	    endfunction
+44	    
+45	    private function Actions takes nothing returns nothing
+46	        local Inventory inv = SocketInv
+47	        local InvItem itm = inv.getItem(SocketLast)
+48	        local InvItem socketItm = inv.getItem(SocketSlot)
+49	        
+50	        set SockItem[inv.user.id] = itm
+51	        set SockSlot[inv.user.id] = SocketSlot
+52	        set SockInv[inv.user.id] = SocketInv
+53	        set SockLast[inv.user.id] = SocketLast
+54	        
+55	        call inv.showTooltip(inv, false)
+56	        
+57	        call ShowYesNoDialog("Socket " + GetObjectName(itm.id) + " into " + GetObjectName(socketItm.id) + "?", inv.user, Filter(function OnAgree))
+58	    endfunction
+59	
+60	    //===========================================================================
+61	    private function Init takes nothing returns nothing
+62	        set Equipment.onSocket = CreateTrigger()
+63	        call TriggerAddAction(Equipment.onSocket, function Actions)
+64	    endfunction
+65	
+66	endscope
+```
+
+**Not shown above — explore these names for their source**
+
+- src/Inventory_02_InventoryItem.j: GetItemInfo:41, GetItemDescription:45, GetItemIcon:49, GetInvItem:37, addSocket:18, buildDescription:18, +9 more
+- src/Inventory_04_InventoryTooltip.j: setTooltipInfo:38, InvTooltip:3, ICON_TOOLTIP_GOLD:18, TOOLTIP_BACKGROUND:19, TOOLTIP_FONT_SIZE:16, TOOLTIP_TEXTURE:14, +17 more
+- src/Inventory_20_Sell_Item.j: OnAgree:9, slot:12, user:10, inv:13, itm:11, SellItem:1, +5 more
+- src/Inventory_21_Drop_Item.j: OnAgree:9, user:10, inv:13, slot:12, itm:11, DropItem:1, +5 more
+- src/Inventory_28_PlayerUtils.j: User:66, toPlayer:111, PlayerUtils:1
+- foundation-src/TimerUtils.j: TimerUtils:1, ReleaseTimer:186, GetTimerData:101, NewTimerEx:144
+- src/Inventory_25_UserInterface.j: createEx:747, createEx:595, UserInterface:1
+- src/Inventory_08_Equipment.j: EquipmentCore:1, LClickItemSlot:526
+- src/Inventory_09_EquipmentItem.j: EquipmentItem:1
+- InventoryProbe.j: Tests:23, Dump:106
+- ... and 4 more files
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

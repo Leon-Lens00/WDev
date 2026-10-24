@@ -1,0 +1,374 @@
+{
+  "target": "Warcraft III Classic 1.27b / MDX800",
+  "revision": "V13 individual super-buster components",
+  "entries": [
+    {
+      "name": "X3_Orbe_Verde",
+      "category": "B-Orbes-individuales/Verde",
+      "path": "exports/megaman-x3-buster-v13/B-Orbes-individuales/Verde/X3_Orbe_Verde.mdx",
+      "sha256": "38f6f0687b08b395986af9c447d8bae4f45bb71a6b6388ac5c3047dccaaf67de",
+      "triangles": 1338,
+      "pe2": 8,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Orbe_Naranja",
+      "category": "B-Orbes-individuales/Naranja",
+      "path": "exports/megaman-x3-buster-v13/B-Orbes-individuales/Naranja/X3_Orbe_Naranja.mdx",
+      "sha256": "35912e3f95821f1727fe2d7104591d1e1751450d098b93fb4999bdd56e73eabf",
+      "triangles": 1338,
+      "pe2": 8,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Orbe_Cian",
+      "category": "B-Orbes-individuales/Cian",
+      "path": "exports/megaman-x3-buster-v13/B-Orbes-individuales/Cian/X3_Orbe_Cian.mdx",
+      "sha256": "0b7ec413289ed0bb6d7bd2a90510bb5281c477757239b3ab2a5097c9b2b095d7",
+      "triangles": 1338,
+      "pe2": 8,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Cross_Buster",
+      "category": "C-Buster-fusionado",
+      "path": "exports/megaman-x3-buster-v13/C-Buster-fusionado/X3_Cross_Buster.mdx",
+      "sha256": "459d9c6255538ebc4ba157078715be0129991c8f2cbdb6885d6c46b54748e51e",
+      "triangles": 6144,
+      "pe2": 15,
+      "ribbons": 1
+    },
+    {
+      "name": "X3_Flash_Union",
+      "category": "C-Flash-union",
+      "path": "exports/megaman-x3-buster-v13/C-Flash-union/X3_Flash_Union.mdx",
+      "sha256": "bf3dd00d062f6a3d67c3a7b6b34b81aa6641c7b3415d25cdd9fbdde9705698d7",
+      "triangles": 780,
+      "pe2": 2,
+      "ribbons": 0
+    },
+    {
+      "name": "X3_Buster_Cargado",
+      "category": "A-Buster-aprobado-V12",
+      "path": "exports/megaman-x3-buster-v13/A-Buster-aprobado-V12/X3_Buster_Cargado.mdx",
+      "sha256": "a8c3dc9992b743fb17a52765a6e943370879926a55326a2f94d00182b9f1b390",
+      "triangles": 4608,
+      "pe2": 15,
+      "ribbons": 1,
+      "preservedV12": true
+    }
+  ],
+  "details": {
+    "X3_Orbe_Verde": {
+      "birthMs": 300,
+      "standMs": 960,
+      "deathMs": 1000,
+      "flightCount": 25,
+      "flightEmitters": 4,
+      "bodyFadeMs": 90,
+      "bodyDeathScale": [
+        1,
+        1,
+        1
+      ],
+      "impactGeosets": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bursts": [
+        {
+          "name": "Impact / Shot II Stars",
+          "on": 40,
+          "off": 240,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            8.25,
+            13.75,
+            0.2750000059604645
+          ],
+          "rate": 90
+        },
+        {
+          "name": "Impact / Shot II Lumps",
+          "on": 50,
+          "off": 280,
+          "lifeMs": 330.00001311302185,
+          "size": [
+            11.399999618530273,
+            5.699999809265137,
+            0.1899999976158142
+          ],
+          "rate": 65
+        },
+        {
+          "name": "Impact / Shot II Flashes",
+          "on": 40,
+          "off": 280,
+          "lifeMs": 300.00001192092896,
+          "size": [
+            3.25,
+            5.199999809265137,
+            3.25
+          ],
+          "rate": 75
+        },
+        {
+          "name": "Impact / Shot II Avante Uno",
+          "on": 0,
+          "off": 160,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            6,
+            5.5,
+            0.25
+          ],
+          "rate": 80
+        }
+      ],
+      "reference": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Blue.mdx",
+      "root": "fixed at origin in every sequence",
+      "death": "flight fades in 90 ms; local flash expands; four reference-derived PE2 bursts decay independently"
+    },
+    "X3_Orbe_Naranja": {
+      "birthMs": 300,
+      "standMs": 960,
+      "deathMs": 1000,
+      "flightCount": 25,
+      "flightEmitters": 4,
+      "bodyFadeMs": 90,
+      "bodyDeathScale": [
+        1,
+        1,
+        1
+      ],
+      "impactGeosets": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bursts": [
+        {
+          "name": "Impact / Shot II Stars",
+          "on": 40,
+          "off": 240,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            8.25,
+            13.75,
+            0.2750000059604645
+          ],
+          "rate": 90
+        },
+        {
+          "name": "Impact / Shot II Lumps",
+          "on": 50,
+          "off": 280,
+          "lifeMs": 330.00001311302185,
+          "size": [
+            11.399999618530273,
+            5.699999809265137,
+            0.1899999976158142
+          ],
+          "rate": 65
+        },
+        {
+          "name": "Impact / Shot II Flashes",
+          "on": 40,
+          "off": 280,
+          "lifeMs": 300.00001192092896,
+          "size": [
+            3.25,
+            5.199999809265137,
+            3.25
+          ],
+          "rate": 75
+        },
+        {
+          "name": "Impact / Shot II Avante Uno",
+          "on": 0,
+          "off": 160,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            6,
+            5.5,
+            0.25
+          ],
+          "rate": 80
+        }
+      ],
+      "reference": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Blue.mdx",
+      "root": "fixed at origin in every sequence",
+      "death": "flight fades in 90 ms; local flash expands; four reference-derived PE2 bursts decay independently"
+    },
+    "X3_Orbe_Cian": {
+      "birthMs": 300,
+      "standMs": 960,
+      "deathMs": 1000,
+      "flightCount": 25,
+      "flightEmitters": 4,
+      "bodyFadeMs": 90,
+      "bodyDeathScale": [
+        1,
+        1,
+        1
+      ],
+      "impactGeosets": [
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "bursts": [
+        {
+          "name": "Impact / Shot II Stars",
+          "on": 40,
+          "off": 240,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            8.25,
+            13.75,
+            0.2750000059604645
+          ],
+          "rate": 90
+        },
+        {
+          "name": "Impact / Shot II Lumps",
+          "on": 50,
+          "off": 280,
+          "lifeMs": 330.00001311302185,
+          "size": [
+            11.399999618530273,
+            5.699999809265137,
+            0.1899999976158142
+          ],
+          "rate": 65
+        },
+        {
+          "name": "Impact / Shot II Flashes",
+          "on": 40,
+          "off": 280,
+          "lifeMs": 300.00001192092896,
+          "size": [
+            3.25,
+            5.199999809265137,
+            3.25
+          ],
+          "rate": 75
+        },
+        {
+          "name": "Impact / Shot II Avante Uno",
+          "on": 0,
+          "off": 160,
+          "lifeMs": 209.99999344348907,
+          "size": [
+            6,
+            5.5,
+            0.25
+          ],
+          "rate": 80
+        }
+      ],
+      "reference": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Blue.mdx",
+      "root": "fixed at origin in every sequence",
+      "death": "flight fades in 90 ms; local flash expands; four reference-derived PE2 bursts decay independently"
+    },
+    "X3_Cross_Buster": {
+      "flightGeosets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        61,
+        62,
+        63,
+        64
+      ],
+      "impactGeosets": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "approvedSource": "a8c3dc9992b743fb17a52765a6e943370879926a55326a2f94d00182b9f1b390",
+      "shapeScale": [
+        0.78,
+        1.2,
+        1.2
+      ],
+      "worldTrajectory": false,
+      "localRingRollMs": 960
+    },
+    "X3_Flash_Union": {
+      "finiteAllSequences": true,
+      "durationMs": 500,
+      "center": "union origin",
+      "worldTrajectory": false
+    }
+  },
+  "source": {
+    "author": "Vinz",
+    "pack": "Shots Vol. II",
+    "path": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/shots-vol-ii/originales/Shots Vol. II/Shot II Blue.mdx",
+    "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac"
+  },
+  "worldTrajectory": false
+}

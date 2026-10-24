@@ -1,0 +1,10 @@
+The exact chain is:
+
+`Jass.trace(s)` → `Jass.print(s)` → `DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 120, s)`.
+
+- `trace` directly and unconditionally calls `print(s)`, then returns `0.0` ([Jass.j:103–106](Jass.j#L103)).
+- `print` directly calls `DisplayTimedTextToPlayer`, forwarding the same string, selecting `GetLocalPlayer()`, coordinates `(0, 0)`, and duration `120` ([Jass.j:99–101](Jass.j#L99)).
+
+There is **no intermediate callback, registration, dispatcher, or conditional branch** between these two functions. Both are declared `private`; `Jass` is the containing library ([Jass.j:1](Jass.j#L1)).
+
+This establishes the source-level call chain; runtime display behavior was not tested.

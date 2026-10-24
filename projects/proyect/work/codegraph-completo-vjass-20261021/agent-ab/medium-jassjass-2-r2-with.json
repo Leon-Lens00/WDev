@@ -1,0 +1,32 @@
+{
+  "repo": "medium-jassjass",
+  "flow": 2,
+  "names": [
+    "Jass.Lexer.parseIdent",
+    "Jass.isDelim"
+  ],
+  "repetition": 2,
+  "arm": "with",
+  "exit": 0,
+  "seconds": 22.297195626997564,
+  "usage": {
+    "input_tokens": 81479,
+    "cached_input_tokens": 64128,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 793,
+    "reasoning_output_tokens": 88
+  },
+  "commands": 0,
+  "command_text": [],
+  "mcp": 2,
+  "mcp_tools": [
+    "codegraph_explore",
+    "codegraph_explore"
+  ],
+  "mcp_errors": [],
+  "forbidden_commands": [],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16220-3095-7ed0-b5cd-777ceb0bf193"
+  ]
+}

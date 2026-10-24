@@ -1,0 +1,63 @@
+{
+  "vjass": {
+    "version": "1.6.2",
+    "initialized": true,
+    "fileCount": 0,
+    "nodeCount": 0,
+    "edgeCount": 0,
+    "languages": [],
+    "index": {
+      "builtWithVersion": null,
+      "builtWithExtractionVersion": null,
+      "currentExtractionVersion": 27,
+      "reindexRecommended": false,
+      "state": "complete",
+      "pendingRefs": 0
+    },
+    "query": []
+  },
+  "python": {
+    "version": "1.6.2",
+    "initialized": true,
+    "fileCount": 1,
+    "nodeCount": 3,
+    "edgeCount": 3,
+    "languages": [
+      "python"
+    ],
+    "index": {
+      "builtWithVersion": "1.6.2",
+      "builtWithExtractionVersion": 27,
+      "currentExtractionVersion": 27,
+      "reindexRecommended": false,
+      "state": "complete",
+      "pendingRefs": 0
+    },
+    "query": [
+      {
+        "node": {
+          "id": "function:a01a76f3be84004fe69e95e79760515b",
+          "kind": "function",
+          "name": "spell_ping",
+          "qualifiedName": "spell_ping",
+          "filePath": "probe.py",
+          "language": "python",
+          "startLine": 1,
+          "endLine": 2,
+          "startColumn": 0,
+          "endColumn": 12,
+          "signature": "()",
+          "visibility": null,
+          "isExported": false,
+          "isAsync": false,
+          "isStatic": false,
+          "isAbstract": false,
+          "updatedAt": 1792545886038
+        },
+        "score": 91.0701813986583
+      }
+    ]
+  },
+  "conclusion": "CachyOS native execution passed; JASS/vJASS extraction not supported by upstream 1.6.2. The complete index status with zero files is not language coverage.",
+  "global_mcp_config_changed": false
+}

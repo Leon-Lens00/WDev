@@ -1,0 +1,55 @@
+{
+  "processes": [
+    {
+      "pid": 718496,
+      "start": "11383006",
+      "command": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\af7d1e2e5b0647c8.w3x -window                                                                                                                                                                                                                                     ",
+      "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-runtime/pfx"
+    }
+  ],
+  "windows": [
+    {
+      "address": "0x55bb07af8bf0",
+      "mapped": true,
+      "hidden": false,
+      "visible": true,
+      "acceptsInput": true,
+      "at": [
+        0,
+        0
+      ],
+      "size": [
+        1920,
+        1080
+      ],
+      "workspace": {
+        "id": 2,
+        "name": "2"
+      },
+      "floating": true,
+      "monitor": 0,
+      "class": "steam_app_0",
+      "title": "Warcraft III",
+      "initialClass": "steam_app_0",
+      "initialTitle": "Warcraft III",
+      "pid": 718496,
+      "xwayland": true,
+      "pinned": false,
+      "pinFullscreened": false,
+      "fullscreen": 2,
+      "fullscreenClient": 0,
+      "fullscreenHandler": "default",
+      "allowedOverFullscreen": true,
+      "grouped": [],
+      "tags": [],
+      "swallowing": "0x0",
+      "focusHistoryID": 0,
+      "inhibitingIdle": false,
+      "xdgTag": "",
+      "xdgDescription": "",
+      "contentType": "none",
+      "tearingHint": false,
+      "stableId": "18001d4a"
+    }
+  ]
+}

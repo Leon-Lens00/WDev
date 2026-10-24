@@ -1,0 +1,22 @@
+[
+  {
+    "pid": "906972",
+    "cmd": "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/pressure-vessel/libexec/steam-runtime-tools-0/srt-bwrap --args 26 /usr/lib/pressure-vessel/from-host/libexec/steam-runtime-tools-0/pv-adverb --prefix=/usr/lib/pressure-vessel/from-host --generate-locales --fd 12 --regenerate-ld.so-cache /var/pressure-vessel/ldso --add-ld.so-path /usr/lib/pressure-vessel/overrides/lib/x86_64-linux-gnu --add-ld.so-path /usr/lib/pressure-vessel/overrides/lib/i386-linux-gnu --set-ld-library-path /usr/lib/pressure-vessel/overrides/lib/x86_64-linux-gnu/aliases:/usr/lib/pressure-vessel/overrides/lib/i386-linux-gnu/aliases --overrides-path /usr/lib/pressure-vessel/overrides --assign-fd=1=3 --assign-fd=2=4 -- /home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton runinprefix C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\83dd0aee21ebb5eb.w3x -window "
+  },
+  {
+    "pid": "907029",
+    "cmd": "/usr/lib/pressure-vessel/from-host/libexec/steam-runtime-tools-0/pv-adverb --prefix=/usr/lib/pressure-vessel/from-host --generate-locales --fd 12 --regenerate-ld.so-cache /var/pressure-vessel/ldso --add-ld.so-path /usr/lib/pressure-vessel/overrides/lib/x86_64-linux-gnu --add-ld.so-path /usr/lib/pressure-vessel/overrides/lib/i386-linux-gnu --set-ld-library-path /usr/lib/pressure-vessel/overrides/lib/x86_64-linux-gnu/aliases:/usr/lib/pressure-vessel/overrides/lib/i386-linux-gnu/aliases --overrides-path /usr/lib/pressure-vessel/overrides --assign-fd=1=3 --assign-fd=2=4 -- /home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton runinprefix C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\83dd0aee21ebb5eb.w3x -window "
+  },
+  {
+    "pid": "907062",
+    "cmd": "python3 /home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton runinprefix C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\83dd0aee21ebb5eb.w3x -window "
+  },
+  {
+    "pid": "907063",
+    "cmd": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\83dd0aee21ebb5eb.w3x -window                                                                                                                                                                                                                                     "
+  },
+  {
+    "pid": "907356",
+    "cmd": "/usr/bin/bash -c python - <<'PY'\nfrom pathlib import Path\nimport json,subprocess,datetime\np=Path('ModelEditor/evidence/x3-v4');records=[]\nfor q in Path('/proc').glob('[0-9]*'):\n try:\n  cmd=(q/'cmdline').read_bytes().replace(b'\\0',b' ').decode(errors='replace')\n  if any(x in cmd.lower() for x in ['war3.exe','ydwe.exe','worldedit.exe']):records.append({'pid':q.name,'cmd':cmd})\n except OSError:pass\n(p/'processes-before.json').write_text(json.dumps(records,indent=2))\n(p/'monitors-before.json').write_bytes(subprocess.check_output(['hyprctl','-j','monitors']))\n(p/'windows-before.json').write_bytes(subprocess.check_output(['hyprctl','-j','clients']))\nprint(records)\nPY "
+  }
+]

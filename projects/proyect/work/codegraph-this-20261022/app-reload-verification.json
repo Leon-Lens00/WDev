@@ -1,0 +1,79 @@
+{
+  "expected_identity": "1.6.2+jass-vjass.5",
+  "extraction": 32,
+  "current_chat_tool_call_after_reload": true,
+  "method": "New application-managed MCP process started after installed build; independent fresh .5 MCP tool responses and production SQLite checked separately.",
+  "app_mcp_processes": [
+    {
+      "pid": 436455,
+      "parent": 390042,
+      "started_after_build": true
+    },
+    {
+      "pid": 436462,
+      "parent": 390042,
+      "started_after_build": true
+    },
+    {
+      "pid": 436470,
+      "parent": 390042,
+      "started_after_build": true
+    }
+  ],
+  "indexes": [
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.5",
+        "indexed_with_extraction_version": "32"
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.5",
+        "indexed_with_extraction_version": "32"
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.5",
+        "indexed_with_extraction_version": "32"
+      }
+    }
+  ],
+  "original_source_hashes_unchanged": true,
+  "passed": true,
+  "elapsed_seconds": 0.06,
+  "reports_archived": 6,
+  "open_reports": [],
+  "current_chat_queries": [
+    {
+      "root_label": "missiles",
+      "response_file": "current-chat-mcp-missiles.json",
+      "source_returned": true,
+      "fixed_edge_shown": true
+    },
+    {
+      "root_label": "inventory",
+      "response_file": "current-chat-mcp-inventory.json",
+      "source_returned": true,
+      "fixed_edge_shown": false
+    },
+    {
+      "root_label": "ui",
+      "response_file": "current-chat-mcp-ui.json",
+      "source_returned": true,
+      "fixed_edge_shown": false
+    }
+  ],
+  "verification_time": "2026-10-22T01:42:31.706132-05:00",
+  "reconnect_action": "CodeGraph toggle off/on in application MCP settings; new processes and actual current-chat tools verified; no extra reload-button click was needed."
+}

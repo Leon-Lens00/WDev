@@ -1,0 +1,519 @@
+
+
+
+	
+	Inventory
+
+
+Inventory is a full screen inventory interface for Warcraft III.
+
+
+
+
+
+First and foremost I have to mention that Inventory is a not even halfway finished system,
+
+however what I coded so far is working and therefore I submit it here for you.
+
+I will update the presentation in this thread together with the Inventory system.
+
+
+
+
+
+
+Documentation of
+
+
+
+
+Inventory API
+
+Inventory code
+
+ Guide to Inventory
+
+
+
+The list of requirements is huge and so is the installation.
+
+I'll try to make it slimer in the next updates. 
+
+
+
+
+Obligatory RequirementsOptional Requirements
+
+
+
+
+UIPackage ( Included in the demo map )
+
+Table
+
+TimerUtils
+
+Font
+
+TextSplat2
+
+RegisterPlayerUnitEvent
+
+
+ -
+
+
+
+
+
+
+What can Inventory doWhat Inventory can't do yet
+
+
+
+
+A backpack interface with pages.
+
+An equipment interface.
+
+An optional dummy portrait.
+
+Displaying unit stats.
+
+Selling items to merchants.
+
+Creating static and dynamic items.
+
+Using Abilities/Bonuses/ItemPowers as item affixes.
+
+Properly firing events for all interfaces.
+
+
+Buying items from merchants.
+
+Trading with other players.
+
+Interact with the native inventory UI.
+
+Sockets / socket combinations.
+
+Level limitation for items.
+
+.... Stuff I didn't yet think about.
+
+
+
+As user you will not have to care about the code, as all you can configurate will
+
+be listed in the user settings:
+
+
+
+
+
+	
+
+		User Setup
+	
+	
+
+		
+
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library InventoryUserSetup/* By BPower
+*************************************************************************************
+*  
+*   Covers all fields which you can customize in Inventory.
+*
+*************************************************************************************
+*
+*   */ uses /*
+*           
+*       */ UIPackage  /* hiveworkshop.com/forums/lab-715/uipackage-full-screen-system-267876/
+*       */ CustomItem /* Included in this map. 
+*
+*************************************************************************************/
+
+//=========================================================================
+// External object merger.
+// This tool can generate a bunch of destructable objects
+// for you, so you don't have to copy 'n' paste everything from this map.
+//=========================================================================
+
+    globals
+        constant boolean INVENTORY_GENERATE_OBJECTS = false
+        //
+        // 1.) Set INVENTORY_GENERATE_OBJECTS = true.
+        // 2.) Save your map, close the editor, start the editor and open your map.
+        // 3.) set INVENTORY_GENERATE_OBJECTS = false.
+    endglobals
+
+//=========================================
+// Inventory constants.
+// Like the game play constants, 
+// but for Inventory.
+//=========================================
+    
+    globals
+        
+        // Shop related.
+        constant real    INVENTORY_PAWN_ITEM_REFUND_FACTOR = .75 
+        constant integer INVENTORY_MERCHANT_EXTRA_PAGES    = 0
+        constant real    INVENTORY_MAXIMUM_SHOP_RANGE      = 450.
+        
+        // Tooltip related.
+        constant string  INVENTORY_RESOURCE_GOLD_ICON      = "UI\\Feedback\\Resources\\ResourceGold.blp"
+        constant string  INVENTORY_RESOURCE_WOOD_ICON      = "UI\\Feedback\\Resources\\ResourceLumber.blp"
+        
+        // Font related.
+        constant real    INVENTORY_FONT_SIZE               = 8.// Recommended setting is 8.
+        
+        // Cell selector.
+        constant integer INVENTORY_CELL_SELECTOR_ID        = 'Bisa'
+        constant real    INVENTORY_CELL_SELECTOR_SCALE     = .75
+        
+        // Default disabled path / object.
+        // This file / id is used, when no disabled path / id is set for an object.
+        // The string refers to an image file path, the id to a destructable object.
+        // If declared the string file path is used over the the destructable id.
+        constant string  CUSTOM_ITEM_DIS_ICON_PATH = null
+        constant integer CUSTOM_ITEM_DIS_ICON_ID   = 'Biba'
+    endglobals
+
+//=============================================
+// Global default values.
+// These informactions are used,
+// if not specified different per instance.
+//=============================================
+
+    // Default font for textsplats in every Inventory instance. 
+    // Use instance.setFont(desiredFont) to change the font of an inventory instances.
+    constant function Inventory_GetDefaultFont takes nothing returns font
+        return TREBUCHET_MS
+    endfunction
+    
+    // Set the font color for interface errors in ARGB.
+    function Inventory_GetMsgFontColor takes nothing returns ARGB
+        return ARGB.create(255, 218, 165, 32)
+    endfunction
+
+//==================================================
+// Struct and race based fields.
+// The setup below is specific for each
+// individual interface window of Inventory.
+//==================================================
+    
+    //=========================================
+    // Equipment related setup.
+    //=========================================
+    //  To change the visual layout and / or the item classes of buttons, go to library "Inventory Equipment",
+    // --> "static method onCreate takes Inventory inventory returns thistype" 
+    // and configurate the buttons coordinates and data to your needs.
+     
+    // Set user interface border fields. 
+    function Inventory_SetEquipmentBorderFields takes unit source returns nothing
+        local race r = GetUnitRace(source)
+        // Hint: UIBorder uses a default setting ( null ) for each border brick, which is used if
+        // you don't specify the path. You can also change the default setting inside the UIBasic library.
+        if (r == RACE_ORC) then
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftOC.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightOC.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpOC.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownOC.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftOC.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightOC.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftOC.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightOC.TGA"
+        elseif (r == RACE_NIGHTELF) then
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftNE.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightNE.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpNE.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownNE.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftNE.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightNE.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftNE.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightNE.TGA"        
+        endif
+        set UI_BORDER_BACKGROUND_COLOR = ARGB.create(255, 0, 0, 0)
+        set UI_BORDER_BACKGROUND       = "war3mapImported\\background.TGA"
+        set r = null
+    endfunction 
+    
+    //=========================================
+    // Backpack related setup.
+    //=========================================
+    // To change the visual layout and / or the item classes of buttons, go to library "Inventory Backpack",
+    // --> "static method onCreate takes Inventory inventory returns thistype" 
+    // and configurate the buttons coordinates and data to your needs.
+     
+    // Set the backpack row count.
+    constant function Inventory_GetBackpackRowCount takes unit source returns integer
+        return 4
+    endfunction
+    
+    // Set the backpack column count.
+    constant function Inventory_GetBackpackColumnCount takes unit source returns integer
+        return 5
+    endfunction
+    
+    // Add extra pages to the backpack. If you don't want to add pages pass in 0 or 1.
+    constant function Inventory_GetBackpackPageCount takes unit source returns integer
+        return 3
+    endfunction
+    
+    // Set the path for the image used as empty slot.
+    constant function Inventory_GetBackpackSlotFilePath takes unit source returns string
+        return "UI\\Console\\Human\\human-transport-slot.blp"
+    endfunction
+    
+    // Set user interface border fields. For full API check the available fields for UIBorder.
+    function Inventory_SetBackpackBorderFields takes unit source returns nothing
+        local race r = GetUnitRace(source)
+        // Hint: UIBorder uses a default setting ( null ) for each border brick, which is used if
+        // you don't specify the path. You can change the default setting inside the UIBasic library.
+        if (r == RACE_ORC) then
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftOC.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightOC.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpOC.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownOC.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftOC.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightOC.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftOC.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightOC.TGA"
+        elseif (r == RACE_NIGHTELF) then
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftNE.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightNE.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpNE.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownNE.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftNE.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightNE.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftNE.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightNE.TGA"        
+        endif
+        set UI_BORDER_BACKGROUND       = null
+    endfunction 
+    
+    //=========================================
+    // Controll panel related setup.
+    //=========================================
+    // To change the visual layout, go to library "Inventory Controll",
+    // --> "static method onCreate takes Inventory inventory returns thistype" 
+    // and configurate the buttons coordinates to your needs.
+     
+    // Set the path for the scroll up arrow.
+    constant function Inventory_GetScrollUpPath takes unit source returns string
+        return "war3mapImported\\ScrollUp.tga"
+    endfunction
+     
+     // Set the path for the scroll down arrow.    
+    constant function Inventory_GetScrollDownPath takes unit source returns string
+        return "war3mapImported\\ScrollDown.tga"
+    endfunction
+     
+     // Set the destructable id for the drop item button. You can also use an image file, 
+     // but then you have to change addDestButton to addImageButton inside the library.
+    constant function Inventory_GetDropButtonId takes unit source returns integer
+        return 'Bibb'
+    endfunction
+    
+     // Set the destructable id for the close inventory button. You can also use an image file, 
+     // but then you have to change addDestButton to addImageButton inside the library.
+    constant function Inventory_GetCloseButtonId takes unit source returns integer
+        return 'Biba'
+    endfunction
+    
+    // Set the destructable id for the pawn item button.
+    constant function Inventory_GetPawnButtonId takes unit source returns integer
+        return 'Bibc'
+    endfunction
+    
+    // Set the destructable id for the buy item button.
+    constant function Inventory_GetBuyButtonId takes unit source returns integer
+        return 'Bibd'
+    endfunction
+    
+    // Set the background image path.
+    constant function Inventory_GetBackgroundFilePath takes unit source returns string
+        return "UI\\Widgets\\EscMenu\\Human\\human-options-button-background-disabled.blp"
+    endfunction
+    
+    // Colorize the background image via an ARGB value.
+    function Inventory_GetBackgroundColor takes unit source returns ARGB
+        if (GetUnitRace(source) == RACE_NIGHTELF) then
+            return ARGB.create(255, 150, 255, 150)
+        endif
+        return ARGB.create(255, 139, 69, 19)
+    endfunction
+    
+    //===========================================
+    // Dummy window and affix box related setup.
+    //===========================================
+    // This setup relates to the unit affix box, 
+    // which is displayed when clicking the user interface dummy unit.
+    //
+    // The affix box is one the more heavy operations within the inventory source code.
+    // Please do not overdo it in terms of text rows. Another factor are color codes.
+    // Color codes have to be translated to hexadecimal, then to ARGB and through this add overhead.
+    //
+    // The box automatically updates on equip and unequip. 
+    // You can update it manually by calling:
+    //
+    // function Inventory_UpdateAffixBox takes unit source returns nothing
+    
+    // Set which units should allocate an affix box at all.
+    function Inventory_AllocateAffixBoxForUnit takes unit source returns boolean
+        return IsUnitType(source, UNIT_TYPE_HERO)
+    endfunction
+    
+    // Set the headline text.
+    function Inventory_GetAffixBoxHeadline takes unit source returns string
+        return "|cffdaa520Attributes:|r" 
+    endfunction
+    
+    // Set the amount of rows inside the box.
+    function Inventory_GetAffixBoxRowCount takes unit source returns integer
+        return 4
+    endfunction
+    
+    // Set the string per row within the affix box. First row index is 0.
+    function Inventory_GetAffixBoxRowString takes unit source, integer row returns string
+        if     (row == 0) then
+            return"|cffdaa520Strength:|r " + I2S(GetHeroStr(source, true))       
+        elseif (row == 1) then
+            return "|cffdaa520Agility:|r " + I2S(GetHeroAgi(source, true))
+        elseif (row == 2) then
+            return "|cffdaa520Intelligence:|r " + I2S(GetHeroInt(source, true))
+        endif
+        return "|cffdaa520Movement Speed:|r " + I2S(R2I(GetUnitMoveSpeed(source)))
+    endfunction
+    
+    // Set border fields for the dummy window.
+    function Inventory_SetDummyBorderFields takes unit source returns nothing
+        local race r = GetUnitRace(source)
+        if r == RACE_NIGHTELF then
+            set UI_BORDER_BACKGROUND   = "UI\\Glues\\Loading\\Backgrounds\\Campaigns\\NightElfSymbol.blp"
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftNE.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightNE.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpNE.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownNE.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftNE.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightNE.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftNE.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightNE.TGA"
+        elseif r == RACE_ORC then
+            set UI_BORDER_BACKGROUND   = "UI\\Glues\\Loading\\Backgrounds\\Campaigns\\OrcSymbol.blp"
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftOC.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightOC.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpOC.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownOC.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftOC.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightOC.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftOC.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightOC.TGA"
+        endif
+        // Higher layer than the equipment.
+        set UI_BORDER_BACKGROUND_IMAGE_TYPE = IMAGE_TYPE_OCCLUSION_MASK
+        set r = null
+    endfunction 
+    
+    // Set border fields for the affix box window.
+    function Inventory_SetAffixBoxBorderFields takes unit source returns nothing
+        local race r = GetUnitRace(source)
+        // Hint: UIBorder uses a default setting ( null ) for each border brick, which is used if
+        // you don't specify the path. You can change the default setting inside the UIBasic library.
+        if (r == RACE_ORC) then
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftOC.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightOC.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpOC.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownOC.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftOC.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightOC.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftOC.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightOC.TGA"
+        elseif (r == RACE_NIGHTELF) then
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftNE.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightNE.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpNE.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownNE.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftNE.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightNE.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftNE.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightNE.TGA"        
+        endif
+        set UI_BORDER_BACKGROUND_COLOR = ARGB.create(255, 0, 0, 0)
+        set UI_BORDER_BACKGROUND       = "war3mapImported\\background.TGA"
+    endfunction                     
+    
+    //===========================================
+    // Native Inventory related setup.
+    //===========================================
+    constant function Inventory_GetSlotFiller takes unit source returns string
+        return "war3mapImported\\background.TGA"
+    endfunction
+
+    //===========================================
+    // Tooltip box related setup.
+    //===========================================
+    
+    function Inventory_SetTooltipBoxBorderFields takes unit source returns nothing
+        local race r = GetUnitRace(source)
+        // Hint: UIBorder uses a default setting ( null ) for each border brick, which is used if
+        // you don't specify the path. You can change the default setting inside the UIBasic library.
+        if (r == RACE_ORC) then
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftOC.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightOC.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpOC.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownOC.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftOC.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightOC.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftOC.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightOC.TGA"
+        elseif (r == RACE_NIGHTELF) then
+            set UI_BORDER_LEFT         = "war3mapImported\\BorderLeftNE.TGA"
+            set UI_BORDER_RIGHT        = "war3mapImported\\BorderRightNE.TGA"
+            set UI_BORDER_TOP          = "war3mapImported\\BorderUpNE.TGA"
+            set UI_BORDER_BOTTOM       = "war3mapImported\\BorderDownNE.TGA"
+            set UI_BORDER_BOTTOM_LEFT  = "war3mapImported\\BorderDownLeftNE.TGA"
+            set UI_BORDER_BOTTOM_RIGHT = "war3mapImported\\BorderDownRightNE.TGA"
+            set UI_BORDER_TOP_LEFT     = "war3mapImported\\BorderUpLeftNE.TGA"
+            set UI_BORDER_TOP_RIGHT    = "war3mapImported\\BorderUpRightNE.TGA"        
+        endif
+        set UI_BORDER_BACKGROUND = "war3mapImported\\background.TGA"
+    endfunction 
+
+endlibrary
+	
+
+		
+	
+
+
+
+
+Keywords:
+
+Custom UI, Inventory

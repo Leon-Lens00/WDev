@@ -1,0 +1,17 @@
+{
+  "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/brillo-20261022-180047/ShotsBrillo.w3x",
+  "sha256": "4da6392c4abc1ea7ccc1758dbb595071aaf99dbc37d1c7e5eb77d132067d7d80",
+  "staged": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/vol-ii-runtime/pfx/drive_c/WarcraftIII/Maps/CodexTest/4da6392c4abc1ea7.w3x",
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/vol-ii-runtime/pfx",
+  "command": [
+    "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/_v2-entry-point",
+    "--verb=run",
+    "--",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+    "runinprefix",
+    "C:\\WarcraftIII\\war3.exe",
+    "-loadfile",
+    "Maps\\CodexTest\\4da6392c4abc1ea7.w3x",
+    "-window"
+  ]
+}

@@ -1,0 +1,66 @@
+CODEGRAPH ORIGINAL CON SOPORTE LOCAL JASS/vJASS — 20-10-2026
+
+Se adaptó el código fuente original, no el puente jassgraph anterior.
+Upstream: https://github.com/colbymchenry/codegraph
+Base v1.6.2: 6560052a6f856855d3f71eee838fd66ccfa4285d
+Checkout: /home/snz/Documentos/MCP W3/codegraph-vjass
+Rama local: codex/jass-vjass-support (cambios locales sin publicar).
+Identidad MCP/daemon: 1.6.2+jass-vjass.1; paquete base conserva versión 1.6.2.
+
+INTEGRACIÓN
+Extractor y resolvedor TypeScript dentro de CodeGraph: .j/.jass/.vjass,
+declaraciones, callbacks explícitos, ámbitos, receptores de tipos declarados,
+herencia, dependencias y referencias. Reutiliza SQLite/FTS, persistencia,
+búsqueda, exploración, llamadas/impacto y actualización incremental del original.
+No llama al jassgraph Go ni convierte fuentes a otro lenguaje.
+Kernel Linux original conservado para los lenguajes que ya soportaba.
+
+Lanzador: /home/snz/.local/bin/codegraph
+Runtime aislado: Node 24.16.0 del paquete original verificado; no cambia Node 26
+del sistema. Telemetría y comprobaciones de actualización desactivadas.
+MCP registrado como codegraph en /home/snz/.codex/config.toml.
+Puente previo wc3-jass-explore desactivado, conservado para uso manual.
+Resto de la configuración preservado y comparado. Skill Warcraft actualizada.
+El catálogo de este chat todavía requiere recargar MCP/nueva sesión; CLI utilizable.
+
+PRUEBAS
+- 15 pruebas específicas del extractor/resolvedor e integración SQLite.
+- 995 pruebas originales de extracción, resolución y sincronización.
+- Otra ejecución: 81 correctas y 8 omitidas por condiciones del entorno/plataforma;
+  incluye 13 de las pruebas JASS anteriores a los dos últimos casos añadidos.
+- Build TypeScript y visor correctos, grammars/assets originales presentes.
+- Fixture vJASS compilado y validado con JassHelper/pJASS del entorno Classic.
+- MCP original con SDK 1.29.0: explore, alta y eliminación .jass por watcher.
+- Comando global realmente configurado probado sin raíz predeterminada, con
+  projectPath; fuente original intacta. Identidad local observada en initialize.
+- Control Python: grafo igual al binario upstream, excluyendo timestamps e ID
+  numérico de fila de edges; resto de atributos persistidos comparados.
+- Tres conjuntos locales, tres consultas de flujo cada uno, reconstrucción sin
+  crecimiento de nodos/relaciones y hashes de fuentes originales conservados:
+  fixture: 1 archivo, 12 nodos, 16 relaciones;
+  + common.j: 2 archivos, 4050 nodos, 6222 relaciones;
+  + Blizzard.j: 3 archivos, 7690 nodos, 13939 relaciones.
+
+COBERTURA PARCIAL
+Es una variante funcional local, experimental; no soporte oficial upstream ni
+implementación completa del lenguaje. No expande macros/imports/implement ni
+Zinc; no resuelve dispatch dinámico, operadores de acceso, métodos generados o
+receptores arbitrarios de cadenas. No evalúa static-if/debug ni analiza todo el
+flujo de variables. Se muestran diagnósticos y notas de cobertura en MCP.
+No valida de forma general el motor 1.27b o multijugador. La prueba del compilador
+acredita el ejemplo, no todas las fuentes ni la completitud del extractor.
+No se ejecutó la evaluación A/B de agentes exigida por upstream con Sonnet y
+repositorios reales de tres tamaños: ese runtime no está disponible. Los conjuntos
+locales con APIs Classic son pruebas de corrección/escala, no sustituyen ese gate.
+No se afirman mejoras generales de tiempo/tokens ni aceptación upstream.
+
+MANTENIMIENTO Y EVIDENCIA
+JASS-VJASS.md del checkout documenta comandos, cobertura y mantenimiento.
+local-jass-vjass.patch contiene cambios rastreados y archivos nuevos.
+provenance.json registra versión, commit y hashes de archivos/runtime/kernel.
+verification-summary.json resume las comprobaciones y límites.
+Logs: jass-final-tests.log, codegraph-upstream-regressions.log,
+native-and-integration-tests.log, compiler-validation.log.
+Resultados: native-probes.json, python-control-comparison.json,
+mcp-original-verification.json, mcp-global-config-verification.json.
+No ejecutar upgrade sobre esta variante sin conservar y reaplicar el parche.

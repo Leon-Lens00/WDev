@@ -1,0 +1,57 @@
+[
+  {
+    "name": "small-noise",
+    "flows": [
+      [
+        "Noise.Noise.octavePerlin2D",
+        "Noise.Noise.perlin2D",
+        "Noise.Noise.floor"
+      ],
+      [
+        "Noise.Noise.perlin3D",
+        "Noise.Noise.grad3D",
+        "Noise.Noise.realTernaryOp"
+      ],
+      [
+        "Noise.Noise.openSimplex2D",
+        "Noise.Noise.extrapolate2D"
+      ]
+    ]
+  },
+  {
+    "name": "medium-jassjass",
+    "flows": [
+      [
+        "Jass.assert",
+        "Jass.error",
+        "Jass.print"
+      ],
+      [
+        "Jass.Lexer.parseIdent",
+        "Jass.isDelim"
+      ],
+      [
+        "Jass.trace",
+        "Jass.print"
+      ]
+    ]
+  },
+  {
+    "name": "large-nestharus",
+    "flows": [
+      [
+        "TimerTools.Timer.create",
+        "TimerTools.TimerList.add",
+        "TimerTools.CreationQueue.add"
+      ],
+      [
+        "TimerTools.Timer.destroy",
+        "TimerTools.TimerPool.recycleTimer"
+      ],
+      [
+        "TimerTools.Timer.destroy",
+        "TimerTools.DestructionQueue.add"
+      ]
+    ]
+  }
+]

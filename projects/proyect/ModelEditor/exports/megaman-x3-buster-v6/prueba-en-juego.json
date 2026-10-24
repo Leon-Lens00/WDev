@@ -1,0 +1,71 @@
+{
+  "model": {
+    "name": "X3_Buster_Cargado",
+    "category": "A-Buster",
+    "path": "exports/megaman-x3-buster-v6/A-Buster/X3_Buster_Cargado.mdx",
+    "sha256": "e9842e265deee0f1e772885d4da9e6e0820a9144d74a0cd3bcd7f78049f2f25d",
+    "triangles": 2776,
+    "pe2": 11,
+    "ribbons": 1
+  },
+  "fixture": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v6-20261023-071320/X3BusterV6.w3x",
+    "sha256": "8e6f5cdf62d7a9ce64137613e24b7fcc6cdb32a0561251275b9c8974f1b34400",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 30,
+    "models": 2,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "launch": "YDWE single_test, EnableHost0, no LAN",
+  "screen": "DP-1 rightmost screen3",
+  "scenarios": [
+    {
+      "scenario": "stand",
+      "frames": 25,
+      "seconds": 5.4884134310123045,
+      "identityGuardedEveryFrame": true
+    },
+    {
+      "scenario": "move",
+      "frames": 25,
+      "seconds": 5.2603459429810755,
+      "identityGuardedEveryFrame": true
+    },
+    {
+      "scenario": "scale05",
+      "frames": 25,
+      "seconds": 5.463226030988153,
+      "identityGuardedEveryFrame": true
+    },
+    {
+      "scenario": "scale3",
+      "frames": 25,
+      "seconds": 5.4121529560070485,
+      "identityGuardedEveryFrame": true
+    },
+    {
+      "scenario": "birth",
+      "frames": 25,
+      "seconds": 5.356307814014144,
+      "identityGuardedEveryFrame": true
+    },
+    {
+      "scenario": "impact",
+      "frames": 25,
+      "seconds": 5.5294051689852495,
+      "identityGuardedEveryFrame": true
+    }
+  ],
+  "totalFrames": 150,
+  "observed": "White core with blue surround; continuous attached pink flow; particles and residue during movement; size0.5/2.4/3; Birth growth and Death disappearance.",
+  "limits": "SP visual check of two models; no stress/FPS, collisions or multiplayer; native capture interval about0.21s does not resolve the entire160ms Birth.",
+  "closure": {
+    "closed": true,
+    "launcherShellCode": 143,
+    "launcherExitFilePresent": false,
+    "liveOwnedProcesses": 0,
+    "evidence": "closure-check.json",
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-071950-x3-v6-cierre-lanzador.md"
+  }
+}

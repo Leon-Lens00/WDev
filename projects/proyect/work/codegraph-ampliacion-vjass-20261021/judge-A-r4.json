@@ -1,0 +1,25 @@
+{
+  "judge": "A",
+  "tree_sha256": "1d42d7d6a0acabff16dfb35d4197335a562cc27b226ff98e2017efc87f01167c",
+  "results": [
+    {
+      "id": "JD-A-R3-001",
+      "status": "verified",
+      "location": "src/resolution/jass.ts:122",
+      "evidence": "El predicado comprueba ahora los tokens de lexJass, que excluye comentarios y literales. S array /* note */ values se reconoce como declaración array. La nueva regresión cubre comentarios entre tipo/array y array/nombre; la fixture compilada aportada confirma la llamada a S.tick."
+    },
+    {
+      "id": "JD-B-002-R3",
+      "status": "verified",
+      "location": "src/resolution/jass.ts:122",
+      "evidence": "La normalización léxica restaura los casos comentados sin volver a aceptar scalar // array ni receptores S[index] sin binding. Se conservan las pruebas negativas de operadores [] y el caso positivo de array simple."
+    }
+  ],
+  "regressions": [],
+  "limitations": [
+    "Una pasada estática limitada al delta R3→R4; no ejecuté programas ni modifiqué archivos.",
+    "Las 1198 pruebas, el build y la compilación JassHelper/pJASS son evidencia del padre.",
+    "No detecté regresiones concretas en el delta; esto no acredita soporte exhaustivo de declaraciones ni operadores [].",
+    "El despliegue MCP activo sigue pendiente; las evidencias anteriores no acreditan este parche."
+  ]
+}

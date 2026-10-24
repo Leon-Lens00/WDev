@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "ls",
+    "/home/snz/Descargas/DevMission v0.96.w3x",
+    "--json"
+  ],
+  "returncode": 0,
+  "stderr": ""
+}

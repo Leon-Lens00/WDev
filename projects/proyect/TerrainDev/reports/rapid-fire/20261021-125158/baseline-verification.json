@@ -1,0 +1,66 @@
+{
+  "status": "Tested in map",
+  "target": "Warcraft III Classic 1.27b",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/TerrainDev.w3x",
+  "map_sha256": "37dcc7954b5318d512bb747e1d3dbae63030392895776759ba1a6933142f86c7",
+  "originals_unchanged": true,
+  "build_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/20261021-023857-288028",
+  "editor_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/multiboard/20261021-022712/editor/result.json",
+  "game_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/game-test/20261021-024016/result.json",
+  "diagnostics_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/game-test/20261021-024016/diagnostics-result.json",
+  "game_values": {
+    "created": 90,
+    "removed": 90,
+    "finished": 70,
+    "collided": 10,
+    "cancelled": 10,
+    "dummies": 78,
+    "pooled": 12,
+    "overflow": 66,
+    "liveUnpooled": 0,
+    "casters": 1,
+    "reused": 12,
+    "timerChecks": 1,
+    "callbacks": 2390,
+    "failures": 0
+  },
+  "library_count": 11,
+  "library_sha256": {
+    "WorldBounds": "0ed3c284b18694b744bdae4423f2b60e5e16346778116caffb5bf9a4267447c9",
+    "ErrorMessage": "b240c5c064d569ec89ba85e21363b27514bab66fb6517c1cd68d8ce9b40df147",
+    "TimerUtils": "cbc13cd7eb8679ee2d618dcfe70e8da47489a926506eb8059dc6fc09eba60f45",
+    "Table": "94d2fd1f89774efb2ad3e9d2ae7e3bdded3c121bb523f02425d4937fc7031fb4",
+    "RegisterPlayerUnitEvent": "a4513c10d93fdc26b7b86440a8f9171153b2d3108b815e7c57169b21c2202c2c",
+    "SpellEffectEvent": "222abb23791bd71eb96db71384ef40a91c16421176cc046c186f0af185050bd0",
+    "IsDestructableTree": "2f981785b5d01564b634ec35a62e3a008a83a313a4a61774e23b4632d69c6829",
+    "DummyCaster": "4437e9214cc7d30b30ad9d7654286d70a1b8c00c96c15d1f2952cebfe4c349c0",
+    "MissileDiagnostics": "5d13202a5116a67e3f49d2a095975b1fe33955fd34fed076eccd0a67d26bc990",
+    "MissileRecycler": "65189b805bf424f57c758eef1ee5497bddb0070a3f59d04a883e63821c7818eb",
+    "Missile": "333150566d2f55b665afd127e95374078cd80053fe617c9def01405ab93510a3"
+  },
+  "multiboard": {
+    "rows": 19,
+    "columns": 2,
+    "updates": "Lifecycle events coalesced per execution; watchdog every1s",
+    "command": "-misiles",
+    "stages_passed": [
+      "idle",
+      "normal",
+      "deferred",
+      "deferred-done",
+      "overdue",
+      "recovered",
+      "hidden",
+      "visible",
+      "invalid"
+    ]
+  },
+  "optional_without_panel_compile": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/multiboard/20261021-022712/optional-without-panel/compile.json",
+  "local_recycler_fix": "Unpause surplus units before applying timed life",
+  "limits": [
+    "No multiplayer test",
+    "No spell/buff casting test for DummyCaster/SpellEffectEvent",
+    "No load/performance certification or tracking-capacity stress test",
+    "Monitor covers these missile/recycler hooks, not all game memory or handles"
+  ]
+}

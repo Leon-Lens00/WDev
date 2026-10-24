@@ -1,0 +1,41 @@
+{
+  "inputs": [
+    {
+      "file": "labs/x3-snes/runs/final-original/events.csv",
+      "sha256": "a7dadfb56a336b9925033dd4a855c2ac8413b45cca053d813bcbf1d7fa0b78c5"
+    },
+    {
+      "file": "labs/x3-snes/runs/final-mod/events.csv",
+      "sha256": "fc20db6285fbc32d651deee50d29ac61247c6a3dc0946f433def8159279bd1b2"
+    },
+    {
+      "file": "labs/x3-snes/runs/final-original-left/events.csv",
+      "sha256": "9a7389bd5d5529cadd5f50e9adcc521f5571a82c984d1c99c3a327aa0dd61b32"
+    },
+    {
+      "file": "labs/x3-snes/runs/final-mod-left/events.csv",
+      "sha256": "cbf9d963799d048050e648630152232cfa408ec5798f2649f733f23d6b4746c0"
+    },
+    {
+      "file": "labs/x3-snes/runs/final-original-gap20/events.csv",
+      "sha256": "fe2b5476c57573e1d8742555a5851b2ee502a5008918a3be05639e6732f01c1e"
+    },
+    {
+      "file": "labs/x3-snes/runs/final-mod-gap20/events.csv",
+      "sha256": "5d0f2bc63d1cc819e921c6b8bd341369674e508e78301214d782d6c93902473d"
+    },
+    {
+      "file": "labs/x3-snes/runs/trace-original-fullcharge/events.csv",
+      "sha256": "6566fac7b78805ef8afb9a55468ce4d3a8726c3480e765a7b46c2bf913d7709a"
+    }
+  ],
+  "totals": {
+    "combined_updates": 1220,
+    "helix_updates": 52,
+    "orb_updates": 153,
+    "pulse_updates": 21
+  },
+  "expected_values": 5259,
+  "tolerance_world_units": 0.012,
+  "generator_sha256": "328549afac930844ae6de7bb1e80e81b15d8e7283570124d53a58874e512c14f"
+}

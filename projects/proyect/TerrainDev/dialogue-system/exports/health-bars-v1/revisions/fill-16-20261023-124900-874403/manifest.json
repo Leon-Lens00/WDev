@@ -1,0 +1,152 @@
+{
+  "target": "Classic 1.27b / BLP1 palette / alpha8 / complete mipmaps",
+  "textures": [
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/PortraitPaladin.blp",
+      "sha256": "ed6800be7c1e1c1c2cf44d027a232f125fc3eb69058bd2e6f563e6869c9143a4",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mips": 8,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "PortraitPaladin",
+      "bytes": 44870,
+      "png": "png/PortraitPaladin.png"
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/PortraitTauren.blp",
+      "sha256": "9c9521fa9c7bf7245d584ac327edba1b8e8ef3f0cafe8c279fe56db921977631",
+      "dimensions": [
+        128,
+        128
+      ],
+      "mips": 8,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "PortraitTauren",
+      "bytes": 44870,
+      "png": "png/PortraitTauren.png"
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/FrameBlue.blp",
+      "sha256": "6b7f4208bd5edb7fa2e775f2cf047d5a9bc0ebfbd8176c42adc8fab65824c246",
+      "dimensions": [
+        128,
+        256
+      ],
+      "mips": 9,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "FrameBlue",
+      "bytes": 88562,
+      "png": "png/FrameBlue.png"
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/FrameRed.blp",
+      "sha256": "754bb486d54c67ad78d120c01b0e6ad7cf042cdf84b5f517f55b4dab2782d44e",
+      "dimensions": [
+        128,
+        512
+      ],
+      "mips": 10,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "FrameRed",
+      "bytes": 175946,
+      "png": "png/FrameRed.png"
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/LifeNormal.blp",
+      "sha256": "cad0458a22f9d5a46d87f6db9ba8d6e92dc25d356612cca252d17ce18a68e7cf",
+      "dimensions": [
+        16,
+        256
+      ],
+      "mips": 9,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "LifeNormal",
+      "bytes": 12122,
+      "png": "png/LifeNormal.png"
+    },
+    {
+      "path": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/health-bars-v1/game/UI/HealthBars/LifeCritical.blp",
+      "sha256": "c28c7b8c742fcbd148ae5708582db1e17367b22dc98ee2a75c8d5fa45af10dd0",
+      "dimensions": [
+        16,
+        256
+      ],
+      "mips": 9,
+      "alphaBits": 8,
+      "compression": 1,
+      "name": "LifeCritical",
+      "bytes": 12122,
+      "png": "png/LifeCritical.png"
+    }
+  ],
+  "totalBlpBytes": 378492,
+  "portraitSources": {
+    "paladin": {
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/HeroPaladin_portrait.mdx",
+      "sourceSha256": "31fb76af561ed47c63b040d1924c10172e6c3142a2459023f2cb42b235d1db82",
+      "sequence": "Portrait - 1",
+      "frame": 80600,
+      "elapsed": 600,
+      "camera": {
+        "position": [
+          25.998641967773438,
+          224.65785217285156,
+          71.62308502197266
+        ],
+        "target": [
+          3.222060203552246,
+          237.6083984375,
+          76.59339904785156
+        ],
+        "horizontalFieldOfView": 0.8278480172157288,
+        "roll": 0
+      },
+      "photoFraming": {
+        "zoom": 1.35,
+        "offsetPixels": [
+          0,
+          -44
+        ]
+      }
+    },
+    "tauren": {
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/Tauren_portrait.mdx",
+      "sourceSha256": "8762cde89deff3c3e4adf6f2754bfd0951ea4b13dad287bb4b8c7e353728cd6f",
+      "sequence": "Portrait - 1",
+      "frame": 67267,
+      "elapsed": 600,
+      "camera": {
+        "position": [
+          81.04679870605469,
+          232.01800537109375,
+          75.2676010131836
+        ],
+        "target": [
+          49.30870056152344,
+          219.6580047607422,
+          83.64140319824219
+        ],
+        "horizontalFieldOfView": 1.1426700353622437,
+        "roll": 0
+      },
+      "photoFraming": {
+        "zoom": 1,
+        "offsetPixels": [
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "nativeTested": false,
+  "mapIntegrated": false,
+  "activeMapSha256": "2cb340dbf906b8da9a061a2e4f08f0905e012c018c3e88a63284b2b5e07725be",
+  "preview": "http://127.0.0.1:4317/healthbars.html"
+}

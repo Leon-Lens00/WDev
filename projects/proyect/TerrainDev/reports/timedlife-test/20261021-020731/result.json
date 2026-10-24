@@ -1,0 +1,10 @@
+{
+  "hypothesis_confirmed": true,
+  "pausedAlive": 1,
+  "runningAlive": 0,
+  "resumedAlive": 0,
+  "elapsed_seconds": 4,
+  "timed_life_seconds": 2,
+  "same_object_type": "dumi",
+  "conclusion": "PauseUnit freezes timed life on this target; unpause surplus immediately before applying timed life"
+}

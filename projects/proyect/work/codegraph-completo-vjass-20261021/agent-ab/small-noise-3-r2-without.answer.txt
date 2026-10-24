@@ -1,0 +1,14 @@
+`codegraph_explore` was unavailable. Source shows a **direct call**, with no intermediate method: `Noise.Noise.openSimplex2D → Noise.Noise.extrapolate2D`.
+
+`openSimplex2D` stretches coordinates, floors them into `(xsb,ysb)`, and computes fractional positions and displacement vectors ([Noise.j:142–166](Noise.j:142)).
+
+Four conditional call sites supply the wiring:
+
+- `(xsb+1,ysb,dx1,dy1)` when `attn1 > 0` ([Noise.j:170–172](Noise.j:170)).
+- `(xsb,ysb+1,dx2,dy2)` when `attn2 > 0` ([Noise.j:174–176](Noise.j:174)).
+- `(xsb,ysb,dx0,dy0)` when `attn0 > 0`; if `inSum > 1`, both cell coordinates first increase by one and displacements shift accordingly ([Noise.j:218–226](Noise.j:218)).
+- `(xsv_ext,ysv_ext,dx_ext,dy_ext)` when `attn_ext > 0` ([Noise.j:228–231](Noise.j:228)).
+
+Extra-vertex selection branches on `inSum <= 1`, then `zins > xins or zins > yins`; otherwise it uses `zins < xins or zins < yins`. Both nested branches compare `xins > yins` ([Noise.j:178–217](Noise.j:178)).
+
+Each attenuation is `2−dx²−dy²`; contributions use its fourth power. `extrapolate2D` hashes coordinates through `permutation`, masks with `7`, and returns the gradient-table dot product ([Noise.j:137–139](Noise.j:137)).

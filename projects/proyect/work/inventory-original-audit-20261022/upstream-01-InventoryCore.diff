@@ -1,0 +1,13 @@
+--- fresh141/001-InventoryCore.j
++++ fresh143/001-InventoryCore.j
+@@ -418,7 +418,9 @@
+             call this.btnPageUp[this.pid].show(flag, cam)
+             call this.btnSell[this.pid].show(flag, cam)
+             call this.btnDrop[this.pid].show(flag, cam)
+-            //call this.selector[this.pid].show(flag, cam)
++            if (not flag) then
++                call this.selector[this.pid].show(flag, cam)
++            endif
+             call this.btnPageDown[this.pid].show(flag, cam)
+             call this.background[this.pid].show(flag, cam)
+ 

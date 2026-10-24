@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-22T16:45:43.923958-05:00",
+  "original141_sha256": "a1b657231bed875ad480a64a9fb428c4548a84249aa89db0545abace39579ada",
+  "original143_sha256": "4a387ac8879a0604a297bbf888bfb2a17681dd0716a66d7fcbcddd85be2610b9",
+  "integrated_sha256": "6cea157b51229f9ec32cf9d4d070e5e96be66c332382ef46665f1eaba45a9946",
+  "demo_ab_sha256": "40736c1fe3a5e961dcd2a414b1ace04a2da8b641215bd4359fed13b77ea5aad2",
+  "download141_same_as_old": true,
+  "running_user_map_was_exact_original141": true,
+  "source_demo_member_differences": [],
+  "local_modified_source_count": 13,
+  "upstream_changed_source_count": 6,
+  "camera_same_141_143": true,
+  "userinterface_same_141_143": true,
+  "uidm_same_in_integrated": true,
+  "ui_assets_same_in_integrated": 29,
+  "ab_demo_result": "Original eye stable in sampled movement; only switching the projection origin to GetCameraEyePosition reproduces drift/clipping; restoration observed. Internal renderer timing not instrumented.",
+  "ab_terrain_result": "Original stored eye hides panels at tested terrain start; local actual eye makes visible. Reversion alone not validated as fix.",
+  "delivery_modified": false,
+  "own_game_pids_closed": [
+    629638,
+    631592,
+    634043
+  ],
+  "original_user_pid": 628515,
+  "original_user_game_closed_by_agent": false,
+  "original_user_pid_present_at_final_check": false,
+  "note": "User game was absent at final focus hand-back check; identity guard prevented inputs, no cause of exit inferred."
+}

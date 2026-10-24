@@ -1,0 +1,64 @@
+Version { FormatVersion 800, }
+Model "Conversation" { NumGeosets 4, NumGeosetAnims 4, BlendTime 0, MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Sequences 4 { Anim "Stand" { Interval { 1, 1000 },  MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim "Stand Alternate" { Interval { 2001, 3000 },  MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim "Birth" { Interval { 4001, 4181 }, NonLooping, MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim "Death" { Interval { 5001, 5181 }, NonLooping, MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, } }
+Textures 4 { Bitmap { Image "UI\Dialogue\FrameRed.blp", }
+Bitmap { Image "UI\Dialogue\FrameBlue.blp", }
+Bitmap { Image "UI\Dialogue\PortraitX.blp", }
+Bitmap { Image "UI\Dialogue\PortraitAlia.blp", } }
+Materials 4 { Material { PriorityPlane 0, Layer { FilterMode Blend, Unshaded, TwoSided, Unfogged, NoDepthTest, NoDepthSet, static TextureID 0, static Alpha 1, } }
+Material { PriorityPlane 0, Layer { FilterMode Blend, Unshaded, TwoSided, Unfogged, NoDepthTest, NoDepthSet, static TextureID 1, static Alpha 1, } }
+Material { PriorityPlane 1, Layer { FilterMode Blend, Unshaded, TwoSided, Unfogged, NoDepthTest, NoDepthSet, static TextureID 2, static Alpha 1, } }
+Material { PriorityPlane 1, Layer { FilterMode Blend, Unshaded, TwoSided, Unfogged, NoDepthTest, NoDepthSet, static TextureID 3, static Alpha 1, } } }
+Geoset { Vertices 4 { {0,-70,29.160659114315138}, {0,70,29.160659114315138}, {0,70,-29.160659114315138}, {0,-70,-29.160659114315138}, } Normals 4 { {1,0,0}, {1,0,0}, {1,0,0}, {1,0,0}, } TVertices 4 { {0,0}, {1,0}, {1,1}, {0,1}, } VertexGroup { 0,0,0,0, } Faces 1 6 { Triangles { {0,2,1,0,3,2}, } } Groups 1 1 { Matrices {0}, } MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, } MaterialID 0, SelectionGroup 0, }
+GeosetAnim { Alpha 8 { DontInterp, 1: 1,
+1000: 1,
+2001: 0,
+3000: 0,
+4001: 1,
+4181: 1,
+5001: 1,
+5181: 0, } GeosetId 0, }
+Geoset { Vertices 4 { {0,-70,29.160659114315138}, {0,70,29.160659114315138}, {0,70,-29.160659114315138}, {0,-70,-29.160659114315138}, } Normals 4 { {1,0,0}, {1,0,0}, {1,0,0}, {1,0,0}, } TVertices 4 { {0,0}, {1,0}, {1,1}, {0,1}, } VertexGroup { 0,0,0,0, } Faces 1 6 { Triangles { {0,2,1,0,3,2}, } } Groups 1 1 { Matrices {0}, } MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, } MaterialID 1, SelectionGroup 0, }
+GeosetAnim { Alpha 8 { DontInterp, 1: 0,
+1000: 0,
+2001: 1,
+3000: 1,
+4001: 0,
+4181: 0,
+5001: 0,
+5181: 0, } GeosetId 1, }
+Geoset { Vertices 4 { {0.05,-61.18,20.529104016477856}, {0.05,-36.82,20.529104016477856}, {0.05,-36.82,1.574675592173019}, {0.05,-61.18,1.574675592173019}, } Normals 4 { {1,0,0}, {1,0,0}, {1,0,0}, {1,0,0}, } TVertices 4 { {0,0}, {1,0}, {1,1}, {0,1}, } VertexGroup { 0,0,0,0, } Faces 1 6 { Triangles { {0,2,1,0,3,2}, } } Groups 1 1 { Matrices {0}, } MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, } MaterialID 2, SelectionGroup 0, }
+GeosetAnim { Alpha 8 { DontInterp, 1: 0.55,
+1000: 0.55,
+2001: 1,
+3000: 1,
+4001: 0.55,
+4181: 0.55,
+5001: 0.55,
+5181: 0, } GeosetId 2, }
+Geoset { Vertices 4 { {0.05,37.24,20.529104016477856}, {0.05,61.599999999999994,20.529104016477856}, {0.05,61.599999999999994,1.574675592173019}, {0.05,37.24,1.574675592173019}, } Normals 4 { {1,0,0}, {1,0,0}, {1,0,0}, {1,0,0}, } TVertices 4 { {0,0}, {1,0}, {1,1}, {0,1}, } VertexGroup { 0,0,0,0, } Faces 1 6 { Triangles { {0,2,1,0,3,2}, } } Groups 1 1 { Matrices {0}, } MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, }
+Anim { MinimumExtent { -1, -70, -29.160659114315138 }, MaximumExtent { 1, 70, 29.160659114315138 }, BoundsRadius 76, } MaterialID 3, SelectionGroup 0, }
+GeosetAnim { Alpha 8 { DontInterp, 1: 1,
+1000: 1,
+2001: 0.55,
+3000: 0.55,
+4001: 1,
+4181: 1,
+5001: 1,
+5181: 0, } GeosetId 3, }
+Bone "PanelBillboard" { ObjectId 0, Billboarded, GeosetId Multiple, GeosetAnimId None, Scaling 8 { Linear, 1: {1,1,1},1000:{1,1,1},2001:{1,1,1},3000:{1,1,1},4001:{1,1,0.08},4181:{1,1,1},5001:{1,1,1},5181:{1,1,0.08}, } }
+PivotPoints 1 { {0,0,0}, }

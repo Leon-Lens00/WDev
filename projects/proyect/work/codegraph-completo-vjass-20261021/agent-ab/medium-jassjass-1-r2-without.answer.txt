@@ -1,0 +1,9 @@
+`codegraph_explore` was unavailable, so I inspected source directly.
+
+The chain consists of direct calls between private functions in library `Jass`:
+
+1. **`Jass.assert(b, s)` → `Jass.error("assert: " + s)`**, only when `not b`. If `b` is true, it returns without printing. [Jass.j:114–118](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:114)
+2. **`Jass.error(s)` → `Jass.print(s)`**, unconditionally. After printing, it executes `set i = 1/0`. The source establishes this operation; its runtime termination behavior was not verified. [Jass.j:108–112](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:108)
+3. **`Jass.print(s)` → `DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 120, s)`**. [Jass.j:99–101](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:99)
+
+There is no intervening callback or trigger. `trace` separately calls `print`; it is outside this chain. [Jass.j:103–106](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:103)

@@ -1,0 +1,25 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-players-negative-v1.w3x",
+  "sha256": "4556047dea521a1cbce45f406936a6b707b7bd4e33644b5c126daffeb935d1c3",
+  "base": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+  "base_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "sources": [
+    "Players/WavePlayerUtils.j"
+  ],
+  "boundary": "None: real player library and Classic APIs only",
+  "fixture": "tests/PlayerUtilsAudit.j",
+  "diagnostic_change": "Omit moved inverse update (expected negative control)",
+  "purpose": "Isolated players integration in real Classic engine; no full survival map coverage",
+  "jass_sha256": "2b23217abc9cf3891ee5ba223764bad0728f1da9342f81ef9e378a2a3c1405f3",
+  "compiled": true,
+  "validated": true,
+  "reextracted": true,
+  "other_members_preserved": true,
+  "game_tested": true,
+  "native_log": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/players-negative-v1-native.txt",
+  "checks": 39,
+  "failures": 10,
+  "removal_transitions": 144,
+  "expected_negative": true,
+  "process_closed": true
+}

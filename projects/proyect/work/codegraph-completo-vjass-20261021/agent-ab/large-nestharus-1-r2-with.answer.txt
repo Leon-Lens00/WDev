@@ -1,0 +1,13 @@
+The chain is explicit and conditional. All references are in `Systems/TimerTools/script.j`:
+
+- `Timer.create` calls `TimerList.add(TimerList.getTimeoutId(timeout), onExpire, funcId)` (730–731). `getTimeoutId` computes `R2I(timeout*320 + .5)` (605–606).
+- `TimerList.add` resolves `timerId` through `thistype[timeoutId]`, whose operator reads `lists[timeoutId]`; its effective timeout is `timeoutId/320.` (586–619).
+- **The intermediate object is `ExpirationCode.create(timerId, onExpire, funcId)`**, which stores those values (310–342). `TimerList.add` passes that object to `CreationQueue.add` only when an existing timer satisfies either:
+  - `isConst[timeoutId]` and remaining time **< timeout/2** (638–641);
+  - otherwise, remaining time **≤ relativeOffset[timeoutId]** (647–651).
+
+`isConst` is initialized as `timeout <= relativeOffset*2` (631–635). Other branches register immediately, sometimes allocating another timer (621–669).
+
+`CreationQueue.add` uses `expirationCode.timerId` as its queue instance, increments `toAdd`, and appends the object through `first/last/next` (463–481). `TimerList.add` returns that expiration object (674).
+
+These are source-level conditions; no runtime execution was verified.

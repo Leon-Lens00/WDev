@@ -1,0 +1,54 @@
+{
+  "title": "Shots Vol. II",
+  "author": "Vinz",
+  "source": "https://www.hiveworkshop.com/threads/shots-vol-ii.315512/",
+  "download_endpoint_without_ephemeral_token": "https://www.hiveworkshop.com/bundles/shots-vol-ii.315512/legacy-download",
+  "downloaded_at": "2026-10-22T17:42:54.699883-05:00",
+  "archive": {
+    "path": "shots-vol-ii-original.zip",
+    "bytes": 14587,
+    "sha256": "218b4b7ec70f616b4865704d26c99a3e78d48cd2680e0898545d5eba3a59ba23",
+    "crc_test": "PASS"
+  },
+  "model_count": 6,
+  "variants": [
+    "simple"
+  ],
+  "files": [
+    {
+      "path": "originales/Shots Vol. II/Shot II Blue.mdx",
+      "bytes": 7188,
+      "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac"
+    },
+    {
+      "path": "originales/Shots Vol. II/Shot II Green.mdx",
+      "bytes": 7160,
+      "sha256": "4f206526f7eaff7394ef06bfcf5b00ea4a824ad0f16d154fb4d751b0ce69f926"
+    },
+    {
+      "path": "originales/Shots Vol. II/Shot II Orange.mdx",
+      "bytes": 7132,
+      "sha256": "eac94529fc5f320803b34bdae7b1767d1679a15b6aa1d4d6a13712869479a1cf"
+    },
+    {
+      "path": "originales/Shots Vol. II/Shot II Purple.mdx",
+      "bytes": 7188,
+      "sha256": "d2cc4430b8ec8c78ae38295396ff4163f5651b5e39ac051a3dcb211d9b0803f4"
+    },
+    {
+      "path": "originales/Shots Vol. II/Shot II Red.mdx",
+      "bytes": 7160,
+      "sha256": "a674ae72a5f1ace9f5cc77f29cdd1d52796fb7d3335695dfbb4c1f94d5a45703"
+    },
+    {
+      "path": "originales/Shots Vol. II/Shot II Yellow.mdx",
+      "bytes": 7132,
+      "sha256": "905b2fdac131ba1e72731946e321b9824025ec9e764fffba5dfc9c7b297e32ef"
+    },
+    {
+      "path": "originales/Shots Vol. II/readme.html",
+      "bytes": 3931,
+      "sha256": "5a562dfa9db43fe0d5cc5eaf23ae04edb7592fe822711f2ac76f5738da9240c8"
+    }
+  ]
+}

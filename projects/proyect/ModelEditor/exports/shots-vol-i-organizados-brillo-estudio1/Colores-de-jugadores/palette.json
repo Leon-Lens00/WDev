@@ -1,0 +1,158 @@
+[
+  {
+    "index": 0,
+    "name": "Red",
+    "label": "Rojo",
+    "rgb": [
+      255,
+      3,
+      3
+    ],
+    "hex": "#FF0303",
+    "source": "TeamColor00.blp",
+    "sha256": "db8efb0a2d76cb4e472c3395086f35391a25c81760509dc58ed109b79e1b9ef6"
+  },
+  {
+    "index": 1,
+    "name": "Blue",
+    "label": "Azul",
+    "rgb": [
+      0,
+      66,
+      255
+    ],
+    "hex": "#0042FF",
+    "source": "TeamColor01.blp",
+    "sha256": "5521bd761c6bfdb34f742fb3acbe9b8d3a19d07bf6da323a2216e478b5817564"
+  },
+  {
+    "index": 2,
+    "name": "Cyan",
+    "label": "Cian",
+    "rgb": [
+      28,
+      230,
+      185
+    ],
+    "hex": "#1CE6B9",
+    "source": "TeamColor02.blp",
+    "sha256": "1a33afc10d67014dba95ec31c185bddb2ee62d5d7c62626af9ac3bbbcea36ce8"
+  },
+  {
+    "index": 3,
+    "name": "Purple",
+    "label": "Púrpura",
+    "rgb": [
+      84,
+      0,
+      129
+    ],
+    "hex": "#540081",
+    "source": "TeamColor03.blp",
+    "sha256": "879d401e6b8dd2005054688c295d6554c47b914dce0795440ddb676724a2ef91"
+  },
+  {
+    "index": 4,
+    "name": "Yellow",
+    "label": "Amarillo",
+    "rgb": [
+      255,
+      252,
+      1
+    ],
+    "hex": "#FFFC01",
+    "source": "TeamColor04.blp",
+    "sha256": "f5b015cfe28d21d3c36e14acc2b141f0be30699cdcd644d75e6748a0b8ed41f5"
+  },
+  {
+    "index": 5,
+    "name": "Orange",
+    "label": "Naranja",
+    "rgb": [
+      254,
+      138,
+      14
+    ],
+    "hex": "#FE8A0E",
+    "source": "TeamColor05.blp",
+    "sha256": "d0a23c5dd00c59cf5602535482ec2d1e4fd8a0e7f5c7b9327a255bc5b2c2ec97"
+  },
+  {
+    "index": 6,
+    "name": "Green",
+    "label": "Verde",
+    "rgb": [
+      32,
+      192,
+      0
+    ],
+    "hex": "#20C000",
+    "source": "TeamColor06.blp",
+    "sha256": "d799d93194182a56cd8cec408e11214ff5b965fee850bed72a2ec90331dddc98"
+  },
+  {
+    "index": 7,
+    "name": "Pink",
+    "label": "Rosa",
+    "rgb": [
+      229,
+      91,
+      176
+    ],
+    "hex": "#E55BB0",
+    "source": "TeamColor07.blp",
+    "sha256": "1ae0931f626db4ac9659d1331e9ca92d09c2b7407d47531fb40c74d008f28587"
+  },
+  {
+    "index": 8,
+    "name": "LightGray",
+    "label": "Gris claro",
+    "rgb": [
+      149,
+      150,
+      151
+    ],
+    "hex": "#959697",
+    "source": "TeamColor08.blp",
+    "sha256": "eb9faf6de202dc6ed81f38d01a2b9fe26b51aa49b02d7470f65cab577ac957fa"
+  },
+  {
+    "index": 9,
+    "name": "LightBlue",
+    "label": "Azul claro",
+    "rgb": [
+      126,
+      191,
+      241
+    ],
+    "hex": "#7EBFF1",
+    "source": "TeamColor09.blp",
+    "sha256": "0acbcedbde39d7fc1ea4752482648c0402b2a906135eab911a5bffc25858e9a6"
+  },
+  {
+    "index": 10,
+    "name": "Aqua",
+    "label": "Verde oscuro",
+    "rgb": [
+      16,
+      98,
+      70
+    ],
+    "hex": "#106246",
+    "source": "TeamColor10.blp",
+    "sha256": "1349b880e72ba8c3dbbcc3629a43b689e19ed2fcceaf282c58f094e45e43770d"
+  },
+  {
+    "index": 11,
+    "name": "Brown",
+    "label": "Marrón",
+    "rgb": [
+      78,
+      42,
+      4
+    ],
+    "hex": "#4E2A04",
+    "source": "TeamColor11.blp",
+    "sha256": "71456b84e06b13c4b2bd3ab9a72ed8bb41d117af15521516e6d88a836a3c7ddd"
+  }
+]

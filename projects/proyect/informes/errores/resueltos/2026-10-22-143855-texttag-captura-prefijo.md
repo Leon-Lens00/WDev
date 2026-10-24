@@ -1,0 +1,5 @@
+# Capturador no reconoció el prefijo propio
+Fecha2026-10-22 14:38 America/Lima. TextTagLab, CachyOS/Proton, revisión6cf5215d. Estado en recuperación.
+El laboratorio arrancó y produjo logs, pero el capturador no asoció la ventana: WINEPREFIX termina en barra y la comparación estricta no la normalizaba. No llegó a enviar entradas ni capturar. Se normaliza exclusivamente la barra final, conservando comprobaciones de ejecutable/PID/start y prefijo exacto. Se recupera la misma instancia propia554753; no se lanzan procesos ajenos. Se registra también pausa de presentación tras enfocar para evitar capturas del frame del compositor anterior. La cobertura inicial de capturas está incompleta y no se presenta como PASS.
+
+Recuperación comprobada: run20261022-144050 capturó29/29casos de la revisión da831518. Todos sus logs frescos validan StringLength y5tags vivos; captura y cierre del PID558533 identificados, S sinSIGTERM. La primera pasada sigue incompleta y no se usa para límites finales. Estado final resuelto.

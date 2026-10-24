@@ -1,0 +1,703 @@
+--- before//home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/wc3lint.py
++++ after//home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/wc3lint.py
+@@ -51,12 +51,80 @@
+ BOOL_ASSIGN = re.compile(r"^\s*set\s+([A-Za-z_]\w*)\s*=\s*(?:Condition|Filter)\s*\(", re.I)
+ BOOL_ADD = re.compile(r"\bTriggerAddCondition\s*\([^,]+,\s*([A-Za-z_]\w*)\s*\)", re.I)
+ BOOL_DESTROY = re.compile(r"\bDestroyBoolExpr\s*\(\s*([A-Za-z_]\w*)\s*\)", re.I)
+-
+-
+-def code_part(line: str) -> str:
+-    if "//" not in line:
+-        return line
+-    return line.split("//", 1)[0]
++LOCAL_PLAYER = re.compile(r"\bGetLocalPlayer\s*\(")
++SOURCE_SUFFIXES = {".j", ".jass", ".vjass"}
++
++
++def lexical_lines(text: str) -> tuple[list[tuple[str, str]], list[tuple[int, str]]]:
++    """Mask literals/comments without moving code; retain only real // ignores.
++
++    This is deliberately lexical: imports/macros and vJASS types are not expanded.
++    Unterminated literals/comments produce coverage errors rather than a clean scan.
++    """
++    masked = list(text)
++    comments: dict[int, str] = {}
++    issues: list[tuple[int, str]] = []
++    quote = ""
++    block = False
++    opened = line = 1
++    i = 0
++    if text.startswith("\ufeff"):
++        masked[0] = " "
++    while i < len(text):
++        c = text[i]
++        if c == "\n":
++            if quote:
++                issues.append((opened, "Unterminated quoted literal; analysis is incomplete."))
++                quote = ""
++            line += 1
++            i += 1
++            continue
++        if block:
++            if text.startswith("*/", i):
++                masked[i:i + 2] = "  "
++                i += 2
++                block = False
++            else:
++                if c != "\r":
++                    masked[i] = " "
++                i += 1
++            continue
++        if quote:
++            masked[i] = " "
++            if c == "\\" and quote == '"' and i + 1 < len(text) and text[i + 1] not in "\r\n":
++                masked[i + 1] = " "
++                i += 2
++                continue
++            if c == quote:
++                quote = ""
++            i += 1
++            continue
++        if text.startswith("//", i):
++            end = text.find("\n", i)
++            if end < 0:
++                end = len(text)
++            comments[line] = text[i:end]
++            for j in range(i, end):
++                if text[j] != "\r":
++                    masked[j] = " "
++            i = end
++            continue
++        if text.startswith("/*", i):
++            block = True
++            opened = line
++            masked[i:i + 2] = "  "
++            i += 2
++            continue
++        if c in {'"', "'"}:
++            quote = c
++            opened = line
++            masked[i] = " "
++        i += 1
++    if block:
++        issues.append((opened, "Unterminated block comment; analysis is incomplete."))
++    if quote:
++        issues.append((opened, "Unterminated quoted literal; analysis is incomplete."))
++    return [(code, comments.get(n, "")) for n, code in enumerate("".join(masked).splitlines(), 1)], issues
+ 
+ 
+ def ignored(line: str, rule: str) -> bool:
+@@ -66,8 +134,8 @@
+ 
+ def source_files(target: Path) -> list[Path]:
+     if target.is_file():
+-        return [target] if target.suffix.lower() == ".j" else []
+-    return sorted(p for p in target.rglob("*.j") if p.is_file())
++        return [target] if target.suffix.lower() in SOURCE_SUFFIXES else []
++    return sorted(p for p in target.rglob("*") if p.is_file() and p.suffix.lower() in SOURCE_SUFFIXES)
+ 
+ 
+ def add(findings: list[Finding], severity: str, rule: str, path: Path, line: int, message: str, raw: str) -> None:
+@@ -76,19 +144,21 @@
+ 
+ 
+ def scan_file(path: Path) -> list[Finding]:
+-    text = path.read_text(encoding="utf-8", errors="replace")
+-    lines = text.splitlines()
++    text = path.read_text(encoding="utf-8")
++    lines, issues = lexical_lines(text)
+     findings: list[Finding] = []
+-    array_structs = {m.group(1) for raw in lines if (m := ARRAY_STRUCT.match(code_part(raw)))}
++    for number, message in issues:
++        add(findings, "ERROR", "LEX-INCOMPLETE", path, number, message, "")
++    array_structs = {m.group(1) for code, _ in lines if (m := ARRAY_STRUCT.match(code))}
+ 
+     local_stack: list[bool] = []
+     local_tainted: set[str] = set()
+     location_live: dict[str, bool] = {}
+     group_aliases: dict[str, str] = {}
+     boolexprs: dict[str, set[str]] = {}
+-
+-    for number, raw in enumerate(lines, 1):
+-        code = code_part(raw)
++    in_module = False
++
++    for number, (code, raw) in enumerate(lines, 1):
+         stripped = code.strip()
+         if not stripped:
+             continue
+@@ -107,13 +177,14 @@
+ 
+         begins_if = bool(re.match(r"^\s*if\b.*\bthen\s*$", code, re.I))
+         if begins_if:
+-            local_stack.append("GetLocalPlayer" in code or (bool(local_stack) and any(local_stack)))
++            local_stack.append(bool(LOCAL_PLAYER.search(code)) or any(local_stack))
+         elif re.match(r"^\s*elseif\b.*\bthen\s*$", code, re.I) and local_stack:
+             parent_local = any(local_stack[:-1])
+-            local_stack[-1] = parent_local or "GetLocalPlayer" in code
++            # A prior local condition also controls whether this elseif/else runs.
++            local_stack[-1] = local_stack[-1] or parent_local or bool(LOCAL_PLAYER.search(code))
+ 
+         in_local = any(local_stack)
+-        if "GetLocalPlayer" in code:
++        if LOCAL_PLAYER.search(code):
+             add(findings, "WARNING", "SYNC-LOCAL-PLAYER", path, number, "Trace all local-only writes and later uses; local safety is not proven by the branch alone.", raw)
+ 
+         if in_local:
+@@ -160,34 +231,40 @@
+                 add(findings, "WARNING", "BOOLEXPR-PREMATURE-DESTROY", path, number, f"`{match.group(1)}` may still be owned by a trigger condition.", raw)
+ 
+         if re.match(r"^\s*module\b", code, re.I):
+-            boolexprs["__module__"] = {"active"}
+-        if "__module__" in boolexprs and re.search(r"\bmethod\s+onInit\b", code, re.I):
++            in_module = True
++        if in_module and re.search(r"\bmethod\s+onInit\b", code, re.I):
+             add(findings, "WARNING", "INIT-ORDER", path, number, "Module `onInit` has special priority; verify runtime dependencies, not only `requires`.", raw)
+         if re.match(r"^\s*endmodule\b", code, re.I):
+-            boolexprs.pop("__module__", None)
++            in_module = False
+ 
+         if re.match(r"^\s*endif\b", code, re.I) and local_stack:
+             local_stack.pop()
+ 
+-        if re.match(r"^\s*endfunction\b", code, re.I):
++        if re.match(r"^\s*(?:endfunction|endmethod)\b", code, re.I):
+             location_live.clear()
+             group_aliases.clear()
+             boolexprs.clear()
+             local_tainted.clear()
++            local_stack.clear()
+ 
+     return findings
+ 
+ 
+ def main() -> int:
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument("path", type=Path, help="A .j file or directory")
++    parser.add_argument("path", type=Path, help="A .j/.jass/.vjass file or directory")
+     parser.add_argument("--json", action="store_true", help="Emit JSON")
+     args = parser.parse_args()
+ 
+     if not args.path.exists():
+         parser.error(f"path does not exist: {args.path}")
+     files = source_files(args.path)
+-    findings = [finding for path in files for finding in scan_file(path)]
++    if not files:
++        parser.error("no supported .j/.jass/.vjass sources found; nothing was scanned")
++    try:
++        findings = [finding for path in files for finding in scan_file(path)]
++    except (OSError, UnicodeError) as error:
++        parser.error(f"source could not be read as UTF-8: {error}")
+     findings.sort(key=lambda f: (f.path, f.line, f.severity, f.rule))
+ 
+     if args.json:
+--- before//home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/tests/test_wc3lint.py
++++ after//home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/tests/test_wc3lint.py
+@@ -1,5 +1,7 @@
+ import importlib.util
+ import sys
++import json
++import subprocess
+ import tempfile
+ import unittest
+ from pathlib import Path
+@@ -66,6 +68,116 @@
+         )
+         self.assertFalse(any(finding.severity == "ERROR" for finding in findings))
+ 
++    def test_literals_and_comments_are_not_gameplay(self):
++        source = '''\ufefffunction Test takes nothing returns nothing
++    local string url = "https://example.invalid/BlzFake()"
++    local string escaped = "escaped \\" BlzFake() /* not a comment */"
++    local integer id = 'BlzA'
++    /* if GetLocalPlayer() == Player(0) then
++        call BlzFake()
++        call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)
++    endif */
++    call BJDebugMsg("GetLocalPlayer() CreateUnit() FourCC()") // BlzFake()
++endfunction
++'''
++        self.assertEqual(self.scan(source), [])
++
++    def test_string_url_does_not_hide_later_code(self):
++        findings = self.scan('call Wrapper("https://example.invalid", BlzFake())\n')
++        self.assertEqual([(f.rule, f.line) for f in findings], [("WC127-BLZ", 1)])
++
++    def test_ignore_requires_a_real_line_comment(self):
++        findings = self.scan('''call BlzFake("wc3lint: ignore ALL -- fake")
++call BlzFake() // wc3lint: ignore WC127-BLZ -- deliberate compatibility fixture
++call BlzFake() /* wc3lint: ignore ALL -- fake */
++''')
++        self.assertEqual([f.line for f in findings if f.rule == "WC127-BLZ"], [1, 3])
++
++    def test_branch_after_local_condition_is_still_divergent(self):
++        findings = self.scan('''function Test takes nothing returns nothing
++if GetLocalPlayer() == Player(0) then
++    call SetCameraPosition(0., 0.)
++elseif true then
++    call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)
++else
++    call GetRandomInt(1, 2)
++endif
++call CreateUnit(Player(0), 'hfoo', 0., 0., 0.)
++endfunction
++''')
++        self.assertEqual([f.line for f in findings if f.rule == "SYNC-LOCAL-HANDLE"], [5])
++        self.assertEqual([f.line for f in findings if f.rule == "SYNC-LOCAL-RNG"], [7])
++
++    def test_nested_local_branch_does_not_taint_sibling_branch(self):
++        findings = self.scan('''if true then
++    if GetLocalPlayer() == Player(0) then
++        call CreateTimer()
++    endif
++else
++    call CreateTimer()
++endif
++''')
++        self.assertEqual([f.line for f in findings if f.rule == "SYNC-LOCAL-HANDLE"], [3])
++
++    def test_resource_tracking_does_not_leak_between_methods(self):
++        findings = self.scan('''struct Example
++method one takes nothing returns nothing
++local location p = Location(0., 0.)
++local group g
++local group alias
++set alias = g
++endmethod
++method two takes nothing returns nothing
++local location p
++local group alias
++set p = Location(1., 1.)
++call FirstOfGroup(alias)
++endmethod
++endstruct
++''')
++        self.assertFalse(any(f.rule in {"LOCATION-OVERWRITE", "GROUP-ALIAS-CONSUME"} for f in findings))
++
++    def test_module_context_survives_method_boundary(self):
++        findings = self.scan('''module Example
++method helper takes nothing returns nothing
++endmethod
++private static method onInit takes nothing returns nothing
++endmethod
++endmodule
++''')
++        self.assertEqual([f.line for f in findings if f.rule == "INIT-ORDER"], [4])
++
++    def test_unclosed_comment_or_literal_is_not_a_clean_scan(self):
++        for source, line in [('call BJDebugMsg("unfinished\n', 1), ('\n/* unfinished', 2), ("set id = 'oops", 1)]:
++            with self.subTest(source=source):
++                findings = self.scan(source)
++                self.assertEqual([(f.rule, f.line, f.severity) for f in findings], [("LEX-INCOMPLETE", line, "ERROR")])
++
++    def test_cli_scans_all_advertised_extensions(self):
++        with tempfile.TemporaryDirectory() as directory:
++            root = Path(directory)
++            for suffix in [".j", ".jass", ".vjass", ".J"]:
++                path = root / ("bad" + suffix)
++                path.write_text("call BlzFake()\n")
++                result = subprocess.run([sys.executable, str(SCRIPT), str(path), "--json"], capture_output=True, text=True)
++                self.assertEqual(result.returncode, 1, result.stderr)
++                self.assertEqual(json.loads(result.stdout)["files"], 1)
++            result = subprocess.run([sys.executable, str(SCRIPT), str(root), "--json"], capture_output=True, text=True)
++            self.assertEqual(json.loads(result.stdout)["files"], 4)
++
++    def test_cli_refuses_empty_unsupported_or_invalid_encoding(self):
++        with tempfile.TemporaryDirectory() as directory:
++            root = Path(directory)
++            unsupported = root / "note.txt"
++            unsupported.write_text("call BlzFake()\n")
++            invalid = root / "invalid.j"
++            for target in [root, unsupported]:
++                result = subprocess.run([sys.executable, str(SCRIPT), str(target), "--json"], capture_output=True, text=True)
++                self.assertEqual(result.returncode, 2)
++            invalid.write_bytes(b"\xff\xfe")
++            result = subprocess.run([sys.executable, str(SCRIPT), str(invalid), "--json"], capture_output=True, text=True)
++            self.assertEqual(result.returncode, 2)
++
+ 
+ if __name__ == "__main__":
+     unittest.main()
+--- before//home/snz/.codex/skills/build-warcraft3-vjass-127b/SKILL.md
++++ after//home/snz/.codex/skills/build-warcraft3-vjass-127b/SKILL.md
+@@ -61,7 +61,7 @@
+ Clasificar hallazgos como `ERROR`, `WARNING`, `PERF` o `STYLE`. Informar un único estado más fuerte: **Designed**, **Scanned**, **Compiled**, **Validated**, **Tested in map** o **Tested in multiplayer**. Un ensayo con fallos sigue teniendo fallos; no equivale a aprobación del producto.
+ 
+ - `scripts/check_toolchain.py CONFIG [--json]`: objetivo, archivos, superficie clásica y SHA-256.
+-- `scripts/wc3lint.py PATH [--json]`: revisión estática conservadora; no sustituye compilador ni motor.
++- `scripts/wc3lint.py PATH [--json]`: revisión estática conservadora de `.j/.jass/.vjass`; distingue código de literales y comentarios. Una raíz sin fuentes o una entrada ilegible devuelve error. Los avisos de recursos/sincronización requieren revisión; no sustituye compilador ni motor.
+ - `scripts/compile_vjass.py --jasshelper EXE --pjass BIN --common FILE --blizzard FILE --input FILE --output NUEVO [--local-launcher /ruta/scripts/wc3.py] [--dry-run] [--log FILE]`: compilación y pJASS. En modo directo admite `--debug` y `--no-optimize`; el lanzador local no expone esos parámetros.
+ - `scripts/build_w3x_project.py MANIFEST`: construcción modular con backend local wc3ctl o MPQEditor directo, WCT opcional y reextracción por hash. Requiere salida y compilado nuevos.
+ - `scripts/map_inventory.py EXTRACTED_DIR`: inventario y recuperación de WCT sin modificar el mapa.
+--- before//home/snz/Documentos/MCP W3/wc3-forge/internal/jassgraph/graph.go
++++ after//home/snz/Documentos/MCP W3/wc3-forge/internal/jassgraph/graph.go
+@@ -10,6 +10,7 @@
+ 	"path/filepath"
+ 	"sort"
+ 	"strings"
++	"unicode/utf8"
+ 
+ 	lex "github.com/StephenSHorton/wc3-forge/internal/forge/jass2lua"
+ )
+@@ -37,6 +38,7 @@
+ 	Kind       string   `json:"kind"`
+ 	Resolution string   `json:"resolution"`
+ 	Candidates []string `json:"candidates"`
++	QueryMatch string   `json:"query_match,omitempty"`
+ }
+ type Dependency struct {
+ 	Location
+@@ -55,6 +57,7 @@
+ type Graph struct {
+ 	Root         string       `json:"root"`
+ 	Analysis     string       `json:"analysis"`
++	Coverage     string       `json:"coverage"`
+ 	Sources      []Source     `json:"sources"`
+ 	Symbols      []Symbol     `json:"symbols"`
+ 	Calls        []Call       `json:"calls"`
+@@ -127,6 +130,13 @@
+ 	if err != nil {
+ 		return nil, err
+ 	}
++	if len(g.Sources) == 0 {
++		return nil, fmt.Errorf("no .j/.jass/.vjass sources found under %s; nothing was scanned", root)
++	}
++	g.Coverage = "lexical_only"
++	if len(g.Diagnostics) > 0 {
++		g.Coverage = "partial"
++	}
+ 	g.resolve()
+ 	return g, nil
+ }
+@@ -172,6 +182,14 @@
+ }
+ 
+ func (g *Graph) addSource(file, src string) {
++	if !utf8.ValidString(src) {
++		g.warn(file, 1, "Source is not valid UTF-8; file omitted from lexical analysis")
++		return
++	}
++	if strings.HasPrefix(src, "\xef\xbb\xbf") {
++		// Keep the three original bytes in column accounting and file hashes.
++		src = "   " + src[3:]
++	}
+ 	masked, closed := maskBlocks(src)
+ 	if !closed {
+ 		g.warn(file, 1, "Unterminated block comment; source is incomplete")
+@@ -233,13 +251,23 @@
+ 		if head == "endfunction" || head == "endmethod" {
+ 			if active < 0 {
+ 				g.warn(file, line[i].Line, "Unmatched "+head)
++			} else if head != "end"+g.Symbols[active].Kind {
++				g.warn(file, line[i].Line, "Mismatched "+head+" for "+g.Symbols[active].Kind)
+ 			} else {
+ 				g.Symbols[active].EndLine = line[i].Line
+ 				active = -1
+ 			}
+ 			continue
+ 		}
+-		if strings.HasPrefix(head, "end") && len(stack) > 0 && head == "end"+stack[len(stack)-1].kind {
++		if head == "endlibrary" || head == "endscope" || head == "endstruct" || head == "endmodule" || head == "endinterface" {
++			if len(stack) == 0 || head != "end"+stack[len(stack)-1].kind {
++				g.warn(file, line[i].Line, "Unmatched or mismatched "+head)
++				continue
++			}
++			if active >= 0 {
++				g.warn(file, g.Symbols[active].Line, "Function/method has no closing marker before "+head)
++				active = -1
++			}
+ 			f := stack[len(stack)-1]
+ 			g.Symbols[f.index].EndLine = line[i].Line
+ 			stack = stack[:len(stack)-1]
+@@ -333,11 +361,25 @@
+ func (g *Graph) calls(file, caller string, line []lex.Token) {
+ 	for i := 0; i < len(line); i++ {
+ 		t := line[i]
+-		if t.Value == "function" && i+1 < len(line) && word(line[i+1]) {
+-			i++
+-			t = line[i]
+-			g.Calls = append(g.Calls, Call{Location: Location{file, t.Line, t.Col}, Caller: caller, Target: t.Value, Kind: "function_reference", Candidates: []string{}})
+-			continue
++		if t.Kind == lex.TokKeyword && t.Value == "function" && i+1 < len(line) {
++			j := i + 1
++			prefix := ""
++			if line[j].Value == "." {
++				prefix = "<implicit-receiver>."
++				j++
++			}
++			if j < len(line) && word(line[j]) {
++				t = line[j]
++				target := prefix + t.Value
++				j++
++				for j+1 < len(line) && line[j].Value == "." && word(line[j+1]) {
++					target += "." + line[j+1].Value
++					j += 2
++				}
++				g.Calls = append(g.Calls, Call{Location: Location{file, t.Line, t.Col}, Caller: caller, Target: target, Kind: "function_reference", Candidates: []string{}})
++				i = j - 1
++				continue
++			}
+ 		}
+ 		if !word(t) {
+ 			continue
+@@ -496,11 +538,26 @@
+ 		}
+ 	}
+ 	for _, c := range g.Calls {
+-		match := ids[c.Caller] || c.Target == name || names[c.Target]
++		basis := ""
++		if ids[c.Caller] {
++			basis = "outgoing"
++		}
+ 		for _, id := range c.Candidates {
+-			match = match || ids[id]
+-		}
+-		if match {
++			if basis == "" && ids[id] {
++				basis = "lexical_candidate"
++			}
++		}
++		if basis == "" && c.Resolution == "member_unresolved" {
++			leaf := c.Target[strings.LastIndex(c.Target, ".")+1:]
++			if leaf == name || names[leaf] || c.Target == name || names[c.Target] {
++				basis = "textual_member"
++			}
++		}
++		if basis == "" && (c.Target == name || names[c.Target]) {
++			basis = "textual"
++		}
++		if basis != "" {
++			c.QueryMatch = basis
+ 			q.Calls = append(q.Calls, c)
+ 		}
+ 	}
+--- before//home/snz/Documentos/MCP W3/wc3-forge/internal/jassgraph/graph_test.go
++++ after//home/snz/Documentos/MCP W3/wc3-forge/internal/jassgraph/graph_test.go
+@@ -125,3 +125,53 @@
+ 		t.Fatal("accepted file as root")
+ 	}
+ }
++
++func TestQualifiedCallbacksAndReceiverQueries(t *testing.T) {
++	src := "library L\nstruct S\nmethod tick takes nothing returns nothing\nendmethod\nmethod use takes nothing returns nothing\ncall Register(function S.tick)\ncall Register(function thistype.tick)\ncall this.tick()\ncall .tick()\ncall Other.tick()\nendmethod\nendstruct\nendlibrary\n"
++	g := scan(t, fixture(t, map[string]string{"callbacks.vjass": src}))
++	q := g.Query("L.S.tick")
++	if len(q.Calls) != 5 {
++		t.Fatalf("lost textual member references: %+v", q.Calls)
++	}
++	for _, c := range q.Calls {
++		if c.Resolution != "member_unresolved" || len(c.Candidates) != 0 || c.QueryMatch != "textual_member" {
++			t.Fatalf("member query must not pretend to infer receiver type: %+v", c)
++		}
++	}
++	if q.Calls[0].Kind != "function_reference" || q.Calls[0].Target != "S.tick" || q.Calls[1].Target != "thistype.tick" {
++		t.Fatalf("lost qualified callbacks: %+v", q.Calls)
++	}
++	if len(g.Query("Register").Calls) != 2 {
++		t.Fatal("lost outer calls while reading callbacks")
++	}
++}
++
++func TestScopeMismatchAndWrongCallableCloserAreReported(t *testing.T) {
++	for _, src := range []string{
++		"library L\nendstruct\nendlibrary\n",
++		"function F takes nothing returns nothing\nendmethod\nendfunction\n",
++		"library L\nfunction F takes nothing returns nothing\nendlibrary\n",
++	} {
++		g := scan(t, fixture(t, map[string]string{"broken.j": src}))
++		if len(g.Diagnostics) == 0 || g.Coverage != "partial" {
++			t.Fatalf("silently accepted inconsistent lexical structure: %+v", g)
++		}
++	}
++}
++
++func TestBOMAndInvalidUTF8Coverage(t *testing.T) {
++	g := scan(t, fixture(t, map[string]string{"bom.j": "\xef\xbb\xbffunction F takes nothing returns nothing\r\nendfunction\r\n"}))
++	if len(g.Symbols) != 1 || g.Symbols[0].Column != 13 || g.Coverage != "lexical_only" {
++		t.Fatalf("BOM moved source coordinates or hid code: %+v", g)
++	}
++	g = scan(t, fixture(t, map[string]string{"encoding.j": "\xfffunction Fake takes nothing returns nothing\nendfunction\n"}))
++	if len(g.Symbols) != 0 || len(g.Diagnostics) == 0 || g.Coverage != "partial" {
++		t.Fatalf("invalid encoding was not reported: %+v", g)
++	}
++}
++
++func TestEmptyProjectIsNotACompletedScan(t *testing.T) {
++	if _, err := Scan(t.TempDir()); err == nil {
++		t.Fatal("empty root looked like a completed review")
++	}
++}
+--- before//home/snz/Documentos/MCP W3/wc3-forge/cmd/jassgraph/main.go
++++ after//home/snz/Documentos/MCP W3/wc3-forge/cmd/jassgraph/main.go
+@@ -17,6 +17,7 @@
+ 	root := f.String("root", "", "required source project directory (no archives; nested symlinks skipped)")
+ 	symbol := f.String("symbol", "", "exact simple or qualified symbol name")
+ 	format := f.String("format", "text", "text or json")
++	strict := f.Bool("strict", false, "exit 1 after emitting report if lexical coverage is partial")
+ 	if err := f.Parse(args); err != nil {
+ 		if err == flag.ErrHelp {
+ 			return 0
+@@ -24,7 +25,7 @@
+ 		return 2
+ 	}
+ 	if *root == "" || f.NArg() != 0 || (*format != "text" && *format != "json") {
+-		fmt.Fprintln(stderr, "Use -root DIRECTORY [-symbol NAME] [-format text|json]")
++		fmt.Fprintln(stderr, "Use -root DIRECTORY [-symbol NAME] [-format text|json] [-strict]")
+ 		return 2
+ 	}
+ 	g, err := jassgraph.Scan(*root)
+@@ -35,6 +36,10 @@
+ 	if *symbol != "" {
+ 		g = g.Query(*symbol)
+ 	}
++	status := 0
++	if *strict && g.Coverage == "partial" {
++		status = 1
++	}
+ 	if *format == "json" {
+ 		e := json.NewEncoder(out)
+ 		e.SetIndent("", "  ")
+@@ -42,14 +47,18 @@
+ 			fmt.Fprintln(stderr, err)
+ 			return 1
+ 		}
+-		return 0
++		return status
+ 	}
+-	fmt.Fprintf(out, "Root: %s\n%s\nSources: %d; definitions: %d; references: %d; diagnostics: %d\n", g.Root, g.Analysis, len(g.Sources), len(g.Symbols), len(g.Calls), len(g.Diagnostics))
++	fmt.Fprintf(out, "Root: %s\n%s\nCoverage: %s\nSources: %d; definitions: %d; references: %d; diagnostics: %d\n", g.Root, g.Analysis, g.Coverage, len(g.Sources), len(g.Symbols), len(g.Calls), len(g.Diagnostics))
+ 	for _, s := range g.Symbols {
+ 		fmt.Fprintf(out, "DEF %s %s %s:%d:%d\n", s.Kind, s.Qualified, s.File, s.Line, s.Column)
+ 	}
+ 	for _, c := range g.Calls {
+-		fmt.Fprintf(out, "REF %s -> %s [%s; %s] %s:%d:%d\n", c.CallerName, c.Target, c.Kind, c.Resolution, c.File, c.Line, c.Column)
++		details := c.Kind + "; " + c.Resolution
++		if c.QueryMatch != "" {
++			details += "; query=" + c.QueryMatch
++		}
++		fmt.Fprintf(out, "REF %s -> %s [%s] %s:%d:%d\n", c.CallerName, c.Target, details, c.File, c.Line, c.Column)
+ 	}
+ 	for _, d := range g.Dependencies {
+ 		fmt.Fprintf(out, "DEP %s -> %s optional=%t %s:%d\n", d.Library, d.Requires, d.Optional, d.File, d.Line)
+@@ -60,6 +69,6 @@
+ 	if *symbol != "" && len(g.Symbols) == 0 {
+ 		fmt.Fprintln(out, "No matching definition in the scanned sources; this does not prove the symbol is absent from the map.")
+ 	}
+-	return 0
++	return status
+ }
+ func main() { os.Exit(run(os.Args[1:], os.Stdout, os.Stderr)) }
+--- before//home/snz/Documentos/MCP W3/wc3-forge/cmd/jassgraph/main_test.go
++++ after//home/snz/Documentos/MCP W3/wc3-forge/cmd/jassgraph/main_test.go
+@@ -35,3 +35,28 @@
+ 		t.Fatalf("wrong output: %s", out.String())
+ 	}
+ }
++
++func TestStrictCoverageEmitsReportAndFailsOnPartialAnalysis(t *testing.T) {
++	root := t.TempDir()
++	if err := os.WriteFile(filepath.Join(root, "macro.j"), []byte("//! runtextmacro Unknown()\n"), 0644); err != nil {
++		t.Fatal(err)
++	}
++	for _, strict := range []bool{false, true} {
++		args := []string{"-root", root, "-format", "json"}
++		want := 0
++		if strict {
++			args = append(args, "-strict")
++			want = 1
++		}
++		var out, stderr bytes.Buffer
++		if code := run(args, &out, &stderr); code != want {
++			t.Fatalf("strict=%t exit=%d: %s", strict, code, stderr.String())
++		}
++		var result struct {
++			Coverage string `json:"coverage"`
++		}
++		if err := json.Unmarshal(out.Bytes(), &result); err != nil || result.Coverage != "partial" {
++			t.Fatalf("partial coverage was not preserved in report: %s", out.String())
++		}
++	}
++}
+--- before//home/snz/Documentos/MCP W3/wc3-forge/docs/jassgraph.md
++++ after//home/snz/Documentos/MCP W3/wc3-forge/docs/jassgraph.md
+@@ -12,11 +12,17 @@
+ ./scripts/jassgraph -root /home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys
+ ./scripts/jassgraph -root /home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys -symbol IsLeapBuffActive
+ ./scripts/jassgraph -root /home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys -format json
++./scripts/jassgraph -root /ruta/fuentes -format json -strict
+ ```
+ 
+ `-symbol` acepta un nombre simple o cualificado exacto. Devuelve las definiciones coincidentes,
+ las referencias entrantes candidatas y las llamadas salientes. Los nombres duplicados no se fusionan.
+ Las referencias a miembros pueden coincidir por texto; no constituyen una resolución de tipos.
++Una consulta por método incluye también `this.metodo`, `thistype.metodo`, `.metodo`
++y otros receptores con el mismo nombre final. `query_match=textual_member` señala esa
++coincidencia amplia: puede pertenecer a otro tipo. Los valores `outgoing`,
++`lexical_candidate` y `textual` explican las otras razones de inclusión. Este campo
++no cambia la resolución original de la referencia ni autoriza un renombrado automático.
+ Shell, Gentle AI y Codex pueden ejecutar este mismo comando mediante su herramienta de terminal.
+ No se ha cambiado su configuración global ni activado llamadas automáticas.
+ 
+@@ -25,7 +31,7 @@
+ - Cada definición y referencia incluye archivo relativo, línea y columna (base 1, columnas del lexer en bytes).
+ - Cada fuente incluye SHA-256. El análisis se calcula en cada ejecución; no hay índice persistente que pueda quedar obsoleto.
+ - Reconoce declaraciones de funciones, natives, métodos con nombre, libraries, scopes, structs, modules e interfaces.
+-- Extrae llamadas textuales, callbacks `function Nombre`, inicializadores y dependencias `requires/needs/uses` en la línea de declaración.
++- Extrae llamadas textuales, callbacks `function Nombre` y `function Tipo.metodo`, inicializadores y dependencias `requires/needs/uses` en la línea de declaración.
+ - `lexical_candidate`: un único candidato por ámbito léxico; **no** es una confirmación del compilador.
+ - `ambiguous`: múltiples definiciones candidatas, conservadas con sus ubicaciones.
+ - `member_unresolved`: receptor de método sin inferencia de tipos; incluye `this`, `thistype`, accesos implícitos y dispatch `.execute/.evaluate`.
+@@ -35,6 +41,8 @@
+ - No analiza directamente `.w3x`, `.w3m`, `.wct` ni `.wtg`. Primero deben existir fuentes de texto extraídas por las herramientas del taller.
+ - No ejecuta `ExecuteFunc`, no interpreta strings como código ni demuestra ausencia de fugas o desincronizaciones.
+ - No ejecuta JassHelper/pJASS ni abre el juego. Cero diagnósticos no acredita compilación o funcionamiento.
++- `coverage=lexical_only` significa que no hubo incidencias de cobertura conocidas; `partial` señala diagnósticos. No equivale a cobertura completa del lenguaje. UTF-8 inválido omite el análisis del archivo y produce un diagnóstico; UTF-8 con BOM conserva coordenadas en bytes y hashes originales.
++- No indexa variables ni sus tipos. Las llamadas en inicializadores globales y las referencias dinámicas en strings no forman parte del grafo de llamadas.
+ 
+ ## Alcance de archivos
+ 
+@@ -43,7 +51,10 @@
+ `.git`, `.codegraph`, `.jassgraph`, `node_modules`, `.venv`, `build`, `dist` y `backups`.
+ Lista las exclusiones en `skipped`; si necesitas fuentes de una carpeta `build`, indícala directamente como raíz.
+ Límites: 2000 fuentes y 4 MiB por archivo. Un error de recorrido/lectura o límite devuelve salida no exitosa;
+-los diagnósticos léxicos se devuelven en el informe para que el consumidor vea la cobertura parcial.
++Una raíz sin fuentes devuelve error. Los diagnósticos léxicos se devuelven en el informe
++para que el consumidor vea la cobertura parcial. Por defecto el informe parcial mantiene
++salida exitosa; `-strict` emite ese mismo informe y devuelve 1 cuando hay diagnósticos.
++Los argumentos inválidos devuelven 2. Tampoco en modo estricto se ejecuta un compilador.
+ El comando no escribe dentro de la raíz analizada. Las redirecciones de salida las decide quien lo invoca.
+ 
+ ## Construcción y comprobación
+@@ -64,3 +75,11 @@
+ De las referencias, 30 tienen un candidato léxico, 63 son miembros sin resolver y 133 son externas/no resueltas.
+ La búsqueda de `IsLeapBuffActive` encontró sus siete sitios de llamada, contrastados con el texto original.
+ Estos resultados describen las fuentes leídas, no certifican el mapa.
++
++Afinamiento del 20-10-2026: se conservaron las 47 definiciones, las 226 referencias y
++los hashes de ambos archivos. La consulta de `MovementSystem.MovementData.destroy`
++pasó de 3 a 9 referencias al incluir receptores implícitos como candidatos textuales.
++Esto amplía la búsqueda, no acredita seis llamadas resueltas adicionales.
++
++El código de `internal/jassgraph` y `cmd/jassgraph` es una extensión local, con pruebas
++en ambos paquetes; no debe atribuirse al proyecto upstream como funcionalidad publicada.
+--- before//home/snz/.codex/skills/build-warcraft3-vjass-127b/references/entorno-local.md
++++ after//home/snz/.codex/skills/build-warcraft3-vjass-127b/references/entorno-local.md
+@@ -50,6 +50,18 @@
+ - El comando `new` de 0.4.10 genera W3I versión 28 incluso con objetivo 1.27b; no usar esa salida como base Classic sin conversión verificada. Para 1.27b, comprobar W3I <=25, terreno <=11, objetos Classic, JASS y assets compatibles. Un análisis de identificadores no valida todos los formatos.
+ - Forge tiene modificaciones locales Classic. Abrir copias: su Save As puede guardar primero el archivo abierto. El auxiliar Linux/MCP y la ventana GUI son sesiones diferentes; seleccionar explícitamente la sesión y conservar un único escritor por archivo. No acreditar su visor como réplica exacta del juego.
+ 
++## Auxiliares locales para leer y revisar código
++
++`wc3lint.py` pertenece a esta skill; es un script local con reglas heurísticas, sin autor o repositorio externo documentado. Acepta `.j`, `.jass` y `.vjass` (también mayúsculas), máscaras de strings/rawcodes y comentarios `//`/`/* */`, UTF-8 con o sin BOM y CRLF. No convierte otras codificaciones. Un literal/comentario sin cerrar devuelve `LEX-INCOMPLETE`; una entrada sin fuentes o ilegible termina con código 2. Código 1 significa hallazgos ERROR; 0 sólo ausencia de ERROR en las reglas ejecutadas. `wc3lint: ignore REGLA -- motivo` sólo tiene efecto dentro de un comentario `//` real en esa línea. No expande macros/imports ni realiza análisis completo de tipos, alias o flujo entre funciones.
++
++`jassgraph` es una extensión local de Forge que reutiliza su lexer, sin ejecutar la conversión a Lua. Para explorar llamadas y callbacks, usar una raíz acotada:
++
++```bash
++"/home/snz/Documentos/MCP W3/wc3-forge/scripts/jassgraph" -root /ruta/fuentes -symbol Nombre -format json
++```
++
++El JSON indica `coverage=lexical_only` o `partial`; ninguna significa validación del compilador. `-strict` conserva el informe y devuelve código 1 si la cobertura es parcial. Una raíz sin fuentes devuelve error. Las consultas incluyen callbacks cualificados y accesos `this.metodo`/`.metodo`; `query_match=textual_member` puede incluir receptores de otros tipos con el mismo nombre de método. No usar esas coincidencias para renombrar automáticamente. La implementación, pruebas y límites están en `docs/jassgraph.md` de Forge. Los ensayos de afinamiento del 20-10-2026 están en `/home/snz/Documentos/ChatGPT/Proyect/work/afinamiento-wc3-20261020/`.
++
+ ## Ejecución y bibliotecas
+ 
+ Seguir `/home/snz/.codex/skills/probar-warcraft3-classic-linux/SKILL.md` para `play`, editores, capturas, resultados y cierre. El perfil gráfico de `play` es NewGen moderno (GE-Proton/DXVK/RenderEdge); YDWE conserva su perfil propio. No cambiar perfiles por una receta histórica de compilación.

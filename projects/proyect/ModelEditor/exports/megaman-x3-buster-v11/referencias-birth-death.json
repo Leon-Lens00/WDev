@@ -1,0 +1,890 @@
+[
+  {
+    "path": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Blue.mdx",
+    "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac",
+    "sequences": [
+      {
+        "name": "Stand",
+        "interval": [
+          100,
+          500
+        ],
+        "moveSpeed": 0,
+        "nonLooping": 0,
+        "rarity": 0,
+        "syncPoint": 0,
+        "extent": {
+          "boundsRadius": 55.05139923095703,
+          "min": [
+            -62.55139923095703,
+            -5.869160175323486,
+            -5.831999778747559
+          ],
+          "max": [
+            47.21730041503906,
+            5.794839859008789,
+            5.831999778747559
+          ]
+        }
+      },
+      {
+        "name": "Birth",
+        "interval": [
+          2000,
+          2300
+        ],
+        "moveSpeed": 0,
+        "nonLooping": 1,
+        "rarity": 0,
+        "syncPoint": 0,
+        "extent": {
+          "boundsRadius": 55.05139923095703,
+          "min": [
+            -62.55139923095703,
+            -5.869160175323486,
+            -5.831999778747559
+          ],
+          "max": [
+            47.21730041503906,
+            5.794839859008789,
+            5.831999778747559
+          ]
+        }
+      },
+      {
+        "name": "Death",
+        "interval": [
+          4000,
+          5000
+        ],
+        "moveSpeed": 0,
+        "nonLooping": 1,
+        "rarity": 0,
+        "syncPoint": 0,
+        "extent": {
+          "boundsRadius": 55.05139923095703,
+          "min": [
+            -62.55139923095703,
+            -5.869160175323486,
+            -5.831999778747559
+          ],
+          "max": [
+            47.21730041503906,
+            5.794839859008789,
+            5.831999778747559
+          ]
+        }
+      }
+    ],
+    "deathEmitters": [
+      {
+        "name": "Stars",
+        "texture": "Textures\\star5tga.blp",
+        "lifeSpan": 0.20999999344348907,
+        "speed": 210,
+        "latitude": 180,
+        "size": [
+          30,
+          50,
+          1
+        ],
+        "alpha": [
+          0,
+          255,
+          255
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 40,
+                "rate": 120
+              },
+              {
+                "msFromDeath": 240,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lumps",
+        "texture": "Textures\\Blue_Glow2.blp",
+        "lifeSpan": 0.33000001311302185,
+        "speed": 140,
+        "latitude": 180,
+        "size": [
+          60,
+          30,
+          1
+        ],
+        "alpha": [
+          0,
+          255,
+          255
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 50,
+                "rate": 120
+              },
+              {
+                "msFromDeath": 300,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Avante Uno",
+        "texture": "Textures\\star5tga.blp",
+        "lifeSpan": 0.20999999344348907,
+        "speed": 820,
+        "latitude": 14,
+        "size": [
+          24,
+          22,
+          1
+        ],
+        "alpha": [
+          255,
+          255,
+          255
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 120
+              },
+              {
+                "msFromDeath": 160,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Flashes",
+        "texture": "Textures\\Flare.blp",
+        "lifeSpan": 0.30000001192092896,
+        "speed": 120,
+        "latitude": 180,
+        "size": [
+          10,
+          16,
+          10
+        ],
+        "alpha": [
+          0,
+          255,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 50,
+                "rate": 120
+              },
+              {
+                "msFromDeath": 300,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/psionic-shots.319594/originales/Psionic Shots/Psionic Shot Blue/Psionic Shot Blue.mdx",
+    "sha256": "dd9f1aa480f066357ca0de352609357f91fe50ec2be73269dab7a7c697c044ff",
+    "sequences": [
+      {
+        "name": "Stand",
+        "interval": [
+          100,
+          900
+        ],
+        "moveSpeed": 0,
+        "nonLooping": 0,
+        "rarity": 0,
+        "syncPoint": 0,
+        "extent": {
+          "boundsRadius": 0,
+          "min": [
+            -50,
+            0,
+            0
+          ],
+          "max": [
+            -50,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "name": "Birth",
+        "interval": [
+          1000,
+          1400
+        ],
+        "moveSpeed": 0,
+        "nonLooping": 1,
+        "rarity": 0,
+        "syncPoint": 0,
+        "extent": {
+          "boundsRadius": 0,
+          "min": [
+            -50,
+            0,
+            0
+          ],
+          "max": [
+            -50,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "name": "Death",
+        "interval": [
+          2000,
+          2800
+        ],
+        "moveSpeed": 0,
+        "nonLooping": 1,
+        "rarity": 0,
+        "syncPoint": 0,
+        "extent": {
+          "boundsRadius": 0,
+          "min": [
+            -50,
+            0,
+            0
+          ],
+          "max": [
+            -50,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "deathEmitters": [
+      {
+        "name": "D Avante",
+        "texture": "PsionicGlow.blp",
+        "lifeSpan": 0.41999998688697815,
+        "speed": 180,
+        "latitude": 15,
+        "size": [
+          9,
+          12,
+          1
+        ],
+        "alpha": [
+          255,
+          255,
+          255
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 60
+              },
+              {
+                "msFromDeath": 200,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D Glo",
+        "texture": "PsionicGlow.blp",
+        "lifeSpan": 0.30000001192092896,
+        "speed": 0,
+        "latitude": 0,
+        "size": [
+          80,
+          120,
+          80
+        ],
+        "alpha": [
+          0,
+          160,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D Blast BG T",
+        "texture": "PsionicGlow.blp",
+        "lifeSpan": 0.47999998927116394,
+        "speed": 250,
+        "latitude": 80,
+        "size": [
+          3,
+          8,
+          1
+        ],
+        "alpha": [
+          0,
+          255,
+          255
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 30
+              },
+              {
+                "msFromDeath": 250,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D T S GG",
+        "texture": "Textures\\GenericGlow2_64_blue.blp",
+        "lifeSpan": 0.36000001430511475,
+        "speed": 170,
+        "latitude": 180,
+        "size": [
+          1,
+          8,
+          1
+        ],
+        "alpha": [
+          0,
+          255,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 20
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D 90 Clouds",
+        "texture": "Textures\\Clouds8x8Mod.blp",
+        "lifeSpan": 0.8999999761581421,
+        "speed": 100,
+        "latitude": 90,
+        "size": [
+          30,
+          60,
+          80
+        ],
+        "alpha": [
+          0,
+          20,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 50
+              },
+              {
+                "msFromDeath": 150,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D Blast BG H",
+        "texture": "PsionicGlow.blp",
+        "lifeSpan": 0.47999998927116394,
+        "speed": 250,
+        "latitude": 80,
+        "size": [
+          8,
+          10,
+          1
+        ],
+        "alpha": [
+          0,
+          255,
+          255
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 50
+              },
+              {
+                "msFromDeath": 250,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Undershade",
+        "texture": "Textures\\Dust5ABlack.blp",
+        "lifeSpan": 0.44999998807907104,
+        "speed": 1,
+        "latitude": 1,
+        "size": [
+          10,
+          20,
+          120
+        ],
+        "alpha": [
+          255,
+          255,
+          5
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 62
+              },
+              {
+                "msFromDeath": 100,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D Ene",
+        "texture": "Textures\\Energy1.blp",
+        "lifeSpan": 0.36000001430511475,
+        "speed": 0,
+        "latitude": 0,
+        "size": [
+          1,
+          30,
+          100
+        ],
+        "alpha": [
+          0,
+          125,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 10
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/firebrand-shots.319649/originales/Firebrand Shots/Firebrand Shot Blue/Firebrand Shot Blue.mdx",
+    "sha256": "cd02d6c572af402c35505edb52a520ad6ea1d5866fa67b6f77e30b0a512dee4d",
+    "sequences": [
+      {
+        "name": "Stand",
+        "interval": [
+          100,
+          900
+        ],
+        "moveSpeed": 0,
+        "nonLooping": 0,
+        "rarity": 0,
+        "syncPoint": 0,
+        "extent": {
+          "boundsRadius": 0,
+          "min": [
+            -50,
+            0,
+            0
+          ],
+          "max": [
+            -50,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "name": "Birth",
+        "interval": [
+          1000,
+          1400
+        ],
+        "moveSpeed": 0,
+        "nonLooping": 1,
+        "rarity": 0,
+        "syncPoint": 0,
+        "extent": {
+          "boundsRadius": 0,
+          "min": [
+            -50,
+            0,
+            0
+          ],
+          "max": [
+            -50,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "name": "Death",
+        "interval": [
+          2000,
+          2800
+        ],
+        "moveSpeed": 0,
+        "nonLooping": 1,
+        "rarity": 0,
+        "syncPoint": 0,
+        "extent": {
+          "boundsRadius": 0,
+          "min": [
+            -50,
+            0,
+            0
+          ],
+          "max": [
+            -50,
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "deathEmitters": [
+      {
+        "name": "D Sparks Up T C",
+        "texture": "Textures\\Sparkle_Anim.blp",
+        "lifeSpan": 0.30000001192092896,
+        "speed": 600,
+        "latitude": 4,
+        "size": [
+          0,
+          24,
+          0
+        ],
+        "alpha": [
+          255,
+          255,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 40
+              },
+              {
+                "msFromDeath": 250,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D Glo",
+        "texture": "PsionicGlow.blp",
+        "lifeSpan": 0.27000001072883606,
+        "speed": 0,
+        "latitude": 0,
+        "size": [
+          80,
+          120,
+          80
+        ],
+        "alpha": [
+          0,
+          80,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 30
+              },
+              {
+                "msFromDeath": 200,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D 10 Clouds",
+        "texture": "Textures\\Clouds8x8Mod.blp",
+        "lifeSpan": 0.8999999761581421,
+        "speed": 300,
+        "latitude": 10,
+        "size": [
+          30,
+          50,
+          60
+        ],
+        "alpha": [
+          0,
+          24,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 30
+              },
+              {
+                "msFromDeath": 300,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D Blast BG H",
+        "texture": "PsionicGlow.blp",
+        "lifeSpan": 0.30000001192092896,
+        "speed": 570,
+        "latitude": 4,
+        "size": [
+          8,
+          30,
+          0
+        ],
+        "alpha": [
+          0,
+          255,
+          255
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 40
+              },
+              {
+                "msFromDeath": 250,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Undershade",
+        "texture": "Textures\\Dust5ABlack.blp",
+        "lifeSpan": 0.30000001192092896,
+        "speed": 1,
+        "latitude": 1,
+        "size": [
+          10,
+          20,
+          120
+        ],
+        "alpha": [
+          10,
+          150,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 33
+              },
+              {
+                "msFromDeath": 200,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D Sparks Up T C B W",
+        "texture": "Textures\\Sparkle_Anim.blp",
+        "lifeSpan": 0.27000001072883606,
+        "speed": 522,
+        "latitude": 4,
+        "size": [
+          0,
+          40,
+          0
+        ],
+        "alpha": [
+          255,
+          255,
+          255
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 30
+              },
+              {
+                "msFromDeath": 200,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D Sparks Up T W",
+        "texture": "Textures\\Sparkle_Anim.blp",
+        "lifeSpan": 0.3199999928474426,
+        "speed": 522,
+        "latitude": 3,
+        "size": [
+          0,
+          40,
+          0
+        ],
+        "alpha": [
+          255,
+          255,
+          255
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 40
+              },
+              {
+                "msFromDeath": 250,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "D Glo Smol",
+        "texture": "PsionicGlow.blp",
+        "lifeSpan": 0.27000001072883606,
+        "speed": 0,
+        "latitude": 0,
+        "size": [
+          36,
+          45,
+          36
+        ],
+        "alpha": [
+          0,
+          100,
+          0
+        ],
+        "emission": [
+          {
+            "interpolationType": 0,
+            "global": -1,
+            "keys": [
+              {
+                "msFromDeath": 0,
+                "rate": 30
+              },
+              {
+                "msFromDeath": 200,
+                "rate": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

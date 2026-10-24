@@ -1,0 +1,93 @@
+[
+  {
+    "p": "model.lights.0.flags",
+    "x": 0,
+    "y": 512
+  },
+  {
+    "p": "model.particleEmitters2.0.flags",
+    "x": 36864,
+    "y": 32768
+  },
+  {
+    "p": "model.particleEmitters2.1.flags",
+    "x": 36864,
+    "y": 32768
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.0.name",
+    "x": "KGTR",
+    "y": "KP2E"
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.0.frames.0",
+    "x": 0,
+    "y": 100
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.0.frames.1",
+    "y": 2000
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.0.values.0.0",
+    "x": 0,
+    "y": 24
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.0.values.0.1",
+    "x": 0
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.0.values.0.2",
+    "x": 0
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.0.values.1",
+    "y": [
+      24
+    ]
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.1.name",
+    "x": "KP2E",
+    "y": "KGTR"
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.1.frames.0",
+    "x": 100,
+    "y": 0
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.1.frames.1",
+    "x": 2000
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.1.values.0.0",
+    "x": 24,
+    "y": 0
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.1.values.0.1",
+    "y": 0
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.1.values.0.2",
+    "y": 0
+  },
+  {
+    "p": "model.particleEmitters2.2.animations.1.values.1",
+    "x": [
+      24
+    ]
+  },
+  {
+    "p": "model.particleEmitters2.2.flags",
+    "x": 561152,
+    "y": 557056
+  },
+  {
+    "p": "model.particleEmitters2.3.flags",
+    "x": 36864,
+    "y": 32768
+  }
+]

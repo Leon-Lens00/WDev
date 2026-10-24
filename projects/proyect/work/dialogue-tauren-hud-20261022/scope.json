@@ -1,0 +1,12 @@
+{
+  "base": "ce990503fcb35ab0672662d1fd31bf55cd26558ff2a2513d05cf835f2bcb0b46",
+  "target": "Classic1.27b SP1920x1080",
+  "reference": "otau standard, Classic OrcUnitStrings.txt and unitUI.slk verified",
+  "criteria": [
+    "native HUD reference captured",
+    "no visible arm stump in final aperture",
+    "head/face animated, body held in idle",
+    "UI Studio before final game comparison",
+    "own games closed"
+  ]
+}

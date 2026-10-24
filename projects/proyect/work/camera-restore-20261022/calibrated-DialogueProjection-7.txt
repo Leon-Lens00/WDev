@@ -1,0 +1,14 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "eye=2944.001,-6618.668,1597.996" )
+	call Preload( "target=2944.000,-5696.000,230.086" )
+	call Preload( "angles=1.571,5.306,1.222" )
+	call Preload( "requested=2944.001,-6436.144,1238.623 fly=1010.973" )
+	call Preload( "actual=2944.000,-6436.145,1238.623 fly=1010.973" )
+	call Preload( "bounds=-28672.000,-28672.000,8192.000,8192.000" )
+	call Preload( "depth=400.000 width=0.651 y=-0.425 page=3 cursor=414" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

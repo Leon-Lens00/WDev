@@ -1,0 +1,71 @@
+[
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+    "transitions": [
+      {
+        "action": "create",
+        "pass": true,
+        "seconds": 0.401
+      },
+      {
+        "action": "edit",
+        "pass": true,
+        "seconds": 0.401
+      },
+      {
+        "action": "delete",
+        "pass": true,
+        "seconds": 0.501
+      }
+    ],
+    "index_restored": true,
+    "original_files_unchanged": true,
+    "quick_check": "ok"
+  },
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+    "transitions": [
+      {
+        "action": "create",
+        "pass": true,
+        "seconds": 0.401
+      },
+      {
+        "action": "edit",
+        "pass": true,
+        "seconds": 0.501
+      },
+      {
+        "action": "delete",
+        "pass": true,
+        "seconds": 0.401
+      }
+    ],
+    "index_restored": true,
+    "original_files_unchanged": true,
+    "quick_check": "ok"
+  },
+  {
+    "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+    "transitions": [
+      {
+        "action": "create",
+        "pass": true,
+        "seconds": 0.401
+      },
+      {
+        "action": "edit",
+        "pass": true,
+        "seconds": 0.401
+      },
+      {
+        "action": "delete",
+        "pass": true,
+        "seconds": 0.401
+      }
+    ],
+    "index_restored": true,
+    "original_files_unchanged": true,
+    "quick_check": "ok"
+  }
+]

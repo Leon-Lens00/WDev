@@ -1,0 +1,512 @@
+{
+  "path": "war3map.wct",
+  "wrapper_magic": null,
+  "version": 1,
+  "comment": "Enter map-specific custom script code below.  This text will be included in the map script after variables are declared and before any trigger code.",
+  "global_custom_script": "//TESH.scrollpos=0\r\n//TESH.alwaysfold=0\r\n",
+  "global_vjass": {
+    "path": "war3map.wct#global",
+    "libraries": [],
+    "structs": [],
+    "modules": [],
+    "interfaces": [],
+    "keywords": [],
+    "functions": [],
+    "textmacros": [],
+    "runtextmacros": [],
+    "imports": [],
+    "rawcodes": [],
+    "blz_calls": [],
+    "get_local_player_count": 0
+  },
+  "trigger_count": 22,
+  "non_empty_trigger_count": 3,
+  "triggers": [
+    {
+      "index": 0,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-0",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 1,
+      "text": "//TESH.scrollpos=0\r\n//TESH.alwaysfold=0\r\n//=============================================================\r\n// Name: Missile\r\n// Version: 1.6.1\r\n// Description: A system for your projectile needs.\r\n// Author: BPower\r\n//\r\n// Written in JASS, API designed for usage with GUI.\r\n// Published on hiveworkshop.com\r\n//     - hiveworkshop.com/forums/spells-569/missile-gui-version-1-1-a-275718/\r\n//=============================================================\r\n// Before getting started make sure that you check \r\n// the settings in trigger Missile Configurate.\r\n//\r\n//     udg_Missile__DummyTypeId \r\n//        • Make sure you have Vexorians dummy.mdx imported.\r\n//        • Only units of this type id will be recycled. \r\n//\r\n//=============================================================\r\n//  Variable naming. \r\n//============================================================= \r\n// Variables which users shouldn't access have no underscore.\r\n// Array variables which are available at any time have one underscore _.\r\n// Scalar variables which are only available during events have two underscores __.\r\n// \r\n//=============================================================\r\n//  Missile API. \r\n//=============================================================  \r\n// Syntax for missile creation in GUI:\r\n//    1. Run trigger Missile Configurate <gen> \r\n//    2. Set properties via scalar variables.\r\n//    3. Run trigger Missile <gen>\r\n// JASS users may call the create and launch function directly.\r\n//\r\n// Missile operates with custom events.\r\n// This means that you have access to \r\n// a missile's properties within action functions\r\n// of the Missile trigger interface. \r\n//\r\n// \"udg_Missile__EventId\" indicates\r\n// which event trigger has been dispatched.\r\n//\r\n// \"udg_Missile__EventIndex\" is the array index\r\n// of the triggering missile.\r\n//\r\n// Avaliable events are:\r\n//\r\n//   1.) udg_EVENT_MISSILE_COLLIDE_UNIT\r\n//        • Runs when a missile collides with a unit.\r\n//\r\n//   2.) udg_EVENT_MISSILE_COLLIDE_DEST\r\n//        • Runs when a missile collides with a destructable.\r\n//\r\n//   3.) udg_EVENT_MISSILE_PERIODIC\r\n//        • Runs every missile timer interval.\r\n//\r\n//   4.) udg_EVENT_MISSILE_FINISH\r\n//        • Runs when a missile reaches its impact position.\r\n//\r\n//   5.) udg_EVENT_MISSILE_REMOVE\r\n//        • Runs when a missile is destroyed.\r\n//\r\n//   6.) udg_EVENT_MISSILE_NOTHING\r\n//        • Value of udg_Missile__EventId when accessed\r\n//          from outside a trigger action function.\r\n//\r\n// During every missile event you may use the \r\n// following GUI generated variables.\r\n// Every scalar variable has an equivalent array variable,\r\n// which you can read and use at any time. \r\n// For exmple: udg_Missile__Source vs. udg_Missile_Source[index]\r\n//\r\n// Trigger variables which fire Missile events:\r\n//\r\n//    trigger udg_Missile__OnCollideUnit            -    trigger array udg_Missile_OnUnit \r\n//    trigger udg_Missile__OnCollideDestructable    -    trigger array udg_Missile_OnDest\r\n//    trigger udg_Missile__OnPeridoic               -    trigger array udg_Missile_OnPeriodic\r\n//    trigger udg_Missile__OnRemove                 -    trigger array udg_Missile_OnRemove\r\n//    trigger udg_Missile__OnFinish                 -    trigger array udg_Missile_OnFinish\r\n//\r\n// Variables which mimic a function call:\r\n//\r\n//    location udg_Missile__Origin    \r\n//    location udg_Missile__Impact      \r\n//    boolean  udg_Missile__WantDestroy    -    boolean array udg_Missile_WantDestroy\r\n//    boolean  udg_Missile__Recycle        -    boolean array udg_Missile_Recycle\r\n//    real     udg_Missile__Scale          -    real    array udg_Missile_Scale\r\n//    real     udg_Missile__FlyTime        -    real    array udg_Missile_FlyTime ( Converts time in seconds to a vector lenght )\r\n//    real     udg_Missile__Model          -    string  array udg_Missile_Model   ( Converts a string path to a special effect )\r\n//    real     udg_Missile__Arc            -    real    array udg_Missile_Arc     ( Converts an arc in degree to height value )\r\n//    real     udg_Missile__Curve          -    real    array udg_Missile_Curve   ( Converts a curve in degree to an open value )\r\n//\r\n// Variables for read-only:\r\n//\r\n//    integer udg_Missile__EventId     \r\n//    integer udg_Missile__EventIndex  \r\n//    unit    udg_Missile__Dummy           -    unit array udg_Missile_Dummy\r\n//    real    udg_Missile__Angle           -    real array udg_Missile_Angle    ( In radians )\r\n//    real    udg_Missile__Distance        -    real array udg_Missile_Distance ( Total distance traveled )\r\n//\r\n// Variables for read and set.\r\n//\r\n//    unit    udg_Missile__Source          -    unit    array udg_Missile_Source\r\n//    unit    udg_Missile__Target          -    unit    array udg_Missile_Target    ( Enables homing behaviour towards a target unit )\r\n//    player  udg_Missile__Owner           -    unit    array udg_Missile_Owner     ( Pseudo-owner for better onCollide evaluation ) \r\n//    real    udg_Missile__ImpactZ         -    real    array udg_Missile_ImpactZ\r\n//    real    udg_Missile__OriginZ         -    real    array udg_Missile_OriginZ\r\n//    real    udg_Missile__Damage          -    real    array udg_Missile_Damage\r\n//    real    udg_Missile__Collision       -    real    array udg_Missile_Collision\r\n//    real    udg_Missile__Speed           -    real    array udg_Missile_Speed\r\n//    real    udg_Missile__Acceleration    -    real    array udg_Missile_Acceleration\r\n//    real    udg_Missile__Height          -    real    array udg_Missile_Height    ( Highest point of the parabola )\r\n//    real    udg_Missile__Open            -    real    array udg_Missile_Open      \r\n//    real    udg_Missile__Turn            -    real    array udg_Missile_Turn      ( Turn ratio per second )\r\n//    real    udg_Missile__Data            -    integer array udg_Missile_Data\r\n//\r\n//=============================================================\r\n// JASS user settings.\r\n//=============================================================\r\n\r\n// Set the timer timeout for projectile motion and trigger interface evaluation.\r\nconstant function Missile_GetTimerTimeout takes nothing returns real\r\n    return 0.031250000\r\nendfunction\r\n\r\n// Set the maximum widget collision radius in this map.\r\n// By default the largest pathing is the human townhall with 196.\r\nconstant function Missile_GetMaxCollision takes nothing returns real\r\n    return 196.\r\nendfunction\r\n\r\n// Set the owning player of all dummy units.\r\n// It should be a neutral player in your map.\r\nconstant function Missile_GetDummyOwner takes nothing returns player\r\n    return Player(PLAYER_NEUTRAL_PASSIVE)\r\nendfunction\r\n\r\n// Fictional z height for units in your map.\r\nfunction Missile_GetUnitBodySize takes unit whichUnit returns real\r\n    return 100.\r\nendfunction\r\n\r\n// Fictional z height for destructables in your map.\r\nfunction Missile_GetDestructableHeight takes destructable whichDest returns real\r\n    return GetDestructableOccluderHeight(whichDest)\r\nendfunction\r\n\r\n// Fictional value for the maximum effect death time in your map.\r\nconstant function Missile_GetEffectDeathTime takes nothing returns integer\r\n    return 3\r\nendfunction\r\n\r\n//=============================================================\r\n// Required utility functions.\r\n//=============================================================\r\n\r\n// Debugging Missile.\r\n// Change the condition from \"true\" to \"false\" or delete \r\n// the content of this function to disable error messages.\r\nfunction Missile_ErrorMessage takes boolean expr, string func, string object, integer index, string text returns nothing\r\n    local string orange = \"|cffffa500\" \r\n    local string blue   = \"|cff99b4d1\"\r\n    local string next   = \"\\n\"\r\n    local string space  = \"    \"\r\n    local string str    = space + next\r\n    if expr and true then\r\n        set str = str +                       orange + \"Error in Trigger Missile|r\" \r\n        set str = str + next + next + space + orange + \"Function: |r\"    + blue + func       + \"|r\" \r\n        set str = str        + next + space + orange + \"Object: |r\"      + blue + object     + \"|r\"\r\n        set str = str        + next + space + orange + \"Index: |r\"       + blue + I2S(index) + \"|r\"\r\n        set str = str        + next + space + orange + \"Description: |r\" + blue + text       + \"|r\"\r\n        call DisplayTimedTextToPlayer(GetLocalPlayer(), 0.00, 0.00, 3600.00, str)\r\n    endif\r\nendfunction\r\n\r\n// Returns the proper Z height of point p(x/y).\r\nfunction Missile_GetLocZ takes real x, real y returns real\r\n    call MoveLocation(udg_MissileLocZ, x, y)\r\n    return GetLocationZ(udg_MissileLocZ)\r\nendfunction\r\n\r\nfunction Missile_GetArc takes integer index returns real\r\n    return Tan(udg_Missile__Arc*bj_DEGTORAD)*udg_Missile_AB_Distance[index]/4\r\nendfunction\r\n\r\nfunction Missile_GetCurve takes integer index returns real\r\n    return Tan(udg_Missile__Curve*bj_DEGTORAD)*udg_Missile_AB_Distance[index]\r\nendfunction\r\n\r\n// Converts fly time to missile speed.\r\n// Doesn't take acceleration into account.\r\nfunction Missile_GetFlyTime takes integer index returns real                \r\n    return (udg_Missile_AB_Distance[index] - udg_Missile_AB_Traveled[index])/RMaxBJ(0.0000001, udg_Missile__FlyTime)\r\nendfunction\r\n\r\nfunction Missile_Math takes integer index returns nothing\r\n    local real dx\r\n    local real dy\r\n    local real iz// Allows to set an impact offset in z.\r\n    \r\n    if udg_Missile_Target[index] != null and GetUnitTypeId(udg_Missile_Target[index]) != 0 then\r\n        set udg_Missile_OriginX[index] = GetUnitX(udg_Missile_Dummy[index])\r\n        set udg_Missile_OriginY[index] = GetUnitY(udg_Missile_Dummy[index])\r\n        set udg_Missile_OriginZ[index] = GetUnitFlyHeight(udg_Missile_Dummy[index])\r\n        set udg_Missile_ImpactX[index] = GetUnitX(udg_Missile_Target[index])\r\n        set udg_Missile_ImpactY[index] = GetUnitY(udg_Missile_Target[index])\r\n        set udg_Missile_AB_Traveled[index] = 0.00\r\n        // Once you set a homing target you'll lose arc & curve settings.\r\n        // That may get patched in the next version update.\r\n        set udg_Missile_Open[index] = 0.00\r\n        set udg_Missile_Height[index] = 0.00\r\n        set udg_Missile_Curve[index] = 0.00\r\n        set udg_Missile_Arc[index] = 0.00\r\n        set iz = GetUnitFlyHeight(udg_Missile_Target[index]) + udg_Missile_ImpactZ[index]\r\n    else\r\n        set iz = udg_Missile_ImpactZ[index]\r\n    endif\r\n    \r\n    loop\r\n        set dx = udg_Missile_OriginX[index] - udg_Missile_ImpactX[index]\r\n        set dy = udg_Missile_OriginY[index] - udg_Missile_ImpactY[index]\r\n        set dx = dx*dx + dy*dy\r\n        set dy = SquareRoot(dx)\r\n        exitwhen dx != 0.00 and dy != 0.00// Check for parabola limits.\r\n        set udg_Missile_OriginX[index] = udg_Missile_OriginX[index] + 0.01\r\n    endloop    \r\n    set udg_Missile_A_Z[index] = Missile_GetLocZ(udg_Missile_OriginX[index], udg_Missile_OriginY[index])\r\n    set udg_Missile_B_Z[index] = Missile_GetLocZ(udg_Missile_ImpactX[index], udg_Missile_ImpactY[index]) \r\n    set udg_Missile_AB_Square[index] = dx\r\n    set udg_Missile_AB_Distance[index] = dy\r\n    set udg_Missile_AB_Angle[index] = Atan2(udg_Missile_ImpactY[index] - udg_Missile_OriginY[index], udg_Missile_ImpactX[index] - udg_Missile_OriginX[index])\r\n    set udg_Missile_AB_Pitch[index] = ((iz + udg_Missile_B_Z[index]) - (udg_Missile_OriginZ[index] + udg_Missile_A_Z[index]))/dy\r\nendfunction\r\n\r\n// Doesn't include all array types. Only those which require a reset.\r\nfunction Missile_ResetArrays takes integer index returns nothing\r\n    set udg_Missile_AB_Traveled[index]  = 0.00\r\n    set udg_Missile_Acceleration[index] = 0.00\r\n    set udg_Missile_Arc[index]          = 0.00\r\n    set udg_Missile_Collision[index]    = 0.00\r\n    set udg_Missile_Curve[index]        = 0.00\r\n    set udg_Missile_CurveX[index]       = 0.00\r\n    set udg_Missile_CurveY[index]       = 0.00\r\n    set udg_Missile_Damage[index]       = 0.00\r\n    set udg_Missile_Data[index]         = 0\r\n    set udg_Missile_Distance[index]     = 0.00\r\n    set udg_Missile_Dummy[index]        = null\r\n    set udg_Missile_Effect[index]       = null\r\n    set udg_Missile_Model[index]        = null\r\n    set udg_Missile_FlyTime[index]      = 0.00\r\n    set udg_Missile_Height[index]       = 0.00\r\n    set udg_Missile_OriginZ[index]      = 0.00\r\n    set udg_Missile_ImpactZ[index]      = 0.00\r\n    set udg_Missile_OnUnit[index]       = null\r\n    set udg_Missile_OnDest[index]       = null\r\n    set udg_Missile_OnPeriodic[index]   = null\r\n    set udg_Missile_OnFinish[index]     = null\r\n    set udg_Missile_OnRemove[index]     = null\r\n    set udg_Missile_Open[index]         = 0.00\r\n    set udg_Missile_Owner[index]        = null\r\n    set udg_Missile_Recycle[index]      = false\r\n    set udg_Missile_Scale[index]        = 1.00\r\n    set udg_Missile_Source[index]       = null\r\n    set udg_Missile_Speed[index]        = 0.00\r\n    set udg_Missile_Target[index]       = null\r\n    set udg_Missile_Turn[index]         = 0.00\r\n    set udg_Missile_WantDestroy[index]  = false\r\nendfunction\r\n\r\nfunction Missile_SaveUserData takes integer index returns nothing\r\n    local boolean math = false\r\n    \r\n    set udg_Missile_OnUnit[index]       = udg_Missile__OnCollideUnit\r\n    set udg_Missile_OnDest[index]       = udg_Missile__OnCollideDestructable\r\n    set udg_Missile_OnPeriodic[index]   = udg_Missile__OnPeriodic\r\n    set udg_Missile_OnFinish[index]     = udg_Missile__OnFinish\r\n    set udg_Missile_OnRemove[index]     = udg_Missile__OnRemove\r\n    set udg_Missile_Source[index]       = udg_Missile__Source \r\n    set udg_Missile_Target[index]       = udg_Missile__Target\r\n    set udg_Missile_Owner[index]        = udg_Missile__Owner\r\n    set udg_Missile_Data[index]         = udg_Missile__Data\r\n    set udg_Missile_Collision[index]    = udg_Missile__Collision\r\n    set udg_Missile_WantDestroy[index]  = udg_Missile__WantDestroy\r\n    set udg_Missile_Damage[index]       = udg_Missile__Damage\r\n    set udg_Missile_Acceleration[index] = udg_Missile__Acceleration\r\n    set udg_Missile_Turn[index]         = udg_Missile__Turn\r\n    \r\n    // The user set a new origin point.\r\n    if udg_Missile__Origin != null then\r\n        set udg_Missile_OriginX[index] = GetLocationX(udg_Missile__Origin) \r\n        set udg_Missile_OriginY[index] = GetLocationY(udg_Missile__Origin) \r\n        call RemoveLocation(udg_Missile__Origin)\r\n        set udg_Missile__Origin = null\r\n        set math = true\r\n    endif\r\n    if udg_Missile_OriginZ[index] != udg_Missile__OriginZ then\r\n        set udg_Missile_OriginZ[index] = udg_Missile__OriginZ\r\n        set math = true\r\n    endif\r\n\r\n    if udg_Missile__Impact != null then\r\n        set udg_Missile_ImpactX[index] = GetLocationX(udg_Missile__Impact) \r\n        set udg_Missile_ImpactY[index] = GetLocationY(udg_Missile__Impact)\r\n        call RemoveLocation(udg_Missile__Impact)\r\n        set udg_Missile__Impact = null\r\n        set math = true\r\n    endif\r\n    if udg_Missile_ImpactZ[index] != udg_Missile__ImpactZ then\r\n        set udg_Missile_ImpactZ[index] = udg_Missile__ImpactZ\r\n        set math = true\r\n    endif\r\n    if math then\r\n        call Missile_Math(index)\r\n    endif\r\n\r\n    // The user defined a new model.\r\n    if udg_Missile_Model[index] != udg_Missile__Model then\r\n        set udg_Missile_Model[index] = udg_Missile__Model\r\n        if udg_Missile_Effect[index] != null then\r\n            call DestroyEffect(udg_Missile_Effect[index])\r\n        endif\r\n        if StringLength(udg_Missile__Model) > 0 then\r\n            set udg_Missile_Effect[index] = AddSpecialEffectTarget(udg_Missile__Model, udg_Missile_Dummy[index], \"origin\")\r\n        else\r\n            set udg_Missile_Effect[index] = null\r\n        endif\r\n    endif\r\n    \r\n    // Default scaling on Missile_Create is 1.00.\r\n    if udg_Missile_Scale[index] != udg_Missile__Scale then\r\n        set udg_Missile_Scale[index] = udg_Missile__Scale\r\n        call SetUnitScale(udg_Missile_Dummy[index], udg_Missile__Scale, 0.00, 0.00)\r\n    endif\r\n    \r\n    if udg_Missile_Curve[index] != udg_Missile__Curve then\r\n        set udg_Missile_Curve[index] = udg_Missile__Curve\r\n        set udg_Missile_Open[index] = Missile_GetCurve(index)\r\n    else\r\n        set udg_Missile_Open[index] = udg_Missile__Open\r\n    endif\r\n\r\n    if udg_Missile_Arc[index] != udg_Missile__Arc then\r\n        set udg_Missile_Arc[index] = udg_Missile__Arc\r\n        set udg_Missile_Height[index] = Missile_GetArc(index)\r\n    else\r\n        set udg_Missile_Height[index] = udg_Missile__Height\r\n    endif\r\n\r\n    if udg_Missile_FlyTime[index] != udg_Missile__FlyTime then\r\n        set udg_Missile_FlyTime[index] = udg_Missile__FlyTime\r\n        set udg_Missile_Speed[index] = Missile_GetFlyTime(index)\r\n    else\r\n        set udg_Missile_Speed[index] = udg_Missile__Speed\r\n    endif\r\nendfunction\r\n\r\nfunction Missile_LoadData takes integer index returns nothing\r\n    set udg_Missile__Index                 = index\r\n\r\n    // Load event triggers.\r\n    set udg_Missile__OnCollideUnit         = udg_Missile_OnUnit[index]\r\n    set udg_Missile__OnCollideDestructable = udg_Missile_OnDest[index]\r\n    set udg_Missile__OnPeriodic            = udg_Missile_OnPeriodic[index]\r\n    set udg_Missile__OnFinish              = udg_Missile_OnFinish[index]\r\n    set udg_Missile__OnRemove              = udg_Missile_OnRemove[index]\r\n    \r\n    // Load other handle types.\r\n    set udg_Missile__Dummy                 = udg_Missile_Dummy[index]\r\n    set udg_Missile__Source                = udg_Missile_Source[index] \r\n    set udg_Missile__Target                = udg_Missile_Target[index]\r\n    set udg_Missile__Owner                 = udg_Missile_Owner[index]\r\n    \r\n    set udg_Missile__Damage                = udg_Missile_Damage[index]\r\n    set udg_Missile__Collision             = udg_Missile_Collision[index] \r\n    set udg_Missile__Model                 = udg_Missile_Model[index] \r\n    set udg_Missile__Data                  = udg_Missile_Data[index]\r\n    set udg_Missile__Scale                 = udg_Missile_Scale[index]\r\n    set udg_Missile__WantDestroy           = udg_Missile_WantDestroy[index]\r\n    \r\n    set udg_Missile__Speed                 = udg_Missile_Speed[index]\r\n    set udg_Missile__Acceleration          = udg_Missile_Acceleration[index]\r\n    set udg_Missile__Open                  = udg_Missile_Open[index]\r\n    set udg_Missile__Turn                  = udg_Missile_Turn[index]\r\n    set udg_Missile__Height                = udg_Missile_Height[index]\r\n    set udg_Missile__Angle                 = udg_Missile_Angle[index]\r\n    set udg_Missile__Distance              = udg_Missile_Distance[index]\r\n    set udg_Missile__Arc                   = udg_Missile_Arc[index]\r\n    set udg_Missile__Curve                 = udg_Missile_Curve[index]\r\n    set udg_Missile__FlyTime               = udg_Missile_FlyTime[index]\r\n    \r\n    set udg_Missile__OriginZ               = udg_Missile_OriginZ[index]\r\n    set udg_Missile__ImpactZ               = udg_Missile_ImpactZ[index]\r\nendfunction\r\n\r\nfunction Missile_ResetScalars takes nothing returns nothing\r\n    if udg_Missile__Origin != null then\r\n        call RemoveLocation(udg_Missile__Origin)\r\n        set udg_Missile__Origin = null\r\n    endif\r\n    if udg_Missile__Impact != null then\r\n        call RemoveLocation(udg_Missile__Origin)\r\n        set udg_Missile__Impact = null\r\n    endif\r\n    set udg_Missile__WantDestroy           = false\r\n    set udg_Missile__Recycle               = false\r\n    set udg_Missile__OnCollideUnit         = null\r\n    set udg_Missile__OnPeriodic            = null\r\n    set udg_Missile__OnFinish              = null\r\n    set udg_Missile__OnCollideDestructable = null\r\n    set udg_Missile__OnRemove              = null\r\n    set udg_Missile__Dummy                 = null\r\n    set udg_Missile__Source                = null\r\n    set udg_Missile__Target                = null\r\n    set udg_Missile__Owner                 = null\r\n    set udg_Missile__Model                 = null\r\n    set udg_Missile__Angle                 = 0.00\r\n    set udg_Missile__Collision             = 0.00\r\n    set udg_Missile__Damage                = 0.00\r\n    set udg_Missile__Speed                 = 0.00\r\n    set udg_Missile__Acceleration          = 0.00\r\n    set udg_Missile__Open                  = 0.00\r\n    set udg_Missile__Height                = 0.00\r\n    set udg_Missile__Turn                  = 0.00\r\n    set udg_Missile__Distance              = 0.00\r\n    set udg_Missile__ImpactZ               = 0.00\r\n    set udg_Missile__OriginZ               = 0.00\r\n    set udg_Missile__Arc                   = 0.00\r\n    set udg_Missile__Curve                 = 0.00\r\n    set udg_Missile__FlyTime               = 0.00\r\n    set udg_Missile__Scale                 = 1.00\r\n    set udg_Missile__EventId               = udg_EVENT_MISSILE_NOTHING\r\n    set udg_Missile__Data                  = 0\r\n    set udg_Missile__Index                 = 0\r\nendfunction\r\n\r\n//=============================================================\r\n// Wrapper functions.\r\n//=============================================================\r\n\r\nfunction Missile_RunTrigger takes integer index, trigger trig, integer eventId returns boolean\r\n    set udg_Missile__EventId = eventId\r\n    set udg_Missile__EventIndex = index\r\n    call Missile_LoadData(index)\r\n    if TriggerEvaluate(trig) then\r\n        call TriggerExecute(trig)\r\n        call Missile_SaveUserData(index)\r\n    endif\r\n    // Just in case the user accidently changes udg_Missile__Index.\r\n    set udg_Missile__EventIndex = 0\r\n    set udg_Missile__EventId = udg_EVENT_MISSILE_NOTHING\r\n    return udg_Missile__WantDestroy\r\nendfunction  \r\n\r\n//=============================================================\r\n// Delayed dummy recycler. Data structure stack.\r\n//=============================================================\r\n// According to my tests:\r\n//    - Using KillUnit(unit) will remove the 'Aloc' effect for group enumerations.\r\n//    - Using UnitApplyTimedLife(unit, 'BTLF', 0.01) keeps on dropping the fps until you hit 0.\r\n//\r\n// The cleanest approach appears to be RemoveUnit(unit). Using a stack with timed dummy\r\n// recycling helps us to properly display the attached special effects.\r\n\r\nfunction Missile_UpdateStack takes nothing returns nothing\r\n    local integer index = 0\r\n    \r\n    loop\r\n        exitwhen index == udg_MissileDummyCount\r\n\r\n        if udg_MissileDummyTime[index] <= 0 then\r\n            call RemoveUnit(udg_MissileDummyStack[index])\r\n            \r\n            set udg_MissileDummyCount = udg_MissileDummyCount - 1\r\n            if  udg_MissileDummyCount == 0 then\r\n                set udg_MissileDummyStack[index] = null\r\n                call PauseTimer(udg_MissileDummyTimer)\r\n            else\r\n                set udg_MissileDummyStack[index] = udg_MissileDummyStack[udg_MissileDummyCount]\r\n                set udg_MissileDummyTime[index] = udg_MissileDummyTime[udg_MissileDummyCount]\r\n                set udg_MissileDummyStack[udg_MissileDummyCount] = null\r\n            endif\r\n        else\r\n            set udg_MissileDummyTime[index] = udg_MissileDummyTime[index] - 1\r\n            set index = index + 1\r\n        endif\r\n    endloop\r\nendfunction\r\n\r\nfunction Missile_RecycleDummy takes unit dummy returns nothing\r\n    if GetUnitTypeId(dummy) == udg_Missile__DummyTypeId then\r\n        \r\n        set udg_MissileDummyTime[udg_MissileDummyCount] = Missile_GetEffectDeathTime()// Approximate death time for special effects.\r\n        set udg_MissileDummyStack[udg_MissileDummyCount] = dummy\r\n        \r\n        if udg_MissileDummyCount == 0 then\r\n            call TimerStart(udg_MissileDummyTimer, 1., true, function Missile_UpdateStack)\r\n        endif\r\n        set udg_MissileDummyCount = udg_MissileDummyCount + 1\r\n    endif\r\nendfunction\r\n\r\n//=============================================================\r\n// Missile structure. Static unique doubly linked list.\r\n//=============================================================\r\n\r\nfunction Missile_SetListNextNode takes integer node, integer nextNode returns nothing\r\n    set udg_MissileNextNode[node] = nextNode\r\nendfunction\r\nconstant function Missile_GetListNextNode takes integer node returns integer\r\n    return udg_MissileNextNode[node]\r\nendfunction\r\n\r\nfunction Missile_SetListPrevNode takes integer node, integer prevNode returns nothing\r\n    set udg_MissilePrevNode[node] = prevNode\r\nendfunction\r\nconstant function Missile_GetListPrevNode takes integer node returns integer\r\n    return udg_MissilePrevNode[node]\r\nendfunction\r\n\r\nfunction Missile_SetListFirstNode takes integer node returns nothing\r\n    set udg_MissileNextNode[0] = node\r\nendfunction\r\nconstant function Missile_GetListFirstNode takes nothing returns integer\r\n    return udg_MissileNextNode[0]\r\nendfunction\r\n\r\nfunction Missile_SetListLastNode takes integer node returns nothing\r\n    set udg_MissilePrevNode[0] = node\r\nendfunction\r\nconstant function Missile_GetListLastNode takes nothing returns integer\r\n    return udg_MissilePrevNode[0]\r\nendfunction\r\n\r\nfunction Missile_ListRemoveNode takes integer node returns nothing\r\n    call Missile_SetListNextNode(Missile_GetListPrevNode(node), Missile_GetListNextNode(node))\r\n    call Missile_SetListPrevNode(Missile_GetListNextNode(node), Missile_GetListPrevNode(node))\r\nendfunction\r\n\r\nfunction Missile_ListPushNode takes integer node returns nothing\r\n    call Missile_SetListPrevNode(Missile_GetListFirstNode(), node)\r\n    call Missile_SetListNextNode(node, Missile_GetListFirstNode())\r\n    call Missile_SetListFirstNode(node)\r\n    call Missile_SetListPrevNode(node, 0)\r\nendfunction\r\n\r\nfunction Missile_AllocateNode takes nothing returns integer\r\n    local integer node = udg_MissileRecycler[0]\r\n    \r\n    if node == 0 then\r\n        set node = udg_MissileNodes + 1\r\n           // Overflow\r\n        if node == JASS_MAX_ARRAY_SIZE then\r\n            call Missile_ErrorMessage(true, \"Missile_AllocateNode\", \"udg_MissileNodes\", JASS_MAX_ARRAY_SIZE, \"Stack overflow!\")\r\n            return 0\r\n        endif\r\n    \r\n        set udg_MissileNodes = node\r\n    else\r\n        set udg_MissileRecycler[0] = udg_MissileRecycler[node]\r\n    endif\r\n    \r\n    set udg_MissileAllocated[node] = true\r\n    \r\n    return node\r\nendfunction\r\n\r\nfunction Missile_RecycleNode takes integer node returns nothing\r\n    set udg_MissileAllocated[node] = false\r\n    set udg_MissileRecycler[node] = udg_MissileRecycler[0]\r\n    set udg_MissileRecycler[0] = node\r\nendfunction\r\n\r\n//=================================================================\r\n// Destructor & Cleanup.\r\n//=================================================================\r\n\r\nfunction Missile_Clear takes integer index returns nothing\r\n    if udg_Missile_Effect[index] != null then\r\n        call DestroyEffect(udg_Missile_Effect[index])\r\n    endif\r\n    call Missile_RecycleDummy(udg_Missile_Dummy[index])\r\n    call Missile_ResetArrays(index)\r\n    call FlushChildHashtable(udg_MissileHash, index)\r\nendfunction\r\n\r\nfunction Missile_Destroy takes integer index returns nothing\r\n    if udg_MissileAllocated[index] then\r\n        if udg_MissileLaunched[index] then\r\n            if udg_Missile_OnRemove[index] != null then\r\n                call Missile_RunTrigger(index, udg_Missile_OnRemove[index], udg_EVENT_MISSILE_REMOVE)\r\n            endif\r\n            \r\n            call Missile_ListRemoveNode(index)\r\n            if Missile_GetListFirstNode() == 0 then\r\n                call PauseTimer(udg_MissileTimer)\r\n            endif\r\n            set udg_MissileLaunched[index] = false \r\n        endif\r\n        \r\n        call Missile_Clear(index)\r\n        call Missile_RecycleNode(index)\r\n    else\r\n        call Missile_ErrorMessage(true, \"Missile_Destroy\", \"udg_MissileAllocated\", index, \"Attempt to destroy invalid node!\")\r\n    endif\r\nendfunction\r\n\r\n//=============================================================\r\n// Widget collision code.\r\n//=============================================================\r\n\r\n// For a rectangle collision z values are\r\n// very inaccurate, hence they are completly ignored.\r\nfunction Missile_IsWidgetInRectangleRad takes integer index, widget w returns boolean\r\n    local real wx = GetWidgetX(w)\r\n    local real wy = GetWidgetY(w) \r\n    local real dx = udg_Missile_PosX[index] - udg_Missile_PrevX[index]\r\n    local real dy = udg_Missile_PosY[index] - udg_Missile_PrevY[index]\r\n    local real s  = (dx*(wx - udg_Missile_PrevX[index]) + dy*(wy - udg_Missile_PrevY[index]))/RMaxBJ(0.0001, (dx*dx + dy*dy))\r\n    if s < 0.00 then\r\n        set s = 0.00\r\n    elseif s > 1.00 then\r\n        set s = 1.00\r\n    endif\r\n    set dx = (udg_Missile_PrevX[index] + s*dx) - wx\r\n    set dy = (udg_Missile_PrevY[index] + s*dy) - wy\r\n    return dx*dx + dy*dy <= udg_Missile_Collision[index]*udg_Missile_Collision[index] \r\nendfunction\r\n                                                    \r\nfunction Missile_IsWidgetInRange takes integer index, widget w, real wz, real distance returns boolean\r\n    local real wx = GetWidgetX(w)\r\n    local real wy = GetWidgetY(w)\r\n    local real dz = Missile_GetLocZ(wx, wy) - udg_Missile_TerrainZ[index]\r\n    return IsUnitInRangeXY(udg_Missile_Dummy[index], wx, wy, distance) and dz + wz >= udg_Missile_PosZ[index] and dz <= udg_Missile_PosZ[index] + distance\r\nendfunction\r\n\r\nfunction Missile_SetRectRectangle takes integer index returns rect\r\n    local real x1 = udg_Missile_PrevX[index] \r\n    local real y1 = udg_Missile_PrevY[index]\r\n    local real x2 = udg_Missile_PosX[index]\r\n    local real y2 = udg_Missile_PosY[index]\r\n    local real d = udg_Missile_Collision[index] + Missile_GetMaxCollision()\r\n    // What is min, what is max ...\r\n    if x1 < x2 then\r\n        if y1 < y2 then\r\n            call SetRect(udg_MissileRect, x1 - d, y1 - d, x2 + d, y2 + d)\r\n        else\r\n            call SetRect(udg_MissileRect, x1 - d, y2 - d, x2 + d, y1 + d)\r\n        endif\r\n    else\r\n        if y1 < y2 then\r\n            call SetRect(udg_MissileRect, x2 - d, y1 - d, x1 + d, y2 + d)\r\n        else\r\n            call SetRect(udg_MissileRect, x2 - d, y2 - d, x1 + d, y1 + d)\r\n        endif\r\n    endif \r\n    return udg_MissileRect\r\nendfunction\r\n\r\nfunction Missile_SetRectCircle takes integer index returns rect\r\n    local real x = udg_Missile_PosX[index]\r\n    local real y = udg_Missile_PosY[index] \r\n    local real d = udg_Missile_Collision[index] + Missile_GetMaxCollision()\r\n    call SetRect(udg_MissileRect, x - d, y - d, x + d, y + d)\r\n    return udg_MissileRect\r\nendfunction\r\n\r\nfunction Missile_RunUnitCollision takes integer index returns nothing\r\n    local real    size      = udg_Missile_Collision[index]\r\n    local boolean rectangle = size < udg_Missile_Speed[index]*Missile_GetTimerTimeout()\r\n    local real    collideZ\r\n    local boolean hit \r\n    local unit    u\r\n    \r\n    if rectangle then\r\n        call GroupEnumUnitsInRect(udg_MissileGroup, Missile_SetRectRectangle(index), null)\r\n    else\r\n        call GroupEnumUnitsInRange(udg_MissileGroup, udg_Missile_PosX[index], udg_Missile_PosY[index], size + Missile_GetMaxCollision(), null)\r\n    endif\r\n        \r\n    loop\r\n        set u = FirstOfGroup(udg_MissileGroup)\r\n        exitwhen u == null\r\n        call GroupRemoveUnit(udg_MissileGroup, u)\r\n        // Chech if missile already hit this unit.\r\n        if not HaveSavedHandle(udg_MissileHash, index, GetHandleId(u)) then\r\n            set hit = false\r\n\r\n            // Evaluate rectangle collision.\r\n            if rectangle then \r\n                set hit = Missile_IsWidgetInRectangleRad(index, u)   \r\n                \r\n            // Evaluate circular collision.\r\n            elseif IsUnitInRange(u, udg_Missile_Dummy[index], size) then\r\n                set collideZ = Missile_GetLocZ(GetUnitX(u), GetUnitY(u)) + GetUnitFlyHeight(u) - udg_Missile_TerrainZ[index]\r\n                set hit = (collideZ + Missile_GetUnitBodySize(u) >= udg_Missile_PosZ[index] - size) and (collideZ <= udg_Missile_PosZ[index] + size)\r\n            endif\r\n            \r\n            if hit then\r\n                call SaveUnitHandle(udg_MissileHash, index, GetHandleId(u), u)\r\n                set udg_Missile__UnitHit = u\r\n                if Missile_RunTrigger(index, udg_Missile_OnUnit[index], udg_EVENT_MISSILE_COLLIDE_UNIT) then\r\n                    call Missile_Destroy(index)\r\n                    exitwhen true\r\n                endif\r\n            endif\r\n        endif\r\n    endloop\r\n        \r\n    set u = null\r\n    set udg_Missile__UnitHit = null\r\nendfunction\r\n\r\nfunction Missile_EnumDestructables takes nothing returns nothing\r\n    local integer index = udg_Missile__Index\r\n    local destructable d = GetEnumDestructable() \r\n    local boolean hit\r\n    \r\n    // Enum trigger action threads can't be canceled. Therefore \r\n    // the code must check for each trigger execution if the index is still allocated.\r\n    if udg_MissileAllocated[index] and not HaveSavedHandle(udg_MissileHash, index, GetHandleId(d)) then\r\n        set hit = false\r\n            \r\n        // Run rectangle collision.\r\n        if udg_Missile_Collision[index] < udg_Missile_Speed[index]*Missile_GetTimerTimeout() then\r\n            set hit = Missile_IsWidgetInRectangleRad(index, d) \r\n        else\r\n            // Run circular collision.\r\n            set hit = Missile_IsWidgetInRange(index, d, Missile_GetDestructableHeight(d), udg_Missile_Collision[index])\r\n        endif\r\n            \r\n        if hit then\r\n            call SaveDestructableHandle(udg_MissileHash, index, GetHandleId(d), d)\r\n            set udg_Missile__DestructableHit = d\r\n            if Missile_RunTrigger(index, udg_Missile_OnDest[index], udg_EVENT_MISSILE_COLLIDE_DEST) then\r\n                call Missile_Destroy(index)\r\n            endif\r\n            set udg_Missile__DestructableHit = null\r\n        endif\r\n    endif\r\n    \r\n    set d = null\r\nendfunction\r\n\r\nfunction Missile_RunDestructableCollision takes integer index returns nothing\r\n    set udg_Missile__Index = index\r\n    if udg_Missile_Collision[index] < udg_Missile_Speed[index]*Missile_GetTimerTimeout() then\r\n        call EnumDestructablesInRect(Missile_SetRectRectangle(index), null, function Missile_EnumDestructables)\r\n    else\r\n        call EnumDestructablesInRect(Missile_SetRectCircle(index), null, function Missile_EnumDestructables)\r\n    endif\r\nendfunction\r\n\r\n//=============================================================\r\n// Core. \r\n//=============================================================\r\n\r\nfunction Missile_UpdatePosition takes integer index returns nothing\r\n    local real velocity = udg_Missile_Speed[index]*Missile_GetTimerTimeout()\r\n    local real turn     = udg_Missile_Turn[index]*Missile_GetTimerTimeout()\r\n    local unit missile  = udg_Missile_Dummy[index]\r\n    local real posX     = GetUnitX(missile)\r\n    local real posY     = GetUnitY(missile)\r\n    local real posZ     \r\n    local real angle \r\n    local real point // Current point on the parabola curve.\r\n    local real pitch\r\n    local real square\r\n    local real distance\r\n    local real curveX\r\n    local real curveY\r\n    \r\n    // Save previous, respectively current missile position.\r\n    // This is required for a possible rectangle collision.\r\n    set udg_Missile_PrevX[index] = posX\r\n    set udg_Missile_PrevY[index] = posY\r\n    \r\n    // For further calculations local real velocity is used instead of speed[index]. \r\n    set udg_Missile_Speed[index] = udg_Missile_Speed[index] + udg_Missile_Acceleration[index]\r\n    \r\n    // Update missile guidance to its intended target.\r\n    if udg_Missile_Target[index] != null then\r\n        if GetUnitTypeId(udg_Missile_Target[index]) == 0 then\r\n            set udg_Missile_Target[index] = null\r\n        else\r\n            call Missile_Math(index)\r\n        endif\r\n    endif\r\n    \r\n    // For read-abilty improvement, eventually also performance.\r\n    set square = udg_Missile_AB_Square[index]\r\n    set distance = udg_Missile_AB_Distance[index]\r\n    set point = udg_Missile_AB_Traveled[index]\r\n\r\n    // Update the missile angle dependant on the turn ratio.\r\n    if turn != 0.00 and Cos(udg_Missile_Angle[index] - udg_Missile_AB_Angle[index]) < Cos(turn) then\r\n        if Sin(udg_Missile_AB_Angle[index] - udg_Missile_Angle[index]) < 0.00 then\r\n            set udg_Missile_Angle[index] = udg_Missile_Angle[index] - turn\r\n        else\r\n            set udg_Missile_Angle[index] = udg_Missile_Angle[index] + turn\r\n        endif\r\n    else\r\n        set udg_Missile_Angle[index] = udg_Missile_AB_Angle[index]\r\n    endif\r\n\r\n    // Update the missile point on the parabola.\r\n    set udg_Missile_Recycle[index] = point + velocity >= distance\r\n\r\n    if udg_Missile_Recycle[index] then\r\n        set udg_Missile_Distance[index] = udg_Missile_Distance[index] + distance - point\r\n        set point = udg_Missile_AB_Distance[index]\r\n    else\r\n        set udg_Missile_Distance[index] = udg_Missile_Distance[index] + velocity\r\n        set point = point + velocity\r\n    endif\r\n    set udg_Missile_AB_Traveled[index] = point\r\n    \r\n    // Set new position in plane x & y, as well as the facing angle in radians. \r\n    set angle = udg_Missile_Angle[index]\r\n    set posX = posX + velocity*Cos(angle)\r\n    set posY = posY + velocity*Sin(angle)\r\n    \r\n    // Update point(x/y) if a curving trajectory is defined.\r\n    if udg_Missile_Open[index] != 0.00 then\r\n        set velocity = 4*udg_Missile_Open[index]*point*(distance - point)/square\r\n        set curveX   = velocity*Cos(angle + bj_PI/2) \r\n        set curveY   = velocity*Sin(angle + bj_PI/2) \r\n        set posX     = posX + velocity*Cos(angle + bj_PI/2) - udg_Missile_CurveX[index]\r\n        set posY     = posY + velocity*Sin(angle + bj_PI/2) - udg_Missile_CurveY[index]\r\n        set angle    = angle + Atan(-((4*udg_Missile_Open[index])*(2*point - distance))/square)\r\n        // Save the current offset in plane x / y.\r\n        set udg_Missile_CurveX[index] = curveX\r\n        set udg_Missile_CurveY[index] = curveY\r\n    endif\r\n    \r\n    // Update point(x,y,z) if an arc or height is defined.\r\n    set pitch = udg_Missile_AB_Pitch[index]\r\n    set udg_Missile_TerrainZ[index] = Missile_GetLocZ(posX, posY)\r\n    if udg_Missile_Height[index] == 0.00 and pitch == 0.00 then\r\n        set posZ = udg_Missile_OriginZ[index] + udg_Missile_A_Z[index] - udg_Missile_TerrainZ[index]\r\n    else\r\n        set posZ = udg_Missile_OriginZ[index] + udg_Missile_A_Z[index] - udg_Missile_TerrainZ[index] + pitch*point \r\n        set pitch = Atan(pitch)*bj_RADTODEG\r\n        if udg_Missile_Height[index] != 0.00 then\r\n            set posZ = posZ + 4*udg_Missile_Height[index]*point*(distance - point)/square\r\n            set pitch = pitch - Atan(((4*udg_Missile_Height[index])*(2*point - distance))/square)*bj_RADTODEG\r\n        endif\r\n    endif\r\n    // Update the pitch angle of the dummy unit. \r\n    if GetUnitTypeId(missile) == udg_Missile__DummyTypeId then\r\n        call SetUnitAnimationByIndex(missile, R2I(pitch + 90.5))\r\n    endif\r\n    \r\n    set udg_Missile_PosX[index] = posX\r\n    set udg_Missile_PosY[index] = posY\r\n    set udg_Missile_PosZ[index] = posZ\r\n    \r\n    // Finally update the missile dummy position and facing angle.\r\n    call SetUnitFacing(missile, angle*bj_RADTODEG)\r\n    call SetUnitFlyHeight(missile, posZ, 0.00)\r\n    if posX < udg_MissileMaxX and posX > udg_MissileMinX and posY < udg_MissileMaxY and posY > udg_MissileMinY then\r\n        call SetUnitX(missile, posX)\r\n        call SetUnitY(missile, posY)\r\n    endif\r\n    \r\n    set missile = null\r\nendfunction\r\n\r\nfunction Missile_Core takes nothing returns boolean\r\n    local integer loops = 0   // Iteration counter.\r\n    local integer limit = 100 // Maximum iterations per trigger evaluate.\r\n    local integer index\r\n    local integer next \r\n    loop\r\n        exitwhen udg_Missile__Index == 0 \r\n        exitwhen limit == loops\r\n        \r\n        set index = udg_Missile__Index\r\n        set next = Missile_GetListNextNode(index)\r\n        \r\n        if udg_Missile_WantDestroy[index] then\r\n            call Missile_Destroy(index) \r\n        else\r\n            set udg_Missile__Index = next\r\n            call Missile_UpdatePosition(index)\r\n            set udg_Missile__Index = index\r\n                \r\n            // Run unit collision code.\r\n            if udg_MissileAllocated[index] and udg_Missile_OnUnit[index] != null and udg_Missile_Collision[index] > 0.00 then\r\n                call Missile_RunUnitCollision(index)\r\n            endif\r\n\r\n            // Run destructable collision code.\r\n            if udg_MissileAllocated[index] and udg_Missile_OnDest[index] != null and udg_Missile_Collision[index] > 0.00 then\r\n                call Missile_RunDestructableCollision(index)\r\n            endif\r\n        \r\n            // Runs when the impact point is reached.\r\n            if udg_MissileAllocated[index] and udg_Missile_Recycle[index] then\r\n                if udg_Missile_OnFinish[index] != null then\r\n                    if Missile_RunTrigger(index, udg_Missile_OnFinish[index], udg_EVENT_MISSILE_FINISH) then\r\n                        call Missile_Destroy(index)\r\n                    endif\r\n                else\r\n                    call Missile_Destroy(index)\r\n                endif\r\n            endif\r\n            \r\n            // Runs periodically every timer timeout.\r\n            if udg_MissileAllocated[index] and udg_Missile_OnPeriodic[index] != null then \r\n                if Missile_RunTrigger(index, udg_Missile_OnPeriodic[index], udg_EVENT_MISSILE_PERIODIC) then\r\n                    call Missile_Destroy(index)\r\n                endif\r\n            endif\r\n        endif\r\n        \r\n        set loops = loops + 1\r\n        set udg_Missile__Index = next\r\n    endloop\r\n    \r\n    return udg_Missile__Index == 0\r\nendfunction\r\n         // Missile_GetTimerTimeout()\r\nfunction Missile_OnPeriodic takes nothing returns nothing\r\n    set udg_Missile__Index = Missile_GetListFirstNode()\r\n    loop\r\n        exitwhen TriggerEvaluate(udg_MissileCore) \r\n    endloop\r\n    call Missile_ResetScalars()\r\nendfunction\r\n\r\nfunction Missile_InitNewMissile takes integer index returns nothing\r\n    local real originX = GetLocationX(udg_Missile__Origin)\r\n    local real originY = GetLocationY(udg_Missile__Origin)\r\n    local real face    = Atan2(GetLocationY(udg_Missile__Impact) - originY, GetLocationX(udg_Missile__Impact) - originX)*bj_RADTODEG \r\n        \r\n    // A user may pass his/her own units as projectile dummies.\r\n    if udg_Missile__Dummy == null then\r\n        set bj_lastCreatedUnit = CreateUnit(Missile_GetDummyOwner(), udg_Missile__DummyTypeId, originX, originY, face)\r\n        set udg_Missile__Dummy = bj_lastCreatedUnit// GUI compatibility for function CreateUnitAtLocSaveLast.\r\n        call UnitAddAbility(udg_Missile__Dummy, 'Aloc')\r\n        call PauseUnit(udg_Missile__Dummy, true) \r\n    endif\r\n    \r\n    // Enables fly height manipulation for the dummy. \r\n    if UnitAddAbility(udg_Missile__Dummy, 'Amrf') and UnitRemoveAbility(udg_Missile__Dummy, 'Amrf') then\r\n    endif\r\n    call SetUnitFlyHeight(udg_Missile__Dummy, udg_Missile__OriginZ, 0.00)\r\n    \r\n    set udg_Missile_Dummy[index] = udg_Missile__Dummy\r\n    set udg_Missile_Scale[index] = 1.00\r\n    set udg_Missile_Angle[index] = GetUnitFacing(udg_Missile__Dummy)*bj_DEGTORAD\r\n    \r\n    // Prevent the missile from colliding with itself.\r\n    call SaveUnitHandle(udg_MissileHash, index, GetHandleId(udg_Missile__Dummy), udg_Missile__Dummy)\r\nendfunction\r\n\r\nfunction Missile_BuildLocations takes nothing returns boolean\r\n    if udg_Missile__Origin == null then\r\n        // Build from dummy position.\r\n        if udg_Missile__Dummy != null then\r\n            set udg_Missile__Origin = Location(GetUnitX(udg_Missile__Dummy), GetUnitY(udg_Missile__Dummy))\r\n        // Build from source position\r\n        elseif udg_Missile__Source != null then\r\n            set udg_Missile__Origin = Location(GetUnitX(udg_Missile__Source), GetUnitY(udg_Missile__Source))\r\n        else\r\n            call Missile_ErrorMessage(true, \"Missile_BuildLocations\", \"Missile__Origin\", udg_Missile__Index, \"Missile is unable to build an origin location.\r\n            The process requires either a target or source unit.\")\r\n            return false\r\n        endif\r\n    endif\r\n    \r\n    if udg_Missile__Impact == null then\r\n        // Build from target position.\r\n        if GetUnitTypeId(udg_Missile__Target) != 0 then\r\n            set udg_Missile__Impact = Location(GetUnitX(udg_Missile__Target), GetUnitY(udg_Missile__Target))\r\n        else\r\n            // Build from origin using angle ( radians! ) and distance.\r\n            set udg_Missile__Impact = PolarProjectionBJ(udg_Missile__Origin, udg_Missile__Distance, udg_Missile__Angle*bj_RADTODEG)        \r\n        endif\r\n    endif\r\n    return true\r\nendfunction\r\n\r\n// Action function of trigger Missile.\r\nfunction Missile_Launch takes nothing returns nothing\r\n    local integer index = udg_Missile__Index \r\n    \r\n    if not udg_MissileAllocated[index] or udg_MissileLaunched[index] then\r\n        \r\n        // This is an invalid situation caused by faulty\r\n        // usage of the Missile API. Missile_Launch was executed\r\n        // without a previous execution of Missile_Create.\r\n        \r\n        // Error identification.\r\n        call Missile_ErrorMessage(udg_MissileLaunched[index], \"Missile_Launch\", \"Missile_Launched\", index, \"Attempt to double launch a missile!\r\n    Make sure you use Run Missile Configurate <gen> - Your missile settings - Run Missile <gen> syntax.\")\r\n    \r\n        call Missile_ErrorMessage(not udg_MissileAllocated[index], \"Missile_Launch\", \"Missile__Index \", index, \"Attempt to launch invalid missile index!\r\n    Make sure you use Run Missile Configurate <gen> - Your missile settings - Run Missile <gen> syntax.\")\r\n\r\n    // Check if Missile has to build an origin or impact location.\r\n    elseif ((udg_Missile__Origin == null) or (udg_Missile__Impact == null)) and not Missile_BuildLocations() then\r\n        call Missile_Destroy(index)\r\n        \r\n    else\r\n        set udg_MissileLaunched[index] = true    \r\n        if Missile_GetListFirstNode() == 0 then\r\n            call TimerStart(udg_MissileTimer, Missile_GetTimerTimeout(), true, function Missile_OnPeriodic)\r\n        endif\r\n        call Missile_ListPushNode(index)\r\n        call Missile_InitNewMissile(index)\r\n        call Missile_SaveUserData(index)\r\n    endif\r\n    \r\n    call Missile_ResetScalars()\r\n    if udg_Missile__EventIndex != 0 then\r\n        call Missile_LoadData(udg_Missile__EventIndex)\r\n    endif\r\nendfunction\r\n\r\n// Action function of trigger Missile Configurate.\r\nfunction Missile_Create takes nothing returns nothing\r\n    // In most cases udg_Missile__Index is 0, thus not allocated.\r\n    if udg_MissileAllocated[udg_Missile__Index] then\r\n    \r\n        // Check if Missile_Create runs from inside a Missile event trigger.\r\n        if udg_Missile__EventIndex == udg_Missile__Index then\r\n            // Save all data from scalar to array variables.\r\n            call Missile_SaveUserData(udg_Missile__EventIndex)\r\n    \r\n        elseif not udg_MissileLaunched[udg_Missile__Index] then\r\n                    \r\n            // This is an invalid situation caused by faulty\r\n            // usage of the Missile API. Missile_Create was executed twice\r\n            // without launching the previously created index.\r\n            // Missile compensates for that error by destroying\r\n            // the forgotten index.\r\n            call Missile_Destroy(udg_Missile__Index)\r\n            \r\n            // Print it for the user.\r\n            call Missile_ErrorMessage(true, \"Missile_Create\", \"Missile_Launched\", udg_Missile__Index, \"You forgot to launch the previous created missile!\r\n    Make sure you use Run Missile Configurate <gen> - Your missile settings - Run Missile <gen> syntax.\")\r\n        \r\n        endif\r\n    endif\r\n    \r\n    call Missile_ResetScalars()\r\n    set udg_Missile__Index = Missile_AllocateNode()\r\nendfunction\r\n\r\n//===========================================================================\r\nfunction InitTrig_Missile takes nothing returns nothing\r\n    if gg_trg_Missile != null then\r\n        return// Missile has already been initialized.\r\n    endif\r\n    \r\n    set udg_MissileHash = InitHashtable()\r\n    set udg_MissileCore = CreateTrigger()\r\n    set udg_MissileRect = GetWorldBounds()\r\n    set udg_MissileLocZ = Location(0.00, 0.00)\r\n    \r\n    // It's necessary to prevent missiles, units in general, from leaving map boundaries.\r\n    set udg_MissileMaxX = R2I(GetRectMaxX(udg_MissileRect)) - 197\r\n    set udg_MissileMaxY = R2I(GetRectMaxY(udg_MissileRect)) - 197\r\n    set udg_MissileMinX = R2I(GetRectMinX(udg_MissileRect)) + 197\r\n    set udg_MissileMinY = R2I(GetRectMinY(udg_MissileRect)) + 197\r\n    \r\n    // Trigger that controlls the trajectory of all missiles.\r\n    call TriggerAddCondition(udg_MissileCore, Condition(function Missile_Core))\r\n    \r\n    // Run the configuration trigger before the first missile is created.\r\n    call TriggerExecute(gg_trg_Missile_Configurate)\r\n    call TriggerClearActions(gg_trg_Missile_Configurate)\r\n    call DestroyTrigger(gg_trg_Missile_Configurate)\r\n    \r\n    // Transform the configurate trigger into the index allocator.\r\n    set gg_trg_Missile_Configurate = CreateTrigger()\r\n    call TriggerAddAction(gg_trg_Missile_Configurate, function Missile_Create)\r\n    \r\n    // Build the launching trigger for missiles.\r\n    set gg_trg_Missile = CreateTrigger()\r\n    call TriggerAddAction(gg_trg_Missile, function Missile_Launch)\r\n\r\n    // Set the missile system ready.\r\n    call Missile_ResetScalars()\r\nendfunction",
+      "vjass": {
+        "path": "war3map.wct#trigger-1",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [
+          "InitTrig_Missile",
+          "Missile_AllocateNode",
+          "Missile_BuildLocations",
+          "Missile_Clear",
+          "Missile_Core",
+          "Missile_Create",
+          "Missile_Destroy",
+          "Missile_EnumDestructables",
+          "Missile_ErrorMessage",
+          "Missile_GetArc",
+          "Missile_GetCurve",
+          "Missile_GetDestructableHeight",
+          "Missile_GetDummyOwner",
+          "Missile_GetEffectDeathTime",
+          "Missile_GetFlyTime",
+          "Missile_GetListFirstNode",
+          "Missile_GetListLastNode",
+          "Missile_GetListNextNode",
+          "Missile_GetListPrevNode",
+          "Missile_GetLocZ",
+          "Missile_GetMaxCollision",
+          "Missile_GetTimerTimeout",
+          "Missile_GetUnitBodySize",
+          "Missile_InitNewMissile",
+          "Missile_IsWidgetInRange",
+          "Missile_IsWidgetInRectangleRad",
+          "Missile_Launch",
+          "Missile_ListPushNode",
+          "Missile_ListRemoveNode",
+          "Missile_LoadData",
+          "Missile_Math",
+          "Missile_OnPeriodic",
+          "Missile_RecycleDummy",
+          "Missile_RecycleNode",
+          "Missile_ResetArrays",
+          "Missile_ResetScalars",
+          "Missile_RunDestructableCollision",
+          "Missile_RunTrigger",
+          "Missile_RunUnitCollision",
+          "Missile_SaveUserData",
+          "Missile_SetListFirstNode",
+          "Missile_SetListLastNode",
+          "Missile_SetListNextNode",
+          "Missile_SetListPrevNode",
+          "Missile_SetRectCircle",
+          "Missile_SetRectRectangle",
+          "Missile_UpdatePosition",
+          "Missile_UpdateStack"
+        ],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [
+          "Aloc",
+          "Amrf",
+          "BTLF"
+        ],
+        "blz_calls": [],
+        "get_local_player_count": 1
+      }
+    },
+    {
+      "index": 2,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-2",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 3,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-3",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 4,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-4",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 5,
+      "text": "//TESH.scrollpos=45\r\n//TESH.alwaysfold=0\r\nfunction Trig_Fireball_Actions_Copy_Func005Func001C takes nothing returns boolean\r\n    if ( not ( udg_Missile__EventId == udg_EVENT_MISSILE_COLLIDE_UNIT ) ) then\r\n        return false\r\n    endif\r\n    if ( not ( IsUnitEnemy(udg_Missile__UnitHit, udg_Missile__Owner) == true ) ) then\r\n        return false\r\n    endif\r\n    if ( not ( IsUnitAliveBJ(udg_Missile__UnitHit) == true ) ) then\r\n        return false\r\n    endif\r\n    return true\r\nendfunction\r\n\r\nfunction Trig_Fireball_Actions_Copy_Func005Func002Func002002003001 takes nothing returns boolean\r\n    return ( IsUnitEnemy(GetFilterUnit(), udg_Missile__Owner) == true )\r\nendfunction\r\n\r\nfunction Trig_Fireball_Actions_Copy_Func005Func002Func002002003002 takes nothing returns boolean\r\n    return ( IsUnitAliveBJ(GetFilterUnit()) == true )\r\nendfunction\r\n\r\nfunction Trig_Fireball_Actions_Copy_Func005Func002Func002002003 takes nothing returns boolean\r\n    return GetBooleanAnd( Trig_Fireball_Actions_Copy_Func005Func002Func002002003001(), Trig_Fireball_Actions_Copy_Func005Func002Func002002003002() )\r\nendfunction\r\n\r\nfunction Trig_Fireball_Actions_Copy_Func005Func002Func003A takes nothing returns nothing\r\n    call UnitDamageTargetBJ( udg_Missile__Source, GetEnumUnit(), udg_Missile__Damage, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL )\r\nendfunction\r\n\r\nfunction Trig_Fireball_Actions_Copy_Func005Func002C takes nothing returns boolean\r\n    if ( not ( udg_Missile__Data == 1 ) ) then\r\n        return false\r\n    endif\r\n    return true\r\nendfunction\r\n\r\nfunction Trig_Fireball_Actions_Copy_Func005C takes nothing returns boolean\r\n    if ( not ( udg_Missile__EventId == udg_EVENT_MISSILE_REMOVE ) ) then\r\n        return false\r\n    endif\r\n    return true\r\nendfunction\r\n\r\nfunction Trig_Fireball_Actions_Copy_Actions takes nothing returns nothing\r\n    // As you can see Missile__EventId allows you \r\n    // to identify which event trigger dispatched.\r\n    // Therefore you can run all actions from one trigger function.\r\n    // Of course you can also seperate triggers into different triggers.\r\n    if ( Trig_Fireball_Actions_Copy_Func005C() ) then\r\n        if ( Trig_Fireball_Actions_Copy_Func005Func002C() ) then\r\n            // Create more fireballs\r\n            // Reference to Missile__Dummy will be removed\r\n            // Once you call Run Missile Configurate <gen>\r\n            set udg_Missile__TempLoc = GetUnitLoc(udg_Missile__Dummy)\r\n            set bj_forLoopAIndex = 1\r\n            set bj_forLoopAIndexEnd = 6\r\n            loop\r\n                exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd\r\n                call TriggerExecute( gg_trg_Missile_Configurate )\r\n                set udg_Missile__Origin = Location(GetLocationX(udg_Missile__TempLoc), GetLocationY(udg_Missile__TempLoc))\r\n                set udg_Missile__Impact = PolarProjectionBJ(udg_Missile__Origin, 450.00, ( 60.00 * I2R(GetForLoopIndexA()) ))\r\n                set udg_Missile__ImpactZ = 50.00\r\n                set udg_Missile__Height = 350.00\r\n                set udg_Missile__OriginZ = 50.00\r\n                set udg_Missile__Speed = 500.00\r\n                set udg_Missile__Damage = 150.00\r\n                set udg_Missile__Source = udg_Missile_Source[udg_Missile__EventIndex]\r\n                set udg_Missile__Owner = udg_Missile_Owner[udg_Missile__EventIndex]\r\n                set udg_Missile__Model = \"Abilities\\\\Weapons\\\\FireBallMissile\\\\FireBallMissile.mdl\"\r\n                set udg_Missile__OnCollideUnit = gg_trg_Fireball_Actions\r\n                set udg_Missile__OnRemove = gg_trg_Fireball_Actions\r\n                set udg_Missile__Data = 2\r\n                call TriggerExecute( gg_trg_Missile )\r\n                set bj_forLoopAIndex = bj_forLoopAIndex + 1\r\n            endloop\r\n            call RemoveLocation(udg_Missile__TempLoc)\r\n            set udg_Missile__TempLoc = null\r\n        else\r\n            set udg_Missile__TempLoc = GetUnitLoc(udg_Missile__Dummy)\r\n            set udg_Temp_Group = GetUnitsInRangeOfLocMatching(128.00, udg_Missile__TempLoc, Condition(function Trig_Fireball_Actions_Copy_Func005Func002Func002002003))\r\n            call ForGroupBJ( udg_Temp_Group, function Trig_Fireball_Actions_Copy_Func005Func002Func003A )\r\n            call AddSpecialEffectLocBJ( udg_Missile__TempLoc, \"Abilities\\\\Spells\\\\Other\\\\Doom\\\\DoomDeath.mdl\" )\r\n            call DestroyEffectBJ( GetLastCreatedEffectBJ() )\r\n            call DestroyGroup(udg_Temp_Group)\r\n            call RemoveLocation(udg_Missile__TempLoc)\r\n            set udg_Missile__TempLoc = null\r\n        endif\r\n    else\r\n        if ( Trig_Fireball_Actions_Copy_Func005Func001C() ) then\r\n            // See how easy damaging got.\r\n            call UnitDamageTargetBJ( udg_Missile__Source, udg_Missile__UnitHit, udg_Missile__Damage, ATTACK_TYPE_MELEE, DAMAGE_TYPE_NORMAL )\r\n            set udg_Missile__WantDestroy = true\r\n        else\r\n        endif\r\n    endif\r\nendfunction\r\n\r\n//===========================================================================\r\nfunction InitTrig_Fireball_Actions_Copy takes nothing returns nothing\r\n    set gg_trg_Fireball_Actions_Copy = CreateTrigger(  )\r\n    call TriggerAddAction( gg_trg_Fireball_Actions_Copy, function Trig_Fireball_Actions_Copy_Actions )\r\nendfunction\r\n\r\n",
+      "vjass": {
+        "path": "war3map.wct#trigger-5",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [
+          "InitTrig_Fireball_Actions_Copy",
+          "Trig_Fireball_Actions_Copy_Actions",
+          "Trig_Fireball_Actions_Copy_Func005C",
+          "Trig_Fireball_Actions_Copy_Func005Func001C",
+          "Trig_Fireball_Actions_Copy_Func005Func002C",
+          "Trig_Fireball_Actions_Copy_Func005Func002Func002002003",
+          "Trig_Fireball_Actions_Copy_Func005Func002Func002002003001",
+          "Trig_Fireball_Actions_Copy_Func005Func002Func002002003002",
+          "Trig_Fireball_Actions_Copy_Func005Func002Func003A"
+        ],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 6,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-6",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 7,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-7",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 8,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-8",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 9,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-9",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 10,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-10",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 11,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-11",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 12,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-12",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 13,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-13",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 14,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-14",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 15,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-15",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 16,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-16",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 17,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-17",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 18,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-18",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 19,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-19",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 20,
+      "text": "",
+      "vjass": {
+        "path": "war3map.wct#trigger-20",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    },
+    {
+      "index": 21,
+      "text": "//TESH.scrollpos=0\r\n//TESH.alwaysfold=0\r\n\r\nfunction Tower_P takes nothing returns nothing\r\n    call TriggerExecute(gg_trg_Missile_Configurate)\r\n    set udg_Missile__Origin  = Location(GetUnitX(gg_unit_hgtw_0019), GetUnitY(gg_unit_hgtw_0019))\r\n    set udg_Missile__Impact  = PolarProjectionBJ(udg_Missile__Origin, 700, GetRandomReal(-bj_PI, bj_PI)*bj_RADTODEG)\r\n    set udg_Missile__Speed   = 500.\r\n    set udg_Missile__OriginZ = 50\r\n    set udg_Missile__ImpactZ = 50\r\n    set udg_Missile__Model   = \"Abilities\\\\Weapons\\\\GuardTowerMissile\\\\GuardTowerMissile.mdl\"\r\n    call TriggerExecute(gg_trg_Missile)\r\nendfunction\r\n\r\n\r\n\r\nfunction Trig_Stress_Tester_Actions takes nothing returns nothing\r\n    if GetTriggerEventId() == EVENT_UNIT_SELECTED then\r\n        call TimerStart(udg_TowerTest, .01, true, function Tower_P) \r\n    else\r\n        call PauseTimer(udg_TowerTest)\r\n    endif\r\nendfunction\r\n\r\n//===========================================================================\r\nfunction InitTrig_Stress_Tester takes nothing returns nothing\r\n    set gg_trg_Stress_Tester = CreateTrigger(  )\r\n    call TriggerRegisterUnitEvent( gg_trg_Stress_Tester, gg_unit_hgtw_0019, EVENT_UNIT_SELECTED )\r\n    call TriggerRegisterUnitEvent( gg_trg_Stress_Tester, gg_unit_hgtw_0019, EVENT_UNIT_DESELECTED )\r\n    call TriggerAddAction( gg_trg_Stress_Tester, function Trig_Stress_Tester_Actions )\r\nendfunction\r\n\r\n",
+      "vjass": {
+        "path": "war3map.wct#trigger-21",
+        "libraries": [],
+        "structs": [],
+        "modules": [],
+        "interfaces": [],
+        "keywords": [],
+        "functions": [
+          "InitTrig_Stress_Tester",
+          "Tower_P",
+          "Trig_Stress_Tester_Actions"
+        ],
+        "textmacros": [],
+        "runtextmacros": [],
+        "imports": [],
+        "rawcodes": [],
+        "blz_calls": [],
+        "get_local_player_count": 0
+      }
+    }
+  ],
+  "trailing_bytes": 0
+}

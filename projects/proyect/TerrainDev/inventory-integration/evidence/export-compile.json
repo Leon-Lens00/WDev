@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "vjass",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/evidence/export-compile-input.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/evidence/export-compiled.j"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "La salida debe ser nueva; se conservan los archivos existentes.\n"
+}

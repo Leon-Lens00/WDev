@@ -1,0 +1,58 @@
+[
+  {
+    "case": "compare-zero",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-bowz16sk",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "fbb8374cb3060408b620a711d6a90e81c13ecb4f7303f62b647287f07cf8ece2",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "deallocate-internal",
+    "compiled": true,
+    "compiler_exit": 0,
+    "checker_exit": 0,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-x0bvkdi6",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "eab8bdd42f0ef607828ca19196653f39c98bdf75d22bd55db11372dacb3c1170",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": null
+  },
+  {
+    "case": "interface-compatible",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-2h8jv5s6",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "1c78e643c8f4682ec348ad611d62154c645de0ffefc9e2bcf1123b3a8e8c74f7",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 18: [] tick is not a valid method for function objects. (Expected .execute or .evaluate)\n1\n"
+  },
+  {
+    "case": "interface-native-subtype",
+    "compiled": false,
+    "compiler_exit": 1,
+    "checker_exit": null,
+    "report": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/oracle-f4ecqtac",
+    "flags": [
+      "--scriptonly",
+      "--nooptimize"
+    ],
+    "input_sha256": "f7db069391236da03d79d54696587a0370dfb96cf5a2c95ee9fa20f7115d6ff4",
+    "compiler_sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985",
+    "language_errors": "logs\\output_war3map.j\nJASSHelper - Step 2 (structs)\nLine 9: [] Signature (arguments/return types) of function \"Target\" does not match the one defined for: \"Callback\"\n1\n"
+  }
+]

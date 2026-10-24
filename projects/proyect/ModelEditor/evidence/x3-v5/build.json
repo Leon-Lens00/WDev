@@ -1,0 +1,25 @@
+{
+  "target": "Classic1.27b MDX800",
+  "revision": "V5 A blue body / nose-to-rear pink flow",
+  "entries": [
+    {
+      "name": "X3_Buster_Cargado",
+      "category": "A-Buster",
+      "path": "exports/megaman-x3-buster-v5/A-Buster/X3_Buster_Cargado.mdx",
+      "sha256": "04c2b760a48732d5ba4ed59be1e74dcccfd56c71e8de74f991f0c204bd9df7f1",
+      "triangles": 5618,
+      "pe2": 3,
+      "ribbons": 1
+    }
+  ],
+  "source": {
+    "author": "Vinz",
+    "pack": "Shots Vol. II",
+    "original": "../descargas/warcraft3/misiles/vinz/shots-vol-ii/originales/Shots Vol. II/Shot II Blue.mdx",
+    "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac",
+    "anchored": "exports/shots-vol-ii-anclaje/Shot II Blue.mdx",
+    "anchoredSha256": "6e181b25bb6047896f95993e0033fd2602c05914e3da001ee192faac5e9c181e",
+    "reuse": "posed geometry, UVs, material stack; compressed X0.36 and widened YZ1.06, new volume and flow geometry"
+  },
+  "worldTrajectory": false
+}

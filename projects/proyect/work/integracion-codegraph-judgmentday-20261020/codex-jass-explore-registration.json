@@ -1,0 +1,14 @@
+{
+  "registered": true,
+  "name": "wc3-jass-explore",
+  "configuration": {
+    "command": "/usr/bin/python3",
+    "args": [
+      "/home/snz/.local/share/wc3-jass-explore/server.py",
+      "--jassgraph",
+      "/home/snz/Documentos/MCP W3/wc3-forge/scripts/jassgraph"
+    ]
+  },
+  "unrelated_config_preserved": true,
+  "note": "CLI normalized away node_repl.args=[]; restored this pre-existing setting before final validation."
+}

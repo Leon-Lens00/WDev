@@ -1,0 +1,38 @@
+{
+  "src/build-x3.cjs": {
+    "sha256": "4bd867e8991be6e02af847143717fa97ed1a6b378005cfbc6e59ac7f6545172b",
+    "bytes": 10151
+  },
+  "src/capture-x3.py": {
+    "sha256": "b2dbab543797976e3abfb946a525d78b5dc84dcbd54f4ab5129d3caef365795a",
+    "bytes": 2464
+  },
+  "src/fixture-x3.py": {
+    "sha256": "4bc7b1d0a0640a4aeb00318821866a4a8f8a691a5f59fb4bbd96b6eecbec10fc",
+    "bytes": 7117
+  },
+  "src/identify-x3.py": {
+    "sha256": "59436341ec4f855e6e9337cabb74cd770376e8ca1db2cac5f953ba6fb1fc1703",
+    "bytes": 1615
+  },
+  "src/preview-x3.py": {
+    "sha256": "47555ca702c96b7206f8a5bcebfeeb768efbe619b42e0514612ffe5b114e370a",
+    "bytes": 4454
+  },
+  "src/reference-buster-x3.py": {
+    "sha256": "bda4016158e1900009d1fa8d78bc90ec1c90e7ea2b31e24457b8c7b50d5357c7",
+    "bytes": 2274
+  },
+  "src/runtime-x3.py": {
+    "sha256": "175921fd758988491449b259e8614f91d8fb8b07c7b420e593aee304ccf73234",
+    "bytes": 3293
+  },
+  "src/textures-x3.py": {
+    "sha256": "d8924c5958d655615819facb497a2c1c9c9fddac2ad2194a1c8de418ed1b9a7f",
+    "bytes": 2266
+  },
+  "src/verify-x3.cjs": {
+    "sha256": "de4f64086756b306c289f34b241fec19eb85f416a103c28240a97fdda8961e3f",
+    "bytes": 3696
+  }
+}

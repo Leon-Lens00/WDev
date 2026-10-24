@@ -1,0 +1,1254 @@
+{
+  "source": {
+    "source": "/home/snz/Descargas/DevMission v0.96.w3x",
+    "size": 81262431,
+    "sha256": "66e0ce9f27d741f4785cd26eea46aad2b0f407210f0b94fab06fa2b4e1175a61",
+    "policy": "read-only resource extraction; never edit, compile, launch or repack this original"
+  },
+  "base": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+  "base_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/TerrainDev-WaveResources-v1.w3x",
+  "sha256": "a7928a10dd811a485ec71a0f0c534e122f654a3f82e97c654176bf87251cd0a4",
+  "resources": [
+    {
+      "internal": "AnimatedCatTailBv025.mdx",
+      "size": 14721,
+      "sha256": "1d3f80db0783ed74967ad200362671a95499428bff15e763cdc1cbcaef8b3ffb"
+    },
+    {
+      "internal": "AzureGlow4.blp",
+      "size": 46538,
+      "sha256": "bda19b8fd88c3fbfe16a635c94312956328ffd1cff6bb0274441c27c3afe8f9d"
+    },
+    {
+      "internal": "EmberGlow6.blp",
+      "size": 16331,
+      "sha256": "23eb7f85134a27c6cb653ae78158525aed76e376b0dfdd2ca247dadd5b858e4a"
+    },
+    {
+      "internal": "Firebolt Rough Major.mdx",
+      "size": 8755,
+      "sha256": "6de5b81d166e3b837ab3b94a20700fa0b6ec043fa71d6f32c9c2b9fc088cd572"
+    },
+    {
+      "internal": "FlagOverlay.blp",
+      "size": 18189,
+      "sha256": "bd95cf82dc624e9afb3a61e6919fd7cd2efb543d29426a0bd60aae5b4c4bc509"
+    },
+    {
+      "internal": "FlagOverlay2.blp",
+      "size": 6513,
+      "sha256": "ffc5469702b98ebbaf98cc1c050d1fc07f2d98da739a2ae0e6722acb0dee5b8a"
+    },
+    {
+      "internal": "FlagPole.blp",
+      "size": 19042,
+      "sha256": "bbc8c118d7d0074c31edf542877d7c514bc64c57ed0b1f35f55c2d733252a7c2"
+    },
+    {
+      "internal": "Flamestrike Blood II.mdx",
+      "size": 84094,
+      "sha256": "4ce85a2363a6730c818331d0802ebc6685cfbfb51919af80a2d8aedd34e8fd7d"
+    },
+    {
+      "internal": "Flamestrike Dark Void II.mdx",
+      "size": 84354,
+      "sha256": "87de24a8928aa81209efd85e5297fca3f3b796a516c076067b1a556df9773ff3"
+    },
+    {
+      "internal": "Flamestrike Fel II.mdx",
+      "size": 83058,
+      "sha256": "734185e0f6f4fade4fea07ca5a987ca42de67f9014262a2fde9fe04027ddafc3"
+    },
+    {
+      "internal": "Flamestrike II.mdx",
+      "size": 83322,
+      "sha256": "72ad38cc575e7013b333eba48a99bfd1110472fdc4caae8ee5f8a02a41ab9d40"
+    },
+    {
+      "internal": "Flamestrike Mystic II.mdx",
+      "size": 83306,
+      "sha256": "83d312a43ef3b55496ae8445971949315b1526bf0372d11c4a1992a58fef503b"
+    },
+    {
+      "internal": "Flamestrike Nature II.mdx",
+      "size": 84190,
+      "sha256": "ccfe6a38f0eb4c6e674a831b6e522bb85b8322486c62984cfd751be70a8e576b"
+    },
+    {
+      "internal": "GrassParticlesV015.blp",
+      "size": 11823,
+      "sha256": "818ae4d34ad685de8adc7968e8b79086d42c76932de9a25cc72a146ebe167a3b"
+    },
+    {
+      "internal": "IconModel\\GemOfTrueSight.mdx",
+      "size": 12427,
+      "sha256": "534ffac2c7ecb3990d16b4f853df618a4a7a0c1a57c39ea51d044e6923ef477a"
+    },
+    {
+      "internal": "Lobo.blp",
+      "size": 28959,
+      "sha256": "e18bf0d859d6ec3e123d24191728ef47c79b3084bae99a40ad7e66c58a493ad3"
+    },
+    {
+      "internal": "Lobo.mdx",
+      "size": 200901,
+      "sha256": "8eb9b58888b9c1e494e22ba35a061e7dfa119870f8b8f605f4ac21c69e1340ca"
+    },
+    {
+      "internal": "Marine.mdx",
+      "size": 78694,
+      "sha256": "3fc8c7a928745dc184cfa7cd41f0ae3f23d17aa3ee5aeca1e83a650f007beaf1"
+    },
+    {
+      "internal": "MiniMap-Hero.mdx",
+      "size": 1020,
+      "sha256": "3d7ea68fdd04d6d641abab58640803c2ab89b3b52183d16727dfddde8e601948"
+    },
+    {
+      "internal": "MiniMap-Waypoint.mdx",
+      "size": 1972,
+      "sha256": "32a616682f730d143664c874285a84c5aceec2843ba6aa127efea72c233b7057"
+    },
+    {
+      "internal": "MiniMapUnitIcon.mdx",
+      "size": 1296,
+      "sha256": "b67f5b49888501a3d4ef3e856806bbb825948fe032ad1691700231523d22d828"
+    },
+    {
+      "internal": "Miss\\Shot Blue.mdx",
+      "size": 5900,
+      "sha256": "6d073549743b558396d9d9e3158d5b8130d1f7fda997e8da4136fdc42fba1a41"
+    },
+    {
+      "internal": "Miss\\Shot Green.mdx",
+      "size": 5872,
+      "sha256": "058de54f2f6deaf0183e92f9f75ce4eeee9a7da1417c2b74bf9eafe86ea9788a"
+    },
+    {
+      "internal": "Miss\\Shot II Blue.mdx",
+      "size": 7188,
+      "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac"
+    },
+    {
+      "internal": "Miss\\Shot II Green.mdx",
+      "size": 7160,
+      "sha256": "4f206526f7eaff7394ef06bfcf5b00ea4a824ad0f16d154fb4d751b0ce69f926"
+    },
+    {
+      "internal": "Miss\\Shot II Orange.mdx",
+      "size": 7132,
+      "sha256": "eac94529fc5f320803b34bdae7b1767d1679a15b6aa1d4d6a13712869479a1cf"
+    },
+    {
+      "internal": "Miss\\Shot II Purple.mdx",
+      "size": 7188,
+      "sha256": "d2cc4430b8ec8c78ae38295396ff4163f5651b5e39ac051a3dcb211d9b0803f4"
+    },
+    {
+      "internal": "Miss\\Shot II Red.mdx",
+      "size": 7160,
+      "sha256": "a674ae72a5f1ace9f5cc77f29cdd1d52796fb7d3335695dfbb4c1f94d5a45703"
+    },
+    {
+      "internal": "Miss\\Shot II Yellow.mdx",
+      "size": 7132,
+      "sha256": "905b2fdac131ba1e72731946e321b9824025ec9e764fffba5dfc9c7b297e32ef"
+    },
+    {
+      "internal": "Miss\\Shot Orange.mdx",
+      "size": 6140,
+      "sha256": "a093ab85380cde8804b746a4ff518b283936ecd0ca48aae74471d1bc77785818"
+    },
+    {
+      "internal": "Miss\\Shot Purple.mdx",
+      "size": 6704,
+      "sha256": "ae584daeb14319fb0c73ee05e6247c0b451a68ac2fbb88e713d808dd516beeb0"
+    },
+    {
+      "internal": "Miss\\Shot Red.mdx",
+      "size": 6492,
+      "sha256": "832aa9a629288eb1d099372e508297b457255e8b69e98b67666b1d248e6e57be"
+    },
+    {
+      "internal": "Miss\\Shot Yellow.mdx",
+      "size": 6408,
+      "sha256": "c49816a0453f4a691d810d05e0411f50937d1d161df2dadbb9153ec3c0baa064"
+    },
+    {
+      "internal": "Miss\\Valiant Charge Fel.mdx",
+      "size": 36993,
+      "sha256": "e35081023d5b1ff14547e0f324c55661b13365b79cea94a1bbf0e0a1399b01f1"
+    },
+    {
+      "internal": "Miss\\Valiant Charge Holy.mdx",
+      "size": 36965,
+      "sha256": "889ec964c660ad19d0e6b86e96fb1b41313cab0aea2e45c8e00455e78120a718"
+    },
+    {
+      "internal": "Miss\\Valiant Charge Royal.mdx",
+      "size": 36993,
+      "sha256": "4a4b7bf3fdaa710d82c1a48afef9c551b029cad527b9b8f235ff91b25051cf00"
+    },
+    {
+      "internal": "Miss\\Valiant Charge Void.mdx",
+      "size": 36485,
+      "sha256": "dd10fc65d8d8abe00f18d82d1ee16e53ab68cf24bc847dd5017a4dfb2be4d829"
+    },
+    {
+      "internal": "Miss\\Valiant Charge.mdx",
+      "size": 37261,
+      "sha256": "a2232beea050a7027039abcf0db73524d4e86d7263128819bbe597e9012f3214"
+    },
+    {
+      "internal": "Miss\\Windwalk Blood.mdx",
+      "size": 8703,
+      "sha256": "57a3e3c6b965d7b2adcb5ea144a1b705508e2b9dcb630cf9551ec9c49e1ec000"
+    },
+    {
+      "internal": "Miss\\Windwalk Blue Soul.mdx",
+      "size": 8463,
+      "sha256": "cd16180f2cfe846b8cd5f606d2d9d04319338c8d4e1e9f270df19b5aaacebfe9"
+    },
+    {
+      "internal": "Miss\\Windwalk Fire.mdx",
+      "size": 8801,
+      "sha256": "fd5a0ed17db3a15001d49403e8ed23a133a96724252f561efdf6ad175463f05a"
+    },
+    {
+      "internal": "Miss\\Windwalk Necro Soul.mdx",
+      "size": 8463,
+      "sha256": "450af49839f45ad2dff80506dcc5331065b35e9d81ea7f4bd840bba86c593d79"
+    },
+    {
+      "internal": "Miss\\Windwalk.mdx",
+      "size": 8463,
+      "sha256": "1826d0a6c997bd519a286ff493a78b864cdc7b3f87e7ed5b74e11811c9353f01"
+    },
+    {
+      "internal": "Model\\Accelerator Gate Blue1.mdx",
+      "size": 25936,
+      "sha256": "38491ec3cf927d77ad53a79a1b9d9b1c11112144c89d77c6bc404c44c1282470"
+    },
+    {
+      "internal": "Model\\Autumn_Computerbox.mdx",
+      "size": 8277,
+      "sha256": "0ac7b6ae3867d3dfb02ab1c397e29425c443b51776c459b4ad49febd94e5b35c"
+    },
+    {
+      "internal": "Model\\Building 1.blp",
+      "size": 38042,
+      "sha256": "654aa9dee3341e44063e356a75e209bbcc1dbba4f14ad779a65db8851bd8fc5a"
+    },
+    {
+      "internal": "Model\\Building 1.mdx",
+      "size": 2944,
+      "sha256": "f61569afb1d3437059d60f7e8cad0d64f236918c9c187bbfc968efb8b4faae52"
+    },
+    {
+      "internal": "Model\\Building 4.blp",
+      "size": 39997,
+      "sha256": "1b308c4232bc017b2c086b81cb59e94d3d6c0efe0e96fd392abdf85dfbd97b3f"
+    },
+    {
+      "internal": "Model\\Building 4.mdx",
+      "size": 2944,
+      "sha256": "a3d14671d422b33b990e3eba66e5bfc61000682d9d095248f2a641c6fcc7649d"
+    },
+    {
+      "internal": "Model\\Chair.mdx",
+      "size": 8694,
+      "sha256": "8e8d7b294b05dc3173d1bd2cd70ac37752da559014f4976b491a849782436bec"
+    },
+    {
+      "internal": "Model\\Door 4.mdx",
+      "size": 20660,
+      "sha256": "fa3eb194aa48e6d69f176292be1f77b4c72ef8216cf30b007e27f80ae5abe5a8"
+    },
+    {
+      "internal": "Model\\FlagPole.mdx",
+      "size": 61518,
+      "sha256": "32a3918c1e346f1f1c12a5ea14e9256e0752801ca038981c7877b5c53be6787f"
+    },
+    {
+      "internal": "Model\\Gallow1withHuman.mdx",
+      "size": 42518,
+      "sha256": "a469cde168ec96e0f2bdc3f96d0a002a7b473ec6090557c561dbdb01897c8e79"
+    },
+    {
+      "internal": "Model\\Huron_0.blp",
+      "size": 165117,
+      "sha256": "f03cbefd0bce16849035197808de216888d6ccd9214dfbbb02390391606fe9f0"
+    },
+    {
+      "internal": "Model\\MansionDoor_by_Kitabatake.mdx",
+      "size": 23031,
+      "sha256": "520bcc085a5f590a71e78f2905c95db82725e3c17f78bce3d5e9dc68958b4cce"
+    },
+    {
+      "internal": "Model\\Sofa02.mdx",
+      "size": 21600,
+      "sha256": "da41ee098eed8af227da0bb7e5dd6d686220c29bd459bb32d6e2ac311d580fca"
+    },
+    {
+      "internal": "Model\\Spell Marker Green.mdx",
+      "size": 99154,
+      "sha256": "2e4a17ddb2d327cf187359edd3e2b896fd372086e2705aa9307a198d4824ccb6"
+    },
+    {
+      "internal": "Model\\Stand.mdx",
+      "size": 18744,
+      "sha256": "ed0400858077f5f1e252234566c0d85dbc3ac4b10272cf4d8904338603f3503c"
+    },
+    {
+      "internal": "Model\\Window3.mdx",
+      "size": 6536,
+      "sha256": "dc99658f40427c3bab9228a53e83724d4629e251a611300f6f12163e8bce35ed"
+    },
+    {
+      "internal": "Model\\WoodenTable5.mdx",
+      "size": 5062,
+      "sha256": "9c46788e81e4681d89f13f03cd7139eb3aa0fc6667551057fdae29ed930b8649"
+    },
+    {
+      "internal": "Model\\WoodenTable6.mdx",
+      "size": 5062,
+      "sha256": "b4cd1181ae32c3a30525312ec44a971cbb9ddfab058f8c21d8299e7bbeaf7a0e"
+    },
+    {
+      "internal": "Model\\WoodenThrone.mdx",
+      "size": 15865,
+      "sha256": "376c3ed8eb0135165dec4cf9be1c8d2f98aafbd1e45c0babaf107df6f3f01a0f"
+    },
+    {
+      "internal": "ReplaceableTextures\\Cliff\\Cliff0.blp",
+      "size": 80635,
+      "sha256": "d54ab42abeedb1b1e3ca2c2c5370b0519b767553cc4a523f41783bf1b31f207d"
+    },
+    {
+      "internal": "ReplaceableTextures\\Cliff\\Cliff1.blp",
+      "size": 73335,
+      "sha256": "0c5ccfee866f683652dd7418119214ebd672cafcdb2326a75cec511069fd6131"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\BTNElementalConvergence.blp",
+      "size": 10383,
+      "sha256": "d6dd53b4952feb1b42ce191b5cbd966e5f1dc7bea0d756c95be52675f7e87b5e"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\BTNElementalObliteration.blp",
+      "size": 16865,
+      "sha256": "a101edd3e66fa305143425948f060bc0239b9370b0048a5494d9ec1c911e3bec"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\BTNKeySetAll.blp",
+      "size": 6710,
+      "sha256": "3c35705992bc189223fe63d6d6abbdc31893446d644ddcbe713eaff584e32625"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\BTNKeySetEmpty.blp",
+      "size": 6300,
+      "sha256": "5edfeba5266f70d84313921b453efce97d58b3d0d738cb29bec066416fec3038"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\BTNKeySetLeft.blp",
+      "size": 6300,
+      "sha256": "ba579fe0abb0c9d3141da797e3c91d37bbf35cb42ad9952f026ead7d7e19f99d"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\BTNKeySetLeftRight.blp",
+      "size": 5631,
+      "sha256": "2269478ffba8720dec5386a8171c32940d594fb878291b6751f83caa95af82dd"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\BTNda.blp",
+      "size": 4978,
+      "sha256": "8a7f98f5bf74b70535a423d22c03716a204453aa18ae2e24ef01eca04cdc1912"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\PASBloodOrb2.blp",
+      "size": 6641,
+      "sha256": "306161127928b4c850821d19d2ff1367652074950d41805ccba7c02d4fb5001a"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\PASChaosOrb.blp",
+      "size": 6641,
+      "sha256": "e27a84e6cdd9844ef95fe78f66c7059c5132f5a321a065c40ebd650041b00cd9"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\PASDarknessOrb.blp",
+      "size": 6641,
+      "sha256": "47af2dd64b41fa8ad851716b4d321448fb6d5c2b71718530f3e56342c6d609cb"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\PASFireOrb.blp",
+      "size": 6641,
+      "sha256": "08f743b32339a3d08decf306059b96956ebba35df41675f4487adb59e81269a2"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\PASLightningOrb.blp",
+      "size": 6641,
+      "sha256": "71d52321730c0c07389ccc6cf86343a5aed738b0f4f2fd750b45c84a78ccb149"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtons\\PASWindOrb.blp",
+      "size": 10988,
+      "sha256": "4fe07bc1bc4817c2f7f8960af20973662d3d99f01e72fdd85bc0bf9dec1f6471"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalConvergence.blp",
+      "size": 3660,
+      "sha256": "a1f8c128118c031c2f44358ba0c78d83230fb4b74e3e0d0a059f8891ceaf36f9"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalObliteration.blp",
+      "size": 12002,
+      "sha256": "a4e2fbce8d994a270eedc859abeca104ac387fc9096859957812efd47636342d"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNKeySetAll.blp",
+      "size": 4043,
+      "sha256": "33c60e6bfcfbb4c921c8303ce2bd155c87561d1a2e4e9fa2335be7f5b0113311"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNKeySetEmpty.blp",
+      "size": 6300,
+      "sha256": "69bd6e111806afe2cf1f78bc3aec720bfa185e7fc45117a8cf295f2412486b74"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNKeySetLeft.blp",
+      "size": 6300,
+      "sha256": "2054fea0f4ab336723484bad0eb5aa31da2ad25b218c6267e84473e5d187960b"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNKeySetLeftRight.blp",
+      "size": 6300,
+      "sha256": "686840b28e902902e47e9a1930799aa8fe5fa6633f3da3f64da5236117b29d35"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNda.blp",
+      "size": 2756,
+      "sha256": "eaae2824ea186e90766a7d8a7991ca4d1124475da4efd8b02a712bf49e6ca122"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASBloodOrb2.blp",
+      "size": 6641,
+      "sha256": "b66e5137384b7d6ba6d33bdb80f35c1dc560d5b361267b3d1148e71dd81eba9a"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASChaosOrb.blp",
+      "size": 6641,
+      "sha256": "40585e99245f0bdaf04c48779f587ab1806c3da84b52bf104839ef6488b3d273"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASDarknessOrb.blp",
+      "size": 6641,
+      "sha256": "8f372b97b716ec0e5faf2e837331c51d50af8b39b14c2c2c97608b987da70fc3"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASFireOrb.blp",
+      "size": 6641,
+      "sha256": "28114d655ea6e5e9e765b18a776a3883cc35630c70fd148f7cb277c18041c430"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASLightningOrb.blp",
+      "size": 6641,
+      "sha256": "e39efe8c372e25e7ab514d604ee763e3d2228e72f9fce94fcb497d3de619f14e"
+    },
+    {
+      "internal": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASWindOrb.blp",
+      "size": 8895,
+      "sha256": "eb9af87f39ee6ee55cd23bc3847705f6235f7231c36e3d794348a3a26b34c283"
+    },
+    {
+      "internal": "RoyalGlow.blp",
+      "size": 45623,
+      "sha256": "75864d5f80ec3963a8b16219478d394a5187c4c1f0f425aec83c093c1233fc75"
+    },
+    {
+      "internal": "Streetlight.blp",
+      "size": 14524,
+      "sha256": "b633760fd70b9d6d6c2dd31919ec20169148fb6646a2fa91ceb6876faeb0c647"
+    },
+    {
+      "internal": "TerrainArt\\Ruins\\Ruins_Dirt.blp",
+      "size": 178898,
+      "sha256": "2ebc2f17c9b479f027e86cc276baad69bab070e7805d90e34e07a4a90925fdd2"
+    },
+    {
+      "internal": "TerrainArt\\Ruins\\Ruins_LargeBricks.blp",
+      "size": 111806,
+      "sha256": "a0852a3c7303676847fd70f82dcb155a013302c30408c0bbc384b482b615997b"
+    },
+    {
+      "internal": "UI\\AzureGlow5.blp",
+      "size": 80315,
+      "sha256": "cb8a905837f6380d516ca36cc3b053e9b9b154d1b171f49ac1fb12b28e856cf4"
+    },
+    {
+      "internal": "UI\\BTNDrop.blp",
+      "size": 14033,
+      "sha256": "499122f7fc8fe1e3d92f51219f9593c16aaa828ff4654f2c4ce6cc426ad855d1"
+    },
+    {
+      "internal": "UI\\BTNSell.blp",
+      "size": 16906,
+      "sha256": "48661e875482e0bdd9076a9aa58f3ff6a65d533eb5b138a2986b83643b40e359"
+    },
+    {
+      "internal": "UI\\CLEAR.blp",
+      "size": 1838,
+      "sha256": "b9050aa3c9ea7aa8186a236a38d00257d6a80a5f6aad37d0877270bd974a7ef3"
+    },
+    {
+      "internal": "UI\\ConsoleMinimap1.blp",
+      "size": 52101,
+      "sha256": "71d9d16238ce3e34bd42df90bf4acd9dfc9402f8feda7377ba5585a783026829"
+    },
+    {
+      "internal": "UI\\MiniMap\\MiniMapIcon\\MinimapIconStartLoc.blp",
+      "size": 1838,
+      "sha256": "b9050aa3c9ea7aa8186a236a38d00257d6a80a5f6aad37d0877270bd974a7ef3"
+    },
+    {
+      "internal": "UI\\Minimap\\Minimap-WaypointMarker.blp",
+      "size": 1838,
+      "sha256": "b9050aa3c9ea7aa8186a236a38d00257d6a80a5f6aad37d0877270bd974a7ef3"
+    },
+    {
+      "internal": "UI\\Nothing.blp",
+      "size": 1486,
+      "sha256": "da4e8df8abf91c2d1624cd52d2c35459e41ad8fcdc9a248914f1ce4fa1dfadbd"
+    },
+    {
+      "internal": "UI\\RB.blp",
+      "size": 6416,
+      "sha256": "310c1dd6e79f8ce4248945fae797a30cfd82b286bcc6003f7da33de78caa8584"
+    },
+    {
+      "internal": "UI\\RaceWindow.mdx",
+      "size": 6276,
+      "sha256": "05297182cf49a16bd39634267213e226ef9b2c674a34451df9cd5aca3abb5b53"
+    },
+    {
+      "internal": "UI\\RaceWindowLong.mdx",
+      "size": 6276,
+      "sha256": "e1c8d5f9864b19247d1b567cbb146dc605425f9d526a72e1fb5181f6ee769ca9"
+    },
+    {
+      "internal": "UI\\SMR.blp",
+      "size": 6170,
+      "sha256": "763ca4480e8cb4e233142fca47018b1a1b195da055ec667ea438c6f91c562f30"
+    },
+    {
+      "internal": "UI\\dummy.mdl",
+      "size": 15428,
+      "sha256": "1994b1c50647d017f2cde1c8fe606b661a4fef538f997e9ff1b7fd29c11fbea4"
+    },
+    {
+      "internal": "UI\\test.blp",
+      "size": 3100,
+      "sha256": "06bd94911c8031ea732675a1ebdf520513e3f24174dc746344d01b3bceb06c66"
+    },
+    {
+      "internal": "UI\\test3.blp",
+      "size": 2688,
+      "sha256": "10d9fb2036bf828a608883fa370fd097b020aee3c0c5d06b4536c3f238bddd73"
+    },
+    {
+      "internal": "UNSC_Console.blp",
+      "size": 49360,
+      "sha256": "b34434f56c677b2643996205326fd79cb47d0ef80bfde41686fcd429c8a9bc5a"
+    },
+    {
+      "internal": "US_Ranger.blp",
+      "size": 30623,
+      "sha256": "5850c720900e8addfe253c75140e87fae0931369042c1126312b2d75da8dfe0f"
+    },
+    {
+      "internal": "Ui\\DMT.blp",
+      "size": 6424,
+      "sha256": "f102956e288e60d6a700c616485554cc00c93e98ec84359474a93a0deb349283"
+    },
+    {
+      "internal": "VerdantGlow2.blp",
+      "size": 17101,
+      "sha256": "5fc929566bdf9824505fd4f54f810f794273096c798f9d4c72afd8f7aa61bc2b"
+    },
+    {
+      "internal": "YoshiSkin.blp",
+      "size": 24611,
+      "sha256": "3ca978d24bf0bc99fbff302567bfbc5b3f3797270bcecf8021b01fa4d3ccc32a"
+    },
+    {
+      "internal": "covenant.blp",
+      "size": 247886,
+      "sha256": "539779b5a71523d69ba41ea90a381b997b406415aa49759f0df9a8633dbda719"
+    },
+    {
+      "internal": "dummy.mdx",
+      "size": 35040,
+      "sha256": "113a257ba2e3908d075778b7ef8b72cdf8eadf614d45f1608d005e2383481ab1"
+    },
+    {
+      "internal": "grass.mdx",
+      "size": 2232,
+      "sha256": "4a452cce41d24bddb9a68e778b8dfbf0f3f3c816c30934ce647ce06c5e8ceef9"
+    },
+    {
+      "internal": "war3map.imp",
+      "size": 6025,
+      "sha256": "d963cff78bec54d2697e65ba10b5870bfd3750678d09312c7de71b371b11c1fb"
+    },
+    {
+      "internal": "war3map.w3a",
+      "size": 30830,
+      "sha256": "2585a7382a31e49b7af715954e12707037fb6e808bda5b55c4c8930f2d283d21"
+    },
+    {
+      "internal": "war3map.w3b",
+      "size": 6984,
+      "sha256": "13dfabb7cfd0a126b14fc7fc91c3b39827653ddc35dcf1da6d486b1a3d58e57a"
+    },
+    {
+      "internal": "war3map.w3d",
+      "size": 3311,
+      "sha256": "da18ae8cb4ad796ed3366e0777eea1657f9b611ff64e23a0f6ef8979772c3919"
+    },
+    {
+      "internal": "war3map.w3h",
+      "size": 857,
+      "sha256": "11717e07e0ec5e13e6a4b10d78530aeb03cf14ac870287b0dda660ad703a09f9"
+    },
+    {
+      "internal": "war3map.w3q",
+      "size": 1484,
+      "sha256": "169b4a6e0d5d8a44086c9a5e77540654fbf7c515e59fa947934e9a7c7c91340a"
+    },
+    {
+      "internal": "war3map.w3t",
+      "size": 707,
+      "sha256": "ccf1c4c421b73bf63d08c0ef315f13767db68ef136ae34b12e78045516f2ba3a"
+    },
+    {
+      "internal": "war3map.w3u",
+      "size": 33418,
+      "sha256": "b1ca18a76df096ca98856ea0cca8e84983d0288647bf434e607db4fd39516af7"
+    },
+    {
+      "internal": "war3map.wts",
+      "size": 66703,
+      "sha256": "65950ca65dd4e49c0c3f21bfbb00ffd7cec347803730b55dd242d554969ec892"
+    },
+    {
+      "internal": "war3mapImported\\01. Burnin' Up.mp3",
+      "size": 1961049,
+      "sha256": "f5b2b29464579a2b091f13ba96a413de9a924d2b46f7ad6e086d53b72bdf179e"
+    },
+    {
+      "internal": "war3mapImported\\02. Wild Rush.mp3",
+      "size": 2200121,
+      "sha256": "c22c4ce69bee8fa88bb24793e0cd61300265f126ade779a4f4c31957a10a31d1"
+    },
+    {
+      "internal": "war3mapImported\\03. Edge Of Spirit.mp3",
+      "size": 2185915,
+      "sha256": "c3722e4d487f986c06ec75ba543b59995d5915476f027303f0cbcabf0da1d871"
+    },
+    {
+      "internal": "war3mapImported\\04. Caution!.mp3",
+      "size": 1983199,
+      "sha256": "3d38d05a7d555185830e44e0c08c7be306499b200adefb542ddba94093b0cfd4"
+    },
+    {
+      "internal": "war3mapImported\\05. Menace.mp3",
+      "size": 2030425,
+      "sha256": "0d84c60cf6966bd758b2b1344ccf66292ccc15840a842790380d6cfa34d8aea9"
+    },
+    {
+      "internal": "war3mapImported\\06. Hot Soul.mp3",
+      "size": 2142859,
+      "sha256": "76054b35e1ae0393b5690def8a19a5dcd543f4856a8ea0d867f660f4a6d39c82"
+    },
+    {
+      "internal": "war3mapImported\\07. High And Scream.mp3",
+      "size": 2118624,
+      "sha256": "e4b43d551d5a88d92d0e939d0d568017858a1bb98ad7e3a69169a53fbdfd7321"
+    },
+    {
+      "internal": "war3mapImported\\08. Shootout In Meteor.mp3",
+      "size": 2154989,
+      "sha256": "805df29584567d6c0c5a87a07ffc17759df5433aa0219cadb33cc37464a4c029"
+    },
+    {
+      "internal": "war3mapImported\\09. Power Scale.mp3",
+      "size": 2093543,
+      "sha256": "d627252ffba2cd10cbd78b80bc3f04475c129cfb4a289b6aa277d26289b513c3"
+    },
+    {
+      "internal": "war3mapImported\\10. Dynamite Battle.mp3",
+      "size": 2055095,
+      "sha256": "59e212cdc6accc084dae3053f4f21eb34416a5cbd90431da8f93fedc31d08e2d"
+    },
+    {
+      "internal": "war3mapImported\\Bondage Blue SD.mdx",
+      "size": 70400,
+      "sha256": "c8d9a621b91d3bd9eb1e7fd540729fb985fae84bce229308c18c52aedf5e6314"
+    },
+    {
+      "internal": "war3mapImported\\Bondage Blue SDC1.mdx",
+      "size": 70464,
+      "sha256": "5f2284b9646a462bd138bf605da53e9543d75ae47603394bca46545bf9d6cf49"
+    },
+    {
+      "internal": "war3mapImported\\Bondage Gold SDC1.mdx",
+      "size": 70464,
+      "sha256": "e0edff84331818fc1710b04d4f3c013694ab244cda7122bc9446196ed7c02f1d"
+    },
+    {
+      "internal": "war3mapImported\\By_Yeti_Kcharte_vos.mp3",
+      "size": 55169,
+      "sha256": "af6fd43c1a92786b950b3ea38557ee7cf7d9d1e55f9621c90b68060360842b63"
+    },
+    {
+      "internal": "war3mapImported\\CLEAR.blp",
+      "size": 1838,
+      "sha256": "b9050aa3c9ea7aa8186a236a38d00257d6a80a5f6aad37d0877270bd974a7ef3"
+    },
+    {
+      "internal": "war3mapImported\\ConsoleMinimap2.blp",
+      "size": 91176,
+      "sha256": "73621a9c51c787bf9cb61bfad09f9d66b55d682b99e0e7986ea4cd85f7ffda88"
+    },
+    {
+      "internal": "war3mapImported\\Ember Blue.mdx",
+      "size": 6458,
+      "sha256": "b5c324e010c7f8362a3ff648689b6018eed83131bfc41a7702bdf2534f9cc638"
+    },
+    {
+      "internal": "war3mapImported\\End.wav",
+      "size": 115148,
+      "sha256": "9dcf1bcf7020c99fe644337a214b63a44dee5650b2fd939a7273c28713a53de2"
+    },
+    {
+      "internal": "war3mapImported\\Error.mp3",
+      "size": 10953,
+      "sha256": "f8b2bfbbd17e5f47555d7d1d042a5c608bcec5514d7efafdee7244c0de2015f6"
+    },
+    {
+      "internal": "war3mapImported\\Farm.mdx",
+      "size": 85560,
+      "sha256": "b8a6181ddca3246a6e3dbd7cebf75d38079501edcd5d137b5e5d03f50175fc08"
+    },
+    {
+      "internal": "war3mapImported\\GM_shuimian03.MDX",
+      "size": 14740,
+      "sha256": "7cdcb05f78b5d6fec05da526766f573298a1b92cec9b5340f47b36636cfe5f6d"
+    },
+    {
+      "internal": "war3mapImported\\Hero_Shinigami.mdx",
+      "size": 169348,
+      "sha256": "72913971fa70458bc5d1bb1cc8eb874e8d2a17e4b929b85d92fd7f8b8df221b4"
+    },
+    {
+      "internal": "war3mapImported\\Hero_ShinigamiP.mdx",
+      "size": 169092,
+      "sha256": "7bbe0e096bb1dac1950f3cc935ae6ccb42af15a355cfb9d4f049559581053492"
+    },
+    {
+      "internal": "war3mapImported\\Intro.wav",
+      "size": 72080,
+      "sha256": "5643c70cf97998661a510d5ba1adca6b3ddb75c42da4c58d6a9bb2ed461dafbd"
+    },
+    {
+      "internal": "war3mapImported\\ModernLightPost.mdx",
+      "size": 10892,
+      "sha256": "0b82b040539b39186d2cedcce9f136f2484bc64c448741c89848299027c5d86c"
+    },
+    {
+      "internal": "war3mapImported\\NuclearExplosion.mdx",
+      "size": 19499,
+      "sha256": "51df8bc2b93f757a6319e100e92edcad8f559da4520bbbd3b0eddcf65f942760"
+    },
+    {
+      "internal": "war3mapImported\\OrbBloodX.mdx",
+      "size": 28345,
+      "sha256": "f97f3094474e27aa95a73b8074590f8cb570e7faeace752c66ab57d38b9c4bbe"
+    },
+    {
+      "internal": "war3mapImported\\OrbBloodXR.mdx",
+      "size": 28353,
+      "sha256": "acfc43de1ac6553f32133a088c3f1ae58e11330f33b677ea8f75387a7c872f1c"
+    },
+    {
+      "internal": "war3mapImported\\OrbDarknessX.mdx",
+      "size": 28345,
+      "sha256": "667d848b4c4a56ce47102f4ce58b4a3acc3d81223c06e09f97dc41312ca0f8a5"
+    },
+    {
+      "internal": "war3mapImported\\OrbDarknessXR.mdx",
+      "size": 28353,
+      "sha256": "ae0572bb3f0269ac2abdef298d07b77ecd0829a8ef4f2e7f8993fc63998c4aff"
+    },
+    {
+      "internal": "war3mapImported\\OrbFireX.mdx",
+      "size": 28077,
+      "sha256": "d743560c8769c340c00d7fc99a7c4e8dc1530d6ead1af501e259d5abcedfb1d2"
+    },
+    {
+      "internal": "war3mapImported\\OrbFireXR.mdx",
+      "size": 28085,
+      "sha256": "62617a6926d2387db4eb6a199e0728cc044de66aea2f4a8d613f6a3cb52d564f"
+    },
+    {
+      "internal": "war3mapImported\\OrbLightX.mdx",
+      "size": 28029,
+      "sha256": "6d594e6caaf65865feab62094757dafffbac36bdd2b7c31dfaf78e9fd2358d06"
+    },
+    {
+      "internal": "war3mapImported\\OrbLightXR.mdx",
+      "size": 28037,
+      "sha256": "ca94bcdb308d2a8bd3d19b62170118db872950d02d6d4ad90aa2eb1be2525bd0"
+    },
+    {
+      "internal": "war3mapImported\\OrbLightningX.mdx",
+      "size": 28613,
+      "sha256": "545abc109db217938a7d0bd5ccda5e0e2c41fc3b2213a0ad8555cdd0a643b709"
+    },
+    {
+      "internal": "war3mapImported\\OrbLightningXR.mdx",
+      "size": 28621,
+      "sha256": "455dd39801e5091ca95eba325cb92e9f580f879a0ce2ddf9f4f5d6c325df1abe"
+    },
+    {
+      "internal": "war3mapImported\\OrbPoisonX.mdx",
+      "size": 28345,
+      "sha256": "5e50c93b7d121c04461c380dd15759fc3196f45c0081419f7823e9464a3d5849"
+    },
+    {
+      "internal": "war3mapImported\\OrbPoisonXR.mdx",
+      "size": 28353,
+      "sha256": "a767fa305e7cd5ed966f2a17e4b632a95ae9f06bc17da8084d79ec324d726990"
+    },
+    {
+      "internal": "war3mapImported\\PTA_1.mp3",
+      "size": 2114062,
+      "sha256": "6e808a55351b6ac7fd0db18c75dcaa6824ba9e9adcbfdfdf119f97ea899b6ba0"
+    },
+    {
+      "internal": "war3mapImported\\PTA_2.mp3",
+      "size": 802088,
+      "sha256": "bb6285e8312015eb4e00a69dbc244520404773b39fcb54f7d7c1739e43f69813"
+    },
+    {
+      "internal": "war3mapImported\\PTA_3.mp3",
+      "size": 1890036,
+      "sha256": "1dedd744bf539b99a339fa9c767f7ce3a6741e0ae45fdec9b96b3d6c2e874780"
+    },
+    {
+      "internal": "war3mapImported\\PTA_4.mp3",
+      "size": 1666010,
+      "sha256": "cc4724e7d55b1794039e93e0aa9b08a6361595f25caabbe6398d43d1cd5a8df5"
+    },
+    {
+      "internal": "war3mapImported\\PTA_5.mp3",
+      "size": 1722016,
+      "sha256": "4aaf4abc45f6549cb2c0f8d2e29fa76cc90ab89cfa2cced04984c5b38fe648be"
+    },
+    {
+      "internal": "war3mapImported\\PTA_6.mp3",
+      "size": 620276,
+      "sha256": "c810d29ffca8d9fc88ee995a35c9b8aede3395fbe8f08ab2442829b957d9469f"
+    },
+    {
+      "internal": "war3mapImported\\PTA_7.mp3",
+      "size": 528325,
+      "sha256": "6100c0bbccbbf149ea955571d77eb35f412ffc9ddde56dbc50667e26488d89e5"
+    },
+    {
+      "internal": "war3mapImported\\PTA_8.mp3",
+      "size": 494052,
+      "sha256": "71844253baf39cddf602fd1196efa95af916721cf9a9e615310ada71aa87af64"
+    },
+    {
+      "internal": "war3mapImported\\PTA_9.mp3",
+      "size": 686314,
+      "sha256": "343afb7a37f0d42fafa6b2f1405bbcafcb5469f21c8b7399f3941cbe6d9f3fd8"
+    },
+    {
+      "internal": "war3mapImported\\Penguin.mdx",
+      "size": 81733,
+      "sha256": "0dcdc202a3e14176e68641fcfbf9f2278b30224ca9f15c34db7560bc3f1f6489"
+    },
+    {
+      "internal": "war3mapImported\\PosteDeLuz.mdx",
+      "size": 7685,
+      "sha256": "809008528ac68520a378c31d622f74b004fc3049a5f34afe3ec689213fea85ec"
+    },
+    {
+      "internal": "war3mapImported\\PotraitRockGolemV1.mdx",
+      "size": 85035,
+      "sha256": "70d2b95eb09523323c7dbe7bf206b0f3f80a1b28fdf4c42be92525673b884113"
+    },
+    {
+      "internal": "war3mapImported\\PozoLife.mdx",
+      "size": 27413,
+      "sha256": "474879de59dc322b7c8155a47de3f03b8a40fdc20a2edd937912186eada618b8"
+    },
+    {
+      "internal": "war3mapImported\\RDK_Domina1.mp3",
+      "size": 28828,
+      "sha256": "80694efd128f0fc4eedeea76e296ba7015a37453133514b90ab6e66be9eef682"
+    },
+    {
+      "internal": "war3mapImported\\RDK_Domina2.mp3",
+      "size": 31958,
+      "sha256": "7c1227be4ac0bc275cd277cb6bfb9f84fda8b128ba219df070a8442068f0d6f4"
+    },
+    {
+      "internal": "war3mapImported\\RDK_Domina3.mp3",
+      "size": 40722,
+      "sha256": "9d76ed4d6c4a24b13b22bcb42709195342f88c4611b7d2cc9c7457f0a9e1da1c"
+    },
+    {
+      "internal": "war3mapImported\\RDK_Domina4.mp3",
+      "size": 33836,
+      "sha256": "427b6801aa9531619dd6e3117cde2df9c6ba758e106e162186b21d1fda676e39"
+    },
+    {
+      "internal": "war3mapImported\\RDK_Domina5.mp3",
+      "size": 36966,
+      "sha256": "6dfde1629861556824661bee4a249e22aa99b6b2cc7f8147a3e515162202b2f1"
+    },
+    {
+      "internal": "war3mapImported\\RDK_Domina6.mp3",
+      "size": 32584,
+      "sha256": "f5d6645e60d7579df695ce6414beb53ae221bd6dbe5b1eb03baef5f728b63cbc"
+    },
+    {
+      "internal": "war3mapImported\\RDK_DotaA2.mp3",
+      "size": 52616,
+      "sha256": "7d43d243b8609f8d03e492d6030dca6b8b8d8c0b2d9c59b95eb7bad90d01c239"
+    },
+    {
+      "internal": "war3mapImported\\RDK_DotaA3.mp3",
+      "size": 60128,
+      "sha256": "750bc5868317526b03e99bffd18ad11cfd0a45b804eb9b777aaf17d1002028c6"
+    },
+    {
+      "internal": "war3mapImported\\RDK_DotaA4.mp3",
+      "size": 120850,
+      "sha256": "b99abf54e4d91889163ae7394413784ab56a95570657dd6d8574f5a3a211d6c4"
+    },
+    {
+      "internal": "war3mapImported\\RDK_DotaA5.mp3",
+      "size": 117720,
+      "sha256": "0e8bec5f0e864118beb65195d32f41043d3d4167552261a42fb2a1ca633dd0e3"
+    },
+    {
+      "internal": "war3mapImported\\RDK_RompeCombo1.mp3",
+      "size": 59502,
+      "sha256": "52cf1402a793b6a0f4a058614b142cbe84325729bb85828085d08ed6a9cae09a"
+    },
+    {
+      "internal": "war3mapImported\\RDK_RompeCombo2.mp3",
+      "size": 55120,
+      "sha256": "0a9cdfa086d4e5d741916e0f39309e3a69dfe4f318cfde0c60fdaf8b8a545710"
+    },
+    {
+      "internal": "war3mapImported\\RDK_RompeRacha.mp3",
+      "size": 39470,
+      "sha256": "6e13496086a8bf535253890076fc59d20f50701243b8e746462832b1d58229c5"
+    },
+    {
+      "internal": "war3mapImported\\RaceWindowDiag.mdx",
+      "size": 6276,
+      "sha256": "4cf42fcae3fb2a3102f93349c446b6099d4ef1759b9176d5a4c496d636ce3544"
+    },
+    {
+      "internal": "war3mapImported\\RaceWindowDiagExtra.mdx",
+      "size": 14592,
+      "sha256": "c6e54c340e3ab8c07c9aadf453f6f0e52ab76317e908fbc4e61c911e17146045"
+    },
+    {
+      "internal": "war3mapImported\\RaceWindowDiagExtraMenor.mdx",
+      "size": 11808,
+      "sha256": "ec57c256f147772b191a3f8d6a91277b57b7941b56629071ee9fc9f14c4db695"
+    },
+    {
+      "internal": "war3mapImported\\RaceWindowPortraitFont.mdx",
+      "size": 1640,
+      "sha256": "7d4017f6a93c88377ea9126bce5f1b50b4922cebc05a1e47ff538e4e91565d7a"
+    },
+    {
+      "internal": "war3mapImported\\RaceWindowPortraitOut.mdx",
+      "size": 2870,
+      "sha256": "8e1bad40a1b7fb62d04f20d8e8511639db36dd8a8ec5c82aa5508f6264a88d9c"
+    },
+    {
+      "internal": "war3mapImported\\Reaper's Claws Blue.mdx",
+      "size": 17293,
+      "sha256": "66567c27d21a09cda9e99e19474327d6926eb726c99c3ac00840bf9d90bd9892"
+    },
+    {
+      "internal": "war3mapImported\\Shock Blast Orange.mdx",
+      "size": 8194,
+      "sha256": "e88159747672bff5ab70c769f826977110d122531f14d8e55c8a8e6f9b024f61"
+    },
+    {
+      "internal": "war3mapImported\\Spell Marker Blue.mdx",
+      "size": 99282,
+      "sha256": "ec11060cf905902ebb7c835a93a67ba068169bc4b9c0f8917bb79bda96464edd"
+    },
+    {
+      "internal": "war3mapImported\\Spell Marker Gray.mdx",
+      "size": 99182,
+      "sha256": "c5494dc01caa59dd8c8518b5a1b3f767889fcc5572b10fd082000ad051665937"
+    },
+    {
+      "internal": "war3mapImported\\Spell Marker Green.mdx",
+      "size": 99154,
+      "sha256": "2e4a17ddb2d327cf187359edd3e2b896fd372086e2705aa9307a198d4824ccb6"
+    },
+    {
+      "internal": "war3mapImported\\Spell Marker Red.mdx",
+      "size": 99182,
+      "sha256": "164047c986e3eeee8fb79f45a2df3929c61db2ebdf4c54ea715102f5de9bc63b"
+    },
+    {
+      "internal": "war3mapImported\\Spell Marker TC.mdx",
+      "size": 111945,
+      "sha256": "819f8bc66e455b3ce3b2b65f6b1d47e47caa90d518135f20a77790fab9adce7a"
+    },
+    {
+      "internal": "war3mapImported\\SurvivalEnd.wav",
+      "size": 1191996,
+      "sha256": "754cf69842fe4ecbc59af493d603a1e2b047f7e1f277f5ecc578607aa1c3bd46"
+    },
+    {
+      "internal": "war3mapImported\\Trader --- - Never Gonna Stay in The Abyss.wav",
+      "size": 1159228,
+      "sha256": "e31be8c52c6caac4096d69f11ebe63b3a25344d68bcc4b7ef30440ad7ba6e481"
+    },
+    {
+      "internal": "war3mapImported\\Trader 1 - Meanwhile, in The Abyss.wav",
+      "size": 776252,
+      "sha256": "f2b1fce2fddaecb6b201cd50f05c9eeddff62fdb50d89e87eb94465e8072718a"
+    },
+    {
+      "internal": "war3mapImported\\Trader 10 - Columba Noachi.wav",
+      "size": 2005052,
+      "sha256": "f5aa5a8b363ed877ef5640a2b0f5e2b0cdd27a9883b7aa18aff113f635818c3a"
+    },
+    {
+      "internal": "war3mapImported\\Trader 11 - Cold Wind.wav",
+      "size": 1888316,
+      "sha256": "d3c1ec010c17cb7739bb3fcdb915cf595a71b504be6fb4338a3e0d2b3876213e"
+    },
+    {
+      "internal": "war3mapImported\\Trader 12 - Crystal Breakin' Time.wav",
+      "size": 1790012,
+      "sha256": "430dc757014e31309e93f53acd1c835190207bb2ad132b91c25269dea1a6dd84"
+    },
+    {
+      "internal": "war3mapImported\\Trader 9 - Weapon Check-up.wav",
+      "size": 1888316,
+      "sha256": "cf050a13158a7ae31c9e7b4a5296bff56f05717ef5b352ada59784a515199a62"
+    },
+    {
+      "internal": "war3mapImported\\Ubershield Azure x10.mdx",
+      "size": 80956,
+      "sha256": "2b942b6d729d1a3c1d4636eb837b39853f888f948e8f391069dd9a2ab51430e1"
+    },
+    {
+      "internal": "war3mapImported\\Ubershield Azure x3.mdx",
+      "size": 80956,
+      "sha256": "93cf78f8336c95fd5c928412acdf157876c4d249b9ecd8d4ef06062dfecae1ab"
+    },
+    {
+      "internal": "war3mapImported\\Ubershield Azure.mdx",
+      "size": 80956,
+      "sha256": "8371055194352c992b068da2e31e4f3388a0c986381a5af17e069f32a04ff395"
+    },
+    {
+      "internal": "war3mapImported\\Ubershield Starfire x3.mdx",
+      "size": 80956,
+      "sha256": "7f74bca844dc9b5633535121290abe26fe8006f467c7256ac964c8b537ea6ba2"
+    },
+    {
+      "internal": "war3mapImported\\Ubershield Tidal.mdx",
+      "size": 80956,
+      "sha256": "d56593dac413e9ae6f78e8a66bede7bd65b763223bc90f78b9ae2c98e1299c5d"
+    },
+    {
+      "internal": "war3mapImported\\Wave 1.wav",
+      "size": 3399740,
+      "sha256": "3294eedfbf8313d75c364ac578edb89f4d2a175b2825ecbc42733587090de229"
+    },
+    {
+      "internal": "war3mapImported\\Wave 11.wav",
+      "size": 7553084,
+      "sha256": "8af94f87e2ffbc82a2cb121f1486dc92d9e6fed4df810191302c9b5231c2304a"
+    },
+    {
+      "internal": "war3mapImported\\Wave 2.wav",
+      "size": 3035196,
+      "sha256": "588f68b520144daafd4dcb7a0f699324bbe21a75cc6aed04e73638cdd660150c"
+    },
+    {
+      "internal": "war3mapImported\\Wave 3.wav",
+      "size": 3147836,
+      "sha256": "c2366d2f09f3925175bde062dd06043aee44dfe38046fe1f95d63e68e1c4de1f"
+    },
+    {
+      "internal": "war3mapImported\\Wave 4.wav",
+      "size": 2615356,
+      "sha256": "cd05ddc1d7daa5eb57081ded6809e1d85c9fca3c5d4155f120ac446e920b7c64"
+    },
+    {
+      "internal": "war3mapImported\\Wave 5.wav",
+      "size": 2832444,
+      "sha256": "db1ba899658ca7cfc4e8d6b08db5874218c8c7164790244f890fb65c304968ef"
+    },
+    {
+      "internal": "war3mapImported\\Wave 6.wav",
+      "size": 2738236,
+      "sha256": "58a9ca462d19f23cb024a6f850f6f08a21530267ed1a5dbb25057ea1c4bfde90"
+    },
+    {
+      "internal": "war3mapImported\\Wave 7.wav",
+      "size": 3541052,
+      "sha256": "3a3b480dd22de6a49a09e5ff5056399b698fd3a14585c1e56dcb8660a4409271"
+    },
+    {
+      "internal": "war3mapImported\\Wave 8.wav",
+      "size": 3885116,
+      "sha256": "1c3c2e1ef1ba86acdb670efb9b50bba0f62179a398f532d0f4c139a5ccd3567f"
+    },
+    {
+      "internal": "war3mapImported\\Wave 9.wav",
+      "size": 5378108,
+      "sha256": "d857460e5772ab1362d7873d0c03bcde111db61e141be993b740b60113a4f362"
+    },
+    {
+      "internal": "war3mapImported\\XPozoLife.mdx",
+      "size": 24460,
+      "sha256": "71f5a110ef7a2bbb4c73595ad4de198a8a8fb9806097e777ab8013842fcb80ac"
+    },
+    {
+      "internal": "war3mapImported\\YetixGemi.mp3",
+      "size": 9194,
+      "sha256": "bd5d614a209b528a9400891a8d6edacc8bf51d7d6f9badf0f0692bd7448ac159"
+    },
+    {
+      "internal": "war3mapImported\\Yoshi TC By RTG.mdx",
+      "size": 115995,
+      "sha256": "8e4edf7638bd895a7d6b5422595e2a8a394bcbb62acf9efac0850fba0d8a2a28"
+    },
+    {
+      "internal": "war3mapImported\\announcer_1stblood_01.wav",
+      "size": 77428,
+      "sha256": "9b1f44b7d3a16b4aabad8e438842fbe95a55af38cbd1c358216563c8959f99b6"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_dominate_01.mp3",
+      "size": 31448,
+      "sha256": "83fba7453aed5b06aed3ad05a2824ca14f0cbb4be5e304422d5c29db82b04a17"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_double_01.mp3",
+      "size": 34789,
+      "sha256": "53e2a69a06d5d3566e4a77645a9c895b48d2ef7cef45854be9efe021131c5d4f"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_godlike_01.mp3",
+      "size": 31447,
+      "sha256": "c603761b678096677f11014d5b3815ea0baf6268c0ea2209667b6d1c084c8655"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_holy_01.mp3",
+      "size": 39803,
+      "sha256": "8e0fca9d57192f01687e7d7b2ffe0a22d9fc33d401ba147b3fbba9ed5195e71a"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_mega_01.mp3",
+      "size": 44400,
+      "sha256": "5a4901f0a19af2b5ceb1738c988954454186f80315621db0460c93eb35d3289a"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_monster_01.mp3",
+      "size": 56106,
+      "sha256": "5e3c60de4263a51cc0997bdd99f13ea4738e9a48da38859941e3695cbbc7989b"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_rampage_01.mp3",
+      "size": 33954,
+      "sha256": "397b10193e200c6d1b165c7bbd71e58846704839bc46c8f5f61b4ea7409feb42"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_spree_01.mp3",
+      "size": 40640,
+      "sha256": "e2380f63cbab5e71d4a60f3b204f45682fe87ad4c6c7a023caf9ab5ec5263528"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_triple_01.mp3",
+      "size": 33118,
+      "sha256": "baf7654f7983d896ccea96e7eb0842bb54ce18455011b62483475e5f4406da03"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_ultra_01.mp3",
+      "size": 43984,
+      "sha256": "f92f714f73f8123d9cebd5271caa43e57c299835aa364250ac5cb9a6dce5f3b7"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_unstop_01.mp3",
+      "size": 34790,
+      "sha256": "4fa9c1e3a3b6c0a45e20d8f039295e056b59e44f248a5d6b7420c201c9ba8801"
+    },
+    {
+      "internal": "war3mapImported\\announcer_kill_wicked_01.mp3",
+      "size": 44403,
+      "sha256": "ac15126f05ba10c3200ac2e665e13cf2f3145ce149f7fdd2e6c588630ebcc2cf"
+    },
+    {
+      "internal": "war3mapImported\\dummy.mdx",
+      "size": 35040,
+      "sha256": "00ae03fa93988df697143cb62770af508d830011e60c39e05e08c3e2bbe1f7c8"
+    },
+    {
+      "internal": "war3mapImported\\emptytown.wav",
+      "size": 944188,
+      "sha256": "4877bc9925c65c4ed148199963028b234af63de3fe4260c8e8b814c806a750b1"
+    },
+    {
+      "internal": "war3mapImported\\hero_select.mp3",
+      "size": 1537252,
+      "sha256": "970dbda7016b613ae9d89d1fa419c2bde68808994be2ba53b96aacbcc4b82f13"
+    },
+    {
+      "internal": "war3mapImported\\tEmber Blue.mdx",
+      "size": 6094,
+      "sha256": "5d97602131ab26f72504e1097c09b63012f909005cce4af469cc5f5647b047df"
+    },
+    {
+      "internal": "war3mapImported\\ttEmber Blue.mdx",
+      "size": 6094,
+      "sha256": "3d001f617dae00d9d3178180e8ee57586b108ba31eae1b162d124cfccd234ffe"
+    },
+    {
+      "internal": "war3mapPreview.blp",
+      "size": 55888,
+      "sha256": "af6a9add71f5645d0972fe2bb573367343dc0c80266abb5a006a27d47171dee4"
+    }
+  ],
+  "resource_count": 246,
+  "excluded": [
+    "war3map.w3s",
+    "war3mapMap.blp",
+    "war3mapMisc.txt",
+    "war3mapSkin.txt"
+  ],
+  "policy": "Replace object tables and WTS intentionally; preserve audit terrain, script, placements and header. No DevMission script imported.",
+  "reextracted_hashes_match": true,
+  "source_unchanged": true
+}

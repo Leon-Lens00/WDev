@@ -1,0 +1,24 @@
+TOOLBAR 131210 buttons=23
+button 0 bitmap=0 command=0 text=New Map... (Ctrl+N)
+button 1 bitmap=1 command=1 text=Open Map... (Ctrl+O)
+button 2 bitmap=2 command=2 text=Save Map (Ctrl+S)
+button 3 bitmap=-2 command=3 text=
+button 4 bitmap=3 command=4 text=Cut (Ctrl+X)
+button 5 bitmap=4 command=5 text=Copy (Ctrl+C)
+button 6 bitmap=5 command=6 text=Paste (Ctrl+V)
+button 7 bitmap=-2 command=7 text=
+button 8 bitmap=6 command=8 text=&Undo (Ctrl+Z)
+button 9 bitmap=7 command=9 text=&Redo (Ctrl+Y)
+button 10 bitmap=-2 command=10 text=
+button 11 bitmap=8 command=11 text=Selection Brush (Space)
+button 12 bitmap=-2 command=12 text=
+button 13 bitmap=9 command=13 text=Terrain Editor (F3)
+button 14 bitmap=10 command=14 text=Trigger Editor (F4)
+button 15 bitmap=11 command=15 text=Sound Editor (F5)
+button 16 bitmap=12 command=16 text=Object Editor (F6)
+button 17 bitmap=13 command=17 text=Campaign Editor (F7)
+button 18 bitmap=14 command=18 text=AI Editor (F8)
+button 19 bitmap=15 command=19 text=Object Manager (F11)
+button 20 bitmap=16 command=20 text=Import Manager (F12)
+button 21 bitmap=-2 command=21 text=
+button 22 bitmap=17 command=22 text=Test Map (Ctrl+F9)

@@ -1,0 +1,9 @@
+{
+  "revision": "installed .3",
+  "declaredEarly": true,
+  "declarations": [
+    "S.early",
+    "S.later"
+  ],
+  "compilerEarly": false
+}

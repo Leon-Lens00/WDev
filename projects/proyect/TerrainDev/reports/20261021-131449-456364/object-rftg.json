@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "object",
+    "get",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261021-131449-456364/stage-6.w3x",
+    "rftg",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Rawcode\": \"rftg\",\n  \"Found\": true,\n  \"BaseRawcode\": \"hfoo\",\n  \"Name\": \"Blanco de prueba\",\n  \"Fields\": [\n    {\n      \"Code\": \"uabi\",\n      \"Name\": \"uabi\",\n      \"Value\": \"\",\n      \"Source\": \"map\",\n      \"Display\": \"\"\n    },\n    {\n      \"Code\": \"uacq\",\n      \"Name\": \"uacq\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"uaen\",\n      \"Name\": \"uaen\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ucbs\",\n      \"Name\": \"ucbs\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ucol\",\n      \"Name\": \"ucol\",\n      \"Value\": \"24\",\n      \"Source\": \"map\",\n      \"Display\": \"24\"\n    },\n    {\n      \"Code\": \"ucpt\",\n      \"Name\": \"ucpt\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ufle\",\n      \"Name\": \"ufle\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"ufoo\",\n      \"Name\": \"ufoo\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"uhpm\",\n      \"Name\": \"uhpm\",\n      \"Value\": \"2000\",\n      \"Source\": \"map\",\n      \"Display\": \"2000\"\n    },\n    {\n      \"Code\": \"umvs\",\n      \"Name\": \"umvs\",\n      \"Value\": \"0\",\n      \"Source\": \"map\",\n      \"Display\": \"0\"\n    },\n    {\n      \"Code\": \"unam\",\n      \"Name\": \"unam\",\n      \"Value\": \"Blanco de prueba\",\n      \"Source\": \"map\",\n      \"Display\": \"Blanco de prueba\"\n    }\n  ],\n  \"Diagnostics\": [\n    \"Warcraft III install not found (pass --game-dir \\u003Cpath\\u003E)\"\n  ]\n}\n",
+  "stderr": ""
+}

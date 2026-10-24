@@ -1,0 +1,27 @@
+{
+  "reference-jass": "e03b20a991d43aac84f88af96e23aaaa942b236d",
+  "reference-jasshelper": "8a483666385cd9beeaaccc34924d9272b7476002",
+  "policy": "Jasshelper source/grammar used as specification reference (zlib); TS reference has empty LICENSE.md, no source copied.",
+  "test_corpora": {
+    "corpus-nestharus": {
+      "commit": "d27426d8b32a2e0bcbeccc33a9d1ee44b39ec77f",
+      "license": "LICENSE",
+      "note": "no game/runtime compatibility claim"
+    },
+    "corpus-jassjass": {
+      "commit": "61b608ff3a0d2d42f96a604d70766d9eeb5ba367",
+      "license": "none supplied; read-only local validation, not shipped",
+      "note": "no game/runtime compatibility claim"
+    },
+    "corpus-noise": {
+      "commit": "d56e5a4a4792c21e2bdb8623765808bb65267de8",
+      "license": "LICENSE",
+      "note": "no game/runtime compatibility claim"
+    },
+    "corpus-h-vjass": {
+      "commit": "0ed3ce99385b00c91147af1c69791992a3f9659b",
+      "license": "LICENSE",
+      "note": "h-vjass has C preprocessor syntax, retained as out-of-profile coverage sample"
+    }
+  }
+}

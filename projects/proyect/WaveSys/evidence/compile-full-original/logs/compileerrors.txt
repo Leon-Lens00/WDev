@@ -1,0 +1,6 @@
+logs\output_war3map.j
+JASSHelper - Step 1 (textmacros, libraries, scopes) (scripts were imported)
+Line 198: [] VisionConfi : InitTrig_Event
+InitTrig functions are forbidden inside libraries and scopes.
+Change function name and use initializer command.
+1

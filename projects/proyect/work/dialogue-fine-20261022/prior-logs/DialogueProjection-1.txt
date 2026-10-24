@@ -1,0 +1,19 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "logicalEye=3131.641,-6310.625,1607.068" )
+	call Preload( "logicalAt=3131.641,-5387.957,239.214 deltaZ=196.776" )
+	call Preload( "terrainRef=203.429 dummy=201.900 owner=239.282" )
+	call Preload( "eye=3131.642,-6310.625,1607.125" )
+	call Preload( "target=3131.641,-5387.957,239.214" )
+	call Preload( "zoffset=65.227" )
+	call Preload( "angles=1.571,5.306,1.222" )
+	call Preload( "requested=3131.641,-6103.118,1264.545 fly=1012.857" )
+	call Preload( "actual=3131.641,-6103.119,1264.545 fly=1012.857" )
+	call Preload( "bounds=-28672.000,-28672.000,8192.000,8192.000" )
+	call Preload( "owner=3130.186,-5385.684 scale=3.015" )
+	call Preload( "depth=400.000 width=0.651 y=-0.161 page=0 cursor=139" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

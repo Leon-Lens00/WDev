@@ -1,0 +1,172 @@
+
+
+
+	Stun Engine
+
+
+Requirements
+
+
+
+Any Unit Indexer
+Known issues
+
+
+
+Can't stun neutral passive, only neutral hostile.
+
+Can't stun buildings.
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+//Stun Engine v.1.1
+//******************************************************************************************************
+//*
+//*     Apply or remove stuns to units. GUI friendly.
+//*
+//*     This systme only works if the Trigger has the excact name: Stun Engine
+//*         --> Information: The intializer function InitTrig_Stun_Engine doesn't work for a different trigger name.
+//*
+//******************************************************************************************************
+//*
+//*     API
+//*
+//*         STE_DURATION       --> desired stun duration
+//*         STE_TARGET         --> will get stunned.
+//*         STE_ADD_STUN       --> set this to false to remove a stun
+//*         STE_STACK          --> set this to true to stack stun times.
+//*
+//*     Execute the stun with
+//*
+//*         call TriggerEvaluate(udg_STE_TRIGGER) 
+//*
+//******************************************************************************************************
+//*
+//*             SETTINGS                           
+//*      
+    constant function StunEngineDummyId takes nothing returns integer
+        return 'n000'
+    endfunction
+    
+    constant function StunEngineAbility takes nothing returns integer
+        return 'A000'
+    endfunction
+    
+    constant function StunEngineBuff takes nothing returns integer
+        return 'B000'
+    endfunction
+    
+    constant function StunEngineAccuracy takes nothing returns real
+        return 0.031250000
+    endfunction
+    //OrderId used for "stomp"
+    constant function StunEngineAbilityOrder takes nothing returns integer
+        return 852127
+    endfunction
+//*
+//*          END OF SETTINGS                         
+//*       
+//*******************************************************************************************************        
+
+     
+    function StunEnginePeriodic takes nothing returns nothing
+        local integer i = 0
+        local integer index
+        loop
+            exitwhen i == udg_STE_MAX
+            set index = GetUnitUserData(udg_STE_UNIT[i])
+     
+            if (0.00 < udg_STE_TRACK[index]) and (0 < GetUnitAbilityLevel(udg_STE_UNIT[i], StunEngineBuff())) then
+                set udg_STE_TRACK[index] = udg_STE_TRACK[index] - StunEngineAccuracy()
+            else
+                call UnitRemoveAbility(udg_STE_UNIT[i], StunEngineBuff())
+                set udg_STE_TRACK[index] = 0.00
+                
+                set udg_STE_MAX = udg_STE_MAX - 1
+                set udg_STE_UNIT[i] = udg_STE_UNIT[udg_STE_MAX]
+                set udg_STE_UNIT[udg_STE_MAX] = null
+                set i = i - 1
+     
+                if (0 == udg_STE_MAX) then
+                    call PauseTimer(udg_STE_TIMER)
+                endif
+     
+            endif
+            set i = i + 1
+        endloop
+    endfunction
+     
+    function EvaluateStunEngine takes nothing returns boolean
+        local integer index = GetUnitUserData(udg_STE_TARGET)
+        
+        if (udg_STE_ADD_STUN) then
+            if (0.00 < udg_STE_DURATION)  then
+     
+                if udg_STE_STACK_TIME then
+                    set udg_STE_TRACK[index] = udg_STE_TRACK[index] + udg_STE_DURATION
+                elseif (udg_STE_TRACK[index] < udg_STE_DURATION) then
+                    set udg_STE_TRACK[index] = udg_STE_DURATION
+                endif
+     
+                if (0 == GetUnitAbilityLevel(udg_STE_TARGET, StunEngineBuff())) then
+                    call SetUnitX(udg_STE_CASTER, GetUnitX(udg_STE_TARGET))
+                    call SetUnitY(udg_STE_CASTER, GetUnitY(udg_STE_TARGET))
+                    call IssueImmediateOrderById(udg_STE_CASTER, StunEngineAbilityOrder())
+                    call SetUnitPosition(udg_STE_CASTER ,2147483647,2147483647)
+     
+                    if (0 == udg_STE_MAX) then
+                        call TimerStart(udg_STE_TIMER, StunEngineAccuracy(), true, function StunEnginePeriodic)
+                    endif
+     
+                    set udg_STE_UNIT[udg_STE_MAX] = udg_STE_TARGET
+                    set udg_STE_MAX = udg_STE_MAX + 1
+                endif
+            endif
+        else
+            call UnitRemoveAbility(udg_STE_TARGET, StunEngineBuff())
+            set udg_STE_TRACK[index] = 0.00
+        endif
+            
+        set udg_STE_TARGET = null
+        set udg_STE_DURATION = 0.00
+        return false
+    endfunction
+
+    function InitTrig_Stun_Engine takes nothing returns nothing
+        set udg_STE_TRIGGER = CreateTrigger()
+        call TriggerAddCondition(udg_STE_TRIGGER, Condition(function EvaluateStunEngine))
+        
+        set udg_STE_CASTER = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), StunEngineDummyId(), 0.,0.,0.)
+        call UnitAddAbility(udg_STE_CASTER, StunEngineAbility())
+        call UnitAddAbility(udg_STE_CASTER, 'Aloc')
+        call SetUnitPosition(udg_STE_CASTER ,2147483647,2147483647)
+    endfunction
+	
+Made, because the existing GUI Stun Systems weren't really satisfying or lacking features.  
+
+
+
+Keywords:
+
+stun, stun system, StunSystem, buff, stomp, GUI

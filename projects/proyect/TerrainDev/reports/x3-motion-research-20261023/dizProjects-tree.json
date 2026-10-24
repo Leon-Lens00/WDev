@@ -1,0 +1,3900 @@
+{
+  "sha": "76393706df24d80514b40950f0bc1e41d1c6ba80",
+  "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/76393706df24d80514b40950f0bc1e41d1c6ba80",
+  "tree": [
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfe0770424b2a19faf507a501ebfc23be8f54e7b",
+      "size": 66,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/dfe0770424b2a19faf507a501ebfc23be8f54e7b"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69d42209eb83122fd88f521b340e946a27d41002",
+      "size": 108,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/69d42209eb83122fd88f521b340e946a27d41002"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d65f893c53e4e7cd1af51f1894066d3dd83d8900",
+      "size": 1583,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/d65f893c53e4e7cd1af51f1894066d3dd83d8900"
+    },
+    {
+      "path": "nes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbc2fb9f55d7fbbc6adf18cc9212d5edd645d892",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/dbc2fb9f55d7fbbc6adf18cc9212d5edd645d892"
+    },
+    {
+      "path": "nes/Castlevania",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6a0b732bcd15f5cae83963dbbe2b5b6c3897c8c8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/6a0b732bcd15f5cae83963dbbe2b5b6c3897c8c8"
+    },
+    {
+      "path": "nes/Castlevania/castlevania.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f004c10e34d375b06237b080493b8e22178d8415",
+      "size": 33066,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f004c10e34d375b06237b080493b8e22178d8415"
+    },
+    {
+      "path": "nes/Castlevania/castlevania.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "139745689ecc9c8f74045900e31ff6bd0a32146a",
+      "size": 277,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/139745689ecc9c8f74045900e31ff6bd0a32146a"
+    },
+    {
+      "path": "nes/Castlevania/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f0531ea855a4555d892be60f835e828a3bf22354",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f0531ea855a4555d892be60f835e828a3bf22354"
+    },
+    {
+      "path": "nes/Castlevania/export/errors.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2e5829e22b261ba484f14c0dc81366f310295a8",
+      "size": 2860,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/d2e5829e22b261ba484f14c0dc81366f310295a8"
+    },
+    {
+      "path": "nes/Castlevania/nesmake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e03daf5e9eb3ad12c7639d186bcea0d6ddea3bc9",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/e03daf5e9eb3ad12c7639d186bcea0d6ddea3bc9"
+    },
+    {
+      "path": "nes/Castlevania/nesmake/mainNES.s",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adbf9ddb448f8b553d780644ec490327e33b8b2b",
+      "size": 1228,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/adbf9ddb448f8b553d780644ec490327e33b8b2b"
+    },
+    {
+      "path": "nes/Castlevania/nesmake/makeNES.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da6de43bfd13b141a7af4f744e6d028fe91dc13e",
+      "size": 1098,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/da6de43bfd13b141a7af4f744e6d028fe91dc13e"
+    },
+    {
+      "path": "nes/Castlevania/nesmake/nesHeader.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f53a7bfb68c44f9cf7da3a49914e2e719c421da1",
+      "size": 16,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f53a7bfb68c44f9cf7da3a49914e2e719c421da1"
+    },
+    {
+      "path": "nes/Castlevania/rom",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "67703f00d9bde34298b8be9ade443ef9a65022dd",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/67703f00d9bde34298b8be9ade443ef9a65022dd"
+    },
+    {
+      "path": "nes/Castlevania/rom/NES2SNES.s",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe22fe9d6124d83ec5652217d4e27a903ff80cd3",
+      "size": 1068,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/fe22fe9d6124d83ec5652217d4e27a903ff80cd3"
+    },
+    {
+      "path": "nes/Castlevania/rom/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44c7ef979e9665a0076039c59c8e1a1b0461ba62",
+      "size": 358,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/44c7ef979e9665a0076039c59c8e1a1b0461ba62"
+    },
+    {
+      "path": "nes/Castlevania/rom/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "768f6a3075d922b5a757fd04881bd4308cb6cd32",
+      "size": 162,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/768f6a3075d922b5a757fd04881bd4308cb6cd32"
+    },
+    {
+      "path": "nes/Castlevania3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3efc214fe961be819ab5ee240b3d9716df7a80a6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/3efc214fe961be819ab5ee240b3d9716df7a80a6"
+    },
+    {
+      "path": "nes/Castlevania3/Castlevania3.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae0f50c824aa6ecca1f353b37720f41e603feb98",
+      "size": 122538,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ae0f50c824aa6ecca1f353b37720f41e603feb98"
+    },
+    {
+      "path": "nes/Castlevania3/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c23b4c4634ee199466e7c8e6a4d58fe1e9f64aa6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c23b4c4634ee199466e7c8e6a4d58fe1e9f64aa6"
+    },
+    {
+      "path": "nes/Castlevania3/export/errors.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f7297e3fa3d19f3cabcdae2e37ed83b32eedb39",
+      "size": 15757,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6f7297e3fa3d19f3cabcdae2e37ed83b32eedb39"
+    },
+    {
+      "path": "nes/Castlevania3/nesmake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f94d65be5bcc10ef3a52a1305e549a016ad1ef5",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1f94d65be5bcc10ef3a52a1305e549a016ad1ef5"
+    },
+    {
+      "path": "nes/Castlevania3/nesmake/mainNES.s",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9c811d831bca00c0d16e8c83fb1b715ae00d238",
+      "size": 5851,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a9c811d831bca00c0d16e8c83fb1b715ae00d238"
+    },
+    {
+      "path": "nes/Castlevania3/nesmake/makeNES.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb711309f81945c760d4f94943e7e3b1d800fbdb",
+      "size": 1887,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/cb711309f81945c760d4f94943e7e3b1d800fbdb"
+    },
+    {
+      "path": "nes/Castlevania3/nesmake/nesHeader.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b319f891577495c93dd2f3ae30e20e4e22488883",
+      "size": 16,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b319f891577495c93dd2f3ae30e20e4e22488883"
+    },
+    {
+      "path": "nes/Castlevania3/rom",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0e4f60c81a04895e1d7dc72be8f203c13bf589c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/b0e4f60c81a04895e1d7dc72be8f203c13bf589c"
+    },
+    {
+      "path": "nes/Castlevania3/rom/NES2SNES.s",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51ae89b01f148ff0d52552c0d0260ff7d171b23d",
+      "size": 2068,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/51ae89b01f148ff0d52552c0d0260ff7d171b23d"
+    },
+    {
+      "path": "nes/Castlevania3/rom/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50d55c3f58de2432f3b7aa6493a112283d9a9fab",
+      "size": 372,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/50d55c3f58de2432f3b7aa6493a112283d9a9fab"
+    },
+    {
+      "path": "nes/Castlevania3/rom/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96aea86c5242daf4ec98ee1bbd182d20836870e0",
+      "size": 178,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/96aea86c5242daf4ec98ee1bbd182d20836870e0"
+    },
+    {
+      "path": "nes/Kirby",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a5bf2305bb4a4414fc93374e53aa64ef6c2ab7ad",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/a5bf2305bb4a4414fc93374e53aa64ef6c2ab7ad"
+    },
+    {
+      "path": "nes/Kirby/Kirby.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83beb4f85c129bbabb1a3178f8b38d8fef442afe",
+      "size": 3556,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/83beb4f85c129bbabb1a3178f8b38d8fef442afe"
+    },
+    {
+      "path": "nes/Kirby/nesmake",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2a2e05130bb410b42ea55298e44aef7876d29306",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/2a2e05130bb410b42ea55298e44aef7876d29306"
+    },
+    {
+      "path": "nes/Kirby/nesmake/mainNES.s",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7c119cfa3e95b261f4e815702ea9d33919fc954",
+      "size": 1878,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f7c119cfa3e95b261f4e815702ea9d33919fc954"
+    },
+    {
+      "path": "nes/Kirby/nesmake/makeNES.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60a6d2b8b3552039b335a6e5d555baf5129e8e97",
+      "size": 2688,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/60a6d2b8b3552039b335a6e5d555baf5129e8e97"
+    },
+    {
+      "path": "nes/Kirby/nesmake/nesHeader.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5612939265291f0efb2b0fc182c21a2896f3ee89",
+      "size": 16,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/5612939265291f0efb2b0fc182c21a2896f3ee89"
+    },
+    {
+      "path": "nes/Kirby/rom",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "afb432d62a71dc710bfb8202a37b1e1a209dc421",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/afb432d62a71dc710bfb8202a37b1e1a209dc421"
+    },
+    {
+      "path": "nes/Kirby/rom/NES2SNES.s",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2795a30adcad731394e79af60a52c27931b96f6d",
+      "size": 2980,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/2795a30adcad731394e79af60a52c27931b96f6d"
+    },
+    {
+      "path": "nes/Kirby/rom/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ac7864fd9d937b2f8b3a00229a5151bc5972d7c",
+      "size": 360,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/3ac7864fd9d937b2f8b3a00229a5151bc5972d7c"
+    },
+    {
+      "path": "nes/Kirby/rom/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f92a0d4071f0ac9ad34b202f0669333220feadbb",
+      "size": 122,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f92a0d4071f0ac9ad34b202f0669333220feadbb"
+    },
+    {
+      "path": "snes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ba0a43ef0d584dfa72486e6f6af76387979f697d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/ba0a43ef0d584dfa72486e6f6af76387979f697d"
+    },
+    {
+      "path": "snes/ActRaiser 2 (USA)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5818b1d8ddc4306552e924a2585c39e7d0988b72",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/5818b1d8ddc4306552e924a2585c39e7d0988b72"
+    },
+    {
+      "path": "snes/ActRaiser 2 (USA)/actraiser 2.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5da4b290cd37a1bcefab3d71acffffbc8c3f1eb5",
+      "size": 32973,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/5da4b290cd37a1bcefab3d71acffffbc8c3f1eb5"
+    },
+    {
+      "path": "snes/ActRaiser 2 (USA)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "85fde6712dc75efcc848c58b4910cc713cbb2f62",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/85fde6712dc75efcc848c58b4910cc713cbb2f62"
+    },
+    {
+      "path": "snes/ActRaiser 2 (USA)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "735406dd744162c784caad5a4d26e4613cfed4dc",
+      "size": 390,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/735406dd744162c784caad5a4d26e4613cfed4dc"
+    },
+    {
+      "path": "snes/ActRaiser 2 (USA)/export/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0"
+    },
+    {
+      "path": "snes/ActRaiser 2 (USA)/export/reBaseC0_act2.bps",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5893d92ce59dfeac3a1bd2fb28d8f21798b8661",
+      "size": 2997,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b5893d92ce59dfeac3a1bd2fb28d8f21798b8661"
+    },
+    {
+      "path": "snes/Actraiser",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a48307939faac6bb5646ebd6ee6cb98281b696bd",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/a48307939faac6bb5646ebd6ee6cb98281b696bd"
+    },
+    {
+      "path": "snes/Actraiser/actraiser.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9bc2696d7c8214be564eaf62b6c6a1d897e5dc3a",
+      "size": 18974,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9bc2696d7c8214be564eaf62b6c6a1d897e5dc3a"
+    },
+    {
+      "path": "snes/Actraiser/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "36f1ae1ac6a9af25be20ed03c425329f5fa160f6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/36f1ae1ac6a9af25be20ed03c425329f5fa160f6"
+    },
+    {
+      "path": "snes/Actraiser/export/errors.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a8cb831e4fa2f2b6fd0525f866f917d8cc32a09",
+      "size": 68,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/2a8cb831e4fa2f2b6fd0525f866f917d8cc32a09"
+    },
+    {
+      "path": "snes/Actraiser/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e987ae4cf5193819c4f5073e55467dd375ea17d4",
+      "size": 169,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/e987ae4cf5193819c4f5073e55467dd375ea17d4"
+    },
+    {
+      "path": "snes/Actraiser/export/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0"
+    },
+    {
+      "path": "snes/Bubsy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "751e4b67bf802c98d991e102fd16a0ab7d4c05d1",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/751e4b67bf802c98d991e102fd16a0ab7d4c05d1"
+    },
+    {
+      "path": "snes/Bubsy/bubsy.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab37a9dd4844b3ed75a26d923fab55dfab631c03",
+      "size": 25530,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ab37a9dd4844b3ed75a26d923fab55dfab631c03"
+    },
+    {
+      "path": "snes/Bubsy/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd00a93fae4487fd7d377540978ef178777e4588",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/fd00a93fae4487fd7d377540978ef178777e4588"
+    },
+    {
+      "path": "snes/Bubsy/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01d0955449eda7ff253fab4dd9db2264ab3ace34",
+      "size": 343,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/01d0955449eda7ff253fab4dd9db2264ab3ace34"
+    },
+    {
+      "path": "snes/Contra 3 expandet",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c651e9559b213b044b6248b8740ca0d461410b89",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c651e9559b213b044b6248b8740ca0d461410b89"
+    },
+    {
+      "path": "snes/Contra 3 expandet/Contra3_expanded.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ef2c288f2dca9697b3da2d492ab9145833d0fac",
+      "size": 46055,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/0ef2c288f2dca9697b3da2d492ab9145833d0fac"
+    },
+    {
+      "path": "snes/Contra 3 expandet/Contra3_expanded.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec9af83fce68f4915287a0bb2ac18039e8e5ef7e",
+      "size": 281,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ec9af83fce68f4915287a0bb2ac18039e8e5ef7e"
+    },
+    {
+      "path": "snes/Contra 3 expandet/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cdf6c8d874716ba1bc7454a3fc6d460edabd9cbe",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/cdf6c8d874716ba1bc7454a3fc6d460edabd9cbe"
+    },
+    {
+      "path": "snes/Contra 3 expandet/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "04de936ddd157e29784b531efba7b775c1a845fd",
+      "size": 293,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/04de936ddd157e29784b531efba7b775c1a845fd"
+    },
+    {
+      "path": "snes/Contra 3 expandet/export/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0"
+    },
+    {
+      "path": "snes/Contra 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9fc8ccd9cd6433448126d87c795c6243679197a6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/9fc8ccd9cd6433448126d87c795c6243679197a6"
+    },
+    {
+      "path": "snes/Contra 3/Contra3.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f22797c4de124f453bba4f783d54d67351b949d9",
+      "size": 50834,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f22797c4de124f453bba4f783d54d67351b949d9"
+    },
+    {
+      "path": "snes/Contra 3/Contra3.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "390d10c0347650a1fb8b5069c396d551e9353dff",
+      "size": 298,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/390d10c0347650a1fb8b5069c396d551e9353dff"
+    },
+    {
+      "path": "snes/Contra 3/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b4c93334f21eb8b9373266783e1774def6e205ab",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/b4c93334f21eb8b9373266783e1774def6e205ab"
+    },
+    {
+      "path": "snes/Contra 3/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1e721e0ef8c5c31808a00b7f4438a96b3f27a50a",
+      "size": 293,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/1e721e0ef8c5c31808a00b7f4438a96b3f27a50a"
+    },
+    {
+      "path": "snes/Contra 3/export/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0"
+    },
+    {
+      "path": "snes/Contra 3/fastROM",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "47eb1f4e1fa57dca1f4422d940d39d369beb5614",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/47eb1f4e1fa57dca1f4422d940d39d369beb5614"
+    },
+    {
+      "path": "snes/Contra 3/fastROM/main.s",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e31c6f1e5a743bd6d4955c2bbdf4833bde176c50",
+      "size": 3719,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/e31c6f1e5a743bd6d4955c2bbdf4833bde176c50"
+    },
+    {
+      "path": "snes/Contra 3/fastROM/makeFast.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18588d66b65e649d0056c9ef5697a6e7d2306ea4",
+      "size": 2085,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/18588d66b65e649d0056c9ef5697a6e7d2306ea4"
+    },
+    {
+      "path": "snes/Demon's Crest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d8d4d6810509792d6c6e7fd788c893ce6e19bb6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/7d8d4d6810509792d6c6e7fd788c893ce6e19bb6"
+    },
+    {
+      "path": "snes/Demon's Crest/demons_crest_us.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f7ef1b23ea8174ed14ee67a78ce8b595634dae3",
+      "size": 83973,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9f7ef1b23ea8174ed14ee67a78ce8b595634dae3"
+    },
+    {
+      "path": "snes/Demon's Crest/demons_crest_us.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f68abc6f50a6ae17c3647884a8a042574e809d21",
+      "size": 287,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f68abc6f50a6ae17c3647884a8a042574e809d21"
+    },
+    {
+      "path": "snes/Demon's Crest/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "327149eaaf440a38f46892d69c89f9f3a6ba632a",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/327149eaaf440a38f46892d69c89f9f3a6ba632a"
+    },
+    {
+      "path": "snes/Demon's Crest/export/Demon's Crest (U)-usage.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc370458f5fcd65c999c461c2b0085e10badd1b6",
+      "size": 16842752,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/cc370458f5fcd65c999c461c2b0085e10badd1b6"
+    },
+    {
+      "path": "snes/Demon's Crest/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6473f0f7a5690e5841cfdd90d01bb4c11532a80",
+      "size": 283,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a6473f0f7a5690e5841cfdd90d01bb4c11532a80"
+    },
+    {
+      "path": "snes/Donkey Kong Country (USA)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e96ef2882b22be6d7f8fce92685e92d514dce42",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/3e96ef2882b22be6d7f8fce92685e92d514dce42"
+    },
+    {
+      "path": "snes/Donkey Kong Country (USA)/DonkeyKongCountry.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a09704cb790c5ea3e240556ff88dd280637f7cfc",
+      "size": 69571,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a09704cb790c5ea3e240556ff88dd280637f7cfc"
+    },
+    {
+      "path": "snes/Donkey Kong Country (USA)/DonkeyKongCountry.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ce3d000238b398dcf0ea4b166f52ae383a88044",
+      "size": 316,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/3ce3d000238b398dcf0ea4b166f52ae383a88044"
+    },
+    {
+      "path": "snes/Donkey Kong Country (USA)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "daa1498cb782316b6f6634e405bc7028ccb2c88a",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/daa1498cb782316b6f6634e405bc7028ccb2c88a"
+    },
+    {
+      "path": "snes/Donkey Kong Country (USA)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8503b4588bd40438259635dda5395e399caec2b2",
+      "size": 274,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/8503b4588bd40438259635dda5395e399caec2b2"
+    },
+    {
+      "path": "snes/Donkey Kong Country (USA)/export/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0"
+    },
+    {
+      "path": "snes/Doom (incomplete)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d77ce5848c951d44eaabbd15e06aaecb983cf09d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d77ce5848c951d44eaabbd15e06aaecb983cf09d"
+    },
+    {
+      "path": "snes/Doom (incomplete)/doom (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15f615adac5fd45c68f2732fbee4de5169befee5",
+      "size": 6171,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/15f615adac5fd45c68f2732fbee4de5169befee5"
+    },
+    {
+      "path": "snes/Doom (incomplete)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01525ab3aceb544d5e54fa3553774f3f9ed59197",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/01525ab3aceb544d5e54fa3553774f3f9ed59197"
+    },
+    {
+      "path": "snes/Doom (incomplete)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74790fb628fc65d549ca47520f2ce57a890d8785",
+      "size": 248,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/74790fb628fc65d549ca47520f2ce57a890d8785"
+    },
+    {
+      "path": "snes/Double Dragon Return",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8cab54feac9cb9759ea1e14164dfa61c67448c4f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/8cab54feac9cb9759ea1e14164dfa61c67448c4f"
+    },
+    {
+      "path": "snes/Double Dragon Return/Double Dragon Return.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecb19d32f1093347739696f5349b8444ee6029d1",
+      "size": 22287,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ecb19d32f1093347739696f5349b8444ee6029d1"
+    },
+    {
+      "path": "snes/Double Dragon Return/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d061644d5bd58ff81e21dfdb9bd134204bd5c268",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d061644d5bd58ff81e21dfdb9bd134204bd5c268"
+    },
+    {
+      "path": "snes/Double Dragon Return/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36279a6f336df765d5bfde58f1d674e2b7b1023d",
+      "size": 295,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/36279a6f336df765d5bfde58f1d674e2b7b1023d"
+    },
+    {
+      "path": "snes/Dracula X",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1afe81ad523f14095c60f6f616804dc171b3953e",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1afe81ad523f14095c60f6f616804dc171b3953e"
+    },
+    {
+      "path": "snes/Dracula X/DracX.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af6e7a7b7a203b7fef831870ca39185ea73c555b",
+      "size": 21197,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/af6e7a7b7a203b7fef831870ca39185ea73c555b"
+    },
+    {
+      "path": "snes/Dracula X/DracX.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5069892188d9ff5bda14d7666f4a5f92813992f",
+      "size": 296,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a5069892188d9ff5bda14d7666f4a5f92813992f"
+    },
+    {
+      "path": "snes/Dracula X/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a1233b235f7689daaf085e708cd4577c0c429ae",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1a1233b235f7689daaf085e708cd4577c0c429ae"
+    },
+    {
+      "path": "snes/Dracula X/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c842501b2a71e4a772929858d8ec0386de6a155",
+      "size": 282,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/2c842501b2a71e4a772929858d8ec0386de6a155"
+    },
+    {
+      "path": "snes/Dracula X/export/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0"
+    },
+    {
+      "path": "snes/Earthworm Jim",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4826903e6170a8d7c72929e641645a0a2473f442",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/4826903e6170a8d7c72929e641645a0a2473f442"
+    },
+    {
+      "path": "snes/Earthworm Jim/earthworm Jim.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea859c5ae7e7ca60ae24176d2ee6d3bde1b3d180",
+      "size": 28332,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ea859c5ae7e7ca60ae24176d2ee6d3bde1b3d180"
+    },
+    {
+      "path": "snes/Earthworm Jim/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "80d46a23e902b457bdbdeb29eabf63fea0c63222",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/80d46a23e902b457bdbdeb29eabf63fea0c63222"
+    },
+    {
+      "path": "snes/Earthworm Jim/export/errors.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afc7bbf4dffc73cf24b90c085ca598c7c0fda2af",
+      "size": 6388,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/afc7bbf4dffc73cf24b90c085ca598c7c0fda2af"
+    },
+    {
+      "path": "snes/Earthworm Jim/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a9f96809d03ba24f16da17e517bd1643aa6ede19",
+      "size": 270,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a9f96809d03ba24f16da17e517bd1643aa6ede19"
+    },
+    {
+      "path": "snes/Finalfight",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "315130e18ec991c798e10c959eab0810ed89947f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/315130e18ec991c798e10c959eab0810ed89947f"
+    },
+    {
+      "path": "snes/Finalfight/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f759883f07bd2f9d5678852283222719d2448499",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f759883f07bd2f9d5678852283222719d2448499"
+    },
+    {
+      "path": "snes/Finalfight/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72fda69ba3da25844b895975b5f4567e6e4cc243",
+      "size": 259,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/72fda69ba3da25844b895975b5f4567e6e4cc243"
+    },
+    {
+      "path": "snes/Finalfight/finalfight.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a26b380a27796d40e556dc9dc71fa0342807f2a4",
+      "size": 34619,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a26b380a27796d40e556dc9dc71fa0342807f2a4"
+    },
+    {
+      "path": "snes/Gradius 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "145898f2f6a96d86f875deb729728a942fb2d375",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/145898f2f6a96d86f875deb729728a942fb2d375"
+    },
+    {
+      "path": "snes/Gradius 3/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "14a54690fa1ee87a7f0d71a178fcd121724d98c6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/14a54690fa1ee87a7f0d71a178fcd121724d98c6"
+    },
+    {
+      "path": "snes/Gradius 3/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d01bb2abce62f823edff1403887a35828434da08",
+      "size": 256,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/d01bb2abce62f823edff1403887a35828434da08"
+    },
+    {
+      "path": "snes/Harvest Moon (USA)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73e869efa8a93c69a195a3b1fb2409741b20e3d1",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/73e869efa8a93c69a195a3b1fb2409741b20e3d1"
+    },
+    {
+      "path": "snes/Harvest Moon (USA)/Harvest Moon (USA).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98471e99e02863ad71103a599033f6c3fb56bd35",
+      "size": 16800,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/98471e99e02863ad71103a599033f6c3fb56bd35"
+    },
+    {
+      "path": "snes/Harvest Moon (USA)/Harvest Moon (USA).dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85d894e817bba5bdaae0662375842ae0b7050a31",
+      "size": 283,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/85d894e817bba5bdaae0662375842ae0b7050a31"
+    },
+    {
+      "path": "snes/Harvest Moon (USA)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb5ddcf9897b24fbca77057fd58379bd421e7b21",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/eb5ddcf9897b24fbca77057fd58379bd421e7b21"
+    },
+    {
+      "path": "snes/Harvest Moon (USA)/export/Harvest Moon (USA).cdl",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1c3d5104cbd61798dda13db2384929f5604fa4ae",
+      "size": 8593515,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/1c3d5104cbd61798dda13db2384929f5604fa4ae"
+    },
+    {
+      "path": "snes/Harvest Moon (USA)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b17366193a9f644e20391d3c19fbf76070cec56b",
+      "size": 258,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b17366193a9f644e20391d3c19fbf76070cec56b"
+    },
+    {
+      "path": "snes/Joe and Mac",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "af50b868108f8c639323b8561459f2c3e6f771a8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/af50b868108f8c639323b8561459f2c3e6f771a8"
+    },
+    {
+      "path": "snes/Joe and Mac/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b04288cdb9e4858c820b9a6afbe40a61c81dea86",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/b04288cdb9e4858c820b9a6afbe40a61c81dea86"
+    },
+    {
+      "path": "snes/Joe and Mac/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f451f2be5a0c5fd90ad478b5e78e7296ee1828e",
+      "size": 271,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/7f451f2be5a0c5fd90ad478b5e78e7296ee1828e"
+    },
+    {
+      "path": "snes/Joe and Mac/joe and mac.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e645befedd25571f1107ebdf2cdba646bec87732",
+      "size": 19562,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/e645befedd25571f1107ebdf2cdba646bec87732"
+    },
+    {
+      "path": "snes/Kirby (incomplete)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "35d79ff5b69b819efa7128a563a796c77adae7b2",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/35d79ff5b69b819efa7128a563a796c77adae7b2"
+    },
+    {
+      "path": "snes/Kirby (incomplete)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "60eccc1f7bc4ca80be54bed317b8cc569611bd3d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/60eccc1f7bc4ca80be54bed317b8cc569611bd3d"
+    },
+    {
+      "path": "snes/Kirby (incomplete)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "117d4b47695f4ee284c7282f509044326df34e9b",
+      "size": 278,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/117d4b47695f4ee284c7282f509044326df34e9b"
+    },
+    {
+      "path": "snes/Kirby (incomplete)/kirby (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd5f8c891d81bb973cf21f45f12bd82e237929c9",
+      "size": 12432,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/bd5f8c891d81bb973cf21f45f12bd82e237929c9"
+    },
+    {
+      "path": "snes/Legend (incomplete)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f5f7d3b37d729819edc3d9bf8dafeb00f3c11d3",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1f5f7d3b37d729819edc3d9bf8dafeb00f3c11d3"
+    },
+    {
+      "path": "snes/Legend (incomplete)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2471ed3675bc57d08c3a3f4df214d9b76acf1210",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/2471ed3675bc57d08c3a3f4df214d9b76acf1210"
+    },
+    {
+      "path": "snes/Legend (incomplete)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8117988943302f98ae898b4a77476bab10bd4cf2",
+      "size": 255,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/8117988943302f98ae898b4a77476bab10bd4cf2"
+    },
+    {
+      "path": "snes/Legend (incomplete)/legend (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad6606c96cb97c1c9fa7f5e3274567ef8999f8e6",
+      "size": 8677,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ad6606c96cb97c1c9fa7f5e3274567ef8999f8e6"
+    },
+    {
+      "path": "snes/Magic Sword",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b9204cc021a6849b7488d9b0d033b04df3b126f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1b9204cc021a6849b7488d9b0d033b04df3b126f"
+    },
+    {
+      "path": "snes/Magic Sword/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "190a887c59c507e37ec2d5d2317cef61d4cc31d1",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/190a887c59c507e37ec2d5d2317cef61d4cc31d1"
+    },
+    {
+      "path": "snes/Magic Sword/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45220a9c2dbd714ddcda39b3b81d51d9b8d5cbd3",
+      "size": 259,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/45220a9c2dbd714ddcda39b3b81d51d9b8d5cbd3"
+    },
+    {
+      "path": "snes/Magic Sword/magic sword.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8012da75d57b1222ed2db7065f08e6e42beed343",
+      "size": 47945,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/8012da75d57b1222ed2db7065f08e6e42beed343"
+    },
+    {
+      "path": "snes/Magical Pop'n",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19688abc573146f175b42d54c274316c490e5b96",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/19688abc573146f175b42d54c274316c490e5b96"
+    },
+    {
+      "path": "snes/Magical Pop'n/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3548adffe76e2c9f6e027132dc9d534bf37e8933",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/3548adffe76e2c9f6e027132dc9d534bf37e8933"
+    },
+    {
+      "path": "snes/Magical Pop'n/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87c9736a5afcabe3abbe873693a6c0219c46f2d4",
+      "size": 266,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/87c9736a5afcabe3abbe873693a6c0219c46f2d4"
+    },
+    {
+      "path": "snes/Magical Pop'n/magical pop'n.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8170536ef6d3d3d0e984262d84523990fec60e20",
+      "size": 36441,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/8170536ef6d3d3d0e984262d84523990fec60e20"
+    },
+    {
+      "path": "snes/Magical Quest Micky",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "915658745f12decdff9b4b478bd11b0c1e2b05dd",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/915658745f12decdff9b4b478bd11b0c1e2b05dd"
+    },
+    {
+      "path": "snes/Magical Quest Micky/Magical Quest Mickey.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa9095ba522eabab17e9685a799c72ece5230140",
+      "size": 49805,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/aa9095ba522eabab17e9685a799c72ece5230140"
+    },
+    {
+      "path": "snes/Magical Quest Micky/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "56b26bdbfd1349e328ef42e82e5432a398c8debf",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/56b26bdbfd1349e328ef42e82e5432a398c8debf"
+    },
+    {
+      "path": "snes/Magical Quest Micky/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64c95d6bbe350539ea8000d0dc13db6cd29b9d6f",
+      "size": 334,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/64c95d6bbe350539ea8000d0dc13db6cd29b9d6f"
+    },
+    {
+      "path": "snes/Magical Quest Micky/fastROM",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4476dce22bf6cef0d8b6284ac05fa71666d9a27",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c4476dce22bf6cef0d8b6284ac05fa71666d9a27"
+    },
+    {
+      "path": "snes/Magical Quest Micky/fastROM/main.s",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4acfa2189047494f13a866661912b7a406d12031",
+      "size": 2713,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/4acfa2189047494f13a866661912b7a406d12031"
+    },
+    {
+      "path": "snes/Magical Quest Micky/fastROM/makeFast.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45ebae8ddb4be6541631d4c93411f8253d3f8bf0",
+      "size": 2083,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/45ebae8ddb4be6541631d4c93411f8253d3f8bf0"
+    },
+    {
+      "path": "snes/Megaman X1",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "df3083f10d8bea8601ac306b2b160647fb7454b5",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/df3083f10d8bea8601ac306b2b160647fb7454b5"
+    },
+    {
+      "path": "snes/Megaman X1/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f6890a84381097d14825701661baa80a832b9e2c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f6890a84381097d14825701661baa80a832b9e2c"
+    },
+    {
+      "path": "snes/Megaman X1/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1324ddc212ad52e66c3394d1890a31e6edba6c6",
+      "size": 275,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a1324ddc212ad52e66c3394d1890a31e6edba6c6"
+    },
+    {
+      "path": "snes/Megaman X1/export/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0"
+    },
+    {
+      "path": "snes/Megaman X1/megamanX.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ba4fdb40b08d15992c33dba294511f9422a0931",
+      "size": 167286,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/4ba4fdb40b08d15992c33dba294511f9422a0931"
+    },
+    {
+      "path": "snes/Megaman X1/megamanX.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8082186a33daa47d8885e8b69b12d3d1fce6c949",
+      "size": 287,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/8082186a33daa47d8885e8b69b12d3d1fce6c949"
+    },
+    {
+      "path": "snes/Megaman X2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8610b49500b07cee9a14a15c113eace1d4c84046",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/8610b49500b07cee9a14a15c113eace1d4c84046"
+    },
+    {
+      "path": "snes/Megaman X2/MMX2.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21a08ad038d2a7933f2855e639d10a70f4d0c978",
+      "size": 32153,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/21a08ad038d2a7933f2855e639d10a70f4d0c978"
+    },
+    {
+      "path": "snes/Megaman X2/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "03d8cd2a1368c8832aa56eb55802ddf2b4e67bd6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/03d8cd2a1368c8832aa56eb55802ddf2b4e67bd6"
+    },
+    {
+      "path": "snes/Megaman X2/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "247f7ee7f625ebd93128050a4d2bcde46b64f1b0",
+      "size": 265,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/247f7ee7f625ebd93128050a4d2bcde46b64f1b0"
+    },
+    {
+      "path": "snes/Megaman X3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f709fe74cc313d49000e966ca9aafc7bd8fc9081",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f709fe74cc313d49000e966ca9aafc7bd8fc9081"
+    },
+    {
+      "path": "snes/Megaman X3/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f9f1db719675ced3c4c6119ef9d14e93b492d0ad",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f9f1db719675ced3c4c6119ef9d14e93b492d0ad"
+    },
+    {
+      "path": "snes/Megaman X3/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6aadce3b316daf0a6c79985ddf559e4fa61dd219",
+      "size": 265,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6aadce3b316daf0a6c79985ddf559e4fa61dd219"
+    },
+    {
+      "path": "snes/Megaman X3/mmx3.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d46b6721db8cda441e314776ec393a12bff31a1a",
+      "size": 62300,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/d46b6721db8cda441e314776ec393a12bff31a1a"
+    },
+    {
+      "path": "snes/Megaman X4",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "49c729ab588d060fde2c7971a2d967d1799bb372",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/49c729ab588d060fde2c7971a2d967d1799bb372"
+    },
+    {
+      "path": "snes/Megaman X4/MEGAMAN 4 COMPREHENSIVE DOCUMENT.TXT",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0be735162d174bef7cbd0a26dbe0992faa3d5ad",
+      "size": 191665,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a0be735162d174bef7cbd0a26dbe0992faa3d5ad"
+    },
+    {
+      "path": "snes/Metal Marines",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7f4fc58859f94343faf83557db12dbd21b51a431",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/7f4fc58859f94343faf83557db12dbd21b51a431"
+    },
+    {
+      "path": "snes/Metal Marines/Metal Marines (U).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20aceab78ef0d45cebcbf25fcdacbe36169c58fa",
+      "size": 6196,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/20aceab78ef0d45cebcbf25fcdacbe36169c58fa"
+    },
+    {
+      "path": "snes/Metal Marines/Metal Marines (U).dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20a957b1e233de1b27930a5b7e03c7e5c62daa41",
+      "size": 283,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/20a957b1e233de1b27930a5b7e03c7e5c62daa41"
+    },
+    {
+      "path": "snes/Metal Marines/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "877c606ee1aee145f01b80288a8cfe4d666dbdb7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/877c606ee1aee145f01b80288a8cfe4d666dbdb7"
+    },
+    {
+      "path": "snes/Metal Marines/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50ae749954a0fe7fdb61a31a6682214559f180d9",
+      "size": 279,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/50ae749954a0fe7fdb61a31a6682214559f180d9"
+    },
+    {
+      "path": "snes/Mickey to Donald 3",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "12cb39715c854ff7c753b26ee494d9203cb9812c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/12cb39715c854ff7c753b26ee494d9203cb9812c"
+    },
+    {
+      "path": "snes/Mickey to Donald 3/Mickey to Donald - Magical Adventure 3 (J).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea3bca45f5fa61220a175acc91f0f94ed7cb0548",
+      "size": 3633,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ea3bca45f5fa61220a175acc91f0f94ed7cb0548"
+    },
+    {
+      "path": "snes/Mickey to Donald 3/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cb87937f83351162ac6687d77ee077b163152e4b",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/cb87937f83351162ac6687d77ee077b163152e4b"
+    },
+    {
+      "path": "snes/Mickey to Donald 3/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d075ee8769fd253361d4ffb38c92b7eb9125f9c",
+      "size": 311,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/3d075ee8769fd253361d4ffb38c92b7eb9125f9c"
+    },
+    {
+      "path": "snes/Mickey to Donald 3/fastROM",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8374ac2196434bcf028a78614aab39ca825a6351",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/8374ac2196434bcf028a78614aab39ca825a6351"
+    },
+    {
+      "path": "snes/Mickey to Donald 3/fastROM/main.s",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6190e102d43799337093d08d810be330b1a2d75f",
+      "size": 2713,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6190e102d43799337093d08d810be330b1a2d75f"
+    },
+    {
+      "path": "snes/Mickey to Donald 3/fastROM/makeFast.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45ebae8ddb4be6541631d4c93411f8253d3f8bf0",
+      "size": 2083,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/45ebae8ddb4be6541631d4c93411f8253d3f8bf0"
+    },
+    {
+      "path": "snes/NinjaWarriors_USA",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "efd8ef65922431eb8a8afd39b6acbc0dadcb891f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/efd8ef65922431eb8a8afd39b6acbc0dadcb891f"
+    },
+    {
+      "path": "snes/NinjaWarriors_USA/NinjaWarriors_USA.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3bed4caa2bfd1a4d3d1517cc7223910f6b2b564",
+      "size": 15510,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/d3bed4caa2bfd1a4d3d1517cc7223910f6b2b564"
+    },
+    {
+      "path": "snes/NinjaWarriors_USA/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b8ee2a4a583527a42d5477d4ae76e6be3a901f02",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/b8ee2a4a583527a42d5477d4ae76e6be3a901f02"
+    },
+    {
+      "path": "snes/NinjaWarriors_USA/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7931b3dd0cde45c481c452d7bcf4598206fb6bd8",
+      "size": 270,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/7931b3dd0cde45c481c452d7bcf4598206fb6bd8"
+    },
+    {
+      "path": "snes/Parodius - Non-Sense Fantasy (Europe)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42307c062194510154e8334062f8206ea47438b8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/42307c062194510154e8334062f8206ea47438b8"
+    },
+    {
+      "path": "snes/Parodius - Non-Sense Fantasy (Europe)/Parodius - Non-Sense Fantasy (Europe).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0831781027de8da7bdda908df74f2220ca5c7ce0",
+      "size": 20975,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/0831781027de8da7bdda908df74f2220ca5c7ce0"
+    },
+    {
+      "path": "snes/Parodius - Non-Sense Fantasy (Europe)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0f052121940702d570dc5654e445e39c79ccf831",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/0f052121940702d570dc5654e445e39c79ccf831"
+    },
+    {
+      "path": "snes/Parodius - Non-Sense Fantasy (Europe)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d9d1bac61b0326b51fed1763b0af81a6580256c",
+      "size": 277,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/3d9d1bac61b0326b51fed1763b0af81a6580256c"
+    },
+    {
+      "path": "snes/Pilotwings",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "738c26f3ce4e504177d66a9bd407f706208150ca",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/738c26f3ce4e504177d66a9bd407f706208150ca"
+    },
+    {
+      "path": "snes/Pilotwings/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "159da3ee46dbc2428c184dfcbb7dca6e862e02db",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/159da3ee46dbc2428c184dfcbb7dca6e862e02db"
+    },
+    {
+      "path": "snes/Pilotwings/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e696e0ce9b87659560648ec7db81020efe27d8f3",
+      "size": 264,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/e696e0ce9b87659560648ec7db81020efe27d8f3"
+    },
+    {
+      "path": "snes/Pilotwings/pilotwings.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c5c57ee364710f82bc5554f6029097c0a596e6e",
+      "size": 14864,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9c5c57ee364710f82bc5554f6029097c0a596e6e"
+    },
+    {
+      "path": "snes/Pocky and Rocky (U)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0df0b07bed14565c42cd7d980f038bda8a2f58f7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/0df0b07bed14565c42cd7d980f038bda8a2f58f7"
+    },
+    {
+      "path": "snes/Pocky and Rocky (U)/PockyAndRocky1.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e98bf97c411a9ac402d8e4d4129f560e034c05e",
+      "size": 38020,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/7e98bf97c411a9ac402d8e4d4129f560e034c05e"
+    },
+    {
+      "path": "snes/Pocky and Rocky (U)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e8b5939d7682d89afb8c5464cea971aea9572e63",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/e8b5939d7682d89afb8c5464cea971aea9572e63"
+    },
+    {
+      "path": "snes/Pocky and Rocky (U)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adb7e9a94dd4d1bc95804d30227b49d68649307c",
+      "size": 269,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/adb7e9a94dd4d1bc95804d30227b49d68649307c"
+    },
+    {
+      "path": "snes/Pocky and Rocky 2 (U)  (incomplete)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e87a32cd49d30e645447d257de74b568040a29d3",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/e87a32cd49d30e645447d257de74b568040a29d3"
+    },
+    {
+      "path": "snes/Pocky and Rocky 2 (U)  (incomplete)/Pocky and Rocky 2 (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "10fe7d08efcea69c8e658c1611116fcc8182e892",
+      "size": 11711,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/10fe7d08efcea69c8e658c1611116fcc8182e892"
+    },
+    {
+      "path": "snes/Pocky and Rocky 2 (U)  (incomplete)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "47bcd2f5046d36d1eef842f748b7eb03eaa07884",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/47bcd2f5046d36d1eef842f748b7eb03eaa07884"
+    },
+    {
+      "path": "snes/Pocky and Rocky 2 (U)  (incomplete)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76157b4ed4c2eb26257d2b479315dfafc8fbc4eb",
+      "size": 273,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/76157b4ed4c2eb26257d2b479315dfafc8fbc4eb"
+    },
+    {
+      "path": "snes/Rock n Roll Racing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8cfe63526f011aedd8750d7c1007af0ae3b3def8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/8cfe63526f011aedd8750d7c1007af0ae3b3def8"
+    },
+    {
+      "path": "snes/Rock n Roll Racing/Rock n Roll Racing.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e325b6c3fdade480142ba8aadbe5f689ae2234df",
+      "size": 13091,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/e325b6c3fdade480142ba8aadbe5f689ae2234df"
+    },
+    {
+      "path": "snes/Rock n Roll Racing/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a7e9dbf6c7299027e3355f9c52bf6aab0076faa8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/a7e9dbf6c7299027e3355f9c52bf6aab0076faa8"
+    },
+    {
+      "path": "snes/Rock n Roll Racing/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec8e662a28ec99842b2bd3d78783a1bfaa873621",
+      "size": 284,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ec8e662a28ec99842b2bd3d78783a1bfaa873621"
+    },
+    {
+      "path": "snes/Secret of Mana (incomplete)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e116b45c89beab84d58be4ecac050de741a896aa",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/e116b45c89beab84d58be4ecac050de741a896aa"
+    },
+    {
+      "path": "snes/Secret of Mana (incomplete)/Secret of Mana (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a99168b303e0fe14c8a799d1f9d30b9af0fb606f",
+      "size": 16696,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a99168b303e0fe14c8a799d1f9d30b9af0fb606f"
+    },
+    {
+      "path": "snes/Secret of Mana (incomplete)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05f419b22ee7072134da08e988ffd036d595e0e3",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/05f419b22ee7072134da08e988ffd036d595e0e3"
+    },
+    {
+      "path": "snes/Secret of Mana (incomplete)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e1d7495ba9a8b0b5cc5ec474b409fc59b9fac2a",
+      "size": 275,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9e1d7495ba9a8b0b5cc5ec474b409fc59b9fac2a"
+    },
+    {
+      "path": "snes/Secret of Mana Germany",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "586344259119074a6f00989b5786ae8a38da899b",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/586344259119074a6f00989b5786ae8a38da899b"
+    },
+    {
+      "path": "snes/Secret of Mana Germany/Secret of Mana Germany.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87ab9dc1a5ea92cb51e3d948b5ba56db7aaff81c",
+      "size": 16649,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/87ab9dc1a5ea92cb51e3d948b5ba56db7aaff81c"
+    },
+    {
+      "path": "snes/Secret of Mana Germany/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c1eaedc49d95208ae8b2532ee42c6f5376abe939",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c1eaedc49d95208ae8b2532ee42c6f5376abe939"
+    },
+    {
+      "path": "snes/Secret of Mana Germany/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bb06f889e71737f625f0bc42fcb0f88372eea8c",
+      "size": 275,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/7bb06f889e71737f625f0bc42fcb0f88372eea8c"
+    },
+    {
+      "path": "snes/Shin Kidoesenki Gundam Wing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "95977554abd095d65893826939167e5db2f6df55",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/95977554abd095d65893826939167e5db2f6df55"
+    },
+    {
+      "path": "snes/Shin Kidoesenki Gundam Wing/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2481ca1a4061d2a34e7bc9ebe61979d900d140c3",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/2481ca1a4061d2a34e7bc9ebe61979d900d140c3"
+    },
+    {
+      "path": "snes/Shin Kidoesenki Gundam Wing/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5ce4a3ce02640e18bddcfce42d5222117e4f56e",
+      "size": 393,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f5ce4a3ce02640e18bddcfce42d5222117e4f56e"
+    },
+    {
+      "path": "snes/Shin Kidoesenki Gundam Wing/shin.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5733685beda380623b1b2581e5841712d3bb3a1",
+      "size": 8496,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b5733685beda380623b1b2581e5841712d3bb3a1"
+    },
+    {
+      "path": "snes/Simcity",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "26cd53df05845917db5c84b807060ff656cdf8fc",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/26cd53df05845917db5c84b807060ff656cdf8fc"
+    },
+    {
+      "path": "snes/Simcity/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00027081d1897da4d219313492932c978fd4a6ed",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/00027081d1897da4d219313492932c978fd4a6ed"
+    },
+    {
+      "path": "snes/Simcity/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "347e757ab0c48e5cb6c9fba2aadf7687e41a666b",
+      "size": 266,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/347e757ab0c48e5cb6c9fba2aadf7687e41a666b"
+    },
+    {
+      "path": "snes/Simcity/simcity.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18d74123bd6f8d22a88ccdda57e0595c4f66c24d",
+      "size": 19803,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/18d74123bd6f8d22a88ccdda57e0595c4f66c24d"
+    },
+    {
+      "path": "snes/Skyblazer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8bdec0d2eee5e6d212d8ad57746238a4f189714d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/8bdec0d2eee5e6d212d8ad57746238a4f189714d"
+    },
+    {
+      "path": "snes/Skyblazer/Skyblazer.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70eb162acb31bcf0d6cd83ed87ce03cb6385410b",
+      "size": 20629,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/70eb162acb31bcf0d6cd83ed87ce03cb6385410b"
+    },
+    {
+      "path": "snes/Skyblazer/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "609270446b66d3902466d8fa310d2d16096f5a7d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/609270446b66d3902466d8fa310d2d16096f5a7d"
+    },
+    {
+      "path": "snes/Skyblazer/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f099840edd9384f281c18a733f5df8895a666dd9",
+      "size": 271,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f099840edd9384f281c18a733f5df8895a666dd9"
+    },
+    {
+      "path": "snes/Spankys quest",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3ebeb8f5f85f8a5503f5c2f343cd8823dd5a571d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/3ebeb8f5f85f8a5503f5c2f343cd8823dd5a571d"
+    },
+    {
+      "path": "snes/Spankys quest/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d0dca97224bebdf1699d4722de26ddd9c64f1a74",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d0dca97224bebdf1699d4722de26ddd9c64f1a74"
+    },
+    {
+      "path": "snes/Spankys quest/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "857871ff3c588fbb8b02e92e719a76040c9ce607",
+      "size": 280,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/857871ff3c588fbb8b02e92e719a76040c9ce607"
+    },
+    {
+      "path": "snes/Spankys quest/spankys quest.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0585256cb4ffa40595d5e1cf1f6739344bfc0982",
+      "size": 14098,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/0585256cb4ffa40595d5e1cf1f6739344bfc0982"
+    },
+    {
+      "path": "snes/Super Adventure Island",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "52aa9d317793d71931ffce30c1224a710a2a7315",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/52aa9d317793d71931ffce30c1224a710a2a7315"
+    },
+    {
+      "path": "snes/Super Adventure Island/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6adbd81b7e648a83ec2dbdb650333302c61a967d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/6adbd81b7e648a83ec2dbdb650333302c61a967d"
+    },
+    {
+      "path": "snes/Super Adventure Island/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06ddf87bbff738133a40612ab572420c4f091031",
+      "size": 300,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/06ddf87bbff738133a40612ab572420c4f091031"
+    },
+    {
+      "path": "snes/Super Adventure Island/super adventure island.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "844b75fb6eed04e987f16ffc24de6160351febb7",
+      "size": 17265,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/844b75fb6eed04e987f16ffc24de6160351febb7"
+    },
+    {
+      "path": "snes/Super Aleste (J)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8c413eb50846a4bac1d7b8f8735442165e1c898b",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/8c413eb50846a4bac1d7b8f8735442165e1c898b"
+    },
+    {
+      "path": "snes/Super Aleste (J)/Super Aleste (J).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b903f995423866f8dc915d67593333a801db4aa",
+      "size": 23920,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6b903f995423866f8dc915d67593333a801db4aa"
+    },
+    {
+      "path": "snes/Super Aleste (J)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "206dd7129324c520c1f4fc9e9c8f7ff8e0f9a56c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/206dd7129324c520c1f4fc9e9c8f7ff8e0f9a56c"
+    },
+    {
+      "path": "snes/Super Aleste (J)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dacf95ccda753f78a9cadb2fe7d55cda01bcd384",
+      "size": 279,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/dacf95ccda753f78a9cadb2fe7d55cda01bcd384"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3a967a67338199f7fe39e80f8b80af756d72a8b",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c3a967a67338199f7fe39e80f8b80af756d72a8b"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded/Super Castlevania 4 Expandet FastRom.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0cd0282ab722c4fd581581577449e1366af2518",
+      "size": 149266,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a0cd0282ab722c4fd581581577449e1366af2518"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded/Super Castlevania 4 Expandet FastRom.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0746deb86a8748e7c11d78fe8d6bfb646baf5746",
+      "size": 309,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/0746deb86a8748e7c11d78fe8d6bfb646baf5746"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded/dizASM_expansionOverview.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2df807222a4b5f551dc31da96fd11b84c3315d85",
+      "size": 2430,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/2df807222a4b5f551dc31da96fd11b84c3315d85"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb2b1b0ebc81cfdeec9950d81b640503863bebdf",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/eb2b1b0ebc81cfdeec9950d81b640503863bebdf"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded/export/Castlevania IV (Expandet).bps",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "839debaea12da88f7b6dee38b4b91995cf8f525f",
+      "size": 665005,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/839debaea12da88f7b6dee38b4b91995cf8f525f"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded/export/all-labels.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "137d625633838347984ebd6c9f1ed8872b73f3f0",
+      "size": 634730,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/137d625633838347984ebd6c9f1ed8872b73f3f0"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded/export/all-labels.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3effd5e12d5f1b9b4a2a54aacd6d9d50a3969d3",
+      "size": 1353450,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c3effd5e12d5f1b9b4a2a54aacd6d9d50a3969d3"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2bf178904ae9800d5bfe18711843823e7a34e38",
+      "size": 380,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/d2bf178904ae9800d5bfe18711843823e7a34e38"
+    },
+    {
+      "path": "snes/Super Castlevania IV Expanded/export/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0"
+    },
+    {
+      "path": "snes/Super Castlevania IV",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c4abd0f9a40476c956f2131a53ac4397ea4b8f3f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c4abd0f9a40476c956f2131a53ac4397ea4b8f3f"
+    },
+    {
+      "path": "snes/Super Castlevania IV/Super Castlevania 4.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12006a931e2d789fbe10b25bd155e2c99bd620f3",
+      "size": 104799,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/12006a931e2d789fbe10b25bd155e2c99bd620f3"
+    },
+    {
+      "path": "snes/Super Castlevania IV/Super Castlevania 4.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4e731c5e6beb8f1eb47238fe4eb2fd6b6499f70",
+      "size": 297,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c4e731c5e6beb8f1eb47238fe4eb2fd6b6499f70"
+    },
+    {
+      "path": "snes/Super Castlevania IV/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18c95e04a1fd2490e9159e7c54d0685c45f287df",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/18c95e04a1fd2490e9159e7c54d0685c45f287df"
+    },
+    {
+      "path": "snes/Super Castlevania IV/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f29f590db93269104e8da4775723b2f10a877382",
+      "size": 275,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f29f590db93269104e8da4775723b2f10a877382"
+    },
+    {
+      "path": "snes/Super Ghouls 'N Ghosts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f6e9668214d51d6ef331f658bec0f2757674160",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1f6e9668214d51d6ef331f658bec0f2757674160"
+    },
+    {
+      "path": "snes/Super Ghouls 'N Ghosts/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c645731ebd340380ef9d7308edd49f320cddee51",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c645731ebd340380ef9d7308edd49f320cddee51"
+    },
+    {
+      "path": "snes/Super Ghouls 'N Ghosts/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9500364111347a55ecd624f94215ba7a677d1fe9",
+      "size": 288,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9500364111347a55ecd624f94215ba7a677d1fe9"
+    },
+    {
+      "path": "snes/Super R-Type",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3562f021e3cb04adc84eaad6647c778d7f5e56c5",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/3562f021e3cb04adc84eaad6647c778d7f5e56c5"
+    },
+    {
+      "path": "snes/Super R-Type/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00c5c31347609c6fda136925ff7091f74f48cdb7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/00c5c31347609c6fda136925ff7091f74f48cdb7"
+    },
+    {
+      "path": "snes/Super R-Type/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63978d927a0184b4831db004dc1e8eb03a5862f9",
+      "size": 268,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/63978d927a0184b4831db004dc1e8eb03a5862f9"
+    },
+    {
+      "path": "snes/Super R-Type/super r-type.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c279060413d7a13aefb9f75d78bd5dd8770181b0",
+      "size": 19942,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c279060413d7a13aefb9f75d78bd5dd8770181b0"
+    },
+    {
+      "path": "snes/Super Street Fighter 2",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c8029f3b82a7a77065a8f3b8bf22e914b409a19a",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c8029f3b82a7a77065a8f3b8bf22e914b409a19a"
+    },
+    {
+      "path": "snes/Super Street Fighter 2/dizSSF2.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c2dcd4b9291abd5c692305b8ab1392905a71fd3",
+      "size": 63574,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/4c2dcd4b9291abd5c692305b8ab1392905a71fd3"
+    },
+    {
+      "path": "snes/Super Street Fighter 2/dizSSF2.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1043d4153e704bc6921a2df38ec8bf737c075a53",
+      "size": 323,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/1043d4153e704bc6921a2df38ec8bf737c075a53"
+    },
+    {
+      "path": "snes/Super Street Fighter 2/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "600489bc40830546f2bd88f7d01c2fcdd475cdfb",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/600489bc40830546f2bd88f7d01c2fcdd475cdfb"
+    },
+    {
+      "path": "snes/Super Street Fighter 2/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c58db23bd3eb10cac11d23db63caf3053f25347b",
+      "size": 302,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c58db23bd3eb10cac11d23db63caf3053f25347b"
+    },
+    {
+      "path": "snes/Super metroid",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3cc0411a7b64e48f8f542d035e7dd252d0699ade",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/3cc0411a7b64e48f8f542d035e7dd252d0699ade"
+    },
+    {
+      "path": "snes/Super metroid/Super Metroid.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8cf4d306cd2492680240f9e75b61d02d6eedaf7",
+      "size": 482515,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b8cf4d306cd2492680240f9e75b61d02d6eedaf7"
+    },
+    {
+      "path": "snes/Super metroid/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "97c26c4c3a0bf050f153e284da09c48727e5eb56",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/97c26c4c3a0bf050f153e284da09c48727e5eb56"
+    },
+    {
+      "path": "snes/Super metroid/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c52d465f876818885c65d24ac8936a2263d4744",
+      "size": 294,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/8c52d465f876818885c65d24ac8936a2263d4744"
+    },
+    {
+      "path": "snes/Super metroid/export/make.bat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/efb7ddd0c3bb4d7bc86f18f670e5a91a8f7a83e0"
+    },
+    {
+      "path": "snes/Teenage Mutant Ninja Turtles IV",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7ecfbcde7ebcc116bb0d7517ae40f233b18737db",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/7ecfbcde7ebcc116bb0d7517ae40f233b18737db"
+    },
+    {
+      "path": "snes/Teenage Mutant Ninja Turtles IV/TMNTIV_USA.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "112bd43fe54390ada040500f5f147aa08ad4d571",
+      "size": 30072,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/112bd43fe54390ada040500f5f147aa08ad4d571"
+    },
+    {
+      "path": "snes/Teenage Mutant Ninja Turtles IV/TMNTIV_USA.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eb4176ce79313a22467179f8aca0b468ce22e095",
+      "size": 344,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/eb4176ce79313a22467179f8aca0b468ce22e095"
+    },
+    {
+      "path": "snes/Teenage Mutant Ninja Turtles IV/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0673aba3f4a468845d26daa169614215ac813022",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/0673aba3f4a468845d26daa169614215ac813022"
+    },
+    {
+      "path": "snes/Teenage Mutant Ninja Turtles IV/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba827b6d512fc1dc167c33fe53f6a657bf048f78",
+      "size": 357,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ba827b6d512fc1dc167c33fe53f6a657bf048f78"
+    },
+    {
+      "path": "snes/Top Gear",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd8117a79905ef6d7342423ed6dbb20c9f6d7c6e",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/fd8117a79905ef6d7342423ed6dbb20c9f6d7c6e"
+    },
+    {
+      "path": "snes/Top Gear/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "86d9f6b2a6de7d18ffacee6beb9bf463550bf4ed",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/86d9f6b2a6de7d18ffacee6beb9bf463550bf4ed"
+    },
+    {
+      "path": "snes/Top Gear/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "757787780b380b07f53263dcf3bc3f2127daf44b",
+      "size": 268,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/757787780b380b07f53263dcf3bc3f2127daf44b"
+    },
+    {
+      "path": "snes/Top Gear/top gear.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21530dc396d57c35106d5031be9a06d0311becb9",
+      "size": 10066,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/21530dc396d57c35106d5031be9a06d0311becb9"
+    },
+    {
+      "path": "snes/U.N. Squadron",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d1f67a13bfe37875f26e7b955d3ce21828d8a0ef",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d1f67a13bfe37875f26e7b955d3ce21828d8a0ef"
+    },
+    {
+      "path": "snes/U.N. Squadron/U.N. Squadron (USA).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0eed0f1f8fe28c05457fd12f0fea39bc8a9fb7af",
+      "size": 33418,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/0eed0f1f8fe28c05457fd12f0fea39bc8a9fb7af"
+    },
+    {
+      "path": "snes/U.N. Squadron/U.N. Squadron (USA).dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4052d7180e7b4bc62fe6a772dfc7206394569b7a",
+      "size": 301,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/4052d7180e7b4bc62fe6a772dfc7206394569b7a"
+    },
+    {
+      "path": "snes/U.N. Squadron/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c6ac7385bda6b8b9a72f6812e2101543d030954e",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c6ac7385bda6b8b9a72f6812e2101543d030954e"
+    },
+    {
+      "path": "snes/U.N. Squadron/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db8c80f45bbf10e02a16bc3407fae4c36dd8d7cd",
+      "size": 275,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/db8c80f45bbf10e02a16bc3407fae4c36dd8d7cd"
+    },
+    {
+      "path": "snes/Wild Guns",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebf736c345c4d9572a2953aabed8fa602b38088b",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/ebf736c345c4d9572a2953aabed8fa602b38088b"
+    },
+    {
+      "path": "snes/Wild Guns/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e37dbdb830772cc6388eb7d6a9515cefe9a24ed7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/e37dbdb830772cc6388eb7d6a9515cefe9a24ed7"
+    },
+    {
+      "path": "snes/Wild Guns/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dda66e52c9554e2ce45253161bad4abe610020a8",
+      "size": 266,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/dda66e52c9554e2ce45253161bad4abe610020a8"
+    },
+    {
+      "path": "snes/Wild Guns/wild guns.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e39bea520febd9b795d5596c42b3833773057ff",
+      "size": 19891,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6e39bea520febd9b795d5596c42b3833773057ff"
+    },
+    {
+      "path": "snes/aarchived",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "24af67fcf658230a908335998bc2fa00863b5201",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/24af67fcf658230a908335998bc2fa00863b5201"
+    },
+    {
+      "path": "snes/aarchived/Acrobat Mission",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebde3dae7537994a6b51de2bbb2a55905c708380",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/ebde3dae7537994a6b51de2bbb2a55905c708380"
+    },
+    {
+      "path": "snes/aarchived/Acrobat Mission/acrobat mission.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c61d9f309816570e9257512aa60b72599f56c292",
+      "size": 12456,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c61d9f309816570e9257512aa60b72599f56c292"
+    },
+    {
+      "path": "snes/aarchived/Acrobat Mission/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2e066657557787821506ae88976c1724ed57031e",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/2e066657557787821506ae88976c1724ed57031e"
+    },
+    {
+      "path": "snes/aarchived/Acrobat Mission/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d12b887c9c28da2c987cac01474a971edec75ab",
+      "size": 271,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/3d12b887c9c28da2c987cac01474a971edec75ab"
+    },
+    {
+      "path": "snes/aarchived/Bill Laimbeer's Combat Basketbal",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f4622d7481d6c62cac89cbe0c9f70fb5f92ab8fc",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f4622d7481d6c62cac89cbe0c9f70fb5f92ab8fc"
+    },
+    {
+      "path": "snes/aarchived/Bill Laimbeer's Combat Basketbal/bill laimbeer.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6d49ae85ed1cda30d10b88c3b65fbcabe207b4a7",
+      "size": 8936,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6d49ae85ed1cda30d10b88c3b65fbcabe207b4a7"
+    },
+    {
+      "path": "snes/aarchived/Bill Laimbeer's Combat Basketbal/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "13f2dc848cd3023617c2ad608f2e565463e91c2c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/13f2dc848cd3023617c2ad608f2e565463e91c2c"
+    },
+    {
+      "path": "snes/aarchived/Bill Laimbeer's Combat Basketbal/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b62ec01b471565c9a683a90ee347a859ae6e7376",
+      "size": 306,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b62ec01b471565c9a683a90ee347a859ae6e7376"
+    },
+    {
+      "path": "snes/aarchived/Biometal (J)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f12b30223416ec1384adce7a5bdbcec7aacbef42",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f12b30223416ec1384adce7a5bdbcec7aacbef42"
+    },
+    {
+      "path": "snes/aarchived/Biometal (J)/biometal (j).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "674fd9f3d200c566fedeefc0fd2a423ec9a5252a",
+      "size": 11293,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/674fd9f3d200c566fedeefc0fd2a423ec9a5252a"
+    },
+    {
+      "path": "snes/aarchived/Biometal (J)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c17576b39640f7007c045460a60db48edce82e14",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c17576b39640f7007c045460a60db48edce82e14"
+    },
+    {
+      "path": "snes/aarchived/Biometal (J)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c57ec2ce1499996f07e5493c9f00911d2cc12851",
+      "size": 261,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c57ec2ce1499996f07e5493c9f00911d2cc12851"
+    },
+    {
+      "path": "snes/aarchived/Biometal (U)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef14405fa751f1a82f6c2863285cc608300cd7c1",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/ef14405fa751f1a82f6c2863285cc608300cd7c1"
+    },
+    {
+      "path": "snes/aarchived/Biometal (U)/biomusa.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1321e6c4a1f1214cfc238f3fd3efc0b4c1f2484",
+      "size": 11254,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f1321e6c4a1f1214cfc238f3fd3efc0b4c1f2484"
+    },
+    {
+      "path": "snes/aarchived/Biometal (U)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6fb05e5628647f73b47d30b6b5b8f358a54fad67",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/6fb05e5628647f73b47d30b6b5b8f358a54fad67"
+    },
+    {
+      "path": "snes/aarchived/Biometal (U)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a6071d6fc855364800ebfa1dae5380b236bc253f",
+      "size": 259,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a6071d6fc855364800ebfa1dae5380b236bc253f"
+    },
+    {
+      "path": "snes/aarchived/Cacoma Knight",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2866c84d6773b76356ea6fbe1722bbe0506549a7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/2866c84d6773b76356ea6fbe1722bbe0506549a7"
+    },
+    {
+      "path": "snes/aarchived/Cacoma Knight/cacoma knight.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f6457d5a454a8cf28a3d3e2cd96fc4a1f8fb83ef",
+      "size": 9151,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f6457d5a454a8cf28a3d3e2cd96fc4a1f8fb83ef"
+    },
+    {
+      "path": "snes/aarchived/Cacoma Knight/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "69a13d3192415abf3c19060292377ba3221d50b7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/69a13d3192415abf3c19060292377ba3221d50b7"
+    },
+    {
+      "path": "snes/aarchived/Cacoma Knight/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad58cf27f128f7efd42f1cf4113bef913728c21b",
+      "size": 286,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ad58cf27f128f7efd42f1cf4113bef913728c21b"
+    },
+    {
+      "path": "snes/aarchived/Castlevania (norom)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e58cb51a2726aafca64f401f55b86e24d5e770fe",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/e58cb51a2726aafca64f401f55b86e24d5e770fe"
+    },
+    {
+      "path": "snes/aarchived/Castlevania (norom)/castlevania.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "998405ea7d89d411ceb0b81913085830545aabf6",
+      "size": 15971,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/998405ea7d89d411ceb0b81913085830545aabf6"
+    },
+    {
+      "path": "snes/aarchived/Combatribes",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9a903af14ba21b51059be9ec93db7635ec4d8e59",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/9a903af14ba21b51059be9ec93db7635ec4d8e59"
+    },
+    {
+      "path": "snes/aarchived/Combatribes/combatribes.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "548e21ac5ec0090fccba85f2cf4ac336c6630958",
+      "size": 8857,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/548e21ac5ec0090fccba85f2cf4ac336c6630958"
+    },
+    {
+      "path": "snes/aarchived/Combatribes/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b858e011425b184e9137dc3e372244c84b2ea563",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/b858e011425b184e9137dc3e372244c84b2ea563"
+    },
+    {
+      "path": "snes/aarchived/Combatribes/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edef5c8f7bfd837b735fc6de3392f366d451f61a",
+      "size": 268,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/edef5c8f7bfd837b735fc6de3392f366d451f61a"
+    },
+    {
+      "path": "snes/aarchived/Cool Spot",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b817b6762dc21e162e5e042f8a8d55bf61922811",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/b817b6762dc21e162e5e042f8a8d55bf61922811"
+    },
+    {
+      "path": "snes/aarchived/Cool Spot/cool spot.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8b946b81172f091cbda15e7726769c8aa245757",
+      "size": 9955,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/d8b946b81172f091cbda15e7726769c8aa245757"
+    },
+    {
+      "path": "snes/aarchived/Cool Spot/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c83d853e156380f2ff8bba0e1cd06cbf7c786b41",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c83d853e156380f2ff8bba0e1cd06cbf7c786b41"
+    },
+    {
+      "path": "snes/aarchived/Cool Spot/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "169176d824fd32152258d74702bf73906ed0efa8",
+      "size": 258,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/169176d824fd32152258d74702bf73906ed0efa8"
+    },
+    {
+      "path": "snes/aarchived/D-Force",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "05aa1ee4ffa2a02666b214e82b93d1260dfd9d6b",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/05aa1ee4ffa2a02666b214e82b93d1260dfd9d6b"
+    },
+    {
+      "path": "snes/aarchived/D-Force/d-force.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "adf0054404c4cdfdaf8390942f78ceb5e081ca96",
+      "size": 9993,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/adf0054404c4cdfdaf8390942f78ceb5e081ca96"
+    },
+    {
+      "path": "snes/aarchived/D-Force/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7f9a59a38fc1e38677b33007dd966a5d9f88c17",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/e7f9a59a38fc1e38677b33007dd966a5d9f88c17"
+    },
+    {
+      "path": "snes/aarchived/D-Force/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52dd6095eadee39f2e7d5175ea869cdfc79f8586",
+      "size": 250,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/52dd6095eadee39f2e7d5175ea869cdfc79f8586"
+    },
+    {
+      "path": "snes/aarchived/Darius",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "223138ab6e72a55c6c816bc2d7b41361b3447ac3",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/223138ab6e72a55c6c816bc2d7b41361b3447ac3"
+    },
+    {
+      "path": "snes/aarchived/Darius/darius.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c20836164d9d5aa993dd44091c106f3a8457780d",
+      "size": 35469,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c20836164d9d5aa993dd44091c106f3a8457780d"
+    },
+    {
+      "path": "snes/aarchived/Darius/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7e5996053fb1aaee8f2b583e3d93df7cf2af67fb",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/7e5996053fb1aaee8f2b583e3d93df7cf2af67fb"
+    },
+    {
+      "path": "snes/aarchived/Darius/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ef9262cb80811c453373343456bc029a6cbb163",
+      "size": 262,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/3ef9262cb80811c453373343456bc029a6cbb163"
+    },
+    {
+      "path": "snes/aarchived/Deae Tonosama Appare Ichiban (incomplete)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f64517aa08a5185349d290c261c71b7421aef773",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f64517aa08a5185349d290c261c71b7421aef773"
+    },
+    {
+      "path": "snes/aarchived/Deae Tonosama Appare Ichiban (incomplete)/Deae Tonosama Appare Ichiban (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5556b2f4f04340b975b8b00c53d26890f1387628",
+      "size": 13843,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/5556b2f4f04340b975b8b00c53d26890f1387628"
+    },
+    {
+      "path": "snes/aarchived/Deae Tonosama Appare Ichiban (incomplete)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "19490f5427a84fd5a413032b1653cf20354327eb",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/19490f5427a84fd5a413032b1653cf20354327eb"
+    },
+    {
+      "path": "snes/aarchived/Deae Tonosama Appare Ichiban (incomplete)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "48e389739d54e5fa30c7d30910ab696a67d827cd",
+      "size": 294,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/48e389739d54e5fa30c7d30910ab696a67d827cd"
+    },
+    {
+      "path": "snes/aarchived/Exhaust Heat",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "152146462e8031728b30a046bb2d63bb1f9b4580",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/152146462e8031728b30a046bb2d63bb1f9b4580"
+    },
+    {
+      "path": "snes/aarchived/Exhaust Heat/exhaust heat.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7572efed6e509e40fa70ead8cafd1354f309068f",
+      "size": 14466,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/7572efed6e509e40fa70ead8cafd1354f309068f"
+    },
+    {
+      "path": "snes/aarchived/Exhaust Heat/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca075e1feedadc703d60f06b6959c0d9e38ae0e7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/ca075e1feedadc703d60f06b6959c0d9e38ae0e7"
+    },
+    {
+      "path": "snes/aarchived/Exhaust Heat/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65879d6f453293a82372334ca2995a9948d3fa4b",
+      "size": 271,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/65879d6f453293a82372334ca2995a9948d3fa4b"
+    },
+    {
+      "path": "snes/aarchived/Final Fight Guy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3e57b90047b0c65899f308f80c576e5a38208509",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/3e57b90047b0c65899f308f80c576e5a38208509"
+    },
+    {
+      "path": "snes/aarchived/Final Fight Guy/Final Fight Guy.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e453e3f7b7809250c2e3b4fc62f4571cd5141085",
+      "size": 35485,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/e453e3f7b7809250c2e3b4fc62f4571cd5141085"
+    },
+    {
+      "path": "snes/aarchived/Final Fight Guy/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "22f073fe3daba0201bcf218eb1b01db06016be16",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/22f073fe3daba0201bcf218eb1b01db06016be16"
+    },
+    {
+      "path": "snes/aarchived/Final Fight Guy/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1353fd83cb9e8cfdcb7b4c82666d2552d0c465f",
+      "size": 266,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f1353fd83cb9e8cfdcb7b4c82666d2552d0c465f"
+    },
+    {
+      "path": "snes/aarchived/Fire Strikers",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "107f32f68e2b132eaacfde4415741ec087b6eae1",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/107f32f68e2b132eaacfde4415741ec087b6eae1"
+    },
+    {
+      "path": "snes/aarchived/Fire Strikers/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bfc04cff06f6b3a2d6b12dbe562b3972ae16ac7e",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/bfc04cff06f6b3a2d6b12dbe562b3972ae16ac7e"
+    },
+    {
+      "path": "snes/aarchived/Fire Strikers/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e27c5523ebd29dccd2263b9a185440855b1d3366",
+      "size": 260,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/e27c5523ebd29dccd2263b9a185440855b1d3366"
+    },
+    {
+      "path": "snes/aarchived/Fire Strikers/fire strikers.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da94e75928932437ae8f1ac1109658ccd63f6fe6",
+      "size": 8596,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/da94e75928932437ae8f1ac1109658ccd63f6fe6"
+    },
+    {
+      "path": "snes/aarchived/Flying Hero",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf431e9add0704fb702b32559fe1eeb29eb7a18b",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/bf431e9add0704fb702b32559fe1eeb29eb7a18b"
+    },
+    {
+      "path": "snes/aarchived/Flying Hero/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d861bf56113e7de8425bc07a134fd437b764b824",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d861bf56113e7de8425bc07a134fd437b764b824"
+    },
+    {
+      "path": "snes/aarchived/Flying Hero/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33686ae1e3966de5f26eca23887efe843aec363f",
+      "size": 306,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/33686ae1e3966de5f26eca23887efe843aec363f"
+    },
+    {
+      "path": "snes/aarchived/Flying Hero/flying hero.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c93b63d52548547beeb3506a2640b95f6d3cfae",
+      "size": 22284,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/4c93b63d52548547beeb3506a2640b95f6d3cfae"
+    },
+    {
+      "path": "snes/aarchived/Great Battle 2 (no rom)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2ff0892b78debf011b3b7c19a69f5f862eab69d1",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/2ff0892b78debf011b3b7c19a69f5f862eab69d1"
+    },
+    {
+      "path": "snes/aarchived/Great Battle 2 (no rom)/Great Battle 2.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ef4b023fc598c752936cce3b978661035aec46bf",
+      "size": 6797,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ef4b023fc598c752936cce3b978661035aec46bf"
+    },
+    {
+      "path": "snes/aarchived/Great Battle 2 (no rom)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7b3edd492a0b072ab75f6e25425a6f78ed5b4e6f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/7b3edd492a0b072ab75f6e25425a6f78ed5b4e6f"
+    },
+    {
+      "path": "snes/aarchived/Great Battle 2 (no rom)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "752105b6949428490766dac0bfb1b1a0636a0073",
+      "size": 87,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/752105b6949428490766dac0bfb1b1a0636a0073"
+    },
+    {
+      "path": "snes/aarchived/Great Battle 3 (no rom)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "79d8eb09055dfba25df70b771f7a43d2de4fdbae",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/79d8eb09055dfba25df70b771f7a43d2de4fdbae"
+    },
+    {
+      "path": "snes/aarchived/Great Battle 3 (no rom)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d2af77838a8812afe11acd24f485395aee49e4f6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d2af77838a8812afe11acd24f485395aee49e4f6"
+    },
+    {
+      "path": "snes/aarchived/Great Battle 3 (no rom)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "215e36067cc53dab9b57da118bdbe612dc9bf2fd",
+      "size": 28,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/215e36067cc53dab9b57da118bdbe612dc9bf2fd"
+    },
+    {
+      "path": "snes/aarchived/Great Battle 3 (no rom)/great battle 3.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c219f72f2d684763307e3572be6515e52eaa451",
+      "size": 11134,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9c219f72f2d684763307e3572be6515e52eaa451"
+    },
+    {
+      "path": "snes/aarchived/Great Battle II J",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b207c5fe806846b958db0284c89029bd168df5d7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/b207c5fe806846b958db0284c89029bd168df5d7"
+    },
+    {
+      "path": "snes/aarchived/Great Battle II J/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a1cd5681ddfe4834e8bd0c07a888e000bd5e9bfb",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/a1cd5681ddfe4834e8bd0c07a888e000bd5e9bfb"
+    },
+    {
+      "path": "snes/aarchived/Great Battle II J/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "484c7e5a9bb195b8cda29dcc4bf2e95d3ba1d53e",
+      "size": 310,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/484c7e5a9bb195b8cda29dcc4bf2e95d3ba1d53e"
+    },
+    {
+      "path": "snes/aarchived/Great Battle II J/great battle II J.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00031d47f39449f87d7c1da40f596727294509cb",
+      "size": 7064,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/00031d47f39449f87d7c1da40f596727294509cb"
+    },
+    {
+      "path": "snes/aarchived/Great Battle II J/great battle II J.dizprefs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "52a3c6e8e4aba92bb6416743baaf2e58b16b9620",
+      "size": 299,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/52a3c6e8e4aba92bb6416743baaf2e58b16b9620"
+    },
+    {
+      "path": "snes/aarchived/Gunforce",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d6305547be59181b76160958ce081116ae44f9ca",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d6305547be59181b76160958ce081116ae44f9ca"
+    },
+    {
+      "path": "snes/aarchived/Gunforce/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8e06095b7fd9043847da46cb6bae6e826cbd734",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d8e06095b7fd9043847da46cb6bae6e826cbd734"
+    },
+    {
+      "path": "snes/aarchived/Gunforce/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "563fdda5e7d64dce400a388ff92f00a818d10052",
+      "size": 290,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/563fdda5e7d64dce400a388ff92f00a818d10052"
+    },
+    {
+      "path": "snes/aarchived/Gunforce/gunforce.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60bcc1eb1206e102a3f5d50689309c6b8a66220b",
+      "size": 13606,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/60bcc1eb1206e102a3f5d50689309c6b8a66220b"
+    },
+    {
+      "path": "snes/aarchived/Hook",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "698abac9b2f3d1caa51ee345817123ad7c645a11",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/698abac9b2f3d1caa51ee345817123ad7c645a11"
+    },
+    {
+      "path": "snes/aarchived/Hook/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d602cb7e148d230619efc037364f6732d15161d6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d602cb7e148d230619efc037364f6732d15161d6"
+    },
+    {
+      "path": "snes/aarchived/Hook/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce3e0dabacb4813aa4acea20c2ff973b75ab4745",
+      "size": 244,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ce3e0dabacb4813aa4acea20c2ff973b75ab4745"
+    },
+    {
+      "path": "snes/aarchived/Hook/hook.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b91a298da62731bfbeb442582d60eaf309b43623",
+      "size": 15249,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b91a298da62731bfbeb442582d60eaf309b43623"
+    },
+    {
+      "path": "snes/aarchived/Hyperzone",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9d33d9c359d31be3064226df40ddd7775e196581",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/9d33d9c359d31be3064226df40ddd7775e196581"
+    },
+    {
+      "path": "snes/aarchived/Hyperzone/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01f47ae7140829afe5bf4118a7e39f99d77aa1e6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/01f47ae7140829afe5bf4118a7e39f99d77aa1e6"
+    },
+    {
+      "path": "snes/aarchived/Hyperzone/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62cf34c6960e6b4971ae7aa465f94575f6ccb15d",
+      "size": 259,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/62cf34c6960e6b4971ae7aa465f94575f6ccb15d"
+    },
+    {
+      "path": "snes/aarchived/Hyperzone/hyperzone.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38c1144413ff6fef9dc6a786f733a2e788cb75d4",
+      "size": 7392,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/38c1144413ff6fef9dc6a786f733a2e788cb75d4"
+    },
+    {
+      "path": "snes/aarchived/Imperium (J)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "aa0ceaa3b68d656aecc8fc77795792caf7ebce3d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/aa0ceaa3b68d656aecc8fc77795792caf7ebce3d"
+    },
+    {
+      "path": "snes/aarchived/Imperium (J)/Imperium (J).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3331856a4110327659ad4c75e6bf6b665b2fdcd",
+      "size": 19971,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a3331856a4110327659ad4c75e6bf6b665b2fdcd"
+    },
+    {
+      "path": "snes/aarchived/Imperium (J)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f1a2b2d0ff836df0700ad1204af0084eb4efab7a",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f1a2b2d0ff836df0700ad1204af0084eb4efab7a"
+    },
+    {
+      "path": "snes/aarchived/Imperium (J)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de061a67232bad982863d332b3821583f8bee325",
+      "size": 278,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/de061a67232bad982863d332b3821583f8bee325"
+    },
+    {
+      "path": "snes/aarchived/Mario Paint (incomplete) (norom)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5f52fcd626528b8296aa125082fdc4023b9e76eb",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/5f52fcd626528b8296aa125082fdc4023b9e76eb"
+    },
+    {
+      "path": "snes/aarchived/Mario Paint (incomplete) (norom)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "51499026f9eff04da0fc446889d1a9b483e62971",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/51499026f9eff04da0fc446889d1a9b483e62971"
+    },
+    {
+      "path": "snes/aarchived/Mario Paint (incomplete) (norom)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86b8bed778bd6156b5ce9c87477801e98d01385b",
+      "size": 47,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/86b8bed778bd6156b5ce9c87477801e98d01385b"
+    },
+    {
+      "path": "snes/aarchived/Mario Paint (incomplete) (norom)/mario paint (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "403da4055c2e1b92170b89b2c3061450a5404109",
+      "size": 5722,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/403da4055c2e1b92170b89b2c3061450a5404109"
+    },
+    {
+      "path": "snes/aarchived/Megaman X3 V1 (norom)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "42fb7e9c41f6660a0b073e3d575fe27e12d2c054",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/42fb7e9c41f6660a0b073e3d575fe27e12d2c054"
+    },
+    {
+      "path": "snes/aarchived/Megaman X3 V1 (norom)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d42d6caf43fd6449f0afa5f49d9eae0e6063107c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d42d6caf43fd6449f0afa5f49d9eae0e6063107c"
+    },
+    {
+      "path": "snes/aarchived/Megaman X3 V1 (norom)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f21a854dfab1f0ac58c0c660a5ab2a6a1fa44d6c",
+      "size": 48,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f21a854dfab1f0ac58c0c660a5ab2a6a1fa44d6c"
+    },
+    {
+      "path": "snes/aarchived/Megaman X3 V1 (norom)/mmx3 v1.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cba2610da117bc66eb9182c72305819740bc5f55",
+      "size": 73010,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/cba2610da117bc66eb9182c72305819740bc5f55"
+    },
+    {
+      "path": "snes/aarchived/Mighty Morphin Power Rangers (U)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8cd5bc7e98386391394b78f6729d12d49f3ea28d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/8cd5bc7e98386391394b78f6729d12d49f3ea28d"
+    },
+    {
+      "path": "snes/aarchived/Mighty Morphin Power Rangers (U)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08f15985c9f5cd2b9b8c4c089dbde1decf7dd653",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/08f15985c9f5cd2b9b8c4c089dbde1decf7dd653"
+    },
+    {
+      "path": "snes/aarchived/Mighty Morphin Power Rangers (U)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bab626859fdb770bd2d6c01866bcdd6693cd030b",
+      "size": 293,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/bab626859fdb770bd2d6c01866bcdd6693cd030b"
+    },
+    {
+      "path": "snes/aarchived/Mighty Morphin Power Rangers (U)/mighty morphin power rangers.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf4d165766ec1e608785360b90725674f201893c",
+      "size": 23906,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/bf4d165766ec1e608785360b90725674f201893c"
+    },
+    {
+      "path": "snes/aarchived/Mighty Morphin Power Rangers - The Fighting Edition (U)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f2bf799ebdd0f2d27c37a43cfae406f1ff1e423",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/4f2bf799ebdd0f2d27c37a43cfae406f1ff1e423"
+    },
+    {
+      "path": "snes/aarchived/Mighty Morphin Power Rangers - The Fighting Edition (U)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d33bdda1591a5d096c597dbe9d5af88193cdbb9",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/5d33bdda1591a5d096c597dbe9d5af88193cdbb9"
+    },
+    {
+      "path": "snes/aarchived/Mighty Morphin Power Rangers - The Fighting Edition (U)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a4b96f54255a177a188025141dbed91f87e34ee",
+      "size": 339,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9a4b96f54255a177a188025141dbed91f87e34ee"
+    },
+    {
+      "path": "snes/aarchived/Mighty Morphin Power Rangers - The Fighting Edition (U)/mighty morphin power rangers - fighting edition.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c178aba5242d62d1c38c4b228f233c4b94cb168",
+      "size": 18033,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/3c178aba5242d62d1c38c4b228f233c4b94cb168"
+    },
+    {
+      "path": "snes/aarchived/Phalanx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "011508748396b90cb7811793e7c15b821523cae9",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/011508748396b90cb7811793e7c15b821523cae9"
+    },
+    {
+      "path": "snes/aarchived/Phalanx/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d8eddfb83d63a45fc55111f70f3a7f01b1850b6a",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d8eddfb83d63a45fc55111f70f3a7f01b1850b6a"
+    },
+    {
+      "path": "snes/aarchived/Phalanx/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb9ac369bc88758ba374249d9a9df15d12c085ef",
+      "size": 284,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/bb9ac369bc88758ba374249d9a9df15d12c085ef"
+    },
+    {
+      "path": "snes/aarchived/Phalanx/phalanx.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1dff732d4c36c85a48a763a252dc2be203900100",
+      "size": 16018,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/1dff732d4c36c85a48a763a252dc2be203900100"
+    },
+    {
+      "path": "snes/aarchived/Prince of Persia Japan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5597d91cec00fab07638abff5bbc7a8c6ab08038",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/5597d91cec00fab07638abff5bbc7a8c6ab08038"
+    },
+    {
+      "path": "snes/aarchived/Prince of Persia Japan/Prince of Persia Japan.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e45b4d75df201806cdd3f3c2b21047e0bb02524b",
+      "size": 20084,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/e45b4d75df201806cdd3f3c2b21047e0bb02524b"
+    },
+    {
+      "path": "snes/aarchived/Prince of Persia Japan/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4f0e0ea370c1c3d5729d3517ff9323f3ab8da52b",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/4f0e0ea370c1c3d5729d3517ff9323f3ab8da52b"
+    },
+    {
+      "path": "snes/aarchived/Prince of Persia Japan/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12f2adfedd9427f028d704967fee5901d56c51c3",
+      "size": 272,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/12f2adfedd9427f028d704967fee5901d56c51c3"
+    },
+    {
+      "path": "snes/aarchived/RPM Racing",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "64fd7788b2519b5098411d22f95c81a068a4ad02",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/64fd7788b2519b5098411d22f95c81a068a4ad02"
+    },
+    {
+      "path": "snes/aarchived/RPM Racing/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e7e03d9015250130cbdf05ef8399cc5dc148ea81",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/e7e03d9015250130cbdf05ef8399cc5dc148ea81"
+    },
+    {
+      "path": "snes/aarchived/RPM Racing/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c43213ebe6e6df808989ea65410e9461b7315e4",
+      "size": 282,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/0c43213ebe6e6df808989ea65410e9461b7315e4"
+    },
+    {
+      "path": "snes/aarchived/RPM Racing/rpm racing.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "356bdbd57845bf62b2db48c23c184e6e4bafe361",
+      "size": 9814,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/356bdbd57845bf62b2db48c23c184e6e4bafe361"
+    },
+    {
+      "path": "snes/aarchived/Raiden Trad",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a36c0888375f3858c61bb0f258549674885dd502",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/a36c0888375f3858c61bb0f258549674885dd502"
+    },
+    {
+      "path": "snes/aarchived/Raiden Trad/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9012fa552af4701fd4368872e3bf3d0f7c49a66e",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/9012fa552af4701fd4368872e3bf3d0f7c49a66e"
+    },
+    {
+      "path": "snes/aarchived/Raiden Trad/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8f75063177de86458944ad353abb85747bd9b90",
+      "size": 265,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/d8f75063177de86458944ad353abb85747bd9b90"
+    },
+    {
+      "path": "snes/aarchived/Raiden Trad/raiden trad.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60466286448870beb628a99bbd7b0e9802209c9f",
+      "size": 12199,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/60466286448870beb628a99bbd7b0e9802209c9f"
+    },
+    {
+      "path": "snes/aarchived/Ranma 1-2 - Chounai Gekitou Hen (Japan)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "526ead7649e3fc62c9cfee07d175278be60b5e96",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/526ead7649e3fc62c9cfee07d175278be60b5e96"
+    },
+    {
+      "path": "snes/aarchived/Ranma 1-2 - Chounai Gekitou Hen (Japan)/Ranma 1-2 - Chounai Gekitou Hen (Japan).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1f06a09401cfcbe6f7111ef9771e4f61718a76d",
+      "size": 12373,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c1f06a09401cfcbe6f7111ef9771e4f61718a76d"
+    },
+    {
+      "path": "snes/aarchived/Ranma 1-2 - Chounai Gekitou Hen (Japan)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "93606d5ffd2656cf695ed35efe8f607997a92751",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/93606d5ffd2656cf695ed35efe8f607997a92751"
+    },
+    {
+      "path": "snes/aarchived/Ranma 1-2 - Chounai Gekitou Hen (Japan)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c1a76e4600f98db95ef90ca52e859571e1af8a5",
+      "size": 307,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/7c1a76e4600f98db95ef90ca52e859571e1af8a5"
+    },
+    {
+      "path": "snes/aarchived/Ranma 1-2 - Ougi Jaanken (Japan)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa2a69456a92319f90d12b312d0625451681e591",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/fa2a69456a92319f90d12b312d0625451681e591"
+    },
+    {
+      "path": "snes/aarchived/Ranma 1-2 - Ougi Jaanken (Japan)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "25ca40f076cac8fa9fceff67ace616b5df4025ea",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/25ca40f076cac8fa9fceff67ace616b5df4025ea"
+    },
+    {
+      "path": "snes/aarchived/Ranma 1-2 - Ougi Jaanken (Japan)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "38e5fcad51c4a37809c524c77d58e4b99458a071",
+      "size": 293,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/38e5fcad51c4a37809c524c77d58e4b99458a071"
+    },
+    {
+      "path": "snes/aarchived/Ranma 1-2 - Ougi Jaanken (Japan)/ranma 1-2 ougi jaanken.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1965fc28524fe8d6e0b26bdf995cc8c45e32b67",
+      "size": 10183,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/d1965fc28524fe8d6e0b26bdf995cc8c45e32b67"
+    },
+    {
+      "path": "snes/aarchived/Rending Ranger",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3785eeaf95bed7c8609ebcd155977360f8f358fb",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/3785eeaf95bed7c8609ebcd155977360f8f358fb"
+    },
+    {
+      "path": "snes/aarchived/Rending Ranger/Rending Ranger.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e8a1ef4b1f90a759f046b2ec1fc494c5dc484a7",
+      "size": 33545,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/8e8a1ef4b1f90a759f046b2ec1fc494c5dc484a7"
+    },
+    {
+      "path": "snes/aarchived/Rending Ranger/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "558f4f827682ca941116e79bcf130a18334891d3",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/558f4f827682ca941116e79bcf130a18334891d3"
+    },
+    {
+      "path": "snes/aarchived/Rending Ranger/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee28a89ec36b443c04ac51a97e037900c7a96d96",
+      "size": 286,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ee28a89ec36b443c04ac51a97e037900c7a96d96"
+    },
+    {
+      "path": "snes/aarchived/Rushing Beat",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2fd39debe9a27da8e1332fb96b8b8ad0515ef9e8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/2fd39debe9a27da8e1332fb96b8b8ad0515ef9e8"
+    },
+    {
+      "path": "snes/aarchived/Rushing Beat/Rushing Beat.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1258dbab72430b8eafb26b1eb2bffc7ed018724",
+      "size": 21834,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f1258dbab72430b8eafb26b1eb2bffc7ed018724"
+    },
+    {
+      "path": "snes/aarchived/Rushing Beat/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f16516319562dc55571221801880a65eecf6f3d6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/f16516319562dc55571221801880a65eecf6f3d6"
+    },
+    {
+      "path": "snes/aarchived/Rushing Beat/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7edefab17e2826e0fe99b8b10ac4549a3a6ca0a8",
+      "size": 335,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/7edefab17e2826e0fe99b8b10ac4549a3a6ca0a8"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle (no rom)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a21e8377b2ba3a2f0099e4a3ee08dee0945e37d4",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/a21e8377b2ba3a2f0099e4a3ee08dee0945e37d4"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle (no rom)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1a5b0392a4e1842254fb8ba300f00644b4f57ed5",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1a5b0392a4e1842254fb8ba300f00644b4f57ed5"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle (no rom)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f98d8516d2bc921723d10e6264179f4a6c4640a",
+      "size": 51,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6f98d8516d2bc921723d10e6264179f4a6c4640a"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle (no rom)/the great battle.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f7a66552e980da1ed84578bb05fbcfa4c65d6dd",
+      "size": 6382,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6f7a66552e980da1ed84578bb05fbcfa4c65d6dd"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle - Aratanaru Chousen (Japan)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "321dc704ba2919f03fbb6b0e092dd986d5aff91f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/321dc704ba2919f03fbb6b0e092dd986d5aff91f"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle - Aratanaru Chousen (Japan)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eef65f7b110ea339dbdd0a7e5548c20b18c4a02c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/eef65f7b110ea339dbdd0a7e5548c20b18c4a02c"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle - Aratanaru Chousen (Japan)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e491b97759885db22a2f1e1ab301a816d4489949",
+      "size": 329,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/e491b97759885db22a2f1e1ab301a816d4489949"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle - Aratanaru Chousen (Japan)/the great battle rev0.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a459da8d87f99522d32d520ffede6c456f77f395",
+      "size": 5324,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a459da8d87f99522d32d520ffede6c456f77f395"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle Rev1 (no rom)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ebe90a60e7f716eb775f45b552bcc11eed9da840",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/ebe90a60e7f716eb775f45b552bcc11eed9da840"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle Rev1 (no rom)/SD The Great Battle Rev1.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91a01e4510dfac3970af1c3a19181f12e5ade89e",
+      "size": 4199,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/91a01e4510dfac3970af1c3a19181f12e5ade89e"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle Rev1 (no rom)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c21f34388aa99bb7811ebfb050963e9a5130498f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c21f34388aa99bb7811ebfb050963e9a5130498f"
+    },
+    {
+      "path": "snes/aarchived/SD The Great Battle Rev1 (no rom)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0a1ae6459b319fa7768d9fb6c8e5d7768675a03",
+      "size": 55,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b0a1ae6459b319fa7768d9fb6c8e5d7768675a03"
+    },
+    {
+      "path": "snes/aarchived/SMAS+W (incomplete) (no rom",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "061bbe9841758c226e57543034ad9f96e33b21d6",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/061bbe9841758c226e57543034ad9f96e33b21d6"
+    },
+    {
+      "path": "snes/aarchived/SMAS+W (incomplete) (no rom/SMAS+W (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fc1283be84eb9ffcc480566f8aa7836d37481b8",
+      "size": 38727,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/5fc1283be84eb9ffcc480566f8aa7836d37481b8"
+    },
+    {
+      "path": "snes/aarchived/SMAS+W (incomplete) (no rom/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "204d1ae630e7c7b626eed86054bfde3a4cea05f8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/204d1ae630e7c7b626eed86054bfde3a4cea05f8"
+    },
+    {
+      "path": "snes/aarchived/SMAS+W (incomplete) (no rom/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f1c835cc41f47b3284fc9ab0b06279eea8c6541",
+      "size": 59,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/7f1c835cc41f47b3284fc9ab0b06279eea8c6541"
+    },
+    {
+      "path": "snes/aarchived/Seiken Densetsu 2 (incomplete)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a60de52fcd7ab3f420b9182793b588bbb579b607",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/a60de52fcd7ab3f420b9182793b588bbb579b607"
+    },
+    {
+      "path": "snes/aarchived/Seiken Densetsu 2 (incomplete)/Seiken Densetsu 2 (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a803940498a676169e554f301281958e507cf25b",
+      "size": 18042,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a803940498a676169e554f301281958e507cf25b"
+    },
+    {
+      "path": "snes/aarchived/Seiken Densetsu 2 (incomplete)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1b1a5f673753c07796afe6027f21e48ebda65358",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1b1a5f673753c07796afe6027f21e48ebda65358"
+    },
+    {
+      "path": "snes/aarchived/Seiken Densetsu 2 (incomplete)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b494da761a5a3ef13466514a928dbe4289e3d2e6",
+      "size": 280,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b494da761a5a3ef13466514a928dbe4289e3d2e6"
+    },
+    {
+      "path": "snes/aarchived/Sim Ant (U)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4668d7cee18dc28e68dd2550a8e873a1ef4d1179",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/4668d7cee18dc28e68dd2550a8e873a1ef4d1179"
+    },
+    {
+      "path": "snes/aarchived/Sim Ant (U)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "17100317d3965db5225b9c33c3b5f62abdb57fe7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/17100317d3965db5225b9c33c3b5f62abdb57fe7"
+    },
+    {
+      "path": "snes/aarchived/Sim Ant (U)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b37b4b09307a0ed5c0114ae7093a7f62f3342792",
+      "size": 295,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/b37b4b09307a0ed5c0114ae7093a7f62f3342792"
+    },
+    {
+      "path": "snes/aarchived/Sim Ant (U)/simant.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e91574bbef231a8434d52de3161c2e7b180bfbd",
+      "size": 21940,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/5e91574bbef231a8434d52de3161c2e7b180bfbd"
+    },
+    {
+      "path": "snes/aarchived/SmashTV",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d13fb40ba774f763850ef99a1213960705f7a7ee",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/d13fb40ba774f763850ef99a1213960705f7a7ee"
+    },
+    {
+      "path": "snes/aarchived/SmashTV/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48f3d656d5796ad82f37c0b24766a800b3238f2c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/48f3d656d5796ad82f37c0b24766a800b3238f2c"
+    },
+    {
+      "path": "snes/aarchived/SmashTV/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edfdb31084d805da69d9c9d007907b10d063701f",
+      "size": 345,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/edfdb31084d805da69d9c9d007907b10d063701f"
+    },
+    {
+      "path": "snes/aarchived/SmashTV/smashtv.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f2bab703ba368e8350f91e5616e9916d599db3f",
+      "size": 17056,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/5f2bab703ba368e8350f91e5616e9916d599db3f"
+    },
+    {
+      "path": "snes/aarchived/Sonic Blast Man (USA)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "49c2acccf38e3de7fd82b55e13373b6ca28ec8cd",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/49c2acccf38e3de7fd82b55e13373b6ca28ec8cd"
+    },
+    {
+      "path": "snes/aarchived/Sonic Blast Man (USA)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b0df35abe64aee9c4bd3b167dabf505fda7870d7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/b0df35abe64aee9c4bd3b167dabf505fda7870d7"
+    },
+    {
+      "path": "snes/aarchived/Sonic Blast Man (USA)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77054eadd58ee3f12370c6a2adf61ceb1c01bfe5",
+      "size": 283,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/77054eadd58ee3f12370c6a2adf61ceb1c01bfe5"
+    },
+    {
+      "path": "snes/aarchived/Sonic Blast Man (USA)/sonic blast man usa.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28d12b7f5a4e962956d4039b743deadb9b7e7fae",
+      "size": 12369,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/28d12b7f5a4e962956d4039b743deadb9b7e7fae"
+    },
+    {
+      "path": "snes/aarchived/Soul Blazer",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "659c67b9e4706db2e5495127c8c867c12490ac28",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/659c67b9e4706db2e5495127c8c867c12490ac28"
+    },
+    {
+      "path": "snes/aarchived/Soul Blazer/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0450140fdcc8c6ac9975bec4a7fb797f18e47bcf",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/0450140fdcc8c6ac9975bec4a7fb797f18e47bcf"
+    },
+    {
+      "path": "snes/aarchived/Soul Blazer/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ee1be5ade22a894b302bc7bdc39b1607c3458908",
+      "size": 276,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ee1be5ade22a894b302bc7bdc39b1607c3458908"
+    },
+    {
+      "path": "snes/aarchived/Soul Blazer/soul blazer.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9813d08f743a42435dab64a4dfed063a137e83ef",
+      "size": 12942,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9813d08f743a42435dab64a4dfed063a137e83ef"
+    },
+    {
+      "path": "snes/aarchived/Space Invaders",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9042e2815775e83c46971703a131accddcd7f6f9",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/9042e2815775e83c46971703a131accddcd7f6f9"
+    },
+    {
+      "path": "snes/aarchived/Space Invaders/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "09b44cb6a7536d3b1062484d72b2ce0c7b68f9a8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/09b44cb6a7536d3b1062484d72b2ce0c7b68f9a8"
+    },
+    {
+      "path": "snes/aarchived/Space Invaders/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30f105995fd9edb33770a0a377d71b88d19ae667",
+      "size": 283,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/30f105995fd9edb33770a0a377d71b88d19ae667"
+    },
+    {
+      "path": "snes/aarchived/Space Invaders/space invaders.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "94ea2111987a4459c912cefa5c1d73fce54d2a3d",
+      "size": 10349,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/94ea2111987a4459c912cefa5c1d73fce54d2a3d"
+    },
+    {
+      "path": "snes/aarchived/Starglider Proto (no rom)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "dbfd6d7931a8add112eb3ed1c093401e14f58db2",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/dbfd6d7931a8add112eb3ed1c093401e14f58db2"
+    },
+    {
+      "path": "snes/aarchived/Starglider Proto (no rom)/Starglider Proto.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c8dc61b80610f580b84a22df286a00a76fd957b",
+      "size": 5414,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/7c8dc61b80610f580b84a22df286a00a76fd957b"
+    },
+    {
+      "path": "snes/aarchived/Starglider Proto (no rom)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a82e934aaa53aec192593dcbceab7b4456b4b96c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/a82e934aaa53aec192593dcbceab7b4456b4b96c"
+    },
+    {
+      "path": "snes/aarchived/Starglider Proto (no rom)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c598f6b932c74bf26a9de6c685b3a5db2a69883c",
+      "size": 64,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c598f6b932c74bf26a9de6c685b3a5db2a69883c"
+    },
+    {
+      "path": "snes/aarchived/Strike Gunner",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7d5822f0cd123b06fc20441fb44ccfc10e5089a0",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/7d5822f0cd123b06fc20441fb44ccfc10e5089a0"
+    },
+    {
+      "path": "snes/aarchived/Strike Gunner/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ed98dc83e2b9a521c8907068120277a2590c156a",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/ed98dc83e2b9a521c8907068120277a2590c156a"
+    },
+    {
+      "path": "snes/aarchived/Strike Gunner/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e98abe7eafbe24a606b72f53562487340840bcf",
+      "size": 288,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6e98abe7eafbe24a606b72f53562487340840bcf"
+    },
+    {
+      "path": "snes/aarchived/Strike Gunner/strike gunner.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdfb45202e1f10c6e64e5d6b25c5992919f8c973",
+      "size": 17613,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/cdfb45202e1f10c6e64e5d6b25c5992919f8c973"
+    },
+    {
+      "path": "snes/aarchived/Stunt Race fx",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "a2021b8831e6ff6a1c10cdfbdacbefa15826436f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/a2021b8831e6ff6a1c10cdfbdacbefa15826436f"
+    },
+    {
+      "path": "snes/aarchived/Stunt Race fx/Stunt race fx.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae1ec30c37722287892c2484543207044d75be6b",
+      "size": 22354,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/ae1ec30c37722287892c2484543207044d75be6b"
+    },
+    {
+      "path": "snes/aarchived/Stunt Race fx/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1e5a89d70822a1889b6c945d5fb6f22efcaa557f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1e5a89d70822a1889b6c945d5fb6f22efcaa557f"
+    },
+    {
+      "path": "snes/aarchived/Stunt Race fx/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0fec40ddb03446662fbaa0a121bd3fd105ed7ad7",
+      "size": 291,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/0fec40ddb03446662fbaa0a121bd3fd105ed7ad7"
+    },
+    {
+      "path": "snes/aarchived/Super Bowling",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e1f6c78e6e8eabb469b48beb709694d351e929e",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/9e1f6c78e6e8eabb469b48beb709694d351e929e"
+    },
+    {
+      "path": "snes/aarchived/Super Bowling/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3617481d74a41ec18631867d85e6d987352ad3f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c3617481d74a41ec18631867d85e6d987352ad3f"
+    },
+    {
+      "path": "snes/aarchived/Super Bowling/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a68ed108c6ace128c67215791581a9efc0cfcaa",
+      "size": 265,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/8a68ed108c6ace128c67215791581a9efc0cfcaa"
+    },
+    {
+      "path": "snes/aarchived/Super Bowling/super bowling.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a007ddfb6a5cd54d070e8d76cba167c8f273325",
+      "size": 8244,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/2a007ddfb6a5cd54d070e8d76cba167c8f273325"
+    },
+    {
+      "path": "snes/aarchived/Super Buster Bros",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5646c0fc959fc9d5aadddae71babd6eaac79b0fe",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/5646c0fc959fc9d5aadddae71babd6eaac79b0fe"
+    },
+    {
+      "path": "snes/aarchived/Super Buster Bros/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "00bb3417baca857c6d3aeee0e32e52b9bac12a09",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/00bb3417baca857c6d3aeee0e32e52b9bac12a09"
+    },
+    {
+      "path": "snes/aarchived/Super Buster Bros/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "094527f1c803de616bc1eba9f58a80c3b3803eee",
+      "size": 291,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/094527f1c803de616bc1eba9f58a80c3b3803eee"
+    },
+    {
+      "path": "snes/aarchived/Super Buster Bros/super buster bros.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cb67b2a07adc9da58e1450529f0504068fbc7a0",
+      "size": 18350,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/6cb67b2a07adc9da58e1450529f0504068fbc7a0"
+    },
+    {
+      "path": "snes/aarchived/Super Earth Defense Force (J)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9dfa4d63c60fe3520dbd98cdbdc7264026b9cb2d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/9dfa4d63c60fe3520dbd98cdbdc7264026b9cb2d"
+    },
+    {
+      "path": "snes/aarchived/Super Earth Defense Force (J)/Super EDF (J).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7c9a7aea4eba20e8dd60af6d06b4050bcfef5c5",
+      "size": 11013,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a7c9a7aea4eba20e8dd60af6d06b4050bcfef5c5"
+    },
+    {
+      "path": "snes/aarchived/Super Earth Defense Force (J)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "089962653bfad10266bb7c13ba0e9bc39c302acc",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/089962653bfad10266bb7c13ba0e9bc39c302acc"
+    },
+    {
+      "path": "snes/aarchived/Super Earth Defense Force (J)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61ed5ec976f5c614120ac68fd85a2110c201c646",
+      "size": 284,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/61ed5ec976f5c614120ac68fd85a2110c201c646"
+    },
+    {
+      "path": "snes/aarchived/Super Earth Defense Force (USA)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0526c4b780080a8db37fb510ae0d8d1665a61df9",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/0526c4b780080a8db37fb510ae0d8d1665a61df9"
+    },
+    {
+      "path": "snes/aarchived/Super Earth Defense Force (USA)/Super EDF (USA).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "426cc420c8f867f1efb4dc59b3800b7abc4cbc51",
+      "size": 10935,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/426cc420c8f867f1efb4dc59b3800b7abc4cbc51"
+    },
+    {
+      "path": "snes/aarchived/Super Earth Defense Force (USA)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "353125c147bb2ad1f1a12c76bf34508a6d68b07d",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/353125c147bb2ad1f1a12c76bf34508a6d68b07d"
+    },
+    {
+      "path": "snes/aarchived/Super Earth Defense Force (USA)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95e06424b2fd4df4e3df3caf24070f6cf0c204ca",
+      "size": 289,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/95e06424b2fd4df4e3df3caf24070f6cf0c204ca"
+    },
+    {
+      "path": "snes/aarchived/Super Punch Out (incomplete) (no rom)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9d35327affd02b750f8f549723d0e120196a263",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/c9d35327affd02b750f8f549723d0e120196a263"
+    },
+    {
+      "path": "snes/aarchived/Super Punch Out (incomplete) (no rom)/Super Punch Out (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50df19996fd594d81afef4cd989198481edcbdc8",
+      "size": 12469,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/50df19996fd594d81afef4cd989198481edcbdc8"
+    },
+    {
+      "path": "snes/aarchived/Super Punch Out (incomplete) (no rom)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "166b5398d447a0093b2f63e1c85bed8dff96650f",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/166b5398d447a0093b2f63e1c85bed8dff96650f"
+    },
+    {
+      "path": "snes/aarchived/Super Punch Out (incomplete) (no rom)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a453c683dd67421004fb1d807d5cbeae8fb5b1d",
+      "size": 50,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/4a453c683dd67421004fb1d807d5cbeae8fb5b1d"
+    },
+    {
+      "path": "snes/aarchived/Super R-Type japan",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "97a088de215e2ea965b93d36ddd4168200e632df",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/97a088de215e2ea965b93d36ddd4168200e632df"
+    },
+    {
+      "path": "snes/aarchived/Super R-Type japan/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1fc6a197118ade14f5fd20d06c69e3a827672c97",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1fc6a197118ade14f5fd20d06c69e3a827672c97"
+    },
+    {
+      "path": "snes/aarchived/Super R-Type japan/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70e9a79114d00946b561f671cf2a9f9ec89e629e",
+      "size": 276,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/70e9a79114d00946b561f671cf2a9f9ec89e629e"
+    },
+    {
+      "path": "snes/aarchived/Super R-Type japan/super r-type japan.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a80ff5a3161a3b696cf953592429a50a2581b7d",
+      "size": 19856,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/3a80ff5a3161a3b696cf953592429a50a2581b7d"
+    },
+    {
+      "path": "snes/aarchived/Super Tennis (USA)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "50c45da0df9a17ec0554e7d4cbb3123ff6f6068c",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/50c45da0df9a17ec0554e7d4cbb3123ff6f6068c"
+    },
+    {
+      "path": "snes/aarchived/Super Tennis (USA)/Super Tennis (USA).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7b23461474d5b04b28ffeb8866c7df6766334ba",
+      "size": 15716,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c7b23461474d5b04b28ffeb8866c7df6766334ba"
+    },
+    {
+      "path": "snes/aarchived/Super Tennis (USA)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9b6e5f85c8d8d34d54b1ae4ce0081e09d8eb8232",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/9b6e5f85c8d8d34d54b1ae4ce0081e09d8eb8232"
+    },
+    {
+      "path": "snes/aarchived/Super Tennis (USA)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "715e589cc9ac4ca3b3f7dfe7952102472354abed",
+      "size": 269,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/715e589cc9ac4ca3b3f7dfe7952102472354abed"
+    },
+    {
+      "path": "snes/aarchived/Super Turrican",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5d29a5312f2105f6a71e43d42aeb7c9fecfccdba",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/5d29a5312f2105f6a71e43d42aeb7c9fecfccdba"
+    },
+    {
+      "path": "snes/aarchived/Super Turrican/Super Turrican.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bfd1932c71755d399de317788a6588242c7c9270",
+      "size": 12111,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/bfd1932c71755d399de317788a6588242c7c9270"
+    },
+    {
+      "path": "snes/aarchived/Super Turrican/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1f5bab609fb5cec2c0de1572acc8bcdcc7303dbf",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/1f5bab609fb5cec2c0de1572acc8bcdcc7303dbf"
+    },
+    {
+      "path": "snes/aarchived/Super Turrican/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a99381a25b82723eab46127d25b7bfc68bce2b9a",
+      "size": 270,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/a99381a25b82723eab46127d25b7bfc68bce2b9a"
+    },
+    {
+      "path": "snes/aarchived/The Ninja Warriors Again",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e941214037df7aba1d7772f8ab7cd4193a9953a8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/e941214037df7aba1d7772f8ab7cd4193a9953a8"
+    },
+    {
+      "path": "snes/aarchived/The Ninja Warriors Again/The Ninja Warriors Again.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9028151e726ecf4c4fb030060011cede39ca798d",
+      "size": 15551,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9028151e726ecf4c4fb030060011cede39ca798d"
+    },
+    {
+      "path": "snes/aarchived/The Ninja Warriors Again/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "08d8550242fe31383aa827199755ca00bca964d9",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/08d8550242fe31383aa827199755ca00bca964d9"
+    },
+    {
+      "path": "snes/aarchived/The Ninja Warriors Again/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d549a9314b860f345b3d35027b7f1b57d1f04c1",
+      "size": 296,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/1d549a9314b860f345b3d35027b7f1b57d1f04c1"
+    },
+    {
+      "path": "snes/aarchived/Thunder Spirits (U)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5cc421bc6716260137391ab046e4c613c6c97733",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/5cc421bc6716260137391ab046e4c613c6c97733"
+    },
+    {
+      "path": "snes/aarchived/Thunder Spirits (U)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bcc6fd4a07a1eb0e5844f0d38009bbdc894c8f96",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/bcc6fd4a07a1eb0e5844f0d38009bbdc894c8f96"
+    },
+    {
+      "path": "snes/aarchived/Thunder Spirits (U)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "639f8632ce281e3e912f0aad0063e336f984694f",
+      "size": 280,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/639f8632ce281e3e912f0aad0063e336f984694f"
+    },
+    {
+      "path": "snes/aarchived/Thunder Spirits (U)/thunder spirits.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b217e225b6d9d2b5bb77d641f215292a352b3e5",
+      "size": 21645,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/8b217e225b6d9d2b5bb77d641f215292a352b3e5"
+    },
+    {
+      "path": "snes/aarchived/Weaponlord (incomplete)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "85d5c890492d31f334bae95edcdbfb4c129f7cd7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/85d5c890492d31f334bae95edcdbfb4c129f7cd7"
+    },
+    {
+      "path": "snes/aarchived/Weaponlord (incomplete)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92132717cff9f61d7de69da59e976ab40fac96a1",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/92132717cff9f61d7de69da59e976ab40fac96a1"
+    },
+    {
+      "path": "snes/aarchived/Weaponlord (incomplete)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7ac42175cfab45e267c8f5674d78a650474e786",
+      "size": 333,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/f7ac42175cfab45e267c8f5674d78a650474e786"
+    },
+    {
+      "path": "snes/aarchived/Weaponlord (incomplete)/weaponlord (incomplete).diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b4c0f3ceec639c70f0b2b5f1ca639ecbc8f6987",
+      "size": 20575,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/4b4c0f3ceec639c70f0b2b5f1ca639ecbc8f6987"
+    },
+    {
+      "path": "snes/aarchived/X-Kaliber 2097 (U)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9e1b0e5d6d1729ed49d8cf5706a8a2cc5370a903",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/9e1b0e5d6d1729ed49d8cf5706a8a2cc5370a903"
+    },
+    {
+      "path": "snes/aarchived/X-Kaliber 2097 (U)/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec8ca5ccfa4b7c389b42d8f6f93de04c6f71a3a7",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/ec8ca5ccfa4b7c389b42d8f6f93de04c6f71a3a7"
+    },
+    {
+      "path": "snes/aarchived/X-Kaliber 2097 (U)/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c047647db8a8c808f26fb4abdfee21709ac1f1e6",
+      "size": 278,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/c047647db8a8c808f26fb4abdfee21709ac1f1e6"
+    },
+    {
+      "path": "snes/aarchived/X-Kaliber 2097 (U)/x-kaliber 2097.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4021019351f4181d627db60cdcc2a8523d9368a6",
+      "size": 23075,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/4021019351f4181d627db60cdcc2a8523d9368a6"
+    },
+    {
+      "path": "snes/aarchived/prince or persia usa",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e33b8e345698472c9ebb254597667a454c04001",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/5e33b8e345698472c9ebb254597667a454c04001"
+    },
+    {
+      "path": "snes/aarchived/prince or persia usa/export",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0d1d06eb1e58d483515b20b75996ec73c65257d8",
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/trees/0d1d06eb1e58d483515b20b75996ec73c65257d8"
+    },
+    {
+      "path": "snes/aarchived/prince or persia usa/export/info.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68b162387f01159f2b490f4c8a8c55d73743e94f",
+      "size": 270,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/68b162387f01159f2b490f4c8a8c55d73743e94f"
+    },
+    {
+      "path": "snes/aarchived/prince or persia usa/prince or persia usa.diz",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9700221b2f1d88d6a6dc9e73a382611fe35fc5af",
+      "size": 18774,
+      "url": "https://api.github.com/repos/bogaa/dizProjects/git/blobs/9700221b2f1d88d6a6dc9e73a382611fe35fc5af"
+    }
+  ],
+  "truncated": false
+}

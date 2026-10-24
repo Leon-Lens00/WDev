@@ -1,0 +1,38 @@
+{
+  "repo": "medium-jassjass",
+  "flow": 1,
+  "names": [
+    "Jass.assert",
+    "Jass.error",
+    "Jass.print"
+  ],
+  "repetition": 2,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 30.880314122005075,
+  "usage": {
+    "input_tokens": 121866,
+    "cached_input_tokens": 95232,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 874,
+    "reasoning_output_tokens": 69
+  },
+  "commands": 4,
+  "command_text": [
+    "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g 'AGENTS.md' -g '*Jass*' -g '*jass*' -g 'package.json'\"",
+    "/usr/bin/bash -lc \"rg -n 'assert|error|print|library|struct|module|onInit|init' Jass.j\"",
+    "/usr/bin/bash -lc \"nl -ba Jass.j | sed -n '1,135p;1348,1380p;1628,1665p;1690,1720p'\"",
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'TriggerAddAction|TriggerExecute|Jass_(assert|error|print)|printTrigger|errorTrigger|ExecuteFunc|function print|function error|function assert' .\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg --files -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*Benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g 'AGENTS.md' -g '*Jass*' -g '*jass*' -g 'package.json'\"",
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'TriggerAddAction|TriggerExecute|Jass_(assert|error|print)|printTrigger|errorTrigger|ExecuteFunc|function print|function error|function assert' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a1621f-5f6d-78c1-9233-1191b9202d7e"
+  ]
+}

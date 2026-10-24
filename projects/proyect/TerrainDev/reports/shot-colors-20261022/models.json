@@ -1,0 +1,758 @@
+[
+  {
+    "color": 0,
+    "file": "Shot_00_Red.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 1,
+    "file": "Shot_01_Blue.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 2,
+    "file": "Shot_02_Cyan.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 3,
+    "file": "Shot_03_Purple.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 4,
+    "file": "Shot_04_Yellow.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 5,
+    "file": "Shot_05_Orange.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 6,
+    "file": "Shot_06_Green.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 7,
+    "file": "Shot_07_Pink.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 8,
+    "file": "Shot_08_LightGray.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 9,
+    "file": "Shot_09_LightBlue.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 10,
+    "file": "Shot_10_Aqua.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  },
+  {
+    "color": 11,
+    "file": "Shot_11_Brown.mdx",
+    "version": 800,
+    "textures": [
+      "ShotsTeam\\ShotFlareNeutral.blp",
+      "ShotsTeam\\ShotStarNeutral.blp",
+      "ShotsTeam\\ShotGlowNeutral.blp"
+    ],
+    "sequences": [
+      "Stand",
+      "Birth",
+      "Death"
+    ],
+    "stand": {
+      "min": [
+        -109.76870262622833,
+        -5.832000210881233,
+        -5.831999778747559
+      ],
+      "max": [
+        0,
+        5.831999823451042,
+        5.831999778747559
+      ],
+      "boundsRadius": 110.07812009715816
+    },
+    "coreWidth": 11.664000034332275,
+    "particles": [
+      {
+        "name": "Stars",
+        "size": [
+          15,
+          30,
+          1
+        ]
+      },
+      {
+        "name": "Lumps",
+        "size": [
+          40,
+          13,
+          1
+        ]
+      },
+      {
+        "name": "F1",
+        "size": [
+          16,
+          16,
+          16
+        ]
+      },
+      {
+        "name": "A Uno",
+        "size": [
+          20,
+          19,
+          1
+        ]
+      }
+    ]
+  }
+]

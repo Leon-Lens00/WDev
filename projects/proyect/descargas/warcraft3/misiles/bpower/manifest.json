@@ -1,0 +1,153 @@
+{
+  "profile_url": "https://www.hiveworkshop.com/members/bpower.216087/#resources",
+  "profile_resources_reviewed": 23,
+  "maps": [
+    {
+      "resource_id": "275718",
+      "title": "Missile [GUI] version 1.6.1",
+      "author": "BPower",
+      "source_url": "https://www.hiveworkshop.com/threads/missile-gui-version-1-6-1.275718/",
+      "download_url": "https://www.hiveworkshop.com/resources/just-another-warcraft-iii-map.47577/download",
+      "downloaded_date": "2026-10-20",
+      "file": "mapas/275718-missile-gui/Missile GUI.w3x",
+      "bytes": 72474,
+      "sha256": "2811bea04da0a70e8d5e7745517843cde8fc224ceedb27ad285b5b8464c3f664",
+      "package_file": "paquetes/275718-missile-gui.zip",
+      "package_sha256": "c31314acbb0f72b9e073f6de8829b16306aaf74778b7acee2bbd9a80db2f360b",
+      "content_type": "application/zip",
+      "selection_evidence": "Core JASS/GUI Missile recovered from WCT.",
+      "verification": {
+        "embedded_jass_pjass_exit": 0,
+        "vjass_recompiled": false,
+        "game_tested": false,
+        "original_hash_unchanged": true,
+        "wct_recovered_blocks": 4
+      },
+      "missile_version": "1.6.1",
+      "core_flavor": "JASS/GUI"
+    },
+    {
+      "resource_id": "258518",
+      "title": "Hydra v4.2",
+      "author": "BPower",
+      "source_url": "https://www.hiveworkshop.com/threads/hydra-v4-2.258518/",
+      "download_url": "https://www.hiveworkshop.com/resources/hydra.47307/download",
+      "downloaded_date": "2026-10-20",
+      "file": "mapas/258518-hydra/Hydra.w3x",
+      "bytes": 146920,
+      "sha256": "4c0c031285380fc3c616ea349560b2d754d27a9d696be00a979bedca912a62f7",
+      "package_file": "paquetes/258518-hydra.zip",
+      "package_sha256": "067ceddc5807b98fd1c4cb14d6390698529fba84bf6f0af383e759b9cc9537e8",
+      "content_type": "application/zip",
+      "selection_evidence": "Missile library and consumer code recovered from WCT; explicit resource dependency.",
+      "verification": {
+        "embedded_jass_pjass_exit": 1,
+        "vjass_recompiled": false,
+        "game_tested": false,
+        "original_hash_unchanged": true,
+        "wct_recovered_blocks": 15
+      },
+      "missile_version": "1.4",
+      "core_flavor": "vJASS"
+    },
+    {
+      "resource_id": "245470",
+      "title": "Armageddon v.2.4.1",
+      "author": "BPower",
+      "source_url": "https://www.hiveworkshop.com/threads/armageddon-v-2-4-1.245470/",
+      "download_url": "https://www.hiveworkshop.com/resources/armageddon.47107/download",
+      "downloaded_date": "2026-10-20",
+      "file": "mapas/245470-armageddon/Armageddon.w3x",
+      "bytes": 100377,
+      "sha256": "c138b418e2f04132cf0fffb47447a5a8b5e031ef00a53029fc7b568bf61198b8",
+      "package_file": "paquetes/245470-armageddon.zip",
+      "package_sha256": "ae4d7c1765e418229928ccdeced87e95413ab4321c2cc58d5545ee46820dc03d",
+      "content_type": "application/zip",
+      "selection_evidence": "Missile library and consumer code recovered from WCT; explicit resource dependency.",
+      "verification": {
+        "embedded_jass_pjass_exit": 0,
+        "vjass_recompiled": false,
+        "game_tested": false,
+        "original_hash_unchanged": true,
+        "wct_recovered_blocks": 8
+      },
+      "missile_version": "2.5.1",
+      "core_flavor": "vJASS"
+    },
+    {
+      "resource_id": "245192",
+      "title": "Simple Spell Collection#1 v.2.0",
+      "author": "BPower",
+      "source_url": "https://www.hiveworkshop.com/threads/simple-spell-collection-1-v-2-0.245192/",
+      "download_url": "https://www.hiveworkshop.com/resources/simple-spell-collection-1.47101/download",
+      "downloaded_date": "2026-10-20",
+      "file": "mapas/245192-simple-spell-collection/Simple Spell Collection #1.w3x",
+      "bytes": 193619,
+      "sha256": "1ff7a65310bbf6b6fa10dbc8d27593e5616bcd7f63f42be64fbac3d43cf81f5d",
+      "package_file": "paquetes/245192-simple-spell-collection.zip",
+      "package_sha256": "6ff49aaf57906aa3743652ac6a2842f51b929a25d26bfddeb1ae4c549d2a919c",
+      "content_type": "application/zip",
+      "selection_evidence": "Missile library and consumer code recovered from WCT; explicit resource dependency.",
+      "verification": {
+        "embedded_jass_pjass_exit": 0,
+        "vjass_recompiled": false,
+        "game_tested": false,
+        "original_hash_unchanged": true,
+        "wct_recovered_blocks": 24
+      },
+      "missile_version": "2.0.2",
+      "core_flavor": "vJASS"
+    },
+    {
+      "resource_id": "243397",
+      "title": "Frozen Orb v2.1",
+      "author": "BPower",
+      "source_url": "https://www.hiveworkshop.com/threads/frozen-orb-v2-1.243397/",
+      "download_url": "https://www.hiveworkshop.com/resources/frozen-orb.47061/download",
+      "downloaded_date": "2026-10-20",
+      "file": "mapas/243397-frozen-orb/Frozen Orb.w3x",
+      "bytes": 81340,
+      "sha256": "79f15554bdcb3b5f66f8fbea57ed4d371e66bba5b14a98a8c9ed5d19c2bda9ac",
+      "package_file": "paquetes/243397-frozen-orb.zip",
+      "package_sha256": "68cca8b6482650001444f3abb5011a610ffb70758ccd37b45d0b98048b45250c",
+      "content_type": "application/zip",
+      "selection_evidence": "Missile library and consumer code recovered from WCT; explicit resource dependency.",
+      "verification": {
+        "embedded_jass_pjass_exit": 0,
+        "vjass_recompiled": false,
+        "game_tested": false,
+        "original_hash_unchanged": true,
+        "wct_recovered_blocks": 8
+      },
+      "missile_version": "2.5.1",
+      "core_flavor": "vJASS"
+    }
+  ],
+  "reference_library": {
+    "source_url": "https://www.hiveworkshop.com/threads/missile.265370/",
+    "retrieved_date": "2026-10-20",
+    "version": "2.5.1",
+    "file": "bibliotecas/Missile-BPower-2.5.1-hive.j",
+    "sha256": "487cd5467b3aee3428d6c6871df01fa8ea3c1754e234aa23d71bb71e85af739e",
+    "html_file": "evidencia/265370-referencia.html",
+    "html_sha256": "cbb17ece3b434510ef4f869d37d51da918b91edf44df0fa9591dd1e96ae81fe1",
+    "origin": "First main post code block; not extracted from a downloaded map",
+    "standalone_recompiled": false,
+    "game_tested": false,
+    "normalized_sha256": "5650218263230bf04ed8669b49f9a1d00e633dbb2cc343232a53288776a502a4",
+    "identical_map_sources_after_editor_header_and_line_ending_normalization": [
+      "fuentes/245470/trigger-0001.j",
+      "fuentes/243397/trigger-0004.j"
+    ]
+  },
+  "toolchain_record": "/home/snz/Documentos/ChatGPT/Proyect/work/bpower-misiles-20261020/toolchain.json",
+  "coverage": {
+    "maps_downloaded": 5,
+    "embedded_jass_scripts_checked": 5,
+    "wct_nonempty_blocks_recovered": 59,
+    "embedded_jass_pass": 4,
+    "embedded_jass_fail": 1,
+    "editable_sources_recompiled": 0,
+    "game_tests": 0
+  }
+}

@@ -1,0 +1,7 @@
+/* outer /* inner */ call Ghost()
+//! runtextmacro Ghost()
+*/
+function main takes nothing returns nothing
+endfunction
+function config takes nothing returns nothing
+endfunction

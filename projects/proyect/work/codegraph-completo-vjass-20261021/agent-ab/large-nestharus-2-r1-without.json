@@ -1,0 +1,37 @@
+{
+  "repo": "large-nestharus",
+  "flow": 2,
+  "names": [
+    "TimerTools.Timer.destroy",
+    "TimerTools.TimerPool.recycleTimer"
+  ],
+  "repetition": 1,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 29.762676044003456,
+  "usage": {
+    "input_tokens": 95475,
+    "cached_input_tokens": 78464,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 804,
+    "reasoning_output_tokens": 87
+  },
+  "commands": 4,
+  "command_text": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!benchmark*'\"' -g '\"'!.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!*.sqlite*'\"' --glob '\"'!*.db'\"' 'recycleTimer|library TimerTools|struct TimerPool' .\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '100,330p;540,820p'\"",
+    "/usr/bin/bash -lc \"nl -ba Systems/TimerTools/script.j | sed -n '330,545p'\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!benchmark*'\"' -g '\"'!.codegraph/**'\"' -g '\"'!*.sqlite*'\"' -g '\"'!*.db'\"'\"",
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*Benchmark*'\"' --glob '\"'!*.sqlite*'\"' --glob '\"'!*.db'\"' 'recycleTimer|library TimerTools|struct TimerPool' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a1621b-138f-7432-98ef-eda66830c8a2"
+  ]
+}

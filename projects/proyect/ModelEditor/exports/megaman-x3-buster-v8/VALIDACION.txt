@@ -1,0 +1,9 @@
+X3 V8 — Tested in map, Warcraft III Classic 1.27b.
+MDX800 releído con lector independiente; MDL equivalente, 311 poses y 14 dependencias comprobadas. BLP1 nueva: cabecera 1/8/4/1, píxeles y 9 mipmaps contrastados por lector independiente.
+Al retirar la capa extra de V8 se reconstruye exactamente el binario V7. Los 31 archivos/ZIP previos siguen con sus hashes originales.
+Barrido de punta a cola, repetición 480 ms y capa oculta en Birth/Death comprobados en curvas exportadas.
+Visor de MDX real: lateral comparativa, oblicua, frontal y 24 fotogramas en pasos de 40 ms (dos oleadas). Capturas incluidas.
+Mapa: JassHelper/pJASS correctos y 32 miembros reextraídos idénticos. Hash del mapa cargado igual al fixture. YDWE un jugador, EnableHost0, sin LAN, perfil privado; pantalla3 DP-1.
+150 capturas en seis escenarios: Stand2.4x, movimiento externo, escala0.5x, escala3x, Birth y Death. Foco/ventana comprobados por captura. Barrido visible; desaparición final correcta. La transición Birth de160ms no queda completamente resuelta por capturas de~200ms.
+Cierre corregido para normalizar la barra final de WINEPREFIX: salida0, ventana/procesos propios ausentes, copia temporal a papelera. Informe en informes/errores/resueltos/2026-10-23-080310-x3-v8-guarda-cierre.md.
+CodeGraph consultado para generadores, visor y laboratorio de ModelEditor; la lectura del grafo no sustituye estas pruebas. No FPS/estrés/multijugador ni física integrada.

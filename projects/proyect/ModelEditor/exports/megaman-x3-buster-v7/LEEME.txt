@@ -1,0 +1,11 @@
+X3 Buster A — V7 | Classic1.27b | MDX800
+
+Ajuste sobre V6: cola azul más prolongada y punta integrada en un solo cuerpo azul/cian. Se conserva el centro blanco, los11emisores y la envoltura rosa con flujo hacia atrás.
+La base azul derivada de ShotsII pasa de~78 a~96unidades de largo, manteniendo los30primeros intactos. Se retiraron las dos esferas rosa/blanca de la punta y su halo; una piel continua llega al origen. Los residuos azules parten ahora deX=-60.
+
+Importación: A-Buster/X3_Buster_Cargado.mdx y13texturas dentro deA-Buster/X3BusterV7. Respetar rutas internas X3BusterV7\Nombre.blp. MDL equivalente editable incluido.
+Frente+X; raíz y punta geométrica0,0,0. Birth0–160ms, Stand200–1160ms, Death1300–1720ms. Física y colisiones externas.
+
+FLUJO-3D.gif contiene24capturas de MDX real con pasos40ms, a0.5x de reproducción. COMPARACION-3D.png: V6 izquierda / V7 derecha. V6 permanece separada en su carpeta yZIP, verificada byte a byte.
+
+Créditos: Vinz, Shots Vol.II https://www.hiveworkshop.com/threads/shots-vol-ii.315512/ . Geometría/UV/apilado y emisores adaptados; conservar atribución. Referencia Mega Man X3: Capcom; sprites Random Talking Bush/Spriters Resource, animación Retropixel. El paquete contiene sólo Buster A; B/C siguen enV4.

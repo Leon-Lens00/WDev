@@ -1,0 +1,93 @@
+[
+  {
+    "variant": "original",
+    "body": 0,
+    "initial_vx": 0.0,
+    "minimum_x_px": 0,
+    "minimum_tick": 0,
+    "first_nonnegative_vx_tick": 1,
+    "velocity_tick120": 8.09375
+  },
+  {
+    "variant": "original",
+    "body": 1,
+    "initial_vx": -8.0,
+    "minimum_x_px": -60.53125,
+    "minimum_tick": 16,
+    "first_nonnegative_vx_tick": 17,
+    "velocity_tick120": 8.49609375
+  },
+  {
+    "variant": "original",
+    "body": 2,
+    "initial_vx": -8.0,
+    "minimum_x_px": -60.53125,
+    "minimum_tick": 16,
+    "first_nonnegative_vx_tick": 17,
+    "velocity_tick120": 8.49609375
+  },
+  {
+    "variant": "original",
+    "body": 3,
+    "initial_vx": -6.0,
+    "minimum_x_px": -45.0,
+    "minimum_tick": 15,
+    "first_nonnegative_vx_tick": 16,
+    "velocity_tick120": 8.375
+  },
+  {
+    "variant": "original",
+    "body": 4,
+    "initial_vx": -6.0,
+    "minimum_x_px": -45.0,
+    "minimum_tick": 15,
+    "first_nonnegative_vx_tick": 16,
+    "velocity_tick120": 8.375
+  },
+  {
+    "variant": "zero-project-v4.1",
+    "body": 0,
+    "initial_vx": 10.0,
+    "minimum_x_px": 0,
+    "minimum_tick": 0,
+    "first_nonnegative_vx_tick": 1,
+    "velocity_tick120": 8.0
+  },
+  {
+    "variant": "zero-project-v4.1",
+    "body": 1,
+    "initial_vx": 1.0,
+    "minimum_x_px": 0,
+    "minimum_tick": 0,
+    "first_nonnegative_vx_tick": 1,
+    "velocity_tick120": 8.1875
+  },
+  {
+    "variant": "zero-project-v4.1",
+    "body": 2,
+    "initial_vx": 1.0,
+    "minimum_x_px": 0,
+    "minimum_tick": 0,
+    "first_nonnegative_vx_tick": 1,
+    "velocity_tick120": 8.1875
+  },
+  {
+    "variant": "zero-project-v4.1",
+    "body": 3,
+    "initial_vx": -3.0,
+    "minimum_x_px": -10.5,
+    "minimum_tick": 7,
+    "first_nonnegative_vx_tick": 8,
+    "velocity_tick120": 8.375
+  },
+  {
+    "variant": "zero-project-v4.1",
+    "body": 4,
+    "initial_vx": -3.0,
+    "minimum_x_px": -10.5,
+    "minimum_tick": 7,
+    "first_nonnegative_vx_tick": 8,
+    "velocity_tick120": 8.375
+  }
+]
+MATCHED 2400 ticks; independent recurrence vs instruction blocks

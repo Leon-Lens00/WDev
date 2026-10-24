@@ -1,0 +1,296 @@
+<h1>Frozen Orb v2.1</h1>
+<p>Submitted by BPower</p>
+<p>Uploaded: 21 Oct, 2013</p>
+<p>Last edited: 25 Mar, 2016</p>
+<p>Source:</p>
+<p><a href="https://www.hiveworkshop.com/threads/frozen-orb-v2-1.243397/">https://www.hiveworkshop.com/threads/frozen-orb-v2-1.243397/</a></p>
+<p>Tags: Target Ground, vJASS, Spell</p>
+<p>Filesize: 79.43 KB</p>
+<h2>Frozen Orb</h2>
+<p>Filesize: 79.43 KB</p>
+<p>Filename: Frozen Orb.w3x</p>
+<p>Number of players: 1</p>
+<p>Recommended game:</p>
+<p>Warcraft 3: Pre-Reforged (1.19 - 1.21b)</p>
+<h2>Description</h2>
+<p><div class="vindit-align-center">
+	<b><h1 style="margin: 0">
+	<span style="color: LightBlue">Frozen Orb</span>
+</h1></b><br />
+<span style="font-size: 12px"><i>A pulsating orb that shreds an area with Ice Bolts. Each Bolt deals damage and has a chance to burst dying enemies, leaving no corpse behind. </i></span><br />
+<br />
+</div><br />
+<span style="font-size: 12px"><div class="bbTable">
+<table style='width: 100%'><tr><td><b>Obligatory Requirements</b></td></tr><tr><td><br />
+<ul>
+<li data-xf-list-type="ul"><a href="http://hiveworkshop.com/forums/submissions-414/missile-265370/" target="_blank" class="link link--external" rel="nofollow ugc noopener">Missile</a></li>
+<li data-xf-list-type="ul"><a href="http://hiveworkshop.com/forums/jass-resources-412/snippet-spelleffectevent-187193/" target="_blank" class="link link--external" rel="nofollow ugc noopener">SpellEffectEvent</a></li>
+</ul></td></tr></table>
+</div></span><br />
+<div class="bbTable">
+<table style='width: 100%'><tr><td>
+
+
+<div class="bbcode-tabs" data-xf-init="tabs-tag">
+	<div class="titles">
+		
+			<h3 data-id="0" class="active">Frozen Orb</h3>
+		
+	</div>
+	<div class="bodies">
+		
+			<div data-id="0" class="active"><pre style="margin: 1em 0">native UnitAlive takes unit id returns boolean
+
+scope FrozenOrb initializer Init
+//=========================================================================
+// Name: Frozen Orb; ©Blizzard Entertainment, Diablo II
+// Version: 2.1
+// Author: BPower
+// Requirements: Missile, SpellEffectEvent
+// Credits: Bribe for SpellEffectEvent 
+//=========================================================================
+// Description:
+// A pulsating orb that shreds an area with Ice Bolts. 
+// Each Bolt deals damage and has chance to burst dying enemies,
+// leaving no corpse behind. 
+//=========================================================================
+
+// User settings:
+// ==============
+
+    globals
+        private constant integer    FROZEN_ORB_ABILITY  = &#039;A001&#039;
+        private constant attacktype ATTACK_TYPE         = ATTACK_TYPE_NORMAL       
+        private constant damagetype DAMAGE_TYPE         = DAMAGE_TYPE_MAGIC
+        private constant real       MISSILE_FLY_HEIGHT  = 50.00// Shared over all missiles of FrozenOrb. 
+        private constant string     ON_BURST_SFX        = &quot;Abilities\\Spells\\Undead\\FrostNova\\FrostNovaTarget.mdl&quot;
+    endglobals
+        
+    // Set the maximum fly distance for the main orb.
+    private constant function GetOrbMaxDistance takes integer level returns real
+        return 800. + level*0.
+    endfunction
+    
+    // Set the maximum fly distance for the ice bolts.
+    private constant function GetIceBoltMaxDistance takes integer level returns real
+        return 400. + level*0.
+    endfunction
+
+    // Set the amount of ice bolts created when the main orb explodes.
+    private constant function GetIceBoltCountOnExplode takes integer level returns integer
+        return 12
+    endfunction
+    
+    // You have full access granted to all members and methods from library Missile.
+    // However missile.data, missile.source and missile.owner are reserved.
+    private function CustomizeFrozenOrb takes Missile orb, integer level returns nothing
+        set orb.speed = 13.
+        set orb.model = &quot;Abilities\\Weapons\\FrostWyrmMissile\\FrostWyrmMissile.mdl&quot;
+        set orb.scale = .75
+    endfunction
+    
+    // Same as CustomizeFrozenOrb, but for ice bolts.
+    private function CustomizeIceBolt takes Missile bolt, integer level returns nothing
+        set bolt.speed = 20.
+        set bolt.model = &quot;Abilities\\Weapons\\LichMissile\\LichMissile.mdl&quot;  
+        set bolt.scale = .65
+        set bolt.damage = 10. + 20.*level
+        set bolt.collision = 48.
+    endfunction
+        
+    // Filter which units are hit by ice bolts.
+    private function TargetFilter takes unit target, player owner returns boolean
+        return not IsUnitType(target, UNIT_TYPE_MAGIC_IMMUNE) and not IsUnitType(target, UNIT_TYPE_STRUCTURE) and UnitAlive(target) and IsUnitEnemy(target, owner)
+    endfunction
+    
+    // Set the chance to burst an enemy to ice. Real comparison in range of 0 - 100.
+    // Return smaller or equal to 0 if you don&#039;t need this feature.
+    private constant function GetBurstChance takes integer level returns real
+        return 5. + 5.*level
+    endfunction
+        
+    // Filter out all units which shouldn&#039;t be removed from the game on burst. Heroes, .. etc
+    // Those units who pass the filter get removed from the game and are inevitably gone.
+    private function ExplodeFilter takes unit target returns boolean
+        return not IsUnitType(target, UNIT_TYPE_MECHANICAL) and not IsUnitType(target, UNIT_TYPE_HERO)
+    endfunction
+
+    // The following struct &quot;Buff&quot; creates the buff- and frostnova effect of Frozen Orb.
+    // Adjust the constants to your needs.
+    private struct Buff extends array
+        
+        // Buff type settings. 
+        private static constant integer CASTER_UNIT_ID = &#039;n000&#039;
+        private static constant integer BUFF_ORDER_ID  = 852226// OrderId(&quot;frostnova&quot;)
+        private static constant integer BUFF_ABILITY   = &#039;A002&#039;
+        
+        private static unit caster = null
+        
+        static method castTarget takes player owner, unit target returns nothing
+            call SetUnitOwner(caster, owner, false)
+            call IssueTargetOrderById(caster, BUFF_ORDER_ID, target)
+            call SetUnitOwner(caster, Missile_NEUTRAL_PASSIVE, false)            
+        endmethod
+    
+        private static method onInit takes nothing returns nothing
+            set caster = CreateUnit(Missile_NEUTRAL_PASSIVE, CASTER_UNIT_ID, 0., 0., 0.)
+            call SetUnitPosition(caster, 2147483647, 2147483647)
+            call UnitAddAbility(caster, BUFF_ABILITY)
+            call ShowUnit(caster, false)
+        endmethod
+    endstruct
+    
+//=====================================================================
+// Frozen orb source code. Make changes carefully.
+//=====================================================================
+// You can extend struct IceBolt and / or struct FrozenOrb with 
+// available Missile API, such as onDestructable, onTerrain ...
+    
+    private struct IceBolt extends array
+        static constant real OFFSET = 32.// That ice bolts don&#039;t emit 
+                                         // directly from the center of the orb.
+        real chance
+        
+        private static method onRemove takes Missile missile returns boolean
+            return true
+        endmethod
+                              // Runs when a missile collides with a unit.
+        private static method onCollide takes Missile missile, unit hit returns boolean
+            local thistype this = thistype(missile)
+            
+            if TargetFilter(hit, missile.owner) then
+                call Buff.castTarget(missile.owner, hit)
+                call UnitDamageTarget(missile.source, hit, missile.damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
+                
+                if GetUnitTypeId(hit) != 0 and GetRandomReal(0., 100.) &lt; chance and ExplodeFilter(hit) then
+                    call DestroyEffect(AddSpecialEffect(ON_BURST_SFX, missile.x, missile.y))
+                    call RemoveUnit(hit)
+                endif
+                return true// returning true will destroy the missile instance.
+            endif
+            return false// returning false will keep the missile flying.
+        endmethod
+        
+        implement MissileStruct
+    endstruct
+    
+    private function CreateIceBolt takes Missile orb, real angle, integer level returns nothing
+        local real x = orb.x + IceBolt.OFFSET*Cos(angle)
+        local real y = orb.y + IceBolt.OFFSET*Sin(angle)
+        local Missile missile = Missile.create(x, y, MISSILE_FLY_HEIGHT, angle, GetIceBoltMaxDistance(level), MISSILE_FLY_HEIGHT)
+    
+        set IceBolt(missile).chance = GetBurstChance(level)
+        call CustomizeIceBolt(missile, level)
+        set missile.source = orb.source
+        set missile.owner = orb.owner
+        call IceBolt.launch(missile)
+    endfunction
+    
+    private struct FrozenOrb extends array
+        static constant real SPACING_ON_PERIOD = bj_PI*3/5
+        static constant real SPACING_ON_REMOVE = bj_PI/4 
+        
+        integer level
+                      // When the main orb gets deallocated.
+        static method onRemove takes Missile missile returns boolean
+            local thistype this = thistype(missile)
+            local integer index = 0
+            local integer count = GetIceBoltCountOnExplode(level)
+            local real space = 2*bj_PI/count
+            
+            loop
+                exitwhen index &gt;= count
+                call CreateIceBolt(missile, index*space + thistype.SPACING_ON_REMOVE, level)
+                set index = index + 1
+            endloop
+            
+            return true
+        endmethod
+                      // Every Missile_TIMER_TIMEOUT interval.
+        static method onPeriod takes Missile missile returns boolean
+            local thistype this = thistype(missile)
+            
+            call CreateIceBolt(missile, thistype.SPACING_ON_PERIOD*missile.data, level)
+            set missile.data = missile.data + 1
+            return false
+        endmethod
+    
+        implement MissileStruct
+    endstruct
+                     // EVENT_PLAYER_UNIT_SPELL_EFFECT.
+    private function OnEffect takes nothing returns nothing
+        local unit source = GetTriggerUnit()
+        local real x = GetUnitX(source)
+        local real y = GetUnitY(source)
+        local real angle = Atan2(GetSpellTargetY() - y, GetSpellTargetX() - x)
+        local integer level = GetUnitAbilityLevel(source, FROZEN_ORB_ABILITY)
+        local Missile missile = Missile.create(x, y, MISSILE_FLY_HEIGHT, angle, GetOrbMaxDistance(level), MISSILE_FLY_HEIGHT)
+        
+        set FrozenOrb(missile).level = level
+        call CustomizeFrozenOrb(missile, level)
+        set missile.source = source
+        set missile.owner = GetTriggerPlayer()
+        call FrozenOrb.launch(missile)
+        
+        set source = null 
+    endfunction
+    
+    private function Init takes nothing returns nothing
+        call RegisterSpellEffectEvent(FROZEN_ORB_ABILITY, function OnEffect)    
+    endfunction
+    
+endscope</pre></div>
+		
+	</div>
+</div></td></tr></table>
+</div><br />
+
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="button bbCodeSpoiler-button button--longText" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span><span class="bbCodeSpoiler-button-title">Changelog</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content"><br />
+<pre style="margin: 1em 0">-v1.0.0
+-- Initial release
+-v1.0.1
+-- Updated documentation
+-- Added detailed import instructions
+-- Changed IsUnitType to native UnitAlive
+-v1.0.2
+-- Added an explosion effect 
+-- Reworked the demo map
+-v1.0.3
+-- Changed the way the explosion effect is displayed
+-- Changed GetWidgetXY back to GetUnitXY
+-- added variables for Sin and Cos since they are constant
+-- Updated documentation
+v1.0.4
+-- Now slighly faster than before
+-- Alloc is now optional
+-- functions are now constant functions
+-- Moved none configurable constant variables into the struct
+-- Improved the code
+-- Updated the documentation to my standart format
+v1.0.4
+-- DummyCaster is now optional
+-- Updated hyperlinks
+-- Function names are now more generic
+-- Replaced bj_lastCreatedGroup with a static group to avoid unwanted bugs
+v2.0
+-- Projectiles are now based on Missile.
+-- No longer uses DummyCaster. You may add your own caster resource.
+-- Better presentation.
+v2.1
+-- Improved customization options.
+-- Restructured code a bit.</pre></div>
+		</div>
+	</div>
+</div><b>Credits:</b><br />
+<div style="margin-left: 20px">Bribe for SpellEffectEvent&#8203;</div><br />
+<b>Keywords:</b><br />
+Frozen Orb, FrozenOrb, Frost, Ice, BPower, Diablo, Orb, burst, aoe, winter, snow, wizard</p>
+<p>Don't forget to credit the author.</p>

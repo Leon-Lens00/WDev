@@ -1,0 +1,15 @@
+{
+  "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Inits.j",
+  "items": [
+    {
+      "label": "InitTrig_ShowMenuClient",
+      "kind": 2,
+      "detail": "Function",
+      "documentation": "\n```jass\nfunction InitTrig_ShowMenuClient takes nothing returns nothing\n```\n\n\n---\n\nCompatibilidad con GUI-style init.\n\nEl trigger de seleccion del heroe fue removido porque MenuClient ya se muestra desde Selection/RestTime.\n\n**_>:** `UI System/MyIU/Inits.j`",
+      "sortText": "1_func_InitTrig_ShowMenuClient",
+      "filePath": "c:\\Users\\Leon\\Documents\\struct\\UI System\\MyIU\\Inits.j",
+      "statementType": "FunctionDeclaration"
+    }
+  ],
+  "timestamp": 1777579694747
+}

@@ -1,0 +1,31 @@
+{
+  "judgment": "APPROVED",
+  "tree_sha256": "13bba935837a3afa17b67f3eb989ce0667c9bb95c0329b0858a9edb4dfd04c31",
+  "snapshot": "/tmp/codegraph-etiquetas-review-20261021-r1",
+  "source_integrity": {
+    "verified": true,
+    "tree_sha256": "13bba935837a3afa17b67f3eb989ce0667c9bb95c0329b0858a9edb4dfd04c31",
+    "files": 19,
+    "source_matches": true,
+    "source_root": "/home/snz"
+  },
+  "judges_completed": [
+    "A",
+    "B"
+  ],
+  "findings": [],
+  "correction_rounds": 0,
+  "checks": {
+    "regression_before": "expected failure reproduced",
+    "tests_passed": 65,
+    "suites": 3,
+    "build": "passed",
+    "live_mcp_after_restart": "passed"
+  },
+  "scope": "Presentation of static/inferred links and global/project/UI instructions; no full language or game validation",
+  "context_sha256": {
+    "work/codegraph-etiquetas-judge-prompts.json": "cbdd816ab4a4cf9dce2bb3601c5ca28d68996b2921655a8d590c78d5f14b1dd3",
+    "work/codegraph-etiquetas-jurados-20261021/requirements.md": "3ba7350fef9691be948919d8b655b83c0c0178a91c1c69e60a7bddb0b9d3208b",
+    "work/codegraph-etiquetas-jurados-20261021/change.diff": "95a0fcdef5198263dbfbc8d4bbdd279f0dbfddff0da9d2bfa48e0b58138207a9"
+  }
+}

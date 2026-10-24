@@ -1,0 +1,159 @@
+[
+  {
+    "case": "modern-call",
+    "before_exit": 1,
+    "after": {
+      "exit": 1,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "ERROR",
+            "rule": "WC127-BLZ",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/modern-call.j",
+            "line": 2,
+            "message": "Blz API is not vanilla Warcraft III 1.27b."
+          }
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  {
+    "case": "string-only",
+    "before_exit": 1,
+    "after": {
+      "exit": 0,
+      "result": {
+        "files": 1,
+        "findings": []
+      },
+      "stderr": ""
+    }
+  },
+  {
+    "case": "block-comment",
+    "before_exit": 1,
+    "after": {
+      "exit": 0,
+      "result": {
+        "files": 1,
+        "findings": []
+      },
+      "stderr": ""
+    }
+  },
+  {
+    "case": "local-unit",
+    "before_exit": 1,
+    "after": {
+      "exit": 1,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "WARNING",
+            "rule": "SYNC-LOCAL-PLAYER",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-unit.j",
+            "line": 2,
+            "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+          },
+          {
+            "severity": "ERROR",
+            "rule": "SYNC-LOCAL-GAMEPLAY",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-unit.j",
+            "line": 3,
+            "message": "Local-only gameplay mutation can desynchronize clients."
+          },
+          {
+            "severity": "ERROR",
+            "rule": "SYNC-LOCAL-HANDLE",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-unit.j",
+            "line": 3,
+            "message": "Do not allocate gameplay handles in a local-player branch."
+          }
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  {
+    "case": "global-unit",
+    "before_exit": 0,
+    "after": {
+      "exit": 0,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "WARNING",
+            "rule": "HANDLE-FACTORY",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/global-unit.j",
+            "line": 2,
+            "message": "Document owner, lifetime, and cleanup or intentional persistence."
+          }
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  {
+    "case": "local-camera",
+    "before_exit": 0,
+    "after": {
+      "exit": 0,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "WARNING",
+            "rule": "SYNC-LOCAL-PLAYER",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-camera.j",
+            "line": 2,
+            "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+          }
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  {
+    "case": "local-random",
+    "before_exit": 1,
+    "after": {
+      "exit": 1,
+      "result": {
+        "files": 1,
+        "findings": [
+          {
+            "severity": "WARNING",
+            "rule": "SYNC-LOCAL-PLAYER",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-random.j",
+            "line": 3,
+            "message": "Trace all local-only writes and later uses; local safety is not proven by the branch alone."
+          },
+          {
+            "severity": "ERROR",
+            "rule": "SYNC-LOCAL-RNG",
+            "path": "/home/snz/Documentos/MCP W3/wc3-agent-lab/evaluation/local-random.j",
+            "line": 4,
+            "message": "Do not consume synchronized RNG in a local-player branch."
+          }
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  {
+    "case": "commented-local-unit",
+    "before_exit": 1,
+    "after": {
+      "exit": 0,
+      "result": {
+        "files": 1,
+        "findings": []
+      },
+      "stderr": ""
+    }
+  }
+]

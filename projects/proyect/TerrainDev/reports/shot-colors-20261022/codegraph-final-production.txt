@@ -1,0 +1,322 @@
+> JASS/vJASS local support: compiler-profile static analysis. Typed receivers/operators, function-value and lifecycle dependencies, hooks/initialization, bounded templates and explicit build data. Excerpts retain real source. Labels distinguish possible targets; unknown build inputs, computed dispatch and other dialects remain coverage boundaries. Absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+> libraries/RapidFire.j:44: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:44: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:44: Static projection at invocation: module Missile.MissileStruct defined at libraries/Missile.j:1636; invoked at libraries/RapidFire.j:44 -> module Missile.MissileLaunch defined at libraries/Missile.j:1449; invoked at libraries/RapidFire.j:44. Generated bodies are not verbatim
+> libraries/RapidFire.j:44: Static projection at invocation: module Missile.MissileStruct defined at libraries/Missile.j:1636; invoked at libraries/RapidFire.j:44 -> module Missile.MissileTerminate defined at libraries/Missile.j:1461; invoked at libraries/RapidFire.j:44. Generated bodies are not verba
+> libraries/RapidFire.j:44: Static projection at invocation: module Missile.MissileStruct defined at libraries/Missile.j:1636; invoked at libraries/RapidFire.j:44 -> module Missile.MissileAction defined at libraries/Missile.j:1483; invoked at libraries/RapidFire.j:44. Generated bodies are not verbatim
+> libraries/RapidFire.j:44: Static projection at invocation: module Missile.MissileStruct defined at libraries/Missile.j:1636; invoked at libraries/RapidFire.j:44. Generated bodies are not verbatim on-disk source.
+> 29 more extraction diagnostics in these files.
+
+**Additional graph links among your symbols**
+(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)
+
+- emit → shootColor   [static JASS: calls]
+- shoot → shootColor   [static JASS: calls]
+- RapidBolt → shootColor   [contains]
+- shootColor → GetUnitFacing   [static JASS: calls]
+- shootColor → GetOwningPlayer   [static JASS: calls]
+- shootColor → Cos   [static JASS: calls]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: RapidBolt.shootColor RapidPair.setColor RapidPair.clearColor RapidPair.color**
+
+Found 62 symbols across 1 file.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `shootColor` (libraries/RapidFire.j:74) — 2 callers in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `color` (libraries/RapidFire.j:154) — 3 callers in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `RapidPair` (libraries/RapidFire.j:113) — 4 callers in `libraries/RapidFire.j`, `libraries/RapidFireDemo.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`libraries/RapidFire.j`** — tint(references), hasTint(references), tint(field), hasTint(field), destroy(calls), +154 more
+
+```jass
+1	library RapidFire initializer Init requires GroundMotion, Missile, Table, TimerUtils, SpellEffectEvent, RegisterPlayerUnitEvent
+2	struct RapidBolt extends array
+3	    // Collision stays independent of the decorative trail and death flash.
+4	    static constant real HIT_RADIUS = 16.
+5	    // Stand body width is 11.664 model units in all twelve unmodified variants.
+6	    // Calibrated in game against the radius16 marker; glow/trail are decorative.
+7	    static constant real VISUAL_SCALE = HIT_RADIUS/5.832
+8	    private static unit array source
+9	    private static player array owner
+10	    readonly static integer live = 0
+11	    readonly static integer hits = 0
+12	    readonly static integer walls = 0
+13	
+14	    private static method resolve takes Missile m returns boolean
+15	        local integer result = GroundCollision.trace(m.prevX,m.prevY,m.x,m.y,HIT_RADIUS,source[m],owner[m],true)
+16	        local unit target = GroundCollision.hit
+17	        local unit caster = source[m]
+18	        if result == 2 then
+19	            set hits = hits+1
+20	            if GetUnitTypeId(caster) != 0 then
+21	                call UnitDamageTarget(caster,target,25.,false,false,ATTACK_TYPE_NORMAL,DAMAGE_TYPE_MAGIC,null)
+22	            endif
+23	        elseif result == 1 or m.z < 0. then
+24	            set walls = walls+1
+25	            set result = 1
+26	        endif
+27	        set target = null
+28	        set caster = null
+29	        return result != 0
+30	    endmethod
+31	    static method onPeriod takes Missile m returns boolean
+32	        return resolve(m)
+33	    endmethod
+34	    static method onFinish takes Missile m returns boolean
+35	        call resolve(m)
+36	        return true
+37	    endmethod
+38	    static method onRemove takes Missile m returns boolean
+39	        set source[m] = null
+40	        set owner[m] = null
+41	        set live = live-1
+42	        return false
+43	    endmethod
+44	    implement MissileStruct
+45	
+46	    static method modelForColor takes playercolor value returns string
+47	        if value == PLAYER_COLOR_RED then
+48	            return "ShotsTeam\\Shot_00_Red.mdx"
+49	        elseif value == PLAYER_COLOR_BLUE then
+50	            return "ShotsTeam\\Shot_01_Blue.mdx"
+51	        elseif value == PLAYER_COLOR_CYAN then
+52	            return "ShotsTeam\\Shot_02_Cyan.mdx"
+53	        elseif value == PLAYER_COLOR_PURPLE then
+54	            return "ShotsTeam\\Shot_03_Purple.mdx"
+55	        elseif value == PLAYER_COLOR_YELLOW then
+56	            return "ShotsTeam\\Shot_04_Yellow.mdx"
+57	        elseif value == PLAYER_COLOR_ORANGE then
+58	            return "ShotsTeam\\Shot_05_Orange.mdx"
+59	        elseif value == PLAYER_COLOR_GREEN then
+60	            return "ShotsTeam\\Shot_06_Green.mdx"
+61	        elseif value == PLAYER_COLOR_PINK then
+62	            return "ShotsTeam\\Shot_07_Pink.mdx"
+63	        elseif value == PLAYER_COLOR_LIGHT_BLUE then
+64	            return "ShotsTeam\\Shot_09_LightBlue.mdx"
+65	        elseif value == PLAYER_COLOR_AQUA then
+66	            return "ShotsTeam\\Shot_10_Aqua.mdx"
+67	        elseif value == PLAYER_COLOR_BROWN then
+68	            return "ShotsTeam\\Shot_11_Brown.mdx"
+69	        endif
+70	        // Light gray also covers neutral/unknown colors outside the Classic 12.
+71	        return "ShotsTeam\\Shot_08_LightGray.mdx"
+72	    endmethod
+73	
+74	    static method shootColor takes unit caster, real px, real py, playercolor color returns Missile
+75	        local real x = GetUnitX(caster)
+76	        local real y = GetUnitY(caster)
+77	        local real dx = px-x
+78	        local real dy = py-y
+79	        local real distance = SquareRoot(dx*dx+dy*dy)
+80	        local real angle
+81	        local real length
+82	        local Missile m
+83	        if distance < 8. then
+84	            set angle = GetUnitFacing(caster)*bj_DEGTORAD
+85	            set distance = 600.
+86	            set dx = distance*Cos(angle)
+87	            set dy = distance*Sin(angle)
+88	        endif
+89	        set length = RMinBJ(distance,1000.)
+90	        set px = x+dx*length/distance
+91	        set py = y+dy*length/distance
+92	        call GroundCollision.trace(x,y,x+dx*24./distance,y+dy*24./distance,HIT_RADIUS,caster,GetOwningPlayer(caster),false)
+93	        set m = Missile.createXYZ(GroundCollision.x,GroundCollision.y,70.,px,py,70.)
+94	        set source[m] = caster
+95	        set owner[m] = GetOwningPlayer(caster)
+96	        set m.owner = owner[m]
+97	        // Ability-specific swept collision chooses obstacles before damage;
+98	        // it does not change the common module's callback ordering.
+99	        set m.collision = 0.
+100	        set m.model = modelForColor(color)
+101	        set m.scale = VISUAL_SCALE
+102	        call m.setMovementSpeed(1200.)
+103	        set live = live+1
+104	        call launch(m)
+105	        return m
+106	    endmethod
+107	    // Existing consumers keep the same API and take the owner's current color.
+108	    static method shoot takes unit caster, real px, real py returns Missile
+109	        return shootColor(caster,px,py,GetPlayerColor(GetOwningPlayer(caster)))
+110	    endmethod
+111	endstruct
+112	
+113	struct RapidPair
+114	    readonly unit controller
+115	    readonly unit actor
+116	    readonly GroundMotion motion
+117	    readonly boolean firing = false
+118	    readonly integer pending = 0
+
+... (gap) ...
+
+140	    private static Table actors
+141	    private static timer clock = CreateTimer()
+142	    private static timer ticker = CreateTimer()
+143	    static constant real INTERVAL = 0.25
+144	
+145	    static method now takes nothing returns real
+146	        return TimerGetElapsed(clock)
+147	    endmethod
+148	    static method fromController takes unit u returns thistype
+149	        return controls[GetHandleId(u)]
+150	    endmethod
+151	    static method fromActor takes unit u returns thistype
+152	        return actors[GetHandleId(u)]
+153	    endmethod
+154	    method color takes nothing returns playercolor
+155	        if hasTint then
+156	            return tint
+157	        endif
+158	        return GetPlayerColor(GetOwningPlayer(actor))
+159	    endmethod
+160	    // Classic has no GetUnitColor. Use this setter for individual/team overrides.
+161	    // Red is enum0 (equal to null in Classic), so absence is a separate flag.
+162	    method setColor takes playercolor value returns nothing
+163	        set tint = value
+164	        set hasTint = true
+165	        call SetUnitColor(actor,color())
+166	        call SetUnitColor(controller,color())
+167	    endmethod
+168	    method clearColor takes nothing returns nothing
+169	        set hasTint = false
+170	        set tint = null
+171	        call SetUnitColor(actor,color())
+172	        call SetUnitColor(controller,color())
+173	    endmethod
+174	    private method face takes nothing returns nothing
+175	        local real dx = aimX-GetUnitX(actor)
+176	        local real dy = aimY-GetUnitY(actor)
+177	        if dx*dx+dy*dy > 0.01 then
+178	            call SetUnitFacingTimed(actor,Atan2(dy,dx)*bj_RADTODEG,0.)
+179	        endif
+180	    endmethod
+181	    private method emit takes nothing returns nothing
+182	        local real gap = now()-lastShot
+183	        if lastShot > -1. and gap < minInterval then
+184	            set minInterval = gap
+185	        endif
+186	        set lastShot = now()
+187	        set pending = pending-1
+188	        set remaining = remaining-1
+189	        set emitted = emitted+1
+190	        call face()
+191	        call SetUnitAnimation(actor,"attack")
+192	        set attacks = attacks+1
+193	        set lastMissile = RapidBolt.shootColor(actor,aimX,aimY,color())
+194	    endmethod
+195	    method cast takes real px, real py returns nothing
+196	        if not GroundCollision.alive(actor) then
+197	            return
+198	        endif
+199	        set aimX = px
+200	        set aimY = py
+201	        if firing then
+202	            set remaining = remaining+6-pending
+203	            set pending = 6
+204	            set recasts = recasts+1
+205	            return
+206	        endif
+207	        set firing = true
+208	        set bursts = bursts+1
+209	        set pending = 6
+210	        set remaining = remaining+6
+211	        // Initial instant transition, if needed, precedes the first attack.
+212	        call motion.enter()
+213	        call SetUnitTimeScale(actor,3.)
+214	        set nextShot = now()+INTERVAL
+215	        call emit()
+216	    endmethod
+217	    private method finish takes boolean resume returns nothing
+218	        if firing then
+219	            set firing = false
+220	            set bursts = bursts-1
+221	            set remaining = remaining-pending
+222	            set pending = 0
+223	            if GetUnitTypeId(actor) != 0 then
+224	                call SetUnitTimeScale(actor,1.)
+225	                call ResetUnitAnimation(actor)
+226	            endif
+227	            call motion.leave(resume)
+228	        endif
+229	    endmethod
+230	    private static method park takes nothing returns nothing
+231	        local thistype this = GetTimerData(GetExpiredTimer())
+232	        call SetUnitPosition(controller,WorldBounds.minX+256.,WorldBounds.minY+256.)
+233	    endmethod
+234	    method move takes real px, real py returns nothing
+235	        call motion.destination(px,py)
+236	    endmethod
+237	    static method create takes unit proxy, unit visible returns thistype
+238	        local thistype this = thistype.allocate()
+239	        set controller = proxy
+240	        set actor = visible
+241	        set firing = false
+242	        set pending = 0
+243	        set lastShot = -1000.
+
+... (gap) ...
+
+317	            set this = following
+318	        endloop
+319	    endmethod
+320	    private static method pointOrder takes nothing returns nothing
+321	        local thistype this = fromController(GetTriggerUnit())
+322	        local integer order = GetIssuedOrderId()
+323	        if this != 0 then
+324	            // A new cast must not be cancelled by a queued proxy move reset.
+325	            call PauseTimer(reset)
+326	            if order == 851986 or order == 851971 then
+327	                call move(GetOrderPointX(),GetOrderPointY())
+328	                call TimerStart(reset,0.,false,function thistype.park)
+329	            endif
+330	        endif
+331	    endmethod
+332	    private static method spell takes nothing returns nothing
+333	        local thistype this = fromController(GetTriggerUnit())
+334	        if this != 0 then
+335	            call cast(GetSpellTargetX(),GetSpellTargetY())
+336	        endif
+337	    endmethod
+338	    private static method selected takes nothing returns nothing
+339	        local thistype this = fromActor(GetTriggerUnit())
+340	        if this != 0 and GetLocalPlayer() == GetTriggerPlayer() then
+341	            // Selection only; all gameplay state is outside the local branch.
+342	            call ClearSelection()
+343	            call SelectUnit(controller,true)
+344	        endif
+345	    endmethod
+346	    static method initialize takes nothing returns nothing
+347	        set controls = Table.create()
+348	        set actors = Table.create()
+349	        call TimerStart(clock,1000000.,false,null)
+350	        call TimerStart(ticker,1./32.,true,function thistype.tick)
+351	        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER,function thistype.pointOrder)
+352	        call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_SELECTED,function thistype.selected)
+353	        call RegisterSpellEffectEvent('Arpf',function thistype.spell)
+354	    endmethod
+355	endstruct
+356	private function Init takes nothing returns nothing
+357	    call RapidPair.initialize()
+358	endfunction
+359	endlibrary
+360	
+```
+
+**Not shown above — explore these names for their source**
+
+- codegraph-api/common.j: SetUnitColor:1465, PLAYER_COLOR_AQUA:180, PLAYER_COLOR_ORANGE:175, PLAYER_COLOR_CYAN:172, PLAYER_COLOR_BLUE:171, PLAYER_COLOR_YELLOW:174, +17 more
+- libraries/GroundCollision.j: clear:74, trace:102, a:76, i:75, GroundCollision:4, point:34, +17 more
+- libraries/Missile.j: MissileTerminate:1461, MissileLaunch:1449, MissileStruct:1636, MissileAction:1483, StartPeriodic:1417, insertFront:488, +8 more
+- libraries/RapidFireDemo.j: panel:19, setup:37
+- codegraph-api/Blizzard.j: RMinBJ:662, TransmissionFromUnitTypeWithNameBJ:6443, bj_PI:12, bj_DEGTORAD:18
+- libraries/WorldBounds.j: WorldBounds:39, maxY:41, minX:42, minY:43, maxX:40
+- libraries/GroundMotion.j: leave:85
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

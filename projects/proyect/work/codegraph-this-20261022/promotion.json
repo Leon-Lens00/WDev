@@ -1,0 +1,32 @@
+{
+  "identity": "1.6.2+jass-vjass.5",
+  "extraction": 32,
+  "schema": 12,
+  "backup": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-this-20261022/production-backup-20261022-013435",
+  "changes": [
+    "src/extraction/extraction-version.ts",
+    "src/mcp/version.ts",
+    "src/resolution/jass.ts",
+    "JASS-VJASS.md",
+    "CHANGELOG.md",
+    "__tests__/jass-implicit-this.test.ts"
+  ],
+  "stopped_pids": [
+    391451,
+    392502,
+    392739
+  ],
+  "installed_validated_build": true,
+  "original_sources_unchanged": true,
+  "production_indexes": "passed",
+  "app_reload": "passed",
+  "fresh_installed_mcp": "passed",
+  "watcher_checks": 2,
+  "regression": {
+    "passed": 6093,
+    "skipped": 36,
+    "suites": 466
+  },
+  "reports_archived": 6,
+  "current_chat_mcp": "passed"
+}

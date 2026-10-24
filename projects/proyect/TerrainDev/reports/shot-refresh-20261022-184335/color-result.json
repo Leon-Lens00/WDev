@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "values": {
+    "checks": 40.0,
+    "failures": 0.0,
+    "live": 0.0,
+    "created": 23.0,
+    "retired": 23.0,
+    "scale": 2.743
+  },
+  "negative_controls_rejected": 4,
+  "production_sha256": "47522cd81caa904206d4917de202f15e1b0865939c240b511875bb6585a2ce59",
+  "laboratory_sha256": "e1c25963bb336a1bd5a577eda0a88cc92ac9c6bc2d3d8202e8f2bac98dc5359e",
+  "manifest": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-colors-20261022/20261022-184434/manifest.json",
+  "visual_palette": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/palette.png"
+}

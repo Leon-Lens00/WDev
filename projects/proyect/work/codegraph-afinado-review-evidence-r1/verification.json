@@ -1,0 +1,133 @@
+{
+  "timestamp": "2026-10-21T19:55:06.267067+00:00",
+  "version": "1.6.2+jass-vjass.2",
+  "extraction_version": 29,
+  "source_map_files": 71,
+  "source_map_files_changed": [],
+  "active_indexes": [
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "files": 16,
+      "nodes": 850,
+      "edges": 1141,
+      "index": {
+        "builtWithVersion": "1.6.2+jass-vjass.2",
+        "builtWithExtractionVersion": 29,
+        "currentExtractionVersion": 29,
+        "reindexRecommended": false,
+        "state": "complete",
+        "pendingRefs": 0
+      },
+      "integrity": "ok"
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "files": 56,
+      "nodes": 2576,
+      "edges": 3744,
+      "index": {
+        "builtWithVersion": "1.6.2+jass-vjass.2",
+        "builtWithExtractionVersion": 29,
+        "currentExtractionVersion": 29,
+        "reindexRecommended": false,
+        "state": "complete",
+        "pendingRefs": 0
+      },
+      "integrity": "ok"
+    },
+    {
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "files": 4,
+      "nodes": 126,
+      "edges": 734,
+      "index": {
+        "builtWithVersion": "1.6.2+jass-vjass.2",
+        "builtWithExtractionVersion": 29,
+        "currentExtractionVersion": 29,
+        "reindexRecommended": false,
+        "state": "complete",
+        "pendingRefs": 0
+      },
+      "integrity": "ok"
+    }
+  ],
+  "tests": {
+    "suites": 7,
+    "passed": 1028,
+    "failed": 0,
+    "skipped": 0,
+    "log": "tests-after.log"
+  },
+  "build_log": "build.log",
+  "mcp": {
+    "roots": [
+      {
+        "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/real-missiles",
+        "query": "RapidFire.RapidPair.emit RapidFire.RapidPair.face",
+        "transitions": {
+          "create": {
+            "passed": true,
+            "ms": 402
+          },
+          "modify": {
+            "passed": true,
+            "ms": 602
+          },
+          "delete": {
+            "passed": true,
+            "ms": 402
+          }
+        }
+      },
+      {
+        "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/real-inventory",
+        "query": "TerrainInventory Inventory",
+        "transitions": {
+          "create": {
+            "passed": true,
+            "ms": 402
+          },
+          "modify": {
+            "passed": true,
+            "ms": 602
+          },
+          "delete": {
+            "passed": true,
+            "ms": 402
+          }
+        }
+      },
+      {
+        "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/real-ui-studio",
+        "query": "screenToUI uiToScreen",
+        "transitions": {
+          "create": {
+            "passed": true,
+            "ms": 402
+          },
+          "modify": {
+            "passed": true,
+            "ms": 602
+          },
+          "delete": {
+            "passed": true,
+            "ms": 401
+          }
+        }
+      }
+    ],
+    "server": {
+      "name": "codegraph",
+      "version": "1.6.2+jass-vjass.2"
+    },
+    "passed": true
+  },
+  "real_probes": "real-probes.json",
+  "scope_limits": [
+    "No general macro/import/module expansion or dynamic dispatch",
+    "No upstream three-size real-repository agent A/B performance gate executed",
+    "No new game or multiplayer tests",
+    "Existing MCP server processes still require reload; fresh MCP revision 2 verified"
+  ],
+  "other_chats_messaged": false
+}

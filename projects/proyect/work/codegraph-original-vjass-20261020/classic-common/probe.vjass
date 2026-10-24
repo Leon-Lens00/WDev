@@ -1,0 +1,28 @@
+library CodeGraphProbe initializer Init
+    globals
+        private integer hits = 0
+    endglobals
+    private function Ping takes nothing returns nothing
+        set hits = hits + 1
+    endfunction
+    private struct Counter
+        method step takes nothing returns nothing
+            call Ping()
+        endmethod
+        static method run takes nothing returns nothing
+            local thistype this = thistype.allocate()
+            call this.step()
+            call this.destroy()
+        endmethod
+    endstruct
+    private function Done takes nothing returns nothing
+        call Counter.run()
+    endfunction
+    private function Init takes nothing returns nothing
+        call TimerStart(CreateTimer(), 0.0, false, function Done)
+    endfunction
+endlibrary
+function main takes nothing returns nothing
+endfunction
+function config takes nothing returns nothing
+endfunction

@@ -1,0 +1,49 @@
+{
+  "pid": 1048507,
+  "start": "17632129",
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/x3-runtime/pfx/",
+  "cmd": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\CodexTest\\9b8d056a6717d3ed.w3x -window                                                                                                                                                                                                                                     ",
+  "window": {
+    "address": "0x558cbc39d6d0",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      4084,
+      165
+    ],
+    "size": [
+      1432,
+      776
+    ],
+    "workspace": {
+      "id": 12,
+      "name": "12"
+    },
+    "floating": true,
+    "monitor": 1,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 1048507,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 0,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 0,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "18000e3a"
+  }
+}

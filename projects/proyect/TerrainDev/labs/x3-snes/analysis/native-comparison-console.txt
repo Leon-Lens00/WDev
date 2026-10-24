@@ -1,0 +1,450 @@
+{
+  "scope": "complete SNES ROM executed by MesenCE2.2.1; compare observed combined-flight values with isolated ROM blocks",
+  "cases": [
+    {
+      "case": "final-original",
+      "variant": "original",
+      "direction": 1,
+      "gap": 12,
+      "frame_rows": 640,
+      "event_rows": 2086,
+      "merges": 1,
+      "emissions": 1,
+      "combined_bodies": 5,
+      "motion_comparisons": 1080,
+      "mismatches": [],
+      "bodies": [
+        {
+          "subtype": 4,
+          "dp": 4568,
+          "moves_observed": 53,
+          "first_nonnegative_forward_tick": 16,
+          "minimum_forward_position_px": -45.0,
+          "initial_vx": -6.0,
+          "first_move_native_frame": 6497
+        },
+        {
+          "subtype": 3,
+          "dp": 4632,
+          "moves_observed": 53,
+          "first_nonnegative_forward_tick": 16,
+          "minimum_forward_position_px": -45.0,
+          "initial_vx": -6.0,
+          "first_move_native_frame": 6497
+        },
+        {
+          "subtype": 2,
+          "dp": 4696,
+          "moves_observed": 52,
+          "first_nonnegative_forward_tick": 17,
+          "minimum_forward_position_px": -60.53125,
+          "initial_vx": -8.0,
+          "first_move_native_frame": 6497
+        },
+        {
+          "subtype": 1,
+          "dp": 4760,
+          "moves_observed": 52,
+          "first_nonnegative_forward_tick": 17,
+          "minimum_forward_position_px": -60.53125,
+          "initial_vx": -8.0,
+          "first_move_native_frame": 6497
+        },
+        {
+          "subtype": 0,
+          "dp": 4824,
+          "moves_observed": 60,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": 0.0,
+          "first_move_native_frame": 6497
+        }
+      ],
+      "formation_frames": 18,
+      "merge_relocation_x_px": -20.0,
+      "fps": 60.0988062658451,
+      "formation_seconds": 0.29950678088974997,
+      "first_move_after_merge_frames": 19,
+      "pulse_flight_updates_seen": 0,
+      "relevant_active_at_end": 0,
+      "scenario_sha256": "0132900fc2cec3aa5b5da4227f327ad713c5853959be4fd653c16219343ca117",
+      "precursor_children_subtypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "final-mod",
+      "variant": "zero-project-v4.1",
+      "direction": 1,
+      "gap": 12,
+      "frame_rows": 640,
+      "event_rows": 1703,
+      "merges": 1,
+      "emissions": 1,
+      "combined_bodies": 5,
+      "motion_comparisons": 700,
+      "mismatches": [],
+      "bodies": [
+        {
+          "subtype": 4,
+          "dp": 4568,
+          "moves_observed": 40,
+          "first_nonnegative_forward_tick": 8,
+          "minimum_forward_position_px": -10.5,
+          "initial_vx": -3.0,
+          "first_move_native_frame": 6483
+        },
+        {
+          "subtype": 3,
+          "dp": 4632,
+          "moves_observed": 40,
+          "first_nonnegative_forward_tick": 8,
+          "minimum_forward_position_px": -10.5,
+          "initial_vx": -3.0,
+          "first_move_native_frame": 6483
+        },
+        {
+          "subtype": 2,
+          "dp": 4696,
+          "moves_observed": 37,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": 1.0,
+          "first_move_native_frame": 6483
+        },
+        {
+          "subtype": 1,
+          "dp": 4760,
+          "moves_observed": 37,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": 1.0,
+          "first_move_native_frame": 6483
+        },
+        {
+          "subtype": 0,
+          "dp": 4824,
+          "moves_observed": 21,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": 10.0,
+          "first_move_native_frame": 6483
+        }
+      ],
+      "formation_frames": 8,
+      "merge_relocation_x_px": -12.0,
+      "fps": 60.0988062658451,
+      "formation_seconds": 0.13311412483988888,
+      "first_move_after_merge_frames": 9,
+      "pulse_flight_updates_seen": 0,
+      "relevant_active_at_end": 0,
+      "scenario_sha256": "0132900fc2cec3aa5b5da4227f327ad713c5853959be4fd653c16219343ca117",
+      "precursor_children_subtypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "final-original-left",
+      "variant": "original",
+      "direction": -1,
+      "gap": 12,
+      "frame_rows": 640,
+      "event_rows": 1941,
+      "merges": 1,
+      "emissions": 1,
+      "combined_bodies": 5,
+      "motion_comparisons": 900,
+      "mismatches": [],
+      "bodies": [
+        {
+          "subtype": 4,
+          "dp": 4568,
+          "moves_observed": 45,
+          "first_nonnegative_forward_tick": 16,
+          "minimum_forward_position_px": -45.0,
+          "initial_vx": 6.0,
+          "first_move_native_frame": 6497
+        },
+        {
+          "subtype": 3,
+          "dp": 4632,
+          "moves_observed": 45,
+          "first_nonnegative_forward_tick": 16,
+          "minimum_forward_position_px": -45.0,
+          "initial_vx": 6.0,
+          "first_move_native_frame": 6497
+        },
+        {
+          "subtype": 2,
+          "dp": 4696,
+          "moves_observed": 44,
+          "first_nonnegative_forward_tick": 17,
+          "minimum_forward_position_px": -60.53125,
+          "initial_vx": 8.0,
+          "first_move_native_frame": 6497
+        },
+        {
+          "subtype": 1,
+          "dp": 4760,
+          "moves_observed": 44,
+          "first_nonnegative_forward_tick": 17,
+          "minimum_forward_position_px": -60.53125,
+          "initial_vx": 8.0,
+          "first_move_native_frame": 6497
+        },
+        {
+          "subtype": 0,
+          "dp": 4824,
+          "moves_observed": 47,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": 0.0,
+          "first_move_native_frame": 6497
+        }
+      ],
+      "formation_frames": 18,
+      "merge_relocation_x_px": 20.0,
+      "fps": 60.0988062658451,
+      "formation_seconds": 0.29950678088974997,
+      "first_move_after_merge_frames": 19,
+      "pulse_flight_updates_seen": 0,
+      "relevant_active_at_end": 0,
+      "scenario_sha256": "0132900fc2cec3aa5b5da4227f327ad713c5853959be4fd653c16219343ca117",
+      "precursor_children_subtypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "final-mod-left",
+      "variant": "zero-project-v4.1",
+      "direction": -1,
+      "gap": 12,
+      "frame_rows": 640,
+      "event_rows": 1573,
+      "merges": 1,
+      "emissions": 1,
+      "combined_bodies": 5,
+      "motion_comparisons": 540,
+      "mismatches": [],
+      "bodies": [
+        {
+          "subtype": 4,
+          "dp": 4568,
+          "moves_observed": 33,
+          "first_nonnegative_forward_tick": 8,
+          "minimum_forward_position_px": -10.5,
+          "initial_vx": 3.0,
+          "first_move_native_frame": 6483
+        },
+        {
+          "subtype": 3,
+          "dp": 4632,
+          "moves_observed": 33,
+          "first_nonnegative_forward_tick": 8,
+          "minimum_forward_position_px": -10.5,
+          "initial_vx": 3.0,
+          "first_move_native_frame": 6483
+        },
+        {
+          "subtype": 2,
+          "dp": 4696,
+          "moves_observed": 28,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": -1.0,
+          "first_move_native_frame": 6483
+        },
+        {
+          "subtype": 1,
+          "dp": 4760,
+          "moves_observed": 28,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": -1.0,
+          "first_move_native_frame": 6483
+        },
+        {
+          "subtype": 0,
+          "dp": 4824,
+          "moves_observed": 13,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": -10.0,
+          "first_move_native_frame": 6483
+        }
+      ],
+      "formation_frames": 8,
+      "merge_relocation_x_px": 13.0,
+      "fps": 60.0988062658451,
+      "formation_seconds": 0.13311412483988888,
+      "first_move_after_merge_frames": 9,
+      "pulse_flight_updates_seen": 0,
+      "relevant_active_at_end": 0,
+      "scenario_sha256": "0132900fc2cec3aa5b5da4227f327ad713c5853959be4fd653c16219343ca117",
+      "precursor_children_subtypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "final-original-gap20",
+      "variant": "original",
+      "direction": 1,
+      "gap": 20,
+      "frame_rows": 640,
+      "event_rows": 2164,
+      "merges": 1,
+      "emissions": 1,
+      "combined_bodies": 5,
+      "motion_comparisons": 1012,
+      "mismatches": [],
+      "bodies": [
+        {
+          "subtype": 4,
+          "dp": 4568,
+          "moves_observed": 50,
+          "first_nonnegative_forward_tick": 16,
+          "minimum_forward_position_px": -45.0,
+          "initial_vx": -6.0,
+          "first_move_native_frame": 6506
+        },
+        {
+          "subtype": 3,
+          "dp": 4632,
+          "moves_observed": 50,
+          "first_nonnegative_forward_tick": 16,
+          "minimum_forward_position_px": -45.0,
+          "initial_vx": -6.0,
+          "first_move_native_frame": 6506
+        },
+        {
+          "subtype": 2,
+          "dp": 4696,
+          "moves_observed": 49,
+          "first_nonnegative_forward_tick": 17,
+          "minimum_forward_position_px": -60.53125,
+          "initial_vx": -8.0,
+          "first_move_native_frame": 6506
+        },
+        {
+          "subtype": 1,
+          "dp": 4760,
+          "moves_observed": 49,
+          "first_nonnegative_forward_tick": 17,
+          "minimum_forward_position_px": -60.53125,
+          "initial_vx": -8.0,
+          "first_move_native_frame": 6506
+        },
+        {
+          "subtype": 0,
+          "dp": 4824,
+          "moves_observed": 55,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": 0.0,
+          "first_move_native_frame": 6506
+        }
+      ],
+      "formation_frames": 18,
+      "merge_relocation_x_px": -27.0,
+      "fps": 60.0988062658451,
+      "formation_seconds": 0.29950678088974997,
+      "first_move_after_merge_frames": 19,
+      "pulse_flight_updates_seen": 4,
+      "relevant_active_at_end": 0,
+      "scenario_sha256": "0132900fc2cec3aa5b5da4227f327ad713c5853959be4fd653c16219343ca117",
+      "precursor_children_subtypes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "case": "final-mod-gap20",
+      "variant": "zero-project-v4.1",
+      "direction": 1,
+      "gap": 20,
+      "frame_rows": 640,
+      "event_rows": 1845,
+      "merges": 1,
+      "emissions": 1,
+      "combined_bodies": 5,
+      "motion_comparisons": 648,
+      "mismatches": [],
+      "bodies": [
+        {
+          "subtype": 4,
+          "dp": 4568,
+          "moves_observed": 38,
+          "first_nonnegative_forward_tick": 8,
+          "minimum_forward_position_px": -10.5,
+          "initial_vx": -3.0,
+          "first_move_native_frame": 6496
+        },
+        {
+          "subtype": 3,
+          "dp": 4632,
+          "moves_observed": 38,
+          "first_nonnegative_forward_tick": 8,
+          "minimum_forward_position_px": -10.5,
+          "initial_vx": -3.0,
+          "first_move_native_frame": 6496
+        },
+        {
+          "subtype": 2,
+          "dp": 4696,
+          "moves_observed": 34,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": 1.0,
+          "first_move_native_frame": 6496
+        },
+        {
+          "subtype": 1,
+          "dp": 4760,
+          "moves_observed": 34,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": 1.0,
+          "first_move_native_frame": 6496
+        },
+        {
+          "subtype": 0,
+          "dp": 4824,
+          "moves_observed": 18,
+          "first_nonnegative_forward_tick": 1,
+          "minimum_forward_position_px": 0,
+          "initial_vx": 10.0,
+          "first_move_native_frame": 6496
+        }
+      ],
+      "formation_frames": 8,
+      "merge_relocation_x_px": -27.0,
+      "fps": 60.0988062658451,
+      "formation_seconds": 0.13311412483988888,
+      "first_move_after_merge_frames": 9,
+      "pulse_flight_updates_seen": 4,
+      "relevant_active_at_end": 0,
+      "scenario_sha256": "0132900fc2cec3aa5b5da4227f327ad713c5853959be4fd653c16219343ca117",
+      "precursor_children_subtypes": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "total_comparisons": 4880,
+  "total_mismatches": 0,
+  "limits": [
+    "single intro-stage scene, X with buster equipment flag set once; no hardware SNES or exhaustive gameplay validation",
+    "object motion evaluated only while observed and alive, not 120 steps forced past screen removal",
+    "charge was real controller holding; scene/equipment preparation is documented separately"
+  ]
+}

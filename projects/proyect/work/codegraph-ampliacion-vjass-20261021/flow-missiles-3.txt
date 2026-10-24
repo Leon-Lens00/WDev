@@ -1,0 +1,326 @@
+> JASS/vJASS local support: structural/static subset. Bounded macro/module projections and indexed-file import links; generated members anchor to invocation source, not expanded bodies. Computed dispatch and other unmodeled cases remain unresolved; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+> libraries/Missile.j:477: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/Missile.j:477: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/Missile.j:477: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> libraries/Missile.j:477: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/Missile.j:488: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/Missile.j:488: Conditional compilation is not evaluated; extracted references are potential paths.
+> 162 more extraction diagnostics in these files.
+
+**Additional graph links among your symbols**
+(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)
+
+- shoot → createXYZ   [static JASS: calls]
+- Missile → createXYZ   [contains]
+- createXYZ → GetRecycledMissile   [static JASS: calls]
+- createXYZ → createEx   [static JASS: calls]
+- createXYZ → newMissileUnit   [static JASS: calls]
+- createXYZ → impactX   [contains]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: Missile.Missile.createXYZ Missile.Missile.createEx**
+
+Found 69 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `createXYZ` (libraries/Missile.j:775) — 1 caller in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `createEx` (libraries/Missile.j:698) — 2 callers in `libraries/Missile.j`; no tests found within 3 caller hops
+- `MissileCreateCollection` (libraries/Missile.j:1365) — 2 callers in `libraries/RapidFire.j`, `libraries/Missile.j`; no tests found within 3 caller hops
+- `MissileCreateExpression` (libraries/Missile.j:1360) — 2 callers in `libraries/RapidFire.j`, `libraries/Missile.j`; no tests found within 3 caller hops
+- `RecycleMissile` (libraries/MissileRecycler.j:227) — 3 callers in `libraries/MissileRecycler.j`, `libraries/Missile.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`libraries/Missile.j`** — GetItemHeight(calls), ToogleUnitIndexer(calls), prepareRectCircle(calls), USE_COLLISION_Z_FILTER(constant), DELAYED_MISSILE_DEATH_ANIMATION_TIME(constant), +49 more
+
+```jass
+474	    // For WRITE_DELAYED_MISSILE_RECYCLING = true Missile will hold back
+475	    // dummies for DELAYED_MISSILE_DEATH_ANIMATION_TIME before they are recylced. ( Code placed in a static if )
+476	    //
+477	    //! runtextmacro optional WRITE_MISSILE_RECYCLE_BIN("WRITE_DELAYED_MISSILE_RECYCLING", "DELAYED_MISSILE_DEATH_ANIMATION_TIME")
+478	    
+479	    // The code of WRITE_MISSILE_POSITION_CODE boxes a missiles position and does the required trigonometry.
+480	    //
+481	    //! runtextmacro WRITE_MISSILE_POSITION_CODE()
+482	    
+483	    // Missiles structure works like a linked list with the folling methods:
+484	    // allocateCollection(), allocateNode(), insertFront(node) and remove()
+485	    //
+486	    private keyword MissileStructure
+487	    struct Missile extends array
+488	        implement MissileStructure
+489	
+490	        // Constants:
+491	        // ==========
+
+... (gap) ...
+
+614	        // Methods:
+615	        // ========
+616	        //
+617	        method bounce takes nothing returns nothing
+618	            call origin.move(x, y, z)
+619	            set dist = 0.
+620	        endmethod
+621	       
+622	        method deflect takes real tx, real ty returns nothing
+623	            local real a = 2.*Atan2(ty - y, tx - x) + bj_PI - angle
+
+... (gap) ...
+
+626	        endmethod
+627	        
+628	        method deflectEx takes real tx, real ty, real tz returns nothing
+629	            call impact.move(impact.x, impact.y, tz)
+630	            call deflect(tx, ty)
+631	        endmethod
+632	    
+633	        method flightTime2Speed takes real duration returns nothing
+
+... (gap) ...
+
+644	        endmethod
+645	
+646	        // Instantly destroys a missile.
+647	        method terminate takes nothing returns nothing
+648	            if allocated then
+649	                static if LIBRARY_MissileDiagnostics then
+650	                    call MissileStats.released(this)
+651	                endif
+652	                call remove()
+653	                call impact.destroy()
+654	                call origin.destroy()
+655	            
+656	                call DestroyEffect(sfx)
+657	                call FlushChildHashtable(HASH, this)
+658	                if GetUnitTypeId(dummy) == Missile_DUMMY_UNIT_ID then
+659	                    // MissileRecycler > Dummy > xe.
+660	                    static if LIBRARY_MissileRecycler then
+661	                        call RecycleMissile(dummy)
+662	                    elseif LIBRARY_Dummy and Dummy.create.exists then
+663	                        call Dummy[dummy].destroy()
+664	                    elseif LIBRARY_xedummy and xedummy.release.exists then
+665	                        call xedummy.release(dummy)
+666	                    else
+667	                        call RemoveUnit(dummy)
+668	                    endif
+669	                endif
+670	                set sfx = null
+671	                set source = null
+672	                set target = null
+673	                set dummy = null
+674	                set owner = null
+675	            endif
+676	        endmethod
+677	        
+678	        // Runs in createEx.
+679	        //! textmacro MISSILE_RESET_ALL_MEMBERS
+
+... (gap) ...
+
+695	        //! endtextmacro
+696	    
+697	        // Launches a dummy of your choice.
+698	        static method createEx takes unit missileDummy, real impactX, real impactY, real impactZ returns thistype
+699	            local thistype this = thistype.allocateNode()
+700	            local real originX  = GetUnitX(missileDummy)
+701	            local real originY  = GetUnitY(missileDummy)
+702	            local real originZ  = GetUnitFlyHeight(missileDummy)
+703	            //
+704	            //! runtextmacro MISSILE_RESET_ALL_MEMBERS()
+705	            //
+706	            set origin = MissilePosition.create(originX, originY, originZ)
+707	            set impact = MissilePosition.create(impactX, impactY, impactZ)
+708	            call MissilePosition.link(origin, impact)
+709	                        
+710	            set posX      = originX
+711	            set posY      = originY
+712	            set x         = originX
+713	            set y         = originY
+714	            set z         = originZ
+715	            set angle     = origin.angle
+716	            set dummy     = missileDummy
+717	            
+718	            call SetUnitFlyHeight(missileDummy, originZ, 0.)   
+719	            call SaveUnitHandle(HASH, this, GetHandleId(missileDummy), missileDummy)
+720	            //
+721	            static if LIBRARY_ErrorMessage then
+722	                debug call ThrowWarning(GetUnitTypeId(missileDummy) == 0, "Missile", "createEx", "missileDummy", this, "Invalid missile dummy unit ( null )!")
+723	            endif
+724	            debug set launched = false
+725	            static if LIBRARY_MissileDiagnostics then
+726	                call MissileStats.allocated(this)
+727	            endif
+728	            return this
+729	        endmethod
+730	    
+731	        // Freaky static if ensures these libraries really don't exist.
+732	        static if not LIBRARY_MissileRecycler and not LIBRARY_Dummy and not Dummy.create.exists and not LIBRARY_xe_dummy and not xe_dummy.new.exists then
+733	            private static method newMissileUnit takes real x, real y, real z, real face returns unit
+734	                local boolean prev = ToogleUnitIndexer(false)
+735	                set bj_lastCreatedUnit = CreateUnit(Missile_NEUTRAL_PASSIVE, Missile_DUMMY_UNIT_ID , x, y, face)
+736	                call ToogleUnitIndexer(prev)
+737	                call SetUnitX(bj_lastCreatedUnit, x)
+738	                call SetUnitY(bj_lastCreatedUnit, y)
+739	                call UnitAddAbility(bj_lastCreatedUnit, 'Amrf')
+740	                call SetUnitFlyHeight(bj_lastCreatedUnit, z, 0.)
+741	                call PauseUnit(bj_lastCreatedUnit, true)
+742	                return bj_lastCreatedUnit
+743	            endmethod
+744	        endif
+745	    
+746	        // MissileRecylcer > Dummy > xe > Missile.
+
+... (gap) ...
+
+764	        //! endtextmacro
+765	    
+766	        // Wrapper to createEx.
+767	        static method create takes real x, real y, real z, real angle, real distance, real impactZ returns thistype
+768	            local real impactX = x + distance*Cos(angle)
+769	            local real impactY = y + distance*Sin(angle)
+770	            // Get the dummy unit.
+771	            //! runtextmacro MISSILE_GET_DUMMY_FROM_LIBRARY()
+772	        endmethod
+773	        
+774	        // Wrapper to createEx.
+775	        static method createXYZ takes real x, real y, real z, real impactX, real impactY, real impactZ returns thistype
+776	            local real angle = Atan2(impactY - y, impactX - x)
+777	            // Get the dummy unit.
+778	            //! runtextmacro MISSILE_GET_DUMMY_FROM_LIBRARY()
+779	        endmethod
+780	    
+781	        // Missile motion takes place every Missile_TIMER_TIMEOUT
+782	        // before accessing each active struct.
+
+... (gap) ...
+
+819	                    if 0 == GetUnitTypeId(u) then
+820	                        set target = null 
+821	                    else
+822	                        call origin.move(x, y, z)
+823	                        call impact.move(GetUnitX(u), GetUnitY(u), GetUnitFlyHeight(u) + GetUnitBodySize(u)*Missile.HIT_BOX)
+824	                        set dist = 0
+825	                        set height = 0
+826	                        set curve = 0
+
+... (gap) ...
+
+1022	        private method isWidgetInRange takes widget w, real wz, real distance returns boolean
+1023	            local real wx = GetWidgetX(w) 
+1024	            local real wy = GetWidgetY(w) 
+1025	            local real dz = Missile_GetLocZ(wx, wy) - terrainZ
+1026	            //     collision in plane x and y,            collision in z axis.
+1027	            return IsUnitInRangeXY(dummy, wx, wy, distance) and dz + wz >= z - distance and dz <= z + distance 
+1028	        endmethod        
+
+... (gap) ...
+
+1038	            local boolean b = false
+1039	            if not HaveSavedHandle(HASH, temp, GetHandleId(d)) then
+1040	                if circle then                          
+1041	                    set b = temp.isWidgetInRange(d, GetDestructableHeight(d), temp.collision)
+1042	                else
+1043	                    set b = temp.isWidgetInRectangle(d, GetDestructableHeight(d), temp.collision) 
+1044	                endif
+1045	            endif
+1046	            set d = null
+
+... (gap) ...
+
+1357	    // ===============================
+1358	    //     
+1359	    // Condition function for the core trigger evaluation. ( Runs for all struct using module MissileStruct )
+1360	    private function MissileCreateExpression takes integer structId, code func returns nothing
+1361	        set expression[structId] = Condition(func)
+1362	    endfunction
+1363	    
+1364	    // Creates a collection for a struct. ( Runs for all struct using module MissileStruct )
+1365	    private function MissileCreateCollection takes integer structId returns nothing
+1366	        set missileList[structId] = Missile.allocateCollection()
+1367	    endfunction
+1368	    
+1369	    // Core:
+1370	    // =====
+```
+
+**`libraries/MissileRecycler.j`** — Print(calls), ToggleIndexer(calls), acquire(calls), PreInit(calls), MissileDiagnostics(imports), +30 more
+
+```jass
+175	    // you.
+176	    //
+177	    function GetRecycledMissile takes real x, real y, real z, real facing returns unit
+178	        local integer i = ModuloInteger(R2I(facing), 360) / ANG_VAL
+179	        local integer this = queueNext[i]
+180	        local unit u
+181	        if this != 0 and TimerGetElapsed(gameTime) >= timeStamp[this] then
+
+... (gap) ...
+
+224	    //=======================================================================
+225	    // You should recycle the dummy missile unit when its job is done.
+226	    //
+227	    function RecycleMissile takes unit u returns nothing
+228	        local integer i
+229	        local integer this = recycle
+230	        if GetUnitTypeId(u) == DUMMY_ID and UnitAlive(u) and GetUnitUserData(u) != -1 then
+231	            if queueStackN == 0 then
+232	                debug call Print("Stack is full - removing surplus unit")
+233	                static if LIBRARY_MissileDiagnostics then
+234	                    call MissileStats.returned(u,false,DEATH_TIME)
+235	                endif
+236	                // TerrainDev / Classic 1.27b: paused units freeze timed life.
+237	                // Only surplus units leave the paused pool before disposal.
+238	                call PauseUnit(u, false)
+239	                call UnitApplyTimedLife(u, 'BTLF', DEATH_TIME)
+240	                return
+241	            endif
+242	            //Recycle this
+243	            set recycle = queueLast[this]
+244	            //Index the dummy unit to an available facing angle.
+245	            //Get the last vacant angle index.
+246	            set queueStackN = queueStackN - 1
+247	            set i = queueStack[queueStackN]
+248	            //Enqueue this
+249	            set queueNext[queueLast[i]] = this
+250	            set queueLast[i] = this
+251	            set queueNext[this] = 0
+252	            //Allow a time barrier for the effect to destroy/turn to complete.
+253	            set timeStamp[this] = TimerGetElapsed(gameTime) + DEATH_TIME
+254	            set stack[this] = u
+255	            call SetUnitFacing(u, i * ANG_VAL + ANG_MID)
+256	            call SetUnitOwner(u, OWNER, false)
+257	            //Prevent double-free of this unit.
+258	            call SetUnitUserData(u, -1)
+259	            static if LIBRARY_MissileDiagnostics then
+260	                call MissileStats.returned(u,true,DEATH_TIME)
+261	            endif
+262	        else
+263	            static if LIBRARY_MissileDiagnostics then
+264	                call MissileStats.invalidReturn()
+265	            endif
+266	            debug call BJDebugMsg("[MissileRecycler] Error: Attempt to recycle invalid unit.")
+267	        endif
+268	    endfunction
+269	
+270	    //=======================================================================
+271	    // I didn't need this function after all
+272	    //
+273	    function RecycleMissileDelayed takes unit u, real r returns nothing
+274	        call RecycleMissile(u)
+275	    endfunction
+276	
+277	    //=======================================================================
+278	    // Map the dummy units to their facing angles (map below is if ANG_N is
+```
+
+**Not shown above — explore these names for their source**
+
+- libraries/MissileDiagnostics.j: allocated:278, invalidReturn:272, returned:246, acquire:232, MissileDiagnostics:3
+- libraries/RapidFire.j: shoot:41, __cg_Missile_MissileStruct_onInit:39
+- libraries/ErrorMessage.j: ThrowWarning:60
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

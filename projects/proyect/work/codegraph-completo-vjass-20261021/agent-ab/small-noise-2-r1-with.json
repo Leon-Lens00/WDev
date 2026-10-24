@@ -1,0 +1,32 @@
+{
+  "repo": "small-noise",
+  "flow": 2,
+  "names": [
+    "Noise.Noise.perlin3D",
+    "Noise.Noise.grad3D",
+    "Noise.Noise.realTernaryOp"
+  ],
+  "repetition": 1,
+  "arm": "with",
+  "exit": 0,
+  "seconds": 27.23723962999793,
+  "usage": {
+    "input_tokens": 56450,
+    "cached_input_tokens": 45696,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 808,
+    "reasoning_output_tokens": 206
+  },
+  "commands": 0,
+  "command_text": [],
+  "mcp": 1,
+  "mcp_tools": [
+    "codegraph_explore"
+  ],
+  "mcp_errors": [],
+  "forbidden_commands": [],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16216-766b-7811-8a5c-7a775587187c"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "source": "../x3-motion-research-20261023/trayectorias-medidas.csv",
+  "conversion_chosen_wc3_units_per_gif_pixel": 2,
+  "fit_gif_frames": [
+    0,
+    13
+  ],
+  "fit_model": "s(t)=v0*t+0.5*a*t*t; capped after fitting",
+  "fitted_v0": -625.8808053260603,
+  "fitted_accel": 4362.731121271264,
+  "selected_green_v0": -626,
+  "selected_green_accel": 4363,
+  "green_cap": 1140,
+  "formation_hold_seconds": 0.09375,
+  "fit_rms_wc3_units": 1.048876771568119,
+  "limits": [
+    "2 units/pixel is an artistic WC3 scale, not a native SNES conversion",
+    "Only the green satellite uses this measured least-squares fit; other components remain approximations",
+    "Formation hold and relative offsets are chosen to mask the visual transition"
+  ]
+}

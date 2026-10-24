@@ -1,0 +1,33 @@
+{
+  "upstream": "https://github.com/colbymchenry/codegraph",
+  "tag": "v1.6.2",
+  "commit": "6560052a6f856855d3f71eee838fd66ccfa4285d",
+  "branch": "codex/jass-vjass-support",
+  "local_mcp_identity": "1.6.2+jass-vjass.1",
+  "extraction_version": 28,
+  "runtime": "Node 24.16.0 from previously SHA512-verified @colbymchenry/codegraph-linux-x64 1.6.2",
+  "origin": "Original CodeGraph checkout with locally authored JASS/vJASS extractor and resolver. Not upstream language support; not the previous jassgraph MCP bridge.",
+  "language_coverage": "partial structural/static subset; see JASS-VJASS.md",
+  "changed_files_sha256": {
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/CHANGELOG.md": "d49f0daab401144b79b20f2faefd13d6ba34bb3813906fe433516f7f81982053",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/README.md": "db44062262108eea3ef8385caf6aacb68cb58f3638696113e4e119b2145ad622",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/extraction/extraction-version.ts": "4cc804522100f1043a6bb93589a0435fac4537e15637d9729f3cd7961af6f3fa",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/extraction/grammars.ts": "cf4cb1149e9f2c770acf899f76419b0951022573a037426811997ac776de1b1c",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/extraction/tree-sitter.ts": "4bdb3fb971bd27f5c74c11a2e4346160c3967b0cc7c20d10d27497ecd4734b50",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/mcp/server-instructions.ts": "5982aea8282a79c060e71f5e8b7b81b5604c905c89be03d0acc4f8f1c6364818",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/mcp/tools.ts": "bfd2fc33ec2931a5d69e131bf4e6593bb27e286dda3f30d9b24a64ac95bb072d",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/mcp/version.ts": "e4f18bc079968293eb8e25b940bc54cf310bd4d2c4f0a03346019052c044989b",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/resolution/index.ts": "65297b6ef63472b3fd08cffc6e4b16ad8e90051d7d50ecc62718869561163f41",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/resolution/name-matcher.ts": "b3456ba5ca744bd5eff9c700e534a08ead2951cf0e846d27f5d2f7f7be772efe",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/types.ts": "c2b35460d769ad782604a565a4d1a87ce6688fc6123e2a6f8ca8efa9ea34a07c",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/JASS-VJASS.md": "79daf5cf5fa2de5028f4f50df2f142e93fcd9b80c17cb1c98bcf133dc5e282c5",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/__tests__/jass-vjass.test.ts": "c1b2a7fc472913812e394f35db92be9c1854c02fbcd56ab4ba229dbfb74afd81",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/scripts/probe-jass.mjs": "feb7fb39371581a8d60f3973cae12c24e6058c4bdd97453d09279c1eab9cb545",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/extraction/jass-extractor.ts": "6e54e0146246d3ad41f6bba045977a8a39f86ce10020b432e68d838c50cf7609",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/src/resolution/jass.ts": "c24c7e300bdd94ade8e8e85d6144db9851c2379774f469d94ef9a27bd77bc7cf",
+    "/home/snz/.local/bin/codegraph": "22664689f33f64d7e3a8e7cd2b095cbdb5ac30407ae3dd2ca5683ed31ada270c",
+    "/home/snz/.local/share/codegraph-vjass/runtime/node": "b2959781cc5a74c357ffa02367efa8a0330cbb1c9cb347732fdfaaaca381cbcd",
+    "/home/snz/Documentos/MCP W3/codegraph-vjass/codegraph-kernel/prebuilds/linux-x64/codegraph-kernel.node": "aba46b16478436f14fdfcb0351d2ac16474f88419439b482c6c8c177a51bd013"
+  },
+  "patch_sha256": "151dad1b3e76e50a2307c9d4da195f1df932376d0635524b69942a519d638e39"
+}

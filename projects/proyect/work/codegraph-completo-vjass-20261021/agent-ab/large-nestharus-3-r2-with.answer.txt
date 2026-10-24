@@ -1,0 +1,11 @@
+`TimerTools.Timer.destroy → TimerTools.DestructionQueue.add` is a **direct call**, with no intervening method. `destroy` obtains `ExpirationCode(this).timerId` and enqueues `this` only when `registered` is true **and** `Handler.expiringTimer == timerId ([script.j:733](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:733)).
+
+The surrounding callback wiring is:
+
+- `Handler.init` assigns `function thistype.expire` to `handler`; `TimerList.add` passes `handler` to periodic `TimerStart` ([script.j:720](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:720), [script.j:629](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:629)).
+- `Handler.expire` sets `expiringTimer`, evaluates the timer’s trigger, then clears it. Thus a callback calling `Timer.destroy` during evaluation can satisfy the equality condition ([script.j:700](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:700)).
+- `ExpirationCode.register` installs the first callback per `(timerId, funcId)` through `TimerPool.register → TriggerAddCondition`; subsequent nodes only increment registration count ([script.j:363](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:363), [script.j:174](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:174)).
+
+`add` appends the expiration node to its timer’s queue; after evaluation, `clean` calls `ExpirationCode.destroy` ([script.j:545](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:545), [script.j:705](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/large-nestharus/Systems/TimerTools/script.j:705)).
+
+Otherwise, registered nodes are destroyed immediately; unregistered nodes are marked disabled. This establishes source wiring, not runtime execution.

@@ -1,0 +1,31 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-features-v1.w3x",
+  "sha256": "d3ac83d39b02ad13afabe895c0845dcd3ea2c64c206fb0bc74cd442d9f73c316",
+  "base": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+  "base_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "sources": [
+    "libraries/Table.j",
+    "libraries/TimerUtils.j",
+    "libraries/SwlsMath.j",
+    "WaveSysAnAI/SwlsWave/SwlsWave.j",
+    "WaveSysAnAI/SwlsWave/WavePointGroups.j"
+  ],
+  "boundary": "TheEnd.endF no-op; empty callbacks in every test",
+  "fixture": "tests/FeatureAudit.j",
+  "diagnostic_change": "None: exact sources",
+  "purpose": "Isolated core integration in real Classic engine; no full survival map coverage",
+  "jass_sha256": "595bc82df2f5e2d65160b002547213b7796c534d34f49999ff4ddb09c4aef564",
+  "compiled": true,
+  "validated": true,
+  "reextracted": true,
+  "other_members_preserved": true,
+  "game_tested": true,
+  "checks": 44,
+  "failures": 2,
+  "findings": [
+    "E13",
+    "E14"
+  ],
+  "native_log": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/features-v1-native.txt",
+  "core_source_sha256": "b33711164fec7468b3048d0c42f0f5b3997d1bb072fea54de135252390e57119"
+}

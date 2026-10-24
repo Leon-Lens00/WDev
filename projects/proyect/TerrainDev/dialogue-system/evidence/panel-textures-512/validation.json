@@ -1,0 +1,238 @@
+{
+  "checks": [
+    {
+      "name": "FrameOpenRed.blp",
+      "size": "512x256",
+      "bytes": 350706,
+      "levels": [
+        {
+          "width": 512,
+          "height": 256,
+          "rgbaSha256": "5114a6d34ec3798286f8abdbe91c7654ce273649e9a195f622fc07ccbc265c22"
+        },
+        {
+          "width": 256,
+          "height": 128,
+          "rgbaSha256": "f489db69a0373c69b36242366262de337a2a761c5acdc0c790403161755ff011"
+        },
+        {
+          "width": 128,
+          "height": 64,
+          "rgbaSha256": "dc1c900ae95421de07dec2bbafd6523c7ddfaf4afd7a5be10fef303470ed0421"
+        },
+        {
+          "width": 64,
+          "height": 32,
+          "rgbaSha256": "63fb3cae4ba8853c4605c7cca14607c6c7509c3d6f3b0c97f399fe6b7bbaeedf"
+        },
+        {
+          "width": 32,
+          "height": 16,
+          "rgbaSha256": "f460b10b3348695b1fbd2e11c79445373b06efc306b50303781fc142636c2413"
+        },
+        {
+          "width": 16,
+          "height": 8,
+          "rgbaSha256": "d8c44f019620cbf8b8f2ad41b84ecfb6a77e8b61436d38dbbe2f38ccc756e766"
+        },
+        {
+          "width": 8,
+          "height": 4,
+          "rgbaSha256": "8d54cf348f46513d5c5f4864f504ec36193b8685bf4f4d70f8d3bdfb59179149"
+        },
+        {
+          "width": 4,
+          "height": 2,
+          "rgbaSha256": "59f4006b1d5638cba2d9729d289e5501b1d94d00ae0dea7bfa351bec0bd1d062"
+        },
+        {
+          "width": 2,
+          "height": 1,
+          "rgbaSha256": "e4ac07420166f39fbddf03a2fa40c783f869c2ab144d016ddea152e2b200d935"
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "rgbaSha256": "783a32c84fab972fd024f6e834eb26eab017f424bcfeb06dcfd0131b5fbee73c"
+        }
+      ],
+      "independentReaders": true
+    },
+    {
+      "name": "FrameOpenRed.blp",
+      "size": "512x512",
+      "bytes": 700230,
+      "levels": [
+        {
+          "width": 512,
+          "height": 512,
+          "rgbaSha256": "d53ada534b83396ac3272e53284b61c9be3acebf9b2218e86d6b6c5b7f4cfbf8"
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "rgbaSha256": "08628ade8676f853647f9010deb9da650fb22983d4e43215aa20fdc23eb126f6"
+        },
+        {
+          "width": 128,
+          "height": 128,
+          "rgbaSha256": "d46527842ee7276fddb9ec3f8f9f5e00b4710458875045ee8269e1b0c4acfd19"
+        },
+        {
+          "width": 64,
+          "height": 64,
+          "rgbaSha256": "9c13f808f103797cd59ec4cf69cbffc1364aa18bfe37601a8e21bbb52579c4ab"
+        },
+        {
+          "width": 32,
+          "height": 32,
+          "rgbaSha256": "ea7b48d050547f96fc3fc8467f360ae54935d3c55d0a46e20f247519d84bfd89"
+        },
+        {
+          "width": 16,
+          "height": 16,
+          "rgbaSha256": "fece0d91e93d92b5b8fbef27ae2e5046a00fda8b025a12242eae6daf5acc8a02"
+        },
+        {
+          "width": 8,
+          "height": 8,
+          "rgbaSha256": "c3a9db3619686a4dfd589bd733e62cb50fbdf9978ae81b4611dea01c4bbc3e0c"
+        },
+        {
+          "width": 4,
+          "height": 4,
+          "rgbaSha256": "67e8150a58d52101b820dbc09409e4da677b42de2643a502b2dd67b82023eb3b"
+        },
+        {
+          "width": 2,
+          "height": 2,
+          "rgbaSha256": "3e6e2e1493d5b079c226a5257c3bbdbe8ab85145bf2cfd67a3c2c966420c3aa2"
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "rgbaSha256": "98b95b7806307b5734067caa961ddc43f9aa8477c7fd3aa399320fff14c2eb11"
+        }
+      ],
+      "independentReaders": true
+    },
+    {
+      "name": "FrameOpenBlue.blp",
+      "size": "512x256",
+      "bytes": 350706,
+      "levels": [
+        {
+          "width": 512,
+          "height": 256,
+          "rgbaSha256": "cab427ae0339195eecd0a97b836d009f25aa6ab4f5694b8d21d095a320e329e9"
+        },
+        {
+          "width": 256,
+          "height": 128,
+          "rgbaSha256": "fd073c43bcb253d35c60c24d8574924876fb292790b64147de28ac7866e94627"
+        },
+        {
+          "width": 128,
+          "height": 64,
+          "rgbaSha256": "527cca42009f1fbef8bb82cedd0b32f70ac9f2affe67c2d2a7733df016963b1b"
+        },
+        {
+          "width": 64,
+          "height": 32,
+          "rgbaSha256": "a29618caca0f8b0581d4ced6408acf97d5242787692ebf997a1c8db0d1c12572"
+        },
+        {
+          "width": 32,
+          "height": 16,
+          "rgbaSha256": "c26f11d62fe173187e45eaaac7db750aae1832508d0709d3c57688293520be0e"
+        },
+        {
+          "width": 16,
+          "height": 8,
+          "rgbaSha256": "c1cf7fdb71636f8c8b9601e875316f647fd79f42b55c42793f366887957cb70e"
+        },
+        {
+          "width": 8,
+          "height": 4,
+          "rgbaSha256": "7331cba2ce94ca7a10473050b7b0f5fdda9244d872ecceaa9ed341b71adeb65e"
+        },
+        {
+          "width": 4,
+          "height": 2,
+          "rgbaSha256": "83ed099d16f0233c4410d32c195d5e70ecb7f79851dc34b623aa014967e259fd"
+        },
+        {
+          "width": 2,
+          "height": 1,
+          "rgbaSha256": "c071c16d51b89191e9a9d6b660681d4b6b0fb11a9b68c1e2e996df010107e93b"
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "rgbaSha256": "5f6212ef3ad9cb10aa50a4b5ed581fb7ea671ce45bddb114882967f2c50391d3"
+        }
+      ],
+      "independentReaders": true
+    },
+    {
+      "name": "FrameOpenBlue.blp",
+      "size": "512x512",
+      "bytes": 700230,
+      "levels": [
+        {
+          "width": 512,
+          "height": 512,
+          "rgbaSha256": "d2860f275da8961d891ce0da81e48da3540d9d0976733641175fc2ec75ab3df3"
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "rgbaSha256": "04e8fa1b7004559da661d1cb747a563b051757ffbf4b23bd3b2a449e7fae73b1"
+        },
+        {
+          "width": 128,
+          "height": 128,
+          "rgbaSha256": "1534460d3c8aa62f5b63a8319d0c203e735f387cb053e566a181badffc9638fb"
+        },
+        {
+          "width": 64,
+          "height": 64,
+          "rgbaSha256": "58e6dfed55607dbc67d46c40abea898de52d3ed34f7ca8f39bb5ae9ac2da2b9c"
+        },
+        {
+          "width": 32,
+          "height": 32,
+          "rgbaSha256": "7e4e5d14e2a03b418da03fedd8ac27d06f2308400d53a702486030fd219ffc3c"
+        },
+        {
+          "width": 16,
+          "height": 16,
+          "rgbaSha256": "ca076a29b3392c9d6905a88b0a5e541fe7d37e45c5d33e9f36f161da1658c05a"
+        },
+        {
+          "width": 8,
+          "height": 8,
+          "rgbaSha256": "3d82cb6d11b3ac91082f750871ae690a0d1b6e484d60143a608f3c47b7e8a046"
+        },
+        {
+          "width": 4,
+          "height": 4,
+          "rgbaSha256": "34b17f0e23cf8d8914ac875ae568a337adb88f34fea5999d2446ef025cdd444b"
+        },
+        {
+          "width": 2,
+          "height": 2,
+          "rgbaSha256": "227e2189825ebe69f187d389f75ff4c83ae7beb934f3d52af4e1ff690d3a30d3"
+        },
+        {
+          "width": 1,
+          "height": 1,
+          "rgbaSha256": "381a78a50830757cf3abd00c3bf6ee76e5122d7ffb9bcee7707158c436ee965a"
+        }
+      ],
+      "independentReaders": true
+    }
+  ],
+  "allActiveTexturesUnchanged": true,
+  "gameTested": false
+}

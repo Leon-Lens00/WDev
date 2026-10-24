@@ -1,0 +1,120 @@
+[
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+    "unchanged": true,
+    "callees": [
+      "GetSpellTargetX",
+      "GetSpellTargetY",
+      "GetTriggerUnit",
+      "RapidFire.RapidPair.cast",
+      "RapidFire.RapidPair.fromController"
+    ],
+    "stats": {
+      "nodeCount": 8874,
+      "edgeCount": 25141,
+      "fileCount": 18,
+      "nodesByKind": {
+        "constant": 776,
+        "field": 172,
+        "file": 18,
+        "function": 2120,
+        "method": 279,
+        "module": 57,
+        "namespace": 15,
+        "parameter": 4517,
+        "struct": 59,
+        "type_alias": 91,
+        "variable": 770
+      },
+      "edgesByKind": {
+        "calls": 3970,
+        "contains": 8856,
+        "extends": 43,
+        "imports": 130,
+        "instantiates": 2,
+        "references": 8837,
+        "returns": 561,
+        "type_of": 2742
+      },
+      "filesByLanguage": {
+        "jass": 18
+      },
+      "dbSizeBytes": 24702976,
+      "walSizeBytes": 64321472,
+      "lastUpdated": 1792650903856
+    }
+  },
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+    "unchanged": true,
+    "callees": [],
+    "stats": {
+      "nodeCount": 10737,
+      "edgeCount": 35440,
+      "fileCount": 58,
+      "nodesByKind": {
+        "class": 1,
+        "constant": 876,
+        "field": 379,
+        "file": 58,
+        "function": 2283,
+        "import": 49,
+        "interface": 1,
+        "method": 474,
+        "module": 82,
+        "namespace": 47,
+        "parameter": 5003,
+        "struct": 91,
+        "type_alias": 92,
+        "variable": 1301
+      },
+      "edgesByKind": {
+        "calls": 5440,
+        "contains": 10679,
+        "extends": 52,
+        "implements": 1,
+        "imports": 175,
+        "instantiates": 40,
+        "references": 15254,
+        "returns": 618,
+        "type_of": 3181
+      },
+      "filesByLanguage": {
+        "jass": 50,
+        "python": 8
+      },
+      "dbSizeBytes": 36442112,
+      "walSizeBytes": 67108864,
+      "lastUpdated": 1792650906969
+    }
+  },
+  {
+    "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+    "unchanged": true,
+    "callees": [],
+    "stats": {
+      "nodeCount": 126,
+      "edgeCount": 734,
+      "fileCount": 4,
+      "nodesByKind": {
+        "constant": 11,
+        "file": 4,
+        "function": 79,
+        "import": 5,
+        "variable": 27
+      },
+      "edgesByKind": {
+        "calls": 521,
+        "contains": 122,
+        "imports": 30,
+        "references": 61
+      },
+      "filesByLanguage": {
+        "javascript": 4
+      },
+      "dbSizeBytes": 749568,
+      "walSizeBytes": 20632,
+      "lastUpdated": 1792650907305
+    }
+  }
+]

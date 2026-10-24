@@ -1,0 +1,1207 @@
+--- before/src/extraction/index.ts
++++ after/src/extraction/index.ts
+@@ -21,6 +21,8 @@
+ } from '../types';
+ import { QueryBuilder, NodeIdentity } from '../db/queries';
+ import { extractFromSource } from './tree-sitter';
++import { JassExtractor } from './jass-extractor';
++import { buildJassCatalog, JassCatalog } from './jass-preprocessor';
+ import { ParseWorkerPool, resolveParsePoolSize, resolveParseTimeoutMs } from './parse-pool';
+ import { StoreWriter, StoreBundle, finalizeStoreBundle } from './store-writer';
+ import { materializeKernelResult } from './kernel';
+@@ -1857,6 +1859,25 @@
+  * Extraction orchestrator
+  */
+ export class ExtractionOrchestrator {
++  private jassCatalog: JassCatalog | undefined;
++
++  private loadJassCatalog(): JassCatalog {
++    if (this.jassCatalog) return this.jassCatalog;
++    const sources = new Map<string, string>();
++    const overrides = loadExtensionOverrides(this.rootDir);
++    for (const file of scanDirectory(this.rootDir)) {
++      const language = detectLanguage(file, undefined, overrides);
++      if (language !== 'jass' && language !== 'vjass') continue;
++      const absolute = validatePathWithinRoot(this.rootDir, file);
++      if (!absolute) continue;
++      try {
++        const read = readBoundedSourceSync(absolute);
++        if (read.bytes) sources.set(file, read.bytes.toString('utf8'));
++      } catch { /* The ordinary index read records unreadable-file errors. */ }
++    }
++    return this.jassCatalog = buildJassCatalog(sources);
++  }
++
+   private rootDir: string;
+   private queries: QueryBuilder;
+   /**
+@@ -2076,6 +2097,7 @@
+     // in file order preserves the #1015 determinism exactly.
+     storeWriterOpts?: { dbPath: string; fastInit: boolean } | null
+   ): Promise<IndexResult> {
++    this.jassCatalog = undefined;
+     const tGrammar = Date.now();
+     await initGrammars();
+     if (process.env.CODEGRAPH_SYNTH_TIMINGS) console.error(`[phase-timing] grammar-init: ${Date.now() - tGrammar}ms`);
+@@ -2245,6 +2267,7 @@
+      */
+     const parseFile = (filePath: string, content: string): Promise<ExtractionResult> => {
+       const language = detectLanguage(filePath, content, overrides);
++      if (language === 'jass' || language === 'vjass') return Promise.resolve(new JassExtractor(filePath, content, language, this.loadJassCatalog()).extract());
+       const names = this.frameworksForFile(filePath, frameworkNames);
+       if (!pool) return Promise.resolve(extractFromSource(filePath, content, language, names));
+       return pool.requestParse({ filePath, content, language, frameworkNames: names });
+@@ -2767,6 +2790,7 @@
+    * Index a single file
+    */
+   async indexFile(relativePath: string): Promise<ExtractionResult> {
++    this.jassCatalog = undefined;
+     // Indexing read: follow in-root symlinks (the `../` guard still applies), #935.
+     const fullPath = validatePathWithinRoot(this.rootDir, relativePath, { allowSymlinkEscape: true });
+ 
+@@ -2871,7 +2895,9 @@
+     // otherwise detect on the spot so single-file re-index paths still emit
+     // route nodes / middleware / etc.
+     const frameworkNames = this.frameworksForFile(relativePath, this.ensureDetectedFrameworks());
+-    const result = extractFromSource(relativePath, content, language, frameworkNames);
++    const result = language === 'jass' || language === 'vjass'
++      ? new JassExtractor(relativePath, content, language, this.loadJassCatalog()).extract()
++      : extractFromSource(relativePath, content, language, frameworkNames);
+ 
+     // Store in database
+     await this.storeExtractionResult(relativePath, content, language, stats, result, createYielder());
+@@ -2940,7 +2966,7 @@
+     // successful retry's symbols — a permanent empty file presented as
+     // recovered (the #1541 wipe, reintroduced through the marker path).
+     const existingFile = this.queries.getFileByPath(filePath);
+-    if (existingFile && existingFile.contentHash === contentHash) {
++    if (existingFile && existingFile.contentHash === contentHash && language !== 'jass' && language !== 'vjass') {
+       const existingIsMarker =
+         existingFile.nodeCount === 0 && (existingFile.errors?.length ?? 0) > 0;
+       const incomingHasContent = result.nodes.length > 0;
+@@ -3264,6 +3290,7 @@
+     /** Inspect changed inputs before deletion/re-extraction cascades their edges. */
+     onFileChange?: (filePath: string, content?: string) => void
+   ): Promise<SyncResult> {
++    this.jassCatalog = undefined;
+     await initGrammars(); // Initialize WASM runtime (grammars loaded lazily below)
+     const startTime = Date.now();
+     let filesChecked = 0;
+@@ -3357,7 +3384,9 @@
+     // `reconcileChecks` drives the cooperative yield shared with the adds/mods loop
+     // below (see SYNC_RECONCILE_YIELD_INTERVAL / issue #905).
+     let reconcileChecks = 0;
++    let removedJass = false;
+     const removeTracked = (tracked: FileRecord): void => {
++      if (tracked.language === 'jass' || tracked.language === 'vjass') removedJass = true;
+       // Before the cascade deletes them, resurrect incoming cross-file
+       // resolution edges as their original refs (#1240 removal case): the
+       // callers live in files this sync will NOT revisit, so this is their
+@@ -3447,6 +3476,23 @@
+         filesToIndex.push(filePath);
+         changedFilePaths.push(filePath);
+         filesModified++;
++      }
++    }
++
++    // Macro/module output belongs to its consumer. A changed or removed JASS
++    // definition invalidates all in-scope JASS consumers, even if their bytes
++    // did not change. Other languages keep the original scoped fast path.
++    const jassOverrides = loadExtensionOverrides(this.rootDir);
++    const isJassInput = (file: string) => ['jass', 'vjass'].includes(detectLanguage(file, undefined, jassOverrides));
++    const jassChanged = removedJass || [...filesToIndex, ...changedFilePaths].some(isJassInput);
++    if (jassChanged) {
++      for (const file of scanDirectory(this.rootDir)) {
++        if (isJassInput(file) && !filesToIndex.includes(file)) {
++          filesToIndex.push(file);
++          filesModified++; // A projection changed even when consumer bytes did not.
++          if (scopedPaths?.length) filesChecked++;
++          if (!changedFilePaths.includes(file)) changedFilePaths.push(file);
++        }
+       }
+     }
+ 
+--- before/src/extraction/jass-extractor.ts
++++ after/src/extraction/jass-extractor.ts
+@@ -1,9 +1,10 @@
+ import { Node, NodeKind, Edge, ExtractionResult, ExtractionError, UnresolvedReference } from '../types';
+ import { generateNodeId } from './tree-sitter-helpers';
+-
+-interface Token { value: string; line: number; column: number }
++import { expandJass, JassCatalog } from './jass-preprocessor';
++
++import { lexJass, Token } from './jass-lexer';
++export { lexJass } from './jass-lexer';
+ interface Block { keyword: string; node: Node }
+-export interface JassLexed { lines: Token[][]; errors: ExtractionError[] }
+ const IDENTIFIER = /^[A-Za-z_][A-Za-z_0-9]*$/;
+ const MODIFIERS = new Set(['private', 'public', 'static', 'stub', 'constant', 'readonly', 'debug']);
+ const STATEMENTS = new Set(['call', 'set', 'return', 'if', 'elseif', 'exitwhen', 'loop', 'then', 'else', 'endif', 'endloop', 'and', 'or', 'not']);
+@@ -12,89 +13,6 @@
+   library: 'namespace', library_once: 'namespace', scope: 'namespace',
+   struct: 'struct', module: 'module', interface: 'interface',
+ };
+-
+-/** Offset-preserving lexical pass; literals/comments never become executable tokens.
+- * Preprocessor regions are excluded BEFORE lexing their arbitrary contents.
+- * novjass is inactive documentation; templates/Zinc remain unsupported coverage.
+- */
+-export function lexJass(source: string): JassLexed {
+-  const masked = source.split('');
+-  const errors: ExtractionError[] = [];
+-  let line = 1, lineStart = 0;
+-  let omitted: 'textmacro' | 'zinc' | 'novjass' | null = null;
+-  const blank = (start: number, end: number) => {
+-    for (let p = start; p < end; p++) if (source[p] !== '\n' && source[p] !== '\r') masked[p] = ' ';
+-  };
+-  const warn = (message: string, at: number, severity: 'error' | 'warning' = 'warning') =>
+-    errors.push({ message, line: at, severity, code: severity === 'error' ? 'jass_parse_error' : 'jass_partial_coverage' });
+-  for (let i = 0; i < source.length;) {
+-    // Only active source reaches this branch: strings and block comments are
+-    // consumed below, so directive-shaped text inside them cannot change mode.
+-    // Once omitted, do not lex the region's strings/comments at all: a template
+-    // may intentionally contain fragments that are not standalone JASS.
+-    if (i === lineStart) {
+-      const end = source.indexOf('\n', i);
+-      const lineEnd = end < 0 ? source.length : end;
+-      const directive = source.slice(i, lineEnd).match(/^[\t \uFEFF]*\/\/![\t ]*(\w+)/)?.[1];
+-      if (omitted || directive) {
+-        if (omitted) {
+-          // Other markers can be quoted as documentation/template content.
+-          // Only this region's own terminator is active here.
+-          if (directive === `end${omitted}`) omitted = null;
+-        }
+-        else if (directive && ['endtextmacro', 'endzinc', 'endnovjass'].includes(directive)) {
+-          warn(`Unmatched ${directive} directive.`, line, 'error');
+-        } else if (directive === 'textmacro' || directive === 'zinc' || directive === 'novjass') {
+-          if (omitted) warn(`Nested ${directive} region is unsupported.`, line);
+-          else omitted = directive;
+-          if (directive !== 'novjass') warn(`Directive ${directive} is not expanded; coverage is partial.`, line);
+-        } else if (directive && !omitted) {
+-          warn(`Directive ${directive} is not expanded; coverage is partial.`, line);
+-        }
+-        blank(i, lineEnd);
+-        i = lineEnd;
+-        if (i === source.length) break;
+-      }
+-    }
+-    if (source[i] === '\n') { line++; lineStart = ++i; continue; }
+-    if (source.startsWith('//', i)) {
+-      const start = i;
+-      while (i < source.length && source[i] !== '\n') i++;
+-      blank(start, i);
+-    } else if (source.startsWith('/*', i)) {
+-      const start = i, at = line;
+-      i += 2;
+-      while (i < source.length && !source.startsWith('*/', i)) {
+-        if (source[i] === '\n') { line++; lineStart = i + 1; }
+-        i++;
+-      }
+-      if (i === source.length) warn('Unclosed block comment; remaining source excluded.', at, 'error');
+-      else i += 2;
+-      blank(start, i);
+-    } else if (source[i] === '"' || source[i] === "'") {
+-      const quote = source[i]!, start = i++, at = line;
+-      let closed = false;
+-      while (i < source.length && (quote === '"' || (source[i] !== '\n' && source[i] !== '\r'))) {
+-        if (source[i] === '\\') {
+-          // Visit physical newlines separately to preserve line coordinates.
+-          i = Math.min(source.length, i + ((source[i + 1] === '\n' || source[i + 1] === '\r') ? 1 : 2));
+-          continue;
+-        }
+-        if (source[i] === '\n') { line++; lineStart = i + 1; }
+-        if (source[i++] === quote) { closed = true; break; }
+-      }
+-      if (!closed) warn('Unclosed string/rawcode; literal excluded from extraction.', at, 'error');
+-      blank(start, i);
+-    } else { i++; }
+-  }
+-  const sourceLines = source.split(/\r?\n/);
+-  const maskedLines = masked.join('').split(/\r?\n/);
+-  const lines = maskedLines.map((text, index) => {
+-    return [...text.matchAll(/[A-Za-z_][A-Za-z_0-9]*|[^\s]/g)].map(m => ({ value: m[0], line: index + 1, column: m.index! }));
+-  });
+-  if (omitted) warn(`Unclosed ${omitted} region.`, sourceLines.length, 'error');
+-  return { lines, errors };
+-}
+ 
+ /** Native CodeGraph extraction result, consumed by its normal SQLite/index/sync
+  * pipeline. This is a structural JASS/vJASS parser, not JassHelper or a VM.
+@@ -109,20 +27,41 @@
+   private sourceLines: string[];
+   private file!: Node;
+ 
+-  constructor(private filePath: string, private source: string, private language: 'jass' | 'vjass') {
++  constructor(private filePath: string, private source: string, private language: 'jass' | 'vjass', private catalog?: JassCatalog) {
+     this.sourceLines = source.split(/\r?\n/);
+   }
+ 
+   extract(): ExtractionResult {
+     const start = Date.now();
++    const original = this.source;
++    const expansion = expandJass(this.filePath, original, this.catalog);
++    this.source = expansion.source;
++    this.sourceLines = this.source.split(/\r?\n/);
+     const lexed = lexJass(this.source);
+-    this.errors = lexed.errors.map(e => ({ ...e, filePath: this.filePath }));
++    this.errors = lexed.errors.filter(e => !/^Directive (textmacro|runtextmacro|import) /.test(e.message)).map(e => ({ ...e, filePath: this.filePath }));
+     this.file = this.node('file', this.filePath, { value: this.filePath, line: 1, column: 0 }, null);
+     this.file.endLine = this.sourceLines.length;
+     this.file.endColumn = this.sourceLines.at(-1)?.length ?? 0;
+     for (const tokens of lexed.lines) this.parseLine(tokens);
+     for (const open of this.stack) this.error(`Missing end${open.keyword} for ${open.node.qualifiedName}.`, open.node.startLine);
+     if (this.globals) this.error('Missing endglobals.', this.sourceLines.length);
++    for (const node of this.nodes) {
++      const origin = expansion.lines[node.startLine - 1];
++      if (origin?.via) node.docstring = `CodeGraph static projection: ${origin.via}. Declaration origin ${origin.file}:${origin.line}. Source below is the invocation, not an expanded body.`;
++      node.startLine = origin?.anchor ?? node.startLine;
++      node.endLine = expansion.lines[node.endLine - 1]?.anchor ?? node.endLine;
++      if (origin?.via) { node.startColumn = 0; node.endColumn = original.split(/\r?\n/)[node.endLine - 1]?.length ?? 0; }
++    }
++    for (const ref of this.refs) { const origin = expansion.lines[ref.line - 1]; ref.line = origin?.anchor ?? ref.line; if (origin?.via) ref.column = 0; }
++    for (const edge of this.edges) if (edge.line) edge.line = expansion.lines[edge.line - 1]?.anchor ?? edge.line;
++    for (const error of this.errors) if (error.line) error.line = expansion.lines[error.line - 1]?.anchor ?? error.line;
++    this.errors.push(...expansion.errors);
++    for (const imp of expansion.imported) this.ref(this.file, `__jass_import__:${imp.path}`, 'imports', { value: imp.path, line: imp.line, column: 0 });
++    const projections = new Set(expansion.lines.filter(l => l.via).map(l => `${l.anchor}:${l.via}`));
++    for (const projection of projections) {
++      const at = Number(projection.slice(0, projection.indexOf(':')));
++      this.error(`Static projection at invocation: ${projection.slice(projection.indexOf(':') + 1)}. Generated bodies are not verbatim on-disk source.`, at, 'warning');
++    }
+     return { nodes: this.nodes, edges: this.edges, unresolvedReferences: this.refs,
+              errors: this.errors, durationMs: Date.now() - start };
+   }
+@@ -217,13 +156,14 @@
+       let declaredName = name.value;
+       if (word === 'method' && name.value === 'operator') {
+         declaredName = 'operator ' + tokens.slice(p + 2, takes).map(t => t.value).join('');
+-        this.error('Operator getter/setter/index dispatch is not resolved.', head.line, 'warning');
++        if (/\[\]/.test(declaredName)) this.error('Index operator dispatch is not resolved.', head.line, 'warning');
+       }
+       const node = this.node(functionInterface ? 'type_alias' : word === 'method' ? 'method' : 'function', declaredName, head, parent, this.sourceLines[head.line - 1]?.trim());
+       this.visibility(node, modifiers);
+       node.isStatic = modifiers.includes('static');
+       node.isAbstract = parent.kind === 'interface';
+       node.returnType = tokens[returns + 1]!.value;
++      if (word === 'method' && modifiers.includes('static') && (name.value === 'onInit' || /^__cg_.+_onInit$/.test(name.value)) && parent.kind === 'struct') this.ref(parent, declaredName, 'calls', head);
+       this.ref(node, node.returnType, 'returns', tokens[returns + 1]!);
+       const parameters = tokens.slice(takes + 1, returns);
+       for (let i = 0; i < parameters.length;) {
+@@ -284,8 +224,19 @@
+       let name = '';
+       if (tokens[j]?.value === '.') {
+         if (tokens[j - 1]?.value === ')' || tokens[j - 1]?.value === ']') {
+-          this.error('Chained call/index receiver is not inferred.', first.line, 'warning');
+-          name = '__jass_unresolved_receiver.';
++          this.error('Factory/index receiver requires a declared type/return type; other chains are not inferred.', first.line, 'warning');
++          const close = tokens[j - 1]!.value;
++          const open = close === ')' ? '(' : '[';
++          let depth = 1, k = j - 2;
++          for (; k >= 0; k--) {
++            if (tokens[k]!.value === close) depth++;
++            if (tokens[k]!.value === open && --depth === 0) break;
++          }
++          let begin = k - 1;
++          while (begin > 0 && tokens[begin - 1]?.value === '.' && IDENTIFIER.test(tokens[begin - 2]?.value ?? '')) begin -= 2;
++          const receiver = tokens.slice(begin, k).map(t => t.value).join('');
++          name = k > 0 && /^[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*$/.test(receiver)
++            ? `__jass_${close === ')' ? 'factory' : 'index'}__:${receiver}.` : '__jass_unresolved_receiver.';
+         } else name = 'this.';
+         j++;
+       }
+@@ -296,9 +247,17 @@
+       }
+       if (callback || tokens[j]?.value === '(') {
+         this.ref(owner, name, callback ? 'function_ref' : 'calls', first);
+-        if (name === 'ExecuteFunc') this.error(`Dynamic dispatch ${name} is not expanded.`, first.line, 'warning');
++        if (name === 'ExecuteFunc') {
++          const literal = this.sourceLines[first.line - 1]?.slice(first.column).match(/^ExecuteFunc\s*\(\s*"([A-Za-z_]\w*)"\s*\)/)?.[1];
++          if (literal) this.ref(owner, `__jass_execute_func__:${literal}`, 'calls', first);
++          else this.error(`Computed dispatch ${name} is not resolved.`, first.line, 'warning');
++        }
+         else if (/\.(execute|evaluate)$/.test(name)) this.error(`Potential indirect dispatch ${name} is not expanded unless a declared method matches the receiver.`, first.line, 'warning');
+         i = j - 1;
++      } else if (!callback && name.includes('.') && !name.startsWith('__jass_') && !name.endsWith('.exists')) {
++        const setter = tokens[j]?.value === '=' && tokens[0]?.value === 'set';
++        this.ref(owner, `__jass_property_${setter ? 'set' : 'get'}__:${name}`, 'references', first);
++        i = j - 1;
+       }
+     }
+   }
+--- before/src/extraction/jass-lexer.ts
++++ after/src/extraction/jass-lexer.ts
+@@ -0,0 +1,88 @@
++import type { ExtractionError } from '../types';
++export interface Token { value: string; line: number; column: number }
++export interface JassLexed { lines: Token[][]; errors: ExtractionError[]; directives: { line: number; text: string; kind: string }[] }
++/** Offset-preserving lexical pass; literals/comments never become executable tokens.
++ * Preprocessor regions are excluded BEFORE lexing their arbitrary contents.
++ * novjass is inactive documentation; templates/Zinc remain unsupported coverage.
++ */
++export function lexJass(source: string): JassLexed {
++  const masked = source.split('');
++  const errors: ExtractionError[] = [];
++  const directives: { line: number; text: string; kind: string }[] = [];
++  let line = 1, lineStart = 0;
++  let omitted: 'textmacro' | 'zinc' | 'novjass' | null = null;
++  const blank = (start: number, end: number) => {
++    for (let p = start; p < end; p++) if (source[p] !== '\n' && source[p] !== '\r') masked[p] = ' ';
++  };
++  const warn = (message: string, at: number, severity: 'error' | 'warning' = 'warning') =>
++    errors.push({ message, line: at, severity, code: severity === 'error' ? 'jass_parse_error' : 'jass_partial_coverage' });
++  for (let i = 0; i < source.length;) {
++    // Only active source reaches this branch: strings and block comments are
++    // consumed below, so directive-shaped text inside them cannot change mode.
++    // Once omitted, do not lex the region's strings/comments at all: a template
++    // may intentionally contain fragments that are not standalone JASS.
++    if (i === lineStart) {
++      const end = source.indexOf('\n', i);
++      const lineEnd = end < 0 ? source.length : end;
++      const directive = source.slice(i, lineEnd).match(/^[\t \uFEFF]*\/\/![\t ]*(\w+)/)?.[1];
++      if (directive && (!omitted || directive === `end${omitted}`)) directives.push({ line, text: source.slice(i, lineEnd).trim(), kind: directive });
++      if (omitted || directive) {
++        if (omitted) {
++          // Other markers can be quoted as documentation/template content.
++          // Only this region's own terminator is active here.
++          if (directive === `end${omitted}`) omitted = null;
++        }
++        else if (directive && ['endtextmacro', 'endzinc', 'endnovjass'].includes(directive)) {
++          warn(`Unmatched ${directive} directive.`, line, 'error');
++        } else if (directive === 'textmacro' || directive === 'zinc' || directive === 'novjass') {
++          if (omitted) warn(`Nested ${directive} region is unsupported.`, line);
++          else omitted = directive;
++          if (directive !== 'novjass') warn(`Directive ${directive} is not expanded; coverage is partial.`, line);
++        } else if (directive && !omitted) {
++          warn(`Directive ${directive} is not expanded; coverage is partial.`, line);
++        }
++        blank(i, lineEnd);
++        i = lineEnd;
++        if (i === source.length) break;
++      }
++    }
++    if (source[i] === '\n') { line++; lineStart = ++i; continue; }
++    if (source.startsWith('//', i)) {
++      const start = i;
++      while (i < source.length && source[i] !== '\n') i++;
++      blank(start, i);
++    } else if (source.startsWith('/*', i)) {
++      const start = i, at = line;
++      i += 2;
++      while (i < source.length && !source.startsWith('*/', i)) {
++        if (source[i] === '\n') { line++; lineStart = i + 1; }
++        i++;
++      }
++      if (i === source.length) warn('Unclosed block comment; remaining source excluded.', at, 'error');
++      else i += 2;
++      blank(start, i);
++    } else if (source[i] === '"' || source[i] === "'") {
++      const quote = source[i]!, start = i++, at = line;
++      let closed = false;
++      while (i < source.length && (quote === '"' || (source[i] !== '\n' && source[i] !== '\r'))) {
++        if (source[i] === '\\') {
++          // Visit physical newlines separately to preserve line coordinates.
++          i = Math.min(source.length, i + ((source[i + 1] === '\n' || source[i + 1] === '\r') ? 1 : 2));
++          continue;
++        }
++        if (source[i] === '\n') { line++; lineStart = i + 1; }
++        if (source[i++] === quote) { closed = true; break; }
++      }
++      if (!closed) warn('Unclosed string/rawcode; literal excluded from extraction.', at, 'error');
++      blank(start, i);
++    } else { i++; }
++  }
++  const sourceLines = source.split(/\r?\n/);
++  const maskedLines = masked.join('').split(/\r?\n/);
++  const lines = maskedLines.map((text, index) => {
++    return [...text.matchAll(/[A-Za-z_][A-Za-z_0-9]*|[^\s]/g)].map(m => ({ value: m[0], line: index + 1, column: m.index! }));
++  });
++  if (omitted) warn(`Unclosed ${omitted} region.`, sourceLines.length, 'error');
++  return { lines, errors, directives };
++}
++
+--- before/src/extraction/jass-preprocessor.ts
++++ after/src/extraction/jass-preprocessor.ts
+@@ -0,0 +1,220 @@
++import type { ExtractionError } from '../types';
++import { lexJass } from './jass-lexer';
++import * as path from 'node:path';
++
++export interface JassSourceLine { text: string; file: string; line: number; anchor: number; via?: string }
++interface Definition { name: string; qualified: string; scope: string; file: string; line: number; private: boolean; args: string[]; body: JassSourceLine[] }
++export interface JassCatalog { macros: Definition[]; modules: Definition[]; files: Set<string> }
++const scopes = new Set(['library', 'library_once', 'scope', 'struct', 'module', 'interface']);
++
++/** Only evaluate a positive fact proved by an unconditional public declaration
++ * in this exact struct projection. Absence, inheritance, compound expressions,
++ * debug flags and blocks with elseif remain unknown. This removes the common
++ * `static if not thistype.member.exists` fallback without assuming global flags.
++ */
++function declaredExists(lines: JassSourceLine[]): JassSourceLine[] {
++  const lexed = lexJass(lines.map(l => l.text).join('\n'));
++  const owners = new Map<number, number>();
++  const members = new Map<number, Set<string>>();
++  const blocks: { kind: string; id: number }[] = [];
++  const conditions: number[] = [];
++  const elseif = new Set<number>();
++  for (let i = 0; i < lines.length; i++) {
++    const words = lexed.lines[i]!.map(t => t.value);
++    const head = words.findIndex(w => !['private', 'public', 'static', 'readonly', 'constant', 'stub', 'debug'].includes(w));
++    const keyword = words[head];
++    if (keyword === 'if') conditions.push(i);
++    if (keyword === 'elseif' && conditions.length) elseif.add(conditions.at(-1)!);
++    if (keyword === 'endif') conditions.pop();
++    const owner = [...blocks].reverse().find(b => b.kind === 'struct');
++    if (owner) {
++      owners.set(i, owner.id);
++      if (!conditions.length && !words.includes('private') && blocks.at(-1)?.kind === 'struct') {
++        const fieldAt = words[head + 1] === 'array' ? head + 2 : head + 1;
++        const field = keyword && /^[A-Za-z_]\w*$/.test(keyword) && !['implement', 'delegate', 'hook', 'key', 'keyword', 'call', 'set', 'return', 'else', 'endif'].includes(keyword) && [undefined, '=', '['].includes(words[fieldAt + 1]);
++        const name = keyword === 'method' ? words[head + 1] : field ? words[fieldAt] : undefined;
++        if (name && /^[A-Za-z_]\w*$/.test(name) && name !== 'operator') members.get(owner.id)!.add(name);
++      }
++    }
++    if (keyword && (scopes.has(keyword) || ['method', 'function'].includes(keyword))) {
++      const kind = keyword === 'library_once' ? 'library' : keyword;
++      blocks.push({ kind, id: i });
++      if (kind === 'struct') members.set(i, new Set());
++    } else if (keyword?.startsWith('end') && blocks.at(-1)?.kind === keyword.slice(3)) blocks.pop();
++  }
++  const stack: { enabled: boolean; known: boolean; selected: boolean }[] = [];
++  return lines.map((line, i) => {
++    const words = lexed.lines[i]!.map(t => t.value);
++    const text = words.join(' ');
++    const keyword = words[0] === 'static' ? words[1] : words[0];
++    const enabled = stack.every(s => s.enabled);
++    if (keyword === 'if') {
++      const match = text.match(/^static if (not )?thistype \. ([A-Za-z_]\w*) \. exists then$/);
++      const owner = owners.get(i);
++      const known = !!match && owner !== undefined && !!members.get(owner)?.has(match[2]!) && !elseif.has(i);
++      const selected = known ? !match![1] : true;
++      stack.push({ enabled: known ? enabled && selected : enabled, known, selected });
++      return !enabled || known ? { ...line, text: '' } : line;
++    }
++    if (keyword === 'else' || keyword === 'elseif') {
++      const frame = stack.at(-1);
++      if (frame?.known) { frame.enabled = stack.slice(0, -1).every(s => s.enabled) && !frame.selected; return { ...line, text: '' }; }
++    }
++    if (keyword === 'endif') {
++      const frame = stack.pop();
++      return frame?.known || !stack.every(s => s.enabled) ? { ...line, text: '' } : line;
++    }
++    return enabled ? line : { ...line, text: '' };
++  });
++}
++
++/** Read only the sources supplied by the indexer's existing scope scanner.
++ * No imports are opened here, no compiler is run, and no source is rewritten.
++ */
++export function buildJassCatalog(sources: ReadonlyMap<string, string>): JassCatalog {
++  const catalog: JassCatalog = { macros: [], modules: [], files: new Set(sources.keys()) };
++  for (const [file, source] of sources) {
++    const raw = source.split(/\r?\n/);
++    const lexed = lexJass(source);
++    for (const directive of lexed.directives) {
++      const match = directive.text.match(/^\/\/!\s*textmacro\s+(\w+)(?:\s+takes\s+(.+))?\s*$/);
++      if (!match) continue;
++      const end = lexed.directives.find(d => d.line > directive.line && d.kind === 'endtextmacro');
++      if (!end) continue;
++      catalog.macros.push({ name: match[1]!, qualified: match[1]!, scope: '', file, line: directive.line, private: false,
++        args: match[2]?.split(',').map(s => s.trim()) ?? [],
++        body: raw.slice(directive.line, end.line - 1).map((text, i) => ({ text, file, line: directive.line + i + 1, anchor: directive.line + i + 1 })) });
++    }
++    const stack: { kind: string; name: string; line: number; private: boolean }[] = [];
++    for (const tokens of lexed.lines) {
++      const words = tokens.map(t => t.value);
++      const offset = words.findIndex(w => !['private', 'public', 'static', 'readonly', 'constant', 'stub'].includes(w));
++      const kind = words[offset];
++      if (!kind) continue;
++      if (scopes.has(kind) && words[offset + 1]) stack.push({ kind: kind === 'library_once' ? 'library' : kind, name: words[offset + 1]!, line: tokens[0]!.line, private: words.includes('private') });
++      else if (kind.startsWith('end') && stack.at(-1)?.kind === kind.slice(3)) {
++        const block = stack.pop()!;
++        if (block.kind !== 'module') continue;
++        const scope = stack.map(s => s.name).join('.');
++        catalog.modules.push({ name: block.name, qualified: scope ? scope + '.' + block.name : block.name, scope, file, line: block.line, private: block.private, args: [],
++          body: raw.slice(block.line, tokens[0]!.line - 1).map((text, i) => ({ text, file, line: block.line + i + 1, anchor: block.line + i + 1 })) });
++      }
++    }
++  }
++  return catalog;
++}
++
++function argumentsOf(text: string): string[] | null {
++  const args: string[] = [];
++  let offset = 0;
++  while (offset < text.length) {
++    const match = text.slice(offset).match(/^\s*"((?:\\.|[^"\\])*)"\s*(,|$)/);
++    if (!match) return text.trim() === '' ? [] : null;
++    // JassHelper arguments are textual strings, not JavaScript escape sequences.
++    if (match[1]!.includes('\\')) return null; // Escaped macro arguments require compiler-specific unescaping.
++    args.push(match[1]!);
++    offset += match[0].length;
++    if (match[2] === ',' && !text.slice(offset).trim()) return null;
++  }
++  return args;
++}
++
++/** Finite, context-specific source projection. Generated nodes point at the
++ * invocation in the REAL source; docstrings retain the definition location.
++ * Limits/cycles/ambiguities are coverage diagnostics, never guessed targets.
++ */
++export function expandJass(file: string, source: string, catalog = buildJassCatalog(new Map([[file, source]]))) {
++  const errors: ExtractionError[] = [];
++  const imported: { path: string; line: number }[] = [];
++  const warn = (at: JassSourceLine, message: string) => errors.push({ filePath: file, line: at.anchor, message, severity: 'warning', code: 'jass_partial_coverage' });
++  let budget = 50000;
++  let characters = 4 * 1024 * 1024;
++  const project = (input: JassSourceLine[], scope: string[], chain: string[]): JassSourceLine[] => {
++    const text = input.map(l => l.text).join('\n');
++    const lexed = lexJass(text);
++    const active = new Map(lexed.directives.map(d => [d.line, d]));
++    const output: JassSourceLine[] = [];
++    let inModule = 0;
++    for (let i = 0; i < input.length; i++) {
++      const line = input[i]!;
++      characters -= line.text.length;
++      if (--budget < 0 || characters < 0) { warn(line, 'JASS expansion line/byte budget exceeded; remaining projection omitted.'); break; }
++      const directive = active.get(i + 1);
++      const words = lexed.lines[i]!.map(t => t.value);
++      const head = words.findIndex(w => !['private', 'public', 'static', 'readonly', 'constant', 'stub'].includes(w));
++      const keyword = words[head];
++      if (keyword === 'module') inModule++;
++      if (keyword === 'endmodule') inModule--;
++      const macro = directive?.text.match(/^\/\/!\s*runtextmacro\s+(optional\s+)?(\w+)\s*\((.*)\)\s*(?:\/\/.*)?$/);
++      const implement = !inModule && keyword === 'implement' ? words.slice(head + 1).filter(w => w !== 'optional').join('') : null;
++      if ((macro || implement) && !inModule) {
++        const definitions = macro ? catalog.macros.filter(d => d.name === macro[2]) : (() => {
++          const originModule = [...(line.via ?? '').matchAll(/module ([\w.]+) defined at/g)].at(-1)?.[1];
++          const originScope = originModule?.includes('.') ? originModule.slice(0, originModule.lastIndexOf('.')) : '';
++          if (originScope) { const found = catalog.modules.filter(d => d.qualified === originScope + '.' + implement); if (found.length) return found; }
++          for (let n = scope.length; n >= 0; n--) {
++            const qualified = [...scope.slice(0, n), implement!].join('.');
++            const found = catalog.modules.filter(d => d.qualified === qualified);
++            if (found.length) return found;
++          }
++          return catalog.modules.filter(d => d.name === implement && !d.private);
++        })();
++        const optional = macro ? !!macro[1] : words.includes('optional');
++        const name = macro?.[2] ?? implement!;
++        const args = macro ? argumentsOf(macro[3]!) : [];
++        const def = definitions.length === 1 ? definitions[0] : undefined;
++        const key = def && `${macro ? 'macro' : 'module'}:${def.file}:${def.line}`;
++        if (!def || !args || args.length !== def.args.length || chain.length >= 24 || (key && chain.includes(key))) {
++          if (!optional || definitions.length > 0) warn(line, `${name}: ${definitions.length > 1 ? 'ambiguous definition' : !def ? 'definition unavailable in indexed scope' : key && chain.includes(key) ? 'expansion cycle' : 'unsupported arguments or expansion depth'}; not expanded.`);
++          output.push({ ...line, text: '// CodeGraph: unresolved expansion' });
++          continue;
++        }
++        const substitutions = new Map(def.args.map((name, j) => [name, args[j]!]));
++        const estimated = def.body.reduce((total, l) => total + l.text.length + [...l.text.matchAll(/\$([A-Za-z_]\w*)\$/g)].reduce((n, m) => n + (substitutions.get(m[1]!)?.length ?? 0), 0), 0);
++        if (estimated > characters || def.body.length > budget) { warn(line, `${name}: expansion budget exceeded; not expanded.`); output.push({ ...line, text: '// CodeGraph: expansion budget exceeded' }); continue; }
++        let body = def.body.map(l => ({ ...l, anchor: line.anchor, via: `${line.via ? line.via + ' -> ' : ''}${macro ? 'textmacro' : 'module'} ${def.qualified} defined at ${def.file}:${def.line}; invoked at ${file}:${line.anchor}`,
++          text: l.text.replace(/\$([A-Za-z_]\w*)\$/g, (whole, name: string) => substitutions.get(name) ?? whole) }));
++        if (!macro) {
++          // Keep independent private module initializers distinct. Other
++          // private-name collisions remain ambiguous instead of guessed.
++          const lexedBody = lexJass(body.map(l => l.text).join('\n'));
++          const privateNames = new Set<string>();
++          for (const tokens of lexedBody.lines) {
++            const words = tokens.map(t => t.value);
++            if (words[0] !== 'private') continue;
++            const at = words.indexOf('method');
++            const name = at >= 0 ? words[at + 1] : words.filter(w => !['private', 'static', 'constant', 'readonly'].includes(w))[1];
++            if (name === 'onInit') privateNames.add(name);
++          }
++          body = body.map((l, j) => {
++            let text = l.text;
++            for (const token of [...lexedBody.lines[j]!].reverse()) {
++              if (!privateNames.has(token.value)) continue;
++              const index = lexedBody.lines[j]!.indexOf(token);
++              const tokens = lexedBody.lines[j]!;
++              if (tokens[index - 1]?.value === '.' && !['this', 'thistype', undefined].includes(tokens[index - 2]?.value)) continue;
++              const prefix = `__cg_${def.qualified.replace(/\W/g, '_')}_`;
++              text = text.slice(0, token.column) + prefix + token.value + text.slice(token.column + token.value.length);
++            }
++            return { ...l, text };
++          });
++        }
++        output.push(...project(body, [...scope], [...chain, key!]));
++        continue;
++      }
++      const imp = directive?.text.match(/^\/\/!\s*import\s+(?:jass\s+)?"([^"]+)"\s*(?:\/\/.*)?$/);
++      if (imp && line.via) { warn(line, 'Import inside a generated projection is not expanded; check JassHelper import ordering.'); } else if (imp) {
++        const raw = imp[1]!.replace(/\\/g, '/');
++        imported.push({ path: imp[1]!, line: line.anchor });
++        const candidates = [...new Set([path.posix.normalize(path.posix.join(path.posix.dirname(file), raw)), path.posix.normalize(raw)])];
++        if (path.posix.isAbsolute(raw) || /^[A-Za-z]:/.test(raw) || candidates.filter(p => !p.startsWith('../') && catalog.files.has(p)).length !== 1) warn(line, `Import ${imp[1]} unavailable or ambiguous within indexed scope; no external file was read.`);
++      } else if (directive && ['runtextmacro', 'import'].includes(directive.kind) && !macro) warn(line, `Unsupported ${directive.kind} directive syntax; not expanded.`);
++      output.push(line);
++      if (keyword && scopes.has(keyword) && words[head + 1]) scope.push(words[head + 1]!);
++      else if (keyword && ['endlibrary', 'endscope', 'endstruct', 'endmodule', 'endinterface'].includes(keyword)) scope.pop();
++    }
++    return output;
++  };
++  const lines = declaredExists(project(source.split(/\r?\n/).map((text, i) => ({ text, file, line: i + 1, anchor: i + 1 })), [], []));
++  return { source: lines.map(l => l.text).join('\n'), lines, errors, imported };
++}
+--- before/src/resolution/jass.ts
++++ after/src/resolution/jass.ts
+@@ -1,5 +1,6 @@
+ import type { Node } from '../types';
+ import type { ResolutionContext, ResolvedRef, UnresolvedRef } from './types';
++import * as path from 'node:path';
+ 
+ const isJass = (node: Node) => node.language === 'jass' || node.language === 'vjass';
+ const parentName = (name: string) => name.includes('.') ? name.slice(0, name.lastIndexOf('.')) : '';
+@@ -13,12 +14,26 @@
+ export function resolveJassReference(ref: UnresolvedRef, ctx: ResolutionContext): ResolvedRef | null {
+   const from = ctx.getNodeById?.(ref.fromNodeId) ?? ctx.getNodesInFile(ref.filePath).find(n => n.id === ref.fromNodeId);
+   if (!from) return null;
++  if (ref.referenceKind === 'imports' && ref.referenceName.startsWith('__jass_import__:')) {
++    const raw = ref.referenceName.slice('__jass_import__:'.length).replace(/\\/g, '/');
++    if (path.posix.isAbsolute(raw) || /^[A-Za-z]:/.test(raw)) return null;
++    const candidates = [...new Set([path.posix.normalize(path.posix.join(path.posix.dirname(ref.filePath), raw)), path.posix.normalize(raw)])]
++      .filter(p => p !== '..' && !p.startsWith('../') && ctx.getAllFiles().includes(p));
++    if (candidates.length !== 1) return null;
++    const target = ctx.getNodesInFile(candidates[0]!).find(n => isJass(n) && n.kind === 'file');
++    return target ? { original: ref, targetNodeId: target.id, confidence: 1, resolvedBy: 'file-path', metadata: { jassStaticSubset: true, resolutionScope: 'indexed-source-import' } } : null;
++  }
+   const enclosing = (node: Node) => parentName(node.qualifiedName);
++  const moduleScope = (node: Node): string | undefined => {
++    const module = [...(node.docstring ?? '').matchAll(/module ([\w.]+) defined at/g)].at(-1)?.[1];
++    return module ? parentName(module) : undefined;
++  };
++  const originScope = moduleScope(from);
+   const visible = (node: Node): boolean => {
+     if (!isJass(node)) return false;
+     if (node.visibility !== 'private') return true;
+     const scope = enclosing(node);
+-    return scope ? from.qualifiedName === scope || from.qualifiedName.startsWith(scope + '.') : from.filePath === node.filePath;
++    return scope ? from.qualifiedName === scope || from.qualifiedName.startsWith(scope + '.') || originScope === scope || !!originScope?.startsWith(scope + '.') : from.filePath === node.filePath;
+   };
+   const unique = (nodes: Node[]) => {
+     const distinct = [...new Map(nodes.filter(visible).map(n => [n.id, n])).values()];
+@@ -27,7 +42,12 @@
+   const scopesFor = (anchor: Node): string[] => {
+     const list: string[] = [];
+     for (let scope = anchor.kind === 'file' ? '' : anchor.qualifiedName; scope; scope = parentName(scope)) list.push(scope);
+-    return [...list, ''];
++    const origin = moduleScope(anchor);
++    if (origin) {
++      const typeAt = list.findIndex(s => ctx.getNodesByQualifiedName(s).some(n => isJass(n) && ['struct', 'interface'].includes(n.kind)));
++      list.splice(typeAt < 0 ? 0 : typeAt + 1, 0, origin);
++    }
++    return [...new Set([...list, ''])];
+   };
+   // A declaration owns its local/parameter scope; type refs originate on the
+   // declared variable itself and also see the enclosing function.
+@@ -78,6 +98,35 @@
+     return parent ? member(parent, name, kinds, visited) : null;
+   };
+   const CALLABLE = new Set(['function', 'method']);
++  const special = ref.referenceName.match(/^__jass_(property_get|property_set|factory|index|execute_func)__:(.+)$/);
++  if (special) {
++    const [, mode, expression] = special;
++    if (mode === 'execute_func') {
++      const candidate = unique(ctx.getNodesByName(expression!).filter(n => n.kind === 'function' && n.qualifiedName === expression));
++      return candidate ? { original: ref, targetNodeId: candidate.id, confidence: 1, resolvedBy: 'qualified-name', metadata: { jassStaticSubset: true, resolutionScope: 'literal-execute-func' } } : null;
++    }
++    const parts = expression!.split('.');
++    const name = parts.pop()!;
++    const receiver = parts.join('.');
++    let type: Node | undefined;
++    if (mode === 'factory') {
++      const factory = resolveJassReference({ ...ref, referenceKind: 'calls', referenceName: receiver }, ctx);
++      const node = factory && ctx.getNodeById?.(factory.targetNodeId);
++      type = node?.kind === 'struct' ? node : node?.returnType === 'thistype'
++        ? ctx.getNodesByQualifiedName(parentName(node.qualifiedName)).find(n => TYPES.has(n.kind))
++        : node?.returnType ? lookup(node.returnType, TYPES, node) : undefined;
++    } else {
++      const binding = lookup(receiver, new Set(['variable', 'parameter', 'field', 'constant']));
++      if (mode === 'index' && binding && !/\barray\b/.test(binding.signature ?? '')) return null;
++      type = receiver === 'thistype' ? owningType : binding ? declaredType(binding) : receiver === 'this' ? owningType : lookup(receiver, TYPES);
++    }
++    if (!type) return null;
++    const operator = mode!.startsWith('property_');
++    // A real field shadows any guessed property dispatch; unknown chains stay unresolved.
++    if (operator && member(type, name, new Set(['field', 'variable', 'constant'])) !== undefined) return null;
++    const target = member(type, operator ? `operator ${name}${mode === 'property_set' ? '=' : ''}` : name, new Set(['method']));
++    return target ? { original: ref, targetNodeId: target.id, edgeKind: 'calls', confidence: 0.95, resolvedBy: 'qualified-name', metadata: { jassStaticSubset: true, resolutionScope: operator ? 'declared-property-operator' : `declared-${mode}-receiver` } } : null;
++  }
+   let target: Node | undefined;
+   let reason = 'lexical-scope';
+   if (ref.referenceKind === 'imports') target = lookup(ref.referenceName, new Set(['namespace']));
+@@ -100,12 +149,12 @@
+       const method = parts.pop()!;
+       const receiver = parts.join('.');
+       const binding = lookup(receiver, new Set(['variable', 'parameter', 'field', 'constant']));
+-      let type = receiver === 'this' || receiver === 'thistype' ? owningType : binding ? declaredType(binding) : lookup(receiver, TYPES);
++      let type = receiver === 'thistype' ? owningType : binding ? declaredType(binding) : receiver === 'this' ? owningType : lookup(receiver, TYPES);
+       let staticReceiver = !binding && receiver !== 'this';
+       if (!type && parts.length > 1) {
+         const first = parts.shift()!;
+         const firstBinding = lookup(first, new Set(['variable', 'parameter', 'field', 'constant']));
+-        type = first === 'this' || first === 'thistype' ? owningType : firstBinding ? declaredType(firstBinding) : lookup(first, TYPES);
++        type = first === 'thistype' ? owningType : firstBinding ? declaredType(firstBinding) : first === 'this' ? owningType : lookup(first, TYPES);
+         staticReceiver = false;
+         for (const field of parts) {
+           const declared = type && member(type, field, new Set(['field', 'variable']));
+@@ -113,9 +162,14 @@
+         }
+       }
+       if (type) {
+-        target = member(type, method, new Set(['method'])) ?? undefined;
++        const declared = member(type, method, new Set(['method']));
++        target = declared ?? undefined;
+         if (staticReceiver && target && !target.isStatic) target = undefined;
+         reason = 'declared-receiver-type';
++        if (ref.referenceKind === 'calls' && declared === undefined && type.kind === 'struct' && !/\bextends\b/.test(type.signature ?? '') && ['allocate', 'create', 'destroy', 'deallocate'].includes(method)) {
++          if (staticReceiver !== ['allocate', 'create'].includes(method)) return null;
++          return { original: ref, targetNodeId: type.id, confidence: 0.95, resolvedBy: 'qualified-name', edgeKind: staticReceiver ? 'instantiates' : 'references', metadata: { jassStaticSubset: true, resolutionScope: 'generated-struct-lifecycle', jassBuiltin: method } };
++        }
+       } else {
+         // Qualified library/scope functions have no receiver instance.
+         target = lookup(ref.referenceName, new Set(['function']));
+@@ -123,6 +177,15 @@
+     }
+     if (target && !CALLABLE.has(target.kind)) target = undefined;
+   }
++  if (!target && ref.referenceKind === 'calls' && /\.(execute|evaluate)$/.test(ref.referenceName)) {
++    const receiver = ref.referenceName.replace(/\.(execute|evaluate)$/, '');
++    if (lookup(receiver, new Set(['variable', 'parameter', 'field', 'constant']))) return null;
++    const direct = resolveJassReference({ ...ref, referenceName: ref.referenceName.replace(/\.(execute|evaluate)$/, '') }, ctx);
++    const callable = direct && ctx.getNodeById?.(direct.targetNodeId);
++    if (direct && callable && (callable.kind === 'function' || (callable.kind === 'method' && callable.isStatic))) {
++      return { ...direct, original: ref, metadata: { ...direct.metadata, resolutionScope: 'named-execute-evaluate' } };
++    }
++  }
+   return target ? {
+     original: ref, targetNodeId: target.id, confidence: 0.95,
+     resolvedBy: ref.referenceKind === 'function_ref' ? 'function-ref' : 'qualified-name',
+--- before/src/mcp/tools.ts
++++ after/src/mcp/tools.ts
+@@ -2649,7 +2649,7 @@
+     if (jass.length) {
+       const diagnostics = jass.flatMap(f => (f.record?.errors ?? []).map(e => `${f.path}:${e.line ?? 1}: ${e.message}`));
+       const details = diagnostics.slice(0, 6).map(e => `> ${e.slice(0, 300)}`).join('\n');
+-      text = '> JASS/vJASS local support: structural/static subset. No macro/import/module expansion or dynamic dispatch; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.\n' +
++      text = '> JASS/vJASS local support: structural/static subset. Bounded macro/module projections and indexed-file import links; generated members anchor to invocation source, not expanded bodies. Computed dispatch and other unmodeled cases remain unresolved; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.\n' +
+         (details ? details + '\n' : '') +
+         (diagnostics.length > 6 ? `> ${diagnostics.length - 6} more extraction diagnostics in these files.\n` : '') + '\n' + text;
+     }
+--- before/src/mcp/server-instructions.ts
++++ after/src/mcp/server-instructions.ts
+@@ -20,9 +20,15 @@
+ export const SERVER_INSTRUCTIONS = `# Codegraph — code intelligence over an indexed knowledge graph
+ 
+ This local build adds JASS/vJASS (.j/.jass/.vjass) through a structural/static
+-extractor. It does not expand textmacros, imports, module implementations or
+-dynamic dispatch, and does not validate Classic 1.27b compatibility. Preserve
+-extraction diagnostics; use JassHelper/pJASS for compilation and correctness.
++extractor with bounded project-wide textmacro/module projections and import
++links limited to indexed source files. Generated declarations anchor to the
++invocation; their docstrings retain definition origins, and source excerpts
++remain the original on-disk text. Known named helpers, declared property
++operators and typed factory/array receivers can resolve; computed runtime
++dispatch remains limited. Only simple thistype.member.exists conditions backed
++by unconditional declarations are simplified; other conditions remain potential.
++This does not validate Classic 1.27b compatibility.
++Preserve diagnostics; use JassHelper/pJASS for compilation and correctness.
+ Additional graph links may be static or inferred: read each link label.
+ A static JASS link does not demonstrate runtime dispatch.
+ 
+@@ -99,8 +105,9 @@
+ export const SERVER_INSTRUCTIONS_NO_ROOT_INDEX = `# Codegraph — available (per-project; pass projectPath)
+ 
+ This local build supports a structural/static subset of JASS/vJASS, without
+-macro/import/module expansion or dynamic dispatch. Preserve diagnostics and
+-use JassHelper/pJASS for compilation; a graph is not Classic 1.27b validation.
++general runtime dispatch. Bounded macro/module projections anchor generated
++members at invocation sites; imports only link indexed files. Preserve
++diagnostics and use JassHelper/pJASS; a graph is not Classic 1.27b validation.
+ 
+ Codegraph is a SQLite knowledge graph of a codebase's symbols, edges, and
+ files (30+ languages): one \`codegraph_explore\` call returns the verbatim, line-numbered source
+--- before/src/mcp/version.ts
++++ after/src/mcp/version.ts
+@@ -27,7 +27,7 @@
+     if (typeof parsed?.version === 'string' && parsed.version.length > 0) {
+       // Local fork identity: never reuse a vanilla 1.6.2 daemon, whose extractor
+       // cannot read JASS/vJASS. The upstream package version is left unchanged.
+-      return `${parsed.version}+jass-vjass.2`;
++      return `${parsed.version}+jass-vjass.3`;
+     }
+   } catch {
+     // Fall through to sentinel.
+--- before/src/extraction/extraction-version.ts
++++ after/src/extraction/extraction-version.ts
+@@ -21,4 +21,4 @@
+  * turns the re-index hint into noise — keep it honest (see CLAUDE.md, "Honesty
+  * in the product is load-bearing").
+  */
+-export const EXTRACTION_VERSION = 29; // JASS inactive regions, literals and caller ownership changed.
++export const EXTRACTION_VERSION = 30; // JASS project projections, imports and declared indirect/property receivers.
+--- before/__tests__/jass-expansion.test.ts
++++ after/__tests__/jass-expansion.test.ts
+@@ -0,0 +1,155 @@
++import { afterEach, describe, expect, it } from 'vitest';
++import * as fs from 'node:fs';
++import * as os from 'node:os';
++import * as path from 'node:path';
++import { CodeGraph } from '../src';
++import { extractFromSource } from '../src/extraction/tree-sitter';
++
++describe('JASS project expansion', { timeout: 60000 }, () => {
++  let root: string;
++  let cg: CodeGraph | undefined;
++  const init = async (files: Record<string, string>) => {
++    root = fs.mkdtempSync(path.join(os.tmpdir(), 'cg-jass-expansion-'));
++    for (const [file, text] of Object.entries(files)) fs.writeFileSync(path.join(root, file), text);
++    cg = await CodeGraph.init(root);
++    await cg.indexAll();
++  };
++  const calls = (name: string) => {
++    const node = cg!.getNodesByQualifiedName(name)[0];
++    expect(node, name).toBeDefined();
++    return cg!.getCallees(node!.id).map(c => c.node.qualifiedName);
++  };
++  const graph = () => cg!.getFiles().flatMap(f => cg!.getNodesInFile(f.path)).flatMap(n => cg!.getOutgoingEdges(n.id).map(e => `${e.source}|${e.target}|${e.kind}|${e.line ?? ''}|${JSON.stringify(e.metadata ?? {})}`)).sort();
++  afterEach(() => { cg?.destroy(); cg = undefined; if (root) fs.rmSync(root, { recursive: true, force: true }); });
++
++  it('specializes nested module methods and thistype callbacks for each implementing struct', async () => {
++    await init({
++      'modules.j': 'module Launch\nstatic method launch takes nothing returns nothing\ncall thistype.onPeriod()\nendmethod\nendmodule\nmodule Bundle\nimplement Launch\nendmodule\n',
++      'users.j': 'struct One extends array\nstatic method onPeriod takes nothing returns nothing\nendmethod\nimplement Bundle\nstatic method start takes nothing returns nothing\ncall launch()\nendmethod\nendstruct\nstruct Two extends array\nstatic method onPeriod takes nothing returns nothing\nendmethod\nimplement Bundle\nendstruct\n',
++    });
++    expect(calls('One.start')).toContain('One.launch');
++    expect(calls('One.launch')).toEqual(['One.onPeriod']);
++    expect(calls('Two.launch')).toEqual(['Two.onPeriod']);
++    const node = cg!.getNodesByQualifiedName('One.launch')[0]!;
++    expect(node.filePath).toBe('users.j');
++    expect(node.startLine).toBe(4);
++    expect(node.docstring).toContain('modules.j:2');
++  });
++
++  it('expands parameterized cross-file textmacros while preserving the invocation source location', async () => {
++    await init({
++      'macros.j': '//! textmacro DECL takes NAME, TARGET\nfunction $NAME$ takes nothing returns nothing\ncall $TARGET$()\nendfunction\n//! endtextmacro\n',
++      'users.j': 'function Ping takes nothing returns nothing\nendfunction\n//! runtextmacro DECL("Run", "Ping")\n',
++    });
++    expect(calls('Run')).toEqual(['Ping']);
++    expect(cg!.getNodesByQualifiedName('Run')[0]!.startLine).toBe(3);
++  });
++
++  it('rebuilds unchanged module and macro consumers after modification and deletion', async () => {
++    await init({ 'defs.j': 'module M\nstatic method run takes nothing returns nothing\ncall Ping()\nendmethod\nendmodule\n',
++      'use.j': 'function Ping takes nothing returns nothing\nendfunction\nfunction Pong takes nothing returns nothing\nendfunction\nstruct S extends array\nimplement M\nendstruct\n' });
++    expect(calls('S.run')).toEqual(['Ping']);
++    fs.writeFileSync(path.join(root, 'defs.j'), fs.readFileSync(path.join(root, 'defs.j'), 'utf8').replace('Ping()', 'Pong()'));
++    await cg!.sync({ paths: ['defs.j'] });
++    expect(calls('S.run')).toEqual(['Pong']);
++    const incremental = graph();
++    cg!.destroy(); cg = await CodeGraph.recreate(root); await cg.indexAll();
++    expect(graph()).toEqual(incremental);
++    fs.unlinkSync(path.join(root, 'defs.j'));
++    await cg!.sync({ paths: ['defs.j'] });
++    expect(cg!.getNodesByQualifiedName('S.run')).toEqual([]);
++    const deleted = graph();
++    cg!.destroy(); cg = await CodeGraph.recreate(root); await cg.indexAll();
++    expect(graph()).toEqual(deleted);
++  });
++
++  it('links only imports within the indexed scope without reading or indexing outside paths', async () => {
++    await init({ 'a.j': '//! import "b.j"\n//! import "../outside.j"\n', 'b.j': 'function B takes nothing returns nothing\nendfunction\n' });
++    const file = cg!.getNodesInFile('a.j').find(n => n.kind === 'file')!;
++    expect(cg!.getCallees(file.id).map(c => [c.node.filePath, c.edge.kind])).toContainEqual(['b.j', 'imports']);
++    expect(cg!.getFiles()).toHaveLength(2);
++  });
++
++  it('keeps recursion and duplicate definitions unresolved, never choosing another module', async () => {
++    await init({ 'a.j': 'module M\nstatic method wrong takes nothing returns nothing\nendmethod\nendmodule\n',
++      'b.j': 'module M\nstatic method other takes nothing returns nothing\nendmethod\nendmodule\nstruct S\nimplement M\nendstruct\nmodule Cycle\nimplement Cycle\nendmodule\nstruct C\nimplement Cycle\nendstruct\n' });
++    expect(cg!.getNodesByQualifiedName('S.wrong')).toEqual([]);
++    expect(cg!.getNodesByQualifiedName('S.other')).toEqual([]);
++    expect(cg!.getFiles().some(f => f.errors?.some(e => /ambiguous|cycle/i.test(e.message)))).toBe(true);
++  });
++
++  it('ignores directive-looking text inside inactive regions, comments and strings', () => {
++    const source = '//! textmacro T\nfunction Generated takes nothing returns nothing\nendfunction\n//! endtextmacro\n/*\n//! runtextmacro T()\n*/\n//! novjass\n//! runtextmacro T()\n//! endnovjass\nfunction Real takes nothing returns nothing\nlocal string s = "//! runtextmacro T()"\nendfunction\n';
++    expect(extractFromSource('safe.j', source).nodes.some(n => n.name === 'Generated')).toBe(false);
++  });
++
++  it('keeps module definition scope for private helpers and independent module initializers', async () => {
++    await init({ 'defs.j': 'library Defs\nprivate function Captured takes nothing returns nothing\nendfunction\nmodule M\nstatic method run takes nothing returns nothing\ncall Captured()\nendmethod\nprivate static method onInit takes nothing returns nothing\ncall thistype.run()\nendmethod\nendmodule\nmodule N\nprivate static method onInit takes nothing returns nothing\nendmethod\nendmodule\nendlibrary\n',
++      'use.j': 'library Use\nstruct S extends array\nimplement M\nimplement N\nendstruct\nendlibrary\n' });
++    expect(calls('Use.S.run')).toEqual(['Defs.Captured']);
++    expect(calls('Use.S')).toEqual(expect.arrayContaining(['Use.S.__cg_Defs_M_onInit', 'Use.S.__cg_Defs_N_onInit']));
++  });
++
++  it('resolves explicit function helpers and literal ExecuteFunc without following computed strings', async () => {
++    await init({ 'functions.j': 'function Ping takes nothing returns nothing\nendfunction\nfunction Run takes string target returns nothing\ncall Ping.execute()\ncall ExecuteFunc("Ping")\ncall ExecuteFunc(target)\nendfunction\n' });
++    expect(calls('Run')).toContain('Ping');
++    const run = cg!.getNodesByQualifiedName('Run')[0]!;
++    const ping = cg!.getNodesByQualifiedName('Ping')[0]!;
++    const refs = cg!.getOutgoingEdges(run.id).filter(e => e.target === ping.id).map(edge => ({ edge }));
++    expect(refs.some(c => c.edge.metadata?.resolutionScope === 'named-execute-evaluate')).toBe(true);
++    expect(refs.some(c => c.edge.metadata?.resolutionScope === 'literal-execute-func')).toBe(true);
++    expect(cg!.getFiles()[0]!.errors?.some(e => /Computed dispatch/.test(e.message))).toBe(true);
++  });
++
++  it('resolves declared property operators and factory/index receivers without guessing unknown types', async () => {
++    await init({ 'operators.j': 'struct S extends array\nmethod tick takes nothing returns nothing\nendmethod\nmethod operator value takes nothing returns integer\nreturn 1\nendmethod\nmethod operator value= takes integer v returns nothing\nendmethod\nstatic method make takes nothing returns thistype\nreturn 1\nendmethod\nendstruct\nglobals\nS array values\ninteger array other\nendglobals\nfunction Run takes S s returns nothing\nlocal integer n = s.value\nset s.value = 2\ncall S.make().tick()\ncall values[0].tick()\ncall other[0].tick()\ncall Unknown().tick()\nendfunction\n' });
++    expect(calls('Run')).toEqual(expect.arrayContaining(['S.operator value', 'S.operator value=', 'S.make', 'S.tick']));
++    const run = cg!.getNodesByQualifiedName('Run')[0]!;
++    const target = cg!.getNodesByQualifiedName('S.tick')[0]!;
++    const tick = cg!.getOutgoingEdges(run.id).filter(e => e.target === target.id).map(edge => ({ edge }));
++    expect(tick).toHaveLength(2);
++    expect(tick.map(c => c.edge.metadata?.resolutionScope).sort()).toEqual(['declared-factory-receiver', 'declared-index-receiver']);
++  });
++
++  it('models compiler-provided lifecycle only on normal structs without inventing method bodies', async () => {
++    await init({ 'alloc.j': 'struct S\nstatic method make takes nothing returns thistype\nreturn thistype.allocate()\nendmethod\nendstruct\nstruct A extends array\nendstruct\nfunction Run takes S s returns nothing\ncall s.destroy()\ncall A.create()\nendfunction\n' });
++    expect(calls('S.make')).toContain('S');
++    expect(cg!.getNodesByQualifiedName('S.allocate')).toEqual([]);
++    const run = cg!.getNodesByQualifiedName('Run')[0]!;
++    expect(cg!.getCallees(run.id).map(c => [c.node.qualifiedName, c.edge.kind, c.edge.metadata?.jassBuiltin])).toContainEqual(['S', 'references', 'destroy']);
++    expect(calls('Run')).not.toContain('A');
++  });
++
++  it('invalidates macro consumers and never expands excluded definitions', async () => {
++    await init({ 'codegraph.json': JSON.stringify({ exclude: ['excluded.j'], extensions: { '.incj': 'vjass' } }),
++      'excluded.j': '//! textmacro HIDDEN\nfunction Wrong takes nothing returns nothing\nendfunction\n//! endtextmacro\n',
++      'macro.incj': '//! textmacro DEF takes NAME\nfunction $NAME$ takes nothing returns nothing\nendfunction\n//! endtextmacro\n',
++      'use.j': '//! runtextmacro DEF("Before")\n//! runtextmacro HIDDEN()\n//! import "excluded.j"\n' });
++    expect(cg!.getNodesByQualifiedName('Before')).toHaveLength(1);
++    expect(cg!.getNodesByQualifiedName('Wrong')).toEqual([]);
++    fs.writeFileSync(path.join(root, 'macro.incj'), fs.readFileSync(path.join(root, 'macro.incj'), 'utf8').replace('$NAME$', '$NAME$After'));
++    await cg!.sync({ paths: ['macro.incj'] });
++    expect(cg!.getNodesByQualifiedName('Before')).toEqual([]);
++    expect(cg!.getNodesByQualifiedName('BeforeAfter')).toHaveLength(1);
++  });
++
++  it('retains negative coverage diagnostics for unsupported directives and bounded recursion', () => {
++    const source = '//! textmacro LOOP\n//! runtextmacro LOOP()\n//! endtextmacro\n//! runtextmacro LOOP()\n//! runtextmacro BROKEN(noQuotes)\n//! import noQuotes\n';
++    const result = extractFromSource('bad.j', source);
++    expect(result.errors.some(e => /cycle/.test(e.message))).toBe(true);
++    expect(result.errors.some(e => /BROKEN.*not expanded/.test(e.message))).toBe(true);
++    expect(result.errors.some(e => /Unsupported import/.test(e.message))).toBe(true);
++  });
++
++  it('uses an explicitly typed local this alias instead of the implementing struct', async () => {
++    await init({ 'alias.j': 'struct Other extends array\nmethod tick takes nothing returns nothing\nendmethod\nendstruct\nmodule M\nstatic method run takes nothing returns nothing\nlocal Other this = 1\ncall this.tick()\nendmethod\nendmodule\nstruct S extends array\nmethod tick takes nothing returns nothing\nendmethod\nimplement M\nendstruct\n' });
++    expect(calls('S.run')).toEqual(['Other.tick']);
++  });
++
++  it('discards exists fallbacks only when the projected struct has an unconditional declaration', async () => {
++    await init({ 'exists.j': 'module M\nmethod describe takes nothing returns nothing\nendmethod\nendmodule\nstruct S extends array\nimplement M\nstatic if not thistype.describe.exists then\nmethod describe takes nothing returns nothing\nendmethod\nendif\nstatic method run takes S s returns nothing\ncall s.describe()\nendmethod\nendstruct\nstruct Unknown extends array\nstatic if FLAG then\nmethod maybe takes nothing returns nothing\nendmethod\nendif\nstatic if not thistype.maybe.exists then\nmethod maybe takes nothing returns nothing\nendmethod\nendif\nendstruct\n' });
++    expect(cg!.getNodesByQualifiedName('S.describe')).toHaveLength(1);
++    expect(calls('S.run')).toEqual(['S.describe']);
++    expect(cg!.getNodesByQualifiedName('Unknown.maybe')).toHaveLength(2);
++  });
++});
+--- before/__tests__/jass-vjass.test.ts
++++ after/__tests__/jass-vjass.test.ts
+@@ -48,8 +48,9 @@
+   it('excludes templates and Zinc, exposes directives, and does not treat a commented directive as real', () => {
+     const source = `/*\n//! zinc\n*/\n//! textmacro M\n${fn('Template')}//! endtextmacro\n//! zinc\nfunction NotJass() {}\n//! endzinc\n//! runtextmacro M()\n//! import "not-followed.j"\n${fn('Real')}`;
+     const result = extractFromSource('main.j', source);
+-    expect(result.nodes.filter(n => n.kind === 'function').map(n => n.name)).toEqual(['Real']);
+-    expect(result.errors.filter(e => e.code === 'jass_partial_coverage')).toHaveLength(4);
++    expect(result.nodes.filter(n => n.kind === 'function').map(n => n.name)).toEqual(['Template', 'Real']);
++    expect(result.errors.some(e => /Zinc|zinc/.test(e.message))).toBe(true);
++    expect(result.errors.some(e => /Static projection/.test(e.message))).toBe(true);
+   });
+ 
+   it('reports malformed input instead of claiming a complete parse', () => {
+@@ -79,7 +80,7 @@
+     const result = extractFromSource('callback.j', fn('Wire', ' call TimerStart(t, 1., false, function Done)\n call Register(function Counter.done)\n call ExecuteFunc("Hidden")\n call Do.evaluate()'));
+     expect(result.unresolvedReferences.filter(r => r.referenceKind === 'function_ref').map(r => r.referenceName)).toEqual(['Done', 'Counter.done']);
+     expect(result.unresolvedReferences.some(r => r.referenceName === 'Hidden')).toBe(false);
+-    expect(result.errors.filter(e => e.severity === 'warning')).toHaveLength(2);
++    expect(result.errors.filter(e => e.severity === 'warning')).toHaveLength(1);
+   });
+ 
+   it('does not invent this.method for a chained factory/index receiver', () => {
+@@ -91,14 +92,15 @@
+   it('interfaces have bodyless method declarations and module expansion stays explicit', () => {
+     const result = extractFromSource('types.vjass', 'interface I\n method tick takes nothing returns nothing defaults nothing\nendinterface\nmodule M\n method ping takes nothing returns nothing\n endmethod\nendmodule\nstruct S\n implement M\nendstruct\n');
+     expect(result.errors.some(e => e.severity === 'error')).toBe(false);
+-    expect(result.errors.some(e => /implement/.test(e.message))).toBe(true);
++    expect(result.nodes.some(n => n.qualifiedName === 'S.ping')).toBe(true);
++    expect(result.errors.some(e => /Static projection/.test(e.message))).toBe(true);
+     expect(result.nodes.find(n => n.qualifiedName === 'I.tick')?.isAbstract).toBe(true);
+   });
+ 
+   it('does not merge distinct operator bodies and makes missing access dispatch explicit', () => {
+     const result = extractFromSource('operators.vjass', 'struct S\n method operator value takes nothing returns integer\n return 0\n endmethod\n method operator value= takes integer v returns nothing\n endmethod\nendstruct\n');
+     expect(result.nodes.filter(n => n.kind === 'method').map(n => n.name)).toEqual(['operator value', 'operator value=']);
+-    expect(result.errors.filter(e => e.code === 'jass_partial_coverage')).toHaveLength(2);
++    expect(result.errors.filter(e => e.severity === 'error')).toHaveLength(0);
+   });
+ 
+   it('keeps unterminated multiline strings out of executable references', () => {
+@@ -248,7 +250,7 @@
+       const response = await handler.execute('codegraph_node', args);
+       expect(response.isError).not.toBe(true);
+       expect(response.content[0]?.text).toContain('JASS/vJASS local support');
+-      expect(response.content[0]?.text).toContain('Directive runtextmacro');
++      expect(response.content[0]?.text).toContain('NOT_EXPANDED: definition unavailable');
+     }
+   });
+ 
+--- before/JASS-VJASS.md
++++ after/JASS-VJASS.md
+@@ -0,0 +1,155 @@
++# Local JASS/vJASS extension
++
++This checkout is CodeGraph **v1.6.2**, upstream commit
++`6560052a6f856855d3f71eee838fd66ccfa4285d`, with a local Classic Warcraft source
++extractor and resolver. It is not an official upstream release. Package version
++stays 1.6.2; the MCP/daemon identity is `1.6.2+jass-vjass.3` so a vanilla or older
++local daemon cannot silently serve this revision. Extraction version is 30;
++rebuild older indexes to include context-specific generated declarations.
++
++## What is integrated
++
++`.j` and `.jass` detect as `jass`; `.vjass` detects as `vjass`. Both dialect IDs
++use the same standalone TypeScript structural parser, inside the original
++extraction pipeline, worker pool, SQLite/FTS index, resolver and incremental sync.
++There is no subprocess bridge to jassgraph and no Go dependency. The original
++`codegraph_explore`, graph traversal, callers, callees, impact, search, CLI and
++watcher are retained. Other languages retain the original Rust/WASM paths.
++
++The extractor records functions/natives, parameters, locals/globals/constants,
++type aliases, libraries/scopes, structs, interfaces, modules, fields and methods.
++References include textual calls, explicit `function Name` callbacks, initializer
++calls, library requirements, declaration types and struct inheritance.
++Inactive `//! novjass` documentation is excluded before lexical analysis, and
++JassHelper multiline strings are masked without losing following coordinates.
++Local initializer calls belong to their enclosing function/method. Unqualified
++struct methods resolve in their owning type before same-named global functions.
++Inheritance headers exclude comments; ambiguous conditional members remain
++unresolved instead of falling through to a global homonym. Ordinary declared
++`execute`/`evaluate` methods resolve on known receivers; indirect helpers remain
++outside the supported subset. Secondary symbol/file MCP reads retain the same
++JASS coverage notes and diagnostics as exploration.
++
++Resolution is case-sensitive and restricted to JASS/vJASS declarations. It uses
++lexical scopes, private visibility, explicit public prefixes (`Library_Name`),
++declared local/parameter/field types, `this`, `thistype`, and explicit inheritance.
++Ambiguous functions and unknown method receivers remain unresolved; there is no
++fallback to a unique method elsewhere in the project. Resolved edges carry
++`metadata.jassStaticSubset` and a conservative provenance marker.
++
++## Revision 3: project projections and declared indirection
++
++The existing scoped source scanner supplies a catalog of textmacro and module
++bodies. Parameterized textmacros (quoted arguments without escapes) and nested
++module implementations are expanded as finite static projections. Each consumer
++has its own method/field declarations and thistype callback context. Module
++origin scope is retained for private library helpers; independent private module
++onInit methods have internal graph names. Cycles, ambiguity, unknown arguments
++and depth/size limits are diagnostics, never an arbitrary selected definition.
++Limits: 24 nested projections, 50,000 processed lines and 4 MiB of projected text.
++
++Projected nodes belong to the consumer file and anchor to the real invocation
++line. Their docstrings identify the original definition file/line and expansion
++chain. The shown source remains the unmodified on-disk invocation, **not** a
++verbatim expanded method body. Macro/module bodies do not become editable files.
++An edit/add/delete of a JASS source invalidates all in-scope JASS consumers for
++re-extraction, including unchanged consumers. Other languages keep their normal
++incremental path. This conservative invalidation costs more than a dependency-
++minimal refresh; it prevents stale generated members.
++
++Imports link indexed JASS source file nodes only: no external files are opened
++or indexed, and arbitrary JassHelper lookup folders are not assumed. Relative
++importer/root alternatives must identify one file. Imports generated by another
++projection are left unsupported pending compiler-order evidence.
++
++Named function/static-method execute/evaluate helpers and simple literal
++ExecuteFunc global names can resolve. Computed function names and function-
++interface values remain unresolved. Declared property getter/setters, single
++factory-return chains, and arrays with declared struct element types can resolve.
++Normal non-inheriting structs' built-in allocate/create/destroy/deallocate are
++represented as lifecycle dependencies to the type, without fabricated bodies;
++array structs get no automatic allocator. Native calls and callbacks are static
++potential dependencies, not proof of execution or callback registration firing.
++
++## Language coverage limits
++
++This is **partial static language support**, not complete JassHelper semantics:
++
++- No Zinc, hooks, delegates or keys; no general data-flow/type inference.
++- Only a simple thistype.member.exists condition backed by an unconditional
++  public declaration in that exact projected struct is simplified (including
++  its negation). Absence, compound/elseif conditions, inheritance and debug
++  flags remain unknown; ambiguous conditional definitions stay unresolved.
++- Macro-generated module catalogs, escaped macro arguments, arbitrary compiler
++  import search paths, unsupported directives and advanced preprocessor cases
++  retain explicit limits. Private member collisions across modules are not
++  fully namespaced (except module initializers); they must not be guessed.
++- Function-interface value dispatch, computed ExecuteFunc, arbitrary receiver
++  chains, index operators and full destructor/onDestroy/inheritance semantics
++  remain unsupported. Lifecycle type edges do not prove a destructor call chain.
++- Headers are line-based. Invalid constructs and unsupported multiline headers
++  report diagnostics; this is not a compiler. Coordinates use one-based lines
++  and UTF-16 columns; sources follow the existing UTF-8 pipeline.
++- Missing edges do not establish missing consumers; index state complete only
++  describes the indexing operation. A clean graph is not a validation of the map.
++
++MCP responses retain coverage notes and relevant diagnostics. JassHelper/pJASS
++with the actual Classic APIs remain the compilation validators; game and
++multiplayer behavior require their own tests.
++
++## Local operation
++
++The Linux launcher is `/home/snz/.local/bin/codegraph`. It runs the Node 24.16.0
++runtime shipped in the verified upstream linux-x64 package, isolated under
++`/home/snz/.local/share/codegraph-vjass/runtime/`; it does not change CachyOS's
++system Node 26. Upstream's Linux kernel binary is retained for its supported
++languages. The launcher disables telemetry and update checks; avoid `upgrade`,
++which would replace local language changes with an upstream build.
++
++```bash
++codegraph init /absolute/source/project --yes
++codegraph query Ping --path /absolute/source/project --json
++codegraph explore 'Init Ping' --path /absolute/source/project
++codegraph sync /absolute/source/project
++```
++
++Create an index only in the project selected for the task; this writes a
++`.codegraph/` index. Sources and map archives are not rewritten. Old indexes
++should be rebuilt with `codegraph index /absolute/source/project`.
++MCP registration uses the original `serve --mcp`; default upstream tool discovery
++exposes `codegraph_explore`. The other original tools remain in the CLI/API and
++can be explicitly enabled with `CODEGRAPH_MCP_TOOLS=explore,search,node,callers,callees,impact,files,status`.
++
++## Evidence and reproducibility
++
++`__tests__/jass-vjass.test.ts` exercises the real extractor and SQLite pipeline,
++including private/public scopes, callback references, declared method receivers,
++ambiguity, persistent reopen and incremental/fresh-rebuild edge-set convergence.
++`scripts/probe-jass.mjs ROOT...` runs three static flow probes per selected root,
++then reconstructs the indexes and checks counts and unchanged source hashes.
++
++Local evidence:
++`/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/`.
++It includes the Classic fixture's JassHelper/pJASS result, exact Python graph
++comparison with upstream, and an independent MCP SDK connection/watch test.
++
++The upstream small/medium/large **real-repository agent A/B performance gate**
++has not been run: the Claude/Sonnet runtime required by that harness is not present
++in this session. The three local source sets (fixture, common.j, common.j+Blizzard.j)
++are correctness/scale probes, not three independent real repositories. Do not
++claim full language coverage, upstream acceptance, agent token savings, or a
++general performance improvement from these checks.
++
++Revision 2 evidence:
++`/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/`.
++It includes failing-before/passing-after regressions, JassHelper/pJASS fixtures,
++1054 passing tests across nine suites, copied real TerrainDev/inventory/UI
++sources and three RapidFire flow probes, plus a Python graph comparison with
++the pinned upstream package. Zero parse errors does not remove coverage warnings
++or establish complete language support. Already-running MCP processes must be
++reloaded to use the new in-memory code; rebuilding an index alone is insufficient.
++
++Revision 3 validation is recorded in the project plan
++`/home/snz/Documentos/ChatGPT/Proyect/docs/planes/codegraph-ampliacion-vjass.md`
++and `work/codegraph-ampliacion-vjass-20261021/`. Consult their current state;
++installation and a source build do not establish that an old MCP process reloaded.

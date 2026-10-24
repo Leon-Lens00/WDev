@@ -1,0 +1,60 @@
+{
+  "expected_identity": "1.6.2+jass-vjass.3",
+  "method": "App-managed MCP process started after the final compiled modules; independent MCP protocol and watcher verification are in mcp-final-verification.json.",
+  "old_pids": [
+    147600,
+    167649,
+    167868
+  ],
+  "current_chat_tool_call_after_reload": true,
+  "app_mcp_processes": [
+    {
+      "pid": 178799,
+      "parent": 177106,
+      "started_after_build": true
+    }
+  ],
+  "old_processes_exited": true,
+  "source_hashes_unchanged": true,
+  "indexes": [
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.3",
+        "indexed_with_extraction_version": "30"
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.3",
+        "indexed_with_extraction_version": "30"
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.3",
+        "indexed_with_extraction_version": "30"
+      }
+    }
+  ],
+  "passed": true,
+  "elapsed_seconds": 30.8,
+  "current_chat_roots_verified": [
+    "missiles",
+    "inventory",
+    "ui"
+  ],
+  "current_chat_reports": [
+    "current-chat-final-mcp-missiles.txt",
+    "current-chat-final-mcp-inventory.txt",
+    "current-chat-final-mcp-ui.txt"
+  ]
+}

@@ -1,0 +1,20 @@
+✔ map layout keeps row-major inventory and equipment identities (6.788915ms)
+✔ screen conversion round-trips at common aspects (0.185234ms)
+✔ invalid imports cannot introduce duplicate bindings or code through rawcodes (1.011373ms)
+✔ JASS preserves text escapes and runtime texture override (1.017579ms)
+✔ model bounds yield original constructor anchors and scales (0.211793ms)
+✔ group movement clamps one delta without changing relative spacing (4.310235ms)
+✔ each resize handle anchors the opposite side; no flipped or zero sizes (0.398822ms)
+✔ groups scale uniformly with their spacing and frame proportions (0.136336ms)
+✔ single panel and Shift resizing preserve aspect ratio (0.105115ms)
+✔ pixel coordinates use top-left origin and round-trip without exporting pixels (0.623886ms)
+✔ transformed original groups continue to validate as a v1 project (1.9176ms)
+✔ group scaling also scales text and respects its exportable font range (0.145378ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 64.721442

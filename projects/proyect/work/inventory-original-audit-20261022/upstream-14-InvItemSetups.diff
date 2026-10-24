@@ -1,0 +1,11 @@
+--- fresh141/014-InvItemSetups.j
++++ fresh143/014-InvItemSetups.j
+@@ -38,7 +38,7 @@
+         set itm.maxSockets = 1
+         
+         // Orb of Frost
+-        set itm = CreateInvItem('ofro', 'D04U', 1000, 'A003', " Adds 6 bonus cold damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and slow the movement speed and attack rate of the enemy for 1 second.")
++        set itm = CreateInvItem('ofro', 'D04U', 1000, 'A003', " Adds 6 bonus cold damage to the attack of a Hero when carried.")
+     
+         // Boots of Quel'Thalas +6
+         set itm = CreateInvItem('belv', 'B00I', 500, 0, " Increases the Agility of the Hero by 6 when worn.")

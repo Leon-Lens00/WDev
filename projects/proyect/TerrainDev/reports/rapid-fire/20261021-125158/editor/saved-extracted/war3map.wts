@@ -1,0 +1,167 @@
+﻿STRING 1
+{
+Swamped Temple_v2
+}
+
+STRING 2
+{
+1v1
+}
+
+STRING 3
+{
+Scientists, excavating a sunken temple soon discovered long lost ancestral artifacts. When the greedy goblins realised what these ancient ruins were hiding it was not long before they began to flood the researchers village and claim the sacred grounds.
+}
+
+STRING 4
+{
+Kai Trausenegger / Anomines
+}
+
+STRING 5
+{
+Player 1
+}
+
+STRING 6
+{
+Player 2
+}
+
+STRING 7
+{
+Force 1
+}
+
+STRING 12
+// Items: I000 (Lesser Rune of the Watcher), Name (Name (unam))
+{
+Lesser Rune of the Watcher
+}
+
+STRING 13
+// Destructibles: B000 (Summer Tree Wall_custom), Name (Name (bnam))
+{
+Summer Tree Wall_custom
+}
+
+STRING 14
+// Doodads: D000 (Rocks_custom), Name (Name (dnam))
+{
+Rocks_custom
+}
+
+STRING 15
+// Doodads: D004 (Arcane), Name (Name (dnam))
+{
+Arcane
+}
+
+STRING 16
+// Doodads: D005 (Pillars_ruin), Name (Name (dnam))
+{
+Pillars_ruin
+}
+
+STRING 17
+// Doodads: D006 (Rocks_custom2), Name (Name (dnam))
+{
+Rocks_custom2
+}
+
+STRING 18
+// Doodads: D007 (Pocket Factory), Name (Name (dnam))
+{
+Pocket Factory
+}
+
+STRING 19
+// Doodads: D00E (Kobold), Name (Name (dnam))
+{
+Kobold
+}
+
+STRING 20
+// Units: n000 (Wish), Name (Name (unam))
+{
+Wish
+}
+
+STRING 21
+// Doodads: D00A (Barrel_noPathing), Name (Name (dnam))
+{
+Barrel_noPathing
+}
+
+STRING 22
+// Abilities: A000 (Lesser Rune of the Watcher), Name (Name (anam))
+{
+Lesser Rune of the Watcher
+}
+
+STRING 23
+// Units: n001 (Net), Name (Name (unam))
+{
+Net
+}
+
+STRING 24
+// Doodads: D00F (Net), Name (Name (dnam))
+{
+Net
+}
+
+STRING 25
+// Units: dumi (Missile Dummy), Name (Name (unam))
+{
+Missile Dummy
+}
+
+STRING 26
+// Units: dcst (Dummy Caster), Name (Name (unam))
+{
+Dummy Caster
+}
+
+STRING 27
+// Units: rfex (Rapid Fire - Ejecutor), Name (Name (unam))
+{
+Rapid Fire - Ejecutor
+}
+
+STRING 28
+// Units: rfct (Rapid Fire - Controlador (Q)), Name (Name (unam))
+{
+Rapid Fire - Controlador (Q)
+}
+
+STRING 29
+// Units: rftg (Blanco de prueba), Name (Name (unam))
+{
+Blanco de prueba
+}
+
+STRING 30
+// Abilities: Arpf (Rapid Fire), Name (Name (anam))
+{
+Rapid Fire
+}
+
+STRING 31
+// Abilities: Arpf (Rapid Fire), Hotkey (Hotkey - Normal (ahky))
+{
+Q
+}
+
+STRING 32
+// Abilities: Arpf (Rapid Fire), Tip (Tooltip - Normal (atp1))
+{
+Rapid Fire (|cffffcc00Q|r)
+}
+
+STRING 33
+// Abilities: Arpf (Rapid Fire), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Dispara 6 misiles. Recast repone 6 sin reiniciar el intervalo de 0.25 s. Permite movimiento durante la rafaga.
+}
+

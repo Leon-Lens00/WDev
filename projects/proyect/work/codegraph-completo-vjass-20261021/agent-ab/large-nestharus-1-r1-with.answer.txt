@@ -1,0 +1,8 @@
+The chain is conditional, with an `ExpirationCode` carrying the timer association:
+
+- `Timer.create` calls `TimerList.add(getTimeoutId(timeout), onExpire, funcId)`. The ID is `R2I(timeout*320+.5)`; `add` recovers duration `t=id/320` and looks up `lists[id]`. [Systems/TimerTools/script.j:730](Systems/TimerTools/script.j:730), [script.j:605](Systems/TimerTools/script.j:605), [script.j:615](Systems/TimerTools/script.j:615).
+- If that list is empty, it allocates a timer, creates/registers its expiration record, and starts it; **no queue call occurs**. Classification is initialized as `isConst = (t <= 2*relativeOffset[id])`. [script.j:621](Systems/TimerTools/script.j:621).
+- For an existing list, queueing occurs when `isConst` and the head’s remaining time is **`< t/2`**, or when nonconstant and remaining time is **`<= relativeOffset[id]`**. Both branches first call `ExpirationCode.create(timerId,onExpire,funcId)`, then `CreationQueue.add(expirationCode)`. Other branches register immediately. [script.j:638](Systems/TimerTools/script.j:638).
+- `ExpirationCode.create` stores those three arguments. `CreationQueue.add` selects its queue through `expirationCode.timerId`, increments `toAdd`, appends through `first/last/next`, and terminates the link with zero. `TimerList.add` returns that expiration record as the public `Timer`. [script.j:334](Systems/TimerTools/script.j:334), [script.j:463](Systems/TimerTools/script.j:463), [script.j:674](Systems/TimerTools/script.j:674).
+
+This establishes source wiring; runtime execution was not tested.

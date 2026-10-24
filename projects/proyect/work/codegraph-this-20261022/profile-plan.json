@@ -1,0 +1,71 @@
+[
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+    "profile": {
+      "jass": {
+        "mode": "release",
+        "completeInputs": false,
+        "apiFiles": [
+          "codegraph-api/common.j",
+          "codegraph-api/Blizzard.j"
+        ]
+      },
+      "deprioritize": [
+        "codegraph-api/"
+      ]
+    },
+    "api_files": [
+      {
+        "source": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+        "target": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src/codegraph-api/common.j",
+        "sha256": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924"
+      },
+      {
+        "source": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+        "target": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src/codegraph-api/Blizzard.j",
+        "sha256": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c"
+      }
+    ],
+    "completeInputs_reason": "The index is source context, not the complete JassHelper translation unit; base war3map input is outside src, and inventory also includes an optional diagnostic probe.",
+    "mode_evidence": "Both project build scripts call FrozenThone/scripts/wc3.py vjass; its JassHelper command uses --scriptonly without --debug."
+  },
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+    "profile": {
+      "exclude": [
+        "build/",
+        "evidence/",
+        "runtime-isolated/",
+        "source-demo/",
+        "upstream/",
+        "studio-before/",
+        "__pycache__/"
+      ],
+      "jass": {
+        "mode": "release",
+        "completeInputs": false,
+        "apiFiles": [
+          "codegraph-api/common.j",
+          "codegraph-api/Blizzard.j"
+        ]
+      },
+      "deprioritize": [
+        "codegraph-api/"
+      ]
+    },
+    "api_files": [
+      {
+        "source": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+        "target": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/codegraph-api/common.j",
+        "sha256": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924"
+      },
+      {
+        "source": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+        "target": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/codegraph-api/Blizzard.j",
+        "sha256": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c"
+      }
+    ],
+    "completeInputs_reason": "The index is source context, not the complete JassHelper translation unit; base war3map input is outside src, and inventory also includes an optional diagnostic probe.",
+    "mode_evidence": "Both project build scripts call FrozenThone/scripts/wc3.py vjass; its JassHelper command uses --scriptonly without --debug."
+  }
+]

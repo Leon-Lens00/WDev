@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-22T15:17:43.837694-05:00",
+  "originals": [
+    {
+      "file": "Shot Blue.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Blue Double.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Green.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Green Double.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Orange.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Orange Double.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Purple.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Purple Double.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Red.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Red Double.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Yellow.mdx",
+      "original_sha256_unchanged": true
+    },
+    {
+      "file": "Shot Yellow Double.mdx",
+      "original_sha256_unchanged": true
+    }
+  ],
+  "models_measured": 12,
+  "max_cross_evaluator_error": 8.344650268554688e-07,
+  "plane_visual_QA": "Ambos PNG inspeccionados: ejes, rótulos, origen, límite frontal y comparación de escalas legibles.",
+  "model_modified": false,
+  "game_test": false,
+  "known_limit": "Malla y anclajes; sin simular partículas ni texturas."
+}

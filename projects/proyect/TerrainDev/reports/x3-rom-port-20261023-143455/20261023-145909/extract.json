@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/usr/bin/python",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "extract",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/work/TerrainDev-x3-20261023-145909.w3x",
+    "war3map.j",
+    "--out",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/20261023-145909/reextracted.j",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Files\": [\n    {\n      \"Name\": \"war3map.j\",\n      \"Bytes\": 557222,\n      \"Path\": \"/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-port-20261023-143455/20261023-145909/reextracted.j\"\n    }\n  ],\n  \"Count\": 1,\n  \"TotalBytes\": 557222\n}\n",
+  "stderr": ""
+}

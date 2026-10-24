@@ -1,0 +1,307 @@
+> JASS/vJASS local support: structural/static subset. Bounded macro/module projections and indexed-file import links; generated members anchor to invocation source, not expanded bodies. Computed dispatch and other unmodeled cases remain unresolved; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:39: Factory/index receiver requires a declared type/return type; other chains are not inferred.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> libraries/RapidFire.j:39: Conditional compilation is not evaluated; extracted references are potential paths.
+> 162 more extraction diagnostics in these files.
+
+**Additional graph links among your symbols**
+(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)
+
+- emit → shoot   [static JASS: calls]
+- RapidBolt → shoot   [contains]
+- shoot → launch   [static JASS: calls]
+- shoot → trace   [static JASS: calls]
+- shoot → operator model=   [static JASS: calls]
+- shoot → setMovementSpeed   [static JASS: calls]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: RapidBolt.shoot RapidBolt.launch RapidBolt.missileIterateP RapidBolt.onPeriod**
+
+Found 66 symbols across 2 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `shoot` (libraries/RapidFire.j:41) — 1 caller in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `launch` (libraries/RapidFire.j:39) — 1 caller in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `missileIterateP` (libraries/RapidFire.j:39) — 1 caller in `libraries/RapidFire.j`; no tests found within 3 caller hops
+- `onPeriod` (libraries/RapidFire.j:26) — 1 caller in `libraries/RapidFire.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`libraries/RapidFire.j`** — calls(calls), imports(imports), this(variable), resolve(calls), trace(calls), +48 more
+
+```jass
+1	library RapidFire initializer Init requires GroundMotion, Missile, Table, TimerUtils, SpellEffectEvent, RegisterPlayerUnitEvent
+2	struct RapidBolt extends array
+3	    private static unit array source
+4	    private static player array owner
+5	    readonly static integer live = 0
+6	    readonly static integer hits = 0
+7	    readonly static integer walls = 0
+8	
+9	    private static method resolve takes Missile m returns boolean
+10	        local integer result = GroundCollision.trace(m.prevX,m.prevY,m.x,m.y,16.,source[m],owner[m],true)
+11	        local unit target = GroundCollision.hit
+12	        local unit caster = source[m]
+13	        if result == 2 then
+14	            set hits = hits+1
+15	            if GetUnitTypeId(caster) != 0 then
+16	                call UnitDamageTarget(caster,target,25.,false,false,ATTACK_TYPE_NORMAL,DAMAGE_TYPE_MAGIC,null)
+17	            endif
+18	        elseif result == 1 or m.z < 0. then
+19	            set walls = walls+1
+20	            set result = 1
+21	        endif
+22	        set target = null
+23	        set caster = null
+24	        return result != 0
+25	    endmethod
+26	    static method onPeriod takes Missile m returns boolean
+27	        return resolve(m)
+28	    endmethod
+29	    static method onFinish takes Missile m returns boolean
+30	        call resolve(m)
+31	        return true
+32	    endmethod
+33	    static method onRemove takes Missile m returns boolean
+34	        set source[m] = null
+35	        set owner[m] = null
+36	        set live = live-1
+37	        return false
+38	    endmethod
+39	    implement MissileStruct
+40	
+41	    static method shoot takes unit caster, real px, real py returns Missile
+42	        local real x = GetUnitX(caster)
+43	        local real y = GetUnitY(caster)
+44	        local real dx = px-x
+45	        local real dy = py-y
+46	        local real distance = SquareRoot(dx*dx+dy*dy)
+47	        local real angle
+48	        local real length
+49	        local Missile m
+50	        if distance < 8. then
+51	            set angle = GetUnitFacing(caster)*bj_DEGTORAD
+52	            set distance = 600.
+53	            set dx = distance*Cos(angle)
+54	            set dy = distance*Sin(angle)
+55	        endif
+56	        set length = RMinBJ(distance,1000.)
+57	        set px = x+dx*length/distance
+58	        set py = y+dy*length/distance
+59	        call GroundCollision.trace(x,y,x+dx*24./distance,y+dy*24./distance,16.,caster,GetOwningPlayer(caster),false)
+60	        set m = Missile.createXYZ(GroundCollision.x,GroundCollision.y,70.,px,py,70.)
+61	        set source[m] = caster
+62	        set owner[m] = GetOwningPlayer(caster)
+63	        set m.owner = owner[m]
+64	        // Ability-specific swept collision chooses obstacles before damage;
+65	        // it does not change the common module's callback ordering.
+66	        set m.collision = 0.
+67	        set m.model = "Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl"
+68	        call m.setMovementSpeed(1200.)
+69	        set live = live+1
+70	        call launch(m)
+71	        return m
+72	    endmethod
+73	endstruct
+74	
+75	struct RapidPair
+76	    readonly unit controller
+```
+
+**`libraries/Missile.j`** — calls(calls), GetLocZ(calls), move(calls), GetUnitBodySize(calls), move(method), +60 more
+
+```jass
+474	    // For WRITE_DELAYED_MISSILE_RECYCLING = true Missile will hold back
+475	    // dummies for DELAYED_MISSILE_DEATH_ANIMATION_TIME before they are recylced. ( Code placed in a static if )
+476	    //
+477	    //! runtextmacro optional WRITE_MISSILE_RECYCLE_BIN("WRITE_DELAYED_MISSILE_RECYCLING", "DELAYED_MISSILE_DEATH_ANIMATION_TIME")
+478	    
+479	    // The code of WRITE_MISSILE_POSITION_CODE boxes a missiles position and does the required trigonometry.
+480	    //
+
+... (gap) ...
+
+485	    //
+486	    private keyword MissileStructure
+487	    struct Missile extends array
+488	        implement MissileStructure
+489	
+490	        // Constants:
+491	        // ==========
+
+... (gap) ...
+
+1446	    // ========
+1447	    //
+1448	    // You want to place module MissileLaunch at the very top of your struct.
+1449	    module MissileLaunch
+1450	        static method launch takes Missile missile returns nothing
+1451	            static if LIBRARY_ErrorMessage then
+1452	                debug call ThrowError(missile.launched, "thistype", "launch", "missile.launched", missile, "This missile was already launched before!")
+1453	            endif
+1454	            debug set missile.launched = true
+1455	            //
+1456	            call missileList[thistype.typeid].insertFront(missile)
+1457	            call StartPeriodic(thistype.typeid)
+1458	        endmethod
+1459	    endmodule
+1460	    
+1461	    module MissileTerminate
+1462	        // Called from missileIterate. "P" to avoid code collision.
+
+... (gap) ...
+
+1493	endif
+1494	
+1495	    static if thistype.onItem.exists then
+1496	        private static method missileActionItem takes nothing returns nothing
+1497	            local item i = GetEnumItem()
+1498	            local Missile this = Missile.temp
+1499	            if this.allocated then
+1500	                call SaveItemHandle(HASH, this, GetHandleId(i), i) 
+1501	                if thistype.onItem(this, i) then
+1502	                    call missileTerminateP(this)
+1503	                endif
+1504	            endif
+1505	            set i = null
+1506	        endmethod
+1507	    endif
+1508	        
+1509	    static if thistype.onDestructable.exists then
+1510	        private static method missileActionDest takes nothing returns nothing
+1511	            local destructable d = GetEnumDestructable()
+1512	            local Missile this = Missile.temp
+1513	            if this.allocated then
+1514	                call SaveDestructableHandle(HASH, this, GetHandleId(d), d) 
+1515	                if thistype.onDestructable(this, d) then
+1516	                    call missileTerminateP(this)
+1517	                endif
+1518	            endif
+1519	            set d = null
+1520	        endmethod
+1521	    endif
+1522	    
+1523	        // Runs every Missile_TIMER_TIMEOUT for this struct.
+1524	        static method missileIterateP takes nothing returns boolean
+1525	            local Missile this = missileList[thistype.typeid].first 
+1526	            local Missile node
+1527	            local real collideZ
+1528	            local boolean b
+1529	            local unit u
+1530	            
+1531	            loop
+1532	                exitwhen 0 == this
+1533	                set node = this.next// The linked list should not lose the next node.
+1534	               
+1535	                if this.wantDestroy then
+1536	                    call thistype.missileTerminateP(this)
+1537	                else
+1538	                    if this.stackSize > 0 then
+1539	                        call this.updateStack()
+1540	                    endif
+1541	                    
+1542	                    // Runs unit collision.
+1543	                    static if thistype.onCollide.exists then
+1544	                        if this.allocated and 0. < this.collision then
+1545	                            set b = this.collisionType == Missile_COLLISION_TYPE_RECTANGLE  
+1546	                            if b then
+1547	                                call this.groupEnumUnitsRectangle()
+1548	                            else
+1549	                                call GroupEnumUnitsInRange(GROUP, this.x, this.y, this.collision + Missile_MAXIMUM_COLLISION_SIZE, null)
+1550	                            endif
+1551	                            loop
+1552	                                set u = FirstOfGroup(GROUP)
+1553	                                exitwhen u == null
+1554	                                call GroupRemoveUnit(GROUP, u)
+1555	                                if not HaveSavedHandle(HASH, this, GetHandleId(u)) then
+1556	                                    if IsUnitInRange(u, this.dummy, this.collision) or b then  
+1557	                                        // Eventually run z collision checks.
+1558	                                        static if Missile_USE_COLLISION_Z_FILTER then
+1559	                                            set collideZ = Missile_GetLocZ(GetUnitX(u), GetUnitY(u)) + GetUnitFlyHeight(u) - this.terrainZ
+1560	                                            if (collideZ + GetUnitBodySize(u) >= this.z - this.collisionZ) and (collideZ <= this.z + this.collisionZ) then
+1561	                                                // Mark as hit.
+1562	                                                call SaveUnitHandle(HASH, this, GetHandleId(u), u)
+1563	                                                if thistype.onCollide(this, u) then
+1564	                                                    call thistype.missileTerminateP(this)
+1565	                                                    exitwhen true
+1566	                                                endif
+1567	                                            endif
+1568	    
+1569	                                        else
+1570	                                            // Runs unit collision without z collision checks.
+1571	                                            call SaveUnitHandle(HASH, this, GetHandleId(u), u)
+1572	                                            if thistype.onCollide(this, u) then
+1573	                                                call thistype.missileTerminateP(this)
+1574	                                                exitwhen true
+1575	                                            endif
+1576	                                        endif
+1577	                                    endif                                    
+1578	                                endif
+1579	                            endloop
+1580	                        endif
+1581	                    endif
+1582	                    
+1583	                    // Runs destructable collision.
+1584	                    static if thistype.onDestructable.exists then
+1585	                        // Check if the missile is not terminated.
+1586	                        if this.allocated and 0. < this.collision then
+1587	                            call this.checkDestCollision(function thistype.missileActionDest)
+1588	                        endif
+1589	                    endif
+1590	                    
+1591	                    // Runs item collision.
+1592	                    static if thistype.onItem.exists then
+1593	                        //  Check if the missile is not terminated.
+1594	                        if this.allocated and 0. < this.collision then
+1595	                            call this.checkItemCollision(function thistype.missileActionItem)
+1596	                        endif
+1597	                    endif
+1598	                
+1599	                    // Runs when the destination is reached.
+1600	                    if this.recycle and this.allocated then
+1601	                        static if thistype.onFinish.exists then
+1602	                            if thistype.onFinish(this) then
+1603	                                call thistype.missileTerminateP(this)
+1604	                            endif
+1605	                        else
+1606	                            call thistype.missileTerminateP(this)
+1607	                        endif
+1608	                    endif
+1609	                
+1610	                    // Runs on terrian collision.
+1611	                    static if thistype.onTerrain.exists then
+1612	                        if this.allocated and 0. > this.z and thistype.onTerrain(this) then
+1613	                            call missileTerminateP(this)
+1614	                        endif
+1615	                    endif
+1616	                
+1617	                    // Runs every Missile_TIMER_TIMEOUT.
+1618	                    static if thistype.onPeriod.exists then
+1619	                        if this.allocated and thistype.onPeriod(this) then
+1620	                            call missileTerminateP(this)
+1621	                        endif
+1622	                    endif
+1623	                endif
+1624	                set this = node
+1625	            endloop
+1626	            
+1627	            set u = null
+1628	            static if DEBUG_MODE and LIBRARY_ErrorMessage then
+1629	                return true
+1630	            else
+1631	                return false
+1632	            endif
+1633	        endmethod
+1634	    endmodule
+1635	    
+1636	    module MissileStruct
+```
+
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

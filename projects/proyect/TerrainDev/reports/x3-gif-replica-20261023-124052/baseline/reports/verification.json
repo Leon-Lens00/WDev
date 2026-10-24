@@ -1,0 +1,73 @@
+{
+  "status": "Tested in map",
+  "target": "Warcraft III Classic1.27b on CachyOS/Wine",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/TerrainDev.w3x",
+  "map_sha256": "4d4c0b227db9ed30edb4dbdcf233dca616a7fd0d62e4f7283312a60351e2a93a",
+  "build_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/20261022-204339-175662",
+  "x3_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-buster-20261022-201342/result.json",
+  "engine_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-buster-20261022-201342/20261022-204528/validated-result.json",
+  "x3_values": {
+    "checks": 54.0,
+    "failures": 0.0,
+    "casts": 0.0,
+    "live": 0.0,
+    "created": 190.0,
+    "retired": 190.0,
+    "fusions": 6.0,
+    "flashes": 0.0
+  },
+  "color_values": {
+    "checks": 40.0,
+    "failures": 0.0,
+    "live": 0.0,
+    "created": 213.0,
+    "retired": 213.0,
+    "scale": 2.743
+  },
+  "rapid_fire_values": {
+    "checks": 44.0,
+    "failures": 0.0,
+    "observed": 46.0,
+    "minimum": 0.25,
+    "emitted": 63.0,
+    "live": 0.0,
+    "pairs": 2.0
+  },
+  "library_count": 17,
+  "library_sha256": {
+    "WorldBounds": "0ed3c284b18694b744bdae4423f2b60e5e16346778116caffb5bf9a4267447c9",
+    "ErrorMessage": "b240c5c064d569ec89ba85e21363b27514bab66fb6517c1cd68d8ce9b40df147",
+    "TimerUtils": "cbc13cd7eb8679ee2d618dcfe70e8da47489a926506eb8059dc6fc09eba60f45",
+    "Table": "94d2fd1f89774efb2ad3e9d2ae7e3bdded3c121bb523f02425d4937fc7031fb4",
+    "RegisterPlayerUnitEvent": "a4513c10d93fdc26b7b86440a8f9171153b2d3108b815e7c57169b21c2202c2c",
+    "SpellEffectEvent": "222abb23791bd71eb96db71384ef40a91c16421176cc046c186f0af185050bd0",
+    "IsDestructableTree": "2f981785b5d01564b634ec35a62e3a008a83a313a4a61774e23b4632d69c6829",
+    "DummyCaster": "4437e9214cc7d30b30ad9d7654286d70a1b8c00c96c15d1f2952cebfe4c349c0",
+    "MissileDiagnostics": "5d13202a5116a67e3f49d2a095975b1fe33955fd34fed076eccd0a67d26bc990",
+    "MissileRecycler": "65189b805bf424f57c758eef1ee5497bddb0070a3f59d04a883e63821c7818eb",
+    "Missile": "333150566d2f55b665afd127e95374078cd80053fe617c9def01405ab93510a3",
+    "GroundCollision": "b39c3f2ef02aaea5643f5572eff90de86e38c0ca635c8abb08b3885e0369a095",
+    "GroundMotion": "4454585a76e191028a46b0238913bec48075fd41b93acf2ac8472a22e61dba8c",
+    "RapidFire": "590ea2e40bb0ec35489c3d95da794562caa3889d116cddb54955682ae7b2d878",
+    "RapidFireDemo": "4228d177c8e0e204833d6ce0e683cb95277a7fd1a11c8e6fc7f142562a97f1a5",
+    "X3Buster": "09c4f96e74c037ebf7bd9f75521329011bfddfb5fc707903861d5fe9bcbcfdd9",
+    "X3BusterDemo": "11f7cd7dfb7d616e2bf50da250f979f33190a3137574f9466a5500449b59a4a2"
+  },
+  "originals_unchanged": true,
+  "old_15_sources_unchanged": true,
+  "game_tested": true,
+  "editor_saved_and_reopened": false,
+  "native_trigger_roundtrip": true,
+  "cleanup": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-buster-20261022-201342/20261022-204528/closure.json",
+  "own_game_and_editor_closed": true,
+  "previous_verification": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-buster-20261022-201342/baseline-verification.json",
+  "limits": [
+    "Local attended single-client Classic1.27b tests; no multiplayer certification.",
+    "W/E are discrete physics demo controls. Holding/releasing a key to accumulate charge is not implemented.",
+    "Cast origin and direction are fixed at launch, including the delayed pulse.",
+    "GroundCollision is a swept XY ground-footprint contract; orbital height is visual, flying targets are excluded.",
+    "Models are a local 3D interpretation of the user reference, not SNES asset/code equivalence.",
+    "No new editor save/reopen; 17-source WCT/WTG, objects and imports verified by builder.",
+    "Focus/window changes interrupted the optional final recording; earlier visual sample is identified separately."
+  ]
+}

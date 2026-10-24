@@ -1,0 +1,38 @@
+[
+  {
+    "etapa": "toolchain",
+    "argv": [
+      "python3",
+      "-B",
+      "/home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/check_toolchain.py",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/wc3toolchain.json",
+      "--json"
+    ],
+    "cwd": "/tmp/superpowers-skills-forward-q2ye5sc7/debug",
+    "returncode": 0
+  },
+  {
+    "etapa": "antes",
+    "argv": [
+      "python3",
+      "-B",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "pjass",
+      "/tmp/superpowers-skills-forward-q2ye5sc7/debug/entrada.j"
+    ],
+    "cwd": "/tmp/superpowers-skills-forward-q2ye5sc7/debug",
+    "returncode": 1
+  },
+  {
+    "etapa": "despues",
+    "argv": [
+      "python3",
+      "-B",
+      "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+      "pjass",
+      "/tmp/superpowers-skills-forward-q2ye5sc7/debug/corregido.j"
+    ],
+    "cwd": "/tmp/superpowers-skills-forward-q2ye5sc7/debug",
+    "returncode": 0
+  }
+]

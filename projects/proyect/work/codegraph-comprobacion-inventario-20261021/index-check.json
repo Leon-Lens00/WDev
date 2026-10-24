@@ -1,0 +1,209 @@
+[
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+    "files": 16,
+    "indexed_files": [
+      "Main.j",
+      "libraries/DummyCaster.j",
+      "libraries/ErrorMessage.j",
+      "libraries/GroundCollision.j",
+      "libraries/GroundMotion.j",
+      "libraries/IsDestructableTree.j",
+      "libraries/Missile.j",
+      "libraries/MissileDiagnostics.j",
+      "libraries/MissileRecycler.j",
+      "libraries/RapidFire.j",
+      "libraries/RapidFireDemo.j",
+      "libraries/RegisterPlayerUnitEvent.j",
+      "libraries/SpellEffectEvent.j",
+      "libraries/Table.j",
+      "libraries/TimerUtils.j",
+      "libraries/WorldBounds.j"
+    ],
+    "sha256_mismatches": [],
+    "metadata": [
+      [
+        "index_state",
+        "complete",
+        1792613305987
+      ],
+      [
+        "indexed_with_version",
+        "1.6.2+jass-vjass.2",
+        1792613305952
+      ],
+      [
+        "indexed_with_extraction_version",
+        "29",
+        1792613305952
+      ],
+      [
+        "index_files_discovered",
+        "16",
+        1792613305987
+      ],
+      [
+        "index_files_accounted",
+        "16",
+        1792613305987
+      ]
+    ],
+    "quick_check": [
+      [
+        "ok"
+      ]
+    ],
+    "diagnostics_by_severity": {
+      "warning": 286
+    },
+    "diagnostics_by_code": {
+      "jass_partial_coverage": 286
+    }
+  },
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+    "files": 56,
+    "indexed_files": [
+      "InventoryProbe.j",
+      "adjust_studio.py",
+      "build.py",
+      "build_support.py",
+      "click_own_game.py",
+      "close_confirmed_game.py",
+      "finalize_verification.py",
+      "foundation-src/DummyCaster.j",
+      "foundation-src/ErrorMessage.j",
+      "foundation-src/IsDestructableTree.j",
+      "foundation-src/Missile.j",
+      "foundation-src/MissileDiagnostics.j",
+      "foundation-src/MissileRecycler.j",
+      "foundation-src/RegisterPlayerUnitEvent.j",
+      "foundation-src/SpellEffectEvent.j",
+      "foundation-src/Table.j",
+      "foundation-src/TimerUtils.j",
+      "foundation-src/WorldBounds.j",
+      "play_isolated.py",
+      "render_frames.py",
+      "src/Inventory_01_Inventory.j",
+      "src/Inventory_02_InventoryItem.j",
+      "src/Inventory_03_InventoryPlugins.j",
+      "src/Inventory_04_InventoryTooltip.j",
+      "src/Inventory_05_InventoryBonus.j",
+      "src/Inventory_06_InventoryGlobals.j",
+      "src/Inventory_08_Equipment.j",
+      "src/Inventory_09_EquipmentItem.j",
+      "src/Inventory_10_EquipmentSockets.j",
+      "src/Inventory_11_EquipHeroModels.j",
+      "src/Inventory_12_EquipItemParser.j",
+      "src/Inventory_14_Item_Setups.j",
+      "src/Inventory_17_AcquireItem.j",
+      "src/Inventory_18_Equip_Item.j",
+      "src/Inventory_19_Unequip_Item.j",
+      "src/Inventory_20_Sell_Item.j",
+      "src/Inventory_21_Drop_Item.j",
+      "src/Inventory_22_Socket_Item.j",
+      "src/Inventory_23_HideInv.j",
+      "src/Inventory_24_YesNoDialog.j",
+      "src/Inventory_25_UserInterface.j",
+      "src/Inventory_27_UnitDex.j",
+      "src/Inventory_28_PlayerUtils.j",
+      "src/Inventory_29_Camera.j",
+      "src/Inventory_30_Math.j",
+      "src/Inventory_33_Table.j",
+      "src/Inventory_35_SimError.j",
+      "src/Inventory_37_BonusMod.j",
+      "src/Inventory_38_RegenBonuses.j",
+      "src/Inventory_39_UnitMaxStateBonuses.j",
+      "src/Inventory_40_MovementBonus.j",
+      "src/Inventory_41_UnitMaxState.j",
+      "src/Inventory_42_AutoIndex_UD.j",
+      "src/Inventory_44_xebasic.j",
+      "src/Inventory_45_xepreload.j",
+      "src/TerrainInventory.j"
+    ],
+    "sha256_mismatches": [],
+    "metadata": [
+      [
+        "index_state",
+        "complete",
+        1792613306825
+      ],
+      [
+        "indexed_with_version",
+        "1.6.2+jass-vjass.2",
+        1792613306793
+      ],
+      [
+        "indexed_with_extraction_version",
+        "29",
+        1792613306793
+      ],
+      [
+        "index_files_discovered",
+        "56",
+        1792613306825
+      ],
+      [
+        "index_files_accounted",
+        "56",
+        1792613306825
+      ]
+    ],
+    "quick_check": [
+      [
+        "ok"
+      ]
+    ],
+    "diagnostics_by_severity": {
+      "warning": 624
+    },
+    "diagnostics_by_code": {
+      "jass_partial_coverage": 624
+    }
+  },
+  {
+    "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+    "files": 4,
+    "indexed_files": [
+      "app.js",
+      "core.js",
+      "geometry.js",
+      "projection.js"
+    ],
+    "sha256_mismatches": [],
+    "metadata": [
+      [
+        "index_state",
+        "complete",
+        1792613307497
+      ],
+      [
+        "indexed_with_version",
+        "1.6.2+jass-vjass.2",
+        1792613307493
+      ],
+      [
+        "indexed_with_extraction_version",
+        "29",
+        1792613307493
+      ],
+      [
+        "index_files_discovered",
+        "4",
+        1792613307497
+      ],
+      [
+        "index_files_accounted",
+        "4",
+        1792613307497
+      ]
+    ],
+    "quick_check": [
+      [
+        "ok"
+      ]
+    ],
+    "diagnostics_by_severity": {},
+    "diagnostics_by_code": {}
+  }
+]

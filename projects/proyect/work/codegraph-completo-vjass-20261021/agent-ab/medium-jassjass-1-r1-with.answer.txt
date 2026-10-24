@@ -1,0 +1,9 @@
+The chain uses **direct function calls**; no callback registration or initialization wiring mediates these hops.
+
+1. **`Jass.assert(b, s)`** calls `error("assert: " + s)` only when `b` is false. When true, it returns without printing. Evidence: `Jass.j:114–118`.
+2. **`Jass.error(s)`** unconditionally calls `print(s)`, then executes `set i = 1/0`. The division occurs after the print call. Evidence: `Jass.j:108–112`.
+3. **`Jass.print(s)`** directly calls `DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 120, s)`. Evidence: `Jass.j:99–101`.
+
+A concrete entry is `Parser.parseIf`: it calls `assert(LastElseif.elseBody == 0, "last elseif body zero")` (`Jass.j:1370`). If that condition is false, the displayed message is `assert: last elseif body zero`.
+
+These are private functions in the source. The division by zero is explicit; its precise runtime effect was not verified because no project code was executed.

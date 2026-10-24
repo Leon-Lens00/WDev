@@ -1,0 +1,11 @@
+The chain uses **module inclusion followed by direct method calls**:
+
+1. `NoisePlugin` requires `Noise` and declares module `OctavePerlin`, which defines `octavePerlin2D` ([OctavePerlin.j:10–29](OctavePerlin.j#L10)). Library `Noise` contains struct `Noise`, which includes that module through `implement optional OctavePerlin`. This supplies `Noise.Noise.octavePerlin2D` when the module is available ([Noise.j:8–30](Noise.j#L8)).
+
+2. `octavePerlin2D` initializes `i=0`, frequency and amplitude to `1`. While `i < octaves`, its unqualified call invokes the containing struct’s `perlin2D(x * frequency, y * frequency)`. Each iteration multiplies amplitude by persistence, doubles frequency, and increments `i`. Thus `octaves <= 0` makes no `perlin2D` calls. `total` is overwritten each iteration, then divided by accumulated `maxValue` ([OctavePerlin.j:29–43](OctavePerlin.j#L29)).
+
+3. Each `perlin2D` invocation calls `floor` four times unconditionally: twice for masked lattice indices and twice for fractional coordinates ([Noise.j:74–84](Noise.j#L74)).
+
+4. Private static `floor` starts with `R2I(value)` and decrements only when `value < 0.` **and** `value - n != 0.` ([Noise.j:32–38](Noise.j#L32)).
+
+This establishes source wiring; compilation/runtime behavior was not tested.

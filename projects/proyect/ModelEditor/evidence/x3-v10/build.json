@@ -1,0 +1,63 @@
+{
+  "target": "Classic1.27b MDX800",
+  "revision": "V10 A 240ms pink sweep preserved, 120ms interior green lightning",
+  "entries": [
+    {
+      "name": "X3_Buster_Cargado",
+      "category": "A-Buster",
+      "path": "exports/megaman-x3-buster-v10/A-Buster/X3_Buster_Cargado.mdx",
+      "sha256": "cd479d2c0a35d84ece4d0d4680fe98740c7410a063d3bbcb08a767d18df93334",
+      "triangles": 3150,
+      "pe2": 11,
+      "ribbons": 1
+    }
+  ],
+  "source": {
+    "author": "Vinz",
+    "pack": "Shots Vol. II",
+    "original": "../descargas/warcraft3/misiles/vinz/shots-vol-ii/originales/Shots Vol. II/Shot II Blue.mdx",
+    "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac",
+    "anchored": "exports/shots-vol-ii-anclaje/Shot II Blue.mdx",
+    "anchoredSha256": "6e181b25bb6047896f95993e0033fd2602c05914e3da001ee192faac5e9c181e",
+    "reuse": "posed geometry/UV and full additive stack; adapted F1/F2/Atras Uno/Atras Dos Sq Tails; attached bow/UV flow; blue rear lengthened 38% behind X=-30; continuous blue tip replaces separate nose spheres"
+  },
+  "pulse": {
+    "geoset": 43,
+    "accentGeosets": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "arcMaterials": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "arcAnimations": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "arcTexture": 14,
+    "arcPeriodMs": 120,
+    "arcTravelMs": 100,
+    "arcPhaseMs": [
+      0,
+      30,
+      60,
+      90
+    ],
+    "material": 11,
+    "texture": 13,
+    "textureAnimation": 2,
+    "periodMs": 240,
+    "travelMs": 210,
+    "geometry": "exact V7 Flow surface; four angular interior green paths",
+    "direction": "nose to rear (-X)",
+    "birthDeath": "new layers hidden; original V7 sequences preserved"
+  },
+  "worldTrajectory": false
+}

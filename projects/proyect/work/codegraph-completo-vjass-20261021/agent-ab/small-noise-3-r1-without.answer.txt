@@ -1,0 +1,12 @@
+`codegraph_explore` was unavailable. Source shows a **direct call**, with no intermediate function: library `Noise` contains struct `Noise`, whose `openSimplex2D` calls private static `extrapolate2D`.
+
+`openSimplex2D` stretches/floors the input into lattice coordinates and calculates displacements ([Noise.j:142](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:142)). Four call sites evaluate:
+
+- `(xsb+1, ysb, dx1, dy1)` when `attn1 > 0` ([Noise.j:170](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:170)).
+- `(xsb, ysb+1, dx2, dy2)` when `attn2 > 0` ([Noise.j:174](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:174)).
+- Current base coordinates/displacements when `attn0 > 0`. For `inSum > 1`, the base advances `(1,1)` and displacements adjust ([Noise.j:218](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:218)).
+- Extra coordinates/displacements when `attn_ext > 0` ([Noise.j:228](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:228)).
+
+Extra-vertex wiring uses `inSum <= 1`: `zins=1-inSum`; `zins>xins or zins>yins` selects `(1,-1)`/`(-1,1)` by `xins>yins`, otherwise `(1,1)`. Above 1, `zins=2-inSum`; `zins<xins or zins<yins` selects `(2,0)`/`(0,2)`, otherwise `(0,0)`—offsets from the original base ([Noise.j:178](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:178)).
+
+Each attenuation is `2-dx²-dy²`; contributions use its fourth power. `extrapolate2D` hashes coordinates through `permutation`, masks with `7`, and returns the gradient dot product ([Noise.j:137](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/small-noise/Noise.j:137)).

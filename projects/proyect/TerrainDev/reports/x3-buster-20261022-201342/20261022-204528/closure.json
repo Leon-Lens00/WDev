@@ -1,0 +1,14 @@
+{
+  "pid": 771030,
+  "start": "11752779",
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/x3-runtime/pfx/",
+  "closed": true,
+  "window_absent": true,
+  "fallback": false,
+  "signal_sent": false,
+  "method": "Process already absent after scoped native exit attempt; disappeared before fallback identity check, so no signal sent. Exact exit interaction not observed.",
+  "remaining_game_pids": [
+    775075,
+    778805
+  ]
+}

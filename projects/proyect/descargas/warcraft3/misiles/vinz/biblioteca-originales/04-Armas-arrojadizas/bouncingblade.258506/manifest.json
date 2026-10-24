@@ -1,0 +1,39 @@
+{
+  "title": "BouncingBlade",
+  "url": "https://www.hiveworkshop.com/threads/bouncingblade.258506/",
+  "author": "Vinz",
+  "tags": [
+    "#Missile",
+    "#Human"
+  ],
+  "listedResources": 2,
+  "date": "2026-10-22T19:15:52.841796-05:00",
+  "category": "04-Armas-arrojadizas",
+  "folder": "04-Armas-arrojadizas/bouncingblade.258506",
+  "zip": "original.zip",
+  "zipBytes": 4401,
+  "zipSha256": "f3f6009a0d6cfbf9c71889ad3a8e80ea20166fac5e7ef5e7e651119af38c32fe",
+  "crc": "PASS",
+  "files": [
+    {
+      "path": "originales/BouncingBlade/readme.html",
+      "archivePath": "BouncingBlade/readme.html",
+      "bytes": 1039,
+      "sha256": "b86a1fce1b693895e327ceb8740c847a81480a4f2c5f88782444bdf153eea9f0"
+    },
+    {
+      "path": "originales/BouncingBlade/BouncingBlade7.mdx",
+      "archivePath": "BouncingBlade/BouncingBlade7.mdx",
+      "bytes": 4216,
+      "sha256": "ab5ed53868bdd85a353983315351ce52924c46257784f5b56043642369fedfb6"
+    },
+    {
+      "path": "originales/BouncingBlade/BouncingBladeBuff.mdx",
+      "archivePath": "BouncingBlade/BouncingBladeBuff.mdx",
+      "bytes": 4072,
+      "sha256": "0c47222cbbf6c66fedefaec9ad97849ec5e3e0d7b64959ebfae9ce983bc466f6"
+    }
+  ],
+  "models": 2,
+  "textures": 0
+}

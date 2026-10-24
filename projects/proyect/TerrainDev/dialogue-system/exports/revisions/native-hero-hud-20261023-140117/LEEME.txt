@@ -1,0 +1,35 @@
+Barras horizontales integradas · Classic1.27b
+
+Héroe:icono HUD nativo sin duplicarlo, barra azul. Enemigo:icono Art nativo
+al extremo derecho y barra granate2,44× más larga. Relleno10px; crece hacia
+derecha. Escala de muestra y juego1,2× sobre contrato común healthbars.json.
+
+CuatroBLP propios(245064bytes), ≤512 por dimensión,37mips; tresMDX800(109284bytes).
+Los iconos internos64×64 no se reimportan:BTNHeroPaladin yBTNTauren.
+RegistroHpal/otau verificado contra Art deUnitFunc efectivo enMPQClassic.
+Para añadir tipos:ampliar registro deiconos, modelos y rawcodes del builder;
+1.27b no expone GetUnitIcon/FrameAPI. Un tipo no registrado oculta la barraenemiga.
+
+Mapa:TerrainDev-Dialogue.w3x, ver latest-healthbar-test.json y manifiesto parahash.
+Probado enSP1920×1080 con vida real, crítico, cero, iconos, patrulla y diálogo.
+LAN no completado, fallbackSP autorizado; no validado enmultijugador ni otrosaspectos.
+
+API fuente:HealthBarsBind(Camera,hero,target), HealthBarsTarget(unit),
+HealthBarsSetVisible(boolean), HealthBarsUpdate() después deactualizar lacámara.
+Vida se consulta cada0,05s; posiciones cada0,01s en el reloj existente.
+Las libreríasCamera/UserInterface originales y foundation permanecen intactas.
+
+Comandos de esta copia:
+-vidaheroe 75 / -vidaenemigo 86 (cambian vida real;0 mata launidad)
+-barrasocultar / -barrasmostrar
+-barrasobjetivopaladin / -barrasobjetivotauren
+-patrullardialogo / -parardialogo
+-dialogo / -reiniciardialogo / -cerrardialogo
+-misiles:ver/ocultar cuadrodiagnóstico, oculto aliniciar para no tapar lasbarras.
+
+Reproducir:genera iconos con tools/healthbar-native-icons.cjs; materiales con
+healthbar-horizontal.py usando elPythonPillow documentado; build.py generaMDX,
+compila e importa automáticamente. Verificadores verify-healthbar-horizontal.cjs
+y verify-healthbar-models.cjs. El mapa se verifica por reextracción en elbuilder.
+Orígenes y hashes deiconos en sources/native/icons.json, no confundir con fotos
+anteriores. La variantevertical aprobada se conserva sin alteraciones.

@@ -1,0 +1,1115 @@
+[
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/small",
+    "index_ms": 170,
+    "total_probe_ms": 587,
+    "files": 1,
+    "nodes": 12,
+    "edges": 16,
+    "errors": [],
+    "flows": [
+      {
+        "from": "CodeGraphProbe.Init",
+        "to": "CodeGraphProbe.Counter.run",
+        "graph_path": [
+          {
+            "node": {
+              "id": "function:0c78625de4fc23368f6f125595b09a4c",
+              "kind": "function",
+              "name": "Init",
+              "qualifiedName": "CodeGraphProbe.Init",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 21,
+              "endLine": 23,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Init takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "function:6c54514c521c919cc20d124fdcd8a728",
+              "kind": "function",
+              "name": "Done",
+              "qualifiedName": "CodeGraphProbe.Done",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 18,
+              "endLine": 20,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Done takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": {
+              "source": "function:0c78625de4fc23368f6f125595b09a4c",
+              "target": "function:6c54514c521c919cc20d124fdcd8a728",
+              "kind": "references",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "lexical-scope",
+                "confidence": 0.95,
+                "resolvedBy": "function-ref",
+                "refName": "Done",
+                "refKind": "function_ref",
+                "fnRef": true
+              },
+              "line": 22,
+              "column": 60,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "method",
+              "name": "run",
+              "qualifiedName": "CodeGraphProbe.Counter.run",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 12,
+              "endLine": 16,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method run takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": {
+              "source": "function:6c54514c521c919cc20d124fdcd8a728",
+              "target": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Counter.run"
+              },
+              "line": 19,
+              "column": 13,
+              "provenance": "heuristic"
+            }
+          }
+        ],
+        "response_chars": 2462,
+        "output": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/small/.probe-1.txt"
+      },
+      {
+        "from": "CodeGraphProbe.Counter.run",
+        "to": "CodeGraphProbe.Ping",
+        "graph_path": [
+          {
+            "node": {
+              "id": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "method",
+              "name": "run",
+              "qualifiedName": "CodeGraphProbe.Counter.run",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 12,
+              "endLine": 16,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method run takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "method",
+              "name": "step",
+              "qualifiedName": "CodeGraphProbe.Counter.step",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 9,
+              "endLine": 11,
+              "startColumn": 8,
+              "endColumn": 17,
+              "signature": "method step takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": {
+              "source": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "target": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "this.step"
+              },
+              "line": 14,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "function",
+              "name": "Ping",
+              "qualifiedName": "CodeGraphProbe.Ping",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 5,
+              "endLine": 7,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Ping takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": {
+              "source": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "target": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "lexical-scope",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Ping"
+              },
+              "line": 10,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          }
+        ],
+        "response_chars": 2559,
+        "output": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/small/.probe-2.txt"
+      },
+      {
+        "from": "CodeGraphProbe.Done",
+        "to": "CodeGraphProbe.Ping",
+        "graph_path": [
+          {
+            "node": {
+              "id": "function:6c54514c521c919cc20d124fdcd8a728",
+              "kind": "function",
+              "name": "Done",
+              "qualifiedName": "CodeGraphProbe.Done",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 18,
+              "endLine": 20,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Done takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "method",
+              "name": "run",
+              "qualifiedName": "CodeGraphProbe.Counter.run",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 12,
+              "endLine": 16,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method run takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": {
+              "source": "function:6c54514c521c919cc20d124fdcd8a728",
+              "target": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Counter.run"
+              },
+              "line": 19,
+              "column": 13,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "method",
+              "name": "step",
+              "qualifiedName": "CodeGraphProbe.Counter.step",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 9,
+              "endLine": 11,
+              "startColumn": 8,
+              "endColumn": 17,
+              "signature": "method step takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": {
+              "source": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "target": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "this.step"
+              },
+              "line": 14,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "function",
+              "name": "Ping",
+              "qualifiedName": "CodeGraphProbe.Ping",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 5,
+              "endLine": 7,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Ping takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928004
+            },
+            "edge": {
+              "source": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "target": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "lexical-scope",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Ping"
+              },
+              "line": 10,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          }
+        ],
+        "response_chars": 2624,
+        "output": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/small/.probe-3.txt"
+      }
+    ],
+    "stable_rebuild_counts": true,
+    "source_hashes_unchanged": true,
+    "source_hashes": {
+      "probe.vjass": "b474a59846089da421d28d662a40ced569bbae4749aad0c7561bc3b09a10e644"
+    }
+  },
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/classic-common",
+    "index_ms": 180,
+    "total_probe_ms": 922,
+    "files": 2,
+    "nodes": 4050,
+    "edges": 6222,
+    "errors": [],
+    "flows": [
+      {
+        "from": "CodeGraphProbe.Init",
+        "to": "CodeGraphProbe.Counter.run",
+        "graph_path": [
+          {
+            "node": {
+              "id": "function:0c78625de4fc23368f6f125595b09a4c",
+              "kind": "function",
+              "name": "Init",
+              "qualifiedName": "CodeGraphProbe.Init",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 21,
+              "endLine": 23,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Init takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "function:6c54514c521c919cc20d124fdcd8a728",
+              "kind": "function",
+              "name": "Done",
+              "qualifiedName": "CodeGraphProbe.Done",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 18,
+              "endLine": 20,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Done takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": {
+              "source": "function:0c78625de4fc23368f6f125595b09a4c",
+              "target": "function:6c54514c521c919cc20d124fdcd8a728",
+              "kind": "references",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "lexical-scope",
+                "confidence": 0.95,
+                "resolvedBy": "function-ref",
+                "refName": "Done",
+                "refKind": "function_ref",
+                "fnRef": true
+              },
+              "line": 22,
+              "column": 60,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "method",
+              "name": "run",
+              "qualifiedName": "CodeGraphProbe.Counter.run",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 12,
+              "endLine": 16,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method run takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": {
+              "source": "function:6c54514c521c919cc20d124fdcd8a728",
+              "target": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Counter.run"
+              },
+              "line": 19,
+              "column": 13,
+              "provenance": "heuristic"
+            }
+          }
+        ],
+        "response_chars": 9825,
+        "output": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/classic-common/.probe-1.txt"
+      },
+      {
+        "from": "CodeGraphProbe.Counter.run",
+        "to": "CodeGraphProbe.Ping",
+        "graph_path": [
+          {
+            "node": {
+              "id": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "method",
+              "name": "run",
+              "qualifiedName": "CodeGraphProbe.Counter.run",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 12,
+              "endLine": 16,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method run takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "method",
+              "name": "step",
+              "qualifiedName": "CodeGraphProbe.Counter.step",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 9,
+              "endLine": 11,
+              "startColumn": 8,
+              "endColumn": 17,
+              "signature": "method step takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": {
+              "source": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "target": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "this.step"
+              },
+              "line": 14,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "function",
+              "name": "Ping",
+              "qualifiedName": "CodeGraphProbe.Ping",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 5,
+              "endLine": 7,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Ping takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": {
+              "source": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "target": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "lexical-scope",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Ping"
+              },
+              "line": 10,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          }
+        ],
+        "response_chars": 3214,
+        "output": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/classic-common/.probe-2.txt"
+      },
+      {
+        "from": "CodeGraphProbe.Done",
+        "to": "CodeGraphProbe.Ping",
+        "graph_path": [
+          {
+            "node": {
+              "id": "function:6c54514c521c919cc20d124fdcd8a728",
+              "kind": "function",
+              "name": "Done",
+              "qualifiedName": "CodeGraphProbe.Done",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 18,
+              "endLine": 20,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Done takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "method",
+              "name": "run",
+              "qualifiedName": "CodeGraphProbe.Counter.run",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 12,
+              "endLine": 16,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method run takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": {
+              "source": "function:6c54514c521c919cc20d124fdcd8a728",
+              "target": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Counter.run"
+              },
+              "line": 19,
+              "column": 13,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "method",
+              "name": "step",
+              "qualifiedName": "CodeGraphProbe.Counter.step",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 9,
+              "endLine": 11,
+              "startColumn": 8,
+              "endColumn": 17,
+              "signature": "method step takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": {
+              "source": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "target": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "this.step"
+              },
+              "line": 14,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "function",
+              "name": "Ping",
+              "qualifiedName": "CodeGraphProbe.Ping",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 5,
+              "endLine": 7,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Ping takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547928543
+            },
+            "edge": {
+              "source": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "target": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "lexical-scope",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Ping"
+              },
+              "line": 10,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          }
+        ],
+        "response_chars": 6626,
+        "output": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/classic-common/.probe-3.txt"
+      }
+    ],
+    "stable_rebuild_counts": true,
+    "source_hashes_unchanged": true,
+    "source_hashes": {
+      "common.j": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924",
+      "probe.vjass": "b474a59846089da421d28d662a40ced569bbae4749aad0c7561bc3b09a10e644"
+    }
+  },
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/classic-common-bj",
+    "index_ms": 272,
+    "total_probe_ms": 1571,
+    "files": 3,
+    "nodes": 7690,
+    "edges": 13939,
+    "errors": [],
+    "flows": [
+      {
+        "from": "CodeGraphProbe.Init",
+        "to": "CodeGraphProbe.Counter.run",
+        "graph_path": [
+          {
+            "node": {
+              "id": "function:0c78625de4fc23368f6f125595b09a4c",
+              "kind": "function",
+              "name": "Init",
+              "qualifiedName": "CodeGraphProbe.Init",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 21,
+              "endLine": 23,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Init takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "function:6c54514c521c919cc20d124fdcd8a728",
+              "kind": "function",
+              "name": "Done",
+              "qualifiedName": "CodeGraphProbe.Done",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 18,
+              "endLine": 20,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Done takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": {
+              "source": "function:0c78625de4fc23368f6f125595b09a4c",
+              "target": "function:6c54514c521c919cc20d124fdcd8a728",
+              "kind": "references",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "lexical-scope",
+                "confidence": 0.95,
+                "resolvedBy": "function-ref",
+                "refName": "Done",
+                "refKind": "function_ref",
+                "fnRef": true
+              },
+              "line": 22,
+              "column": 60,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "method",
+              "name": "run",
+              "qualifiedName": "CodeGraphProbe.Counter.run",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 12,
+              "endLine": 16,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method run takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": {
+              "source": "function:6c54514c521c919cc20d124fdcd8a728",
+              "target": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Counter.run"
+              },
+              "line": 19,
+              "column": 13,
+              "provenance": "heuristic"
+            }
+          }
+        ],
+        "response_chars": 14352,
+        "output": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/classic-common-bj/.probe-1.txt"
+      },
+      {
+        "from": "CodeGraphProbe.Counter.run",
+        "to": "CodeGraphProbe.Ping",
+        "graph_path": [
+          {
+            "node": {
+              "id": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "method",
+              "name": "run",
+              "qualifiedName": "CodeGraphProbe.Counter.run",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 12,
+              "endLine": 16,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method run takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "method",
+              "name": "step",
+              "qualifiedName": "CodeGraphProbe.Counter.step",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 9,
+              "endLine": 11,
+              "startColumn": 8,
+              "endColumn": 17,
+              "signature": "method step takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": {
+              "source": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "target": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "this.step"
+              },
+              "line": 14,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "function",
+              "name": "Ping",
+              "qualifiedName": "CodeGraphProbe.Ping",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 5,
+              "endLine": 7,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Ping takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": {
+              "source": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "target": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "lexical-scope",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Ping"
+              },
+              "line": 10,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          }
+        ],
+        "response_chars": 12857,
+        "output": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/classic-common-bj/.probe-2.txt"
+      },
+      {
+        "from": "CodeGraphProbe.Done",
+        "to": "CodeGraphProbe.Ping",
+        "graph_path": [
+          {
+            "node": {
+              "id": "function:6c54514c521c919cc20d124fdcd8a728",
+              "kind": "function",
+              "name": "Done",
+              "qualifiedName": "CodeGraphProbe.Done",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 18,
+              "endLine": 20,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Done takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": null
+          },
+          {
+            "node": {
+              "id": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "method",
+              "name": "run",
+              "qualifiedName": "CodeGraphProbe.Counter.run",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 12,
+              "endLine": 16,
+              "startColumn": 15,
+              "endColumn": 17,
+              "signature": "static method run takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": true,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": {
+              "source": "function:6c54514c521c919cc20d124fdcd8a728",
+              "target": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Counter.run"
+              },
+              "line": 19,
+              "column": 13,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "method",
+              "name": "step",
+              "qualifiedName": "CodeGraphProbe.Counter.step",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 9,
+              "endLine": 11,
+              "startColumn": 8,
+              "endColumn": 17,
+              "signature": "method step takes nothing returns nothing",
+              "visibility": "public",
+              "isExported": true,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": {
+              "source": "method:bc2560132fd2a453178e381b7c75d9e8",
+              "target": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "declared-receiver-type",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "this.step"
+              },
+              "line": 14,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          },
+          {
+            "node": {
+              "id": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "function",
+              "name": "Ping",
+              "qualifiedName": "CodeGraphProbe.Ping",
+              "filePath": "probe.vjass",
+              "language": "vjass",
+              "startLine": 5,
+              "endLine": 7,
+              "startColumn": 12,
+              "endColumn": 15,
+              "signature": "private function Ping takes nothing returns nothing",
+              "visibility": "private",
+              "isExported": false,
+              "isAsync": false,
+              "isStatic": false,
+              "isAbstract": false,
+              "returnType": "nothing",
+              "updatedAt": 1792547929499
+            },
+            "edge": {
+              "source": "method:52ce1c6947f9cd284227dd4b0dec5620",
+              "target": "function:703f23c446f09753d8ec2adc05e3e9a3",
+              "kind": "calls",
+              "metadata": {
+                "jassStaticSubset": true,
+                "resolutionScope": "lexical-scope",
+                "confidence": 0.95,
+                "resolvedBy": "qualified-name",
+                "refName": "Ping"
+              },
+              "line": 10,
+              "column": 17,
+              "provenance": "heuristic"
+            }
+          }
+        ],
+        "response_chars": 14571,
+        "output": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/classic-common-bj/.probe-3.txt"
+      }
+    ],
+    "stable_rebuild_counts": true,
+    "source_hashes_unchanged": true,
+    "source_hashes": {
+      "Blizzard.j": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c",
+      "common.j": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924",
+      "probe.vjass": "b474a59846089da421d28d662a40ced569bbae4749aad0c7561bc3b09a10e644"
+    }
+  }
+]

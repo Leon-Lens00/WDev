@@ -1,0 +1,33 @@
+{
+  "repo": "medium-jassjass",
+  "flow": 1,
+  "names": [
+    "Jass.assert",
+    "Jass.error",
+    "Jass.print"
+  ],
+  "repetition": 1,
+  "arm": "with",
+  "exit": 0,
+  "seconds": 24.83878759700019,
+  "usage": {
+    "input_tokens": 81973,
+    "cached_input_tokens": 64384,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 752,
+    "reasoning_output_tokens": 110
+  },
+  "commands": 0,
+  "command_text": [],
+  "mcp": 2,
+  "mcp_tools": [
+    "codegraph_explore",
+    "codegraph_explore"
+  ],
+  "mcp_errors": [],
+  "forbidden_commands": [],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16217-af3f-7113-81ba-1fc03bbd2eac"
+  ]
+}

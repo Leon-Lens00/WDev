@@ -1,0 +1,27 @@
+--- r2/Documentos/MCP W3/codegraph-vjass/src/resolution/jass.ts
++++ r3/Documentos/MCP W3/codegraph-vjass/src/resolution/jass.ts
+@@ -117,7 +117,8 @@
+         : node?.returnType ? lookup(node.returnType, TYPES, node) : undefined;
+     } else {
+       const binding = lookup(receiver, new Set(['variable', 'parameter', 'field', 'constant']));
+-      if (mode === 'index' && (!binding || !/\barray\b/.test(binding.signature ?? ''))) return null;
++      // Require the declaration shape, not an incidental word in a comment or initializer.
++      if (mode === 'index' && (!binding || !/^(?:(?:local|private|public|constant|static|readonly|debug)\s+)*[A-Za-z_]\w*\s+array\s+[A-Za-z_]\w*\b/.test(binding.signature ?? ''))) return null;
+       type = receiver === 'thistype' ? owningType : binding ? declaredType(binding) : receiver === 'this' ? owningType : lookup(receiver, TYPES);
+     }
+     if (!type) return null;
+--- r2/Documentos/MCP W3/codegraph-vjass/__tests__/jass-expansion.test.ts
++++ r3/Documentos/MCP W3/codegraph-vjass/__tests__/jass-expansion.test.ts
+@@ -160,6 +160,12 @@
+     expect(calls('Run')).not.toContain('Other.tick'); // Operator [] remains explicitly unsupported.
+   });
+ 
++  it('does not mistake an array comment on a scalar for an array declaration', async () => {
++    await init({ 'index.j': "struct Other extends array\n    method tick takes nothing returns nothing\n    endmethod\nendstruct\nstruct S extends array\n    method operator [] takes integer index returns Other\n        return Other(index)\n    endmethod\n    method tick takes nothing returns nothing\n    endmethod\nendstruct\nfunction Run takes nothing returns nothing\n    local S scalar = 0 // array\n    call scalar[0].tick()\nendfunction\nfunction config takes nothing returns nothing\nendfunction\n" });
++    expect(calls('Run')).not.toContain('S.tick');
++    expect(calls('Run')).not.toContain('Other.tick'); // Instance operator [] remains unsupported.
++  });
++
+   it('keeps debug-dependent exists fallbacks as potential paths', () => {
+     const result = extractFromSource('debug.j', 'struct S extends array\ndebug integer feature\nstatic if not thistype.feature.exists then\nstatic method fallback takes nothing returns nothing\nendmethod\nendif\nendstruct\n');
+     expect(result.nodes.some(n => n.qualifiedName === 'S.fallback')).toBe(true);

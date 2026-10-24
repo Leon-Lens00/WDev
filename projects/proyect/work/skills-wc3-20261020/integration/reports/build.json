@@ -1,0 +1,253 @@
+{
+  "ok": true,
+  "name": "CachyOS skill integration",
+  "target": "Warcraft III 1.27b",
+  "manifest": "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/wc3project.json",
+  "base_map": {
+    "path": "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/maps/base.w3x",
+    "sha256": "6dbc64b9d73fad2ffe0e73dd1d8fd56475e760e8da878d6e3ff78b2e84466e0e"
+  },
+  "output_map": {
+    "path": "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/dist/SkillCheck.w3x",
+    "sha256": "3233371c9281296066f04b9aadec5885261874e3d4204e22f8bacd36f8fe35b2",
+    "size": 117275
+  },
+  "entrypoint": "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/src/Main.j",
+  "map_header_size": 512,
+  "sync_wct": true,
+  "wct_import": "..\\src\\Main.j",
+  "verification": [
+    {
+      "target": "war3map.j",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/war3map.compiled.j",
+      "sha256": "ce32ab6125ca314b360e589ba460fb9e12e43451b53a13350931f994660aba47",
+      "size": 44338
+    },
+    {
+      "target": "war3map.wct",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/war3map.wct",
+      "sha256": "353492cf5f968754d25308fa75c75384a9ed820c3fce0fa25da067ce3e8fb203",
+      "size": 263
+    },
+    {
+      "target": "war3mapImported\\skill-check.bin",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/asset.bin",
+      "sha256": "9f5de7c9e86f18b005c0c0b3bf474e099d994fcb3543b50abcb6b6c43ac4f3cd",
+      "size": 25
+    }
+  ],
+  "toolchain": {
+    "ok": true,
+    "config": "/home/snz/Documentos/ChatGPT/FrozenThone/wc3toolchain.json",
+    "target": "Warcraft III 1.27b",
+    "files": {
+      "jasshelper": {
+        "path": "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/clijasshelper.exe",
+        "exists": true,
+        "size": 814080,
+        "sha256": "23a3cf524d42581c3d5149db96cc64aeded46b30dbfc12f6815f039da6b55985"
+      },
+      "pjass": {
+        "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/pjass",
+        "exists": true,
+        "size": 82320,
+        "sha256": "917c50be6bd80f819e6a0fa3a2f7e8286967e5795106dd7ca98abe8c0f58f851"
+      },
+      "common": {
+        "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+        "exists": true,
+        "size": 166690,
+        "sha256": "9cb04da1c75dd30025d96fec12b4302c2f6a1f1a8c864b66d6cf52c65ecde924"
+      },
+      "blizzard": {
+        "path": "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+        "exists": true,
+        "size": 451847,
+        "sha256": "d290865bd673f8394f4e6fb7b4d6720412fed3a447877523cec9e54e65b8e62c"
+      }
+    },
+    "errors": [],
+    "warnings": []
+  },
+  "archive_backend": "local wc3ctl (repacked on save)",
+  "commands": [
+    {
+      "stage": "extract base war3map.j",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+        "wc3ctl",
+        "extract",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/base-archive.mpq",
+        "war3map.j",
+        "-o",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/base-extract/war3map.j"
+      ],
+      "returncode": 0,
+      "stdout": "Extracted 1 file(s) (43,780 bytes) to /home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/base-extract/war3map.j\n",
+      "stderr": ""
+    },
+    {
+      "stage": "extract base war3map.wct",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+        "wc3ctl",
+        "extract",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/base-archive.mpq",
+        "war3map.wct",
+        "-o",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/base-extract/war3map.wct"
+      ],
+      "returncode": 0,
+      "stdout": "Extracted 1 file(s) (165 bytes) to /home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/base-extract/war3map.wct\n",
+      "stderr": ""
+    },
+    {
+      "stage": "lint source",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/wc3lint.py",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/src",
+        "--json"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"files\": 3,\n  \"findings\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "stage": "compile and validate",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/compile_vjass.py",
+        "--jasshelper",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/editors/newgen/jasshelper/standart/clijasshelper.exe",
+        "--pjass",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/wc3_agent_tools/pjass/pjass",
+        "--common",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j",
+        "--blizzard",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j",
+        "--input",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/compiler-input.j",
+        "--output",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/war3map.compiled.j",
+        "--log",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/compile-report.json",
+        "--local-launcher",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"compiled\": true, \"validated\": true, \"output\": \"/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/war3map.compiled.j\", \"report\": \"/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261020-191224-239147\"}\nParse successful:     2418 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/common.j\nParse successful:    10230 lines: /home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Scripts/Blizzard.j\nParse successful:     1234 lines: /home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/war3map.compiled.j\nParse successful:    13882 lines: <total>\n",
+      "stderr": ""
+    },
+    {
+      "stage": "inject war3map.j",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+        "wc3ctl",
+        "file",
+        "set",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/output-archive.mpq",
+        "war3map.j",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/war3map.compiled.j",
+        "-o",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/member-update.mpq"
+      ],
+      "returncode": 0,
+      "stdout": "replaced war3map.j, 44338 bytes\nsaved: /home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/member-update.mpq\n",
+      "stderr": ""
+    },
+    {
+      "stage": "inject war3map.wct",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+        "wc3ctl",
+        "file",
+        "set",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/output-archive.mpq",
+        "war3map.wct",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/war3map.wct",
+        "-o",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/member-update.mpq"
+      ],
+      "returncode": 0,
+      "stdout": "replaced war3map.wct, 263 bytes\nsaved: /home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/member-update.mpq\n",
+      "stderr": ""
+    },
+    {
+      "stage": "inject war3mapImported\\skill-check.bin",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+        "wc3ctl",
+        "file",
+        "set",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/output-archive.mpq",
+        "war3mapImported\\skill-check.bin",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/asset.bin",
+        "-o",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/member-update.mpq"
+      ],
+      "returncode": 0,
+      "stdout": "added war3mapImported\\skill-check.bin, 25 bytes\nsaved: /home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/member-update.mpq\n",
+      "stderr": ""
+    },
+    {
+      "stage": "verify war3map.j",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+        "wc3ctl",
+        "extract",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/output-archive.mpq",
+        "war3map.j",
+        "-o",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/verify/000/war3map.j"
+      ],
+      "returncode": 0,
+      "stdout": "Extracted 1 file(s) (44,338 bytes) to /home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/verify/000/war3map.j\n",
+      "stderr": ""
+    },
+    {
+      "stage": "verify war3map.wct",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+        "wc3ctl",
+        "extract",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/output-archive.mpq",
+        "war3map.wct",
+        "-o",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/verify/001/war3map.wct"
+      ],
+      "returncode": 0,
+      "stdout": "Extracted 1 file(s) (263 bytes) to /home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/verify/001/war3map.wct\n",
+      "stderr": ""
+    },
+    {
+      "stage": "verify war3mapImported\\skill-check.bin",
+      "command": [
+        "/usr/bin/python3",
+        "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+        "wc3ctl",
+        "extract",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/output-archive.mpq",
+        "war3mapImported\\skill-check.bin",
+        "-o",
+        "/home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/verify/002/war3mapImported/skill-check.bin"
+      ],
+      "returncode": 0,
+      "stdout": "Extracted 1 file(s) (25 bytes) to /home/snz/Documentos/ChatGPT/Proyect/work/skills-wc3-20261020/integration/build/verify/002/war3mapImported/skill-check.bin\n",
+      "stderr": ""
+    }
+  ],
+  "verification_state": "Validated",
+  "remaining_tests": [
+    "Open copied map in World Editor",
+    "Test in Warcraft III 1.27b",
+    "Run two-client test for sync claims"
+  ]
+}

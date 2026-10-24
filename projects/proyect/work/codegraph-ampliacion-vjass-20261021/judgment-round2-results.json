@@ -1,0 +1,35 @@
+{
+  "snapshot": "bf608d5912ec531ae63329261f0c33143fa12301d67d1019db7b4d249bddf806",
+  "record": "Consolidaci\u00f3n de los dos informes finales, no transcripci\u00f3n literal",
+  "correction_rounds": 2,
+  "judges": {
+    "A": {
+      "verified": [
+        "JD-A-001",
+        "JD-B-002"
+      ],
+      "new_warning": "A array declaration with block comments between tokens can lose its index receiver edge",
+      "static_only": true
+    },
+    "B": {
+      "verified": [
+        "JD-A-001",
+        "JD-B-002"
+      ],
+      "new_warning": "A array declaration with block comments between tokens can lose its index receiver edge",
+      "static_only": true
+    }
+  },
+  "new_warning_ids": [
+    "JD-A-R3-001",
+    "JD-B-002-R3"
+  ],
+  "parent_corroboration": {
+    "confirmed": true,
+    "graph_callees": [],
+    "compiler_call": "S.tick",
+    "compiler_validated": true
+  },
+  "integrity_verified_after_both": true,
+  "judgment": "ESCALATED"
+}

@@ -1,0 +1,22 @@
+Barras horizontales · variante separada · Classic1.27b
+
+Héroe: icono nativo del HUD, sin BLP propio ni retrato duplicado. La preview
+conserva el icono de la captura de referencia; la integración del anclaje real
+en el juego está pendiente. Enemigo: portraitBLP independiente e intercambiable.
+Vida: origen izquierdo, crece hacia la derecha. Ancho útil133/325px; grosor10px.
+Marco azul256×64(contenido224×64); enemigo512×128(contenido448×96).
+LifeNormal/CriticalHorizontal256×16; fotos de enemigo128×128.
+Las texturas originales del conjunto vertical permanecen intactas.
+
+FuentesSVG y PNG separadas; game/ contiene sólo6BLP importables. El PNG de
+preview se decodifica del BLP final. healthbars.json define recortesUV y capas.
+Los valores de vida y porcentaje son dinámicos, no se pintan en las texturas.
+Las dos fotos disponibles conservan la procedencia del paquetevertical.
+
+Reproducir desdeProyect:
+work/shots-vol-i-origen-20261022/plot-env/bin/python TerrainDev/dialogue-system/tools/healthbar-horizontal.py
+node TerrainDev/dialogue-system/tools/verify-healthbar-horizontal.cjs
+work/shots-vol-i-origen-20261022/plot-env/bin/python TerrainDev/dialogue-system/tools/healthbar-horizontal.py --pack
+
+Preview: http://127.0.0.1:4317/healthbars.html → Disposición.
+Materiales y vista listos para evaluación. IntegraciónMDX/JASS y ensayo nativo pendientes.

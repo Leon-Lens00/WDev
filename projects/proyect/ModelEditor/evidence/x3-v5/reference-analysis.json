@@ -1,0 +1,45 @@
+{
+  "sheet": "/tmp/codex-clipboard-3ca7b032-9977-4200-bccf-91812a429b65.png",
+  "crops": [
+    [
+      194,
+      589,
+      240,
+      630
+    ],
+    [
+      241,
+      589,
+      288,
+      630
+    ],
+    [
+      290,
+      589,
+      338,
+      630
+    ]
+  ],
+  "gif": "references/megaman-x3/originales/buster-estandar.gif",
+  "flightFrames": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "archiveFrameDurationMs": 30,
+  "readingLoopMsPerPhase": 240,
+  "nativeGameTimingVerified": false,
+  "sources": [
+    "https://www.megaman.retropixel.net/mmx/3/sprites.php",
+    "https://www.spriters-resource.com/snes/mmx/asset/21390/"
+  ]
+}

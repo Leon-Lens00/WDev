@@ -1,0 +1,7 @@
+`codegraph_explore` is unavailable; this chain is verified directly from `Systems/TimerTools/script.j`.
+
+- **Entry:** `Timer.create(timeout, onExpire, funcId)` calls `TimerList.add(TimerList.getTimeoutId(timeout), onExpire, funcId)`. The key is `R2I(timeout*320 + .5)` (lines **605–606, 730–731**).
+- **Lookup:** `TimerList.add` obtains the bucket’s timer through `thistype[timeoutId]`, whose overloaded `[]` reads `lists[timeoutId]`; it reconstructs `timeout = timeoutId/320.` (lines **586–587, 608–619**).
+- **Intermediate wiring:** both queueing branches first call `ExpirationCode.create(timerId, onExpire, funcId)`, then pass that object to `CreationQueue.add` (lines **640–641, 650–651**). Creation stores those three arguments (lines **334–336**).
+- **Conditions:** an existing bucket is required. Queueing occurs when `isConst[timeoutId]` and remaining time `< timeout/2`, or when nonconstant and remaining time `<= relativeOffset[timeoutId]`. Classification uses `timeout <= relativeOffset*2` (lines **621–651**). Other branches register immediately (lines **627–629, 643–669**).
+- **Queue behavior:** `CreationQueue.add` indexes queue state by `expirationCode.timerId`, increments `toAdd`, and appends the object (lines **463–481**). `Handler.expire` drains it through `CreationQueue.register` after callback evaluation (lines **700–704**).

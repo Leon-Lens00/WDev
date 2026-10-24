@@ -1,0 +1,18 @@
+{
+  "server": {
+    "name": "codegraph",
+    "version": "1.6.2+jass-vjass.1"
+  },
+  "global_config_command": true,
+  "client": "@modelcontextprotocol/sdk 1.29.0",
+  "tools": [
+    "codegraph_explore"
+  ],
+  "original_explore_passed": true,
+  "watcher_jass_add_passed": true,
+  "watcher_add_observed_ms": 518,
+  "watcher_jass_remove_passed": true,
+  "original_source_hash_unchanged": true,
+  "response_chars": 2598,
+  "stderr": "[CodeGraph MCP] No .codegraph/ at or above /home/snz/Documentos/ChatGPT/Proyect: no default project, live sync disabled until an indexed project is accessed via projectPath.\n[CodeGraph MCP] Indexed sub-projects found: work/codegraph-original-vjass-20261020/classic-common, work/codegraph-original-vjass-20261020/classic-common-bj, work/codegraph-original-vjass-20261020/python-control-fork, work/codegraph-original-vjass-20261020/python-control-upstream, work/codegraph-original-vjass-20261020/small, work/integracion-codegraph-judgmentday-20261020/fixtures/python-control, work/integracion-codegraph-judgmentday-20261020/fixtures/vjass-only. Pass `projectPath` per call, or launch with --path.\n[CodeGraph MCP] Query pool: up to 2 worker thread(s) for concurrent reads.\n[CodeGraph MCP] File watcher active for /home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/small — graph will auto-sync on changes\n[CodeGraph MCP] Auto-synced 1 file(s) in 43ms\n"
+}

@@ -1,0 +1,144 @@
+{
+  "paladin": {
+    "name": "HeroPaladin",
+    "animationBounds": {
+      "min": [
+        -12.500001269826924,
+        -11.000002570856827
+      ],
+      "max": [
+        12.500008080024976,
+        4.963639387574944
+      ]
+    },
+    "bodyPolicy": "fixed reference idle pose; neck/head/face keep idle and talk tracks",
+    "frozenBodyNodes": [
+      0,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25
+    ],
+    "idle": 0,
+    "talk": 1,
+    "sourceIdle": 1,
+    "sourceTalk": 4,
+    "file": "UI\\Dialogue\\Portraits\\paladin.mdx",
+    "preview": "assets/dialogue/portraits/paladin.mdx",
+    "rawcode": "dpa0",
+    "fit": 0.7518615238199312,
+    "translation": [
+      104.23454674044052,
+      -154.87789956566738,
+      -40.16865924212468
+    ],
+    "rotation": [
+      -0.024505620822310448,
+      -0.08932957053184509,
+      0.26341667771339417,
+      0.9602246284484863
+    ],
+    "sampleStepMs": 100,
+    "headOnly": false,
+    "bust": true,
+    "referencePoseFit": true,
+    "borderClip": "idle pose, inverse skin group for border vertices",
+    "depthCompression": 0.02,
+    "sampledSequences": [
+      1,
+      4
+    ],
+    "projectedBounds": {
+      "min": [
+        -158.3533704719661,
+        176.03902085027886,
+        33.330863398662466
+      ],
+      "max": [
+        -118.91722640832968,
+        228.12616044285252,
+        60.02734106680316
+      ]
+    },
+    "removedGeosets": [
+      2
+    ],
+    "source": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/HeroPaladin_portrait.mdx"
+  },
+  "tauren": {
+    "name": "Tauren",
+    "animationBounds": {
+      "min": [
+        -11.867094464628387,
+        -9.897515489098643
+      ],
+      "max": [
+        12.125000697799292,
+        8.030159920647922
+      ]
+    },
+    "bodyPolicy": "fixed reference idle pose; neck/head/face keep idle and talk tracks",
+    "frozenBodyNodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "idle": 0,
+    "talk": 1,
+    "sourceIdle": 1,
+    "sourceTalk": 4,
+    "file": "UI\\Dialogue\\Portraits\\tauren.mdx",
+    "preview": "assets/dialogue/portraits/tauren.mdx",
+    "rawcode": "dta0",
+    "fit": 0.2804348668911505,
+    "translation": [
+      -21.33336739271108,
+      -55.25880208089042,
+      -32.345401444528775
+    ],
+    "rotation": [
+      0.022199515253305435,
+      -0.11817827820777893,
+      -0.18327908217906952,
+      0.9756791591644287
+    ],
+    "sampleStepMs": 100,
+    "headOnly": false,
+    "bust": true,
+    "referencePoseFit": true,
+    "borderClip": "idle pose, inverse skin group for border vertices",
+    "depthCompression": 0.02,
+    "sampledSequences": [
+      1,
+      4
+    ],
+    "projectedBounds": {
+      "min": [
+        32.882755648708994,
+        154.90456193250543,
+        47.11720203966529
+      ],
+      "max": [
+        119.26214437181183,
+        241.09464608184516,
+        143.97060296155865
+      ]
+    },
+    "removedGeosets": [
+      2
+    ],
+    "source": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-animated-20261022/originals/Tauren_portrait.mdx"
+  }
+}

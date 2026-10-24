@@ -1,0 +1,8 @@
+CodeGraph MCP was unavailable; direct source inspection establishes this chain:
+
+`Noise.Noise.perlin3D → grad3D → realTernaryOp`.
+
+- `perlin3D` masks floored coordinates with `255`, retains fractional coordinates, and computes fade weights. It builds `A=p[X]+Y`, `B=p[X+1]+Y`, then `AA=p[A]+Z`, `AB=p[A+1]+Z`, `BA=p[B]+Z`, `BB=p[B+1]+Z`, where `p=permutation`. ([Noise.j:101–129](<./Noise.j#L101>))
+- Eight unconditional `grad3D` calls occur as arguments to four `lerp(u, …)` calls. Hashes are `p[AA/BA/AB/BB]` for the lower z face and `p[AA+1/BA+1/AB+1/BB+1]` for the upper face, with matching coordinate offsets of `−1`. Results interpolate along y, then z. ([Noise.j:130–134](<./Noise.j#L130>))
+- `grad3D` sets `h=hash & 15`. Helpers select `u = x` if `h<8`, otherwise `y`; `v = y` if `h<4`, otherwise a **nested** helper selects `x` when `h==12 or h==14`, else `z`. Two further helpers select signs using bits `1` and `2`, then sum. ([Noise.j:94–98](<./Noise.j#L94>))
+- `realTernaryOp(cond,a,b)` returns `a` when true, otherwise `b`. ([Noise.j:40–46](<./Noise.j#L40>))

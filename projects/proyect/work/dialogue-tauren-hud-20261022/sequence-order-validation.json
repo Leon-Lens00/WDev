@@ -1,0 +1,172 @@
+{
+  "paladin": {
+    "before": [
+      {
+        "name": "Portrait - 1",
+        "interval": [
+          80000,
+          83333
+        ]
+      },
+      {
+        "name": "Portrait Talk - 1",
+        "interval": [
+          113333,
+          116000
+        ]
+      },
+      {
+        "name": "Portrait - 2",
+        "interval": [
+          86667,
+          96667
+        ]
+      },
+      {
+        "name": "Portrait - 3",
+        "interval": [
+          103333,
+          108533
+        ]
+      },
+      {
+        "name": "Portrait Talk - 2",
+        "interval": [
+          120000,
+          121000
+        ]
+      }
+    ],
+    "after": [
+      {
+        "name": "Portrait - 1",
+        "interval": [
+          80000,
+          83333
+        ]
+      },
+      {
+        "name": "Portrait - 2",
+        "interval": [
+          86667,
+          96667
+        ]
+      },
+      {
+        "name": "Portrait - 3",
+        "interval": [
+          103333,
+          108533
+        ]
+      },
+      {
+        "name": "Portrait Talk - 1",
+        "interval": [
+          113333,
+          116000
+        ]
+      },
+      {
+        "name": "Portrait Talk - 2",
+        "interval": [
+          120000,
+          121000
+        ]
+      }
+    ],
+    "beforeInversions": 1,
+    "afterInversions": 0
+  },
+  "tauren": {
+    "before": [
+      {
+        "name": "Portrait - 1",
+        "interval": [
+          66667,
+          69333
+        ]
+      },
+      {
+        "name": "Portrait Talk - 1",
+        "interval": [
+          100000,
+          102000
+        ]
+      },
+      {
+        "name": "Stand -1",
+        "interval": [
+          3333,
+          6000
+        ]
+      },
+      {
+        "name": "Portrait - 2",
+        "interval": [
+          73333,
+          84000
+        ]
+      },
+      {
+        "name": "Portrait Talk - 2",
+        "interval": [
+          90000,
+          92000
+        ]
+      },
+      {
+        "name": "Portrait - 3",
+        "interval": [
+          110000,
+          111333
+        ]
+      }
+    ],
+    "after": [
+      {
+        "name": "Stand -1",
+        "interval": [
+          3333,
+          6000
+        ]
+      },
+      {
+        "name": "Portrait - 1",
+        "interval": [
+          66667,
+          69333
+        ]
+      },
+      {
+        "name": "Portrait - 2",
+        "interval": [
+          73333,
+          84000
+        ]
+      },
+      {
+        "name": "Portrait Talk - 2",
+        "interval": [
+          90000,
+          92000
+        ]
+      },
+      {
+        "name": "Portrait Talk - 1",
+        "interval": [
+          100000,
+          102000
+        ]
+      },
+      {
+        "name": "Portrait - 3",
+        "interval": [
+          110000,
+          111333
+        ]
+      }
+    ],
+    "beforeInversions": 1,
+    "afterInversions": 0
+  }
+}

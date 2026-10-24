@@ -1,0 +1,57 @@
+{
+  "format": "wc3-dialogue-studio",
+  "version": 1,
+  "name": "Conversación · enlace de misión",
+  "target": "1.27b",
+  "viewport": "warcraft",
+  "calibration": {
+    "version": 1,
+    "planeWidth": 91.5,
+    "planeHeight": 64.7,
+    "planeTop": 12.8,
+    "depth": 400,
+    "frustumWidth": 0.81,
+    "centerY": -0.49,
+    "source": "verified-10 / 1920x1080; one camera position"
+  },
+  "background": "terrain",
+  "lettersPerSecond": 30,
+  "punctuationPause": true,
+  "layout": {
+    "width": 68,
+    "bottom": 14.4,
+    "font": 2.45,
+    "color": "#e78691",
+    "leftColor": "#81c8e2"
+  },
+  "portraits": {
+    "left": {
+      "name": "X",
+      "image": "reference-x"
+    },
+    "right": {
+      "name": "ALIA",
+      "image": "reference-alia"
+    }
+  },
+  "messages": [
+    {
+      "id": "message-1",
+      "speaker": "right",
+      "text": "La señal sigue activa al otro lado del río. Tendremos que cruzar el bosque antes de que anochezca; mantén abierto el canal de comunicación.\nSi detectas movimiento entre los árboles, avísame. Desde aquí puedo seguir tu posición y guiarte hasta el punto de encuentro.",
+      "presentation": "wide"
+    },
+    {
+      "id": "message-2",
+      "speaker": "left",
+      "text": "Entendido, Alia.\nVoy hacia la señal. Te avisaré en cuanto llegue.",
+      "presentation": "wide"
+    },
+    {
+      "id": "message-3",
+      "speaker": "right",
+      "text": "Sí. Proviene del bosque, al otro lado del río.\nTen cuidado. Estaremos en contacto.",
+      "presentation": "wide"
+    }
+  ]
+}

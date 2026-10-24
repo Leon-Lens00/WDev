@@ -1,0 +1,53 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/033-Table.j
++++ TerrainDev/inventory-integration/src/Inventory_33_Table.j
+@@ -1,9 +1,9 @@
+-library Table
++library InventoryTable
+ //***************************************************************
+-//* Table object 3.1
++//* InventoryTable object 3.1
+ //* ------------
+ //*
+-//*   set t=Table.create() - instanceates a new table object
++//*   set t=InventoryTable.create() - instanceates a new table object
+ //*   call t.destroy()     - destroys it
+ //*   t[1234567]           - Get value for key 1234567
+ //*                          (zero if not assigned previously)
+@@ -13,22 +13,22 @@
+ //*   t.exists(32)         - Was key 32 assigned? Notice
+ //*                          that flush() unassigns values.
+ //*   call t.reset()       - Flushes the whole contents of the
+-//*                          Table.
++//*                          InventoryTable.
+ //*
+ //*   call t.destroy()     - Does reset() and also recycles the id.
+ //*
+-//*   If you use HandleTable instead of Table, it is the same
++//*   If you use HandleTable instead of InventoryTable, it is the same
+ //* but it uses handles as keys, the same with StringTable.
+ //*
+-//*  You can use Table on structs' onInit  if the struct is
+-//* placed in a library that requires Table or outside a library.
++//*  You can use InventoryTable on structs' onInit  if the struct is
++//* placed in a library that requires InventoryTable or outside a library.
+ //*
+ //*  You can also do 2D array syntax if you want to touch
+ //* mission keys directly, however, since this is shared space
+ //* you may want to prefix your mission keys accordingly:
+ //*
+-//*  set Table["thisstring"][ 7 ] = 2
+-//*  set Table["thisstring"][ 5 ] = Table["thisstring"][7]
++//*  set InventoryTable["thisstring"][ 7 ] = 2
++//*  set InventoryTable["thisstring"][ 5 ] = InventoryTable["thisstring"][7]
+ //*
+ //***************************************************************
+ 
+@@ -85,7 +85,7 @@
+     endstruct
+     //! endtextmacro
+ 
+-    //! runtextmacro Table__make("Table","integer","key" )
++    //! runtextmacro Table__make("InventoryTable","integer","key" )
+     //! runtextmacro Table__make("StringTable","string", "StringHash(key)" )
+     //! runtextmacro Table__make("HandleTable","handle","GetHandleId(key)" )
+ 

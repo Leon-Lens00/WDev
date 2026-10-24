@@ -1,0 +1,775 @@
+
+Traps
+
+
+
+Made these two for a project long time ago. Maybe someone can use them. 
+
+
+
+The demo map:
+
+
+
+
+
+	
+
+		Contains:
+	
+	
+
+		
+
+			
+
+
+Arcane and lightning trap with all required resources
+
+A small demo map
+
+		
+	
+Requires:
+
+
+
+Dummy
+
+optional TimerUtils
+
+
+Credits:
+
+
+
+
+
+
+
+	
+
+		Nestharus
+	
+	
+
+		
+
+			
+
+
+Dummy
+
+		
+	
+
+
+The spells use native UnitAlive
+
+
+
+
+
+
+
+	
+
+		Arcane Trap
+	
+	
+
+		
+
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library_once IsPointInRectangle
+    //determins if point P is in rectangle ABCD
+    function IsPointInRectangle takes real ax, real ay, real bx, real by, real cx, real cy, real dx, real dy, real px, real py returns boolean
+        local real cross0 = (py-ay)*(bx-ax)-(px-ax)*(by-ay)
+        local real cross1 = (py-cy)*(ax-cx)-(px-cx)*(ay-cy)
+        local real cross4 = (py-dy)*(ax-dx)-(px-dx)*(ay-dy)
+       
+        return ((cross0*cross1 >= 0) and (((py-by)*(cx-bx)-(px-bx)*(cy-by))*cross1 >= 0)) or ((cross0*cross4 >= 0) and (((py-by)*(dx-bx)-(px-bx)*(dy-by))*cross4 >= 0))
+    endfunction
+endlibrary
+
+library ArcaneTrap /* v1.0.0.0
+*************************************************************************************
+*
+*   Creates a trap which creates a lighting moving in a circle.
+*   Units hit by the lightning will be damaged each interval.
+*
+*************************************************************************************
+*
+*   Credits
+*
+*       To Nestharus
+*       -----------------------
+*
+*           For Alloc
+*
+*       To Vexorian
+*       -----------------------
+*
+*           For TimerUtils
+*
+*      
+*************************************************************************************
+*
+*   */ uses /*
+*
+*       */ Dummy                /*  
+*       */ optional TimerUtils  /*         [url]http://www.wc3c.net/showthread.php?t=101322[/url]
+*       */ optional Alloc       /*         -
+*
+************************************************************************************
+*
+*   2. API
+*   ¯¯¯¯¯¯
+*       struct ArcaneTrap extends array
+*  
+*           static method create takes player who, real createX, real createY, real degree, integer level returns thistype 
+*           method destroy takes nothing returns nothing
+*
+*           method operator owner= takes player who returns nothing
+*               Not really changes the controller, but the player for the player struct member "own"
+*
+*   SETTINGS
+*
+*/
+    globals
+        /*
+        *   Trap models may be curved, which can look weird. A symmetrical model probably will fit best.
+        */
+        private constant integer TRAP_ID              = 'o001'
+        private constant real RED                     = 0.2
+        private constant real GREEN                   = 1.0
+        private constant real BLUE                    = 0.2
+        /*
+        *   Define the variance in which units are damaged. 
+        */
+        private constant real VARIANCE                = 20.
+        /*
+        *   The trap can only be invulnerable
+        *   if it's selectable. Otherwise the code
+        *   below will ignore IS_TRAP_INVULNERABLE.
+        */
+        private constant boolean IS_TRAP_SELECTABLE   = false
+        private constant boolean IS_TRAP_INVULNERABLE = false
+        /*
+        *   Fly height of dummy representing the head of the lightning.
+        */
+        private constant real DUMMY_FLY_HEIGHT        = 50.
+        /*
+        *   Fly height of the origin of the lighting.
+        */
+        private constant real TRAP_HEIGHT             = 125.00
+        private constant real ANGLE_PER_TICK          = 0.5
+        private constant real TIMER_TIMEOUT           = 0.031250000
+        private constant string LIGHTNING             = "LEAS"
+        private constant string EFFECT_ON_DUMMY       = "Abilities\\Weapons\\BloodElfMissile\\BloodElfMissile.mdl"
+        private constant real SCALE                   = 1.8
+        private constant attacktype ATTACK_TYPE       = ATTACK_TYPE_NORMAL
+        private constant damagetype DAMAGE_TYPE       = DAMAGE_TYPE_NORMAL
+    endglobals
+    
+    //native UnitAlive takes unit id returns boolean 
+    
+    private function TargetFilter takes unit target, player who returns boolean
+        return UnitAlive(target) and IsUnitEnemy(target, who) and not IsUnitType(target, UNIT_TYPE_STRUCTURE)
+    endfunction
+    
+    //The duration the trap lasts. 
+    private constant function GetDuration takes integer level returns real
+        return 40. + (2.*level)
+    endfunction
+
+    private constant function GetRange takes integer level returns real
+        return 450 + 0.*level
+    endfunction
+
+    private constant function GetDamage takes integer level returns real
+        return 10.*level
+    endfunction
+        
+    struct ArcaneTrap extends array
+        implement optional Alloc
+        
+        static if not LIBRARY_Alloc then
+            private static integer array recycler
+            static method allocate takes nothing returns thistype
+                local thistype this = recycler[0]
+                
+                debug if (0 == this) then
+                    debug call BJDebugMsg("this == 0, Arcane Trap, allocate Overflow")
+                debug endif
+                
+                set recycler[0] = recycler[this]
+                
+                debug set recycler[this] = -1
+
+                return this
+            endmethod
+            method deallocate takes nothing returns nothing
+            
+                debug if (recycler[this] != -1) then
+                    debug call BJDebugMsg("this == 0, Arcane Trap, deallocate, Attempted To Deallocate Null Instance.")
+                debug endif
+                
+                set recycler[this] = recycler[0]
+                set recycler[0] = this
+            endmethod
+            private static method onInit takes nothing returns nothing
+                local integer i = 0
+                set recycler[8191] = 0
+                loop
+                    set recycler[i] = i + 1
+                    exitwhen i == 8190
+                    set i = i + 1
+                endloop
+            endmethod
+        endif
+        
+        readonly static constant integer TIMED_LIFE = 'BTLF'
+        readonly unit trap
+        readonly Dummy dum
+        
+        private static constant real v       = bj_PI/2
+        private static constant real radians = ANGLE_PER_TICK*bj_DEGTORAD
+        private static location loc = Location(0,0)
+        private lightning light
+        private effect sfx
+        private player own
+        private real damage
+        private real range
+        private real angle
+        private real x
+        private real y 
+        private real x0
+        private real y0
+        
+        private static group enu   = CreateGroup()
+        
+        static if not LIBRARY_TimerUtils then
+            private static timer clock = CreateTimer()
+        endif
+        
+        private static integer array n
+        private static integer array p
+        
+        method operator owner= takes player p returns nothing
+            set own = p
+        endmethod
+        
+        method destroy takes nothing returns nothing
+            set n[p[this]] = n[this]
+            set p[n[this]] = p[this]
+            
+            call deallocate()
+            call DestroyEffect(sfx)
+            call dum.destroy()
+            call DestroyLightning(light)
+            call UnitApplyTimedLife(trap, TIMED_LIFE, 0.01)
+            set trap  = null
+            set light = null
+            set sfx   = null
+        endmethod
+        
+        private static method callback takes nothing returns nothing
+            local thistype this = n[0]
+            local unit u
+            local real z
+            local real z2
+            local real s//sinus
+            local real c//cosinus
+            loop
+                if UnitAlive(trap) then
+                    set angle = angle + radians
+                    set x = GetUnitX(trap)
+                    set y = GetUnitY(trap)
+                    call SetUnitFacing(trap, angle*bj_RADTODEG)
+                    
+                    set x0 = x + range*Cos(angle)
+                    set y0 = y + range*Sin(angle)
+                    
+                    set s = VARIANCE*Sin(angle + v)
+                    set c = VARIANCE*Cos(angle + v)
+
+                    call GroupEnumUnitsInRange(enu, x, y, range, null) 
+                    loop
+                        set u = FirstOfGroup(enu)
+                        exitwhen u == null
+                        call GroupRemoveUnit(enu, u)
+                        if TargetFilter(u, own) then
+                            //Requires library IsPointInRectangle
+                            //Detects if a point p is within ABCD.
+                            if (IsPointInRectangle(x + c, y + s, x - c, y - s, x0 - c, y0 - s, x0 + c , y0 + s, GetUnitX(u), GetUnitY(u))) then 
+                                call UnitDamageTarget(trap, u, damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
+                                //Add a special effect on hit here.
+                            endif
+                        endif
+                    endloop
+
+                    call SetUnitX(dum.unit, x0)
+                    call SetUnitY(dum.unit, y0)
+                    call MoveLocation(thistype.loc, x0, y0)
+                    set z = GetLocationZ(thistype.loc)
+                    call MoveLocation(thistype.loc, x, y)
+                    set z2 = GetLocationZ(thistype.loc)
+                    call MoveLightningEx(light, true, x, y, z2 + TRAP_HEIGHT, x0, y0, z + GetUnitFlyHeight(dum.unit))
+                else
+                    call destroy()
+                    if (0 == n[0]) then
+                        static if LIBRARY_TimerUtils then
+                            call ReleaseTimer(GetExpiredTimer())
+                        else
+                            call PauseTimer(clock)
+                        endif
+                    endif
+                endif
+                set this = n[this]
+                exitwhen 0 == this
+            endloop
+        endmethod
+        
+        static method create takes player who, real createX, real createY, real degree, integer level returns thistype 
+            local thistype this = allocate()
+            //Linked List
+            set n[this] = 0
+            set p[this] = p[0]
+            set n[p[0]] = this
+            set p[0]    = this
+            
+            set trap   = CreateUnit(who, TRAP_ID, createX, createY, degree)
+            call UnitApplyTimedLife(trap, TIMED_LIFE, GetDuration(level))
+            
+            set x      = GetUnitX(trap)
+            set y      = GetUnitY(trap)
+            set own    = who
+            set range  = GetRange(level)
+            set damage = GetDamage(level)
+            set angle  = degree*bj_DEGTORAD
+            set x0     = x + range*Cos(angle)
+            set y0     = y + range*Sin(angle)
+            
+            set dum = Dummy.create(x0, y0 , degree)
+            call SetUnitFlyHeight(dum.unit, DUMMY_FLY_HEIGHT, 0.)
+            set sfx = AddSpecialEffectTarget(EFFECT_ON_DUMMY, dum.unit, "origin")
+            call SetUnitScale(dum.unit, SCALE, 0., 0.)
+            
+            set light  = AddLightningEx(LIGHTNING, true, x, y , TRAP_HEIGHT, x0, y0, GetUnitFlyHeight(dum.unit))
+            call SetLightningColor(light, RED, GREEN, BLUE, 1)
+        
+            static if IS_TRAP_SELECTABLE then
+                static if IS_TRAP_INVULNERABLE then
+                    call UnitAddAbility(trap, 'Avul')
+                endif
+            else
+                call UnitAddAbility(trap, 'Aloc')
+            endif
+        
+            if (0 == p[this]) then
+                static if LIBRARY_TimerUtils then
+                    call TimerStart(NewTimer(), TIMER_TIMEOUT, true, function thistype.callback)
+                else
+                    call TimerStart(clock, TIMER_TIMEOUT, true, function thistype.callback)
+                endif
+            endif
+            
+            return this
+        endmethod
+        
+    endstruct
+endlibrary
+	
+
+		
+	
+
+
+
+
+	
+
+		LightningTrap
+	
+	
+
+		
+
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library LightningTrap/* v1.0.0.0
+*************************************************************************************
+*
+*   Creates a trap which focuses enemies within 500 range.
+*   Nearby corpses will explode and deal damage relative to their maximum life.
+*
+*************************************************************************************
+*
+*   Credits
+*
+*       To Nestharus
+*       -----------------------
+*
+*           For Alloc
+*
+*       To Vexorian
+*       -----------------------
+*
+*           For TimerUtils
+*
+*      
+*************************************************************************************
+*
+*   */ uses /*
+*  
+*       */ optional TimerUtils  /*         [url]http://www.wc3c.net/showthread.php?t=101322[/url]
+*       */ optional Alloc       /*         -
+*
+************************************************************************************
+*
+*   SETTINGS
+*
+*/
+    globals
+        /*
+        *   It is not required to set the timer timeout to a really small
+        *   value for this spell. 0.1 is a recommended value here.
+        */
+        private constant real TIMEOUT    = 0.1
+        /*
+        *   The trap can only be invulnerable
+        *   if it is selectable. Otherwise the code
+        *   below will ignore IS_TRAP_INVULNERABLE.
+        */
+        private constant boolean IS_TRAP_SELECTABLE       = true
+        private constant boolean IS_TRAP_INVULNERABLE     = false
+        /*
+        *   Explosions fire with a cooldown in between.
+        */
+        private constant real COOLDOWN_BETWEEN_EXPLOSIONS = 1.7
+        private constant damagetype DAMAGE_TYPE       = DAMAGE_TYPE_NORMAL
+        private constant attacktype ATTACK_TYPE       = ATTACK_TYPE_NORMAL
+        /*
+        *   The effect on the trap each time a explosion takes place.
+        */
+        private constant string EXPLOSION_ON_TRAP     = "Abilities\\Weapons\\ChimaeraLightningMissile\\ChimaeraLightningMissile.mdl"
+        private constant string ATTACH_ON_TRAP        = "origin"
+        /*
+        *   The effect on living affected units. 
+        */
+        private constant string EXPLOSION_ON_UNIT     = "Abilities\\Weapons\\AvengerMissile\\AvengerMissile.mdl"
+        private constant string ATTACH_ON_UNIT        = "chest"
+        /*
+        *   The effect displayed on the corpse.
+        */
+        private constant string EXPLOSION_ON_CORPSE   = "Objects\\Spawnmodels\\Undead\\UndeadLargeDeathExplode\\UndeadLargeDeathExplode.mdl"
+    endglobals  
+
+    native UnitAlive takes unit id returns boolean 
+    
+    //Place in the corresponding raw-code, based on the passed integer level
+    private function GetTrapByLevel takes integer level returns integer
+        if level == 1 then
+            return 'o000'
+        elseif level == 2 then
+            return 'o000'
+        else
+            return 'o000'
+        endif
+    endfunction
+    
+    //The duration the trap lasts. 
+    private constant function GetDuration takes integer level returns real
+        return 8. + (2.*level)
+    endfunction
+    
+    //The aoe the trap searches for corpses
+    private constant function GetDetectionRange takes integer level returns real
+        return 400. + (50.*level)
+    endfunction
+    
+    //The explosion aoe. Within this aoe units take damage.
+    private constant function GetExplosionRange takes integer level returns real
+        return 200. + (50.*level)
+    endfunction
+    
+    //Each trap can fire a maximum number of explosions.
+    private constant function GetExplosions takes integer level returns integer
+        return 4 + (1*level)
+    endfunction
+    
+    //Filter which corpses should be considered. Heroes are filtered out by default.
+    private constant function ExplosionFilter takes unit target returns boolean
+        return not IsUnitType(target, UNIT_TYPE_MECHANICAL)
+    endfunction
+    
+    //The percent of maximum damage, which will be dealt as damage
+    //i.e: Footman has 100 maximum life --> 100*0.2 = 20. 
+    private constant function GetDamageFactor takes integer level returns real
+        return 0.2 + (0.2*level)
+    endfunction
+    
+    //Which units around the corpse should take damage
+    private function DamageFilter takes unit target, player who returns boolean
+        return UnitAlive(target) and IsUnitEnemy(target, who) 
+    endfunction
+
+    struct LightningTrap extends array
+        implement optional Alloc
+        
+        static if not LIBRARY_Alloc then
+            private static integer array recycler
+        endif
+    
+        static if not LIBRARY_TimerUtils then
+            private static timer tmr = CreateTimer()
+        endif
+    
+        private unit trap
+        private player owner
+        private real range
+        private real factor
+        private real radius
+        private real x
+        private real y
+        private integer counter
+        private real cooldown
+ 
+        private static group pick = CreateGroup()
+        private static group expl = CreateGroup()
+    
+        private static integer array next
+        private static integer array prev
+        /*
+        *   Heroes aren't considered as corpses,
+        *   because they shouldn't be removed from the game.
+        */
+        private static method basicFilter takes unit u returns boolean
+            return not UnitAlive(u) and (not IsUnitType(u, UNIT_TYPE_HERO))
+        endmethod
+ 
+        method destroy takes nothing returns nothing
+            static if LIBRARY_Alloc then
+                call this.deallocate()
+            else
+                set recycler[this] = recycler[0]
+                set recycler[0] = this
+            endif
+            
+            call UnitApplyTimedLife(.trap, 'BTLF', 0.01)
+            set this.trap  = null
+            set this.owner = null
+        endmethod
+        
+        private static method callback takes nothing returns nothing
+            local thistype this = next[0]
+            local unit u
+            local unit c
+            local real x
+            local real y
+            local real damage
+            local boolean b = false
+            loop
+                /*
+                *   Each trap can fire a maximum of
+                *   corpse explosions.
+                */
+                if UnitAlive(.trap) and (0 < .counter) then
+                    /*
+                    *   There is a cooldown between two
+                    *   corpse explosions.
+                    */
+                    if (0 >= .cooldown) then
+
+                        call GroupEnumUnitsInRange(pick, .x, .y , .range, null)
+                        loop
+                            set u = FirstOfGroup(pick)
+                            exitwhen u == null
+                            call GroupRemoveUnit(pick, u)
+                    
+                            if ExplosionFilter(u) and thistype.basicFilter(u) then
+                                call GroupAddUnit(expl, u)
+                            endif
+                
+                        endloop
+            
+                        call ForGroup(expl, function GroupPickRandomUnitEnum)
+                        set c = FirstOfGroup(expl)
+                        call GroupClear(expl)
+                
+                        if (c != null) then
+                            set x = GetUnitX(c)
+                            set y = GetUnitY(c)
+                    
+                            set damage = GetUnitState(c, UNIT_STATE_MAX_LIFE)*factor
+
+                            call GroupEnumUnitsInRange(pick, x, y, .radius, null)
+                            loop
+                                set u = FirstOfGroup(pick)
+                                exitwhen u == null
+                                call GroupRemoveUnit(pick, u)
+                                if (DamageFilter(u, .owner)) then
+                                    call UnitDamageTarget(.trap, u, damage, false, false, ATTACK_TYPE, DAMAGE_TYPE, null)
+                                    call DestroyEffect(AddSpecialEffectTarget(EXPLOSION_ON_UNIT, u, ATTACH_ON_UNIT))
+                                    set b = true
+                                endif
+                            endloop
+                            /*
+                            *   b confirms if the trap has hit any enemies.
+                            *   if not neither the corpse is removed nor the cooldown goes off.
+                            */
+                            if b then
+                                call RemoveUnit(c)
+                                call DestroyEffect(AddSpecialEffect(EXPLOSION_ON_CORPSE, x, y))
+                                call DestroyEffect(AddSpecialEffectTarget(EXPLOSION_ON_TRAP, .trap, ATTACH_ON_TRAP))
+                                /*
+                                *   Decrease the maximum explosion counter
+                                *   and set the cooldown.
+                                */
+                                set .counter = .counter - 1
+                                set .cooldown = COOLDOWN_BETWEEN_EXPLOSIONS
+                                set b = not b
+                            endif
+                            set c = null
+                        endif
+                    else
+                        set .cooldown = .cooldown - TIMEOUT
+                    endif
+                else
+                    call this.destroy()
+                
+                    set next[prev[this]] = next[this]
+                    set prev[next[this]] = prev[this]
+                    if (0 == next[0]) then
+                        static if LIBRARY_TimerUtils then
+                            call ReleaseTimer(GetExpiredTimer())
+                        else
+                            call PauseTimer(tmr)
+                        endif
+                    endif
+                endif
+                
+                set this = next[this]
+                exitwhen 0 == this
+            endloop
+        endmethod
+ 
+        static method create takes player who, real x, real y, real angle, integer level returns thistype
+            static if LIBRARY_Alloc then
+                local thistype this = allocate()
+            else
+                local thistype this = recycler[0]
+                set recycler[0] = recycler[this]
+            endif
+            
+            set next[this] = 0
+            set prev[this] = prev[0]
+            set next[prev[0]] = this
+            set prev[0] = this
+            
+            set .owner = who
+            set .trap  = CreateUnit(who, GetTrapByLevel(level), x, y, angle)
+            call UnitApplyTimedLife(.trap, 'BTLF', GetDuration(level))
+            
+            set .range    = GetDetectionRange(level)
+            set .radius   = GetExplosionRange(level)
+            set .factor   = GetDamageFactor(level)
+            set .counter  = GetExplosions(level)
+            set .cooldown = COOLDOWN_BETWEEN_EXPLOSIONS
+            /*
+            *   May not be passed in x and y due to pathing.
+            */
+            set .x = GetUnitX(this.trap)
+            set .y = GetUnitY(this.trap)
+            
+            static if IS_TRAP_SELECTABLE then
+                static if IS_TRAP_INVULNERABLE then
+                    call UnitAddAbility(this.trap, 'Avul')
+                endif
+            else
+                call UnitAddAbility(this.trap, 'Aloc')
+            endif
+            
+            if (0 ==  prev[this]) then
+                static if LIBRARY_TimerUtils then
+                    call TimerStart(NewTimer(), TIMEOUT, true, function thistype.callback)
+                else
+                    call TimerStart(tmr, TIMEOUT, true, function thistype.callback)
+                endif
+            endif
+            
+            return this
+        endmethod
+        
+        //Full credits to Nestharus
+        static if not LIBRARY_Alloc then
+            private static method onInit takes nothing returns nothing
+                local integer i = 0
+                set recycler[8191] = 0
+                loop
+                    set recycler[i] = i + 1
+                    exitwhen i == 8190
+                    set i = i + 1
+                endloop
+            endmethod
+        endif
+        
+    endstruct
+endlibrary
+	
+
+		
+	
+
+
+Keywords:
+
+Trap, Traps, ArcaneTrap, Lightning, BPower

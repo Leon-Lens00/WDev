@@ -1,0 +1,33 @@
+{
+  "repo": "small-noise",
+  "flow": 1,
+  "names": [
+    "Noise.Noise.octavePerlin2D",
+    "Noise.Noise.perlin2D",
+    "Noise.Noise.floor"
+  ],
+  "repetition": 1,
+  "arm": "with",
+  "exit": 0,
+  "seconds": 23.59704488400166,
+  "usage": {
+    "input_tokens": 81901,
+    "cached_input_tokens": 68096,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 668,
+    "reasoning_output_tokens": 9
+  },
+  "commands": 0,
+  "command_text": [],
+  "mcp": 2,
+  "mcp_tools": [
+    "codegraph_explore",
+    "codegraph_explore"
+  ],
+  "mcp_errors": [],
+  "forbidden_commands": [],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16208-7bbf-7462-a665-8f96def93a76"
+  ]
+}

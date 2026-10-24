@@ -1,0 +1,25 @@
+[
+  {
+    "id": "dumi",
+    "donor_map_id": "243397",
+    "donor_object": "dumi",
+    "donor_unit_data_sha256": "654cecf9669c8511130f5eb6f299efd8238c64f50bd1b97c4d607fb1fe8813fc",
+    "local_file": "assets/dumi.w3u",
+    "sha256": "1e50fb4242a4c74bc7e3038088c341a2a1f02cee2c58d9660137489d6b3bbdbe",
+    "changes": [
+      "Inline name avoids donor WTS IDs"
+    ]
+  },
+  {
+    "id": "dcst",
+    "donor_map_id": "245192",
+    "donor_object": "n002",
+    "donor_unit_data_sha256": "755b346a496983ba27b448bd02e16d258a89fecd859ed0f5d2d71e22ca06ccd0",
+    "local_file": "assets/dcst.w3u",
+    "sha256": "60c9d0b43b47e32202341db7cb5f018f2fce396cc06828f8510caecdb6466ce0",
+    "changes": [
+      "Inline name avoids donor WTS IDs",
+      "Dedicated rawcode, locust/invulnerable, shared invisible model, no attacks/food/sight/movement, zero casting point and backswing"
+    ]
+  }
+]

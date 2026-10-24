@@ -1,0 +1,182 @@
+{
+  "timestamp": "2026-10-21T20:24:52.859729+00:00",
+  "method": "Desktop settings MCP toggle off/on followed by Restart; official app reload, no Codex process termination",
+  "old_pids": [
+    3434,
+    6507,
+    15783,
+    83766
+  ],
+  "old_processes_exited": true,
+  "current_processes": [
+    {
+      "pid": 98487,
+      "started_utc": "2026-10-21T20:18:10.570000+00:00",
+      "started_after_current_build": true
+    },
+    {
+      "pid": 98761,
+      "started_utc": "2026-10-21T20:19:03.330000+00:00",
+      "started_after_current_build": true
+    },
+    {
+      "pid": 99030,
+      "started_utc": "2026-10-21T20:19:39.330000+00:00",
+      "started_after_current_build": true
+    }
+  ],
+  "current_build_identity": "1.6.2+jass-vjass.2",
+  "version_evidence": "Current launcher path and new app-managed MCP processes started after the built version/extractor/resolver modules; live tool responses and per-project writer ownership verified",
+  "enabled": true,
+  "queries": [
+    {
+      "label": "missiles",
+      "successful": true,
+      "characters": 13973
+    },
+    {
+      "label": "inventory",
+      "successful": true,
+      "characters": 16613
+    },
+    {
+      "label": "ui-studio",
+      "successful": true,
+      "characters": 8119
+    }
+  ],
+  "autosync": {
+    "method": "Existing MCP process only. No sync, query or other CodeGraph call during observation; read-only SQLite polling.",
+    "roots": [
+      {
+        "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+        "fixture": "cg_autosync_probe_99423.j",
+        "writer_before": {
+          "pid": 99030,
+          "mode": "fallback",
+          "startedAt": 1792614224443,
+          "ready": true
+        },
+        "transitions": {
+          "create": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe99423A"
+            ],
+            "passed": true,
+            "seconds": 0.418
+          },
+          "modify": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe99423B"
+            ],
+            "passed": true,
+            "seconds": 0.602
+          },
+          "delete": {
+            "files": 0,
+            "names": [],
+            "passed": true,
+            "seconds": 0.602
+          }
+        },
+        "fixture_removed": true,
+        "writer_after": {
+          "pid": 99030,
+          "mode": "fallback",
+          "startedAt": 1792614224443,
+          "ready": true
+        }
+      },
+      {
+        "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+        "fixture": "cg_autosync_probe_99423.j",
+        "writer_before": {
+          "pid": 99030,
+          "mode": "fallback",
+          "startedAt": 1792614224861,
+          "ready": true
+        },
+        "transitions": {
+          "create": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe99423A"
+            ],
+            "passed": true,
+            "seconds": 0.401
+          },
+          "modify": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe99423B"
+            ],
+            "passed": true,
+            "seconds": 0.602
+          },
+          "delete": {
+            "files": 0,
+            "names": [],
+            "passed": true,
+            "seconds": 0.401
+          }
+        },
+        "fixture_removed": true,
+        "writer_after": {
+          "pid": 99030,
+          "mode": "fallback",
+          "startedAt": 1792614224861,
+          "ready": true
+        }
+      },
+      {
+        "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+        "fixture": "cg_autosync_probe_99423.js",
+        "writer_before": {
+          "pid": 99030,
+          "mode": "fallback",
+          "startedAt": 1792614225125,
+          "ready": true
+        },
+        "transitions": {
+          "create": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe99423A"
+            ],
+            "passed": true,
+            "seconds": 0.401
+          },
+          "modify": {
+            "files": 1,
+            "names": [
+              "CGAutosyncProbe99423B"
+            ],
+            "passed": true,
+            "seconds": 0.401
+          },
+          "delete": {
+            "files": 0,
+            "names": [],
+            "passed": true,
+            "seconds": 0.401
+          }
+        },
+        "fixture_removed": true,
+        "writer_after": {
+          "pid": 99030,
+          "mode": "fallback",
+          "startedAt": 1792614225125,
+          "ready": true
+        }
+      }
+    ],
+    "passed": true
+  },
+  "original_sources_maps_changed": [],
+  "source_map_hashes_checked": 71,
+  "desktop_app_remained_running": true,
+  "app_server_remained_running": false,
+  "passed": true
+}

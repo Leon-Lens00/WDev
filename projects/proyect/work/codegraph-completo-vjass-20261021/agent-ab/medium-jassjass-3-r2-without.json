@@ -1,0 +1,36 @@
+{
+  "repo": "medium-jassjass",
+  "flow": 3,
+  "names": [
+    "Jass.trace",
+    "Jass.print"
+  ],
+  "repetition": 2,
+  "arm": "without",
+  "exit": 0,
+  "seconds": 27.255175374004466,
+  "usage": {
+    "input_tokens": 117014,
+    "cached_input_tokens": 98176,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 743,
+    "reasoning_output_tokens": 140
+  },
+  "commands": 3,
+  "command_text": [
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'Jass\\\\.(trace|print)|\\\\b(trace|print)\\\\s*[:=]|function\\\\s+(trace|print)\\\\b' .\"",
+    "/usr/bin/bash -lc 'nl -ba Jass.j'",
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' '\\\\btrace\\\\b|\\\\bprint\\\\b' .\""
+  ],
+  "mcp": 0,
+  "mcp_tools": [],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' 'Jass\\\\.(trace|print)|\\\\b(trace|print)\\\\s*[:=]|function\\\\s+(trace|print)\\\\b' .\"",
+    "/usr/bin/bash -lc \"rg -n --glob '\"'!**/.codegraph/**'\"' --glob '\"'!**/*benchmark*'\"' --glob '\"'!**/*.sqlite*'\"' --glob '\"'!**/*.db'\"' '\\\\btrace\\\\b|\\\\bprint\\\\b' .\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16221-043d-7f43-8c5b-26fd093d9947"
+  ]
+}

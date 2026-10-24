@@ -1,0 +1,212 @@
+[
+  {
+    "index": 0,
+    "name": "StartGame",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 1,
+    "name": "InventoryCore",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 2,
+    "name": "InventoryItem",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 3,
+    "name": "InventoryPlugins",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 4,
+    "name": "InventoryTooltip",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 5,
+    "name": "InventoryBonuses",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 6,
+    "name": "trigger",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 8,
+    "name": "EquipmentCore",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 9,
+    "name": "EquipmentItem",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 10,
+    "name": "EquipmentSockets",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 11,
+    "name": "EquipHeroModels",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 12,
+    "name": "EquipItemParser",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 14,
+    "name": "InvItemSetups",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 15,
+    "name": "trigger",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 16,
+    "name": "trigger",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 17,
+    "name": "AcquireItem",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 18,
+    "name": "EquipItem",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 19,
+    "name": "UnequipItem",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 20,
+    "name": "SellItem",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 21,
+    "name": "DropItem",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 22,
+    "name": "SocketItem",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 23,
+    "name": "HideInventory",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 24,
+    "name": "YesNoDialog",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 25,
+    "name": "UserInterface",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 27,
+    "name": "UnitDex",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 28,
+    "name": "PlayerUtils",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 29,
+    "name": "Camera",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 30,
+    "name": "UIMath",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 32,
+    "name": "TimerUtils",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 33,
+    "name": "Table",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 35,
+    "name": "SimError",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 36,
+    "name": "BoundSentinel",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 37,
+    "name": "BonusMod",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 38,
+    "name": "RegenBonuses",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 39,
+    "name": "UnitMaxStateBonuses",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 40,
+    "name": "MovementBonus",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 41,
+    "name": "UnitMaxState",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 42,
+    "name": "AutoIndex",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 43,
+    "name": "AutoIndex",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 44,
+    "name": "xebasic",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 45,
+    "name": "xepreload",
+    "equal_normalized_lf": true
+  },
+  {
+    "index": 46,
+    "name": "AbilityPreload",
+    "equal_normalized_lf": true
+  }
+]

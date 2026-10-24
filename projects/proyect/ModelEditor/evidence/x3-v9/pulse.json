@@ -1,0 +1,17 @@
+{
+  "geoset": 43,
+  "accentGeosets": [
+    44,
+    45,
+    46,
+    47
+  ],
+  "material": 11,
+  "texture": 13,
+  "textureAnimation": 2,
+  "periodMs": 240,
+  "travelMs": 210,
+  "geometry": "exact V7 Flow surface plus four sparse green sprite filaments",
+  "direction": "nose to rear (-X)",
+  "birthDeath": "new layers hidden; original V7 sequences preserved"
+}

@@ -1,0 +1,13 @@
+{
+  "codegraph": {
+    "command": "/home/snz/.local/bin/codegraph",
+    "args": [
+      "serve",
+      "--mcp"
+    ],
+    "startup_timeout_sec": 30,
+    "tool_timeout_sec": 60,
+    "enabled": true
+  },
+  "other_configuration_sha256": "2dd205a37df4c223648d06661735e640474315cbcd6170a16da7922d84b60694"
+}

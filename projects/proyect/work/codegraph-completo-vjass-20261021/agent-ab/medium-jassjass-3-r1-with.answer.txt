@@ -1,0 +1,6 @@
+The chain is direct: `Jass.trace(s) → Jass.print(s) → DisplayTimedTextToPlayer(...)`.
+
+- `trace` takes a string and unconditionally executes `call print(s)`, passing it unchanged. It then returns `0.0`. There is no intermediate function, callback registration, trigger, or dispatch step in this connection. Evidence: [Jass.j:103–106](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:103).
+- `print` unconditionally calls `DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 120, s)`. `GetLocalPlayer()` supplies the recipient; it is not a conditional guard. Evidence: [Jass.j:99–101](/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-completo-vjass-20261021/corpus-runs/medium-jassjass/Jass.j:99).
+
+Both functions are declared `private`. Neither body contains an `if`, debug gate, or other condition controlling this path. This establishes the source-level connection; it does not establish whether `trace` is invoked at runtime.

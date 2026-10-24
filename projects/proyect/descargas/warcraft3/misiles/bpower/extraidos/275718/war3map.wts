@@ -1,0 +1,112 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 2
+{
+Force 1
+}
+
+STRING 4
+// Units: dumi (Missile Dummy), Name (Name (unam))
+{
+Missile Dummy
+}
+
+STRING 5
+// Abilities: A000 (Fireball), Tip (Tooltip - Normal (atp1))
+{
+Fireball
+}
+
+STRING 7
+// Abilities: A000 (Fireball), Name (Name (anam))
+{
+Fireball
+}
+
+STRING 9
+// Abilities: A000 (Fireball), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Shoot a fireball that splits into small projectiles.
+}
+
+STRING 10
+// Abilities: A000 (Fireball), Hotkey (Hotkey - Normal (ahky))
+{
+Q
+}
+
+STRING 13
+// Abilities: A001 (Guarded Magic), Tip (Tooltip - Normal (atp1))
+{
+Guarded Magic
+}
+
+STRING 14
+// Abilities: A001 (Guarded Magic), Hotkey (Hotkey - Normal (ahky))
+{
+W
+}
+
+STRING 16
+// Abilities: A001 (Guarded Magic), Name (Name (anam))
+{
+Guarded Magic
+}
+
+STRING 17
+// Abilities: A001 (Guarded Magic), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Create a sphere of pure energy which chases its enemies to death.|n|nHotkey W
+}
+
+STRING 18
+// Abilities: A002 (Big Bomber), Tip (Tooltip - Normal (atp1))
+{
+Big Bomber
+}
+
+STRING 19
+// Abilities: A002 (Big Bomber), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Shredder destructables.
+}
+
+STRING 20
+// Abilities: A002 (Big Bomber), Name (Name (anam))
+{
+Big Bomber
+}
+
+STRING 21
+// Abilities: A002 (Big Bomber), Hotkey (Hotkey - Normal (ahky))
+{
+Q
+}
+
+STRING 22
+{
+Click me to
+test destructable collision
+}
+
+STRING 23
+{
+Click me to see 
+How missiles 
+fly over uneven terrain.
+}
+
+STRING 24
+{
+Click me for launching
+an homing missile.
+}
+
+STRING 25
+{
+Aua!!!
+}
+

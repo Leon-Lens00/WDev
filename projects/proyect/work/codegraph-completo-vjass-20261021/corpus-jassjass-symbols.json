@@ -1,0 +1,2798 @@
+[
+  {
+    "name": "Jass.j",
+    "file": "Jass.j",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "Jass",
+    "file": "Jass.j",
+    "line": 1,
+    "kind": "namespace"
+  },
+  {
+    "name": "Jass.LPAREN",
+    "file": "Jass.j",
+    "line": 6,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.RPAREN",
+    "file": "Jass.j",
+    "line": 7,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.RBRACKET",
+    "file": "Jass.j",
+    "line": 8,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.LBRACKET",
+    "file": "Jass.j",
+    "line": 9,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.NEQ",
+    "file": "Jass.j",
+    "line": 10,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.EQ",
+    "file": "Jass.j",
+    "line": 11,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.LEQ",
+    "file": "Jass.j",
+    "line": 12,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.LT",
+    "file": "Jass.j",
+    "line": 13,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.GEQ",
+    "file": "Jass.j",
+    "line": 14,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.GT",
+    "file": "Jass.j",
+    "line": 15,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.PLUS",
+    "file": "Jass.j",
+    "line": 16,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.MINUS",
+    "file": "Jass.j",
+    "line": 17,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.MUL",
+    "file": "Jass.j",
+    "line": 18,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.DIV",
+    "file": "Jass.j",
+    "line": 19,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.MOD",
+    "file": "Jass.j",
+    "line": 20,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.AND",
+    "file": "Jass.j",
+    "line": 21,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.OR",
+    "file": "Jass.j",
+    "line": 22,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.NOT",
+    "file": "Jass.j",
+    "line": 23,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.CALL",
+    "file": "Jass.j",
+    "line": 24,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.SET",
+    "file": "Jass.j",
+    "line": 25,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.LOCAL",
+    "file": "Jass.j",
+    "line": 26,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.GLOBALS",
+    "file": "Jass.j",
+    "line": 27,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.ENDGLOBALS",
+    "file": "Jass.j",
+    "line": 28,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.TYPE",
+    "file": "Jass.j",
+    "line": 29,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.EXTENDS",
+    "file": "Jass.j",
+    "line": 30,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.NATIVE",
+    "file": "Jass.j",
+    "line": 31,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.CONSTANT",
+    "file": "Jass.j",
+    "line": 32,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.FUNCTION",
+    "file": "Jass.j",
+    "line": 33,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.TAKES",
+    "file": "Jass.j",
+    "line": 34,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.RETURNS",
+    "file": "Jass.j",
+    "line": 35,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.RETURN",
+    "file": "Jass.j",
+    "line": 36,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.IF",
+    "file": "Jass.j",
+    "line": 37,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.ELSEIF",
+    "file": "Jass.j",
+    "line": 38,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.THEN",
+    "file": "Jass.j",
+    "line": 39,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.ELSE",
+    "file": "Jass.j",
+    "line": 40,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.ENDIF",
+    "file": "Jass.j",
+    "line": 41,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.LOOP",
+    "file": "Jass.j",
+    "line": 42,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.EXITWHEN",
+    "file": "Jass.j",
+    "line": 43,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.ENDLOOP",
+    "file": "Jass.j",
+    "line": 44,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.ENDFUNCTION",
+    "file": "Jass.j",
+    "line": 45,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.NULL",
+    "file": "Jass.j",
+    "line": 46,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.TrueTok",
+    "file": "Jass.j",
+    "line": 47,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.FalseTok",
+    "file": "Jass.j",
+    "line": 48,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.ARRAY",
+    "file": "Jass.j",
+    "line": 49,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.NL",
+    "file": "Jass.j",
+    "line": 50,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.COMMA",
+    "file": "Jass.j",
+    "line": 51,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.NOTHING",
+    "file": "Jass.j",
+    "line": 52,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.IDENT",
+    "file": "Jass.j",
+    "line": 53,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.INTEGER",
+    "file": "Jass.j",
+    "line": 54,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.REAL",
+    "file": "Jass.j",
+    "line": 55,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.STRING",
+    "file": "Jass.j",
+    "line": 56,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.CODE",
+    "file": "Jass.j",
+    "line": 57,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.BOOL",
+    "file": "Jass.j",
+    "line": 58,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.HEX",
+    "file": "Jass.j",
+    "line": 59,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.OCT",
+    "file": "Jass.j",
+    "line": 60,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.RAWCODE",
+    "file": "Jass.j",
+    "line": 61,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.EqualTok",
+    "file": "Jass.j",
+    "line": 62,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.EOF",
+    "file": "Jass.j",
+    "line": 64,
+    "kind": "constant"
+  },
+  {
+    "name": "Jass.NAMES",
+    "file": "Jass.j",
+    "line": 66,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.OPERATORS",
+    "file": "Jass.j",
+    "line": 67,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.hex",
+    "file": "Jass.j",
+    "line": 69,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Nil",
+    "file": "Jass.j",
+    "line": 71,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.List",
+    "file": "Jass.j",
+    "line": 74,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.List.head",
+    "file": "Jass.j",
+    "line": 75,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.List.tail",
+    "file": "Jass.j",
+    "line": 76,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.cons",
+    "file": "Jass.j",
+    "line": 79,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.cons.hd",
+    "file": "Jass.j",
+    "line": 79,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.cons.tl",
+    "file": "Jass.j",
+    "line": 79,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.cons.l",
+    "file": "Jass.j",
+    "line": 80,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.B2S",
+    "file": "Jass.j",
+    "line": 90,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.B2S.b",
+    "file": "Jass.j",
+    "line": 90,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.print",
+    "file": "Jass.j",
+    "line": 99,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.print.s",
+    "file": "Jass.j",
+    "line": 99,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.trace",
+    "file": "Jass.j",
+    "line": 103,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.trace.s",
+    "file": "Jass.j",
+    "line": 103,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.error",
+    "file": "Jass.j",
+    "line": 108,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.error.s",
+    "file": "Jass.j",
+    "line": 108,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.error.i",
+    "file": "Jass.j",
+    "line": 109,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.assert",
+    "file": "Jass.j",
+    "line": 114,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.assert.s",
+    "file": "Jass.j",
+    "line": 114,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.assert.b",
+    "file": "Jass.j",
+    "line": 114,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Ast",
+    "file": "Jass.j",
+    "line": 135,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Ast.toString",
+    "file": "Jass.j",
+    "line": 136,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Toplevel",
+    "file": "Jass.j",
+    "line": 141,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.VarDecl",
+    "file": "Jass.j",
+    "line": 144,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Globals",
+    "file": "Jass.j",
+    "line": 147,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Globals.glbls",
+    "file": "Jass.j",
+    "line": 148,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Globals.create",
+    "file": "Jass.j",
+    "line": 150,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Globals.create.defs",
+    "file": "Jass.j",
+    "line": 150,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Globals.create.this",
+    "file": "Jass.j",
+    "line": 151,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Globals.toString",
+    "file": "Jass.j",
+    "line": 156,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Globals.toString.ret",
+    "file": "Jass.j",
+    "line": 157,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Globals.toString.l",
+    "file": "Jass.j",
+    "line": 158,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.TypeDef",
+    "file": "Jass.j",
+    "line": 168,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.TypeDef.base",
+    "file": "Jass.j",
+    "line": 169,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.TypeDef.new",
+    "file": "Jass.j",
+    "line": 170,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.TypeDef.create",
+    "file": "Jass.j",
+    "line": 172,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.TypeDef.create.new",
+    "file": "Jass.j",
+    "line": 172,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.TypeDef.create.base",
+    "file": "Jass.j",
+    "line": 172,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.TypeDef.create.this",
+    "file": "Jass.j",
+    "line": 173,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.TypeDef.toString",
+    "file": "Jass.j",
+    "line": 179,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.TypeAndName",
+    "file": "Jass.j",
+    "line": 184,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.TypeAndName.type",
+    "file": "Jass.j",
+    "line": 185,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.TypeAndName.name",
+    "file": "Jass.j",
+    "line": 186,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.TypeAndName.create",
+    "file": "Jass.j",
+    "line": 188,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.TypeAndName.create.name",
+    "file": "Jass.j",
+    "line": 188,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.TypeAndName.create.typ",
+    "file": "Jass.j",
+    "line": 188,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.TypeAndName.create.this",
+    "file": "Jass.j",
+    "line": 189,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.TypeAndName.toString",
+    "file": "Jass.j",
+    "line": 195,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Native",
+    "file": "Jass.j",
+    "line": 200,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Native.const",
+    "file": "Jass.j",
+    "line": 201,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Native.name",
+    "file": "Jass.j",
+    "line": 202,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Native.params",
+    "file": "Jass.j",
+    "line": 203,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Native.returntype",
+    "file": "Jass.j",
+    "line": 204,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Native.create",
+    "file": "Jass.j",
+    "line": 206,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Native.create.paramlist",
+    "file": "Jass.j",
+    "line": 206,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Native.create.const",
+    "file": "Jass.j",
+    "line": 206,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Native.create.name",
+    "file": "Jass.j",
+    "line": 206,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Native.create.returntype",
+    "file": "Jass.j",
+    "line": 206,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Native.create.this",
+    "file": "Jass.j",
+    "line": 207,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Native.toString",
+    "file": "Jass.j",
+    "line": 215,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Native.toString.l",
+    "file": "Jass.j",
+    "line": 216,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Native.toString.ret",
+    "file": "Jass.j",
+    "line": 217,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Function",
+    "file": "Jass.j",
+    "line": 229,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Function.const",
+    "file": "Jass.j",
+    "line": 230,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Function.name",
+    "file": "Jass.j",
+    "line": 231,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Function.params",
+    "file": "Jass.j",
+    "line": 232,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Function.returntype",
+    "file": "Jass.j",
+    "line": 233,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Function.body",
+    "file": "Jass.j",
+    "line": 234,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Function.create",
+    "file": "Jass.j",
+    "line": 236,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Function.create.name",
+    "file": "Jass.j",
+    "line": 236,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Function.create.body",
+    "file": "Jass.j",
+    "line": 236,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Function.create.const",
+    "file": "Jass.j",
+    "line": 236,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Function.create.returntype",
+    "file": "Jass.j",
+    "line": 236,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Function.create.paramlist",
+    "file": "Jass.j",
+    "line": 236,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Function.create.this",
+    "file": "Jass.j",
+    "line": 237,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Function.toString",
+    "file": "Jass.j",
+    "line": 246,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Function.toString.l",
+    "file": "Jass.j",
+    "line": 247,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Function.toString.ret",
+    "file": "Jass.j",
+    "line": 248,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.ArrayDecl",
+    "file": "Jass.j",
+    "line": 268,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.ArrayDecl.name",
+    "file": "Jass.j",
+    "line": 269,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.ArrayDecl.typ",
+    "file": "Jass.j",
+    "line": 270,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.ArrayDecl.create",
+    "file": "Jass.j",
+    "line": 272,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.ArrayDecl.create.name",
+    "file": "Jass.j",
+    "line": 272,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.ArrayDecl.create.t",
+    "file": "Jass.j",
+    "line": 272,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.ArrayDecl.create.this",
+    "file": "Jass.j",
+    "line": 273,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.ArrayDecl.toString",
+    "file": "Jass.j",
+    "line": 279,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.NormalDecl",
+    "file": "Jass.j",
+    "line": 285,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.NormalDecl.const",
+    "file": "Jass.j",
+    "line": 286,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.NormalDecl.name",
+    "file": "Jass.j",
+    "line": 287,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.NormalDecl.typ",
+    "file": "Jass.j",
+    "line": 288,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.NormalDecl.init",
+    "file": "Jass.j",
+    "line": 289,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.NormalDecl.create",
+    "file": "Jass.j",
+    "line": 291,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.NormalDecl.create.name",
+    "file": "Jass.j",
+    "line": 291,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.NormalDecl.create.t",
+    "file": "Jass.j",
+    "line": 291,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.NormalDecl.create.const",
+    "file": "Jass.j",
+    "line": 291,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.NormalDecl.create.init",
+    "file": "Jass.j",
+    "line": 291,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.NormalDecl.create.this",
+    "file": "Jass.j",
+    "line": 292,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.NormalDecl.toString",
+    "file": "Jass.j",
+    "line": 299,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Statement",
+    "file": "Jass.j",
+    "line": 308,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Var",
+    "file": "Jass.j",
+    "line": 311,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Expr",
+    "file": "Jass.j",
+    "line": 314,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.ArrayVar",
+    "file": "Jass.j",
+    "line": 317,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.ArrayVar.name",
+    "file": "Jass.j",
+    "line": 318,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.ArrayVar.idx",
+    "file": "Jass.j",
+    "line": 319,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.ArrayVar.create",
+    "file": "Jass.j",
+    "line": 321,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.ArrayVar.create.idx",
+    "file": "Jass.j",
+    "line": 321,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.ArrayVar.create.name",
+    "file": "Jass.j",
+    "line": 321,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.ArrayVar.create.this",
+    "file": "Jass.j",
+    "line": 322,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.ArrayVar.toString",
+    "file": "Jass.j",
+    "line": 328,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.NormalVar",
+    "file": "Jass.j",
+    "line": 333,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.NormalVar.name",
+    "file": "Jass.j",
+    "line": 334,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.NormalVar.create",
+    "file": "Jass.j",
+    "line": 336,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.NormalVar.create.name",
+    "file": "Jass.j",
+    "line": 336,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.NormalVar.create.this",
+    "file": "Jass.j",
+    "line": 337,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.NormalVar.toString",
+    "file": "Jass.j",
+    "line": 342,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Set",
+    "file": "Jass.j",
+    "line": 347,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Set.var",
+    "file": "Jass.j",
+    "line": 348,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Set.value",
+    "file": "Jass.j",
+    "line": 349,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Set.create",
+    "file": "Jass.j",
+    "line": 351,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Set.create.v",
+    "file": "Jass.j",
+    "line": 351,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Set.create.e",
+    "file": "Jass.j",
+    "line": 351,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Set.create.this",
+    "file": "Jass.j",
+    "line": 352,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Set.toString",
+    "file": "Jass.j",
+    "line": 358,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Call",
+    "file": "Jass.j",
+    "line": 363,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Call.name",
+    "file": "Jass.j",
+    "line": 364,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Call.args",
+    "file": "Jass.j",
+    "line": 365,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Call.create",
+    "file": "Jass.j",
+    "line": 367,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Call.create.l",
+    "file": "Jass.j",
+    "line": 367,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Call.create.s",
+    "file": "Jass.j",
+    "line": 367,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Call.create.this",
+    "file": "Jass.j",
+    "line": 368,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Call.toString",
+    "file": "Jass.j",
+    "line": 374,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Call.toString.ret",
+    "file": "Jass.j",
+    "line": 375,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Call.toString.l",
+    "file": "Jass.j",
+    "line": 377,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.CallStmt",
+    "file": "Jass.j",
+    "line": 387,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.CallStmt.cll",
+    "file": "Jass.j",
+    "line": 388,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.CallStmt.create",
+    "file": "Jass.j",
+    "line": 390,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.CallStmt.create.l",
+    "file": "Jass.j",
+    "line": 390,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.CallStmt.create.s",
+    "file": "Jass.j",
+    "line": 390,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.CallStmt.create.this",
+    "file": "Jass.j",
+    "line": 391,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.CallStmt.toString",
+    "file": "Jass.j",
+    "line": 396,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Local",
+    "file": "Jass.j",
+    "line": 401,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Local.vd",
+    "file": "Jass.j",
+    "line": 402,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Local.create",
+    "file": "Jass.j",
+    "line": 404,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Local.create.vd",
+    "file": "Jass.j",
+    "line": 404,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Local.create.this",
+    "file": "Jass.j",
+    "line": 405,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Local.toString",
+    "file": "Jass.j",
+    "line": 410,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Loop",
+    "file": "Jass.j",
+    "line": 415,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Loop.body",
+    "file": "Jass.j",
+    "line": 416,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Loop.create",
+    "file": "Jass.j",
+    "line": 418,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Loop.create.l",
+    "file": "Jass.j",
+    "line": 418,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Loop.create.this",
+    "file": "Jass.j",
+    "line": 419,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Loop.toString",
+    "file": "Jass.j",
+    "line": 424,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Loop.toString.ret",
+    "file": "Jass.j",
+    "line": 425,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Loop.toString.l",
+    "file": "Jass.j",
+    "line": 426,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.If",
+    "file": "Jass.j",
+    "line": 437,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.If.cond",
+    "file": "Jass.j",
+    "line": 438,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.If.thenBody",
+    "file": "Jass.j",
+    "line": 439,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.If.elseBody",
+    "file": "Jass.j",
+    "line": 440,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.If.create",
+    "file": "Jass.j",
+    "line": 442,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.If.create.elseBody",
+    "file": "Jass.j",
+    "line": 442,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.If.create.thenBody",
+    "file": "Jass.j",
+    "line": 442,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.If.create.cond",
+    "file": "Jass.j",
+    "line": 442,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.If.create.this",
+    "file": "Jass.j",
+    "line": 443,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.If.toString",
+    "file": "Jass.j",
+    "line": 450,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.If.toString.ret",
+    "file": "Jass.j",
+    "line": 451,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.If.toString.it",
+    "file": "Jass.j",
+    "line": 452,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.If.toString.tmp",
+    "file": "Jass.j",
+    "line": 453,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Exitwhen",
+    "file": "Jass.j",
+    "line": 481,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Exitwhen.cond",
+    "file": "Jass.j",
+    "line": 482,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Exitwhen.create",
+    "file": "Jass.j",
+    "line": 484,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Exitwhen.create.r",
+    "file": "Jass.j",
+    "line": 484,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Exitwhen.create.this",
+    "file": "Jass.j",
+    "line": 485,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Exitwhen.toString",
+    "file": "Jass.j",
+    "line": 490,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Return",
+    "file": "Jass.j",
+    "line": 495,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Return.value",
+    "file": "Jass.j",
+    "line": 496,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Return.create",
+    "file": "Jass.j",
+    "line": 498,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Return.create.r",
+    "file": "Jass.j",
+    "line": 498,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Return.create.this",
+    "file": "Jass.j",
+    "line": 499,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Return.toString",
+    "file": "Jass.j",
+    "line": 504,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Integer",
+    "file": "Jass.j",
+    "line": 513,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Integer.val",
+    "file": "Jass.j",
+    "line": 514,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Integer.create",
+    "file": "Jass.j",
+    "line": 516,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Integer.create.s",
+    "file": "Jass.j",
+    "line": 516,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Integer.create.this",
+    "file": "Jass.j",
+    "line": 517,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Integer.toString",
+    "file": "Jass.j",
+    "line": 522,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Rawcode",
+    "file": "Jass.j",
+    "line": 527,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Rawcode.val",
+    "file": "Jass.j",
+    "line": 528,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Rawcode.create",
+    "file": "Jass.j",
+    "line": 530,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Rawcode.create.s",
+    "file": "Jass.j",
+    "line": 530,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Rawcode.create.this",
+    "file": "Jass.j",
+    "line": 531,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Rawcode.toString",
+    "file": "Jass.j",
+    "line": 536,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Real",
+    "file": "Jass.j",
+    "line": 541,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Real.val",
+    "file": "Jass.j",
+    "line": 542,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Real.create",
+    "file": "Jass.j",
+    "line": 544,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Real.create.s",
+    "file": "Jass.j",
+    "line": 544,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Real.create.this",
+    "file": "Jass.j",
+    "line": 545,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Real.toString",
+    "file": "Jass.j",
+    "line": 550,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.String",
+    "file": "Jass.j",
+    "line": 555,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.String.val",
+    "file": "Jass.j",
+    "line": 556,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.String.create",
+    "file": "Jass.j",
+    "line": 558,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.String.create.s",
+    "file": "Jass.j",
+    "line": 558,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.String.create.this",
+    "file": "Jass.j",
+    "line": 559,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.String.toString",
+    "file": "Jass.j",
+    "line": 564,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Code",
+    "file": "Jass.j",
+    "line": 569,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Code.name",
+    "file": "Jass.j",
+    "line": 570,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Code.create",
+    "file": "Jass.j",
+    "line": 572,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Code.create.s",
+    "file": "Jass.j",
+    "line": 572,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Code.create.this",
+    "file": "Jass.j",
+    "line": 573,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Code.toString",
+    "file": "Jass.j",
+    "line": 578,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Null",
+    "file": "Jass.j",
+    "line": 583,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Null.toString",
+    "file": "Jass.j",
+    "line": 584,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Bool",
+    "file": "Jass.j",
+    "line": 589,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Bool.val",
+    "file": "Jass.j",
+    "line": 590,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Bool.create",
+    "file": "Jass.j",
+    "line": 592,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Bool.create.s",
+    "file": "Jass.j",
+    "line": 592,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Bool.create.this",
+    "file": "Jass.j",
+    "line": 593,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Bool.toString",
+    "file": "Jass.j",
+    "line": 598,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.CallExpr",
+    "file": "Jass.j",
+    "line": 603,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.CallExpr.cll",
+    "file": "Jass.j",
+    "line": 604,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.CallExpr.create",
+    "file": "Jass.j",
+    "line": 606,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.CallExpr.create.s",
+    "file": "Jass.j",
+    "line": 606,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.CallExpr.create.l",
+    "file": "Jass.j",
+    "line": 606,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.CallExpr.create.this",
+    "file": "Jass.j",
+    "line": 607,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.CallExpr.toString",
+    "file": "Jass.j",
+    "line": 612,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.VarExpr",
+    "file": "Jass.j",
+    "line": 617,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.VarExpr.var",
+    "file": "Jass.j",
+    "line": 618,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.VarExpr.create",
+    "file": "Jass.j",
+    "line": 620,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.VarExpr.create.var",
+    "file": "Jass.j",
+    "line": 620,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.VarExpr.create.this",
+    "file": "Jass.j",
+    "line": 621,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.VarExpr.toString",
+    "file": "Jass.j",
+    "line": 626,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Token",
+    "file": "Jass.j",
+    "line": 645,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Token.type",
+    "file": "Jass.j",
+    "line": 646,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Token.value",
+    "file": "Jass.j",
+    "line": 647,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Token.create",
+    "file": "Jass.j",
+    "line": 649,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Token.create.v",
+    "file": "Jass.j",
+    "line": 649,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Token.create.k",
+    "file": "Jass.j",
+    "line": 649,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Token.create.this",
+    "file": "Jass.j",
+    "line": 650,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Token.toString",
+    "file": "Jass.j",
+    "line": 656,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.startsWith",
+    "file": "Jass.j",
+    "line": 661,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.startsWith.input",
+    "file": "Jass.j",
+    "line": 661,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.startsWith.t",
+    "file": "Jass.j",
+    "line": 661,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.isDelim",
+    "file": "Jass.j",
+    "line": 665,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.isDelim.s",
+    "file": "Jass.j",
+    "line": 665,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.isDigit",
+    "file": "Jass.j",
+    "line": 672,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.isDigit.s",
+    "file": "Jass.j",
+    "line": 672,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.isLetter",
+    "file": "Jass.j",
+    "line": 677,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.isLetter.s",
+    "file": "Jass.j",
+    "line": 677,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.isHex",
+    "file": "Jass.j",
+    "line": 686,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.isHex.s",
+    "file": "Jass.j",
+    "line": 686,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.isOct",
+    "file": "Jass.j",
+    "line": 692,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.isOct.s",
+    "file": "Jass.j",
+    "line": 692,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.token",
+    "file": "Jass.j",
+    "line": 698,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.token.input",
+    "file": "Jass.j",
+    "line": 698,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.token.t",
+    "file": "Jass.j",
+    "line": 698,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.token.i",
+    "file": "Jass.j",
+    "line": 699,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.op",
+    "file": "Jass.j",
+    "line": 703,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.op.t",
+    "file": "Jass.j",
+    "line": 703,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.op.input",
+    "file": "Jass.j",
+    "line": 703,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.hash",
+    "file": "Jass.j",
+    "line": 707,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.hash.s",
+    "file": "Jass.j",
+    "line": 707,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.hex2int",
+    "file": "Jass.j",
+    "line": 711,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.hex2int.h",
+    "file": "Jass.j",
+    "line": 711,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.hex2int.i",
+    "file": "Jass.j",
+    "line": 712,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.hex2int.sum",
+    "file": "Jass.j",
+    "line": 713,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.hex2int.len",
+    "file": "Jass.j",
+    "line": 714,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.oct2int",
+    "file": "Jass.j",
+    "line": 723,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.oct2int.h",
+    "file": "Jass.j",
+    "line": 723,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.oct2int.i",
+    "file": "Jass.j",
+    "line": 724,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.oct2int.sum",
+    "file": "Jass.j",
+    "line": 725,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.oct2int.len",
+    "file": "Jass.j",
+    "line": 726,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer",
+    "file": "Jass.j",
+    "line": 735,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Lexer.input",
+    "file": "Jass.j",
+    "line": 736,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Lexer.pos",
+    "file": "Jass.j",
+    "line": 737,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Lexer.length",
+    "file": "Jass.j",
+    "line": 738,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Lexer.create",
+    "file": "Jass.j",
+    "line": 740,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.create.input",
+    "file": "Jass.j",
+    "line": 740,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Lexer.create.this",
+    "file": "Jass.j",
+    "line": 741,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.slurpWhitespace",
+    "file": "Jass.j",
+    "line": 748,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.slurpWhitespace.c",
+    "file": "Jass.j",
+    "line": 749,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseIdent",
+    "file": "Jass.j",
+    "line": 758,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.parseIdent.p",
+    "file": "Jass.j",
+    "line": 759,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseIdent.c",
+    "file": "Jass.j",
+    "line": 760,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseIdent.r",
+    "file": "Jass.j",
+    "line": 761,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseDotFloat",
+    "file": "Jass.j",
+    "line": 774,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.parseDotFloat.start",
+    "file": "Jass.j",
+    "line": 775,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseHex",
+    "file": "Jass.j",
+    "line": 783,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.parseHex.start",
+    "file": "Jass.j",
+    "line": 784,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseNumber",
+    "file": "Jass.j",
+    "line": 792,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.parseNumber.start",
+    "file": "Jass.j",
+    "line": 793,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseNumber.isReal",
+    "file": "Jass.j",
+    "line": 794,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseOct",
+    "file": "Jass.j",
+    "line": 818,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.parseOct.start",
+    "file": "Jass.j",
+    "line": 819,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseOct.isReal",
+    "file": "Jass.j",
+    "line": 820,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseRawcode",
+    "file": "Jass.j",
+    "line": 844,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.parseRawcode.start",
+    "file": "Jass.j",
+    "line": 845,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseRawcode.c",
+    "file": "Jass.j",
+    "line": 846,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseRawcode.t",
+    "file": "Jass.j",
+    "line": 847,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseString",
+    "file": "Jass.j",
+    "line": 864,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.parseString.start",
+    "file": "Jass.j",
+    "line": 865,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseString.c",
+    "file": "Jass.j",
+    "line": 866,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.parseString.t",
+    "file": "Jass.j",
+    "line": 867,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.next",
+    "file": "Jass.j",
+    "line": 884,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Lexer.next.c",
+    "file": "Jass.j",
+    "line": 885,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.next.cur",
+    "file": "Jass.j",
+    "line": 886,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Lexer.hasNext",
+    "file": "Jass.j",
+    "line": 1069,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.mkOp",
+    "file": "Jass.j",
+    "line": 1087,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.mkOp.rhs",
+    "file": "Jass.j",
+    "line": 1087,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.mkOp.t",
+    "file": "Jass.j",
+    "line": 1087,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.mkOp.lhs",
+    "file": "Jass.j",
+    "line": 1087,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.mkOp.l",
+    "file": "Jass.j",
+    "line": 1088,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.mkOp.ret",
+    "file": "Jass.j",
+    "line": 1089,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser",
+    "file": "Jass.j",
+    "line": 1094,
+    "kind": "struct"
+  },
+  {
+    "name": "Jass.Parser.l",
+    "file": "Jass.j",
+    "line": 1095,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Parser.cur",
+    "file": "Jass.j",
+    "line": 1096,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Parser.LastElseif",
+    "file": "Jass.j",
+    "line": 1098,
+    "kind": "field"
+  },
+  {
+    "name": "Jass.Parser.operator sym",
+    "file": "Jass.j",
+    "line": 1100,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.create",
+    "file": "Jass.j",
+    "line": 1104,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.create.s",
+    "file": "Jass.j",
+    "line": 1104,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Parser.create.this",
+    "file": "Jass.j",
+    "line": 1105,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.nextsym",
+    "file": "Jass.j",
+    "line": 1110,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.accept",
+    "file": "Jass.j",
+    "line": 1125,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.accept.t",
+    "file": "Jass.j",
+    "line": 1125,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Parser.expect",
+    "file": "Jass.j",
+    "line": 1134,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.expect.t",
+    "file": "Jass.j",
+    "line": 1134,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Parser.parseArgs",
+    "file": "Jass.j",
+    "line": 1150,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseArgs.e",
+    "file": "Jass.j",
+    "line": 1151,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p6",
+    "file": "Jass.j",
+    "line": 1167,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.p6.r",
+    "file": "Jass.j",
+    "line": 1168,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p6.v",
+    "file": "Jass.j",
+    "line": 1169,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p6.tmp",
+    "file": "Jass.j",
+    "line": 1170,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p6.l",
+    "file": "Jass.j",
+    "line": 1171,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p5",
+    "file": "Jass.j",
+    "line": 1237,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.p5.lhs",
+    "file": "Jass.j",
+    "line": 1238,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p5.t",
+    "file": "Jass.j",
+    "line": 1239,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p4",
+    "file": "Jass.j",
+    "line": 1251,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.p4.lhs",
+    "file": "Jass.j",
+    "line": 1252,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p4.t",
+    "file": "Jass.j",
+    "line": 1253,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p3",
+    "file": "Jass.j",
+    "line": 1272,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.p3.lhs",
+    "file": "Jass.j",
+    "line": 1273,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p3.t",
+    "file": "Jass.j",
+    "line": 1274,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p2",
+    "file": "Jass.j",
+    "line": 1289,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.p2.lhs",
+    "file": "Jass.j",
+    "line": 1290,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.p1",
+    "file": "Jass.j",
+    "line": 1303,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.p1.lhs",
+    "file": "Jass.j",
+    "line": 1304,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseLVar",
+    "file": "Jass.j",
+    "line": 1316,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseLVar.v",
+    "file": "Jass.j",
+    "line": 1317,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseLVar.tmp",
+    "file": "Jass.j",
+    "line": 1318,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseStatements",
+    "file": "Jass.j",
+    "line": 1329,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseStatements.t",
+    "file": "Jass.j",
+    "line": 1330,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseElseIfs",
+    "file": "Jass.j",
+    "line": 1339,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseElseIfs.c",
+    "file": "Jass.j",
+    "line": 1340,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseElseIfs.e",
+    "file": "Jass.j",
+    "line": 1341,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseIf",
+    "file": "Jass.j",
+    "line": 1356,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseIf.cond",
+    "file": "Jass.j",
+    "line": 1357,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseIf.thenBody",
+    "file": "Jass.j",
+    "line": 1358,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseIf.elseBody",
+    "file": "Jass.j",
+    "line": 1359,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseIf.elseifs",
+    "file": "Jass.j",
+    "line": 1360,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pStmt",
+    "file": "Jass.j",
+    "line": 1387,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.pStmt.n",
+    "file": "Jass.j",
+    "line": 1388,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pStmt.l",
+    "file": "Jass.j",
+    "line": 1389,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pStmt.tmp",
+    "file": "Jass.j",
+    "line": 1390,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseVarDecl",
+    "file": "Jass.j",
+    "line": 1424,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseVarDecl.const",
+    "file": "Jass.j",
+    "line": 1424,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Parser.parseVarDecl.name",
+    "file": "Jass.j",
+    "line": 1425,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseVarDecl.t",
+    "file": "Jass.j",
+    "line": 1426,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseVarDecl.init",
+    "file": "Jass.j",
+    "line": 1427,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseGlobalVarDecls",
+    "file": "Jass.j",
+    "line": 1448,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseGlobalVarDecls.vd",
+    "file": "Jass.j",
+    "line": 1449,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pTypeAndName",
+    "file": "Jass.j",
+    "line": 1466,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.pTypeAndName.t",
+    "file": "Jass.j",
+    "line": 1467,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pTypeAndName.n",
+    "file": "Jass.j",
+    "line": 1468,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseParamlist2",
+    "file": "Jass.j",
+    "line": 1478,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseParamlist2.e",
+    "file": "Jass.j",
+    "line": 1479,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseParamlist",
+    "file": "Jass.j",
+    "line": 1494,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseReturntype",
+    "file": "Jass.j",
+    "line": 1503,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseReturntype.t",
+    "file": "Jass.j",
+    "line": 1504,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pNative",
+    "file": "Jass.j",
+    "line": 1514,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.pNative.const",
+    "file": "Jass.j",
+    "line": 1514,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Parser.pNative.name",
+    "file": "Jass.j",
+    "line": 1515,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pNative.returntype",
+    "file": "Jass.j",
+    "line": 1516,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pNative.paramlist",
+    "file": "Jass.j",
+    "line": 1517,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pFunction",
+    "file": "Jass.j",
+    "line": 1528,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.pFunction.const",
+    "file": "Jass.j",
+    "line": 1528,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Parser.pFunction.name",
+    "file": "Jass.j",
+    "line": 1529,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pFunction.returntype",
+    "file": "Jass.j",
+    "line": 1530,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pFunction.paramlist",
+    "file": "Jass.j",
+    "line": 1531,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pFunction.body",
+    "file": "Jass.j",
+    "line": 1532,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pNativeOrFunction",
+    "file": "Jass.j",
+    "line": 1545,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.pNativeOrFunction.const",
+    "file": "Jass.j",
+    "line": 1545,
+    "kind": "parameter"
+  },
+  {
+    "name": "Jass.Parser.pToplevel",
+    "file": "Jass.j",
+    "line": 1553,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.pToplevel.t",
+    "file": "Jass.j",
+    "line": 1554,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pToplevel.n",
+    "file": "Jass.j",
+    "line": 1556,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.pToplevel.b",
+    "file": "Jass.j",
+    "line": 1557,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseToplevel",
+    "file": "Jass.j",
+    "line": 1594,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.pProgram",
+    "file": "Jass.j",
+    "line": 1599,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseExpr",
+    "file": "Jass.j",
+    "line": 1610,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseStatement",
+    "file": "Jass.j",
+    "line": 1615,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.Parser.parseStatement.t",
+    "file": "Jass.j",
+    "line": 1616,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.Parser.parseProgram",
+    "file": "Jass.j",
+    "line": 1628,
+    "kind": "method"
+  },
+  {
+    "name": "Jass.init",
+    "file": "Jass.j",
+    "line": 1634,
+    "kind": "function"
+  },
+  {
+    "name": "Jass.init.charmap",
+    "file": "Jass.j",
+    "line": 1635,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.init.i",
+    "file": "Jass.j",
+    "line": 1636,
+    "kind": "variable"
+  },
+  {
+    "name": "Jass.init.len",
+    "file": "Jass.j",
+    "line": 1637,
+    "kind": "variable"
+  }
+]

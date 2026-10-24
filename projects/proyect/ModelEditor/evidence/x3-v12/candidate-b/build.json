@@ -1,0 +1,143 @@
+{
+  "target": "Classic1.27b MDX800",
+  "revision": "V12 rounded open sheath, additive lightning core and halo; V11 lifecycle retained",
+  "entries": [
+    {
+      "name": "X3_Buster_Cargado",
+      "category": "A-Buster",
+      "path": "exports/megaman-x3-buster-v12/A-Buster/X3_Buster_Cargado.mdx",
+      "sha256": "117417791de566fd9a52300b14e78b1bf4fb27618e22a0d2be783de21eb22d44",
+      "triangles": 4416,
+      "pe2": 15,
+      "ribbons": 1
+    }
+  ],
+  "source": {
+    "author": "Vinz",
+    "pack": "Shots Vol. II",
+    "original": "../descargas/warcraft3/misiles/vinz/shots-vol-ii/originales/Shots Vol. II/Shot II Blue.mdx",
+    "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac",
+    "anchored": "exports/shots-vol-ii-anclaje/Shot II Blue.mdx",
+    "anchoredSha256": "6e181b25bb6047896f95993e0033fd2602c05914e3da001ee192faac5e9c181e",
+    "reuse": "posed geometry/UV and full additive stack; adapted F1/F2/Atras Uno/Atras Dos Sq Tails; attached bow/UV flow; blue rear lengthened 38% behind X=-30; continuous blue tip replaces separate nose spheres"
+  },
+  "pulse": {
+    "geoset": 43,
+    "accentGeosets": [
+      45,
+      47,
+      49,
+      51
+    ],
+    "haloGeosets": [
+      44,
+      46,
+      48,
+      50
+    ],
+    "arcMaterials": [
+      12,
+      13,
+      14,
+      15
+    ],
+    "arcAnimations": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "arcTexture": 14,
+    "arcPeriodMs": 120,
+    "arcTravelMs": 100,
+    "arcPhaseMs": [
+      0,
+      30,
+      60,
+      90
+    ],
+    "material": 11,
+    "texture": 13,
+    "textureAnimation": 2,
+    "periodMs": 240,
+    "travelMs": 210,
+    "geometry": "rounded open wake; four jagged additive cores with soft halos",
+    "direction": "nose to rear (-X)",
+    "birthDeath": "remapped by x3-lifecycle-v12; flight fades at impact"
+  },
+  "lifecycle": {
+    "birthMs": 300,
+    "standMs": 960,
+    "deathMs": 1000,
+    "flightCount": 52,
+    "flightEmitters": 11,
+    "bodyFadeMs": 90,
+    "bodyDeathScale": [
+      1,
+      1,
+      1
+    ],
+    "impactGeosets": [
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "bursts": [
+      {
+        "name": "Impact / Shot II Stars",
+        "on": 40,
+        "off": 240,
+        "lifeMs": 209.99999344348907,
+        "size": [
+          16.5,
+          27.5,
+          0.550000011920929
+        ],
+        "rate": 90
+      },
+      {
+        "name": "Impact / Shot II Lumps",
+        "on": 50,
+        "off": 280,
+        "lifeMs": 330.00001311302185,
+        "size": [
+          22.799999237060547,
+          11.399999618530273,
+          0.3799999952316284
+        ],
+        "rate": 65
+      },
+      {
+        "name": "Impact / Shot II Flashes",
+        "on": 40,
+        "off": 280,
+        "lifeMs": 300.00001192092896,
+        "size": [
+          6.5,
+          10.399999618530273,
+          6.5
+        ],
+        "rate": 75
+      },
+      {
+        "name": "Impact / Shot II Avante Uno",
+        "on": 0,
+        "off": 160,
+        "lifeMs": 209.99999344348907,
+        "size": [
+          12,
+          11,
+          0.5
+        ],
+        "rate": 80
+      }
+    ],
+    "reference": "../descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Blue.mdx",
+    "root": "fixed at origin in every sequence",
+    "death": "flight fades in 90 ms; local flash expands; four reference-derived PE2 bursts decay independently"
+  },
+  "worldTrajectory": false
+}

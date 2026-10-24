@@ -1,0 +1,965 @@
+﻿STRING 1
+{
+Spieler 1
+}
+
+STRING 2
+{
+Streitmacht 1
+}
+
+STRING 5
+// Abilities: A002 (Chaosflare), Name (Name (anam))
+{
+Chaosflare
+}
+
+STRING 11
+// Buffs/Effects: B000 (), Buffubertip (Tooltip - Extended (fube))
+{
+This unit burns. It takes damage over time
+}
+
+STRING 18
+{
+Simple Spell Collection #1
+}
+
+STRING 19
+{
+1
+}
+
+STRING 20
+{
+Simple Spell Collection #1
+}
+
+STRING 21
+{
+BPower
+}
+
+STRING 22
+{
+Simple Spell Collection #1
+}
+
+STRING 24
+{
+Chaosflare, IceSiege, Fireball, Reaper's Scyte, Bone Spirit, Whirlwind,
+Leap
+}
+
+STRING 32
+// Abilities: A002 (Chaosflare), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00Q|r  Meat Hook
+}
+
+STRING 33
+// Abilities: A002 (Chaosflare), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00Q|r  Meat Hook
+}
+
+STRING 36
+// Abilities: A002 (Chaosflare), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+|cffffcc00Damages enemies only|n|nDeals 100+100*Level Damage|n|n600+200*Level Range|r
+}
+
+STRING 37
+// Abilities: A002 (Chaosflare), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+|cffffcc00Damages enemies only|n|nDeals 100+100*Level Damage|n|n600+200*Level Range|r
+}
+
+STRING 47
+// Units: n002 (DummyCaster), Name (Name (unam))
+{
+DummyCaster
+}
+
+STRING 50
+// Abilities: A000 (Chaosflare Buff Placer), Name (Name (anam))
+{
+Chaosflare Buff Placer
+}
+
+STRING 51
+// Buffs/Effects: B000 (), Bufftip (Tooltip (ftip))
+{
+Chaosflare
+}
+
+STRING 52
+// Abilities: A002 (Chaosflare), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Chaosflare|r - [|cffffcc00Level 2|r]
+}
+
+STRING 53
+// Abilities: A002 (Chaosflare), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Chaosflare|r - [|cffffcc00Level 3|r]
+}
+
+STRING 57
+// Abilities: A002 (Chaosflare), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Chaosflare|r - [|cffffcc00Level 1|r]
+}
+
+STRING 58
+// Abilities: A002 (Chaosflare), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+The caster concentrates his power to let loose a powerful beam of fire|ntowards the target, dealing damage and burning the target.|n|n|cffffcc00Level 1|r - 55 impact damage plus 100 damage over 4 seconds. |n|cffffcc00Level 2|r - 65 impact damage plus 140 damage over 4 seconds.|n|cffffcc00Level 3|r - 75 impact damage plus 180 damage over 4 seconds.
+}
+
+STRING 59
+// Abilities: A001 (Ice Siege), Name (Name (anam))
+{
+Ice Siege
+}
+
+STRING 63
+// Abilities: A001 (Ice Siege), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00Q|r  Meat Hook
+}
+
+STRING 64
+// Abilities: A001 (Ice Siege), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00Q|r  Meat Hook
+}
+
+STRING 67
+// Abilities: A001 (Ice Siege), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+|cffffcc00Damages enemies only|n|nDeals 100+100*Level Damage|n|n600+200*Level Range|r
+}
+
+STRING 68
+// Abilities: A001 (Ice Siege), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+|cffffcc00Damages enemies only|n|nDeals 100+100*Level Damage|n|n600+200*Level Range|r
+}
+
+STRING 73
+// Abilities: A004 (Ice Siege Buff Placer), Name (Name (anam))
+{
+Ice Siege Buff Placer
+}
+
+STRING 74
+// Abilities: A001 (Ice Siege), Researchhotkey (Hotkey - Learn (arhk))
+{
+E
+}
+
+STRING 75
+// Abilities: A001 (Ice Siege), Hotkey (Hotkey - Normal (ahky))
+{
+E
+}
+
+STRING 76
+// Abilities: A001 (Ice Siege), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Ice Siege|r - [|cffffcc00Level 2|r]
+}
+
+STRING 77
+// Abilities: A001 (Ice Siege), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Ice Siege|r - [|cffffcc00Level 3|r]
+}
+
+STRING 78
+// Abilities: A001 (Ice Siege), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The caster covers himself with a amor of ice. The armor slows and damages foes in an aoe of 500 by 45 Damage each wave.|n|n|cff6d6d6dHotkey: E|r
+}
+
+STRING 79
+// Abilities: A001 (Ice Siege), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The caster covers himself with a amor of ice. The armor slows and damages foes in an aoe of 600 by 65 Damage each wave.|n|n|cff6d6d6dHotkey: E|r
+}
+
+STRING 80
+// Abilities: A001 (Ice Siege), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The caster covers himself with a amor of ice. The armor slows and damages foes in an aoe of 700 by 85 Damage each wave.|n|n|cff6d6d6dHotkey: E|r
+}
+
+STRING 81
+// Abilities: A001 (Ice Siege), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Ice Siege|r - [|cffffcc00Level 1|r]
+}
+
+STRING 82
+// Abilities: A001 (Ice Siege), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+The caster covers himself with a amor of ice. The armor slows and damages nearby foes.|n|n|cffffcc00Level 1|r - Deals 45 Damage per wave to all units in an aoe of 500. |n|cffffcc00Level 2|r - Deals 65 Damage per wave to all units in an aoe of 600.|n|cffffcc00Level 3|r - Deals 85 Damage per wave to all units in an aoe of 700.
+}
+
+STRING 83
+// Abilities: A001 (Ice Siege), Researchtip (Tooltip - Learn (aret))
+{
+Learn Ic|cffffcc00e|r Siege - [|cffffcc00Level %d|r]
+}
+
+STRING 84
+// Abilities: A000 (Chaosflare Buff Placer), EditorSuffix (Editor Suffix (ansf))
+{
+(Slow)
+}
+
+STRING 85
+// Abilities: A004 (Ice Siege Buff Placer), EditorSuffix (Editor Suffix (ansf))
+{
+(Frostnova)
+}
+
+STRING 86
+// Abilities: A006 (Reaper's Scythe Buff Placer), Name (Name (anam))
+{
+Reaper's Scythe Buff Placer
+}
+
+STRING 87
+// Abilities: A006 (Reaper's Scythe Buff Placer), EditorSuffix (Editor Suffix (ansf))
+{
+(Storm Bolt)
+}
+
+STRING 88
+// Abilities: A005 (Reaper's Scythe), Name (Name (anam))
+{
+Reaper's Scythe
+}
+
+STRING 89
+// Abilities: A005 (Reaper's Scythe), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Reaper's Scythe|r - [|cffffcc00Level 2|r]
+}
+
+STRING 90
+// Abilities: A005 (Reaper's Scythe), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Reaper's Scythe|r - [|cffffcc00Level 3|r]
+}
+
+STRING 91
+// Abilities: A005 (Reaper's Scythe), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Brings a target to full realization of its own mortality, dealing damage based on how much life the target is missing. Stuns for 1.5 second. Deals 0.4 damage per hit point missing.|n|n|cff6d6d6dHotkey: R|r
+}
+
+STRING 92
+// Abilities: A005 (Reaper's Scythe), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00Q|r  Meat Hook
+}
+
+STRING 93
+// Abilities: A005 (Reaper's Scythe), Tip (Tooltip - Normal (atp1))
+{
+|cffffcc00Q|r  Meat Hook
+}
+
+STRING 94
+// Abilities: A005 (Reaper's Scythe), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Brings a target to full realization of its own mortality, dealing damage based on how much life the target is missing. Stuns for 1.5 second. Deals 0.6 damage per hit point missing.|n|n|cff6d6d6dHotkey: R|r
+}
+
+STRING 95
+// Abilities: A005 (Reaper's Scythe), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Brings a target to full realization of its own mortality, dealing damage based on how much life the target is missing. Stuns for 1.5 second. Deals 0.9 damage per hit point missing.|n|n|cff6d6d6dHotkey: R|r
+}
+
+STRING 96
+// Abilities: A005 (Reaper's Scythe), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+|cffffcc00Damages enemies only|n|nDeals 100+100*Level Damage|n|n600+200*Level Range|r
+}
+
+STRING 97
+// Abilities: A005 (Reaper's Scythe), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+|cffffcc00Damages enemies only|n|nDeals 100+100*Level Damage|n|n600+200*Level Range|r
+}
+
+STRING 98
+// Abilities: A005 (Reaper's Scythe), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Reaper's Scythe|r - [|cffffcc00Level 1|r]
+}
+
+STRING 101
+// Abilities: A005 (Reaper's Scythe), Researchhotkey (Hotkey - Learn (arhk))
+{
+R
+}
+
+STRING 102
+// Abilities: A005 (Reaper's Scythe), Hotkey (Hotkey - Normal (ahky))
+{
+R
+}
+
+STRING 103
+// Buffs/Effects: B001 (), Bufftip (Tooltip (ftip))
+{
+Reaper's Scythe
+}
+
+STRING 104
+// Abilities: A005 (Reaper's Scythe), Researchtip (Tooltip - Learn (aret))
+{
+Learn |cffffcc00R|reaper's Scythe - [|cffffcc00Level %d|r]
+}
+
+STRING 105
+// Abilities: A005 (Reaper's Scythe), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+Brings a target to full realization of its own mortality, dealing damage based on how much life the target is missing. Stuns for 1.5 second. |n|n|cffffcc00Level 1|r - Deals 0.4  damage per hit point missing and stuns. |n|cffffcc00Level 2|r - Deals 0.6  damage per hit point missing and stuns.|n|cffffcc00Level 3|r - Deals 0.9  damage per hit point missing and stuns.
+}
+
+STRING 106
+// Abilities: A007 (Fireball), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+The caster hurls a fireball towards the target location, dealing damage in a small aoe on impact. |n|n|cffffcc00Level 1|r - 70 damage on impact|n|cffffcc00Level 2|r - 140 damage on impact |n|cffffcc00Level 3|r - 210 damage on impact|n
+}
+
+STRING 107
+// Abilities: A007 (Fireball), Researchtip (Tooltip - Learn (aret))
+{
+Learn |cffffcc00F|rireball - [|cffffcc00Level %d|r]
+}
+
+STRING 108
+// Abilities: A007 (Fireball), Hotkey (Hotkey - Normal (ahky))
+{
+Q
+}
+
+STRING 109
+// Abilities: A007 (Fireball), Researchhotkey (Hotkey - Learn (arhk))
+{
+Q
+}
+
+STRING 110
+// Abilities: A007 (Fireball), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fireball|r - [|cffffcc00Level 1|r]
+}
+
+STRING 111
+// Abilities: A007 (Fireball), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fireball|r - [|cffffcc00Level 2|r]
+}
+
+STRING 112
+// Abilities: A007 (Fireball), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fireball|r - [|cffffcc00Level 3|r]
+}
+
+STRING 113
+// Abilities: A007 (Fireball), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fireball|r - [|cffffcc00Level 4|r]
+}
+
+STRING 114
+// Abilities: A007 (Fireball), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Hurls a fireball towards the target location, dealing 70 damage in a small aoe on impact. |n|n|cff6d6d6dHotkey: Q|r
+}
+
+STRING 115
+// Abilities: A007 (Fireball), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Hurls a fireball towards the target location, dealing 140 damage in a small aoe on impact. |n|n|cff6d6d6dHotkey: Q|r
+}
+
+STRING 116
+// Abilities: A007 (Fireball), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Hurls a fireball towards the target location, dealing 210 damage in a small aoe on impact. |n|n|cff6d6d6dHotkey: Q|r
+}
+
+STRING 117
+// Abilities: A007 (Fireball), Name (Name (anam))
+{
+Fireball
+}
+
+STRING 118
+// Units: dumi (Particle), Name (Name (unam))
+{
+Particle
+}
+
+STRING 119
+// Abilities: A002 (Chaosflare), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The caster concentrates his power to let loose a powerful beam of fire|ntowards the target, dealing damage 55 damage and burning the target over 4 seconds for 100 extra damage.|n|n|cff6d6d6dHotkey: W|r
+}
+
+STRING 120
+// Abilities: A002 (Chaosflare), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The caster concentrates his power to let loose a powerful beam of fire|ntowards the target, dealing damage 65 damage and burning the target over 4 seconds for 140 extra damage.|n|n|cff6d6d6dHotkey: W|r
+}
+
+STRING 121
+// Abilities: A002 (Chaosflare), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The caster concentrates his power to let loose a powerful beam of fire|ntowards the target, dealing damage 75 damage and burning the target over 4 seconds for 180 extra damage.|n|n|cff6d6d6dHotkey: W|r
+}
+
+STRING 122
+// Abilities: A002 (Chaosflare), Researchtip (Tooltip - Learn (aret))
+{
+LearnChaosflare [ |cffffcc00W|r] - [|cffffcc00Level %d|r]
+}
+
+STRING 123
+// Abilities: A002 (Chaosflare), Researchhotkey (Hotkey - Learn (arhk))
+{
+W
+}
+
+STRING 124
+// Abilities: A002 (Chaosflare), Hotkey (Hotkey - Normal (ahky))
+{
+W
+}
+
+STRING 127
+// Abilities: A008 (Bone Spirit), Hotkey (Hotkey - Normal (ahky))
+{
+Q
+}
+
+STRING 129
+// Abilities: A008 (Bone Spirit), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Bone Spirit|r - [|cffffcc00Level 1|r]
+}
+
+STRING 130
+// Abilities: A008 (Bone Spirit), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Bone Spirit|r - [|cffffcc00Level 2|r]
+}
+
+STRING 131
+// Abilities: A008 (Bone Spirit), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Bone Spirit|r - [|cffffcc00Level 3|r]
+}
+
+STRING 132
+// Abilities: A008 (Bone Spirit), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fireball|r - [|cffffcc00Level 4|r]
+}
+
+STRING 136
+// Abilities: A008 (Bone Spirit), Name (Name (anam))
+{
+Bone Spirit
+}
+
+STRING 137
+// Abilities: A009 (Bone Spirit Buff Placer), Name (Name (anam))
+{
+Bone Spirit Buff Placer
+}
+
+STRING 138
+// Abilities: A009 (Bone Spirit Buff Placer), EditorSuffix (Editor Suffix (ansf))
+{
+(Storm Bolt)
+}
+
+STRING 139
+// Buffs/Effects: B002 (), Bufftip (Tooltip (ftip))
+{
+Bone Spirit
+}
+
+STRING 140
+// Abilities: A008 (Bone Spirit), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+The Spirit tracks down a target, or finds one of its own.|nOn impact the target is stunned for 0.25 seconds.|n|n|cffffcc00Level 1|r - 90 damage on impact|n|cffffcc00Level 2|r - 180 damage on impact |n|cffffcc00Level 3|r - 270 damage on impact|n
+}
+
+STRING 141
+// Abilities: A008 (Bone Spirit), Researchtip (Tooltip - Learn (aret))
+{
+Learn Bon|cffffcc00e|r Spirit - [|cffffcc00Level %d|r]
+}
+
+STRING 142
+// Abilities: A008 (Bone Spirit), Researchhotkey (Hotkey - Learn (arhk))
+{
+E
+}
+
+STRING 143
+// Abilities: A008 (Bone Spirit), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The Spirit tracks down a target, or finds one of its own. Deals 90 damage on impact and stuns the target for 0.25 seconds|n|n|cff6d6d6dHotkey: Q|r
+}
+
+STRING 144
+// Abilities: A008 (Bone Spirit), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The Spirit tracks down a target, or finds one of its own. Deals 180 damage on impact and stuns the target for 0.25 seconds|n|n|cff6d6d6dHotkey: Q|r
+}
+
+STRING 145
+// Abilities: A008 (Bone Spirit), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The Spirit tracks down a target, or finds one of its own. Deals 270 damage on impact and stuns the target for 0.25 seconds|n|n|cff6d6d6dHotkey: Q|r
+}
+
+STRING 146
+// Abilities: A00A (Whirlwind), Unhotkey (Hotkey - Turn Off (auhk))
+{
+R
+}
+
+STRING 147
+// Abilities: A00A (Whirlwind), Hotkey (Hotkey - Normal (ahky))
+{
+R
+}
+
+STRING 148
+// Abilities: A00A (Whirlwind), Name (Name (anam))
+{
+Whirlwind
+}
+
+STRING 150
+// Abilities: A00A (Whirlwind), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Whirlwind|r
+}
+
+STRING 156
+// Abilities: A00A (Whirlwind), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Deliver multiple attacks to everything in your path for 200 damage as Normal Damage.
+}
+
+STRING 157
+// Abilities: A00A (Whirlwind), Untip (Tooltip - Turn Off (aut1))
+{
+|cff6d6d6dTurn off Whirwind|n|nHotkey: R|r
+}
+
+STRING 158
+// Abilities: A00A (Whirlwind), Untip (Tooltip - Turn Off (aut1))
+{
+|cff6d6d6dTurn off Whirwind|n|nHotkey: R|r
+}
+
+STRING 159
+// Abilities: A00A (Whirlwind), Untip (Tooltip - Turn Off (aut1))
+{
+|cff6d6d6dTurn off Whirwind|n|nHotkey: R|r
+}
+
+STRING 160
+// Abilities: A00A (Whirlwind), Untip (Tooltip - Turn Off (aut1))
+{
+|cff6d6d6dTurn off Whirwind|n|nHotkey: R|r
+}
+
+STRING 161
+// Buffs/Effects: B003 (), Buffubertip (Tooltip - Extended (fube))
+{
+A furious dance of death.
+}
+
+STRING 162
+// Buffs/Effects: B003 (), Bufftip (Tooltip (ftip))
+{
+Whirlwind
+}
+
+STRING 163
+// Abilities: A00A (Whirlwind), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Deliver multiple attacks to everything in your path for 50 damage as Normal Damage.|n|n|cff6d6d6dHotkey: R|r
+}
+
+STRING 164
+// Abilities: A00A (Whirlwind), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Whirlwind|r - [|cffffcc00Level 1|r]
+}
+
+STRING 165
+// Abilities: A00A (Whirlwind), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Whirlwind|r - [|cffffcc00Level 2|r]
+}
+
+STRING 166
+// Abilities: A00A (Whirlwind), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Whirlwind|r - [|cffffcc00Level 3|r]
+}
+
+STRING 167
+// Abilities: A00A (Whirlwind), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Deliver multiple attacks to everything in your path for 100 damage as Normal Damage.|n|n|cff6d6d6dHotkey: R|r
+}
+
+STRING 168
+// Abilities: A00A (Whirlwind), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Deliver multiple attacks to everything in your path for 150 damage as Normal Damage.|n|n|cff6d6d6dHotkey: R|r
+}
+
+STRING 169
+// Abilities: A00A (Whirlwind), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+Deliver multiple attacks to everything in your path.|n|cffffcc00|nLevel 1|r - 12.5 damage per second|n|cffffcc00Level 2|r - 25 damage per second |n|cffffcc00Level 3|r - 37.5 damage per second|n|nCan be toggled on and off.
+}
+
+STRING 170
+// Abilities: A00A (Whirlwind), Researchtip (Tooltip - Learn (aret))
+{
+Learn Whi|cffffcc00r|rlwind - [|cffffcc00Level %d|r]
+}
+
+STRING 171
+// Abilities: A003 (Leap), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+Leap into the air, dealing  damage to all close enemies of your destination and slowing their movement speed by 20% for 3 seconds. |n|n|cffffcc00Level 1|r - 70 damage on impact|n|cffffcc00Level 2|r - 140 damage on impact |n|cffffcc00Level 3|r - 210 damage on impact|n
+}
+
+STRING 172
+// Abilities: A003 (Leap), Researchtip (Tooltip - Learn (aret))
+{
+Learn |cffffcc00L|reap - [|cffffcc00Level %d|r]
+}
+
+STRING 173
+// Abilities: A003 (Leap), Hotkey (Hotkey - Normal (ahky))
+{
+W
+}
+
+STRING 174
+// Abilities: A003 (Leap), Researchhotkey (Hotkey - Learn (arhk))
+{
+L
+}
+
+STRING 175
+// Abilities: A003 (Leap), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Leap|r - [|cffffcc00Level 1|r]
+}
+
+STRING 176
+// Abilities: A003 (Leap), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Leap|r - [|cffffcc00Level 2|r]
+}
+
+STRING 177
+// Abilities: A003 (Leap), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Leapl|r - [|cffffcc00Level 3|r]
+}
+
+STRING 178
+// Abilities: A003 (Leap), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fireball|r - [|cffffcc00Level 4|r]
+}
+
+STRING 179
+// Abilities: A003 (Leap), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Leap into the air, dealing 70  damage to all close enemies of your destination and slowing their movement speed by 20% for 3 seconds. |n|n|cff6d6d6dHotkey: W|r
+}
+
+STRING 180
+// Abilities: A003 (Leap), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Leap into the air, dealing 140  damage to all close enemies of your destination and slowing their movement speed by 20% for 3 seconds. |n|n|cff6d6d6dHotkey: W|r
+}
+
+STRING 181
+// Abilities: A003 (Leap), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Leap into the air, dealing 210  damage to all close enemies of your destination and slowing their movement speed by 20% for 3 seconds. |n|n|cff6d6d6dHotkey: W|r
+}
+
+STRING 182
+// Abilities: A003 (Leap), Name (Name (anam))
+{
+Leap
+}
+
+STRING 183
+// Abilities: A00B (Leap Buff Placer), Name (Name (anam))
+{
+Leap Buff Placer
+}
+
+STRING 184
+// Abilities: A00B (Leap Buff Placer), EditorSuffix (Editor Suffix (ansf))
+{
+(Slow)
+}
+
+STRING 185
+// Buffs/Effects: B004 (), Bufftip (Tooltip (ftip))
+{
+Leap
+}
+
+STRING 187
+// Buffs/Effects: B004 (), Buffubertip (Tooltip - Extended (fube))
+{
+This unit is slowed. It's movement speed is reduced.
+}
+
+STRING 190
+// Abilities: A00C (Fist of Thunder), Hotkey (Hotkey - Normal (ahky))
+{
+E
+}
+
+STRING 195
+// Abilities: A00C (Fist of Thunder), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fireball|r - [|cffffcc00Level 4|r]
+}
+
+STRING 200
+// Abilities: A00C (Fist of Thunder), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+Slams the ground in front of you, dealing damage to close enemies. Emerging lightnings deal extra damage, when colliding with an enemy. |n|n|cffffcc00Level 1|r - 30 damage on slam. 20 damage per lightning.|n|cffffcc00Level 2|r - 70 damage on slam. 30 damage per lightning.|n|cffffcc00Level 3|r - 120 damage on slam. 40 damage per lightning.|n
+}
+
+STRING 201
+// Abilities: A00C (Fist of Thunder), Researchtip (Tooltip - Learn (aret))
+{
+Learn |cffffcc00F|rist of Thunder- [|cffffcc00Level %d|r]
+}
+
+STRING 202
+// Abilities: A00C (Fist of Thunder), Researchhotkey (Hotkey - Learn (arhk))
+{
+F
+}
+
+STRING 203
+// Abilities: A00C (Fist of Thunder), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fist of Thunder|r - [|cffffcc00Level 1|r]
+}
+
+STRING 204
+// Abilities: A00C (Fist of Thunder), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fist of Thunder|r - [|cffffcc00Level 2|r]
+}
+
+STRING 205
+// Abilities: A00C (Fist of Thunder), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fist of Thunder|r - [|cffffcc00Level 3|r]
+}
+
+STRING 206
+// Abilities: A00C (Fist of Thunder), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Slams the ground in front of you, dealing 30 damage to close enemies. Emerging lightnings deal extra 20 damage, when colliding with an enemy.  |n|n|cff6d6d6dHotkey: E|r
+}
+
+STRING 207
+// Abilities: A00C (Fist of Thunder), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Slams the ground in front of you, dealing 70 damage to close enemies. Emerging lightnings deal extra 30 damage, when colliding with an enemy.  |n|n|cff6d6d6dHotkey: E|r
+}
+
+STRING 208
+// Abilities: A00C (Fist of Thunder), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Slams the ground in front of you, dealing 120 damage to close enemies. Emerging lightnings deal extra 40 damage, when colliding with an enemy.  |n|n|cff6d6d6dHotkey: E|r
+}
+
+STRING 209
+// Abilities: A00C (Fist of Thunder), Name (Name (anam))
+{
+Fist of Thunder
+}
+
+STRING 211
+// Abilities: A00D (Chaotic Boulder), Researchtip (Tooltip - Learn (aret))
+{
+Learn Chaotic Boulde|cffffcc00r|r - [|cffffcc00Level %d|r]
+}
+
+STRING 212
+// Abilities: A00D (Chaotic Boulder), Hotkey (Hotkey - Normal (ahky))
+{
+R
+}
+
+STRING 213
+// Abilities: A00D (Chaotic Boulder), Researchhotkey (Hotkey - Learn (arhk))
+{
+R
+}
+
+STRING 214
+// Abilities: A00D (Chaotic Boulder), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Chaotic Boulder|r - [|cffffcc00Level 1|r]
+}
+
+STRING 215
+// Abilities: A00D (Chaotic Boulder), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Chaotic Boulder|r - [|cffffcc00Level 2|r]
+}
+
+STRING 216
+// Abilities: A00D (Chaotic Boulder), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Chaotic Boulder|r - [|cffffcc00Level 3|r]
+}
+
+STRING 217
+// Abilities: A00D (Chaotic Boulder), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fireball|r - [|cffffcc00Level 4|r]
+}
+
+STRING 221
+// Abilities: A00D (Chaotic Boulder), Name (Name (anam))
+{
+Chaotic Boulder
+}
+
+STRING 222
+// Abilities: A00D (Chaotic Boulder), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+Throws a boulder of magma towards the targeted point, splitting into tiny fragments that launch into the sky.|n|n|cffffcc00Level 1|r - 270 Boulder damage and 20 fragment damage.|n|cffffcc00Level 2|r - 340 Boulder damage and 30 fragment damage.|n|cffffcc00Level 3|r - 410 Boulder damage and 40 fragment damage.|n
+}
+
+STRING 223
+// Abilities: A00D (Chaotic Boulder), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Throws a boulder of magma towards the targeted point, dealing 270 damage on impact and splitting into tiny fragments that launch into the sky. Each fragments deals 20 damage.|n|n|cff6d6d6dHotkey: R|r
+}
+
+STRING 224
+// Abilities: A00D (Chaotic Boulder), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Throws a boulder of magma towards the targeted point, dealing 340 damage on impact and splitting into tiny fragments that launch into the sky. Each fragments deals 30 damage.|n|n|cff6d6d6dHotkey: R|r
+}
+
+STRING 225
+// Abilities: A00D (Chaotic Boulder), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+Throws a boulder of magma towards the targeted point, dealing 410 damage on impact and splitting into tiny fragments that launch into the sky. Each fragments deals 40 damage.|n|n|cff6d6d6dHotkey: R|r
+}
+
+STRING 228
+// Abilities: A00E (Guided Arrow), Hotkey (Hotkey - Normal (ahky))
+{
+Q
+}
+
+STRING 229
+// Abilities: A00E (Guided Arrow), Researchhotkey (Hotkey - Learn (arhk))
+{
+Q
+}
+
+STRING 230
+// Abilities: A00E (Guided Arrow), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Guided Arrow|r - [|cffffcc00Level 1|r]
+}
+
+STRING 231
+// Abilities: A00E (Guided Arrow), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Guided Arrow|r - [|cffffcc00Level 2|r]
+}
+
+STRING 232
+// Abilities: A00E (Guided Arrow), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Guided Arrow|r - [|cffffcc00Level 3|r]
+}
+
+STRING 233
+// Abilities: A00E (Guided Arrow), Tip (Tooltip - Normal (atp1))
+{
+|cffdaa520Fireball|r - [|cffffcc00Level 4|r]
+}
+
+STRING 237
+// Abilities: A00E (Guided Arrow), Name (Name (anam))
+{
+Guided Arrow
+}
+
+STRING 238
+// Abilities: A00E (Guided Arrow), Researchubertip (Tooltip - Learn - Extended (arut))
+{
+The caster fires an arrow which tracks down it's target.|nOn impact the arrow has a chance to pierce and hit the target again. |n|n|cffffcc00Level 1|r - 30 damage on impact. Pierces 1 to 4 times.|n|cffffcc00Level 2|r - 60 damage on impact. Pierces 2 to 5 times. |n|cffffcc00Level 3|r - 90 damage on impact. Pierces 3 to 6 times.|n
+}
+
+STRING 239
+// Abilities: A00E (Guided Arrow), Researchtip (Tooltip - Learn (aret))
+{
+Learn |cffffcc00G|ruided Arrow - [|cffffcc00Level %d|r]
+}
+
+STRING 240
+// Abilities: A00E (Guided Arrow), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The caster fires an arrow which tracks down it's target, dealing 30 damage on impact. Pierces 1 to 4 times.|n|n|cff6d6d6dHotkey: Q|r
+}
+
+STRING 241
+// Abilities: A00E (Guided Arrow), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The caster fires an arrow which tracks down it's target, dealing 60 damage on impact. Pierces 2 to 5 times.|n|n|cff6d6d6dHotkey: Q|r
+}
+
+STRING 242
+// Abilities: A00E (Guided Arrow), Ubertip (Tooltip - Normal - Extended (aub1))
+{
+The caster fires an arrow which tracks down it's target, dealing 90 damage on impact. Pierces 3 to 6 times.|n|n|cff6d6d6dHotkey: Q|r
+}
+

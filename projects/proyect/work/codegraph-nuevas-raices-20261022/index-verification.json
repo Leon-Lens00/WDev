@@ -1,0 +1,79 @@
+{
+  "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system",
+  "metadata": {
+    "index_state": "complete",
+    "indexed_with_version": "1.6.2+jass-vjass.5",
+    "indexed_with_extraction_version": "32"
+  },
+  "integrity": "ok",
+  "file_count": 9,
+  "node_count": 7815,
+  "edge_count": 22298,
+  "files": [
+    {
+      "path": "build.py",
+      "matches_disk": true,
+      "errors": []
+    },
+    {
+      "path": "codegraph-api/Blizzard.j",
+      "matches_disk": true,
+      "errors": []
+    },
+    {
+      "path": "codegraph-api/common.j",
+      "matches_disk": true,
+      "errors": []
+    },
+    {
+      "path": "src/ConversationUI.j",
+      "matches_disk": true,
+      "errors": []
+    },
+    {
+      "path": "src/DialogueData.j",
+      "matches_disk": true,
+      "errors": []
+    },
+    {
+      "path": "tools/game.py",
+      "matches_disk": true,
+      "errors": []
+    },
+    {
+      "path": "tools/model.cjs",
+      "matches_disk": true,
+      "errors": []
+    },
+    {
+      "path": "tools/story.mjs",
+      "matches_disk": true,
+      "errors": []
+    },
+    {
+      "path": "tools/textures.py",
+      "matches_disk": true,
+      "errors": []
+    }
+  ],
+  "extraction_errors": [],
+  "excluded_paths_present": [],
+  "symbols": [
+    {
+      "name": "BeginPage",
+      "qualified_name": "ConversationUI.BeginPage",
+      "file": "src/ConversationUI.j"
+    },
+    {
+      "name": "ConversationAdvance",
+      "qualified_name": "ConversationUI.ConversationAdvance",
+      "file": "src/ConversationUI.j"
+    },
+    {
+      "name": "Render",
+      "qualified_name": "ConversationUI.Render",
+      "file": "src/ConversationUI.j"
+    }
+  ],
+  "scope_limit": "UserInterface/Camera and frozen base are in a separate inventory index; cross-root calls are not resolved by this index."
+}

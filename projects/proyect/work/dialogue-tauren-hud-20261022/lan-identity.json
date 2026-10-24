@@ -1,0 +1,50 @@
+{
+  "pid": 735918,
+  "start": "11548892",
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/runtime-lan/pfx",
+  "cmd": "C:\\WarcraftIII\\war3.exe -window                                                                                                                                                                                                                                     ",
+  "window": {
+    "address": "0x55bb0752f2e0",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      0,
+      0
+    ],
+    "size": [
+      1920,
+      1080
+    ],
+    "workspace": {
+      "id": 3,
+      "name": "3"
+    },
+    "floating": true,
+    "monitor": 0,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 735918,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 2,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 1,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "18001dfb"
+  },
+  "map_sha256": "5bbb04f5b622227d2ea60bcd9b1ea84da937955fe959165028ddaefd277ccb3a"
+}

@@ -1,0 +1,8 @@
+{
+  "exclude": [
+    "**/*.md"
+  ],
+  "jass": {
+    "mode": "conservative"
+  }
+}

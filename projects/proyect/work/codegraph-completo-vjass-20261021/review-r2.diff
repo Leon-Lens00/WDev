@@ -1,0 +1,222 @@
+--- review-r1/JASS-VJASS.md
++++ review-r2/JASS-VJASS.md
+@@ -115,7 +115,7 @@
+ 
+ Projection limits: depth 24, 50,000 processed lines and 4 MiB text. Expression
+ limits prevent adversarial depth/node growth; value flow bounds recursion/work.
+-SLK bounds coordinates and cells. Exceeding a bound emits a coverage diagnostic.
++Constant values share work/depth limits, memoize dependencies and cap strings at 64 KiB. SLK bounds coordinates and cells. Exceeding a bound emits a coverage diagnostic.
+ This integration does not reproduce allocator bytecode, optimize code, validate
+ all compiler type errors, or prove runtime and synchronization behavior.
+ 
+--- review-r1/__tests__/jass-conditions.test.ts
++++ review-r2/__tests__/jass-conditions.test.ts
+@@ -77,4 +77,10 @@
+     expect(names('a.j')).toEqual(['No', 'Yes']); expect(names('b.j')).toEqual(['No', 'Yes']);
+   });
+ 
++  it('does not close a static branch when an ordinary runtime endif is encountered while pooling flags', () => {
++    const source='static if DEBUG_MODE then\nfunction Optional takes nothing returns nothing\nif true then\nendif\nendfunction\nglobals\nconstant boolean FLAG=true\nendglobals\nendif\nstatic if FLAG then\nfunction Yes takes nothing returns nothing\nendfunction\nelse\nfunction No takes nothing returns nothing\nendfunction\nendif\n';
++    const result=extract(source);
++    expect(result.nodes.filter(n=>['Yes','No'].includes(n.name)).map(n=>n.name).sort()).toEqual(['No','Yes']);
++  });
++
+ });
+--- review-r1/__tests__/jass-semantic-resolution.test.ts
++++ review-r2/__tests__/jass-semantic-resolution.test.ts
+@@ -413,4 +413,38 @@
+     expect(calls('S.run')).toContain('S.make');
+   });
+ 
++  it('keeps generated destruction callbacks within JASS even with TypeScript homonyms', async () => {
++    await init('struct S\nendstruct\nfunction Run takes S s returns nothing\ncall s.destroy()\nendfunction\n');
++    fs.writeFileSync(path.join(root!, 'other.ts'), 'class S { onDestroy() {} }');
++    await graph!.sync({ paths: ['other.ts'] });
++    graph!.destroy(); graph=await CodeGraph.recreate(root!); await graph.indexAll();
++    expect(graph.getNodesByName('onDestroy').some(n=>n.language==='typescript')).toBe(true);
++    const run = graph!.getNodesByQualifiedName('Run')[0]!;
++    expect(graph!.getOutgoingEdges(run.id).some(e => graph!.getNode(e.target)?.language === 'typescript')).toBe(false);
++  });
++  it('follows possible function values read from arrays without claiming index precision', async () => {
++    await init('globals\nstring array names\nendglobals\nfunction Target takes nothing returns nothing\nendfunction\nfunction Run takes nothing returns nothing\nset names[0]="Target"\ncall ExecuteFunc(names[0])\nendfunction\n');
++    expect(calls('Run')).toContain('Target');
++    const edge = graph!.getOutgoingEdges(graph!.getNodesByQualifiedName('Run')[0]!.id).find(e => graph!.getNode(e.target)?.qualifiedName === 'Target');
++    expect(edge?.metadata?.jassCandidate).toBe(true);
++  });
++  it('includes assignments and arguments owned by injected bodies in possible-value analysis', async () => {
++    await init('globals\nstring dispatch=""\nendglobals\nfunction Target takes nothing returns nothing\nendfunction\n//! inject main\nset dispatch=Target.name\ncall ExecuteFunc(dispatch)\n//! dovjassinit\n//! endinject\nfunction main takes nothing returns nothing\nendfunction\n');
++    const injected=graph!.getNodesByQualifiedName('__jass_inject_main')[0]!;
++    expect(graph!.getOutgoingEdges(injected.id).some(e=>e.kind==='calls' && e.metadata?.resolutionScope==='function-name-value' && graph!.getNode(e.target)?.qualifiedName==='Target')).toBe(true);
++  });
++  it('connects global and static constant initializers from the entry point', async () => {
++    await init('function Compute takes nothing returns integer\nreturn 1\nendfunction\nglobals\nconstant integer VALUE=Compute()\nendglobals\nstruct S\nstatic constant integer FIELD=Compute()\nendstruct\nfunction main takes nothing returns nothing\nendfunction\n');
++    const main=graph!.getNodesByQualifiedName('main')[0]!;
++    for (const name of ['VALUE','S.FIELD']) {
++      const target=graph!.getNodesByQualifiedName(name)[0]!;
++      expect(graph!.findPath(main.id,target.id)).not.toBeNull();
++    }
++  });
++
++  it('retains global variable writers across functions inside a library', async () => {
++    await init('library Demo\nglobals\nstring dispatch=""\nendglobals\nfunction Target takes nothing returns nothing\nendfunction\nfunction Assign takes nothing returns nothing\nset dispatch=Target.name\nendfunction\nfunction Run takes nothing returns nothing\ncall ExecuteFunc(dispatch)\nendfunction\nendlibrary\n');
++    expect(calls('Demo.Run')).toContain('Demo.Target');
++  });
++
+ });
+--- review-r1/__tests__/jass-value-bounds.test.ts
++++ review-r2/__tests__/jass-value-bounds.test.ts
+@@ -0,0 +1,30 @@
++import { describe, it, expect } from 'vitest';
++import { collectJassFunctionValues } from '../src/resolution/jass-value-flow';
++import { resolveJassExpression } from '../src/resolution/jass-expression';
++import { evaluateJassConstant } from '../src/extraction/jass-constant';
++import type { JassExpressionEnvironment } from '../src/resolution/jass-expression';
++import type { Node } from '../src/types';
++
++describe('JASS constant value bounds', () => {
++  it('bounds shared constant dependency expansion instead of visiting exponential leaves', () => {
++    const declarations=new Map<string,Node>();
++    for(let i=0;i<21;i++) declarations.set('S'+i, { id:'S'+i,name:'S'+i,qualifiedName:'S'+i,kind:'constant',language:'jass',filePath:'test.j',startLine:i+1,semanticData:{values:[i?{kind:'binary',operator:'+',left:{kind:'name',name:'S'+(i-1)},right:{kind:'name',name:'S'+(i-1)}}:{kind:'literal',value:'""',literalKind:'string'}]} } as Node);
++    let lookups=0; const root=declarations.get('S20')!;
++    const env={from:root,lookup:(name:string)=>{if(++lookups>512)throw new Error('Unbounded constant expansion');return declarations.get(name);},context:{getNodesByKind:()=>[],getNodesByQualifiedName:()=>[]}} as unknown as JassExpressionEnvironment;
++    expect(()=>collectJassFunctionValues(root,env)).not.toThrow();
++    expect(lookups).toBeLessThan(512);
++  });
++  it('refuses constant string concatenation before materializing excessive output', () => {
++    const literal={kind:'literal' as const,literalKind:'string',value:'"'+'x'.repeat(40000)+'"'};
++    expect(evaluateJassConstant({kind:'binary',operator:'+',left:literal,right:literal} as any,()=>undefined) === undefined).toBe(true);
++  });
++  it('refuses foreign destructor targets even when a context supplies a colliding qualified name', () => {
++    const type={id:'S',kind:'struct',name:'S',qualifiedName:'S',language:'jass',signature:'struct S'} as Node;
++    const receiver={id:'s',kind:'parameter',name:'s',qualifiedName:'Run.s',language:'jass'} as Node;
++    const foreign={id:'foreign',kind:'method',name:'onDestroy',qualifiedName:'S.onDestroy',language:'typescript',isStatic:false} as Node;
++    const env={from:receiver,lookup:()=>receiver,declaredType:()=>type,member:()=>undefined,named:()=>null,context:{getNodesByKind:()=>[type],getNodesByQualifiedName:()=>[foreign]}} as unknown as JassExpressionEnvironment;
++    const reference={referenceName:'__jass_expr__:'+JSON.stringify({access:'call',expression:{kind:'call',callee:{kind:'member',object:{kind:'name',name:'s'},name:'destroy'},args:[]}})} as any;
++    expect(resolveJassExpression(reference,env)?.targetNodeId).not.toBe('foreign');
++  });
++
++});
+--- review-r1/src/extraction/jass-conditions.ts
++++ review-r2/src/extraction/jass-conditions.ts
+@@ -61,14 +61,15 @@
+   if (!cached) for (const [sourceFile, text] of sources) {
+     const scopes: { kind: string; name: string }[] = [];
+     let globals = false, conditional = 0, inModule = false;
++    const poolingBranches: boolean[] = [];
+     for (const tokens of lexJass(text).semanticLines) {
+       const words = tokens.map(t => t.value), p = words.findIndex(w => !MODIFIERS.has(w));
+       const word = words[p];
+       if (!word) continue;
+       if (word === 'module') { inModule = true; continue; }
+       if (inModule) { if (word === 'endmodule') inModule = false; continue; }
+-      if (word === 'if' && words.includes('static')) conditional++;
+-      if (word === 'endif' && conditional) conditional--;
++      if (word === 'if') { const isStatic = words.includes('static'); poolingBranches.push(isStatic); if (isStatic) conditional++; }
++      if (word === 'endif' && poolingBranches.pop()) conditional--;
+       if (word === 'globals') { globals = true; continue; }
+       if (word === 'endglobals') { globals = false; continue; }
+       const scope = scopes.filter(s => ['library', 'scope'].includes(s.kind)).map(s => s.name).join('.');
+--- review-r1/src/extraction/jass-constant.ts
++++ review-r2/src/extraction/jass-constant.ts
+@@ -20,7 +20,7 @@
+     if (text === 'false') return false;
+     if (text === 'null') return null;
+     if (expression.literalKind === 'string') {
+-      if (!/^"[\s\S]*"$/.test(text)) return undefined;
++      if (text.length > 65538 || !/^"[\s\S]*"$/.test(text)) return undefined;
+       return text.slice(1, -1).replace(/\\([\\"nrt])/g, (_, value: string) => ({ n: '\n', r: '\r', t: '\t', '\\': '\\', '"': '"' })[value]!);
+     }
+     if (expression.literalKind === 'rawcode') {
+@@ -53,7 +53,7 @@
+     if (typeof left !== typeof right) return undefined;
+     return expression.operator === '==' ? left === right : left !== right;
+   }
+-  if (expression.operator === '+' && typeof left === 'string' && typeof right === 'string') return left + right;
++  if (expression.operator === '+' && typeof left === 'string' && typeof right === 'string') return left.length + right.length <= 65536 ? left + right : undefined;
+   if (typeof left !== 'number' || typeof right !== 'number') return undefined;
+   switch (expression.operator) {
+     case '+': return left + right;
+--- review-r1/src/resolution/jass-expression.ts
++++ review-r2/src/resolution/jass-expression.ts
+@@ -220,7 +220,7 @@
+         type = base && base !== 'array' ? env.lookup(base, TYPES, type) : undefined;
+       }
+       if (!lineage.some(n => n.id === value!.type!.id)) continue;
+-      for (const type of lineage) for (const callback of env.context.getNodesByQualifiedName(type.qualifiedName + '.onDestroy').filter(n => n.kind === 'method' && !n.isStatic)) {
++      for (const type of lineage) for (const callback of env.context.getNodesByQualifiedName(type.qualifiedName + '.onDestroy').filter(n => (n.language === 'jass' || n.language === 'vjass') && n.kind === 'method' && !n.isStatic)) {
+         if (!seenCallbacks.has(callback.id)) { seenCallbacks.add(callback.id); callbacks.push(callback); }
+       }
+     }
+--- review-r1/src/resolution/jass-synthesizer.ts
++++ review-r2/src/resolution/jass-synthesizer.ts
+@@ -95,7 +95,7 @@
+   const add = (source: Node, target: Node, site: number, phase: string) => result.push({ source: source.id, target: target.id, kind: 'references', line: site, provenance: 'heuristic', metadata: { synthesizedBy: 'jass-initialization', jassCandidate: true, registeredAt: `${target.filePath}:${target.startLine}`, phase } });
+   const injection = main?.semanticData?.injection as { file?: string; init?: number } | undefined;
+   const mainInitializes = main && (!injection || !!injection.init);
+-  for (const kind of ['file', 'namespace', 'struct', 'variable', 'field'] as const) {
++  for (const kind of ['file', 'namespace', 'struct', 'variable', 'field', 'constant'] as const) {
+     const nodes = ctx.iterateNodesByKind?.(kind) ?? ctx.getNodesByKind(kind);
+     for (const node of nodes) {
+       await yieldToLoop();
+@@ -108,7 +108,7 @@
+         if (mainInitializes && queries.getOutgoingEdges(node.id).some(e => e.kind === 'calls')) add(main, node, injection?.file && injection.file !== main.filePath ? main.startLine : injection?.init ?? main.startLine, kind === 'struct' ? 'struct-onInit' : 'library-scope-initializer');
+       } else if (Array.isArray(node.semanticData?.calls) && node.semanticData.calls.length) {
+         const ownerName = node.qualifiedName.includes('.') ? node.qualifiedName.slice(0, node.qualifiedName.lastIndexOf('.')) : '';
+-        const owner = kind === 'field' ? ctx.getNodesByQualifiedName(ownerName).find(n => jass(n) && n.kind === 'struct') : undefined;
++        const owner = (kind === 'field' || kind === 'constant') ? ctx.getNodesByQualifiedName(ownerName).find(n => jass(n) && n.kind === 'struct') : undefined;
+         if (owner && !node.isStatic) add(owner, node, owner.startLine, 'instance-field-initializer');
+         else if (mainInitializes && !ctx.getNodesByQualifiedName(ownerName).some(n => ['function', 'method'].includes(n.kind))) add(main, node, injection?.file && injection.file !== main.filePath ? main.startLine : injection?.init ?? main.startLine, 'static-global-initializer');
+       }
+--- review-r1/src/resolution/jass-value-flow.ts
++++ review-r2/src/resolution/jass-value-flow.ts
+@@ -33,7 +33,7 @@
+   const seen = new Set<string>();
+   const functions = () => {
+     let list = functionCache.get(env.context);
+-    if (!list) { list = [...env.context.getNodesByKind('function'), ...env.context.getNodesByKind('method')].filter(n => n.language === 'jass' || n.language === 'vjass'); functionCache.set(env.context, list); }
++    if (!list) { list = ['function', 'method', 'namespace', 'variable', 'field', 'constant'].flatMap(kind => env.context.getNodesByKind(kind as Node['kind'])).filter(n => (n.language === 'jass' || n.language === 'vjass') && (CALLABLE.has(n.kind) || Array.isArray(n.semanticData?.calls) || Array.isArray(n.semanticData?.assignments))); functionCache.set(env.context, list); }
+     return list;
+   };
+   const storage = (e: JassExpression, from: Node): Node | undefined => {
+@@ -65,14 +65,17 @@
+     }
+     return '';
+   };
+-  const constantString = (expression: JassExpression, from: Node, visited = new Set<string>()): string | undefined => {
++  const constantMemo = new Map<string, string | undefined>();
++  const constantString = (expression: JassExpression, from: Node, visited = new Set<string>(), depth = 0): string | undefined => {
++    if (--budget < 0 || depth > 32) { unknown = true; return undefined; }
+     const constant = evaluateJassConstant(expression, name => {
+       if (name === 'SCOPE_PREFIX') { const scope = namespace(from); return scope ? scope.replace(/\./g, '_') + '_' : undefined; }
+       const node = env.lookup(name, BINDINGS, from);
+       if (!node || node.kind !== 'constant' || visited.has(node.id)) return undefined;
++      if (constantMemo.has(node.id)) return constantMemo.get(node.id);
+       const values = array<JassExpression>(node.semanticData?.values);
+       if (values.length !== 1) return undefined;
+-      visited.add(node.id); const result = constantString(values[0]!, node, visited); visited.delete(node.id); return result;
++      visited.add(node.id); const result = constantString(values[0]!, node, visited, depth + 1); visited.delete(node.id); constantMemo.set(node.id, result); return result;
+     });
+     return typeof constant === 'string' ? constant : undefined;
+   };
+@@ -95,9 +98,9 @@
+       if (text !== undefined) stringTarget(text); else unknown = true;
+       return;
+     }
+-    if (expression.kind === 'name' || expression.kind === 'member') {
++    if (expression.kind === 'name' || expression.kind === 'member' || expression.kind === 'index') {
+       const declared = storage(expression, from);
+-      if (declared) { binding(declared, depth + 1); return; }
++      if (declared) { if (expression.kind === 'index') unknown = true; binding(declared, depth + 1); return; }
+       const direct = callable(expression, from);
+       if (direct && (direct.kind === 'function' || direct.isStatic)) { targets.set(direct.id, direct); return; }
+       if (expression.kind === 'member') {
+@@ -128,7 +131,8 @@
+   const binding = (node: Node, depth: number): void => {
+     if (depth > 32 || --budget < 0 || seen.has(node.id)) { unknown = true; return; }
+     seen.add(node.id);
+-    const owner = env.lookup(parent(node.qualifiedName), CALLABLE, node) ?? node;
++    const enclosingOwner = env.lookup(parent(node.qualifiedName), new Set([...CALLABLE, 'namespace']), node);
++    const owner = enclosingOwner && (CALLABLE.has(enclosingOwner.kind) || enclosingOwner.semanticData?.injectionTarget) ? enclosingOwner : node;
+     const values = array<JassExpression>(node.semanticData?.values);
+     for (const expression of values) value(expression, owner, depth + 1);
+     let writers = values.length;

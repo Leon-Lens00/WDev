@@ -1,0 +1,36 @@
+{
+  "repo": "medium-jassjass",
+  "flow": 2,
+  "names": [
+    "Jass.Lexer.parseIdent",
+    "Jass.isDelim"
+  ],
+  "repetition": 1,
+  "arm": "with",
+  "exit": 0,
+  "seconds": 24.58648816099594,
+  "usage": {
+    "input_tokens": 82366,
+    "cached_input_tokens": 58496,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 744,
+    "reasoning_output_tokens": 51
+  },
+  "commands": 1,
+  "command_text": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"'\""
+  ],
+  "mcp": 2,
+  "mcp_tools": [
+    "codegraph_explore",
+    "codegraph_explore"
+  ],
+  "mcp_errors": [],
+  "forbidden_commands": [
+    "/usr/bin/bash -lc \"pwd; rg --files -g 'AGENTS.md' -g '\"'!**/.codegraph/**'\"' -g '\"'!**/*benchmark*'\"' -g '\"'!**/*.sqlite*'\"' -g '\"'!**/*.db'\"' -g '\"'!**/.git/**'\"'\""
+  ],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a16219-0ad9-7a91-8bf5-183624f08634"
+  ]
+}

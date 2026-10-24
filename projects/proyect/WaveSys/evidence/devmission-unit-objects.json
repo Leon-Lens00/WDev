@@ -1,0 +1,1050 @@
+[
+  {
+    "id": "Hblm",
+    "base": "Hblm",
+    "section": 0,
+    "strings": {
+      "uabi": "A000,Sch2,AM01,AInv",
+      "uhab": "A001,AHbn,AHdr,AHpx",
+      "ua1t": "unknown"
+    }
+  },
+  {
+    "id": "hwtw",
+    "base": "hwtw",
+    "section": 0,
+    "strings": {
+      "upap": "blighted",
+      "umdl": "war3mapImported\\Gatling gun.mdl",
+      "uubs": "",
+      "uabi": "Aloc,Avul,AInv"
+    }
+  },
+  {
+    "id": "oeye",
+    "base": "oeye",
+    "section": 0,
+    "strings": {
+      "uabi": "Avul,Adt1,Aeth"
+    }
+  },
+  {
+    "id": "hpea",
+    "base": "hpea",
+    "section": 0,
+    "strings": {
+      "uabi": "A00F,AInv",
+      "utyp": "",
+      "upgr": "",
+      "ubui": "",
+      "udaa": "",
+      "ures": "Rhar"
+    }
+  },
+  {
+    "id": "hfoo",
+    "base": "hfoo",
+    "section": 0,
+    "strings": {
+      "upgr": "",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "hkni",
+    "base": "hkni",
+    "section": 0,
+    "strings": {
+      "upgr": "",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "hrif",
+    "base": "hrif",
+    "section": 0,
+    "strings": {
+      "upgr": "",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "hmtm",
+    "base": "hmtm",
+    "section": 0,
+    "strings": {
+      "upgr": "",
+      "ua1p": "debris,structure"
+    }
+  },
+  {
+    "id": "hgyr",
+    "base": "hgyr",
+    "section": 0,
+    "strings": {
+      "upgr": "",
+      "utyp": "_"
+    }
+  },
+  {
+    "id": "hgry",
+    "base": "hgry",
+    "section": 0,
+    "strings": {
+      "upgr": ""
+    }
+  },
+  {
+    "id": "hmpr",
+    "base": "hmpr",
+    "section": 0,
+    "strings": {
+      "upgr": "",
+      "uabi": "AInv",
+      "udaa": ""
+    }
+  },
+  {
+    "id": "hsor",
+    "base": "hsor",
+    "section": 0,
+    "strings": {
+      "upgr": "",
+      "uabi": "AInv",
+      "udaa": ""
+    }
+  },
+  {
+    "id": "hmtt",
+    "base": "hmtt",
+    "section": 0,
+    "strings": {
+      "upgr": "",
+      "ua1g": "ground,structure,debris,air,item,ward",
+      "utyp": "",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "hspt",
+    "base": "hspt",
+    "section": 0,
+    "strings": {
+      "upgr": ""
+    }
+  },
+  {
+    "id": "hdhw",
+    "base": "hdhw",
+    "section": 0,
+    "strings": {
+      "upgr": ""
+    }
+  },
+  {
+    "id": "hmil",
+    "base": "hmil",
+    "section": 0,
+    "strings": {
+      "uabi": "AInv,AU01",
+      "upgr": "",
+      "ubui": ""
+    }
+  },
+  {
+    "id": "ewsp",
+    "base": "ewsp",
+    "section": 0,
+    "strings": {
+      "utyp": "",
+      "uabi": "Adtn,Aren,Ault"
+    }
+  },
+  {
+    "id": "ngme",
+    "base": "ngme",
+    "section": 0,
+    "strings": {
+      "usei": "",
+      "useu": "H01A,H001,H005,H006,H009,H007"
+    }
+  },
+  {
+    "id": "hgtw",
+    "base": "hgtw",
+    "section": 0,
+    "strings": {
+      "umdl": "Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl"
+    }
+  },
+  {
+    "id": "hwt3",
+    "base": "hwt3",
+    "section": 0,
+    "strings": {
+      "upgr": "",
+      "uabi": "AInv"
+    }
+  },
+  {
+    "id": "edot",
+    "base": "edot",
+    "section": 0,
+    "strings": {
+      "uabi": "AU01,Acyc,Arav,Afae,Aien,Ault"
+    }
+  },
+  {
+    "id": "ugho",
+    "base": "ugho",
+    "section": 0,
+    "strings": {
+      "uabi": "A015,Acan,Ahrl,Aiun"
+    }
+  },
+  {
+    "id": "nsnp",
+    "base": "nsnp",
+    "section": 0,
+    "strings": {
+      "ua1m": "war3mapImported\\OrbBloodXR.mdl",
+      "umdl": "war3mapImported\\OrbFireXR.mdl"
+    }
+  },
+  {
+    "id": "nhef",
+    "base": "nhef",
+    "section": 0,
+    "strings": {
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNSentryWard.blp"
+    }
+  },
+  {
+    "id": "nhem",
+    "base": "nhem",
+    "section": 0,
+    "strings": {
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNReplay-Speedup.blp"
+    }
+  },
+  {
+    "id": "H001",
+    "base": "Hmgd",
+    "section": 1,
+    "strings": {
+      "upro": "TRIGSTR_204",
+      "unam": "TRIGSTR_218",
+      "usnd": "",
+      "uhab": "",
+      "ushu": "ShadowFlyer",
+      "umdl": "Marine.mdl",
+      "uhot": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNFlakCannons.blp",
+      "utub": "",
+      "uarm": "Flesh",
+      "ua1m": "Abilities\\Weapons\\Rifle\\RifleImpact.mdl",
+      "ua1g": "ground,structure,debris,air,item,ward",
+      "ucs1": "",
+      "ua1w": "instant",
+      "uabi": "U0A5,U0A4,U0A3,Sch2,U0A1,U0A2,AInv",
+      "ussi": "ReplaceableTextures\\CommandButtons\\BTNFlakCannons.blp",
+      "uawt": "TRIGSTR_097",
+      "utpr": "TRIGSTR_098"
+    }
+  },
+  {
+    "id": "n000",
+    "base": "nmrl",
+    "section": 1,
+    "strings": {
+      "umvt": "amph",
+      "udaa": "",
+      "uabi": "",
+      "upgr": "Rhar"
+    }
+  },
+  {
+    "id": "n001",
+    "base": "nmrr",
+    "section": 1,
+    "strings": {
+      "umvt": "amph",
+      "upgr": "Rhar"
+    }
+  },
+  {
+    "id": "n002",
+    "base": "ngrk",
+    "section": 1,
+    "strings": {}
+  },
+  {
+    "id": "n003",
+    "base": "ngrk",
+    "section": 1,
+    "strings": {
+      "unam": ""
+    }
+  },
+  {
+    "id": "H006",
+    "base": "Hmgd",
+    "section": 1,
+    "strings": {
+      "unam": "TRIGSTR_096",
+      "usnd": "",
+      "uhab": "",
+      "ushu": "ShadowFlyer",
+      "umdl": "war3mapImported\\Penguin.mdl",
+      "uhot": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNPenguin.blp",
+      "utub": "",
+      "uarm": "Flesh",
+      "ua1m": "Abilities\\Weapons\\Rifle\\RifleImpact.mdl",
+      "ua1g": "ground,structure,debris,air,item,ward",
+      "ucs1": "",
+      "ua1w": "instant",
+      "ussi": "ReplaceableTextures\\CommandButtons\\BTNPenguin.blp",
+      "utpr": "TRIGSTR_102",
+      "uawt": "TRIGSTR_103",
+      "upro": "TRIGSTR_099",
+      "uabi": "U0A5,U0A4,U0A3,Sch2,U0A1,U0A2,AInv"
+    }
+  },
+  {
+    "id": "h00A",
+    "base": "hwtw",
+    "section": 1,
+    "strings": {
+      "upap": "blighted",
+      "umdl": "war3mapImported\\Gatling gun.mdl",
+      "uubs": "",
+      "uabi": "Aloc,Avul,AInv"
+    }
+  },
+  {
+    "id": "n004",
+    "base": "nmrm",
+    "section": 1,
+    "strings": {
+      "umvt": "amph"
+    }
+  },
+  {
+    "id": "n005",
+    "base": "nfro",
+    "section": 1,
+    "strings": {
+      "uabi": "Aloc,Avul,AInv",
+      "ushu": "",
+      "uspa": "",
+      "umdl": "war3mapImported\\dummy.mdl",
+      "umvt": "",
+      "unam": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNSkillz.tga",
+      "urac": "human"
+    }
+  },
+  {
+    "id": "n006",
+    "base": "nmcf",
+    "section": 1,
+    "strings": {
+      "umdl": "units\\creeps\\MurgulSlave\\MurgulSlave.mdl"
+    }
+  },
+  {
+    "id": "n007",
+    "base": "nmbg",
+    "section": 1,
+    "strings": {}
+  },
+  {
+    "id": "n008",
+    "base": "nmsn",
+    "section": 1,
+    "strings": {}
+  },
+  {
+    "id": "n009",
+    "base": "nmrv",
+    "section": 1,
+    "strings": {}
+  },
+  {
+    "id": "n00A",
+    "base": "nmfs",
+    "section": 1,
+    "strings": {
+      "umvt": "amph"
+    }
+  },
+  {
+    "id": "n00B",
+    "base": "nmmu",
+    "section": 1,
+    "strings": {
+      "umvt": "amph"
+    }
+  },
+  {
+    "id": "n00C",
+    "base": "nmtw",
+    "section": 1,
+    "strings": {}
+  },
+  {
+    "id": "h010",
+    "base": "hwtw",
+    "section": 1,
+    "strings": {
+      "uupt": "",
+      "upgr": "",
+      "usnd": "",
+      "udty": "hero",
+      "uabi": "AIhb",
+      "umdl": "Doodads\\LordaeronSummer\\Terrain\\Crates\\Crates0.mdl",
+      "ushb": "ShadowCrates",
+      "unam": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNBox.blp",
+      "uubs": ""
+    }
+  },
+  {
+    "id": "h011",
+    "base": "hgtw",
+    "section": 1,
+    "strings": {
+      "uabi": "A00X,A00W",
+      "umdl": "war3mapImported\\Turret.mdl",
+      "uani": "",
+      "uarm": "Metal",
+      "ureq": "",
+      "upgr": "",
+      "udty": "divine",
+      "uubs": "",
+      "ushb": "ShadowHouse",
+      "upat": "PathTextures\\2x2Default.tga",
+      "unam": "",
+      "utyp": "mechanical,ward",
+      "usnd": "ClockwerkGoblin",
+      "uico": "war3mapImported\\BTNminigun.blp",
+      "uspa": "",
+      "udaa": "A00X",
+      "upap": "unwalkable"
+    }
+  },
+  {
+    "id": "h012",
+    "base": "hgtw",
+    "section": 1,
+    "strings": {
+      "uabi": "Atau",
+      "umdl": "units\\critters\\Penguin\\Penguin.mdl",
+      "uani": "",
+      "ureq": "",
+      "upgr": "",
+      "udty": "divine",
+      "uubs": "",
+      "ushb": "",
+      "upat": "PathTextures\\2x2Default.tga",
+      "unam": "",
+      "utyp": "mechanical,ward",
+      "usnd": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp",
+      "uspa": "",
+      "upap": "unwalkable"
+    }
+  },
+  {
+    "id": "H01A",
+    "base": "Hmgd",
+    "section": 1,
+    "strings": {
+      "upro": "TRIGSTR_210",
+      "unam": "TRIGSTR_211",
+      "usnd": "",
+      "uhab": "",
+      "ushu": "ShadowFlyer",
+      "umdl": "units\\human\\HeroBloodElf\\HeroBloodElf.mdl",
+      "uhot": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNHeroBloodElfPrince.blp",
+      "utub": "",
+      "uarm": "Flesh",
+      "ua1m": "Abilities\\Weapons\\Rifle\\RifleImpact.mdl",
+      "ua1g": "ground,structure,debris,air,item,ward",
+      "ucs1": "",
+      "ua1w": "instant",
+      "ussi": "ReplaceableTextures\\CommandButtons\\BTNHeroBloodElfPrince.blp",
+      "utpr": "TRIGSTR_207",
+      "uawt": "TRIGSTR_208",
+      "uabi": "U0A5,U0A4,U0A3,Sch2,U0A1,U0A2,AInv"
+    }
+  },
+  {
+    "id": "h000",
+    "base": "hpea",
+    "section": 1,
+    "strings": {
+      "unam": "TRIGSTR_067",
+      "utyp": "",
+      "umdl": "dummy.mdl",
+      "umvt": "",
+      "uabi": "AInv,Aloc",
+      "ubui": "",
+      "upgr": "",
+      "usnd": "",
+      "ushu": "",
+      "udty": "none",
+      "uarm": "Ethereal",
+      "utar": "_",
+      "uspa": ""
+    }
+  },
+  {
+    "id": "h002",
+    "base": "hpea",
+    "section": 1,
+    "strings": {
+      "unam": "TRIGSTR_068",
+      "utyp": "",
+      "umdl": "dummy.mdl",
+      "umvt": "",
+      "uabi": "AInv",
+      "ubui": "",
+      "upgr": "",
+      "usnd": "",
+      "ushu": "",
+      "udty": "none",
+      "uarm": "Ethereal",
+      "utar": "_",
+      "uspa": ""
+    }
+  },
+  {
+    "id": "h003",
+    "base": "hpea",
+    "section": 1,
+    "strings": {
+      "uabi": "A015",
+      "utyp": "",
+      "upgr": "",
+      "ubui": "",
+      "umvt": ""
+    }
+  },
+  {
+    "id": "h004",
+    "base": "hhou",
+    "section": 1,
+    "strings": {
+      "umdl": "war3mapImported\\PozoLife.mdl",
+      "uabi": "Avul,Aloc",
+      "unam": "TRIGSTR_344",
+      "upgr": "",
+      "usnd": "",
+      "uspa": "",
+      "uubs": "",
+      "upap": "unwalkable"
+    }
+  },
+  {
+    "id": "bwn2",
+    "base": "ewsp",
+    "section": 1,
+    "strings": {
+      "uspa": "",
+      "utub": "",
+      "urac": "other",
+      "usnd": "",
+      "unsf": "TRIGSTR_081",
+      "uabi": "Aeth,Avul",
+      "ussi": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "ubui": "",
+      "umdl": "UI\\RaceWindow.mdl",
+      "unam": "TRIGSTR_082",
+      "uico": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "utip": "",
+      "utyp": "",
+      "utar": "",
+      "upgr": "",
+      "uhot": "",
+      "uhrt": "none",
+      "umvt": "float",
+      "udty": "none"
+    }
+  },
+  {
+    "id": "e000",
+    "base": "ewsp",
+    "section": 1,
+    "strings": {
+      "uspa": "",
+      "utub": "",
+      "urac": "other",
+      "usnd": "",
+      "unsf": "TRIGSTR_083",
+      "uabi": "Aeth",
+      "ussi": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp",
+      "ubui": "",
+      "umdl": "war3mapImported\\dummy.mdl",
+      "unam": "TRIGSTR_084",
+      "utip": "",
+      "utyp": "",
+      "utar": "",
+      "upgr": "",
+      "uhot": "",
+      "uhrt": "none",
+      "umvt": "float",
+      "udty": "none"
+    }
+  },
+  {
+    "id": "uidm",
+    "base": "ewsp",
+    "section": 1,
+    "strings": {
+      "uspa": "",
+      "utub": "",
+      "urac": "other",
+      "usnd": "",
+      "unsf": "TRIGSTR_091",
+      "uabi": "Avul,Aeth",
+      "ussi": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "ubui": "",
+      "umdl": "UI\\dummy.mdl",
+      "unam": "TRIGSTR_092",
+      "uico": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "utip": "",
+      "utyp": "",
+      "utar": "",
+      "upgr": "",
+      "uhot": "",
+      "uhrt": "none",
+      "umvt": "float",
+      "udty": "hero"
+    }
+  },
+  {
+    "id": "ewin",
+    "base": "ewsp",
+    "section": 1,
+    "strings": {
+      "utar": "",
+      "udty": "none",
+      "ussi": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "usnd": "",
+      "uabi": "Aeth,Avul",
+      "uhot": "",
+      "unam": "TRIGSTR_094",
+      "utip": "",
+      "utub": "",
+      "ubui": "",
+      "upgr": "",
+      "utyp": "",
+      "urac": "other",
+      "uhrt": "none",
+      "umdl": "UI\\RaceWindowLong.mdl",
+      "umvt": "float",
+      "uspa": "",
+      "uico": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "unsf": "TRIGSTR_095"
+    }
+  },
+  {
+    "id": "dumi",
+    "base": "hfoo",
+    "section": 1,
+    "strings": {
+      "uabi": "Amrf,Aloc",
+      "umdl": "war3mapImported\\dummy.mdl",
+      "uspa": "",
+      "ushu": "",
+      "usnd": "",
+      "util": "",
+      "uhrt": "none",
+      "upgr": "",
+      "unam": "TRIGSTR_203",
+      "uhot": "",
+      "utip": "",
+      "utub": ""
+    }
+  },
+  {
+    "id": "dn02",
+    "base": "nfr2",
+    "section": 1,
+    "strings": {
+      "ushb": "",
+      "usnd": "",
+      "unam": "TRIGSTR_209",
+      "uubs": "",
+      "upat": "",
+      "urac": "human",
+      "uabi": ""
+    }
+  },
+  {
+    "id": "H005",
+    "base": "Hmgd",
+    "section": 1,
+    "strings": {
+      "upro": "TRIGSTR_205",
+      "unam": "TRIGSTR_206",
+      "usnd": "",
+      "uhab": "",
+      "ushu": "ShadowFlyer",
+      "umdl": "Lobo.mdl",
+      "uhot": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNDireWolf.blp",
+      "utub": "",
+      "uarm": "Flesh",
+      "ua1m": "Abilities\\Weapons\\Rifle\\RifleImpact.mdl",
+      "ua1g": "ground,structure,debris,air,item,ward",
+      "ucs1": "",
+      "ua1w": "instant",
+      "ussi": "ReplaceableTextures\\CommandButtons\\BTNDireWolf.blp",
+      "utpr": "TRIGSTR_212",
+      "uawt": "TRIGSTR_213",
+      "uabi": "U0A5,U0A4,U0A3,Sch2,U0A1,U0A2,AInv"
+    }
+  },
+  {
+    "id": "H007",
+    "base": "Hmgd",
+    "section": 1,
+    "strings": {
+      "upro": "TRIGSTR_214",
+      "unam": "TRIGSTR_215",
+      "usnd": "",
+      "uhab": "",
+      "ushu": "ShadowFlyer",
+      "umdl": "war3mapImported\\Yoshi TC By RTG.mdl",
+      "uhot": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNda.blp",
+      "utub": "",
+      "uarm": "Flesh",
+      "ua1m": "Abilities\\Weapons\\Rifle\\RifleImpact.mdl",
+      "ua1g": "ground,structure,debris,air,item,ward",
+      "ucs1": "",
+      "ua1w": "instant",
+      "uabi": "U0A5,U0A4,U0A3,Sch2,U0A1,U0A2,AInv",
+      "ussi": "ReplaceableTextures\\CommandButtons\\BTNda.blp",
+      "uawt": "TRIGSTR_216",
+      "utpr": "TRIGSTR_217"
+    }
+  },
+  {
+    "id": "H008",
+    "base": "Hmgd",
+    "section": 1,
+    "strings": {
+      "upro": "TRIGSTR_219",
+      "unam": "TRIGSTR_220",
+      "usnd": "",
+      "uhab": "",
+      "ushu": "ShadowFlyer",
+      "umdl": "war3mapImported\\Yoshi TC By RTG.mdl",
+      "uhot": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNda.blp",
+      "utub": "",
+      "uarm": "Flesh",
+      "ua1m": "Abilities\\Weapons\\Rifle\\RifleImpact.mdl",
+      "ua1g": "ground,structure,debris,air,item,ward",
+      "ucs1": "",
+      "ua1w": "instant",
+      "uabi": "U0A3,Sch2,U0A1,U0A2,AInv",
+      "ussi": "ReplaceableTextures\\CommandButtons\\BTNda.blp",
+      "uawt": "TRIGSTR_221",
+      "utpr": "TRIGSTR_222"
+    }
+  },
+  {
+    "id": "H009",
+    "base": "Hmgd",
+    "section": 1,
+    "strings": {
+      "upro": "TRIGSTR_223",
+      "unam": "TRIGSTR_224",
+      "usnd": "",
+      "uhab": "",
+      "ushu": "ShadowFlyer",
+      "umdl": "war3mapImported\\Hero_Shinigami.mdl",
+      "uhot": "",
+      "uico": "ReplaceableTextures\\CommandButtons\\BTNSacrifice.blp",
+      "utub": "",
+      "uarm": "Flesh",
+      "ua1m": "Abilities\\Weapons\\Rifle\\RifleImpact.mdl",
+      "ua1g": "ground,structure,debris,air,item,ward",
+      "ucs1": "",
+      "ua1w": "instant",
+      "uabi": "U0A5,U0A4,U0A3,Sch2,U0A1,U0A2,AInv",
+      "ussi": "ReplaceableTextures\\CommandButtons\\BTNSacrifice.blp",
+      "uawt": "TRIGSTR_225",
+      "utpr": "TRIGSTR_226"
+    }
+  },
+  {
+    "id": "e001",
+    "base": "ewsp",
+    "section": 1,
+    "strings": {
+      "utar": "",
+      "udty": "none",
+      "ussi": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp",
+      "usnd": "",
+      "uabi": "Aeth",
+      "uhot": "",
+      "unam": "TRIGSTR_288",
+      "utip": "",
+      "utub": "",
+      "ubui": "",
+      "upgr": "",
+      "utyp": "",
+      "urac": "other",
+      "uhrt": "none",
+      "umdl": "war3mapImported\\dummy.mdl",
+      "umvt": "",
+      "uspa": ""
+    }
+  },
+  {
+    "id": "lwin",
+    "base": "ewsp",
+    "section": 1,
+    "strings": {
+      "utar": "",
+      "udty": "none",
+      "ussi": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "usnd": "",
+      "uabi": "Aeth,Avul",
+      "uhot": "",
+      "unam": "TRIGSTR_300",
+      "utip": "",
+      "utub": "",
+      "ubui": "",
+      "upgr": "",
+      "utyp": "",
+      "urac": "other",
+      "uhrt": "none",
+      "umdl": "war3mapImported\\RaceWindowDiag.mdl",
+      "umvt": "float",
+      "uspa": "",
+      "uico": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "unsf": "TRIGSTR_301"
+    }
+  },
+  {
+    "id": "pwin",
+    "base": "ewsp",
+    "section": 1,
+    "strings": {
+      "utar": "",
+      "udty": "none",
+      "ussi": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "usnd": "",
+      "uabi": "Aeth,Avul",
+      "uhot": "",
+      "unam": "TRIGSTR_302",
+      "utip": "",
+      "utub": "",
+      "ubui": "",
+      "upgr": "",
+      "utyp": "",
+      "urac": "other",
+      "uhrt": "none",
+      "umdl": "war3mapImported\\RaceWindowPortraitOut.mdl",
+      "umvt": "float",
+      "uspa": "",
+      "uico": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "unsf": "TRIGSTR_303"
+    }
+  },
+  {
+    "id": "pwif",
+    "base": "ewsp",
+    "section": 1,
+    "strings": {
+      "utar": "",
+      "udty": "none",
+      "ussi": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "usnd": "",
+      "uabi": "Aeth,Avul",
+      "uhot": "",
+      "unam": "TRIGSTR_304",
+      "utip": "",
+      "utub": "",
+      "ubui": "",
+      "upgr": "",
+      "utyp": "",
+      "urac": "other",
+      "uhrt": "none",
+      "umdl": "war3mapImported\\RaceWindowPortraitFont.mdl",
+      "umvt": "float",
+      "uspa": "",
+      "uico": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "unsf": "TRIGSTR_305"
+    }
+  },
+  {
+    "id": "lewn",
+    "base": "ewsp",
+    "section": 1,
+    "strings": {
+      "utar": "",
+      "udty": "none",
+      "ussi": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "usnd": "",
+      "uabi": "Aeth,Avul",
+      "uhot": "",
+      "unam": "TRIGSTR_351",
+      "utip": "",
+      "utub": "",
+      "ubui": "",
+      "upgr": "",
+      "utyp": "",
+      "urac": "other",
+      "uhrt": "none",
+      "umdl": "war3mapImported\\RaceWindowDiagExtraMenor.mdl",
+      "umvt": "float",
+      "uspa": "",
+      "uico": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp",
+      "unsf": "TRIGSTR_352"
+    }
+  },
+  {
+    "id": "zA01",
+    "base": "hmil",
+    "section": 1,
+    "strings": {
+      "uabi": "A00F,AInv",
+      "upgr": "Rhar",
+      "ubui": "",
+      "ides": "TRIGSTR_362",
+      "unsf": "TRIGSTR_363"
+    }
+  },
+  {
+    "id": "zA02",
+    "base": "hfoo",
+    "section": 1,
+    "strings": {
+      "upgr": "Rhar",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "zA03",
+    "base": "hrif",
+    "section": 1,
+    "strings": {
+      "upgr": "Rhar",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "zA04",
+    "base": "hkni",
+    "section": 1,
+    "strings": {
+      "upgr": "Rhar",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "zA05",
+    "base": "hmtm",
+    "section": 1,
+    "strings": {
+      "upgr": "Rhar",
+      "ua1p": "debris,structure",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "zA06",
+    "base": "hsor",
+    "section": 1,
+    "strings": {
+      "upgr": "Rhar",
+      "uabi": "A00F,AInv",
+      "udaa": ""
+    }
+  },
+  {
+    "id": "zA07",
+    "base": "hmpr",
+    "section": 1,
+    "strings": {
+      "upgr": "Rhar",
+      "uabi": "A00F,AInv",
+      "udaa": ""
+    }
+  },
+  {
+    "id": "zA08",
+    "base": "hmtt",
+    "section": 1,
+    "strings": {
+      "upgr": "Rhar",
+      "ua1g": "ground,structure,debris,air,item,ward",
+      "utyp": "",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "zA09",
+    "base": "hwt3",
+    "section": 1,
+    "strings": {
+      "upgr": "Rhar",
+      "uabi": "A00F,AInv"
+    }
+  },
+  {
+    "id": "l00A",
+    "base": "hpea",
+    "section": 1,
+    "strings": {
+      "unam": "TRIGSTR_391",
+      "utyp": "",
+      "umdl": "war3mapImported\\Spell Marker Green.mdl",
+      "umvt": "",
+      "uabi": "AInv",
+      "ubui": "",
+      "upgr": "",
+      "usnd": "",
+      "ushu": "",
+      "udty": "none",
+      "uarm": "Ethereal",
+      "utar": "_",
+      "uspa": ""
+    }
+  },
+  {
+    "id": "l00B",
+    "base": "hpea",
+    "section": 1,
+    "strings": {
+      "unam": "TRIGSTR_392",
+      "utyp": "",
+      "umdl": "war3mapImported\\Spell Marker Green.mdl",
+      "umvt": "",
+      "uabi": "AInv",
+      "ubui": "",
+      "upgr": "",
+      "usnd": "",
+      "ushu": "",
+      "udty": "none",
+      "uarm": "Ethereal",
+      "utar": "_",
+      "uspa": ""
+    }
+  },
+  {
+    "id": "s001",
+    "base": "hwtw",
+    "section": 1,
+    "strings": {}
+  }
+]

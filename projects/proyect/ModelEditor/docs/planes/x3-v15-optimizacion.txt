@@ -1,0 +1,6 @@
+X3 V15: optimización de los seis componentes V14 para Classic1.27b MDX800.
+Fuentes originales intactas y hashes en evidence/x3-v15/bases-preservadas.json.
+Fases: inspeccionar mallas/materiales; simplificar filas de retículas con error local convertido a límite animado0.20unidades y UV0.001; conservar puntas, bordes, grupos y todas las curvas. No simplificar mallas no reconocidas. Suprimir triángulos de área cero.
+Texturas: eliminar recursos/materiales sin consumidor, compartir recursos por hash bajo X3BusterV15; bajar un mip sólo en máscaras suaves y Pulse. Conservar mipmaps inferiores byte a byte, cabecera y alfa. Proteger Motes, Flow y Arc.
+Verificar MDX/MDL con doslectores, datos semánticos preservados, error geométrico/UV y poses, hashes y recursos. Comparar V14/V15 3D en lateral/frontal/oblicua y Birth/Stand/Death; luego prueba YDWE SP pantalla3. Empaquetar separado sólo tras revisión. No modificar Shots ni física.
+Estado: diagnóstico completo, implementación en curso.

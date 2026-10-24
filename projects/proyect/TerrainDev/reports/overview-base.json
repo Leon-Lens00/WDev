@@ -1,0 +1,251 @@
+{
+  "Info": {
+    "Name": "Swamped Temple_v2",
+    "Author": "Kai Trausenegger / Anomines",
+    "Players": 2,
+    "Width": 267,
+    "Height": 265,
+    "Diagnostics": []
+  },
+  "Files": [
+    {
+      "Name": "war3map.w3e",
+      "SizeBytes": 584732,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3i",
+      "SizeBytes": 356,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.wtg",
+      "SizeBytes": 622,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.wct",
+      "SizeBytes": 169,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.wts",
+      "SizeBytes": 1601,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.j",
+      "SizeBytes": 41872,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.shd",
+      "SizeBytes": 1327104,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapMap.blp",
+      "SizeBytes": 10185,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.mmp",
+      "SizeBytes": 120,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.wpm",
+      "SizeBytes": 1327120,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.doo",
+      "SizeBytes": 444972,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapUnits.doo",
+      "SizeBytes": 13197,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3r",
+      "SizeBytes": 524,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3c",
+      "SizeBytes": 8,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3u",
+      "SizeBytes": 632,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3t",
+      "SizeBytes": 186,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3b",
+      "SizeBytes": 222,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3d",
+      "SizeBytes": 3129,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3a",
+      "SizeBytes": 104,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.w3s",
+      "SizeBytes": 310,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3map.imp",
+      "SizeBytes": 26,
+      "Known": true,
+      "Parsed": true,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapMisc.txt",
+      "SizeBytes": 5804,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapSkin.txt",
+      "SizeBytes": 5804,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapExtra.txt",
+      "SizeBytes": 31,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "war3mapImported\\KoboldDigger.mdx",
+      "SizeBytes": 43766,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    },
+    {
+      "Name": "(listfile)",
+      "SizeBytes": 365,
+      "Known": false,
+      "Parsed": false,
+      "ContentType": null,
+      "NameFromHarvest": false
+    }
+  ],
+  "ObjectCounts": [
+    {
+      "Kind": "Unit",
+      "Count": 2
+    },
+    {
+      "Kind": "Item",
+      "Count": 1
+    },
+    {
+      "Kind": "Ability",
+      "Count": 1
+    },
+    {
+      "Kind": "Destructable",
+      "Count": 4
+    },
+    {
+      "Kind": "Doodad",
+      "Count": 18
+    },
+    {
+      "Kind": "Buff",
+      "Count": 0
+    },
+    {
+      "Kind": "Upgrade",
+      "Count": 0
+    }
+  ],
+  "Diagnostics": []
+}

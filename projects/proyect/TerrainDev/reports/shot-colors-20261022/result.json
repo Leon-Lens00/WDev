@@ -1,0 +1,56 @@
+{
+  "status": "Tested in map",
+  "target": "Warcraft III Classic1.27b; local CachyOS/Wine",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/TerrainDev.w3x",
+  "map_sha256": "b15b320fe113fd84f5923ead07981e7781c1ba1242b54604728b4163c8a85b74",
+  "models": 12,
+  "shared_textures": 3,
+  "asset_manifest": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/assets/rapid-shot-colors/manifest.json",
+  "model_validation": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-colors-20261022/models.json",
+  "collision_radius": 16,
+  "body_width_model": 11.664,
+  "visual_scale": 2.7434842249657065,
+  "policy": "Owner color read at emission; RapidPair.setColor for explicit per-unit/team color and clearColor to restore owner. Red enum0 handled with independent hasTint flag. Existing flights keep original model.",
+  "color_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-colors-20261022/20261022-175921/color-result.json",
+  "color_values": {
+    "checks": 40.0,
+    "failures": 0.0,
+    "live": 0.0,
+    "created": 23.0,
+    "retired": 23.0,
+    "scale": 2.743
+  },
+  "rapid_fire_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-colors-20261022/20261022-175921/rapid-result.json",
+  "rapid_fire_values": {
+    "checks": 44.0,
+    "failures": 0.0,
+    "observed": 46.0,
+    "minimum": 0.25,
+    "emitted": 63.0,
+    "live": 0.0,
+    "pairs": 2.0
+  },
+  "negative_controls_rejected": 9,
+  "visual_evidence": [
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-colors-20261022/calibration.png",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-colors-20261022/palette-final.png"
+  ],
+  "originals_unchanged": true,
+  "core_unchanged": [
+    "Missile",
+    "MissileRecycler",
+    "MissileDiagnostics",
+    "GroundMotion",
+    "GroundCollision"
+  ],
+  "closure": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-colors-20261022/20261022-175921/closure.json",
+  "own_game_closed": true,
+  "other_games_preserved": [],
+  "build_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/20261022-175344-711466/result.json",
+  "limits": [
+    "Local single-client tests, no multiplayer/load certification.",
+    "Body maximum width calibrated; decorative glow/trail/death are not the collision shape.",
+    "External SetUnitColor calls cannot be queried in Classic; use the system setter for individual/team overrides.",
+    "Editor save/reopen not repeated for this revision; WCT/object/import roundtrips checked by builder."
+  ]
+}

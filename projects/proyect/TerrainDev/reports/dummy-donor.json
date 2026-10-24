@@ -1,0 +1,277 @@
+{
+  "Rawcode": "dumi",
+  "Found": true,
+  "BaseRawcode": "hfoo",
+  "Name": "Particle",
+  "Fields": [
+    {
+      "Code": "uabi",
+      "Name": "uabi",
+      "Value": "Amrf,Aloc,Avul",
+      "Source": "map",
+      "Display": "Amrf,Aloc,Avul"
+    },
+    {
+      "Code": "uaen",
+      "Name": "uaen",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ubba",
+      "Name": "ubba",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ubdi",
+      "Name": "ubdi",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ubld",
+      "Name": "ubld",
+      "Value": "1",
+      "Source": "map",
+      "Display": "1"
+    },
+    {
+      "Code": "ubsi",
+      "Name": "ubsi",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ucar",
+      "Name": "ucar",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ucol",
+      "Name": "ucol",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "udea",
+      "Name": "udea",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "udro",
+      "Name": "udro",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ufle",
+      "Name": "ufle",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ufoo",
+      "Name": "ufoo",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ugol",
+      "Name": "ugol",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ugor",
+      "Name": "ugor",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "uhom",
+      "Name": "uhom",
+      "Value": "1",
+      "Source": "map",
+      "Display": "1"
+    },
+    {
+      "Code": "uhot",
+      "Name": "uhot",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "uhpm",
+      "Name": "uhpm",
+      "Value": "1",
+      "Source": "map",
+      "Display": "1"
+    },
+    {
+      "Code": "uhpr",
+      "Name": "uhpr",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "uhrt",
+      "Name": "uhrt",
+      "Value": "none",
+      "Source": "map",
+      "Display": "none"
+    },
+    {
+      "Code": "uico",
+      "Name": "uico",
+      "Value": " ",
+      "Source": "map",
+      "Display": " "
+    },
+    {
+      "Code": "uine",
+      "Name": "uine",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "ulev",
+      "Name": "ulev",
+      "Value": "1",
+      "Source": "map",
+      "Display": "1"
+    },
+    {
+      "Code": "umdl",
+      "Name": "umdl",
+      "Value": "war3mapImported\\dummy.mdl",
+      "Source": "map",
+      "Display": "war3mapImported\\dummy.mdl"
+    },
+    {
+      "Code": "unam",
+      "Name": "unam",
+      "Value": "TRIGSTR_006",
+      "Source": "map",
+      "Display": "Particle"
+    },
+    {
+      "Code": "upgr",
+      "Name": "upgr",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "upoi",
+      "Name": "upoi",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "upri",
+      "Name": "upri",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "urtm",
+      "Name": "urtm",
+      "Value": "1",
+      "Source": "map",
+      "Display": "1"
+    },
+    {
+      "Code": "ushu",
+      "Name": "ushu",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "usid",
+      "Name": "usid",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "usin",
+      "Name": "usin",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "usma",
+      "Name": "usma",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "usnd",
+      "Name": "usnd",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "uspa",
+      "Name": "uspa",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "usrg",
+      "Name": "usrg",
+      "Value": "0",
+      "Source": "map",
+      "Display": "0"
+    },
+    {
+      "Code": "util",
+      "Name": "util",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "utip",
+      "Name": "utip",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    },
+    {
+      "Code": "utub",
+      "Name": "utub",
+      "Value": "",
+      "Source": "map",
+      "Display": ""
+    }
+  ],
+  "Diagnostics": [
+    "Warcraft III install not found (pass --game-dir \u003Cpath\u003E)"
+  ]
+}

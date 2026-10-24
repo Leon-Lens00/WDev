@@ -1,0 +1,820 @@
+
+
+
+
+	Today's topic: Extending structs.
+
+
+
+
+
+
+
+
+Basics​
+Extending structs​
+Miscellaneous​
+
+
+
+
+Introduction
+
+Constructor & Destructor
+
+
+
+
+Stub Methods & super
+
+Generated Code
+
+Extends array
+
+typeid & getType()
+
+
+
+
+Conclusion
+
+Demo Code
+
+
+
+
+
+Introduction
+
+
+
+These days it appears to be a dying art for vJass resources, hence I want to raise interest on this easily readable way of coding.
+
+So before going into details, let's make sure you have a faint idea what extending structs are.
+
+
+
+You're probably aware of struct A or struct A extends array.
+
+The topic for today is struct A extends B, how it works and how to use it.
+
+I will also talk about finally compiled code when using this feature of vJass.
+
+
+
+
+
+
+
+	
+		
+
+			Quote from JassHelper manual
+		
+		
+		
+
+			You base a struct on a previously declared struct, by doing so your new type aquires methods and variable members of the base struct.
+
+Furthermore  it is able to use instances of this type with functions and variables of the base type.
+		
+	
+Constructor & Destructor
+
+
+
+Let's quickly repeat allocation and deallocation of structs extending other structs.
+
+For demonstration I will make a realistic spell name: Hydra ( the Diablo II & Diablo III spell )
+
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+struct Hydra
+endstruct
+	
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+struct FireHydra extends Hydra
+endstruct
+	
+
+
+
+
+
+
+allocate()​When using FireHydra.allocate() you will end up calling Hydra.allocate() instead.
+
+
+
+create()​You can use FireHydra.create() instead of FireHydra.allocate(). It will also use the parent structs constructor instead.
+
+If you override Hydra.create() with your own custom create method the create method for child structs ( FireHydra ) will require the same arguments.
+
+
+
+destroy()​When destroying a FireHydra instance, Hydra's destructor is called instead and FireHydra's onDestroy method is evaluated via trigger.
+
+Note: The onDestroy[structid] trigger is always evaluated, independent of method onDestroy beeing declared or not.
+
+
+
+deallocate()​In case you override method destroy with a custom destroy method, use method deallocate to call the normal destroy method.
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+			Code
+		
+			After JassHelper
+		
+	
+	
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+// In the example Hydra is our parent struct.
+struct Hydra
+    player owner// Child structs can use members of the parent struct
+                // aslong as they are "not" private!
+
+    // Child structs can use methods of parent structs.
+    method fire takes unit target returns nothing
+    endmethod
+                
+endstruct
+
+// In the example FireHydra is a child struct extending Hydra.
+struct FireHydra extends Hydra
+
+endstruct
+	
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+globals
+
+//JASSHelper struct globals:
+constant integer si__Hydra=1// Hydra struct id
+integer si__Hydra_F=0       // Free indexes
+integer si__Hydra_I=0       // Index count
+integer array si__Hydra_V   // Reprents existing instances.
+player array s__Hydra_owner
+
+constant integer si__FireHydra=2 // FireHydra struct id
+integer array si__Hydra_type     // Stores which type an instance is ( i.e. is it FireHydra? --> 2 )
+trigger array st__Hydra_onDestroy// Evaluate proper onDestroy method.
+integer f__arg_this              // Global to transfer data via TriggerEvaluate
+
+endglobals
+
+
+//Generated allocator of Hydra
+function s__Hydra__allocate takes nothing returns integer
+ local integer this=si__Hydra_F
+    if (this!=0) then
+        set si__Hydra_F=si__Hydra_V[this]
+    else
+        set si__Hydra_I=si__Hydra_I+1
+        set this=si__Hydra_I
+    endif
+    if (this>8190) then
+        call DisplayTimedTextToPlayer(GetLocalPlayer(),0,0,1000.,"Unable to allocate id for an object of type: Hydra")
+        return 0
+    endif
+
+    set si__Hydra_type[this]=1
+    set si__Hydra_V[this]=-1
+ return this
+endfunction
+
+//Generated destructor of Hydra
+function sc__Hydra_deallocate takes integer this returns nothing
+    if this==null then
+            call DisplayTimedTextToPlayer(GetLocalPlayer(),0,0,1000.,"Attempt to destroy a null struct of type: Hydra")
+        return
+    elseif (si__Hydra_V[this]!=-1) then
+            call DisplayTimedTextToPlayer(GetLocalPlayer(),0,0,1000.,"Double free of type: Hydra")
+        return
+    endif
+    set f__arg_this=this
+    call TriggerEvaluate(st__Hydra_onDestroy[si__Hydra_type[this]])
+    set si__Hydra_V[this]=si__Hydra_F
+    set si__Hydra_F=this
+endfunction
+
+//Generated allocator of FireHydra
+function s__FireHydra__allocate takes nothing returns integer
+ local integer this=s__Hydra__allocate()// Calls Hydra's allocator instead.
+ local integer kthis
+    if(this==0) then
+        return 0
+    endif
+    set si__Hydra_type[this]=2// Sets the type
+    set kthis=this
+
+ return this
+endfunction
+	
+
+		
+	
+
+
+
+
+
+stub methods & super
+
+
+
+A method declared in your parent struct can't be re-declared in your child struct. The JassHelper will throw an error:
+
+
+
+
+
+
+
+	
+		
+
+			Error
+		
+		
+		
+
+			Member name already in use by a parent type
+		
+	
+Now a stub method behaves like a normal method, but can be overridden in your child struct.
+
+Make use of this feature, if you want different method behaviours in your child struct than in your parent struct. ( i.e. a filter )
+
+
+
+super forces the parent method to be called, you might need this when extending an interface or avoiding an overrriden stub method.
+
+I guess the usage of super is very seldom to non-existent.
+
+
+
+An example is better than 1000 words:
+
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+// In the example Hydra is our parent struct.
+struct Hydra
+
+    stub method onCreate takes unit new returns nothing
+    endmethod
+
+    stub method onFilter takes unit filterUnit returns boolean
+        return true
+    endmethod
+    
+    // Child structs can use methods of parent structs.
+    method fire takes unit target returns nothing
+    endmethod
+                
+endstruct
+
+// In the example FireHydra is a child struct extending Hydra.
+struct FireHydra extends Hydra
+
+    // overrrides stub method onCreate.
+    method onCreate takes unit new returns nothing
+        call BJDebugMsg("parent onCreate overridden")
+        call super.onCreate(new)// Will now also call the parent struct onCreate method.
+    endmethod
+
+    // overrides stub method onFilter. Returned boolean may now also be false.
+    method onFilter takes unit filterUnit returns boolean
+        return UnitAlive(filterUnit)
+    endmethod
+    
+    // Will throw an error, because method fire is already declared in Hydra!
+    method fire takes unit target returns nothing
+    endmethod
+endstruct
+	
+
+
+
+
+	
+		
+
+			Limitation
+		
+		
+		
+
+			It is impossible to call a stub method within the parent creator
+		
+	
+
+
+
+
+	
+
+		Code example which is not working
+	
+	
+
+		
+
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library A
+
+ struct A
+    
+    // Eval via call TriggerEvaluate(st__A_onCreate[si__A_type[this]])
+    public stub method onCreate takes nothing returns nothing
+        // Will always run
+    endmethod
+    
+    static method create takes nothing returns thistype
+        local thistype this = thistype.allocate()// set si__A_type[this]=1
+
+        call this.onCreate()// Evaluates st__A_onCreate[si__A_type[this]]!
+
+        return this// Returned to a function, which set si__A_type[this]=2
+    endmethod
+        
+ endstruct
+
+  struct B extends A
+    
+    private method onCreate takes nothing returns nothing
+        // Will never run
+    endmethod
+    
+    static method doit takes nothing returns nothing
+        local B this = B.create()// here si__A_type[this]=2
+        call Print(I2S(this.getType()))// Prints 2
+    endmethod
+        
+ endstruct
+ 
+endlibrary
+	
+
+		
+	
+
+
+Generated Code
+
+
+
+One could think: Quite awesome this vJass!
+
+But it is very important to analyse the code generated behind stub method and extending structs.
+
+Constructor and destructors stay as described above, but how is it possible to "override" stub methods?
+
+
+
+
+
+
+
+
+
+stub method​Stub methods create a trigger array a static integer, a static type for the returner and for each function argument a respective type variable.
+
+Variables of the same type are shared across structs in your map to reduce overall used globals to a minimum.
+
+These variables are required to pass over agruments when using trigger evaluations.
+
+
+
+overridden stub methods​Once re-declared in your child struct, stub methods are accessed via TriggerEvaluate(trigger[structid]).
+
+So we have an additional triggeraction and triggercondition registered to the above mentioned trigger array. The array index is the child struct id.
+
+
+
+super​super doesn't create any extra code. It compiles to a simple function call to the parent struct method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+			code
+		
+			After JassHelper
+		
+	
+	
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+// In the example Hydra is our parent struct.
+struct Hydra
+
+    stub method onCreate takes unit new returns nothing
+        call BJDebugMsg("- parent -")
+    endmethod
+                
+endstruct
+
+// In the example FireHydra is a child struct extending Hydra.
+struct FireHydra extends Hydra
+
+    // overrides stub method onCreate.
+    method onCreate takes unit new returns nothing
+        call BJDebugMsg("parent onCreate overridden")
+    endmethod
+    
+endstruct
+	
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+//JASSHelper struct globals:
+constant integer si__Hydra=1
+integer si__Hydra_F=0
+integer si__Hydra_I=0
+integer array si__Hydra_V
+constant integer si__FireHydra=2
+trigger array st__Hydra_onCreate// trigger array for stub method onCreate
+integer array si__Hydra_type      
+trigger array st__Hydra_onDestroy
+unit f__arg_unit1
+integer f__arg_this
+
+endglobals
+
+// Generated method caller for Hydra.onCreate
+// This method is always called onCreate, from here the proper ( stub ) method is evaluated via trigger.
+// Arguments are passed via globals as you can see.
+function sc__Hydra_onCreate takes integer this,unit new returns nothing
+    set f__arg_this=this
+    set f__arg_unit1=new
+    call TriggerEvaluate(st__Hydra_onCreate[si__Hydra_type[this]])
+endfunction
+
+//Generated method caller for FireHydra.onCreate
+function sc__FireHydra_onCreate takes integer this,unit new returns nothing
+    call BJDebugMsg("parent onCreate overridden")
+endfunction
+
+function s__Hydra_onCreate takes integer this,unit new returns nothing
+    call BJDebugMsg("- parent -")
+endfunction
+function s__FireHydra_onCreate takes integer this,unit new returns nothing
+    call BJDebugMsg("parent onCreate overridden")
+endfunction
+
+// Struct method generated initializers/callers:
+// First for Hydra the second for FireHydra.
+// f__arg_this, and f__arg_unit1 are set in the trigger conditions.
+function sa__Hydra_onCreate takes nothing returns boolean
+    call s__Hydra_onCreate(f__arg_this,f__arg_unit1)
+   return true
+endfunction
+function sa__FireHydra_onCreate takes nothing returns boolean
+    call s__FireHydra_onCreate(f__arg_this,f__arg_unit1)
+   return true
+endfunction
+
+// Array index is the constant struct id. 
+function jasshelper__initstructs325686859 takes nothing returns nothing
+    // Hydra onCreate ( Parent struct )
+    set st__Hydra_onCreate[1]=CreateTrigger()
+    call TriggerAddCondition(st__Hydra_onCreate[1],Condition( function sa__Hydra_onCreate))
+    call TriggerAddAction(st__Hydra_onCreate[1], function sa__Hydra_onCreate)
+
+    // FireHydra onCreate ( Child struct )
+    set st__Hydra_onCreate[2]=CreateTrigger()
+    call TriggerAddCondition(st__Hydra_onCreate[2],Condition( function sa__FireHydra_onCreate))
+    call TriggerAddAction(st__Hydra_onCreate[2], function sa__FireHydra_onCreate)
+
+    // Hydra and FireHydra onDestroy ( not declared, therefore null )
+    // Even though they do no exists, the trigger is still evaluated.
+    set st__Hydra_onDestroy[1]=null
+    set st__Hydra_onDestroy[2]=null    
+endfunction
+
+function main takes nothing returns nothing
+    // ... Blizzard code, init stuff
+    
+    // Struct initializer are executed via ExecuteFunc native.
+    call ExecuteFunc("jasshelper__initstructs325686859")
+endfunction
+	
+
+		
+	
+
+
+
+
+
+Array Structs
+
+
+
+Structs extending array ( i.e. struct Hydra extends array ) are not discussed in detail in this tutorial.
+
+What you should know is that array structs do not generate a struct creator and destructor. You have to do all of this by yourself.
+
+You want to use array structs for the . syntax and for struct fields. ( JassHelper link )
+
+
+
+Side note: struct extends array is also recommended for large scale systems,
+
+as high frequency trigger evaluations ( onDestroy, stub methods, ... ) can have a negative impact on the overall computation time.
+
+
+
+
+
+typeid & getType()
+
+
+
+Let's imagine you want to code more different Hydra type spells in your map ( i.e. Ice, Lightning, Venom-Hydra ... ).
+
+How is it possible to distinguish which type of Hydra an instance is? Remember they are all allocated via our parent struct: Hydra.
+
+
+
+
+
+
+
+
+
+thistype.typeid​Each struct has an id represented as constant integer ( i.e. constant integer si__FireHydra=2 )
+
+You can read the struct id by using struct.typeid ( i.e. FireHydra.typeid has here the value 2 )
+
+
+
+getType()​Method instance.getType() returns the struct id ( see above ) of an allocated instance.
+
+In FireHydra.allocate() ( see code analysis ) set si__Hydra_type[this]=2 defines the type this instance is. 
+
+These fields allow the following comparison: hydra.getType() == FireHydra.typeid.
+
+
+
+
+
+
+Conclusion
+
+
+
+Many people postulate that extending structs should be avoided due to extra code generation and trigger evaluations.
+
+We can't deny that stub methods are not top performers in vJass coding ( due to trigger evaluations ),
+
+however the syntax is very readable and easy to use. Performance-wise you will not realise a difference ingame in 99% of all cases.
+
+
+
+As an example extending structs are beneficial when it comes to coding spell resources for you map. ( reconsider my Hydra example )
+
+Alternative ways of coding ( eventually faster ) with modules combined with static ifs and Events are often really hard to understand at a glance.
+
+
+
+I totally recommend to try out extending structs for clean, readable OOP coding in vJass.
+
+
+
+
+
+Demo Code
+
+
+
+Some links to resources on THW using the features discussed above:
+
+
+
+BuffHandler by Muzzel
+
+Custom Projectile by Berb
+
+Hydra by BPower
+
+
+
+
+Thank you for your attention.

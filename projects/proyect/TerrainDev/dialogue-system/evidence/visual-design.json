@@ -1,0 +1,28 @@
+{
+  "transition": {
+    "lineOpen": 150,
+    "unfold": 200,
+    "acquire": 300,
+    "loss": 300,
+    "fold": 150,
+    "lineClose": 150
+  },
+  "portraits": {
+    "left": {
+      "model": "paladin",
+      "scale": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "name": "X",
+      "image": "reference-x"
+    },
+    "right": {
+      "model": "tauren",
+      "scale": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "name": "ALIA",
+      "image": "reference-alia"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "pid": 792985,
+  "map_sha256": "e7b9e5353a91cd6986550d63177a565e9c9db4176e4c70e3373f7ecd891dd5f8",
+  "window": {
+    "address": "0x558cbce86d60",
+    "mapped": true,
+    "hidden": false,
+    "visible": true,
+    "acceptsInput": true,
+    "at": [
+      1920,
+      0
+    ],
+    "size": [
+      1920,
+      1080
+    ],
+    "workspace": {
+      "id": 32,
+      "name": "32"
+    },
+    "floating": true,
+    "monitor": 2,
+    "class": "steam_app_0",
+    "title": "Warcraft III",
+    "initialClass": "steam_app_0",
+    "initialTitle": "Warcraft III",
+    "pid": 792985,
+    "xwayland": true,
+    "pinned": false,
+    "pinFullscreened": false,
+    "fullscreen": 2,
+    "fullscreenClient": 0,
+    "fullscreenHandler": "default",
+    "allowedOverFullscreen": true,
+    "grouped": [],
+    "tags": [],
+    "swallowing": "0x0",
+    "focusHistoryID": 0,
+    "inhibitingIdle": false,
+    "xdgTag": "",
+    "xdgDescription": "",
+    "contentType": "none",
+    "tearingHint": false,
+    "stableId": "1800035e"
+  },
+  "monitor": {
+    "id": 2,
+    "name": "HDMI-A-1",
+    "description": "Samsung Electric Company SA300/SA350 H9NB304808",
+    "make": "Samsung Electric Company",
+    "model": "SA300/SA350",
+    "serial": "H9NB304808",
+    "width": 1920,
+    "height": 1080,
+    "physicalWidth": 410,
+    "physicalHeight": 230,
+    "refreshRate": 59.939,
+    "x": 1920,
+    "y": 0,
+    "activeWorkspace": {
+      "id": 32,
+      "name": "32"
+    },
+    "specialWorkspace": {
+      "id": 0,
+      "name": ""
+    },
+    "reserved": [
+      0,
+      45,
+      0,
+      0
+    ],
+    "scale": 1,
+    "transform": 0,
+    "focused": true,
+    "dpmsStatus": true,
+    "vrr": false,
+    "solitary": "558cbce86d60",
+    "solitaryBlockedBy": null,
+    "activelyTearing": false,
+    "tearingBlockedBy": [
+      "NOT_TORN"
+    ],
+    "directScanoutTo": "0",
+    "directScanoutBlockedBy": [
+      "USER",
+      "RECORD"
+    ],
+    "disabled": false,
+    "currentFormat": "XRGB8888",
+    "mirrorOf": "none",
+    "availableModes": [
+      "1366x768@59.79Hz",
+      "1920x1080@59.94Hz",
+      "1280x720@59.94Hz",
+      "1024x768@75.03Hz",
+      "1024x768@70.07Hz",
+      "1024x768@60.00Hz",
+      "800x600@75.00Hz",
+      "800x600@72.19Hz",
+      "800x600@60.32Hz",
+      "800x600@56.25Hz",
+      "720x480@59.94Hz",
+      "720x480@59.94Hz",
+      "640x480@75.00Hz",
+      "640x480@72.81Hz",
+      "640x480@59.94Hz"
+    ],
+    "colorManagementPreset": "srgb",
+    "sdrBrightness": 1,
+    "sdrSaturation": 1,
+    "sdrMinLuminance": 0.2,
+    "sdrMaxLuminance": 80,
+    "hardwareCursorsInUse": false
+  }
+}

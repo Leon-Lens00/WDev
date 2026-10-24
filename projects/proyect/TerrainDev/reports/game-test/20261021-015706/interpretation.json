@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "flight_counts_correct": true,
+  "measurement_error": [
+    "GroupEnumUnitsInRect omits locust missile dummies",
+    "Second batch started before DEATH_TIME barrier expired"
+  ],
+  "fix": "Track actual returned dummy handles; wait 6 seconds before requesting reuse; accept documented surplus disposal",
+  "production_libraries_changed": false
+}

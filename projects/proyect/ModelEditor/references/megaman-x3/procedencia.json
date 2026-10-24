@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-22T19:21:15.577937-05:00",
+  "game": "Mega Man X3",
+  "copyright": "Capcom",
+  "referenceSite": "https://megaman.retropixel.net/mmx/3/sprites.php",
+  "acquisition": "Browser observed image download; then unchanged copy into reference archive",
+  "purpose": "User-confirmed visual reference archive, not generated models",
+  "entries": [
+    {
+      "path": "originales/buster-estandar.gif",
+      "url": "https://megaman.retropixel.net/mmx/3/animated_sprite_megamanx3_shot.gif",
+      "sha256": "fcf44b45f9a6e9370ff6cb1ee8ebe26b025064530bb4dddc89cdbc57eb6da185",
+      "bytes": 15574
+    },
+    {
+      "path": "originales/buster-mejorado-secuencia.gif",
+      "url": "https://megaman.retropixel.net/mmx/3/animated_sprite_megamanx3_shot2.gif",
+      "sha256": "7d0d8e7af26970b0276795be4aca82dc04c96537a5e88d77afd91bc85bc4466b",
+      "bytes": 27343
+    },
+    {
+      "path": "originales/MegaManX.png",
+      "url": "https://spritedatabase.net/files/snes/466/Sprite/MegaManX.png",
+      "sourcePage": "https://spritedatabase.net/file/8203",
+      "contributor": "Random Talking Bush",
+      "copyright": "Capcom",
+      "bytes": 488910,
+      "sha256": "368998158a4d6fa3c03afee61e6c5d63273ce49fb43f261e26133e3809978416"
+    },
+    {
+      "path": "originales/WeaponsItems.png",
+      "url": "https://spritedatabase.net/files/snes/466/Sprite/WeaponsItems.png",
+      "sourcePage": "https://spritedatabase.net/file/18084",
+      "contributor": "Random Talking Bush",
+      "copyright": "Capcom",
+      "bytes": 183439,
+      "sha256": "f94ab742751cbe14fd92c160e1762b83e5de8ea92ced99120a0d6441718272c6"
+    },
+    {
+      "path": "originales/tenor-usuario.gif",
+      "url": "https://tenor.com/iA3z0BfiPC1.gif",
+      "sourcePage": "https://tenor.com/es-PE/view/x-buster-megaman-x3-high-definition-charge-shot-gif-7078458901745683153",
+      "uploader": "COFFEE_Drinker",
+      "userProvided": true,
+      "sha256": "8ad5303ac32ba4d5718a1fa097f8062b603d61945cde19a16f72d8d880871714",
+      "frames": 140,
+      "durationMS": 3040
+    }
+  ]
+}

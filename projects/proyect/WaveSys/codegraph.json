@@ -1,0 +1,22 @@
+{
+  "exclude": [
+    "src/build/**",
+    "src/Pruebas/**",
+    "src/backups/**",
+    "artifacts/**",
+    "evidence/**",
+    ".cache/**",
+    "resources/**"
+  ],
+  "deprioritize": [
+    "codegraph-api/"
+  ],
+  "jass": {
+    "mode": "release",
+    "completeInputs": false,
+    "apiFiles": [
+      "codegraph-api/common.j",
+      "codegraph-api/Blizzard.j"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "vjass",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-125152-430059/input.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-125152-430059/compiled.j"
+  ],
+  "returncode": 0,
+  "stdout": "{\"compiled\": true, \"validated\": true, \"output\": \"/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-125152-430059/compiled.j\", \"report\": \"/home/snz/Documentos/ChatGPT/FrozenThone/runtime/wc3-tools/reports/vjass-20261023-125152-942410\"}\n",
+  "stderr": ""
+}

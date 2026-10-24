@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "models": 6,
+  "surfaceSamples": 63600,
+  "maxSurfaceError": 0.17977238223803035,
+  "maxUvError": 3.9736429924275285e-8,
+  "retainedVertexPoses": 334,
+  "animations": "all unchanged",
+  "materialsAndEmitters": "same used materials/emitters, remapped IDs only",
+  "version": 800,
+  "limitations": "Surface error sampled on original grids at quarter-cell steps; visual comparison separately. No FPS claim."
+}

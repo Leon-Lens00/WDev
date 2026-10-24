@@ -1,0 +1,189 @@
+{
+  "models": [
+    {
+      "name": "X3_Buster_Cargado",
+      "canonicalNodeOrder": "PASS",
+      "ribbonReaderAndVisibility": "PASS",
+      "posesSampled": 299,
+      "geometryX": [
+        -91,
+        0
+      ],
+      "frontAtOrigin": "PASS",
+      "rootAtOrigin": "PASS",
+      "dependencies": "PASS",
+      "birthStandDeath": "structure and pose PASS",
+      "mdlGeometry": "PASS",
+      "binaryAndIndependentReaders": "PASS in build"
+    },
+    {
+      "name": "X3_Orbe_Verde",
+      "canonicalNodeOrder": "PASS",
+      "ribbonReaderAndVisibility": "PASS",
+      "posesSampled": 299,
+      "geometryX": [
+        -36,
+        0
+      ],
+      "frontAtOrigin": "PASS",
+      "rootAtOrigin": "PASS",
+      "dependencies": "PASS",
+      "birthStandDeath": "structure and pose PASS",
+      "mdlGeometry": "PASS",
+      "binaryAndIndependentReaders": "PASS in build"
+    },
+    {
+      "name": "X3_Orbe_Naranja",
+      "canonicalNodeOrder": "PASS",
+      "ribbonReaderAndVisibility": "PASS",
+      "posesSampled": 299,
+      "geometryX": [
+        -36,
+        0
+      ],
+      "frontAtOrigin": "PASS",
+      "rootAtOrigin": "PASS",
+      "dependencies": "PASS",
+      "birthStandDeath": "structure and pose PASS",
+      "mdlGeometry": "PASS",
+      "binaryAndIndependentReaders": "PASS in build"
+    },
+    {
+      "name": "X3_Orbe_Cian",
+      "canonicalNodeOrder": "PASS",
+      "ribbonReaderAndVisibility": "PASS",
+      "posesSampled": 299,
+      "geometryX": [
+        -36,
+        0
+      ],
+      "frontAtOrigin": "PASS",
+      "rootAtOrigin": "PASS",
+      "dependencies": "PASS",
+      "birthStandDeath": "structure and pose PASS",
+      "mdlGeometry": "PASS",
+      "binaryAndIndependentReaders": "PASS in build"
+    },
+    {
+      "name": "X3_Grupo_Orbital",
+      "canonicalNodeOrder": "PASS",
+      "ribbonReaderAndVisibility": "PASS",
+      "posesSampled": 299,
+      "geometryX": [
+        -36,
+        0
+      ],
+      "frontAtOrigin": "PASS",
+      "rootAtOrigin": "PASS",
+      "dependencies": "PASS",
+      "birthStandDeath": "structure and pose PASS",
+      "mdlGeometry": "PASS",
+      "binaryAndIndependentReaders": "PASS in build"
+    },
+    {
+      "name": "X3_Cross_Buster",
+      "canonicalNodeOrder": "PASS",
+      "ribbonReaderAndVisibility": "PASS",
+      "posesSampled": 299,
+      "geometryX": [
+        -106.47000122070312,
+        0
+      ],
+      "frontAtOrigin": "PASS",
+      "rootAtOrigin": "PASS",
+      "dependencies": "PASS",
+      "birthStandDeath": "structure and pose PASS",
+      "mdlGeometry": "PASS",
+      "binaryAndIndependentReaders": "PASS in build"
+    },
+    {
+      "name": "X3_Flash_Union",
+      "canonicalNodeOrder": "PASS",
+      "ribbonReaderAndVisibility": "PASS",
+      "posesSampled": 299,
+      "geometryX": [
+        -57.20000123977661,
+        57.20000123977661
+      ],
+      "frontAtOrigin": "impact expansion around origin",
+      "rootAtOrigin": "PASS",
+      "dependencies": "PASS",
+      "birthStandDeath": "structure and pose PASS",
+      "mdlGeometry": "PASS",
+      "binaryAndIndependentReaders": "PASS in build"
+    }
+  ],
+  "textures": [
+    {
+      "file": "Glow.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "d91de87e3e550ac98441f8bf93b8ae4b6f77b96ccdc72e0a95c6a507ccdff427",
+      "sha256": "35b2f5cc943ff8f90da370cf6d3d02bc0246e6b3d1d1adc3b8e1b7fb197db491",
+      "headerPixelsAndMipBytes": "PASS",
+      "origin": "original procedural mask v2",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Core.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "357f57efb1811418523d6ec0fbbb26afdd60e8d873bb9ab0ee071f0c3d2824b6",
+      "sha256": "5d2588a14227bf6594926b109d43dd6293fcb3f8920030529c46692d8d4f6542",
+      "headerPixelsAndMipBytes": "PASS",
+      "origin": "original procedural mask v2",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Band.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "76318af1b167dd9a11fa5a98b76930a0357c3b78d6e3c9b5a996033093321b74",
+      "sha256": "811b3f28f38c4d6c51c248f9b428c97235338861b23963dd54d10ea58d25b82d",
+      "headerPixelsAndMipBytes": "PASS",
+      "origin": "original procedural mask v2",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Filament.blp",
+      "size": 128,
+      "mips": 8,
+      "rgbaSha256": "92376353101d856f8b4caddd83a6d4ca44e156f123a0c307710bf3ba94f7f490",
+      "sha256": "a327dca19b025ec60922a9373665367e2b630a85d2ca142b73e3a328991e05e3",
+      "headerPixelsAndMipBytes": "PASS",
+      "origin": "original procedural mask v2",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Ring.blp",
+      "size": 64,
+      "mips": 7,
+      "rgbaSha256": "c2c137cf4035856336417792ad40583c09528cb37249fd8e923e116f213dd1d1",
+      "sha256": "033c8d7b3c151b88095cc99c253b2107875afc9c439c4201fa9b0d3f3d122470",
+      "headerPixelsAndMipBytes": "PASS",
+      "origin": "original procedural mask v2",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Ribbon.blp",
+      "size": 64,
+      "mips": 7,
+      "rgbaSha256": "f21826f71c32e055ea72f78f400423683cb52a03c7b50af91b54f1f0158fb6f4",
+      "sha256": "673556a270483b1ee85fb9ac1f64b1fc9cf8a22351e31aeed08af04a92329508",
+      "headerPixelsAndMipBytes": "PASS",
+      "origin": "original procedural mask v2",
+      "independentM3Decode": "PASS"
+    },
+    {
+      "file": "Spark.blp",
+      "size": 64,
+      "mips": 7,
+      "rgbaSha256": "96e4caf0a427aff279442c161fd4e4d9b12e3db5a726b3e0e4c5e7497f9a1a82",
+      "sha256": "bec4a30889a11e8508acbb6018f574b0fd69980b5533c68c4b6d0b27ad35c3f4",
+      "headerPixelsAndMipBytes": "PASS",
+      "origin": "original procedural mask v2",
+      "independentM3Decode": "PASS"
+    }
+  ],
+  "limits": "No world physics or multiplayer tests; visual runtime checked separately."
+}

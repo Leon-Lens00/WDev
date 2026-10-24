@@ -1,0 +1,15 @@
+--- AGENTS.before.md
++++ AGENTS.md
+@@ -47,3 +47,12 @@
+   Informa qué se comprobó, el resultado y los límites materiales.
+ - Evita halagos y acuerdos automáticos. Prioriza la exactitud, la evidencia y
+   el objetivo del usuario sobre confirmar lo que cualquiera de los dos espera.
++
++## Depuración y planificación
++
++- Para investigar un fallo, regresión o resultado técnico inesperado, usar
++  [systematic-debugging](/home/snz/.codex/skills/systematic-debugging/SKILL.md).
++- Para un plan solicitado o un cambio técnico de varias fases con dependencias,
++  usar [writing-plans](/home/snz/.codex/skills/writing-plans/SKILL.md). Conservar
++  el plan y sus decisiones en el proyecto; los ajustes claros y pequeños no
++  necesitan un documento de planificación.

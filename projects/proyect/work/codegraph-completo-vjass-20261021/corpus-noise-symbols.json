@@ -1,0 +1,2252 @@
+[
+  {
+    "name": "JASS/Noise.j",
+    "file": "JASS/Noise.j",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "NoiseVersion",
+    "file": "JASS/Noise.j",
+    "line": 24,
+    "kind": "function"
+  },
+  {
+    "name": "Floor",
+    "file": "JASS/Noise.j",
+    "line": 28,
+    "kind": "function"
+  },
+  {
+    "name": "Floor.value",
+    "file": "JASS/Noise.j",
+    "line": 28,
+    "kind": "parameter"
+  },
+  {
+    "name": "Floor.n",
+    "file": "JASS/Noise.j",
+    "line": 29,
+    "kind": "variable"
+  },
+  {
+    "name": "RealTernaryOp",
+    "file": "JASS/Noise.j",
+    "line": 36,
+    "kind": "function"
+  },
+  {
+    "name": "RealTernaryOp.a",
+    "file": "JASS/Noise.j",
+    "line": 36,
+    "kind": "parameter"
+  },
+  {
+    "name": "RealTernaryOp.b",
+    "file": "JASS/Noise.j",
+    "line": 36,
+    "kind": "parameter"
+  },
+  {
+    "name": "RealTernaryOp.cond",
+    "file": "JASS/Noise.j",
+    "line": 36,
+    "kind": "parameter"
+  },
+  {
+    "name": "Fade",
+    "file": "JASS/Noise.j",
+    "line": 44,
+    "kind": "function"
+  },
+  {
+    "name": "Fade.t",
+    "file": "JASS/Noise.j",
+    "line": 44,
+    "kind": "parameter"
+  },
+  {
+    "name": "Lerp",
+    "file": "JASS/Noise.j",
+    "line": 48,
+    "kind": "function"
+  },
+  {
+    "name": "Lerp.t",
+    "file": "JASS/Noise.j",
+    "line": 48,
+    "kind": "parameter"
+  },
+  {
+    "name": "Lerp.a",
+    "file": "JASS/Noise.j",
+    "line": 48,
+    "kind": "parameter"
+  },
+  {
+    "name": "Lerp.b",
+    "file": "JASS/Noise.j",
+    "line": 48,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient1D",
+    "file": "JASS/Noise.j",
+    "line": 52,
+    "kind": "function"
+  },
+  {
+    "name": "Gradient1D.hash",
+    "file": "JASS/Noise.j",
+    "line": 52,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient1D.x",
+    "file": "JASS/Noise.j",
+    "line": 52,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient1D.h",
+    "file": "JASS/Noise.j",
+    "line": 53,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise1D",
+    "file": "JASS/Noise.j",
+    "line": 57,
+    "kind": "function"
+  },
+  {
+    "name": "PerlinNoise1D.x",
+    "file": "JASS/Noise.j",
+    "line": 57,
+    "kind": "parameter"
+  },
+  {
+    "name": "PerlinNoise1D.X",
+    "file": "JASS/Noise.j",
+    "line": 58,
+    "kind": "variable"
+  },
+  {
+    "name": "Gradient2D",
+    "file": "JASS/Noise.j",
+    "line": 63,
+    "kind": "function"
+  },
+  {
+    "name": "Gradient2D.y",
+    "file": "JASS/Noise.j",
+    "line": 63,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient2D.hash",
+    "file": "JASS/Noise.j",
+    "line": 63,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient2D.x",
+    "file": "JASS/Noise.j",
+    "line": 63,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient2D.h",
+    "file": "JASS/Noise.j",
+    "line": 64,
+    "kind": "variable"
+  },
+  {
+    "name": "Gradient2D.u",
+    "file": "JASS/Noise.j",
+    "line": 65,
+    "kind": "variable"
+  },
+  {
+    "name": "Gradient2D.v",
+    "file": "JASS/Noise.j",
+    "line": 66,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise2D",
+    "file": "JASS/Noise.j",
+    "line": 70,
+    "kind": "function"
+  },
+  {
+    "name": "PerlinNoise2D.x",
+    "file": "JASS/Noise.j",
+    "line": 70,
+    "kind": "parameter"
+  },
+  {
+    "name": "PerlinNoise2D.y",
+    "file": "JASS/Noise.j",
+    "line": 70,
+    "kind": "parameter"
+  },
+  {
+    "name": "PerlinNoise2D.X",
+    "file": "JASS/Noise.j",
+    "line": 71,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise2D.Y",
+    "file": "JASS/Noise.j",
+    "line": 72,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise2D.u",
+    "file": "JASS/Noise.j",
+    "line": 73,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise2D.v",
+    "file": "JASS/Noise.j",
+    "line": 74,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise2D.A",
+    "file": "JASS/Noise.j",
+    "line": 75,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise2D.B",
+    "file": "JASS/Noise.j",
+    "line": 76,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise2D.lerpA1",
+    "file": "JASS/Noise.j",
+    "line": 77,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise2D.lerpA2",
+    "file": "JASS/Noise.j",
+    "line": 78,
+    "kind": "variable"
+  },
+  {
+    "name": "Gradient3D",
+    "file": "JASS/Noise.j",
+    "line": 90,
+    "kind": "function"
+  },
+  {
+    "name": "Gradient3D.y",
+    "file": "JASS/Noise.j",
+    "line": 90,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient3D.z",
+    "file": "JASS/Noise.j",
+    "line": 90,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient3D.x",
+    "file": "JASS/Noise.j",
+    "line": 90,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient3D.hash",
+    "file": "JASS/Noise.j",
+    "line": 90,
+    "kind": "parameter"
+  },
+  {
+    "name": "Gradient3D.h",
+    "file": "JASS/Noise.j",
+    "line": 91,
+    "kind": "variable"
+  },
+  {
+    "name": "Gradient3D.u",
+    "file": "JASS/Noise.j",
+    "line": 92,
+    "kind": "variable"
+  },
+  {
+    "name": "Gradient3D.v",
+    "file": "JASS/Noise.j",
+    "line": 93,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D",
+    "file": "JASS/Noise.j",
+    "line": 97,
+    "kind": "function"
+  },
+  {
+    "name": "PerlinNoise3D.z",
+    "file": "JASS/Noise.j",
+    "line": 97,
+    "kind": "parameter"
+  },
+  {
+    "name": "PerlinNoise3D.x",
+    "file": "JASS/Noise.j",
+    "line": 97,
+    "kind": "parameter"
+  },
+  {
+    "name": "PerlinNoise3D.y",
+    "file": "JASS/Noise.j",
+    "line": 97,
+    "kind": "parameter"
+  },
+  {
+    "name": "PerlinNoise3D.X",
+    "file": "JASS/Noise.j",
+    "line": 98,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.Y",
+    "file": "JASS/Noise.j",
+    "line": 99,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.Z",
+    "file": "JASS/Noise.j",
+    "line": 100,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.u",
+    "file": "JASS/Noise.j",
+    "line": 101,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.v",
+    "file": "JASS/Noise.j",
+    "line": 102,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.w",
+    "file": "JASS/Noise.j",
+    "line": 103,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.A",
+    "file": "JASS/Noise.j",
+    "line": 104,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.AA",
+    "file": "JASS/Noise.j",
+    "line": 105,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.AB",
+    "file": "JASS/Noise.j",
+    "line": 106,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.B",
+    "file": "JASS/Noise.j",
+    "line": 107,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.BA",
+    "file": "JASS/Noise.j",
+    "line": 108,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.BB",
+    "file": "JASS/Noise.j",
+    "line": 109,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.lerpA1",
+    "file": "JASS/Noise.j",
+    "line": 110,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.lerpA2",
+    "file": "JASS/Noise.j",
+    "line": 111,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.lerpB1",
+    "file": "JASS/Noise.j",
+    "line": 112,
+    "kind": "variable"
+  },
+  {
+    "name": "PerlinNoise3D.lerpB2",
+    "file": "JASS/Noise.j",
+    "line": 113,
+    "kind": "variable"
+  },
+  {
+    "name": "GeneratePermutationTableCustom",
+    "file": "JASS/Noise.j",
+    "line": 133,
+    "kind": "function"
+  },
+  {
+    "name": "GeneratePermutationTableCustom.GetRandomIntInterface",
+    "file": "JASS/Noise.j",
+    "line": 133,
+    "kind": "parameter"
+  },
+  {
+    "name": "GeneratePermutationTableCustom.i",
+    "file": "JASS/Noise.j",
+    "line": 134,
+    "kind": "variable"
+  },
+  {
+    "name": "GeneratePermutationTableCustom.trig",
+    "file": "JASS/Noise.j",
+    "line": 135,
+    "kind": "variable"
+  },
+  {
+    "name": "GeneratePermutationTable",
+    "file": "JASS/Noise.j",
+    "line": 151,
+    "kind": "function"
+  },
+  {
+    "name": "GeneratePermutationTable.i",
+    "file": "JASS/Noise.j",
+    "line": 152,
+    "kind": "variable"
+  },
+  {
+    "name": "InitGradientTable2D",
+    "file": "JASS/Noise.j",
+    "line": 161,
+    "kind": "function"
+  },
+  {
+    "name": "StretchConstant2D",
+    "file": "JASS/Noise.j",
+    "line": 180,
+    "kind": "function"
+  },
+  {
+    "name": "SquishConstant2D",
+    "file": "JASS/Noise.j",
+    "line": 184,
+    "kind": "function"
+  },
+  {
+    "name": "NormConstant2D",
+    "file": "JASS/Noise.j",
+    "line": 188,
+    "kind": "function"
+  },
+  {
+    "name": "PMASK",
+    "file": "JASS/Noise.j",
+    "line": 192,
+    "kind": "function"
+  },
+  {
+    "name": "SquishConstant2DX",
+    "file": "JASS/Noise.j",
+    "line": 196,
+    "kind": "function"
+  },
+  {
+    "name": "SquishConstant2DY",
+    "file": "JASS/Noise.j",
+    "line": 200,
+    "kind": "function"
+  },
+  {
+    "name": "Extrapolate2D",
+    "file": "JASS/Noise.j",
+    "line": 204,
+    "kind": "function"
+  },
+  {
+    "name": "Extrapolate2D.xsb",
+    "file": "JASS/Noise.j",
+    "line": 204,
+    "kind": "parameter"
+  },
+  {
+    "name": "Extrapolate2D.dy",
+    "file": "JASS/Noise.j",
+    "line": 204,
+    "kind": "parameter"
+  },
+  {
+    "name": "Extrapolate2D.ysb",
+    "file": "JASS/Noise.j",
+    "line": 204,
+    "kind": "parameter"
+  },
+  {
+    "name": "Extrapolate2D.dx",
+    "file": "JASS/Noise.j",
+    "line": 204,
+    "kind": "parameter"
+  },
+  {
+    "name": "Extrapolate2D.index",
+    "file": "JASS/Noise.j",
+    "line": 205,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D",
+    "file": "JASS/Noise.j",
+    "line": 209,
+    "kind": "function"
+  },
+  {
+    "name": "OpenSimplex2D.y",
+    "file": "JASS/Noise.j",
+    "line": 209,
+    "kind": "parameter"
+  },
+  {
+    "name": "OpenSimplex2D.x",
+    "file": "JASS/Noise.j",
+    "line": 209,
+    "kind": "parameter"
+  },
+  {
+    "name": "OpenSimplex2D.strechOffset",
+    "file": "JASS/Noise.j",
+    "line": 210,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.xs",
+    "file": "JASS/Noise.j",
+    "line": 211,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.ys",
+    "file": "JASS/Noise.j",
+    "line": 212,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.xsb",
+    "file": "JASS/Noise.j",
+    "line": 213,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.ysb",
+    "file": "JASS/Noise.j",
+    "line": 214,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.squishOffset",
+    "file": "JASS/Noise.j",
+    "line": 215,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.xb",
+    "file": "JASS/Noise.j",
+    "line": 216,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.yb",
+    "file": "JASS/Noise.j",
+    "line": 217,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.xins",
+    "file": "JASS/Noise.j",
+    "line": 218,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.yins",
+    "file": "JASS/Noise.j",
+    "line": 219,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.inSum",
+    "file": "JASS/Noise.j",
+    "line": 220,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.dx0",
+    "file": "JASS/Noise.j",
+    "line": 221,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.dy0",
+    "file": "JASS/Noise.j",
+    "line": 222,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.dx_ext",
+    "file": "JASS/Noise.j",
+    "line": 223,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.dy_ext",
+    "file": "JASS/Noise.j",
+    "line": 224,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.xsv_ext",
+    "file": "JASS/Noise.j",
+    "line": 225,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.ysv_ext",
+    "file": "JASS/Noise.j",
+    "line": 226,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.value",
+    "file": "JASS/Noise.j",
+    "line": 227,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.dx1",
+    "file": "JASS/Noise.j",
+    "line": 228,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.dy1",
+    "file": "JASS/Noise.j",
+    "line": 229,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.attn1",
+    "file": "JASS/Noise.j",
+    "line": 230,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.dx2",
+    "file": "JASS/Noise.j",
+    "line": 231,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.dy2",
+    "file": "JASS/Noise.j",
+    "line": 232,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.attn2",
+    "file": "JASS/Noise.j",
+    "line": 233,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.zins",
+    "file": "JASS/Noise.j",
+    "line": 234,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.attn0",
+    "file": "JASS/Noise.j",
+    "line": 235,
+    "kind": "variable"
+  },
+  {
+    "name": "OpenSimplex2D.attn_ext",
+    "file": "JASS/Noise.j",
+    "line": 236,
+    "kind": "variable"
+  },
+  {
+    "name": "InitNoise",
+    "file": "JASS/Noise.j",
+    "line": 303,
+    "kind": "function"
+  },
+  {
+    "name": "JASS/OctavePerlin.j",
+    "file": "JASS/OctavePerlin.j",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "OctavePerlin1D",
+    "file": "JASS/OctavePerlin.j",
+    "line": 10,
+    "kind": "function"
+  },
+  {
+    "name": "OctavePerlin1D.x",
+    "file": "JASS/OctavePerlin.j",
+    "line": 10,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin1D.octaves",
+    "file": "JASS/OctavePerlin.j",
+    "line": 10,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin1D.persistence",
+    "file": "JASS/OctavePerlin.j",
+    "line": 10,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin1D.total",
+    "file": "JASS/OctavePerlin.j",
+    "line": 11,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin1D.frequency",
+    "file": "JASS/OctavePerlin.j",
+    "line": 12,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin1D.amplitude",
+    "file": "JASS/OctavePerlin.j",
+    "line": 13,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin1D.maxValue",
+    "file": "JASS/OctavePerlin.j",
+    "line": 14,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin1D.i",
+    "file": "JASS/OctavePerlin.j",
+    "line": 15,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin2D",
+    "file": "JASS/OctavePerlin.j",
+    "line": 27,
+    "kind": "function"
+  },
+  {
+    "name": "OctavePerlin2D.octaves",
+    "file": "JASS/OctavePerlin.j",
+    "line": 27,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin2D.persistence",
+    "file": "JASS/OctavePerlin.j",
+    "line": 27,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin2D.y",
+    "file": "JASS/OctavePerlin.j",
+    "line": 27,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin2D.x",
+    "file": "JASS/OctavePerlin.j",
+    "line": 27,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin2D.total",
+    "file": "JASS/OctavePerlin.j",
+    "line": 28,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin2D.frequency",
+    "file": "JASS/OctavePerlin.j",
+    "line": 29,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin2D.amplitude",
+    "file": "JASS/OctavePerlin.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin2D.maxValue",
+    "file": "JASS/OctavePerlin.j",
+    "line": 31,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin2D.i",
+    "file": "JASS/OctavePerlin.j",
+    "line": 32,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin3D",
+    "file": "JASS/OctavePerlin.j",
+    "line": 44,
+    "kind": "function"
+  },
+  {
+    "name": "OctavePerlin3D.y",
+    "file": "JASS/OctavePerlin.j",
+    "line": 44,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin3D.x",
+    "file": "JASS/OctavePerlin.j",
+    "line": 44,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin3D.z",
+    "file": "JASS/OctavePerlin.j",
+    "line": 44,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin3D.persistence",
+    "file": "JASS/OctavePerlin.j",
+    "line": 44,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin3D.octaves",
+    "file": "JASS/OctavePerlin.j",
+    "line": 44,
+    "kind": "parameter"
+  },
+  {
+    "name": "OctavePerlin3D.total",
+    "file": "JASS/OctavePerlin.j",
+    "line": 45,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin3D.frequency",
+    "file": "JASS/OctavePerlin.j",
+    "line": 46,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin3D.amplitude",
+    "file": "JASS/OctavePerlin.j",
+    "line": 47,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin3D.maxValue",
+    "file": "JASS/OctavePerlin.j",
+    "line": 48,
+    "kind": "variable"
+  },
+  {
+    "name": "OctavePerlin3D.i",
+    "file": "JASS/OctavePerlin.j",
+    "line": 49,
+    "kind": "variable"
+  },
+  {
+    "name": "JASS/test/noise-pjass-defined-udg.j",
+    "file": "JASS/test/noise-pjass-defined-udg.j",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "udg_NoisePermutation",
+    "file": "JASS/test/noise-pjass-defined-udg.j",
+    "line": 4,
+    "kind": "variable"
+  },
+  {
+    "name": "udg_GradientTable2DX",
+    "file": "JASS/test/noise-pjass-defined-udg.j",
+    "line": 5,
+    "kind": "variable"
+  },
+  {
+    "name": "udg_GradientTable2DY",
+    "file": "JASS/test/noise-pjass-defined-udg.j",
+    "line": 6,
+    "kind": "variable"
+  },
+  {
+    "name": "udg_NoiseGetRandomIntEvent",
+    "file": "JASS/test/noise-pjass-defined-udg.j",
+    "line": 7,
+    "kind": "variable"
+  },
+  {
+    "name": "udg_NoiseGetRandomIntLow",
+    "file": "JASS/test/noise-pjass-defined-udg.j",
+    "line": 8,
+    "kind": "variable"
+  },
+  {
+    "name": "udg_NoiseGetRandomIntHigh",
+    "file": "JASS/test/noise-pjass-defined-udg.j",
+    "line": 9,
+    "kind": "variable"
+  },
+  {
+    "name": "udg_NoiseGetRandomIntReturn",
+    "file": "JASS/test/noise-pjass-defined-udg.j",
+    "line": 10,
+    "kind": "variable"
+  },
+  {
+    "name": "Lua/Noise.lua",
+    "file": "Lua/Noise.lua",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "floor",
+    "file": "Lua/Noise.lua",
+    "line": 14,
+    "kind": "function"
+  },
+  {
+    "name": "fade",
+    "file": "Lua/Noise.lua",
+    "line": 20,
+    "kind": "function"
+  },
+  {
+    "name": "lerp",
+    "file": "Lua/Noise.lua",
+    "line": 24,
+    "kind": "function"
+  },
+  {
+    "name": "grad1D",
+    "file": "Lua/Noise.lua",
+    "line": 28,
+    "kind": "function"
+  },
+  {
+    "name": "Noise::perlin1D",
+    "file": "Lua/Noise.lua",
+    "line": 33,
+    "kind": "method"
+  },
+  {
+    "name": "grad2D",
+    "file": "Lua/Noise.lua",
+    "line": 39,
+    "kind": "function"
+  },
+  {
+    "name": "Noise::perlin2D",
+    "file": "Lua/Noise.lua",
+    "line": 45,
+    "kind": "method"
+  },
+  {
+    "name": "grad3D",
+    "file": "Lua/Noise.lua",
+    "line": 56,
+    "kind": "function"
+  },
+  {
+    "name": "Noise::perlin3D",
+    "file": "Lua/Noise.lua",
+    "line": 62,
+    "kind": "method"
+  },
+  {
+    "name": "Noise::permutationInit",
+    "file": "Lua/Noise.lua",
+    "line": 80,
+    "kind": "method"
+  },
+  {
+    "name": "Noise::generatePermutationTable",
+    "file": "Lua/Noise.lua",
+    "line": 85,
+    "kind": "method"
+  },
+  {
+    "name": "extrapolate2D",
+    "file": "Lua/Noise.lua",
+    "line": 106,
+    "kind": "function"
+  },
+  {
+    "name": "Noise::openSimplex2D",
+    "file": "Lua/Noise.lua",
+    "line": 111,
+    "kind": "method"
+  },
+  {
+    "name": "Noise::initialize",
+    "file": "Lua/Noise.lua",
+    "line": 205,
+    "kind": "method"
+  },
+  {
+    "name": "Lua/OctavePerlin.lua",
+    "file": "Lua/OctavePerlin.lua",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "Noise::octavePerlin1D",
+    "file": "Lua/OctavePerlin.lua",
+    "line": 11,
+    "kind": "method"
+  },
+  {
+    "name": "Noise::octavePerlin2D",
+    "file": "Lua/OctavePerlin.lua",
+    "line": 22,
+    "kind": "method"
+  },
+  {
+    "name": "Noise::octavePerlin3D",
+    "file": "Lua/OctavePerlin.lua",
+    "line": 33,
+    "kind": "method"
+  },
+  {
+    "name": "vJASS/Noise.j",
+    "file": "vJASS/Noise.j",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "Noise",
+    "file": "vJASS/Noise.j",
+    "line": 8,
+    "kind": "namespace"
+  },
+  {
+    "name": "Noise.Init",
+    "file": "vJASS/Noise.j",
+    "line": 10,
+    "kind": "module"
+  },
+  {
+    "name": "Noise.Init.onInit",
+    "file": "vJASS/Noise.j",
+    "line": 11,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise",
+    "file": "vJASS/Noise.j",
+    "line": 16,
+    "kind": "struct"
+  },
+  {
+    "name": "Noise.Noise.version",
+    "file": "vJASS/Noise.j",
+    "line": 17,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.STRETCH_CONSTANT_2D",
+    "file": "vJASS/Noise.j",
+    "line": 18,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.SQUISH_CONSTANT_2D",
+    "file": "vJASS/Noise.j",
+    "line": 19,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.NORM_CONSTANT_2D",
+    "file": "vJASS/Noise.j",
+    "line": 20,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.PMASK",
+    "file": "vJASS/Noise.j",
+    "line": 21,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.SQUISH_CONSTANT_2D_X",
+    "file": "vJASS/Noise.j",
+    "line": 22,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.SQUISH_CONSTANT_2D_Y",
+    "file": "vJASS/Noise.j",
+    "line": 23,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.permutation",
+    "file": "vJASS/Noise.j",
+    "line": 25,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.gradTable2DX",
+    "file": "vJASS/Noise.j",
+    "line": 26,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.gradTable2DY",
+    "file": "vJASS/Noise.j",
+    "line": 27,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.__cg_Noise_Init_onInit",
+    "file": "vJASS/Noise.j",
+    "line": 29,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.octaves",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.y",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.z",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.x",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.persistence",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.persistence",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.y",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.octaves",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.x",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.persistence",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.octaves",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.x",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.maxValue",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.amplitude",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.amplitude",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.i",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.frequency",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.frequency",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.i",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.total",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.i",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.total",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.amplitude",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin2D.maxValue",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.maxValue",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin1D.frequency",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.octavePerlin3D.total",
+    "file": "vJASS/Noise.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.floor",
+    "file": "vJASS/Noise.j",
+    "line": 32,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.floor.value",
+    "file": "vJASS/Noise.j",
+    "line": 32,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.floor.n",
+    "file": "vJASS/Noise.j",
+    "line": 33,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.realTernaryOp",
+    "file": "vJASS/Noise.j",
+    "line": 40,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.realTernaryOp.cond",
+    "file": "vJASS/Noise.j",
+    "line": 40,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.realTernaryOp.a",
+    "file": "vJASS/Noise.j",
+    "line": 40,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.realTernaryOp.b",
+    "file": "vJASS/Noise.j",
+    "line": 40,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.fade",
+    "file": "vJASS/Noise.j",
+    "line": 48,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.fade.t",
+    "file": "vJASS/Noise.j",
+    "line": 48,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.lerp",
+    "file": "vJASS/Noise.j",
+    "line": 52,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.lerp.b",
+    "file": "vJASS/Noise.j",
+    "line": 52,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.lerp.t",
+    "file": "vJASS/Noise.j",
+    "line": 52,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.lerp.a",
+    "file": "vJASS/Noise.j",
+    "line": 52,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad1D",
+    "file": "vJASS/Noise.j",
+    "line": 56,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.grad1D.x",
+    "file": "vJASS/Noise.j",
+    "line": 56,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad1D.hash",
+    "file": "vJASS/Noise.j",
+    "line": 56,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad1D.h",
+    "file": "vJASS/Noise.j",
+    "line": 57,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin1D",
+    "file": "vJASS/Noise.j",
+    "line": 61,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.perlin1D.x",
+    "file": "vJASS/Noise.j",
+    "line": 61,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin1D.X",
+    "file": "vJASS/Noise.j",
+    "line": 62,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad2D",
+    "file": "vJASS/Noise.j",
+    "line": 67,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.grad2D.hash",
+    "file": "vJASS/Noise.j",
+    "line": 67,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad2D.y",
+    "file": "vJASS/Noise.j",
+    "line": 67,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad2D.x",
+    "file": "vJASS/Noise.j",
+    "line": 67,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad2D.h",
+    "file": "vJASS/Noise.j",
+    "line": 68,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad2D.u",
+    "file": "vJASS/Noise.j",
+    "line": 69,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad2D.v",
+    "file": "vJASS/Noise.j",
+    "line": 70,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D",
+    "file": "vJASS/Noise.j",
+    "line": 74,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.y",
+    "file": "vJASS/Noise.j",
+    "line": 74,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.x",
+    "file": "vJASS/Noise.j",
+    "line": 74,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.X",
+    "file": "vJASS/Noise.j",
+    "line": 75,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.Y",
+    "file": "vJASS/Noise.j",
+    "line": 76,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.u",
+    "file": "vJASS/Noise.j",
+    "line": 77,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.v",
+    "file": "vJASS/Noise.j",
+    "line": 78,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.A",
+    "file": "vJASS/Noise.j",
+    "line": 79,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.B",
+    "file": "vJASS/Noise.j",
+    "line": 80,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.lerpA1",
+    "file": "vJASS/Noise.j",
+    "line": 81,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin2D.lerpA2",
+    "file": "vJASS/Noise.j",
+    "line": 82,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad3D",
+    "file": "vJASS/Noise.j",
+    "line": 94,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.grad3D.hash",
+    "file": "vJASS/Noise.j",
+    "line": 94,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad3D.z",
+    "file": "vJASS/Noise.j",
+    "line": 94,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad3D.y",
+    "file": "vJASS/Noise.j",
+    "line": 94,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad3D.x",
+    "file": "vJASS/Noise.j",
+    "line": 94,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.grad3D.h",
+    "file": "vJASS/Noise.j",
+    "line": 95,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad3D.u",
+    "file": "vJASS/Noise.j",
+    "line": 96,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.grad3D.v",
+    "file": "vJASS/Noise.j",
+    "line": 97,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D",
+    "file": "vJASS/Noise.j",
+    "line": 101,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.z",
+    "file": "vJASS/Noise.j",
+    "line": 101,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.x",
+    "file": "vJASS/Noise.j",
+    "line": 101,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.y",
+    "file": "vJASS/Noise.j",
+    "line": 101,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.X",
+    "file": "vJASS/Noise.j",
+    "line": 102,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.Y",
+    "file": "vJASS/Noise.j",
+    "line": 103,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.Z",
+    "file": "vJASS/Noise.j",
+    "line": 104,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.u",
+    "file": "vJASS/Noise.j",
+    "line": 105,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.v",
+    "file": "vJASS/Noise.j",
+    "line": 106,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.w",
+    "file": "vJASS/Noise.j",
+    "line": 107,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.A",
+    "file": "vJASS/Noise.j",
+    "line": 108,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.AA",
+    "file": "vJASS/Noise.j",
+    "line": 109,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.AB",
+    "file": "vJASS/Noise.j",
+    "line": 110,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.B",
+    "file": "vJASS/Noise.j",
+    "line": 111,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.BA",
+    "file": "vJASS/Noise.j",
+    "line": 112,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.BB",
+    "file": "vJASS/Noise.j",
+    "line": 113,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.lerpA1",
+    "file": "vJASS/Noise.j",
+    "line": 114,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.lerpA2",
+    "file": "vJASS/Noise.j",
+    "line": 115,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.lerpB1",
+    "file": "vJASS/Noise.j",
+    "line": 116,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.perlin3D.lerpB2",
+    "file": "vJASS/Noise.j",
+    "line": 117,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D",
+    "file": "vJASS/Noise.j",
+    "line": 137,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.dy",
+    "file": "vJASS/Noise.j",
+    "line": 137,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.ysb",
+    "file": "vJASS/Noise.j",
+    "line": 137,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.dx",
+    "file": "vJASS/Noise.j",
+    "line": 137,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.xsb",
+    "file": "vJASS/Noise.j",
+    "line": 137,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.extrapolate2D.index",
+    "file": "vJASS/Noise.j",
+    "line": 138,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D",
+    "file": "vJASS/Noise.j",
+    "line": 142,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.y",
+    "file": "vJASS/Noise.j",
+    "line": 142,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.x",
+    "file": "vJASS/Noise.j",
+    "line": 142,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.strechOffset",
+    "file": "vJASS/Noise.j",
+    "line": 143,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xs",
+    "file": "vJASS/Noise.j",
+    "line": 144,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.ys",
+    "file": "vJASS/Noise.j",
+    "line": 145,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xsb",
+    "file": "vJASS/Noise.j",
+    "line": 146,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.ysb",
+    "file": "vJASS/Noise.j",
+    "line": 147,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.squishOffset",
+    "file": "vJASS/Noise.j",
+    "line": 148,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xb",
+    "file": "vJASS/Noise.j",
+    "line": 149,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.yb",
+    "file": "vJASS/Noise.j",
+    "line": 150,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xins",
+    "file": "vJASS/Noise.j",
+    "line": 151,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.yins",
+    "file": "vJASS/Noise.j",
+    "line": 152,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.inSum",
+    "file": "vJASS/Noise.j",
+    "line": 153,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dx0",
+    "file": "vJASS/Noise.j",
+    "line": 154,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dy0",
+    "file": "vJASS/Noise.j",
+    "line": 155,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dx_ext",
+    "file": "vJASS/Noise.j",
+    "line": 156,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dy_ext",
+    "file": "vJASS/Noise.j",
+    "line": 157,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.xsv_ext",
+    "file": "vJASS/Noise.j",
+    "line": 158,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.ysv_ext",
+    "file": "vJASS/Noise.j",
+    "line": 159,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.value",
+    "file": "vJASS/Noise.j",
+    "line": 160,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dx1",
+    "file": "vJASS/Noise.j",
+    "line": 161,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dy1",
+    "file": "vJASS/Noise.j",
+    "line": 162,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.attn1",
+    "file": "vJASS/Noise.j",
+    "line": 163,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dx2",
+    "file": "vJASS/Noise.j",
+    "line": 164,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.dy2",
+    "file": "vJASS/Noise.j",
+    "line": 165,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.attn2",
+    "file": "vJASS/Noise.j",
+    "line": 166,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.zins",
+    "file": "vJASS/Noise.j",
+    "line": 167,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.attn0",
+    "file": "vJASS/Noise.j",
+    "line": 168,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.openSimplex2D.attn_ext",
+    "file": "vJASS/Noise.j",
+    "line": 169,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.setGradientTable2D",
+    "file": "vJASS/Noise.j",
+    "line": 236,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.openSimplexInit",
+    "file": "vJASS/Noise.j",
+    "line": 256,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.permutationInit",
+    "file": "vJASS/Noise.j",
+    "line": 262,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTable",
+    "file": "vJASS/Noise.j",
+    "line": 267,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTable.i",
+    "file": "vJASS/Noise.j",
+    "line": 268,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.getRandomIntEvent",
+    "file": "vJASS/Noise.j",
+    "line": 277,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.p_getRandomIntLow",
+    "file": "vJASS/Noise.j",
+    "line": 278,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.p_getRandomIntHigh",
+    "file": "vJASS/Noise.j",
+    "line": 279,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.p_getRandomIntReturn",
+    "file": "vJASS/Noise.j",
+    "line": 280,
+    "kind": "field"
+  },
+  {
+    "name": "Noise.Noise.operator getRandomIntLow",
+    "file": "vJASS/Noise.j",
+    "line": 282,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.operator getRandomIntHigh",
+    "file": "vJASS/Noise.j",
+    "line": 286,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.operator getRandomIntReturn=",
+    "file": "vJASS/Noise.j",
+    "line": 290,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.operator getRandomIntReturn=.value",
+    "file": "vJASS/Noise.j",
+    "line": 290,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTableCustom",
+    "file": "vJASS/Noise.j",
+    "line": 294,
+    "kind": "method"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTableCustom.GetRandomIntInterface",
+    "file": "vJASS/Noise.j",
+    "line": 294,
+    "kind": "parameter"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTableCustom.i",
+    "file": "vJASS/Noise.j",
+    "line": 295,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.generatePermutationTableCustom.trig",
+    "file": "vJASS/Noise.j",
+    "line": 296,
+    "kind": "variable"
+  },
+  {
+    "name": "Noise.Noise.initialize",
+    "file": "vJASS/Noise.j",
+    "line": 312,
+    "kind": "method"
+  },
+  {
+    "name": "vJASS/OctavePerlin.j",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 1,
+    "kind": "file"
+  },
+  {
+    "name": "NoisePlugin",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 10,
+    "kind": "namespace"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 11,
+    "kind": "module"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin1D",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 12,
+    "kind": "method"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin1D.octaves",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 12,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin1D.x",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 12,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin1D.persistence",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 12,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin1D.total",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 13,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin1D.frequency",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 14,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin1D.amplitude",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 15,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin1D.maxValue",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 16,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin1D.i",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 17,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 29,
+    "kind": "method"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D.octaves",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 29,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D.x",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 29,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D.persistence",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 29,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D.y",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 29,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D.total",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 30,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D.frequency",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 31,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D.amplitude",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 32,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D.maxValue",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 33,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin2D.i",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 34,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 46,
+    "kind": "method"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.persistence",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 46,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.octaves",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 46,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.y",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 46,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.x",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 46,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.z",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 46,
+    "kind": "parameter"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.total",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 47,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.frequency",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 48,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.amplitude",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 49,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.maxValue",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 50,
+    "kind": "variable"
+  },
+  {
+    "name": "NoisePlugin.OctavePerlin.octavePerlin3D.i",
+    "file": "vJASS/OctavePerlin.j",
+    "line": 51,
+    "kind": "variable"
+  }
+]

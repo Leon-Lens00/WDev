@@ -1,0 +1,11 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "TERRAINDEV RUN 20261021-133841 COMPLETE" )
+	call Preload( "created=90 removed=90 finished=70 collided=10 cancelled=10" )
+	call Preload( "dummies=78 pooled=12 overflow=66 liveUnpooled=0 casters=1 reused=12 timerChecks=1 callbacks=2390" )
+	call Preload( "failures=0" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

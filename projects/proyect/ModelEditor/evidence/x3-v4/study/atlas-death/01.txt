@@ -1,0 +1,46 @@
+Browser tab: 3, Title: "Vinz · estudio de 191 modelos", URL: "http://127.0.0.1:34801/vinz-study-v4/".
+0 AXWebArea Vinz · estudio de 191 modelos, URL: 127.0.0.1:34801/vinz-study-v4/
+	1 container
+		2 heading Vinz · estudio191, Value: 1
+			3 text Vinz · estudio191
+		4 button Anterior, ID: prev
+		5 text Página 
+		6 stepper (settable, integer) Página, Value: 1, ID: page
+		7 button Siguiente, ID: next
+		8 text Secuencia 
+		9 pop up button (collapsed, settable) Secuencia, Value: Death120ms, ID: sequence, Secondary Actions: Expand
+			10 menu
+				11 Stand
+				12 Birth120ms
+				13 (selected) Death120ms
+		14 text Cámara 
+		15 pop up button (collapsed, settable) Cámara, Value: Oblicua, ID: camera, Secondary Actions: Expand
+			16 menu
+				17 (selected) Oblicua
+				18 Lateral
+				19 Frontal
+		20 button Movimiento prueba | activar, ID: motion
+		43 text Página1/32 · 6 modelos · partículas372
+	22 container
+		23 image view
+		24 container cells
+			25 container
+				26 text 000 · Arcade Bolts · Arcade Bolt Blues
+				27 text Recursos resueltos 1 tris · 8 PE2 · 0 estelas · Death · t2120ms
+			28 container
+				29 text 001 · Arcade Bolts · Arcade Bolt FIre
+				30 text Recursos resueltos 1 tris · 8 PE2 · 0 estelas · Death · t2120ms
+			31 container
+				32 text 002 · Arcade Bolts · Arcade Bolt Lemon
+				33 text Recursos resueltos 1 tris · 8 PE2 · 0 estelas · Death · t2120ms
+			34 container
+				35 text 003 · Arcade Bolts · Arcade Bolt Lime
+				36 text Recursos resueltos 1 tris · 8 PE2 · 0 estelas · Death · t2120ms
+			37 container
+				38 text 004 · Arcade Bolts · Arcade Bolt Psyche
+				39 text Recursos resueltos 1 tris · 8 PE2 · 0 estelas · Death · t2120ms
+			40 container
+				41 text 005 · Arcade Bolts · Arcade Bolt Red
+				42 text Recursos resueltos 1 tris · 8 PE2 · 0 estelas · Death · t2120ms
+
+The focused UI element is 0 AXWebArea Vinz · estudio de 191 modelos, URL: 127.0.0.1:34801/vinz-study-v4/

@@ -1,0 +1,26 @@
+[
+  {
+    "source": "Flare.blp",
+    "target": "ShotFlareNeutral.blp",
+    "mips": 6,
+    "pixels": "PASS",
+    "header": "PASS",
+    "sha256": "21bc983701ae77fb1ce5c0279854f3c3ca2c211329fec23d66b5f19eaf95e42f"
+  },
+  {
+    "source": "star5tga.blp",
+    "target": "ShotStarNeutral.blp",
+    "mips": 7,
+    "pixels": "PASS",
+    "header": "PASS",
+    "sha256": "00f775c1b90586f46ce58f7d3de3c29b25f9942a7787a5c6341ef55a30d6616a"
+  },
+  {
+    "source": "Blue_Glow2.blp",
+    "target": "ShotGlowNeutral.blp",
+    "mips": 6,
+    "pixels": "PASS",
+    "header": "PASS",
+    "sha256": "79f8f9187fa30a253d0ec2d310ceba80dd4c39a3eb82e0c550478c8fe03bf06c"
+  }
+]

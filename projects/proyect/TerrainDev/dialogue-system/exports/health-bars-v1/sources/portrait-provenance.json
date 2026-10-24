@@ -1,0 +1,14 @@
+[
+  {
+    "id": "paladin",
+    "source": "/home/snz/Documentos/WarDatsPy/ui-studio/dist/assets/dialogue/source/HeroPaladin_portrait.mdx",
+    "sha256": "31fb76af561ed47c63b040d1924c10172e6c3142a2459023f2cb42b235d1db82",
+    "changes": "Only TEXS replaceable IDs/paths. TeamColor uses existing red; TeamGlow uses black (additive zero). Geometry, animation and cameras retained."
+  },
+  {
+    "id": "tauren",
+    "source": "/home/snz/Documentos/WarDatsPy/ui-studio/dist/assets/dialogue/source/Tauren_portrait.mdx",
+    "sha256": "8762cde89deff3c3e4adf6f2754bfd0951ea4b13dad287bb4b8c7e353728cd6f",
+    "changes": "Only TEXS replaceable IDs/paths. TeamColor uses existing red; TeamGlow uses black (additive zero). Geometry, animation and cameras retained."
+  }
+]

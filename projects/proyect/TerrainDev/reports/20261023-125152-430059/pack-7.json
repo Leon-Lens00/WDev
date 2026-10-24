@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "file",
+    "set",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-125152-430059/stage-6.w3x",
+    "ShotsTeam\\Flare.blp",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-125152-430059/payload-7.bin",
+    "-o",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-125152-430059/stage-7.w3x",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"added ShotsTeam\\\\Flare.blp, 2436 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/build/20261023-125152-430059/stage-7.w3x\"\n}\n",
+  "stderr": ""
+}

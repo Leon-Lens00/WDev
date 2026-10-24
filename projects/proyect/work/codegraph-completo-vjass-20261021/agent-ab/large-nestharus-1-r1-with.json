@@ -1,0 +1,33 @@
+{
+  "repo": "large-nestharus",
+  "flow": 1,
+  "names": [
+    "TimerTools.Timer.create",
+    "TimerTools.TimerList.add",
+    "TimerTools.CreationQueue.add"
+  ],
+  "repetition": 1,
+  "arm": "with",
+  "exit": 0,
+  "seconds": 29.563531881998642,
+  "usage": {
+    "input_tokens": 87128,
+    "cached_input_tokens": 69632,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 872,
+    "reasoning_output_tokens": 154
+  },
+  "commands": 0,
+  "command_text": [],
+  "mcp": 2,
+  "mcp_tools": [
+    "codegraph_explore",
+    "codegraph_explore"
+  ],
+  "mcp_errors": [],
+  "forbidden_commands": [],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a1621a-3988-7a81-aff5-0b8d89ba7521"
+  ]
+}

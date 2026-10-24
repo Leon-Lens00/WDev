@@ -1,0 +1,23 @@
+{
+  "29_Camera": {
+    "original_constants": 7,
+    "changed": {},
+    "added": {}
+  },
+  "25_UserInterface": {
+    "original_constants": 11,
+    "changed": {
+      "WINDOW_DUMMY": {
+        "original": [
+          "integer",
+          "'uiwn'"
+        ],
+        "current": [
+          "integer",
+          "'bwn2'"
+        ]
+      }
+    },
+    "added": {}
+  }
+}

@@ -1,0 +1,8 @@
+`codegraph_explore` was unavailable; I inspected source read-only.
+
+The chain is **module implementation → unqualified `perlin2D(...)` call → direct `floor(...)` calls**.
+
+- **Wiring:** `NoisePlugin requires Noise` defines module `OctavePerlin` ([OctavePerlin.j:10–11](OctavePerlin.j#L10)). Inside library `Noise`’s struct `Noise`, `implement optional OctavePerlin` supplies `octavePerlin2D` when that module is available ([Noise.j:8–30](Noise.j#L8)). Thus the method is module-provided.
+- **First call:** Starting with `i=0`, frequency and amplitude `1`, the loop exits when `i >= octaves`; otherwise it calls `perlin2D(x * frequency, y * frequency)`, multiplies by amplitude, then updates amplitude, doubles frequency, and increments `i` ([OctavePerlin.j:29–43](OctavePerlin.j#L29)). `total` is **overwritten**, not accumulated. Nonpositive octaves skip all calls and leave a `0/0` return expression; runtime behavior is unverified.
+- **Second call:** Each `perlin2D` invocation unconditionally calls `floor` four times: for masked integer coordinates, then coordinate fractions ([Noise.j:74–84](Noise.j#L74)).
+- **Condition inside `floor`:** It starts with `R2I(value)` and decrements only when `value < 0.` **and** `value - n != 0.` ([Noise.j:32–37](Noise.j#L32)).

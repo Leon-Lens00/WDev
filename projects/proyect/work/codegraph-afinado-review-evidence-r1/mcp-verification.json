@@ -1,0 +1,63 @@
+{
+  "roots": [
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/real-missiles",
+      "query": "RapidFire.RapidPair.emit RapidFire.RapidPair.face",
+      "transitions": {
+        "create": {
+          "passed": true,
+          "ms": 402
+        },
+        "modify": {
+          "passed": true,
+          "ms": 602
+        },
+        "delete": {
+          "passed": true,
+          "ms": 402
+        }
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/real-inventory",
+      "query": "TerrainInventory Inventory",
+      "transitions": {
+        "create": {
+          "passed": true,
+          "ms": 402
+        },
+        "modify": {
+          "passed": true,
+          "ms": 602
+        },
+        "delete": {
+          "passed": true,
+          "ms": 402
+        }
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-afinado-vjass-20261021/real-ui-studio",
+      "query": "screenToUI uiToScreen",
+      "transitions": {
+        "create": {
+          "passed": true,
+          "ms": 402
+        },
+        "modify": {
+          "passed": true,
+          "ms": 602
+        },
+        "delete": {
+          "passed": true,
+          "ms": 401
+        }
+      }
+    }
+  ],
+  "server": {
+    "name": "codegraph",
+    "version": "1.6.2+jass-vjass.2"
+  },
+  "passed": true
+}

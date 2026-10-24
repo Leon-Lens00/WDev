@@ -1,0 +1,13 @@
+`Jass.trace → Jass.print` is a **direct call**, with no intermediate function or callback wiring.
+
+- Both are private functions inside `library Jass` ([Jass.j:1](Jass.j:1), [Jass.j:99](Jass.j:99), [Jass.j:103](Jass.j:103)).
+- `trace(s)` unconditionally executes `call print(s)`, forwarding the same string, then returns `0.0` ([Jass.j:104](Jass.j:104), [Jass.j:105](Jass.j:105)).
+- `print(s)` unconditionally calls `DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 120, s)` ([Jass.j:100](Jass.j:100)).
+
+Thus the complete source-level path is:
+
+`trace(s) → print(s) → DisplayTimedTextToPlayer(...)`, with `GetLocalPlayer()` supplying the recipient.
+
+There are no guards or debug conditions on this path. The separate `assert → error → print` path runs when `not b`; it is not an intermediary for `trace` ([Jass.j:108](Jass.j:108), [Jass.j:114](Jass.j:114)).
+
+`codegraph_explore` was unavailable. Read-only source search found no callers of `trace`, so actual runtime invocation is unestablished.

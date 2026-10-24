@@ -1,0 +1,16 @@
+{
+  "variant": "project-policy",
+  "model": "gpt-6.1-sol",
+  "effort": "high",
+  "repeats": 2,
+  "fresh_sessions": true,
+  "policy": "identical conditional CodeGraph-first policy in both arms, matching user project AGENTS",
+  "not_identical_to": "upstream Claude/sonnet harness; CLI consumer and provider differ",
+  "natural_preflight": "Preserved in preflight-*; first with-arm did not select MCP. No automatic natural adoption or speedup claimed.",
+  "script_sha256": "4d859395f9edd1773a56e1edaf64d20870bdab8dea2a68e15221751af71477f5",
+  "limitations": "Command audit instead of Claude PreToolUse CLI shim. Read-only session; no execution of project code. Both arms ignore global config/project docs, use same explicit retrieval policy. Watcher disabled, timing includes per-session MCP startup. Skill metadata warning occurs in both arms.",
+  "candidate_tree_sha256": "d3daa5f81f8254d5fe8f3ae59d506fd9dd638e847b73e559d4bf66cf3c660846",
+  "runtime": "1.6.2+jass-vjass.4",
+  "extraction_version": 31,
+  "read_grep_accounting": "Commands are separately audited: listing/pwd is not a source Read/Grep, rg on source or nl/sed/cat is. Failed tool calls count in totals. Negative exclusion globs do not constitute reading SQLite."
+}

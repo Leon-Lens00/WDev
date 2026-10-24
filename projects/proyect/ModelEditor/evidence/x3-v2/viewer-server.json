@@ -1,0 +1,6 @@
+{
+  "pid": 769017,
+  "command": "python -m http.server 8764 --bind 127.0.0.1 --directory ModelEditor/viewer/x3",
+  "url": "http://127.0.0.1:8764/",
+  "log": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/evidence/x3-v2/viewer-server.log"
+}

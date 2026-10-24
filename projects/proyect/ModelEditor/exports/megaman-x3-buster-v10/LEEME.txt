@@ -1,0 +1,12 @@
+X3 Buster A — V10 | Warcraft III Classic 1.27b | MDX800
+
+Verde eléctrico interior, entre cuerpo azul y flujo rosa. Cuatro trazos de rayo con quiebres distintos y fases desfasadas0/30/60/90ms. Cada rayo recorre hacia la cola en100ms y repite cada120ms. Mezcla alfa para conservar el verde sobre la luz clara; bordes suaves, geometría angular.
+Rosa V9 conservado: oleada cada240ms, recorrido210ms. Núcleo blanco, cuerpo/cola azul, envoltura continua,11emisores y1ribbon deV7 conservados. Punta y raíz permanecen en(0,0,0), frente+X. No traslación mundial exportada.
+
+Importación: A-Buster/X3_Buster_Cargado.mdx y15texturas de A-Buster/X3BusterV10. Rutas internas X3BusterV10\Nombre.blp. MDL editable incluido.
+Birth0–160ms, Stand200–1160ms, Death1300–1720ms.3150triángulos. Frente aV9 añade40triángulos,1textura y4animacionesUV; conserva los emisores. No se midieronFPS.
+
+RITMO-1X.gif:12capturas del MDX con pasos20ms, ciclo de240ms; partículas al inicio deStand, no captura de FPS. DETALLE-05X.gif: mismos cuadros a media velocidad. Visor orbital: http://127.0.0.1:34801/x3-v10/ mientras el servidor local esté activo.
+V9/V8/V7 y susZIP permanecen intactos. B/C continúan enV4. Sólo modeloA; física e interacción quedan fuera.
+
+Créditos: Vinz, ShotsVol.II https://www.hiveworkshop.com/threads/shots-vol-ii.315512/ (geometría/UV/apilado y emisores adaptados). Mega Man X3: Capcom; sprites Random Talking Bush/Spriters Resource; referencia animada Retropixel. Interpretación3D;120/240ms son decisiones artísticas, no tiempos nativos SNES comprobados.

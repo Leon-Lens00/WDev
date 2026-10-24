@@ -1,0 +1,689 @@
+
+
+
+	Item Set
+
+
+
+Enables the creation of item groups, which form gathered together an item set.
+
+
+
+
+
+
+
+	
+
+		Example Picture
+	
+	
+
+		
+
+			
+
+
+		
+	
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+Core - Item Set​
+How to use ItemSet​
+Extension​
+
+
+
+
+library ItemSet
+
+Requirements
+
+Optional requirements ( hot )
+
+
+
+
+Equipment systems
+
+
+
+
+Demo code
+
+Development
+
+
+
+library ItemSet
+
+
+
+ItemSet was firstly submitted in my Equipment Package. It should be mentioned that ItemSet
+
+can be easily combined with any inventory system including the standard Warcraft III inventory.
+
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library ItemSet /* v2.5
+*************************************************************************************
+*
+*   ItemSet allows to create "item sets" as known from various other games.
+*   Bonuses are applied to an unit, depending on the number of equipped items
+*   of that item set.
+*
+*   One item set can have as many bonuses as you want.
+*   Upper bound for bonus instancing is 8190.
+*
+*   Available bonuses are:
+*       1. Abilities
+*
+*   Optional bonuses, if libraries exist:
+*       2.  ItemPower ( BPower ) for custom item affixes.
+*       3a. BonusMod ( Earthfury ) for excellent bonus handling ( Life, Mana, Agility, ... ).
+*       3b. Bonus ( Nestharus ) equals BonusMod in API and functionality. I recommend "BonusMod" over "Bonus".
+*
+*************************************************************************************
+*
+*   */ uses /*
+*  
+*       */ optional Bonus        /* https://github.com/nestharus/JASS/tree/master/jass/Systems/Bonus
+*       */ optional BonusMod     /* http://www.wc3c.net/showthread.php?t=107940
+*       */ optional ItemPower    /* https://www.hiveworkshop.com/forums/spells-569/itempower-v1-1-0-0-a-243917/
+*       */ optional ErrorMessage /* https://raw.githubusercontent.com/nestharus/JASS/master/jass/Systems/ErrorMessage/script.j
+*
+************************************************************************************
+*
+*   1. Import instruction
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*       Copy the ItemSet script into your map.
+*       Libraries listed as optional are not mandatory to have.
+*                           ¯¯¯¯¯¯¯¯
+*   2. API
+*   ¯¯¯¯¯¯
+*
+*       readonly static constant integer COMPLETE    = 0
+*       readonly static constant integer INCOMPLETE  = 1
+*       function RegisterItemSetEvent takes integer whichEvent, code func returns nothing
+*           --> GetTriggerItemSet() returns the event ItemSet
+*           --> GetTriggerItemSetUnit() returns the event unit
+*           --> GetTriggerItemSetEventId() returns the event integer ( COMPLETE, INCOMPLETE )
+*
+*
+*       struct ItemSet extends array
+*  
+*           Creator:
+*               static method create takes string name, string model, string attachPointName returns thistype
+*                   --> create a new ItemSet instance. Each item set has a name, an effect model and an attach point.
+*                           - Can take null as effect model, if a specialeffect is not wanted.
+*
+*           Adding items:
+*               method addItem takes integer itemId returns nothing
+*                   --> Add an item to an ItemSet instance. One item id can only be linked to one ItemSet instance.
+*
+*           Adding ItemSet Bonuses:
+*               method addAbility takes integer itemCount, integer abilityId returns nothing
+*                   --> Adds an ability to the instace as ItemSet bonus.
+*                   --> Arguments:
+*                       - itemCount : How many items are required to apply the ability.
+*                       - abilityId : Which ability
+*              
+*               Only available if library ItemPower exists:
+*                                         ¯¯¯¯¯¯¯¯¯
+*               method addItemPower takes integer itemCount, integer power, real value returns nothing
+*                   --> Adds an ItemPower to the instace as ItemSet bonus.
+*                   --> Arguments:
+*                       - itemCount: How many items are required to apply the ItemPower.
+*                       - power    : Which ItemPower
+*                       - value    : The amount added to that units ItemPower.
+*
+*               Only available if library Bonus exists:
+*                                         ¯¯¯¯¯
+*               method addBonus takes integer itemCount, integer bonus, integer value returns nothing
+*                   --> Adds an Bonus to the instance as ItemSet bonus.
+*                   --> Arguments:
+*                       - itemCount: How many items are required to apply the Bonus.
+*                       - bonus    : Which Bonus
+*                       - value    : The amount added to that units Bonus.
+*
+*               method addBuffIndicator takes integer itemCount, integer abilityId, integer buffId returns nothing
+*                   --> Adds a buff placer to the instance.
+*                   --> Arguments:
+*                       - itemCount : How many items are required to apply the buff.
+*                       - abilityId : Ability id of the buff placer.
+*                       - buffId    : Ability id of the buff.
+*
+*               static method onItemUnequip takes unit whichUnit, integer itemId returns nothing
+*               static method onItemEquip takes unit whichUnit, integer itemId returns nothing
+*                   --> Run these two using your inventory system.
+*                   --> Can use the normal warcraft inventory aswell.
+*
+*           static method operator [] takes integer itemId returns thistype
+*               --> Returns the corresponding ItemSet instance for an item id.
+*
+*           readonly string name
+*               --> ItemSet name
+*
+*       Unit Indexer implementation: ( Optional )
+*
+*           static method onUnitDeindex takes unit whichUnit returns nothing
+*               --> Run this function on unit deindex event for best hashtable cleanup.
+*
+*   3. Configuration
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*/
+    globals
+       
+        /**
+        *   Identifies the type of bonus added to the ItemSet instance.
+        */
+        key ITEM_SET_BONUS_TYPE_ABILITY    
+        key ITEM_SET_BONUS_TYPE_ITEM_POWER  
+        key ITEM_SET_BONUS_TYPE_BONUS
+       
+        /**
+        *   Should completed ItemSets add a special effect to the unit?
+        */
+        private constant boolean ADD_SPECIAL_EFFECT_TARGET = true
+
+    endglobals
+
+//ItemSet code. Edit on your own risk.
+    private struct ItemSetBonus extends array
+   
+        // ItemSetBonus instances are constant data, so there is no need for a recycler.
+        private static integer alloc = 0
+       
+        integer requiredItems
+        integer bonus    // bonus can be of type ability, ItemPower or Bonus.
+        integer bonusType
+       
+    //static if LIBRARY_ItemPower then
+        real    itemPowerAmount 
+    //endif
+   
+    //static if LIBRARY_Bonus then
+        integer bonusAmount
+    //endif
+   
+        // ItemSets are constant. Contact me, if you want to design them dynamically.
+        static method create takes integer counter, integer bonusTypeId, integer bonusId, real itemPowerValue, integer bonusValue returns ItemSetBonus
+            local ItemSetBonus this = ItemSetBonus(ItemSetBonus.alloc + 1)
+            set ItemSetBonus.alloc  = integer(this)
+
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError((this == 8191), "ItemSetBonus", "create", "thistype", 8191, "Overflow!")
+            else
+                debug if (this == 8191) then
+                    debug call DisplayTimedTextToPlayer(GetLocalPlayer(), 0., 0., 10000. ,SCOPE_PREFIX + "FATAL ERROR: Overflow! Stopping Thread!")
+                    debug set this = 1/0
+                debug endif
+            endif
+           
+            set requiredItems   = counter
+            set bonus           = bonusId
+            set bonusType       = bonusTypeId
+           
+            set itemPowerAmount = itemPowerValue
+            set bonusAmount     = bonusValue
+           
+            return this
+        endmethod
+    endstruct
+   
+    struct ItemSet extends array
+        // Event id's.
+        readonly static constant integer COMPLETE   = 0
+        readonly static constant integer INCOMPLETE = 1
+        // Event response variables. 
+        // Wrapper functions are located below struct ItemSet. 
+        readonly static unit    triggerUnit         = null
+        readonly static integer triggerEventId      = -1
+        readonly static ItemSet triggerItemSet      = 0
+    
+        // Allocation:
+        private static integer alloc  = 0
+       
+        // Members:
+        readonly string name          // Name of the ItemSet
+       
+        private integer bonuses       // Keep track of how many Bonuses an ItemSet has.
+        private integer maxItemCount  // Keep track of how many items an ItemSet has.
+        private string sfx                      
+        private string point                
+       
+        private static hashtable hash = InitHashtable()
+       
+        private static trigger incompleted = CreateTrigger()
+        private static trigger completed   = CreateTrigger()
+        
+        private static constant integer BUFF_BUFF_ID_OFFSET    = 20000
+        private static constant integer BUFF_ABILITY_ID_OFFSET = 10000
+        
+        static method registerEvent takes integer whichEvent, boolexpr expression returns nothing
+            if (whichEvent == ItemSet.COMPLETE) then
+                call TriggerAddCondition(ItemSet.completed, expression)
+            elseif (whichEvent == ItemSet.INCOMPLETE) then
+                call TriggerAddCondition(ItemSet.incompleted, expression)
+            debug else
+                debug call BJDebugMsg(SCOPE_PREFIX + "Error: Invalid ItemSet event index [" + I2S(whichEvent) + "]!")
+            endif
+        endmethod
+       
+        static method operator [] takes integer itemId returns ItemSet
+            return ItemSet(LoadInteger(ItemSet.hash, 0, itemId))
+        endmethod
+       
+        private method fire takes trigger whichTrigger, unit whichUnit, integer id returns nothing
+            local ItemSet prevItemSet  = ItemSet.triggerItemSet
+            local unit    prevUnit     = ItemSet.triggerUnit
+            local integer prevEv       = ItemSet.triggerEventId
+            set ItemSet.triggerItemSet = this
+            set ItemSet.triggerUnit    = whichUnit
+            set ItemSet.triggerEventId = id
+            call TriggerEvaluate(whichTrigger)
+            set ItemSet.triggerItemSet = prevItemSet
+            set ItemSet.triggerUnit    = prevUnit  
+            set ItemSet.triggerEventId = prevEv
+            set prevUnit               = null
+        endmethod
+       
+        private method itemSetComplete takes unit whichUnit returns nothing
+            if (sfx != null) then
+                static if ADD_SPECIAL_EFFECT_TARGET then
+                    call SaveEffectHandle(hash, GetHandleId(whichUnit), this, AddSpecialEffectTarget(sfx, whichUnit, point)) 
+                else
+                    call DestroyEffect(AddSpecialEffectTarget(sfx, whichUnit, point))
+                endif
+            endif
+            call fire(ItemSet.completed, whichUnit, ItemSet.COMPLETE)
+        endmethod
+       
+        private method itemSetIncomplete takes unit whichUnit returns nothing
+           
+            static if ADD_SPECIAL_EFFECT_TARGET then
+                local integer id = GetHandleId(whichUnit)
+                if HaveSavedHandle(hash, id, this) then
+                    call DestroyEffect(LoadEffectHandle(hash, id, this))
+                    call RemoveSavedHandle(hash, id, this)
+                endif
+            endif
+           
+            call fire(ItemSet.incompleted, whichUnit, ItemSet.INCOMPLETE)
+        endmethod
+
+        private method remove takes unit whichUnit, integer itemCounter returns nothing
+            local integer index = 0
+            local ItemSetBonus toRemove
+            local integer child
+            loop
+                exitwhen index == bonuses
+ 
+                    set toRemove = ItemSetBonus(LoadInteger(hash, this, index))
+                    if (toRemove.requiredItems == itemCounter) then
+
+                        if (toRemove.bonusType == ITEM_SET_BONUS_TYPE_ABILITY) then
+                            call UnitRemoveAbility(whichUnit, toRemove.bonus)                          
+
+                        // Impossible to exclude via optional textmacro/module, ....
+                        elseif (toRemove.bonusType == ITEM_SET_BONUS_TYPE_ITEM_POWER) then
+                            static if LIBRARY_ItemPower then
+                                call ItemPower_UnitManipulate(whichUnit, toRemove.bonus, -toRemove.itemPowerAmount)
+                            endif
+                               
+                        elseif (toRemove.bonusType == ITEM_SET_BONUS_TYPE_BONUS) then
+                            static if LIBRARY_Bonus then
+                                call AddUnitBonus(whichUnit, toRemove.bonus, -toRemove.bonusAmount)
+                            elseif LIBRARY_BonusMod then
+                                call AddUnitBonus(whichUnit, toRemove.bonus, -toRemove.bonusAmount)
+                            endif
+
+                       
+                        endif
+                       
+                    endif
+                set index = index + 1
+            endloop
+
+            set child = itemCounter + BUFF_ABILITY_ID_OFFSET
+            if HaveSavedInteger(hash, this, child) then
+                call UnitRemoveAbility(whichUnit, LoadInteger(hash, this, child))
+                call UnitRemoveAbility(whichUnit, LoadInteger(hash, this, itemCounter + BUFF_BUFF_ID_OFFSET))
+            endif
+           
+           set child = itemCounter + BUFF_ABILITY_ID_OFFSET - 1
+            if HaveSavedInteger(hash, this, child) then
+                call UnitAddAbility(whichUnit, LoadInteger(hash, this, child))
+                call UnitMakeAbilityPermanent(whichUnit, true, LoadInteger(hash, this, itemCounter + BUFF_ABILITY_ID_OFFSET - 1))
+            endif
+           
+            if (itemCounter == maxItemCount) then
+                call itemSetIncomplete(whichUnit)
+            endif
+        endmethod
+       
+        static method onItemUnequip takes unit whichUnit, integer itemId returns nothing
+            local integer id  = GetHandleId(whichUnit)
+            local ItemSet this
+
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowWarning((id == 0), "ItemSet", "onItemUnequip", "id", id, "Invalid Unit Handle (null)!")
+            endif
+           
+            if (HaveSavedInteger(hash, 0, itemId)) and (id != 0) then
+                call SaveInteger(hash, id, itemId, LoadInteger(hash, id, itemId) - 1)
+                if (LoadInteger(hash, id, itemId) == 0) then
+                    call RemoveSavedInteger(hash, id, itemId)
+
+                    set this   = LoadInteger(ItemSet.hash, 0, itemId)
+                    call remove(whichUnit, LoadInteger(hash, id, this))
+                    call SaveInteger(hash, id, this, LoadInteger(hash, id, this) - 1)
+                    
+               endif
+            endif
+        endmethod
+       
+        private method add takes unit whichUnit, integer itemCounter returns nothing
+            local integer index = 0
+            local ItemSetBonus toAdd
+            local integer child
+
+            loop
+                // Loop through all ItemSetBonuses created for this ItemSet.
+                exitwhen index == bonuses
+ 
+                    //Load the current Bonus.
+                    set toAdd = ItemSetBonus(LoadInteger(hash, this, index))
+
+                    //A Bonus is only applied if the numer of carried items equals its counter.
+                    if (toAdd.requiredItems == itemCounter) then
+                   
+                        if (toAdd.bonusType == ITEM_SET_BONUS_TYPE_ABILITY) then
+                            call UnitAddAbility(whichUnit, toAdd.bonus)
+                            call UnitMakeAbilityPermanent(whichUnit, true, toAdd.bonus)                            
+                       
+                        elseif (toAdd.bonusType == ITEM_SET_BONUS_TYPE_ITEM_POWER) then
+                            static if LIBRARY_ItemPower then
+                                call ItemPower_UnitManipulate(whichUnit, toAdd.bonus, toAdd.itemPowerAmount)
+                            endif
+                               
+                        elseif (toAdd.bonusType == ITEM_SET_BONUS_TYPE_BONUS) then
+                            static if LIBRARY_Bonus then
+                                call AddUnitBonus(whichUnit, toAdd.bonus, toAdd.bonusAmount)
+                            elseif LIBRARY_BonusMod then
+                                call AddUnitBonus(whichUnit, toAdd.bonus, toAdd.bonusAmount)
+                            endif
+                           
+                        endif  
+                    endif
+                //Move on to the next loop index.
+                set index = index + 1
+            endloop
+            
+            set child = itemCounter + BUFF_ABILITY_ID_OFFSET
+            if HaveSavedInteger(hash, this, child) then
+                call UnitAddAbility(whichUnit, LoadInteger(hash, this, child))
+                call UnitMakeAbilityPermanent(whichUnit, true, LoadInteger(hash, this, child))
+            endif
+            // Check if prev item amount holds a buff.
+            set child = itemCounter + BUFF_ABILITY_ID_OFFSET - 1
+            if HaveSavedInteger(hash, this, child) then
+                call UnitRemoveAbility(whichUnit, LoadInteger(hash, this, child))
+                call UnitRemoveAbility(whichUnit, LoadInteger(hash, this, itemCounter + BUFF_BUFF_ID_OFFSET - 1))
+            endif
+
+            //Check if the ItemSet is completed.
+            if (itemCounter == maxItemCount) then
+                call itemSetComplete(whichUnit)
+            endif
+        endmethod
+       
+        static method onItemEquip takes unit whichUnit, integer itemId returns nothing
+            local integer id  = GetHandleId(whichUnit)
+            local ItemSet this
+           
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowWarning((id == 0), "ItemSet", "onItemEquip", "id", id, "Invalid Unit Handle ( null )!")
+            endif
+           
+            // Is item in database and the unit exists.
+            if (HaveSavedInteger(hash, 0, itemId)) and (id != 0) then
+                // Keep track how often that item was equipped. 
+                call SaveInteger(hash, id, itemId, LoadInteger(hash, id, itemId) + 1)
+                // Bonuses are only applied on the first item of that type.
+                if (LoadInteger(hash, id, itemId) == 1) then  
+                    
+                    set this = LoadInteger(hash, 0, itemId)
+                    call SaveInteger(hash, id, this, LoadInteger(hash, id, this) + 1)
+               
+                    //Apply bonuses associated with that ItemSet counter.
+                    call add(whichUnit, LoadInteger(hash, id, this))
+                endif
+            endif
+        endmethod
+        
+        method addBuffIndicator takes integer itemCount, integer abilityId, integer buffId returns nothing
+            call SaveInteger(hash, this, itemCount + BUFF_ABILITY_ID_OFFSET, abilityId)
+            call SaveInteger(hash, this, itemCount + BUFF_BUFF_ID_OFFSET,       buffId)
+        endmethod
+       
+        method addBonus takes integer itemCount, integer bonusType, integer amount returns nothing
+            call SaveInteger(hash, this, bonuses, ItemSetBonus.create(itemCount, ITEM_SET_BONUS_TYPE_BONUS, bonusType, 0., amount))
+            set bonuses = bonuses + 1
+        endmethod
+       
+        method addItemPower takes integer itemCount, integer power, real value returns nothing
+            call SaveInteger(hash, this, bonuses, ItemSetBonus.create(itemCount, ITEM_SET_BONUS_TYPE_ITEM_POWER, power, value, 0))
+            set bonuses = bonuses + 1
+        endmethod
+
+        method addAbility takes integer itemCount, integer abilityId returns nothing
+            call SaveInteger(hash, this, bonuses, ItemSetBonus.create(itemCount, ITEM_SET_BONUS_TYPE_ABILITY, abilityId, 0., 0)) 
+            set bonuses = bonuses + 1
+        endmethod
+       
+        method addItem takes integer itemId returns nothing
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError(HaveSavedInteger(hash, 0, itemId), "ItemSet", "addItem", "itemId", this, "Adding Item Ids To Two Different ItemSets Is Not Allowed: " + GetObjectName(itemId))
+                debug call ThrowError(itemId == 0              ,         "ItemSet", "addItem", "itemId", this, "Invalid Item Id (0)!")
+            endif
+           
+            call SaveInteger(hash, 0, itemId, this)
+            set maxItemCount = maxItemCount + 1
+        endmethod
+
+        static method create takes string itemSetName, string modelName, string attachPointName returns thistype
+            local ItemSet this = ItemSet(ItemSet.alloc + 1)
+            set ItemSet.alloc  = integer(this)
+
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError((this == 8191), "ItemSet", "create", "thistype", 8191, "Overflow!")
+            else
+                debug if (this == 8191) then
+                    debug call DisplayTimedTextToPlayer(GetLocalPlayer(), 0., 0., 10000. ,SCOPE_PREFIX + "FATAL ERROR: Overflow! Stopping Thread!")
+                    debug set this = 1/0
+                debug endif
+            endif
+           
+            set name  = itemSetName
+            set sfx   = modelName
+            set point = attachPointName
+           
+            return this
+        endmethod 
+        
+        /**
+        *   Call this method for best hashtable cleanup.
+        */
+        static method onUnitDeindex takes unit whichUnit returns nothing
+            local integer id = GetHandleId(whichUnit)
+            if (0 != GetUnitTypeId(whichUnit)) and (0 != id) then
+                call FlushChildHashtable(thistype.hash, id)
+            endif
+        endmethod
+       
+    endstruct
+    
+    /**
+    *   Wrapper functions.
+    */
+    function GetTriggerItemSetEventId takes nothing returns integer
+        return ItemSet.triggerEventId
+    endfunction
+   
+    function GetTriggerItemSetUnit takes nothing returns unit
+        return ItemSet.triggerUnit
+    endfunction
+   
+    function GetTriggerItemSet takes nothing returns ItemSet
+        return ItemSet.triggerItemSet
+    endfunction
+   
+    function RegisterItemSetEvent takes integer whichEvent, code func returns nothing
+        call ItemSet.registerEvent(whichEvent, Condition(func))
+    endfunction
+   
+endlibrary
+	
+
+
+Requirements
+
+
+
+Important: In order to compile ItemSet you'll need JPNG. Furthermore a basic understanding of vJass or JASS.
+
+
+
+By default library ItemSet has no external requirements. However you can extend it's functionality by 
+
+using multiple optional requirements like i.e. BonusMod in your map. 
+
+A link to Equipment has added, as ItemSet is optionally implemented in it and requires no extra setup from your side.
+
+
+
+
+
+Optional requirements
+
+
+
+ItemSet can use a few optional requirements ( JassHelper link ), once they exists in your map file.
+
+Each optional requirement extends the functionality of ItemSet by those libraries purposes.
+
+
+
+Important: Using more than one requirement of each block has no benefit at all! It would be counterproductive for your map!
+
+
+
+
+
+
+
+
+
+Hero Stats​
+Custom Stats​
+Debugging​
+
+
+
+
+Bonus ( Requires LUA knowledge, recommended )
+
+BonusMod ( highly recommended)
+
+
+
+
+ItemPower ( useful )
+
+
+
+
+ErrorMessage ( Useful )
+
+
+
+
+
+Equipment system
+
+
+
+ItemSet is designed to work with any equipment system ever created, as well as the standard Warcraft III inventory.
+
+Call those two function on your equip/unequip event:
+
+static method onItemUnequip takes unit whichUnit, integer itemId returns nothing
+
+static method onItemEquip takes unit whichUnit, integer itemId returns nothing
+
+ 
+
+
+
+Demo Code
+
+
+
+I attached a demo map, which shows how to use ItemSet. A more advanced demo can be
+
+found in my Equipment Package thread ( see link above or check my resources )
+
+
+
+
+
+Development
+
+
+
+The current vesion of ItemSet seems to be stable and working. If you experience any bugs/error
+
+please report them in the thread. I'm going to fix them as soon as possible.
+
+
+
+
+
+Keywords:
+
+item, itemset, set

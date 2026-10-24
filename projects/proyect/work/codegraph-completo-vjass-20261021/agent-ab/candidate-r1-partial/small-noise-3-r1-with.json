@@ -1,0 +1,31 @@
+{
+  "repo": "small-noise",
+  "flow": 3,
+  "names": [
+    "Noise.Noise.openSimplex2D",
+    "Noise.Noise.extrapolate2D"
+  ],
+  "repetition": 1,
+  "arm": "with",
+  "exit": 0,
+  "seconds": 27.217064520998974,
+  "usage": {
+    "input_tokens": 56246,
+    "cached_input_tokens": 45696,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 873,
+    "reasoning_output_tokens": 164
+  },
+  "commands": 0,
+  "command_text": [],
+  "mcp": 1,
+  "mcp_tools": [
+    "codegraph_explore"
+  ],
+  "mcp_errors": [],
+  "forbidden_commands": [],
+  "source_hashes_unchanged": true,
+  "session_ids": [
+    "01a1620a-4061-7192-a615-0ce831e707e3"
+  ]
+}

@@ -1,0 +1,821 @@
+[
+  {
+    "id": "Sch2",
+    "base": "Sch2",
+    "section": 0,
+    "strings": {
+      "areq:0": " "
+    }
+  },
+  {
+    "id": "Aro2",
+    "base": "Aro2",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "Afla",
+    "base": "Afla",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "Afae",
+    "base": "Afae",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "AEfk",
+    "base": "AEfk",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "AHdr",
+    "base": "AHdr",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "AIsr",
+    "base": "AIsr",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "AUls",
+    "base": "AUls",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "Aivs",
+    "base": "Aivs",
+    "section": 0,
+    "strings": {
+      "anam:0": "TRIGSTR_077",
+      "areq:0": ""
+    }
+  },
+  {
+    "id": "Atau",
+    "base": "Atau",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "Aneu",
+    "base": "Aneu",
+    "section": 0,
+    "strings": {
+      "anam:0": ""
+    }
+  },
+  {
+    "id": "Amov",
+    "base": "Amov",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "ACsw",
+    "base": "ACsw",
+    "section": 0,
+    "strings": {}
+  },
+  {
+    "id": "Aien",
+    "base": "Aien",
+    "section": 0,
+    "strings": {
+      "areq:0": ""
+    }
+  },
+  {
+    "id": "Aihn",
+    "base": "Aihn",
+    "section": 0,
+    "strings": {
+      "areq:0": ""
+    }
+  },
+  {
+    "id": "A000",
+    "base": "AHtb",
+    "section": 1,
+    "strings": {
+      "atar:1": "air,ground",
+      "atar:2": "air,ground",
+      "atar:3": "air,ground",
+      "amat:0": "",
+      "ahky:0": "TRIGSTR_078"
+    }
+  },
+  {
+    "id": "AS00",
+    "base": "ANso",
+    "section": 1,
+    "strings": {
+      "atar:1": "vuln,invu,alive,dead"
+    }
+  },
+  {
+    "id": "A010",
+    "base": "AOsw",
+    "section": 1,
+    "strings": {
+      "aub1:1": "",
+      "aub1:2": "",
+      "aub1:3": "",
+      "Hwe1:1": "h012",
+      "Hwe1:2": "h012",
+      "Hwe1:3": "h012",
+      "Hwe1:4": "h012",
+      "Hwe1:5": "h012",
+      "atp1:1": "",
+      "atp1:2": "",
+      "atp1:3": "",
+      "arac:0": "creeps",
+      "anam:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp",
+      "ahky:0": ""
+    }
+  },
+  {
+    "id": "A001",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "Ncl6:1": "curse",
+      "auar:0": "ReplaceableTextures\\CommandButtons\\BTNDeathPact.blp",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "ahky:0": "TRIGSTR_066"
+    }
+  },
+  {
+    "id": "S001",
+    "base": "Sshm",
+    "section": 1,
+    "strings": {}
+  },
+  {
+    "id": "AB01",
+    "base": "Aslo",
+    "section": 1,
+    "strings": {
+      "aub1:1": "",
+      "atp1:1": "",
+      "aut1:1": "",
+      "auu1:1": "",
+      "ansf:0": "TRIGSTR_285",
+      "abuf:1": "BB01",
+      "auhk:0": "",
+      "anam:0": "TRIGSTR_284",
+      "atar:1": "alive",
+      "auar:0": "",
+      "acat:0": "",
+      "aart:0": "",
+      "ahky:0": ""
+    }
+  },
+  {
+    "id": "AM01",
+    "base": "Aexh",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_306",
+      "aub1:2": "TRIGSTR_307",
+      "aub1:3": "TRIGSTR_308",
+      "aub1:4": "TRIGSTR_309",
+      "aub1:5": "TRIGSTR_310",
+      "atp1:1": "TRIGSTR_113",
+      "atp1:2": "TRIGSTR_114",
+      "atp1:3": "TRIGSTR_127",
+      "atp1:4": "TRIGSTR_128",
+      "atp1:5": "TRIGSTR_129",
+      "anam:0": "TRIGSTR_130",
+      "areq:0": "",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASBloodOrb2.blp",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\PASBloodOrb2.blp",
+      "exhu:2": "ugho",
+      "exhu:3": "ugho",
+      "exhu:4": "ugho",
+      "exhu:5": "ugho"
+    }
+  },
+  {
+    "id": "AS01",
+    "base": "Amfl",
+    "section": 1,
+    "strings": {}
+  },
+  {
+    "id": "AU01",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_283",
+      "atp1:1": "TRIGSTR_311",
+      "aut1:1": "TRIGSTR_273",
+      "auu1:1": "TRIGSTR_255",
+      "Ncl6:1": "ambush",
+      "aord:0": "",
+      "auhk:0": "TRIGSTR_229",
+      "anam:0": "TRIGSTR_358",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalConvergence.blp",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNFrostMourne.blp",
+      "ahky:0": "TRIGSTR_230"
+    }
+  },
+  {
+    "id": "A011",
+    "base": "AIsa",
+    "section": 1,
+    "strings": {
+      "anam:0": ""
+    }
+  },
+  {
+    "id": "U0A1",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_353",
+      "atp1:1": "TRIGSTR_354",
+      "aut1:1": "TRIGSTR_291",
+      "auu1:1": "TRIGSTR_292",
+      "Ncl6:1": "avatar",
+      "aord:0": "",
+      "auhk:0": "TRIGSTR_357",
+      "anam:0": "TRIGSTR_227",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalConvergence.blp",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNFrostMourne.blp",
+      "ahky:0": "TRIGSTR_359"
+    }
+  },
+  {
+    "id": "A002",
+    "base": "Afla",
+    "section": 1,
+    "strings": {
+      "aeff:1": "",
+      "anam:0": "",
+      "areq:0": "",
+      "acat:0": ""
+    }
+  },
+  {
+    "id": "AM02",
+    "base": "Aexh",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_312",
+      "aub1:2": "TRIGSTR_313",
+      "aub1:3": "TRIGSTR_314",
+      "aub1:4": "TRIGSTR_315",
+      "aub1:5": "TRIGSTR_316",
+      "atp1:1": "TRIGSTR_159",
+      "atp1:2": "TRIGSTR_161",
+      "atp1:3": "TRIGSTR_162",
+      "atp1:4": "TRIGSTR_163",
+      "atp1:5": "TRIGSTR_164",
+      "anam:0": "TRIGSTR_165",
+      "areq:0": "",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASChaosOrb.blp",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\PASChaosOrb.blp",
+      "exhu:2": "ugho",
+      "exhu:3": "ugho",
+      "exhu:4": "ugho",
+      "exhu:5": "ugho"
+    }
+  },
+  {
+    "id": "A012",
+    "base": "Afae",
+    "section": 1,
+    "strings": {
+      "arac:0": "orc",
+      "abuf:1": "B001",
+      "anam:0": "",
+      "atar:1": "air,enemies,ground,nonancient,organic"
+    }
+  },
+  {
+    "id": "U0A2",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_280",
+      "atp1:1": "TRIGSTR_317",
+      "Ncl6:1": "avengerform",
+      "aord:0": "",
+      "auhk:0": "TRIGSTR_406",
+      "anam:0": "TRIGSTR_231",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalObliteration.blp",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNAttackGround.blp"
+    }
+  },
+  {
+    "id": "A003",
+    "base": "AIta",
+    "section": 1,
+    "strings": {
+      "auhk:0": "TRIGSTR_360",
+      "acat:0": "",
+      "ahky:0": "TRIGSTR_361"
+    }
+  },
+  {
+    "id": "AM03",
+    "base": "Aexh",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_318",
+      "aub1:2": "TRIGSTR_319",
+      "aub1:3": "TRIGSTR_320",
+      "aub1:4": "TRIGSTR_321",
+      "aub1:5": "TRIGSTR_322",
+      "atp1:1": "TRIGSTR_170",
+      "atp1:2": "TRIGSTR_172",
+      "atp1:3": "TRIGSTR_173",
+      "atp1:4": "TRIGSTR_174",
+      "atp1:5": "TRIGSTR_175",
+      "anam:0": "TRIGSTR_176",
+      "areq:0": "",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASDarknessOrb.blp",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\PASDarknessOrb.blp",
+      "exhu:2": "ugho",
+      "exhu:3": "ugho",
+      "exhu:4": "ugho",
+      "exhu:5": "ugho"
+    }
+  },
+  {
+    "id": "AS03",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "ata0:0": "",
+      "aub1:1": "TRIGSTR_108",
+      "aub1:2": "TRIGSTR_109",
+      "aub1:3": "TRIGSTR_110",
+      "atp1:1": "TRIGSTR_122",
+      "atp1:2": "TRIGSTR_104",
+      "atp1:3": "TRIGSTR_105",
+      "Ncl6:1": "stop",
+      "aord:0": "",
+      "aani:0": "stand",
+      "arhk:0": "TRIGSTR_123",
+      "auhk:0": "TRIGSTR_124",
+      "anam:0": "TRIGSTR_106",
+      "acap:0": "",
+      "arar:0": "ReplaceableTextures\\CommandButtons\\BTNStop.blp",
+      "atar:1": "invulnerable,vulnerable",
+      "atar:2": "invulnerable,vulnerable",
+      "atar:3": "invulnerable,vulnerable",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNStop.blp",
+      "ahky:0": "TRIGSTR_125"
+    }
+  },
+  {
+    "id": "A013",
+    "base": "AIsr",
+    "section": 1,
+    "strings": {
+      "anam:0": ""
+    }
+  },
+  {
+    "id": "U0A3",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_323",
+      "atp1:1": "TRIGSTR_324",
+      "aut1:1": "TRIGSTR_355",
+      "auu1:1": "TRIGSTR_356",
+      "Ncl6:1": "banish",
+      "aord:0": "",
+      "auhk:0": "TRIGSTR_293",
+      "anam:0": "TRIGSTR_294",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalConvergence.blp",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNWandOfNeutralization.blp",
+      "ahky:0": "TRIGSTR_295"
+    }
+  },
+  {
+    "id": "AM04",
+    "base": "Aexh",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_325",
+      "aub1:2": "TRIGSTR_326",
+      "aub1:3": "TRIGSTR_327",
+      "aub1:4": "TRIGSTR_328",
+      "aub1:5": "TRIGSTR_329",
+      "atp1:1": "TRIGSTR_181",
+      "atp1:2": "TRIGSTR_183",
+      "atp1:3": "TRIGSTR_184",
+      "atp1:4": "TRIGSTR_185",
+      "atp1:5": "TRIGSTR_186",
+      "anam:0": "TRIGSTR_187",
+      "areq:0": "",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASFireOrb.blp",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\PASFireOrb.blp",
+      "exhu:2": "ugho",
+      "exhu:3": "ugho",
+      "exhu:4": "ugho",
+      "exhu:5": "ugho"
+    }
+  },
+  {
+    "id": "AM05",
+    "base": "Aexh",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_330",
+      "aub1:2": "TRIGSTR_331",
+      "aub1:3": "TRIGSTR_332",
+      "aub1:4": "TRIGSTR_333",
+      "aub1:5": "TRIGSTR_334",
+      "atp1:1": "TRIGSTR_192",
+      "atp1:2": "TRIGSTR_335",
+      "atp1:3": "TRIGSTR_336",
+      "atp1:4": "TRIGSTR_337",
+      "atp1:5": "TRIGSTR_338",
+      "anam:0": "TRIGSTR_339",
+      "areq:0": "",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASLightningOrb.blp",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\PASLightningOrb.blp",
+      "exhu:2": "ugho",
+      "exhu:3": "ugho",
+      "exhu:4": "ugho",
+      "exhu:5": "ugho"
+    }
+  },
+  {
+    "id": "A015",
+    "base": "AOwk",
+    "section": 1,
+    "strings": {}
+  },
+  {
+    "id": "AM06",
+    "base": "Aexh",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_256",
+      "aub1:2": "TRIGSTR_257",
+      "aub1:3": "TRIGSTR_258",
+      "aub1:4": "TRIGSTR_259",
+      "aub1:5": "TRIGSTR_260",
+      "atp1:1": "TRIGSTR_261",
+      "atp1:2": "TRIGSTR_262",
+      "atp1:3": "TRIGSTR_263",
+      "atp1:4": "TRIGSTR_264",
+      "atp1:5": "TRIGSTR_265",
+      "anam:0": "TRIGSTR_266",
+      "areq:0": "",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISPASWindOrb.blp",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\PASWindOrb.blp",
+      "exhu:2": "ugho",
+      "exhu:3": "ugho",
+      "exhu:4": "ugho",
+      "exhu:5": "ugho"
+    }
+  },
+  {
+    "id": "A00D",
+    "base": "ANpi",
+    "section": 1,
+    "strings": {
+      "atp1:1": "",
+      "anam:0": "",
+      "atar:1": "air,enemies,ground,neutral,organic"
+    }
+  },
+  {
+    "id": "HDHD",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "ata0:0": "",
+      "aub1:1": "TRIGSTR_115",
+      "aub1:2": "TRIGSTR_116",
+      "aub1:3": "TRIGSTR_117",
+      "atp1:1": "TRIGSTR_107",
+      "atp1:2": "TRIGSTR_118",
+      "atp1:3": "TRIGSTR_119",
+      "Ncl6:1": "smart",
+      "aord:0": "",
+      "aani:0": "stand",
+      "anam:0": "TRIGSTR_120",
+      "acap:0": "",
+      "arar:0": "ReplaceableTextures\\CommandButtons\\BTNMove.blp",
+      "atar:1": "invulnerable,vulnerable",
+      "atar:2": "invulnerable,vulnerable",
+      "atar:3": "invulnerable,vulnerable",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNMove.blp",
+      "ahky:0": ""
+    }
+  },
+  {
+    "id": "A00E",
+    "base": "Apxf",
+    "section": 1,
+    "strings": {
+      "amat:0": ""
+    }
+  },
+  {
+    "id": "A00F",
+    "base": "Aneu",
+    "section": 1,
+    "strings": {
+      "atp1:1": ""
+    }
+  },
+  {
+    "id": "A00H",
+    "base": "ACfn",
+    "section": 1,
+    "strings": {
+      "arac:0": "nightelf",
+      "anam:0": "",
+      "atar:1": "air,ground,structure,enemy,neutral"
+    }
+  },
+  {
+    "id": "A00Q",
+    "base": "Aivs",
+    "section": 1,
+    "strings": {
+      "arac:0": "nightelf",
+      "areq:0": "",
+      "atat:0": ""
+    }
+  },
+  {
+    "id": "A00R",
+    "base": "AIil",
+    "section": 1,
+    "strings": {
+      "abuf:1": "",
+      "atat:0": ""
+    }
+  },
+  {
+    "id": "A00S",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "ata0:0": "",
+      "atp1:1": "",
+      "Ncl6:1": "awaken",
+      "Ncl6:2": "attack",
+      "Ncl6:3": "attack",
+      "Ncl6:4": "attack",
+      "Ncl6:5": "attack",
+      "Ncl6:6": "attack",
+      "Ncl6:7": "attack",
+      "Ncl6:8": "attack",
+      "Ncl6:9": "attack",
+      "Ncl6:10": "attack",
+      "aord:0": "",
+      "aani:0": "",
+      "anam:0": "",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNBreathOfFrost.blp",
+      "ahky:0": ""
+    }
+  },
+  {
+    "id": "A00T",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "ata0:0": "",
+      "aub1:1": "TRIGSTR_267",
+      "aub1:2": "TRIGSTR_268",
+      "aub1:3": "TRIGSTR_269",
+      "aub1:4": "TRIGSTR_270",
+      "aub1:5": "TRIGSTR_271",
+      "atp1:1": "",
+      "Ncl6:1": "blight",
+      "Ncl6:2": "blight",
+      "Ncl6:3": "blight",
+      "Ncl6:4": "blight",
+      "Ncl6:5": "blight",
+      "Ncl6:6": "attack",
+      "Ncl6:7": "attack",
+      "Ncl6:8": "attack",
+      "Ncl6:9": "attack",
+      "Ncl6:10": "attack",
+      "aord:0": "",
+      "aani:0": "Spell",
+      "anam:0": "",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNFrostArmor.blp",
+      "ahky:0": ""
+    }
+  },
+  {
+    "id": "A00U",
+    "base": "ACcb",
+    "section": 1,
+    "strings": {
+      "arac:0": "nightelf",
+      "abuf:1": "B000",
+      "anam:0": ""
+    }
+  },
+  {
+    "id": "A00V",
+    "base": "AOwk",
+    "section": 1,
+    "strings": {
+      "aub1:1": "",
+      "aub1:2": "",
+      "aub1:3": "",
+      "atp1:1": "",
+      "atp1:2": "",
+      "atp1:3": "",
+      "arac:0": "creeps",
+      "anam:0": "",
+      "aefs:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNPenguin.blp",
+      "ahky:0": ""
+    }
+  },
+  {
+    "id": "A00W",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "ata0:0": "",
+      "atp1:1": "",
+      "Ncl6:1": "blizzard",
+      "Ncl6:2": "blizzard",
+      "Ncl6:3": "blizzard",
+      "Ncl6:4": "blizzard",
+      "Ncl6:5": "blizzard",
+      "Ncl6:6": "attack",
+      "Ncl6:7": "attack",
+      "Ncl6:8": "attack",
+      "Ncl6:9": "attack",
+      "Ncl6:10": "attack",
+      "aord:0": "",
+      "aani:0": "Spell",
+      "anam:0": "",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNManaFlareOff.blp",
+      "ahky:0": ""
+    }
+  },
+  {
+    "id": "A00X",
+    "base": "Afae",
+    "section": 1,
+    "strings": {
+      "abuf:1": "B001",
+      "anam:0": "",
+      "atar:1": "air,enemies,ground,nonancient,organic"
+    }
+  },
+  {
+    "id": "A00Y",
+    "base": "AImz",
+    "section": 1,
+    "strings": {}
+  },
+  {
+    "id": "Skin",
+    "base": "Agra",
+    "section": 1,
+    "strings": {
+      "aub1:1": "",
+      "atp1:1": "",
+      "arac:0": "human",
+      "aani:0": "stand",
+      "anam:0": "TRIGSTR_093"
+    }
+  },
+  {
+    "id": "uDex",
+    "base": "Adef",
+    "section": 1,
+    "strings": {
+      "arac:0": "0",
+      "ansf:0": "TRIGSTR_079",
+      "anam:0": "TRIGSTR_080",
+      "acat:0": "",
+      "aart:0": ""
+    }
+  },
+  {
+    "id": "ADD0",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_393",
+      "atp1:1": "TRIGSTR_394",
+      "aut1:1": "TRIGSTR_395",
+      "auu1:1": "TRIGSTR_396",
+      "Ncl6:1": "flare",
+      "aord:0": "",
+      "auhk:0": "TRIGSTR_400",
+      "anam:0": "TRIGSTR_398",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalConvergence.blp",
+      "acat:0": "",
+      "aeat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNFrostMourne.blp",
+      "ahky:0": "TRIGSTR_401",
+      "atat:0": "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl"
+    }
+  },
+  {
+    "id": "U0A4",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_402",
+      "atp1:1": "TRIGSTR_408",
+      "aut1:1": "TRIGSTR_404",
+      "auu1:1": "TRIGSTR_405",
+      "Ncl6:1": "barkskin",
+      "aord:0": "",
+      "auhk:0": "TRIGSTR_418",
+      "anam:0": "TRIGSTR_407",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalConvergence.blp",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNWandOfShadowSight.blp",
+      "ahky:0": "TRIGSTR_419"
+    }
+  },
+  {
+    "id": "A004",
+    "base": "AIl2",
+    "section": 1,
+    "strings": {
+      "anam:0": "TRIGSTR_409"
+    }
+  },
+  {
+    "id": "A005",
+    "base": "AIl2",
+    "section": 1,
+    "strings": {
+      "anam:0": "TRIGSTR_410"
+    }
+  },
+  {
+    "id": "U0A5",
+    "base": "ANcl",
+    "section": 1,
+    "strings": {
+      "aub1:1": "TRIGSTR_411",
+      "atp1:1": "TRIGSTR_420",
+      "aut1:1": "TRIGSTR_413",
+      "auu1:1": "TRIGSTR_414",
+      "Ncl6:1": "cripple",
+      "aord:0": "",
+      "auhk:0": "TRIGSTR_233",
+      "anam:0": "TRIGSTR_416",
+      "auar:0": "ReplaceableTextures\\CommandButtonsDisabled\\DISBTNElementalConvergence.blp",
+      "acat:0": "",
+      "aeat:0": "",
+      "atat:0": "",
+      "aart:0": "ReplaceableTextures\\CommandButtons\\BTNClusterRockets.blp",
+      "ahky:0": "TRIGSTR_234"
+    }
+  }
+]

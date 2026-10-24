@@ -1,0 +1,1171 @@
+<h1>Hydra v4.2</h1>
+<p>Submitted by BPower</p>
+<p>Uploaded: 19 Oct, 2014</p>
+<p>Last edited: 21 Oct, 2015</p>
+<p>Source:</p>
+<p><a href="https://www.hiveworkshop.com/threads/hydra-v4-2.258518/">https://www.hiveworkshop.com/threads/hydra-v4-2.258518/</a></p>
+<p>Tags: System, vJASS</p>
+<p>Filesize: 143.48 KB</p>
+<h2>Hydra</h2>
+<p>Filesize: 143.48 KB</p>
+<p>Filename: Hydra.w3x</p>
+<p>Number of players: 1</p>
+<p>Recommended game:</p>
+<p>Warcraft 3: Pre-Reforged (1.19 - 1.21b)</p>
+<h2>Description</h2>
+<p><div class="vindit-align-center">
+	<b><h1 style="margin: 0">
+	<span style="color: DarkOrange">Hydra</span>
+</h1></b><br />
+<span style="font-size: 12px"><i>Summons a many-headed dragon, attacking nearby enemies.</i></span><br />
+<br />
+<br />
+<img src="/proxy.php?image=https%3A%2F%2Fwww.hiveworkshop.com%2Fforums%2Fmembers%2F216087-albums7785-picture91932.gif&amp;hash=08954b7ff82ec0f306ea4da4be450b6d" data-url="https://www.hiveworkshop.com/forums/members/216087-albums7785-picture91932.gif" class="bbImage " loading="lazy"
+		 style="" width="" height="" /><br />
+</div><br />
+<span style="font-size: 12px"><div class="bbTable">
+<table style='width: 100%'><tr><td><b>Obligatory Requirements</b></td><td><b>Optional Requirements</b></td></tr><tr><td><ul>
+<li data-xf-list-type="ul"><a href="https://www.hiveworkshop.com/forums/jass-resources-412/missile-265370/" class="link link--internal">Missile</a></li>
+<li data-xf-list-type="ul"><a href="http://www.wc3c.net/showthread.php?t=101322" target="_blank" class="link link--external" rel="nofollow ugc noopener">TimerUtils</a></li>
+</ul></td><td><ul>
+<li data-xf-list-type="ul"><a href="https://github.com/nestharus/JASS/tree/master/jass/Systems/ErrorMessage" target="_blank" class="link link--external" rel="nofollow ugc noopener">ErrorMessage</a></li>
+</ul></td></tr></table>
+</div></span><br />
+<div class="bbTable">
+<table style='width: 100%'><tr><td>
+
+
+<div class="bbcode-tabs" data-xf-init="tabs-tag">
+	<div class="titles">
+		
+			<h3 data-id="0" class="active">Hydra</h3>
+		
+			<h3 data-id="1" class="">Code Template</h3>
+		
+	</div>
+	<div class="bodies">
+		
+			<div data-id="0" class="active"><pre style="margin: 1em 0">library Hydra /* v4.2
+*************************************************************************************
+*
+*   Summons a many-headed dragon, attacking nearby enemies.
+*  
+*************************************************************************************
+*      
+*       To Vexorian
+*       -----------------------
+*
+*           For TimerUtils, Hydra, cool vJass features and JassHelper
+*
+*       To Nestharus
+*       -----------------------
+*
+*           For ErrorMessage, properly debugging data structures.
+*   
+*************************************************************************************
+*
+*   */ uses /*
+*  
+*       */ Missile               /* https://www.hiveworkshop.com/forums/jass-resources-412/missile-265370/
+*       */ TimerUtils            /* http://www.wc3c.net/showthread.php?t=101322
+*       */ optional ErrorMessage /* http://github.com/nestharus/JASS/tree/master/jass/Systems/ErrorMessage
+*
+************************************************************************************
+*
+*   1. Import instruction
+*   ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+*       Copy the Hydra script and the required libraries into your map.
+*       The FireSnake.mdx model is very recommended as Hydra Head model.
+*
+*   2. API
+*   ¯¯¯¯¯¯
+*       struct Hydra
+*  
+*       Creator/Destructor:
+*
+*           static method create takes unit whichUnit, integer unitId, real x, real y, real z, real face, spawnInterval returns Hydra
+*           method destroy takes nothing returns nothing
+*
+*       Mandatory:
+*
+*           method operator attackAnimationTime= takes real value returns nothing
+*               - duration of the attack animation for the hydra unit (object editor).
+*               - Normally it&#039;s half of the animation time displayed in the object editor,
+*                 as the second half is the backswing animation time.
+*
+*           method operator attackSpeed= takes real value returns nothing
+*               - attack speed of one single hydra head.
+*           
+*           method operator duration= takes real time returns nothing
+*               - sets the life time of this Hydra instance, once it is summoned.
+*               - time values &lt;= 0, will make the Hydra permanent, until you set
+*                 a new duration or use th destructor method: this.destroy().
+*  
+*           method summon takes nothing returns nothing
+*               - summons this instance 
+*
+*           real    attackPeriod       ( pause between two heads )
+*           real    headHeight         ( is also missile z offset )
+*           real    attackRange    
+*           real    bodysize           ( by default 48.00 )
+*           real    birthAnimationTime ( timeout until the head will start to shoot. )
+*           integer heads              ( total amount of heads )
+*           boolean hasArcOrCurve      ( MUST be set, otherwise the Missile fly incorrect! )  
+*
+*       Optional:
+*
+*           method addHead takes real x, real y, real z, real face returns boolean
+*               - summons a new head to the Hydra.
+*               - only works if the Hydra is at least one head already exists.
+*               - does not reset the duration.
+*
+*           method operator scale= takes real value returns nothing
+*               - sets the scale of each hydra units. Runs for the entire hydra head list.
+*               - can be updated at any time.
+*
+*           method operator scale takes nothing returns real
+*               - gets the current scaling of each head.
+*
+*           method operator offset= takes real value returns nothing
+*               - by default this value is 0.
+*               - Each missile can be create with an offset towards the shooting unit.
+*               - offset is automatically affect by the scale operator. Ergo scaling, also scales the offset.
+*
+*           method optimize takes nothing returns nothing
+*               - optimizes attack period and animation, based on the attack speed.
+*
+*       Fields:
+*
+*           readonly unit    source 
+*           readonly player  owner 
+*           readonly integer typeId 
+*           readonly real    posX          
+*           readonly real    posY
+*           readonly real    posZ
+*                 
+*       Safety:
+*           readonly boolean summoned
+*
+*       Extending structs available stub methods:
+*   
+*           public stub method onSummonHead takes unit head returns nothing
+*               - runs each time a new head is summoned
+*
+*           public stub method onRemoveHead takes unit head returns nothing
+*               - runs each time a head is removed.
+*
+*           public stub method onTargetFilter takes unit target, player owner returns boolean
+*               - runs each time a target filter is applied
+*               by default: return UnitAlive(target) and IsUnitEnemy(target, owner)
+*               
+
+*
+*           public stub method onFire takes unit shooter, unit target, Missile missile returns nothing
+*               - runs each time a new missile is created.
+*               by default: call missile.terminate()
+*
+*/
+
+// Hydra Code. Changes may causes errors.
+    native UnitAlive takes unit id returns boolean
+
+    // Toogles unit indexer systems in the best way possible.
+    // Considers the previous library setup ( enabled or not )
+    private function ToogleUnitIndexer takes boolean enable returns boolean 
+        local boolean prevSetup = true
+        static if LIBRARY_UnitIndexer then
+            set prevSetup = UnitIndexer.enabled
+            set UnitIndexer.enabled = enable
+        elseif LIBRARY_UnitIndexerGUI then
+            set prevSetup = udg_UnitIndexerEnabled
+            set udg_UnitIndexerEnabled = enable
+        elseif LIBRARY_UnitDex then
+            set prevSetup = UnitDex.Enabled
+            set UnitDex.Enabled = enable
+        endif
+        return prevSetup
+    endfunction
+    
+    // Data structure; complexity: List
+    private keyword HydraStructure
+    private struct HydraHead extends array
+        implement HydraStructure
+        unit unit
+        unit target 
+        real x// Hydra position.
+        real y
+        real z//
+        real unitZ
+        real lastShot // Hydra uses a timer stamp, stores elapsed time on lastShot.
+        integer number// Head number.
+        
+        real aimX
+        real aimY
+        real aimZ
+        real aimAngle
+    endstruct
+    
+    globals
+        // Constants required in Hydra.
+        private constant real    TWO_PI           = bj_PI*2
+        private constant real    DEFAULT_BODYSIZE = 48.
+        private constant integer LOCUST           = &#039;Aloc&#039;
+        private constant integer TIMED_LIFE       = &#039;BTLF&#039; 
+        private constant integer CROW_FORM        = &#039;Amrf&#039;
+        private constant string  ATTACK           = &quot;attack &quot;
+        private constant string  BIRTH            = &quot;birth &quot;
+        private constant string  STAND            = &quot;stand &quot;
+        private constant timer   STAMP            = CreateTimer()
+        // Available animationSuffixes. Global for ever unit type.
+        private string   array animationSuffix 
+        
+        // Tracks how many Hydra instances are allocated
+        private integer allocCount = 0 
+    endglobals
+    
+    struct Hydra
+        //grp for a better target evaluation.
+        private static group enu = CreateGroup()
+        private static group grp = CreateGroup()
+    
+        private HydraHead list
+        private HydraHead currentHead
+        private HydraHead nextShootingHead
+        
+        private timer shoot    
+        private timer lifeTimer  
+    
+        readonly unit    source 
+        readonly player  owner 
+        readonly integer typeId 
+        readonly boolean summoned
+        readonly real    posX          
+        readonly real    posY
+        readonly real    posZ
+        private  real    angle
+        private  real    timeScale
+        private  real    interval
+                 real    headHeight// is also the missile offset.
+                 real    attackSpeed        
+                 real    attackRange
+                 real    bodysize
+                 real    birthAnimationTime
+                 integer heads  
+                 boolean hasArcOrCurve
+
+        // Available stub methods.
+        public stub method onSummonHead takes unit head returns nothing
+        endmethod
+        public stub method onRemoveHead takes unit head returns nothing
+        endmethod
+        public stub method onTargetFilter takes unit target, player owner returns boolean
+            return UnitAlive(target) and IsUnitEnemy(target, owner)
+        endmethod
+        public stub method onFire takes unit shooter, unit target, Missile missile returns nothing
+            call missile.terminate()
+        endmethod
+
+        private real attackPeriod_p
+        private real animationTime_p
+        private real animationTimeOriginal
+        method operator attackAnimationTime= takes real value returns nothing
+            set animationTimeOriginal = value
+            set animationTime_p       = value
+            if (0. != attackPeriod_p and attackPeriod_p &lt; value) then
+                set timeScale         = value/attackPeriod_p
+                set animationTime_p   = attackPeriod_p
+            endif
+        endmethod
+
+        method operator attackPeriod= takes real value returns nothing
+            set attackPeriod_p      = value 
+            if (value &lt; animationTime_p and animationTimeOriginal != 0.) then
+                set timeScale       = animationTimeOriginal/value 
+                set animationTime_p = value
+            endif
+        endmethod
+        
+        private real duration_p
+        method operator duration= takes real time returns nothing
+            if (0. &lt;= time) then
+                call PauseTimer(lifeTimer)
+            elseif (summoned) and (list.size != 0) then
+                call TimerStart(lifeTimer, time, false, function thistype.killHead)
+            endif
+            set duration_p = time
+        endmethod
+        
+        private real scale_p
+        method operator scale= takes real value returns nothing
+            local HydraHead node
+            if (summoned) then
+                set node = list.first
+                loop 
+                    exitwhen node == 0
+                    call SetUnitScale(node.unit, value, 0, 0)
+                    set node.unitZ = node.z + headHeight*value
+                    set node = node.next
+                endloop
+            endif
+            set offset_p = offset_p*value
+            set scale_p  = value
+        endmethod
+        
+        method operator scale takes nothing returns real
+            return scale_p
+        endmethod
+        
+        private real offset_p
+        method operator offset= takes real value returns nothing
+            set offset_p = value*scale
+        endmethod
+        
+        method optimize takes nothing returns nothing
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError((heads &lt;= 0),                 &quot;Hydra&quot;, &quot;optimize&quot;, &quot;heads&quot;,         this, &quot;Can&#039;t use optimize() before heads are set above 0!&quot;)
+                debug call ThrowError((attackPeriod_p &lt;= 0),        &quot;Hydra&quot;, &quot;optimize&quot;, &quot;attackPeriod&quot;,  this, &quot;Can&#039;t use optimize() before attackPeriod is set!&quot;)
+                debug call ThrowError((attackSpeed &lt;= 0),           &quot;Hydra&quot;, &quot;optimize&quot;, &quot;attackSpeed&quot;,   this, &quot;Can&#039;t use optimize() before attackSpeed is set!&quot;)
+                debug call ThrowError((animationTimeOriginal &lt;= 0), &quot;Hydra&quot;, &quot;optimize&quot;, &quot;animationTime&quot;, this, &quot;Can&#039;t use optimize() before attackAnimationTime is set!&quot;)
+            endif
+            
+            set attackPeriod = (attackSpeed/heads)
+        endmethod
+        
+        method destroy takes nothing returns nothing
+            local HydraHead head = list.first
+
+            call ReleaseTimer(lifeTimer)
+            call ReleaseTimer(shoot)
+            loop
+                exitwhen (0 == head)                
+                if (UnitAlive(head.unit)) then
+                    call onRemoveHead(head.unit)
+                    call UnitApplyTimedLife(head.unit, TIMED_LIFE, 0.001)
+                endif
+                set head.unit   = null
+                set head.target = null
+                set head        = head.next
+            endloop
+            call list.destroy()
+            
+            set owner     = null            
+            set shoot     = null
+            set lifeTimer = null
+            set source    = null
+            set summoned  = false
+            
+            set allocCount = allocCount - 1
+            if (allocCount == 0) then
+                call PauseTimer(STAMP)
+            endif
+            call deallocate()
+        endmethod
+    
+        // It took some time until I found the proper Z offset calculation for non arcing missiles.
+        // Warcraft III terrain surface says no-no to simple geometry and congruent triangles. 
+        // It is like this:
+        //      1. head.unitZ == GetUnitFlyHeight(head) + headHeight*scale
+        //      2. this.z     == GetUnitFlyHeight(head.target) + GetUnitBodySize(head.target)*Missile.HIT_BOX
+        //      3. dZ         == LocZ(impactX, impactY) - head.UnitZ + LocZ(originX, originY)
+        //      4. endZ       == head.unitZ + dZ*(maxDistance/distance) - LocZ(maxDistanceImpactX, maxDistanceImpactY)
+        private static method fire takes nothing returns nothing
+            local timer t        = GetExpiredTimer()
+            local thistype this  = thistype(GetTimerData(t))
+            local HydraHead head = currentHead
+            local real sin       = Sin(head.aimAngle)
+            local real cos       = Cos(head.aimAngle)
+            local real ox        = head.x + offset_p*cos
+            local real oy        = head.y + offset_p*sin
+            local real a         = attackPeriod_p - animationTime_p
+            local real d          
+            local real dZ         
+            local real endZ       
+            local Missile missile 
+            
+            if (hasArcOrCurve) then
+                set missile = Missile.createXYZ(ox, oy, head.unitZ, head.aimX, head.aimY, head.aimZ)
+            else
+                set d       = RMaxBJ(SquareRoot((ox - head.aimX)*(ox - head.aimX) + (oy - head.aimY)*(oy - head.aimY)), 1.)
+                set dZ      = (Missile_GetLocZ(head.aimX, head.aimY) + head.aimZ) - (head.unitZ + Missile_GetLocZ(ox, oy))
+                set endZ    = head.unitZ + (dZ*(attackRange/d) - Missile_GetLocZ(ox + attackRange*cos, oy + attackRange*sin))
+                set missile = Missile.create(ox, oy, head.unitZ, head.aimAngle, attackRange, endZ)
+            endif
+            set missile.source = source
+            set missile.owner  = owner
+            set missile.data   = this
+            
+            // Fire stub method onFire
+            call onFire(head.unit, head.target, missile)
+            
+            static if LIBRARY_ErrorMessage then
+                debug if (hasArcOrCurve) and ((not (missile.arc != 0.)) and (not (missile.curve != 0.))) then
+                    debug call ThrowWarning(true, &quot;Hydra&quot;, &quot;fire&quot;, &quot;hasArcOrCurve&quot;, this, &quot;Don&#039;t set it to true, when you don&#039;t use arced or curved missiles!&quot;)
+                debug elseif not (hasArcOrCurve) and (((missile.arc != 0.) or (missile.curve != 0.))) then
+                    debug call ThrowWarning(true, &quot;Hydra&quot;, &quot;fire&quot;, &quot;hasArcOrCurve&quot;, this, &quot;Arc &amp; Curve settings are only valid if hasArcOrCurve is set to true&quot;)
+                debug endif
+            endif
+           
+            if (1. != timeScale) then
+                call SetUnitTimeScale(head.unit, 1.)
+            endif
+            call QueueUnitAnimation(currentHead.unit ,STAND + animationSuffix[head.number])
+           
+            if (0. &gt; a) then
+                set a = 0.
+            endif
+        
+            call TimerStart(t, a, false, function thistype.attemptShoot)
+            set t = null
+        endmethod
+
+        /*
+        *   Concept: 
+        *       - Each head has an individual target, if possible.
+        *       - The closest unit is the best target, since moving units are hard to hit.
+        *       - The old target has the highest priority, unless the last two missiles failed.
+        *         Only missiles, which hit walls or cliffs are evaluated as fails.
+        *       - Returns true will initialize the shooting process.
+        */
+        private method evaluateTarget takes HydraHead node returns boolean
+            local real dist // Distance,
+            local real ndist// new distance 
+            local real bdist// and best new distance.
+            local unit u
+            local unit new  = null    // This is the new target,
+            local unit best = null    // the best new target
+            local unit old  = node.target// and the old target.
+            local real x
+            local real y
+            local real ox
+            local real oy
+            local HydraHead temp 
+            
+            // First check the previous target.
+            // Evaluates stub method onTargetFilter
+            if (IsUnitInRange(old, node.unit, attackRange)) and (onTargetFilter(old, owner)) then
+                set old = null
+                return true
+            else
+                set node.target = null// Clear the previous target.
+                call GroupClear(thistype.grp)
+                
+                
+                // Units targeted by the other heads of this instance, have a lower priority.
+                set temp = list.first
+                loop                       
+                    exitwhen (0 == temp)
+                    if (temp.target != null) then
+                        call GroupAddUnit(thistype.grp, temp.target)
+                    endif
+                    set temp = temp.next
+                endloop
+                
+                set ox = node.x
+                set oy = node.y
+                call GroupEnumUnitsInRange(thistype.enu, ox, oy, attackRange + Missile_MAXIMUM_COLLISION_SIZE, null)
+        
+                // The old target probably has an high error quote,
+                // therefore it gets the lowest priority.
+                call GroupRemoveUnit(thistype.enu, old)
+                loop
+                    set u = FirstOfGroup(thistype.enu)
+                    exitwhen u == null
+                    call GroupRemoveUnit(thistype.enu, u)
+                    
+                    if IsUnitInRange(u, node.unit, attackRange) and onTargetFilter(u, owner) then
+                        set x    = GetUnitX(u)
+                        set y    = GetUnitY(u)
+                        set dist = ((x - ox)*(x - ox) + (y - oy)*(y - oy))//screw squareroot
+                        if (new == null) or (dist &lt; ndist) then
+                            set ndist = dist
+                            set new   = u
+                        endif
+                        
+                        if not (IsUnitInGroup(u, thistype.grp)) then
+                            if (best == null) or (dist &lt; bdist) then
+                                set best  = u
+                                set bdist = dist
+                            endif
+                        endif
+                    endif
+                endloop
+                
+                if (best != null) then
+                    set node.target = best
+                    set best        = null
+                    
+                elseif (new != null) then
+                    set node.target = new
+                    
+                elseif (onTargetFilter(old, owner) and IsUnitInRange(old, node.unit, attackRange)) then
+                    set node.target = old
+                endif
+                set new  = null
+                set old  = null
+            endif
+
+            return (node.target != null)
+        endmethod
+    
+        private static method attemptShoot takes nothing returns nothing
+            local timer t        = GetExpiredTimer()
+            local thistype this  = thistype(GetTimerData(t))  
+            local real elapsed   = TimerGetElapsed(STAMP)
+            local HydraHead head = nextShootingHead
+            local real timeout 
+
+            if (head.lastShot + attackSpeed &lt;= elapsed) then
+
+                if (evaluateTarget(head)) then
+                
+                    set nextShootingHead = head.next
+                    if (nextShootingHead == 0) then
+                        set nextShootingHead = list.first
+                    endif
+                    
+                    // Taking aim, before the shoot animation starts.
+                    set head.aimX     = GetUnitX(head.target)
+                    set head.aimY     = GetUnitY(head.target)       
+                    set head.aimZ     = GetUnitFlyHeight(head.target) + GetUnitBodySize(head.target)*Missile.HIT_BOX
+                    set head.aimAngle = Atan2(head.aimY - head.y, head.aimX - head.x)
+                    set currentHead   = head
+                    set head.lastShot = elapsed 
+                
+                    //  Initiate the shooting process.
+                    call SetUnitFacing(head.unit, head.aimAngle*bj_RADTODEG)
+                
+                    if (1. != timeScale) then
+                        call SetUnitTimeScale(head.unit, timeScale)
+                    endif
+                
+                    call SetUnitAnimation(head.unit, ATTACK + animationSuffix[head.number])
+                    call TimerStart(t, animationTime_p, false, function thistype.fire)
+                    
+                elseif (list.size &gt; 1) then
+                
+                    // This head can&#039;t shoot, we pass in a timeout and
+                    // move to the next head.
+                    set head.lastShot = elapsed
+                    set head          = head.next 
+                    if (head == 0) then
+                        set head = list.first
+                    endif
+                    set nextShootingHead = head
+                    
+                    set timeout = head.lastShot + attackSpeed - elapsed
+                    if (timeout &lt; 0) then
+                        set timeout = 0.
+                    elseif (timeout &gt; attackPeriod_p) then
+                        set timeout = attackPeriod_p
+                    endif
+                    
+                    call TimerStart(t, timeout, false, function thistype.attemptShoot)
+                else
+                    call TimerStart(t, attackPeriod_p, false, function thistype.attemptShoot)
+                endif
+            else
+                call TimerStart(t, RMaxBJ(0., head.lastShot + attackSpeed - elapsed), false, function thistype.attemptShoot)
+            endif
+            set t = null
+        endmethod
+        
+        private static method killHead takes nothing returns nothing
+            local thistype this  = thistype(GetTimerData(GetExpiredTimer()))
+            local HydraHead head = list.first
+            local HydraHead node = head.next
+            local real time      = RMaxBJ(.0001, head.lastShot + (animationTime_p*2.) - TimerGetElapsed(STAMP))
+            
+            // In case this head is still in the shoot animation foreward or backwards,
+            // we show that shoot animation before killing it.
+            call UnitApplyTimedLife(head.unit, TIMED_LIFE, time)
+            
+            // Evaluate stub method onRemoveHead
+            call this.onRemoveHead(head.unit)
+            set head.unit = null
+            call head.remove()
+            if (0 == list.first) then
+                call destroy()
+            else
+                if (nextShootingHead == head) then
+                    if (node == 0) then
+                        set nextShootingHead = list.first
+                    else
+                        set nextShootingHead = node
+                    endif
+                endif
+                call TimerStart(lifeTimer, interval, false, function thistype.killHead)
+            endif
+        endmethod
+        
+        // Create a new head without firing off an onIndex event.
+        private method addHeadEx takes real x, real y, real z, real face returns nothing
+            local HydraHead node = list.enqueue()
+            local string suffix  = animationSuffix[list.size]
+            local boolean   prev = ToogleUnitIndexer(false)  
+            local unit      head = CreateUnit(owner, typeId, x, y, face) 
+            call ToogleUnitIndexer(prev)
+            call SetUnitFlyHeight(head, z, 0.)
+            if (1. != scale_p) then
+                call SetUnitScale(head, scale_p, 1., 1.)
+            endif
+            call UnitAddAbility(head,     LOCUST)
+            call UnitAddAbility(head,     CROW_FORM)
+            call SetUnitAnimation(head,   BIRTH + suffix)
+            call QueueUnitAnimation(head, STAND + suffix)
+            
+            set node.unit     = head        
+            set node.target   = null
+            set node.lastShot = TimerGetElapsed(STAMP) - attackSpeed + birthAnimationTime
+            set node.x        = GetUnitX(head)
+            set node.y        = GetUnitY(head)
+            set node.z        = z
+            set node.unitZ    = z + headHeight*scale_p
+            set node.number   = list.size
+                
+            // Evaluate stub method onSummonHead.
+            call this.onSummonHead(head)
+            set head          = null
+        endmethod
+        
+        method addHead takes real x, real y, real z, real face returns boolean
+            if (summoned) and (list.size &gt; 0) then
+                call addHeadEx(x, y, z, face)
+                return true
+            endif
+            return false
+        endmethod
+        
+        // Periodically called until all Hydra heads are created.
+        private static method spawn takes nothing returns nothing 
+            local timer t       = GetExpiredTimer()
+            local thistype this = thistype(GetTimerData(t))
+            local real a        = angle*bj_DEGTORAD + list.size*(TWO_PI/heads)
+            call addHeadEx((bodysize*scale_p)*Cos(a) + posX, (bodysize*scale_p)*Sin(a) + posY, posZ, a*bj_RADTODEG)
+            
+            if (list.size == 1) then
+                set nextShootingHead = list.first
+                call TimerStart(t, interval, true, function thistype.spawn)
+            endif
+            
+            if (list.size &gt;= heads) then
+                call ReleaseTimer(t)
+            endif
+            set t = null
+        endmethod
+    
+        method summon takes nothing returns nothing
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError((summoned),                     &quot;Hydra&quot;,    &quot;summon&quot;, &quot;summoned&quot;,              this, &quot;This Hydra is already summoned!&quot;)
+                debug call ThrowError((typeId == 0),                  &quot;Hydra&quot;,    &quot;summon&quot;, &quot;unitId&quot;,                this, &quot;Passed in Hydra unit type id is invalid ( 0 )!&quot;)
+                debug call ThrowError((heads &lt;= 0),                   &quot;Hydra&quot;,    &quot;summon&quot;, &quot;heads&quot;,                 this, &quot;Passed in value is invalid ( &lt;= 0 )!&quot;)
+                debug call ThrowError((attackRange &lt;= 0),             &quot;Hydra&quot;,    &quot;summon&quot;, &quot;attackRange&quot;,           this, &quot;Passed in value is invalid ( &lt;= 0 )!&quot;)
+                debug call ThrowError((attackPeriod_p &lt;= 0),          &quot;Hydra&quot;,    &quot;summon&quot;, &quot;attackPeriod&quot;,          this, &quot;Passed in value is invalid ( &lt;= 0 )!&quot;)
+                debug call ThrowError((animationTimeOriginal &lt;= 0),   &quot;Hydra&quot;,    &quot;summon&quot;, &quot;attackAnimationTime&quot;,   this, &quot;Passed in value is invalid ( &lt;= 0 )!&quot;)
+                debug call ThrowWarning((headHeight &lt; 0),             &quot;Hydra&quot;,    &quot;summon&quot;, &quot;headHeight&quot;,            this, &quot;Passed in value is invalid ( below 0 )!&quot;)
+                debug call ThrowWarning((GetUnitTypeId(source) == 0), &quot;Hydra&quot;,    &quot;summon&quot;, &quot;GetUnitTypeId(source)&quot;, this, &quot;Passed in unit is invalid ( null )!&quot;)
+            endif
+            
+            if not (summoned) then
+                set summoned = true
+                call TimerStart(NewTimerEx(this), 0., false, function thistype.spawn)
+                call TimerStart(shoot, birthAnimationTime, false, function thistype.attemptShoot)
+                if (duration_p &gt; 0.) then
+                    call TimerStart(lifeTimer, duration_p, false, function thistype.killHead)
+                endif
+            endif
+        endmethod
+
+        static method create takes unit whichUnit, integer unitId, real x, real y, real z, real face, real spawnInterval returns Hydra 
+      local thistype this      = thistype.allocate()
+            set list           = HydraHead.create()
+            set shoot          = NewTimerEx(this)
+            set lifeTimer      = NewTimerEx(this)
+            set owner          = GetOwningPlayer(whichUnit)
+            
+            // Set members.
+            set source         = whichUnit
+            set typeId         = unitId
+            set posX           = x
+            set posY           = y
+            set posZ           = z
+            set angle          = face
+            set scale_p        = 1.
+            set timeScale      = 1.
+            set attackPeriod_p = 0.
+            set offset_p       = 0.
+            set duration_p     = 0.
+            set animationTimeOriginal = 0.
+            set birthAnimationTime = 0.
+            set bodysize       = DEFAULT_BODYSIZE
+            set interval       = spawnInterval
+            set hasArcOrCurve  = false
+            
+            if (allocCount == 0) then
+                call TimerStart(STAMP, 604800, false, null)
+            endif
+            set allocCount = allocCount + 1
+                
+            // Debug safety for method summon.
+            debug set heads       = 0
+            debug set attackSpeed = 0.
+            debug set headHeight  = -1.
+            debug set attackRange = 0.
+            
+            return this
+        endmethod
+    
+        private static method onInit takes nothing returns nothing
+            set animationSuffix[0] = &quot;first&quot;
+            set animationSuffix[1] = &quot;second&quot;
+            set animationSuffix[2] = &quot;third&quot;
+            set animationSuffix[3] = &quot;fourth&quot;
+            set animationSuffix[4] = &quot;fifth&quot;
+        endmethod
+    
+    endstruct
+    
+    // Credits to Nestharus for a properly working
+    // debug algorithm in list modules.
+    private module HydraStructure 
+    
+        private static thistype collectionCount = 0
+        private static thistype nodeCount = 0
+        debug private boolean isNode
+        debug private boolean isCollection
+        readonly integer size 
+        
+        private thistype _list
+        method operator list takes nothing returns thistype
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError(this == 0,    &quot;List&quot;, &quot;list&quot;, &quot;thistype&quot;, this, &quot;Attempted To Read Null Node.&quot;)
+                debug call ThrowError(not isNode,   &quot;List&quot;, &quot;list&quot;, &quot;thistype&quot;, this, &quot;Attempted To Read Invalid Node.&quot;)
+            endif
+            return _list
+        endmethod
+        
+        private thistype _next
+        method operator next takes nothing returns thistype
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError(this == 0,    &quot;List&quot;, &quot;next&quot;, &quot;thistype&quot;, this, &quot;Attempted To Go Out Of Bounds.&quot;)
+                debug call ThrowError(not isNode,   &quot;List&quot;, &quot;next&quot;, &quot;thistype&quot;, this, &quot;Attempted To Read Invalid Node.&quot;)
+            endif
+            return _next
+        endmethod
+        
+        private thistype _prev
+        method operator prev takes nothing returns thistype
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError(this == 0,    &quot;List&quot;, &quot;prev&quot;, &quot;thistype&quot;, this, &quot;Attempted To Go Out Of Bounds.&quot;)
+                debug call ThrowError(not isNode,   &quot;List&quot;, &quot;prev&quot;, &quot;thistype&quot;, this, &quot;Attempted To Read Invalid Node.&quot;)
+            endif
+            return _prev
+        endmethod
+        
+        private thistype _first
+        method operator first takes nothing returns thistype
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError(this == 0,        &quot;List&quot;, &quot;first&quot;, &quot;thistype&quot;, this, &quot;Attempted To Read Null List.&quot;)
+                debug call ThrowError(not isCollection, &quot;List&quot;, &quot;first&quot;, &quot;thistype&quot;, this, &quot;Attempted To Read Invalid List.&quot;)
+            endif
+            return _first
+        endmethod
+        
+        private thistype _last
+        method operator last takes nothing returns thistype
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError(this == 0,        &quot;List&quot;, &quot;last&quot;, &quot;thistype&quot;, this, &quot;Attempted To Read Null List.&quot;)
+                debug call ThrowError(not isCollection, &quot;List&quot;, &quot;last&quot;, &quot;thistype&quot;, this, &quot;Attempted To Read Invalid List.&quot;)
+            endif
+            return _last
+        endmethod
+        
+        private static method allocateCollection takes nothing returns thistype
+            local thistype this = thistype(0)._first
+            
+            if (0 == this) then
+                static if LIBRARY_ErrorMessage then
+                    debug call ThrowError(collectionCount == 8191, &quot;List&quot;, &quot;allocateCollection&quot;, &quot;thistype&quot;, 0, &quot;Overflow.&quot;)
+                endif
+               
+                set this = collectionCount + 1
+                set collectionCount = this
+            else
+                set thistype(0)._first = _first
+            endif
+            
+            return this
+        endmethod
+        
+        private static method allocateNode takes nothing returns thistype
+            local thistype this = thistype(0)._next
+            
+            if (0 == this) then
+                
+                static if LIBRARY_ErrorMessage then
+                    debug call ThrowError(nodeCount == 8191, &quot;List&quot;, &quot;allocateNode&quot;, &quot;thistype&quot;, 0, &quot;Overflow.&quot;)
+                endif
+               
+                set this = nodeCount + 1
+                set nodeCount = this
+            else
+                set thistype(0)._next = _next
+            endif
+            
+            return this
+        endmethod
+        
+        static method create takes nothing returns thistype
+            local thistype this = allocateCollection()
+            
+            debug set isCollection = true
+            
+            set _first = 0
+            set size   = 0
+            return this
+        endmethod
+        method enqueue takes nothing returns thistype
+            local thistype node = allocateNode()
+            
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError(this == 0,        &quot;List&quot;, &quot;enqueue&quot;, &quot;thistype&quot;, this, &quot;Attempted To Enqueue On To Null List.&quot;)
+                debug call ThrowError(not isCollection, &quot;List&quot;, &quot;enqueue&quot;, &quot;thistype&quot;, this, &quot;Attempted To Enqueue On To Invalid List.&quot;)
+            endif
+            
+            debug set node.isNode = true
+            
+            set node._list = this
+        
+            if (_first == 0) then
+                set _first = node
+                set _last = node
+                set node._prev = 0
+            else
+                set _last._next = node
+                set node._prev = _last
+                set _last = node
+            endif
+            
+            set node._next = 0
+            set size       = size + 1
+            return node
+        endmethod
+        method remove takes nothing returns nothing
+            local thistype node = this
+            set this = node._list
+            
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError(node == 0,        &quot;List&quot;, &quot;remove&quot;, &quot;thistype&quot;, this, &quot;Attempted To Remove Null Node.&quot;)
+                debug call ThrowError(not node.isNode,  &quot;List&quot;, &quot;remove&quot;, &quot;thistype&quot;, this, &quot;Attempted To Remove Invalid Node (&quot; + I2S(node) + &quot;).&quot;)
+            endif
+            
+            debug set node.isNode = false
+            
+            set node._list = 0
+        
+            if (0 == node._prev) then
+                set _first = node._next
+            else
+                set node._prev._next = node._next
+            endif
+            if (0 == node._next) then
+                set _last = node._prev
+            else
+                set node._next._prev = node._prev
+            endif
+            
+            set node._next = thistype(0)._next
+            set thistype(0)._next = node
+            set size = size - 1
+        endmethod
+        method clear takes nothing returns nothing
+            debug local thistype node = _first
+           
+           static if LIBRARY_ErrorMessage then
+                debug call ThrowError(this == 0,            &quot;List&quot;, &quot;clear&quot;, &quot;thistype&quot;, this, &quot;Attempted To Clear Null List.&quot;)
+                debug call ThrowError(not isCollection,     &quot;List&quot;, &quot;clear&quot;, &quot;thistype&quot;, this, &quot;Attempted To Clear Invalid List.&quot;)
+           endif
+           
+            static if DEBUG_MODE then
+                loop
+                    exitwhen node == 0
+                    set node.isNode = false
+                    set node = node._next
+                endloop
+            endif
+            
+            if (_first == 0) then
+                return
+            endif
+            
+            set _last._next = thistype(0)._next
+            set thistype(0)._next = _first
+            
+            set _first = 0
+            set _last = 0
+        endmethod
+        method destroy takes nothing returns nothing
+            static if LIBRARY_ErrorMessage then
+                debug call ThrowError(this == 0,            &quot;List&quot;, &quot;destroy&quot;, &quot;thistype&quot;, this, &quot;Attempted To Destroy Null List.&quot;)
+                debug call ThrowError(not isCollection,     &quot;List&quot;, &quot;destroy&quot;, &quot;thistype&quot;, this, &quot;Attempted To Destroy Invalid List.&quot;)
+            endif
+            
+            static if DEBUG_MODE then
+                debug call clear()
+                
+                debug set isCollection = false
+            else
+                if (_first != 0) then
+                    set _last._next = thistype(0)._next
+                    set thistype(0)._next = _first
+                    
+                    set _last = 0
+                endif
+            endif
+            
+            set _first = thistype(0)._first
+            set thistype(0)._first = this
+            set size   = 0
+        endmethod
+    endmodule
+    
+endlibrary</pre></div>
+		
+			<div data-id="1" class=""><pre style="margin: 1em 0">library HydraTemplate uses Hydra
+//******************************************************************************
+//*
+//* A guide to individual Hydra structs 
+//* ===================================
+//*  
+//*  First and foremost Hydra uses the vJass feature &quot;Extending structs&quot;.
+//*     - https://www.hiveworkshop.com/threads/vjass-meet-vjass-extending-structs.267719/post-2706474
+//*  
+//* Which means that each of your custom Hydra-types will extend Hydra. Example: FireHydra extends Hydra
+//* That makes customization very flexible, as Hydra will evaluate several stub methods
+//* in the respective child struct like the target filter or the missile setup.
+//*
+//*  The projectiles fired by hydra units are outsourced to library Missile,
+//* as consequence you have full access granted to the Missile API, which
+//* can be individual per child struct. This means projectiles fired by
+//* i.e. FireHydra can have a different behaviour than those fired by an i.e. IceHydra
+//* If you haven&#039;t done it already, please do a proper setup for the globals in library Missile
+//*
+//*  struct Hydra has a boolean member named hasArcOrCurve. You have to set it per Hydra instance you create
+//* to false or true. Set it to true, if you wish to setup curve= or arc= for that custom Hydra.
+//* Don&#039;t forget it, because otherwise the projectiles fired in the struct will go crazy.
+//* in DEBUG_MODE you will recieve a warning, if you forget to set hasArcOrCurve.  
+//*
+//*  Below you will find an example struct, how a custum Hydra could look like
+//* For more examples check out IceHydra, FriendlyHydra, EasterEgg, ... in this map.
+//*
+//*
+//********************************************************************************
+
+//=================================================================================
+    
+    //*  Declare a new custom hydra type which extends Hydra
+    //* Here I have chosen the struct name AcidHydra.   
+    struct AcidHydra extends Hydra
+
+    //*
+    //*  Acces the API of library Missile ( for detailed information read library Missile ).
+    //* As already mentioned above, you have granted full access to the API of library Missile.
+    //* You can declare various static method which will be called if a Missile launched from this struct,
+    //* meets the condition for the respective static method.
+    //*
+    //* Available static methods are:
+    //*
+    //*     static method onCollide takes Missile missile, unit hit returns boolean
+    //*          -   Runs every time the missile collides with a unit.
+    //*
+    //*     static method onPeriod takes Missile missile returns boolean
+    //*          -   Runs every Missile_TIMER_TIMEOUT seconds.
+    //*
+    //*     static method onFinish takes Missile missile returns boolean
+    //*          -   Runs whenever the missile finishes it&#039;s course.
+    //*          -   Runs before the missile is destroyed.
+    //*          -   Does not run, if a Missile is destroyed by another method.
+    //*
+    //*     static method onRemove takes Missile missile returns boolean
+    //*          -   Runs whenever the missile is deallocated.
+    //*          -   Return true will recycle a Missile delayed ( only if WRITE_DELAYED_MISSILE_RECYCLING = true )
+    //*          -   Return false will recycle a Missile right away.
+    //*          -   Runs always, if declared!!
+    //*
+    //*     static method onDestructableFilter takes nothing returns boolean
+    //*          -   Runs before onDestructable.
+    //*          -   May create a better filter for enumerated destructables.
+    //*          -   Only method which has no impact on the Missile instance.
+    //*
+    //*     static method onDestructable takes Missile missile, destructable hit returns boolean
+    //*          -   Runs every time the missile collides with a destructable.
+    //*          -   Can use onDestructableFilter ( optional ) 
+    //*          -   Runs after onDestructableFilter ( if filter is declared )
+    //*
+    //*       Hint: missile.data is always the respective Hydra instance.
+    //*
+    //*  Let&#039;s see some of the static methods I declared for this struct. 
+    
+        private static method onRemove takes Missile missile returns boolean
+            return true
+        endmethod
+        
+        //* Will kill the missile, when it collides i.e. with a wall.
+        private static method onTerrain takes Missile missile returns boolean
+            return true
+        endmethod
+        
+        //* Will kill the missile when it deals damage.
+        //* You can read missile members, like missile.source, missile.damage, ....
+        private static method onCollide takes Missile missile, unit hit returns boolean
+            if UnitAlive(hit) and IsUnitEnemy(hit, missile.owner) then
+                return UnitDamageTarget(missile.source, hit, missile.damage, false, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL, null)
+            endif
+            return false
+        endmethod
+        
+        //*  module MissileStruct is required, that a hydra unit can fire missiles at all.
+        //* The best place for it is above the Hydra stub methods and below the Missile API.
+        //* In this position the JassHelper will not generate extra pseudo-code duplicates.
+        implement MissileStruct
+        
+    //*  Access the Hydra API: ( for detailed information read library Hydra. )
+    //* As mentioned above you can customize a couple of stub methods located 
+    //* in library Hydra, our parent struct. A declaration of method onFire
+    //* is required, that a Hydra type of this struct can fire missiles at all. 
+    //*
+    //*  Available stub methods are:
+    //* 
+    //*      public stub method onSummonHead takes unit head returns nothing
+    //*          - runs each time a new head is summoned.
+    //*
+    //*      public stub method onRemoveHead takes unit head returns nothing 
+    //*          - runs each time a head dies.
+    //*
+    //*      public stub method onTargetFilter takes unit target, player owner returns boolean
+    //*          - customize a target filter. As you can see each different Hydra type can have it&#039;s own filter.
+    //*  
+    //*      public stub method onFire takes unit shooter, unit target, Missile missile returns nothing
+    //*          - customize the missile datas here. ( damage, model, arc, curve, ... )
+    //*          - from this method you have to launch the missile via thistype.launch(missile)
+    //*          
+    //*  Let&#039;s see some example code:
+    
+        //*  Here we have access to the shooting head and the already created missile instance.
+        //* missile.source, missile.owner are already set and don&#039;t need further changes.
+        //* missile.data is already set to this AcidHydra instance, you can override it if required.
+        private method onFire takes unit shooter, unit target, Missile missile returns nothing
+            set missile.model      = &quot;Abilities\\Weapons\\FireBallMissile\\FireBallMissile.mdl&quot;
+            set missile.scale      = 1.
+            set missile.damage     = GetRandomReal(50, 150)
+            set missile.collision  = 32.
+            set missile.collisionZ = 15.
+            set missile.speed      = 27.
+            //*  You have to launch the Missile here. It will tell library Missile, that it&#039;s
+            //* a missile fired from excacly this struct.
+            call thistype.launch(missile)
+        endmethod
+        
+        //*  Another stub method, which runs each time a new head of type AcidHydra is created
+        private method onSummonHead takes unit summoned returns nothing
+            //*  call BJDebugMsg(&quot;summoned&quot;)
+        endmethod
+        
+        //*  Here you can customize, which units can the AcidHydra target.
+        //* Example: Just enemies structure type units are valid targets.
+        private method onTargetFilter takes unit target, player owner returns boolean
+            return IsUnitType(target, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(target, owner) and UnitAlive(target)
+        endmethod
+        
+    endstruct
+
+    //*  Here you will learn how to create a AcidHydra instance.
+    //* I choose a spell as example:
+    private function OnCast takes nothing returns boolean
+    
+        //*  Declare a new Acidydra local.
+        local AcidHydra hydra   
+        local real x        = GetSpellTargetX()
+        local real y        = GetSpellTargetY() 
+        local real z        = 0.
+        local real face     = GetRandomReal(0., 2*bj_PI)*bj_RADTODEG
+        //*  This is the spawn interval between each heads.
+        //* CreateHead - wait interval - CreatHead - wait interval - ...
+        local real interval = .23
+
+        if (GetSpellAbilityId() == &#039;xxxx&#039;) then
+             
+            //*  static method create takes unit whichUnit, integer unitid, real x, real y, z, real angle, spawnInterval returns Hydra
+            set hydra                     = AcidHydra.create(GetTriggerUnit(), &#039;hfoo&#039;, x, y, z, face, interval)
+            
+            //*  Customize hydra members. 
+            //* Each member has a default setting, which is done in static method create.
+            //* You will recieve an error message, if you forget to setup a mandatory member.
+            set hydra.heads               = 3     // By default 0.
+            set hydra.attackAnimationTime = .5    // Read it in the object editor and divide it with 1/2. ( the second half is the backswing )
+            set hydra.attackSpeed         = 3.    // By default 0.
+            set hydra.attackPeriod        = .25   // By default 0.
+            set hydra.duration            = 12    // By default 0.
+            set hydra.attackRange         = 950.  // By default 0. 
+            set hydra.headHeight          = 55.   // By default 0.
+            set hydra.scale               = 1.    // By default 1.
+            set hydra.hasArcOrCurve       = false // By default false
+            set hydra.birthAnimationTime  = 0.    // By default 0.
+            
+            // *Summon it.
+            call hydra.summon()
+        endif
+        return false
+    endfunction
+    
+    private function Init takes nothing returns nothing
+        local trigger t = CreateTrigger()
+        if UnitAddAbility(DemoMap_HERO, &#039;xxxx&#039;) then
+            call TriggerRegisterAnyUnitEventBJ(t, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+            call TriggerAddCondition(t, Condition(function OnCast))
+        endif
+    endfunction
+    
+endscope</pre></div>
+		
+	</div>
+</div></td></tr></table>
+</div><br />
+
+
+<div class="bbCodeSpoiler">
+	<button type="button" class="button bbCodeSpoiler-button button--longText" data-xf-click="toggle" data-xf-init="tooltip" title="Click to reveal or hide spoiler"><span class="button-text">
+
+		<span><span class="bbCodeSpoiler-button-title">Changelog</span></span>
+	</span></button>
+	<div class="bbCodeSpoiler-content">
+		<div class="bbCodeBlock bbCodeBlock--spoiler">
+			<div class="bbCodeBlock-content"><br />
+<br />
+v1.0<br />
+<div style="margin-left: 20px">Initial release.&#8203;</div>v2.0<br />
+<div style="margin-left: 20px">Completly revised projectile system.<br />
+Can now fire with attackspeed below attack animtion time.<br />
+More intelligent shooting.&#8203;</div>v2.1<br />
+<div style="margin-left: 20px">static method create takes unitid as argument aswell<br />
+method operator missileheight added.&#8203;</div>v2.2<br />
+<div style="margin-left: 20px">fixed z calculation.&#8203;</div>v3.0<br />
+<div style="margin-left: 20px">Improved setup options and performance.&#8203;</div>v3.1<br />
+<div style="margin-left: 20px">Removed constant functions for setters.&#8203;</div>v4.0<br />
+<div style="margin-left: 20px">Epic update. Now you can customize everything to your wishes.&#8203;</div>v4.1<br />
+<div style="margin-left: 20px">Fixed a bug while reading node.next first found by Empirean.&#8203;</div>v4.2<br />
+<div style="margin-left: 20px">Added<br />
+method operator scale=<br />
+method operator scale<br />
+method operator offset=<br />
+method addHead<br />
+stamp is now a global timer.<br />
+removed list as requirement.<br />
+shooting process starts, when the first head is summoned.<br />
+improved shooting behaviour.&#8203;</div></div>
+		</div>
+	</div>
+</div><b>Credits:</b><br />
+<div style="margin-left: 20px">Nestharus, Vexorian, Rising_Dusk&#8203;</div><br />
+<b>Keywords:</b><br />
+Hydra, Guardian, Fire, Dragon, Serpent Ward, Ward, BPower, Diablo</p>
+<p>Don't forget to credit the author.</p>

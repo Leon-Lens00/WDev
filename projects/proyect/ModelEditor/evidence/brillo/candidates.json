@@ -1,0 +1,582 @@
+{
+  "entries": [
+    {
+      "volume": "I",
+      "color": 0,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_00_Red.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 1,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_01_Blue.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 2,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_02_Cyan.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 3,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_03_Purple.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 4,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_04_Yellow.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 5,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_05_Orange.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 6,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_06_Green.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 7,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_07_Pink.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 8,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_08_LightGray.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 9,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_09_LightBlue.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 10,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_10_Aqua.mdx"
+    },
+    {
+      "volume": "I",
+      "color": 11,
+      "path": "exports/candidatos-brillo/Vol-I/ShotsTeam/Shot_11_Brown.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 0,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_00_Red.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 1,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_01_Blue.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 2,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_02_Cyan.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 3,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_03_Purple.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 4,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_04_Yellow.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 5,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_05_Orange.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 6,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_06_Green.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 7,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_07_Pink.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 8,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_08_LightGray.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 9,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_09_LightBlue.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 10,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_10_Aqua.mdx"
+    },
+    {
+      "volume": "II",
+      "color": 11,
+      "path": "exports/candidatos-brillo/Vol-II/ShotsVolII/ShotII_11_Brown.mdx"
+    }
+  ],
+  "stats": [
+    {
+      "volume": "I",
+      "color": "Red",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        1,
+        0.011764705882352941,
+        0.011764705882352941
+      ],
+      "highlightGeo": [
+        1,
+        0.3411761224269867,
+        0.3411761224269867
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "Blue",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0,
+        0.25882352941176473,
+        1
+      ],
+      "highlightGeo": [
+        0.33333298563957214,
+        0.5058820843696594,
+        1
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "Cyan",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.10980392156862745,
+        0.9019607843137255,
+        0.7254901960784313
+      ],
+      "highlightGeo": [
+        0.40653562545776367,
+        0.9346404671669006,
+        0.8169933557510376
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "Purple",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.32941176470588235,
+        0,
+        0.5058823529411764
+      ],
+      "highlightGeo": [
+        0.5529409646987915,
+        0.33333298563957214,
+        0.6705880761146545
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "Yellow",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        1,
+        0.9882352941176471,
+        0.00392156862745098
+      ],
+      "highlightGeo": [
+        1,
+        0.9921568632125854,
+        0.3359473645687103
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "Orange",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.996078431372549,
+        0.5411764705882353,
+        0.054901960784313725
+      ],
+      "highlightGeo": [
+        0.9973856210708618,
+        0.6941174864768982,
+        0.3699343204498291
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "Green",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.12549019607843137,
+        0.7529411764705882,
+        0
+      ],
+      "highlightGeo": [
+        0.4169931709766388,
+        0.8352940082550049,
+        0.33333298563957214
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "Pink",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.8980392156862745,
+        0.3568627450980392,
+        0.6901960784313725
+      ],
+      "highlightGeo": [
+        0.9320260882377625,
+        0.5712416172027588,
+        0.793463945388794
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "LightGray",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.5843137254901961,
+        0.5882352941176471,
+        0.592156862745098
+      ],
+      "highlightGeo": [
+        0.7228756546974182,
+        0.7254900336265564,
+        0.7281044125556946
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "LightBlue",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.49411764705882355,
+        0.7490196078431373,
+        0.9450980392156862
+      ],
+      "highlightGeo": [
+        0.66274493932724,
+        0.8326796293258667,
+        0.9633986949920654
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "Aqua",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.06274509803921569,
+        0.3843137254901961,
+        0.27450980392156865
+      ],
+      "highlightGeo": [
+        0.37516307830810547,
+        0.5895422697067261,
+        0.5163396000862122
+      ]
+    },
+    {
+      "volume": "I",
+      "color": "Brown",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.3058823529411765,
+        0.16470588235294117,
+        0.01568627450980392
+      ],
+      "highlightGeo": [
+        0.5372546315193176,
+        0.44313696026802063,
+        0.3437905013561249
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Red",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        1,
+        0.011764705882352941,
+        0.011764705882352941
+      ],
+      "highlightGeo": [
+        1,
+        0.3411761224269867,
+        0.3411761224269867
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Blue",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0,
+        0.25882352941176473,
+        1
+      ],
+      "highlightGeo": [
+        0.33333298563957214,
+        0.5058820843696594,
+        1
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Cyan",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.10980392156862745,
+        0.9019607843137255,
+        0.7254901960784313
+      ],
+      "highlightGeo": [
+        0.40653562545776367,
+        0.9346404671669006,
+        0.8169933557510376
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Purple",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.32941176470588235,
+        0,
+        0.5058823529411764
+      ],
+      "highlightGeo": [
+        0.5529409646987915,
+        0.33333298563957214,
+        0.6705880761146545
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Yellow",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        1,
+        0.9882352941176471,
+        0.00392156862745098
+      ],
+      "highlightGeo": [
+        1,
+        0.9921568632125854,
+        0.3359473645687103
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Orange",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.996078431372549,
+        0.5411764705882353,
+        0.054901960784313725
+      ],
+      "highlightGeo": [
+        0.9973856210708618,
+        0.6941174864768982,
+        0.3699343204498291
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Green",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.12549019607843137,
+        0.7529411764705882,
+        0
+      ],
+      "highlightGeo": [
+        0.4169931709766388,
+        0.8352940082550049,
+        0.33333298563957214
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Pink",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.8980392156862745,
+        0.3568627450980392,
+        0.6901960784313725
+      ],
+      "highlightGeo": [
+        0.9320260882377625,
+        0.5712416172027588,
+        0.793463945388794
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "LightGray",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.5843137254901961,
+        0.5882352941176471,
+        0.592156862745098
+      ],
+      "highlightGeo": [
+        0.7228756546974182,
+        0.7254900336265564,
+        0.7281044125556946
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "LightBlue",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.49411764705882355,
+        0.7490196078431373,
+        0.9450980392156862
+      ],
+      "highlightGeo": [
+        0.66274493932724,
+        0.8326796293258667,
+        0.9633986949920654
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Aqua",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.06274509803921569,
+        0.3843137254901961,
+        0.27450980392156865
+      ],
+      "highlightGeo": [
+        0.37516307830810547,
+        0.5895422697067261,
+        0.5163396000862122
+      ]
+    },
+    {
+      "volume": "II",
+      "color": "Brown",
+      "originalGeo": [
+        0.33333298563957214,
+        0.6000000238418579,
+        1
+      ],
+      "flatGeo": [
+        0.3058823529411765,
+        0.16470588235294117,
+        0.01568627450980392
+      ],
+      "highlightGeo": [
+        0.5372546315193176,
+        0.44313696026802063,
+        0.3437905013561249
+      ]
+    }
+  ]
+}

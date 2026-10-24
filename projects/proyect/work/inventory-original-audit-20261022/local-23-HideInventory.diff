@@ -1,0 +1,26 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/023-HideInventory.j
++++ TerrainDev/inventory-integration/src/Inventory_23_HideInv.j
+@@ -4,6 +4,11 @@
+         local unit u = GetIndexedUnit()
+         local Inventory inv = Inventory[u]
+         local unit u2 = Equipment[Equipment.PlayerCurrentUnit[inv.pid]].unit
++
++        if inv == 0 then
++            set u = null
++            return false
++        endif
+ 
+         if (u == u2 and u != null) then
+             call Equipment[u2].show(false, PlayerCamera[inv.pid])
+@@ -21,6 +26,11 @@
+         local Inventory inv = Inventory[u]
+         local unit u2 = Equipment[Equipment.PlayerCurrentUnit[inv.pid]].unit
+         
++        if inv == 0 then
++            set u = null
++            return
++        endif
++
+         if (u == u2 and u != null) then
+             call Equipment[u2].show(false, PlayerCamera[inv.pid])
+         endif

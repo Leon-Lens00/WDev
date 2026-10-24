@@ -1,0 +1,105 @@
+{
+  "identical_to_upstream": true,
+  "node_count": 3,
+  "edge_count": 3,
+  "scope": "All persisted node fields except updated_at; all edge fields except row id. Engine-build metadata intentionally differs.",
+  "graph": {
+    "edges": [
+      {
+        "source": "function:9f809d26a7944a87eae9c1d2606675e4",
+        "target": "function:a01a76f3be84004fe69e95e79760515b",
+        "kind": "calls",
+        "metadata": "{\"confidence\":0.9,\"resolvedBy\":\"exact-match\",\"refName\":\"spell_ping\"}",
+        "line": 5,
+        "col": 11,
+        "provenance": null
+      },
+      {
+        "source": "file:probe.py",
+        "target": "function:9f809d26a7944a87eae9c1d2606675e4",
+        "kind": "contains",
+        "metadata": null,
+        "line": null,
+        "col": null,
+        "provenance": null
+      },
+      {
+        "source": "file:probe.py",
+        "target": "function:a01a76f3be84004fe69e95e79760515b",
+        "kind": "contains",
+        "metadata": null,
+        "line": null,
+        "col": null,
+        "provenance": null
+      }
+    ],
+    "nodes": [
+      {
+        "id": "file:probe.py",
+        "kind": "file",
+        "name": "probe.py",
+        "qualified_name": "probe.py",
+        "file_path": "probe.py",
+        "language": "python",
+        "start_line": 1,
+        "end_line": 6,
+        "start_column": 0,
+        "end_column": 0,
+        "docstring": null,
+        "signature": null,
+        "visibility": null,
+        "is_exported": 0,
+        "is_async": 0,
+        "is_static": 0,
+        "is_abstract": 0,
+        "decorators": null,
+        "type_parameters": null,
+        "return_type": null
+      },
+      {
+        "id": "function:a01a76f3be84004fe69e95e79760515b",
+        "kind": "function",
+        "name": "spell_ping",
+        "qualified_name": "spell_ping",
+        "file_path": "probe.py",
+        "language": "python",
+        "start_line": 1,
+        "end_line": 2,
+        "start_column": 0,
+        "end_column": 12,
+        "docstring": null,
+        "signature": "()",
+        "visibility": null,
+        "is_exported": 0,
+        "is_async": 0,
+        "is_static": 0,
+        "is_abstract": 0,
+        "decorators": null,
+        "type_parameters": null,
+        "return_type": null
+      },
+      {
+        "id": "function:9f809d26a7944a87eae9c1d2606675e4",
+        "kind": "function",
+        "name": "main",
+        "qualified_name": "main",
+        "file_path": "probe.py",
+        "language": "python",
+        "start_line": 4,
+        "end_line": 5,
+        "start_column": 0,
+        "end_column": 23,
+        "docstring": null,
+        "signature": "()",
+        "visibility": null,
+        "is_exported": 0,
+        "is_async": 0,
+        "is_static": 0,
+        "is_abstract": 0,
+        "decorators": null,
+        "type_parameters": null,
+        "return_type": null
+      }
+    ]
+  }
+}

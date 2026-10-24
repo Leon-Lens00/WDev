@@ -1,0 +1,42 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/TerrainDev-Dialogue.w3x",
+  "sha256": "5777003b5e6172fa96dc100b7ae2b5b087a82be3a246ca2bcd10e535b0c7b154",
+  "base_sha256": "6cea157b51229f9ec32cf9d4d070e5e96be66c332382ef46665f1eaba45a9946",
+  "build": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/build/20261022-170313-577961",
+  "sources": [
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/WorldBounds.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/ErrorMessage.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/TimerUtils.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/Table.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/RegisterPlayerUnitEvent.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/SpellEffectEvent.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/IsDestructableTree.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/DummyCaster.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/MissileDiagnostics.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/MissileRecycler.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/foundation-src/Missile.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/src/Inventory_25_UserInterface.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/src/Inventory_27_UnitDex.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/src/Inventory_28_PlayerUtils.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/src/Inventory_29_Camera.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration/src/Inventory_30_Math.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/src/DialogueProjection.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/src/DialogueData.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/src/ConversationUI.j"
+  ],
+  "imports": [
+    "UI\\Dialogue\\Conversation.mdx",
+    "UI\\Dialogue\\FrameBlue.blp",
+    "UI\\Dialogue\\FrameRed.blp",
+    "UI\\Dialogue\\PortraitAlia.blp",
+    "UI\\Dialogue\\PortraitX.blp"
+  ],
+  "compiled": true,
+  "pjass": true,
+  "members_preserved": true,
+  "header_preserved": true,
+  "inventory_demo_enabled": false,
+  "game_tested": false,
+  "editor_roundtrip": false,
+  "multiplayer_tested": false
+}

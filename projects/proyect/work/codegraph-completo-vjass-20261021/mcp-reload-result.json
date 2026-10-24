@@ -1,0 +1,28 @@
+{
+  "ui_toggle_completed": true,
+  "states": [
+    {
+      "enabled": false,
+      "time": "2026-10-22T00:55:03.036083"
+    },
+    {
+      "enabled": true,
+      "time": "2026-10-22T00:55:04.056166"
+    }
+  ],
+  "codegraph": {
+    "command": "/home/snz/.local/bin/codegraph",
+    "args": [
+      "serve",
+      "--mcp"
+    ],
+    "startup_timeout_sec": 30,
+    "tool_timeout_sec": 60,
+    "enabled": true
+  },
+  "other_configuration_unchanged": true,
+  "current_chat_query": "passed_after_official_reload",
+  "toggle_alone_recovered_transport": false,
+  "recovery_action": "Official MCP reload in app settings; interrupted the prior turn and recreated the server transport.",
+  "verification_file": "app-reload-v4-verification.json"
+}

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "values": {
+    "created": 90,
+    "removed": 90,
+    "finished": 70,
+    "collided": 10,
+    "cancelled": 10,
+    "dummies": 78,
+    "pooled": 12,
+    "overflow": 66,
+    "liveUnpooled": 0,
+    "casters": 1,
+    "reused": 12,
+    "timerChecks": 1,
+    "callbacks": 2390,
+    "failures": 0
+  },
+  "negative_controls_rejected": 3,
+  "scope": "Local Warcraft III 1.27b laboratory; multiplayer and future spell effects untested"
+}

@@ -1,0 +1,55 @@
+{
+  "processes": [
+    {
+      "pid": 793715,
+      "start": "11906276",
+      "command": "C:\\WarcraftIII\\war3.exe -loadfile Maps\\Test\\WorldEditTestMap.w3x -window -ydwe C:\\Tools\\YDWE                                                                                                                                                                                                                                     ",
+      "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v3-ydwe-runtime/pfx"
+    }
+  ],
+  "windows": [
+    {
+      "address": "0x558cbcb86200",
+      "mapped": true,
+      "hidden": false,
+      "visible": true,
+      "acceptsInput": true,
+      "at": [
+        -1472,
+        156
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "workspace": {
+        "id": 2,
+        "name": "2"
+      },
+      "floating": true,
+      "monitor": 2,
+      "class": "steam_app_0",
+      "title": "Warcraft III",
+      "initialClass": "steam_app_0",
+      "initialTitle": "Warcraft III",
+      "pid": 793715,
+      "xwayland": true,
+      "pinned": false,
+      "pinFullscreened": false,
+      "fullscreen": 0,
+      "fullscreenClient": 0,
+      "fullscreenHandler": "default",
+      "allowedOverFullscreen": true,
+      "grouped": [],
+      "tags": [],
+      "swallowing": "0x0",
+      "focusHistoryID": 2,
+      "inhibitingIdle": false,
+      "xdgTag": "",
+      "xdgDescription": "",
+      "contentType": "none",
+      "tearingHint": false,
+      "stableId": "18000382"
+    }
+  ]
+}

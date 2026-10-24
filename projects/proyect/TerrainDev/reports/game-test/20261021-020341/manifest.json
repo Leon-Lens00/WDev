@@ -1,0 +1,29 @@
+{
+  "directory": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/game-test/20261021-020341",
+  "run": "20261021-020341",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/work/TerrainDev-probe-20261021-020341.w3x",
+  "map_sha256": "3eccfef0e8938a5db3541dccced4d0349d444ebe41f8511062771e4e71c9f389",
+  "production_map_sha256": "39222d0bb6257925661ee6d8c0f27c0718b2f696c2f3d41745c0da037b671d02",
+  "source_sha256": "606e51d4a4a5f0dccb11d57b2d656b66af3a7c354869f00c54ed03d9bc4dafad",
+  "logs": {
+    "start": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-020341-start.txt",
+    "result": "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx/drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-20261021-020341-result.txt"
+  },
+  "expected": {
+    "created": 90,
+    "removed": 90,
+    "finished": 70,
+    "collided": 10,
+    "cancelled": 10,
+    "liveUnpooled": 0,
+    "casters": 1,
+    "timerChecks": 1,
+    "failures": 0
+  },
+  "minimum": {
+    "pooled": 1,
+    "reused": 1,
+    "callbacks": 1,
+    "dummies": 1
+  }
+}

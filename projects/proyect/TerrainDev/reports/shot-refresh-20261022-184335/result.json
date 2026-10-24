@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "target": "Warcraft III Classic 1.27b, CachyOS/Wine",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/TerrainDev.w3x",
+  "map_sha256": "47522cd81caa904206d4917de202f15e1b0865939c240b511875bb6585a2ce59",
+  "revision": "shots-vol-i-organizados-brillo",
+  "source_directory": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple",
+  "models_replaced": 12,
+  "textures_imported": 14,
+  "imports_verified": 26,
+  "asset_validation": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/asset-validation.json",
+  "colors": {
+    "passed": true,
+    "values": {
+      "checks": 40.0,
+      "failures": 0.0,
+      "live": 0.0,
+      "created": 23.0,
+      "retired": 23.0,
+      "scale": 2.743
+    },
+    "negative_controls_rejected": 4,
+    "production_sha256": "47522cd81caa904206d4917de202f15e1b0865939c240b511875bb6585a2ce59",
+    "laboratory_sha256": "e1c25963bb336a1bd5a577eda0a88cc92ac9c6bc2d3d8202e8f2bac98dc5359e",
+    "manifest": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-colors-20261022/20261022-184434/manifest.json",
+    "visual_palette": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/palette.png"
+  },
+  "visual_observation": "All twelve models render in 1.27b at production scale; clear cores and colored gradients visible, no missing textures observed.",
+  "palette": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/palette.png",
+  "build_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/20261022-184407-403137",
+  "libraries_unchanged": true,
+  "scale": 2.7434842249657065,
+  "hit_radius": 16,
+  "backup": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/previous-assets",
+  "previous_map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/TerrainDev.w3x",
+  "cleanup": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/closure.json",
+  "codegraph": {
+    "queries": [
+      "TerrainDev/src: RapidBolt VISUAL_SCALE modelForColor shootColor",
+      "TerrainDev/scripts: build.py shot_assets prepare_color_probe and prepare_color_probe.py main",
+      "ModelEditor: model.cjs read dependency pose bounds"
+    ],
+    "limits": "Separate indices, incomplete JASS inputs; conditional/module projection diagnostics retained. Graph does not validate game assets or replace compiler/engine checks."
+  },
+  "limits": [
+    "Single local client in Warcraft III Classic1.27b; multiplayer not tested.",
+    "Uniform scale matches body width; decorative light/trail/Death can exceed collision radius.",
+    "Editor save/reopen not repeated; builder verifies imports, editable triggers and unrelated members."
+  ]
+}

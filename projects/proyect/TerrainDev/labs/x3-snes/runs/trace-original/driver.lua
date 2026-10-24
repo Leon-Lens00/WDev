@@ -1,0 +1,2 @@
+LAB_CONFIG = { out = "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runs/trace-original", variant = "original", lab = "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes", state = "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/runs/ready-original-fixed/ready.mss" }
+dofile("/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/scripts/trace.lua")

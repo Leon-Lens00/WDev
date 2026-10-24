@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-23T13:55:44.763025-05:00",
+  "scope": "static and isolated instruction evaluation; no full SNES game trace or Warcraft changes",
+  "rom_sha256": "65b03268afac296330e8ff8d60dd0825879e13ed658b37713c034a3bd074f1d7",
+  "upstream": "b1ffc579861b028306bf5db636ed02489bb6eded",
+  "isolated_matched_steps": 2400,
+  "combinations": 20,
+  "focused_blocks_per_variant": 12,
+  "source_physics_changes_match_ips": true,
+  "original_zip_and_rom_preserved": true,
+  "production_map_and_libraries_unchanged": true,
+  "report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/docs/x3-evaluacion-rom-original-zero-project.md",
+  "chart": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/x3-rom-evaluation-20261023-134543/comparacion-fisica-rom.png",
+  "plot_python": "/home/snz/Documentos/ChatGPT/Proyect/work/shots-vol-i-origen-20261022/plot-env/bin/python",
+  "incidents_resolved": [
+    "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-135029-x3-interprete-investigacion.md",
+    "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-135147-x3-guardar-evidencia-codegraph.md"
+  ],
+  "limits": [
+    "No complete SNES scheduler/animation/collision trace",
+    "No full HEAD source build; focused patches only compared with IPS V4.1",
+    "No native timebase measured; use per-update units",
+    "No Warcraft implementation or new in-game tests this turn"
+  ]
+}

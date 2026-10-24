@@ -1,0 +1,19 @@
+{
+  "name": "CachyOS skill integration",
+  "target": "Warcraft III 1.27b",
+  "base_map": "maps/base.w3x",
+  "entrypoint": "src/Main.j",
+  "source_root": "src",
+  "toolchain": "/home/snz/Documentos/ChatGPT/FrozenThone/wc3toolchain.json",
+  "local_launcher": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+  "output_map": "dist/SkillCheck.w3x",
+  "build_dir": "build",
+  "report": "reports/build.json",
+  "sync_wct": true,
+  "archive_files": [
+    {
+      "source": "asset.bin",
+      "target": "war3mapImported/skill-check.bin"
+    }
+  ]
+}

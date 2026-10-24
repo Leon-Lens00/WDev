@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-23T03:00:49.077550-05:00",
+  "original_hashes_checked": 162,
+  "original_unchanged": true,
+  "copy_changed": [
+    "Multiboard/InitialWaveMultiboard.j",
+    "Multiboard/WaveMultiboard.j",
+    "MyMissiles/PrisonerDropSystem.j",
+    "Players/Config/InitialGoldConfig.j",
+    "Selection/SelectionClientBridge.j",
+    "Selection/SelectionHeroSpawn.j",
+    "Selection/SelectionSystem.j",
+    "Systems/HeroLives/HeroLives.j",
+    "WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j",
+    "WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j",
+    "WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j",
+    "WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j",
+    "WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j",
+    "WaveSysAnAI/SwlsWave/StageExample.j",
+    "WaveSysAnAI/SwlsWave/WaveStreaks.j",
+    "libraries/HealthBarTextTags.j"
+  ],
+  "copy_unchanged": 146,
+  "new_source": "Players/WavePlayerUtils.j",
+  "new_source_sha256": "b9409c61c8bc0e1f01f325667fcdcbdbc3a00ce05ce0e775b6d8a5f572fb0daf",
+  "ui_preserved": [
+    "UI System/MyIU/MenuClient.j",
+    "libraries/Camera.j",
+    "libraries/PlayerUtils.j",
+    "libraries/SpacebarDetect.j",
+    "libraries/SyncInteger.j",
+    "libraries/UserInterface.j"
+  ],
+  "native_runs": [
+    {
+      "run": "players-alone-v1",
+      "checks": 39,
+      "failures": 0,
+      "removal_transitions": 144,
+      "expected_negative": false,
+      "process_closed": true
+    },
+    {
+      "run": "players-coexist-v1",
+      "checks": 39,
+      "failures": 0,
+      "removal_transitions": 144,
+      "expected_negative": false,
+      "process_closed": true
+    },
+    {
+      "run": "players-negative-v1",
+      "checks": 39,
+      "failures": 10,
+      "removal_transitions": 144,
+      "expected_negative": true,
+      "process_closed": true
+    }
+  ],
+  "full_compile_sources_still_current": true
+}

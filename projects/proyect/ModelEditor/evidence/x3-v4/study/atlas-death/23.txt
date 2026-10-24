@@ -1,0 +1,46 @@
+Browser tab: 3, Title: "Vinz · estudio de 191 modelos", URL: "http://127.0.0.1:34801/vinz-study-v4/".
+0 AXWebArea Vinz · estudio de 191 modelos, URL: 127.0.0.1:34801/vinz-study-v4/
+	1 container
+		2 heading Vinz · estudio191, Value: 1
+			3 text Vinz · estudio191
+		4 button Anterior, ID: prev
+		5 text Página 
+		6 stepper (settable, integer) Página, Value: 23, ID: page
+		7 button Siguiente, ID: next
+		8 text Secuencia 
+		9 pop up button (collapsed, settable) Secuencia, Value: Death120ms, ID: sequence, Secondary Actions: Expand
+			10 menu
+				11 Stand
+				12 Birth120ms
+				13 (selected) Death120ms
+		14 text Cámara 
+		15 pop up button (collapsed, settable) Cámara, Value: Oblicua, ID: camera, Secondary Actions: Expand
+			16 menu
+				17 (selected) Oblicua
+				18 Lateral
+				19 Frontal
+		20 button Movimiento prueba | activar, ID: motion
+		25 text Página23/32 · 6 modelos · partículas553
+	22 container
+		23 image view
+		24 container cells
+			26 container
+				27 text 132 · Storm Bolt · Storm Bolt
+				28 text Recursos resueltos 842 tris · 13 PE2 · 1 estelas · Death · t8620ms
+			29 container
+				30 text 133 · Storm Bolt · Storm Bolt Green
+				31 text Recursos resueltos 842 tris · 13 PE2 · 1 estelas · Death · t8620ms
+			32 container
+				33 text 134 · Storm Bolt · Storm Bolt Red
+				34 text Recursos resueltos 842 tris · 13 PE2 · 1 estelas · Death · t8620ms
+			35 container
+				36 text 135 · Void Missiles · Void Arrow
+				37 text Recursos resueltos 44 tris · 5 PE2 · 0 estelas · Death · t2120ms
+			38 container
+				39 text 136 · Void Missiles · Void Crescent Tailed
+				40 text Recursos resueltos 72 tris · 5 PE2 · 0 estelas · Death · t2120ms
+			41 container
+				42 text 137 · Void Missiles · Void Spear
+				43 text Recursos resueltos 2 tris · 8 PE2 · 6 estelas · Death · t2120ms
+
+The focused UI element is 7 button Siguiente, ID: next

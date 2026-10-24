@@ -1,0 +1,23 @@
+{
+  "previewTexelsEqualBlpMip0": true,
+  "nativeIconPathsVerified": true,
+  "heroUsesCustomFrameIcon": true,
+  "nativeHeroHudHiddenByBasicSharedControl": true,
+  "assetTextureNames": [
+    "FrameHeroHorizontal",
+    "FrameEnemyHorizontal",
+    "LifeNormalHorizontal",
+    "LifeCriticalHorizontal"
+  ],
+  "casesObserved": [
+    "shared grid75/86",
+    "shared game75/86",
+    "native100",
+    "native critical10/15",
+    "native enemy0",
+    "native target-icon swap",
+    "native move and HolyLight",
+    "native patrol/dialogue"
+  ],
+  "nativeEvidence": "latest-healthbar-test.json"
+}

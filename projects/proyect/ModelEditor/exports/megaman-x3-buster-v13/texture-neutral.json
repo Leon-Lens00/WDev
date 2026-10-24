@@ -1,0 +1,9 @@
+{
+  "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/assets/x3-v12/Blue_Glow2.blp",
+  "sourceSha256": "f034effe383cb39eae294b2a06a6f7ca3e447cb98eb98907e995fda86d91ceb7",
+  "output": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/assets/x3-v13/White_Glow2.blp",
+  "sha256": "cd7ea717ba182812a93b14e8c56a3490e574e24f73db8594e5044cf0f3ab3884",
+  "mips": 6,
+  "alphaExact": true,
+  "method": "RGB=max(R,G,B), preserved alpha; grayscale BLP1 palette"
+}

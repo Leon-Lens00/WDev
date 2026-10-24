@@ -1,0 +1,18 @@
+{
+  "maps": {
+    "speed0": "70659fd806685801e3240a13af973df4edb4fe19cb900a33da168516343931bd",
+    "speed300": "aba08fc7990035442296295159031a53346dcecd8130a15c95b599e02175b5b3"
+  },
+  "compiledScriptIdentical": true,
+  "onlyObjectFieldChanged": "umvs0\u2192300 for7 dummy units;14 byte differences",
+  "brightCoreScreenXSpeed0": [
+    665,
+    673
+  ],
+  "brightCoreScreenXSpeed300": [
+    586,
+    704
+  ],
+  "result": "Actual visual displacement and trailing particles observed; root MDX unchanged",
+  "physicsScope": "Only optional demo in isolated gallery"
+}

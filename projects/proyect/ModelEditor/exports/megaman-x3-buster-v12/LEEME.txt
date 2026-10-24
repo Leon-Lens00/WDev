@@ -1,0 +1,13 @@
+X3 Buster A — V12 | Warcraft III Classic 1.27b | MDX800
+
+Corrección de la envoltura romboidal de V11. El perfil rosa ahora es continuo y redondeado, con cola abierta que se prolonga en hebras. La superficie sigue al cuerpo azul y conserva el barrido luminoso cada 240 ms.
+El verde usa cuatro descargas angulares, núcleo fino y halo suave con material aditivo. Bandas cruzadas evitan que se pierda al verse de canto. Recorrido100ms, repetición120ms, fases0/30/60/90ms. La luz se aclara al superponerse al blanco; el verde se distingue hacia los bordes interiores de la envoltura.
+Núcleo azul, UV y geometría de sus18geosets conservados de V11. Birth300ms y Death1000ms conservan su comportamiento: formación local desde la punta, desaparición del cuerpo en90ms y estallido independiente con partículas derivadas de ShotsVol.II.
+
+Importar A-Buster/X3_Buster_Cargado.mdx y los15BLP de A-Buster/X3BusterV12. Rutas internas exactas X3BusterV12\Nombre.blp. MDL editable incluido. Punta/raíz=(0,0,0), frente+X y cola-X. El impacto se expande alrededor del origen. Sólo modelo: sin física ni trayectoria mundial.
+IntervalosMDX: Birth0–300, Stand400–1360, Death1500–2500.4608triángulos,61geosets,15PE2(11vuelo+4impacto),1ribbon,15texturas.
+La revisión V11 y los paquetes anteriores permanecen intactos. B/C no cambiaron.
+
+Previews: capturas reales del visor3D y del motor. GIF3D a1/4develocidad para inspección; no representan el ritmo del juego. Visor local http://127.0.0.1:34801/x3-v12/ mientras siga activo el servidor.
+
+Créditos: Vinz, ShotsVol.II (geometría,UV,capas y emisores adaptados), https://www.hiveworkshop.com/threads/shots-vol-ii.315512/ . Psionic Shots y Firebrand Shots como referencias del ciclo visual. Mega Man X3:Capcom; sprites Random Talking Bush/Spriters Resource; referencia animada Retropixel. Interpretación3D;120/240ms son decisiones artísticas, no temporizaciónSNES medida.

@@ -1,0 +1,102 @@
+{
+  "status": "TESTED IN MAP / visual scope",
+  "mdxSha256": "570738e214e42c4610a56655278f9b52b2557cd3f9fe5c86ed516f261123e7d7",
+  "map": {
+    "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v11-20261023-092825/X3BusterV11.w3x",
+    "sha256": "16b298bea81a946ac60e8ef41c4407659471717242529bf8b4ba57128c4477e5",
+    "baseSha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+    "membersVerified": 35,
+    "models": 2,
+    "compiled": "PASS",
+    "reextraction": "PASS"
+  },
+  "mode": "YDWE -war3 -loadfile, Classic1.27b, single player, private EnableHost0",
+  "cases": [
+    {
+      "name": "final-scale05",
+      "frames": 25,
+      "firstCaptureSeconds": 0.2092586070066318,
+      "lastCaptureSeconds": 5.48684253700776,
+      "monitor": "DP-1",
+      "pid": 1000454
+    },
+    {
+      "name": "final-scale24",
+      "frames": 25,
+      "firstCaptureSeconds": 0.19905033500981517,
+      "lastCaptureSeconds": 5.393045545002678,
+      "monitor": "DP-1",
+      "pid": 1000454
+    },
+    {
+      "name": "final-stand-scale1",
+      "frames": 25,
+      "firstCaptureSeconds": 0.24358532598125748,
+      "lastCaptureSeconds": 5.787629451981047,
+      "monitor": "DP-1",
+      "pid": 1000454
+    },
+    {
+      "name": "final-birth-normal",
+      "frames": 25,
+      "firstCaptureSeconds": 0.24328337199403904,
+      "lastCaptureSeconds": 5.579187661991455,
+      "monitor": "DP-1",
+      "pid": 1000454
+    },
+    {
+      "name": "final-birth-slow",
+      "frames": 25,
+      "firstCaptureSeconds": 0.21135584299918264,
+      "lastCaptureSeconds": 5.464190444006817,
+      "monitor": "DP-1",
+      "pid": 1000454
+    },
+    {
+      "name": "final-impact-normal",
+      "frames": 25,
+      "firstCaptureSeconds": 0.19580827100435272,
+      "lastCaptureSeconds": 5.574820665002335,
+      "monitor": "DP-1",
+      "pid": 1000454
+    },
+    {
+      "name": "final-impact-slow",
+      "frames": 25,
+      "firstCaptureSeconds": 0.2826357250160072,
+      "lastCaptureSeconds": 5.949888659000862,
+      "monitor": "DP-1",
+      "pid": 1000454
+    },
+    {
+      "name": "final-moving-scale1",
+      "frames": 25,
+      "firstCaptureSeconds": 0.20563110397779383,
+      "lastCaptureSeconds": 5.479714836983476,
+      "monitor": "DP-1",
+      "pid": 1000454
+    }
+  ],
+  "observed": [
+    "Pink elongated envelope more visible than V10 at scales0.5/1/2.4",
+    "Thicker interior green is distinguishable at1/2.4; angular detail diminishes at0.5",
+    "Birth formation observed with animation timeScale0.25; normal command/end state also captured",
+    "Death at normal and0.25animation speed: body fades, blue star/globule burst expands and dissipates",
+    "Motion preview at scale1 shows trailing particles; model has no exported world trajectory"
+  ],
+  "limitations": [
+    "Native captures around220ms apart cannot measure120/240ms flicker precisely; curves and3D step20ms inspect that timing",
+    "SetUnitTimeScale0.25 is an animation inspection aid, not proof every particle simulation clock is slowed equally",
+    "No multiplayer, physics integration or performance measurements"
+  ],
+  "close": {
+    "pid": 1000454,
+    "processAbsent": true,
+    "windowAbsent": true,
+    "exit": {
+      "returnCode": 0,
+      "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v11-ydwe-runtime/pfx"
+    }
+  },
+  "firstRun": "Focus conflict and wtype failure documented separately; excluded from final cases"
+}

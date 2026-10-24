@@ -1,0 +1,47 @@
+{
+  "client": "@modelcontextprotocol/sdk 1.29.0 (existing Forge dependency)",
+  "server": {
+    "name": "wc3-jass-explore-local",
+    "version": "0.1.0"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tools": [
+    "jass_query",
+    "jass_explore"
+  ],
+  "source_count": 3,
+  "query_symbols": [
+    "SpellPing"
+  ],
+  "explored_calls": [
+    {
+      "file": "Main.vjass",
+      "line": 2,
+      "column": 7,
+      "caller": "Main.vjass:1:10",
+      "caller_name": "main",
+      "target": "SpellPing",
+      "kind": "call",
+      "resolution": "lexical_candidate",
+      "candidates": [
+        "Ping.jass:1:10"
+      ],
+      "query_match": "lexical_candidate"
+    }
+  ],
+  "snippet_count": 2,
+  "coverage": "lexical_only",
+  "source_set_sha256": "419c5b3791a701c8042bac7c56ec766ec7a866304ff7362c82bf727f6d93bd5a",
+  "invalid_root_rejected": true,
+  "source_hashes_unchanged": true,
+  "source_hashes": {
+    "Counter.j": "327af3d4297a326bde80623393052ffd5a2d2c8e8af573e3359a0bd966630716",
+    "Main.vjass": "e5afa2592e4a05ea2a06648b3f24acc07c84c19dfb33a5b036b3e9cf3added9a",
+    "Ping.jass": "8c284fe04a47ad24e8c8faced162783484f5f1930664756e2a7a229e15a6d56e"
+  },
+  "stderr": ""
+}

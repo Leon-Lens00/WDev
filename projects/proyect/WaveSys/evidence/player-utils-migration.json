@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-23T02:45:01.564121-05:00",
+  "files": [
+    {
+      "path": "Multiboard/InitialWaveMultiboard.j",
+      "before_sha256": "3287faa176f5dee3c3274d747552a546886d8d8bfe6d0073985958dc5d495d6a",
+      "after_sha256": "6202600a9c17b58523f081aed8295d046aba70455e76d63a1b7275da7b8e73ac",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/Multiboard/InitialWaveMultiboard.j"
+    },
+    {
+      "path": "Multiboard/WaveMultiboard.j",
+      "before_sha256": "6bdbecea9cf9cc73a4ead17d17d2819664e648fd9f2be25c16d71c4deb4bc3f1",
+      "after_sha256": "0803897a0e4812823183a2ff9eab3d69e746760658701bacc69f09e4ad5bcc12",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/Multiboard/WaveMultiboard.j"
+    },
+    {
+      "path": "MyMissiles/PrisonerDropSystem.j",
+      "before_sha256": "2a37b91cfb1ba57ec2fcdc9c7b451020ee608c1feb79dba978f77885f7a7428a",
+      "after_sha256": "fdc46afd3dabf6c20c3cd464e5f4eea472b3df07bea526a4fe5c2ce746c561d5",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/MyMissiles/PrisonerDropSystem.j"
+    },
+    {
+      "path": "Players/Config/InitialGoldConfig.j",
+      "before_sha256": "05dc9c34dcb09b94df79315f03d95726c27e099baa5fe22bd8dc3503ba9c4d61",
+      "after_sha256": "7e352df276b821b27bfb51197965cd6bcb7a61d6afa7ac1bc2d91fe2a18a0567",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/Players/Config/InitialGoldConfig.j"
+    },
+    {
+      "path": "Selection/SelectionClientBridge.j",
+      "before_sha256": "27ea766d9ee525abea1b1c8ff8c06309150cf33bf9718be19d61b34c0c8cb974",
+      "after_sha256": "084941fbad11a2835250c85cf9c026176eac3ba452219f8ff16cb5436cfb6ea7",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/Selection/SelectionClientBridge.j"
+    },
+    {
+      "path": "Selection/SelectionHeroSpawn.j",
+      "before_sha256": "a77f403ab4cdc7ac8134b6a8517b73b8e47b3b280d5d6663369d59fcdcf66e10",
+      "after_sha256": "e3e2a16f6541422c79c57185972afe44f9c1c776a7c911936390f03cdaebf7bd",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/Selection/SelectionHeroSpawn.j"
+    },
+    {
+      "path": "Selection/SelectionSystem.j",
+      "before_sha256": "920e577a907c65799597657c2045d8a71ca729fb28d8ee2645e89e7f8fb2eb25",
+      "after_sha256": "29c238b2ac3a813adb90611dd9a8b2f85f0f544926f612814a62c33ff078a938",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/Selection/SelectionSystem.j"
+    },
+    {
+      "path": "Systems/HeroLives/HeroLives.j",
+      "before_sha256": "0c2fd21b6effd2adf27c735c839fc04f59144acedbc2b261909d9a57785241ea",
+      "after_sha256": "177b69b78e24d9b9a5eb6f4511720473f044f5f0eed35d7734c9e2724993f0bd",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/Systems/HeroLives/HeroLives.j"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j",
+      "before_sha256": "3cec19655a66212342ac574e34c49cc0f8dfa0003e10968053f01d65b5f435dd",
+      "after_sha256": "1dc2b065b3a09a6999989e9f72d81943568580bfd4cabcbdb39cc22c1b6e27bb",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j",
+      "before_sha256": "4a022a7ade77424b2263e27578643291738aff9b1f914ae046a6f6671789a557",
+      "after_sha256": "e0c2af397d54c707e6e3f91f4d679f6d39babb14fa261dec98aac038212453c4",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j",
+      "before_sha256": "3f9575aa6fb85195a1d6d8e183e4336a82f3e3d33689e3bef424d4052ad47185",
+      "after_sha256": "0e549f811724814585d40bc32ecb357df3fade3202a98243f308978d0327c796",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j",
+      "before_sha256": "06133c8704764ab767d6bed3b633cf09b17c25e7bf4bd9fa5d1a2575000e8073",
+      "after_sha256": "4a54244a503adfb8b9943ee0f231a47ade78b69003de21b0fec40c6466c06b4a",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j",
+      "before_sha256": "d094dc8b220c95d1743ea172b84c2839fd8216e87f71fee985a2ac1ef2ef69f7",
+      "after_sha256": "70591a2daac8d9e023e58eb4065c8d86ca3d59e978319a09ee319c3cda312929",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/StageExample.j",
+      "before_sha256": "042026a60044ff6800672ed712fd409aea257c8b5e470607e8d72f2044a7755f",
+      "after_sha256": "597e8b02704870b7fe44bfd8ea1cd5d1bc28f7480eaff2bbab4418d64e4b3b7b",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/WaveSysAnAI/SwlsWave/StageExample.j"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/WaveStreaks.j",
+      "before_sha256": "96bf8b6b6859ca726eba6abe6e7f31e4c6c9d205a0c32a730e70c777b8f0e266",
+      "after_sha256": "6c566d35f2ceda443bd82c725bbd398bf0bc1804dbd121363f3f786038b342f3",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/WaveSysAnAI/SwlsWave/WaveStreaks.j"
+    },
+    {
+      "path": "libraries/HealthBarTextTags.j",
+      "before_sha256": "fec7217bafd949bcd4580498f406798ed79d8037369fb5c23b54bbd28f24a48e",
+      "after_sha256": "d5bd677804dd5677d15391eab6b699a9d323d16098bb0ccfcd6efbc98a72a780",
+      "backup": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/evidence/player-utils-before/libraries/HealthBarTextTags.j"
+    }
+  ],
+  "preserved_ui": [
+    "UI System/MyIU/MenuClient.j",
+    "libraries/Camera.j",
+    "libraries/PlayerUtils.j",
+    "libraries/SpacebarDetect.j",
+    "libraries/SyncInteger.j",
+    "libraries/UserInterface.j"
+  ],
+  "original_root": "/home/snz/Documentos/WarDatsPy/struct"
+}

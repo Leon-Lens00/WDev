@@ -1,0 +1,40 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/001-InventoryCore.j
++++ TerrainDev/inventory-integration/src/Inventory_01_Inventory.j
+@@ -81,7 +81,7 @@
+         static UIPicture array selector
+         
+         Camera camera
+-        Table countTable
++        InventoryTable countTable
+         integer currentPage
+         
+         readonly boolean displayed
+@@ -285,7 +285,7 @@
+             set this.freeSlot = 0
+             set this.pid = GetPlayerId(GetOwningPlayer(this.owner))
+             set this.user = User(this.pid)
+-            set this.countTable=Table.create()
++            set this.countTable=InventoryTable.create()
+             
+             set raceId = GetHandleId(GetPlayerRace(User(this.pid).handle))-1
+             
+@@ -377,6 +377,10 @@
+             local thistype equip
+             local real timeout
+             
++            if this == 0 or (not flag and not this.displayed) then
++                return
++            endif
++
+             if (this.currentPage >= .MAX_PAGES) then
+                 set this.currentPage = 0
+             elseif (this.currentPage < 0) then
+@@ -439,8 +443,6 @@
+                 
+                 call this.getButton(i).setTexture(thistype.localInt(this.pid, GetItemIcon(this.getItem((.MAX_SLOTS*this.currentPage) + i).id), ICON_TRANSPARENT))
+ 
+-                call this.getButton(i).showPlayer(this.user.handle, flag, this.camera)
+-                
+                 call this.getButton(i).showPlayer(this.user.handle, flag, this.camera)
+                 
+                 

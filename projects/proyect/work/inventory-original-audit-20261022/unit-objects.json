@@ -1,0 +1,5984 @@
+{
+  "fresh141": {
+    "ewin": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth,Avul"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "EquipmentWindow"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\RaceWindowLong.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "bwn2": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth,Avul"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "RaceWindow"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\RaceWindow.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "e001": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "dummy"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "war3mapImported\\dummy.mdl"
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        },
+        "uerd": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvt": {
+          "type": 3,
+          "value": ""
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "udtm": {
+          "type": 2,
+          "value": 0.10000000149011612
+        }
+      }
+    },
+    "uidm": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "hero"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Avul,Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": " "
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 500
+        },
+        "usin": {
+          "type": 0,
+          "value": 500
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\dummy.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "Button (UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        }
+      }
+    },
+    "ttip": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth,Avul"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "TooltipWindow"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\TooltipWindow.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "e000": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "dummy"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "war3mapImported\\dummy.mdl"
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        },
+        "uerd": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "udtm": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(hero window)"
+        }
+      }
+    },
+    "e002": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "hero"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Avul,Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": " "
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 500
+        },
+        "usin": {
+          "type": 0,
+          "value": 500
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\TRSHerolevel.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "Selector 1 (UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        }
+      }
+    },
+    "e003": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "dummy"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\TRSHerolevel.mdl"
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        },
+        "uerd": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "udtm": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(selector)"
+        }
+      }
+    }
+  },
+  "fresh143": {
+    "ewin": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth,Avul"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "EquipmentWindow"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\RaceWindowLong.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "bwn2": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth,Avul"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "RaceWindow"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\RaceWindow.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "e001": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "dummy"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "war3mapImported\\dummy.mdl"
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        },
+        "uerd": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvt": {
+          "type": 3,
+          "value": ""
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "udtm": {
+          "type": 2,
+          "value": 0.10000000149011612
+        }
+      }
+    },
+    "uidm": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "hero"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Avul,Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": " "
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 500
+        },
+        "usin": {
+          "type": 0,
+          "value": 500
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\dummy.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "Button (UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        }
+      }
+    },
+    "ttip": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth,Avul"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "TooltipWindow"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\TooltipWindow.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "e000": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "dummy"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "war3mapImported\\dummy.mdl"
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        },
+        "uerd": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "udtm": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(hero window)"
+        }
+      }
+    },
+    "e002": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "hero"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Avul,Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": " "
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 500
+        },
+        "usin": {
+          "type": 0,
+          "value": 500
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\TRSHerolevel.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "Selector 1 (UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        }
+      }
+    },
+    "e003": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "dummy"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\TRSHerolevel.mdl"
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        },
+        "uerd": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "udtm": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(selector)"
+        }
+      }
+    }
+  },
+  "integrated": {
+    "n000": {
+      "base": "nalb",
+      "fields": {
+        "unam": {
+          "type": 3,
+          "value": "Wish"
+        },
+        "umdl": {
+          "type": 3,
+          "value": "Abilities\\Weapons\\MurgulMagicMissile\\MurgulMagicMissile.mdl"
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aloc,Awan"
+        },
+        "ushu": {
+          "type": 3,
+          "value": ""
+        },
+        "usca": {
+          "type": 1,
+          "value": 0.5
+        },
+        "uclb": {
+          "type": 0,
+          "value": 150
+        },
+        "uclg": {
+          "type": 0,
+          "value": 150
+        },
+        "uclr": {
+          "type": 0,
+          "value": 200
+        },
+        "umvh": {
+          "type": 2,
+          "value": 350.0
+        },
+        "umvf": {
+          "type": 2,
+          "value": 300.0
+        },
+        "uble": {
+          "type": 1,
+          "value": 1.0
+        },
+        "ucpt": {
+          "type": 2,
+          "value": 0.30000001192092896
+        },
+        "urun": {
+          "type": 1,
+          "value": 300.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 300.0
+        },
+        "umvs": {
+          "type": 0,
+          "value": 50
+        },
+        "umis": {
+          "type": 0,
+          "value": 50
+        },
+        "umvr": {
+          "type": 2,
+          "value": 3.0
+        }
+      }
+    },
+    "n001": {
+      "base": "nalb",
+      "fields": {
+        "unam": {
+          "type": 3,
+          "value": "Net"
+        },
+        "umdl": {
+          "type": 3,
+          "value": "Abilities\\Spells\\Orc\\Ensnare\\ensnareTarget.mdl"
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aloc"
+        },
+        "ushu": {
+          "type": 3,
+          "value": ""
+        },
+        "usca": {
+          "type": 1,
+          "value": 1.7999999523162842
+        },
+        "umvh": {
+          "type": 2,
+          "value": 0.0
+        },
+        "umvf": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvs": {
+          "type": 0,
+          "value": 0
+        },
+        "umis": {
+          "type": 0,
+          "value": 0
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        }
+      }
+    },
+    "dumi": {
+      "base": "hfoo",
+      "fields": {
+        "uabi": {
+          "type": 3,
+          "value": "Amrf,Aloc,Avul"
+        },
+        "uico": {
+          "type": 3,
+          "value": " "
+        },
+        "umdl": {
+          "type": 3,
+          "value": "war3mapImported\\dummy.mdl"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "ushu": {
+          "type": 3,
+          "value": ""
+        },
+        "uaen": {
+          "type": 0,
+          "value": 0
+        },
+        "udea": {
+          "type": 0,
+          "value": 0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "util": {
+          "type": 3,
+          "value": ""
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ulev": {
+          "type": 0,
+          "value": 1
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "Missile Dummy"
+        }
+      }
+    },
+    "dcst": {
+      "base": "nfr2",
+      "fields": {
+        "ushb": {
+          "type": 3,
+          "value": ""
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uubs": {
+          "type": 3,
+          "value": ""
+        },
+        "upat": {
+          "type": 3,
+          "value": ""
+        },
+        "urac": {
+          "type": 3,
+          "value": "human"
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "unam": {
+          "type": 3,
+          "value": "Dummy Caster"
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aloc,Avul"
+        },
+        "umdl": {
+          "type": 3,
+          "value": "war3mapImported\\dummy.mdl"
+        },
+        "uaen": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "ucpt": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvs": {
+          "type": 0,
+          "value": 0
+        },
+        "umvt": {
+          "type": 3,
+          "value": "none"
+        },
+        "usca": {
+          "type": 1,
+          "value": 1.0
+        }
+      }
+    },
+    "ewin": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth,Avul"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "EquipmentWindow"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\RaceWindowLong.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "bwn2": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth,Avul"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "RaceWindow"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\RaceWindow.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "e001": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "dummy"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\InventoryDummy.mdl"
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        },
+        "uerd": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvt": {
+          "type": 3,
+          "value": ""
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "udtm": {
+          "type": 2,
+          "value": 0.10000000149011612
+        }
+      }
+    },
+    "uidm": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "hero"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Avul,Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": " "
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 500
+        },
+        "usin": {
+          "type": 0,
+          "value": 500
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\dummy.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "Button (UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        }
+      }
+    },
+    "ttip": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth,Avul"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "TooltipWindow"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\TooltipWindow.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        }
+      }
+    },
+    "e000": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "dummy"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\InventoryDummy.mdl"
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        },
+        "uerd": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "udtm": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(hero window)"
+        }
+      }
+    },
+    "e002": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "hero"
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Avul,Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": " "
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 500
+        },
+        "usin": {
+          "type": 0,
+          "value": 500
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\TRSHerolevel.mdl"
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uhom": {
+          "type": 0,
+          "value": 1
+        },
+        "uico": {
+          "type": 3,
+          "value": "ReplaceableTextures\\WorldEditUI\\Doodad-Cinematic.blp"
+        },
+        "unsf": {
+          "type": 3,
+          "value": "Selector 1 (UI Dummy)"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uslz": {
+          "type": 1,
+          "value": 2048.0
+        },
+        "ussc": {
+          "type": 1,
+          "value": -1.0
+        },
+        "ufle": {
+          "type": 0,
+          "value": 0
+        },
+        "uine": {
+          "type": 0,
+          "value": 0
+        },
+        "ushr": {
+          "type": 0,
+          "value": 0
+        },
+        "utcc": {
+          "type": 0,
+          "value": 1
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        }
+      }
+    },
+    "e003": {
+      "base": "ewsp",
+      "fields": {
+        "utar": {
+          "type": 3,
+          "value": ""
+        },
+        "udup": {
+          "type": 0,
+          "value": 0
+        },
+        "udty": {
+          "type": 3,
+          "value": "none"
+        },
+        "uimz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "ussi": {
+          "type": 3,
+          "value": "ReplaceableTextures\\CommandButtons\\BTNWisp.blp"
+        },
+        "utco": {
+          "type": 0,
+          "value": 12
+        },
+        "umvs": {
+          "type": 0,
+          "value": 1
+        },
+        "usnd": {
+          "type": 3,
+          "value": ""
+        },
+        "ucol": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uabi": {
+          "type": 3,
+          "value": "Aeth"
+        },
+        "uhot": {
+          "type": 3,
+          "value": ""
+        },
+        "unam": {
+          "type": 3,
+          "value": "dummy"
+        },
+        "utip": {
+          "type": 3,
+          "value": ""
+        },
+        "utub": {
+          "type": 3,
+          "value": ""
+        },
+        "ubui": {
+          "type": 3,
+          "value": ""
+        },
+        "upgr": {
+          "type": 3,
+          "value": ""
+        },
+        "urtm": {
+          "type": 0,
+          "value": 1
+        },
+        "ubld": {
+          "type": 0,
+          "value": 1
+        },
+        "utyp": {
+          "type": 3,
+          "value": ""
+        },
+        "usrg": {
+          "type": 0,
+          "value": 0
+        },
+        "usma": {
+          "type": 0,
+          "value": 0
+        },
+        "uhpm": {
+          "type": 0,
+          "value": 1
+        },
+        "ucar": {
+          "type": 0,
+          "value": 0
+        },
+        "ubba": {
+          "type": 0,
+          "value": 0
+        },
+        "ubsi": {
+          "type": 0,
+          "value": 0
+        },
+        "ubdi": {
+          "type": 0,
+          "value": 0
+        },
+        "upoi": {
+          "type": 0,
+          "value": 0
+        },
+        "ufor": {
+          "type": 0,
+          "value": 0
+        },
+        "upri": {
+          "type": 0,
+          "value": 0
+        },
+        "usid": {
+          "type": 0,
+          "value": 0
+        },
+        "usin": {
+          "type": 0,
+          "value": 0
+        },
+        "urac": {
+          "type": 3,
+          "value": "other"
+        },
+        "uhpr": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uhrt": {
+          "type": 3,
+          "value": "none"
+        },
+        "ugol": {
+          "type": 0,
+          "value": 0
+        },
+        "ugor": {
+          "type": 0,
+          "value": 0
+        },
+        "ufoo": {
+          "type": 0,
+          "value": 0
+        },
+        "udro": {
+          "type": 0,
+          "value": 0
+        },
+        "umdl": {
+          "type": 3,
+          "value": "UI\\TRSHerolevel.mdl"
+        },
+        "umxp": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umxr": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ulpz": {
+          "type": 2,
+          "value": 0.0
+        },
+        "uspe": {
+          "type": 0,
+          "value": 1
+        },
+        "umvr": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "uprw": {
+          "type": 2,
+          "value": 1.0
+        },
+        "uerd": {
+          "type": 1,
+          "value": 0.0
+        },
+        "umvt": {
+          "type": 3,
+          "value": "float"
+        },
+        "uspa": {
+          "type": 3,
+          "value": ""
+        },
+        "uble": {
+          "type": 1,
+          "value": 0.0
+        },
+        "ucbs": {
+          "type": 2,
+          "value": 0.0
+        },
+        "urun": {
+          "type": 1,
+          "value": 0.0
+        },
+        "uwal": {
+          "type": 1,
+          "value": 0.0
+        },
+        "udtm": {
+          "type": 2,
+          "value": 0.10000000149011612
+        },
+        "unsf": {
+          "type": 3,
+          "value": "(selector)"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+DIAGNÓSTICO Y CORRECCIÓN — Warcraft III Classic 1.27b
+Fecha de ensayo: 2026-10-20 America/Lima
+Estado más fuerte: Validated (validación estática de JASS con pJASS).
+
+SÍNTOMA REPRODUCIDO
+La entrada ya es JASS generado: contiene globals, funciones y wrappers de JassHelper. No requiere otra compilación vJASS para esta validación. Con common.j y Blizzard.j configurados, pJASS devuelve código 1 y dos errores:
+entrada.j:2215: Variable ndist is uninitialized
+entrada.j:2221: Variable bdist is uninitialized
+
+CAUSA CONFIRMADA PARA EL FALLO DE VALIDACIÓN
+En s__Hydra_evaluateTarget (2165), ndist y bdist se declaran sin inicialización (2167–2168). La primera lectura de cada una aparece en una comparación de la condición if (2215 y 2221); su asignación está dentro del cuerpo posterior (2216 y 2223). Este pJASS no acepta esa garantía de inicialización a partir del indicador new/best nulo. La hipótesis y predicción se registraron antes del cambio en hipotesis.txt. No se afirma haber reproducido un fallo en tiempo de ejecución.
+
+CAMBIO EN COPIA
+corregido.j inicializa exclusivamente ndist y bdist con 0. en las declaraciones. Conserva los bytes y finales CRLF del resto de la entrada. El diff tiene sólo esas dos líneas. La selección inicial sigue gobernada por new/best == null y guarda dist; las comparaciones posteriores usan la distancia guardada. No cambian filtros, radio, prioridad de candidatos sin otra cabeza asignada, fallback al objetivo anterior, firma ni retorno. Se inspeccionaron las lecturas/escrituras locales y los consumidores s__Hydra_attemptShoot y sa__Hydra_attemptShoot.
+
+VERIFICACIONES REALES
+1. check_toolchain.py: código 0, ok=true, cuatro archivos existentes, sin errores ni advertencias de superficie moderna. Hashes de herramientas y APIs en toolchain.stdout.log.
+2. La configuración del launcher resuelve los mismos common.j, Blizzard.j y pJASS que wc3toolchain.json.
+3. Mismo runner, original: código 1, exactamente dos errores de inicialización.
+4. Mismo runner, corregido.j: código 0; common.j (2418 líneas), Blizzard.j (10230) y script corregido (4646 según contador de pJASS), total 17294. El archivo tiene 4645 líneas físicas; se conserva el contador literal del runner, que incluye su convención de EOF.
+5. SHA-256 confirma entrada.j intacta y conservación de wc3toolchain.json, wc3.py y wc3-environment.json respecto de la identidad registrada. Sólo se escribieron artefactos dentro de esta carpeta.
+
+LÍMITES
+No se ejecutó Warcraft III ni editor alguno, no se empaquetaron/modificaron mapas, no se instalaron dependencias, no se usó red, no se hicieron commits y no se lanzaron agentes. La fuente editable original (WCT/vJASS) no fue proporcionada ni actualizada: regenerarla desde otra fuente podría perder la corrección. El PASS cubre la validación del JASS completo y las APIs indicadas; no acredita comportamiento dentro de 1.27b, objetos/assets del mapa, rendimiento ni multijugador.
+
+COMANDOS EJECUTADOS (cwd: esta carpeta)
+
+toolchain:
+python3 -B /home/snz/.codex/skills/build-warcraft3-vjass-127b/scripts/check_toolchain.py /home/snz/Documentos/ChatGPT/FrozenThone/wc3toolchain.json --json
+Código de retorno: 0
+Logs: toolchain.stdout.log y toolchain.stderr.log
+
+antes:
+python3 -B /home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py pjass /tmp/superpowers-skills-forward-q2ye5sc7/debug/entrada.j
+Código de retorno: 1
+Logs: antes.stdout.log y antes.stderr.log
+
+despues:
+python3 -B /home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py pjass /tmp/superpowers-skills-forward-q2ye5sc7/debug/corregido.j
+Código de retorno: 0
+Logs: despues.stdout.log y despues.stderr.log
+
+IDENTIDAD
+Entrada SHA-256: 972e06de1c4f73cf195d33059bdabc6dbedf0d36a373d09786d917e2dad3abe7
+Salida SHA-256: 9982caed5f52cb91c4d92299b9e6f1ad8cfdbe3aa242e7b680fd4bc5c4552bf3
+
+ARTEFACTOS
+corregido.j: salida corregida nueva.
+cambio.diff: diferencia exacta.
+resultado.json: resultado estructurado y límites.
+hipotesis.txt: causa propuesta y prueba discriminante previas al cambio.
+contexto-fallo.txt: fragmento original numerado.
+comandos.json: comandos, cwd y códigos.
+identidad-inicial.json y entrada.sha256: identidades iniciales.
+toolchain/antes/despues.*.log: salida completa de comprobación y validaciones.

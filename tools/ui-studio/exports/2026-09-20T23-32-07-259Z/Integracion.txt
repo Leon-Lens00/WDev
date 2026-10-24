@@ -1,0 +1,90 @@
+UI Studio — InventorySys · Diseño original
+
+Base: InventorySys 1.4.1 / UserInterface 1.0.6 / Warcraft III 1.27b
+
+1. Importar UIStudioLayout.j junto a las bibliotecas originales.
+2. Sustituir las llamadas de creación por UIStudioButton(id, textura), UIStudioPicture(id, textura) o UIStudioText(id, jugador). Conservar customValue, selectUnit, callbacks y referencias originales. -1 usa la textura diseñada; el icono dinámico del objeto debe seguir pasándose desde el inventario.
+3. Las posiciones dinámicas en show(), setTooltipPosition() y similares deben consultar UIStudioX/Y. Los paneles usan su geometría de modelo; tamaños de textos son guías del editor, no cajas de recorte del juego.
+4. Mostrar cada control con la cámara apropiada y UIStudioVisible(id). La visibilidad del grupo en el editor es sólo un filtro de trabajo.
+5. UIStudioAction conserva los enlaces de acciones como datos: no ejecuta venta, equipo ni eliminación de objetos. Conectar acciones nuevas mediante callbacks sincronizados y validar propietario/casilla.
+6. El modelo del héroe y el selector de brillo requieren sus recursos y lógica originales; no se crean desde estas fábricas. Los botones no llevan texto propio: usar un UIText separado.
+7. No llamar las fábricas dentro de GetLocalPlayer. No se han aplicado parches ni cambios al mapa. Compilar y probar dos clientes antes de integrar en producción.
+
+Diseño extraído del código; vista previa 2D aproximada. Textos, marcos y relación de aspecto necesitan calibración en el juego. La cuadrícula original tiene 6 columnas y 5 filas.
+
+ENLACES
+equipment.background | panel | equipment.background | clic=none | derecho=none
+inventory.background | panel | inventory.background | clic=none | derecho=none
+tooltip.background | panel | tooltip.background | clic=none | derecho=none
+equipment.slot.0 | button | Equipment.getButton(0) | clic=select | derecho=equip
+equipment.slot.1 | button | Equipment.getButton(1) | clic=select | derecho=equip
+equipment.slot.2 | button | Equipment.getButton(2) | clic=select | derecho=equip
+equipment.slot.3 | button | Equipment.getButton(3) | clic=select | derecho=equip
+equipment.slot.4 | button | Equipment.getButton(4) | clic=select | derecho=equip
+equipment.slot.5 | button | Equipment.getButton(5) | clic=select | derecho=equip
+equipment.slot.6 | button | Equipment.getButton(6) | clic=select | derecho=equip
+equipment.slot.7 | button | Equipment.getButton(7) | clic=select | derecho=equip
+equipment.slot.8 | button | Equipment.getButton(8) | clic=select | derecho=equip
+equipment.slot.9 | button | Equipment.getButton(9) | clic=select | derecho=equip
+equipment.slot.10 | button | Equipment.getButton(10) | clic=select | derecho=equip
+equipment.slot.11 | button | Equipment.getButton(11) | clic=select | derecho=equip
+equipment.slot.12 | button | Equipment.getButton(12) | clic=select | derecho=equip
+equipment.slot.13 | button | Equipment.getButton(13) | clic=select | derecho=equip
+equipment.hero | model | Equipment.charModel | clic=none | derecho=none
+equipment.title | text | Equipment.title | clic=none | derecho=none
+inventory.slot.0 | button | Inventory.getButton(0) | clic=select | derecho=equip
+inventory.slot.1 | button | Inventory.getButton(1) | clic=select | derecho=equip
+inventory.slot.2 | button | Inventory.getButton(2) | clic=select | derecho=equip
+inventory.slot.3 | button | Inventory.getButton(3) | clic=select | derecho=equip
+inventory.slot.4 | button | Inventory.getButton(4) | clic=select | derecho=equip
+inventory.slot.5 | button | Inventory.getButton(5) | clic=select | derecho=equip
+inventory.slot.6 | button | Inventory.getButton(6) | clic=select | derecho=equip
+inventory.slot.7 | button | Inventory.getButton(7) | clic=select | derecho=equip
+inventory.slot.8 | button | Inventory.getButton(8) | clic=select | derecho=equip
+inventory.slot.9 | button | Inventory.getButton(9) | clic=select | derecho=equip
+inventory.slot.10 | button | Inventory.getButton(10) | clic=select | derecho=equip
+inventory.slot.11 | button | Inventory.getButton(11) | clic=select | derecho=equip
+inventory.slot.12 | button | Inventory.getButton(12) | clic=select | derecho=equip
+inventory.slot.13 | button | Inventory.getButton(13) | clic=select | derecho=equip
+inventory.slot.14 | button | Inventory.getButton(14) | clic=select | derecho=equip
+inventory.slot.15 | button | Inventory.getButton(15) | clic=select | derecho=equip
+inventory.slot.16 | button | Inventory.getButton(16) | clic=select | derecho=equip
+inventory.slot.17 | button | Inventory.getButton(17) | clic=select | derecho=equip
+inventory.slot.18 | button | Inventory.getButton(18) | clic=select | derecho=equip
+inventory.slot.19 | button | Inventory.getButton(19) | clic=select | derecho=equip
+inventory.slot.20 | button | Inventory.getButton(20) | clic=select | derecho=equip
+inventory.slot.21 | button | Inventory.getButton(21) | clic=select | derecho=equip
+inventory.slot.22 | button | Inventory.getButton(22) | clic=select | derecho=equip
+inventory.slot.23 | button | Inventory.getButton(23) | clic=select | derecho=equip
+inventory.slot.24 | button | Inventory.getButton(24) | clic=select | derecho=equip
+inventory.slot.25 | button | Inventory.getButton(25) | clic=select | derecho=equip
+inventory.slot.26 | button | Inventory.getButton(26) | clic=select | derecho=equip
+inventory.slot.27 | button | Inventory.getButton(27) | clic=select | derecho=equip
+inventory.slot.28 | button | Inventory.getButton(28) | clic=select | derecho=equip
+inventory.slot.29 | button | Inventory.getButton(29) | clic=select | derecho=equip
+inventory.pageUp | button | Inventory.btnPageUp | clic=previous | derecho=none
+inventory.pageDown | button | Inventory.btnPageDown | clic=next | derecho=none
+inventory.sell | button | Inventory.btnSell | clic=sell | derecho=none
+inventory.drop | button | Inventory.btnDrop | clic=drop | derecho=none
+inventory.page | text | Inventory.pageNum | clic=none | derecho=none
+tooltip.icon | picture | Inventory.infoIcon | clic=none | derecho=none
+tooltip.title | text | Inventory.infoBoxTitle | clic=none | derecho=none
+tooltip.gold | picture | Inventory.costIcon | clic=none | derecho=none
+tooltip.cost | text | Inventory.infoBoxCost | clic=none | derecho=none
+tooltip.line.0 | text | Inventory.ItemInfoTags[pid][0] | clic=none | derecho=none
+tooltip.line.1 | text | Inventory.ItemInfoTags[pid][1] | clic=none | derecho=none
+tooltip.line.2 | text | Inventory.ItemInfoTags[pid][2] | clic=none | derecho=none
+tooltip.line.3 | text | Inventory.ItemInfoTags[pid][3] | clic=none | derecho=none
+tooltip.line.4 | text | Inventory.ItemInfoTags[pid][4] | clic=none | derecho=none
+tooltip.line.5 | text | Inventory.ItemInfoTags[pid][5] | clic=none | derecho=none
+tooltip.line.6 | text | Inventory.ItemInfoTags[pid][6] | clic=none | derecho=none
+tooltip.line.7 | text | Inventory.ItemInfoTags[pid][7] | clic=none | derecho=none
+tooltip.line.8 | text | Inventory.ItemInfoTags[pid][8] | clic=none | derecho=none
+tooltip.line.9 | text | Inventory.ItemInfoTags[pid][9] | clic=none | derecho=none
+tooltip.line.10 | text | Inventory.ItemInfoTags[pid][10] | clic=none | derecho=none
+tooltip.line.11 | text | Inventory.ItemInfoTags[pid][11] | clic=none | derecho=none
+tooltip.line.12 | text | Inventory.ItemInfoTags[pid][12] | clic=none | derecho=none
+tooltip.line.13 | text | Inventory.ItemInfoTags[pid][13] | clic=none | derecho=none
+tooltip.line.14 | text | Inventory.ItemInfoTags[pid][14] | clic=none | derecho=none
+tooltip.line.15 | text | Inventory.ItemInfoTags[pid][15] | clic=none | derecho=none
+custom.text.1 | text | nuevo | clic=none | derecho=none

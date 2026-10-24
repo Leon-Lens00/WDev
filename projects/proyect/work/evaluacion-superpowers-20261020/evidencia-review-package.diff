@@ -1,0 +1,17 @@
+# Review package: 60734f1d69cc52f93704819de2af76d7a5f4e603..dc5c9f81d0ecdce9a22cc8d55d74a481018d4fea
+
+## Commits
+dc5c9f8 fixture committed delta
+
+## Files changed
+ fuente.j | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+## Diff
+diff --git a/fuente.j b/fuente.j
+index a214fdd..dd34388 100644
+--- a/fuente.j
++++ b/fuente.j
+@@ -1 +1 @@
+-// committed baseline
++// committed change

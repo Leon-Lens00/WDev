@@ -1,0 +1,1716 @@
+﻿STRING 1
+{
+Wc3 Dev Mission
+}
+
+STRING 2
+{
+5vs5
+}
+
+STRING 3
+{
+A travez de los siglos xD
+}
+
+STRING 4
+{
+Shana
+}
+
+STRING 5
+{
+Player 1
+}
+
+STRING 6
+{
+Player 2
+}
+
+STRING 7
+{
+Fuerza 1
+}
+
+STRING 8
+{
+Fuerza 2
+}
+
+STRING 11
+// Objetos: KY02 (Moon key 1/3), Name (Nombre (unam))
+{
+Moon key 1/3
+}
+
+STRING 12
+// Objetos: KY03 (Moon key 2/3), Name (Nombre (unam))
+{
+Moon key 2/3
+}
+
+STRING 13
+// Objetos: KY04 (Moon key 3/3), Name (Nombre (unam))
+{
+Moon key 3/3
+}
+
+STRING 14
+// Objetos: KY00 (Gem Key), Name (Nombre (unam))
+{
+Gem Key
+}
+
+STRING 16
+// Objetos: KY01 (Moon key 0/3), Name (Nombre (unam))
+{
+Moon key 0/3
+}
+
+STRING 43
+{
+Jugador 3
+}
+
+STRING 44
+{
+Jugador 4
+}
+
+STRING 45
+{
+Jugador 5
+}
+
+STRING 46
+{
+Jugador 6
+}
+
+STRING 47
+{
+Jugador 7
+}
+
+STRING 48
+{
+Jugador 8
+}
+
+STRING 49
+{
+Jugador 9
+}
+
+STRING 50
+{
+Jugador 10
+}
+
+STRING 51
+{
+Jugador 11
+}
+
+STRING 52
+{
+Jugador 12
+}
+
+STRING 53
+// Destructibles: B002 (Bandera de KoleshyEngine), Name (Nombre (bnam))
+{
+Bandera de KoleshyEngine
+}
+
+STRING 54
+// Complementos: D008 (Sofa), Name (Nombre (dnam))
+{
+Sofa
+}
+
+STRING 55
+// Destructibles: B003 (Mesa), Name (Nombre (bnam))
+{
+Mesa
+}
+
+STRING 56
+// Complementos: D009 (Windows), Name (Nombre (dnam))
+{
+Windows
+}
+
+STRING 57
+// Destructibles: B004 (Dori), Name (Nombre (bnam))
+{
+Dori
+}
+
+STRING 58
+// Destructibles: B005 (Dori), Name (Nombre (bnam))
+{
+Dori
+}
+
+STRING 59
+// Complementos: D00A (Columna sensi), Name (Nombre (dnam))
+{
+Columna sensi
+}
+
+STRING 60
+// Complementos: D00B (Chair), Name (Nombre (dnam))
+{
+Chair
+}
+
+STRING 61
+// Complementos: D00C (Estante de Golosinas), Name (Nombre (dnam))
+{
+Estante de Golosinas
+}
+
+STRING 62
+// Complementos: D00D (Estatua), Name (Nombre (dnam))
+{
+Estatua
+}
+
+STRING 63
+// Complementos: D00E (Stanque), Name (Nombre (dnam))
+{
+Stanque
+}
+
+STRING 64
+// Complementos: D00F (Table), Name (Nombre (dnam))
+{
+Table
+}
+
+STRING 65
+// Destructibles: B007 (Bandera de KoleshyEngine x3), Name (Nombre (bnam))
+{
+Bandera de KoleshyEngine x3
+}
+
+STRING 66
+// Habilidades: A001 (Canal), Hotkey (Acceso rápido - Normal (ahky))
+{
+A
+}
+
+STRING 67
+// Unidades: h000 (Dummy Caster), Name (Nombre (unam))
+{
+Dummy Caster
+}
+
+STRING 68
+// Unidades: h002 (Dummy), Name (Nombre (unam))
+{
+Dummy
+}
+
+STRING 77
+// Habilidades: Aivs (Invisibilidad h), Name (Nombre (anam))
+{
+Invisibilidad h
+}
+
+STRING 78
+// Habilidades: A000 (Rayo de tormenta), Hotkey (Acceso rápido - Normal (ahky))
+{
+Q
+}
+
+STRING 79
+// Habilidades: uDex (Detect Leave), EditorSuffix (Sufijo editor (ansf))
+{
+(UnitDex)
+}
+
+STRING 80
+// Habilidades: uDex (Detect Leave), Name (Nombre (anam))
+{
+Detect Leave
+}
+
+STRING 81
+// Unidades: bwn2 (RaceWindow), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+(UI Dummy)
+}
+
+STRING 82
+// Unidades: bwn2 (RaceWindow), Name (Nombre (unam))
+{
+RaceWindow
+}
+
+STRING 83
+// Unidades: e000 (dummy), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+(hero window)
+}
+
+STRING 84
+// Unidades: e000 (dummy), Name (Nombre (unam))
+{
+dummy
+}
+
+STRING 85
+// Destructibles: B011 (Inv Sell Item), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 86
+// Destructibles: B011 (Inv Sell Item), Name (Nombre (bnam))
+{
+Inv Sell Item
+}
+
+STRING 87
+// Destructibles: B00N (Inv Drop Item), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 88
+// Destructibles: B00N (Inv Drop Item), Name (Nombre (bnam))
+{
+Inv Drop Item
+}
+
+STRING 89
+// Destructibles: M00A (InvItemIcon209), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 90
+// Destructibles: D201 (ElemBag01), Name (Nombre (bnam))
+{
+ElemBag01
+}
+
+STRING 91
+// Unidades: uidm ( ), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+Button (UI Dummy)
+}
+
+STRING 92
+// Unidades: uidm ( ), Name (Nombre (unam))
+{
+ 
+}
+
+STRING 93
+// Habilidades: Skin (-Skin Changer), Name (Nombre (anam))
+{
+-Skin Changer
+}
+
+STRING 94
+// Unidades: ewin (EquipmentWindow), Name (Nombre (unam))
+{
+EquipmentWindow
+}
+
+STRING 95
+// Unidades: ewin (EquipmentWindow), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+(UI Dummy)
+}
+
+STRING 96
+// Unidades: H006 (Yetix), Name (Nombre (unam))
+{
+Yetix
+}
+
+STRING 97
+// Unidades: H001 (Military), Awakentip (Ayuda - Despertar (uawt))
+{
+Yalasa
+}
+
+STRING 98
+// Unidades: H001 (Military), Revivetip (Ayuda - Revivir (utpr))
+{
+Yalasa
+}
+
+STRING 99
+// Unidades: H006 (Yetix), Propernames (Nombres propios (upro))
+{
+PinguinoKchero
+}
+
+STRING 102
+// Unidades: H006 (Yetix), Revivetip (Ayuda - Revivir (utpr))
+{
+Yalasa
+}
+
+STRING 103
+// Unidades: H006 (Yetix), Awakentip (Ayuda - Despertar (uawt))
+{
+Yalasa
+}
+
+STRING 104
+// Habilidades: AS03 (#Smart Handler), Tip (Ayuda - Normal (atp1))
+{
+#Smart Handler
+}
+
+STRING 105
+// Habilidades: AS03 (#Smart Handler), Tip (Ayuda - Normal (atp1))
+{
+#Smart Handler
+}
+
+STRING 106
+// Habilidades: AS03 (#Smart Handler), Name (Nombre (anam))
+{
+#Smart Handler
+}
+
+STRING 107
+// Habilidades: HDHD (#Smart Handler), Tip (Ayuda - Normal (atp1))
+{
+#Smart Handler
+}
+
+STRING 108
+// Habilidades: AS03 (#Smart Handler), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Channels powerful scripting.
+}
+
+STRING 109
+// Habilidades: AS03 (#Smart Handler), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Channels powerful scripting.
+}
+
+STRING 110
+// Habilidades: AS03 (#Smart Handler), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Channels powerful scripting.
+}
+
+STRING 113
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000Orb Of Blood|r
+}
+
+STRING 114
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000Orb Of Blood|r
+}
+
+STRING 115
+// Habilidades: HDHD (#Smart Handler), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Channels powerful scripting.
+}
+
+STRING 116
+// Habilidades: HDHD (#Smart Handler), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Channels powerful scripting.
+}
+
+STRING 117
+// Habilidades: HDHD (#Smart Handler), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+Channels powerful scripting.
+}
+
+STRING 118
+// Habilidades: HDHD (#Smart Handler), Tip (Ayuda - Normal (atp1))
+{
+#Smart Handler
+}
+
+STRING 119
+// Habilidades: HDHD (#Smart Handler), Tip (Ayuda - Normal (atp1))
+{
+#Smart Handler
+}
+
+STRING 120
+// Habilidades: HDHD (#Smart Handler), Name (Nombre (anam))
+{
+#Smart Handler
+}
+
+STRING 122
+// Habilidades: AS03 (#Smart Handler), Tip (Ayuda - Normal (atp1))
+{
+#Smart Handlers
+}
+
+STRING 123
+// Habilidades: AS03 (#Smart Handler), Researchhotkey (Aprender (arhk))
+{
+S
+}
+
+STRING 124
+// Habilidades: AS03 (#Smart Handler), Unhotkey (Acceso rápido - Desactivar (auhk))
+{
+S
+}
+
+STRING 125
+// Habilidades: AS03 (#Smart Handler), Hotkey (Acceso rápido - Normal (ahky))
+{
+S
+}
+
+STRING 127
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000Orb Of Blood|r
+}
+
+STRING 128
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000Orb Of Blood|r
+}
+
+STRING 129
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000Orb Of Blood|r
+}
+
+STRING 130
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Name (Nombre (anam))
+{
+|cffff0000Orb Of Blood|r
+}
+
+STRING 159
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cff00ff00Orb Of Venom|r|r
+}
+
+STRING 161
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cff00ff00Orb Of Venom|r|r
+}
+
+STRING 162
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cff00ff00Orb Of Venom|r|r
+}
+
+STRING 163
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cff00ff00Orb Of Venom|r|r
+}
+
+STRING 164
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cff00ff00Orb Of Venom|r|r
+}
+
+STRING 165
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Name (Nombre (anam))
+{
+|cffff0000|cff00ff00Orb Of Venom|r|r
+}
+
+STRING 170
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Tip (Ayuda - Normal (atp1))
+{
+|cff8000fffOrb Of Dark|r
+}
+
+STRING 172
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Tip (Ayuda - Normal (atp1))
+{
+|cff8000fffOrb Of Dark|r
+}
+
+STRING 173
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Tip (Ayuda - Normal (atp1))
+{
+|cff8000fffOrb Of Dark|r
+}
+
+STRING 174
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Tip (Ayuda - Normal (atp1))
+{
+|cff8000fffOrb Of Dark|r
+}
+
+STRING 175
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Tip (Ayuda - Normal (atp1))
+{
+|cff8000fffOrb Of Dark|r
+}
+
+STRING 176
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Name (Nombre (anam))
+{
+|cff8000fffOrb Of Dark|r
+}
+
+STRING 181
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff2200Orb Of Fire|r
+}
+
+STRING 183
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff2200Orb Of Fire|r
+}
+
+STRING 184
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff2200Orb Of Fire|r
+}
+
+STRING 185
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff2200Orb Of Fire|r
+}
+
+STRING 186
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff2200Orb Of Fire|r
+}
+
+STRING 187
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Name (Nombre (anam))
+{
+|cffff2200Orb Of Fire|r
+}
+
+STRING 192
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Tip (Ayuda - Normal (atp1))
+{
+|cff0044ffOrb Of Lightning|r
+}
+
+STRING 203
+// Unidades: dumi (Particle), Name (Nombre (unam))
+{
+Particle
+}
+
+STRING 204
+// Unidades: H001 (Military), Propernames (Nombres propios (upro))
+{
+Military
+}
+
+STRING 205
+// Unidades: H005 (Lob), Propernames (Nombres propios (upro))
+{
+Mr Lob
+}
+
+STRING 206
+// Unidades: H005 (Lob), Name (Nombre (unam))
+{
+Lob
+}
+
+STRING 207
+// Unidades: H01A (Kael), Revivetip (Ayuda - Revivir (utpr))
+{
+Yalasa
+}
+
+STRING 208
+// Unidades: H01A (Kael), Awakentip (Ayuda - Despertar (uawt))
+{
+Yalasa
+}
+
+STRING 209
+// Unidades: dn02 (DummyCaster), Name (Nombre (unam))
+{
+DummyCaster
+}
+
+STRING 210
+// Unidades: H01A (Kael), Propernames (Nombres propios (upro))
+{
+Kael
+}
+
+STRING 211
+// Unidades: H01A (Kael), Name (Nombre (unam))
+{
+Kael
+}
+
+STRING 212
+// Unidades: H005 (Lob), Revivetip (Ayuda - Revivir (utpr))
+{
+Yalasa
+}
+
+STRING 213
+// Unidades: H005 (Lob), Awakentip (Ayuda - Despertar (uawt))
+{
+Yalasa
+}
+
+STRING 214
+// Unidades: H007 (Yoshi), Propernames (Nombres propios (upro))
+{
+Yoshi
+}
+
+STRING 215
+// Unidades: H007 (Yoshi), Name (Nombre (unam))
+{
+Yoshi
+}
+
+STRING 216
+// Unidades: H007 (Yoshi), Awakentip (Ayuda - Despertar (uawt))
+{
+Yalasa
+}
+
+STRING 217
+// Unidades: H007 (Yoshi), Revivetip (Ayuda - Revivir (utpr))
+{
+Yalasa
+}
+
+STRING 218
+// Unidades: H001 (Military), Name (Nombre (unam))
+{
+Military
+}
+
+STRING 219
+// Unidades: H008 (Pollo), Propernames (Nombres propios (upro))
+{
+Pollo
+}
+
+STRING 220
+// Unidades: H008 (Pollo), Name (Nombre (unam))
+{
+Pollo
+}
+
+STRING 221
+// Unidades: H008 (Pollo), Awakentip (Ayuda - Despertar (uawt))
+{
+Yalasa
+}
+
+STRING 222
+// Unidades: H008 (Pollo), Revivetip (Ayuda - Revivir (utpr))
+{
+Yalasa
+}
+
+STRING 223
+// Unidades: H009 (Shinigami), Propernames (Nombres propios (upro))
+{
+Shinigami
+}
+
+STRING 224
+// Unidades: H009 (Shinigami), Name (Nombre (unam))
+{
+Shinigami
+}
+
+STRING 225
+// Unidades: H009 (Shinigami), Awakentip (Ayuda - Despertar (uawt))
+{
+Yalasa
+}
+
+STRING 226
+// Unidades: H009 (Shinigami), Revivetip (Ayuda - Revivir (utpr))
+{
+Yalasa
+}
+
+STRING 227
+// Habilidades: U0A1 (Attack), Name (Nombre (anam))
+{
+Attack
+}
+
+STRING 229
+// Habilidades: AU01 (AttackType), Unhotkey (Acceso rápido - Desactivar (auhk))
+{
+A
+}
+
+STRING 230
+// Habilidades: AU01 (AttackType), Hotkey (Acceso rápido - Normal (ahky))
+{
+A
+}
+
+STRING 231
+// Habilidades: U0A2 (Jump), Name (Nombre (anam))
+{
+Jump
+}
+
+STRING 233
+// Habilidades: U0A5 (AttackFire), Unhotkey (Acceso rápido - Desactivar (auhk))
+{
+D
+}
+
+STRING 234
+// Habilidades: U0A5 (AttackFire), Hotkey (Acceso rápido - Normal (ahky))
+{
+D
+}
+
+STRING 255
+// Habilidades: AU01 (AttackType), Unubertip (Ayuda - Desactivar - Ampliada (auu1))
+{
+|cff0044ffOrb Of Lightning|r – |cff99ccffConvierte el siguiente disparo en un rayo penetrante que atraviesa enemigos. Cada instancia permite atravesar 1 unidad adicional.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ffEl siguiente disparo inflige daño adicional basado en la vida máxima del enemigo. Cada instancia aumenta el daño en 1% de la vida máxima actual.|r|n|cffff0000Orb Of Blood|r – |cffff6666El siguiente disparo puede causar un golpe crítico aleatorio entre 100% y 400% del daño. Cada instancia aumenta el mínimo y máximo del crítico en 25%.|r|n|cffffff00Orb Of Wind|r – |cffffee88El disparo impacta y provoca daño en área base de 150. Cada instancia añade +50 de daño AOE.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66El siguiente disparo aplica veneno que inflige daño por segundo.|r |cff66ff66La duración del efecto aumenta según el número de instancias.|r|n|cffff2200|cffff0000|cffff2200Orb Of Fire|r – |cffff8844Aumenta el daño del siguiente disparo en 50% por cada instancia.|r|r|r
+}
+
+STRING 256
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffff00Orbe|r|cffffdd55 Vientor|n|n|cffffee88Habilidad Pasiva – Disparo Radiante|r|n|n|n|cfffff2aaPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffffff66daño|r y |cffffee55escala|r, convirtiéndolo en un impacto cegador en combate. Tras ejecutarse, la habilidad entra en |cffffcc00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|n|cfffff0aaEste orbe también puede generar|r |cffffff88destellos sagrados|r, |cffffdd33daño en área|r y otros efectos al mejorarse en la zona de |cffffcc00LordsEngines.|r
+}
+
+STRING 257
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffff00Orbe|r|cffffdd55 Vientor|n|n|cffffee88Habilidad Pasiva – Disparo Radiante|r|n|n|n|cfffff2aaPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffffff66daño|r y |cffffee55escala|r, convirtiéndolo en un impacto cegador en combate. Tras ejecutarse, la habilidad entra en |cffffcc00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|n|cfffff0aaEste orbe también puede generar|r |cffffff88destellos sagrados|r, |cffffdd33daño en área|r y otros efectos al mejorarse en la zona de |cffffcc00LordsEngines.|r
+}
+
+STRING 258
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffff00Orbe|r|cffffdd55 Vientor|n|n|cffffee88Habilidad Pasiva – Disparo Radiante|r|n|n|n|cfffff2aaPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffffff66daño|r y |cffffee55escala|r, convirtiéndolo en un impacto cegador en combate. Tras ejecutarse, la habilidad entra en |cffffcc00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|n|cfffff0aaEste orbe también puede generar|r |cffffff88destellos sagrados|r, |cffffdd33daño en área|r y otros efectos al mejorarse en la zona de |cffffcc00LordsEngines.|r
+}
+
+STRING 259
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffff00Orbe|r|cffffdd55 Vientor|n|n|cffffee88Habilidad Pasiva – Disparo Radiante|r|n|n|n|cfffff2aaPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffffff66daño|r y |cffffee55escala|r, convirtiéndolo en un impacto cegador en combate. Tras ejecutarse, la habilidad entra en |cffffcc00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|n|cfffff0aaEste orbe también puede generar|r |cffffff88destellos sagrados|r, |cffffdd33daño en área|r y otros efectos al mejorarse en la zona de |cffffcc00LordsEngines.|r
+}
+
+STRING 260
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffff00Orbe|r|cffffdd55 Vientor|n|n|cffffee88Habilidad Pasiva – Disparo Radiante|r|n|n|n|cfffff2aaPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffffff66daño|r y |cffffee55escala|r, convirtiéndolo en un impacto cegador en combate. Tras ejecutarse, la habilidad entra en |cffffcc00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|n|cfffff0aaEste orbe también puede generar|r |cffffff88destellos sagrados|r, |cffffdd33daño en área|r y otros efectos al mejorarse en la zona de |cffffcc00LordsEngines.|r
+}
+
+STRING 261
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cffffff00Orb Of Windr|r
+}
+
+STRING 262
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cffffff00Orb Of Windr|r
+}
+
+STRING 263
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cffffff00Orb Of Windr|r
+}
+
+STRING 264
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cffffff00Orb Of Windr|r
+}
+
+STRING 265
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Tip (Ayuda - Normal (atp1))
+{
+|cffff0000|cffffff00Orb Of Windr|r
+}
+
+STRING 266
+// Habilidades: AM06 (|cffff0000|cffffff00Orb Of Windr|r), Name (Nombre (anam))
+{
+|cffff0000|cffffff00Orb Of Windr|r
+}
+
+STRING 267
+// Habilidades: A00T (), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|cffc0c0c0Dispara 2 veces por segundo e inflige 1 de daño base.|r|n|cffc0c0c0Daño y velocidad mejorables en |r|cffffd700LordsEngines.|r|n|cffc0c0c0El siguiente disparo se potencia según el Orbe activo.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia.|r|n|n|cffff0000Orb Of Blood|r – |cffff6666Crítico 100–400%. +25% al rango por instancia.|r|n|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 268
+// Habilidades: A00T (), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|cffc0c0c0Dispara 2 veces por segundo e inflige 1 de daño base.|r|n|cffc0c0c0Daño y velocidad mejorables en |r|cffffd700LordsEngines.|r|n|cffc0c0c0El siguiente disparo se potencia según el Orbe activo.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia.|r|n|n|cffff0000Orb Of Blood|r – |cffff6666Crítico 100–400%. +25% al rango por instancia.|r|n|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 269
+// Habilidades: A00T (), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|cffc0c0c0Dispara 2 veces por segundo e inflige 1 de daño base.|r|n|cffc0c0c0Daño y velocidad mejorables en |r|cffffd700LordsEngines.|r|n|cffc0c0c0El siguiente disparo se potencia según el Orbe activo.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia.|r|n|n|cffff0000Orb Of Blood|r – |cffff6666Crítico 100–400%. +25% al rango por instancia.|r|n|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 270
+// Habilidades: A00T (), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|cffc0c0c0Dispara 2 veces por segundo e inflige 1 de daño base.|r|n|cffc0c0c0Daño y velocidad mejorables en |r|cffffd700LordsEngines.|r|n|cffc0c0c0El siguiente disparo se potencia según el Orbe activo.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia.|r|n|n|cffff0000Orb Of Blood|r – |cffff6666Crítico 100–400%. +25% al rango por instancia.|r|n|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 271
+// Habilidades: A00T (), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|cffc0c0c0Dispara 2 veces por segundo e inflige 1 de daño base.|r|n|cffc0c0c0Daño y velocidad mejorables en |r|cffffd700LordsEngines.|r|n|cffc0c0c0El siguiente disparo se potencia según el Orbe activo.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia.|r|n|n|cffff0000Orb Of Blood|r – |cffff6666Crítico 100–400%. +25% al rango por instancia.|r|n|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 273
+// Habilidades: AU01 (AttackType), Untip (Ayuda - Desactivar (aut1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|n|cffc0c0c0Dispara plasma con un intervalo base de|r 0.5 segundos|cffc0c0c0 por proyectil, infligiendo|r 1 de daño base|cffc0c0c0.|r|n|n|cffc0c0c0El daño y el intervalo pueden mejorarse en|r LordsEngines|cffc0c0c0.|r|n|n|cffc0c0c0El siguiente disparo se potencia según el Orbe Elemental activo, otorgando efectos únicos por instancia.|n|n|r|cffffd700Afinidades Elementales:|r
+}
+
+STRING 280
+// Habilidades: U0A2 (Jump), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffc0c0c0Permite a la unidad saltar libremente a otro punto del terreno, generando daño base en una pequeña área.|r  |n|cffc0c0c0El salto siempre aplica el encanto elemental seleccionado.|r|n|n|cffc0c0c0La|r |cffffcc00velocidad y distancia|r |cffc0c0c0pueden mejorarse en|r |cffffcc00LordsEngines|r|cffc0c0c0.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffDaña unidades en el trayecto, trazando un rayo en el terreno.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ffAplica daño basado en la vida máxima actual de los enemigos en el área de impacto.|r|n|cffff0000Orb Of Blood|r – |cffff6666Aplica daño crítico en el área de impacto.|r|n|cffffff00Orb Of Wind|r – |cffffee88Aumenta el área de impacto.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66Aplica daño por tic a las unidades en el área.|r|n|cffff2200Orb Of Fire|r – |cffff8844Aplica daño adicional en el área de impacto.|r
+}
+
+STRING 283
+// Habilidades: AU01 (AttackType), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffc0c0c0Dispara 2 veces por segundo e inflige daño base.|r|n|cffc0c0c0El |r|cffffd700daño e intervalo|r|cffc0c0c0 mejorables en |r|cffffd700LordsEngines|r|cffc0c0c0.|r|n|cffc0c0c0El siguiente disparo se potencia según el |r|cffffd700Orbe activo|r|cffc0c0c0.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia como daño adicional.|r|n|cffff0000Orb Of Blood|r – |cffff6666Crítico aleatorio entre 100–400%. +25% al rango por instancia.|r|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 284
+// Habilidades: AB01 (Leap Buff Placer), Name (Nombre (anam))
+{
+Leap Buff Placer
+}
+
+STRING 285
+// Habilidades: AB01 (Leap Buff Placer), EditorSuffix (Sufijo editor (ansf))
+{
+(Slow)
+}
+
+STRING 286
+// Conjuros benéficos/efectos: BB01 (), Bufftip (Ayuda (ftip))
+{
+Jump
+}
+
+STRING 287
+// Conjuros benéficos/efectos: BB01 (), Buffubertip (Ayuda - Ampliada (fube))
+{
+This unit is Jumping
+}
+
+STRING 288
+// Unidades: e001 (dummy), Name (Nombre (unam))
+{
+dummy
+}
+
+STRING 291
+// Habilidades: U0A1 (Attack), Untip (Ayuda - Desactivar (aut1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|n|cffc0c0c0Dispara plasma con un intervalo base de|r 0.5 segundos|cffc0c0c0 por proyectil, infligiendo|r 1 de daño base|cffc0c0c0.|r|n|n|cffc0c0c0El daño y el intervalo pueden mejorarse en|r LordsEngines|cffc0c0c0.|r|n|n|cffc0c0c0El siguiente disparo se potencia según el Orbe Elemental activo, otorgando efectos únicos por instancia.|n|n|r|cffffd700Afinidades Elementales:|r
+}
+
+STRING 292
+// Habilidades: U0A1 (Attack), Unubertip (Ayuda - Desactivar - Ampliada (auu1))
+{
+|cff0044ffOrb Of Lightning|r – |cff99ccffConvierte el siguiente disparo en un rayo penetrante que atraviesa enemigos. Cada instancia permite atravesar 1 unidad adicional.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ffEl siguiente disparo inflige daño adicional basado en la vida máxima del enemigo. Cada instancia aumenta el daño en 1% de la vida máxima actual.|r|n|cffff0000Orb Of Blood|r – |cffff6666El siguiente disparo puede causar un golpe crítico aleatorio entre 100% y 400% del daño. Cada instancia aumenta el mínimo y máximo del crítico en 25%.|r|n|cffffff00Orb Of Wind|r – |cffffee88El disparo impacta y provoca daño en área base de 150. Cada instancia añade +50 de daño AOE.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66El siguiente disparo aplica veneno que inflige daño por segundo.|r |cff66ff66La duración del efecto aumenta según el número de instancias.|r|n|cffff2200|cffff0000|cffff2200Orb Of Fire|r – |cffff8844Aumenta el daño del siguiente disparo en 50% por cada instancia.|r|r|r
+}
+
+STRING 293
+// Habilidades: U0A3 (AttackSnapShot), Unhotkey (Acceso rápido - Desactivar (auhk))
+{
+S
+}
+
+STRING 294
+// Habilidades: U0A3 (AttackSnapShot), Name (Nombre (anam))
+{
+AttackSnapShot
+}
+
+STRING 295
+// Habilidades: U0A3 (AttackSnapShot), Hotkey (Acceso rápido - Normal (ahky))
+{
+S
+}
+
+STRING 296
+// Destructibles: M00A (InvItemIcon209), Name (Nombre (bnam))
+{
+InvItemIcon209
+}
+
+STRING 297
+// Destructibles: B00S (Nothing), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 298
+// Destructibles: B00S (Nothing), Name (Nombre (bnam))
+{
+Nothing
+}
+
+STRING 299
+// Destructibles: D201 (ElemBag01), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 300
+// Unidades: lwin (RaceWindow), Name (Nombre (unam))
+{
+RaceWindow
+}
+
+STRING 301
+// Unidades: lwin (RaceWindow), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+(UI Dummy)
+}
+
+STRING 302
+// Unidades: pwin (RaceWindow), Name (Nombre (unam))
+{
+RaceWindow
+}
+
+STRING 303
+// Unidades: pwin (RaceWindow), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+(UI Dummy)
+}
+
+STRING 304
+// Unidades: pwif (RaceWindow), Name (Nombre (unam))
+{
+RaceWindow
+}
+
+STRING 305
+// Unidades: pwif (RaceWindow), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+(UI Dummy)
+}
+
+STRING 306
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff0000Orbe|r|cffff5555 de Sangre|r|n|cffcc1111Habilidad Pasiva – Disparo Potenciado|r|n|n|cffdd8888Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff4444daño|r y |cffff5555escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cffff6600CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffdd8888Este orbe también puede generar|r |cffff2222impactos especiales|r, |cffff3333daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 307
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff0000Orbe|r|cffff5555 de Sangre|r|n|cffcc1111Habilidad Pasiva – Disparo Potenciado|r|n|n|cffdd8888Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff4444daño|r y |cffff5555escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cffff6600CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffdd8888Este orbe también puede generar|r |cffff2222impactos especiales|r, |cffff3333daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 308
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff0000Orbe|r|cffff5555 de Sangre|r|n|cffcc1111Habilidad Pasiva – Disparo Potenciado|r|n|n|cffdd8888Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff4444daño|r y |cffff5555escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cffff6600CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffdd8888Este orbe también puede generar|r |cffff2222impactos especiales|r, |cffff3333daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 309
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff0000Orbe|r|cffff5555 de Sangre|r|n|cffcc1111Habilidad Pasiva – Disparo Potenciado|r|n|n|cffdd8888Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff4444daño|r y |cffff5555escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cffff6600CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffdd8888Este orbe también puede generar|r |cffff2222impactos especiales|r, |cffff3333daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 310
+// Habilidades: AM01 (|cffff0000Orb Of Blood|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff0000Orbe|r|cffff5555 de Sangre|r|n|cffcc1111Habilidad Pasiva – Disparo Potenciado|r|n|n|cffdd8888Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff4444daño|r y |cffff5555escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cffff6600CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffdd8888Este orbe también puede generar|r |cffff2222impactos especiales|r, |cffff3333daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 311
+// Habilidades: AU01 (AttackType), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00Disparo de Plasma Primordial [A]|r|n|cffffe680Habilidad Básica – Ataque Activo|r
+}
+
+STRING 312
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff00aa00Habilidad Pasiva – Disparo Potenciado|r|n|n|cff55ff55Potencia el siguiente disparo|r de la habilidad base, aumentando su |cff00cc00daño|r y |cff00ff00escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff55aa00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff55ff55Este orbe también puede generar|r |cff00cc00impactos especiales|r, |cff00aa00daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 313
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff00aa00Habilidad Pasiva – Disparo Potenciado|r|n|n|cff55ff55Potencia el siguiente disparo|r de la habilidad base, aumentando su |cff00cc00daño|r y |cff00ff00escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff55aa00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff55ff55Este orbe también puede generar|r |cff00cc00impactos especiales|r, |cff00aa00daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 314
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff00aa00Habilidad Pasiva – Disparo Potenciado|r|n|n|cff55ff55Potencia el siguiente disparo|r de la habilidad base, aumentando su |cff00cc00daño|r y |cff00ff00escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff55aa00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff55ff55Este orbe también puede generar|r |cff00cc00impactos especiales|r, |cff00aa00daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 315
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff00aa00Habilidad Pasiva – Disparo Potenciado|r|n|n|cff55ff55Potencia el siguiente disparo|r de la habilidad base, aumentando su |cff00cc00daño|r y |cff00ff00escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff55aa00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff55ff55Este orbe también puede generar|r |cff00cc00impactos especiales|r, |cff00aa00daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 316
+// Habilidades: AM02 (|cffff0000|cff00ff00Orb Of Venom|r|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff00aa00Habilidad Pasiva – Disparo Potenciado|r|n|n|cff55ff55Potencia el siguiente disparo|r de la habilidad base, aumentando su |cff00cc00daño|r y |cff00ff00escala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff55aa00CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff55ff55Este orbe también puede generar|r |cff00cc00impactos especiales|r, |cff00aa00daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 317
+// Habilidades: U0A2 (Jump), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00Salto Elemental [D]|r|n|cffffe680Habilidad Activa – Movimiento y Daño|r
+}
+
+STRING 318
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff9900ffOrbe|r|cff660099 of Dark|r|n|cffaa00ffHabilidad Pasiva – Disparo Profanado|r|n|n|cffbb88ffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffcc66ffdaño|r y |cffdd99ffescala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff8800ccCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffbb88ffEste orbe también puede generar|r |cff9933ffimpactos especiales|r, |cffaa66ffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 319
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff9900ffOrbe|r|cff660099 of Dark|r|n|cffaa00ffHabilidad Pasiva – Disparo Profanado|r|n|n|cffbb88ffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffcc66ffdaño|r y |cffdd99ffescala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff8800ccCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffbb88ffEste orbe también puede generar|r |cff9933ffimpactos especiales|r, |cffaa66ffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 320
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff9900ffOrbe|r|cff660099 of Dark|r|n|cffaa00ffHabilidad Pasiva – Disparo Profanado|r|n|n|cffbb88ffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffcc66ffdaño|r y |cffdd99ffescala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff8800ccCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffbb88ffEste orbe también puede generar|r |cff9933ffimpactos especiales|r, |cffaa66ffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 321
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff9900ffOrbe|r|cff660099 of Dark|r|n|cffaa00ffHabilidad Pasiva – Disparo Profanado|r|n|n|cffbb88ffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffcc66ffdaño|r y |cffdd99ffescala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff8800ccCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffbb88ffEste orbe también puede generar|r |cff9933ffimpactos especiales|r, |cffaa66ffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 322
+// Habilidades: AM03 (|cff8000fffOrb Of Dark|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff9900ffOrbe|r|cff660099 of Dark|r|n|cffaa00ffHabilidad Pasiva – Disparo Profanado|r|n|n|cffbb88ffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cffcc66ffdaño|r y |cffdd99ffescala|r, convirtiéndolo en un ataque letal en combate. Tras ejecutarse, la habilidad entra en |cff8800ccCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffbb88ffEste orbe también puede generar|r |cff9933ffimpactos especiales|r, |cffaa66ffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 323
+// Habilidades: U0A3 (AttackSnapShot), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffc0c0c0Inflinge un rafaga de disparos a corta distancia multiplando el dano base x2.|r|n|cffc0c0c0El |r|cffffd700daño e intervalo|r|cffc0c0c0 mejorables en |r|cffffd700LordsEngines|r|cffc0c0c0.|r|n|cffc0c0c0El siguiente disparo se potencia según el |r|cffffd700Orbe activo|r|cffc0c0c0.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia como daño adicional.|r|n|cffff0000Orb Of Blood|r – |cffff6666Crítico aleatorio entre 100–400%. +25% al rango por instancia.|r|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 324
+// Habilidades: U0A3 (AttackSnapShot), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00Rafaga de Plasma Primordial [S]|r|n|cffffe680Habilidad Básica – Ataque Activo|r
+}
+
+STRING 325
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff6600Habilidad Pasiva – Disparo Potenciado|r|n|n|cffff9933Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff3300daño|r y |cffff6600escala|r, convirtiéndolo en un ataque letal y abrasador en combate. Tras ejecutarse, la habilidad entra en |cffff4400CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffff9933Este orbe también puede generar|r |cffff3300impactos especiales|r, |cffff6600daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 326
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff6600Habilidad Pasiva – Disparo Potenciado|r|n|n|cffff9933Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff3300daño|r y |cffff6600escala|r, convirtiéndolo en un ataque letal y abrasador en combate. Tras ejecutarse, la habilidad entra en |cffff4400CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffff9933Este orbe también puede generar|r |cffff3300impactos especiales|r, |cffff6600daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 327
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff6600Habilidad Pasiva – Disparo Potenciado|r|n|n|cffff9933Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff3300daño|r y |cffff6600escala|r, convirtiéndolo en un ataque letal y abrasador en combate. Tras ejecutarse, la habilidad entra en |cffff4400CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffff9933Este orbe también puede generar|r |cffff3300impactos especiales|r, |cffff6600daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 328
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff6600Habilidad Pasiva – Disparo Potenciado|r|n|n|cffff9933Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff3300daño|r y |cffff6600escala|r, convirtiéndolo en un ataque letal y abrasador en combate. Tras ejecutarse, la habilidad entra en |cffff4400CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffff9933Este orbe también puede generar|r |cffff3300impactos especiales|r, |cffff6600daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 329
+// Habilidades: AM04 (|cffff2200Orb Of Fire|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffff6600Habilidad Pasiva – Disparo Potenciado|r|n|n|cffff9933Potencia el siguiente disparo|r de la habilidad base, aumentando su |cffff3300daño|r y |cffff6600escala|r, convirtiéndolo en un ataque letal y abrasador en combate. Tras ejecutarse, la habilidad entra en |cffff4400CD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cffff9933Este orbe también puede generar|r |cffff3300impactos especiales|r, |cffff6600daño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 330
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff3399ffHabilidad Pasiva – Disparo Potenciado|r|n|n|cff66ccffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cff00ccffdaño|r y |cff33ccffescala|r, convirtiéndolo en un ataque letal cargado de energía. Tras ejecutarse, la habilidad entra en |cff3399ffCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff66ccffEste orbe también puede generar|r |cff00ccffimpactos especiales|r, |cff33ccffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 331
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff3399ffHabilidad Pasiva – Disparo Potenciado|r|n|n|cff66ccffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cff00ccffdaño|r y |cff33ccffescala|r, convirtiéndolo en un ataque letal cargado de energía. Tras ejecutarse, la habilidad entra en |cff3399ffCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff66ccffEste orbe también puede generar|r |cff00ccffimpactos especiales|r, |cff33ccffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 332
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff3399ffHabilidad Pasiva – Disparo Potenciado|r|n|n|cff66ccffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cff00ccffdaño|r y |cff33ccffescala|r, convirtiéndolo en un ataque letal cargado de energía. Tras ejecutarse, la habilidad entra en |cff3399ffCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff66ccffEste orbe también puede generar|r |cff00ccffimpactos especiales|r, |cff33ccffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 333
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff3399ffHabilidad Pasiva – Disparo Potenciado|r|n|n|cff66ccffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cff00ccffdaño|r y |cff33ccffescala|r, convirtiéndolo en un ataque letal cargado de energía. Tras ejecutarse, la habilidad entra en |cff3399ffCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff66ccffEste orbe también puede generar|r |cff00ccffimpactos especiales|r, |cff33ccffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 334
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cff3399ffHabilidad Pasiva – Disparo Potenciado|r|n|n|cff66ccffPotencia el siguiente disparo|r de la habilidad base, aumentando su |cff00ccffdaño|r y |cff33ccffescala|r, convirtiéndolo en un ataque letal cargado de energía. Tras ejecutarse, la habilidad entra en |cff3399ffCD|r, requiriendo tiempo para recargarse antes de volver a usarse.|n|n|cff66ccffEste orbe también puede generar|r |cff00ccffimpactos especiales|r, |cff33ccffdaño en área|r y otros efectos al mejorarse en la zona de |cffffaa00LordsEngines.|r
+}
+
+STRING 335
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Tip (Ayuda - Normal (atp1))
+{
+|cff0044ffOrb Of Lightning|r
+}
+
+STRING 336
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Tip (Ayuda - Normal (atp1))
+{
+|cff0044ffOrb Of Lightning|r
+}
+
+STRING 337
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Tip (Ayuda - Normal (atp1))
+{
+|cff0044ffOrb Of Lightning|r
+}
+
+STRING 338
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Tip (Ayuda - Normal (atp1))
+{
+|cff0044ffOrb Of Lightning|r
+}
+
+STRING 339
+// Habilidades: AM05 (|cff0044ffOrb Of Lightning|r), Name (Nombre (anam))
+{
+|cff0044ffOrb Of Lightning|r
+}
+
+STRING 340
+// Destructibles: M00B (InvItemIcon209), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 341
+// Destructibles: M00B (InvItemIcon209), Name (Nombre (bnam))
+{
+InvItemIcon209
+}
+
+STRING 342
+// Destructibles: M00C (InvItemIcon209), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 343
+// Destructibles: M00C (InvItemIcon209), Name (Nombre (bnam))
+{
+InvItemIcon209
+}
+
+STRING 344
+// Unidades: h004 (Rouky), Name (Nombre (unam))
+{
+Rouky
+}
+
+STRING 345
+// Destructibles: M00D (InvItemIcon209), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 346
+// Destructibles: M00D (InvItemIcon209), Name (Nombre (bnam))
+{
+InvItemIcon209
+}
+
+STRING 347
+// Destructibles: M00E (InvItemIcon209), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 348
+// Destructibles: M00E (InvItemIcon209), Name (Nombre (bnam))
+{
+InvItemIcon209
+}
+
+STRING 349
+// Destructibles: M00F (InvItemIcon209), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 350
+// Destructibles: M00F (InvItemIcon209), Name (Nombre (bnam))
+{
+InvItemIcon209
+}
+
+STRING 351
+// Unidades: lewn (RaceWindow), Name (Nombre (unam))
+{
+RaceWindow
+}
+
+STRING 352
+// Unidades: lewn (RaceWindow), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+(UI Dummy)
+}
+
+STRING 353
+// Habilidades: U0A1 (Attack), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffc0c0c0Dispara 2 veces por segundo e inflige daño base.|r|n|cffc0c0c0El |r|cffffd700daño e intervalo|r|cffc0c0c0 mejorables en |r|cffffd700LordsEngines|r|cffc0c0c0.|r|n|cffc0c0c0El siguiente disparo se potencia según el |r|cffffd700Orbe activo|r|cffc0c0c0.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia como daño adicional.|r|n|cffff0000Orb Of Blood|r – |cffff6666Crítico aleatorio entre 100–400%. +25% al rango por instancia.|r|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 354
+// Habilidades: U0A1 (Attack), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00Disparo de Plasma Primordial [A]|r|n|cffffe680Habilidad Básica – Ataque Activo|r
+}
+
+STRING 355
+// Habilidades: U0A3 (AttackSnapShot), Untip (Ayuda - Desactivar (aut1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|n|cffc0c0c0Dispara plasma con un intervalo base de|r 0.5 segundos|cffc0c0c0 por proyectil, infligiendo|r 1 de daño base|cffc0c0c0.|r|n|n|cffc0c0c0El daño y el intervalo pueden mejorarse en|r LordsEngines|cffc0c0c0.|r|n|n|cffc0c0c0El siguiente disparo se potencia según el Orbe Elemental activo, otorgando efectos únicos por instancia.|n|n|r|cffffd700Afinidades Elementales:|r
+}
+
+STRING 356
+// Habilidades: U0A3 (AttackSnapShot), Unubertip (Ayuda - Desactivar - Ampliada (auu1))
+{
+|cff0044ffOrb Of Lightning|r – |cff99ccffConvierte el siguiente disparo en un rayo penetrante que atraviesa enemigos. Cada instancia permite atravesar 1 unidad adicional.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ffEl siguiente disparo inflige daño adicional basado en la vida máxima del enemigo. Cada instancia aumenta el daño en 1% de la vida máxima actual.|r|n|cffff0000Orb Of Blood|r – |cffff6666El siguiente disparo puede causar un golpe crítico aleatorio entre 100% y 400% del daño. Cada instancia aumenta el mínimo y máximo del crítico en 25%.|r|n|cffffff00Orb Of Wind|r – |cffffee88El disparo impacta y provoca daño en área base de 150. Cada instancia añade +50 de daño AOE.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66El siguiente disparo aplica veneno que inflige daño por segundo.|r |cff66ff66La duración del efecto aumenta según el número de instancias.|r|n|cffff2200|cffff0000|cffff2200Orb Of Fire|r – |cffff8844Aumenta el daño del siguiente disparo en 50% por cada instancia.|r|r|r
+}
+
+STRING 357
+// Habilidades: U0A1 (Attack), Unhotkey (Acceso rápido - Desactivar (auhk))
+{
+A
+}
+
+STRING 358
+// Habilidades: AU01 (AttackType), Name (Nombre (anam))
+{
+AttackType
+}
+
+STRING 359
+// Habilidades: U0A1 (Attack), Hotkey (Acceso rápido - Normal (ahky))
+{
+A
+}
+
+STRING 360
+// Habilidades: A003 (Objeto Rastreo de zona), Unhotkey (Acceso rápido - Desactivar (auhk))
+{
+F
+}
+
+STRING 361
+// Habilidades: A003 (Objeto Rastreo de zona), Hotkey (Acceso rápido - Normal (ahky))
+{
+F
+}
+
+STRING 362
+// Unidades: zA01 (Milicia), Description (Descripción (ides))
+{
+WBoss1
+}
+
+STRING 363
+// Unidades: zA01 (Milicia), EditorSuffix (Nombre - Sufijo editor (unsf))
+{
+wBoss1
+}
+
+STRING 366
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), effect1 (Efecto 1 (gef1))
+{
+rhpo
+}
+
+STRING 367
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Name (Nombre (gnam))
+{
+Coraza de hierro
+}
+
+STRING 368
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Name (Nombre (gnam))
+{
+Coraza de hierro
+}
+
+STRING 369
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Name (Nombre (gnam))
+{
+Coraza de hierro
+}
+
+STRING 370
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Name (Nombre (gnam))
+{
+Coraza de hierro
+}
+
+STRING 371
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Name (Nombre (gnam))
+{
+Coraza de hierro
+}
+
+STRING 372
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Name (Nombre (gnam))
+{
+Coraza de hierro
+}
+
+STRING 373
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Name (Nombre (gnam))
+{
+Coraza de hierro
+}
+
+STRING 374
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Tip (Ayuda (gtp1))
+{
+Actualizar a |cffffcc00C|roraza de hierro
+}
+
+STRING 375
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Tip (Ayuda (gtp1))
+{
+Actualizar a |cffffcc00C|roraza de hierro
+}
+
+STRING 376
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Tip (Ayuda (gtp1))
+{
+Actualizar a |cffffcc00C|roraza de hierro
+}
+
+STRING 377
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Tip (Ayuda (gtp1))
+{
+Actualizar a |cffffcc00C|roraza de hierro
+}
+
+STRING 378
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Tip (Ayuda (gtp1))
+{
+Actualizar a |cffffcc00C|roraza de hierro
+}
+
+STRING 379
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Tip (Ayuda (gtp1))
+{
+Actualizar a |cffffcc00C|roraza de hierro
+}
+
+STRING 380
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Tip (Ayuda (gtp1))
+{
+Actualizar a |cffffcc00C|roraza de hierro
+}
+
+STRING 381
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Ubertip (Ayuda - Ampliada (gub1))
+{
+Aumenta la armadura de milicias, soldados rasos, deshacedores de hechizos, caballeros, Máquinas voladoras y Motores de asedio.
+}
+
+STRING 382
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Ubertip (Ayuda - Ampliada (gub1))
+{
+Aumenta la armadura de milicias, soldados rasos, deshacedores de hechizos, caballeros, Máquinas voladoras y Motores de asedio.
+}
+
+STRING 383
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Ubertip (Ayuda - Ampliada (gub1))
+{
+Aumenta la armadura de milicias, soldados rasos, deshacedores de hechizos, caballeros, Máquinas voladoras y Motores de asedio.
+}
+
+STRING 384
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Ubertip (Ayuda - Ampliada (gub1))
+{
+Aumenta la armadura de milicias, soldados rasos, deshacedores de hechizos, caballeros, Máquinas voladoras y Motores de asedio.
+}
+
+STRING 385
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Ubertip (Ayuda - Ampliada (gub1))
+{
+Aumenta la armadura de milicias, soldados rasos, deshacedores de hechizos, caballeros, Máquinas voladoras y Motores de asedio.
+}
+
+STRING 386
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Ubertip (Ayuda - Ampliada (gub1))
+{
+Aumenta la armadura de milicias, soldados rasos, deshacedores de hechizos, caballeros, Máquinas voladoras y Motores de asedio.
+}
+
+STRING 387
+// Actualizaciones: Rhar (Coraza de hierro, Coraza de acero, Coraza de mithril), Ubertip (Ayuda - Ampliada (gub1))
+{
+Aumenta la armadura de milicias, soldados rasos, deshacedores de hechizos, caballeros, Máquinas voladoras y Motores de asedio.
+}
+
+STRING 388
+// Complementos: D00G (02 Anea), Name (Nombre (dnam))
+{
+02 Anea
+}
+
+STRING 389
+// Complementos: D00H (05 Yuyos), Name (Nombre (dnam))
+{
+05 Yuyos
+}
+
+STRING 390
+// Complementos: D001 (Obstáculos), Name (Nombre (dnam))
+{
+Obstáculos
+}
+
+STRING 391
+// Unidades: l00A (Dummy Locations), Name (Nombre (unam))
+{
+Dummy Locations
+}
+
+STRING 392
+// Unidades: l00B (Dummy Locations IniPlayer), Name (Nombre (unam))
+{
+Dummy Locations IniPlayer
+}
+
+STRING 393
+// Habilidades: ADD0 (Dummy), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffc0c0c0Dispara 2 veces por segundo e inflige daño base.|r|n|cffc0c0c0El |r|cffffd700daño e intervalo|r|cffc0c0c0 mejorables en |r|cffffd700LordsEngines|r|cffc0c0c0.|r|n|cffc0c0c0El siguiente disparo se potencia según el |r|cffffd700Orbe activo|r|cffc0c0c0.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia como daño adicional.|r|n|cffff0000Orb Of Blood|r – |cffff6666Crítico aleatorio entre 100–400%. +25% al rango por instancia.|r|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 394
+// Habilidades: ADD0 (Dummy), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00Disparo de Plasma Primordial [A]|r|n|cffffe680Habilidad Básica – Ataque Activo|r
+}
+
+STRING 395
+// Habilidades: ADD0 (Dummy), Untip (Ayuda - Desactivar (aut1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|n|cffc0c0c0Dispara plasma con un intervalo base de|r 0.5 segundos|cffc0c0c0 por proyectil, infligiendo|r 1 de daño base|cffc0c0c0.|r|n|n|cffc0c0c0El daño y el intervalo pueden mejorarse en|r LordsEngines|cffc0c0c0.|r|n|n|cffc0c0c0El siguiente disparo se potencia según el Orbe Elemental activo, otorgando efectos únicos por instancia.|n|n|r|cffffd700Afinidades Elementales:|r
+}
+
+STRING 396
+// Habilidades: ADD0 (Dummy), Unubertip (Ayuda - Desactivar - Ampliada (auu1))
+{
+|cff0044ffOrb Of Lightning|r – |cff99ccffConvierte el siguiente disparo en un rayo penetrante que atraviesa enemigos. Cada instancia permite atravesar 1 unidad adicional.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ffEl siguiente disparo inflige daño adicional basado en la vida máxima del enemigo. Cada instancia aumenta el daño en 1% de la vida máxima actual.|r|n|cffff0000Orb Of Blood|r – |cffff6666El siguiente disparo puede causar un golpe crítico aleatorio entre 100% y 400% del daño. Cada instancia aumenta el mínimo y máximo del crítico en 25%.|r|n|cffffff00Orb Of Wind|r – |cffffee88El disparo impacta y provoca daño en área base de 150. Cada instancia añade +50 de daño AOE.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66El siguiente disparo aplica veneno que inflige daño por segundo.|r |cff66ff66La duración del efecto aumenta según el número de instancias.|r|n|cffff2200|cffff0000|cffff2200Orb Of Fire|r – |cffff8844Aumenta el daño del siguiente disparo en 50% por cada instancia.|r|r|r
+}
+
+STRING 398
+// Habilidades: ADD0 (Dummy), Name (Nombre (anam))
+{
+Dummy
+}
+
+STRING 400
+// Habilidades: ADD0 (Dummy), Unhotkey (Acceso rápido - Desactivar (auhk))
+{
+Z
+}
+
+STRING 401
+// Habilidades: ADD0 (Dummy), Hotkey (Acceso rápido - Normal (ahky))
+{
+Z
+}
+
+STRING 402
+// Habilidades: U0A4 (AttackGranade), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffc0c0c0Inflinge un rafaga de disparos a corta distancia multiplando el dano base x2.|r|n|cffc0c0c0El |r|cffffd700daño e intervalo|r|cffc0c0c0 mejorables en |r|cffffd700LordsEngines|r|cffc0c0c0.|r|n|cffc0c0c0El siguiente disparo se potencia según el |r|cffffd700Orbe activo|r|cffc0c0c0.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia como daño adicional.|r|n|cffff0000Orb Of Blood|r – |cffff6666Crítico aleatorio entre 100–400%. +25% al rango por instancia.|r|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 404
+// Habilidades: U0A4 (AttackGranade), Untip (Ayuda - Desactivar (aut1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|n|cffc0c0c0Dispara plasma con un intervalo base de|r 0.5 segundos|cffc0c0c0 por proyectil, infligiendo|r 1 de daño base|cffc0c0c0.|r|n|n|cffc0c0c0El daño y el intervalo pueden mejorarse en|r LordsEngines|cffc0c0c0.|r|n|n|cffc0c0c0El siguiente disparo se potencia según el Orbe Elemental activo, otorgando efectos únicos por instancia.|n|n|r|cffffd700Afinidades Elementales:|r
+}
+
+STRING 405
+// Habilidades: U0A4 (AttackGranade), Unubertip (Ayuda - Desactivar - Ampliada (auu1))
+{
+|cff0044ffOrb Of Lightning|r – |cff99ccffConvierte el siguiente disparo en un rayo penetrante que atraviesa enemigos. Cada instancia permite atravesar 1 unidad adicional.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ffEl siguiente disparo inflige daño adicional basado en la vida máxima del enemigo. Cada instancia aumenta el daño en 1% de la vida máxima actual.|r|n|cffff0000Orb Of Blood|r – |cffff6666El siguiente disparo puede causar un golpe crítico aleatorio entre 100% y 400% del daño. Cada instancia aumenta el mínimo y máximo del crítico en 25%.|r|n|cffffff00Orb Of Wind|r – |cffffee88El disparo impacta y provoca daño en área base de 150. Cada instancia añade +50 de daño AOE.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66El siguiente disparo aplica veneno que inflige daño por segundo.|r |cff66ff66La duración del efecto aumenta según el número de instancias.|r|n|cffff2200|cffff0000|cffff2200Orb Of Fire|r – |cffff8844Aumenta el daño del siguiente disparo en 50% por cada instancia.|r|r|r
+}
+
+STRING 406
+// Habilidades: U0A2 (Jump), Unhotkey (Acceso rápido - Desactivar (auhk))
+{
+C
+}
+
+STRING 407
+// Habilidades: U0A4 (AttackGranade), Name (Nombre (anam))
+{
+AttackGranade
+}
+
+STRING 408
+// Habilidades: U0A4 (AttackGranade), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00Rafaga de Plasma Primordial [C]|r|n|cffffe680Habilidad Básica – Ataque Activo|r
+}
+
+STRING 409
+// Habilidades: A004 (Objeto Bonificación de vida Normal), Name (Nombre (anam))
+{
+Objeto Bonificación de vida Normal
+}
+
+STRING 410
+// Habilidades: A005 (Objeto Bonificación de vida Alta), Name (Nombre (anam))
+{
+Objeto Bonificación de vida Alta
+}
+
+STRING 411
+// Habilidades: U0A5 (AttackFire), Ubertip (Ayuda - Normal - Ampliada (aub1))
+{
+|cffc0c0c0Dispara 2 veces por segundo e inflige daño base.|r|n|cffc0c0c0El |r|cffffd700daño e intervalo|r|cffc0c0c0 mejorables en |r|cffffd700LordsEngines|r|cffc0c0c0.|r|n|cffc0c0c0El siguiente disparo se potencia según el |r|cffffd700Orbe activo|r|cffc0c0c0.|r|n|n|cffffd700Afinidades Elementales:|r|n|n|cff0044ffOrb Of Lightning|r – |cff99ccffAtraviesa 1 unidad adicional por instancia.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ff+1% de la vida máxima actual por instancia como daño adicional.|r|n|cffff0000Orb Of Blood|r – |cffff6666Crítico aleatorio entre 100–400%. +25% al rango por instancia.|r|n|cffffff00Orb Of Wind|r – |cffffee88Explosión AOE 150. +50 por instancia.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66Veneno por segundo. Duración por instancia.|r|n|cffff2200Orb Of Fire|r – |cffff8844+50% daño por instancia.|r
+}
+
+STRING 413
+// Habilidades: U0A5 (AttackFire), Untip (Ayuda - Desactivar (aut1))
+{
+|cffffcc00Disparo de Plasma Primordial|r|n|cffffe680Habilidad Básica – Ataque Activo|r|n|n|n|cffc0c0c0Dispara plasma con un intervalo base de|r 0.5 segundos|cffc0c0c0 por proyectil, infligiendo|r 1 de daño base|cffc0c0c0.|r|n|n|cffc0c0c0El daño y el intervalo pueden mejorarse en|r LordsEngines|cffc0c0c0.|r|n|n|cffc0c0c0El siguiente disparo se potencia según el Orbe Elemental activo, otorgando efectos únicos por instancia.|n|n|r|cffffd700Afinidades Elementales:|r
+}
+
+STRING 414
+// Habilidades: U0A5 (AttackFire), Unubertip (Ayuda - Desactivar - Ampliada (auu1))
+{
+|cff0044ffOrb Of Lightning|r – |cff99ccffConvierte el siguiente disparo en un rayo penetrante que atraviesa enemigos. Cada instancia permite atravesar 1 unidad adicional.|r|n|cff8000ffOrb Of Dark|r – |cffbb66ffEl siguiente disparo inflige daño adicional basado en la vida máxima del enemigo. Cada instancia aumenta el daño en 1% de la vida máxima actual.|r|n|cffff0000Orb Of Blood|r – |cffff6666El siguiente disparo puede causar un golpe crítico aleatorio entre 100% y 400% del daño. Cada instancia aumenta el mínimo y máximo del crítico en 25%.|r|n|cffffff00Orb Of Wind|r – |cffffee88El disparo impacta y provoca daño en área base de 150. Cada instancia añade +50 de daño AOE.|r|n|cff00ff00Orb Of Venom|r – |cff66ff66El siguiente disparo aplica veneno que inflige daño por segundo.|r |cff66ff66La duración del efecto aumenta según el número de instancias.|r|n|cffff2200|cffff0000|cffff2200Orb Of Fire|r – |cffff8844Aumenta el daño del siguiente disparo en 50% por cada instancia.|r|r|r
+}
+
+STRING 416
+// Habilidades: U0A5 (AttackFire), Name (Nombre (anam))
+{
+AttackFire
+}
+
+STRING 418
+// Habilidades: U0A4 (AttackGranade), Unhotkey (Acceso rápido - Desactivar (auhk))
+{
+F
+}
+
+STRING 419
+// Habilidades: U0A4 (AttackGranade), Hotkey (Acceso rápido - Normal (ahky))
+{
+F
+}
+
+STRING 420
+// Habilidades: U0A5 (AttackFire), Tip (Ayuda - Normal (atp1))
+{
+|cffffcc00Disparo de Plasma Primordial [F]|r|n|cffffe680Habilidad Básica – Ataque Activo|r
+}
+
+STRING 421
+// Destructibles: M00G (InvItemIcon209), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 422
+// Destructibles: M00G (InvItemIcon209), Name (Nombre (bnam))
+{
+InvItemIcon209
+}
+
+STRING 423
+// Destructibles: M00H (InvItemIcon209), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 424
+// Destructibles: M00H (InvItemIcon209), Name (Nombre (bnam))
+{
+InvItemIcon209
+}
+
+STRING 425
+// Destructibles: M00I (InvItemIcon209), EditorSuffix (Sufijo del editor (bsuf))
+{
+(texture)
+}
+
+STRING 426
+// Destructibles: M00I (InvItemIcon209), Name (Nombre (bnam))
+{
+InvItemIcon209
+}
+

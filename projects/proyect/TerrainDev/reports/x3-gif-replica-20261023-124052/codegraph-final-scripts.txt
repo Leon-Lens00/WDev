@@ -1,0 +1,242 @@
+> JASS/vJASS local support: compiler-profile static analysis. Typed receivers/operators, function-value and lifecycle dependencies, hooks/initialization, bounded templates and explicit build data. Excerpts retain real source. Labels distinguish possible targets; unknown build inputs, computed dispatch and other dialects remain coverage boundaries. Absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+
+**Additional graph links among your symbols**
+(static relationships or inferred links; each link is labelled by kind; `@file:line` is the wiring site)
+
+- RapidFireProbe → Tick   [contains]
+- Begin → Tick   [static JASS: references]
+- Tick → Reset   [static JASS: calls]
+- Tick → Advance   [static JASS: calls]
+- Tick → Check   [static JASS: calls]
+- Tick → Note   [static JASS: calls]
+
+**Dynamic boundaries (the static path ends at runtime dispatch)**
+
+- `Tick` (X3Probe.j:107) — string-keyed dispatch (runtime key): `set shot = X3Buster.fire(source,sx+1400.,sy,0)` (+13 more such sites in this body)
+
+> These sites choose their call target at runtime (registry / bus / reflection) — the site shown IS where the flow continues. To follow it, run codegraph_explore or codegraph_node on a candidate; source for the sites above is included below.
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: X3Probe.j Tick Save verify_x3_probe.py x3_evaluate reject_controls**
+
+Found 87 symbols across 2 files. 2 files pinned from the query.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `reject_controls` (verify_x3_probe.py:55) — 2 callers in `verify_x3_probe.py`; no tests found within 3 caller hops
+- `x3_evaluate` (verify_x3_probe.py:14) — 2 callers in `verify_x3_probe.py`; no tests found within 3 caller hops
+- `evaluate` (verify_rapid_probe.py:7) — 4 callers in `verify_rapid_probe.py`, `verify_x3_probe.py`; no tests found within 3 caller hops
+- `evaluate` (verify_probe.py:9) — 2 callers in `verify_probe.py`; no tests found within 3 caller hops
+- `Save` (ShotColorProbe.j:109) — 1 caller in `ShotColorProbe.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`X3Probe.j`** — t(references), Damage(references), Damage(function), Begin(function), Begin(references), +129 more
+
+```jass
+1	// Engine laboratory only. The lane is selected from the real map, not flattened.
+2	library X3Probe initializer Init requires X3BusterDemo
+3	globals
+4	    private integer checks = 0
+5	    private integer failures = 0
+6	    private integer stage = -1
+7	    private integer search = 0
+8	    private string array lines
+9	    private real since
+10	    private real sx = -4700.
+11	    private real sy = 3024.
+12	    private unit source
+13	    private unit target
+14	    private destructable tree
+15	    private X3Buster shot
+16	    private X3Buster second
+17	    private integer baseline
+18	    private integer births
+19	    private integer hitBase
+20	    private integer wallBase
+21	    private integer satelliteBase
+22	    private boolean one = false
+23	    private timer ticker = CreateTimer()
+24	    private timer showing = CreateTimer()
+25	    private integer array capped
+26	    private integer capIndex = 0
+27	    private real facingImmediate
+28	    private real facingSettled
+29	    private real fallbackAngle
+30	    private RapidPair nativePair
+31	    private real firstDamage = 0.
+32	    private real fusedDamage = 0.
+33	    private trigger damageWatch
+34	    private real catchX
+35	    private real catchY
+36	    private real sampleGreen
+37	    private real sampleOrange
+38	    private real sampleCore
+39	    private real sampleSpeed
+40	    private real reverseExpected = 0.
+41	    private real boundaryDamage = 0.
+42	    private real previousClock = -1.
+43	    private integer repeatedClock = 0
+44	    private integer physicalCallbacks = 0
+45	    private real greenBirthX = 0.
+46	    private real greenMinimumX = 0.
+47	    private real greenRetreat = 0.
+48	    private real finalGreenSpeed = 0.
+49	    private real finalOrangeSpeed = 0.
+50	    private integer damageEvents = 0
+51	endglobals
+52	private function Check takes boolean value, string label returns nothing
+53	    set lines[checks] = "PASS "+label
+
+... (gap) ...
+
+57	    endif
+58	    set checks = checks+1
+59	endfunction
+60	private function Save takes string status returns nothing
+61	    local integer i = 0
+62	    call PreloadGenClear()
+63	    call PreloadGenStart()
+64	    call Preload("X3 @RUN@ "+status)
+65	    loop
+66	        exitwhen i == checks
+67	        call Preload(lines[i])
+68	        set i = i+1
+69	    endloop
+70	    call Preload("checks="+I2S(checks)+" failures="+I2S(failures)+" casts="+I2S(X3Buster.live)+" live="+I2S(X3Buster.projectiles)+" created="+I2S(X3Buster.created)+" retired="+I2S(X3Buster.retired)+" fusions="+I2S(X3Buster.fusions)+" flashes="+I2S(X3Buster.flashCount()))
+71	    call Preload("facingImmediate="+R2S(facingImmediate)+" facingSettled="+R2S(facingSettled)+" fallbackDegrees="+R2S(fallbackAngle*bj_RADTODEG))
+72	    call Preload("boundaryFirstDamage="+R2S(boundaryDamage)+" expectedFusedDamage="+R2S(fusedDamage)+" reverseFirstDamage="+R2S(firstDamage)+" reverseExpected="+R2S(reverseExpected))
+73	    call Preload("physicalCallbacks="+I2S(physicalCallbacks)+" repeatedClockReadings="+I2S(repeatedClock))
+74	    call Preload("greenRetreat="+R2S(greenRetreat)+" greenFinalSpeed="+R2S(finalGreenSpeed)+" orangeFinalSpeed="+R2S(finalOrangeSpeed)+" reverseDamageEvents="+I2S(damageEvents))
+75	    call PreloadGenEnd("Logs\\TerrainDev-@RUN@-x3.txt")
+76	endfunction
+77	private function Advance takes integer nextStage returns nothing
+78	    set stage = nextStage
+79	    set since = X3Buster.now()
+
+... (gap: Damage (X3Probe.j:83)) ...
+
+87	    endif
+88	endfunction
+89	private function Tick takes nothing returns nothing
+90	    local real elapsed = X3Buster.now()-since
+91	    local real gy
+92	    local real oy
+93	    local integer i
+94	    local X3Buster c
+95	    set physicalCallbacks = physicalCallbacks+1
+96	    if previousClock == X3Buster.now() then
+```
+
+**`verify_x3_probe.py`** — reject_controls(function), x3_evaluate(function), negative(variable), values(function), x(variable), +13 more
+
+```python
+1	#!/usr/bin/env python3
+2	"""Check real engine evidence and ensure stale/failed/empty logs are rejected."""
+3	from pathlib import Path
+4	import hashlib,json,re
+5	from verify_rapid_probe import evaluate as rapid_evaluate
+6	
+7	ROOT=Path(__file__).resolve().parents[1]
+8	
+9	
+10	def values(raw, keys):
+11	    return {k:float(re.search(r'\b'+k+r'=([\d.]+)',raw)[1]) for k in keys}
+12	
+13	
+14	def x3_evaluate(info, raw):
+15	    assert f'X3 {info["run"]} COMPLETE' in raw and '"FAIL ' not in raw
+16	    passes=re.findall(r'call Preload\( "PASS ([^"]+)"',raw)
+17	    assert len(passes)==len(set(passes))==69
+18	    for label in ['two bodies orbit independently in XY',
+19	                  'catching pulse produces exactly one fusion',
+20	                  'missing orb prevents fusion',
+21	                  'enemy impact before union prevents fusion',
+22	                  'obstacle before union prevents fusion',
+23	                  'simultaneous casts fuse only their own components',
+24	                  'concurrent cast limit rejects overflow',
+25	                  'native W spell event creates charged physics',
+26	                  'native E spell event completes cross-shot sequence',
+27	                  'fusion precedes later enemy impact inside the same tick',
+28	                  'green satellite really travels backwards after union',
+29	                  'orange satellite really travels backwards after union',
+30	                  'satellite turns around and accelerates forwards',
+31	                  'core accelerates after formation',
+32	                  'green satellite reaches its sustained speed limit',
+33	                  'orange satellite reaches its sustained speed limit',
+34	                  'retreating satellite sweeps its real path and damages once']:
+35	        assert label in passes
+36	    v=values(raw,['checks','failures','casts','live','created','retired','fusions','flashes'])
+37	    assert v['checks']==69 and v['failures']==v['casts']==v['live']==v['flashes']==0
+38	    # Baseline190 + one extra eight-body cast to test a retrograde collision.
+39	    assert v['created']==v['retired']==198 and v['fusions']==7
+40	    return v
+41	
+42	
+43	def color_evaluate(info, raw):
+44	    assert f'COLOR {info["run"]} COMPLETE' in raw and '"FAIL ' not in raw
+45	    passes=re.findall(r'call Preload\( "PASS ([^"]+)"',raw)
+46	    assert len(passes)==len(set(passes))==40
+47	    for i in range(12):
+48	        assert f'model for owner color {i}' in passes and f'scale for owner color {i}' in passes
+49	    v=values(raw,['checks','failures','live','created','retired','scale'])
+50	    assert v['checks']==40 and v['failures']==v['live']==0
+51	    assert v['created']==v['retired']==221 and abs(v['scale']-16/5.832)<.001
+52	    return v
+53	
+54	
+55	def reject_controls(check, raw, controls):
+56	    for altered in controls:
+57	        assert altered!=raw
+58	        try:check(altered)
+59	        except AssertionError:continue
+60	        raise AssertionError('Evaluator accepted corrupted evidence')
+61	    return len(controls)
+62	
+63	
+64	if __name__=='__main__':
+65	    final=json.loads((ROOT/'reports/current-x3-test.json').read_text())
+66	    regression=final
+67	    latest=json.loads((ROOT/'reports/latest-build.json').read_text())
+68	    d=Path(final['directory']);rd=Path(regression['directory'])
+69	    for info in [final,regression]:
+70	        assert info['production_sha256']==latest['sha256']
+71	        assert hashlib.sha256(Path(info['map']).read_bytes()).hexdigest()==info['sha256']
+72	    assert hashlib.sha256((ROOT/'TerrainDev.w3x').read_bytes()).hexdigest()==latest['sha256']
+73	    for n,h in latest['library_sha256'].items():
+74	        assert hashlib.sha256((ROOT/f'src/libraries/{n}.j').read_bytes()).hexdigest()==h
+75	    logs=[d/'x3-engine.txt',rd/'colors-engine.txt',rd/'rapid-engine.txt']
+76	    missing=[str(p) for p in logs if not p.is_file()]
+77	    if missing:
+78	        raise SystemExit('Laboratory incomplete; wait for COMPLETE before validating: '+', '.join(missing))
+79	    xraw,craw,rraw=[p.read_text() for p in logs]
+80	    x=x3_evaluate(final,xraw);c=color_evaluate(regression,craw);r=rapid_evaluate(regression,rraw)
+81	    negative=reject_controls(lambda s:x3_evaluate(final,s),xraw,[
+82	        xraw.replace('failures=0','failures=1'),xraw.replace(final['run'],'old-run'),
+83	        xraw.replace('retired=198','retired=197'),xraw.replace('fusions=7','fusions=0'),
+84	        xraw.replace('PASS native E spell event','OMITTED native E spell event'),
+85	        xraw.replace('PASS green satellite really travels backwards','OMITTED green satellite really travels backwards')])
+86	    negative+=reject_controls(lambda s:color_evaluate(regression,s),craw,[
+87	        craw.replace('failures=0','failures=1'),craw.replace(regression['run'],'old-run'),
+88	        craw.replace('retired=221','retired=220'),craw.replace('PASS model for owner color 0','OMITTED model for owner color 0')])
+89	    negative+=reject_controls(lambda s:rapid_evaluate(regression,s),rraw,[
+90	        rraw.replace('failures=0','failures=1'),rraw.replace(regression['run'],'old-run'),
+91	        re.sub(r'observed=\d+','observed=0',rraw),rraw.replace('minimum=0.250','minimum=0.010'),
+92	        rraw.replace('PASS native point cast accepted','OMITTED native point cast accepted')])
+93	    result={'passed':True,'production_sha256':latest['sha256'],'x3':x,'colors':c,'rapid_fire':r,
+94	            'checks_total':153,'negative_controls_rejected':negative,
+95	            'x3_fixture':str(d/'fixture.json'),'regression_fixture':str(rd/'fixture.json')}
+96	    (d/'validated-result.json').write_text(json.dumps(result,indent=2)+'\n')
+97	    print(json.dumps(result,indent=2))
+```
+
+**Not shown above — explore these names for their source**
+
+- RapidFireProbe.j: Save:53, i:54, RapidFireProbe:2, Begin:388, Advance:66, Tick:191, +20 more
+- ShotColorProbe.j: Save:109, i:110, ShotColorProbe:2, Tick:122, failures:11, lines:12, +19 more
+- verify_probe.py: evaluate:9, values:32, verify_probe.py:1
+- verify_rapid_probe.py: evaluate:7, values:34, verify_rapid_probe.py:1
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

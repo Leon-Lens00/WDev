@@ -1,0 +1,4 @@
+{
+  "exclude": ["__pycache__/", ".pytest_cache/", "*.exe", "*.dll"],
+  "jass": {"mode": "conservative", "completeInputs": false}
+}

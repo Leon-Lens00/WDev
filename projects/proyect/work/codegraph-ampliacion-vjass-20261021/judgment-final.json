@@ -1,0 +1,44 @@
+{
+  "judgment": "APPROVED",
+  "scope": "Corrección CodeGraph JASS/vJASS R4 y regresiones; activación verificada por el padre mediante proceso nuevo, protocolo independiente y consultas de este chat",
+  "tree_sha256": "1d42d7d6a0acabff16dfb35d4197335a562cc27b226ff98e2017efc87f01167c",
+  "files": 59,
+  "correction_rounds": 3,
+  "extra_round_user_authorization": "Claro dale otra pasada",
+  "judges": [
+    "judge-A-r4.json",
+    "judge-B-r4.json"
+  ],
+  "prior_verified": [
+    "JD-A-001",
+    "JD-B-002",
+    "JD-A-002",
+    "JD-B-001",
+    "JD-A-003"
+  ],
+  "final_verified": [
+    "JD-A-R3-001",
+    "JD-B-002-R3"
+  ],
+  "open_material_findings": [],
+  "tests": {
+    "passed": 1198,
+    "suites": 15,
+    "log": "judgment-extra-regressions.log"
+  },
+  "build": "judgment-extra-build.log",
+  "snapshot_source_integrity_verified_before_and_after": true,
+  "installed_mcp": "mcp-final-verification.json",
+  "active_indexes": "final-active-index-verification.json",
+  "limits": [
+    "No lenguaje vJASS completo",
+    "No evaluación upstream A/B con agentes en tres repositorios",
+    "No nueva validación en juego ni multijugador"
+  ],
+  "app_activation": "app-reload-final-verification.json",
+  "reviewed_code_unchanged_after_activation": true,
+  "post_review_changes_to_snapshot_files": [
+    "Documentos/ChatGPT/Proyect/docs/planes/codegraph-ampliacion-vjass.md"
+  ],
+  "note": "Sólo las notas del plan cambiaron después del cierre; los bytes del código revisado permanecen iguales. Las pruebas de activación son del padre, no de los jurados."
+}

@@ -1,0 +1,21 @@
+--- work/inventory-original-audit-20261022/fresh141/sources/008-EquipmentCore.j
++++ TerrainDev/inventory-integration/src/Inventory_08_Equipment.j
+@@ -312,12 +312,16 @@
+             local integer len
+             local real timeout
+             
++            if this == 0 or (not flag and not this.displayed) then
++                return
++            endif
++            if flag and not this.displayed then
++                set .DisplayCount = .DisplayCount + 1
++            endif
+             set this.displayed = flag
+             set this.camera = cam
+             
+             if (flag) then
+-                set .DisplayCount = .DisplayCount + 1
+-
+                 if (DisplayCount >= 1) then
+                     call PauseTimer(.UpdateTimer)
+                     

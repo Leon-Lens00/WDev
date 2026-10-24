@@ -1,0 +1,91 @@
+{
+  "node": "v22.14.0",
+  "library_root": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Personajes-WC3-127b/migracion-linux/runtime/node_modules",
+  "models": [
+    {
+      "name": "Newborn",
+      "input": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Newborn-NPC-30235/TDAU_Newborn_NPC_30235_Compacto_Prueba.mdx",
+      "input_sha256": "de67dd0c2ae8efe2ecc1dce07ad4eff74ec5fe5e475221d69f1e26993cc0b2dd",
+      "original_unchanged": true,
+      "version": 800,
+      "bytes": 249023,
+      "metrics": {
+        "vertices": 1415,
+        "triangles": 2314,
+        "bones": 20,
+        "helpers": 0,
+        "geosets": 2,
+        "sequences": 11,
+        "keys": 9455,
+        "max_group_entries": 4
+      },
+      "output": "/home/snz/Documentos/ChatGPT/Proyect/work/skill-modelado-20261022/smoke-output/Newborn.mdx",
+      "output_sha256": "a8920e3918e20c92b8f26e9f03df7c67af904700a35834e2007a15a52c0fbb95",
+      "mdl_independently_parsed": true,
+      "numeric_structure_comparison": true,
+      "texture_paths_present": [
+        {
+          "declared": "STCharacters\\61d8615638f2763415fe.blp",
+          "path": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Newborn-NPC-30235/STCharacters/61d8615638f2763415fe.blp"
+        },
+        {
+          "declared": "STCharacters\\6e70a37cc68fa67ffd1f.blp",
+          "path": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Newborn-NPC-30235/STCharacters/6e70a37cc68fa67ffd1f.blp"
+        }
+      ]
+    },
+    {
+      "name": "Rangedborn",
+      "input": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Rangedborn-NPC-30119/TDAU_Rangedborn_NPC_30119_Compacto_Prueba.mdx",
+      "input_sha256": "b65170ca5cb9d46542abc1ae578b42a6d433c899d57c957bdecc0c94ca43f378",
+      "original_unchanged": true,
+      "version": 800,
+      "bytes": 315615,
+      "metrics": {
+        "vertices": 3707,
+        "triangles": 4000,
+        "bones": 40,
+        "helpers": 0,
+        "geosets": 7,
+        "sequences": 11,
+        "keys": 8252,
+        "max_group_entries": 4
+      },
+      "output": "/home/snz/Documentos/ChatGPT/Proyect/work/skill-modelado-20261022/smoke-output/Rangedborn.mdx",
+      "output_sha256": "2fc83a9a0adefbe64143dfc7271afa1851f68fc7b597aa1054ac2284c8ad0c55",
+      "mdl_independently_parsed": true,
+      "numeric_structure_comparison": true,
+      "texture_paths_present": [
+        {
+          "declared": "STCharacters\\3134a9ba1191c2b18416.blp",
+          "path": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Rangedborn-NPC-30119/STCharacters/3134a9ba1191c2b18416.blp"
+        },
+        {
+          "declared": "STCharacters\\30665bd850d09386e421.blp",
+          "path": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Rangedborn-NPC-30119/STCharacters/30665bd850d09386e421.blp"
+        },
+        {
+          "declared": "STCharacters\\42f5acc9559b7ac3833e.blp",
+          "path": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Rangedborn-NPC-30119/STCharacters/42f5acc9559b7ac3833e.blp"
+        },
+        {
+          "declared": "STCharacters\\6bb55546b413abc47eb2.blp",
+          "path": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Rangedborn-NPC-30119/STCharacters/6bb55546b413abc47eb2.blp"
+        },
+        {
+          "declared": "STCharacters\\c1278ac8e4e98dbe5fcd.blp",
+          "path": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Rangedborn-NPC-30119/STCharacters/c1278ac8e4e98dbe5fcd.blp"
+        },
+        {
+          "declared": "STCharacters\\f21a11a288b5cef724f1.blp",
+          "path": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Rangedborn-NPC-30119/STCharacters/f21a11a288b5cef724f1.blp"
+        },
+        {
+          "declared": "STCharacters\\0d6a1f27526d9bab23de.blp",
+          "path": "/home/snz/Documentos/Slendytubbies-WC3-recuperado-2026-10-09/Newborn-WC3-127b/pruebas-editor-v11/TDAU/Rangedborn-NPC-30119/STCharacters/0d6a1f27526d9bab23de.blp"
+        }
+      ]
+    }
+  ],
+  "scope": "Lectura/escritura/relectura MDX800 y comparación numérica; sin render, sin juego, sin FPS."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "native-classic-127b-027-1920-v1",
+  "font": "Friz Quadrata TT",
+  "nativeHeight": 0.027,
+  "screen": [
+    1920,
+    1080
+  ],
+  "fontPx": 29.16,
+  "fallback": 32,
+  "safety": 1.05,
+  "tagWidth": 400,
+  "fontSha256": "8f798feb09a0e9dc97daf0a54b52a9a1a7b4cf7103fcb2aa1566ab36ac4dc41c",
+  "status": "Measured advances for 111 glyphs at native .027 and 1920x1080. Other heights interpolate; shapes remain a browser approximation.",
+  "source": "Native 8-repeat grid: dialogue-system/evidence/metrics-final-00..09.png; PID589024. _=15px from120px/8 continuous ink; space=7px from W+8spaces+W."
+}

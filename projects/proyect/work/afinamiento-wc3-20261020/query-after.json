@@ -1,0 +1,146 @@
+{
+  "exit": 0,
+  "result": {
+    "root": "/home/snz/Documentos/WarDatsPy/struct-rebuild/MoveSys",
+    "analysis": "lexical-prototype; not compilation, runtime validation or proof of completeness",
+    "coverage": "lexical_only",
+    "sources": [
+      {
+        "file": "Config/MovementSpellTargetConfig.j",
+        "sha256": "7a8eea6f3a965de69ccfd6b9dc6433601e3aa09dfbb260fb686c7a137b68368c"
+      },
+      {
+        "file": "MoveCast.j",
+        "sha256": "03814c4641637f59a3e8e757ed2e8216054382aad08e50dbfe9e087cef46ed1c"
+      }
+    ],
+    "symbols": [
+      {
+        "file": "MoveCast.j",
+        "line": 402,
+        "column": 12,
+        "id": "MoveCast.j:402:12",
+        "name": "destroy",
+        "qualified": "MovementSystem.MovementData.destroy",
+        "kind": "method",
+        "scope": "MovementSystem.MovementData",
+        "private": false,
+        "end_line": 421
+      }
+    ],
+    "calls": [
+      {
+        "file": "MoveCast.j",
+        "line": 411,
+        "column": 15,
+        "caller": "MoveCast.j:402:12",
+        "caller_name": "MovementSystem.MovementData.destroy",
+        "target": "<implicit-receiver>.endSession",
+        "kind": "call",
+        "resolution": "member_unresolved",
+        "candidates": [],
+        "query_match": "outgoing"
+      },
+      {
+        "file": "MoveCast.j",
+        "line": 412,
+        "column": 14,
+        "caller": "MoveCast.j:402:12",
+        "caller_name": "MovementSystem.MovementData.destroy",
+        "target": "thistype.forget",
+        "kind": "call",
+        "resolution": "member_unresolved",
+        "candidates": [],
+        "query_match": "outgoing"
+      },
+      {
+        "file": "MoveCast.j",
+        "line": 418,
+        "column": 15,
+        "caller": "MoveCast.j:402:12",
+        "caller_name": "MovementSystem.MovementData.destroy",
+        "target": "<implicit-receiver>.deallocate",
+        "kind": "call",
+        "resolution": "member_unresolved",
+        "candidates": [],
+        "query_match": "outgoing"
+      },
+      {
+        "file": "MoveCast.j",
+        "line": 447,
+        "column": 19,
+        "caller": "MoveCast.j:423:27",
+        "caller_name": "MovementSystem.MovementData.onMoveTick",
+        "target": "<implicit-receiver>.destroy",
+        "kind": "call",
+        "resolution": "member_unresolved",
+        "candidates": [],
+        "query_match": "textual_member"
+      },
+      {
+        "file": "MoveCast.j",
+        "line": 453,
+        "column": 19,
+        "caller": "MoveCast.j:423:27",
+        "caller_name": "MovementSystem.MovementData.onMoveTick",
+        "target": "<implicit-receiver>.destroy",
+        "kind": "call",
+        "resolution": "member_unresolved",
+        "candidates": [],
+        "query_match": "textual_member"
+      },
+      {
+        "file": "MoveCast.j",
+        "line": 518,
+        "column": 19,
+        "caller": "MoveCast.j:503:27",
+        "caller_name": "MovementSystem.MovementData.onSessionTick",
+        "target": "<implicit-receiver>.destroy",
+        "kind": "call",
+        "resolution": "member_unresolved",
+        "candidates": [],
+        "query_match": "textual_member"
+      },
+      {
+        "file": "MoveCast.j",
+        "line": 524,
+        "column": 19,
+        "caller": "MoveCast.j:503:27",
+        "caller_name": "MovementSystem.MovementData.onSessionTick",
+        "target": "<implicit-receiver>.destroy",
+        "kind": "call",
+        "resolution": "member_unresolved",
+        "candidates": [],
+        "query_match": "textual_member"
+      },
+      {
+        "file": "MoveCast.j",
+        "line": 562,
+        "column": 19,
+        "caller": "MoveCast.j:539:27",
+        "caller_name": "MovementSystem.MovementData.onPulse",
+        "target": "<implicit-receiver>.destroy",
+        "kind": "call",
+        "resolution": "member_unresolved",
+        "candidates": [],
+        "query_match": "textual_member"
+      },
+      {
+        "file": "MoveCast.j",
+        "line": 606,
+        "column": 18,
+        "caller": "MoveCast.j:596:18",
+        "caller_name": "MovementSystem.DestroyMovementDataForUnit",
+        "target": "data.destroy",
+        "kind": "call",
+        "resolution": "member_unresolved",
+        "candidates": [],
+        "query_match": "textual_member"
+      }
+    ],
+    "dependencies": [],
+    "diagnostics": [],
+    "skipped": []
+  },
+  "stderr": ""
+}

@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-22T22:09:20.416086-05:00",
+  "skill": "/home/snz/.codex/skills/wc3-classic-modeling",
+  "quick_validate": "PASS",
+  "links": [
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/vinz.md",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/entorno-linux.md",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/portrait-playback-classic.md",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/optimization-classic.md",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/references/optimization-classic.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/entorno-linux.md",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/references/optimization-classic.md",
+      "target": "/home/snz/.codex/skills/wc3-classic-modeling/references/portrait-playback-classic.md",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/references/portrait-playback-classic.md",
+      "target": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence/RETRATOS-ANIMADOS.md",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/references/portrait-playback-classic.md",
+      "target": "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-22-182141-dialogo-marco-jerarquia-mdx.md",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/references/portrait-playback-classic.md",
+      "target": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-tauren-hud-20261022/sequence-order-validation.json",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/references/portrait-playback-classic.md",
+      "target": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-tauren-hud-20261022/actor-blend-validation.json",
+      "exists": true
+    },
+    {
+      "source": "/home/snz/.codex/skills/wc3-classic-modeling/references/portrait-playback-classic.md",
+      "target": "/home/snz/Documentos/ChatGPT/Proyect/work/dialogue-tauren-hud-20261022/dialogo-patrulla.mp4",
+      "exists": true
+    }
+  ],
+  "scope": "Documentación; no se modifican modelos, mapa ni configuración. Hallazgo nativo previo; mezcla visual nueva de UI pendiente."
+}

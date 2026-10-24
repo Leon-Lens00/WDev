@@ -1,0 +1,289 @@
+Focused static decoding. Not a full game trace. Numbers after mnemonics are addressing-mode IDs from the pinned decoder.
+
+
+BLOCK 818CA4-818CB3 entry M1X1
+818CA4  08        PHP  mode= 0 operand=$000000 M1X1
+818CA5  c220      REP  mode= 2 operand=$000020 M1X1
+818CA7  2410      BIT  mode= 3 operand=$000010 M0X1
+818CA9  5006      BVC  mode=11 operand=$008CB1 M0X1
+818CAB  49ffff    EOR  mode= 2 operand=$00FFFF M0X1
+818CAE  1a        INC  mode= 1 operand=$000000 M0X1
+818CAF  28        PLP  mode= 0 operand=$000000 M0X1
+818CB0  6b        RTL  mode= 0 operand=$000000 M1X1
+818CB1  28        PLP  mode= 0 operand=$000000 M1X1
+818CB2  6b        RTL  mode= 0 operand=$000000 M1X1
+
+BLOCK 81C5A6-81C5DB entry M1X1
+81C5A6  a50b      LDA  mode= 3 operand=$00000B M1X1
+81C5A8  0a        ASL  mode= 1 operand=$000000 M1X1
+81C5A9  0a        ASL  mode= 1 operand=$000000 M1X1
+81C5AA  0a        ASL  mode= 1 operand=$000000 M1X1
+81C5AB  aa        TAX  mode= 0 operand=$000000 M1X1
+81C5AC  bda0bb    LDA  mode= 7 operand=$00BBA0 M1X1
+81C5AF  ea        NOP  mode= 0 operand=$000000 M1X1
+81C5B0  ea        NOP  mode= 0 operand=$000000 M1X1
+81C5B1  ea        NOP  mode= 0 operand=$000000 M1X1
+81C5B2  ea        NOP  mode= 0 operand=$000000 M1X1
+81C5B3  851e      STA  mode= 3 operand=$00001E M1X1
+81C5B5  bda1bb    LDA  mode= 7 operand=$00BBA1 M1X1
+81C5B8  22a48c81  JSL  mode= 9 operand=$818CA4 M1X1
+81C5BC  851f      STA  mode= 3 operand=$00001F M1X1
+81C5BE  bda6bb    LDA  mode= 7 operand=$00BBA6 M1X1
+81C5C1  853b      STA  mode= 3 operand=$00003B M1X1
+81C5C3  a511      LDA  mode= 3 operand=$000011 M1X1
+81C5C5  2970      AND  mode= 2 operand=$000070 M1X1
+81C5C7  053b      ORA  mode= 3 operand=$00003B M1X1
+81C5C9  8511      STA  mode= 3 operand=$000011 M1X1
+81C5CB  c220      REP  mode= 2 operand=$000020 M1X1
+81C5CD  bda2bb    LDA  mode= 7 operand=$00BBA2 M0X1
+81C5D0  22a48c81  JSL  mode= 9 operand=$818CA4 M0X1
+81C5D4  851a      STA  mode= 3 operand=$00001A M0X1
+81C5D6  bda4bb    LDA  mode= 7 operand=$00BBA4 M0X1
+81C5D9  851c      STA  mode= 3 operand=$00001C M0X1
+
+BLOCK 81C610-81C62E entry M1X1
+81C610  c220      REP  mode= 2 operand=$000020 M1X1
+81C612  2410      BIT  mode= 3 operand=$000010 M0X1
+81C614  7009      BVS  mode=11 operand=$00C61F M0X1
+81C616  a900f8    LDA  mode= 2 operand=$00F800 M0X1
+81C619  c51a      CMP  mode= 3 operand=$00001A M0X1
+81C61B  300b      BMI  mode=11 operand=$00C628 M0X1
+81C61D  8007      BRA  mode=11 operand=$00C626 M0X1
+81C61F  a90008    LDA  mode= 2 operand=$000800 M0X1
+81C622  c51a      CMP  mode= 3 operand=$00001A M0X1
+81C624  1002      BPL  mode=11 operand=$00C628 M0X1
+81C626  851a      STA  mode= 3 operand=$00001A M0X1
+81C628  e220      SEP  mode= 2 operand=$000020 M0X1
+81C62A  22c2d782  JSL  mode= 9 operand=$82D7C2 M1X1
+
+BLOCK 82D7C2-82D7F3 entry M1X1
+82D7C2  08        PHP  mode= 0 operand=$000000 M1X1
+82D7C3  c220      REP  mode= 2 operand=$000020 M1X1
+82D7C5  38        SEC  mode= 0 operand=$000000 M0X1
+82D7C6  a51e      LDA  mode= 3 operand=$00001E M0X1
+82D7C8  29ff00    AND  mode= 2 operand=$0000FF M0X1
+82D7CB  898000    BIT  mode= 2 operand=$000080 M0X1
+82D7CE  f003      BEQ  mode=11 operand=$00D7D3 M0X1
+82D7D0  0900ff    ORA  mode= 2 operand=$00FF00 M0X1
+82D7D3  e51c      SBC  mode= 3 operand=$00001C M0X1
+82D7D5  49ffff    EOR  mode= 2 operand=$00FFFF M0X1
+82D7D8  1a        INC  mode= 1 operand=$000000 M0X1
+82D7D9  851c      STA  mode= 3 operand=$00001C M0X1
+82D7DB  38        SEC  mode= 0 operand=$000000 M0X1
+82D7DC  a51f      LDA  mode= 3 operand=$00001F M0X1
+82D7DE  29ff00    AND  mode= 2 operand=$0000FF M0X1
+82D7E1  898000    BIT  mode= 2 operand=$000080 M0X1
+82D7E4  f003      BEQ  mode=11 operand=$00D7E9 M0X1
+82D7E6  0900ff    ORA  mode= 2 operand=$00FF00 M0X1
+82D7E9  e51a      SBC  mode= 3 operand=$00001A M0X1
+82D7EB  49ffff    EOR  mode= 2 operand=$00FFFF M0X1
+82D7EE  1a        INC  mode= 1 operand=$000000 M0X1
+82D7EF  851a      STA  mode= 3 operand=$00001A M0X1
+82D7F1  809c      BRA  mode=11 operand=$00D78F M0X1
+
+BLOCK 82D78E-82D7C2 entry M1X1
+82D78E  08        PHP  mode= 0 operand=$000000 M1X1
+82D78F  c221      REP  mode= 2 operand=$000021 M1X1
+82D791  a504      LDA  mode= 3 operand=$000004 M0X1
+82D793  651a      ADC  mode= 3 operand=$00001A M0X1
+82D795  8504      STA  mode= 3 operand=$000004 M0X1
+82D797  e220      SEP  mode= 2 operand=$000020 M0X1
+82D799  a900      LDA  mode= 2 operand=$000000 M1X1
+82D79B  241b      BIT  mode= 3 operand=$00001B M1X1
+82D79D  1001      BPL  mode=11 operand=$00D7A0 M1X1
+82D79F  3a        DEC  mode= 1 operand=$000000 M1X1
+82D7A0  6506      ADC  mode= 3 operand=$000006 M1X1
+82D7A2  8506      STA  mode= 3 operand=$000006 M1X1
+82D7A4  c220      REP  mode= 2 operand=$000020 M1X1
+82D7A6  38        SEC  mode= 0 operand=$000000 M0X1
+82D7A7  a507      LDA  mode= 3 operand=$000007 M0X1
+82D7A9  e51c      SBC  mode= 3 operand=$00001C M0X1
+82D7AB  8507      STA  mode= 3 operand=$000007 M0X1
+82D7AD  e220      SEP  mode= 2 operand=$000020 M0X1
+82D7AF  9c0000    STZ  mode= 6 operand=$000000 M1X1
+82D7B2  241d      BIT  mode= 3 operand=$00001D M1X1
+82D7B4  1003      BPL  mode=11 operand=$00D7B9 M1X1
+82D7B6  ce0000    DEC  mode= 6 operand=$000000 M1X1
+82D7B9  a509      LDA  mode= 3 operand=$000009 M1X1
+82D7BB  ed0000    SBC  mode= 6 operand=$000000 M1X1
+82D7BE  8509      STA  mode= 3 operand=$000009 M1X1
+82D7C0  28        PLP  mode= 0 operand=$000000 M1X1
+82D7C1  6b        RTL  mode= 0 operand=$000000 M1X1
+
+BLOCK 81C124-81C149 entry M1X1
+81C124  22998b81  JSL  mode= 9 operand=$818B99 M1X1
+81C128  c220      REP  mode= 2 operand=$000020 M1X1
+81C12A  a98000    LDA  mode= 2 operand=$000080 M0X1
+81C12D  2410      BIT  mode= 3 operand=$000010 M0X1
+81C12F  7003      BVS  mode=11 operand=$00C134 M0X1
+81C131  a980ff    LDA  mode= 2 operand=$00FF80 M0X1
+81C134  851a      STA  mode= 3 operand=$00001A M0X1
+81C136  641c      STZ  mode= 3 operand=$00001C M0X1
+81C138  a90008    LDA  mode= 2 operand=$000800 M0X1
+81C13B  851e      STA  mode= 3 operand=$00001E M0X1
+81C13D  a91abb    LDA  mode= 2 operand=$00BB1A M0X1
+81C140  8520      STA  mode= 3 operand=$000020 M0X1
+81C142  a9f0dc    LDA  mode= 2 operand=$00DCF0 M0X1
+81C145  8531      STA  mode= 3 operand=$000031 M0X1
+81C147  e220      SEP  mode= 2 operand=$000020 M0X1
+
+BLOCK 81C1C5-81C1FB entry M1X1
+81C1C5  a538      LDA  mode= 3 operand=$000038 M1X1
+81C1C7  f008      BEQ  mode=11 operand=$00C1D1 M1X1
+81C1C9  c638      DEC  mode= 3 operand=$000038 M1X1
+81C1CB  d004      BNE  mode=11 operand=$00C1D1 M1X1
+81C1CD  a940      LDA  mode= 2 operand=$000040 M1X1
+81C1CF  851f      STA  mode= 3 operand=$00001F M1X1
+81C1D1  2411      BIT  mode= 3 operand=$000011 M1X1
+81C1D3  7011      BVS  mode=11 operand=$00C1E6 M1X1
+81C1D5  22f8d682  JSL  mode= 9 operand=$82D6F8 M1X1
+81C1D9  c220      REP  mode= 2 operand=$000020 M1X1
+81C1DB  a900fb    LDA  mode= 2 operand=$00FB00 M0X1
+81C1DE  c51a      CMP  mode= 3 operand=$00001A M0X1
+81C1E0  3013      BMI  mode=11 operand=$00C1F5 M0X1
+81C1E2  851a      STA  mode= 3 operand=$00001A M0X1
+81C1E4  800f      BRA  mode=11 operand=$00C1F5 M0X1
+81C1E6  2219d782  JSL  mode= 9 operand=$82D719 M0X1
+81C1EA  c220      REP  mode= 2 operand=$000020 M0X1
+81C1EC  a90005    LDA  mode= 2 operand=$000500 M0X1
+81C1EF  c51a      CMP  mode= 3 operand=$00001A M0X1
+81C1F1  1002      BPL  mode=11 operand=$00C1F5 M0X1
+81C1F3  851a      STA  mode= 3 operand=$00001A M0X1
+81C1F5  e220      SEP  mode= 2 operand=$000020 M0X1
+81C1F7  5c36d682  JMP  mode= 9 operand=$82D636 M1X1
+
+BLOCK 81C263-81C289 entry M1X1
+81C263  a902      LDA  mode= 2 operand=$000002 M1X1
+81C265  8501      STA  mode= 3 operand=$000001 M1X1
+81C267  a9ff      LDA  mode= 2 operand=$0000FF M1X1
+81C269  8510      STA  mode= 3 operand=$000010 M1X1
+81C26B  ee0d0a    INC  mode= 6 operand=$000A0D M1X1
+81C26E  ee550a    INC  mode= 6 operand=$000A55 M1X1
+81C271  e630      INC  mode= 3 operand=$000030 M1X1
+81C273  a60b      LDX  mode= 3 operand=$00000B M1X1
+81C275  bd28bb    LDA  mode= 7 operand=$00BB28 M1X1
+81C278  8537      STA  mode= 3 operand=$000037 M1X1
+81C27A  a901      LDA  mode= 2 operand=$000001 M1X1
+81C27C  8538      STA  mode= 3 operand=$000038 M1X1
+81C27E  a60b      LDX  mode= 3 operand=$00000B M1X1
+81C280  a90e      LDA  mode= 2 operand=$00000E M1X1
+81C282  1411      TRB  mode= 3 operand=$000011 M1X1
+81C284  bd2cbb    LDA  mode= 7 operand=$00BB2C M1X1
+81C287  0411      TSB  mode= 3 operand=$000011 M1X1
+
+BLOCK 81C3BE-81C3EA entry M1X1
+81C3BE  c638      DEC  mode= 3 operand=$000038 M1X1
+81C3C0  d027      BNE  mode=11 operand=$00C3E9 M1X1
+81C3C2  a637      LDX  mode= 3 operand=$000037 M1X1
+81C3C4  bd37bb    LDA  mode= 7 operand=$00BB37 M1X1
+81C3C7  d004      BNE  mode=11 operand=$00C3CD M1X1
+81C3C9  6437      STZ  mode= 3 operand=$000037 M1X1
+81C3CB  80f5      BRA  mode=11 operand=$00C3C2 M1X1
+81C3CD  8538      STA  mode= 3 operand=$000038 M1X1
+81C3CF  bd38bb    LDA  mode= 7 operand=$00BB38 M1X1
+81C3D2  8512      STA  mode= 3 operand=$000012 M1X1
+81C3D4  c220      REP  mode= 2 operand=$000020 M1X1
+81C3D6  bd39bb    LDA  mode= 7 operand=$00BB39 M0X1
+81C3D9  851a      STA  mode= 3 operand=$00001A M0X1
+81C3DB  bd3bbb    LDA  mode= 7 operand=$00BB3B M0X1
+81C3DE  851c      STA  mode= 3 operand=$00001C M0X1
+81C3E0  e220      SEP  mode= 2 operand=$000020 M0X1
+81C3E2  a537      LDA  mode= 3 operand=$000037 M1X1
+81C3E4  18        CLC  mode= 0 operand=$000000 M1X1
+81C3E5  6906      ADC  mode= 2 operand=$000006 M1X1
+81C3E7  8537      STA  mode= 3 operand=$000037 M1X1
+81C3E9  60        RTS  mode= 0 operand=$000000 M1X1
+
+BLOCK 81C42F-81C49D entry M1X1
+81C42F  c230      REP  mode= 2 operand=$000030 M1X1
+81C431  a2d810    LDX  mode= 2 operand=$0010D8 M0X0
+81C434  bd0000    LDA  mode= 7 operand=$000000 M0X0
+81C437  29ff00    AND  mode= 2 operand=$0000FF M0X0
+81C43A  f00b      BEQ  mode=11 operand=$00C447 M0X0
+81C43C  bd0a00    LDA  mode= 7 operand=$00000A M0X0
+81C43F  29ff00    AND  mode= 2 operand=$0000FF M0X0
+81C442  c90300    CMP  mode= 2 operand=$000003 M0X0
+81C445  f00d      BEQ  mode=11 operand=$00C454 M0X0
+81C447  8a        TXA  mode= 0 operand=$000000 M0X0
+81C448  18        CLC  mode= 0 operand=$000000 M0X0
+81C449  694000    ADC  mode= 2 operand=$000040 M0X0
+81C44C  c91813    CMP  mode= 2 operand=$001318 M0X0
+81C44F  1048      BPL  mode=11 operand=$00C499 M0X0
+81C451  aa        TAX  mode= 0 operand=$000000 M0X0
+81C452  80e0      BRA  mode=11 operand=$00C434 M0X0
+81C454  e220      SEP  mode= 2 operand=$000020 M0X0
+81C456  bd0100    LDA  mode= 7 operand=$000001 M1X0
+81C459  c902      CMP  mode= 2 operand=$000002 M1X0
+81C45B  f004      BEQ  mode=11 operand=$00C461 M1X0
+81C45D  c906      CMP  mode= 2 operand=$000006 M1X0
+81C45F  d038      BNE  mode=11 operand=$00C499 M1X0
+81C461  bd0200    LDA  mode= 7 operand=$000002 M1X0
+81C464  c902      CMP  mode= 2 operand=$000002 M1X0
+81C466  d031      BNE  mode=11 operand=$00C499 M1X0
+81C468  225ccc84  JSL  mode= 9 operand=$84CC5C M1X0
+81C46C  902b      BCC  mode=11 operand=$00C499 M1X0
+81C46E  c220      REP  mode= 2 operand=$000020 M1X0
+81C470  bd0500    LDA  mode= 7 operand=$000005 M0X0
+81C473  8505      STA  mode= 3 operand=$000005 M0X0
+81C475  bd0800    LDA  mode= 7 operand=$000008 M0X0
+81C478  8508      STA  mode= 3 operand=$000008 M0X0
+81C47A  3c1000    BIT  mode= 7 operand=$000010 M0X0
+81C47D  500c      BVC  mode=11 operand=$00C48B M0X0
+81C47F  ad5d1e    LDA  mode= 6 operand=$001E5D M0X0
+81C482  38        SEC  mode= 0 operand=$000000 M0X0
+81C483  e98000    SBC  mode= 2 operand=$000080 M0X0
+81C486  9d0500    STA  mode= 7 operand=$000005 M0X0
+81C489  800a      BRA  mode=11 operand=$00C495 M0X0
+81C48B  ad5d1e    LDA  mode= 6 operand=$001E5D M0X0
+81C48E  18        CLC  mode= 0 operand=$000000 M0X0
+81C48F  698001    ADC  mode= 2 operand=$000180 M0X0
+81C492  9d0500    STA  mode= 7 operand=$000005 M0X0
+81C495  e230      SEP  mode= 2 operand=$000030 M0X0
+81C497  38        SEC  mode= 0 operand=$000000 M1X1
+81C498  60        RTS  mode= 0 operand=$000000 M1X1
+81C499  e230      SEP  mode= 2 operand=$000030 M1X1
+81C49B  18        CLC  mode= 0 operand=$000000 M1X1
+81C49C  60        RTS  mode= 0 operand=$000000 M1X1
+
+BLOCK 81C49D-81C4D0 entry M1X1
+81C49D  e220      SEP  mode= 2 operand=$000020 M1X1
+81C49F  c210      REP  mode= 2 operand=$000010 M1X1
+81C4A1  a00400    LDY  mode= 2 operand=$000004 M1X0
+81C4A4  22c4d882  JSL  mode= 9 operand=$82D8C4 M1X0
+81C4A8  d023      BNE  mode=11 operand=$00C4CD M1X0
+81C4AA  fe0000    INC  mode= 7 operand=$000000 M1X0
+81C4AD  b932bb    LDA  mode= 8 operand=$00BB32 M1X0
+81C4B0  9d0a00    STA  mode= 7 operand=$00000A M1X0
+81C4B3  98        TYA  mode= 0 operand=$000000 M1X0
+81C4B4  9d0b00    STA  mode= 7 operand=$00000B M1X0
+81C4B7  a511      LDA  mode= 3 operand=$000011 M1X0
+81C4B9  9d1100    STA  mode= 7 operand=$000011 M1X0
+81C4BC  c220      REP  mode= 2 operand=$000020 M1X0
+81C4BE  a505      LDA  mode= 3 operand=$000005 M0X0
+81C4C0  9d0500    STA  mode= 7 operand=$000005 M0X0
+81C4C3  a508      LDA  mode= 3 operand=$000008 M0X0
+81C4C5  9d0800    STA  mode= 7 operand=$000008 M0X0
+81C4C8  e220      SEP  mode= 2 operand=$000020 M0X0
+81C4CA  88        DEY  mode= 0 operand=$000000 M1X0
+81C4CB  10d7      BPL  mode=11 operand=$00C4A4 M1X0
+81C4CD  e210      SEP  mode= 2 operand=$000010 M1X0
+81C4CF  60        RTS  mode= 0 operand=$000000 M1X1
+
+BLOCK 819040-819068 entry M1X1
+819040  a603      LDX  mode= 3 operand=$000003 M1X1
+819042  d01b      BNE  mode=11 operand=$00905F M1X1
+819044  e603      INC  mode= 3 operand=$000003 M1X1
+819046  6430      STZ  mode= 3 operand=$000030 M1X1
+819048  c221      REP  mode= 2 operand=$000021 M1X1
+81904A  a90008    LDA  mode= 2 operand=$000800 M0X1
+81904D  2410      BIT  mode= 3 operand=$000010 M0X1
+81904F  7003      BVS  mode=11 operand=$009054 M0X1
+819051  a900f8    LDA  mode= 2 operand=$00F800 M0X1
+819054  851a      STA  mode= 3 operand=$00001A M0X1
+819056  e220      SEP  mode= 2 operand=$000020 M0X1
+819058  a901      LDA  mode= 2 operand=$000001 M1X1
+81905A  2267b984  JSL  mode= 9 operand=$84B967 M1X1
+81905E  60        RTS  mode= 0 operand=$000000 M1X1
+81905F  22f3d782  JSL  mode= 9 operand=$82D7F3 M1X1
+819063  224ab984  JSL  mode= 9 operand=$84B94A M1X1
+819067  60        RTS  mode= 0 operand=$000000 M1X1

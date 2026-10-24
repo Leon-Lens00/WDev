@@ -1,0 +1,28 @@
+{
+  "unchanged_libraries": [
+    "WorldBounds",
+    "ErrorMessage",
+    "TimerUtils",
+    "Table",
+    "RegisterPlayerUnitEvent",
+    "SpellEffectEvent",
+    "IsDestructableTree",
+    "DummyCaster",
+    "Missile",
+    "MissileRecycler",
+    "MissileDiagnostics",
+    "GroundCollision",
+    "GroundMotion",
+    "RapidFire",
+    "RapidFireDemo"
+  ],
+  "modified_libraries": [
+    "X3Buster",
+    "X3BusterDemo"
+  ],
+  "added_libraries": [
+    "X3Kinematics"
+  ],
+  "visual_assets": "35 imports reextracted and SHA256 validated by latest build",
+  "original_immutable_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac"
+}

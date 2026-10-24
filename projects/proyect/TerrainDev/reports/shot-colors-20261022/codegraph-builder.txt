@@ -1,0 +1,210 @@
+> JASS/vJASS local support: compiler-profile static analysis. Typed receivers/operators, function-value and lifecycle dependencies, hooks/initialization, bounded templates and explicit build data. Excerpts retain real source. Labels distinguish possible targets; unknown build inputs, computed dispatch and other dialects remain coverage boundaries. Absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+
+**Exploration: build.py build map_script run prepare_rapid_probe.py**
+
+Found 30 symbols across 2 files. 2 files pinned from the query.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `map_script` (build.py:144) — 3 callers in `prepare_probe.py`, `prepare_rapid_probe.py`, `build.py`; no tests found within 3 caller hops
+- `run` (build.py:134) — 3 callers in `prepare_probe.py`, `prepare_rapid_probe.py`, `build.py`; no tests found within 3 caller hops
+- `build` (build.py:158) — 2 callers in `build.py`, `rapid_objects.py`; no tests found within 3 caller hops
+- `runningDummy` (TimedLifeProbe.j:5) — 2 callers in `TimedLifeProbe.j`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`build.py`** — take(calls), __init__(method), take(method), unit_records(calls), abilities(calls), +33 more
+
+```python
+10	import subprocess
+11	import sys
+12	
+13	ROOT = Path(__file__).resolve().parents[1]
+14	LAUNCHER = Path('/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py')
+15	
+16	
+17	def digest(data):
+18	    return hashlib.sha256(data).hexdigest()
+19	
+20	
+21	def integer(n):
+22	    return struct.pack('<i', n)
+23	
+24	
+25	def cstring(s):
+26	    return s.encode('utf-8') + b'\0'
+27	
+28	
+29	class Reader:
+
+... (gap: __init__ (build.py:30), take (build.py:33)) ...
+
+37	        return result
+38	
+39	    def int(self):
+40	        return struct.unpack('<i', self.take(4))[0]
+41	
+42	    def string(self):
+43	        end = self.data.index(0, self.pos)
+44	        return self.take(end-self.pos+1)
+45	
+46	
+47	def units(data):
+48	    r = Reader(data)
+49	    assert r.int() == 2, 'Only Classic unit object format v2 is supported'
+50	    tables = []
+51	    for _ in range(2):
+52	        records = []
+53	        for _ in range(r.int()):
+54	            begin = r.pos
+55	            base, new, count = r.take(4), r.take(4), r.int()
+56	            mods = []
+57	            for _ in range(count):
+58	                field, kind = r.take(4), r.int()
+59	                assert kind in (0, 1, 2, 3)
+60	                value = r.string() if kind == 3 else r.take(4)
+61	                mods.append((field, kind, value, r.take(4)))
+62	            records.append({'base': base, 'id': new, 'mods': mods, 'raw': data[begin:r.pos]})
+63	        tables.append(records)
+64	    assert r.pos == len(data)
+65	    # Before editing, prove the parser can reproduce every original byte.
+66	    assert encode_units(tables) == data
+67	    return tables
+68	
+69	
+70	def encode_record(record):
+
+... (gap) ...
+
+72	        field + integer(kind) + value + end for field, kind, value, end in record['mods'])
+73	
+74	
+75	def encode_units(tables):
+76	    return integer(2) + b''.join(integer(len(t)) + b''.join(encode_record(x) for x in t) for t in tables)
+77	
+78	
+79	def set_field(record, field, kind, value):
+
+... (gap) ...
+
+83	    record['mods'].append((field, kind, value, b'\0'*4))
+84	
+85	
+86	def triggers(data, names):
+87	    r = Reader(data)
+88	    assert r.take(4) == b'WTG!' and r.int() == 7
+89	    category_count = r.int()
+90	    assert category_count == 1
+91	    start = r.pos
+92	    assert r.int() == 0
+93	    r.string()
+94	    r.int()
+95	    categories = data[start:r.pos]
+96	    middle_start = r.pos
+97	    r.int()
+98	    assert r.int() == 0, 'Base map variables changed; review before rebuilding'
+99	    middle = data[middle_start:r.pos]
+100	    assert r.int() == 2, 'Base map trigger count changed'
+101	    original_records = bytearray(data[r.pos:])
+102	    header = Reader(original_records)
+103	    assert header.string() == b'Melee Initialization\0'
+104	    header.string()
+105	    assert header.int() == 0
+106	    enabled = header.pos
+107	    assert header.int() == 1
+108	    original_records[enabled:enabled+4] = integer(0)
+109	    original_records = bytes(original_records)
+110	    added = b''
+111	    for name in names:
+112	        added += cstring(name) + cstring('TerrainDev foundation; original author credits in code.')
+113	        added += b''.join(integer(v) for v in (0, 1, 1, 0, 0, 1, 0))
+114	    return (b'WTG!' + integer(7) + integer(2) + categories + integer(1) +
+115	            cstring('Project Libraries') + integer(0) + middle + integer(2+len(names)) +
+116	            original_records + added)
+117	
+118	
+119	def custom_text(data, bodies):
+120	    r = Reader(data)
+121	    assert r.int() == 1
+122	    r.string()
+123	    r.take(r.int())
+124	    header = data[:r.pos]
+125	    assert r.int() == 2
+126	    begin = r.pos
+127	    for _ in range(2):
+128	        r.take(r.int())
+129	    assert r.pos == len(data)
+130	    return header + integer(2+len(bodies)) + data[begin:] + b''.join(
+131	        integer(len(body)+1) + body + b'\0' for body in bodies)
+132	
+133	
+134	def run(args, log):
+135	    command = [sys.executable, str(LAUNCHER), *map(str, args)]
+136	    result = subprocess.run(command, capture_output=True, text=True)
+137	    log.write_text(json.dumps({'command': command, 'returncode': result.returncode,
+138	                              'stdout': result.stdout, 'stderr': result.stderr}, indent=2))
+139	    if result.returncode:
+140	        raise RuntimeError(f'Command failed; see {log}: {result.stdout} {result.stderr}')
+141	    return result.stdout
+142	
+143	
+144	def map_script(path):
+145	    """Keep original GUI actions recoverable, disable the melee trigger at runtime."""
+146	    code = path.read_bytes()
+147	    code, count = re.subn(rb'(^[ \t]*call TriggerAddAction\(gg_trg_Melee_Initialization,[^\r\n]+)',
+148	                         rb'\1\n    call DisableTrigger(gg_trg_Melee_Initialization)',code,flags=re.MULTILINE)
+149	    assert count == 1
+150	    # TriggerExecute/ConditionalTriggerExecute can execute disabled triggers.
+151	    # Remove the two explicit initialization calls as well as disabling WTG.
+152	    code, count = re.subn(rb'^[ \t]*call ConditionalTriggerExecute\(gg_trg_Melee_Initialization\)[^\r\n]*',
+153	                         b'    // Melee initialization disabled for the Rapid Fire prototype.',code,flags=re.MULTILINE)
+154	    assert count == 2
+155	    return code
+156	
+157	
+158	def build():
+```
+
+**`prepare_rapid_probe.py`** — info(variable), r(variable), stamp(variable), d(variable), names(variable), +5 more
+
+```python
+1	#!/usr/bin/env python3
+2	from pathlib import Path
+3	import datetime,json,sys
+4	import build
+5	r=build.ROOT
+6	stamp=datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
+7	d=r/'reports/rapid-fire'/stamp;d.mkdir(parents=True)
+8	names=json.loads((r/'libraries.json').read_text())['order']
+9	latest=json.loads((r/'reports/latest-build.json').read_text())
+10	assert build.digest((r/'TerrainDev.w3x').read_bytes())==latest['sha256']
+11	for n in names:
+12	    assert build.digest((r/f'src/libraries/{n}.j').read_bytes())==latest['library_sha256'][n]
+13	source='\n'.join((r/f'src/libraries/{n}.j').read_text() for n in names)
+14	source+='\n'+(r/'scripts/RapidFireProbe.j').read_text().replace('@RUN@',stamp)
+15	source+='\n'+build.map_script(Path(latest['build_directory'])/'base/war3map.j').decode()
+16	(d/'input.j').write_text(source)
+17	build.run(['vjass',d/'input.j',d/'compiled.j'],d/'compile.json')
+18	target=r/f'maps/work/TerrainDev-rapid-{stamp}.w3x'
+19	build.run(['wc3ctl','file','set',r/'TerrainDev.w3x','war3map.j',d/'compiled.j','-o',target,'--json'],d/'pack.json')
+20	build.run(['wc3ctl','extract',target,'war3map.j','--out',d/'reextracted.j','--json'],d/'extract.json')
+21	assert (d/'reextracted.j').read_bytes()==(d/'compiled.j').read_bytes()
+22	prefix=Path('/home/snz/Documentos/ChatGPT/FrozenThone/runtime/proton-newgen-modern-test/pfx')
+23	info={'run':stamp,'directory':str(d),'map':str(target),'map_sha256':build.digest(target.read_bytes()),
+24	      'production_sha256':latest['sha256'],'log':str(prefix/f'drive_c/WarcraftIII/CustomMapData/Logs/TerrainDev-{stamp}-rapid.txt')}
+25	assert not Path(info['log']).exists()
+26	(d/'manifest.json').write_text(json.dumps(info,indent=2));(r/'reports/current-rapid-test.json').write_text(json.dumps(info,indent=2))
+27	print(d)
+```
+
+**Not shown above — explore these names for their source**
+
+- TimedLifeProbe.j: runningDummy:5, TimedLifeProbe:2, Begin:25, Finish:14, Init:44, AliveFlag:8, +4 more
+- rapid_objects.py: ability_record:54, unit_records:41, encode_abilities:6, abilities:13, unit:34, rapid_objects.py:1
+- prepare_probe.py: run:13, info:35, prepare_probe.py:1
+- run_diagnostics.py: PREFIX:13, ENVROOT:12, launch:53, HELPER:14, ui:77
+- run_rapid_probe.py: prefix:8
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

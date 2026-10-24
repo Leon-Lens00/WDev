@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "flight_counts_correct": true,
+  "observed_reuse": 12,
+  "tracked_unique_dummies": 78,
+  "pooled": 12,
+  "live_unpooled": 66,
+  "hypothesis": "Paused surplus units retain timed life indefinitely; isolating PauseUnit vs timed-life behavior",
+  "next": "Three identical dummy objects: paused, running, resumed; timed life 2s; inspect at4s"
+}

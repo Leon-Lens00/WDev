@@ -1,0 +1,20 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "hero=1215324524 userdata=1 inv=1 eq=1 count=8" )
+	call Preload( "user=0 amount=1 display=1 current=1" )
+	call Preload( "heroXYZ=3184.000,-5712.000,248.578" )
+	call Preload( "delta=196.776 actualEye=3184.001,-6634.667,1593.700" )
+	call Preload( "camEye=3184.000,-6634.668,1616.490 at=3184.000,-5712.000,248.578" )
+	call Preload( "camAngles=-0.977,1.571 btn=19 type=1969841261 idx=53" )
+	call Preload( "btnPos=3216.539,-6585.580,1262.945 scale=1.780 life=1.000" )
+	call Preload( "pic=22 type=1651994162 pos=3225.893,-6590.865,1257.498" )
+	call Preload( "first=1667984999 itemData=1 tables=2" )
+	call Preload( "shown=48,3,2" )
+	call Preload( "texture=1110454343 expected=1110454343 local=0 owner=0" )
+	call Preload( "firstXY=0.562,-0.228 second=0.627,-0.228" )
+	call Preload( "applySkin=1262.945" )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

@@ -1,0 +1,231 @@
+# Instrucciones del proyecto
+
+## Edición de modelos
+
+- Para crear o editar modelos, animaciones y efectos MDL/MDX, usar
+  [wc3-classic-modeling](/home/snz/.codex/skills/wc3-classic-modeling/SKILL.md).
+  Destino predeterminado: Warcraft III Classic 1.27b, modelo versión 800, salvo
+  indicación explícita del usuario. Consultar su referencia de entorno Linux
+  antes de elegir herramientas; Blender disponible no implica exportador MDX.
+- Para optimizar personajes S3/TDAU, complementar con
+  [optimize-slendytubbies-wc3-127b](/home/snz/.codex/skills/optimize-slendytubbies-wc3-127b/SKILL.md).
+  Trabajar en copias y conservar fuentes, texturas y procedencia.
+
+<!-- CODEGRAPH_START -->
+## CodeGraph
+
+- Para comprender/localizar código, revisar dependencias o preparar cambios en
+  las fuentes indexadas de este proyecto, consultar primero `codegraph_explore`.
+  Pasar siempre `projectPath` según la tabla siguiente y nombres concretos de
+  archivos/símbolos. Si la herramienta está diferida, cargarla por su nombre.
+- Alternativa CLI: `/home/snz/.local/bin/codegraph explore "SIMBOLOS" --path RAIZ`.
+  El código devuelto cuenta como leído; ampliar consultas o leer directamente
+  sólo lo que no cubre el grafo o cuya vigencia no puede verificarse.
+<!-- CODEGRAPH_END -->
+
+### Rutas y alcance de los índices actuales
+
+| Trabajo | `projectPath` absoluto |
+|---|---|
+| TerrainDev actual: Rapid Fire, movimiento y misiles | `/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src` |
+| TerrainDev: builder y laboratorios Python/JASS | `/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/scripts` |
+| Laboratorio SNES X3: launcher Python y observación Lua; excluye runtime, ROMs, upstream y evidencias al indexar sólo scripts | `/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/scripts` |
+| Copia de InventorySys y sus dependencias congeladas | `/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration` |
+| Conversaciones: fuentes y auxiliares de la copia de diálogo | `/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system` |
+| Diseñador UI Studio: JavaScript ejecutado por la aplicación | `/home/snz/Documentos/WarDatsPy/ui-studio/dist` |
+| ModelEditor: herramientas JS/Python para MDX/MDL, texturas y ensayos de modelos | `/home/snz/Documentos/ChatGPT/Proyect/ModelEditor` |
+| WaveSys: copia aislada, fuentes activas, builder y APIs Classic; excluye Pruebas, builds, backups, evidencia y recursos binarios; release, completeInputs false | `/home/snz/Documentos/ChatGPT/Proyect/WaveSys` |
+
+### Incorporación de nuevas raíces autorizada por el usuario
+
+- El usuario autoriza de forma permanente a los agentes a crear y configurar
+  índices para nuevas raíces de código que creen o empiecen a desarrollar como
+  parte de tareas autorizadas de este proyecto, dentro de
+  `/home/snz/Documentos/ChatGPT/Proyect/`, y del editor
+  `/home/snz/Documentos/WarDatsPy/ui-studio/`. No se necesita volver a pedir
+  permiso para cada raíz dentro de ese alcance. Esta autorización local cumple
+  la decisión del usuario que exige la recomendación general del MCP de no
+  inicializar proyectos por iniciativa propia; no autoriza otras carpetas.
+- Antes de crear o empezar a desarrollar código fuera de las raíces de la tabla,
+  comprobar si un índice ancestro ya lo cubre y si sus exclusiones lo permiten.
+  Dentro de una raíz existente, reutilizarla: los archivos y modos nuevos se
+  incorporan mediante watcher/sync, sin crear un índice por cada archivo o modo.
+- Cuando no haya cobertura, elegir la raíz mínima coherente del componente;
+  preparar `codegraph.json` e inicializar con
+  `/home/snz/.local/bin/codegraph init RAIZ --yes`. Excluir builds, evidencias,
+  exportaciones, cachés y recursos binarios. Evitar solapar o duplicar raíces ya
+  indexadas; no indexar todo TerrainDev, el proyecto, el home o repos externos
+  como atajo. Mantener separadas las variantes del mapa.
+  Si la carpeta todavía está vacía, registrar su alcance y crear las primeras
+  fuentes antes de inicializar; un índice con cero fuentes no acredita cobertura.
+- Para JASS/vJASS, comprobar el builder, APIs y entradas reales antes de fijar
+  `jass`; usar conservative si el modo no está acreditado y completeInputs false
+  mientras falte contexto. Las APIs Classic declaradas deben estar dentro de la
+  raíz, con origen/hash documentados, sin importarlas otra vez al mapa.
+- Registrar la raíz absoluta, alcance, exclusiones, perfil y límites en esta
+  tabla y en la guía específica del componente, si existe. Consultar enseguida
+  por MCP nombres de sus fuentes reales, comprobar archivos/símbolos y vigencia,
+  y resolver o informar fallos antes de confiar en el índice. No basta con que
+  exista `.codegraph/` ni con un resultado de cero archivos.
+- Los índices son independientes: no suponer aristas entre raíces ni copiar
+  dependencias para aparentar cobertura. Consultar el índice propietario de
+  cada dependencia y declarar lo que queda fuera. Si el código se mueve fuera
+  del alcance o aparece una contradicción decisiva de build, resolverla antes
+  de ampliar el índice; continuar el trabajo independiente autorizado.
+
+### Uso y vigencia
+
+- Mantener separados el TerrainDev actual y la base `foundation-src` de la copia
+  de inventario. Consultar el índice de la revisión que se va a cambiar.
+- La primera consulta MCP con `projectPath` abre el índice, sincroniza los
+  cambios pendientes y activa el watcher. La revisión actual se comprobó con canarios aislados de JASS y JavaScript
+  (altas, cambios, bajas, perfil y datos), observando SQLite antes de cualquier
+  consulta/sync adicional; las tres raíces reales se reconstruyeron y consultaron
+  por MCP sin modificar sus fuentes.
+  Se actualiza por cambios en disco, independientemente de qué agente los haga.
+  El watcher se libera tras 10 minutos sin consultas, al desalojar el proyecto
+  de la caché o al cerrar el servidor; la siguiente consulta lo reabre y pone
+  al día. No es un servicio permanente fuera de una sesión MCP activa.
+- Tras editar, comprobar los avisos de vigencia/cobertura de la respuesta.
+  Si aparecen `DISABLED`, `RECOVERING`, archivos pendientes o una negativa por
+  falta de vigencia, no asumir que el grafo está actualizado: esperar/reintentar
+  o ejecutar `/home/snz/.local/bin/codegraph sync RAIZ` y comprobar el resultado.
+  Leer directamente las fuentes afectadas cuando siga sin poder verificarse.
+  En uso sólo por CLI, sincronizar tras cambios antes de reutilizar el índice.
+- Integración JASS/vJASS estructural en el pipeline original: scopes/tipos,
+  operadores y cadenas de receptores declarados, herencia/delegates, templates,
+  valores de función acotados, hooks, lifecycle e inicialización. Los imports
+  sólo enlazan entradas indexadas; datos SLK requieren jass.dataFiles explícito
+  dentro de la raíz y respetan exclusiones. Durante el indexado, CodeGraph no
+  ejecuta herramientas externas; compilaciones y pruebas autorizadas se realizan
+  por separado.
+- Las proyecciones de macros/módulos conservan origen e invocación real; la fuente
+  devuelta es el archivo original, no un cuerpo expandido editable. Cambiar una
+  fuente JASS, el perfil o datos declarados invalida también consumidores JASS
+  sin cambios de bytes. Respetar avisos y límites de trabajo/profundidad/tamaño.
+- Las tres raíces JASS tienen perfil `release`, confirmado contra los builders
+  sin `--debug`, y copias exactas de common.j/Blizzard.j Classic declaradas en
+  `jass.apiFiles` bajo `codegraph-api/`. No importarlas desde las bibliotecas del
+  mapa: el compilador ya recibe esas APIs. Procedencia y hashes en
+  `work/codegraph-this-20261022/profile-plan.json` y, para diálogo,
+  `work/codegraph-nuevas-raices-20261022/api-provenance.json`. `completeInputs` permanece
+  false: estos índices no incluyen toda la unidad de compilación.
+- El perfil jass de codegraph.json distingue conservative (predeterminado),
+  release y debug. No elegirlo por conveniencia: debe corresponder al build.
+  completeInputs sólo es true cuando el conjunto indexado es una unidad completa;
+  ver una library opcional en otro archivo no demuestra que se compile. Sin ese
+  contexto, condiciones y destinos se conservan como candidatos/desconocidos.
+- Zinc/C/cJASS, salidas de herramientas externas no indexadas, strings arbitrarios
+  y aliasing/dispatch no demostrable siguen siendo fronteras explícitas. Una
+  arista candidata no acredita ejecución y una arista ausente no prueba ausencia
+  de consumidores. Contrastar diagnósticos/casos inciertos con JassHelper/pJASS;
+  compilación y pruebas en Warcraft 1.27b siguen siendo comprobaciones separadas.
+- Los mapas, builds y evidencias históricas no forman parte de estos índices.
+  "No tests found" en el grafo no demuestra que falten los ensayos del proyecto:
+  consultar también planes, manifiestos e informes vigentes.
+- No indexar carpetas ajenas al alcance autorizado ni sustituir compilación o
+  pruebas en juego por una consulta al grafo. Registrar las consultas relevantes
+  y sus límites al informar del cambio; no afirmar uso de CodeGraph sin ejecutarlo.
+- Si una carpeta carece de `.codegraph/`, aplicar la política anterior de nuevas
+  raíces autorizadas y usar las herramientas habituales hasta incorporarla.
+  Fuera de ese alcance, no inicializar por iniciativa propia. No ejecutar
+  `codegraph upgrade` sobre esta variante: reemplazaría nuestra adaptación
+  JASS/vJASS por upstream. Para actualizarla, integrar y probar el parche.
+- Revisión local vigente: `1.6.2+jass-vjass.5`, extracción 32, esquema 12.
+  Los MCP abiertos antes de instalarla deben recargarse: reconstruir la base no
+  sustituye su código en memoria. Perfil, capacidades y límites en
+  `/home/snz/Documentos/MCP W3/codegraph-vjass/JASS-VJASS.md`; evidencia y revisión
+  en `docs/planes/codegraph-soporte-completo-vjass.md` y
+  `work/codegraph-completo-vjass-20261021/`. La corrección .5 y su evidencia están
+  en `docs/planes/codegraph-llamada-this-y-archivo-informes.md` y
+  `work/codegraph-this-20261022/`. La adaptación A/B usa Codex y la
+  política CodeGraph-first del proyecto; no acredita adopción espontánea ni
+  reproduce el ensayo Claude de upstream.
+
+## Evitar la complacencia (sycophancy)
+
+- Trata las afirmaciones técnicas del usuario y las tuyas como hipótesis
+  verificables. Distingue esas afirmaciones de sus objetivos y preferencias.
+- Antes de aplicar cambios, identifica el entorno objetivo indicado para la
+  tarea: proyecto, versión, motor, APIs y dependencias relevantes. Contrástalo
+  con los archivos y herramientas disponibles; no extrapoles compatibilidad
+  desde otro entorno. Reutiliza datos comprobados mientras sigan vigentes. Si
+  hay una contradicción o falta un dato decisivo, resuélvelo mediante inspección
+  o una pregunta concreta antes de ejecutar el cambio que dependa de ese dato.
+- Revisa el impacto del cambio sobre el comportamiento existente, las interfaces
+  y los componentes que lo usan. Para una habilidad de misil, por ejemplo,
+  examina las relaciones pertinentes entre física, trayectoria, velocidad,
+  colisiones, paso temporal, ciclo de vida y otras habilidades que compartan el
+  sistema. Un cambio local puede afectar a consumidores de una biblioteca común.
+  Antes de aplicarlo, comunica cualquier incompatibilidad o riesgo material
+  detectado, con evidencia y una alternativa. Distingue un defecto demostrado
+  de una sospecha; comprueba esta última antes de presentarla como cierta.
+- Tras un cambio, ejecuta las verificaciones apropiadas para el comportamiento
+  y los consumidores afectados. Si no puedes realizar una prueba necesaria,
+  informa qué queda pendiente y qué conclusión no está demostrada. La revisión
+  previa y estas instrucciones no sustituyen las pruebas.
+- Antes de tomar una decisión que dependa de una premisa importante, compruébala
+  con el código, las APIs del entorno, documentación primaria o una prueba
+  reproducible. Busca también evidencia que pueda contradecirla. Ajusta la
+  comprobación al impacto de la decisión; no conviertas cada edición en una
+  auditoría completa.
+- Si una premisa es incorrecta, señálalo claramente y con respeto, explica la
+  evidencia y propone una alternativa que preserve el objetivo del usuario.
+  No necesitas permiso para corregir una afirmación; continúa el trabajo ya
+  autorizado cuando la corrección no requiera una decisión nueva del usuario.
+- Si falta evidencia, declara la incertidumbre y qué falta comprobar. No
+  presentes una suposición, una promesa del README o una respuesta anterior
+  del agente como un hecho demostrado.
+- No cambies una conclusión sólo porque el usuario insiste o parece preferir
+  otra respuesta. Tampoco la mantengas por orgullo: rectifica cuando aparezcan
+  pruebas contrarias. No discrepes por sistema ni confundas firmeza con exactitud.
+- Describe únicamente las capacidades y resultados acreditados. En este entorno,
+  instalación, conexión MCP, exploración léxica, resolución semántica,
+  compilación y funcionamiento en Warcraft III 1.27b acreditan cosas distintas.
+  Una referencia candidata no es una llamada resuelta; compilar no demuestra
+  funcionamiento en juego ni ausencia de desincronización multijugador.
+- Comprueba la cobertura antes de interpretar un resultado limpio: cero archivos
+  analizados, casos omitidos o pruebas simuladas no validan el objetivo real.
+  Informa qué se comprobó, el resultado y los límites materiales.
+- Evita halagos y acuerdos automáticos. Prioriza la exactitud, la evidencia y
+  el objetivo del usuario sobre confirmar lo que cualquiera de los dos espera.
+
+## Notificación de errores
+
+- Guardar el informe de cada fallo real o inesperado en
+  `/home/snz/Documentos/ChatGPT/Proyect/informes/errores/` y enlazarlo al avisar
+  en el chat. Usar `AAAA-MM-DD-HHMMSS-tema.md`, comprobar que no exista y añadir
+  un sufijo si coincide con otro informe. Registrar fecha, proyecto/entorno y
+  revisión, síntoma, reproducción o evidencia, impacto, causa confirmada o
+  hipótesis, estado, acciones y verificaciones con sus resultados y límites.
+  No guardar claves ni datos sensibles. Actualizar el mismo informe para
+  repeticiones y recuperación; no sobrescribir informes de otros agentes.
+- Al comprobar la recuperación o justificar el cierre, mover el informe a
+  `informes/errores/resueltos/` y actualizar enlaces vigentes. Mantener en la raíz
+  los abiertos y pendientes de verificar; «atendido» no significa «resuelto».
+  Si reaparece, devolver el mismo informe a la raíz. Conservar las evidencias.
+- Consultar `informes/errores/README.md` para el formato. Un fallo al crear el
+  informe también se comunica en el chat; no ocultar el error original ni
+  detener el trabajo independiente por un problema de documentación.
+- Informar al usuario en el chat cuando se detecte un fallo real o inesperado al
+  explorar, modificar, compilar, indexar o probar el proyecto. Indicar qué falló,
+  la evidencia relevante y su impacto. Si compromete una conclusión o bloquea
+  un paso, avisar antes de continuar con el trabajo que dependa de él.
+- Comunicar también su desenlace: corrección y comprobación de recuperación, o
+  qué queda pendiente y qué no pudo validarse. Continuar el trabajo independiente
+  ya autorizado; avisar de un error no exige pedir permiso para cada recuperación.
+- En CodeGraph, incluir fallos de conexión MCP, extracción, índice o
+  sincronización, y estados `DISABLED`/`RECOVERING` que persistan o impidan
+  verificar la vigencia. Informar si fue necesario usar una alternativa de lectura.
+- Agrupar repeticiones del mismo fallo y actualizar su estado. Distinguir errores
+  confirmados de sospechas, controles negativos previstos y avisos conocidos de
+  cobertura parcial; estos últimos requieren aviso cuando afecten a la tarea.
+
+## Depuración y planificación
+
+- Para investigar un fallo, regresión o resultado técnico inesperado, usar
+  [systematic-debugging](/home/snz/.codex/skills/systematic-debugging/SKILL.md).
+- Para un plan solicitado o un cambio técnico de varias fases con dependencias,
+  usar [writing-plans](/home/snz/.codex/skills/writing-plans/SKILL.md). Conservar
+  el plan y sus decisiones en el proyecto; los ajustes claros y pequeños no
+  necesitan un documento de planificación.

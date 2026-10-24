@@ -1,0 +1,306 @@
+> JASS/vJASS local support: structural/static subset. No macro/import/module expansion or dynamic dispatch; absence of an edge is not proof of absence. JassHelper/pJASS remain the validators.
+
+**Dynamic-dispatch links among your symbols**
+(synthesized — the indirect hops grep/Read would reconstruct; the `@file:line` is the wiring site)
+
+- CodeGraphProbe → Init   [calls]
+- Init → CreateTimer   [calls]
+- Init → TimerStart   [calls]
+- Init → Done   [references]
+- Done → run   [calls]
+- Counter → run   [contains]
+
+> Full source for these symbols is below — the call flow among them, followed by their bodies.
+**Exploration: CodeGraphProbe.Init CodeGraphProbe.Counter.run**
+
+Found 67 symbols across 3 files.
+
+**Blast radius — what depends on these (update/verify before editing)**
+
+- `Init` (probe.vjass:21) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+- `run` (probe.vjass:12) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+- `step` (probe.vjass:9) — 1 caller in `probe.vjass`; no tests found within 3 caller hops
+
+**Source Code**
+
+> The code below is the **verbatim, current on-disk source** of these files — re-read from disk on this call and line-numbered, byte-for-byte identical to what the Read tool returns. It is NOT a summary, outline, or stale cache. Treat each block as a Read you have already performed: do not Read a file shown here.
+
+**`probe.vjass`** — CodeGraphProbe(namespace), run(method), Counter(struct), Init(function), step(method), +4 more
+
+```vjass
+1	library CodeGraphProbe initializer Init
+2	    globals
+3	        private integer hits = 0
+4	    endglobals
+5	    private function Ping takes nothing returns nothing
+6	        set hits = hits + 1
+7	    endfunction
+8	    private struct Counter
+9	        method step takes nothing returns nothing
+10	            call Ping()
+11	        endmethod
+12	        static method run takes nothing returns nothing
+13	            local thistype this = thistype.allocate()
+14	            call this.step()
+15	            call this.destroy()
+16	        endmethod
+17	    endstruct
+18	    private function Done takes nothing returns nothing
+19	        call Counter.run()
+20	    endfunction
+21	    private function Init takes nothing returns nothing
+22	        call TimerStart(CreateTimer(), 0.0, false, function Done)
+23	    endfunction
+24	endlibrary
+25	function main takes nothing returns nothing
+26	endfunction
+27	function config takes nothing returns nothing
+28	endfunction
+```
+
+**`Blizzard.j`** — calls(calls), references(references), Player(calls), CreateTrigger(calls), TriggerAddAction(calls), +72 more
+
+```jass
+2820	endfunction
+2821	
+2822	//===========================================================================
+2823	function UnitInventoryCount takes unit whichUnit returns integer
+2824	    local integer index = 0
+2825	    local integer count = 0
+2826	
+2827	    loop
+2828	        if (UnitItemInSlot(whichUnit, index) != null) then
+2829	            set count = count + 1
+2830	        endif
+2831	
+2832	        set index = index + 1
+2833	        exitwhen index >= bj_MAX_INVENTORY
+2834	    endloop
+2835	
+2836	    return count
+2837	endfunction
+2838	
+2839	//===========================================================================
+2840	function UnitInventorySizeBJ takes unit whichUnit returns integer
+
+... (gap: SetItemInvulnerableBJ (Blizzard.j:2845), whichItem (Blizzard.j:2845), flag (Blizzard.j:2845), SetItemDropOnDeathBJ (Blizzard.j:2850), SetItemDroppableBJ (Blizzard.j:2855), SetItemPlayerBJ (Blizzard.j:2860), +1040 more) ...
+
+9733	//===========================================================================
+9734	function SetDNCSoundsDawn takes nothing returns nothing
+9735	    if bj_useDawnDuskSounds then
+9736	        call StartSound(bj_dawnSound)
+9737	    endif
+9738	endfunction
+9739	
+9740	//===========================================================================
+9741	function SetDNCSoundsDusk takes nothing returns nothing
+9742	    if bj_useDawnDuskSounds then
+9743	        call StartSound(bj_duskSound)
+9744	    endif
+9745	endfunction
+9746	
+
+... (gap: SetDNCSoundsDay (Blizzard.j:9748), ToD (Blizzard.j:9749)) ...
+
+9752	        set bj_dncIsDaytime = true
+9753	
+9754	        // change ambient sounds
+9755	        call StopSound(bj_nightAmbientSound, false, true)
+9756	        call StartSound(bj_dayAmbientSound)
+9757	    endif
+9758	endfunction
+9759	
+
+... (gap: SetDNCSoundsNight (Blizzard.j:9761), ToD (Blizzard.j:9762)) ...
+
+9765	        set bj_dncIsDaytime = false
+9766	
+9767	        // change ambient sounds
+9768	        call StopSound(bj_dayAmbientSound, false, true)
+9769	        call StartSound(bj_nightAmbientSound)
+9770	    endif
+9771	endfunction
+9772	
+9773	//===========================================================================
+9774	function InitDNCSounds takes nothing returns nothing
+9775	    // Create sounds to be played at dawn and dusk.
+9776	    set bj_dawnSound = CreateSoundFromLabel("RoosterSound", false, false, false, 10000, 10000)
+9777	    set bj_duskSound = CreateSoundFromLabel("WolfSound", false, false, false, 10000, 10000)
+9778	
+9779	    // Set up triggers to respond to dawn and dusk.
+9780	    set bj_dncSoundsDawn = CreateTrigger()
+9781	    call TriggerRegisterGameStateEvent(bj_dncSoundsDawn, GAME_STATE_TIME_OF_DAY, EQUAL, bj_TOD_DAWN)
+9782	    call TriggerAddAction(bj_dncSoundsDawn, function SetDNCSoundsDawn)
+9783	
+9784	    set bj_dncSoundsDusk = CreateTrigger()
+9785	    call TriggerRegisterGameStateEvent(bj_dncSoundsDusk, GAME_STATE_TIME_OF_DAY, EQUAL, bj_TOD_DUSK)
+9786	    call TriggerAddAction(bj_dncSoundsDusk, function SetDNCSoundsDusk)
+9787	
+9788	    // Set up triggers to respond to changes from day to night or vice-versa.
+9789	    set bj_dncSoundsDay = CreateTrigger()
+9790	    call TriggerRegisterGameStateEvent(bj_dncSoundsDay,   GAME_STATE_TIME_OF_DAY, GREATER_THAN_OR_EQUAL, bj_TOD_DAWN)
+9791	    call TriggerRegisterGameStateEvent(bj_dncSoundsDay,   GAME_STATE_TIME_OF_DAY, LESS_THAN,             bj_TOD_DUSK)
+9792	    call TriggerAddAction(bj_dncSoundsDay, function SetDNCSoundsDay)
+9793	
+9794	    set bj_dncSoundsNight = CreateTrigger()
+9795	    call TriggerRegisterGameStateEvent(bj_dncSoundsNight, GAME_STATE_TIME_OF_DAY, LESS_THAN,             bj_TOD_DAWN)
+9796	    call TriggerRegisterGameStateEvent(bj_dncSoundsNight, GAME_STATE_TIME_OF_DAY, GREATER_THAN_OR_EQUAL, bj_TOD_DUSK)
+9797	    call TriggerAddAction(bj_dncSoundsNight, function SetDNCSoundsNight)
+9798	endfunction
+9799	
+9800	//===========================================================================
+9801	function InitBlizzardGlobals takes nothing returns nothing
+
+... (gap: index (Blizzard.j:9802), userControlledPlayers (Blizzard.j:9803), v (Blizzard.j:9804)) ...
+
+9878	endfunction
+9879	
+9880	//===========================================================================
+9881	function InitQueuedTriggers takes nothing returns nothing
+9882	    set bj_queuedExecTimeout = CreateTrigger()
+9883	    call TriggerRegisterTimerExpireEvent(bj_queuedExecTimeout, bj_queuedExecTimeoutTimer)
+9884	    call TriggerAddAction(bj_queuedExecTimeout, function QueuedTriggerDoneBJ)
+9885	endfunction
+9886	
+9887	//===========================================================================
+9888	function InitMapRects takes nothing returns nothing
+9889	    set bj_mapInitialPlayableArea = Rect(GetCameraBoundMinX()-GetCameraMargin(CAMERA_MARGIN_LEFT), GetCameraBoundMinY()-GetCameraMargin(CAMERA_MARGIN_BOTTOM), GetCameraBoundMaxX()+GetCameraMargin(CAMERA_MARGIN_RIGHT), GetCameraBoundMaxY()+GetCameraMargin(CAMERA_MARGIN_TOP))
+9890	    set bj_mapInitialCameraBounds = GetCurrentCameraBoundsMapRectBJ()
+9891	endfunction
+9892	
+9893	//===========================================================================
+9894	function InitSummonableCaps takes nothing returns nothing
+9895	    local integer index
+9896	
+9897	    set index = 0
+9898	    loop
+9899	        // upgraded units
+9900	        // Note: Only do this if the corresponding upgrade is not yet researched
+9901	        // Barrage - Siege Engines
+9902	        if (not GetPlayerTechResearched(Player(index), 'Rhrt', true)) then
+9903	            call SetPlayerTechMaxAllowed(Player(index), 'hrtt', 0)
+9904	        endif
+9905	
+9906	        // Berserker Upgrade - Troll Berserkers
+9907	        if (not GetPlayerTechResearched(Player(index), 'Robk', true)) then
+9908	            call SetPlayerTechMaxAllowed(Player(index), 'otbk', 0)
+9909	        endif
+9910	
+9911	        // max skeletons per player
+9912	        call SetPlayerTechMaxAllowed(Player(index), 'uske', bj_MAX_SKELETONS)
+9913	
+9914	        set index = index + 1
+9915	        exitwhen index == bj_MAX_PLAYERS
+9916	    endloop
+9917	endfunction
+9918	
+9919	//===========================================================================
+9920	// Update the per-class stock limits.
+
+... (gap) ...
+
+10030	endfunction
+10031	
+10032	//===========================================================================
+10033	function InitNeutralBuildings takes nothing returns nothing
+10034	    local integer iLevel
+10035	
+10036	    // Chart of allowed stock items.
+10037	    set iLevel = 0
+10038	    loop
+10039	        set bj_stockAllowedPermanent[iLevel] = false
+10040	        set bj_stockAllowedCharged[iLevel] = false
+10041	        set bj_stockAllowedArtifact[iLevel] = false
+10042	        set iLevel = iLevel + 1
+10043	        exitwhen iLevel > bj_MAX_ITEM_LEVEL
+10044	    endloop
+10045	
+10046	    // Limit stock inventory slots.
+10047	    call SetAllItemTypeSlots(bj_MAX_STOCK_ITEM_SLOTS)
+10048	    call SetAllUnitTypeSlots(bj_MAX_STOCK_UNIT_SLOTS)
+10049	
+10050	    // Arrange the first update.
+10051	    set bj_stockUpdateTimer = CreateTimer()
+10052	    call TimerStart(bj_stockUpdateTimer, bj_STOCK_RESTOCK_INITIAL_DELAY, false, function StartStockUpdates)
+10053	
+10054	    // Set up a trigger to fire whenever an item is sold.
+10055	    set bj_stockItemPurchased = CreateTrigger()
+10056	    call TriggerRegisterPlayerUnitEvent(bj_stockItemPurchased, Player(PLAYER_NEUTRAL_PASSIVE), EVENT_PLAYER_UNIT_SELL_ITEM, null)
+10057	    call TriggerAddAction(bj_stockItemPurchased, function RemovePurchasedItem)
+10058	endfunction
+10059	
+10060	//===========================================================================
+10061	function MarkGameStarted takes nothing returns nothing
+10062	    set bj_gameStarted = true
+10063	    call DestroyTimer(bj_gameStartedTimer)
+10064	endfunction
+10065	
+10066	//===========================================================================
+10067	function DetectGameStarted takes nothing returns nothing
+10068	    set bj_gameStartedTimer = CreateTimer()
+10069	    call TimerStart(bj_gameStartedTimer, bj_GAME_STARTED_THRESHOLD, false, function MarkGameStarted)
+10070	endfunction
+10071	
+10072	//===========================================================================
+10073	function InitBlizzard takes nothing returns nothing
+10074	    // Set up the Neutral Victim player slot, to torture the abandoned units
+10075	    // of defeated players.  Since some triggers expect this player slot to
+10076	    // exist, this is performed for all maps.
+10077	    call ConfigureNeutralVictim()
+10078	
+10079	    call InitBlizzardGlobals()
+10080	    call InitQueuedTriggers()
+10081	    call InitRescuableBehaviorBJ()
+10082	    call InitDNCSounds()
+10083	    call InitMapRects()
+10084	    call InitSummonableCaps()
+10085	    call InitNeutralBuildings()
+10086	    call DetectGameStarted()
+10087	endfunction
+10088	
+10089	
+10090	
+```
+
+**`common.j`** — item(type_alias), extends(extends), timer(returns), timer(type_alias), rect(returns), +17 more
+
+```jass
+909	//============================================================================
+910	// Timer API
+911	//
+912	native CreateTimer          takes nothing returns timer
+913	native DestroyTimer         takes timer whichTimer returns nothing
+914	native TimerStart           takes timer whichTimer, real timeout, boolean periodic, code handlerFunc returns nothing
+915	native TimerGetElapsed      takes timer whichTimer returns real
+916	native TimerGetRemaining    takes timer whichTimer returns real
+917	native TimerGetTimeout      takes timer whichTimer returns real
+
+... (gap: PauseTimer (common.j:918), whichTimer (common.j:918), ResumeTimer (common.j:919), GetExpiredTimer (common.j:920), CreateGroup (common.j:925), DestroyGroup (common.j:926), +48 more) ...
+
+971	//============================================================================
+972	// Region and Location API
+973	//
+974	native Rect                     takes real minx, real miny, real maxx, real maxy returns rect
+975	native RectFromLoc              takes location min, location max returns rect
+976	native RemoveRect               takes rect whichRect returns nothing
+977	native SetRect                  takes rect whichRect, real minx, real miny, real maxx, real maxy returns nothing
+
+... (gap: SetRectFromLoc (common.j:978), min (common.j:978), max (common.j:978), whichRect (common.j:978), MoveRectTo (common.j:979), newCenterX (common.j:979), +1191 more) ...
+
+2212	native EndCinematicScene                takes nothing returns nothing
+2213	native ForceCinematicSubtitles          takes boolean flag returns nothing
+2214	
+2215	native GetCameraMargin                  takes integer whichMargin returns real
+2216	
+2217	// These return values for the local players camera only...
+2218	constant native GetCameraBoundMinX          takes nothing returns real
+2219	constant native GetCameraBoundMinY          takes nothing returns real
+2220	constant native GetCameraBoundMaxX          takes nothing returns real
+2221	constant native GetCameraBoundMaxY          takes nothing returns real
+2222	constant native GetCameraField              takes camerafield whichField returns real
+2223	constant native GetCameraTargetPositionX    takes nothing returns real
+2224	constant native GetCameraTargetPositionY    takes nothing returns real
+```
+
+
+> Some file sections were trimmed for size. Elided symbols are named inside gap markers as `name (file:line)` and preferred in the file header — run another `codegraph_explore` (or `codegraph_node`) with those exact names for their source.

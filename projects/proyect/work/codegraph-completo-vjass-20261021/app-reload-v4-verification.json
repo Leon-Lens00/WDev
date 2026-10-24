@@ -1,0 +1,68 @@
+{
+  "expected_identity": "1.6.2+jass-vjass.4",
+  "current_chat_tool_call_after_reload": true,
+  "app_mcp_processes": [
+    {
+      "pid": 391451,
+      "parent": 390042,
+      "started_after_build": true
+    }
+  ],
+  "indexes": [
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.4",
+        "indexed_with_extraction_version": "31"
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.4",
+        "indexed_with_extraction_version": "31"
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "integrity": "ok",
+      "metadata": {
+        "index_state": "complete",
+        "indexed_with_version": "1.6.2+jass-vjass.4",
+        "indexed_with_extraction_version": "31"
+      }
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "passed": true,
+  "elapsed_seconds": 10.8,
+  "current_chat_verified_at": "2026-10-22T01:01:47.389700-05:00",
+  "current_chat_queries": [
+    {
+      "query": "RapidFire.RapidBolt",
+      "response_file": "current-chat-v4-mcp-missiles.json",
+      "is_error": false,
+      "source_returned": true,
+      "stale_status": false
+    },
+    {
+      "query": "InventoryProbe",
+      "response_file": "current-chat-v4-mcp-inventory.json",
+      "is_error": false,
+      "source_returned": true,
+      "stale_status": false
+    },
+    {
+      "query": "applyTheme",
+      "response_file": "current-chat-v4-mcp-ui.json",
+      "is_error": false,
+      "source_returned": true,
+      "stale_status": false
+    }
+  ],
+  "current_chat_method": "Actual tools.mcp__codegraph__codegraph_explore calls from the resumed current chat after official MCP reload; not standalone child servers."
+}

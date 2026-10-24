@@ -1,0 +1,51 @@
+{
+  "status": "Tested in map",
+  "target": "Warcraft III Classic 1.27b, CachyOS/Wine",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/TerrainDev.w3x",
+  "map_sha256": "47522cd81caa904206d4917de202f15e1b0865939c240b511875bb6585a2ce59",
+  "build_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/20261022-184407-403137",
+  "asset_validation": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/asset-validation.json",
+  "previous_verification": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/verification.json",
+  "source_libraries_unchanged": true,
+  "library_sha256": {
+    "WorldBounds": "0ed3c284b18694b744bdae4423f2b60e5e16346778116caffb5bf9a4267447c9",
+    "ErrorMessage": "b240c5c064d569ec89ba85e21363b27514bab66fb6517c1cd68d8ce9b40df147",
+    "TimerUtils": "cbc13cd7eb8679ee2d618dcfe70e8da47489a926506eb8059dc6fc09eba60f45",
+    "Table": "94d2fd1f89774efb2ad3e9d2ae7e3bdded3c121bb523f02425d4937fc7031fb4",
+    "RegisterPlayerUnitEvent": "a4513c10d93fdc26b7b86440a8f9171153b2d3108b815e7c57169b21c2202c2c",
+    "SpellEffectEvent": "222abb23791bd71eb96db71384ef40a91c16421176cc046c186f0af185050bd0",
+    "IsDestructableTree": "2f981785b5d01564b634ec35a62e3a008a83a313a4a61774e23b4632d69c6829",
+    "DummyCaster": "4437e9214cc7d30b30ad9d7654286d70a1b8c00c96c15d1f2952cebfe4c349c0",
+    "MissileDiagnostics": "5d13202a5116a67e3f49d2a095975b1fe33955fd34fed076eccd0a67d26bc990",
+    "MissileRecycler": "65189b805bf424f57c758eef1ee5497bddb0070a3f59d04a883e63821c7818eb",
+    "Missile": "333150566d2f55b665afd127e95374078cd80053fe617c9def01405ab93510a3",
+    "GroundCollision": "b39c3f2ef02aaea5643f5572eff90de86e38c0ca635c8abb08b3885e0369a095",
+    "GroundMotion": "4454585a76e191028a46b0238913bec48075fd41b93acf2ac8472a22e61dba8c",
+    "RapidFire": "590ea2e40bb0ec35489c3d95da794562caa3889d116cddb54955682ae7b2d878",
+    "RapidFireDemo": "4228d177c8e0e204833d6ce0e683cb95277a7fd1a11c8e6fc7f142562a97f1a5"
+  },
+  "game_tested": true,
+  "editor_saved_and_reopened": false,
+  "color_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/color-result.json",
+  "color_values": {
+    "checks": 40.0,
+    "failures": 0.0,
+    "live": 0.0,
+    "created": 23.0,
+    "retired": 23.0,
+    "scale": 2.743
+  },
+  "appearance_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/result.json",
+  "cleanup": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-refresh-20261022-184335/closure.json",
+  "own_game_and_editor_closed": true,
+  "imports_verified": 26,
+  "originals_unchanged": true,
+  "native_trigger_roundtrip": true,
+  "historical_rapid_fire_report": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/reports/shot-colors-20261022/20261022-175921/rapid-result.json",
+  "historical_rapid_fire_note": "44 mechanics checks passed on previous asset revision; not repeated because only visual assets changed and all source hashes/geometry/emission parameters match.",
+  "limits": [
+    "Single local client in Warcraft III Classic1.27b; multiplayer not tested.",
+    "Uniform scale matches body width; decorative light/trail/Death can exceed collision radius.",
+    "Editor save/reopen not repeated; builder verifies imports, editable triggers and unrelated members."
+  ]
+}

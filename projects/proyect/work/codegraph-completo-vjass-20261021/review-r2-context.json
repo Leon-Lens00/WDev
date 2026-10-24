@@ -1,0 +1,27 @@
+{
+  "tree_sha256": "d3daa5f81f8254d5fe8f3ae59d506fd9dd638e847b73e559d4bf66cf3c660846",
+  "diff_sha256": "a81da3224348528316bf5508b8197302d0096d13f4514c7a7ee3fb73c832139f",
+  "correction_round": 1,
+  "affected_ids": [
+    "JD-A-001",
+    "JD-A-002",
+    "JD-A-003",
+    "JD-B-001",
+    "JD-B-002",
+    "JD-B-003"
+  ],
+  "changed_files": [
+    "JASS-VJASS.md",
+    "__tests__/jass-conditions.test.ts",
+    "__tests__/jass-semantic-resolution.test.ts",
+    "__tests__/jass-value-bounds.test.ts",
+    "src/extraction/jass-conditions.ts",
+    "src/extraction/jass-constant.ts",
+    "src/resolution/jass-expression.ts",
+    "src/resolution/jass-synthesizer.ts",
+    "src/resolution/jass-value-flow.ts"
+  ],
+  "requirements": "No foreign-language lifecycle candidates; constant evaluation bounded in recursion, shared dependencies and output; runtime endif must not end static pooling; possible values from array reads and injected assignments/arguments; global/static constant initialization reachable from main; preserve global variable writers in library namespace. Conservative unknowns, no runtime execution guarantees. Review only affected IDs and regressions introduced by this delta.",
+  "parent_reproductions": "jury-r1-before.log: 5 red tests (B001 two, B002, A002,A003); jury-r1-reproduction.log B003 red; actual TypeScript qname is S::onDestroy, so ordinary example for A001 did not reproduce. Separate contract mock supplies colliding S.onDestroy to test language filtering. New owner regression caught in jury-r1-owner-before.log, part of same writer delta.",
+  "tests": "jury-r1-after.log 95pass before owner refinement. Full final r2 suite running; do not count until completed."
+}

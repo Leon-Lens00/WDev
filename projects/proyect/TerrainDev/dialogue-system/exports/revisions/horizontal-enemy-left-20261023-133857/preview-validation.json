@@ -1,0 +1,24 @@
+{
+  "previewTexelsEqualBlpMip0": true,
+  "studioAssetsEqualExport": true,
+  "casesObservedViaBrowser": [
+    "horizontal75/86",
+    "horizontal20critical",
+    "horizontal0",
+    "horizontal100",
+    "horizontal60PaladinEnemy",
+    "horizontalGridNativeIcon",
+    "vertical60",
+    "resetHorizontal75/86"
+  ],
+  "screenshots": [
+    "preview-horizontal.png",
+    "preview-critical.png",
+    "preview-empty.png",
+    "preview-full.png",
+    "preview-grid.png",
+    "preview-vertical-comparison.png"
+  ],
+  "nativeTested": false,
+  "notes": "Two independent readers clamp rectangular last mips to at least 1x1. UI uses captured native HUD icon as a reference; live engine anchoring remains pending."
+}

@@ -1,0 +1,35 @@
+{
+  "before": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/panel-comparison-20261022-232339-908878/TerrainDev-Dialogue-Panel-Antes.w3x",
+  "after": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/exports/panel-comparison-20261022-232339-908878/TerrainDev-Dialogue-Panel-512.w3x",
+  "beforeSha256": "2cb340dbf906b8da9a061a2e4f08f0905e012c018c3e88a63284b2b5e07725be",
+  "afterSha256": "d29f771227586dd5cc93121be5a7e7edda438571e522127a77b97d959156227a",
+  "beforeBytes": 9614934,
+  "afterBytes": 9414585,
+  "changedMembers": {
+    "UI/Dialogue/FrameOpenRed.blp": "1da98c0aace190d255788d0aaee793093ae255597ece8cc79048ef2e9ef81614",
+    "UI/Dialogue/FrameOpenBlue.blp": "ab88938868d3be5a3388cd51e8d6802c8caa9c2f689568cd2e54a6b8d13cca17"
+  },
+  "verifiedMembers": 71,
+  "scriptUnchanged": true,
+  "headerUnchanged": true,
+  "pjass": true,
+  "activeMapUnchanged": true,
+  "nativeTested": true,
+  "work": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/build/panel-comparison-20261022-232339-908878",
+  "nativeEvidence": "/home/snz/Documentos/ChatGPT/Proyect/work/panel-comparison-native-20261022",
+  "nativeTarget": "Warcraft III Classic 1.27b / GE-Proton modern / RenderEdge / SP / 1920x1080",
+  "nativeChecks": {
+    "beforeRedBlue": true,
+    "afterRedBlue": true,
+    "afterPatrol": true,
+    "afterClosed": true,
+    "noMajorVisualLossObserved": true,
+    "ownedSessionsClosed": true
+  },
+  "nativeLimitations": [
+    "Random race/start location differs between sessions; no pixel-exact full screenshot comparison.",
+    "No FPS, memory or actual GPU mip-selection measurement.",
+    "Portrait optimization candidates are not part of these maps.",
+    "No LAN/multiplayer/editor roundtrip verification."
+  ]
+}

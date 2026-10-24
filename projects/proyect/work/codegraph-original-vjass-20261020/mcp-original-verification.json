@@ -1,0 +1,17 @@
+{
+  "server": {
+    "name": "codegraph",
+    "version": "1.6.2+jass-vjass.1"
+  },
+  "client": "@modelcontextprotocol/sdk 1.29.0",
+  "tools": [
+    "codegraph_explore"
+  ],
+  "original_explore_passed": true,
+  "watcher_jass_add_passed": true,
+  "watcher_add_observed_ms": 607,
+  "watcher_jass_remove_passed": true,
+  "original_source_hash_unchanged": true,
+  "response_chars": 2598,
+  "stderr": ""
+}

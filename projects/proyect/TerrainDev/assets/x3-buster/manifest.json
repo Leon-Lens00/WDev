@@ -1,0 +1,61 @@
+{
+  "target": "Classic1.27b MDX800",
+  "source_directory": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1",
+  "origin": "Local ModelEditor interpretation of Capcom designs; original meshes/textures. Vinz resources remain separate.",
+  "imports": [
+    {
+      "internal": "X3Buster\\X3_Buster_Cargado.mdx",
+      "file": "x3-buster/X3_Buster_Cargado.mdx",
+      "sha256": "47f4119dd8f03b7a3d7b0bc4cae80f4092c6b8059e04cbf2b57b8fd41ba8bc38",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1/A-Buster/X3_Buster_Cargado.mdx"
+    },
+    {
+      "internal": "X3Buster\\X3_Orbe_Verde.mdx",
+      "file": "x3-buster/X3_Orbe_Verde.mdx",
+      "sha256": "1291b259e599fc3f2569dd7e36cdc38b8fe827b5a425deefdad0032220908e19",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1/B-Orbes-individuales/Verde/X3_Orbe_Verde.mdx"
+    },
+    {
+      "internal": "X3Buster\\X3_Orbe_Naranja.mdx",
+      "file": "x3-buster/X3_Orbe_Naranja.mdx",
+      "sha256": "b438c9219fa1b956933798da3b114dd1d6436a2ebdf1e48041ba395311cf99ef",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1/B-Orbes-individuales/Naranja/X3_Orbe_Naranja.mdx"
+    },
+    {
+      "internal": "X3Buster\\X3_Cross_Buster.mdx",
+      "file": "x3-buster/X3_Cross_Buster.mdx",
+      "sha256": "dacb6d21cafe7f1f5f1e5191f4551a699c652ce9d30eb18c12a6451f11a6dcac",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1/C-Buster-fusionado/X3_Cross_Buster.mdx"
+    },
+    {
+      "internal": "X3Buster\\X3_Flash_Union.mdx",
+      "file": "x3-buster/X3_Flash_Union.mdx",
+      "sha256": "852998e37e2e17aa1a26e5e3afa53c4cd23e2dca91348b148bf7f6d2f02939b8",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1/C-Flash-union/X3_Flash_Union.mdx"
+    },
+    {
+      "internal": "X3Buster\\Band.blp",
+      "file": "x3-buster/X3Buster/Band.blp",
+      "sha256": "db975fa8123932aaed98b4e0ad1c1a930c9bd65a44182d3ee3f8e1c7777f4bf1",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1/A-Buster/X3Buster/Band.blp"
+    },
+    {
+      "internal": "X3Buster\\Solid.blp",
+      "file": "x3-buster/X3Buster/Solid.blp",
+      "sha256": "5f3a7ae209d0232a9bb43580a0e0ff1c4b60a6bc381042b068c26ccd7b5babc6",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1/A-Buster/X3Buster/Solid.blp"
+    },
+    {
+      "internal": "X3Buster\\Glow.blp",
+      "file": "x3-buster/X3Buster/Glow.blp",
+      "sha256": "03c21b43c1f15fd57a0f0f6f44fe22a760b56a7c62bc13834885feac0a891591",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1/A-Buster/X3Buster/Glow.blp"
+    },
+    {
+      "internal": "X3Buster\\Spark.blp",
+      "file": "x3-buster/X3Buster/Spark.blp",
+      "sha256": "c24462f980d356ef37fcd23046b8f136018f361c542389c8060f7790b01aa582",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/exports/megaman-x3-buster-v1/A-Buster/X3Buster/Spark.blp"
+    }
+  ]
+}

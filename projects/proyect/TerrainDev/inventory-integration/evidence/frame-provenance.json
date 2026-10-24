@@ -1,0 +1,21 @@
+{
+  "sources": {
+    "TooltipWindow.mdx": "16e06b24ab5bf2a4b71b86a852f4a62ab5d9a9b1cb68ef2b7c0d66b62308c15c",
+    "RaceWindowLong.mdx": "e1c8d5f9864b19247d1b567cbb146dc605425f9d526a72e1fb5181f6ee769ca9",
+    "RaceWindow.mdx": "05297182cf49a16bd39634267213e226ef9b2c674a34451df9cd5aca3abb5b53",
+    "TRSHerolevel.mdx": "967e3bfb8a509b9b499f91aa7b0e3e73b6baf62e5e1cd5cabe28346dcc57f6c4",
+    "TooltipWindowLarge.mdx": "e4681095d2041dbaaa52c8086e42a004b69ed2caa812d4648c7b4b0d6df02c8c"
+  },
+  "frames": {
+    "bwn2-D201.png": "5ba60f73724da79b5bc69216829fa7c2bff86008d1cab24c2fb1b3a0e2b69f00",
+    "bwn2-D202.png": "d2ae356c34cfdda0b6d3aacc78b643e1717e34d9c1a96eb5050c17d42b721e21",
+    "bwn2-D203.png": "48480dfbac45561132d3413b14270707872251c2fdbd559af221a950baea2015",
+    "bwn2-D204.png": "eeb2f76bbce5475bbd9c0098071857622f46eb4094870e8998b898aa3c8afd06",
+    "ewin-D201.png": "2b9a1a5b31618fdef92e0053f01bf2369fb2833b2b9e8be6bc3232253da2d6dc",
+    "ewin-D202.png": "57de0c1191a1461860776327a87aa321a81841671ef9f4608965fe52d1c45bc5",
+    "ewin-D203.png": "c097fef11178d4475188b25021dbc1dbbee5b3f5fc3835e374235e7bf507af26",
+    "ewin-D204.png": "e8bc024397f9d47ef67f10ea9d70eb5bd6e6d8cc9800441f3502fe8c2c776d8c",
+    "ttip-B014.png": "e60fa291bf005a6e1fca9c7200ada59867912a1d7ce6eeb066f5e36a554ae965"
+  },
+  "method": "Static MDX vertices, triangle indices, UVs, material alpha; RGB border atlas with dark-cutout approximation; empirical perspective inset .97/.92 in CSS."
+}

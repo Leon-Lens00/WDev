@@ -1,0 +1,19 @@
+{
+  "mode": "YDWE single player without LAN",
+  "target": "Classic1.27b MDX800",
+  "loadedMapSha256": "aba08fc7990035442296295159031a53346dcecd8130a15c95b599e02175b5b3",
+  "captured": [
+    "moving flight with residual particles",
+    "Birth flash",
+    "Death disappearance"
+  ],
+  "screen": "DP-1, rightmost screen3",
+  "ownedProfileProcessesAfterClose": [],
+  "sourceYdweConfigUnchanged": true,
+  "noOtherSessionsTerminated": true,
+  "limits": [
+    "No F9 full editor workflow",
+    "No production collision/fusion physics",
+    "No multiplayer or FPS test"
+  ]
+}

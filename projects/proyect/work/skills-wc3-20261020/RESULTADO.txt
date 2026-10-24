@@ -1,0 +1,35 @@
+ACTUALIZACIÓN DE SKILLS WARCRAFT — 20-10-2026
+
+build-warcraft3-vjass-127b actualizada al entorno CachyOS/Wine y Classic 1.27b.
+Entrada, referencia local, plantillas y auxiliares ahora distinguen ejecución Linux,
+JassHelper PE bajo Wine y nombres/rutas internos de mapas. Se elimina el requisito
+inexistente de una skill de terreno. Se mantienen APIs, perfiles de biblioteca y
+modo MPQEditor directo para otros entornos; se aclara la procedencia histórica.
+
+probar-warcraft3-classic-linux: perfiles, tiempos, entradas y cierre ya describen
+el entorno local y se conservaron. Se añadió una advertencia puntual de la ruta
+antigua de Forge y se distinguió wc3ctl activo del prototipo nuevo.
+
+VALIDACIÓN
+- 26 pruebas unittest correctas (22 previas + 4 nuevas). Una prueba previa suponía
+  que Path interpretaba rutas Windows también en Linux; se corrigió la fixture.
+- Toolchain real y plantilla local: check_toolchain OK con SHA-256 de sus archivos.
+- Construcción real usando JassHelper/Wine y pJASS nativo a través de wc3.py.
+- Empaquetado nativo con wc3ctl 0.3.0 activo; sin MPQEditor.exe.
+- WCT, JASS e import binario reextraídos con SHA-256 coincidentes.
+- Cabecera HM3W de 512 bytes conservada; mapa original sin cambios.
+- Diff completo: únicamente JASS/WCT/import de prueba y metadatos MPQ cambiaron.
+- Referencias Markdown locales existentes.
+- Estado de la construcción de prueba: Validated. No se lanzó juego ni editor.
+
+CONFIGURACIÓN EXTERNA
+wc3 verificar sigue señalando fuente/GUI/enlace de Forge con la ruta antigua
+/home/snz/Documentos/WarDatsPy/wc3-forge. La copia encontrada es
+/home/snz/Documentos/MCP W3/wc3-forge. No se alteraron instalaciones, enlaces,
+configuraciones de lanzamiento ni archivos del entorno FrozenThone; su compilador
+produjo sus registros habituales durante la prueba.
+
+Respaldo previo: before/.
+Diff reproducible: changes.patch.
+Construcción y reportes: integration/reports/build.json, integration-build.log.
+Pruebas: unit-tests.log. Estado de rutas: environment-check.json.

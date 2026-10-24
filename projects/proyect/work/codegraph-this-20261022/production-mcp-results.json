@@ -1,0 +1,41 @@
+[
+  {
+    "args": {
+      "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "query": "RapidPair.spell RapidPair.cast GetSpellTargetX",
+      "maxFiles": 2
+    },
+    "server": {
+      "name": "codegraph",
+      "version": "1.6.2+jass-vjass.5"
+    },
+    "source_returned": true,
+    "chars": 17103
+  },
+  {
+    "args": {
+      "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "query": "InventoryProbe GetTriggerUnit",
+      "maxFiles": 2
+    },
+    "server": {
+      "name": "codegraph",
+      "version": "1.6.2+jass-vjass.5"
+    },
+    "source_returned": true,
+    "chars": 17055
+  },
+  {
+    "args": {
+      "projectPath": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "query": "applyTheme",
+      "maxFiles": 1
+    },
+    "server": {
+      "name": "codegraph",
+      "version": "1.6.2+jass-vjass.5"
+    },
+    "source_returned": true,
+    "chars": 12467
+  }
+]

@@ -1,0 +1,206 @@
+
+
+
+	
+	Simple Spell Collection #1
+
+
+May these spells be an inspiration for you.
+
+
+
+
+
+
+
+
+Obligatory RequirementsOptional Requirements
+
+
+
+
+Table
+
+Missile
+
+TimerUtils
+
+WorldBounds
+
+DummyCaster
+
+SpellEffectEvent
+
+RegisterPlayerUnitEvent
+
+
+CameraEQNoise ( for Leap )
+
+IsTerrainWalkable ( for Leap )
+
+IsDestructableTree ( for Chaotic Boulder )
+
+
+
+
+
+
+Spells included in the demo map
+
+
+
+
+Chaos Flare v.2.0
+
+Ice Siege v.2.0
+
+Bone Spirit v.2.0
+
+The Reaper's Scythe v.2.0
+
+Fireball v.2.0
+
+Whirlwind v.2.0
+
+Leap v.1.0 ( New! )
+
+Fist of Thunder v.1.0 ( New! )
+
+Chaotic Boulder v.1.0 ( New! )
+
+Guided Arrow v.1.0 ( New! )
+
+
+
+Each spell is placed in a seperated library, but they all have library SpellIndex as common requirement.
+
+It allocates spell instances and provides most important struct members for all spells.
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+			Spell Index
+		
+	
+	
+
+		
+			
+
+	
+	
+    
+    
+
+
+
+
+
+		
+	
+	
+
+
+
+
+	
+
+		JASS:Copy
+	
+	
+
+		
+library SpellIndex/* v1.1
+************************************************************
+*
+*   Makes spell indexing global and nulls members automatically.
+*   A screen freeze is more likely than an overflow.
+*
+*   API: 
+*       --> SpellIndex.create() and index.destroy()
+*
+************************************************************
+*
+*   */ uses /*
+*       
+*       */ Table                   /* hiveworkshop.com/forums/jass-resources-412/snippet-new-table-188084/
+*       */ Missile                 /* hiveworkshop.com/forums/jass-resources-412/missile-265370/
+*       */ TimerUtils              /* wc3c.net/showthread.php?t=101322
+*       */ DummyCaster             /* github.com/nestharus/JASS/tree/master/jass/Systems/DummyCaster
+*       */ WorldBounds             /* github.com/nestharus/JASS/tree/master/jass/Systems/WorldBounds
+*       */ SpellEffectEvent        /* hiveworkshop.com/forums/jass-resources-412/snippet-spelleffectevent-187193/
+*       */ RegisterPlayerUnitEvent /* hiveworkshop.com/forums/showthread.php?t=203338
+*
+***************************************************************
+*
+*   Credits to Bribe, Nestharus, Maghteridon96 and Vexorian.
+*
+***************************************************************/
+    
+    native UnitAlive takes unit id returns boolean
+    
+    struct SpellIndex
+        //*  implement your Alloc module here.
+    
+        static constant group GLOBAL_GROUP = bj_lastCreatedGroup 
+        //*  Add or remove struct members you to needs.
+        //*  Units.
+        unit      source
+        unit      target
+        player    user
+        //* Effects.
+        effect    fx
+        ubersplat splat
+        lightning flash
+        //* Timer.
+        timer     clock
+        //*  Damage options.
+        real      damage
+        real      collision
+        //*  Misc.
+        real      time
+        integer   count
+        integer   level
+        integer   phase
+        
+        //*  Conditionally destroy an handle on instance.destroy().
+        //! textmacro SPELL_INDEX_CHECK_MEMBER takes VAR, TYPE
+            if $VAR$ != null then
+                call Destroy$TYPE$($VAR$) 
+                set $VAR$ = null
+            endif 
+        //! endtextmacro
+        
+        method destroy takes nothing returns nothing
+            //! runtextmacro SPELL_INDEX_CHECK_MEMBER("fx", "Effect")
+            //! runtextmacro SPELL_INDEX_CHECK_MEMBER("splat", "Ubersplat")
+            //! runtextmacro SPELL_INDEX_CHECK_MEMBER("flash", "Lightning")
+            set target    = null
+            set clock     = null
+            set source    = null
+            call deallocate()
+        endmethod
+    
+    endstruct
+
+endlibrary
+	
+
+		
+	
+
+
+
+Keywords:
+
+Pack, Collection, Simple, Ice Siege, Reaper's Scyte, Fireball, Chaosflare, Fire, Ice, Death, Necro

@@ -1,0 +1,21 @@
+{
+  "regression_cases_correct": 8,
+  "before_false_positive_errors": 3,
+  "after_false_positive_errors": 0,
+  "real_source_hashes_unchanged": true,
+  "definitions_before_after": [
+    47,
+    47
+  ],
+  "references_before_after": [
+    226,
+    226
+  ],
+  "diagnostics": [],
+  "destroy_query_before_after": [
+    3,
+    9
+  ],
+  "hook_cases": "3 controls accepted; 3 modern API sources blocked",
+  "real_lint_exit": 0
+}

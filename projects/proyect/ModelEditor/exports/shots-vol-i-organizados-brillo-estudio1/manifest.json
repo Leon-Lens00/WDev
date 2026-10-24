@@ -1,0 +1,1062 @@
+{
+  "models": 36,
+  "modelBytesUnchanged": false,
+  "entries": [
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Azul",
+      "folder": "Colores-originales/Misil-simple/Azul",
+      "model": "Shot Blue.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Blue.mdx",
+      "sha256": "f5bb9b4c9551085710ca84391fff227c33caaa1afc5cbf98560e44755d5d53b6",
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Blue_Glow2.blp",
+          "sha256": "dcbf0770aa792883d3d7ad0b93052d5a9a1b264ac841dae43b7876f26cbfd793",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Azul",
+      "folder": "Colores-originales/Misil-doble/Azul",
+      "model": "Shot Blue Double.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Blue Double.mdx",
+      "sha256": "7a469a6b4df603f245d5dc57ee101923dbb046121a74dc4386e8818ed7424ce8",
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Blue_Glow2.blp",
+          "sha256": "dcbf0770aa792883d3d7ad0b93052d5a9a1b264ac841dae43b7876f26cbfd793",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Verde",
+      "folder": "Colores-originales/Misil-simple/Verde",
+      "model": "Shot Green.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Green.mdx",
+      "sha256": "231a348a4d41c36a289b2ea7907ad10f20f1ac865086d82501aac2ee86bec922",
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Green_Glow3.blp",
+          "sha256": "e7ce9f685ae3581efb31eb805db783cee20528f94bb061128a312b52bfaca4ce",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Verde",
+      "folder": "Colores-originales/Misil-doble/Verde",
+      "model": "Shot Green Double.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Green Double.mdx",
+      "sha256": "00bbc88c311911a9bf7cce30f6ee112ac696ebbb5216cbb6ee2b22c694471743",
+      "textures": [
+        {
+          "path": "Textures\\Green_Glow3.blp",
+          "sha256": "e7ce9f685ae3581efb31eb805db783cee20528f94bb061128a312b52bfaca4ce",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Naranja",
+      "folder": "Colores-originales/Misil-simple/Naranja",
+      "model": "Shot Orange.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Orange.mdx",
+      "sha256": "67c17a43895ced558cffb7ceb66426270ab2dece1f33ce65f691ba8754bb5d8e",
+      "textures": [
+        {
+          "path": "Textures\\LavaLump2.blp",
+          "sha256": "172a49889b2470415c5e571d3ac21d7adca19756703aff6f02f71d481bf32e58",
+          "stock": true
+        },
+        {
+          "path": "Textures\\LavaLump.blp",
+          "sha256": "60fe3fe1938e3452384e0dc25b390825e58ec8b9957d4b713cd3592c4d074212",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Naranja",
+      "folder": "Colores-originales/Misil-doble/Naranja",
+      "model": "Shot Orange Double.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Orange Double.mdx",
+      "sha256": "cf182b276c017278d44abc79ed8cd877c1a989dbd1cdc1aa6cb9e74816c7a014",
+      "textures": [
+        {
+          "path": "Textures\\LavaLump.blp",
+          "sha256": "60fe3fe1938e3452384e0dc25b390825e58ec8b9957d4b713cd3592c4d074212",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\LavaLump2.blp",
+          "sha256": "172a49889b2470415c5e571d3ac21d7adca19756703aff6f02f71d481bf32e58",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Purpura",
+      "folder": "Colores-originales/Misil-simple/Purpura",
+      "model": "Shot Purple.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Purple.mdx",
+      "sha256": "09b31b138d32055f85da9e3fcd9e2b5f6837b89faada48e1c1583fc0576a6528",
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Purple_Glow.blp",
+          "sha256": "85281ecf3c941fce27f6c5bd4638886aef4c2d7e32b9483b7fb5e6d8ae44f442",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Glow.blp",
+          "sha256": "a02958b0cd074fd01f1d83388a964aeaa84f633149dc07dbb5633f51b5f284ba",
+          "stock": true
+        },
+        {
+          "path": "Textures\\GenericGlow64.blp",
+          "sha256": "e2d02637d2505a9486877fb96a1b0a427d6d21726b4353e0483f1452da791fef",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Star_Dim.blp",
+          "sha256": "45d936c52a8e92240851fbfdb0f81444efdacf5656c0588115f93702575659ec",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Purpura",
+      "folder": "Colores-originales/Misil-doble/Purpura",
+      "model": "Shot Purple Double.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Purple Double.mdx",
+      "sha256": "9391064978d83cdc22f10f9216463009016e7fe0dcd1053e7a20b978d8c7dfbc",
+      "textures": [
+        {
+          "path": "Textures\\Purple_Glow.blp",
+          "sha256": "85281ecf3c941fce27f6c5bd4638886aef4c2d7e32b9483b7fb5e6d8ae44f442",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Rojo",
+      "folder": "Colores-originales/Misil-simple/Rojo",
+      "model": "Shot Red.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Red.mdx",
+      "sha256": "de43841137eae2751455403b2585df5be173859c34c52b9157b0e2072d50f9ca",
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Red_star2.blp",
+          "sha256": "02a845639f7dfb8ae53b3498d84ba15acb273d3165bf1701d03f2bdc10ee9710",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Red_Glow3.blp",
+          "sha256": "b05e048d80e56f51cd4741ce4c041b02bdc1fe8fd2eaf8f0aa8bd1d44683b64c",
+          "stock": true
+        },
+        {
+          "path": "Textures\\LavaLump2.blp",
+          "sha256": "172a49889b2470415c5e571d3ac21d7adca19756703aff6f02f71d481bf32e58",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Rojo",
+      "folder": "Colores-originales/Misil-doble/Rojo",
+      "model": "Shot Red Double.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Red Double.mdx",
+      "sha256": "bf6c51752ff00d1f8bb18968a18bcc4b10f58e7f48fad6fb0a51af206f210067",
+      "textures": [
+        {
+          "path": "Textures\\Red_star2.blp",
+          "sha256": "02a845639f7dfb8ae53b3498d84ba15acb273d3165bf1701d03f2bdc10ee9710",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-simple",
+      "color": "Amarillo",
+      "folder": "Colores-originales/Misil-simple/Amarillo",
+      "model": "Shot Yellow.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Yellow.mdx",
+      "sha256": "a380e45052b36a1d4eb3d4836b9cd48b459059cc69b2f6c1ed5260db99a86a06",
+      "textures": [
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Glow.blp",
+          "sha256": "a02958b0cd074fd01f1d83388a964aeaa84f633149dc07dbb5633f51b5f284ba",
+          "stock": true
+        },
+        {
+          "path": "Textures\\GenericGlow64.blp",
+          "sha256": "e2d02637d2505a9486877fb96a1b0a427d6d21726b4353e0483f1452da791fef",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Star_Dim.blp",
+          "sha256": "45d936c52a8e92240851fbfdb0f81444efdacf5656c0588115f93702575659ec",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-originales",
+      "type": "Misil-doble",
+      "color": "Amarillo",
+      "folder": "Colores-originales/Misil-doble/Amarillo",
+      "model": "Shot Yellow Double.mdx",
+      "modelImportPath": "ShotsOriginales\\Shot Yellow Double.mdx",
+      "sha256": "c0df95af0f502c34584007e6e86a3f4c7dc11e6bec12f724cb92b8b74e1905ca",
+      "textures": [
+        {
+          "path": "Textures\\Yellow_Glow.blp",
+          "sha256": "a02958b0cd074fd01f1d83388a964aeaa84f633149dc07dbb5633f51b5f284ba",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Yellow_Star_Dim.blp",
+          "sha256": "45d936c52a8e92240851fbfdb0f81444efdacf5656c0588115f93702575659ec",
+          "stock": true
+        },
+        {
+          "path": "Textures\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": true
+        },
+        {
+          "path": "Textures\\star5tga.blp",
+          "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7",
+          "stock": true
+        },
+        {
+          "path": "Textures\\GenericGlow64.blp",
+          "sha256": "e2d02637d2505a9486877fb96a1b0a427d6d21726b4353e0483f1452da791fef",
+          "stock": true
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "00-Rojo",
+      "folder": "Colores-de-jugadores/Misil-simple/00-Rojo",
+      "model": "Shot_00_Red.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_00_Red.mdx",
+      "sha256": "529e42d2a531d437af97317c01c8b1727023cfe341ab30c3c9e6ab764fe80cfe",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_00.blp",
+          "sha256": "0ab6290029e5e48669ae2bcb3b346e22581f865cf91f8222f0e4f822eead5d35",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "01-Azul",
+      "folder": "Colores-de-jugadores/Misil-simple/01-Azul",
+      "model": "Shot_01_Blue.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_01_Blue.mdx",
+      "sha256": "db27613b3dab1383f9e2d19101750641a898587391a50ee34252a7a821876e0c",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_01.blp",
+          "sha256": "50844a0d945141ad783b79ba15eb122a8580eee24a11c09e6bb4f7baff79365d",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "02-Cian",
+      "folder": "Colores-de-jugadores/Misil-simple/02-Cian",
+      "model": "Shot_02_Cyan.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_02_Cyan.mdx",
+      "sha256": "e0b63a4e4523b8ba673ce9745d456948cd2ae2abaa3139a07e034d755e945d12",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_02.blp",
+          "sha256": "279292043f4c7cf23c0ab07047921541e53878e350c2b2ae12766546ca74d65e",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "03-Purpura",
+      "folder": "Colores-de-jugadores/Misil-simple/03-Purpura",
+      "model": "Shot_03_Purple.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_03_Purple.mdx",
+      "sha256": "b6a724d48fe4c4b8c9e173ae0a8a38ef4be24756a38a6bddcaf131a407050638",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_03.blp",
+          "sha256": "a8e8d756713bf703c3b36bed1b06eceb17d7963c6f07ce1c291608e7e2800b2b",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "04-Amarillo",
+      "folder": "Colores-de-jugadores/Misil-simple/04-Amarillo",
+      "model": "Shot_04_Yellow.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_04_Yellow.mdx",
+      "sha256": "e90bc407e3f8f502a88c85aa62aa744c16d8dec2b63f91f9555bf945824d0c2b",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_04.blp",
+          "sha256": "fe2ba809fbb5e67a280831165539a9f317f2f4554d786b89a7e4f72ec509a209",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "05-Naranja",
+      "folder": "Colores-de-jugadores/Misil-simple/05-Naranja",
+      "model": "Shot_05_Orange.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_05_Orange.mdx",
+      "sha256": "919e025d7721f71d24833fc963e2541f54719c020174239527102ba669b48231",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_05.blp",
+          "sha256": "f3fe146b1144cfd70c19aab728a931a67c01229aeb58a9c43694435e601da65a",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "06-Verde",
+      "folder": "Colores-de-jugadores/Misil-simple/06-Verde",
+      "model": "Shot_06_Green.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_06_Green.mdx",
+      "sha256": "8c897673a6ed4a1e2531c31f0181b72f62ec5776170a75dbf96063fb03493b5f",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_06.blp",
+          "sha256": "cfd9abe71c40599c7a23817c33a0d67e17cd815b637ea03db07649b72a6e20f9",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "07-Rosa",
+      "folder": "Colores-de-jugadores/Misil-simple/07-Rosa",
+      "model": "Shot_07_Pink.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_07_Pink.mdx",
+      "sha256": "4015b1a007773cf306c42ab1b1b419cc5396cd7dcf0cb72d86d655a98f842d31",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_07.blp",
+          "sha256": "135c2c7699d4e378f1a72f8a69cafc3bcd9f26fd7f74c888827d526609ff9892",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "08-Gris-claro",
+      "folder": "Colores-de-jugadores/Misil-simple/08-Gris-claro",
+      "model": "Shot_08_LightGray.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_08_LightGray.mdx",
+      "sha256": "fdd141fb138740dc559bad3f5d62f67424cd1ed370151420dbc076ae8b9226ee",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_08.blp",
+          "sha256": "cdc2ba315610ca4f3c46a761591fe11fbc7ba2652342e1933a10ece9c67510f3",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "09-Azul-claro",
+      "folder": "Colores-de-jugadores/Misil-simple/09-Azul-claro",
+      "model": "Shot_09_LightBlue.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_09_LightBlue.mdx",
+      "sha256": "498b0d60a2871324cb8a12de505d2e8093f8e84d533b75b7baf9d672f3dc5782",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_09.blp",
+          "sha256": "cbac9f67cfd383beb4032d10f9a88266ba755e11cb3af7e771f2ad9dcde7e64f",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "10-Verde-oscuro",
+      "folder": "Colores-de-jugadores/Misil-simple/10-Verde-oscuro",
+      "model": "Shot_10_Aqua.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_10_Aqua.mdx",
+      "sha256": "290917a1e2e3e59528a1490707edf5b45d0d219a6cbb57e6bbca20ff1f14aee7",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_10.blp",
+          "sha256": "d94ced0c8060cccbf57f151ce94d835735dd53ed36bc58c0eee7553e8df9a276",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-simple",
+      "color": "11-Marron",
+      "folder": "Colores-de-jugadores/Misil-simple/11-Marron",
+      "model": "Shot_11_Brown.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_11_Brown.mdx",
+      "sha256": "a1f65f198417d135d37b8108a9005a023681e4f6c958f59ba02d2fce693471dd",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_11.blp",
+          "sha256": "5832cf477b2ea343572b58b818c03ba58e43f03d4c2f09e81dce85007ad81057",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "00-Rojo",
+      "folder": "Colores-de-jugadores/Misil-doble/00-Rojo",
+      "model": "Shot_00_Red_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_00_Red_Double.mdx",
+      "sha256": "15f13f174cb966a0813adb6f8781493de41e36dc479b8522cc7a621dc2673fe2",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_00.blp",
+          "sha256": "0ab6290029e5e48669ae2bcb3b346e22581f865cf91f8222f0e4f822eead5d35",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "01-Azul",
+      "folder": "Colores-de-jugadores/Misil-doble/01-Azul",
+      "model": "Shot_01_Blue_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_01_Blue_Double.mdx",
+      "sha256": "63947d6e8d26d57452ece6b221b032eb35609968ebe325ae0cc23084515222fc",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_01.blp",
+          "sha256": "50844a0d945141ad783b79ba15eb122a8580eee24a11c09e6bb4f7baff79365d",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "02-Cian",
+      "folder": "Colores-de-jugadores/Misil-doble/02-Cian",
+      "model": "Shot_02_Cyan_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_02_Cyan_Double.mdx",
+      "sha256": "9902329ad5a8278ba06ba7acb1ae25290f113acb9807a5e4e2c311675d5db047",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_02.blp",
+          "sha256": "279292043f4c7cf23c0ab07047921541e53878e350c2b2ae12766546ca74d65e",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "03-Purpura",
+      "folder": "Colores-de-jugadores/Misil-doble/03-Purpura",
+      "model": "Shot_03_Purple_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_03_Purple_Double.mdx",
+      "sha256": "581cbd805ffa0e12a1f52434d19593c2de1a7c5b31ff378701ef6802480107bd",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_03.blp",
+          "sha256": "a8e8d756713bf703c3b36bed1b06eceb17d7963c6f07ce1c291608e7e2800b2b",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "04-Amarillo",
+      "folder": "Colores-de-jugadores/Misil-doble/04-Amarillo",
+      "model": "Shot_04_Yellow_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_04_Yellow_Double.mdx",
+      "sha256": "b0d949b22684bb656c145c7dd0227b67edc6949f004d0b96b9b6e4901c6669a6",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_04.blp",
+          "sha256": "fe2ba809fbb5e67a280831165539a9f317f2f4554d786b89a7e4f72ec509a209",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "05-Naranja",
+      "folder": "Colores-de-jugadores/Misil-doble/05-Naranja",
+      "model": "Shot_05_Orange_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_05_Orange_Double.mdx",
+      "sha256": "2827efd7306aa3e715df4b618af44bb954dc0838255ac857094a5cf03f6f01f8",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_05.blp",
+          "sha256": "f3fe146b1144cfd70c19aab728a931a67c01229aeb58a9c43694435e601da65a",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "06-Verde",
+      "folder": "Colores-de-jugadores/Misil-doble/06-Verde",
+      "model": "Shot_06_Green_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_06_Green_Double.mdx",
+      "sha256": "e6384d9d82e2a72cf930bec7bb31fff112e9e8016cde2ebb2a6e93ce98762999",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_06.blp",
+          "sha256": "cfd9abe71c40599c7a23817c33a0d67e17cd815b637ea03db07649b72a6e20f9",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "07-Rosa",
+      "folder": "Colores-de-jugadores/Misil-doble/07-Rosa",
+      "model": "Shot_07_Pink_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_07_Pink_Double.mdx",
+      "sha256": "9b2d8d7f7a7a7db5fa2c3644c267eb4b07933ce53a83361feff0845f23a5244b",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_07.blp",
+          "sha256": "135c2c7699d4e378f1a72f8a69cafc3bcd9f26fd7f74c888827d526609ff9892",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "08-Gris-claro",
+      "folder": "Colores-de-jugadores/Misil-doble/08-Gris-claro",
+      "model": "Shot_08_LightGray_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_08_LightGray_Double.mdx",
+      "sha256": "7a029e6557fe933591916df6e47f000124bfae632608b3b3be1937d482d672b2",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_08.blp",
+          "sha256": "cdc2ba315610ca4f3c46a761591fe11fbc7ba2652342e1933a10ece9c67510f3",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "09-Azul-claro",
+      "folder": "Colores-de-jugadores/Misil-doble/09-Azul-claro",
+      "model": "Shot_09_LightBlue_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_09_LightBlue_Double.mdx",
+      "sha256": "0b0b99d72553273e94b3aabe6bff0d3b6afb8b259cbc03085dc8681985342ef1",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_09.blp",
+          "sha256": "cbac9f67cfd383beb4032d10f9a88266ba755e11cb3af7e771f2ad9dcde7e64f",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "10-Verde-oscuro",
+      "folder": "Colores-de-jugadores/Misil-doble/10-Verde-oscuro",
+      "model": "Shot_10_Aqua_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_10_Aqua_Double.mdx",
+      "sha256": "213b4dd599761f8163e8d7e06435667be28457a37c188dfede03421dcb2b3641",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_10.blp",
+          "sha256": "d94ced0c8060cccbf57f151ce94d835735dd53ed36bc58c0eee7553e8df9a276",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    },
+    {
+      "pack": "Colores-de-jugadores",
+      "type": "Misil-doble",
+      "color": "11-Marron",
+      "folder": "Colores-de-jugadores/Misil-doble/11-Marron",
+      "model": "Shot_11_Brown_Double.mdx",
+      "modelImportPath": "ShotsTeam\\Shot_11_Brown_Double.mdx",
+      "sha256": "b04b4ad7aebace74f6c87eb1b346c25532294c631329305aba3549ae49286cac",
+      "textures": [
+        {
+          "path": "ShotsTeam\\Flare.blp",
+          "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\Glow_11.blp",
+          "sha256": "5832cf477b2ea343572b58b818c03ba58e43f03d4c2f09e81dce85007ad81057",
+          "stock": false
+        },
+        {
+          "path": "ShotsTeam\\star5tga.blp",
+          "sha256": "59a543352408a0a1f005bc39442d3f1f18d2ff38623ee1a9bae48d88afbb4c11",
+          "stock": false
+        }
+      ]
+    }
+  ],
+  "stock": [
+    {
+      "internal": "Textures\\Flare.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/war3.mpq",
+      "sha256": "c866d565f468b27c0bbcd06f0484d7f57c35d7aac2ccd58f0e84c818a3abdad2"
+    },
+    {
+      "internal": "Textures\\star5tga.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "ddb78ebf4f589177fd47753572d38d28e4f83e17558fe8b5861073ba742250e7"
+    },
+    {
+      "internal": "Textures\\Blue_Glow2.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "dcbf0770aa792883d3d7ad0b93052d5a9a1b264ac841dae43b7876f26cbfd793"
+    },
+    {
+      "internal": "Textures\\Green_Glow3.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "e7ce9f685ae3581efb31eb805db783cee20528f94bb061128a312b52bfaca4ce"
+    },
+    {
+      "internal": "Textures\\LavaLump2.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "172a49889b2470415c5e571d3ac21d7adca19756703aff6f02f71d481bf32e58"
+    },
+    {
+      "internal": "Textures\\LavaLump.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "60fe3fe1938e3452384e0dc25b390825e58ec8b9957d4b713cd3592c4d074212"
+    },
+    {
+      "internal": "Textures\\Purple_Glow.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "85281ecf3c941fce27f6c5bd4638886aef4c2d7e32b9483b7fb5e6d8ae44f442"
+    },
+    {
+      "internal": "Textures\\Yellow_Glow.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "a02958b0cd074fd01f1d83388a964aeaa84f633149dc07dbb5633f51b5f284ba"
+    },
+    {
+      "internal": "Textures\\GenericGlow64.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "e2d02637d2505a9486877fb96a1b0a427d6d21726b4353e0483f1452da791fef"
+    },
+    {
+      "internal": "Textures\\Yellow_Star_Dim.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "45d936c52a8e92240851fbfdb0f81444efdacf5656c0588115f93702575659ec"
+    },
+    {
+      "internal": "Textures\\Red_star2.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "02a845639f7dfb8ae53b3498d84ba15acb273d3165bf1701d03f2bdc10ee9710"
+    },
+    {
+      "internal": "Textures\\Red_Glow3.blp",
+      "archive": "/home/snz/Documentos/ChatGPT/FrozenThone/games/WarcraftIII-1.27b/War3x.mpq",
+      "sha256": "b05e048d80e56f51cd4741ce4c041b02bdc1fe8fd2eaf8f0aa8bd1d44683b64c"
+    }
+  ],
+  "revision": "brillo-gradiente-2026-10-22",
+  "previousCollection": "shots-vol-i-organizados",
+  "colorModels": 24
+}

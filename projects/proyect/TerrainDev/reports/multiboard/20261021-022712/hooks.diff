@@ -1,0 +1,114 @@
+--- baseline/Missile.j
++++ current/Missile.j
+@@ -53,6 +53,7 @@
+ *   c) Handle recycling: ( Performace gain, memory management )
+ *           - uses MissileRecylcer > Dummy > xedummy. 
+ *       */ optional MissileRecycler /* hiveworkshop.com/forums/jass-resources-412/system-missilerecycler-206086/
++*       */ optional MissileDiagnostics /* TerrainDev: observable lifecycle counters, no motion changes.
+ *       */ optional Dummy           /* github.com/nestharus/JASS/blob/master/jass/Systems/Dummy/Dummy.w3x
+ *       */ optional xedummy         /* wc3c.net/showthread.php?t=101150
+ *
+@@ -645,6 +646,9 @@
+         // Instantly destroys a missile.
+         method terminate takes nothing returns nothing
+             if allocated then
++                static if LIBRARY_MissileDiagnostics then
++                    call MissileStats.released(this)
++                endif
+                 call remove()
+                 call impact.destroy()
+                 call origin.destroy()
+@@ -718,6 +722,9 @@
+                 debug call ThrowWarning(GetUnitTypeId(missileDummy) == 0, "Missile", "createEx", "missileDummy", this, "Invalid missile dummy unit ( null )!")
+             endif
+             debug set launched = false
++            static if LIBRARY_MissileDiagnostics then
++                call MissileStats.allocated(this)
++            endif
+             return this
+         endmethod
+     
+@@ -1778,6 +1785,10 @@
+                 endif
+                 set thistype.dummy[max] = toRecycle
+                 set thistype.time[max]  = $AFTER_TIME$ + TimerGetRemaining(thistype.t)
++                static if LIBRARY_MissileDiagnostics then
++                    // The existing bin advances in whole seconds; allow its next tick.
++                    call MissileStats.delay(toRecycle,$AFTER_TIME$+1.)
++                endif
+                 set thistype.max        = thistype.max + 1
+             endmethod
+     
+--- baseline/MissileRecycler.j
++++ current/MissileRecycler.j
+@@ -1,4 +1,4 @@
+-library MissileRecycler initializer PreInit requires optional UnitIndexer, optional UnitDex, optional UnitIndexerGUI /*
++library MissileRecycler initializer PreInit requires optional UnitIndexer, optional UnitDex, optional UnitIndexerGUI, optional MissileDiagnostics /*
+ 
+     MissileRecycler v 1.4.5.2
+     =========================================================================
+@@ -198,6 +198,9 @@
+             call SetUnitVertexColor(u, 255, 255, 255, 255)
+             call SetUnitAnimationByIndex(u, 90)
+             call SetUnitScale(u, 1, 0, 0)
++            static if LIBRARY_MissileDiagnostics then
++                call MissileStats.acquire(u,true)
++            endif
+             //call PauseUnit(u, false) -- you can disable "resets" that you don't need to worry about.
+             debug call Print("Recycling")
+         else
+@@ -206,6 +209,9 @@
+             set u = CreateUnit(OWNER, DUMMY_ID, x, y, facing)
+             call ToggleIndexer(true)
+             call PauseUnit(u, true)
++            static if LIBRARY_MissileDiagnostics then
++                call MissileStats.acquire(u,false)
++            endif
+         endif
+         call SetUnitX(u, x)
+         call SetUnitY(u, y)
+@@ -224,6 +230,9 @@
+         if GetUnitTypeId(u) == DUMMY_ID and UnitAlive(u) and GetUnitUserData(u) != -1 then
+             if queueStackN == 0 then
+                 debug call Print("Stack is full - removing surplus unit")
++                static if LIBRARY_MissileDiagnostics then
++                    call MissileStats.returned(u,false,DEATH_TIME)
++                endif
+                 // TerrainDev / Classic 1.27b: paused units freeze timed life.
+                 // Only surplus units leave the paused pool before disposal.
+                 call PauseUnit(u, false)
+@@ -247,7 +256,13 @@
+             call SetUnitOwner(u, OWNER, false)
+             //Prevent double-free of this unit.
+             call SetUnitUserData(u, -1)
+-        debug else
++            static if LIBRARY_MissileDiagnostics then
++                call MissileStats.returned(u,true,DEATH_TIME)
++            endif
++        else
++            static if LIBRARY_MissileDiagnostics then
++                call MissileStats.invalidReturn()
++            endif
+             debug call BJDebugMsg("[MissileRecycler] Error: Attempt to recycle invalid unit.")
+         endif
+     endfunction
+@@ -276,6 +291,9 @@
+         local real x = GetRectMaxX(bj_mapInitialPlayableArea)
+         local real y = GetRectMaxY(bj_mapInitialPlayableArea)
+         local unit u
++        static if LIBRARY_MissileDiagnostics then
++            call MissileStats.configure(ANG_N*ANG_STORAGE_MAX)
++        endif
+         call ToggleIndexer(false)
+         loop
+             set i = i - 1
+@@ -289,6 +307,9 @@
+                 set stack[n] = u
+                 call PauseUnit(u, true)
+                 call SetUnitUserData(u, -1)
++                static if LIBRARY_MissileDiagnostics then
++                    call MissileStats.preload(u)
++                endif
+                 set n = n + 1
+                 exitwhen n == end
+             endloop

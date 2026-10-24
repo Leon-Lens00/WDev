@@ -1,0 +1,11 @@
+Shots Vol. II — modelos organizados
+
+Colores-originales/Misil-simple: 6 colores originales con anclaje frontal ajustado.
+Colores-de-jugadores/Misil-simple: 12 colores Classic, derivados del mismo Blue ajustado.
+Cada color incluye MDX, MDL, texturas, créditos y rutas de importación.
+Vol. II publica sólo forma simple. Se conservó esa forma por elección expresa del usuario.
+El pack de jugadores usa rutas exclusivas ShotsVolII para coexistir con Vol. I.
+Helper opcional: ShotsVolIIPlayerPath(GetOwningPlayer(caster)) devuelve la ruta a usar al lanzar.
+No se integró con un sistema de colisiones ni se usan APIs Blz. Neutral desconocido: gris claro.
+Los originales descargados están intactos en descargas/warcraft3/misiles/vinz/shots-vol-ii.
+Autor original: Vinz. Darle crédito. https://www.hiveworkshop.com/threads/shots-vol-ii.315512/

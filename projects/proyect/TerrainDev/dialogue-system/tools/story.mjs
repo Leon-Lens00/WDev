@@ -1,0 +1,58 @@
+import {projectionJass} from '/home/snz/Documentos/WarDatsPy/ui-studio/dist/dialogue-calibration.js';
+import {dialoguePreset,validateDialogue} from '/home/snz/Documentos/WarDatsPy/ui-studio/dist/dialogue-core.js';
+import {compileDialogue,visibleFragments,toUIText} from '/home/snz/Documentos/WarDatsPy/ui-studio/dist/dialogue-layout.js';
+import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const args=process.argv.slice(2);if(args.length&&!(args.length===2&&args[0]==='--input'))throw Error('Usage: node tools/story.mjs [--input /absolute/design.json]');
+const input=args[1]?path.resolve(args[1]):path.join(root,'conversation.wc3dialogue.json');
+if(args.length&&!fs.existsSync(input))throw Error('Dialogue JSON does not exist: '+input);
+const design=validateDialogue(fs.existsSync(input)?JSON.parse(fs.readFileSync(input,'utf8')):dialoguePreset()),story=compileDialogue(design);
+const q=s=>'"'+s.normalize('NFC').replaceAll('\\','\\\\').replaceAll('"','\\"').replaceAll('\n','\\n').replaceAll('\r','')+'"';
+const real=n=>n.toFixed(6),N=story.pool.body;let init=[],cursor=0,blocks=[],block=[];
+function emit(...lines){block.push(...lines);if(block.length>700){blocks.push(block);block=[];}}
+for(const [i,page] of story.pages.entries()){
+ const name=toUIText(page.left,(page.plane.top+page.plane.height*.54)*10.8+page.fontPx*1.37*.8);
+ const hint=toUIText((page.plane.left+page.plane.width*.85)*19.2,(page.plane.top+page.plane.height*.9)*10.8);
+ const plane=page.plane;
+ emit(`set DialogueStart[${i}] = ${cursor}`,`set DialogueSpeaker[${i}] = ${q(page.name)}`,`set DialogueLeft[${i}] = ${page.speaker==='left'}`,`set DialogueFont[${i}] = ${real(page.fontHeight)}`,`set DialogueFrameWidth[${i}] = ${real(plane.frustumWidth)}`,`set DialogueFrameY[${i}] = ${real(plane.anchorY)}`,`set DialogueFrameX[${i}] = ${real(plane.anchorX)}`,`set DialogueFrameScale[${i}] = ${real(plane.nativeScale)}`,`set DialogueNameX[${i}] = ${real(name.x)}`,`set DialogueNameY[${i}] = ${real(name.y)}`,`set DialogueHintX[${i}] = ${real(hint.x)}`,`set DialogueHintY[${i}] = ${real(hint.y)}`);
+ const rgb=page.color.match(/[a-f\d]{2}/ig).map(x=>parseInt(x,16));for(const [j,key] of ['R','G','B'].entries())emit(`set Dialogue${key}[${i}] = ${rgb[j]}`);
+ for(let slot=0;slot<N;slot++){
+  const f=page.fragments.find(x=>x.slot===slot),p=toUIText(f?.left??page.left,(f?.top??page.top)+page.fontPx*.8);
+  emit(`set DialogueX${slot}[${i}] = ${real(p.x)}`,`set DialogueY${slot}[${i}] = ${real(p.y)}`);
+ }
+ for(let n=0;n<=page.characters.length;n++){
+  const visible=visibleFragments(page,n);
+  for(let slot=0;slot<N;slot++)emit(`set DialogueBody${slot}[${cursor}] = ${q(visible.find(f=>f.slot===slot)?.text??'')}`);
+  emit(`set DialoguePause[${cursor}] = ${design.punctuationPause&&/[.,!?…:;]/u.test(page.characters[n-1]??'')?6:1}`);cursor++;
+ }
+ emit(`set DialogueEnd[${i}] = ${cursor-1}`);
+}
+if(block.length){blocks.push(block);block=[];}
+const read=(name,type,index)=>`function ${name} takes integer slot, integer ${index} returns ${type}\n${Array.from({length:N},(_,i)=>` ${i?'elseif':'if'} slot == ${i} then\n  return ${name==='DialogueText'?'DialogueBody':name==='DialogueX'?'DialogueX':'DialogueY'}${i}[${index}]`).join('\n')}\n endif\n return ${type==='string'?'""':'0.'}\nendfunction\n`;
+const metricGlyphs=[...Array.from({length:95},(_,i)=>String.fromCharCode(32+i)).filter(c=>c!=='|'),'á','é','í','ó','ú','ü','ñ','Á','É','Í','Ó','Ú','Ü','Ñ','¿','¡','…'];
+metricGlyphs.forEach((c,i)=>emit(`set DialogueMetricGlyph[${i}] = ${q(c===' '?'W'+' '.repeat(8)+'W':c.repeat(8))}`));
+if(block.length){blocks.push(block);block=[];}
+fs.writeFileSync(path.join(root,'evidence/metric-glyphs.json'),JSON.stringify(metricGlyphs));
+const registry=JSON.parse(fs.readFileSync(path.join(root,'evidence/portrait-registry.json')));
+const visualGlobals=[];
+for(const [key,value] of Object.entries(design.transition))visualGlobals.push(` constant integer DIALOGUE_${key.toUpperCase()} = ${value/10}`);
+for(const [side,p] of Object.entries(design.portraits)){const r=registry[p.model];if(!r)throw Error('El mapa requiere un modelo registrado; las imágenes personalizadas son sólo de diseño.');const key=side.toUpperCase();visualGlobals.push(` constant integer DIALOGUE_${key}_TYPE = '${r.rawcode}'`,` constant integer DIALOGUE_${key}_IDLE = ${r.idle}`,` constant integer DIALOGUE_${key}_TALK = ${r.talk}`,` constant real DIALOGUE_${key}_SCALE = ${real(p.scale)}`,` constant real DIALOGUE_${key}_X = ${real(p.offsetX)}`,` constant real DIALOGUE_${key}_Y = ${real(p.offsetY)}`);}
+// The same duration/index registry drives browser and native idle variation.
+for(const [side,p] of Object.entries(design.portraits)){
+ const r=registry[p.model],key=side.toUpperCase(),title=side[0].toUpperCase()+side.slice(1),variants=r.idleVariants;
+ if(!variants?.length)throw Error('Missing idle variants for '+p.model);
+ visualGlobals.push(` constant integer DIALOGUE_${key}_IDLE_COUNT = ${variants.length}`,` integer array Dialogue${title}Idle`,` real array Dialogue${title}IdleDuration`);
+ for(const [i,v]of variants.entries())emit(`set Dialogue${title}Idle[${i}] = ${v.index}`,`set Dialogue${title}IdleDuration[${i}] = ${real(v.durationMs/1000)}`);
+}
+if(block.length){blocks.push(block);block=[];}
+fs.writeFileSync(path.join(root,'evidence/visual-design.json'),JSON.stringify({transition:design.transition,portraits:design.portraits},null,2));
+const globals=[...visualGlobals,' string array DialogueMetricGlyph',` constant integer DIALOGUE_METRIC_COUNT = ${metricGlyphs.length}`,...Array.from({length:N},(_,i)=>` string array DialogueBody${i}\n real array DialogueX${i}\n real array DialogueY${i}`),...['Speaker'].map(x=>` string array Dialogue${x}`),' boolean array DialogueLeft',...['Start','End','Pause','R','G','B'].map(x=>` integer array Dialogue${x}`),...['Font','FrameWidth','FrameY','FrameX','FrameScale','NameX','NameY','HintX','HintY'].map(x=>` real array Dialogue${x}`),` constant real DIALOGUE_SPEED = ${real(design.lettersPerSecond)}`,` constant integer DIALOGUE_COUNT = ${story.pages.length}`,` constant integer DIALOGUE_BODY_TAGS = ${N}`].join('\n');
+const functions=blocks.map((b,i)=>`private function Load${i} takes nothing returns nothing\n ${b.join('\n ')}\nendfunction`).join('\n');
+const source=`// Generated by the same compositor as UI Studio. Fixed pool; grapheme-safe prefixes.\nlibrary DialogueData initializer Init\nglobals\n${globals}\nendglobals\n${read('DialogueText','string','cursor')}${read('DialogueX','real','page')}${read('DialogueY','real','page')}${functions}\nprivate function Init takes nothing returns nothing\n${blocks.map((_,i)=>` call Load${i}.execute()`).join('\n')}\nendfunction\nendlibrary\n`;
+// Validate everything before replacing the build inputs.
+fs.writeFileSync(path.join(root,'src/DialogueProjection.j'),projectionJass(design));
+fs.writeFileSync(path.join(root,'src/DialogueData.j'),source);
+fs.writeFileSync(path.join(root,'conversation.wc3dialogue.json'),JSON.stringify(design,null,2));
+fs.writeFileSync(path.join(root,'evidence/story.json'),JSON.stringify({messages:design.messages.length,pages:story.pages.length,prefixes:cursor,lettersPerSecond:design.lettersPerSecond,pool:story.pool,profile:story.profile,unicode:'Intl.Segmenter graphemes',initializerBlocks:blocks.length},null,2));
+fs.writeFileSync(path.join(root,'evidence/composed-story.json'),JSON.stringify(story,null,2));
+console.log(`${story.pages.length} pages, ${cursor} Unicode-safe prefixes, ${N+2} persistent texttags`);

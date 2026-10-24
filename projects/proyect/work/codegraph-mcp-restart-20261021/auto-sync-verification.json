@@ -1,0 +1,129 @@
+{
+  "method": "Existing MCP process only. No sync, query or other CodeGraph call during observation; read-only SQLite polling.",
+  "roots": [
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "fixture": "cg_autosync_probe_99423.j",
+      "writer_before": {
+        "pid": 99030,
+        "mode": "fallback",
+        "startedAt": 1792614224443,
+        "ready": true
+      },
+      "transitions": {
+        "create": {
+          "files": 1,
+          "names": [
+            "CGAutosyncProbe99423A"
+          ],
+          "passed": true,
+          "seconds": 0.418
+        },
+        "modify": {
+          "files": 1,
+          "names": [
+            "CGAutosyncProbe99423B"
+          ],
+          "passed": true,
+          "seconds": 0.602
+        },
+        "delete": {
+          "files": 0,
+          "names": [],
+          "passed": true,
+          "seconds": 0.602
+        }
+      },
+      "fixture_removed": true,
+      "writer_after": {
+        "pid": 99030,
+        "mode": "fallback",
+        "startedAt": 1792614224443,
+        "ready": true
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "fixture": "cg_autosync_probe_99423.j",
+      "writer_before": {
+        "pid": 99030,
+        "mode": "fallback",
+        "startedAt": 1792614224861,
+        "ready": true
+      },
+      "transitions": {
+        "create": {
+          "files": 1,
+          "names": [
+            "CGAutosyncProbe99423A"
+          ],
+          "passed": true,
+          "seconds": 0.401
+        },
+        "modify": {
+          "files": 1,
+          "names": [
+            "CGAutosyncProbe99423B"
+          ],
+          "passed": true,
+          "seconds": 0.602
+        },
+        "delete": {
+          "files": 0,
+          "names": [],
+          "passed": true,
+          "seconds": 0.401
+        }
+      },
+      "fixture_removed": true,
+      "writer_after": {
+        "pid": 99030,
+        "mode": "fallback",
+        "startedAt": 1792614224861,
+        "ready": true
+      }
+    },
+    {
+      "root": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "fixture": "cg_autosync_probe_99423.js",
+      "writer_before": {
+        "pid": 99030,
+        "mode": "fallback",
+        "startedAt": 1792614225125,
+        "ready": true
+      },
+      "transitions": {
+        "create": {
+          "files": 1,
+          "names": [
+            "CGAutosyncProbe99423A"
+          ],
+          "passed": true,
+          "seconds": 0.401
+        },
+        "modify": {
+          "files": 1,
+          "names": [
+            "CGAutosyncProbe99423B"
+          ],
+          "passed": true,
+          "seconds": 0.401
+        },
+        "delete": {
+          "files": 0,
+          "names": [],
+          "passed": true,
+          "seconds": 0.401
+        }
+      },
+      "fixture_removed": true,
+      "writer_after": {
+        "pid": 99030,
+        "mode": "fallback",
+        "startedAt": 1792614225125,
+        "ready": true
+      }
+    }
+  ],
+  "passed": true
+}

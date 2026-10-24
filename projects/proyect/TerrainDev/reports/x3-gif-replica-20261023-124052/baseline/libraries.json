@@ -1,0 +1,225 @@
+{
+  "order": [
+    "WorldBounds",
+    "ErrorMessage",
+    "TimerUtils",
+    "Table",
+    "RegisterPlayerUnitEvent",
+    "SpellEffectEvent",
+    "IsDestructableTree",
+    "DummyCaster",
+    "MissileDiagnostics",
+    "MissileRecycler",
+    "Missile",
+    "GroundCollision",
+    "GroundMotion",
+    "RapidFire",
+    "RapidFireDemo",
+    "X3Buster",
+    "X3BusterDemo"
+  ],
+  "libraries": [
+    {
+      "name": "WorldBounds",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/bpower/fuentes/245470/trigger-0006.j",
+      "source_sha256": "e7f65f00756e5cd81dc59cc07eaffffd58ebeae758466f29b8f951629970efdd",
+      "local_file": "src/libraries/WorldBounds.j",
+      "changes": [
+        "TESH editor header removed; line endings normalized; library code and author credits retained"
+      ],
+      "version": "2.0.0.0",
+      "local_sha256": "0ed3c284b18694b744bdae4423f2b60e5e16346778116caffb5bf9a4267447c9"
+    },
+    {
+      "name": "ErrorMessage",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/bpower/fuentes/258518/trigger-0003.j",
+      "source_sha256": "38b989a719f67c7bc86ab390bc6ce3c64b089dfa0a53f94142a756f17e042748",
+      "local_file": "src/libraries/ErrorMessage.j",
+      "changes": [
+        "TESH editor header removed; line endings normalized; library code and author credits retained"
+      ],
+      "version": "1.0.1.4",
+      "local_sha256": "b240c5c064d569ec89ba85e21363b27514bab66fb6517c1cd68d8ce9b40df147"
+    },
+    {
+      "name": "TimerUtils",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/bpower/fuentes/245470/trigger-0002.j",
+      "source_sha256": "375eb82c09994196281d46fa2dd3aee0a745a0906810a825a30e6cef6ae0c974",
+      "local_file": "src/libraries/TimerUtils.j",
+      "changes": [
+        "TESH editor header removed; line endings normalized; library code and author credits retained"
+      ],
+      "version": "2.0",
+      "local_sha256": "cbc13cd7eb8679ee2d618dcfe70e8da47489a926506eb8059dc6fc09eba60f45"
+    },
+    {
+      "name": "Table",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/bpower/fuentes/245192/trigger-0002.j",
+      "source_sha256": "0c1d59fbd3919e0bf351ecf5be8277892838ea30c146433ca85006295d307e94",
+      "local_file": "src/libraries/Table.j",
+      "changes": [
+        "TESH editor header removed; line endings normalized; library code and author credits retained"
+      ],
+      "version": "3.1.0.1",
+      "local_sha256": "94d2fd1f89774efb2ad3e9d2ae7e3bdded3c121bb523f02425d4937fc7031fb4"
+    },
+    {
+      "name": "RegisterPlayerUnitEvent",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/bpower/fuentes/245470/trigger-0004.j",
+      "source_sha256": "901003343a3b3c3af1687c06f8f45872b2862409ab3e6631028c7f715c46fde6",
+      "local_file": "src/libraries/RegisterPlayerUnitEvent.j",
+      "changes": [
+        "TESH editor header removed; line endings normalized; library code and author credits retained"
+      ],
+      "version": "5.1.0.1",
+      "local_sha256": "a4513c10d93fdc26b7b86440a8f9171153b2d3108b815e7c57169b21c2202c2c"
+    },
+    {
+      "name": "SpellEffectEvent",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/bpower/fuentes/245470/trigger-0003.j",
+      "source_sha256": "d3350d800dc75c0ffae2ebc3a7373fcdf28246bbca989c2d35b6db72f332732d",
+      "local_file": "src/libraries/SpellEffectEvent.j",
+      "changes": [
+        "TESH editor header removed; line endings normalized; library code and author credits retained"
+      ],
+      "version": "1.1.0.0",
+      "local_sha256": "222abb23791bd71eb96db71384ef40a91c16421176cc046c186f0af185050bd0"
+    },
+    {
+      "name": "IsDestructableTree",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/bpower/fuentes/245470/trigger-0007.j",
+      "source_sha256": "67cf00ea89f5f68b65ef0ed2763e7f823bad2a9e7498bed452ea542952cc2a7e",
+      "local_file": "src/libraries/IsDestructableTree.j",
+      "changes": [
+        "TESH editor header removed; line endings normalized; library code and author credits retained"
+      ],
+      "version": "1.3.1",
+      "local_sha256": "2f981785b5d01564b634ec35a62e3a008a83a313a4a61774e23b4632d69c6829"
+    },
+    {
+      "name": "DummyCaster",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/bpower/fuentes/245192/trigger-0006.j",
+      "source_sha256": "d92b550bfe391497b6d564f15da5ff364ef7a53a15753b5726cd1be8a9a982c0",
+      "local_file": "src/libraries/DummyCaster.j",
+      "changes": [
+        "TESH editor header removed; line endings normalized; library code and author credits retained",
+        "Dedicated dummy caster rawcode dcst replaces donor n002"
+      ],
+      "version": "2.0.0.1",
+      "local_sha256": "4437e9214cc7d30b30ad9d7654286d70a1b8c00c96c15d1f2952cebfe4c349c0"
+    },
+    {
+      "name": "Missile",
+      "version": "2.5.1",
+      "source_url": "https://www.hiveworkshop.com/threads/missile.265370/",
+      "source_sha256": "487cd5467b3aee3428d6c6871df01fa8ea3c1754e234aa23d71bb71e85af739e",
+      "local_file": "src/libraries/Missile.j",
+      "changes": [
+        "Line endings normalized during original import",
+        "Optional MissileDiagnostics lifecycle hooks; no change to motion, callbacks or pooling policy"
+      ],
+      "local_sha256": "333150566d2f55b665afd127e95374078cd80053fe617c9def01405ab93510a3"
+    },
+    {
+      "name": "MissileRecycler",
+      "version": "1.4.5.2",
+      "source_url": "https://www.hiveworkshop.com/threads/system-missilerecycler.206086/",
+      "source_sha256": "82d6f77e16e6ad5f2cc256dcb12b5f17ea7131767e6400770ab7c2ebdf58eac4",
+      "local_file": "src/libraries/MissileRecycler.j",
+      "changes": [
+        "ObjectMerger directive replaced with comment; object data supplied explicitly",
+        "Classic 1.27b fix: unpause surplus dummy before UnitApplyTimedLife; paused timed life otherwise does not expire. Reproduced with three identical objects; reports/timedlife-test/20261021-020731.",
+        "Optional MissileDiagnostics lifecycle hooks; no change to motion, callbacks or pooling policy"
+      ],
+      "local_sha256": "65189b805bf424f57c758eef1ee5497bddb0070a3f59d04a883e63821c7818eb"
+    },
+    {
+      "name": "MissileDiagnostics",
+      "version": "1.0.0-local",
+      "local_file": "src/libraries/MissileDiagnostics.j",
+      "source": "Local implementation for TerrainDev, 2026-10-21",
+      "changes": [
+        "Event counters, bounded tracking of real dummy handles, lifetime watchdog and classic multiboard"
+      ],
+      "dependencies": [
+        "Table"
+      ],
+      "local_sha256": "5d13202a5116a67e3f49d2a095975b1fe33955fd34fed076eccd0a67d26bc990"
+    },
+    {
+      "name": "GroundCollision",
+      "version": "1.0.0-local",
+      "local_file": "src/libraries/GroundCollision.j",
+      "source": "Local TerrainDev implementation, 2026-10-21",
+      "local_sha256": "b39c3f2ef02aaea5643f5572eff90de86e38c0ca635c8abb08b3885e0369a095",
+      "dependencies": [
+        "WorldBounds",
+        "IsDestructableTree"
+      ]
+    },
+    {
+      "name": "GroundMotion",
+      "version": "1.0.0-local",
+      "local_file": "src/libraries/GroundMotion.j",
+      "source": "Local TerrainDev implementation, 2026-10-21",
+      "local_sha256": "4454585a76e191028a46b0238913bec48075fd41b93acf2ac8472a22e61dba8c",
+      "dependencies": [
+        "GroundCollision"
+      ]
+    },
+    {
+      "name": "RapidFire",
+      "version": "1.1.0-local",
+      "local_file": "src/libraries/RapidFire.j",
+      "source": "Local TerrainDev implementation, 2026-10-21",
+      "local_sha256": "590ea2e40bb0ec35489c3d95da794562caa3889d116cddb54955682ae7b2d878",
+      "dependencies": [
+        "GroundMotion",
+        "Missile",
+        "Table",
+        "TimerUtils",
+        "SpellEffectEvent",
+        "RegisterPlayerUnitEvent"
+      ],
+      "changes": [
+        "ShotsTeam: twelve Vinz player-color models, owner color at emission, explicit individual/team override and clearColor (red enum0 is not an absence sentinel).",
+        "Collision radius remains16; body width calibrated to32 with visual scale16/5.832; trail/glow/death stay decorative. Original shoot(unit,x,y) API retained."
+      ]
+    },
+    {
+      "name": "RapidFireDemo",
+      "version": "1.0.0-local",
+      "local_file": "src/libraries/RapidFireDemo.j",
+      "source": "Local TerrainDev implementation, 2026-10-21",
+      "local_sha256": "4228d177c8e0e204833d6ce0e683cb95277a7fd1a11c8e6fc7f142562a97f1a5",
+      "dependencies": [
+        "RapidFire",
+        "MissileDiagnostics"
+      ]
+    },
+    {
+      "name": "X3Buster",
+      "version": "0.1.0-local",
+      "local_file": "src/libraries/X3Buster.j",
+      "source": "Local TerrainDev adaptation of user GIF, 2026-10-22",
+      "dependencies": [
+        "Missile",
+        "GroundCollision",
+        "TimerUtils"
+      ],
+      "local_sha256": "09c4f96e74c037ebf7bd9f75521329011bfddfb5fc707903861d5fe9bcbcfdd9"
+    },
+    {
+      "name": "X3BusterDemo",
+      "version": "0.1.0-local",
+      "local_file": "src/libraries/X3BusterDemo.j",
+      "source": "Local TerrainDev adaptation of user GIF, 2026-10-22",
+      "dependencies": [
+        "X3Buster",
+        "RapidFireDemo",
+        "SpellEffectEvent"
+      ],
+      "local_sha256": "11f7cd7dfb7d616e2bf50da250f979f33190a3137574f9466a5500449b59a4a2"
+    }
+  ]
+}

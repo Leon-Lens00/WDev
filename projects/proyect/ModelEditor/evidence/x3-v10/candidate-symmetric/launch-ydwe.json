@@ -1,0 +1,24 @@
+{
+  "mode": "YDWE single_test branch: one player, EnableHost=0, no -auto and no host",
+  "prefix": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v10-ydwe-runtime/pfx",
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/build/x3-v10-ydwe-runtime/pfx/drive_c/WarcraftIII/Maps/CodexTest/X3V10-774337fea09c.w3x",
+  "sha256": "774337fea09c39371d507d79f08b248bf2d6493cab15c27a0851a9db91ebaf4f",
+  "command": [
+    "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/_v2-entry-point",
+    "--verb=run",
+    "--",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+    "runinprefix",
+    "C:\\Tools\\YDWE\\YDWE.exe",
+    "-war3",
+    "-loadfile",
+    "Maps\\CodexTest\\X3V10-774337fea09c.w3x"
+  ],
+  "sourceConfigUnchanged": "349f8c86729ee854df02164b3fcee6f1fa31fef62138812e6d506bf97106a754",
+  "privateConfig": "498ce570edec3318729b042fa9683c4aede8e5b3bc42b895da8a8a0684c30fdf",
+  "binaryHashes": {
+    "war3.exe": "0ea3434d2bdfd9609eda5fce2a68febac2137af72846de52e0008b142297ffbd",
+    "d3d8.dll": "9152ba43386e756790a66f61cdcee01b3287d156d4161c7456d816faa82fc364",
+    "d3d9.dll": "265888c31ca78dffa290c39cb7e50bfb02762590e41927906e46fb32f01497fa"
+  }
+}

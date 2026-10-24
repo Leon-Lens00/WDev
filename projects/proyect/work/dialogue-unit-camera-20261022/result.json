@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-22",
+  "target": "Warcraft III Classic 1.27b",
+  "map_sha256": "b80ca9d93ca03939c5c46e9eccd99a59d7957c837b712d17c0425f1935f92f67",
+  "pid": 623953,
+  "build": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/build/20261022-160921-857626",
+  "native_example": [
+    "Inventory.onDisplay",
+    "TerrainInventory.Start",
+    "UIPicture.create",
+    "uidm"
+  ],
+  "passed": [
+    "normal HUD and command card remain visible",
+    "no cinematic / no automatic dialogue opening",
+    "camera follows selectable Hpal",
+    "frame visible while walking with right-click order",
+    "active dialogue teleport zone1 and return zone0",
+    "close/open/restart without persistent frame left behind in sampled cases",
+    "page transition and red/blue variants",
+    "Esc advances while HUD is visible",
+    "confirmed S exit, process absent"
+  ],
+  "limitations": [
+    "brief single-player test at 1920x1080",
+    "small transient frame/text offset during walking not yet measured",
+    "editor/native visual calibration remains approximate",
+    "dummy replacement tested as a configuration: individual responsible field not isolated",
+    "compact presentation not sampled in this new gameplay run",
+    "no multiplayer or editor roundtrip"
+  ],
+  "visual_approved": false,
+  "exit": {
+    "confirmation": "S",
+    "exited": true,
+    "sigterm_needed": false
+  },
+  "evidence_directory": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/evidence"
+}

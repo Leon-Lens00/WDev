@@ -1,0 +1,13 @@
+`codegraph_explore` was unavailable, so I inspected `Jass.j` directly.
+
+The chain uses direct calls between private functions inside `library Jass` ([Jass.j:1](Jass.j:1)):
+
+1. **`Jass.assert(b, s)`** calls `error("assert: " + s)` only when `b` is false. When `b` is true, it does nothing ([Jass.j:114](Jass.j:114)).
+2. **`Jass.error(s)`** unconditionally calls `print(s)`, then evaluates `set i = 1/0` ([Jass.j:108](Jass.j:108)).
+3. **`Jass.print(s)`** calls `DisplayTimedTextToPlayer(GetLocalPlayer(), 0, 0, 120, s)` ([Jass.j:99](Jass.j:99)).
+
+There is no callback, trigger, or `trace` intermediary. `trace` independently calls `print` and returns `0.0` ([Jass.j:103](Jass.j:103)).
+
+The concrete assertion caller is `parseIf`: after resetting `LastElseif` and parsing elseif branches, it asserts `LastElseif.elseBody == 0`, with message `"last elseif body zero"` ([Jass.j:1367](Jass.j:1367)).
+
+The division-by-zero expression is explicit; its runtime effect was not verified because no project code was executed.
