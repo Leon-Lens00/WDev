@@ -1,0 +1,39 @@
+{
+  "upstream_repository": "https://github.com/obra/superpowers",
+  "upstream_version": "7.0.0",
+  "upstream_commit": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+  "upstream_author": "Jesse Vincent",
+  "license": "MIT",
+  "adaptation_date": "2026-10-20",
+  "adaptation": "Local derivative, not installation of the Superpowers marketplace plugin",
+  "changes": [
+    "Scope by task, not global bootstrap",
+    "Conditional Warcraft guidance through existing skills",
+    "Proportional verification; no forced TDD/review dependency",
+    "Persistent investigation decisions; no automatic scratch deletion"
+  ],
+  "source_files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+      "source_url": "https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/systematic-debugging/SKILL.md"
+    },
+    {
+      "path": "root-cause-tracing.md",
+      "sha256": "75b933b6a8c40bdb2031b10f21654395b56ec6ab6bc7b018c18d3fe57aeb7fb8",
+      "source_url": "https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/systematic-debugging/root-cause-tracing.md"
+    },
+    {
+      "path": "condition-based-waiting.md",
+      "sha256": "e89fec8400d6cd50f43407cec9fab50976ba4d55d0ec2eb51c0bd68036b54c26",
+      "source_url": "https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/systematic-debugging/condition-based-waiting.md"
+    },
+    {
+      "path": "defense-in-depth.md",
+      "sha256": "1e175fb86fc357e58c6aebf5441e481e1b7868b4380c0456b63a17eefbd18ba7",
+      "source_url": "https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/systematic-debugging/defense-in-depth.md"
+    }
+  ],
+  "global_bootstrap_installed": false,
+  "additional_Superpowers_skills_required": []
+}

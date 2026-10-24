@@ -220,7 +220,7 @@ examples and tests use the authored suite-owned `Smoke.j` fixture instead.
   does not contain those effects. Do not invoke it automatically.
 
 For compilation, manually review the existing project build instructions and
-`.pi/skills/build-warcraft3-vjass-127b/` safety/prerequisite references first.
+`skills/claude/build-warcraft3-vjass-127b/` safety/prerequisite references first.
 Match exact headers, distribution and patch provenance, then separately obtain
 compiler evidence. Editor/game launch and multiplayer tests need distinct
 permission and evidence; graphical launchers have additional uninspected Steam

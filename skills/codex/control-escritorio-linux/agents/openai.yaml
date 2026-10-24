@@ -1,0 +1,4 @@
+interface:
+  display_name: "Control del escritorio Linux"
+  short_description: "Capturas, clics y teclado en Hyprland local"
+  default_prompt: "Usa $control-escritorio-linux para comprobar las herramientas disponibles y realizar la tarea solicitada en mi escritorio."

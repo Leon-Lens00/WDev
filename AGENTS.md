@@ -4,7 +4,7 @@ This project-specific guidance supplements the active agent instructions; it doe
 not replace their safety, authorization or workflow rules.
 
 - Default Warcraft target: **Warcraft III Classic 1.27b**, not Reforged or Lua.
-  For Warcraft work, load `.pi/skills/build-warcraft3-vjass-127b/SKILL.md` and its
+  For Warcraft work, load `skills/claude/build-warcraft3-vjass-127b/SKILL.md` and its
   relevant references before changing code or assessing compatibility.
 - Prefer the read-only `wc3_workshop` Pi tool, or
   `python3 -B tools/wc3-workshop/wc3.py --help`. See

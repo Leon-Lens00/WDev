@@ -1,0 +1,4 @@
+interface:
+  display_name: "Planificar trabajos técnicos"
+  short_description: "Planes por fases con dependencias y evidencia"
+  default_prompt: "Usa $writing-plans para organizar este cambio en fases verificables y guardar las decisiones necesarias para retomarlo."

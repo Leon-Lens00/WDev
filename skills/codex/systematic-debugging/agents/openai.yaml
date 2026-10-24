@@ -1,0 +1,4 @@
+interface:
+  display_name: "Depuración sistemática"
+  short_description: "Investigar causas y verificar correcciones reales"
+  default_prompt: "Usa $systematic-debugging para reproducir este fallo, localizar su causa y verificar la corrección en el entorno del proyecto."

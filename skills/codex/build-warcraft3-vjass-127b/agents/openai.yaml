@@ -1,0 +1,4 @@
+interface:
+  display_name: "Warcraft III vJASS 1.27b"
+  short_description: "Compila y audita mapas Classic en CachyOS/Wine"
+  default_prompt: "Usa $build-warcraft3-vjass-127b para compilar, recuperar o auditar este mapa Classic 1.27b con la toolchain local verificada."

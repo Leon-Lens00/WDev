@@ -1,0 +1,4 @@
+interface:
+  display_name: "Crear misiles para Warcraft III 1.27b"
+  short_description: "Diseñar proyectiles con ejemplos de BPower"
+  default_prompt: "Usa $crear-misiles-warcraft3-127b para diseñar esta habilidad de misil usando los ejemplos locales y el entorno Classic."

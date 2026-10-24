@@ -1,0 +1,24 @@
+{
+  "upstream_repository": "https://github.com/obra/superpowers",
+  "upstream_version": "7.0.0",
+  "upstream_commit": "b739a8af570e10a95898f2bdf6cec97467fa6c12",
+  "upstream_author": "Jesse Vincent",
+  "license": "MIT",
+  "adaptation_date": "2026-10-20",
+  "adaptation": "Local derivative, not installation of the Superpowers marketplace plugin",
+  "changes": [
+    "Multi-stage technical tasks only",
+    "Persistent project plans and evidence",
+    "Distinguish planned checks from observed results",
+    "Respect existing authorization; no forced execution/review/model chain"
+  ],
+  "source_files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+      "source_url": "https://github.com/obra/superpowers/blob/b739a8af570e10a95898f2bdf6cec97467fa6c12/skills/writing-plans/SKILL.md"
+    }
+  ],
+  "global_bootstrap_installed": false,
+  "additional_Superpowers_skills_required": []
+}

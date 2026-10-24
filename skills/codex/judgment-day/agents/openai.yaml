@@ -1,0 +1,4 @@
+interface:
+  display_name: "Judgment Day"
+  short_description: "Doble revisión adversarial con alcance verificable"
+  default_prompt: "Usa $judgment-day para revisar este cambio con dos jueces independientes."

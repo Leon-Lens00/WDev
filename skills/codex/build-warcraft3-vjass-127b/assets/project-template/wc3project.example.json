@@ -1,0 +1,15 @@
+{
+  "name": "My Warcraft III Map",
+  "target": "Warcraft III 1.27b",
+  "base_map": "maps/originals/MyMap.w3x",
+  "entrypoint": "src/Main.j",
+  "source_root": "src",
+  "toolchain": "wc3toolchain.json",
+  "output_map": "dist/MyMap-dev.w3x",
+  "build_dir": "build",
+  "report": "reports/build-report.json",
+  "sync_wct": true,
+  "wct_import": "../src/Main.j",
+  "archive_files": [],
+  "local_launcher": "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py"
+}
