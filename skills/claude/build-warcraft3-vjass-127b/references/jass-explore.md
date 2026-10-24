@@ -1,88 +1,94 @@
 # CodeGraph original con soporte local JASS/vJASS
 
-Instalación activa: `/home/snz/Documentos/MCP W3/codegraph-vjass`, basada en el
-CodeGraph upstream v1.6.2, commit `6560052a6f856855d3f71eee838fd66ccfa4285d`.
-El extractor/resolvedor JASS/vJASS está integrado dentro del original: no llama a
-jassgraph ni depende de Go. Reutiliza SQLite/FTS, consultas, exploración, impacto,
-persistencia y sincronización incremental del original.
+Instalación activa de esta PC: `/home/snz/Documentos/MCP W3/codegraph-vjass`,
+basada en upstream1.6.2, commit `6560052a6f856855d3f71eee838fd66ccfa4285d`.
+Identidad MCP/daemon vigente: **1.6.2+jass-vjass.5**, extracción **32**, esquema **12**.
+`codegraph --version` conserva la versión base1.6.2; no usarla para distinguir el
+parche local. Fuente de capacidades/límites: [JASS-VJASS.md](</home/snz/Documentos/MCP W3/codegraph-vjass/JASS-VJASS.md>).
+No es una versión oficial upstream ni un compilador JASS.
 
-Servidor MCP `codegraph`, herramienta principal `codegraph_explore`. El registro
-se guarda en `/home/snz/.codex/config.toml` (Codex) y en `.mcp.json` de la raíz del repo (Claude Code; requiere aprobar el servidor al abrir la sesión). El catálogo de un chat anterior puede
-requerir recargar MCP o iniciar una sesión que lea la configuración. El puente
-anterior `wc3-jass-explore` está desactivado, conservado como alternativa manual.
+## Clientes, fuentes y raíces
 
-## Alcance y uso
+Servidor MCP `codegraph`, herramienta `codegraph_explore`. Codex lo registra en
+`/home/snz/.codex/config.toml`; Claude en `.mcp.json` de la entrada del proyecto.
+Claude necesita la aprobación local del servidor; tener el archivo no acredita
+conexión. Comprobar `claude mcp get codegraph` y una consulta positiva de la sesión.
+Los clientes abiertos antes de actualizar el backend deben recargarse: reconstruir
+el índice no reemplaza su código en memoria.
 
-Elegir la raíz explícita del proyecto del usuario; no indexar todo el taller ni
-otro mapa como muestra. CodeGraph escribe su índice `.codegraph/` en la raíz
-elegida; no modifica fuentes ni mapas. Necesita fuentes de texto extraídas: no
-extrae por sí solo `.w3x`, `.w3m`, `.wct` o `.wtg`. Crear el índice si preparar ese
-proyecto está dentro de la tarea autorizada; no crear índices de proyectos ajenos.
+Para este proyecto compartido, las fuentes activas siguen en Proyect y UI Studio.
+La tabla completa/autorización de raíces está en
+`/home/snz/Documentos/ChatGPT/Proyect/AGENTS.md`; UI tiene su guía específica.
+WDev conserva snapshots: no consultar un índice original como si acreditara otra
+copia. Si el usuario elige desarrollar una copia, delimitarla e indexarla con sus
+propios perfiles. No inicializar todo WDev, Proyect, el home ni carpetas ajenas.
+
+Para código ya indexado, consultar primero nombres concretos con `projectPath`
+explícito del componente. La fuente devuelta cuenta como leída; ampliar sólo lo
+no cubierto o no vigente. Las raíces no tienen aristas entre sí por estar en un
+mismo proyecto: consultar cada dependencia en su índice propietario.
 
 ```bash
-/home/snz/.local/bin/codegraph init /ruta/fuentes --yes
-/home/snz/.local/bin/codegraph query Nombre --path /ruta/fuentes --json
-/home/snz/.local/bin/codegraph explore 'Init Nombre' --path /ruta/fuentes
-/home/snz/.local/bin/codegraph sync /ruta/fuentes
-/home/snz/.local/bin/codegraph index /ruta/fuentes
+/home/snz/.local/bin/codegraph explore 'Nombre NombreRelacionado' --path /raiz/fuentes
+/home/snz/.local/bin/codegraph sync /raiz/fuentes
 ```
 
-En MCP, pasar `query` con nombres concretos y `projectPath` con la raíz elegida,
-especialmente si el servidor arrancó sin proyecto predeterminado. El original
-expone por defecto sólo `codegraph_explore`; las demás consultas se conservan en
-CLI/API y pueden habilitarse mediante la configuración original de herramientas.
+Crear índices sólo en el alcance autorizado, reutilizando cobertura existente.
+Una raíz nueva mínima necesita configuración y fuentes reales antes de ejecutar
+`codegraph init /raiz/fuentes --yes`; consultar después archivos/símbolos reales.
+No crear un índice por cada modo o archivo. El grafo no extrae por sí solo W3X/WCT.
 
-## Interpretación
+## Perfil de compilación y cobertura
 
-Reconoce `.j`, `.jass`, `.vjass`, declaraciones, natives, parámetros, variables,
-constantes, bibliotecas/scopes, structs, interfaces, módulos, campos y métodos.
-Resuelve referencias compatibles con ámbitos léxicos, visibilidad privada,
-prefijos `public`, callbacks explícitos, tipos declarados de receptores y herencia.
-Conserva ambigüedad/receptores desconocidos sin escoger un método por semejanza.
-Las relaciones llevan `metadata.jassStaticSubset`; no son demostraciones del motor.
+La integración participa en el pipeline original: workers, SQLite/FTS, resolución,
+recorrido, impacto, CLI, MCP y watcher. Los otros lenguajes conservan sus rutas
+originales. No depende de un segundo servicio JASS ni ejecuta herramientas externas
+al indexar. La compilación/prueba autorizada se realiza por separado.
 
-La revisión local 3 añade proyecciones estáticas acotadas de textmacros con
-argumentos simples y módulos anidados entre fuentes indexables. Conserva el
-contexto thistype de cada consumidor y ámbitos de origen para helpers privados.
-Los miembros generados se anclan a la invocación; su docstring conserva el origen.
-La fuente devuelta sigue siendo la del disco, no un cuerpo generado editable.
-Los imports sólo enlazan archivos dentro del alcance ya indexable, sin abrir
-rutas externas. Cambios y borrados JASS reextraen los consumidores JASS aunque
-sus bytes permanezcan iguales.
+Reconoce scopes, tipos, bibliotecas/structs/interfaces/módulos, funciones/natives,
+visibilidad, herencia/delegates, this/thistype y receptores/retornos declarados.
+Incluye operadores/expresiones y cadenas tipadas, arrays, macros y módulos
+acotados (incluidos módulos generados), selección static-if/debug compatible con
+el perfil declarado, posibles valores de funciones, hooks, lifecycle e inicialización.
+Los cuerpos generados conservan origen/invocación; lo mostrado es fuente original,
+no un cuerpo expandido editable. Hay límites de trabajo, profundidad y tamaño.
 
-Resuelve algunos helpers execute/evaluate nombrados, ExecuteFunc literal global,
-operadores getter/setter y receptores simples de factories/arrays con tipo
-conocido. Los ciclos, ambigüedades y casos no admitidos conservan diagnósticos.
-Sólo simplifica condiciones simples thistype.miembro.exists demostradas por
-declaraciones públicas incondicionales del mismo struct, incluida su negación.
-Sigue siendo soporte **parcial**: sin Zinc, hooks/delegates, evaluación general
-de static-if/debug, data-flow completo, dispatch de valores de function-interface,
-strings calculados o cadenas arbitrarias. Tampoco implementa toda la semántica
-de herencia/destructores, macros con escapes o módulos generados por macros.
-Consultar JASS-VJASS.md para límites exactos; complete sólo es estado de indexado.
+`jass.mode` distingue conservative (predeterminado), release y debug; elegir según
+el builder real, nunca por conveniencia. `completeInputs` sólo puede ser true si
+la raíz representa la unidad completa de compilación. APIs Classic declaradas en
+`jass.apiFiles` deben estar indexadas dentro de la raíz y tener procedencia/hash;
+no importarlas otra vez al mapa si el compilador ya las recibe. Los datos SLK
+requieren `jass.dataFiles` explícito y respetan raíz/exclusiones. Ver un archivo o
+library opcional no prueba por sí solo que esté incluido en ese build.
 
-Usar JassHelper/pJASS con las APIs del mapa para compilación y compatibilidad
-Classic 1.27b. Este grafo no valida recursos, desync, ejecución ni multijugador.
+Los imports sólo enlazan entradas indexadas. Zinc/C/cJASS, herramientas externas,
+entradas generadas no indexadas, strings calculados y aliasing/dispatch no
+acreditado son fronteras explícitas. Sin información decisiva se conservan
+candidatos/desconocidos; no se elige un destino por semejanza. Una arista candidata
+no demuestra ejecución y una arista ausente no demuestra ausencia de consumidores.
 
-## Entorno y mantenimiento
+## Vigencia, errores y mantenimiento
 
-El lanzador usa el Node 24.16.0 del paquete linux-x64 original, aislado en
-`/home/snz/.local/share/codegraph-vjass/runtime/`; no utiliza ni cambia el Node 26
-del sistema. Conserva el kernel original para los otros lenguajes. Telemetría y
-comprobaciones de actualización están desactivadas en este lanzador.
+La primera consulta MCP abre/sincroniza la raíz y activa el watcher. Cambios en
+disco de cualquier agente se detectan mientras siga abierto; el proyecto puede
+liberarse tras10min sin consultas o al cerrar/desalojar el servidor. La siguiente
+consulta reabre y pone al día. No es vigilancia permanente fuera de la sesión.
+En uso sólo CLI, sincronizar después de editar antes de reutilizar el grafo.
 
-`codegraph --version` muestra la base 1.6.2; la identidad MCP/daemon es
-`1.6.2+jass-vjass.3`, diferente del upstream para evitar compartir el daemon
-equivocado. No ejecutar `upgrade` sobre esta variante: reemplazaría el soporte
-local. Para actualizar, conservar el parche y volver a aplicar/comprobar cambios.
-La extracción vigente es 30; reconstruir índices de revisiones anteriores y recargar los
-servidores MCP ya abiertos para evitar que sigan ejecutando la revisión anterior.
+Cambiar una fuente JASS, su perfil o datos declarados invalida también consumidores
+JASS sin cambios de bytes. Respetar avisos DISABLED/RECOVERING y archivos pendientes;
+reintentar/sync y usar lectura directa si la vigencia no puede comprobarse. Informar
+los fallos conforme al AGENTS.md del proyecto. Cero fuentes o cero coincidencias
+no acreditan cobertura positiva; usar símbolos reales y contrastar los límites.
 
-Capacidades y límites detallados: `JASS-VJASS.md` en el checkout. Evidencia:
-`/home/snz/Documentos/ChatGPT/Proyect/work/codegraph-original-vjass-20261020/`.
-La validación local no incluye la evaluación A/B de agentes con Claude/Sonnet ni
-certifica ahorros de tokens o soporte completo de vJASS.
+No ejecutar `codegraph upgrade`: sustituiría la adaptación por upstream. Integrar
+actualizaciones conservando el parche y sus comprobaciones. JassHelper/pJASS con
+las APIs del mapa validan compilación/compatibilidad Classic1.27b; consultas, tests
+del extractor, pruebas en juego y multijugador acreditan cosas diferentes.
+La instalación/consulta no certifica ahorro de tokens, FPS ni decisiones del agente.
 
-Como alternativa de lectura, el jassgraph anterior sigue disponible por su CLI;
-no mezclar sus candidatos léxicos con las relaciones resueltas de CodeGraph sin
-conservar su procedencia.
+El launcher `/home/snz/.local/bin/codegraph` usa el runtime Node aislado en
+`/home/snz/.local/share/codegraph-vjass/runtime`, sin cambiar el Node del sistema.
+Telemetría y actualización automática están desactivadas en ese launcher.
+La alternativa CLI jassgraph conserva su cobertura léxica; no mezclar sus candidatos
+con relaciones resueltas de CodeGraph sin mantener la procedencia.

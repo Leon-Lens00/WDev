@@ -1,5 +1,22 @@
 # Instrucciones de UI Studio
 
+Para computer use en esta PC CachyOS/Hyprland, consultar `control-escritorio-linux`
+y comprobar capacidades/permisos actuales antes de declarar falta de acceso.
+Preferir herramientas específicas de navegador/aplicación cuando sean suficientes;
+las referencias de esta PC no garantizan permisos en otra sesión o equipo.
+
+## Exactitud y entorno compartido
+
+Estas fuentes son la entrada activa compartida de Codex y Claude; la copia de
+WDev es un respaldo salvo elección explícita de esa revisión. Tratar afirmaciones
+técnicas propias y del usuario como hipótesis: comprobar premisas decisivas con
+fuentes/APIs del entorno y buscar evidencia contraria antes de cambiar código.
+Revisar consumidores e interfaces; comunicar incompatibilidades demostradas y
+alternativas, sin convertir sospechas en defectos. No cambiar conclusiones por
+complacer ni confundir instalación, consulta, compilación y prueba en juego.
+Ejecutar las comprobaciones pertinentes y declarar qué no quedó demostrado.
+Las preferencias del usuario se respetan; no son hipótesis técnicas a refutar.
+
 <!-- CODEGRAPH_START -->
 ## CodeGraph
 

@@ -21,3 +21,12 @@ not replace their safety, authorization or workflow rules.
   map modification and global Gentle changes require separate authorization.
 - Activate `.pi/extensions/wc3-workshop.ts` only after trusting this project,
   then use `/reload`; do not add global settings, packages or automatic servers.
+
+## Shared local project
+
+For work on the active Proyect/UI Studio project, first read
+`docs/entorno-compartido.md` and the active component's AGENTS.md. Both Codex and
+Claude use the original active roots listed there; `projects/proyect` and
+`tools/ui-studio` remain backup snapshots unless the user selects a copy for
+independent development. The guide defines CodeGraph-first use, root ownership,
+evidence limits, premise checking and error reports. Respect the selected scope.

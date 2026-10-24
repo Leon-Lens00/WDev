@@ -1,0 +1,158 @@
+[
+  {
+    "case": [
+      "TerrainDev active",
+      "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/src",
+      "RapidFire"
+    ],
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "found": "Found 41 symbols across 1 file.",
+        "error": false,
+        "zero": false,
+        "statusWarnings": []
+      }
+    }
+  },
+  {
+    "case": [
+      "TerrainDev builder",
+      "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/scripts",
+      "run_x3_pipeline.py"
+    ],
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "name": "TerrainDev builder",
+        "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/scripts",
+        "query": "run_x3_pipeline.py",
+        "error": false,
+        "found": "Found 13 symbols across 1 file. 1 file pinned from the query.",
+        "zero": false,
+        "statusWarnings": [],
+        "textLength": 2380
+      }
+    }
+  },
+  {
+    "case": [
+      "SNES scripts",
+      "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/scripts",
+      "run_lab.py"
+    ],
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "name": "SNES scripts",
+        "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/labs/x3-snes/scripts",
+        "query": "run_lab.py",
+        "error": false,
+        "found": "Found 4 symbols across 1 file. 1 file pinned from the query.",
+        "zero": false,
+        "statusWarnings": [],
+        "textLength": 4084
+      }
+    }
+  },
+  {
+    "case": [
+      "Inventory",
+      "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+      "InventorySys"
+    ],
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "name": "Inventory",
+        "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/inventory-integration",
+        "query": "InventorySys",
+        "error": false,
+        "found": "Found 69 symbols across 1 file.",
+        "zero": false,
+        "statusWarnings": [],
+        "textLength": 12570
+      }
+    }
+  },
+  {
+    "case": [
+      "Dialogue",
+      "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system",
+      "Dialogue Conversation"
+    ],
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "name": "Dialogue",
+        "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system",
+        "query": "Dialogue Conversation",
+        "error": false,
+        "found": "Found 63 symbols across 1 file.",
+        "zero": false,
+        "statusWarnings": [],
+        "textLength": 11884
+      }
+    }
+  },
+  {
+    "case": [
+      "ModelEditor",
+      "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor",
+      "model.cjs"
+    ],
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "name": "ModelEditor",
+        "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor",
+        "query": "model.cjs",
+        "error": false,
+        "found": "Found 13 symbols across 1 file. 1 file pinned from the query.",
+        "zero": false,
+        "statusWarnings": [],
+        "textLength": 5057
+      }
+    }
+  },
+  {
+    "case": [
+      "WaveSys",
+      "/home/snz/Documentos/ChatGPT/Proyect/WaveSys",
+      "SwlsWave"
+    ],
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "name": "WaveSys",
+        "projectPath": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys",
+        "query": "SwlsWave",
+        "error": false,
+        "found": "Found 1 symbol across 1 file.",
+        "zero": false,
+        "statusWarnings": [],
+        "textLength": 5105
+      }
+    }
+  },
+  {
+    "case": [
+      "UI Studio",
+      "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+      "dialogue-editor.js"
+    ],
+    "result": {
+      "status": "fulfilled",
+      "value": {
+        "name": "UI Studio",
+        "projectPath": "/home/snz/Documentos/WarDatsPy/ui-studio/dist",
+        "query": "dialogue-editor.js",
+        "error": false,
+        "found": "Found 24 symbols across 1 file. 1 file pinned from the query.",
+        "zero": false,
+        "statusWarnings": [],
+        "textLength": 14407
+      }
+    }
+  }
+]

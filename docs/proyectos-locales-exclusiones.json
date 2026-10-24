@@ -79214,7 +79214,27 @@
       "root": "projects/proyect",
       "path": "work/shots-vol-i-origen-20261022/plot-env/share/man/man1/ttx.1",
       "reason": "installed tooling/virtual environment or historical compiled dist"
+    },
+    {
+      "root": "projects/proyect",
+      "path": ".claude/settings.local.json",
+      "reason": "local approval/permission settings"
+    },
+    {
+      "root": "projects/proyect",
+      "path": ".claude/skills",
+      "reason": "local skill-directory symlink; WDev has its own relative shared skill link"
+    },
+    {
+      "root": "tools/ui-studio",
+      "path": ".claude/settings.local.json",
+      "reason": "local approval/permission settings"
+    },
+    {
+      "root": "tools/ui-studio",
+      "path": ".claude/skills",
+      "reason": "local skill-directory symlink; WDev has its own relative shared skill link"
     }
   ],
-  "count": 15843
+  "count": 15847
 }

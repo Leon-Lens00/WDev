@@ -1,2 +1,6 @@
 .cache/
 test-results/
+
+# Aprobaciones locales de Claude
+**/.claude/settings.local.json
+**/.codegraph/

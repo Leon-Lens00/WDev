@@ -2,7 +2,10 @@
   "mcpServers": {
     "codegraph": {
       "command": "/home/snz/.local/bin/codegraph",
-      "args": ["serve", "--mcp"]
+      "args": [
+        "serve",
+        "--mcp"
+      ]
     }
   }
 }

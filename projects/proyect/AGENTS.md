@@ -1,5 +1,14 @@
 # Instrucciones del proyecto
 
+## Escritorio Linux compartido
+
+Esta PC usa CachyOS con Hyprland/Wayland. Para capturas, clics, escritura en
+aplicaciones o pruebas visuales, cargar `control-escritorio-linux` y comprobar
+capacidades/permisos de la sesión actual antes de afirmar que no se puede.
+Preferir CLI/API de la aplicación cuando resuelva la tarea. Las capacidades
+documentadas de grim/hyprctl/ydotool/wtype no otorgan permisos ni garantizan
+acceso desde otro equipo o sesión; comprobar ventanas/monitores actuales.
+
 ## Edición de modelos
 
 - Para crear o editar modelos, animaciones y efectos MDL/MDX, usar

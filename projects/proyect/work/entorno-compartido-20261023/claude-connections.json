@@ -1,0 +1,20 @@
+[
+  {
+    "root": "/home/snz/Documentos/ChatGPT/Proyect",
+    "exit": 0,
+    "connected": true,
+    "output": "codegraph:\n  Scope: Project config (shared via .mcp.json)\n  Status: \u2714 Connected\n  Type: stdio\n  Command: /home/snz/.local/bin/codegraph\n  Args: serve --mcp\n\nTo remove this server, run: claude mcp remove codegraph -s project\n"
+  },
+  {
+    "root": "/home/snz/Documentos/ChatGPT/WDev",
+    "exit": 0,
+    "connected": true,
+    "output": "codegraph:\n  Scope: Project config (shared via .mcp.json)\n  Status: \u2714 Connected\n  Type: stdio\n  Command: /home/snz/.local/bin/codegraph\n  Args: serve --mcp\n\nTo remove this server, run: claude mcp remove codegraph -s project\n"
+  },
+  {
+    "root": "/home/snz/Documentos/WarDatsPy/ui-studio",
+    "exit": 0,
+    "connected": true,
+    "output": "codegraph:\n  Scope: Project config (shared via .mcp.json)\n  Status: \u2714 Connected\n  Type: stdio\n  Command: /home/snz/.local/bin/codegraph\n  Args: serve --mcp\n\nTo remove this server, run: claude mcp remove codegraph -s project\n"
+  }
+]

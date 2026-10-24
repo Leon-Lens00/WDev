@@ -14,8 +14,8 @@
     {
       "path": "projects/proyect/AGENTS.md",
       "source": "/home/snz/Documentos/ChatGPT/Proyect/AGENTS.md",
-      "bytes": 16394,
-      "sha256": "129223c18151c8eae6c9f319f7ac2b30936937ee327b6cbacf0629adf1e12ea6"
+      "bytes": 16888,
+      "sha256": "33ce3b5e2f943789afe23e88caff1fc64e94c99ba1005b055eacb0ee89548bd6"
     },
     {
       "path": "projects/proyect/work/codegraph-etiquetas-jurados-20261021-live.txt",
@@ -104750,8 +104750,8 @@
     {
       "path": "tools/ui-studio/.gitignore",
       "source": "/home/snz/Documentos/WarDatsPy/ui-studio/.gitignore",
-      "bytes": 22,
-      "sha256": "29e4902ea44c7e54ca98c417c0b9b6e66170c8991d236df8fda39bc763f5fcbe"
+      "bytes": 102,
+      "sha256": "ee107dc32f7dabff052d981e34cd880175c724157829297799162a3911b67195"
     },
     {
       "path": "tools/ui-studio/Abrir UI Studio.cmd",
@@ -104810,8 +104810,8 @@
     {
       "path": "tools/ui-studio/AGENTS.md",
       "source": "/home/snz/Documentos/WarDatsPy/ui-studio/AGENTS.md",
-      "bytes": 5214,
-      "sha256": "367007dbb64224c63ffab0c121ffd01890b7ec26de8b5420c3efc027839b195c"
+      "bytes": 6293,
+      "sha256": "f8676cc16c558f97bbee5a35c2641c2957041f318cf11feabfccbe54daf52dc4"
     },
     {
       "path": "tools/ui-studio/design-qa.md",
@@ -106276,8 +106276,117 @@
       "source": "/home/snz/Documentos/WarDatsPy/ui-studio/tests/portrait-blend.test.mjs",
       "bytes": 1026,
       "sha256": "9b19259f498679b06749532d276930fe077f9169738d24d830979114aa443db0"
+    },
+    {
+      "path": "projects/proyect/.gitignore",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/.gitignore",
+      "bytes": 131,
+      "sha256": "bfce83224ef6d04c783c56b020975f17467008fc67bdf0dc18f2541b707c686a"
+    },
+    {
+      "path": "projects/proyect/.mcp.json",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/.mcp.json",
+      "bytes": 159,
+      "sha256": "035dd53013439a865797889fee7aa3d8b084f7a1cd8f81fced94a44b960e0812"
+    },
+    {
+      "path": "projects/proyect/CLAUDE.md",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/CLAUDE.md",
+      "bytes": 696,
+      "sha256": "7657dff59d99ff9024b6e1fee4ac0cf153c942252bb34f2379061768099f88af"
+    },
+    {
+      "path": "projects/proyect/ModelEditor/CLAUDE.md",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/ModelEditor/CLAUDE.md",
+      "bytes": 11,
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+    },
+    {
+      "path": "projects/proyect/TerrainDev/CLAUDE.md",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/CLAUDE.md",
+      "bytes": 11,
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+    },
+    {
+      "path": "projects/proyect/TerrainDev/dialogue-system/CLAUDE.md",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/dialogue-system/CLAUDE.md",
+      "bytes": 11,
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+    },
+    {
+      "path": "projects/proyect/docs/claude-entorno-verificacion-20261023.md",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/docs/claude-entorno-verificacion-20261023.md",
+      "bytes": 7534,
+      "sha256": "aab93a4e0d1222196adc1feff1cf05888f747266c9c7a8574377221b9f40e0dd"
+    },
+    {
+      "path": "projects/proyect/docs/entorno-compartido-codex-claude.md",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/docs/entorno-compartido-codex-claude.md",
+      "bytes": 4410,
+      "sha256": "bb6da4f3574b2845532fbcdb4fb191b4a79af0dccfe97c2e70f1aed03dccb7d0"
+    },
+    {
+      "path": "projects/proyect/docs/planes/auditar-entorno-claude-20261023.md",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/docs/planes/auditar-entorno-claude-20261023.md",
+      "bytes": 1932,
+      "sha256": "b27144dbbca571fcf29da8c9c0e2dd63a92ab17a2cbf30ffc28856b3ade63ac9"
+    },
+    {
+      "path": "projects/proyect/docs/planes/entorno-compartido-codex-claude-20261023.md",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/docs/planes/entorno-compartido-codex-claude-20261023.md",
+      "bytes": 2573,
+      "sha256": "d84c80a760d32c967aa40b73d31340dbb0d24019ae5057605192e153ee7e2370"
+    },
+    {
+      "path": "projects/proyect/informes/errores/resueltos/2026-10-23-222021-claude-codegraph-pendiente.md",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-222021-claude-codegraph-pendiente.md",
+      "bytes": 3870,
+      "sha256": "f496d3c33019ccec91f714a00585c2e36f43828dea7355cc3ebb617de349869e"
+    },
+    {
+      "path": "projects/proyect/work/entorno-compartido-20261023/claude-connections.json",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/entorno-compartido-20261023/claude-connections.json",
+      "bytes": 1063,
+      "sha256": "a18f15aa14155043a51b08d3766af0906d5e2830c5c4c54ffc1ec6ea3938094b"
+    },
+    {
+      "path": "projects/proyect/work/entorno-compartido-20261023/claude-context-verification.json",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/entorno-compartido-20261023/claude-context-verification.json",
+      "bytes": 1747,
+      "sha256": "4410652d54987a66f7fc585c9e91ea9c8e82d58293e753b03903eaef96503409"
+    },
+    {
+      "path": "projects/proyect/work/entorno-compartido-20261023/codegraph-roots.json",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/entorno-compartido-20261023/codegraph-roots.json",
+      "bytes": 4100,
+      "sha256": "a7b2cfebb7fbefc1312aace2aec1e24c911844234a1bff87045e68b5825faefe"
+    },
+    {
+      "path": "projects/proyect/work/entorno-compartido-20261023/reference-hashes.json",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/entorno-compartido-20261023/reference-hashes.json",
+      "bytes": 402,
+      "sha256": "7daeca6a4e59751ed0a22395aed4db9d221583e3de1cc5e9f20f17a2f9b1e240"
+    },
+    {
+      "path": "projects/proyect/work/entorno-compartido-20261023/skills-validation.json",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/work/entorno-compartido-20261023/skills-validation.json",
+      "bytes": 2722,
+      "sha256": "db4fc4125de4edbfbce710c9e5c123114994d5407d8ac01df797c46227cb86c8"
+    },
+    {
+      "path": "tools/ui-studio/.mcp.json",
+      "source": "/home/snz/Documentos/WarDatsPy/ui-studio/.mcp.json",
+      "bytes": 159,
+      "sha256": "035dd53013439a865797889fee7aa3d8b084f7a1cd8f81fced94a44b960e0812"
+    },
+    {
+      "path": "tools/ui-studio/CLAUDE.md",
+      "source": "/home/snz/Documentos/WarDatsPy/ui-studio/CLAUDE.md",
+      "bytes": 409,
+      "sha256": "5d9e4b68a48b32a45e74a5ba2019b9ca0cdf1b515d343986db4ee7cdcf37d9e6"
     }
   ],
-  "count": 17711,
-  "bytes": 1285743792
+  "count": 17729,
+  "bytes": 1285777385,
+  "configurationUpdated": "2026-10-23T22:43:53.421856-05:00"
 }
