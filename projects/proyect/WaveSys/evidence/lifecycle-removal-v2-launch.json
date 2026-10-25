@@ -1,0 +1,22 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-lifecycle-removal-v2.w3x",
+  "sha256": "9f0c4228b7ea8ddf0ab0d68e4c9e7ed2b9cf11cd207ecb68d9807d425d8f0b3c",
+  "staged": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile/pfx/drive_c/WarcraftIII/Maps/CodexTest/9f0c4228b7ea8ddf.w3x",
+  "expected_log": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile/pfx/drive_c/WarcraftIII/CustomMapData/Logs/WaveSysAudit-lifecycle-removal-v2.txt",
+  "launcher_pid": 1336297,
+  "command": [
+    "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/_v2-entry-point",
+    "--verb=run",
+    "--",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+    "runinprefix",
+    "C:\\WarcraftIII\\war3.exe",
+    "-loadfile",
+    "Maps\\CodexTest\\9f0c4228b7ea8ddf.w3x",
+    "-window"
+  ],
+  "started": "2026-10-24T01:48:55-0500",
+  "profile": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile",
+  "gpu": "intel-igpu override (this run only)",
+  "scope": "single-player local test; not multiplayer"
+}

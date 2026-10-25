@@ -1,0 +1,22 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-rf-survival-v1.w3x",
+  "sha256": "e322aca5c0e7a62e8209c4c1dfdd8e54db0424c1ef51b406fa4c450857cfe41c",
+  "staged": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile/pfx/drive_c/WarcraftIII/Maps/CodexTest/e322aca5c0e7a62e.w3x",
+  "expected_log": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile/pfx/drive_c/WarcraftIII/CustomMapData/Logs/WaveSysAudit-rf-survival-v1.txt",
+  "launcher_pid": 121253,
+  "command": [
+    "/home/snz/.local/share/Steam/steamapps/common/SteamLinuxRuntime_4/_v2-entry-point",
+    "--verb=run",
+    "--",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/runtime/runtimes/GE-Proton11-7-x86_64/proton",
+    "runinprefix",
+    "C:\\WarcraftIII\\war3.exe",
+    "-loadfile",
+    "Maps\\CodexTest\\e322aca5c0e7a62e.w3x",
+    "-window"
+  ],
+  "started": "2026-10-25T02:15:14-0500",
+  "profile": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/.cache/player-test-profile",
+  "gpu": "profile-default (NVIDIA)",
+  "scope": "single-player local test; not multiplayer"
+}

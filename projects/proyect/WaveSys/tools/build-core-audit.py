@@ -18,7 +18,7 @@ def run(args, name):
     p = subprocess.run(command, text=True, capture_output=True)
     (EVIDENCE / (RUN_ID + '-' + name)).write_text(json.dumps(dict(command=command, returncode=p.returncode, stdout=p.stdout, stderr=p.stderr), indent=2))
     if p.returncode:
-        raise RuntimeError(f'Failed; see {EVIDENCE / name}')
+        raise RuntimeError(f'Failed; see {EVIDENCE / (RUN_ID + "-" + name)}')
 
 def read(path):
     raw = path.read_bytes()
@@ -35,17 +35,16 @@ def build():
     mapcode, n = re.subn(r'^\s*call ConditionalTriggerExecute\(gg_trg_Melee_Initialization\)[^\n]*', '\n    // Melee initialization disabled only in audit map.', mapcode, flags=re.M)
     assert n == 2, n
     if SOURCE_SET == 'core':
-        sources = ['libraries/Table.j', 'libraries/TimerUtils.j', 'libraries/SwlsMath.j',
-                   'WaveSysAnAI/SwlsWave/SwlsWave.j', 'WaveSysAnAI/SwlsWave/WavePointGroups.j']
+        # Clean core (rework phase 1): only Table and TimerUtils, plus the point, presentation and owner-policy layers.
+        sources = ['libraries/Table.j', 'libraries/TimerUtils.j',
+                   'WaveSysAnAI/SwlsWave/SwlsWave.j', 'WaveSysAnAI/SwlsWave/WavePointGroups.j',
+                   'WaveSysAnAI/SwlsWave/WaveSpawnFx.j', 'WaveSysAnAI/SwlsWave/WaveOwnerPolicy.j']
     else:
         sources = ['Players/WavePlayerUtils.j']
         if SOURCE_SET == 'players-coexist':
             sources.append('libraries/PlayerUtils.j')
-    # WaveTest uses this Classic native but obtains its declaration indirectly
-    # from SpellIndex in the full build. Declare the same native for isolation.
-    boundary = 'native UnitAlive takes unit id returns boolean\nlibrary TheEnd\nfunction endF takes string nextWaveFunc returns nothing\nendfunction\nendlibrary\n'
-    if SOURCE_SET != 'core':
-        boundary = ''
+    # The clean core no longer needs a TheEnd stub nor an injected UnitAlive declaration.
+    boundary = ''
     bodies = []
     for s in sources:
         body = read(ROOT/'src'/s)
@@ -53,12 +52,6 @@ def build():
             correct = 'set this.positions[moved] = index + 1'
             assert body.count(correct) == 1
             body = body.replace(correct, '// Negative control: omit moved player inverse update.')
-        if INIT_SLOT and s.endswith('SwlsWave.j'):
-            start = body.index('private function OnUnitDeath takes')
-            prefix, suffix = body[:start], body[start:]
-            suffix, n = re.subn(r'local WaveSlot s\b', 'local WaveSlot s = 0', suffix, count=1)
-            assert n == 1
-            body = prefix + suffix
         bodies.append(body)
     source = OUT / (RUN_ID + '-input.j')
     source.write_text(boundary + '\n'.join(bodies)
@@ -78,10 +71,10 @@ def build():
     assert BASE.read_bytes()[:512] == target.read_bytes()[:512]
     result = dict(map=str(target), sha256=hashlib.sha256(target.read_bytes()).hexdigest(),
                   base=str(BASE), base_sha256=hashlib.sha256(BASE.read_bytes()).hexdigest(),
-                  sources=sources, boundary='TheEnd.endF no-op; empty callbacks in every test' if SOURCE_SET == 'core' else 'None: real player library and Classic APIs only',
+                  sources=sources, boundary='None: clean core without TheEnd/UnitAlive stubs' if SOURCE_SET == 'core' else 'None: real player library and Classic APIs only',
                   fixture=FIXTURE,
                   diagnostic_change=('Omit moved inverse update (expected negative control)' if BREAK_INVERSE else
-                                     'OnUnitDeath local slot initialized to zero' if INIT_SLOT else 'None: exact sources'),
+                                     'None: exact sources'),
                   purpose='Isolated '+SOURCE_SET+' integration in real Classic engine; no full survival map coverage',
                   jass_sha256=hashlib.sha256(compiled.read_bytes()).hexdigest(), compiled=True, validated=True,
                   reextracted=True, other_members_preserved=True, game_tested=False)
@@ -92,16 +85,14 @@ if __name__ == '__main__':
     import argparse
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-id', required=True)
-    parser.add_argument('--initialize-death-slot', action='store_true')
     parser.add_argument('--fixture', default='tests/CoreAudit.j')
     parser.add_argument('--source-set', choices=['core', 'players', 'players-coexist'], default='core')
     parser.add_argument('--break-roster-inverse', action='store_true', help='Expected negative control; generated input only')
     args = parser.parse_args()
     assert re.fullmatch(r'[a-zA-Z0-9-]+', args.run_id)
-    RUN_ID, INIT_SLOT = args.run_id, args.initialize_death_slot
+    RUN_ID = args.run_id
     FIXTURE = args.fixture
     SOURCE_SET, BREAK_INVERSE = args.source_set, args.break_roster_inverse
-    assert not INIT_SLOT or SOURCE_SET == 'core'
     assert not BREAK_INVERSE or SOURCE_SET != 'core'
     assert (ROOT/FIXTURE).resolve().is_relative_to(ROOT/'tests')
     build()

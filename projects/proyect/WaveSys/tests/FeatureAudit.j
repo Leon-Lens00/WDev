@@ -1,5 +1,5 @@
 // Functional audit of exact core sources; does not patch production code.
-library WaveFeatureAudit initializer Init requires WaveTest, WavePointGroups
+library WaveFeatureAudit initializer Init requires WaveCore, WavePointGroups, WaveOwnerPolicy
 globals
     private string array lines
     private integer lineCount = 0
@@ -26,6 +26,9 @@ globals
     private unit fxUnit
     private real reservedX
     private real reservedY
+    private integer fxReserves = 0
+    private real fxReserveX = 0.
+    private real fxReserveY = 0.
     private integer timerBaseline
 endglobals
 
@@ -79,12 +82,19 @@ private function SpawnEvent takes nothing returns nothing
         set fxUnit = GetWaveEventUnit()
     endif
 endfunction
+private function ReserveEvent takes nothing returns nothing
+    if GetWaveEventWave() == fxWave then
+        set fxReserves = fxReserves + 1
+        set fxReserveX = GetWaveEventX()
+        set fxReserveY = GetWaveEventY()
+    endif
+endfunction
 private function DeathEvent takes nothing returns nothing
     local integer w = GetWaveEventWave()
     set died[w] = died[w] + 1
 endfunction
 private function NewWave takes integer cap, integer chance returns Wave
-    return Wave.create(cap, chance, 60.0, null, "", 1, 10, "")
+    return Wave.create(cap, chance, 60.0, 1, 10)
 endfunction
 
 private function Final takes nothing returns nothing
@@ -116,7 +126,7 @@ private function AfterMaterialize takes nothing returns nothing
     call Check(u != null and fxUnit == u and spawned[fxWave] >= 1, "FX reservation materializes and dispatches spawn context")
     call Check(u != null and GetUnitTypeId(u) == 'hfoo' and GetOwningPlayer(u) == Player(8), "materialized rawcode and owner match slot")
     call Check(u != null and IsWaveManagedUnit(u) and GetWaveByUnit(u) == fxWave and GetWaveSlotByUnit(u) == fxWave.slots[0], "materialized unit has wave/slot/index mapping")
-    call Check(u != null and SwlsDistance(GetUnitX(u), GetUnitY(u), reservedX, reservedY) < 128., "materialization uses reserved point despite reference moving")
+    call Check(u != null and SquareRoot((GetUnitX(u) - reservedX) * (GetUnitX(u) - reservedX) + (GetUnitY(u) - reservedY) * (GetUnitY(u) - reservedY)) < 128., "materialization uses reserved point despite reference moving")
     call Check(cancelledWave.isDestroyed, "graceful termination drains pending reservation and destroys wave")
     call Check(recycledWave.remainingToSpawn == 2 and recycledWave.slots[0].remaining == 2 and recycledWave.activeOnMap == 0, "destroyed old pending timer cannot mutate recycled wave; actual remaining=" + I2S(recycledWave.remainingToSpawn))
     call Note("Recycled wave id=" + I2S(recycledWave) + " old token=" + I2S(oldToken) + " new token=" + I2S(recycledWave.waveToken) + " oldSlot=" + I2S(oldSlot) + " newSlot=" + I2S(recycledWave.slots[0]))
@@ -127,9 +137,9 @@ private function AfterMaterialize takes nothing returns nothing
     call Check(externalSource != null, "external scenario really materialized a source")
     set externalUnit = CreateUnit(Player(9), 'hfoo', -4700., 3100., 0.)
     set before = externalWave.activeOnMap
-    call registerExternalUnit(externalSource, externalUnit, true)
+    call WaveRegisterExternalUnit(externalSource, externalUnit, true)
     call Check(externalWave.activeOnMap == before + 1 and GetWaveByUnit(externalUnit) == externalWave and ExternalIsBoss[GetHandleId(externalUnit)] == 1, "external boss registration updates mappings and counters")
-    call registerExternalUnit(externalSource, externalUnit, true)
+    call WaveRegisterExternalUnit(externalSource, externalUnit, true)
     call Check(externalWave.activeOnMap == before + 1, "duplicate external registration does not double count")
     call Check(not WaveCanSpawnUnitFromDefaultOwnerPid(externalSource, 8) and WaveCanSpawnUnitFromDefaultOwnerPid(externalSource, 10), "spawn helper enforces occupied owner cap and allows free owner")
     set manualUnit = WaveSpawnUnitFromDefaultOwnerPid(externalSource, 'hfoo', 10, -4750., 3050.)
@@ -149,6 +159,7 @@ endfunction
 
 private function BeforeMaterialize takes nothing returns nothing
     call Check(fxWave.getActiveIndexedCount() == 0 and fxWave.activeOnMap == 1, "effect stage has reservation but no materialized unit before 1.5 seconds")
+    call Check(fxReserves == 1 and fxReserveX == reservedX and fxReserveY == reservedY, "reserve event reports the reserved point for presentation")
     call Save("effect-visible")
     call TimerStart(phaseTimer, 1.15, false, function AfterMaterialize)
 endfunction
@@ -164,7 +175,7 @@ private function Begin takes nothing returns nothing
     local unit anchor
     call Note("BEGIN exact core feature audit; no source corrections")
     set timerBaseline = GetTimerUtilsInUse()
-    set w = Wave.create(0, -5, 0., null, "", 2, 10, "")
+    set w = Wave.create(0, -5, 0., 2, 10)
     call Check(w.perPlayerLimit == 1 and w.nearUnitChance == 0 and w.interval == 0.25, "create clamps invalid cap/chance/interval")
     call Check(w.activeOnMap == 0 and w.getToKillRemaining() == 0 and not w.isRunning and w.loopTimer == null, "new instance starts empty and inactive")
     call w.addSlot(0, 1, 1, 0, 0, -1, false, Player(8))
@@ -175,7 +186,7 @@ private function Begin takes nothing returns nothing
     set s = w.slots[0]
     call Check(s.limit == 1 and s.fxId == 0 and s.threatWeight == 1.0 and s.aiProfileId == 101 and s.laneId == 7 and s.behaviorFlags == 3, "slot defaults and AI metadata")
     call w.addSlot('hfoo', 1, 1, 9, 999, -1, true, Player(9))
-    call Check(w.pickSlot() == w.slots[1] and w.slots[1].fxId == FX_MAX, "highest eligible priority chosen; excessive FX clamped")
+    call Check(w.pickSlot() == w.slots[1] and w.slots[1].fxId == 999, "highest eligible priority chosen; fxId kept as opaque presentation data")
     set w.activeByPlayer[9] = 1
     call Check(w.pickSlot() == s, "owner cap excludes otherwise highest priority")
     set w.activeByPlayer[9] = 0
@@ -193,18 +204,15 @@ private function Begin takes nothing returns nothing
     call w.destroyWave()
 
     set w = NewWave(4, 0)
-    call w.addSlotByPlayers('hfoo', 3, false, 1, 1, 0, -1, false)
+    call WaveAddSlotByPlayers(w, 'hfoo', 3, false, 1, 1, 0, -1, false)
     call Check(w.slotCount == 5 and w.totalToSpawn == 15 and GetPlayerId(w.slots[0].owner) == 8 and GetPlayerId(w.slots[4].owner) == 12, "ByPlayers creates all five default owner slots without scaling")
     call w.destroyWave()
     set w = NewWave(4, 0)
-    call w.upsertSlotExByPlayer(99, 'hfoo', 2, false, 1, 1, 0, -1, false, Player(8), 1, 0, 0, 1.)
-    call w.upsertSlotExByPlayer(99, 'hfoo', 3, false, 9, 9, 0, -1, false, Player(8), 9, 0, 0, 1.)
+    call WaveUpsertSlotExByPlayer(w, 99, 'hfoo', 2, false, 1, 1, 0, -1, false, Player(8), 1, 0, 0, 1.)
+    call WaveUpsertSlotExByPlayer(w, 99, 'hfoo', 3, false, 9, 9, 0, -1, false, Player(8), 9, 0, 0, 1.)
     call Check(w.slotCount == 1 and w.totalToSpawn == 5 and w.slots[0].total == 5 and w.slots[0].limit == 1, "upsert adds amount without replacing existing slot policy")
-    call w.setAdditionalPerPlayerPercent(-20.)
-    call Check(w.getAdditionalPerPlayerPercent() == 0., "negative per-player percentage clamped")
-    call w.setFinishFunctionName("Example")
-    call Check(w.getFinishFunctionName() == "Example", "finish callback name setter/getter")
-    call w.setFinishFunctionName("")
+    call WaveSetAdditionalPerPlayerPercent(w, -20.)
+    call Check(WaveGetAdditionalPerPlayerPercent(w) == 0., "negative per-player percentage clamped")
     call w.destroyWave()
 
     set w = NewWave(4, 0)
@@ -315,6 +323,7 @@ private function Init takes nothing returns nothing
     call RegisterWaveFinishEvent(function FinishEvent)
     call RegisterWaveSpawnEvent(function SpawnEvent)
     call RegisterWaveDeathEvent(function DeathEvent)
+    call RegisterWaveReserveEvent(function ReserveEvent)
     call FogEnable(false)
     call FogMaskEnable(false)
     call TimerStart(phaseTimer, 1.0, false, function Begin)

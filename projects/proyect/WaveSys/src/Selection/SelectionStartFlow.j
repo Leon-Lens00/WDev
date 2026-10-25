@@ -4,8 +4,7 @@ library SelectionStartFlow requires TheEnd, GameState, InitialWaveMultiboard, Se
         call SelectionCreateClients()
         call SelectionShowClients()
         call ShowInitialWaveMultiboard()
-        set WaveTgg = "Trig_w1_Actions"
-        call StartInitialWaveCountdown()
+        call StartMatchCountdown("Trig_w1_Actions")
     endfunction
 
 endlibrary

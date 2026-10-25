@@ -1,4 +1,4 @@
-library WaveAuraSkills initializer Init requires Table, TimerUtils, WaveTest, TerrainPathability, WaveSkillVisuals
+library WaveAuraSkills initializer Init requires Table, TimerUtils, WaveCore, TerrainPathability, WaveSkillVisuals
 
     globals
         public constant integer WAVE_HKNI_UNIT_ID = 'hkni'
@@ -304,7 +304,7 @@ library WaveAuraSkills initializer Init requires Table, TimerUtils, WaveTest, Te
                 set WaveAuraUnitMemberIndex[GetHandleId(moved)] = index
             endif
         endif
-        call WaveAuraMemberUnitByKey.remove(lastKey)
+        call WaveAuraMemberUnitByKey.handle.remove(lastKey)
         call WaveAuraMemberHidByKey.remove(lastKey)
         call WaveAuraUnitOwnerAura.remove(hid)
         if WaveAuraUnitMemberIndex.has(hid) then
@@ -329,7 +329,7 @@ library WaveAuraSkills initializer Init requires Table, TimerUtils, WaveTest, Te
             if WaveAuraMemberHidByKey.has(key) then
                 call WaveAuraMemberHidByKey.remove(key)
             endif
-            call WaveAuraMemberUnitByKey.remove(key)
+            call WaveAuraMemberUnitByKey.handle.remove(key)
             set WaveAuraMemberCount[auraId] = last - 1
             endif
             set target = null
@@ -452,7 +452,7 @@ library WaveAuraSkills initializer Init requires Table, TimerUtils, WaveTest, Te
             set key = WaveAuraMemberKey(auraId, index)
             set target = WaveAuraMemberUnitByKey.unit[key]
             if target == null or GetUnitTypeId(target) == 0 then
-                call WaveAuraMemberUnitByKey.remove(key)
+                call WaveAuraMemberUnitByKey.handle.remove(key)
                 set WaveAuraMemberCount[auraId] = WaveAuraMemberCount[auraId] - 1
             else
                 set hid = GetHandleId(target)
@@ -562,7 +562,7 @@ library WaveAuraSkills initializer Init requires Table, TimerUtils, WaveTest, Te
         if u == null then
             return
         endif
-        set unitType = GetUnitTypeId(u)
+        set unitType = GetWaveEventUnitTypeId()
         if unitType != WAVE_HKNI_UNIT_ID and unitType != WAVE_HKNI_BOSS_UNIT_ID then
             set u = null
             return

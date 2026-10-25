@@ -50,3 +50,13 @@ otras rutas locales documentadas necesitan preparación aparte. Esta publicació
 acredita copia e integridad de archivos, no portabilidad ni funcionamiento desde
 un checkout nuevo. Para recuperar exactamente todas las pruebas históricas se
 necesita además el archivo de evidencias que permanece fuera de Git.
+
+## Actualizaciones
+
+- **2026-10-25 — WaveSys**: copia actualizada desde `Proyect/WaveSys` tras la corrección del núcleo de oleadas y el
+  rework de conexiones (núcleo `WaveCore`, capas `WaveSpawnFx`/`WaveOwnerPolicy`, puente RestTime, tablero ligado,
+  contrato en `projects/proyect/WaveSys/docs/contrato-wavecore.md`). Mismo criterio de exclusión que la incorporación:
+  sin `artifacts/`, `.cache/`, capturas `png` ni `log` de evidencia; tampoco la instantánea local de rollback
+  `evidence/snapshot-rework-fase1-20261025/`. El inventario se actualizó solo en las entradas de WaveSys
+  (`waveSysUpdated`). Ensayos en Warcraft III Classic 1.27b en la PC original; no se repitieron desde esta copia.
+

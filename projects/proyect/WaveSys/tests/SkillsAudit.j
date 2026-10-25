@@ -113,7 +113,7 @@ private function Begin takes nothing returns nothing
     call AISetFixedTickMs(150)
     call AISetFixedBudget(48)
     call AISetTrackedHeroForPlayer(1, hero)
-    set w = Wave.create(1, 0, 60., null, "", 1, 10, "")
+    set w = Wave.create(1, 0, 60., 1, 10)
     call w.addPoint(-6500., 3000.)
     call w.addSlotEx('hfoo', 1, 1, 1, 0, -1, false, Player(8), AI_PROFILE_MELEE, 0, 0, 1.)
     call w.start()

@@ -1,6 +1,6 @@
 // Laboratory only. Exact Wave/Table/TimerUtils/WavePointGroups sources.
-// TheEnd is a harness boundary; all test waves use an empty finish callback.
-library WaveCoreAudit initializer Init requires WaveTest, WavePointGroups
+// Clean core since rework phase 1: no TheEnd stub needed.
+library WaveCoreAudit initializer Init requires WaveCore, WavePointGroups
 globals
     private string array lines
     private integer lineCount = 0
@@ -71,6 +71,15 @@ private function OnWaveDeath takes nothing returns nothing
 endfunction
 
 private function Final takes nothing returns nothing
+    local boolean finished
+    // removedWave ticks every 10 s; one explicit tick stands for the next natural one.
+    call removedWave.onTick()
+    set finished = removedWave.isDestroyed
+    call Check(removedWave.activeOnMap == 0 and removedWave.retiredCount == 1 and removedWave.killsDone == 0, "RemoveUnit releases active counter on the next tick")
+    call Note("After RemoveUnit + tick: active=" + I2S(removedWave.activeOnMap) + " retired=" + I2S(removedWave.retiredCount) + " finished=" + I2S(WaveDebugBoolToInt(finished)))
+    if not finished then
+        call removedWave.destroyWave()
+    endif
     call Check(externalDeaths == 1, "external unit death reaches WaveDeath listeners; actual=" + I2S(externalDeaths))
     call Check(not IsWaveManagedUnit(externalUnit), "external unit death clears WaveByUnit mapping")
     call Check(externalWave.activeOnMap == 1, "external death leaves exactly the source alive")
@@ -101,13 +110,11 @@ private function AfterSpawns takes nothing returns nothing
     call pausedWave.terminate(false)
     call Check(removed != null, "RemoveUnit scenario really spawned a unit")
     call RemoveUnit(removed)
-    call Check(removedWave.activeOnMap == 0, "RemoveUnit releases active counter")
-    call Note("After RemoveUnit: active=" + I2S(removedWave.activeOnMap) + " tracked=" + I2S(removedWave.getActiveIndexedCount()))
-    call removedWave.destroyWave()
+    // Contract D3: a retirement is reconciled on the next tick (checked in Final); WaveRetireUnit is the synchronous path.
     set sourceUnit = externalWave.getActiveIndexedUnit(1)
     call Check(sourceUnit != null, "external scenario has a live Wave source")
     set externalUnit = CreateUnit(Player(8), 'hfoo', -4600., 3100., 0.)
-    call registerExternalUnit(sourceUnit, externalUnit, false)
+    call WaveRegisterExternalUnit(sourceUnit, externalUnit, false)
     call Check(IsWaveManagedUnit(externalUnit), "external unit registered before death")
     call Save("before-external-death")
     // Schedule observer before the kill: an aborted death callback cannot hide the result.
@@ -142,7 +149,7 @@ private function Begin takes nothing returns nothing
     call WavePointGroupsBuild()
     call Check(WavePointGroupCount("AuditMarkers") == 2, "marker collection deduplicates repeated coordinates")
     call Check(WavePointGroupGetPointY("AuditMarkers", 0) > WavePointGroupGetPointY("AuditMarkers", 1), "marker order is descending Y")
-    set w = Wave.create(3, 0, 0.25, null, "", 1, 1, "")
+    set w = Wave.create(3, 0, 0.25, 1, 1)
     loop
         exitwhen i == 99
         call w.addPoint(-5000., 3000.)
@@ -154,12 +161,12 @@ private function Begin takes nothing returns nothing
     call Check(added == w.pointCount - before, "point application reports the actual inserted count")
     call w.destroyWave()
 
-    set w = Wave.create(3, 0, 0.25, null, "", 1, 1, "")
+    set w = Wave.create(3, 0, 0.25, 1, 1)
     call w.addSlot('hfoo', 2, 1, 1, 0, 1, true, Player(8))
     call Note("Self killGate fixture: remaining=" + I2S(w.getToKillRemaining()) + " selected slot=" + I2S(w.pickSlot()))
     call w.destroyWave()
 
-    set w = Wave.create(3, 0, 0.25, null, "", 1, 1, "")
+    set w = Wave.create(3, 0, 0.25, 1, 1)
     set nestedWaveId = w
     set nestedStart = true
     call w.start()
@@ -167,7 +174,7 @@ private function Begin takes nothing returns nothing
     call Check(nestedReadId == nestedWaveId, "nested pause preserves outer start context; read=" + I2S(nestedReadId))
     call w.terminate(false)
 
-    set pausedWave = Wave.create(3, 0, 10., null, "", 1, 1, "")
+    set pausedWave = Wave.create(3, 0, 10., 1, 1)
     call pausedWave.addPoint(-5000., 3000.)
     call pausedWave.addSlot('hfoo', 1, 1, 1, 1, -1, false, Player(8))
     call pausedWave.start()
@@ -175,13 +182,13 @@ private function Begin takes nothing returns nothing
     call pausedWave.pause()
     call Check(pausedWave.activeOnMap == 1 and pausedWave.getActiveIndexedCount() == 0, "pause fixture has exactly one pending reservation")
 
-    set removedWave = Wave.create(3, 0, 10., null, "", 1, 1, "")
+    set removedWave = Wave.create(3, 0, 10., 1, 1)
     call removedWave.addPoint(-4800., 3000.)
     call removedWave.addSlot('hfoo', 1, 1, 1, 0, -1, false, Player(8))
     call removedWave.start()
     call removedWave.trySpawn()
 
-    set externalWave = Wave.create(3, 0, 10., null, "", 1, 1, "")
+    set externalWave = Wave.create(3, 0, 10., 1, 1)
     call externalWave.addPoint(-4600., 3000.)
     call externalWave.addSlot('hfoo', 1, 1, 1, 0, -1, false, Player(8))
     call externalWave.start()

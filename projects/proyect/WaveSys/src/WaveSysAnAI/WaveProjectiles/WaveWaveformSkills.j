@@ -1,4 +1,4 @@
-library WaveWaveformSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveTest
+library WaveWaveformSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveCore
 
     globals
         public constant integer WAVE_HWT3_UNIT_ID = 'hwt3'
@@ -177,10 +177,10 @@ library WaveWaveformSkills initializer Init requires Table, TimerUtils, Missile,
         local integer hid
         local Missile missile
         local integer unitTypeId
-        if deadUnit == null or GetUnitTypeId(deadUnit) == 0 then
+        if deadUnit == null then
             return
         endif
-        set unitTypeId = GetUnitTypeId(deadUnit)
+        set unitTypeId = GetWaveEventUnitTypeId()
         if unitTypeId != WAVE_HWT3_UNIT_ID and unitTypeId != WAVE_HWT3_BOSS_UNIT_ID then
             return
         endif

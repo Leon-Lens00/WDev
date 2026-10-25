@@ -1,4 +1,4 @@
-library WaveSiegeZoneSkills initializer Init requires Table, TimerUtils, SpellIndex, WaveTest
+library WaveSiegeZoneSkills initializer Init requires Table, TimerUtils, SpellIndex, WaveCore
 
     globals
         public constant integer WAVE_HMTT_UNIT_ID = 'hmtt'
@@ -322,10 +322,10 @@ library WaveSiegeZoneSkills initializer Init requires Table, TimerUtils, SpellIn
         local integer hid
         local integer castId
         local integer unitTypeId
-        if deadUnit == null or GetUnitTypeId(deadUnit) == 0 then
+        if deadUnit == null then
             return
         endif
-        set unitTypeId = GetUnitTypeId(deadUnit)
+        set unitTypeId = GetWaveEventUnitTypeId()
         if unitTypeId != WAVE_HMTT_UNIT_ID and unitTypeId != WAVE_HMTT_BOSS_UNIT_ID then
             return
         endif

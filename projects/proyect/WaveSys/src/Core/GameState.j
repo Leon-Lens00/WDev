@@ -11,6 +11,7 @@ library GameState
         sound error
         sound error_Neg
         string Message
+        // TargetWave, WaveTgg e isWavez: solo RestTime los escribe (aqui solo el valor inicial); el resto los lee.
         string WaveTgg
         boolean array isTender[11]
         boolean isWavez = false

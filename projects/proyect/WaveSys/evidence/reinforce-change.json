@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-25",
+  "agent": "Claude (chat WavSys)",
+  "decision": "user: the stage provides the reinforcement composition; the AI only requests it",
+  "before": "evidence/reinforce-before/",
+  "after_sha256": {
+    "src/WaveSysAnAI/AI/IAManager.j": "1d4f6911d5ceb4330a9f723815cb03672090e585b3c73105f651e03026bad42b",
+    "src/WaveSysAnAI/SwlsWave/StageExample.j": "a0decaf4471d1f33c15319be71632ea9eff8c249dff2f89fefb2f7becaa8b863",
+    "tests/ReinforcementAudit.j": "8afd5be35ad996ce42a6f1a3dcbfd7529966c74f534c4f39d3466627e9caac24"
+  },
+  "changes": [
+    "IAManager: AIBossReinforcementApplySlots (hard-coded 10-type list) replaced by AIBossReinforcementRequest(w, waveIndex) that runs a registered provider with context (AIGetBossReinforcementWave/WaveIndex, restored on nesting); AIRegisterBossReinforcementProvider; requires WaveOwnerPolicy removed",
+    "stage: Stage1AddReinforcements(w, waveIndex) with the same list and values the AI had; Stage1RegisterBossReinforcements() (idempotent) called from InitStage1"
+  ],
+  "first_run": "rf-reinforce-v2 0 reinforcements: the integration builder disables InitStage1, so no provider was registered (fixture setup, not product); fixture now registers it like InitStage1",
+  "runs": {
+    "rf-reinforce-v3": "7/0: zA01 boss requested after ~18 s; wave 3 composition +15 (hpea/hmil/hfoo x owners 8..12); no later types; invariant holds",
+    "rf-survival-v1": "77/0, 10/10, 518/518",
+    "rf-integration-v1": "25/0"
+  },
+  "not_verified": "reinforcement in a full match (bosses die instantly in the survival fixture); multiplayer"
+}

@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-24",
+  "agent": "Claude (chat WavSys)",
+  "plan": "docs/planes/ciclo-vida-e13-e03-e02-2026-10-24.md",
+  "before": {
+    "SwlsWave.j": "evidence/lifecycle-e03-before/SwlsWave.j (= after E02/E13, a21cdb06...)",
+    "consumers": "evidence/lifecycle-e03-before/consumers/",
+    "CoreAudit.j": "evidence/lifecycle-e03-before/CoreAudit.j",
+    "first_attempt": "evidence/lifecycle-e03-before/SwlsWave.after-first-e03-attempt.j"
+  },
+  "after_sha256": {
+    "src/WaveSysAnAI/SwlsWave/SwlsWave.j": "09ac8b82db5ab3ee9c014721b064ee7aedc0c9e9b74b066d20badd20a2847596",
+    "src/WaveSysAnAI/SwlsWave/WaveStreaks.j": "e3b2ba9514a1fa786db61a50831a4dc660cb553c7cb1702c20d37a090bc79779",
+    "tests/LifecycleAudit.j": "207c2908417c6b284afec8e95bc4aa3f6e720e125225d36895c82ac8e60784a8",
+    "tests/CoreAudit.j": "0fe58271bf4af2e2bed7f15d67b6d6b9e61c27618f349e5a3979ff0d8000b498",
+    "src/WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j": "a16995dd3597b6e3b13a009e7db1ec31df40f75476c22d37279620ddd4273ff6",
+    "src/WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j": "02895c56f4f8392006016482015735abdc7e0d94b9d4b2905982133aa3907c9c",
+    "src/WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j": "5897d65cd69b68c607a94f5db76a03bbaa78a5db53eb9d9f2b9e6116af94d5ba",
+    "src/WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j": "dfeadb28421ab455ad9acd4105987a7129765f066caac17ec400b253376aea2b",
+    "src/WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j": "04183baebb19cea9d697e9dc5978356b00db44f66cccf6cf50c16b522f66fd02",
+    "src/WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j": "0b85f6df8e63548c0497a8acad48b6be2ba792edef172a1c7a39c4dd07f87f3b",
+    "src/WaveSysAnAI/WaveProjectiles/WavePriestSkills.j": "1024d9a204a00172318a5036cb97f157806f569b8823abf067fe19d04f0c2080",
+    "src/WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j": "cd6fafea1f027f27c0c4023be981a4cba42e3b88adb206afd495293344332323",
+    "src/WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j": "48d478cbda4db028fa23d7dd16a2feac4cc05b17a918488b0cf783e3de232767"
+  },
+  "changes": [
+    "releaseEntity: single exit path (death or retirement, D1 accounting)",
+    "reconcileRetired sweep in onTick; loop timer keeps running in pause/terminate (D3)",
+    "WaveRetireUnit public synchronous retirement",
+    "IsWaveEventRetired / GetWaveEventUnitTypeId; registered type table WaveUnitTypeByUnit",
+    "WaveEntityRef: active index holds struct-field unit reference (hashtable load of removed unit is null)",
+    "untrackedOverflow and retiredCount counters",
+    "WaveStreaks: retired exit clears damage credit and returns (D2)",
+    "9 skill cleanups filter by GetWaveEventUnitTypeId()",
+    "CoreAudit:104 deferred to Final after one tick"
+  ],
+  "first_attempt_failure": "lifecycle-e03-v1: 49 checks/11 FAIL; sweep skipped removed units because Table.unit[] (LoadUnitHandle) returns null after RemoveUnit. Confirmed by probe in lifecycle-e03-v2 (hashtable load null=1, variable keeps handle).",
+  "runs": {
+    "lifecycle-e03-v2": "LifecycleAudit 49/0",
+    "lifecycle-features-v2b": "FeatureAudit 44/1 (E14)",
+    "lifecycle-core-v2b": "CoreAudit 18/3 (E08,E06,E09)",
+    "lifecycle-removal-v2": "active=0 tracked=0 finished=1",
+    "lifecycle-survival-v1": "SurvivalAudit 67/0, 10/10 waves, 518/518"
+  },
+  "superseded_builds_not_run": [
+    "lifecycle-features-v2",
+    "lifecycle-core-v2 (first E03 attempt)"
+  ],
+  "gpu": "Intel iGPU override per run (NVIDIA driver/library mismatch)",
+  "verification_level": "Tested in map (isolated labs, single player); not multiplayer, not full survival map"
+}

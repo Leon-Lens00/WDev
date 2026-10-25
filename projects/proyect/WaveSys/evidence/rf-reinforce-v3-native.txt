@@ -1,0 +1,17 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "WAVESYS REINFORCEMENT rf-reinforce-v3 complete" )
+	call Preload( "checks=7 failures=0" )
+	call Preload( "PASS zA01 boss materialized in the wave" )
+	call Preload( "PASS boss AI requested reinforcements within 45 s; polls=18" )
+	call Preload( "PASS stage composition for wave 3 adds 15 units; added=15" )
+	call Preload( "PASS one slot per default owner and type; new slots=15" )
+	call Preload( "PASS hpea, hmil and hfoo slots for owners 8..12" )
+	call Preload( "PASS types of later waves are not added to wave 3" )
+	call Preload( "PASS objective invariant holds after reinforcement" )
+	call Preload( "COMPLETE reinforcement audit; failures are product observations, not approval." )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

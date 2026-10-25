@@ -1,4 +1,4 @@
-library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeUI
+library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeUI, InitialWaveMultiboard
 
     function RestTimeStopPhaseTimer takes nothing returns nothing
         if RestPhaseTimer != null then
@@ -23,6 +23,8 @@ library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeUI
         call RestTimeSetStatusForActivePlayers("Wave " + I2S(TargetWave))
         call RestTimeSetBoardTitle("|cFF66FF99Activa|r |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(TargetWave) + "|r|cFFFF8C00/|r|cFFE6E6E610|r")
         call RestTimeStopPhaseTimer()
+        // RestTime es el unico que escribe isWavez/TargetWave/WaveTgg: la oleada queda activa al lanzarla.
+        set isWavez = true
         if SwlsWaveStartTrigger != null then
             call TriggerExecute(SwlsWaveStartTrigger)
         elseif WaveTgg != null and WaveTgg != "" then
@@ -46,6 +48,8 @@ library RestTimeCountdown requires RestTimeState, RestTimeAudio, RestTimeUI
         if RestPhaseTimer == null then
             set RestPhaseTimer = CreateTimer()
         endif
+        // Desde la primera cuenta atras el titulo es de RestTime; el tablero inicial deja de reescribirlo.
+        call StopInitialWaveMultiboard()
         set RestPhaseState = phaseState
         set RestPhaseRemaining = seconds
         if phaseState == REST_PHASE_PURCHASE then

@@ -1,176 +1,68 @@
 
-library WaveTest initializer Init /*
-
-    */requires Table,/*
-    */TimerUtils, TheEnd, SwlsMath 
+library WaveCore initializer Init requires Table, TimerUtils
     /*
     ==========================================================================
-    WaveTest (SwlsWave) - Documentación práctica
+    WaveCore (SwlsWave) - nucleo de oleadas
     ==========================================================================
 
-    IDEA GENERAL
-    ------------
-    Wave es una instancia independiente de spawn PvE.
-    Cada Wave tiene su propio timer, slots, conteos, estado y eventos.
+    Una Wave es una instancia independiente de aparicion PvE con su propio
+    temporizador, slots, reservas, contadores y eventos. El nucleo solo depende
+    de Table y TimerUtils; la partida (descansos, tablero, jugadores, efectos)
+    se conecta desde fuera escuchando eventos.
 
-    FLUJO BÁSICO
-    ------------
-    1) set w = Wave.create(...)
-    2) call w.addPoint(...) / call w.addNearUnit(...)
-    3) call w.addSlot... (la variante que te convenga)
+    FLUJO
+    1) set w = Wave.create(perPlayerLimit, nearChancePercent, intervalSec, waveIndex, waveTotal)
+    2) call w.addPoint(x, y) / call w.addNearUnit(u)
+    3) call w.addSlot(...) / w.addSlotEx(...) / w.addSlotGrouped(slotGroupId, ...)
     4) call w.start()
 
-    --------------------------------------------------------------------------
-    WAVE.CREATE
-    --------------------------------------------------------------------------
-    Firma:
-    Wave.create(
-        perPlayerLimit,          // integer
-        spawnNearChancePercent,  // integer 0..100
-        intervalSec,             // real (ej: 0.25)
-        board,                   // multiboard (null permitido)
-        titleFuncName,           // string ExecuteFunc para board ("" permitido)
-        waveIndex,               // integer (wave actual)
-        waveTotal,               // integer (total waves)
-        finishFuncName           // string callback al finalizar ("" permitido)
-    )
+    SLOTS
+    uId, amount, lim (activas simultaneas del slot), prio (mayor sale antes;
+    cualquier entero), fxId (dato opaco para la presentacion, >= 0), killGate
+    (-1 sin bloqueo; >= 0 exige toKillRemaining <= killGate), isBoss, owner,
+    aiProfileId, laneId, behaviorFlags, threatWeight.
+    addSlotGrouped amplia un slot existente del mismo grupo/owner/tipo.
+    Duenos por defecto y escalado por jugadores: libreria WaveOwnerPolicy.
 
-    Parámetros:
-    - perPlayerLimit:
-      Límite de unidades activas por owner de slot (dentro de esa Wave).
-    - spawnNearChancePercent:
-      Chance de usar near units para spawnear; si falla usa points.
-    - intervalSec:
-      Tick interno de spawn.
-    - board / titleFuncName:
-      Integración opcional con multiboard.
-    - waveIndex / waveTotal:
-      Datos para UI/progreso.
-    - finishFuncName:
-      Nombre de función global a ejecutar cuando termina.
+    EVENTOS (RegisterWave<Evento>Event)
+    Start, Pause, Resume, Finish, Reserve, Spawn, Death, External.
+    Contexto: GetWaveEventWave/Unit/Killer/Slot, IsWaveEventBoss/External/Retired,
+    GetWaveEventUnitTypeId, GetWaveEventX/Y (Reserve).
+    - Death tambien cubre la retirada sin muerte (IsWaveEventRetired, killer null).
+    - Finish: fin natural o fin de terminate; destroyWave directo no lo emite.
+    - Un evento disparado dentro de otro no altera el contexto del exterior.
 
-    --------------------------------------------------------------------------
-    FAMILIA ADDSLOT (qué usar y cuándo)
-    --------------------------------------------------------------------------
-    A) Slot fijo por owner puntual (SIN escalado automático por players activos)
-       addSlot(uId, amount, lim, prio, fxId, killGate, isBoss, playerOwner)
-       addSlotEx(... + aiProfileId, laneId, behaviorFlags, threatWeight)
-
-       Uso típico:
-       - Boss único real (1 unidad total) en un owner específico.
-       - Spawns especiales scriptados.
-
-    B) Slots para owners default Player(8..12)
-       addSlotByPlayers(...)
-       addSlotByPlayersPct(...)
-       addSlotExByPlayers(...)
-
-       Estos métodos SIEMPRE crean un slot por cada owner default.
-       El boolean scaleWithActivePlayers SOLO define si escala la cantidad.
-
-    C) Slot por owner puntual con opción de escalado
-       addSlotByPlayer(...)
-       addSlotByPlayerPct(...)
-       addSlotExByPlayer(...)
-
-    --------------------------------------------------------------------------
-    PARÁMETROS DE ADDSLOT (significado)
-    --------------------------------------------------------------------------
-    uId:
-      Rawcode de unidad.
-    amount / baseAmount:
-      Cantidad base a crear desde ese slot.
-    scaleWithActivePlayers (métodos ByPlayers/ByPlayer):
-      true  -> escala amount según users activos y additionalPerPlayerPct.
-      false -> usa baseAmount exacto.
-    lim:
-      Máximo de unidades activas simultáneas para ESE slot.
-    prio:
-      Prioridad de spawn (más alto = sale antes).
-    fxId:
-      Índice de FX de entrada/salida (0 = sin FX).
-    killGate:
-      -1 sin bloqueo; >=0 requiere totalKilled <= killGate
-      (es decir: faltantes directos para terminar wave).
-    isBoss:
-      Marca para contadores/eventos de boss.
-    playerOwner / player p:
-      Owner del slot (cuando aplica por owner puntual).
-    aiProfileId:
-      Perfil de IA (AIProfiles).
-    laneId:
-      Carril/meta para lógica externa.
-    behaviorFlags:
-      Banderas de comportamiento IA.
-    threatWeight:
-      Peso de amenaza para selección de target.
-
-    --------------------------------------------------------------------------
-    EJEMPLOS CORTOS
-    --------------------------------------------------------------------------
-    // Miniboss escalable (owners default 8..12)
-    call w.addSlotExByPlayers('nmb', 1, true, 1, 8, 2, -1, true, AI_PROFILE_MELEE, 0, 0, 1.20)
-
-    // Boss único real (solo Player(10), sin escalado)
-    call w.addSlotExByPlayer('nbs', 1, false, 1, 10, 3, -1, true, Player(10), AI_PROFILE_CASTER, 0, 0, 2.00)
-
-    // Unit normal fija por owner puntual
-    call w.addSlotExByPlayer('hfoo', 6, false, 3, 2, 1, -1, false, Player(10), AI_PROFILE_MELEE, 0, 0, 1.00)
-
-    --------------------------------------------------------------------------
-    EVENTOS Y CONTEXTO
-    --------------------------------------------------------------------------
-    Registro:
-    RegisterWaveStartEvent / Pause / Resume / Finish / Spawn / Death / External
-
-    Lectura de contexto:
-    GetWaveEventWave(), GetWaveEventUnit(), GetWaveEventKiller(),
-    GetWaveEventSlot(), GetWaveEventIsBoss(), GetWaveEventIsExternal()
-
-    --------------------------------------------------------------------------
-    NOTA CLAVE PARA BOSS VS MINIBOSS
-    --------------------------------------------------------------------------
-    - Boss único real:
-      usar addSlotExByPlayer(..., false, ..., Player(x), ...)
-    - Miniboss escalable:
-      usar addSlotExByPlayers(..., true, ...)
+    PAUSA: congela nuevas reservas y las ya creadas (conservan su tiempo restante).
     */
 
     globals
         constant boolean WAVE_DEBUG_ENABLED = false
         constant string WAVE_DEBUG_PREFIX = "[WaveDebug]"
 
-        Table WaveByUnit
-        Table WaveByTimer
-        Table SlotByUnit
-        Table WaveByBoard
-        Table ExternalIsBoss
-        Table WaveActiveUnitByKey
-        Table WaveActivePosByUnit
-        Table WaveAffiliateWaveByUnit
-        Table WaveAffiliateModeByUnit
-        Table WaveExternalOwnerPidByUnit
-        Table WaveExternalSpawnFxByUnit
+        Table WaveByUnit = 0
+        Table WaveByTimer = 0
+        Table SlotByUnit = 0
+        Table ExternalIsBoss = 0
+        Table WaveActiveUnitByKey = 0
+        Table WaveActivePosByUnit = 0
+        Table WaveAffiliateWaveByUnit = 0
+        Table WaveAffiliateModeByUnit = 0
+        Table WaveExternalOwnerPidByUnit = 0
 
         constant integer WAVE_MAX_SLOTS = 100
         constant integer WAVE_MAX_POINTS = 100
         constant integer WAVE_MAX_NEAR_UNITS = 100
         constant integer WAVE_TRACKED_PLAYER_SLOTS = 20
         constant integer WAVE_ACTIVE_STRIDE = 4096
-        constant integer WAVE_DEFAULT_OWNER_MIN = 8
-        constant integer WAVE_DEFAULT_OWNER_MAX = 12
 
-        constant integer FX_MAX = 19
-        string array FX_UnitIn
-        string array FX_UnitOut
-
-        trigger WaveEvtStart
-        trigger WaveEvtPause
-        trigger WaveEvtResume
-        trigger WaveEvtFinish
-        trigger WaveEvtSpawn
-        trigger WaveEvtDeath
-        trigger WaveEvtExternal
+        trigger WaveEvtStart = null
+        trigger WaveEvtPause = null
+        trigger WaveEvtResume = null
+        trigger WaveEvtFinish = null
+        trigger WaveEvtSpawn = null
+        trigger WaveEvtDeath = null
+        trigger WaveEvtExternal = null
+        trigger WaveEvtReserve = null
 
         integer WaveEventWaveId = 0
         unit WaveEventUnit = null
@@ -178,9 +70,16 @@ library WaveTest initializer Init /*
         integer WaveEventSlotId = 0
         boolean WaveEventIsBoss = false
         boolean WaveEventIsExternal = false
+        boolean WaveEventIsRetired = false
+        integer WaveEventUnitTypeId = 0
+        real WaveEventX = 0.
+        real WaveEventY = 0.
+        // Tipo registrado: permite filtrar una retirada aunque el motor ya haya eliminado la unidad.
+        Table WaveUnitTypeByUnit = 0
+        // Unidades cuya salida se esta procesando: un listener de Death no puede liberarlas otra vez.
+        Table WaveReleasingByUnit = 0
 
         integer WaveTokenSeed = 0
-        multiboard CurrentBoardContext
     endglobals
 
     private function WavePushEventContext takes integer w, unit u, unit killer, integer s, boolean isBoss, boolean isExternal returns nothing
@@ -192,14 +91,6 @@ library WaveTest initializer Init /*
         set WaveEventIsExternal = isExternal
     endfunction
 
-    private function WaveClearEventContext takes nothing returns nothing
-        set WaveEventWaveId = 0
-        set WaveEventUnit = null
-        set WaveEventKiller = null
-        set WaveEventSlotId = 0
-        set WaveEventIsBoss = false
-        set WaveEventIsExternal = false
-    endfunction
 
     function WaveDebugBoolToInt takes boolean b returns integer
         if b then
@@ -255,65 +146,66 @@ library WaveTest initializer Init /*
         endif
     endfunction
 
+    // Despacha un evento y despues restaura el contexto exterior: un listener puede disparar otro evento
+    // (p. ej. Start -> pause) y los listeners siguientes del evento exterior deben conservar su contexto.
+    private function WaveDispatchEvent takes trigger t, integer w, unit u, unit killer, integer s, boolean isBoss, boolean isExternal, boolean retired, integer unitTypeId, real x, real y returns nothing
+        local integer outerWave = WaveEventWaveId
+        local unit outerUnit = WaveEventUnit
+        local unit outerKiller = WaveEventKiller
+        local integer outerSlot = WaveEventSlotId
+        local boolean outerBoss = WaveEventIsBoss
+        local boolean outerExternal = WaveEventIsExternal
+        local boolean outerRetired = WaveEventIsRetired
+        local integer outerType = WaveEventUnitTypeId
+        local real outerX = WaveEventX
+        local real outerY = WaveEventY
+        call WavePushEventContext(w, u, killer, s, isBoss, isExternal)
+        set WaveEventIsRetired = retired
+        set WaveEventUnitTypeId = unitTypeId
+        set WaveEventX = x
+        set WaveEventY = y
+        call WaveExecEvent(t)
+        call WavePushEventContext(outerWave, outerUnit, outerKiller, outerSlot, outerBoss, outerExternal)
+        set WaveEventIsRetired = outerRetired
+        set WaveEventUnitTypeId = outerType
+        set WaveEventX = outerX
+        set WaveEventY = outerY
+        set outerUnit = null
+        set outerKiller = null
+    endfunction
+
     private function WaveFireStart takes integer w returns nothing
-        call WavePushEventContext(w, null, null, 0, false, false)
-        call WaveExecEvent(WaveEvtStart)
-        call WaveClearEventContext()
+        call WaveDispatchEvent(WaveEvtStart, w, null, null, 0, false, false, false, 0, 0., 0.)
     endfunction
 
     private function WaveFirePause takes integer w returns nothing
-        call WavePushEventContext(w, null, null, 0, false, false)
-        call WaveExecEvent(WaveEvtPause)
-        call WaveClearEventContext()
+        call WaveDispatchEvent(WaveEvtPause, w, null, null, 0, false, false, false, 0, 0., 0.)
     endfunction
 
     private function WaveFireResume takes integer w returns nothing
-        call WavePushEventContext(w, null, null, 0, false, false)
-        call WaveExecEvent(WaveEvtResume)
-        call WaveClearEventContext()
+        call WaveDispatchEvent(WaveEvtResume, w, null, null, 0, false, false, false, 0, 0., 0.)
     endfunction
 
     private function WaveFireFinish takes integer w returns nothing
-        call WavePushEventContext(w, null, null, 0, false, false)
-        call WaveExecEvent(WaveEvtFinish)
-        call WaveClearEventContext()
+        call WaveDispatchEvent(WaveEvtFinish, w, null, null, 0, false, false, false, 0, 0., 0.)
     endfunction
 
     private function WaveFireSpawn takes integer w, unit u, integer s, boolean isBoss, boolean isExternal returns nothing
-        call WavePushEventContext(w, u, null, s, isBoss, isExternal)
-        call WaveExecEvent(WaveEvtSpawn)
-        call WaveClearEventContext()
+        call WaveDispatchEvent(WaveEvtSpawn, w, u, null, s, isBoss, isExternal, false, 0, 0., 0.)
     endfunction
 
-    private function WaveFireDeath takes integer w, unit u, unit killer, integer s, boolean isBoss, boolean isExternal returns nothing
-        call WavePushEventContext(w, u, killer, s, isBoss, isExternal)
-        call WaveExecEvent(WaveEvtDeath)
-        call WaveClearEventContext()
+    // Salida de una entidad: muerte (retired=false) o retirada sin muerte (retired=true, killer=null).
+    private function WaveFireDeath takes integer w, unit u, unit killer, integer s, boolean isBoss, boolean isExternal, boolean retired, integer unitTypeId returns nothing
+        call WaveDispatchEvent(WaveEvtDeath, w, u, killer, s, isBoss, isExternal, retired, unitTypeId, 0., 0.)
     endfunction
 
     private function WaveFireExternal takes integer w, unit u, integer s, boolean isBoss, boolean isExternal returns nothing
-        call WavePushEventContext(w, u, null, s, isBoss, isExternal)
-        call WaveExecEvent(WaveEvtExternal)
-        call WaveClearEventContext()
+        call WaveDispatchEvent(WaveEvtExternal, w, u, null, s, isBoss, isExternal, false, 0, 0., 0.)
     endfunction
 
-    private function WaveCountPlayingUsers takes nothing returns integer
-        local integer i = 0
-        local integer count = 0
-        local player p
-        loop
-            exitwhen i >= bj_MAX_PLAYER_SLOTS
-            set p = Player(i)
-            if (GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING) and (GetPlayerController(p) == MAP_CONTROL_USER) then
-                set count = count + 1
-            endif
-            set i = i + 1
-        endloop
-        set p = null
-        if count < 1 then
-            set count = 1
-        endif
-        return count
+    // Reserva creada (antes de materializar): la presentacion puede marcar la posicion.
+    private function WaveFireReserve takes integer w, integer s, boolean isBoss, real x, real y returns nothing
+        call WaveDispatchEvent(WaveEvtReserve, w, null, null, s, isBoss, false, false, 0, x, y)
     endfunction
 
     private function WaveHandleAffiliateDeath takes integer hid returns nothing
@@ -364,12 +256,29 @@ library WaveTest initializer Init /*
                 set t = null
                 return
             endif
+            // waveToken identifica la instancia: si no coincide, el id se reutilizo y ni la Wave ni ps.slot son de esta reserva.
             if (ps.wave == 0) or ps.wave.isDestroyed or (ps.wave.waveToken != ps.waveToken) then
-                if (ps.wave != 0) and (not ps.wave.isDestroyed) and (ps.wave.waveToken != ps.waveToken) then
-                    call ps.wave.cancelReservedSpawn(ps.slot, ps.pid, (not ps.wave.cancelPendingPermanently))
-                    call ps.wave.tryDestroyAfterTermination()
-                endif
                 call ReleaseTimer(t)
+                set ps.t = null
+                call ps.destroy()
+                set t = null
+                return
+            endif
+            // Pausa (E09): la reserva queda congelada. pause() ya detiene estos temporizadores; esto cubre un disparo residual.
+            if (ps.wave.pendingEpoch == ps.epoch) and ps.wave.isPaused and (not ps.wave.terminateRequested) then
+                call TimerStart(t, 0.01, false, function PendingSpawn_execute)
+                call PauseTimer(t)
+                set t = null
+                return
+            endif
+            call ps.wave.unlinkPending(ps)
+            set ps.wave.pendingReservations = ps.wave.pendingReservations - 1
+            // Misma instancia, epoca distinta: terminate cancelo las reservas anteriores.
+            if ps.wave.pendingEpoch != ps.epoch then
+                call ps.wave.cancelReservedSpawn(ps.slot, ps.pid, (not ps.wave.cancelPendingPermanently))
+                call ps.wave.tryDestroyAfterTermination()
+                call ReleaseTimer(t)
+                set ps.t = null
                 call ps.destroy()
                 set t = null
                 return
@@ -379,18 +288,16 @@ library WaveTest initializer Init /*
             if (u == null) or (GetUnitTypeId(u) == 0) then
                 call ps.wave.cancelReservedSpawn(ps.slot, ps.pid, true)
                 call ReleaseTimer(t)
+                set ps.t = null
                 call ps.destroy()
                 set t = null
                 set u = null
                 return
             endif
-            if (ps.slot.fxId > 0) and (ps.slot.fxId <= FX_MAX) then
-                call DestroyEffect(AddSpecialEffectTarget(FX_UnitOut[ps.slot.fxId], u, "origin"))
-            endif
-
             call ps.wave.registerWaveUnit(u, ps.slot, ps.slot.isBoss, false)
 
             call ReleaseTimer(t)
+            set ps.t = null
             call ps.destroy()
 
             set t = null
@@ -421,9 +328,18 @@ library WaveTest initializer Init /*
         WaveSlot slot
         integer pid
         integer waveToken
+        integer epoch
+        PendingSpawn nextPending
+        PendingSpawn prevPending
         real x
         real y
         timer t
+    endstruct
+
+    // Referencia del indice activo: un campo de struct conserva el handle aunque el motor elimine la unidad,
+    // mientras que cargarla desde el hashtable devuelve null y no permitiria reconciliar la retirada.
+    struct WaveEntityRef
+        unit u
     endstruct
 
     struct Wave
@@ -439,7 +355,6 @@ library WaveTest initializer Init /*
 
         //Timer
         real interval 
-        real additionalPerPlayerPct
         timer loopTimer
 
         integer pointCount
@@ -454,11 +369,6 @@ library WaveTest initializer Init /*
         // --- cache del punto elegido ---
         real spawnX
         real spawnY
-
-        multiboard board
-        string titleFunc
-
-        string finishFuncName = ""
 
         // --- Referenciales ---
         integer waveIndex
@@ -479,10 +389,10 @@ library WaveTest initializer Init /*
         integer activeBosses
         integer activeUnits
 
-        // Compatibilidad heredada: estos 3 campos representan "objetivos restantes".
-        integer totalKilled
-        integer totalKilledUnits
-        integer totalKilledBoss
+        // Objetivo restante: unidades que aun faltan por morir o retirarse para cumplir la Wave (killGate lo usa).
+        integer toKillRemaining
+        integer toKillUnitsRemaining
+        integer toKillBossRemaining
 
         // Contadores acumulados reales (IA/UI)
         integer killsDone
@@ -495,12 +405,17 @@ library WaveTest initializer Init /*
         boolean isDestroyed
         boolean terminateRequested
         boolean cancelPendingPermanently
-        boolean suppressEndCallback
         boolean finishEventFired
         integer affiliateUnitHid
         integer affiliateTerminateMode
         integer tickCounter
         integer waveToken
+        integer pendingEpoch
+        integer pendingReservations
+        integer retiredCount
+        integer untrackedOverflow
+        // Reservas pendientes de esta instancia: pause/resume detienen y reanudan sus temporizadores.
+        PendingSpawn pendingHead
         
         static method operator [] takes unit u returns thistype
             local integer hid
@@ -514,24 +429,20 @@ library WaveTest initializer Init /*
             return 0
         endmethod 
 
-        static method create takes integer PlayerLim, integer nearChance, real sec, multiboard mb, string titleFunc, integer wIndex, integer wTotal, string onFinishFuncName returns Wave 
+        static method create takes integer PlayerLim, integer nearChance, real sec, integer wIndex, integer wTotal returns Wave
             local Wave this = Wave.allocate()
             local integer i = 0
 
             set WaveTokenSeed = WaveTokenSeed + 1
             set this.waveToken = WaveTokenSeed
+            set this.pendingEpoch = 0
+            set this.pendingReservations = 0
+            set this.retiredCount = 0
+            set this.untrackedOverflow = 0
+            set this.pendingHead = 0
             set this.isDestroyed = false
-            set this.titleFunc = titleFunc
             set this.waveIndex = wIndex
             set this.waveTotal = wTotal
-            set this.finishFuncName = onFinishFuncName
-
-            if mb != null then
-                set this.board = mb
-                set WaveByBoard[GetHandleId(mb)] = this
-            else
-                set this.board = null
-            endif
 
             set this.pointCount = 0
             if nearChance < 0 then
@@ -552,7 +463,6 @@ library WaveTest initializer Init /*
                 set sec = 0.25
             endif
             set this.interval  = sec
-            set this.additionalPerPlayerPct = 100.0
 
             set this.totalToSpawn      = 0
             set this.totalUnits        = 0
@@ -565,9 +475,9 @@ library WaveTest initializer Init /*
             set this.activeBosses      = 0
             set this.activeUnits       = 0
 
-            set this.totalKilled       = 0
-            set this.totalKilledUnits  = 0
-            set this.totalKilledBoss   = 0
+            set this.toKillRemaining       = 0
+            set this.toKillUnitsRemaining  = 0
+            set this.toKillBossRemaining   = 0
 
             set this.killsDone      = 0
             set this.killsDoneUnits = 0
@@ -578,7 +488,6 @@ library WaveTest initializer Init /*
             set this.isFinishing = false
             set this.terminateRequested = false
             set this.cancelPendingPermanently = false
-            set this.suppressEndCallback = false
             set this.finishEventFired = false
             set this.affiliateUnitHid = 0
             set this.affiliateTerminateMode = 0
@@ -623,16 +532,16 @@ library WaveTest initializer Init /*
 
             set this.totalToSpawn     = this.totalToSpawn + amount
             set this.remainingToSpawn = this.remainingToSpawn + amount
-            set this.totalKilled      = this.totalKilled + amount
+            set this.toKillRemaining      = this.toKillRemaining + amount
 
             if s.isBoss then
                 set this.totalBosses     = this.totalBosses + amount
                 set this.remainingBosses = this.remainingBosses + amount
-                set this.totalKilledBoss = this.totalKilledBoss + amount
+                set this.toKillBossRemaining = this.toKillBossRemaining + amount
             else
                 set this.totalUnits      = this.totalUnits + amount
                 set this.remainingUnits  = this.remainingUnits + amount
-                set this.totalKilledUnits = this.totalKilledUnits + amount
+                set this.toKillUnitsRemaining = this.toKillUnitsRemaining + amount
             endif
 
             call this.clampCoreCounters()
@@ -669,8 +578,6 @@ library WaveTest initializer Init /*
             endif
             if fxId < 0 then
                 set fxId = 0
-            elseif fxId > FX_MAX then
-                set fxId = FX_MAX
             endif
 
             set s.unitId    = uId
@@ -701,18 +608,18 @@ library WaveTest initializer Init /*
             set this.totalToSpawn     = this.totalToSpawn + amount
             set this.remainingToSpawn = this.remainingToSpawn + amount
 
-            set this.totalKilled     = this.totalKilled + amount
+            set this.toKillRemaining     = this.toKillRemaining + amount
 
             if isBoss then
                 // Boss
                 set this.totalBosses     = this.totalBosses + amount
                 set this.remainingBosses = this.remainingBosses + amount
-                set this.totalKilledBoss     = this.totalKilledBoss + amount
+                set this.toKillBossRemaining     = this.toKillBossRemaining + amount
             else
                 // Unidades normales
                 set this.totalUnits     = this.totalUnits + amount
                 set this.remainingUnits = this.remainingUnits + amount
-                set this.totalKilledUnits     = this.totalKilledUnits + amount
+                set this.toKillUnitsRemaining     = this.toKillUnitsRemaining + amount
             endif
         endmethod
 
@@ -726,137 +633,8 @@ library WaveTest initializer Init /*
             call this.addSlotInternal(0, uId, amount, lim, prio, fxId, killGate, isBoss, p, aiProfileId, laneId, behaviorFlags, threatWeight)
         endmethod
 
-        method setAdditionalPerPlayerPercent takes real pct returns nothing
-            if pct < 0.0 then
-                set pct = 0.0
-            endif
-            set this.additionalPerPlayerPct = pct
-        endmethod
-
-        method getAdditionalPerPlayerPercent takes nothing returns real
-            return this.additionalPerPlayerPct
-        endmethod
-
-        method setFinishFunctionName takes string funcName returns nothing
-            set this.finishFuncName = funcName
-        endmethod
-
-        method getFinishFunctionName takes nothing returns string
-            return this.finishFuncName
-        endmethod
-
-        private method computeScaledAmount takes integer baseAmount, integer playersCount, real pct returns integer
-            local real addPerPlayer
-            local integer extraPlayers
-            local integer amount
-            if baseAmount <= 0 then
-                return 0
-            endif
-            if playersCount < 1 then
-                set playersCount = 1
-            endif
-            if pct < 0.0 then
-                set pct = 0.0
-            endif
-            set extraPlayers = playersCount - 1
-            if extraPlayers <= 0 then
-                return baseAmount
-            endif
-            set addPerPlayer = I2R(baseAmount) * (pct * 0.01)
-            set amount = baseAmount + R2I(I2R(extraPlayers) * addPerPlayer + 0.5)
-            if amount < baseAmount then
-                set amount = baseAmount
-            endif
-            return amount
-        endmethod
-
-        private method addSlotScaledForDefaultPlayers takes integer slotGroupId, integer uId, integer baseAmount, real pct, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing
-            local integer ownerId = WAVE_DEFAULT_OWNER_MIN
-            local integer amount = baseAmount
-            if scaleWithActivePlayers then
-                set amount = this.computeScaledAmount(baseAmount, WaveCountPlayingUsers(), pct)
-            endif
-            loop
-                exitwhen ownerId > WAVE_DEFAULT_OWNER_MAX
-                call this.addSlotInternal(slotGroupId, uId, amount, lim, prio, fxId, killGate, isBoss, Player(ownerId), aiProfileId, laneId, behaviorFlags, threatWeight)
-                set ownerId = ownerId + 1
-            endloop
-        endmethod
-
-        method pickDefaultOwnerPid takes nothing returns integer
-            local integer pid = WAVE_DEFAULT_OWNER_MIN
-            local integer bestPid = -1
-            local integer bestCount = 0
-            loop
-                exitwhen pid > WAVE_DEFAULT_OWNER_MAX
-                if pid < WAVE_TRACKED_PLAYER_SLOTS then
-                    if this.activeByPlayer[pid] < this.perPlayerLimit then
-                        if bestPid < 0 or this.activeByPlayer[pid] < bestCount then
-                            set bestPid = pid
-                            set bestCount = this.activeByPlayer[pid]
-                        endif
-                    endif
-                endif
-                set pid = pid + 1
-            endloop
-            return bestPid
-        endmethod
-
-        // Modo nativo del sistema: crea slots para Player(8..12) en una sola llamada.
-        method addSlotByPlayers takes integer uId, integer baseAmount, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss returns nothing
-            call this.addSlotScaledForDefaultPlayers(0, uId, baseAmount, this.additionalPerPlayerPct, scaleWithActivePlayers, lim, prio, fxId, killGate, isBoss, 0, 0, 0, 1.0)
-        endmethod
-
-        method addSlotByPlayersPct takes integer uId, integer baseAmount, real pct, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss returns nothing
-            call this.addSlotScaledForDefaultPlayers(0, uId, baseAmount, pct, scaleWithActivePlayers, lim, prio, fxId, killGate, isBoss, 0, 0, 0, 1.0)
-        endmethod
-
-        method addSlotExByPlayers takes integer uId, integer baseAmount, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing
-            call this.addSlotScaledForDefaultPlayers(0, uId, baseAmount, this.additionalPerPlayerPct, scaleWithActivePlayers, lim, prio, fxId, killGate, isBoss, aiProfileId, laneId, behaviorFlags, threatWeight)
-        endmethod
-
-        method upsertSlotExByPlayers takes integer slotGroupId, integer uId, integer baseAmount, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing
-            if slotGroupId <= 0 then
-                call this.addSlotExByPlayers(uId, baseAmount, scaleWithActivePlayers, lim, prio, fxId, killGate, isBoss, aiProfileId, laneId, behaviorFlags, threatWeight)
-                return
-            endif
-            call this.addSlotScaledForDefaultPlayers(slotGroupId, uId, baseAmount, this.additionalPerPlayerPct, scaleWithActivePlayers, lim, prio, fxId, killGate, isBoss, aiProfileId, laneId, behaviorFlags, threatWeight)
-        endmethod
-
-        // Variante explÃƒÆ’Ã‚Â­cita por jugador para casos especiales.
-        method addSlotByPlayer takes integer uId, integer baseAmount, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p returns nothing
-            local integer amount = baseAmount
-            if scaleWithActivePlayers then
-                set amount = this.computeScaledAmount(baseAmount, WaveCountPlayingUsers(), this.additionalPerPlayerPct)
-            endif
-            call this.addSlotInternal(0, uId, amount, lim, prio, fxId, killGate, isBoss, p, 0, 0, 0, 1.0)
-        endmethod
-
-        method addSlotByPlayerPct takes integer uId, integer baseAmount, real pct, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p returns nothing
-            local integer amount = baseAmount
-            if scaleWithActivePlayers then
-                set amount = this.computeScaledAmount(baseAmount, WaveCountPlayingUsers(), pct)
-            endif
-            call this.addSlotInternal(0, uId, amount, lim, prio, fxId, killGate, isBoss, p, 0, 0, 0, 1.0)
-        endmethod
-
-        method addSlotExByPlayer takes integer uId, integer baseAmount, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing
-            local integer amount = baseAmount
-            if scaleWithActivePlayers then
-                set amount = this.computeScaledAmount(baseAmount, WaveCountPlayingUsers(), this.additionalPerPlayerPct)
-            endif
-            call this.addSlotInternal(0, uId, amount, lim, prio, fxId, killGate, isBoss, p, aiProfileId, laneId, behaviorFlags, threatWeight)
-        endmethod
-
-        method upsertSlotExByPlayer takes integer slotGroupId, integer uId, integer baseAmount, boolean scaleWithActivePlayers, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing
-            local integer amount = baseAmount
-            if slotGroupId <= 0 then
-                call this.addSlotExByPlayer(uId, baseAmount, scaleWithActivePlayers, lim, prio, fxId, killGate, isBoss, p, aiProfileId, laneId, behaviorFlags, threatWeight)
-                return
-            endif
-            if scaleWithActivePlayers then
-                set amount = this.computeScaledAmount(baseAmount, WaveCountPlayingUsers(), this.additionalPerPlayerPct)
-            endif
+        // Alta o ampliacion por grupo: con slotGroupId > 0 amplia el slot del mismo grupo/owner/tipo.
+        method addSlotGrouped takes integer slotGroupId, integer uId, integer amount, integer lim, integer prio, integer fxId, integer killGate, boolean isBoss, player p, integer aiProfileId, integer laneId, integer behaviorFlags, real threatWeight returns nothing
             call this.addSlotInternal(slotGroupId, uId, amount, lim, prio, fxId, killGate, isBoss, p, aiProfileId, laneId, behaviorFlags, threatWeight)
         endmethod
 
@@ -867,6 +645,7 @@ library WaveTest initializer Init /*
             endif
             set hid = GetHandleId(u)
             set WaveByUnit[hid] = this
+            set WaveUnitTypeByUnit[hid] = GetUnitTypeId(u)
             if s != 0 then
                 set SlotByUnit[hid] = s
                 call ExternalIsBoss.remove(hid)
@@ -894,7 +673,6 @@ library WaveTest initializer Init /*
             local integer summonedId = GetHandleId(summoned)
             local Wave w
             local integer ownerPid
-            local integer srcFxId
 
             if (source == null) or (summoned == null) then
                 call WaveDebugLog("registerExternalUnit reject reason=null_source_or_summoned source=" + WaveDebugUnitSummary(source) + " summoned=" + WaveDebugUnitSummary(summoned) + " boss=" + I2S(WaveDebugBoolToInt(isBoss)))
@@ -928,29 +706,19 @@ library WaveTest initializer Init /*
                 set w.activeByPlayer[ownerPid] = w.activeByPlayer[ownerPid] + 1
             endif
 
-            set srcFxId = 0
-            if SlotByUnit.has(srcId) then
-                set srcFxId = WaveSlot(SlotByUnit[srcId]).fxId
-            elseif WaveExternalSpawnFxByUnit.has(srcId) then
-                set srcFxId = WaveExternalSpawnFxByUnit[srcId]
-            endif
-            if srcFxId > 0 then
-                set WaveExternalSpawnFxByUnit[GetHandleId(summoned)] = srcFxId
-            endif
-
             set w.activeOnMap = w.activeOnMap + 1
             set w.totalToSpawn = w.totalToSpawn + 1
-            set w.totalKilled = w.totalKilled + 1
+            set w.toKillRemaining = w.toKillRemaining + 1
 
             if isBoss then
                 //set w.remainingBosses = w.remainingBosses + 1
                 set w.totalBosses = w.totalBosses + 1
-                set w.totalKilledBoss = w.totalKilledBoss + 1
+                set w.toKillBossRemaining = w.toKillBossRemaining + 1
                 set w.activeBosses    = w.activeBosses + 1
             else
                 //set w.remainingUnits = w.remainingUnits + 1
                 set w.totalUnits = w.totalUnits + 1
-                set w.totalKilledUnits = w.totalKilledUnits + 1
+                set w.toKillUnitsRemaining = w.toKillUnitsRemaining + 1
                 set w.activeUnits    = w.activeUnits + 1
             endif
 
@@ -1036,10 +804,13 @@ library WaveTest initializer Init /*
         private method trackActiveUnit takes unit u returns nothing
             local integer hid
             local integer index
+            local WaveEntityRef ref
             if u == null then
                 return
             endif
             if this.activeTrackedCount >= (WAVE_ACTIVE_STRIDE - 1) then
+                // Fuera del indice no se puede reconciliar una retirada.
+                set this.untrackedOverflow = this.untrackedOverflow + 1
                 return
             endif
             set hid = GetHandleId(u)
@@ -1048,7 +819,9 @@ library WaveTest initializer Init /*
             endif
             set index = this.activeTrackedCount + 1
             set this.activeTrackedCount = index
-            set WaveActiveUnitByKey.unit[this.activeKey(index)] = u
+            set ref = WaveEntityRef.create()
+            set ref.u = u
+            set WaveActiveUnitByKey[this.activeKey(index)] = ref
             set WaveActivePosByUnit[hid] = index
         endmethod
 
@@ -1057,7 +830,8 @@ library WaveTest initializer Init /*
             local integer last
             local integer key
             local integer movedKey
-            local unit moved
+            local WaveEntityRef gone
+            local WaveEntityRef moved
             if not WaveActivePosByUnit.has(hid) then
                 return
             endif
@@ -1070,18 +844,22 @@ library WaveTest initializer Init /*
 
             set key = this.activeKey(index)
             set movedKey = this.activeKey(last)
+            set gone = WaveEntityRef(WaveActiveUnitByKey[key])
             if index != last then
-                set moved = WaveActiveUnitByKey.unit[movedKey]
-                set WaveActiveUnitByKey.unit[key] = moved
-                if moved != null then
-                    set WaveActivePosByUnit[GetHandleId(moved)] = index
+                set moved = WaveEntityRef(WaveActiveUnitByKey[movedKey])
+                set WaveActiveUnitByKey[key] = moved
+                if moved != 0 then
+                    set WaveActivePosByUnit[GetHandleId(moved.u)] = index
                 endif
             endif
 
             call WaveActiveUnitByKey.remove(movedKey)
             call WaveActivePosByUnit.remove(hid)
             set this.activeTrackedCount = last - 1
-            set moved = null
+            if gone != 0 then
+                set gone.u = null
+                call gone.destroy()
+            endif
         endmethod
 
         method getActiveIndexedCount takes nothing returns integer
@@ -1089,10 +867,15 @@ library WaveTest initializer Init /*
         endmethod
 
         method getActiveIndexedUnit takes integer index returns unit
+            local WaveEntityRef ref
             if (index < 1) or (index > this.activeTrackedCount) then
                 return null
             endif
-            return WaveActiveUnitByKey.unit[this.activeKey(index)]
+            set ref = WaveEntityRef(WaveActiveUnitByKey[this.activeKey(index)])
+            if ref == 0 then
+                return null
+            endif
+            return ref.u
         endmethod
 
         private method clampCoreCounters takes nothing returns nothing
@@ -1123,14 +906,14 @@ library WaveTest initializer Init /*
             if this.totalBosses < 0 then
                 set this.totalBosses = 0
             endif
-            if this.totalKilled < 0 then
-                set this.totalKilled = 0
+            if this.toKillRemaining < 0 then
+                set this.toKillRemaining = 0
             endif
-            if this.totalKilledUnits < 0 then
-                set this.totalKilledUnits = 0
+            if this.toKillUnitsRemaining < 0 then
+                set this.toKillUnitsRemaining = 0
             endif
-            if this.totalKilledBoss < 0 then
-                set this.totalKilledBoss = 0
+            if this.toKillBossRemaining < 0 then
+                set this.toKillBossRemaining = 0
             endif
         endmethod
 
@@ -1146,15 +929,15 @@ library WaveTest initializer Init /*
             set s.remaining = 0
             set this.remainingToSpawn = this.remainingToSpawn - canceled
             set this.totalToSpawn = this.totalToSpawn - canceled
-            set this.totalKilled = this.totalKilled - canceled
+            set this.toKillRemaining = this.toKillRemaining - canceled
             if s.isBoss then
                 set this.remainingBosses = this.remainingBosses - canceled
                 set this.totalBosses = this.totalBosses - canceled
-                set this.totalKilledBoss = this.totalKilledBoss - canceled
+                set this.toKillBossRemaining = this.toKillBossRemaining - canceled
             else
                 set this.remainingUnits = this.remainingUnits - canceled
                 set this.totalUnits = this.totalUnits - canceled
-                set this.totalKilledUnits = this.totalKilledUnits - canceled
+                set this.toKillUnitsRemaining = this.toKillUnitsRemaining - canceled
             endif
         endmethod
 
@@ -1202,13 +985,13 @@ library WaveTest initializer Init /*
                 endif
             else
                 set this.totalToSpawn = this.totalToSpawn - 1
-                set this.totalKilled = this.totalKilled - 1
+                set this.toKillRemaining = this.toKillRemaining - 1
                 if s.isBoss then
                     set this.totalBosses = this.totalBosses - 1
-                    set this.totalKilledBoss = this.totalKilledBoss - 1
+                    set this.toKillBossRemaining = this.toKillBossRemaining - 1
                 else
                     set this.totalUnits = this.totalUnits - 1
-                    set this.totalKilledUnits = this.totalKilledUnits - 1
+                    set this.toKillUnitsRemaining = this.toKillUnitsRemaining - 1
                 endif
             endif
             call this.clampCoreCounters()
@@ -1230,7 +1013,7 @@ library WaveTest initializer Init /*
             loop
                 exitwhen i < 1 or this.isDestroyed
                 set u = this.getActiveIndexedUnit(i)
-                if (u != null) and (GetUnitTypeId(u) != 0) and UnitAlive(u) then
+                if (u != null) and (GetUnitTypeId(u) != 0) and (not IsUnitType(u, UNIT_TYPE_DEAD)) then
                     call KillUnit(u)
                 endif
                 set i = i - 1
@@ -1246,27 +1029,23 @@ library WaveTest initializer Init /*
             if this.isDestroyed then
                 return
             endif
+            // Reservas congeladas por una pausa: deben dispararse para cancelarse por epoca y drenar la instancia.
+            if this.isPaused then
+                call this.setPendingTimersPaused(false)
+            endif
             set this.terminateRequested = true
             set this.cancelPendingPermanently = true
-            // Al terminar por API tambiÃ©n queremos ejecutar callback final (RestTime/endF).
-            set this.suppressEndCallback = false
             set this.isRunning = false
             set this.isPaused = true
             set this.isFinishing = true
 
-            if this.loopTimer != null then
-                call PauseTimer(this.loopTimer)
-            endif
-
+            // El temporizador sigue activo para reconciliar retiradas mientras se drena.
             call this.cancelAllPendingSlots()
-            set this.waveToken = this.waveToken + 1
+            set this.pendingEpoch = this.pendingEpoch + 1
 
             if modeKillAlive then
                 call this.killAllTrackedUnits()
             endif
-
-            // Al terminar por API, forzamos refresco inmediato de multiboard.
-            call this.refreshBoard()
 
             call this.tryDestroyAfterTermination()
         endmethod
@@ -1315,7 +1094,7 @@ library WaveTest initializer Init /*
                 set index = GetRandomInt(0, this.nearUnitCount - 1)
                 set u = this.nearUnits[index]
 
-                if u != null and GetUnitTypeId(u) != 0 and UnitAlive(u) then
+                if u != null and GetUnitTypeId(u) != 0 and (not IsUnitType(u, UNIT_TYPE_DEAD)) then
                     set angle = GetRandomReal(0.0, 6.28318)
                     set dist  = GetRandomReal(64.0, radius)
 
@@ -1362,7 +1141,8 @@ library WaveTest initializer Init /*
 
         // Iniciar la wave
         method start takes nothing returns nothing
-            if this.isDestroyed or (this.loopTimer != null) then
+            // Una Wave terminada (aunque nunca arrancara) no vuelve a arrancar.
+            if this.isDestroyed or this.terminateRequested or (this.loopTimer != null) then
                 return
             endif
             set this.loopTimer = NewTimer()
@@ -1376,13 +1156,40 @@ library WaveTest initializer Init /*
             call WaveFireStart(this)
         endmethod
 
+        method unlinkPending takes PendingSpawn ps returns nothing
+            if ps.prevPending != 0 then
+                set ps.prevPending.nextPending = ps.nextPending
+            elseif this.pendingHead == ps then
+                set this.pendingHead = ps.nextPending
+            endif
+            if ps.nextPending != 0 then
+                set ps.nextPending.prevPending = ps.prevPending
+            endif
+            set ps.nextPending = 0
+            set ps.prevPending = 0
+        endmethod
+
+        // ResumeTimer conserva el tiempo restante de cada reserva congelada.
+        private method setPendingTimersPaused takes boolean paused returns nothing
+            local PendingSpawn ps = this.pendingHead
+            loop
+                exitwhen ps == 0
+                if paused then
+                    call PauseTimer(ps.t)
+                else
+                    call ResumeTimer(ps.t)
+                endif
+                set ps = ps.nextPending
+            endloop
+        endmethod
+
         method pause takes nothing returns nothing
             if this.isDestroyed or (not this.isRunning) or this.isPaused then
                 return
             endif
-            if this.loopTimer != null then
-                call PauseTimer(this.loopTimer)
-            endif
+            // El temporizador sigue activo: los ticks en pausa solo reconcilian retiradas.
+            // Las reservas ya creadas tambien se congelan: ninguna unidad aparece hasta resume (E09).
+            call this.setPendingTimersPaused(true)
             set this.isPaused = true
             call WaveFirePause(this)
         endmethod
@@ -1391,9 +1198,7 @@ library WaveTest initializer Init /*
             if this.isDestroyed or (not this.isRunning) or (not this.isPaused) then
                 return
             endif
-            if this.loopTimer != null then
-                call TimerStart(this.loopTimer, this.interval, true, function Wave_onTick)
-            endif
+            call this.setPendingTimersPaused(false)
             set this.isPaused = false
             call WaveFireResume(this)
         endmethod
@@ -1407,7 +1212,7 @@ library WaveTest initializer Init /*
             if s.killGate == -1 then
                 return true
             endif
-            return this.totalKilled <= s.killGate
+            return this.toKillRemaining <= s.killGate
         endmethod
 
         //==================================================
@@ -1419,7 +1224,9 @@ library WaveTest initializer Init /*
             local integer pick
             local WaveSlot s
             local integer pid
-            local integer maxPrio = -1
+            local integer maxPrio = 0
+            // Cualquier prioridad entera es valida (tambien negativa): no usar -1 como centinela.
+            local boolean found = false
 
             // 1. Encontrar prioridad mÃ¡s alta vÃ¡lida
             loop
@@ -1429,8 +1236,9 @@ library WaveTest initializer Init /*
 
                 if this.isTrackedPid(pid) and s.remaining > 0 and s.active < s.limit and this.activeByPlayer[pid] < this.perPlayerLimit then
                     if this.killGatePassed(s) then
-                        if s.priority > maxPrio then
+                        if (not found) or (s.priority > maxPrio) then
                             set maxPrio = s.priority
+                            set found = true
                         endif
                     endif
                 endif
@@ -1438,7 +1246,7 @@ library WaveTest initializer Init /*
                 set i = i + 1
             endloop
 
-            if maxPrio < 0 then
+            if not found then
                 return 0
             endif
 
@@ -1528,12 +1336,16 @@ library WaveTest initializer Init /*
             set ps.slot = s
             set ps.pid  = pid
             set ps.waveToken = this.waveToken
+            set ps.epoch = this.pendingEpoch
+            set ps.prevPending = 0
+            set ps.nextPending = this.pendingHead
+            if this.pendingHead != 0 then
+                set this.pendingHead.prevPending = ps
+            endif
+            set this.pendingHead = ps
+            set this.pendingReservations = this.pendingReservations + 1
             set ps.x    = this.spawnX
             set ps.y    = this.spawnY
-
-            if s.fxId > 0 and s.fxId <= FX_MAX then
-                call DestroyEffect(AddSpecialEffect(FX_UnitIn[s.fxId], ps.x, ps.y))
-            endif
 
             // 4. Timer de spawn real
             set ps.t = NewTimer()
@@ -1541,6 +1353,105 @@ library WaveTest initializer Init /*
             call SetTimerData(ps.t, ps)
             call TimerStart(ps.t, 1.50, false, function PendingSpawn_execute)
 
+            // Ultimo paso: un listener de Reserve puede pausar o destruir la Wave; la reserva ya esta completa.
+            call WaveFireReserve(this, s, s.isBoss, ps.x, ps.y)
+
+        endmethod
+
+        //==================================================
+        // Unica salida de una entidad registrada. retired=true: baja sin muerte (cumple objetivo, no cuenta kill).
+        method releaseEntity takes unit u, unit killer, boolean retired returns nothing
+            local integer hid = GetHandleId(u)
+            local WaveSlot s = 0
+            local integer pid = -1
+            local integer unitTypeId = 0
+            local boolean isBoss = false
+            local boolean isExternal = false
+
+            // Salida unica: si un listener de Death retira o mata esta misma unidad, la segunda salida se ignora.
+            if WaveReleasingByUnit.has(hid) then
+                return
+            endif
+            set WaveReleasingByUnit[hid] = 1
+
+            if WaveUnitTypeByUnit.has(hid) then
+                set unitTypeId = WaveUnitTypeByUnit[hid]
+            endif
+            set this.activeOnMap = this.activeOnMap - 1
+            set this.toKillRemaining = this.toKillRemaining - 1
+            if retired then
+                set this.retiredCount = this.retiredCount + 1
+            else
+                set this.killsDone = this.killsDone + 1
+            endif
+
+            if SlotByUnit.has(hid) then
+                set s = WaveSlot(SlotByUnit[hid])
+                if s.owner != null then
+                    set pid = GetPlayerId(s.owner)
+                endif
+                if (pid >= 0) and (pid < WAVE_TRACKED_PLAYER_SLOTS) then
+                    set this.activeByPlayer[pid] = this.activeByPlayer[pid] - 1
+                endif
+                set s.active = s.active - 1
+                set isBoss = s.isBoss
+            elseif ExternalIsBoss.has(hid) then
+                set isExternal = true
+                if WaveExternalOwnerPidByUnit.has(hid) then
+                    set pid = WaveExternalOwnerPidByUnit[hid]
+                    if (pid >= 0) and (pid < WAVE_TRACKED_PLAYER_SLOTS) then
+                        set this.activeByPlayer[pid] = this.activeByPlayer[pid] - 1
+                        if this.activeByPlayer[pid] < 0 then
+                            set this.activeByPlayer[pid] = 0
+                        endif
+                    endif
+                endif
+                set isBoss = ExternalIsBoss[hid] == 1
+            endif
+
+            if isBoss then
+                set this.activeBosses = this.activeBosses - 1
+                set this.toKillBossRemaining = this.toKillBossRemaining - 1
+                if not retired then
+                    set this.killsDoneBoss = this.killsDoneBoss + 1
+                endif
+            elseif (s != 0) or isExternal then
+                set this.activeUnits = this.activeUnits - 1
+                set this.toKillUnitsRemaining = this.toKillUnitsRemaining - 1
+                if not retired then
+                    set this.killsDoneUnits = this.killsDoneUnits + 1
+                endif
+            endif
+
+            if WAVE_DEBUG_ENABLED then
+                call WaveDebugLog("releaseEntity w=" + I2S(this) + " retired=" + I2S(WaveDebugBoolToInt(retired)) + " unit=" + WaveDebugUnitSummary(u) + " killer=" + WaveDebugUnitSummary(killer) + " external=" + I2S(WaveDebugBoolToInt(isExternal)) + " boss=" + I2S(WaveDebugBoolToInt(isBoss)) + " ownerPid=" + I2S(pid) + " type=" + I2S(unitTypeId) + " hid=" + I2S(hid))
+            endif
+
+            call this.untrackUnitByHandle(hid)
+            call WaveFireDeath(this, u, killer, s, isBoss, isExternal, retired, unitTypeId)
+
+            call WaveByUnit.remove(hid)
+            call SlotByUnit.remove(hid)
+            call ExternalIsBoss.remove(hid)
+            call WaveExternalOwnerPidByUnit.remove(hid)
+            call WaveUnitTypeByUnit.remove(hid)
+            call WaveReleasingByUnit.remove(hid)
+            call this.tryDestroyAfterTermination()
+        endmethod
+
+        // Entidades indexadas que el motor ya elimino sin evento de muerte (RemoveUnit).
+        method reconcileRetired takes nothing returns nothing
+            local integer i = this.activeTrackedCount
+            local unit u
+            loop
+                exitwhen i < 1 or this.isDestroyed
+                set u = this.getActiveIndexedUnit(i)
+                if (u != null) and (GetUnitTypeId(u) == 0) then
+                    call this.releaseEntity(u, null, true)
+                endif
+                set i = i - 1
+            endloop
+            set u = null
         endmethod
 
         //==================================================
@@ -1558,15 +1469,15 @@ library WaveTest initializer Init /*
 
         // API semÃƒÂ¡ntica para IA/UI (sin romper legacy)
         method getToKillRemaining takes nothing returns integer
-            return this.totalKilled
+            return this.toKillRemaining
         endmethod
 
         method getToKillUnitsRemaining takes nothing returns integer
-            return this.totalKilledUnits
+            return this.toKillUnitsRemaining
         endmethod
 
         method getToKillBossRemaining takes nothing returns integer
-            return this.totalKilledBoss
+            return this.toKillBossRemaining
         endmethod
 
         method getKillsDone takes nothing returns integer
@@ -1585,17 +1496,13 @@ library WaveTest initializer Init /*
             return this.isRunning and (not this.isPaused) and (not this.isDestroyed)
         endmethod
 
-        method refreshBoard takes nothing returns nothing
-            if this.board != null and this.titleFunc != "" then
-                set CurrentBoardContext = this.board
-                call ExecuteFunc(this.titleFunc)
-                set CurrentBoardContext = null
-            endif
-        endmethod
-
         //==================================================
         method onTick takes nothing returns nothing
-            if this.isDestroyed or this.isPaused then
+            if this.isDestroyed then
+                return
+            endif
+            call this.reconcileRetired()
+            if this.isDestroyed or this.isPaused or this.terminateRequested then
                 return
             endif
             set this.tickCounter = this.tickCounter + 1
@@ -1603,8 +1510,6 @@ library WaveTest initializer Init /*
                 call this.compactNearUnits()
             endif
             call this.trySpawn()
-
-            call this.refreshBoard()
 
             if this.allSlotsEmpty() and this.activeOnMap <= 0 then
                 call this.finish()
@@ -1635,6 +1540,9 @@ library WaveTest initializer Init /*
             local integer hid
             local integer key
             local unit u
+            local WaveEntityRef ref
+            local PendingSpawn ps
+            local PendingSpawn nextPs
 
             if this.isDestroyed then
                 return
@@ -1642,6 +1550,21 @@ library WaveTest initializer Init /*
             set this.isDestroyed = true
             set this.isRunning = false
             set this.isPaused = false
+
+            // Reservas pendientes: se liberan ya (una congelada no volveria a dispararse).
+            set ps = this.pendingHead
+            loop
+                exitwhen ps == 0
+                set nextPs = ps.nextPending
+                call ReleaseTimer(ps.t)
+                set ps.t = null
+                set ps.nextPending = 0
+                set ps.prevPending = 0
+                call ps.destroy()
+                set ps = nextPs
+            endloop
+            set this.pendingHead = 0
+            set this.pendingReservations = 0
 
             // Timer
             if this.loopTimer != null then
@@ -1656,34 +1579,27 @@ library WaveTest initializer Init /*
             loop
                 exitwhen i > this.activeTrackedCount
                 set key = this.activeKey(i)
-                set u = WaveActiveUnitByKey.unit[key]
+                set ref = WaveEntityRef(WaveActiveUnitByKey[key])
+                set u = null
+                if ref != 0 then
+                    set u = ref.u
+                    set ref.u = null
+                    call ref.destroy()
+                endif
                 if u != null then
                     set hid = GetHandleId(u)
                     call WaveByUnit.remove(hid)
                     call SlotByUnit.remove(hid)
                     call ExternalIsBoss.remove(hid)
                     call WaveExternalOwnerPidByUnit.remove(hid)
-                    call WaveExternalSpawnFxByUnit.remove(hid)
                     call WaveActivePosByUnit.remove(hid)
+                    call WaveUnitTypeByUnit.remove(hid)
                 endif
                 call WaveActiveUnitByKey.remove(key)
                 set i = i + 1
             endloop
             set this.activeTrackedCount = 0
             set u = null
-
-            // Multiboard
-            if this.board != null then
-                call WaveByBoard.remove(GetHandleId(this.board))
-                set this.board = null
-                set this.titleFunc = ""
-            endif
-
-            // endFunct
-            if (not this.suppressEndCallback) and this.finishFuncName != "" then 
-                // RestTime: recibe el nombre de la funciÃƒÂ³n a ejecutar luego.
-                call endF(this.finishFuncName)
-            endif
 
             // Slots
             set i = 0
@@ -1738,6 +1654,19 @@ library WaveTest initializer Init /*
         return 0
     endfunction
 
+    function IsWaveEventRetired takes nothing returns boolean
+        return WaveEventIsRetired
+    endfunction
+
+    // Tipo vivo si la unidad existe; si ya fue eliminada, el tipo registrado.
+    function GetWaveEventUnitTypeId takes nothing returns integer
+        local integer t = GetUnitTypeId(WaveEventUnit)
+        if t != 0 then
+            return t
+        endif
+        return WaveEventUnitTypeId
+    endfunction
+
     function IsWaveManagedUnit takes unit u returns boolean
         if u == null then
             return false
@@ -1787,6 +1716,21 @@ library WaveTest initializer Init /*
         call TriggerAddAction(WaveEvtDeath, c)
     endfunction
 
+    function RegisterWaveReserveEvent takes code c returns nothing
+        if WaveEvtReserve == null then
+            set WaveEvtReserve = CreateTrigger()
+        endif
+        call TriggerAddAction(WaveEvtReserve, c)
+    endfunction
+
+    function GetWaveEventX takes nothing returns real
+        return WaveEventX
+    endfunction
+
+    function GetWaveEventY takes nothing returns real
+        return WaveEventY
+    endfunction
+
     function RegisterWaveExternalEvent takes code c returns nothing
         if WaveEvtExternal == null then
             set WaveEvtExternal = CreateTrigger()
@@ -1822,7 +1766,6 @@ library WaveTest initializer Init /*
         local Wave w = Wave(waveId)
         if w != 0 then
             call w.terminate(false)
-            call w.refreshBoard()
         endif
     endfunction
 
@@ -1830,7 +1773,6 @@ library WaveTest initializer Init /*
         local Wave w = Wave(waveId)
         if w != 0 then
             call w.terminate(true)
-            call w.refreshBoard()
         endif
     endfunction
 
@@ -1848,66 +1790,6 @@ library WaveTest initializer Init /*
         endif
     endfunction
 
-    function InitFX takes nothing returns nothing
-        // 1. Teletransporte masivo humano
-        set FX_UnitIn[1]  = "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl"
-        set FX_UnitOut[1] = "Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.mdl"
-        // 2. ResurrecciÃ³n humana
-        set FX_UnitIn[2]  = "Abilities\\Spells\\Human\\Resurrect\\ResurrectCaster.mdl"
-        set FX_UnitOut[2] = "Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl"
-        // 3. Animar muerto no-muerto
-        set FX_UnitIn[3]  = "Abilities\\Spells\\Undead\\CarrionSwarm\\CarrionSwarmDamage.mdl"
-        set FX_UnitOut[3] = "Abilities\\Spells\\Undead\\AnimateDead\\AnimateDeadTarget.mdl"
-        // 4. Artefacto especial (AIil)
-        set FX_UnitIn[4]  = "Abilities\\Spells\\Items\\AIil\\AIilTarget.mdl"
-        set FX_UnitOut[4] = "Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl"
-        // 5. DisipaciÃ³n no-muerto
-        set FX_UnitIn[5]  = "Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl"
-        set FX_UnitOut[5] = "Abilities\\Spells\\Human\\MarkOfChaos\\MarkOfChaosDone.mdl"
-        // 6. PurificaciÃ³n de objeto
-        set FX_UnitIn[6]  = "Abilities\\Spells\\Items\\StaffOfPurification\\PurificationCaster.mdl"
-        set FX_UnitOut[6] = "Abilities\\Spells\\Items\\StaffOfPurification\\PurificationTarget.mdl"
-        // 7. Invocar esqueleto guerrero
-        set FX_UnitIn[7]  = "Abilities\\Spells\\Undead\\RaiseSkeletonWarrior\\RaiseSkeleton.mdl"
-        set FX_UnitOut[7] = "Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilSpecialArt.mdl"
-        // 8.  / batalla
-        set FX_UnitIn[8]  = "Abilities\\Spells\\Orc\\FeralSpirit\\feralspirittarget.mdl"
-        set FX_UnitOut[8] = "Abilities\\Spells\\NightElf\\BattleRoar\\RoarCaster.mdl"
-        // 9. Ola aplastante / daÃ±o
-        set FX_UnitIn[9]  = "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl"
-        set FX_UnitOut[9] = "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl"
-        // 10. DisipaciÃ³n / cancelaciÃ³n no-muerto
-        set FX_UnitIn[10]  = "Objects\\Spawnmodels\\Undead\\UndeadDissipate\\UndeadDissipate.mdl"
-        set FX_UnitOut[10] = "Objects\\Spawnmodels\\Undead\\UCancelDeath\\UCancelDeath.mdl"
-        // 11. Polvo de empalamiento / humano
-        set FX_UnitIn[11]  = "Objects\\Spawnmodels\\Undead\\ImpaleTargetDust\\ImpaleTargetDust.mdl"
-        set FX_UnitOut[11] = "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl"
-        // 12. Pacto de muerte
-        set FX_UnitIn[12]  = "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl"
-        set FX_UnitOut[12] = "Objects\\Spawnmodels\\NightElf\\NECancelDeath\\NECancelDeath.mdl"
-        // 13. ToonBoom / arte especial
-        set FX_UnitIn[13]  = "Objects\\Spawnmodels\\Other\\ToonBoom\\ToonBoom.mdl"
-        set FX_UnitOut[13] = "Abilities\\Spells\\Items\\AIem\\AIemTarget.mdl"
-        // 15. Rayo divino / HolyBolt
-        set FX_UnitIn[14]  = "Abilities\\Spells\\Other\\Awaken\\Awaken.mdl"
-        set FX_UnitOut[14] = "Abilities\\Spells\\Human\\HolyBolt\\HolyBoltSpecialArt.mdl"
-        // 16. Arte AIhe / HolyBolt
-        set FX_UnitIn[15]  = "Abilities\\Spells\\Items\\AIhe\\AIheTarget.mdl"
-        set FX_UnitOut[15] = "Abilities\\Spells\\Human\\HolyBolt\\HolyBoltSpecialArt.mdl"
-        // 17. Feedback / WarStomp
-        set FX_UnitIn[16]  = "Abilities\\Spells\\Human\\Feedback\\SpellBreakerAttack.mdl"
-        set FX_UnitOut[16] = "Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl"
-        // 18. Control mÃ¡gico
-        set FX_UnitIn[17]  = "Abilities\\Spells\\Human\\ControlMagic\\ControlMagicTarget.mdl"
-        set FX_UnitOut[17] = "Abilities\\Spells\\Undead\\DarkRitual\\DarkRitualTarget.mdl"
-        // 19. Impacto de proyectil / Bolt
-        set FX_UnitIn[18]  = "Abilities\\Weapons\\Bolt\\BoltImpact.mdl"
-        set FX_UnitOut[18] = "Abilities\\Spells\\Human\\Thunderclap\\ThunderClapCaster.mdl"
-        // 20. Dispel / TomeOfRetraining
-        set FX_UnitIn[19]  = "Abilities\\Spells\\Human\\DispelMagic\\DispelMagicTarget.mdl"
-        set FX_UnitOut[19] = "Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl"
-    endfunction
-
     //==================================================
     // Trigger de muerte
     //==================================================
@@ -1916,13 +1798,6 @@ library WaveTest initializer Init /*
         local unit killer = GetKillingUnit()
         local integer hid = GetHandleId(u)
         local Wave w
-        local WaveSlot s
-        local integer pid
-        local integer ownerPid = -1
-        local integer slotUnitId = -1
-        local boolean isBoss = false
-        local boolean isExternal = false
-        local string deathKind = "normal"
 
         if WaveByUnit.has(hid) then
             set w = Wave(WaveByUnit[hid])
@@ -1932,9 +1807,10 @@ library WaveTest initializer Init /*
                 call SlotByUnit.remove(hid)
                 call ExternalIsBoss.remove(hid)
                 call WaveExternalOwnerPidByUnit.remove(hid)
-                call WaveExternalSpawnFxByUnit.remove(hid)
+                call WaveUnitTypeByUnit.remove(hid)
                 call WaveHandleAffiliateDeath(hid)
                 set u = null
+                set killer = null
                 return
             endif
             if w.isDestroyed then
@@ -1944,82 +1820,13 @@ library WaveTest initializer Init /*
                 call SlotByUnit.remove(hid)
                 call ExternalIsBoss.remove(hid)
                 call WaveExternalOwnerPidByUnit.remove(hid)
-                call WaveExternalSpawnFxByUnit.remove(hid)
+                call WaveUnitTypeByUnit.remove(hid)
                 call WaveHandleAffiliateDeath(hid)
                 set u = null
+                set killer = null
                 return
             endif
-
-            set w.activeOnMap = w.activeOnMap - 1
-            set w.totalKilled = w.totalKilled - 1
-            set w.killsDone = w.killsDone + 1
-
-            if SlotByUnit.has(hid) then
-                set s = WaveSlot(SlotByUnit[hid])
-                set slotUnitId = s.unitId
-                if s.owner != null then
-                    set ownerPid = GetPlayerId(s.owner)
-                endif
-                set pid = ownerPid
-                if (pid >= 0) and (pid < WAVE_TRACKED_PLAYER_SLOTS) then
-                    set w.activeByPlayer[pid] = w.activeByPlayer[pid] - 1
-                endif
-                set s.active = s.active - 1
-                if s.isBoss then
-                    set isBoss = true
-                    set w.activeBosses = w.activeBosses - 1
-                    set w.totalKilledBoss = w.totalKilledBoss - 1
-                    set w.killsDoneBoss = w.killsDoneBoss + 1
-                else
-                    set w.activeUnits = w.activeUnits - 1
-                    set w.totalKilledUnits = w.totalKilledUnits - 1
-                    set w.killsDoneUnits = w.killsDoneUnits + 1
-                endif
-            elseif ExternalIsBoss.has(hid) then
-                set isExternal = true
-                if WaveExternalOwnerPidByUnit.has(hid) then
-                    set pid = WaveExternalOwnerPidByUnit[hid]
-                    set ownerPid = pid
-                    if (pid >= 0) and (pid < WAVE_TRACKED_PLAYER_SLOTS) then
-                        set w.activeByPlayer[pid] = w.activeByPlayer[pid] - 1
-                        if w.activeByPlayer[pid] < 0 then
-                            set w.activeByPlayer[pid] = 0
-                        endif
-                    endif
-                endif
-                if ExternalIsBoss[hid] == 1 then 
-                    set isBoss = true
-                    set w.activeBosses = w.activeBosses - 1
-                    set w.totalKilledBoss = w.totalKilledBoss - 1
-                    set w.killsDoneBoss = w.killsDoneBoss + 1
-                else                   
-                    set w.activeUnits = w.activeUnits - 1
-                    set w.totalKilledUnits = w.totalKilledUnits - 1
-                    set w.killsDoneUnits = w.killsDoneUnits + 1
-                endif
-            endif
-
-            if isExternal and isBoss then
-                set deathKind = "external_boss"
-            elseif isExternal then
-                set deathKind = "external"
-            elseif isBoss then
-                set deathKind = "boss"
-            endif
-
-            if WAVE_DEBUG_ENABLED then
-                call WaveDebugLog("OnUnitDeath w=" + I2S(w) + " kind=" + deathKind + " unit=" + WaveDebugUnitSummary(u) + " killer=" + WaveDebugUnitSummary(killer) + " external=" + I2S(WaveDebugBoolToInt(isExternal)) + " boss=" + I2S(WaveDebugBoolToInt(isBoss)) + " ownerPid=" + I2S(ownerPid) + " slotUnitId=" + I2S(slotUnitId) + " hid=" + I2S(hid))
-            endif
-
-            call w.untrackUnitByHandle(hid)
-            call WaveFireDeath(w, u, killer, s, isBoss, isExternal)
-
-            call WaveByUnit.remove(hid)
-            call SlotByUnit.remove(hid)
-            call ExternalIsBoss.remove(hid)
-            call WaveExternalOwnerPidByUnit.remove(hid)
-            call WaveExternalSpawnFxByUnit.remove(hid)
-            call w.tryDestroyAfterTermination()
+            call w.releaseEntity(u, killer, false)
         endif
 
         call WaveHandleAffiliateDeath(hid)
@@ -2028,7 +1835,26 @@ library WaveTest initializer Init /*
         set u = null
     endfunction
 
-    function registerExternalUnit takes unit source, unit summoned, boolean isBoss returns nothing
+    // Retirada explicita (p. ej. antes de RemoveUnit): baja sin muerte e inmediata.
+    function WaveRetireUnit takes unit u returns boolean
+        local integer hid
+        local Wave w
+        if u == null then
+            return false
+        endif
+        set hid = GetHandleId(u)
+        if not WaveByUnit.has(hid) then
+            return false
+        endif
+        set w = Wave(WaveByUnit[hid])
+        if (w == 0) or w.isDestroyed or WaveReleasingByUnit.has(hid) then
+            return false
+        endif
+        call w.releaseEntity(u, null, true)
+        return true
+    endfunction
+
+    function WaveRegisterExternalUnit takes unit source, unit summoned, boolean isBoss returns nothing
             local integer srcId = GetHandleId(source)
             local Wave w
 
@@ -2052,97 +1878,6 @@ library WaveTest initializer Init /*
         return Wave(WaveByUnit[GetHandleId(u)])
     endfunction
 
-    function WaveIsDefaultOwnerPlayerId takes integer pid returns boolean
-        return (pid >= WAVE_DEFAULT_OWNER_MIN) and (pid <= WAVE_DEFAULT_OWNER_MAX) and (pid < bj_MAX_PLAYER_SLOTS)
-    endfunction
-
-    function WaveGetDefaultOwnerCount takes nothing returns integer
-        return WAVE_DEFAULT_OWNER_MAX - WAVE_DEFAULT_OWNER_MIN + 1
-    endfunction
-
-    function WaveGetSpawnFxIdForUnit takes unit u returns integer
-        local integer hid
-        local WaveSlot s
-        if u == null or GetUnitTypeId(u) == 0 then
-            return 0
-        endif
-        set s = GetWaveSlotByUnit(u)
-        if s != 0 then
-            return s.fxId
-        endif
-        set hid = GetHandleId(u)
-        if hid != 0 and WaveExternalSpawnFxByUnit.has(hid) then
-            return WaveExternalSpawnFxByUnit[hid]
-        endif
-        return 0
-    endfunction
-
-    function WaveCanSpawnUnitFromDefaultOwnerPid takes unit source, integer pid returns boolean
-        local Wave w
-        if source == null or GetUnitTypeId(source) == 0 then
-            return false
-        endif
-        if not WaveIsDefaultOwnerPlayerId(pid) or pid >= WAVE_TRACKED_PLAYER_SLOTS then
-            return false
-        endif
-        set w = GetWaveByUnit(source)
-        if w == 0 or w.isDestroyed then
-            return false
-        endif
-        return w.activeByPlayer[pid] < w.perPlayerLimit
-    endfunction
-
-    function WaveSpawnUnitFromDefaultOwnerPid takes unit source, integer unitTypeId, integer pid, real x, real y returns unit
-        local Wave w
-        local unit summoned
-        local integer fxId
-        if unitTypeId == 0 then
-            return null
-        endif
-        if not WaveCanSpawnUnitFromDefaultOwnerPid(source, pid) then
-            return null
-        endif
-        set w = GetWaveByUnit(source)
-        if w == 0 or w.isDestroyed then
-            return null
-        endif
-        set fxId = WaveGetSpawnFxIdForUnit(source)
-        if fxId > 0 and fxId <= FX_MAX then
-            call DestroyEffect(AddSpecialEffect(FX_UnitIn[fxId], x, y))
-        endif
-        set summoned = CreateUnit(Player(pid), unitTypeId, x, y, 270.0)
-        if summoned == null or GetUnitTypeId(summoned) == 0 then
-            set summoned = null
-            return null
-        endif
-        if fxId > 0 and fxId <= FX_MAX then
-            call DestroyEffect(AddSpecialEffectTarget(FX_UnitOut[fxId], summoned, "origin"))
-        endif
-        if fxId > 0 then
-            set WaveExternalSpawnFxByUnit[GetHandleId(summoned)] = fxId
-        endif
-        return summoned
-    endfunction
-
-    function WaveSpawnUnitFromDefaultOwners takes unit source, integer unitTypeId, real x, real y returns unit
-        local Wave w
-        local integer pid
-        local unit summoned
-        if source == null or GetUnitTypeId(source) == 0 or unitTypeId == 0 then
-            return null
-        endif
-        set w = GetWaveByUnit(source)
-        if w == 0 or w.isDestroyed then
-            return null
-        endif
-        set pid = w.pickDefaultOwnerPid()
-        if pid < 0 then
-            return null
-        endif
-        set summoned = WaveSpawnUnitFromDefaultOwnerPid(source, unitTypeId, pid, x, y)
-        return summoned
-    endfunction
-    
     //==================================================
     // Init
     //==================================================
@@ -2153,14 +1888,14 @@ library WaveTest initializer Init /*
         set WaveByUnit = Table.create()
         set WaveByTimer = Table.create()
         set SlotByUnit = Table.create()
-        set WaveByBoard = Table.create()
         set ExternalIsBoss = Table.create()
         set WaveActiveUnitByKey = Table.create()
         set WaveActivePosByUnit = Table.create()
         set WaveAffiliateWaveByUnit = Table.create()
         set WaveAffiliateModeByUnit = Table.create()
         set WaveExternalOwnerPidByUnit = Table.create()
-        set WaveExternalSpawnFxByUnit = Table.create()
+        set WaveUnitTypeByUnit = Table.create()
+        set WaveReleasingByUnit = Table.create()
         set WaveEvtStart = CreateTrigger()
         set WaveEvtPause = CreateTrigger()
         set WaveEvtResume = CreateTrigger()
@@ -2168,7 +1903,7 @@ library WaveTest initializer Init /*
         set WaveEvtSpawn = CreateTrigger()
         set WaveEvtDeath = CreateTrigger()
         set WaveEvtExternal = CreateTrigger()
-        call InitFX()
+        set WaveEvtReserve = CreateTrigger()
 
         loop
             exitwhen i >= bj_MAX_PLAYER_SLOTS

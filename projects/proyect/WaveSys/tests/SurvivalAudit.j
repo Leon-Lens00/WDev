@@ -1,7 +1,7 @@
 // Executes the original ten stage configurations and real rest/victory flow.
 // A test-only sweeper kills enemies after spawn: this verifies progression,
 // not combat difficulty, survival skill or human input.
-library WaveSurvivalAudit initializer Init requires stage1, WaveDamageCredit, WavePointApi
+library WaveSurvivalAudit initializer Init requires stage1, WaveDamageCredit, WavePointApi, RestTimeCountdown
 globals
     private string array lines
     private integer n = 0
@@ -61,6 +61,7 @@ private function OnStart takes nothing returns nothing
         set expectedSlots = 5
     endif
     call Check(w.waveIndex == starts and TargetWave == starts, "stage index " + I2S(starts))
+    call Check(isWavez, "wave " + I2S(starts) + " marked active by RestTime launch")
     call Check(w.totalToSpawn == expected and w.remainingToSpawn == expected, "wave " + I2S(starts) + " total=" + I2S(w.totalToSpawn) + " expected=" + I2S(expected))
     call Check(w.slotCount == expectedSlots, "wave " + I2S(starts) + " slot count=" + I2S(w.slotCount))
     call Check(w.pointCount == 3 and w.nearUnitCount == 1, "fixed marker points and active hero reach stage")
@@ -149,7 +150,8 @@ private function Begin takes nothing returns nothing
     call RegisterWaveDeathEvent(function OnDeath)
     call RegisterWaveFinishEvent(function OnFinish)
     call TimerStart(monitor, .10, true, function Tick)
-    call Trig_w1_Actions()
+    // Same entry as the real match: RestTime launches the wave (and owns isWavez/TargetWave/WaveTgg).
+    call RestTimeLaunchCurrentWave()
     call PanCameraToTimed(-6000., 3500., 0.)
     call Save("started")
     set a = null

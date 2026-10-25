@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "/home/snz/Documentos/ChatGPT/FrozenThone/scripts/wc3.py",
+    "wc3ctl",
+    "file",
+    "set",
+    "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+    "war3map.j",
+    "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/rw1b-pause-v1-compiled.j",
+    "-o",
+    "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-rw1b-pause-v1.w3x",
+    "--json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"Ok\": true,\n  \"Message\": \"replaced war3map.j, 243844 bytes\",\n  \"SavedTo\": \"/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-rw1b-pause-v1.w3x\"\n}\n",
+  "stderr": ""
+}

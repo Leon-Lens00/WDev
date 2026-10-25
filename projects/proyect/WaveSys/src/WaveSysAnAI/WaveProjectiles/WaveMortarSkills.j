@@ -1,4 +1,4 @@
-library WaveMortarSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveTest, WaveSkillVisuals, PlayerHeroState
+library WaveMortarSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveCore, WaveSkillVisuals, PlayerHeroState
 
     globals
         public constant integer WAVE_HMTM_UNIT_ID = 'hmtm'
@@ -298,10 +298,10 @@ library WaveMortarSkills initializer Init requires Table, TimerUtils, Missile, S
         local unit deadUnit = GetWaveEventUnit()
         local integer hid
         local integer barrageId
-        if deadUnit == null or GetUnitTypeId(deadUnit) == 0 then
+        if deadUnit == null then
             return
         endif
-        if GetUnitTypeId(deadUnit) == WAVE_HMTM_UNIT_ID or GetUnitTypeId(deadUnit) == WAVE_HMTM_BOSS_UNIT_ID then
+        if GetWaveEventUnitTypeId() == WAVE_HMTM_UNIT_ID or GetWaveEventUnitTypeId() == WAVE_HMTM_BOSS_UNIT_ID then
             set hid = GetHandleId(deadUnit)
             if hid != 0 and WaveMortarNextCastMs.has(hid) then
                 call WaveMortarNextCastMs.remove(hid)

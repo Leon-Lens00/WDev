@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-24",
+  "agent": "Claude (chat WavSys)",
+  "decision": "User: pause also freezes reservations already created; no unit appears until resume.",
+  "file": "src/WaveSysAnAI/SwlsWave/SwlsWave.j",
+  "before": "evidence/e09-before/SwlsWave.j",
+  "after_sha256": "96f62a25b4093325e41e0d8d2c2588a3df23a4bbc943bae7ec6fef40b4d44473",
+  "fixture": {
+    "tests/PauseAudit.j": "93234027d734398f21e1480e15df9da8e5ae8eb2a5349c9665272ab8bb6ec0d1"
+  },
+  "changes": [
+    "Wave keeps a linked list of its PendingSpawn (pendingHead, nextPending/prevPending)",
+    "pause() PauseTimer on pending timers; resume() ResumeTimer (keeps remaining time)",
+    "terminate() resumes frozen timers so they cancel by epoch and drain the wave",
+    "destroyWave() releases pending timers/structs immediately",
+    "PendingSpawn_execute: defensive refreeze if fired while paused; unlink on resolution"
+  ],
+  "runs": {
+    "e09-pause-v1": "PauseAudit 11/0",
+    "e09-features-v1": "FeatureAudit 44/0",
+    "e09-core-v1": "CoreAudit 16/0 (2 checks only ran when the paused wave materialized; ordinary death covered by FeatureAudit/LifecycleAudit)",
+    "e09-lifecycle-v1": "LifecycleAudit 49/0",
+    "e09-survival-v1": "SurvivalAudit 67/0, 10/10, 518/518"
+  },
+  "gpu": "profile default (NVIDIA)",
+  "limits": "Pause still does not freeze native attacks, skill timers or AI; only Wave reservations and new spawns. Single player."
+}

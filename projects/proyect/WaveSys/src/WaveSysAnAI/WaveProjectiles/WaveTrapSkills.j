@@ -1,4 +1,4 @@
-library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, RegisterPlayerUnitEvent, WaveTest, WaveSkillVisuals, PlayerHeroState
+library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, RegisterPlayerUnitEvent, WaveCore, WaveSkillVisuals, PlayerHeroState
 
     globals
         public constant integer WAVE_HSOR_UNIT_ID = 'hsor'
@@ -399,10 +399,10 @@ library WaveTrapSkills initializer Init requires Table, TimerUtils, Missile, Spe
         local integer hid
         local integer castId
         local integer unitTypeId
-        if deadUnit == null or GetUnitTypeId(deadUnit) == 0 then
+        if deadUnit == null then
             return
         endif
-        set unitTypeId = GetUnitTypeId(deadUnit)
+        set unitTypeId = GetWaveEventUnitTypeId()
         if unitTypeId != WAVE_HSOR_UNIT_ID and unitTypeId != WAVE_HSOR_BOSS_UNIT_ID then
             return
         endif

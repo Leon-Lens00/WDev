@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-24",
+  "agent": "Claude (chat WavSys)",
+  "plan": "docs/planes/ciclo-vida-e13-e03-e02-2026-10-24.md",
+  "file": "src/WaveSysAnAI/SwlsWave/SwlsWave.j",
+  "before_sha256": "b33711164fec7468b3048d0c42f0f5b3997d1bb072fea54de135252390e57119",
+  "before_copy": "evidence/lifecycle-e02-e13-before/SwlsWave.j",
+  "after_sha256": "a21cdb06c69d825dac78a9713ab4c3270b5b4335c5f6124f89866fe43d4131c7",
+  "changes": ["E02: local WaveSlot s = 0 in OnUnitDeath", "E13: waveToken immutable instance identity; pendingEpoch/PendingSpawn.epoch for terminate; pendingReservations counter"],
+  "encoding_note": "Edited bytewise; LF kept (2 pre-existing CRLF lines untouched); added text is ASCII only.",
+  "verification": "static diff and CodeGraph re-read only; not compiled, not run in game"
+}

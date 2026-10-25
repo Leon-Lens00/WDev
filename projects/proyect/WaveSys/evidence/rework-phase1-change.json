@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-24",
+  "agent": "Claude (chat WavSys)",
+  "plan": "docs/planes/rework-conexiones-wavesys-2026-10-24.md",
+  "decisions": "user approved: clean Wave.create signature; keep terminate/bind helpers; move default-owner helpers to config; FX via presentation adapter",
+  "before": "evidence/rework-phase1-before/",
+  "after_sha256": {
+    "src/WaveSysAnAI/SwlsWave/SwlsWave.j": "94c098ed12023f17c7f86a9b648edd16f210a3120e6d5b316b362fb0ac20cc79",
+    "src/WaveSysAnAI/SwlsWave/WaveSpawnFx.j": "470c4b70686e18b319d68abab564117d0cc9c456b18be54a90231773274eb394",
+    "src/WaveSysAnAI/SwlsWave/WaveOwnerPolicy.j": "17122e802d3bd791534a62d3c0c7681609c6ad7660eae7432c924a0ed6b2ad0e",
+    "tools/build-core-audit.py": "05b164864e5a5606b07b5651826c8a8d075b71242ad252bce3944f6c596d9382",
+    "tests/FeatureAudit.j": "a3a10efeb42aefc32404d484667dbf1d3fded74bb7333cbbad72b700fc95af5f"
+  },
+  "core_requires": "Table, TimerUtils (TheEnd and SwlsMath removed; UnitAlive replaced by IsUnitType DEAD)",
+  "removed_from_core": [
+    "endF/finishFuncName/suppressEndCallback",
+    "multiboard board/titleFunc/WaveByBoard/refreshBoard/ExecuteFunc/CurrentBoardContext",
+    "player count and per-player scaling",
+    "default owners 8-12 and ByPlayer(s) methods",
+    "FX paths/InitFX/FX_MAX clamp and external FX table",
+    "default-owner spawn helpers"
+  ],
+  "added": [
+    "Wave.create(perPlayerLimit, nearChance, interval, waveIndex, waveTotal)",
+    "Wave.addSlotGrouped",
+    "Reserve event + GetWaveEventX/Y",
+    "WaveSpawnFx.j (presentation)",
+    "WaveOwnerPolicy.j (map policy)"
+  ],
+  "defect_found_and_fixed": "rw1-*: trigger WaveEvtReserve read uninitialized in WaveTest Init -> init thread aborted and every trySpawn crashed; fixed with '= null' and unconditional CreateTrigger",
+  "runs": {
+    "rw1b-lifecycle-v1": "49/0",
+    "rw1b-pause-v1": "11/0",
+    "rw1b-features-v1": "44/0",
+    "rw1b-core-v1": "16/0",
+    "rw1b-removal-v1": "active=0 tracked=0 finished=1"
+  },
+  "not_run": "full 114-source build and integration labs: integrations (stage, RestTime, board, IAManager, WaveStreaks) pending rework phase 2"
+}

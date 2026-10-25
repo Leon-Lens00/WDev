@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-24",
+  "agent": "Claude (chat WavSys)",
+  "issue": "informes/errores/resueltos/2026-10-23-015734-wavesys-e11-tablero-descanso.md (E16 is a duplicate)",
+  "decision": "User chose option 1: initial board only during selection; RestTime owns the title during rests.",
+  "files": {
+    "src/Multiboard/InitialWaveMultiboard.j": {
+      "before": "6202600a9c17b58523f081aed8295d046aba70455e76d63a1b7275da7b8e73ac",
+      "after": "4b8876d334e1126b046eb4be6f6729dcc9cdc16b9069f47a2065f80259b3154e"
+    },
+    "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j": {
+      "before": "d44dae4331a7733d827f97b5de68ee7861ab64901f2da594bc3763c6bb7dffa5",
+      "after": "12946aebe30090ab4b5be69cf1f0f1542f39a3824485c256e5fb3a45319110c5"
+    }
+  },
+  "before_copies": "evidence/e16-before/",
+  "fixture": {
+    "tests/RestBoardAudit.j": "6dd92ba025602b8a64bd462ca95a7efa144b865e163b388721319dafc2d6a88e",
+    "derived_from": "tests/SurvivalAudit.j + read-only title sampler every 0.05 s during RestPhaseState != NONE"
+  },
+  "runs": {
+    "restboard-before-v1": {
+      "map_sha256": "aef35b08aed72d36855b7577a59fd9ff3fe07ed5da0133b64b6753ed3da01810",
+      "result": "69 checks / 1 FAIL; foreign titles 1700/1800 (initial board 'Preparando Wave N/10')"
+    },
+    "restboard-after-v1": {
+      "map_sha256": "5cf1b48494cc2ac56b8a2e4f28f4ed5768647965042c9d02ff084df98cde9ea7",
+      "result": "69 checks / 0 FAIL; foreign 0/1800; 10/10 waves, 518/518"
+    }
+  },
+  "not_covered": "Selection -> initial countdown path (fixture starts wave 1 directly); it uses the same RestTimeBeginCountdown stop. No screenshots of rests; title measured in engine. Board cells during rests keep the last wave-board content.",
+  "gpu": "Intel iGPU override per run"
+}

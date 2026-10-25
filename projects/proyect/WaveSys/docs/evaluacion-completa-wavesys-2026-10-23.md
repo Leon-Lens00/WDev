@@ -63,19 +63,19 @@ En el final de la décima wave se activa la secuencia de 18 segundos y se llama 
 | ID | Prioridad | Hallazgo | Evidencia |
 |---|---|---|---|
 | [E01](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e01-inittrig.md) | P1 | La unidad de fuentes actual no compila sin adaptación | JassHelper/pJASS, contraste generado |
-| [E02](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e02-muerte-invocado.md) | P1 | La muerte de invocados aborta antes de avisar y limpiar | Motor + contraste de inicialización |
-| [E03](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e03-removeunit.md) | P1 | RemoveUnit deja la oleada esperando unidades inexistentes | Motor, observación diferida |
+| [E02](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-015734-wavesys-e02-muerte-invocado.md) | P1 | La muerte de invocados aborta antes de avisar y limpiar | Motor + contraste de inicialización |
+| [E03](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-015734-wavesys-e03-removeunit.md) | P1 | RemoveUnit deja la oleada esperando unidades inexistentes | Motor, observación diferida |
 | [E04](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e04-jugadores-salida.md) | P1 | PlayerUtils corrompe el índice compacto de jugadores al salir | Fuente; nuevo roster probado, UI antigua pendiente |
 | [E05](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e05-ids-habilidades.md) | P1 | Las habilidades agotan índices acumulativos sin reciclar | Estática/compilado; saturación no ejecutada |
-| [E06](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e06-contexto-eventos.md) | P2 | Los eventos anidados borran el contexto del evento exterior | Motor, eventos anidados |
-| [E07](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e07-table-handles.md) | P2 | La limpieza de Table usa el tipo equivocado | Motor, almacenamiento por tipo |
-| [E08](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e08-conteo-puntos.md) | P2 | Aplicar puntos devuelve una cantidad que no se insertó | Motor, límite de puntos |
-| [E09](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e09-pausa-reservas.md) | P2 | La pausa permite materializar apariciones ya reservadas | Motor; decisión de semántica de pausa |
+| [E06](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-015734-wavesys-e06-contexto-eventos.md) | P2 | Los eventos anidados borran el contexto del evento exterior | Motor, eventos anidados |
+| [E07](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-015734-wavesys-e07-table-handles.md) | P2 | La limpieza de Table usa el tipo equivocado | Motor, almacenamiento por tipo |
+| [E08](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-015734-wavesys-e08-conteo-puntos.md) | P2 | Aplicar puntos devuelve una cantidad que no se insertó | Motor, límite de puntos |
+| [E09](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-015734-wavesys-e09-pausa-reservas.md) | P2 | La pausa permite materializar apariciones ya reservadas | Motor; decisión de semántica de pausa |
 | [E10](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e10-cache-ordenes.md) | P2 | La memoria de órdenes puede impedir reanudar persecución | Motor, barrera y orden0 |
-| [E11](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e11-tablero-descanso.md) | P2 | El tablero inicial sobrescribe la interfaz de descanso y victoria | Motor en descanso; final estático |
+| [E11](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-015734-wavesys-e11-tablero-descanso.md) | P2 | El tablero inicial sobrescribe la interfaz de descanso y victoria | Motor en descanso; final estático |
 | [E12](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-015734-wavesys-e12-aura-compactacion.md) | P2 | El aura pierde miembros vivos al retirar una entrada inválida | Motor, recursos y observadores de lectura |
-| [E13](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-082842-wavesys-e13-pending-instancia-reciclada.md) | P1 | Un temporizador pendiente modifica una instancia de Wave reciclada | Motor, reciclaje de instancia |
-| [E14](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-082842-wavesys-e14-prioridad-negativa.md) | P2 | Los slots admiten prioridad negativa pero nunca se eligen | Motor, prioridad negativa |
+| [E13](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-082842-wavesys-e13-pending-instancia-reciclada.md) | P1 | Un temporizador pendiente modifica una instancia de Wave reciclada | Motor, reciclaje de instancia |
+| [E14](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/resueltos/2026-10-23-082842-wavesys-e14-prioridad-negativa.md) | P2 | Los slots admiten prioridad negativa pero nunca se eligen | Motor, prioridad negativa |
 | [E15](/home/snz/Documentos/ChatGPT/Proyect/informes/errores/2026-10-23-091934-wavesys-e15-recursos-armas-ausentes.md) | P1 | DevMission v0.96 carece de objetos que exigen las armas actuales | Tablas por hash + motor, recursos ausentes |
 
 ### Ciclo de vida: la prioridad más alta

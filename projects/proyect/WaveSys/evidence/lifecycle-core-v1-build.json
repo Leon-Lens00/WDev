@@ -1,0 +1,23 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-lifecycle-core-v1.w3x",
+  "sha256": "e91db48415790ebab4d5ad45d993b672977d1763b6dee413c71bdeccb7db7c48",
+  "base": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+  "base_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "sources": [
+    "libraries/Table.j",
+    "libraries/TimerUtils.j",
+    "libraries/SwlsMath.j",
+    "WaveSysAnAI/SwlsWave/SwlsWave.j",
+    "WaveSysAnAI/SwlsWave/WavePointGroups.j"
+  ],
+  "boundary": "TheEnd.endF no-op; empty callbacks in every test",
+  "fixture": "tests/CoreAudit.j",
+  "diagnostic_change": "None: exact sources",
+  "purpose": "Isolated core integration in real Classic engine; no full survival map coverage",
+  "jass_sha256": "37355e465dfcb31e8a22fc0261a0ee2083131c1ff6530071f94c9324fc7c9c05",
+  "compiled": true,
+  "validated": true,
+  "reextracted": true,
+  "other_members_preserved": true,
+  "game_tested": false
+}

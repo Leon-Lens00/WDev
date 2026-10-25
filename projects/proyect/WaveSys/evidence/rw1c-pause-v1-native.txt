@@ -1,0 +1,27 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "WAVESYS PAUSE rw1c-pause-v1 complete" )
+	call Preload( "checks=16 failures=1" )
+	call Preload( "BEGIN pause audit: Warcraft III Classic 1.27b, E09 contract" )
+	call Preload( "PASS pause inside the Reserve listener keeps the new reservation counted" )
+	call Preload( "PASS destroy inside the Reserve listener releases the wave without crashing the spawner" )
+	call Preload( "PASS reservation pending before pause" )
+	call Preload( "PASS paused wave does not materialize a reservation created before pause" )
+	call Preload( "PASS frozen reservation stays counted while paused" )
+	call Preload( "PASS second paused wave is frozen too" )
+	call Preload( "PASS terminate(false) while paused waits for the frozen reservation timer" )
+	call Preload( "PASS direct destruction while paused releases the frozen reservation" )
+	call Preload( "PASS resume does not materialize instantly" )
+	call Preload( "PASS reservation paused from its own Reserve listener stayed frozen" )
+	call Preload( "PASS resumed reservation keeps its remaining time instead of firing at once" )
+	call Preload( "PASS frozen reservation materializes after resume with its remaining time" )
+	call Preload( "PASS counters consistent after materialization" )
+	call Preload( "PASS terminate(false) while paused drains the frozen reservation without creating a unit" )
+	call Preload( "FAIL reservation paused from its own Reserve listener materializes after resume" )
+	call Preload( "PASS wave destroyed from its own Reserve listener never materializes" )
+	call Preload( "COMPLETE pause audit; failures are product observations, not approval." )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

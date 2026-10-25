@@ -103,14 +103,14 @@ private function Cast takes nothing returns nothing
         exitwhen i >= 3
         set member = CreateUnit(Player(8), 'nrat', GetUnitX(auraSource) + 50.*i, GetUnitY(auraSource) + 80., 0.)
         call PauseUnit(member, true)
-        call registerExternalUnit(auraSource, member, false)
+        call WaveRegisterExternalUnit(auraSource, member, false)
         set i = i + 1
     endloop
     // Priest member belongs to same wave as its source via real external map.
-    call registerExternalUnit(auraSource, caster[6], false)
+    call WaveRegisterExternalUnit(auraSource, caster[6], false)
     set priestMember = CreateUnit(Player(8), 'nrat', GetUnitX(caster[6]) + 30., GetUnitY(caster[6]), 0.)
     call PauseUnit(priestMember, true)
-    call registerExternalUnit(auraSource, priestMember, false)
+    call WaveRegisterExternalUnit(auraSource, priestMember, false)
     call Check(not WaveRangedSkillsTryExecute(caster[0], hero[0], 0), "ranged seeds its real initial cooldown")
     call Check(WaveRangedSkillsTryExecute(caster[0], hero[0], 100000), "ranged starts real telegraph/projectile")
     call Check(not WaveMortarSkillsTryExecute(caster[1], hero[1], 0), "mortar seeds initial cooldown")
@@ -167,7 +167,7 @@ private function Begin takes nothing returns nothing
         call PauseUnit(caster[i], true)
         set i = i + 1
     endloop
-    set w = Wave.create(20, 0, 60., null, "", 1, 10, "")
+    set w = Wave.create(20, 0, 60., 1, 10)
     call w.addPoint(-5900., -6000.)
     call w.addSlotEx('hkni', 1, 1, 1, 0, -1, false, Player(8), AI_PROFILE_MELEE, 0, 0, 1.)
     call w.start()

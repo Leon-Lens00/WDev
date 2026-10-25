@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-25",
+  "agent": "Claude (chat WavSys)",
+  "step": "Rework phase 2, priority 1: single-exit guard",
+  "addresses": "judgment finding JD-A-005 (double exit when a Death listener retires or kills the same unit)",
+  "before": "evidence/integ-p1-before/",
+  "after_sha256": {
+    "src/WaveSysAnAI/SwlsWave/SwlsWave.j": "4ba0f50c618720f1416fe226d352b97ba9e3febdbd15494f12d5ca0075ad54c1",
+    "tests/LifecycleAudit.j": "5ae591f1497bb7cbfe7ad9bc34bdd51e1b1b8719d43ff04a64d13965e0df8163"
+  },
+  "change": "Table WaveReleasingByUnit marks a unit while its exit is processed; releaseEntity returns early if marked; WaveRetireUnit returns false if marked; mark removed at the end",
+  "runs": {
+    "p1-lifecycle-v1": "57/0 (R14 retire inside death rejected, R15 kill inside retirement ignored, I1/I3)",
+    "p1-pause-v1": "17/0",
+    "p1-features-v1": "44/0",
+    "p1-core-v1": "16/0",
+    "p1-removal-v1": "finished=1"
+  },
+  "not_run": "negative control with the previous core for R14/R15"
+}

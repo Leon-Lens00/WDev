@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-25",
+  "agent": "Claude (chat WavSys)",
+  "decision": "user: RestTime is the single writer of isWavez, TargetWave and WaveTgg",
+  "before": "evidence/owner-globals-before/",
+  "after_sha256": {
+    "src/WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j": "080d57aa91df3747e24b700d284b23bea8c0e91999771664a193a194f669d510",
+    "src/WaveSysAnAI/SwlsWave/RestTime/TheEnd.j": "225eb8360fb469da3054a70ee730304600280fdf3d7b98db89b21cc11c27a518",
+    "src/Selection/SelectionStartFlow.j": "f2f0d89c831cde929f7a674dfb44368036e1469f1bb3aea8686b6ecc38105c3e",
+    "src/WaveSysAnAI/SwlsWave/StageExample.j": "9bff15b518676e521db300d409846445e5f855f43b9a220d372b7208d371385d",
+    "src/Core/GameState.j": "f6ce91057a97d05f967aa551ac338a6055a659fc6f2c9dbc7a3c4ea0217590a2",
+    "tests/SurvivalAudit.j": "a79de337d5b411fd34b11c0199a16858f0378aa32aedf17c10d5994f017557e0",
+    "tests/RestBoardAudit.j": "4fbae8526e13e877992825c069abd4adb0e1d3fa531716773ab5ac778f274f4c"
+  },
+  "writers_after": {
+    "isWavez": "RestTimeLaunchCurrentWave (true), RestTimeOnWaveFinished (false)",
+    "TargetWave": "GameState default 1, RestTimeOnWaveFinished (+1)",
+    "WaveTgg": "StartMatchCountdown (first wave), RestTimeOnWaveFinished (next)"
+  },
+  "changes": [
+    "RestTimeLaunchCurrentWave sets isWavez = true",
+    "TheEnd: StartInitialWaveCountdown replaced by StartMatchCountdown(firstWaveFunc); unused endF removed",
+    "SelectionStartFlow calls StartMatchCountdown(\"Trig_w1_Actions\")",
+    "stage no longer writes isWavez",
+    "GameState comment documents ownership",
+    "survival fixtures launch wave 1 through RestTimeLaunchCurrentWave and check isWavez at every start"
+  ],
+  "runs": {
+    "og-survival-v1": "77/0 (10 new checks: every wave marked active), 10/10, 518/518",
+    "og-restboard-v1": "79/0, foreign titles 0/1800",
+    "og-integration-v1": "25/0"
+  },
+  "not_exercised": "selection -> StartMatchCountdown path (compiled, not run by any lab)"
+}

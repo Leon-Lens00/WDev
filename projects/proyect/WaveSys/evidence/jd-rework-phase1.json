@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-24",
+  "protocol": "judgment-day (Claude Code adaptation), 2 independent Explore judges",
+  "round0": {
+    "tree_sha256": "6be7e381c973af687ecfa9edddeff7935b457067c544648ec98878e1ce7454b1",
+    "files": 17,
+    "integrity": "verified"
+  },
+  "round1": {
+    "tree_sha256": "3c947c49d87d20063183f9c363f9b34ae79c0a7beacbae05e8641a56447374ca",
+    "core_diff_sha256": "6cc9e90a27e2b6d4facd3740aa4e71a8062adb01a785bd33110bd1376f9c17af",
+    "integrity": "verified"
+  },
+  "findings": {
+    "JD-A-001/JD-B-001": "confirmed (both); Reserve fired before ps.t assigned; fixed round 1 (Reserve last, ps.t=null after release); verified by both judges; PauseAudit rw1c-pause-v2 17/0",
+    "JD-A-002/JD-B-003": "confirmed; FX inheritance via raw registerExternalUnit lost; open, document or restore in phase 2",
+    "JD-B-002": "confirmed; fxId>19 no longer clamped; open, document",
+    "JD-A-003": "confirmed; inherited fx cleared in Death listener before later listeners; open",
+    "JD-A-004/JD-B-004": "suspect; stale fx entries after direct destroyWave; open",
+    "JD-A-005": "resolved 2026-10-25 (integration priority 1): single-exit guard; LifecycleAudit R14/R15 57/0",
+    "JD-A-006": "suspect; start() after terminate on never-started wave; open",
+    "JD-A-007/JD-B-005": "confirmed coverage gaps (recycled-token path, FX layer, nested X/Y); partly addressed by re-entry checks",
+    "JD-A-008/JD-B-006": "confirmed; builder --initialize-death-slot obsolete; open (minor)",
+    "JD-A-009": "confirmed; lab headers fixed; plan updated"
+  },
+  "rounds_used": 1,
+  "verdict": "APPROVED for the frozen scope (clean core phase 1); non-grave findings open",
+  "runs_after_fix": {
+    "rw1c-pause-v2": "17/0",
+    "rw1c-lifecycle-v1": "49/0",
+    "rw1c-features-v1": "44/0",
+    "rw1c-core-v1": "16/0",
+    "rw1c-removal-v1": "active=0 tracked=0 finished=1"
+  }
+}

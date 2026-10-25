@@ -2,6 +2,8 @@ library InitialWaveMultiboard requires WavePlayerUtils, TimerUtils, TextTagDebug
 
     globals
         private timer InitialBoardTimer = null
+        // Solo durante la seleccion: al empezar la primera cuenta atras RestTime pasa a ser el dueno del titulo.
+        private boolean InitialBoardActive = true
     endglobals
 
     private function SetInitialBoardCell takes integer row, integer column, string value, real width returns nothing
@@ -65,14 +67,24 @@ library InitialWaveMultiboard requires WavePlayerUtils, TimerUtils, TextTagDebug
     endfunction
 
     private function InitialWaveMultiboardTick takes nothing returns nothing
-        if SwlsMultiboard == null or isWavez then
+        if SwlsMultiboard == null or isWavez or (not InitialBoardActive) then
             return
         endif
         call PopulateInitialWaveMultiboard()
         call MultiboardDisplay(SwlsMultiboard, true)
     endfunction
 
+    function StopInitialWaveMultiboard takes nothing returns nothing
+        set InitialBoardActive = false
+        if InitialBoardTimer != null then
+            call PauseTimer(InitialBoardTimer)
+        endif
+    endfunction
+
     function ShowInitialWaveMultiboard takes nothing returns nothing
+        if not InitialBoardActive then
+            return
+        endif
         call PopulateInitialWaveMultiboard()
         call MultiboardDisplay(SwlsMultiboard, true)
     endfunction

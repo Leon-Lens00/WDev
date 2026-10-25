@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-24",
+  "agent": "Claude (chat WavSys)",
+  "builder": {
+    "tools/build-integration-audit.py": "a67ba0fcb95cacec4441106a1046b0b9bc54ee3e54e674239c26f7e87bb5d7cd",
+    "flags": "--table-observers (read-only observers injected in generated input), --revert-e07 (negative control, generated input only)"
+  },
+  "fixture": {
+    "tests/TableAudit.j": "8b5cf2c56cfbaad07d43fe9a522dd5e791ce15a687afdedcf6be39116cc4f266",
+    "derived_from": "tests/ResourceSkillsAudit.j"
+  },
+  "criterion": "stale entry = handle kept for a unit that is gone or whose hid entry was removed; E12 live ghosts excluded",
+  "runs": {
+    "e07-tables-revert-v1": {
+      "map_sha256": "271b60668f5cd891088a31c6868a3575a0a96b629ec2ebbe8cd8b2e4be62ac0a",
+      "result": "34/4: IA mask=14 after death, last slot handle kept, aura stale=1, priest stale=1"
+    },
+    "e07-tables-v1": {
+      "map_sha256": "fce922da01b22531c31f46dfa59ba92ee85302d2d0c5a3dab208ce2b8ddfe7ae",
+      "result": "34/0: IA mask=0, slot empty, aura stale=0, priest stale=0"
+    }
+  },
+  "gpu": "profile default (NVIDIA)",
+  "limits": "Single player; E12 ghost members still present (separate issue)."
+}

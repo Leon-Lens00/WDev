@@ -1,4 +1,4 @@
-library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderSystem, AIProfiles, AIConfig, TerrainPathability, WaveBarrierSkills, WaveAuraSkills, WaveRangedSkills, WaveSiegeSkills, WaveMortarSkills, WavePriestSkills, WaveTrapSkills, WaveSiegeZoneSkills, WaveWaveformSkills, TextTagDebug, AIManagerUtils
+library IAManager initializer Init requires Table, TimerUtils, WaveCore, TenderSystem, AIProfiles, AIConfig, TerrainPathability, WaveBarrierSkills, WaveAuraSkills, WaveRangedSkills, WaveSiegeSkills, WaveMortarSkills, WavePriestSkills, WaveTrapSkills, WaveSiegeZoneSkills, WaveWaveformSkills, TextTagDebug, AIManagerUtils
 
     globals
         private constant integer AI_TICK_MS = 500
@@ -20,6 +20,10 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
         private constant real AI_TELEPORT_FRONTBACK_DOT_THRESHOLD = 0.35
         private constant string AI_TELEPORT_ATTACH_POINT = "origin"
         private constant integer AI_BOSS_REINFORCEMENT_WINDUP_MS = 1500
+        // Proveedor de la composicion de refuerzos (lo registra el stage) y contexto de la peticion en curso.
+        private trigger AIBossReinforcementProvider = null
+        private Wave AIBossReinforcementRequestWave = 0
+        private integer AIBossReinforcementRequestIndex = 0
         private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MIN_MS = 15000
         private constant integer AI_BOSS_REINFORCEMENT_INITIAL_MAX_MS = 20000
         private constant integer AI_BOSS_REINFORCEMENT_COOLDOWN_MIN_MS = 50000
@@ -139,44 +143,33 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
         return ""
     endfunction
 
-    private function AIBossReinforcementApplySlots takes Wave w, integer maxWave returns nothing
-        if w == 0 then
-            return
+    // La IA solo pide refuerzos: la composicion la aporta quien monta la oleada (el stage), registrado como proveedor.
+    function AIRegisterBossReinforcementProvider takes code c returns nothing
+        if AIBossReinforcementProvider == null then
+            set AIBossReinforcementProvider = CreateTrigger()
         endif
-        if maxWave < 1 then
-            return
-        elseif maxWave > 10 then
-            set maxWave = 10
-        endif
+        call TriggerAddAction(AIBossReinforcementProvider, c)
+    endfunction
 
-        call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HPEA, 'hpea', 1, false, 2, 1, 1, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
-        if maxWave >= 2 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMIL, 'hmil', 1, false, 2, 1, 2, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
+    function AIGetBossReinforcementWave takes nothing returns Wave
+        return AIBossReinforcementRequestWave
+    endfunction
+
+    function AIGetBossReinforcementWaveIndex takes nothing returns integer
+        return AIBossReinforcementRequestIndex
+    endfunction
+
+    private function AIBossReinforcementRequest takes Wave w, integer waveIndex returns nothing
+        local Wave outerWave = AIBossReinforcementRequestWave
+        local integer outerIndex = AIBossReinforcementRequestIndex
+        if w == 0 or AIBossReinforcementProvider == null then
+            return
         endif
-        if maxWave >= 3 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HFOO, 'hfoo', 1, false, 2, 1, 3, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
-        endif
-        if maxWave >= 4 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HRIF, 'hrif', 1, false, 2, 1, 4, -1, false, AI_PROFILE_WAVE4_SPELL, 0, 0, 1.00)
-        endif
-        if maxWave >= 5 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HKNI, 'hkni', 1, false, 2, 1, 5, -1, false, AI_PROFILE_MELEE, 0, 0, 1.00)
-        endif
-        if maxWave >= 6 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMTM, 'hmtm', 1, false, 2, 1, 6, -1, false, AI_PROFILE_WAVE6_SPELL, 0, 0, 1.00)
-        endif
-        if maxWave >= 7 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMPR, 'hmpr', 1, false, 2, 1, 7, -1, false, AI_PROFILE_WAVE7_SPELL, 0, 0, 1.10)
-        endif
-        if maxWave >= 8 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HSOR, 'hsor', 1, false, 2, 1, 8, -1, false, AI_PROFILE_WAVE8_SPELL, 0, 0, 1.20)
-        endif
-        if maxWave >= 9 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HMTT, 'hmtt', 1, false, 2, 1, 9, -1, false, AI_PROFILE_WAVE9_SPELL, 0, 0, 1.00)
-        endif
-        if maxWave >= 10 then
-            call w.upsertSlotExByPlayers(AI_STAGE1_SLOT_GROUP_HWT3, 'hwt3', 1, false, 2, 1, 10, -1, false, AI_PROFILE_WAVE10_SPELL, 0, 0, 1.00)
-        endif
+        set AIBossReinforcementRequestWave = w
+        set AIBossReinforcementRequestIndex = waveIndex
+        call TriggerExecute(AIBossReinforcementProvider)
+        set AIBossReinforcementRequestWave = outerWave
+        set AIBossReinforcementRequestIndex = outerIndex
     endfunction
 
     private function AICalcDynamicBudget takes integer unitCount returns integer
@@ -634,8 +627,7 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
                 if AI_BOSS_REINFORCEMENT_APPLY_FX != "" then
                     call DestroyEffect(AddSpecialEffectTarget(AI_BOSS_REINFORCEMENT_APPLY_FX, boss, AI_BOSS_REINFORCEMENT_ATTACH_POINT))
                 endif
-                call AIBossReinforcementApplySlots(w, w.waveIndex)
-                call w.refreshBoard()
+                call AIBossReinforcementRequest(w, w.waveIndex)
                 if hid != 0 then
                     set AIBossReinforcementNextMs[hid] = cast.startedAtMs + AI_BOSS_REINFORCEMENT_WINDUP_MS + AIBossReinforcementRollCooldownMs()
                     set AIUnitNextAbilityMs[hid] = cast.startedAtMs + AI_BOSS_REINFORCEMENT_WINDUP_MS + AIIntervalToMs(AIGetProfileThinkInterval(cast.profileId), 250)
@@ -965,7 +957,7 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
             endif
         endif
 
-        call AIUnitByIndex.remove(last)
+        call AIUnitByIndex.handle.remove(last)
         set AIUnitCount = last - 1
 
         if hid != 0 then
@@ -975,8 +967,8 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
             call AIUnitProfileId.remove(hid)
             call AIUnitLaneId.remove(hid)
             call AIUnitBehaviorFlags.remove(hid)
-            call AIUnitThreatWeight.remove(hid)
-            call AIUnitTarget.remove(hid)
+            call AIUnitThreatWeight.real.remove(hid)
+            call AIUnitTarget.handle.remove(hid)
             call AIUnitNextRetargetMs.remove(hid)
             call AIUnitNextOrderMs.remove(hid)
             call AIUnitNextAbilityMs.remove(hid)
@@ -986,8 +978,8 @@ library IAManager initializer Init requires Table, TimerUtils, WaveTest, TenderS
             call AIUnitNextDebugMs.remove(hid)
             call AIUnitLastOrderType.remove(hid)
             call AIUnitLastOrderTarget.remove(hid)
-            call AIUnitLastOrderX.remove(hid)
-            call AIUnitLastOrderY.remove(hid)
+            call AIUnitLastOrderX.real.remove(hid)
+            call AIUnitLastOrderY.real.remove(hid)
             call AIBossReinforcementNextMs.remove(hid)
             if AIUnitCooldownTables.has(hid) then
                 set cd = Table(AIUnitCooldownTables[hid])

@@ -1,4 +1,4 @@
-library WaveMultiboard requires WaveTest, WavePlayerUtils, TimerUtils, TextTagDebug, HealthBarTextTags, HeroLives, WaveStreaks
+library WaveMultiboard initializer WaveMultiboardInit requires WaveCore, WavePlayerUtils, TimerUtils, TextTagDebug, HealthBarTextTags, HeroLives, WaveStreaks
     globals
         private constant integer MB_MAX_PLAYERS = 8
         private constant integer MB_COLUMN_COUNT = 7
@@ -9,6 +9,12 @@ library WaveMultiboard requires WaveTest, WavePlayerUtils, TimerUtils, TextTagDe
         private constant integer MB_ROW_DEBUG_LOADOUT = 10
         private constant integer MB_ROW_DEBUG_SYSTEMS = 11
         private constant integer MB_ROW_DEBUG_TEXTTAGS = 12
+        private constant real MB_REFRESH_INTERVAL = 0.25
+        // Wave ligada por el stage; el token evita refrescar una instancia reciclada.
+        private Wave BoundWave = 0
+        private integer BoundToken = 0
+        private multiboard BoundBoard = null
+        private timer RefreshTimer = null
     endglobals
 
     private function MBSetCell takes multiboard board, integer row, integer column, string value, real width returns nothing
@@ -46,7 +52,7 @@ library WaveMultiboard requires WaveTest, WavePlayerUtils, TimerUtils, TextTagDe
     endfunction
 
     private function MBWaveTitle takes Wave w returns string
-        return MBWaveStateText(w) + " |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(w.waveIndex) + "|r|cFFFF8C00/|r|cFFE6E6E6" + I2S(w.waveTotal) + "|r |cFFFFFFFF| |r |cFFFFFFFFToKill |r|cFFFF3333" + I2S(w.totalKilled) + "|r|cFFFF8C00/|r|cFFCC66FF" + I2S(w.totalToSpawn) + "|r"
+        return MBWaveStateText(w) + " |cFFFFFFFFWave |r|cFFE6E6E6" + I2S(w.waveIndex) + "|r|cFFFF8C00/|r|cFFE6E6E6" + I2S(w.waveTotal) + "|r |cFFFFFFFF| |r |cFFFFFFFFToKill |r|cFFFF3333" + I2S(w.toKillRemaining) + "|r|cFFFF8C00/|r|cFFCC66FF" + I2S(w.totalToSpawn) + "|r"
     endfunction
 
     private function MBWaveCell takes Wave w returns string
@@ -66,7 +72,7 @@ library WaveMultiboard requires WaveTest, WavePlayerUtils, TimerUtils, TextTagDe
     endfunction
 
     private function MBToKillCell takes Wave w returns string
-        return "|cFFCC66FFT|r|cFFB24CFFo|r|cFF9933FFK|r|cFF7F1AFFill|r|cFFFFFFFF: |r|cFFFF3333" + I2S(w.totalKilled) + "|r|cFFFF8C00/|r|cFFCC66FF" + I2S(w.totalToSpawn) + "|r"
+        return "|cFFCC66FFT|r|cFFB24CFFo|r|cFF9933FFK|r|cFF7F1AFFill|r|cFFFFFFFF: |r|cFFFF3333" + I2S(w.toKillRemaining) + "|r|cFFFF8C00/|r|cFFCC66FF" + I2S(w.totalToSpawn) + "|r"
     endfunction
 
     private function MBOnMapCell takes Wave w returns string
@@ -202,31 +208,21 @@ library WaveMultiboard requires WaveTest, WavePlayerUtils, TimerUtils, TextTagDe
         return color + label + "|r|cFFFFFFFF: |r|cFFFFFF00" + I2S(liveValue) + "|r|cFFFF8C00/|r|cFFFFCC66" + I2S(peakValue) + "|r"
     endfunction
 
-    function BMT1 takes nothing returns nothing
-        local Wave w
+    private function MBRefresh takes Wave w, multiboard mb returns nothing
         local integer row
         local integer pid
 
-        if CurrentBoardContext == null then
-            return
-        endif
-
-        set w = WaveByBoard[GetHandleId(CurrentBoardContext)]
-        if w == 0 then
-            return
-        endif
-
-        call MBEnsureLayout(w.board)
-        call MultiboardSetTitleText(w.board, MBWaveTitle(w))
+        call MBEnsureLayout(mb)
+        call MultiboardSetTitleText(mb, MBWaveTitle(w))
 
         // Row 0: metricas completas de la wave con layout fijo.
-        call MBSetCell(w.board, MB_ROW_WAVE, 0, MBWaveCell(w), 0.08)
-        call MBSetCell(w.board, MB_ROW_WAVE, 1, MBToSpawnCell(w), 0.14)
-        call MBSetCell(w.board, MB_ROW_WAVE, 2, MBUnitsCell(w), 0.13)
-        call MBSetCell(w.board, MB_ROW_WAVE, 3, MBBossCell(w), 0.11)
-        call MBSetCell(w.board, MB_ROW_WAVE, 4, MBToKillCell(w), 0.12)
-        call MBSetCell(w.board, MB_ROW_WAVE, 5, MBOnMapCell(w), 0.09)
-        call MBSetCell(w.board, MB_ROW_WAVE, 6, MBPlayersCell(), 0.08)
+        call MBSetCell(mb, MB_ROW_WAVE, 0, MBWaveCell(w), 0.08)
+        call MBSetCell(mb, MB_ROW_WAVE, 1, MBToSpawnCell(w), 0.14)
+        call MBSetCell(mb, MB_ROW_WAVE, 2, MBUnitsCell(w), 0.13)
+        call MBSetCell(mb, MB_ROW_WAVE, 3, MBBossCell(w), 0.11)
+        call MBSetCell(mb, MB_ROW_WAVE, 4, MBToKillCell(w), 0.12)
+        call MBSetCell(mb, MB_ROW_WAVE, 5, MBOnMapCell(w), 0.09)
+        call MBSetCell(mb, MB_ROW_WAVE, 6, MBPlayersCell(), 0.08)
 
         // Rows 1..8: slots fijos rojo..rosa. Nunca mover debug por AmountPlaying.
         set pid = 0
@@ -234,50 +230,93 @@ library WaveMultiboard requires WaveTest, WavePlayerUtils, TimerUtils, TextTagDe
             exitwhen pid >= MB_MAX_PLAYERS
             set row = MB_ROW_PLAYER_START + pid
 
-            call MBSetCell(w.board, row, 0, MBPlayerNameText(pid), 0.14)
-            call MBSetCell(w.board, row, 1, MBPlayerStatusText(pid), 0.09)
-            call MBSetCell(w.board, row, 2, MBPlayerKillsText(pid), 0.09)
-            call MBSetCell(w.board, row, 3, MBPlayerStreakText(pid), 0.09)
-            call MBSetCell(w.board, row, 4, MBPlayerMultiText(pid), 0.08)
-            call MBSetCell(w.board, row, 5, MBPlayerDeathsText(pid), 0.09)
-            call MBSetCell(w.board, row, 6, MBPlayerLivesText(pid), 0.08)
+            call MBSetCell(mb, row, 0, MBPlayerNameText(pid), 0.14)
+            call MBSetCell(mb, row, 1, MBPlayerStatusText(pid), 0.09)
+            call MBSetCell(mb, row, 2, MBPlayerKillsText(pid), 0.09)
+            call MBSetCell(mb, row, 3, MBPlayerStreakText(pid), 0.09)
+            call MBSetCell(mb, row, 4, MBPlayerMultiText(pid), 0.08)
+            call MBSetCell(mb, row, 5, MBPlayerDeathsText(pid), 0.09)
+            call MBSetCell(mb, row, 6, MBPlayerLivesText(pid), 0.08)
 
             set pid = pid + 1
         endloop
 
         // Fila debug general: TimerUtils
-        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 0, "|cFFBBBBBBDebug Timer|r", 0.14)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 1, MBDebugInUse(), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 2, MBDebugCap(), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 3, MBDebugPeak(), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 4, MBDebugAvail(), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 5, "", 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TIMER, 6, "", 0.08)
+        call MBSetCell(mb, MB_ROW_DEBUG_TIMER, 0, "|cFFBBBBBBDebug Timer|r", 0.14)
+        call MBSetCell(mb, MB_ROW_DEBUG_TIMER, 1, MBDebugInUse(), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TIMER, 2, MBDebugCap(), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TIMER, 3, MBDebugPeak(), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TIMER, 4, MBDebugAvail(), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TIMER, 5, "", 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TIMER, 6, "", 0.08)
 
         // Fila debug loadouts: live/peak por sistema
-        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 0, "|cFFBBBBBBDebug Load|r", 0.14)
-        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 1, MBLoadoutDebugCell("Ctrl", "|cFFFF6666", TIMER_DEBUG_TAG_LOADOUT_CONTROL), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 2, MBLoadoutDebugCell("Miss", "|cFF66CCFF", TIMER_DEBUG_TAG_LOADOUT_MISSILE), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 3, MBLoadoutDebugCell("Leap", "|cFF66FF99", TIMER_DEBUG_TAG_LOADOUT_LEAP), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 4, MBLoadoutDebugCell("LpMs", "|cFFFFCC66", TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 5, MBLoadoutDebugCell("Rckt", "|cFFFF99CC", TIMER_DEBUG_TAG_LOADOUT_ROCKET), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_LOADOUT, 6, "", 0.08)
+        call MBSetCell(mb, MB_ROW_DEBUG_LOADOUT, 0, "|cFFBBBBBBDebug Load|r", 0.14)
+        call MBSetCell(mb, MB_ROW_DEBUG_LOADOUT, 1, MBLoadoutDebugCell("Ctrl", "|cFFFF6666", TIMER_DEBUG_TAG_LOADOUT_CONTROL), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_LOADOUT, 2, MBLoadoutDebugCell("Miss", "|cFF66CCFF", TIMER_DEBUG_TAG_LOADOUT_MISSILE), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_LOADOUT, 3, MBLoadoutDebugCell("Leap", "|cFF66FF99", TIMER_DEBUG_TAG_LOADOUT_LEAP), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_LOADOUT, 4, MBLoadoutDebugCell("LpMs", "|cFFFFCC66", TIMER_DEBUG_TAG_LOADOUT_LEAP_MISS), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_LOADOUT, 5, MBLoadoutDebugCell("Rckt", "|cFFFF99CC", TIMER_DEBUG_TAG_LOADOUT_ROCKET), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_LOADOUT, 6, "", 0.08)
 
         // Fila debug sistemas: wave / ia / skills / movecast / otros
-        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 0, "|cFFBBBBBBDebug Sys|r", 0.14)
-        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 1, MBTaggedDebugCell("Wave", "|cFF99CCFF", TIMER_DEBUG_TAG_WAVE_CORE), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 2, MBTaggedDebugCell("IA", "|cFFFF9999", TIMER_DEBUG_TAG_AI), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 3, MBTaggedDebugCell("Skill", "|cFF99FF99", TIMER_DEBUG_TAG_UNIT_SKILLS), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 4, MBTaggedDebugCell("Move", "|cFFFFCC66", TIMER_DEBUG_TAG_MOVECAST), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 5, MBTaggedDebugCell("Other", "|cFFD6B3FF", TIMER_DEBUG_TAG_OTHER), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_SYSTEMS, 6, "", 0.08)
+        call MBSetCell(mb, MB_ROW_DEBUG_SYSTEMS, 0, "|cFFBBBBBBDebug Sys|r", 0.14)
+        call MBSetCell(mb, MB_ROW_DEBUG_SYSTEMS, 1, MBTaggedDebugCell("Wave", "|cFF99CCFF", TIMER_DEBUG_TAG_WAVE_CORE), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_SYSTEMS, 2, MBTaggedDebugCell("IA", "|cFFFF9999", TIMER_DEBUG_TAG_AI), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_SYSTEMS, 3, MBTaggedDebugCell("Skill", "|cFF99FF99", TIMER_DEBUG_TAG_UNIT_SKILLS), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_SYSTEMS, 4, MBTaggedDebugCell("Move", "|cFFFFCC66", TIMER_DEBUG_TAG_MOVECAST), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_SYSTEMS, 5, MBTaggedDebugCell("Other", "|cFFD6B3FF", TIMER_DEBUG_TAG_OTHER), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_SYSTEMS, 6, "", 0.08)
 
-        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 0, "|cFFBBBBBBDebug Tags|r", 0.14)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 1, MBTextTagTotalCell("Total", "|cFF66CCFF", GetTextTagDebugLiveTotal(), GetTextTagDebugPeakTotal()), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 2, MBTextTagTotalCell("UI", "|cFFFF9999", GetTextTagDebugLive(TEXTTAG_DEBUG_UI), GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 3, MBTextTagTotalCell("Move", "|cFFFFCC66", GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST), GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 4, MBTextTagTotalCell("Dmg", "|cFFD6B3FF", GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE), GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 5, MBTextTagTotalCell("HP", "|cFF99FF99", GetHealthBarVisibleCount(), GetHealthBarTextTagCap()), 0.09)
-        call MBSetCell(w.board, MB_ROW_DEBUG_TEXTTAGS, 6, "", 0.08)
+        call MBSetCell(mb, MB_ROW_DEBUG_TEXTTAGS, 0, "|cFFBBBBBBDebug Tags|r", 0.14)
+        call MBSetCell(mb, MB_ROW_DEBUG_TEXTTAGS, 1, MBTextTagTotalCell("Total", "|cFF66CCFF", GetTextTagDebugLiveTotal(), GetTextTagDebugPeakTotal()), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TEXTTAGS, 2, MBTextTagTotalCell("UI", "|cFFFF9999", GetTextTagDebugLive(TEXTTAG_DEBUG_UI), GetTextTagDebugPeak(TEXTTAG_DEBUG_UI)), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TEXTTAGS, 3, MBTextTagTotalCell("Move", "|cFFFFCC66", GetTextTagDebugLive(TEXTTAG_DEBUG_MOVECAST), GetTextTagDebugPeak(TEXTTAG_DEBUG_MOVECAST)), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TEXTTAGS, 4, MBTextTagTotalCell("Dmg", "|cFFD6B3FF", GetTextTagDebugLive(TEXTTAG_DEBUG_DAMAGE), GetTextTagDebugPeak(TEXTTAG_DEBUG_DAMAGE)), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TEXTTAGS, 5, MBTextTagTotalCell("HP", "|cFF99FF99", GetHealthBarVisibleCount(), GetHealthBarTextTagCap()), 0.09)
+        call MBSetCell(mb, MB_ROW_DEBUG_TEXTTAGS, 6, "", 0.08)
+    endfunction
+
+    private function MBStop takes nothing returns nothing
+        set BoundWave = 0
+        set BoundToken = 0
+        set BoundBoard = null
+        if RefreshTimer != null then
+            call PauseTimer(RefreshTimer)
+        endif
+    endfunction
+
+    private function MBTick takes nothing returns nothing
+        if BoundWave == 0 or BoundBoard == null or BoundWave.isDestroyed or BoundWave.waveToken != BoundToken then
+            call MBStop()
+            return
+        endif
+        call MBRefresh(BoundWave, BoundBoard)
+    endfunction
+
+    // Liga la Wave al tablero: se refresca cada 0,25 s mientras la Wave siga viva (tambien en pausa).
+    function WaveMultiboardBind takes Wave w, multiboard mb returns nothing
+        if w == 0 or mb == null then
+            return
+        endif
+        set BoundWave = w
+        set BoundToken = w.waveToken
+        set BoundBoard = mb
+        call MBRefresh(w, mb)
+        if RefreshTimer == null then
+            set RefreshTimer = CreateTimer()
+        endif
+        call TimerStart(RefreshTimer, MB_REFRESH_INTERVAL, true, function MBTick)
+    endfunction
+
+    // Al terminar deja de refrescar: RestTime es duenio del titulo durante el descanso.
+    private function MBOnFinish takes nothing returns nothing
+        if GetWaveEventWave() == BoundWave then
+            call MBStop()
+        endif
+    endfunction
+
+    private function WaveMultiboardInit takes nothing returns nothing
+        call RegisterWaveFinishEvent(function MBOnFinish)
     endfunction
 endlibrary

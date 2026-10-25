@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-25",
+  "agent": "Claude (chat WavSys)",
+  "step": "Organization and naming + public contract",
+  "before": "evidence/fase3-before/",
+  "after_sha256": {
+    "src/WaveSysAnAI/SwlsWave/SwlsWave.j": "58bb0af03beebc129009fb24e649dc4ff251a1944c613e2264ed1a1728b63913",
+    "src/WaveSysAnAI/SwlsWave/WaveSpawnFx.j": "c83b5ac0bf6f03061c70b13155312828debe9f042641badb94380fc0d56d5ff6",
+    "src/WaveSysAnAI/SwlsWave/WaveOwnerPolicy.j": "a45536188a937882984117861dd33345a227368db8bc36bdcc87fb9d9157ef1f",
+    "src/WaveSysAnAI/SwlsWave/StageExample.j": "1bc31c42efc9df7f1790a2c794ef7b2523549a768beff58a3f4c2be88eb9dd55",
+    "src/WaveSysAnAI/SwlsWave/RestTime/WaveRestTimeBridge.j": "e0d7019e77b5a114c1c83144405cef85c3d9a0638f37c933e0210a7e64fa9e7d",
+    "src/Multiboard/WaveMultiboard.j": "f03a7cca1de4e05b6fd44e287622a2e553cd4721d4650fdcc63cd2dad60cd70c",
+    "tools/build-core-audit.py": "7c2054396eee024ef55f0da2e68d22509fef3e2ac6f2c6245c21aee9478c14c3",
+    "docs/contrato-wavecore.md": "133ba0922266a96e8757c1609175ec7dae499396bfb8498522919485a25a289b"
+  },
+  "runs": {
+    "f3-lifecycle-v1": "57/0",
+    "f3-pause-v1": "17/0",
+    "f3-features-v1": "44/0",
+    "f3-core-v1": "16/0",
+    "f3-removal-v1": "finished=1",
+    "f3-integration-v1": "25/0",
+    "f3-tables-v1": "34/0",
+    "f3-resource-skills-v1": "28/1 (E12, skills, set aside)",
+    "f3-survival-v1": "67/0, 10/10, 518/518",
+    "f3-restboard-v1": "incomplete: 280 s wait expired at wave 9 (57/0 so far), rerun",
+    "f3-restboard-v2": "69/0, 10/10, 518/518, foreign titles 0/1800"
+  },
+  "tool_incident": "several Bash calls blocked by a transient auto-mode classifier error (no verdict); no command ran during those attempts"
+}

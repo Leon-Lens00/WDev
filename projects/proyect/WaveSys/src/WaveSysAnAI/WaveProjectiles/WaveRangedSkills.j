@@ -1,4 +1,4 @@
-library WaveRangedSkills initializer Init requires Table, TimerUtils, WaveTest, WaveProjectileCore, WaveProjectileConfig, TerrainPathability, WaveSkillVisuals
+library WaveRangedSkills initializer Init requires Table, TimerUtils, WaveCore, WaveProjectileCore, WaveProjectileConfig, TerrainPathability, WaveSkillVisuals
 
     globals
         public constant integer WAVE_HRIF_UNIT_ID = 'hrif'
@@ -458,7 +458,7 @@ library WaveRangedSkills initializer Init requires Table, TimerUtils, WaveTest, 
         if u == null then
             return
         endif
-        set unitType = GetUnitTypeId(u)
+        set unitType = GetWaveEventUnitTypeId()
         if unitType != WAVE_HRIF_UNIT_ID and unitType != WAVE_HRIF_BOSS_UNIT_ID then
             set u = null
             return

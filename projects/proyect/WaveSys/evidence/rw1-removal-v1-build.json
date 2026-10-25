@@ -1,0 +1,24 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-rw1-removal-v1.w3x",
+  "sha256": "fb687c95386d310c9296b44bc51aaac1e4227fa24dc6b93d6a9f66886ec8c56c",
+  "base": "/home/snz/Documentos/ChatGPT/Proyect/TerrainDev/maps/originals/TerrainDev.w3x",
+  "base_sha256": "268666e1d846cb3d8df422c87b70c08c4b293b1035ef579529ba2020670c68ac",
+  "sources": [
+    "libraries/Table.j",
+    "libraries/TimerUtils.j",
+    "WaveSysAnAI/SwlsWave/SwlsWave.j",
+    "WaveSysAnAI/SwlsWave/WavePointGroups.j",
+    "WaveSysAnAI/SwlsWave/WaveSpawnFx.j",
+    "WaveSysAnAI/SwlsWave/WaveOwnerPolicy.j"
+  ],
+  "boundary": "None: clean core without TheEnd/UnitAlive stubs",
+  "fixture": "tests/RemovalAudit.j",
+  "diagnostic_change": "None: exact sources",
+  "purpose": "Isolated core integration in real Classic engine; no full survival map coverage",
+  "jass_sha256": "755e55afa6be2c7bdd15ce7fd19213aab3ff263da591013b2d5f07ce49513955",
+  "compiled": true,
+  "validated": true,
+  "reextracted": true,
+  "other_members_preserved": true,
+  "game_tested": false
+}

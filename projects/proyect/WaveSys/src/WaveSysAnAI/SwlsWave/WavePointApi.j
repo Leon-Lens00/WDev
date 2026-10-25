@@ -1,4 +1,4 @@
-library WavePointApi requires WaveTest
+library WavePointApi requires WaveCore
 
     function WaveGetPointCount takes Wave w returns integer
         if w == 0 then

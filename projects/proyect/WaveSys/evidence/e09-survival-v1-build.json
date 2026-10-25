@@ -1,0 +1,488 @@
+{
+  "map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/WaveSys-e09-survival-v1.w3x",
+  "sha256": "16a71fb897e5713cbed10fe2f2e5e7ddb1705dbb038c9991f3849a7174b2e282",
+  "source_count": 114,
+  "sources": [
+    {
+      "path": "Audio/Config/AudioPreload.j",
+      "sha256": "3e74fa0c350f7cf0b0b19e3fe41ed87fd8252229a61ffb14ea57ec66a2f18f92"
+    },
+    {
+      "path": "Core/GameState.j",
+      "sha256": "a9389b1f86eebb6385f113c5f4afc298dd787cf45faa932cdafe1f082e48345c"
+    },
+    {
+      "path": "Environment/Config/VisionConfig.j",
+      "sha256": "5f81f6772c8db8fc9b8cf8b6329eb4c5a5bca1ec7913a5fbdd2b15eac91e1c51"
+    },
+    {
+      "path": "InitMap/MapBootstrap.j",
+      "sha256": "97c1c37612841eb0ffd3e7ef7d0b882d5dbabfc35a2e91eb27d3e0fefbde9204"
+    },
+    {
+      "path": "InitMap/PreConfi.j",
+      "sha256": "35bb837ca55f185df2b43b5151c3a212cb67eac099c2e797e0830d2f7dae6df7"
+    },
+    {
+      "path": "MoveSys/Config/MovementSpellTargetConfig.j",
+      "sha256": "7a8eea6f3a965de69ccfd6b9dc6433601e3aa09dfbb260fb686c7a137b68368c"
+    },
+    {
+      "path": "MoveSys/MoveCast.j",
+      "sha256": "03814c4641637f59a3e8e757ed2e8216054382aad08e50dbfe9e087cef46ed1c"
+    },
+    {
+      "path": "Multiboard/InitialWaveMultiboard.j",
+      "sha256": "4b8876d334e1126b046eb4be6f6729dcc9cdc16b9069f47a2065f80259b3154e"
+    },
+    {
+      "path": "Multiboard/WaveMultiboard.j",
+      "sha256": "0803897a0e4812823183a2ff9eab3d69e746760658701bacc69f09e4ad5bcc12"
+    },
+    {
+      "path": "MyMissiles/Config/LoadoutMoveCastConfig.j",
+      "sha256": "c2638bea859907efa8eac392c4f9e0fcb27a625b9eeb761595af1a928ad672e5"
+    },
+    {
+      "path": "MyMissiles/Config/WeaponProfileConfig.j",
+      "sha256": "1bcc7bd4d94e5ab53bd70fc50743a92d6434658b7464122da03ac946e5d3ded6"
+    },
+    {
+      "path": "MyMissiles/Loadout Control.j",
+      "sha256": "53235fb9a63fd84ede7d3b0e6092f2e217cde4048b64df3c16dad49303e454e4"
+    },
+    {
+      "path": "MyMissiles/Loadout IronLizard.j",
+      "sha256": "1cebba8a0e4d5f52e16298878f1c3cc4a107289d8fdb382d7631bfa2093eea83"
+    },
+    {
+      "path": "MyMissiles/Loadout Leap.j",
+      "sha256": "198b3023a6593167f95833ba98edc07961dd39e70cb8ae8d9f38539d2c4b304e"
+    },
+    {
+      "path": "MyMissiles/Loadout LeapMissile.j",
+      "sha256": "e4a1da6ddcada5f7400b74263778233881ad5d5b9b8036744d8d58202ee95030"
+    },
+    {
+      "path": "MyMissiles/Loadout MetalSlugSpecial.j",
+      "sha256": "725ad4894962fd6c0403ef4464884c5c2a3740df9a2b5dfe26ffa58090707fb6"
+    },
+    {
+      "path": "MyMissiles/Loadout Missile.j",
+      "sha256": "c606ef3bfda892798e259c7fb352e026517d7a99c4b20130be69d01a9f33e466"
+    },
+    {
+      "path": "MyMissiles/Loadout RocketLauncher.j",
+      "sha256": "200704e419a0417a0c8a5614c1aaafea101314934129304f8d154c1d03af7ffd"
+    },
+    {
+      "path": "MyMissiles/Loadout ThunderShot.j",
+      "sha256": "aec3982e4778a41b5b563b7f421d78145854677b87dbd8009cc28abee444ad76"
+    },
+    {
+      "path": "MyMissiles/PrisonerDropSystem.j",
+      "sha256": "fdc46afd3dabf6c20c3cd464e5f4eea472b3df07bea526a4fe5c2ce746c561d5"
+    },
+    {
+      "path": "MyMissiles/SwapMana.j",
+      "sha256": "ceee58c284548fa1b2be15b0e0185ef1e0007b4364747cac17ed6e519811a366"
+    },
+    {
+      "path": "MyMissiles/UnitTypeMissile.j",
+      "sha256": "0c9ad2c9feef0270d2b7cdc72a3451b8bd0e623ebb7d4cf3508367fa66ee64f7"
+    },
+    {
+      "path": "MyMissiles/UnitTypeMissileConfig.j",
+      "sha256": "619e5fdf1384b930ff32fe8f94fc3edb29baed5019320e169be6618be54dc88f"
+    },
+    {
+      "path": "MyMissiles/UnitTypeMissileLoadout.j",
+      "sha256": "d636c2213d3e523095c2eaede5f545ac424a5f04f388b6493353883486124bbc"
+    },
+    {
+      "path": "MyMissiles/WeaponInventoryCore.j",
+      "sha256": "69093527d3fdac0af77fa23bf617e50aab279ed56f0f4e01f66a732d68ec2305"
+    },
+    {
+      "path": "MyMissiles/WeaponInventorySystem.j",
+      "sha256": "998b11c9debc04573ba7c51480de543e1bf1cc6b1dd8c3426d6483b1cef73c3e"
+    },
+    {
+      "path": "MyMissiles/WeaponSelectionSystem.j",
+      "sha256": "a7e4cc627708fd23abe53d64cb73cc751af2745f3d41ea8a883837c4e753422e"
+    },
+    {
+      "path": "Players/Config/AllianceConfig.j",
+      "sha256": "61cddea68475cdb6481e69ad3a6c7f35f563b83cfe35d4a838f464928474d539"
+    },
+    {
+      "path": "Players/Config/InitialGoldConfig.j",
+      "sha256": "7e352df276b821b27bfb51197965cd6bcb7a61d6afa7ac1bc2d91fe2a18a0567"
+    },
+    {
+      "path": "Players/PlayerHeroState.j",
+      "sha256": "c2dc8b7e379e23793cf4804d78e8838170a718d2ab18874a98ce6ea73f384f12"
+    },
+    {
+      "path": "Players/WavePlayerUtils.j",
+      "sha256": "b9409c61c8bc0e1f01f325667fcdcbdbc3a00ce05ce0e775b6d8a5f572fb0daf"
+    },
+    {
+      "path": "Selection/Config/SelectionElementConfig.j",
+      "sha256": "8918f6887cb3ff383e0046c7853f2fd921735426fbbcd69f2bdb2d153ec19d69"
+    },
+    {
+      "path": "Selection/Config/SelectionHeroConfig.j",
+      "sha256": "97289e98e314e259c2c01d04dae2f07b9216dc313cef1b360f21bb6670e1a9e8"
+    },
+    {
+      "path": "Selection/Config/SelectionHeroVisualConfig.j",
+      "sha256": "56b6187d209d393f7d4f95c2912bea18a15c26356a620b6db3383e51402ab797"
+    },
+    {
+      "path": "Selection/SelectionClientBridge.j",
+      "sha256": "084941fbad11a2835250c85cf9c026176eac3ba452219f8ff16cb5436cfb6ea7"
+    },
+    {
+      "path": "Selection/SelectionHeroSpawn.j",
+      "sha256": "e3e2a16f6541422c79c57185972afe44f9c1c776a7c911936390f03cdaebf7bd"
+    },
+    {
+      "path": "Selection/SelectionStartFlow.j",
+      "sha256": "7c1c07dce4c9bb8e55c6e2c648c7ad6ed97b0a13ca50ceeb37816bf55aabad60"
+    },
+    {
+      "path": "Selection/SelectionSystem.j",
+      "sha256": "29c238b2ac3a813adb90611dd9a8b2f85f0f544926f612814a62c33ff078a938"
+    },
+    {
+      "path": "Systems/HeroLives/HeroLives.j",
+      "sha256": "177b69b78e24d9b9a5eb6f4511720473f044f5f0eed35d7734c9e2724993f0bd"
+    },
+    {
+      "path": "Systems/Orders/OrderSmartChannel.j",
+      "sha256": "adf9b7e1460c74e77bcff6695fbd1156c976c6f9ca0c14ec5ea905854d5f7c2e"
+    },
+    {
+      "path": "Systems/Tender/Config/TenderSpawnConfig.j",
+      "sha256": "5df90679832101ad012e0bc92d5e37e2217c2338f613a1644e403119fbd41db8"
+    },
+    {
+      "path": "Systems/Tender/TenderEscInteraction.j",
+      "sha256": "75a17886f47b9e2464799d74802960483684bda4d7bf874e097d526573724578"
+    },
+    {
+      "path": "Systems/Tender/TenderSystem.j",
+      "sha256": "30c2cd688eda8de7582a87d027bc48e29bbd35e58ec91a34bdbfad06392f80d0"
+    },
+    {
+      "path": "Terrain/Config/TerrainReplaceConfig.j",
+      "sha256": "fe8832320dd7e29298894fbd03a0ee7761175f4de23716b770737000291150f1"
+    },
+    {
+      "path": "UI System/MyIU/Config/MenuClientInitConfig.j",
+      "sha256": "a398d51f9d4aafdf8f784b0f7c47d319ea300f407d60eb9aafa64ca1976a3953"
+    },
+    {
+      "path": "UI System/MyIU/EnemyPreviewConfig.j",
+      "sha256": "1dfdf9ba0ae195d786872bb68db1cf85ebcc4b0c0c7dce8476e88af0239ec392"
+    },
+    {
+      "path": "UI System/MyIU/Inits.j",
+      "sha256": "7616c927c6ed53804c837669628bd08b363c77be20ed05d6f813b162b72dfb39"
+    },
+    {
+      "path": "UI System/MyIU/MenuClient.j",
+      "sha256": "95780cfd8756dc49e46f6c890cfb07ca66fd7b45b4b3e7fdb1a131ccdf5706e7"
+    },
+    {
+      "path": "UI System/MyIU/Models.j",
+      "sha256": "3e7820fd802011a552eb58427012292137633a7db1a8f6b9fc2cc456f4991151"
+    },
+    {
+      "path": "WaveSysAnAI/AI/AIConfig.j",
+      "sha256": "263d864ed4dae9ac8eed32f65013d7cf08ee6d81c3d8d3fd3b9d35b47663a938"
+    },
+    {
+      "path": "WaveSysAnAI/AI/AIManagerUtils.j",
+      "sha256": "7e065c1c9ce8ba6ee8df8d653ef32f469d725ce1f01aa448496572f556f461e7"
+    },
+    {
+      "path": "WaveSysAnAI/AI/AIProfiles.j",
+      "sha256": "1dc637a9392129974939892a593197eb0069e9b557622d777dafd434760becce"
+    },
+    {
+      "path": "WaveSysAnAI/AI/IAManager.j",
+      "sha256": "d921f97a7b753fe78307f46e1f73b2c4322c60916c1fe579369aece542ba71c3"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/Config/WaveOwnerConfig.j",
+      "sha256": "1dc2b065b3a09a6999989e9f72d81943568580bfd4cabcbdb39cc22c1b6e27bb"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeAudio.j",
+      "sha256": "6ce991ea68b9b17836bb017648af516257e0007239da507e086409909a33838f"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeCountdown.j",
+      "sha256": "12946aebe30090ab4b5be69cf1f0f1542f39a3824485c256e5fb3a45319110c5"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeEndFlow.j",
+      "sha256": "e0c2af397d54c707e6e3f91f4d679f6d39babb14fa261dec98aac038212453c4"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeMenuBridge.j",
+      "sha256": "0e549f811724814585d40bc32ecb357df3fade3202a98243f308978d0327c796"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeState.j",
+      "sha256": "f39982f8e3af4088f8f8d11daac6f64c1d67fd1438f158bb260195ee773cfedb"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeSurvivalEnd.j",
+      "sha256": "4a54244a503adfb8b9943ee0f231a47ade78b69003de21b0fec40c6466c06b4a"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeTenderAudio.j",
+      "sha256": "70a0492e9199a1ed0d136512d04403e24cc5366af13a7ab98b31f25d8ebd9b03"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/RestTimeUI.j",
+      "sha256": "70591a2daac8d9e023e58eb4065c8d86ca3d59e978319a09ee319c3cda312929"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/RestTime/TheEnd.j",
+      "sha256": "f1f3a35f3030c97ecff1cad299d134f4312195d9b5628ec8e5833efc03f8cf33"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/StageExample.j",
+      "sha256": "597e8b02704870b7fe44bfd8ea1cd5d1bc28f7480eaff2bbab4418d64e4b3b7b"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/SwlsWave.j",
+      "sha256": "96f62a25b4093325e41e0d8d2c2588a3df23a4bbc943bae7ec6fef40b4d44473"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/WavePointApi.j",
+      "sha256": "649cf71e72f29f1e33aa20a1e3bc48a1a4710f578a748dea48b2be4b8da34ae5"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/WavePointGroups.j",
+      "sha256": "9e8e1350b49772ede1da0472fa5302f539a405eb2176c4a679c774fb7c4db1ff"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/WavePointGroupsConfig.j",
+      "sha256": "ef3e5ed7ade655db341fd8011be6bb12c4a30df90f665400acad227114e41dc0"
+    },
+    {
+      "path": "WaveSysAnAI/SwlsWave/WaveStreaks.j",
+      "sha256": "e3b2ba9514a1fa786db61a50831a4dc660cb553c7cb1702c20d37a090bc79779"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j",
+      "sha256": "34a49dad95b1830697844b24d626e46686a63bfd757edd96b0d42f0d9180ba2e"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveBarrierSkills.j",
+      "sha256": "02895c56f4f8392006016482015735abdc7e0d94b9d4b2905982133aa3907c9c"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveMortarSkills.j",
+      "sha256": "dfeadb28421ab455ad9acd4105987a7129765f066caac17ec400b253376aea2b"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WavePriestSkills.j",
+      "sha256": "f89b022ccdb6704aaed7ad6dea81ac03d5c52fff09ab69e390967c430aee9c53"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveProjectileBehaviors.j",
+      "sha256": "1d007c2f02a118a16e71a3945095ab3f35455633d800774b3a307d80f31c843f"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveProjectileConfig.j",
+      "sha256": "f1b2ed62ea8ee435269d2060cf4e1763f5dfce53d3a24c95da82fbf79d87a88c"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveProjectileCore.j",
+      "sha256": "a1f74fd51a11cecb2c19b0f442af2872a2581fe2f4e3b280d5eb9bfe55efcb8d"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveRangedSkills.j",
+      "sha256": "cd6fafea1f027f27c0c4023be981a4cba42e3b88adb206afd495293344332323"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveReinforcements.j",
+      "sha256": "afcf998796e2ce8c1e63371c6ed059a144ebf2b544f028926b8925675768d753"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveSiegeSkills.j",
+      "sha256": "a16995dd3597b6e3b13a009e7db1ec31df40f75476c22d37279620ddd4273ff6"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveSiegeZoneSkills.j",
+      "sha256": "0b85f6df8e63548c0497a8acad48b6be2ba792edef172a1c7a39c4dd07f87f3b"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveSkillVisuals.j",
+      "sha256": "825141655319960fe775de5e1e7287c29d82fa80a3bb41ec05c5ef8f249e2485"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveTrapSkills.j",
+      "sha256": "48d478cbda4db028fa23d7dd16a2feac4cc05b17a918488b0cf783e3de232767"
+    },
+    {
+      "path": "WaveSysAnAI/WaveProjectiles/WaveWaveformSkills.j",
+      "sha256": "04183baebb19cea9d697e9dc5978356b00db44f66cccf6cf50c16b522f66fd02"
+    },
+    {
+      "path": "libraries/BoundSentinel.j",
+      "sha256": "5dd43675fa0109c984237a1fecdc26a145c253ff41cd5e3c628bf4ba795021ea"
+    },
+    {
+      "path": "libraries/Camera.j",
+      "sha256": "c1c1799e3451fd029653ca396425d9c5dd496e259a2b3a3a98cedee3ecf9f165"
+    },
+    {
+      "path": "libraries/CameraEQNoise.j",
+      "sha256": "6381c6e8c54a54f838fb62b7a10feceb6fde0d28726b087590a598e9fb452dcb"
+    },
+    {
+      "path": "libraries/Damage Text Util.j",
+      "sha256": "2fab15d1058480577bcca6978d4c5cf44fff1cf2fdfbcf939dba247fe47c86e9"
+    },
+    {
+      "path": "libraries/DummyCaster.j",
+      "sha256": "d92b550bfe391497b6d564f15da5ff364ef7a53a15753b5726cd1be8a9a982c0"
+    },
+    {
+      "path": "libraries/File IO.j",
+      "sha256": "6e6e801da8845b74ccbcc4f7429c522ed222a2cb46bd14677eb1d48990faab46"
+    },
+    {
+      "path": "libraries/HealthBarTextTags.j",
+      "sha256": "d5bd677804dd5677d15391eab6b699a9d323d16098bb0ccfcd6efbc98a72a780"
+    },
+    {
+      "path": "libraries/IsDestructableTree.j",
+      "sha256": "8dd4eb898f7b44f61c38baff9df6bea4c049c479cd2cb9e1497de8c7f91dd3f6"
+    },
+    {
+      "path": "libraries/IsUnitChanneling.j",
+      "sha256": "45cad8072606c9e222d723f76494f0025d8a74ba692725e7d3f1402b38f1b11a"
+    },
+    {
+      "path": "libraries/Missile.j",
+      "sha256": "83f8a3f2936d81a4896e9b3dd1a7191c3b51e00e222d1fc4e9f9844b10686d87"
+    },
+    {
+      "path": "libraries/PlayerUtils.j",
+      "sha256": "ccecc594e26b897e421936e2fa64bac26e07fcd56a80b07d42b053918499e933"
+    },
+    {
+      "path": "libraries/RegisterPlayerUnitEvent.j",
+      "sha256": "901003343a3b3c3af1687c06f8f45872b2862409ab3e6631028c7f715c46fde6"
+    },
+    {
+      "path": "libraries/SilenceEx.j",
+      "sha256": "7cb95778456739f74182b3fff95ce6112f161682ebe9251fa444c027521aa8d7"
+    },
+    {
+      "path": "libraries/SimError.j",
+      "sha256": "ab04e75ef12b84eb00af4b74ae9da5de92b5dee6732e8d1a1a7678d97efb23a1"
+    },
+    {
+      "path": "libraries/SpacebarDetect.j",
+      "sha256": "b93a72b5d62c088c116ae70b4a034ef5e7cc65ee042ee36f13dbd91499465966"
+    },
+    {
+      "path": "libraries/SpellEfffectEvent.j",
+      "sha256": "d3350d800dc75c0ffae2ebc3a7373fcdf28246bbca989c2d35b6db72f332732d"
+    },
+    {
+      "path": "libraries/SpellFinishEvent.j",
+      "sha256": "34b8b7e4376c5a3aeb76a860b4950545f86be8cc21142564c5a8647666c7139b"
+    },
+    {
+      "path": "libraries/SpellIndex.j",
+      "sha256": "d2e69086917db17f89472988c4c13ba5efcf4d53adec2dd503059fd21343cb9c"
+    },
+    {
+      "path": "libraries/SwlsMath.j",
+      "sha256": "7a2e5e1f667bbd6f0bd7b15120841d8442a37a113ecfa793755f6f66afd25cee"
+    },
+    {
+      "path": "libraries/SyncInteger.j",
+      "sha256": "a11c37051144366395eb39c136e964009248591c69e6751df30e64e53fd8b48c"
+    },
+    {
+      "path": "libraries/Table.j",
+      "sha256": "0c1d59fbd3919e0bf351ecf5be8277892838ea30c146433ca85006295d307e94"
+    },
+    {
+      "path": "libraries/TerrainPathability.j",
+      "sha256": "fa7e6b6653fdb6ece9f6d3b528b1686e9d42c2398490b8db275325f0472f3cca"
+    },
+    {
+      "path": "libraries/TerrainReplace.j",
+      "sha256": "589df3dd5f665ffeb2a037b3af9da6519c6f2aaeac0a95c442df4564e66b6b44"
+    },
+    {
+      "path": "libraries/TextTagDebug.j",
+      "sha256": "ca54ef79ea9ea5259c4edd4e99319ce0bcf71fb308c5c64ad5d8ccbc993291df"
+    },
+    {
+      "path": "libraries/TimerUtils.j",
+      "sha256": "51085b00ea287f27444b9a31613fa7ce2e1ad3d516ee8be1be6df0b78078083c"
+    },
+    {
+      "path": "libraries/UIMath.j",
+      "sha256": "09af17982f6e257ce463649f687fdfc84bf5fb86deed568c8b6c0ca88ee7cf65"
+    },
+    {
+      "path": "libraries/UnitDex.j",
+      "sha256": "fce553569be95f4d2356158b45db0aba7fdada93e4558348a075c88e39f4475a"
+    },
+    {
+      "path": "libraries/UnitIndexer.j",
+      "sha256": "d105da230e2f34700f33d810d1d8bb1fe934fc552e60d688cc72d74aadce1ae4"
+    },
+    {
+      "path": "libraries/UserInterface.j",
+      "sha256": "4095627076eb7609a4620e5039262f7954e86d41d78301b26043dc7a0a100476"
+    },
+    {
+      "path": "libraries/WaveDamageCredit.j",
+      "sha256": "cb54bc5a1820819eef7800b24fad01deb3fbec6c89a7ae05b2fa5d2ad9f4e0da"
+    },
+    {
+      "path": "libraries/WorldBounds.j",
+      "sha256": "b58e6120101fbe1152ae56113bea724057ea8f3c967dccf51c9a162636c6940d"
+    }
+  ],
+  "fixture": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/tests/SurvivalAudit.j",
+  "disabled_initializers": [
+    "InitMap/MapBootstrap.j",
+    "WaveSysAnAI/SwlsWave/StageExample.j"
+  ],
+  "diagnostic_renames": {
+    "InitTrig_Event": "AuditInitTrig_Event",
+    "InitTrig_ShowMenuClient": "AuditInitTrig_ShowMenuClient",
+    "InitTrig_Vars": "AuditInitTrig_Vars",
+    "InitTrig_gg": "AuditInitTrig_gg"
+  },
+  "boundaries": "15 map rect declarations null; explicit fixture setup; DevMission resource overlay, independent terrain",
+  "base_map": "/home/snz/Documentos/ChatGPT/Proyect/WaveSys/artifacts/TerrainDev-WaveResources-v1.w3x",
+  "base_sha256": "a7928a10dd811a485ec71a0f0c534e122f654a3f82e97c654176bf87251cd0a4",
+  "read_only_aura_observers": false,
+  "compiled": true,
+  "validated": true,
+  "reextracted": true,
+  "other_members_preserved": true,
+  "generated_mpq_metadata_excluded": [
+    "(listfile)",
+    "(attributes)"
+  ],
+  "game_tested": false,
+  "full_survival_map_tested": false
+}

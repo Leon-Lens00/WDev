@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-24",
+  "agent": "Claude (chat WavSys)",
+  "before_copies": "evidence/e06-e07-e08-e14-before/",
+  "after_sha256": {
+    "src/WaveSysAnAI/SwlsWave/SwlsWave.j": "91fca4d0f3c4eafc025bc46323a63b23278f44d9f5a36f825bdd76b67ef2c583",
+    "src/WaveSysAnAI/SwlsWave/WavePointGroups.j": "9e8e1350b49772ede1da0472fa5302f539a405eb2176c4a679c774fb7c4db1ff",
+    "src/WaveSysAnAI/AI/IAManager.j": "d921f97a7b753fe78307f46e1f73b2c4322c60916c1fe579369aece542ba71c3",
+    "src/WaveSysAnAI/WaveProjectiles/WaveAuraSkills.j": "34a49dad95b1830697844b24d626e46686a63bfd757edd96b0d42f0d9180ba2e",
+    "src/WaveSysAnAI/WaveProjectiles/WavePriestSkills.j": "f89b022ccdb6704aaed7ad6dea81ac03d5c52fff09ab69e390967c430aee9c53"
+  },
+  "changes": {
+    "E06": "WaveDispatchEvent saves and restores the outer event context (replaces push+clear)",
+    "E07": "typed removes: IAManager 5 tables (.real/.handle), WaveAura/WavePriest member unit tables (.handle)",
+    "E08": "WavePointGroupApplyToWave returns actually inserted points (pointCount delta)",
+    "E14": "pickSlot uses a found flag; negative priorities are selectable"
+  },
+  "runs": {
+    "blk2-features-v1": "FeatureAudit 44/0 (E14 PASS)",
+    "blk2-core-v1": "CoreAudit 18/1: only E09; E06 PASS (read=1), E08 PASS (reported=1 actual=1)",
+    "blk2-lifecycle-v1": "LifecycleAudit 49/0",
+    "blk2-resource-skills-v1": "ResourceSkillsAudit 28/1: only E12 (aura compaction, other block)",
+    "blk2-integration-v1": "IntegrationAudit 25/0 (E11 rest title PASS)",
+    "blk2-survival-v1": "SurvivalAudit 67/0, 10/10, 518/518"
+  },
+  "gpu": "profile default (NVIDIA) after driver recovery",
+  "limits": "E07 IA/aura/priest: no direct observation of removed handles (private tables); only behaviour regressions. Single player; not multiplayer."
+}

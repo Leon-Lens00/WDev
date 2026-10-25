@@ -1,4 +1,4 @@
-library WaveBarrierSkills initializer Init requires Table, TimerUtils, WaveTest, TerrainPathability, WaveSkillVisuals
+library WaveBarrierSkills initializer Init requires Table, TimerUtils, WaveCore, TerrainPathability, WaveSkillVisuals
 
     globals
         public constant integer WAVE_HFOO_UNIT_ID = 'hfoo'
@@ -339,7 +339,7 @@ library WaveBarrierSkills initializer Init requires Table, TimerUtils, WaveTest,
         if u == null then
             return
         endif
-        set unitType = GetUnitTypeId(u)
+        set unitType = GetWaveEventUnitTypeId()
         if unitType != WAVE_HFOO_UNIT_ID and unitType != WAVE_HFOO_BOSS_UNIT_ID then
             set u = null
             return

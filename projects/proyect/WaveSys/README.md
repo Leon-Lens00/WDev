@@ -4,7 +4,7 @@
 
 Origen: `/home/snz/Documentos/WarDatsPy/struct/`, copiado el 23 de octubre de 2026. Las 162 fuentes/artefactos JASS y PowerShell coinciden byte a byte con `evidence/original-manifest.json` al copiar. No se mezcla `struct-rebuild`.
 
-- `src/`: copia de trabajo. Después de la auditoría se añadió `Players/WavePlayerUtils.j` y se migraron 16 consumidores de partida. Los demás originales, incluida la interfaz, siguen intactos; hashes y respaldos en `evidence/player-utils-migration.json` y `evidence/player-utils-before/`.
+- `src/`: copia de trabajo. Después de la auditoría se añadió `Players/WavePlayerUtils.j` y se migraron 16 consumidores de partida. Los demás originales, incluida la interfaz, siguen intactos; hashes y respaldos en `evidence/player-utils-migration.json` y `evidence/player-utils-before/`. El 24/10/2026 se corrigieron E02, E13 y E03 en `SwlsWave.j` (más guard en WaveStreaks y filtro por tipo registrado en 9 limpiadores de habilidades) ([plan](docs/planes/ciclo-vida-e13-e03-e02-2026-10-24.md), `evidence/lifecycle-e02-e13-change.json`); verificados en 1.27b con `lifecycle-*` (LifecycleAudit 49/0, supervivencia 67/0); `evidence/lifecycle-e03-change.json`. E11 (multiboard en descansos; registrado también como E16) corregido en `InitialWaveMultiboard.j`/`RestTimeCountdown.j`; `evidence/e16-change.json`. E06, E07, E08 y E14 corregidos y verificados (E07 con observadores de solo lectura, `evidence/e07-verification.json`); `evidence/e06-e07-e08-e14-change.json`. E09: la pausa congela las reservas ya creadas; `evidence/e09-change.json`.
 - `artifacts/`: salidas nuevas de compilación y posibles mapas de ensayo.
 - `evidence/`: manifiestos, procedencia y resultados.
 - `docs/planes/`: alcance y continuidad de evaluación.

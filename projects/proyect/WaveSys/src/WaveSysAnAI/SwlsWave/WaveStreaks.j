@@ -1,4 +1,4 @@
-library WaveStreaks initializer Init requires Table, TimerUtils, WavePlayerUtils, WaveTest, SelectionSystem, WaveDamageCredit, PlayerHeroState, PrisonerDropSystem
+library WaveStreaks initializer Init requires Table, TimerUtils, WavePlayerUtils, WaveCore, WaveOwnerPolicy, SelectionSystem, WaveDamageCredit, PlayerHeroState, PrisonerDropSystem
 
     globals
         private constant integer WAVE_STREAK_MAX_TIERS = 8
@@ -437,6 +437,13 @@ library WaveStreaks initializer Init requires Table, TimerUtils, WavePlayerUtils
 
         if WAVE_DEBUG_ENABLED then
             call WaveDebugLog("WaveStreakOnWaveDeath enter " + WaveDeathDebugContextSummary())
+        endif
+        // Una retirada no es una baja: no da racha ni drop; solo limpia el credito de dano.
+        if IsWaveEventRetired() then
+            call WaveClearDamageCredit(dead)
+            set dead = null
+            set killer = null
+            return
         endif
         set killerPid = WaveGetOwnerPlayerId(killer)
         if WAVE_DEBUG_ENABLED then

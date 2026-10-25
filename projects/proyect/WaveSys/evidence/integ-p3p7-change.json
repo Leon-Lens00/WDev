@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-25",
+  "agent": "Claude (chat WavSys)",
+  "step": "Rework phase 2, priorities 3-7",
+  "before": "evidence/integ-p3p6-before/ (and evidence/integ-p2-before/ for the stage)",
+  "after_sha256": {
+    "src/WaveSysAnAI/SwlsWave/RestTime/WaveRestTimeBridge.j": "73ae3b1fc84ea5c0c67c97c656133a1d6da10153fb00348a3f14ca97baa0a046",
+    "src/Multiboard/WaveMultiboard.j": "a270452637679870ca7685ab1193be2cf391cc35ca4c6b6997e74a4f1b7b8973",
+    "src/WaveSysAnAI/AI/IAManager.j": "6ee58043911aa0e30e72679858a213e69594a703a63fdf32ddc6b7152d518781",
+    "src/WaveSysAnAI/SwlsWave/WaveStreaks.j": "482e82ee97af76c0e0b504edec19dfdb2abf117d5f97948a35aaf49074a357ea",
+    "src/WaveSysAnAI/SwlsWave/StageExample.j": "27a50a3380ab280828b8fe238faaeadad709b553001499249cb6e4029b561394",
+    "tools/build-integration-audit.py": "9cb2b726494c1adad9ac1b604cef5725c4abeb698953702f37c0aaf703ea6ed0"
+  },
+  "changes": {
+    "P3": "WaveRestTimeBridge: Finish listener calls RestTimeOnWaveFinished(next) only for waves bound with WaveRestTimeBindNext (token-checked); replaces core endF",
+    "P4": "WaveMultiboard: BMT1/ExecuteFunc/CurrentBoardContext/WaveByBoard removed; WaveMultiboardBind(w, mb) with own 0.25 s refresh timer while the bound wave lives (also while paused); stops on Finish so RestTime owns the title",
+    "P5": "IAManager: 10 WaveUpsertSlotExByPlayers(w, ...), requires WaveOwnerPolicy; removed w.refreshBoard() after boss reinforcement (board refreshes every 0.25 s)",
+    "P6": "WaveStreaks: requires WaveOwnerPolicy",
+    "P7": "integration builder includes WaveSpawnFx, WaveOwnerPolicy, WaveRestTimeBridge (117 sources)"
+  },
+  "runs": {
+    "p7-survival-v2": "67/0, 10/10 waves, 518/518 (stage, RestTime bridge, owner policy exercised)",
+    "p7-restboard-v1": "69/0, foreign titles 0/1800",
+    "p7-integration-v1": "25/0",
+    "p7-tables-v1": "34/0",
+    "p7-resource-skills-v1": "28/1 (E12 only, pre-existing)"
+  },
+  "behaviour_changes": [
+    "board keeps refreshing while paused (shows Pausada)",
+    "RestTime is invoked inside the Finish event instead of at the end of destroyWave; other Finish listeners (IA, streaks) do not read the globals it changes"
+  ],
+  "not_verified": "board contents visually; multiplayer; selection->initial countdown path (unchanged code)"
+}

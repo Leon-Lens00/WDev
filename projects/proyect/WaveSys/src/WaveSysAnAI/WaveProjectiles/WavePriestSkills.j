@@ -1,4 +1,4 @@
-library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex, WaveTest, WaveSkillVisuals, FileIO
+library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex, WaveCore, WaveSkillVisuals, FileIO
 
     globals
         public constant integer WAVE_HMPR_UNIT_ID = 'hmpr'
@@ -373,7 +373,7 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         set WavePriestMemberHidByKey[key] = GetHandleId(target)
         call WavePriestDebugMsg("MEMBER_PUSH aura=" + I2S(auraId) + " type=" + WavePriestAuraTypeName(WavePriestAuraType[auraId]) + " count=" + I2S(WavePriestMemberCount[auraId]) + " target=" + GetUnitName(target))
         if not WavePriestApplyAuraEffect(auraId, WavePriestAuraType[auraId], target) then
-            call WavePriestMemberUnitByKey.remove(key)
+            call WavePriestMemberUnitByKey.handle.remove(key)
             if WavePriestMemberHidByKey.has(key) then
                 call WavePriestMemberHidByKey.remove(key)
             endif
@@ -408,7 +408,7 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
                 call WavePriestMemberHidByKey.remove(key)
             endif
         endif
-        call WavePriestMemberUnitByKey.remove(lastKey)
+        call WavePriestMemberUnitByKey.handle.remove(lastKey)
         if WavePriestMemberHidByKey.has(lastKey) then
             call WavePriestMemberHidByKey.remove(lastKey)
         endif
@@ -555,10 +555,10 @@ library WavePriestSkills initializer Init requires Table, TimerUtils, SpellIndex
         local integer hid
         local integer auraId
         local integer unitTypeId
-        if deadUnit == null or GetUnitTypeId(deadUnit) == 0 then
+        if deadUnit == null then
             return
         endif
-        set unitTypeId = GetUnitTypeId(deadUnit)
+        set unitTypeId = GetWaveEventUnitTypeId()
         if unitTypeId != WAVE_HMPR_UNIT_ID and unitTypeId != WAVE_HMPR_BOSS_UNIT_ID then
             return
         endif

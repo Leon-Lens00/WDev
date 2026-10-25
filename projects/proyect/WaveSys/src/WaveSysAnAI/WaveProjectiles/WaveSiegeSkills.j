@@ -1,4 +1,4 @@
-library WaveSiegeSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveTest, TerrainPathability, WaveProjectileConfig, WaveSkillVisuals, PlayerHeroState
+library WaveSiegeSkills initializer Init requires Table, TimerUtils, Missile, SpellIndex, WaveCore, TerrainPathability, WaveProjectileConfig, WaveSkillVisuals, PlayerHeroState
 
     globals
         public constant integer WAVE_HMIL_UNIT_ID = 'hmil'
@@ -190,10 +190,10 @@ library WaveSiegeSkills initializer Init requires Table, TimerUtils, Missile, Sp
     private function WaveSiegeCleanupWaveDeath takes nothing returns nothing
         local unit deadUnit = GetWaveEventUnit()
         local integer hid
-        if deadUnit == null or GetUnitTypeId(deadUnit) == 0 then
+        if deadUnit == null then
             return
         endif
-        if GetUnitTypeId(deadUnit) == WAVE_HMIL_UNIT_ID or GetUnitTypeId(deadUnit) == WAVE_HMIL_BOSS_UNIT_ID then
+        if GetWaveEventUnitTypeId() == WAVE_HMIL_UNIT_ID or GetWaveEventUnitTypeId() == WAVE_HMIL_BOSS_UNIT_ID then
             if WAVE_DEBUG_ENABLED then
                 call WaveDebugLog("WaveSiegeCleanupWaveDeath enter " + WaveDeathDebugContextSummary())
             endif

@@ -1,5 +1,5 @@
 // Verify retirement after the engine has actually removed the unit.
-library WaveRemovalAudit initializer Init requires WaveTest
+library WaveRemovalAudit initializer Init requires WaveCore
 globals
     private Wave w = 0
     private unit victim = null
@@ -40,7 +40,7 @@ private function Retire takes nothing returns nothing
     call TimerStart(t, 0.5, false, function Observe)
 endfunction
 private function Begin takes nothing returns nothing
-    set w = Wave.create(2, 0, 0.25, null, "", 1, 1, "")
+    set w = Wave.create(2, 0, 0.25, 1, 1)
     call w.addPoint(-4800., 3000.)
     call w.addSlot('hfoo', 1, 1, 1, 0, -1, false, Player(8))
     call w.start()

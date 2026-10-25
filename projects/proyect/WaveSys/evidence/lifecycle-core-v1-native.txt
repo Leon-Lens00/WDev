@@ -1,0 +1,34 @@
+function PreloadFiles takes nothing returns nothing
+
+	call Preload( "WAVESYS CORE AUDIT lifecycle-core-v1 complete" )
+	call Preload( "checks=18 failures=5" )
+	call Preload( "BEGIN: Warcraft III Classic 1.27b, exact core sources, isolated map" )
+	call Preload( "PASS all three marker fixtures created" )
+	call Preload( "PASS duplicate marker coordinates established" )
+	call Preload( "PASS marker collection deduplicates repeated coordinates" )
+	call Preload( "PASS marker order is descending Y" )
+	call Preload( "Point apply: reported=2 actual added=1" )
+	call Preload( "FAIL point application reports the actual inserted count" )
+	call Preload( "Self killGate fixture: remaining=2 selected slot=0" )
+	call Preload( "FAIL nested pause preserves outer start context; read=0" )
+	call Preload( "PASS pause fixture has exactly one pending reservation" )
+	call Preload( "PASS collected markers removed after engine update" )
+	call Preload( "FAIL paused wave does not materialize its pending spawn" )
+	call Preload( "Paused state=1 tracked=1" )
+	call Preload( "PASS ordinary death releases active counter" )
+	call Preload( "FAIL ordinary death removes saved unit handle" )
+	call Preload( "PASS RemoveUnit scenario really spawned a unit" )
+	call Preload( "FAIL RemoveUnit releases active counter" )
+	call Preload( "After RemoveUnit: active=1 tracked=1" )
+	call Preload( "PASS external scenario has a live Wave source" )
+	call Preload( "PASS external unit registered before death" )
+	call Preload( "PASS external unit death reaches WaveDeath listeners; actual=1" )
+	call Preload( "PASS external unit death clears WaveByUnit mapping" )
+	call Preload( "PASS external death leaves exactly the source alive" )
+	call Preload( "External active index=1" )
+	call Preload( "COMPLETE: engine tests ended; failures are product observations, not approval." )
+	call PreloadEnd( 0.0 )
+
+endfunction
+
+

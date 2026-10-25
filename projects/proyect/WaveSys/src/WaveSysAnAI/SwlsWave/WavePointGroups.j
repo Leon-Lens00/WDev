@@ -1,4 +1,4 @@
-library WavePointGroups initializer Init requires Table, WaveTest
+library WavePointGroups initializer Init requires Table, WaveCore
 //------------------------------------------------------------------------------
 // WavePointGroups
 //------------------------------------------------------------------------------
@@ -293,20 +293,23 @@ library WavePointGroups initializer Init requires Table, WaveTest
         endloop
     endfunction
 
+    // Devuelve los puntos realmente anadidos: Wave.addPoint rechaza los que superan WAVE_MAX_POINTS.
     function WavePointGroupApplyToWave takes Wave w, string groupName returns integer
         local integer groupId = WPG_GetGroupId(groupName)
         local integer i = 0
         local integer count
+        local integer before
         if (w == 0) or (groupId <= 0) then
             return 0
         endif
         set count = WPGGroupPointCount[groupId]
+        set before = w.pointCount
         loop
             exitwhen i >= count
             call w.addPoint(WPGGroupPointX[WPG_GroupKey(groupId, i)], WPGGroupPointY[WPG_GroupKey(groupId, i)])
             set i = i + 1
         endloop
-        return count
+        return w.pointCount - before
     endfunction
 
     function WavePointGroupsDebugDump takes nothing returns nothing

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-25",
+  "agent": "Claude (chat WavSys)",
+  "step": "Rework phase 2, priority 2: stage",
+  "file": "src/WaveSysAnAI/SwlsWave/StageExample.j",
+  "before": "evidence/integ-p2-before/StageExample.j",
+  "after_sha256": "27a50a3380ab280828b8fe238faaeadad709b553001499249cb6e4029b561394",
+  "changes": [
+    "requires + WaveOwnerPolicy, WaveRestTimeBridge",
+    "Wave.create(30, 15, 0.25, TargetWave, 10)",
+    "WaveMultiboardBind(w, SwlsMultiboard) [implemented in priority 4]",
+    "WaveRestTimeBindNext(w, \"Trig_w1_Actions\") [implemented in priority 3]",
+    "WaveSetAdditionalPerPlayerPercent(w, 100.0)",
+    "12 WaveUpsertSlotExByPlayers, 2 WaveAddSlotExByPlayers, 13 WaveAddSlotExByPlayer (active and commented examples)"
+  ],
+  "encoding": "UTF-8 BOM and CRLF preserved",
+  "verification": "static argument-count check: 0 mismatches; not compiled (build needs priorities 3-6)"
+}
