@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Red",
+    "internal": "Windwalk\\Ghost2 Red.blp",
+    "file": "Windwalk/Ghost2 Red.blp",
+    "source": "Textures/Ghost2.blp",
+    "sha256": "0027344ed23a0f9991853d7fe44e539514be6c69d3c67e54624b44e0b3a482c6",
+    "maxChannelQuantizationError": 11,
+    "mips": 7,
+    "alpha": "exact"
+  },
+  {
+    "name": "Teal",
+    "internal": "Windwalk\\Ghost2 Teal.blp",
+    "file": "Windwalk/Ghost2 Teal.blp",
+    "source": "Textures/Ghost2.blp",
+    "sha256": "30e400613dda884ac0f7c274362d2b04847a466cfb802bfaf63d8e95e11709b3",
+    "maxChannelQuantizationError": 10,
+    "mips": 7,
+    "alpha": "exact"
+  },
+  {
+    "name": "Purple",
+    "internal": "Windwalk\\Ghost2 Purple.blp",
+    "file": "Windwalk/Ghost2 Purple.blp",
+    "source": "Textures/Ghost2.blp",
+    "sha256": "e468288e4c92b9f0af2779168ff19857fc57a7fe3aaa8cff291bb454b1d928cb",
+    "maxChannelQuantizationError": 8,
+    "mips": 7,
+    "alpha": "exact"
+  },
+  {
+    "name": "Yellow",
+    "internal": "Windwalk\\Ghost2 Yellow.blp",
+    "file": "Windwalk/Ghost2 Yellow.blp",
+    "source": "Textures/Ghost2.blp",
+    "sha256": "625ec8b4b6d945fb8ef5782447a1732e0c53b1ced37b6f8286a0fb6e8aed26ee",
+    "maxChannelQuantizationError": 10,
+    "mips": 7,
+    "alpha": "exact"
+  },
+  {
+    "name": "Pink",
+    "internal": "Windwalk\\Ghost2 Pink.blp",
+    "file": "Windwalk/Ghost2 Pink.blp",
+    "source": "Textures/Ghost2.blp",
+    "sha256": "5d22c82778233d14620564f1b58403480d83823161770fe1a4c3d2112910fc43",
+    "maxChannelQuantizationError": 11,
+    "mips": 7,
+    "alpha": "exact"
+  },
+  {
+    "name": "Silver",
+    "internal": "Windwalk\\Ghost2 Silver.blp",
+    "file": "Windwalk/Ghost2 Silver.blp",
+    "source": "Textures/Ghost2.blp",
+    "sha256": "6bab44d708a00cc7a9352e686976cb7fd317fed8cb0d30d167b83b60ee5bcb29",
+    "maxChannelQuantizationError": 5,
+    "mips": 7,
+    "alpha": "exact"
+  }
+]

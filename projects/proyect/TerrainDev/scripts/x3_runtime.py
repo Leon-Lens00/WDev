@@ -27,7 +27,12 @@ def prepare():
     env['DXVK_LOG_PATH']=str(log)
     return env
 
+# Per-process Intel Mesa/Vulkan, as in ModelEditor V15 while NVIDIA kernel/NVML mismatch.
+integrated='--integrated' in sys.argv
+if integrated:sys.argv.remove('--integrated')
 env=prepare()
+if integrated:
+    env.update(__NV_PRIME_RENDER_OFFLOAD='0',__GLX_VENDOR_LIBRARY_NAME='mesa',DXVK_FILTER_DEVICE_NAME='Intel',VK_DRIVER_FILES='/usr/share/vulkan/icd.d/intel_icd.json',VK_ICD_FILENAMES='/usr/share/vulkan/icd.d/intel_icd.json',DRI_PRIME='0')
 if len(sys.argv)>1 and sys.argv[1]=='ui':
     env.update(WINEPREFIX=str(PROFILE/'pfx'),WINEESYNC='0',WINEFSYNC='0',WINENTSYNC='0')
     helper=FROZEN/'work/two-candidate-tests-20261018/window_probe.exe'
@@ -44,7 +49,7 @@ staged=game/'Maps/CodexTest'/(digest[:16]+'.w3x');staged.parent.mkdir(parents=Tr
 if staged.exists():assert staged.read_bytes()==data
 else:staged.write_bytes(data)
 command=[str(modern.SLR),'--verb=run','--',str(modern.PROTON),'runinprefix',r'C:\WarcraftIII\war3.exe','-loadfile','Maps\\CodexTest\\'+staged.name,'-window']
-(EVIDENCE/'launch-isolated.json').write_text(json.dumps({'source':str(source),'sha256':digest,'staged':str(staged),'prefix':str(PROFILE/'pfx'),'command':command},indent=2)+'\n')
+(EVIDENCE/'launch-isolated.json').write_text(json.dumps({'source':str(source),'sha256':digest,'staged':str(staged),'prefix':str(PROFILE/'pfx'),'command':command,'gpu':'Intel integrated' if integrated else 'default'},indent=2)+'\n')
 print(json.dumps({'launching':str(staged),'prefix':str(PROFILE/'pfx')}),flush=True)
 with (EVIDENCE/'runtime-isolated.log').open('w') as log:
     code=subprocess.run(command,cwd=game,env=env,stdout=log,stderr=log).returncode

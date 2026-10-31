@@ -1,0 +1,105 @@
+{
+  "author": "Vinz (Windwalk); colors by scripts/windwalk_colores.cjs",
+  "origin": "Unmodified Windwalk originals in windwalk-originales. Blue/Green/Orange are byte copies; the rest are Blue Soul with tinted particle, ribbon and light colors and a recolored Ghost2. Everything else (geometry, timing, sizes, filters, alpha) is unchanged.",
+  "imports": [
+    {
+      "internal": "Windwalk\\Ghost2 Red.blp",
+      "file": "windwalk-colores/Windwalk/Ghost2 Red.blp",
+      "sha256": "0027344ed23a0f9991853d7fe44e539514be6c69d3c67e54624b44e0b3a482c6",
+      "source": "windwalk-originales/Textures/Ghost2.blp"
+    },
+    {
+      "internal": "Windwalk\\Windwalk Red.mdx",
+      "file": "windwalk-colores/Windwalk/Windwalk Red.mdx",
+      "sha256": "cf855c1880b9e284ad5b2f92e717d5ff0a80376906efcec56c6cc1902d3623de",
+      "source": "windwalk-originales/Windwalk/Windwalk Blue Soul.mdx",
+      "method": "gradient tint to 253,0,6; Ghost2 replaced"
+    },
+    {
+      "internal": "Windwalk\\Windwalk Blue.mdx",
+      "file": "windwalk-colores/Windwalk/Windwalk Blue.mdx",
+      "sha256": "cd16180f2cfe846b8cd5f606d2d9d04319338c8d4e1e9f270df19b5aaacebfe9",
+      "source": "windwalk-originales/Windwalk/Windwalk Blue Soul.mdx",
+      "method": "unmodified copy"
+    },
+    {
+      "internal": "Windwalk\\Ghost2 Teal.blp",
+      "file": "windwalk-colores/Windwalk/Ghost2 Teal.blp",
+      "sha256": "30e400613dda884ac0f7c274362d2b04847a466cfb802bfaf63d8e95e11709b3",
+      "source": "windwalk-originales/Textures/Ghost2.blp"
+    },
+    {
+      "internal": "Windwalk\\Windwalk Teal.mdx",
+      "file": "windwalk-colores/Windwalk/Windwalk Teal.mdx",
+      "sha256": "34d0f2f6ad57ed508ef2581428a8ae4d2b1f14dc158467b760211676781d5a20",
+      "source": "windwalk-originales/Windwalk/Windwalk Blue Soul.mdx",
+      "method": "gradient tint to 0,227,253; Ghost2 replaced"
+    },
+    {
+      "internal": "Windwalk\\Ghost2 Purple.blp",
+      "file": "windwalk-colores/Windwalk/Ghost2 Purple.blp",
+      "sha256": "e468288e4c92b9f0af2779168ff19857fc57a7fe3aaa8cff291bb454b1d928cb",
+      "source": "windwalk-originales/Textures/Ghost2.blp"
+    },
+    {
+      "internal": "Windwalk\\Windwalk Purple.mdx",
+      "file": "windwalk-colores/Windwalk/Windwalk Purple.mdx",
+      "sha256": "461a9ffdb933b8736d4277ce74e03a5343aa9ee718628589050ec655edf8b45b",
+      "source": "windwalk-originales/Windwalk/Windwalk Blue Soul.mdx",
+      "method": "gradient tint to 114,0,253; Ghost2 replaced"
+    },
+    {
+      "internal": "Windwalk\\Ghost2 Yellow.blp",
+      "file": "windwalk-colores/Windwalk/Ghost2 Yellow.blp",
+      "sha256": "625ec8b4b6d945fb8ef5782447a1732e0c53b1ced37b6f8286a0fb6e8aed26ee",
+      "source": "windwalk-originales/Textures/Ghost2.blp"
+    },
+    {
+      "internal": "Windwalk\\Windwalk Yellow.mdx",
+      "file": "windwalk-colores/Windwalk/Windwalk Yellow.mdx",
+      "sha256": "2907beac31928444305cae90ef5c87a694dd3fbb0e97cc805274cf123f636915",
+      "source": "windwalk-originales/Windwalk/Windwalk Blue Soul.mdx",
+      "method": "gradient tint to 253,234,0; Ghost2 replaced"
+    },
+    {
+      "internal": "Windwalk\\Windwalk Orange.mdx",
+      "file": "windwalk-colores/Windwalk/Windwalk Orange.mdx",
+      "sha256": "fd5a0ed17db3a15001d49403e8ed23a133a96724252f561efdf6ad175463f05a",
+      "source": "windwalk-originales/Windwalk/Windwalk Fire.mdx",
+      "method": "unmodified copy"
+    },
+    {
+      "internal": "Windwalk\\Windwalk Green.mdx",
+      "file": "windwalk-colores/Windwalk/Windwalk Green.mdx",
+      "sha256": "450af49839f45ad2dff80506dcc5331065b35e9d81ea7f4bd840bba86c593d79",
+      "source": "windwalk-originales/Windwalk/Windwalk Necro Soul.mdx",
+      "method": "unmodified copy"
+    },
+    {
+      "internal": "Windwalk\\Ghost2 Pink.blp",
+      "file": "windwalk-colores/Windwalk/Ghost2 Pink.blp",
+      "sha256": "5d22c82778233d14620564f1b58403480d83823161770fe1a4c3d2112910fc43",
+      "source": "windwalk-originales/Textures/Ghost2.blp"
+    },
+    {
+      "internal": "Windwalk\\Windwalk Pink.mdx",
+      "file": "windwalk-colores/Windwalk/Windwalk Pink.mdx",
+      "sha256": "94c35eac3b0f1059414e96dc315ad55706e0627d1c2ed33552e511b06703f442",
+      "source": "windwalk-originales/Windwalk/Windwalk Blue Soul.mdx",
+      "method": "gradient tint to 234,0,253; Ghost2 replaced"
+    },
+    {
+      "internal": "Windwalk\\Ghost2 Silver.blp",
+      "file": "windwalk-colores/Windwalk/Ghost2 Silver.blp",
+      "sha256": "6bab44d708a00cc7a9352e686976cb7fd317fed8cb0d30d167b83b60ee5bcb29",
+      "source": "windwalk-originales/Textures/Ghost2.blp"
+    },
+    {
+      "internal": "Windwalk\\Windwalk Silver.mdx",
+      "file": "windwalk-colores/Windwalk/Windwalk Silver.mdx",
+      "sha256": "97d1f9d8cb7317df44690733de7bf01657b624f1a762b585eef8da6954fc47ee",
+      "source": "windwalk-originales/Windwalk/Windwalk Blue Soul.mdx",
+      "method": "gradient tint to 173,182,194; Ghost2 replaced"
+    }
+  ]
+}

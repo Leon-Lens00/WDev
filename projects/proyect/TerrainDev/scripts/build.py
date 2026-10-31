@@ -155,7 +155,13 @@ def map_script(path):
     return code
 
 
-def build():
+# Megaman X3 physics live in their own isolated test map (profile x3).
+X3_LIBRARIES = ('X3Kinematics','X3Buster','X3Charge','X3BusterDemo')
+
+
+def build(destination=None, profile='main'):
+    assert profile in ('main','x3')
+    assert profile == 'main' or destination, 'The x3 profile is a test map: pass --output'
     stamp = datetime.datetime.now().strftime('%Y%m%d-%H%M%S-%f')
     work = ROOT / 'build' / stamp
     work.mkdir(parents=True)
@@ -171,6 +177,8 @@ def build():
     entry = (ROOT/'src/Main.j').read_text()
     imports = re.findall(r'^\s*//! import "libraries/([^"/]+)\.j"\s*$', entry, re.MULTILINE)
     assert imports == names, 'Main.j imports must match the ordered editable WCT library list'
+    if profile == 'main':
+        names = [n for n in names if n not in X3_LIBRARIES]
     assert all(not line.strip() or line.strip().startswith('//') for line in entry.splitlines()), \
         'Put map code in its own custom-text source and add it to Main.j and libraries.json'
     bodies = [(ROOT/'src/libraries'/f'{name}.j').read_bytes() for name in names]
@@ -191,10 +199,15 @@ def build():
     ability_tables = abilities((base/'war3map.w3a').read_bytes())
     assert {r['id'] for r in ability_tables[1]} == {b'A000'}
     ability_tables[1].append(ability_record())
-    from x3_objects import ability_records as x3_ability_records
-    ability_tables[1].extend(x3_ability_records())
+    if profile == 'x3':
+        from x3_objects import ability_records as extra_ability_records
+        spells = ('Ax3c','Ax3s','Ax3z')
+    else:
+        from shots_objects import ability_records as extra_ability_records
+        spells = ('Arp1','Arp3')
+    ability_tables[1].extend(extra_ability_records())
     controller = next(r for r in tables[1] if r['id'] == b'rfct')
-    set_field(controller,'uabi',3,'Arpf,Ax3c,Ax3s,Ax3z,Avul')
+    set_field(controller,'uabi',3,','.join(('Arpf',)+spells+('Avul',)))
     changes = {
         'war3map.j': compiled.read_bytes(),
         'war3map.w3u': encode_units(tables),
@@ -205,16 +218,27 @@ def build():
     }
     imp = (base/'war3map.imp').read_bytes()
     assert imp == integer(1)+integer(1)+bytes([8])+cstring('KoboldDigger.mdx')
-    shot_assets = json.loads((ROOT/'assets/rapid-shot-colors/manifest.json').read_text())
     x3_assets = json.loads((ROOT/'assets/x3-buster/manifest.json').read_text())
+    firebrand_assets = json.loads((ROOT/'assets/firebrand-shots/manifest.json').read_text())
+    # Only the Shots copies shifted in X are imported; the unmodified originals in
+    # assets/shots-originales are just the input of scripts/shots_ajustados.cjs.
+    shifted_assets = json.loads((ROOT/'assets/shots-ajustados/manifest.json').read_text())
+    # Windwalk feet effect for artificial motion, one per missile color (scripts/windwalk_colores.cjs).
+    windwalk_assets = json.loads((ROOT/'assets/windwalk-colores/manifest.json').read_text())
+    profile_assets = x3_assets['imports'] if profile == 'x3' else shifted_assets['imports']
+    # The unmodified Firebrand originals load their glow BLP from the map root.
+    root_textures = {a['internal'] for a in firebrand_assets['imports'] if '\\' not in a['internal']}
+    assert root_textures == {'PsionicGlow.blp','FelGlow.blp','BattlecastGlow.blp','VoidGlow.blp','RadiantGlow.blp'}
     extra_imports = []
-    for asset in shot_assets['imports']+x3_assets['imports']:
+    # RapidPair (both profiles) shows Windwalk while in artificial motion.
+    for asset in firebrand_assets['imports']+windwalk_assets['imports']+profile_assets:
         path = (ROOT/'assets'/asset['file']).resolve(strict=True)
         assert path.is_relative_to((ROOT/'assets').resolve())
         payload = path.read_bytes()
         assert digest(payload) == asset['sha256'], f'Asset hash changed: {path}'
         internal = asset['internal']
-        assert internal.startswith(('ShotsTeam\\','X3Buster\\')) and internal not in changes
+        assert internal.startswith(('ShotsAjustados\\','Windwalk\\','X3Buster\\','FirebrandShots\\')) or internal in root_textures
+        assert internal not in changes and not (base/internal.replace('\\','/')).exists()
         changes[internal] = payload
         extra_imports.append(bytes([13])+cstring(internal))
     changes['war3map.imp'] = (integer(1)+integer(2+len(extra_imports))+imp[8:]
@@ -251,24 +275,37 @@ def build():
     assert native['Triggers'][:2] == expected_triggers
     assert [t['Name'] for t in native['Triggers'][2:]] == names
     assert all(t['IsCustomText'] and t['Enabled'] for t in native['Triggers'][2:])
-    for rawid in ('dumi','dcst','rfex','rfct','rftg','Arpf','Ax3c','Ax3s','Ax3z'):
+    for rawid in ('dumi','dcst','rfex','rfct','rftg','rfm1','rfm2','rfm3','rbs2','rbs3','Arpf')+spells:
         obj = json.loads(run(['wc3ctl','object','get',current,rawid,'--json'],report/f'object-{rawid}.json'))
         assert obj['Found']
-    final = ROOT/'TerrainDev.w3x'
+    # A candidate output leaves the delivered map and latest-build.json untouched.
+    final = Path(destination).resolve() if destination else ROOT/'TerrainDev.w3x'
+    assert final != original.resolve()
+    final.parent.mkdir(parents=True, exist_ok=True)
     if final.exists():
         shutil.copy2(final, work/'previous-output.w3x')
     shutil.copy2(current, final)
     result = {'map':str(final),'sha256':digest(final.read_bytes()),'original_sha256':identity['sha256'],
               'libraries':names,'library_sha256':{n:digest(b) for n,b in zip(names,bodies)},
-              'shot_assets':shot_assets['imports'],
-              'x3_assets':x3_assets['imports'],
+              'profile':profile,
+              'x3_assets':x3_assets['imports'] if profile == 'x3' else [],
+              'shots_shifted_assets':shifted_assets['imports'] if profile == 'main' else [],
+              'windwalk_assets':windwalk_assets['imports'],
+              'firebrand_assets':firebrand_assets['imports'],
               'checks':checks,'build_directory':str(work),'report_directory':str(report),
               'compiled':True,'pjass':True,'native_trigger_roundtrip':True,
-              'game_tested':False,'editor_tested':False}
+              'game_tested':False,'editor_tested':False,'candidate':bool(destination)}
     (report/'result.json').write_text(json.dumps(result,indent=2))
-    (ROOT/'reports/latest-build.json').write_text(json.dumps(result,indent=2))
+    if not destination:
+        (ROOT/'reports/latest-build.json').write_text(json.dumps(result,indent=2))
     print(json.dumps(result,indent=2))
 
 
 if __name__ == '__main__':
-    build()
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', help='write a candidate map here instead of TerrainDev.w3x')
+    parser.add_argument('--profile', choices=('main','x3'), default='main',
+                        help='main: Firebrand/Shots missiles; x3: isolated Megaman X3 physics test map')
+    args = parser.parse_args()
+    build(args.output, args.profile)

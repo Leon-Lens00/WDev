@@ -59,4 +59,8 @@ necesita además el archivo de evidencias que permanece fuera de Git.
   sin `artifacts/`, `.cache/`, capturas `png` ni `log` de evidencia; tampoco la instantánea local de rollback
   `evidence/snapshot-rework-fase1-20261025/`. El inventario se actualizó solo en las entradas de WaveSys
   (`waveSysUpdated`). Ensayos en Warcraft III Classic 1.27b en la PC original; no se repitieron desde esta copia.
-
+- **2026-10-30 — TerrainDev Rapid Fire**: copia actualizada desde `Proyect/TerrainDev` con `src`, `scripts`, `assets`
+  (sin `upstream`), `docs`, `libraries.json`, `AGENTS.md` y `README.md`. Incluye alcance fijo 1350, Windwalk por color y la guía
+  `projects/proyect/TerrainDev/docs/importar-rapid-fire.md`. `maps/work` queda sólo con el candidato vigente `rango-20261028b` y los
+  dos de X3 Charge; las pruebas anteriores se retiraron (siguen en el historial de Git). No incluye `labs/x3-snes` ni los planes de
+  audio X3 del 29/10. El inventario se actualizó sólo en esas rutas (`terrainDevUpdated`). Sin promover: `TerrainDev.w3x` sigue en `f087047b…`.

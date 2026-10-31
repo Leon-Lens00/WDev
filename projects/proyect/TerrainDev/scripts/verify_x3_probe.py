@@ -11,18 +11,18 @@ def values(raw, keys):
     return {k:float(re.search(r'\b'+k+r'=([\d.]+)',raw)[1]) for k in keys}
 
 
-def x3_evaluate(info, raw):
+# expected/w_labels default to the delivered discrete W; candidates with X3Charge pass theirs.
+def x3_evaluate(info, raw, expected=69, w_labels=('native W spell event creates charged physics',)):
     assert f'X3 {info["run"]} COMPLETE' in raw and '"FAIL ' not in raw
     passes=re.findall(r'call Preload\( "PASS ([^"]+)"',raw)
-    assert len(passes)==len(set(passes))==69
-    for label in ['two bodies orbit independently in XY',
+    assert len(passes)==len(set(passes))==expected
+    for label in [*w_labels,'two bodies orbit independently in XY',
                   'catching pulse produces exactly one fusion',
                   'missing orb prevents fusion',
                   'enemy impact before union prevents fusion',
                   'obstacle before union prevents fusion',
                   'simultaneous casts fuse only their own components',
                   'concurrent cast limit rejects overflow',
-                  'native W spell event creates charged physics',
                   'native E spell event completes cross-shot sequence',
                   'fusion precedes later enemy impact inside the same tick',
                   'green satellite really travels backwards after union',
@@ -34,7 +34,7 @@ def x3_evaluate(info, raw):
                   'retreating satellite sweeps its real path and damages once']:
         assert label in passes
     v=values(raw,['checks','failures','casts','live','created','retired','fusions','flashes'])
-    assert v['checks']==69 and v['failures']==v['casts']==v['live']==v['flashes']==0
+    assert v['checks']==expected and v['failures']==v['casts']==v['live']==v['flashes']==0
     # Baseline190 + one extra eight-body cast to test a retrograde collision.
     assert v['created']==v['retired']==198 and v['fusions']==7
     return v

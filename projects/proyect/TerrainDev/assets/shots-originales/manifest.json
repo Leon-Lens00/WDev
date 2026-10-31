@@ -1,0 +1,124 @@
+{
+  "author": "Vinz",
+  "sources": [
+    "https://www.hiveworkshop.com/threads/shots-vol-i.315258/",
+    "https://www.hiveworkshop.com/threads/shots-vol-ii.315512/"
+  ],
+  "origin": "Unmodified originals, byte-identical to biblioteca-originales and its inventory hashes (test of 26/10/2026). Their Textures\\*.blp are present in war3.mpq/War3x.mpq 1.27b, so none are imported.",
+  "geometry_scale1": {
+    "Shot <Color>": "X -62.55..47.22 (tip ahead of origin), half-width 5.87",
+    "Shot <Color> Double": "two bodies centred at y=+-15, half-width 5.83 each",
+    "Shot II <Color>": "X -151.95..64.46, half-width 17.99",
+    "Shot II Green": "X -136.76..58.01, half-width 16.19"
+  },
+  "imports": [
+    {
+      "internal": "ShotsVolI\\Shot Blue Double.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Blue Double.mdx",
+      "sha256": "207792358ba184a7b8850db2cbaacafd9aa1b960c45b9905ee3eeca9e27ce47e",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Blue Double.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Blue.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Blue.mdx",
+      "sha256": "6d073549743b558396d9d9e3158d5b8130d1f7fda997e8da4136fdc42fba1a41",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Blue.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Green Double.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Green Double.mdx",
+      "sha256": "7725166d413b36a26c7de1b4e6d168282237151025ff41427c6c6617966f6b5d",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Green Double.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Green.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Green.mdx",
+      "sha256": "058de54f2f6deaf0183e92f9f75ce4eeee9a7da1417c2b74bf9eafe86ea9788a",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Green.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Orange Double.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Orange Double.mdx",
+      "sha256": "78d9e5e05a08a692476048e90e2fe1637759e5692a1f494823840c221c8814e7",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Orange Double.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Orange.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Orange.mdx",
+      "sha256": "a093ab85380cde8804b746a4ff518b283936ecd0ca48aae74471d1bc77785818",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Orange.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Purple Double.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Purple Double.mdx",
+      "sha256": "337175b73b35705a555b2085df0c9694da9aff2ddd0485169daaa48dcfe3d777",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Purple Double.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Purple.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Purple.mdx",
+      "sha256": "ae584daeb14319fb0c73ee05e6247c0b451a68ac2fbb88e713d808dd516beeb0",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Purple.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Red Double.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Red Double.mdx",
+      "sha256": "cf191e954957584f1f7121c44d7f6a1be91e86e7a4e32007b67223e88ec57510",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Red Double.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Red.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Red.mdx",
+      "sha256": "832aa9a629288eb1d099372e508297b457255e8b69e98b67666b1d248e6e57be",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Red.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Yellow Double.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Yellow Double.mdx",
+      "sha256": "a097691b8dd3386b4b5643f0ff197520715c57bec405c12265704110e2618343",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Yellow Double.mdx"
+    },
+    {
+      "internal": "ShotsVolI\\Shot Yellow.mdx",
+      "file": "shots-originales/ShotsVolI/Shot Yellow.mdx",
+      "sha256": "c49816a0453f4a691d810d05e0411f50937d1d161df2dadbb9153ec3c0baa064",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-i.315258/originales/Shots Vol. I/Shot Yellow.mdx"
+    },
+    {
+      "internal": "ShotsVolII\\Shot II Blue.mdx",
+      "file": "shots-originales/ShotsVolII/Shot II Blue.mdx",
+      "sha256": "e2fd4dbed3f1a9e97ff8adc76093cee16fafebf362dffe327a199776dc6432ac",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Blue.mdx"
+    },
+    {
+      "internal": "ShotsVolII\\Shot II Green.mdx",
+      "file": "shots-originales/ShotsVolII/Shot II Green.mdx",
+      "sha256": "4f206526f7eaff7394ef06bfcf5b00ea4a824ad0f16d154fb4d751b0ce69f926",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Green.mdx"
+    },
+    {
+      "internal": "ShotsVolII\\Shot II Orange.mdx",
+      "file": "shots-originales/ShotsVolII/Shot II Orange.mdx",
+      "sha256": "eac94529fc5f320803b34bdae7b1767d1679a15b6aa1d4d6a13712869479a1cf",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Orange.mdx"
+    },
+    {
+      "internal": "ShotsVolII\\Shot II Purple.mdx",
+      "file": "shots-originales/ShotsVolII/Shot II Purple.mdx",
+      "sha256": "d2cc4430b8ec8c78ae38295396ff4163f5651b5e39ac051a3dcb211d9b0803f4",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Purple.mdx"
+    },
+    {
+      "internal": "ShotsVolII\\Shot II Red.mdx",
+      "file": "shots-originales/ShotsVolII/Shot II Red.mdx",
+      "sha256": "a674ae72a5f1ace9f5cc77f29cdd1d52796fb7d3335695dfbb4c1f94d5a45703",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Red.mdx"
+    },
+    {
+      "internal": "ShotsVolII\\Shot II Yellow.mdx",
+      "file": "shots-originales/ShotsVolII/Shot II Yellow.mdx",
+      "sha256": "905b2fdac131ba1e72731946e321b9824025ec9e764fffba5dfc9c7b297e32ef",
+      "source": "/home/snz/Documentos/ChatGPT/Proyect/descargas/warcraft3/misiles/vinz/biblioteca-originales/01-Energia-y-plasma/shots-vol-ii.315512/originales/Shots Vol. II/Shot II Yellow.mdx"
+    }
+  ]
+}

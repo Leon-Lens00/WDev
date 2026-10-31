@@ -1,5 +1,6 @@
 """Classic v2 ability encoding and reproducible local Rapid Fire objects."""
 import struct
+from pathlib import Path
 from build import Reader, integer, cstring, encode_units, set_field
 
 
@@ -31,9 +32,38 @@ def abilities(data):
     return tables
 
 
+# w3u variable kinds by UnitMetaData.slk type; a wrong kind reads as 0 in
+# the editor and game (usca/ussc written as unreal gave scale 0, 26/10/2026).
+META = Path('/home/snz/Documentos/ChatGPT/FrozenThone/tools/wc3-addons/classic-assets/Units/UnitMetaData.slk')
+
+
+def meta_kinds():
+    rows, cur = {}, None
+    for line in META.read_text(encoding='latin1').splitlines():
+        p = line.split(';')
+        if p[0] != 'C':
+            continue
+        x = k = None
+        for f in p[1:]:
+            if f[:1] == 'X': x = int(f[1:])
+            elif f[:1] == 'Y': cur = int(f[1:])
+            elif f[:1] == 'K': k = f[1:].strip('"')
+        if x is not None:
+            rows.setdefault(cur, {})[x] = k
+    head = {v: k for k, v in rows[1].items()}
+    kind = {'real': 1, 'unreal': 2}
+    return {r[1]: kind.get(r.get(head['type'])) for y, r in rows.items() if y > 1 and 1 in r}
+
+
+KINDS = meta_kinds()
+
+
 def unit(rawid, base, fields):
     r = dict(id=rawid.encode(),base=base.encode(),mods=[])
     for field,kind,value in fields:
+        # Float fields must use the metadata kind; other types are not floats.
+        if kind in (1, 2) or KINDS[field] is not None:
+            assert KINDS[field] == kind, f'{rawid}.{field}: kind {kind}, metadata {KINDS[field]}'
         set_field(r,field,kind,value)
     return r
 
@@ -48,7 +78,34 @@ def unit_records():
              ('uabi',3,'Arpf,Avul'),('umvs',0,350),('ucol',2,0.),
              ('usid',0,0),('usin',0,0),('uhom',0,1)]),
         unit('rftg','hfoo',common+[('unam',3,'Blanco de prueba'),('uhpm',0,2000),
-             ('umvs',0,0),('uabi',3,''),('ucol',2,24.)])]
+             ('umvs',0,0),('uabi',3,''),('ucol',2,24.)])]+missile_targets()+boss_targets()
+
+
+def boss_targets():
+    # Abominations at model scale 2 / 3 as bosses: selection scale and collision
+    # scaled from uabo (2.1, 48) to test hit bodies of large models in game.
+    common = [('uaen',0,0),('uacq',2,0.),('ufle',0,0),('uhpm',0,5000),('ufoo',0,0)]
+    return [unit(raw,'uabo',common+[('unam',3,name),('usca',1,scale),
+                                    ('ussc',1,2.1*scale),('ucol',2,48.*scale)])
+            for raw,name,scale in [('rbs2','Jefe x2 (abominacion)',2.),
+                                   ('rbs3','Jefe x3 (abominacion)',3.)]]
+
+
+def missile_targets():
+    # Missile models as units: selection scale = collision radius / 36
+    # (UI\MiscData.txt ScaleFactor 72 is the circle width), model scale 1.
+    # Speed 0 left them at ground level despite SetUnitFlyHeight (game, 26/10):
+    # speed 1 keeps movement. umvh = radius rests the centred model on the ground.
+    common = [('uaen',0,0),('uacq',2,0.),('ufle',0,0),('uhpm',0,2000),
+              ('ucpt',2,0.),('ucbs',2,0.),('uabi',3,''),('ufoo',0,0),
+              ('umvs',0,1),('ucol',2,8.),('usca',1,1.),('ushu',3,'_')]
+    # Shots use the copies shifted in X (scripts/shots_ajustados.cjs): the tip sits
+    # at +radius, so the circle of that radius ends at the tip.
+    return [unit(raw,'hfoo',common+[('unam',3,name),('umdl',3,model),('ussc',1,radius/36.),('umvh',2,height)])
+            for raw,name,model,radius,height in [
+                ('rfm1','Misil Firebrand (radio 30)','FirebrandShots\\Firebrand Shot Red.mdx',30.,30.),
+                ('rfm2','Misil Shots Vol. I (radio 6)','ShotsAjustados\\Shot Red.mdx',6.,6.),
+                ('rfm3','Misil Shots Vol. II (radio 18)','ShotsAjustados\\Shot II Red.mdx',18.,18.)]]
 
 
 def ability_record():

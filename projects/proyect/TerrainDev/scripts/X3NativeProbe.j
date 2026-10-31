@@ -196,7 +196,18 @@ private function Tick takes nothing returns nothing
         set merges = X3Buster.fusions
         call Check(IssuePointOrder(pair.controller,"breathoffire",sx+1400.,sy),"controller accepts native R Zero Project order")
         call Advance(21)
-    elseif stage == 21 and elapsed >= 0.8 then
+    elseif stage == 21 and elapsed >= 0.25 then
+        call Check(X3Buster.created == births and X3Charge.stateOf(pair) == X3Charge.CHARGING,"native R first press begins Zero Project charge without bodies")
+        call Advance(130)
+    elseif stage == 130 and elapsed >= 3.2 then
+        // About 3.45 s after the first press: past the 201-frame level-10 threshold.
+        call Check(X3Charge.level(pair) == 10 and IssuePointOrder(pair.controller,"breathoffire",sx+1400.,sy),"native R second press at level 10 accepted")
+        call Advance(131)
+    elseif stage == 131 and elapsed >= 13./X3Kinematics.FPS then
+        call Check(X3Buster.created == births+3 and X3Charge.stateOf(pair) == X3Charge.STORED,"native R full release launches the helix and stores its pulse")
+        call Check(IssuePointOrder(pair.controller,"breathoffire",sx+1400.,sy),"native R third press accepted for the stored pulse")
+        call Advance(132)
+    elseif stage == 132 and elapsed >= 0.8 then
         call Check(X3Buster.fusions == merges+1 and X3Buster.created == births+9,"native R selects Zero Project without conflicting with E or Rapid Fire")
         call Check(GetUnitCurrentOrder(source) == 0,"native R leaves visible actor without a spell order")
         call Advance(22)

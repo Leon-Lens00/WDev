@@ -1,6 +1,6 @@
 # Misiles por color — Classic 1.27b
 
-Rapid Fire usa los12 modelos `ShotsTeam\Shot_00_Red.mdx` a `Shot_11_Brown.mdx`, autor original Vinz. Derivados con anclaje frontal y paleta Classic procedentes de `ModelEditor/exports/shots-vol-i-organizados-brillo/Colores-de-jugadores/Misil-simple`. Se copiaron sin modificar bytes. Procedencia y SHA256: `assets/rapid-shot-colors/manifest.json`; créditos HTML conservados junto a los modelos.
+Rapid Fire (W Shots I y R Shots II; el doble se retiró el 26/10/2026) usa las copias `ShotsAjustados\Shot <color>.mdx` y `ShotsAjustados\Shot II <color>.mdx`, autor original Vinz. Son los originales de `assets/shots-originales` desplazados sólo en X por `scripts/shots_ajustados.cjs` para que la punta quede en +radio. Procedencia y SHA256: `assets/shots-ajustados/manifest.json`; créditos HTML en `assets/shots-originales`. Los antiguos `ShotsTeam` (rapid-shot-colors) se retiraron el 26/10/2026.
 
 ## Selección
 
@@ -17,6 +17,10 @@ call pair.clearColor()
 `pair` es un RapidPair existente. El setter cambia el color visual del actor y controlador y guarda el override del emisor; no cambia dueño, alianzas ni daño. `clearColor()` restaura la política del propietario. En Classic no hay GetUnitColor: un SetUnitColor externo no puede leerse automáticamente, por lo que usar este setter para esas unidades. Rojo es enum0 y se compara igual a null; **setColor(null) no borra el override**, equivale a rojo. La ausencia se mantiene en un booleano independiente.
 
 `RapidBolt.shoot(unit,x,y)` conserva su firma y toma el color del propietario. `RapidBolt.shootColor(unit,x,y,playercolor)` sirve para un emisor independiente con color explícito. Valores fuera de los12 colores Classic usan el modelo gris; null coincide con rojo en ese runtime.
+
+## Windwalk por color
+
+`RapidPair` muestra Windwalk de Vinz durante el movimiento artificial, en la familia del misil: Firebrand usa sus 9 colores y Shots sus 6 (`RapidBolt.walkModelOf`). Azul, Verde y Naranja son copias sin tocar de Blue Soul, Necro Soul y Fire. Rojo, Teal, Púrpura, Amarillo, Rosa y Plata salen de Blue Soul con color tomado de la luz de cada Firebrand y un `Ghost2` recoloreado (`scripts/windwalk_colores.cjs`, `scripts/windwalk_texturas.py`). `Ghost2.blp` es un BLP JPEG con BGRA invertido: Pillow pierde su alfa y lo deja opaco (cuadros negros en juego), por eso el script lo decodifica a mano y comprueba el alfa con bytes del archivo. Blood y el Windwalk neutro no se usan.
 
 ## Escala y colisión
 

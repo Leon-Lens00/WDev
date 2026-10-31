@@ -1,11 +1,14 @@
 // TerrainDev Classic 1.27b. Hidden-item walkability technique: Rising_Dusk/BPower.
 // Validates swept ground footprints; no mutation of actors or missile libraries.
-library GroundCollision initializer Init requires WorldBounds, IsDestructableTree
+library GroundCollision initializer Init requires WorldBounds, IsDestructableTree, UnitHitShape
 struct GroundCollision extends array
     readonly static real x
     readonly static real y
     readonly static unit hit = null
     readonly static integer reason = 0 // 0 clear, 1 ground/destructible, 2 enemy
+    // Per-model unit bodies (UnitHitShape) for the caller that sets it; off keeps
+    // the native ucol test used by every other consumer.
+    static boolean shaped = false
     private static item probe
     private static rect area = Rect(0.,0.,256.,256.)
     private static group targets = CreateGroup()
@@ -66,6 +69,21 @@ struct GroundCollision extends array
         set d = null
     endmethod
 
+    private static method touches takes unit u, real px, real py, real radius returns boolean
+        local real body
+        local real dx
+        local real dy
+        if shaped then
+            set body = UnitHitShape.radius(u)
+            if body >= 0. then
+                set dx = GetUnitX(u)-px
+                set dy = GetUnitY(u)-py
+                return dx*dx+dy*dy <= (radius+body)*(radius+body)
+            endif
+        endif
+        return IsUnitInRangeXY(u,px,py,radius)
+    endmethod
+
     static method height takes real px, real py returns real
         call MoveLocation(heightPoint,px,py)
         return GetLocationZ(heightPoint)
@@ -109,6 +127,10 @@ struct GroundCollision extends array
         local real lastZ = height(ax,ay)
         local real z
         local unit u
+        local real reach = radius+128.
+        if shaped then
+            set reach = radius+256.
+        endif
         set x = ax
         set y = ay
         set hit = null
@@ -123,13 +145,13 @@ struct GroundCollision extends array
                 return reason
             endif
             if units then
-                call GroupEnumUnitsInRange(targets,nx,ny,radius+128.,null)
+                call GroupEnumUnitsInRange(targets,nx,ny,reach,null)
                 loop
                     set u = FirstOfGroup(targets)
                     exitwhen u == null
                     call GroupRemoveUnit(targets,u)
                     if u != source and alive(u) and IsUnitEnemy(u,owner) and not IsUnitType(u,UNIT_TYPE_FLYING) and GetUnitTypeId(u) != 'dumi' and GetUnitTypeId(u) != 'dcst' and GetUnitTypeId(u) != 'rfct' then
-                        if IsUnitInRangeXY(u,nx,ny,radius) then
+                        if touches(u,nx,ny,radius) then
                             set hit = u
                             set x = nx
                             set y = ny

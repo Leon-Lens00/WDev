@@ -3,13 +3,17 @@
 from pathlib import Path
 import subprocess,json,time,shutil,sys
 r=Path(__file__).resolve().parents[1]
-info=json.loads((r/'reports/current-x3-test.json').read_text());d=Path(info['directory'])
+# Optional fixture path (candidate labs); default is the delivered fixture.
+fixture=Path(sys.argv[1]) if len(sys.argv)>1 else r/'reports/current-x3-test.json'
+info=json.loads(fixture.read_text());d=Path(info['directory'])
 identity=json.loads((d/'window-identity.json').read_text());pid=identity['window']['pid'];addr=identity['window']['address'];hwnd=identity['hwnd'];begun=time.monotonic()
-for tag,command,limit in [('x3','-x3test',55),('colors','-testcolors',20),('rapid','-rapid',45),('native','-native',45)]:
+for tag,command,limit in info.get('stages',[('x3','-x3test',55),('colors','-testcolors',20),('rapid','-rapid',45),('native','-native',45)]):
     cmdline=Path(f'/proc/{pid}/cmdline').read_bytes().decode().replace('\0',' ')
     assert info['sha256'][:16] in cmdline and 'war3.exe' in cmdline
     for args in [['13'],['text',command],['13']]:
         subprocess.run([sys.executable,str(r/'scripts/x3_runtime.py'),'ui',hwnd,*args],capture_output=True,check=True)
+        # Text sent before the chat box opens is lost (seen 24/10 on -testcolors).
+        time.sleep(.5)
     p=Path(info['log_directory'])/f'TerrainDev-{info["run"]}-{tag}.txt';deadline=time.monotonic()+limit
     while time.monotonic()<deadline:
         w=next((x for x in json.loads(subprocess.check_output(['hyprctl','-j','clients'])) if x['pid']==pid and x['address']==addr),None)

@@ -11,12 +11,14 @@
     "MissileDiagnostics",
     "MissileRecycler",
     "Missile",
+    "UnitHitShape",
     "GroundCollision",
     "GroundMotion",
     "RapidFire",
     "RapidFireDemo",
     "X3Kinematics",
     "X3Buster",
+    "X3Charge",
     "X3BusterDemo"
   ],
   "libraries": [
@@ -148,14 +150,36 @@
       "local_sha256": "5d13202a5116a67e3f49d2a095975b1fe33955fd34fed076eccd0a67d26bc990"
     },
     {
+      "name": "UnitHitShape",
+      "version": "0.1.0-local",
+      "local_file": "src/libraries/UnitHitShape.j",
+      "source": "Local TerrainDev implementation, 2026-10-26",
+      "local_sha256": "94291d0a8c1c7b629e5d65ae5e638693f74ddd428b24de73a623b4a2d8ac4bb7",
+      "dependencies": [
+        "Table"
+      ],
+      "changes": [
+        "Per-type selection scale (unitUI.slk) and ucol (UnitBalance.slk) from 1.27b War3Patch.mpq via FrozenThone classic-assets; body radius = 36 x selection scale, from UI\\MiscData.txt [SelectionCircle] ScaleFactor=72 (circle quad width).",
+        "Missile-model test units rfm1/rfm2/rfm3 (Firebrand, Shots Vol. I, Shots Vol. II) with selection scale = hit radius / 36.",
+        "2026-10-26: rfm4/rfm5 registered with the circle reaching the mesh tip (47.22 / 64.46).",
+        "2026-10-26: rfm4/rfm5 now use the red models shifted in X (tip at +radius), radius 6 / 18.",
+        "2026-10-26: bosses rbs2/rbs3 (abomination at model scale 2 / 3) registered with selection 4.2 / 6.3.",
+        "2026-10-26: rfm4/rfm5 (unshifted original test units) removed."
+      ]
+    },
+    {
       "name": "GroundCollision",
-      "version": "1.0.0-local",
+      "version": "1.1.0-unit-bodies",
       "local_file": "src/libraries/GroundCollision.j",
       "source": "Local TerrainDev implementation, 2026-10-21",
-      "local_sha256": "b39c3f2ef02aaea5643f5572eff90de86e38c0ca635c8abb08b3885e0369a095",
+      "local_sha256": "ed15d72f82e3a46ef4995b80c691e6e1ce5c13573fff6ce26dbb7fad4fad47d0",
       "dependencies": [
         "WorldBounds",
-        "IsDestructableTree"
+        "IsDestructableTree",
+        "UnitHitShape"
+      ],
+      "changes": [
+        "2026-10-26: optional GroundCollision.shaped uses UnitHitShape bodies (distance <= radius+body) for registered types; default off keeps IsUnitInRangeXY for all other consumers (X3Buster). Enumeration reach radius+256 only when shaped."
       ]
     },
     {
@@ -170,10 +194,10 @@
     },
     {
       "name": "RapidFire",
-      "version": "1.1.0-local",
+      "version": "1.8.1-fixed-aim",
       "local_file": "src/libraries/RapidFire.j",
       "source": "Local TerrainDev implementation, 2026-10-21",
-      "local_sha256": "590ea2e40bb0ec35489c3d95da794562caa3889d116cddb54955682ae7b2d878",
+      "local_sha256": "4c5286693779cf0f166b57a597af8846104964a71d60085324026d9e559c1597",
       "dependencies": [
         "GroundMotion",
         "Missile",
@@ -183,19 +207,39 @@
         "RegisterPlayerUnitEvent"
       ],
       "changes": [
-        "ShotsTeam: twelve Vinz player-color models, owner color at emission, explicit individual/team override and clearColor (red enum0 is not an absence sentinel).",
-        "Collision radius remains16; body width calibrated to32 with visual scale16/5.832; trail/glow/death stay decorative. Original shoot(unit,x,y) API retained."
+        "1.4.1: missile sweeps set GroundCollision.shaped so enemy hits use UnitHitShape bodies (selection circle at its scale).",
+        "Families sharing the burst, all at base scale 1: Q Firebrand (nine unmodified Vinz originals, radius 30); W/E/R now use the unmodified Vinz Shots Vol. I / Vol. I Double / Vol. II originals (six colors; other player colors take the nearest hue, gray -> yellow). Per-missile collision from the original mesh bounds: radius 6 (Vol. I, one circle per body at +-15 in the double) and 18 (Vol. II; Green 16.2), centred tip-radius ahead of the origin (tips 47.22 / 64.46 / 58.01). The first sweep starts at the launch point so the lead is not skipped.",
+        "Previous 1.3.1: ModelEditor brillo derivatives anchored at X=-1.21 (ShotsTeam/ShotsVolII twelve colors). setColor/clearColor, shoot, shootColor, shootFamily and RapidPair.castFamily API unchanged; shotsModel/backOf removed (no consumers).",
+        "2026-10-26: red Vol. I / Vol. II use the X-shifted copies (ShotsAjustados, tip at +radius) with ahead 0; other colors keep the originals.",
+        "2026-10-26: flight height = body radius above terrain (Firebrand 30, Vol. I 6, Vol. II 18 / 16.2) instead of 70.",
+        "2026-10-26: every Shots color (Vol. I, Double, Vol. II) uses the X-shifted copies ShotsAjustados (tip at +radius); collision advance (ahead/fresh/shifted) removed; ShotsTeam and unshifted originals no longer imported.",
+        "2026-10-26: Shots Vol. I Double family (E, Arp2) removed with its side sweeps and dirX/dirY; only single Vol. I (W) and Vol. II (R) remain.",
+        "2026-10-28: RapidPair shows Vinz's Windwalk at 'origin' while GroundMotion is artificial (created on burst start, refreshed on family/color change, DestroyEffect on finish); color = the bolt's family palette (walkModelOf). firebrandColor extracted from modelForColor.",
+        "1.8.0: every bolt flies RANGE = 1350 along the aim direction; the cast point only gives the direction (before: its distance, capped at 1000).",
+        "1.8.1: the burst aims at the point RANGE away in the cast direction (projected from the actor at cast/recast), so facing and shots keep it while the actor moves."
       ]
     },
     {
       "name": "RapidFireDemo",
-      "version": "1.0.0-local",
+      "version": "1.1.0-unit-bodies",
       "local_file": "src/libraries/RapidFireDemo.j",
       "source": "Local TerrainDev implementation, 2026-10-21",
-      "local_sha256": "4228d177c8e0e204833d6ce0e683cb95277a7fd1a11c8e6fc7f142562a97f1a5",
+      "local_sha256": "bf7c31f3e574dd81533427692488c5f833c5e89d3d3a2ceae6333de9057054e6",
       "dependencies": [
         "RapidFire",
-        "MissileDiagnostics"
+        "MissileDiagnostics",
+        "UnitHitShape"
+      ],
+      "changes": [
+        "2026-10-26: seven native-size targets (rftg, ugho, hkni, otau, ucry, uabo, okod), life refilled; the hit body is shown only by the native selection circle (no extra drawings).",
+        "2026-10-26: three more targets with the missile models (rfm1-3) at scale 1, selection scale = hit radius / 36. Owned by Player(0) to show the green circle; not shot targets.",
+        "2026-10-26: missile units rest on the ground (fly height = radius, default height from object data); speed 1 because a 0-speed unit stayed at ground level despite SetUnitFlyHeight.",
+        "2026-10-26: rfm4/rfm5 (Vol I/II, circle reaching the tip) at y-560 to compare length.",
+        "2026-10-26: rfm4/rfm5 show the shifted red models (assets/shots-ajustados).",
+        "2026-10-26: boss targets (rbs2, rbs3, uabo with SetUnitScale 2) and an on-screen report of the IsUnitInRangeXY body radius per size; requires UnitHitShape.",
+        "2026-10-26: original-model test units removed; bosses renumbered 10-12.",
+        "2026-10-26: help text lists W Shots I and R Shots II only.",
+        "2026-10-28: '-color N' chat command (Player 0) tints the demo pair to player color N to check every missile/Windwalk color; '-color' clears."
       ]
     },
     {
@@ -213,15 +257,16 @@
     },
     {
       "name": "X3BusterDemo",
-      "version": "0.2.0-local",
+      "version": "0.3.0-charge",
       "local_file": "src/libraries/X3BusterDemo.j",
-      "source": "Local demonstration: W/E USA, R Zero Project 4.1, 2026-10-23",
+      "source": "Local demonstration: W charges USA, R charges Zero Project 4.1 (X3Charge toggle), E discrete USA, 2026-10-24",
       "dependencies": [
         "X3Buster",
+        "X3Charge",
         "RapidFireDemo",
         "SpellEffectEvent"
       ],
-      "local_sha256": "a379a07b284c1a339b585780d5ff785527e2fb89dabc85934e03ea630ec07792"
+      "local_sha256": "97a28fda855a134b977d1327990e660b68e4c8823011133a3db5c2ce5cc7a3e5"
     },
     {
       "name": "X3Kinematics",
@@ -230,6 +275,19 @@
       "source": "Local mathematical port measured against X3 USA / Zero Project 4.1 SNES traces; labs/x3-snes",
       "dependencies": [],
       "local_sha256": "e7002fddc6a3de93c795f047b2463ae69880b4c338b08eb6bc5bb32f8f225bc1"
+    },
+    {
+      "name": "X3Charge",
+      "version": "0.1.0-local",
+      "local_file": "src/libraries/X3Charge.j",
+      "source": "Local accumulated charge, thresholds from labs/x3-snes final-original/final-mod frames.csv, 2026-10-24",
+      "dependencies": [
+        "X3Buster",
+        "RapidFire",
+        "GroundCollision",
+        "X3Kinematics"
+      ],
+      "local_sha256": "44cd6b0d22b35fc531fbbd792b133cec6af99016d953e9435c5cc0f2e3cdbfef"
     }
   ]
 }

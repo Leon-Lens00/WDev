@@ -302,8 +302,15 @@ private function Tick takes nothing returns nothing
         call Check(IssuePointOrder(nativePair.controller,"carrionswarm",sx+1400.,sy),"native W order accepted by controller")
         call Advance(21)
     elseif stage == 21 and elapsed >= 0.25 then
-        call Check(X3Buster.created == births+1,"native W spell event creates charged physics")
+        call Check(X3Buster.created == births and X3Charge.stateOf(nativePair) == X3Charge.CHARGING,"native W first press begins charge without bodies")
         call Check(GetUnitCurrentOrder(source) == 0,"visible executor receives no spell order")
+        call Advance(120)
+    elseif stage == 120 and elapsed >= 2.2 then
+        // About 2.45 s after the first press: level 8, below the level-10 helix.
+        call Check(X3Charge.level(nativePair) == 8 and IssuePointOrder(nativePair.controller,"carrionswarm",sx+1400.,sy),"native W second press at level 8 accepted")
+        call Advance(121)
+    elseif stage == 121 and elapsed >= 0.25 then
+        call Check(X3Buster.created == births+1 and X3Charge.stateOf(nativePair) == X3Charge.IDLE,"native W release at level 8 creates charged physics")
         call Advance(22)
     elseif stage == 22 and elapsed >= 1.5 then
         set births = X3Buster.created

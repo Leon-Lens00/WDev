@@ -1,0 +1,210 @@
+{
+  "author": "Vinz (models); X shift by scripts/shots_ajustados.cjs",
+  "origin": "Copies of the unmodified originals in shots-originales, translated in X only (vertices, pivots, extents) so the posed Stand tip sits at +radius. Textures come from the game MPQs.",
+  "imports": [
+    {
+      "internal": "ShotsAjustados\\Shot Blue.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot Blue.mdx",
+      "sha256": "b1d70f737e1d622327db4de4c262235915888f67dfc08ceaf9ac004bccf64540",
+      "source": "shots-originales/ShotsVolI/Shot Blue.mdx",
+      "radius": 6,
+      "shift_x": -42.4238,
+      "stand_x_before": [
+        -61.34,
+        48.42
+      ],
+      "stand_x_after": [
+        -103.77,
+        6
+      ],
+      "half_width": 6
+    },
+    {
+      "internal": "ShotsAjustados\\Shot Green.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot Green.mdx",
+      "sha256": "ce3ca749a0e3e5378020c94380d22b45cb072c655ef7c53655a7385709feeb0e",
+      "source": "shots-originales/ShotsVolI/Shot Green.mdx",
+      "radius": 6,
+      "shift_x": -42.4238,
+      "stand_x_before": [
+        -61.34,
+        48.42
+      ],
+      "stand_x_after": [
+        -103.77,
+        6
+      ],
+      "half_width": 6
+    },
+    {
+      "internal": "ShotsAjustados\\Shot Orange.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot Orange.mdx",
+      "sha256": "bdd6e5d89daa694ae106b9de7eb2e5fe8fb12386d5e9409e282d6dc25c39ce83",
+      "source": "shots-originales/ShotsVolI/Shot Orange.mdx",
+      "radius": 6,
+      "shift_x": -42.4238,
+      "stand_x_before": [
+        -61.34,
+        48.42
+      ],
+      "stand_x_after": [
+        -103.77,
+        6
+      ],
+      "half_width": 6
+    },
+    {
+      "internal": "ShotsAjustados\\Shot Purple.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot Purple.mdx",
+      "sha256": "deb914ca6a4dc6e6dcccc665327e6883c400fe403ec070624d9ec0db36d92500",
+      "source": "shots-originales/ShotsVolI/Shot Purple.mdx",
+      "radius": 6,
+      "shift_x": -42.4238,
+      "stand_x_before": [
+        -61.34,
+        48.42
+      ],
+      "stand_x_after": [
+        -103.77,
+        6
+      ],
+      "half_width": 6
+    },
+    {
+      "internal": "ShotsAjustados\\Shot Red.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot Red.mdx",
+      "sha256": "f2a65f3bb455c6f79529244bf724df9aba5d7b867585e30c868bcdd6911c15f6",
+      "source": "shots-originales/ShotsVolI/Shot Red.mdx",
+      "radius": 6,
+      "shift_x": -42.4238,
+      "stand_x_before": [
+        -61.34,
+        48.42
+      ],
+      "stand_x_after": [
+        -103.77,
+        6
+      ],
+      "half_width": 6
+    },
+    {
+      "internal": "ShotsAjustados\\Shot Yellow.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot Yellow.mdx",
+      "sha256": "1a33f9a82869cc1c83ef9416e61f0f3a98e27c706568bac18f7752b4c189df46",
+      "source": "shots-originales/ShotsVolI/Shot Yellow.mdx",
+      "radius": 6,
+      "shift_x": -42.4238,
+      "stand_x_before": [
+        -61.34,
+        48.42
+      ],
+      "stand_x_after": [
+        -103.77,
+        6
+      ],
+      "half_width": 6
+    },
+    {
+      "internal": "ShotsAjustados\\Shot II Blue.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot II Blue.mdx",
+      "sha256": "68d9cc34452ea5bf5b0ddbda44e91aa4dd2d00e15c3aa2335d43de913b108817",
+      "source": "shots-originales/ShotsVolII/Shot II Blue.mdx",
+      "radius": 18,
+      "shift_x": -47.667,
+      "stand_x_before": [
+        -150.74,
+        65.67
+      ],
+      "stand_x_after": [
+        -198.41,
+        18
+      ],
+      "half_width": 18.12
+    },
+    {
+      "internal": "ShotsAjustados\\Shot II Green.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot II Green.mdx",
+      "sha256": "e0dbe18b9f230a6b9b782a5f8121d53705b0702bd3a609c5e328410e97b6b0b5",
+      "source": "shots-originales/ShotsVolII/Shot II Green.mdx",
+      "radius": 16.2,
+      "shift_x": -43.021,
+      "stand_x_before": [
+        -135.55,
+        59.22
+      ],
+      "stand_x_after": [
+        -178.57,
+        16.2
+      ],
+      "half_width": 16.32
+    },
+    {
+      "internal": "ShotsAjustados\\Shot II Orange.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot II Orange.mdx",
+      "sha256": "898365a3e61483ce3d6a94db1b608cffcc69cb3f984445185f9c29f835b7c4f9",
+      "source": "shots-originales/ShotsVolII/Shot II Orange.mdx",
+      "radius": 18,
+      "shift_x": -47.667,
+      "stand_x_before": [
+        -150.74,
+        65.67
+      ],
+      "stand_x_after": [
+        -198.41,
+        18
+      ],
+      "half_width": 18.12
+    },
+    {
+      "internal": "ShotsAjustados\\Shot II Purple.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot II Purple.mdx",
+      "sha256": "220cfe7e843cabb50e32a5aafaf8b655a101405a5170b6ce0667be51b1b40a79",
+      "source": "shots-originales/ShotsVolII/Shot II Purple.mdx",
+      "radius": 18,
+      "shift_x": -47.667,
+      "stand_x_before": [
+        -150.74,
+        65.67
+      ],
+      "stand_x_after": [
+        -198.41,
+        18
+      ],
+      "half_width": 18.12
+    },
+    {
+      "internal": "ShotsAjustados\\Shot II Red.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot II Red.mdx",
+      "sha256": "12442b8843b912b1e94825d11b9046547590aae1083a128b6cc5d50d4b121c25",
+      "source": "shots-originales/ShotsVolII/Shot II Red.mdx",
+      "radius": 18,
+      "shift_x": -47.667,
+      "stand_x_before": [
+        -150.74,
+        65.67
+      ],
+      "stand_x_after": [
+        -198.41,
+        18
+      ],
+      "half_width": 18.12
+    },
+    {
+      "internal": "ShotsAjustados\\Shot II Yellow.mdx",
+      "file": "shots-ajustados/ShotsAjustados/Shot II Yellow.mdx",
+      "sha256": "d7d939384da9c2872b4221acc3577365205389e8f45cbc55f2025deadeb7e971",
+      "source": "shots-originales/ShotsVolII/Shot II Yellow.mdx",
+      "radius": 18,
+      "shift_x": -47.667,
+      "stand_x_before": [
+        -150.74,
+        65.67
+      ],
+      "stand_x_after": [
+        -198.41,
+        18
+      ],
+      "half_width": 18.12
+    }
+  ]
+}
