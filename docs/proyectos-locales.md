@@ -64,3 +64,12 @@ necesita además el archivo de evidencias que permanece fuera de Git.
   `projects/proyect/TerrainDev/docs/importar-rapid-fire.md`. `maps/work` queda sólo con el candidato vigente `rango-20261028b` y los
   dos de X3 Charge; las pruebas anteriores se retiraron (siguen en el historial de Git). No incluye `labs/x3-snes` ni los planes de
   audio X3 del 29/10. El inventario se actualizó sólo en esas rutas (`terrainDevUpdated`). Sin promover: `TerrainDev.w3x` sigue en `f087047b…`.
+- **2026-11-05 — Dev Mission v14k**: primera copia de `Proyect/work/titulo-devmission-20261026`, solo con una selección:
+  - incluye `scripts/` (sin `__pycache__`), `v14k-recursos/` y el mapa entregado `TerrainDev-Titulo-v14k.w3x`
+    (3a2067df…);
+  - incluye el plan `docs/planes/devmission-tienda-ia-v14i.md` (sección v14k) y su informe de errores;
+  - no incluye los demás mapas (v14j base, variantes de prueba y versiones anteriores), `evidencia/`, las carpetas
+    de construcción ni los registros LAN; siguen en la PC original;
+  - `hacer-v14k.sh` necesita v14j y `hacer-lan-v14k.sh` necesita `negro-terreno-20261026`;
+  - inventario actualizado solo en esas rutas (`devMissionV14kUpdated`). Ensayos en 1.27b, incluida la LAN con dos
+    clientes, en la PC original.

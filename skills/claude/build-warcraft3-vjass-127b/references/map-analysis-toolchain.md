@@ -50,6 +50,8 @@ A `.w3x` is an MPQ archive. Relevant members can include:
 - `war3map.w3r`, `.w3c`, `.w3s`, `.w3i`, `.imp`, `.wts`;
 - trigger files, imports, models, textures, and listfiles.
 
+When the terrain grid grows or shrinks on the west or south side (for example, to widen the minimap), coordinates in world units stay valid. Members stored in grid cells from the south-west corner do not. In 1.27b `war3map.doo` (version 8) ends with a *special doodads* block: version 0, a count, then per entry `id, z, x, y` as int32 tile indices. These are cliff pieces such as `YCr2` (Rough cliff cave 2) and `YCg*` (cliff slides). Normal doodads use world floats. Copying an old `.doo` onto a widened `.w3e` moved a cliff cave onto flat ground, where it rendered as a box with a black opening, with no error; it was seen in Dev Mission v14j on 04/11/2026. Shift those cells by the added columns or rows, and compare the block with the one the editor saved. `war3map.wpm` and `war3map.shd` are also grids: pad them rather than copying them.
+
 If only compiled `war3map.j` exists, original vJASS abstractions, comments, modules, textmacros, and naming may be lost. Prefer official `.j` sources or editable demo maps when studying architecture.
 
 ## Trigger and source recovery

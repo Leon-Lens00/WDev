@@ -56,3 +56,19 @@ Verified assets/objects include `'uidm'` → `UI\dummy.mdl`, `'e001'` → `war3m
 For conversation layout and measured texttag wrapping/clipping, consult [texttags-dialogos-127b.md](texttags-dialogos-127b.md). Its separate 2026-10-22 Classic 1.27b experiment does not extend this original inventory profile's validation boundary or certify the proposed multi-fragment renderer.
 
 Before production use, test simultaneous panels on two 1.27b clients; repeat open/close/page/equip/sell/drop; destroy controls with pending clicks; vary resolution, camera position, and terrain height; measure timer/unit/instance growth. These are targeted next checks, not tests already performed.
+
+## Billboarded picture dummies away from X 0 (Dev Mission v14e, 02/11/2026)
+
+Observed in Classic 1.27b with a top-down camera (AoA 270, rotation 180). Single-player map test, not multiplayer.
+
+- **Symptom.** A picture dummy draws nothing once it sits more than about 600 units from X 0, at any Y. The dummy is one quad in the YZ plane, normal +X, under a root marked `Billboarded`. Texttags, trackables and normal units at the same place still draw.
+- **Cause.** The billboard orientation depends on the dummy's absolute position. Far from the origin it turns the quad edge-on under the camera.
+- **Ruled out, each without effect:** fog/mask (the unit was visible and unmasked), fly height, the skin swap (all succeeded), owner vision, the background plane, `ShowUnit` refresh, and `TwoSided`.
+- **Fix that worked.** Use a static quad without `Billboarded`:
+  - lay the quad in the XY plane facing +Z: vertices (1,-1,0), (1,1,0), (-1,1,0), (-1,-1,0), with the same TVertices order;
+  - set normals to (0,0,1) and the extents to ±1 in X and Y;
+  - move the aspect-scaling keys from {1, width, height} to {width, height, 1};
+  - create the unit with facing 270.
+- **Keep the billboarded type** where it is needed, such as in-game HUD icons under the angled game camera. Give the static model its own unit type; Dev Mission uses `'uids'` beside `'uidb'`.
+- **Scripts:** `Proyect/work/titulo-devmission-20261026/scripts/modelo_plano.py` and `w3u_tienda.py`.
+- **Related limit.** Trackables cannot be destroyed in 1.27b. A second screen with trackables must sit away from the first one's spot, which is what first moved a panel out of X 0.

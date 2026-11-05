@@ -10,6 +10,9 @@ Si ambos asistentes trabajan a la vez, asignar archivos/componentes diferentes,
 revisar cambios ajenos antes de escribir y mantener un solo escritor por mapa.
 CodeGraph refleja archivos en disco; no coordina las decisiones de dos agentes.
 
+Entre chats del proyecto, los roles, entregas y turnos de prueba están en
+`/home/snz/Documentos/ChatGPT/Proyect/docs/traspasos/coordinacion-chats.md`.
+
 ## Entrada y skills
 
 Para operar sobre el proyecto activo, iniciar Claude o Codex en Proyect (o UI

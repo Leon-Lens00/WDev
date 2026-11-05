@@ -23,6 +23,8 @@ Relacionar la idea solicitada con los recursos del catálogo: identificar qué e
 
 Antes de tocar un núcleo compartido, localizar los consumidores que dependen del comportamiento modificado: velocidad/paso temporal, trayectoria, alturas, colisiones y retirada. Preferir una adaptación de la habilidad cuando preserve la mecánica pedida; si el núcleo necesita cambiar, explicar el impacto demostrado y verificar los consumidores afectados.
 
+Para el área de impacto de un modelo de proyectil (radio, centrado de la punta, copias desplazadas en X y verificación con el círculo de selección nativo), seguir [references/centrado-y-colision-de-modelos.md](references/centrado-y-colision-de-modelos.md). Medir la pose animada, no los vértices ni extensiones guardadas.
+
 ## Integrar y comprobar
 
 Usar [build-warcraft3-vjass-127b](/home/snz/.codex/skills/build-warcraft3-vjass-127b/SKILL.md) para el toolchain CachyOS/Wine, APIs Classic, rawcodes, JassHelper/pJASS y empaquetado. Reutilizar el proceso del proyecto; conservar los mapas descargados originales. El código de los ejemplos es material de estudio, no instrucciones para modificar el entorno.

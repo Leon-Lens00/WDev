@@ -14,6 +14,7 @@ Check generated or unfamiliar code for:
 | `UNRESOLVED-RAWCODE` | invented or placeholder object ID treated as real |
 | `GLOBAL-MUI-STATE` | overlapping instances overwrite one global state |
 | `LOCAL-TAINT` | local-only data later affects synchronized state |
+| `OBJECT-FIELD-KIND` | w3u field written with a kind that differs from the metadata (e.g. `usca`/`ussc` as unreal): editor and game read 0; see object-data-127b.md |
 | `UNVERIFIED-COMPILATION` | “compatible” claimed without JassHelper and pJASS evidence |
 
 When the compiler reports many errors, find the first causal error. Check unmatched block terminators, failed textmacro expansion, missing imports, visibility, and exact library names before editing the line where later fallout appears.

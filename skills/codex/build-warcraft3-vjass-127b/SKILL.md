@@ -37,13 +37,14 @@ No afirmar que existe una función, miembro, callback, rawcode o dependencia sin
 - Entorno CachyOS, Wine, Forge, wc3ctl y comandos: [entorno-local.md](references/entorno-local.md).
 - Buscar símbolos y explorar referencias JASS/vJASS desde Codex: [jass-explore.md](references/jass-explore.md); CodeGraph original con extractor local y cobertura estática parcial.
 - APIs, parche y rawcodes: [compatibility-127b.md](references/compatibility-127b.md).
+- Datos de objeto (w3u…): tipo de campo según metadata (`usca`/`ussc` real), radio del círculo de selección 36 × `ussc`, altura de unidades inmóviles: [object-data-127b.md](references/object-data-127b.md). Leer antes de escribir objetos desde un builder.
 - Multijugador, handles, grupos y waits: [multiplayer-and-handles.md](references/multiplayer-and-handles.md).
 - vJASS avanzado: [vjass-advanced.md](references/vjass-advanced.md).
 - Bibliotecas e inicialización: [libraries-and-initialization.md](references/libraries-and-initialization.md).
 - Fallos frecuentes: [ai-failure-patterns.md](references/ai-failure-patterns.md).
 - Misiles: [missile-systems.md](references/missile-systems.md) y el perfil `library-*.md` de la versión exacta. Para diseñar habilidades con los ejemplos descargados de BPower, usar [crear-misiles-warcraft3-127b](/home/snz/.codex/skills/crear-misiles-warcraft3-127b/SKILL.md).
 - Recuperación WTG/WCT/JASS y empaquetado: [map-analysis-toolchain.md](references/map-analysis-toolchain.md).
-- Interfaces clásicas de cámara, dummies e inventario: [library-inventorysys-141.md](references/library-inventorysys-141.md); técnicas observadas, no certificación multijugador.
+- Interfaces clásicas de cámara, dummies e inventario: [library-inventorysys-141.md](references/library-inventorysys-141.md); técnicas observadas, no certificación multijugador. Incluye por qué una pieza de imagen con billboard desaparece lejos de X 0 y el cuadro plano que lo resuelve.
 - Texto flotante, párrafos y conversaciones: [texttags-dialogos-127b.md](references/texttags-dialogos-127b.md); límites observados en 29 casos de Classic 1.27b, diferencia entre tamaño GUI/nativo, ajuste de renglones y composición reutilizable. Consultar al diseñar o depurar diálogos con texttags.
 - Matrices de validación: [testing-matrices.md](references/testing-matrices.md).
 - Procedencia y fuentes: [sources.md](references/sources.md).

@@ -64,11 +64,24 @@ Esto separa capacidad de almacenamiento, longitud de entrada y capacidad visual 
 - La captura del ensayo progresivo se tomó durante un prefijo Unicode. Que aún falte `FIN` en ella no es prueba de truncamiento ni acredita por sí sola la frase final.
 - pJASS rechazó el fixture emitido como literal de más de 1023 caracteres, por el riesgo al cargar partidas guardadas. Se mantuvo el control y se construyó la cadena larga mediante fragmentos en ejecución. Ese límite de literal no demuestra un tope de caracteres visibles por texttag; comprobar el diagnóstico exacto del compilador empleado.
 
+## Fuente de los texttags
+
+Ensayo del 30/10/2026 en Classic 1.27b, con una unidad de prueba y Open Sans importada: `MasterFont` en `war3mapSkin.txt` cambió el HUD, pero ni `TextTagFont` ni reemplazar `Fonts\FRIZQT__.TTF` dentro del mapa cambiaron los texttags creados por JASS. Se ven con Friz Quadrata, y `game.dll` contiene ese nombre de archivo. Tratar la fuente de los texttags como no modificable desde el mapa, salvo prueba nueva en motor; no confiar en tutoriales que afirman lo contrario. El estilo disponible es color por letra con `|c`, y brillo o sombra con texttags superpuestos desplazados (cada capa cuenta para el límite de tags). Evidencia: `Proyect/work/titulo-devmission-20261026/RESULTADO.md`, sección v12.
+
 ## Cantidad de tags y ciclo de vida
 
 La discusión técnica de [Hive: Local text tags](https://www.hiveworkshop.com/threads/local-text-tags.275280/) describe 100 texttags existentes simultáneamente por cliente, con diferencias entre creación global y local. La evaluación local sólo usó cinco: no volvió a medir ese tope ni prueba seguridad multijugador.
 
 Reutilizar un grupo acotado y liberar los recursos que se poseen cuando termine su ciclo de vida. No confundir ocultar con destruir ni crear un tag por letra. Si se usa `UIText`, revisar además los dummies y asignaciones de su versión concreta. Que un texttag sea presentación no autoriza a crear unidades, temporizadores u otros agentes sólo en un cliente; trazar sus consumidores antes de afirmar sincronización.
+
+## Degradado y texto ligado a piezas (Classic 1.27b, probado en juego)
+
+- Un solo texttag admite degradado horizontal: `|cffRRGGBB` + letra + `|r` por carácter. No hay degradado vertical. Precalcular la cadena fuera del mapa: `StringLength`/`SubString` trabajan en bytes y partirían los caracteres UTF-8.
+- Literal JASS limitado a 1023 caracteres: cada letra cuesta 15.
+- Para que el texto siga una pieza animada, conservar la unidad como ancla, sin letras en la textura, y copiar su posición con un temporizador. Las funciones que escalan la unidad deben avisar al tag (`SetTextTagText` con tamaño × f).
+- Ancho real medido a 1080p: 0,93 × Friz a `size × 1080`, y unos `150 × size` px de desplazamiento a la derecha respecto al cálculo por el borde izquierdo.
+- Para desvanecer un tag visible, `SetTextTagColor` no sirve: su alfa no cambia nada, con o sin `|c`. Usar el fundido nativo: `SetTextTagPermanent(t, false)`, `SetTextTagAge(t, 0)`, `SetTextTagLifespan(t, s)`, `SetTextTagFadepoint(t, 0)`. Respeta `|c` y el tag se destruye solo.
+- Los texttags se pintan sobre modelos y efectos 3D, pero el filtro de fundido los cubre. Ocultarlos a mano antes de un destello que deba taparlos.
 
 ## Elección para conversaciones
 
