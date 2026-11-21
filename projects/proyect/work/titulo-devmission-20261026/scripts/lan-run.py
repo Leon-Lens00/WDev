@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 
 ROOT = Path('/home/snz/Documentos/ChatGPT/FrozenThone')
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -17,14 +18,17 @@ env = config.environment()
 log = ROOT / 'runtime/logs/modern-ydwe'
 log.mkdir(parents=True, exist_ok=True)
 env['DXVK_LOG_PATH'] = str(log)
-# RASTREO=carpeta: tiempo de cada cuadro y muestras del proceso.
-rastreo = os.environ.get('RASTREO')
-if rastreo:
-    capa = Path(__file__).resolve().parent.parent / 'rastreo'
-    env['VK_ADD_LAYER_PATH'] = str(capa)
-    env['VK_INSTANCE_LAYERS'] = 'VK_LAYER_WDEV_cuadros'
-    env['WC3_CUADROS'] = rastreo + '/cuadros.txt'
-    subprocess.Popen([sys.executable, '-I', str(capa / 'rastreador.py'), rastreo])
-bat = 'Z:' + sys.argv[1].replace('/', '\\')
-sys.exit(subprocess.run([str(config.SLR), '--verb=run', '--', str(config.PROTON), 'run', 'cmd', '/c', bat],
-                        env=env, cwd=config.DATA / 'pfx/drive_c/WarcraftIII').returncode)
+capa = Path(__file__).resolve().parent.parent / 'rastreo'
+sys.path.insert(0, str(capa))
+from preflight import trace_game, wait_detached_game
+
+bat_path = Path(sys.argv[1]).resolve(strict=True)
+requested = os.environ.get('RASTREO')
+rastreo = Path(requested) if requested else Path(tempfile.mkdtemp(prefix='rastreo-', dir=bat_path.parent))
+bat = 'Z:' + str(bat_path).replace('/', '\\')
+command = [str(config.SLR), '--verb=run', '--', str(config.PROTON), 'run', 'cmd', '/c', bat]
+with trace_game(env, rastreo) as traced_env:
+    status = subprocess.run(command, env=traced_env, cwd=config.DATA / 'pfx/drive_c/WarcraftIII').returncode
+    if status == 0 and '/wait' not in bat_path.read_bytes().lower().decode('latin-1'):
+        wait_detached_game(traced_env)
+    sys.exit(status)
