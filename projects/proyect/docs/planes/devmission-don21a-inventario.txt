@@ -1,0 +1,157 @@
+
+== H00P Vegeta / Saiyan Soldier  modelo war3mapImported\Vegeta'sBody_squished.mdl (-1 B)
+  A0HT base=ACro [T] Final Explosion cd=35.0 m= tgt=self | Trig_Angry_Explosion_vegeta
+  A0HM base=AOvd [X] Power Up cd=5.0 m=30 tgt=none | Trig_Saian_Bejita Trig_SaiyanCancel
+  A080 base=AId5 [] HeadVegeta cd= m= tgt= | Trig_Saian_Bejita2 Trig_Saian_Bejita3 Trig_saian_vegeta
+  A0EK base=AOcr [] Full Blooded Saiyan Pride cd= m= tgt= | Trig_RectAI005 Trig_attacked4
+  A01E base=AOsw [] Galick Gun cd=25.0 m=75 tgt= | Trig_RectAI005 Trig_galick_gun
+  A01F base=ANrf [R] Final Flash cd=130.0 m=100 tgt= | Trig_FinalFlashBasic Trig_RectAI005
+  A01D base=AUim [Q] Big Bang Attack cd=25.0 m=50 tgt=air,enemies,ground,neutral,organic | Trig_RectAI005 Trig_bigbang_attack
+
+== H02T Vegitto / fused by Potara Earrings  modelo war3mapImported\Vegetto SS_squished.mdl (-1 B)
+  A03F base=Aenr [T] Spirit Sword cd=30.0 m=100 tgt=air,enemies,ground,neutral,organic | Trig_RectAI005 Trig_spiritsword
+  A0HL base=AOvd [X] Power Up cd=5.0 m=30 tgt=none | Trig_Saian_Vegito Trig_SaiyanCancel
+  A033 base=AUim [W] Big Bang Attack cd=20.0 m=75 tgt=air,enemies,ground,neutral,organic | Trig_RectAI005 Trig_bigbang_vegito
+  A0HN base=Absk [E] Afterimage Technique cd=15.0 m=25 tgt= | Trig_Afterimage Trig_RectAI005 Trig_attacked2
+  A03E base=ANcs [Q] Banshee Blast cd=25.0 m=50 tgt=air,enemies,ground,neutral | Trig_Banshee_Blast Trig_Homing Trig_RectAI005
+  A0DS base=AOsw [R] Final Kamehameha cd=150.0 m=100 tgt= | Trig_final_kamehameha_vegito
+
+== H07O Broly / Legendary Saiyan  modelo war3mapImported\Broly_SSJ_squished.mdl (-1 B)
+  A0L7 base=ANhs [T] Rage Broly cd=20.0 m=50 tgt=none | Trig_Rage_Broly
+  A0H6 base=AOvd [X] Power Up cd=5.0 m=30 tgt=none | Trig_Saian_Broly Trig_SaiyanCancel
+  A02S base=AHtb [W] Bloody Smash cd=20.0 m= tgt=air,enemies,ground,organic | Trig_Bloody_Smash Trig_RectAI005 Trig_blody_3
+  A0A5 base=AOsw [Q] Eraser Cannon cd=20.0 m=75 tgt= | Trig_Eraser_Cannon Trig_RectAI005
+  A0I2 base=AOcr [] The Legendary Super Saiyan cd= m= tgt= | Trig_RectAI005 Trig_learn_legendary
+  A09Q base=ANrf [R] Gigantic Meteor cd=130.0 m=50 tgt= | Trig_GiganticMeteor Trig_RectAI005
+
+== H0IM Kid Buu / Final Form  modelo war3mapImported\KidbuuEbony_squished.mdl (-1 B)
+  A0LV base=ACcl [T] Mystic Ball cd=20.0 m=25 tgt= | Trig_Mystic_Ball
+  A0MY base=ACro [X] Power Up cd=25.0 m=75 tgt=self | Trig_Power_Up_Kid_Bhuu
+  A0MZ base=AUav [] Absorption cd= m= tgt=self | 
+  A0LO base=AOsw [] Vanishing Beam cd=20.0 m=50 tgt= | Trig_Vanishing_Beam
+  A0LM base=AOvd [R] Assault Rain cd=150.0 m=100 tgt=none | Trig_Assault_Rain Trig_Assault_Rain_Cancel
+  A0LL base=ANrf [Q] Shocking Ball cd=30.0 m=100 tgt= | Trig_Next_Shocking_Ball Trig_Shocking_Ball
+
+== H00X Uchiha Sasuke / Uchiha Survivor  modelo war3mapImported\sasuke.mdl (-1 B)
+  A0AK base=ANrf [X] Kirin cd=70.0 m=100 tgt= | Trig_kirin
+  A055 base=AHtc [T] Susanoo cd=150.0 m=100 tgt=enemies,ground,neutral,organic | Trig_SUsanoo_Sasuke
+  A079 base=AOsw [R] Susanoo Black Arrow cd=130.0 m=75 tgt= | Trig_RectAI005 Trig_Sasuke_Black_Arrow
+  A00V base=Absk [Q] Mangekyou Sharingan cd=60.0 m=50 tgt= | Trig_RectAI005 Trig_mangekyou_sasuke
+  A013 base=ANta [E] Chidori cd=25.0 m=100 tgt=invulnerable | Trig_Chidori_Passive Trig_RectAI005 Trig_ngesot_Chidori
+  A0D5 base=ANst [W] Katon - Goukakyuu No Jutsu cd=25.0 m=125 tgt=air,debris,enemies,ground,neutral,structure | Trig_Katon_sasuke Trig_Katon_sasuke_cancel Trig_RectAI005
+
+== H01A Naruto Uzumaki / Kyuubi Chakra Mode  modelo war3mapImported\Naruto (Sage Mode)_squished.mdl (-1 B)
+  A0KY base=ANrf [T] Bijuu RasenShuriken cd=50.0 m=50 tgt= | Trig_Bijuu_Rasenshuriken
+  A0K5 base=ACro [X] Kyuubi Chakra Cloack cd=60.0 m= tgt= | 
+  A00W base=AUau [E] Ashura's Reincarnation cd= m= tgt=self | Trig_RectAI005 Trig_attacked4
+  A0F5 base=ACfl [Q] Multiple Rasenrengan cd=20.0 m=100 tgt= | Trig_Missile_UCDummy Trig_Rasenrengan Trig_Rasenrengan_sixtail Trig_RectAI005
+  A0K2 base=AOvd [W] RasenKyuugan cd=30.0 m=100 tgt=none | Trig_Butcher_MUI Trig_RasenKyuugan Trig_RasenKyuugan2 Trig_RasenKyuugan_cancel Trig_RectAI005
+  A0F3 base=AOsw [R] Bijuu Dama cd=150.0 m=75 tgt= | Trig_Bijuu_Dama Trig_RectAI005 Trig_Unit_die_2
+
+== H01F Uchiha Itachi / Edo Tensai  modelo war3mapImported\Itachi.mdl (-1 B)
+  A08S base=AId5 [] Itachi Head cd= m= tgt= | 
+  A0AM base=AUls [X] Izanami cd=90.0 m=0 tgt= | Trig_izanami
+  A0HO base=AHtc [T] Susanoo cd=150.0 m=100 tgt=enemies,ground,neutral,organic | Trig_SUsanoo_Itachi
+  A034 base=AOsw [] Katon GokakyuuNoJutsu cd=20.0 m=100 tgt= | Trig_RectAI005 Trig_katon_itachi Trig_katon_itachi_move
+  A0JT base=Absk [E] Mangekyou Sharingan cd=60.0 m=50 tgt= | Trig_RectAI005 Trig_mangekyou_itachi_yg_baru
+  A0J0 base=AHtb [Q] Tsukuyomi cd=30.0 m=100 tgt=air,enemies,ground,neutral,organic | Trig_RectAI005 Trig_tsukuyomi
+  A0JQ base=ANrf [R] Yasaka Magatama cd=130.0 m=100 tgt= | Trig_RectAI005 Trig_Yasaka_Magatama_Edo Trig_Yasaka_Magatama_Edo2
+
+== H0BP Uchiha Madara / Founder's of Konohagakure  modelo war3mapImported\Madara_Rinnegan no shadow_squished.mdl (-1 B)
+  A0DG base=Aspb [X] Rinnegan Abilities cd= m= tgt= | 
+  A09N base=ANbl [Q] Space Time cd=25.0 m=75 tgt= | Trig_RectAI005 Trig_Space_time_asli
+  A0DE base=ANr2 [E] Izanagi cd=160.0 m=50 tgt= | Trig_percentiza
+  A0DB base=AOsw [] Dimensional Shuriken cd=25.0 m=75 tgt= | Trig_RectAI005
+  A0AZ base=Abrf [E] Kekkei Genkai cd=9.0 m= tgt= | Trig_kekei_genkai Trig_learn_kekei
+  A0AP base=ACro [Q] Space Time cd=20.0 m=75 tgt=self | 
+
+== H04I Uchiha Madara / Uchiha Founder  modelo war3mapImported\Copy of madara NWU1112_squished.mdl (-1 B)
+  A0JJ base=ANcr [T] Mangekyou Sharingan cd=40.0 m=100 tgt= | Trig_Sharingan_Madara
+  A0JL base=Aspb [C] Default Abilities cd= m= tgt= | 
+  A0HJ base=ACro [E] Blocking Technique Absorption  cd=25.0 m=75 tgt=self | Trig_Blocking_Technique Trig_RectAI005
+  A0GY base=ANhs [W] Mokuton Hijutsu: Jukai Ko-tan cd=25.0 m= tgt=air,enemies,ground,organic | Trig_Koutan_Madara Trig_RectAI005
+  A0GX base=ANrf [R] Banbutsu So-zo cd=130.0 m=100 tgt= | Trig_RectAI005 Trig_Tengai_Shinsei
+  A0IU base=AOsw [Q] Katon - Gouka Mekkyaku cd=20.0 m=100 tgt= | Trig_RectAI005 Trig_mekakyu_madara
+
+== H0FX Uchiha Madara / Uchiha Founder  modelo war3mapImported\Copy of madara NWU1112_squished.mdl (-1 B)
+  A0JJ base=ANcr [T] Mangekyou Sharingan cd=40.0 m=100 tgt= | Trig_Sharingan_Madara
+  A0HJ base=ACro [E] Blocking Technique Absorption  cd=25.0 m=75 tgt=self | Trig_Blocking_Technique Trig_RectAI005
+  A0GY base=ANhs [W] Mokuton Hijutsu: Jukai Ko-tan cd=25.0 m= tgt=air,enemies,ground,organic | Trig_Koutan_Madara Trig_RectAI005
+  A0GX base=ANrf [R] Banbutsu So-zo cd=130.0 m=100 tgt= | Trig_RectAI005 Trig_Tengai_Shinsei
+  A0IU base=AOsw [Q] Katon - Gouka Mekkyaku cd=20.0 m=100 tgt= | Trig_RectAI005 Trig_mekakyu_madara
+
+== H0AH Jiraiya / Sennin Mode  modelo war3mapImported\xzilaiye_squished.mdl (-1 B)
+  A0HV base=AHtb [X] Rasengan cd=20.0 m= tgt= | Trig_Rasengan_Jiraiya
+  A0CX base=ANhs [T] Toad Summoning cd=100.0 m=150 tgt=none | Trig_toad_summon
+  A0DQ base=AEah [] Needle Jizo cd=5.0 m= tgt=self | 
+  A0CF base=ACmp [W] Sage Art Frog Songs cd=20.0 m= tgt=none | Trig_RectAI005 Trig_frog_songs Trig_frog_songs2
+  A0CG base=ANrf [R] Chou Odama Rasengan cd=130.0 m=75 tgt= | Trig_Chou Trig_Chou2 Trig_RectAI005
+  A0CV base=ANst [Q] Katon Gamayu Endan cd=25.0 m=75 tgt=air,debris,enemies,ground,neutral,structure | Trig_Endan_cancel Trig_RectAI005 Trig_katon_gamayu
+
+== H0IO Hashirama Senjuu / First Hokage  modelo war3mapImported\hashirama normal mode and sage mode.mdl (-1 B)
+  A0MP base=AHad [] Sage Mode cd= m= tgt= | 
+  A0LW base=AOsh [T] Senpo: Myojinmon cd=25.0 m=75 tgt=air,ground,debris,enemy,neutral,organic | Trig_Senpo_Myojimon
+  A0MQ base=AUav [] Wood Clone Technique cd= m= tgt=ground,invulnerable,organic,player,self,vulnerable | Trig_Hashirama_clone Trig_RectAI005 Trig_Unit_die_3 Trig_learn_3rd
+  A0LU base=ANhs [R] Senpo Mokuton: Shin Susenju cd=120.0 m= tgt=air,enemies,ground,organic | Trig_RectAI005 Trig_Senpo_Mokuton_Shin_Susenju
+  A0LT base=ANrf [W] Mokuton: Mokuryuu no Jutsu cd=25.0 m=100 tgt= | Trig_Mokuton_Mokuryu Trig_RectAI005
+  A0LP base=AOsw [Q] Mokuton Jukai Ho cd=20.0 m=75 tgt= | Trig_RectAI005 Trig_mokuton_jukai_ho
+
+== H0JZ Kaguya Otsutsuki / Zenno no Kami  modelo war3mapImported\B_Kaguya.mdl (-1 B)
+  A0NC base=Aspb [X] Byakugan and Rinne Sharingan cd= m= tgt= | 
+  A0N9 base=AUim [T] Yomotsu Hirasaka cd=15.0 m=35 tgt=air,enemies,ground,neutral,organic | Trig_Yomutsu_Hirasaka
+  A0NG base=AHab [] Kekkei Mora cd= m= tgt=air,alive,enemies,ground,invulnerable,vulnerable | Trig_RectAI005
+  A0NF base=ANhs [R] Infinite Tsukuyomi cd=150.0 m= tgt= | Trig_Infinite_Tsukuyomi Trig_RectAI005 Trig_Tailed_Beast_Transformation
+  A0NB base=AOsw [] Kaguya Otsutsuki Strikes cd=20.0 m=75 tgt= | Trig_RectAI005 Trig_kaguya_ots_strike
+  A0NA base=ANrf [Q] Togebari cd=25.0 m=100 tgt= | Trig_RectAI005 Trig_Togebari Trig_Togebari2 Trig_TogebariStop
+
+== H00C Son Goku / Kakarotto  modelo war3mapImported\Goku_squished.mdl (-1 B)
+  A0G2 base=AOvd [X] Power Up cd=5.0 m=35 tgt=none | Trig_Saian_New Trig_SaiyanCancel
+  A01G base=ANrf [T] Spirit Bomb cd=90.0 m=125 tgt= | 
+  A069 base=AId5 [] Normal HeadGoku cd= m= tgt= | Trig_Revert Trig_SaianGoku Trig_SaianGokuTImer Trig_SaianGoku_GodTimer Trig_Saian_Goku_God2 Trig_saian2 Trig_saian_gohan
+  A0IQ base=AOcr [] Full Blooded Saiyan Pride cd= m= tgt= | 
+  A0IA base=AHtb [W] Warp Kamehameha cd=25.0 m=100 tgt= | Trig_RectAI005 Trig_Warp_Kamehameha
+  A0BZ base=ACmp [R] Ultimate cd=150.0 m= tgt=air,enemies,ground,neutral | Trig_DragonFist2 Trig_RectAI005 Trig_SF_1st Trig_Ultimate_Goku_GOd Trig_UltraInstinct
+  A00P base=AOsw [Q] Kamehameha cd=20.0 m=75 tgt= | Trig_kamehameha2 Trig_kamehameha_goku
+
+== H0LF Son Goku / Kakarotto  modelo war3mapImported\Goku_squished.mdl (-1 B)
+  A0O5 base=AOvd [X] Power Up cd=2.5 m=35 tgt=none | Trig_Saian_Goku_God Trig_SaiyanGodCancel
+  A0PM base=ANbl [T] Instant Transmission cd=90.0 m=50 tgt= | Trig_Instant_Transmission
+  A069 base=AId5 [] Normal HeadGoku cd= m= tgt= | Trig_Revert Trig_SaianGoku Trig_SaianGokuTImer Trig_SaianGoku_GodTimer Trig_Saian_Goku_God2 Trig_saian2 Trig_saian_gohan
+  A0IA base=AHtb [W] Warp Kamehameha cd=25.0 m=100 tgt= | Trig_RectAI005 Trig_Warp_Kamehameha
+  A0BZ base=ACmp [R] Ultimate cd=150.0 m= tgt=air,enemies,ground,neutral | Trig_DragonFist2 Trig_RectAI005 Trig_SF_1st Trig_Ultimate_Goku_GOd Trig_UltraInstinct
+  A0CZ base=Aroa [E] Revert cd=5.0 m=1 tgt=none | Trig_RectAI005 Trig_Revert Trig_attacked4
+  A0O6 base=AOsw [Q] Kamehameha cd=20.0 m=75 tgt= | Trig_RectAI005 Trig_kamehameha_goku_god
+
+== H0GX Freiza / Final Form  modelo war3mapImported\Frieza Final Form.mdl (-1 B)
+  A0IY base=ACro [X] Death Saucer cd=30.0 m=50 tgt=self | Trig_Death_Saucer
+  A0J1 base=Aenr [] Death Break cd=30.0 m=100 tgt=air,enemies,ground,neutral,organic | Trig_RectAI005 Trig_death_break Trig_death_break3
+  A0IX base=AOsw [Q] You Will Die By My Hand! cd=20.0 m=75 tgt= | Trig_RectAI005 Trig_You_will_die
+  A0OH base=ANcr [] Frieza Golden Form cd=80.0 m=100 tgt= | Trig_Frieza_Golden_Transformation Trig_Next_Deathball Trig_RectAI005
+  A0JD base=AUim [W] Imprisonment Ball cd=20.0 m=75 tgt=none | Trig_Homing Trig_Improsen2 Trig_Prison_Ball Trig_RectAI005
+
+== H0LH Golden Freiza / Golden Frieza  modelo war3mapImported\Frieza Golden.mdl (-1 B)
+  A0G4 base=AIs2 [] Saian Attack Speed BOnus cd= m= tgt= | Trig_Frieza_Golden_Transformation Trig_Revert Trig_SaianGoku Trig_SaianGokuTImer Trig_SaianGoku_GodTimer Trig_Saian_Goku_God2
+  A00Y base=AId5 []  cd= m= tgt= | Trig_Frieza_Golden_Transformation Trig_Next_Stardust Trig_Revert Trig_SaianGoku Trig_SaianGokuTImer Trig_SaianGoku_GodTimer Trig_SaianJanemba2 Trig_Sa
+  A0IW base=ANrf [T] Death Ball cd=90.0 m=100 tgt= | Trig_Death_Ball
+  A0IY base=ACro [X] Death Saucer cd=30.0 m=50 tgt=self | Trig_Death_Saucer
+  A0J1 base=Aenr [] Death Break cd=30.0 m=100 tgt=air,enemies,ground,neutral,organic | Trig_RectAI005 Trig_death_break Trig_death_break3
+  A0IX base=AOsw [Q] You Will Die By My Hand! cd=20.0 m=75 tgt= | Trig_RectAI005 Trig_You_will_die
+  A0OH base=ANcr [] Frieza Golden Form cd=80.0 m=100 tgt= | Trig_Frieza_Golden_Transformation Trig_Next_Deathball Trig_RectAI005
+  A0JD base=AUim [W] Imprisonment Ball cd=20.0 m=75 tgt=none | Trig_Homing Trig_Improsen2 Trig_Prison_Ball Trig_RectAI005
+
+== H037 Future Trunks / Sword Warrior  modelo war3mapImported\TrunkNormal.mdl (-1 B)
+  A0I5 base=ACro [T] Sword of Hope cd=25.0 m=75 tgt=self | Trig_sword_of_hope
+  A07X base=AId5 [] HeadTrunks cd= m= tgt= | Trig_Saian_Trunks2 Trig_Saian_Trunks3 Trig_Trunk_Life
+  A0H5 base=AOvd [X] Power Up cd=5.0 m=30 tgt=none | Trig_Saian_Trunks Trig_SaiyanCancel
+  A03Z base=AId5 []  cd= m= tgt= | 
+  A0GV base=AOsw [] Finish Buster cd=20.0 m=75 tgt= | Trig_Finish_Buster Trig_Finish_Buster2 Trig_RectAI005
+  A086 base=ACfl [E] Heat Dome cd=25.0 m=75 tgt= | Trig_HeatBasic Trig_HeatCombo Trig_RectAI005
+  A05B base=AOsh [Q] Burning Attack cd=20.0 m=75 tgt=air,debris,enemies,ground,organic | Trig_BurningBasic Trig_RectAI005
+  A03W base=Aenr [R] Final Hope Slash cd=120.0 m=100 tgt=air,enemies,ground,neutral,organic | Trig_Burning_Slash2 Trig_Burning_slash Trig_RectAI005
+
+== H0D9 Kyuubi Form / Six-Tailed Demon Fox  modelo war3mapImported\6-tail_Kyuubi2_squished.mdl (-1 B)
+  A0HX base=AIsr [] Spell Reduction cd= m= tgt= | 
+  A0HW base=ANrf [T] Kyuubi Chakra Blast cd=90.0 m=100 tgt= | Trig_kyuubi_blast
+  A00U base=ANcr [] Six Tailed Kyuubi Mode cd=150.0 m=100 tgt= | Trig_Six_Tail Trig_kyuubi_blast
+  A0F3 base=AOsw [R] Bijuu Dama cd=150.0 m=75 tgt= | Trig_Bijuu_Dama Trig_RectAI005 Trig_Unit_die_2
+  A00W base=AUau [E] Ashura's Reincarnation cd= m= tgt=self | Trig_RectAI005 Trig_attacked4
